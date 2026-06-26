@@ -37,3 +37,9 @@
   default, and boundary-aware.
 - 2026-06-26: Extended scaffold validation to require the VM-20 planning
   artifacts and confirm the plan stays well-formed and review-only by default.
+- 2026-06-26: Ran the first controlled VM-20 extraction batch using two narrow
+  excerpt windows from `pbr_data_valuation_manual_2026.pdf` (pages 45-46 for
+  the framework overview and page 47 for the mechanics boundary), added a
+  dedicated `npm run vm20:batch-003` entry, surfaced review flags as
+  extraction categories in the review packet markdown, and passed
+  `npm run check` across three ignored pilot batches.

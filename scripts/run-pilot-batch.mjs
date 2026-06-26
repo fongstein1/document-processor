@@ -710,7 +710,8 @@ function renderReviewPacketMarkdown(packet) {
         (item) =>
           `- **${item.stableId}** (${item.sourceId}) - ${item.summary} ` +
           `[locator: ${renderLocator(item)}; ref: ${item.sourceReference ?? 'n/a'}] ` +
-          `[confidence: ${item.confidence}; learner-facing: ${item.learnerFacingEligible ? 'yes' : 'no'}; app-ready: ${item.appReadyEligible ? 'yes' : 'no'}]`,
+          `[confidence: ${item.confidence}; learner-facing: ${item.learnerFacingEligible ? 'yes' : 'no'}; app-ready: ${item.appReadyEligible ? 'yes' : 'no'}] ` +
+          `[review flags: ${(item.reviewFlags ?? []).join(', ') || 'none'}]`,
       )
       .join('\n')
   }
@@ -786,6 +787,8 @@ function renderReviewPacketMarkdown(packet) {
 ${renderSourceFilesTable(packet.sourceFilesProcessed)}
 
 ## Extracted Items
+
+Review flags below act as extraction categories and exception tags; all items stay review-only unless a later batch explicitly promotes them.
 
 ${renderExtractedItems(packet.extractedItems)}
 

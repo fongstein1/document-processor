@@ -89,3 +89,10 @@ The VM-20 chapter should be driven by a tracked section-by-section plan before
 any larger extraction run begins. Planned batches should remain review-only by
 default, and the plan config should serve as the source of truth until actual
 VM-20 extraction is authorized.
+
+## Controlled excerpt windows are allowed
+
+When a single VM-20 source file needs to be split for review, controlled
+batches may use multiple narrow excerpt windows from that file so the overview
+language stays separate from mechanics boundary slices. Those excerpt windows
+must remain review-only and clearly labeled in the batch outputs.

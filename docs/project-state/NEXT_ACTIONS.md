@@ -2,19 +2,22 @@
 
 ## Next immediate task
 
-Review the VM-20 extraction plan and decide whether the first planned
-sub-batch should become the next tiny extraction run or stay on hold until the
-boundary map is approved.
+Review the batch-003 VM-20 overview output and decide whether page 47 stays in
+the controlled overview batch or becomes the first mechanics slice for the
+next VM-20 batch.
 
 ## Build tasks
 
 - Keep batch 001 and batch 002 review-only unless a human reviewer explicitly
   approves promotion.
+- Keep batch 003 review-only until the boundary decision is made.
 - Treat `docs/processor/vm20_extraction_plan.md` and
   `config/vm20-batch-plan.json` as the source of truth for the next VM-20
   planning step.
-- Extend `scripts/batch-definitions.mjs` later, only when actual VM-20
-  extraction batches are authorized.
+- Use the new `npm run vm20:batch-003` entry for reruns or review refreshes
+  when the controlled overview batch needs to be regenerated.
+- Extend `scripts/batch-definitions.mjs` later, only when the next VM-20
+  mechanics batch is authorized.
 - Expand validation only if the plan or a later batch reveals a genuine schema
   or workflow gap.
 - Keep app-ready export work deferred until a real promotion candidate exists.
@@ -35,4 +38,6 @@ boundary map is approved.
   confirmed.
 - Keep source-reference, unresolved-issues, and no-promotion coverage visible
   in pilot review packets.
+- Keep overview and mechanics-boundary excerpt windows distinct when a single
+  source file needs to be split across controlled VM-20 batches.
 - Commit only lightweight, auditable artifacts.

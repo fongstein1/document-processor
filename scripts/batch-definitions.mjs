@@ -445,4 +445,215 @@ export const batchDefinitions = {
       },
     ],
   },
+  'batch-003': {
+    batchName: 'Controlled VM-20 batch 003 - framework overview',
+    batchSlug: 'vm20-fw-003',
+    batchProfile: 'vm20_framework_overview',
+    processingIntentText:
+      'First controlled VM-20 batch: keep the overview slice narrow, preserve the NPR floor / minimum reserve orientation, and separate the page-47 mechanics boundary for review-only handling.',
+    processingIntentNotes:
+      'Controlled VM-20 workflow proof only. The batch uses two tiny excerpt windows from the same Valuation Manual PDF so the overview language and the mechanics boundary stay review-only.',
+    batchSummaryText:
+      'Batch 003 remains review-only. The overview excerpt clarifies the VM-20 framework at a high level, while the page-47 boundary slice is retained only to test how the processor separates orientation language from the start of formula mechanics.',
+    batchSummaryNotes: 'No learner-facing approval is granted.',
+    reviewPacketReason:
+      'This controlled VM-20 batch is intentionally tiny and split into an overview slice plus a mechanics-boundary slice; neither excerpt is approved for promotion.',
+    reviewPacketNextStep:
+      'Confirm whether page 47 should stay in the framework batch or move into the next NPR / DR / SR mechanics batch.',
+    reviewerNotes:
+      'Tiny VM-20 control batch only. Keep the excerpt windows source-bound, review-first, and non-promotable.',
+    reviewPacketFlags: [
+      {
+        flagId: 'flag-vm20-overview',
+        severity: 'medium',
+        sourceId: 'vm20-framework-overview',
+        itemId: 'item-vm20-framework-overview-vm20-fw-003',
+        flagType: 'framework_overview_slice',
+        message:
+          'The overview slice is useful for framework orientation, but it remains review-only and is not learner-facing.',
+        notes: 'Keep review-only and do not promote.',
+      },
+      {
+        flagId: 'flag-vm20-boundary',
+        severity: 'medium',
+        sourceId: 'vm20-framework-boundary',
+        itemId: 'item-vm20-framework-boundary-vm20-fw-003',
+        flagType: 'mechanics_boundary_slice',
+        message:
+          'The page-47 slice is a boundary-control excerpt that starts to move toward reserve mechanics and should not be promoted.',
+        notes: 'Suitable for review-only support, not promotion.',
+      },
+    ],
+    reviewPacketCitationIssues: [
+      {
+        issueId: 'citation-vm20-framework-span',
+        sourceId: 'vm20-framework-overview',
+        itemId: 'item-vm20-framework-overview-vm20-fw-003',
+        issueType: 'excerpt_window',
+        details:
+          'The overview slice spans pages 45-46 so the page boundary stays explicit and the later mechanics slice can remain separate.',
+        recommendedAction:
+          'Keep the page window visible in review and do not merge the overview with the mechanics boundary slice.',
+      },
+    ],
+    reviewPacketHumanDecisions: [
+      {
+        decisionId: 'decision-vm20-page47-boundary',
+        decisionType: 'scope_split',
+        question:
+          'Should page 47 remain in the controlled overview batch, or should it be moved into the next NPR / DR / SR mechanics batch?',
+        whyItMatters:
+          'The batch should keep the orientation slice separate from the formulas that begin on the later page.',
+        recommendedOwner: 'processor owner',
+        priority: 'high',
+      },
+      {
+        decisionId: 'decision-vm20-orientation-coverage',
+        decisionType: 'coverage_check',
+        question:
+          'Do we want a later batch to add the explicit Section 3 / Section 4 / Section 5 role statements, or is the current overview enough for the first control run?',
+        whyItMatters:
+          'The first controlled batch should decide how explicit the NPR / DR / SR orientation needs to be before the mechanics batches begin.',
+        recommendedOwner: 'source reviewer',
+        priority: 'medium',
+      },
+    ],
+    unresolvedIssues: [
+      {
+        issueId: 'issue-vm20-page47-boundary',
+        severity: 'medium',
+        issueType: 'mechanics_boundary_confirmation',
+        sourceId: 'vm20-framework-boundary',
+        itemId: 'item-vm20-framework-boundary-vm20-fw-003',
+        message:
+          'Page 47 begins to move from orientation into reserve-category mechanics, so it should stay review-only until the next batch isolates the formula language more cleanly.',
+        recommendedAction:
+          'Keep page 47 out of learner-facing outputs and use it only as a boundary-control slice.',
+        evidence: 'Page 47 continues Section 2 minimum reserve language into the first category calculations.',
+      },
+      {
+        issueId: 'issue-vm20-orientation-coverage',
+        severity: 'low',
+        issueType: 'orientation_coverage_check',
+        sourceId: 'vm20-framework-overview',
+        itemId: 'item-vm20-framework-overview-vm20-fw-003',
+        message:
+          'The overview slice gives the high-level VM-20 framework map, but it does not yet capture the later Section 3 / Section 4 / Section 5 role statements.',
+        recommendedAction:
+          'Decide whether a later controlled batch should add those explicit role statements before mechanics extraction begins.',
+        evidence: 'Pages 45-46 provide the purpose and early minimum reserve structure only.',
+      },
+    ],
+    validationChecks: [
+      {
+        checkId: 'batch-manifest-guardrails',
+        status: 'passed',
+        details: 'Pilot manifest blocks learner-facing promotion and app-ready export.',
+      },
+      {
+        checkId: 'framework-overview-coverage',
+        status: 'passed',
+        details:
+          'The selected pages keep the overview slice narrow and keep the page-47 mechanics boundary review-only.',
+      },
+      {
+        checkId: 'source-reference-coverage',
+        status: 'passed',
+        details: 'Each pilot item carries a source reference and a locator appropriate to the file type.',
+      },
+      {
+        checkId: 'review-flag-categories',
+        status: 'passed',
+        details: 'Review flags distinguish the overview slice from the mechanics-boundary slice.',
+      },
+      {
+        checkId: 'unresolved-issues-tracked',
+        status: 'passed',
+        details: 'The review packet and unresolved-issues summary both capture the open review items.',
+      },
+      {
+        checkId: 'no-promotion-output',
+        status: 'passed',
+        details: 'No approved-promoted or app-ready export was produced for the pilot.',
+      },
+      {
+        checkId: 'review-only-guardrails',
+        status: 'passed',
+        details: 'Review packet stays not approved and unresolved issues remain visible for human review.',
+      },
+    ],
+    sourceSelections: [
+      {
+        sourceId: 'vm20-framework-overview',
+        relativePath: 'pbr_data_valuation_manual_2026.pdf',
+        sourceFamilyId: 'valuation_manual_pdfs',
+        documentType: 'valuation_manual_section',
+        sourceTitle: 'Valuation Manual',
+        sourceReference: '2026 NAIC Valuation Manual',
+        versionDate: null,
+        pageWindow: [45, 46],
+        sectionReference: 'Section 1: Purpose; Section 2: Minimum Reserve (overview)',
+        citationText: 'VM-20: Requirements for Principle-Based Reserves for Life Products',
+        confidence: 'high',
+        reviewFlags: [
+          'core_vm_course',
+          'framework_overview',
+          'regulatory_requirement',
+          'background_content',
+          'cross_reference_mapping',
+        ],
+        reviewStatus: 'draft_candidate',
+        itemKind: 'chunk',
+        notes:
+          'Orientation slice for the first controlled VM-20 batch; keep review-only and do not promote.',
+        summary:
+          'VM-20 establishes the minimum reserve valuation standard, notes the NPR floor, and sets up the reserving structure and exclusion-test pathway at a high level.',
+        keywords: ['VM-20', 'minimum reserve', 'NPR floor', 'Section 2', 'exclusion tests', 'framework overview'],
+        sourceNotes: 'Pages 45-46 only; overview slice for the controlled framework batch.',
+        artifactProcessingStatus: 'inventoried',
+        inventoryProcessingStatus: 'inventoried',
+        authorityLevel: 'core_manual_section',
+        reviewPacketNotes: 'Framework overview slice; review-only until the later mechanics batches are added.',
+        reviewPacketIssueCount: 1,
+        reviewPacketProcessingStatus: 'inventoried',
+        nonLearnerFacingNotes: 'Review-only orientation slice for the VM-20 framework batch.',
+      },
+      {
+        sourceId: 'vm20-framework-boundary',
+        relativePath: 'pbr_data_valuation_manual_2026.pdf',
+        sourceFamilyId: 'valuation_manual_pdfs',
+        documentType: 'valuation_manual_section',
+        sourceTitle: 'Valuation Manual',
+        sourceReference: '2026 NAIC Valuation Manual',
+        versionDate: null,
+        pageWindow: [47, 47],
+        sectionReference: 'Section 2: Minimum Reserve (category continuation)',
+        citationText: 'the group of policies and riders for which the company computes all three reserve calculations',
+        confidence: 'high',
+        reviewFlags: [
+          'core_vm_course',
+          'mechanics_boundary',
+          'requires_human_interpretation',
+          'formula_context',
+          'boundary_control_window',
+        ],
+        reviewStatus: 'needs_human_review',
+        itemKind: 'review_note',
+        notes:
+          'Boundary slice showing the transition from overview language into reserve-category mechanics; keep review-only.',
+        summary:
+          'This page continues the minimum reserve category language and starts to move toward formula mechanics, so it is useful as a boundary-control slice but not as learner-facing content.',
+        keywords: ['VM-20', 'reserve categories', 'boundary control', 'mechanics', 'review-only'],
+        sourceNotes: 'Page 47 only; boundary slice that stays in review-only mode.',
+        artifactProcessingStatus: 'review_pending',
+        inventoryProcessingStatus: 'needs_human_review',
+        authorityLevel: 'core_manual_section',
+        reviewPacketNotes:
+          'Boundary slice only; keep review-only until the mechanics batches separate NPR/DR/SR treatment more cleanly.',
+        reviewPacketIssueCount: 1,
+        reviewPacketProcessingStatus: 'review_pending',
+        nonLearnerFacingNotes: 'Review-only boundary slice; not sufficient to teach mechanics.',
+      },
+    ],
+  },
 }

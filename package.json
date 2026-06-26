@@ -7,6 +7,7 @@
     "bootstrap": "node scripts/bootstrap-small-batch.mjs",
     "check": "node scripts/validate-scaffold.mjs",
     "pilot": "node scripts/run-pilot-batch.mjs",
-    "pilot:course-core": "node scripts/run-pilot-batch.mjs --batch batch-002"
+    "pilot:course-core": "node scripts/run-pilot-batch.mjs --batch batch-002",
+    "vm20:batch-003": "node scripts/run-pilot-batch.mjs --batch batch-003"
   }
 }
