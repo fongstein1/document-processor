@@ -61,3 +61,8 @@
   start next.
 - 2026-06-26: Committed the control-plan refresh as `a43b412`, then refreshed
   the current project state so the next batch starts from the new baseline.
+- 2026-06-26: Completed the first three re-bound VM-20 batches. Batch-006
+  captured the Section 3.C assumption slice, batch-007 captured the Section 4
+  deterministic reserve opener, and batch-008 captured the Section 5
+  stochastic reserve opener. Each batch stayed review-only in ignored working
+  storage, and `npm run check` passed across eight validated pilot batches.
