@@ -10,7 +10,7 @@
 
 ## Latest known commit
 
-None yet. This repository was initialized in this session.
+`d3cea90` - Initialize document processor scaffold
 
 ## Validation status
 
@@ -30,6 +30,7 @@ Scaffold validation passed.
 - No inventory, extraction, chunking, or export run has happened yet.
 - The first batch workspace scaffold exists but no real source files have been
   selected yet.
+- The repository is clean on `main` after the first scaffold commit.
 
 ## Current focus
 
