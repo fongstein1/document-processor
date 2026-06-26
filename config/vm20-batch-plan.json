@@ -233,23 +233,25 @@
     {
       "plannedBatchId": "batch-005",
       "topicIds": [
-        "vm20-dr-mechanics"
+        "vm20-npr-mechanics"
       ],
-      "title": "Deterministic reserve mechanics",
+      "title": "NPR mechanics entry point",
       "pageTarget": {
         "knownWindow": [
-          45,
-          51
+          52,
+          57
         ],
         "specificPages": null,
-        "notes": "Pin after NPR because the deterministic reserve text should stay separate."
+        "notes": "Start immediately after the Section 3 applicability opener, keep the NPR setup and formula block together, and stop before Section 3.C assumptions."
       },
-      "rationale": "Keep deterministic reserve treatment isolated from NPR and SR content.",
+      "rationale": "Capture the first NPR calculation structure after the applicability opener while keeping the formula context intact and stopping before Section 3.C assumptions.",
       "reviewComplexity": "high",
       "expectedIssueTypes": [
-        "reserve_boundary",
-        "actuarial_judgment",
-        "citation_precision"
+        "formula_boundary",
+        "terminology_alignment",
+        "calculation_structure",
+        "cross_reference_mapping",
+        "mechanics_boundary"
       ],
       "reviewOnlyByDefault": true
     },

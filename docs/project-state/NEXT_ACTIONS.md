@@ -2,9 +2,9 @@
 
 ## Next immediate task
 
-Review the batch-004 VM-20 role-map output and decide whether the next batch
-should start at the detailed Section 3 calculation terms or whether one more
-boundary slice is needed first.
+Review the batch-005 NPR mechanics entry output and decide whether the next
+batch should begin with Section 3.C assumptions or whether another NPR branch
+needs to be isolated first.
 
 ## Build tasks
 
@@ -12,6 +12,7 @@ boundary slice is needed first.
   approves promotion.
 - Keep batch 003 review-only until the boundary decision is made.
 - Keep batch 004 review-only until the mechanics-start decision is made.
+- Keep batch 005 review-only until the Section 3.C boundary decision is made.
 - Treat `docs/processor/vm20_extraction_plan.md` and
   `config/vm20-batch-plan.json` as the source of truth for the next VM-20
   planning step.
@@ -19,8 +20,10 @@ boundary slice is needed first.
   when the controlled overview batch needs to be regenerated.
 - Use the new `npm run vm20:batch-004` entry for reruns or review refreshes
   when the controlled role-map batch needs to be regenerated.
-- Extend `scripts/batch-definitions.mjs` later, only when the next VM-20
-  mechanics batch is authorized.
+- Use the new `npm run vm20:batch-005` entry for reruns or review refreshes
+  when the NPR mechanics entry batch needs to be regenerated.
+- Extend `scripts/batch-definitions.mjs` later only if the next VM-20 batch
+  needs a new narrow boundary slice beyond the current NPR entry point.
 - Expand validation only if the plan or a later batch reveals a genuine schema
   or workflow gap.
 - Keep app-ready export work deferred until a real promotion candidate exists.
@@ -45,4 +48,8 @@ boundary slice is needed first.
   source file needs to be split across controlled VM-20 batches.
 - Keep role-map completion separate from detailed mechanics so batch numbering
   stays easy to reason about.
+- Keep the NPR setup slice and formula slice together in a narrow review-only
+  entry batch, but stop before Section 3.C assumptions.
+- Keep the PDF extraction runner UTF-8-safe because formula pages can include
+  Unicode minus signs and other non-ASCII glyphs.
 - Commit only lightweight, auditable artifacts.

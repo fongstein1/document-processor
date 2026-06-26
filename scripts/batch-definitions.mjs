@@ -863,4 +863,227 @@ export const batchDefinitions = {
       },
     ],
   },
+  'batch-005': {
+    batchName: 'Controlled VM-20 batch 005 - NPR mechanics entry point',
+    batchSlug: 'vm20-npr-entry-005',
+    batchProfile: 'vm20_npr_mechanics_entry',
+    processingIntentText:
+      'Capture the first NPR mechanics block immediately after the Section 3 applicability opener, including the definition/setup layer and the initial formula block, then stop before Section 3.C assumptions.',
+    processingIntentNotes:
+      'Controlled VM-20 workflow proof only. This batch stays review-only and uses narrow excerpt windows so the NPR entry layer remains separate from later assumptions and margins.',
+    batchSummaryText:
+      'Batch 005 remains review-only. The NPR setup slice and the initial formula slice capture the calculation entry point while the Section 3.C assumptions remain deferred to later batches.',
+    batchSummaryNotes: 'No learner-facing approval is granted.',
+    reviewPacketReason:
+      'This controlled VM-20 batch is intentionally limited to the NPR mechanics entry point and the initial formula block; neither excerpt is approved for promotion.',
+    reviewPacketNextStep:
+      'Confirm whether batch-006 should begin with the Section 3.C assumption block or whether any additional NPR branch needs to be isolated first.',
+    reviewerNotes:
+      'Tiny NPR entry batch only. Keep the work review-first, preserve source-bound locators, and do not promote any item.',
+    reviewPacketFlags: [
+      {
+        flagId: 'flag-vm20-npr-setup',
+        severity: 'medium',
+        sourceId: 'vm20-npr-entry-setup',
+        itemId: 'item-vm20-npr-entry-setup-vm20-npr-005',
+        flagType: 'npr_setup_slice',
+        message:
+          'The initial Section 3.B terms and terminal NPR setup are useful for mechanics orientation, but they remain review-only.',
+        notes: 'Keep review-only and do not promote.',
+      },
+      {
+        flagId: 'flag-vm20-npr-formula',
+        severity: 'medium',
+        sourceId: 'vm20-npr-entry-formula',
+        itemId: 'item-vm20-npr-entry-formula-vm20-npr-005',
+        flagType: 'npr_formula_boundary',
+        message:
+          'The initial formula block captures NPR mechanics but stops before Section 3.C assumptions and later review scope.',
+        notes: 'Suitable for review-only support, not promotion.',
+      },
+    ],
+    reviewPacketCitationIssues: [
+      {
+        issueId: 'citation-vm20-npr-setup-scope',
+        sourceId: 'vm20-npr-entry-setup',
+        itemId: 'item-vm20-npr-entry-setup-vm20-npr-005',
+        issueType: 'excerpt_window',
+        details:
+          'The setup slice spans pages 52-55 and keeps the actual formula block separate for review clarity.',
+        recommendedAction:
+          'Keep the setup slice review-only and use it to orient the calculation structure, not as the full NPR rule.',
+      },
+      {
+        issueId: 'citation-vm20-npr-assumptions-boundary',
+        sourceId: 'vm20-npr-entry-formula',
+        itemId: 'item-vm20-npr-entry-formula-vm20-npr-005',
+        issueType: 'assumptions_boundary',
+        details:
+          'The formula slice ends before Section 3.C on page 58, so mortality, lapse, and interest assumptions remain outside this batch.',
+        recommendedAction:
+          'Keep assumptions for a later batch and do not promote the formula slice as a full NPR treatment.',
+      },
+    ],
+    reviewPacketHumanDecisions: [
+      {
+        decisionId: 'decision-vm20-npr-setup-vs-formula',
+        decisionType: 'scope_split',
+        question:
+          'Should the NPR setup slice stay grouped with the formula block, or should the next batch split off assumptions first?',
+        whyItMatters:
+          'The entry-point batch should stay narrow enough to preserve the formula context without absorbing the Section 3.C assumption block.',
+        recommendedOwner: 'processor owner',
+        priority: 'high',
+      },
+      {
+        decisionId: 'decision-vm20-npr-batch006-start',
+        decisionType: 'coverage_check',
+        question:
+          'Should batch-006 begin with the Section 3.C assumption block, or is there another NPR branch that needs to be isolated first?',
+        whyItMatters:
+          'The next batch should start cleanly at the assumption boundary rather than reopening the mechanics entry layer.',
+        recommendedOwner: 'source reviewer',
+        priority: 'medium',
+      },
+    ],
+    unresolvedIssues: [
+      {
+        issueId: 'issue-vm20-npr-setup-boundary',
+        severity: 'medium',
+        issueType: 'definition_boundary',
+        sourceId: 'vm20-npr-entry-setup',
+        itemId: 'item-vm20-npr-entry-setup-vm20-npr-005',
+        message:
+          'The setup slice introduces the calculation terms but does not by itself complete the NPR mechanics, so it should remain review-only.',
+        recommendedAction:
+          'Use this slice only as mechanics orientation until the formula block is also reviewed.',
+        evidence: 'Pages 52-55 define the key secondary guarantee terms and the terminal NPR setup.',
+      },
+      {
+        issueId: 'issue-vm20-npr-assumptions-boundary',
+        severity: 'medium',
+        issueType: 'mechanics_boundary_confirmation',
+        sourceId: 'vm20-npr-entry-formula',
+        itemId: 'item-vm20-npr-entry-formula-vm20-npr-005',
+        message:
+          'The formula slice reaches the edge of Section 3.C assumptions on page 58, so the next batch should keep mortality, lapse, and interest assumptions separate.',
+        recommendedAction:
+          'Start assumptions in the next batch only if the boundary remains clean.',
+        evidence: 'Page 57 references Section 3.C below.',
+      },
+    ],
+    validationChecks: [
+      {
+        checkId: 'batch-manifest-guardrails',
+        status: 'passed',
+        details: 'Pilot manifest blocks learner-facing promotion and app-ready export.',
+      },
+      {
+        checkId: 'npr-entry-coverage',
+        status: 'passed',
+        details:
+          'The selected pages capture the NPR setup and the initial formula block without crossing into Section 3.C assumptions.',
+      },
+      {
+        checkId: 'source-reference-coverage',
+        status: 'passed',
+        details: 'Each pilot item carries a source reference and a locator appropriate to the file type.',
+      },
+      {
+        checkId: 'formula-context-preserved',
+        status: 'passed',
+        details: 'The setup slice and formula slice stay readable as a small mechanics-entry sequence.',
+      },
+      {
+        checkId: 'unresolved-issues-tracked',
+        status: 'passed',
+        details: 'The review packet and unresolved-issues summary both capture the open review items.',
+      },
+      {
+        checkId: 'no-promotion-output',
+        status: 'passed',
+        details: 'No approved-promoted or app-ready export was produced for the pilot.',
+      },
+      {
+        checkId: 'review-only-guardrails',
+        status: 'passed',
+        details: 'Review packet stays not approved and unresolved issues remain visible for human review.',
+      },
+    ],
+    sourceSelections: [
+      {
+        sourceId: 'vm20-npr-entry-setup',
+        relativePath: 'pbr_data_valuation_manual_2026.pdf',
+        sourceFamilyId: 'valuation_manual_pdfs',
+        documentType: 'valuation_manual_section',
+        sourceTitle: 'Valuation Manual',
+        sourceReference: '2026 NAIC Valuation Manual',
+        versionDate: null,
+        pageWindow: [52, 55],
+        sectionReference: 'Section 3.B.1-3.B.5.c.i.3 (definitions and NPR setup)',
+        citationText:
+          'Section 3.B.4 and Section 3.B.5 provide the calculation of a terminal NPR under the assumption of an annual mode gross premium.',
+        confidence: 'high',
+        reviewFlags: [
+          'core_vm_course',
+          'npr_mechanics',
+          'definition_or_terminology',
+          'regulatory_requirement',
+          'calculation_structure',
+          'cross_reference_mapping',
+        ],
+        reviewStatus: 'draft_candidate',
+        itemKind: 'chunk',
+        notes:
+          'NPR setup slice for the mechanics entry point; keep review-only and do not promote.',
+        summary:
+          'Section 3.B introduces the term definitions for NPR mechanics, including secondary guarantees, fully funded, actual, and level guarantee concepts, plus the terminal NPR setup for term and ULSG categories before the formula block begins.',
+        keywords: ['VM-20', 'NPR', 'secondary guarantee', 'terminal NPR', 'definitions', 'calculation setup'],
+        sourceNotes: 'Pages 52-55 only; setup slice for the NPR mechanics entry point.',
+        artifactProcessingStatus: 'inventoried',
+        inventoryProcessingStatus: 'inventoried',
+        authorityLevel: 'core_manual_section',
+        reviewPacketNotes: 'Setup slice remains review-only until the formula block and later assumptions are reviewed.',
+        reviewPacketIssueCount: 1,
+        reviewPacketProcessingStatus: 'inventoried',
+        nonLearnerFacingNotes: 'Review-only setup slice for the NPR entry batch.',
+      },
+      {
+        sourceId: 'vm20-npr-entry-formula',
+        relativePath: 'pbr_data_valuation_manual_2026.pdf',
+        sourceFamilyId: 'valuation_manual_pdfs',
+        documentType: 'valuation_manual_section',
+        sourceTitle: 'Valuation Manual',
+        sourceReference: '2026 NAIC Valuation Manual',
+        versionDate: null,
+        pageWindow: [56, 57],
+        sectionReference: 'Section 3.B.5.c.i.4 through Section 3.B.5.d (NPR formula and ULSG branch)',
+        citationText: 'The NPR for an insured age x at issue at time t shall be according to the formula below.',
+        confidence: 'high',
+        reviewFlags: [
+          'core_vm_course',
+          'npr_mechanics',
+          'formula_context',
+          'calculation_structure',
+          'mechanics_boundary',
+          'requires_human_interpretation',
+        ],
+        reviewStatus: 'needs_human_review',
+        itemKind: 'review_note',
+        notes:
+          'Formula slice and boundary to Section 3.C assumptions; keep review-only.',
+        summary:
+          'Section 3.B.5.c.i.4 introduces the NPR formula using ASG, FFSG, NSP, and expense allowance terms, and Section 3.B.5.d begins the no-secondary-guarantee branch that remains just before Section 3.C assumptions.',
+        keywords: ['VM-20', 'NPR formula', 'ASG', 'FFSG', 'NSP', 'expense allowance', 'ULSG'],
+        sourceNotes: 'Pages 56-57 only; formula and reserve branch slice for the NPR mechanics entry point.',
+        artifactProcessingStatus: 'review_pending',
+        inventoryProcessingStatus: 'needs_human_review',
+        authorityLevel: 'core_manual_section',
+        reviewPacketNotes: 'Formula slice remains review-only until the assumptions block is captured in a later batch.',
+        reviewPacketIssueCount: 1,
+        reviewPacketProcessingStatus: 'review_pending',
+        nonLearnerFacingNotes: 'Review-only formula slice; not sufficient to teach the full NPR mechanics.',
+      },
+    ],
+  },
 }

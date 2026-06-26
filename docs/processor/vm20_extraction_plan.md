@@ -73,7 +73,7 @@ avoid mixing unrelated reserve concepts in one run.
 | --- | --- | --- | --- | --- |
 | `batch-003` | VM-20 framework overview | Confirm within pages 45-51 | Pin the chapter boundary and terminology before mechanics | Medium |
 | `batch-004` | NPR / DR / SR role map completion | Confirm within pages 45-51 | Complete the high-level role map before detailed NPR mechanics begin | Medium |
-| `batch-005` | Deterministic reserve mechanics | Confirm within pages 45-51 | Keep deterministic reserve treatment separate from NPR and SR content | High |
+| `batch-005` | NPR mechanics entry point | Pages 52-57 | Capture the first NPR calculation structure after the applicability opener and stop before Section 3.C assumptions | High |
 | `batch-006` | Stochastic reserve mechanics | Confirm within pages 45-51 | Separate stochastic reserve modeling from deterministic and net premium language | High |
 | `batch-007` | Exclusion tests | Confirm within pages 45-51 | Split eligibility and exclusion language away from reserve mechanics | Medium |
 | `batch-008` | Assumptions and margins | Confirm within pages 45-51 | Keep assumption and margin language isolated because it usually needs actuarial judgment | High |
@@ -86,7 +86,9 @@ The exact page splits are still to be confirmed. The only confirmed range is
 the batch-002 observation window on pages 45-51. Batch-004 intentionally uses
 the explicit Section 3 / Section 4 / Section 5 role statement on page 48 and
 the Section 3 applicability opener on pages 50-51 to close the framework map
-before the detailed mechanics batches begin.
+before the detailed mechanics batches begin. Batch-005 then starts the NPR
+mechanics entry point on pages 52-57, keeping the setup and formula context
+together while leaving Section 3.C assumptions for later review.
 
 ## Review Standards
 

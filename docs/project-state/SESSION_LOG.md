@@ -48,3 +48,8 @@
   a page-48 role-map slice and a narrow Section 3 opener on pages 50-51.
   Added `npm run vm20:batch-004`, updated the role-map boundary notes in the
   plan/config, and passed `npm run check` across four ignored batches.
+- 2026-06-26: Rebound batch-005 to the NPR mechanics entry point, with a setup
+  slice on pages 52-55 and a formula slice on pages 56-57, then hardened the
+  PDF extraction runner for UTF-8 output so formula-heavy pages with Unicode
+  minus signs would not fail. Ran `npm run vm20:batch-005` and
+  `npm run check` successfully across five ignored batches.

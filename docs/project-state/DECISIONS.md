@@ -103,3 +103,17 @@ For VM-20, the high-level NPR / DR / SR role map should be closed out before
 detailed reserve mechanics begin. If a narrow Section 3 opener is needed to
 confirm the NPR role, it may remain review-only as a boundary slice rather than
 being promoted into mechanics content.
+
+## NPR entry slice boundary
+
+The first NPR mechanics batch should use a narrow entry slice that keeps the
+setup terms and the initial formula block together, then stop before the
+Section 3.C assumptions begin on the following page range. That boundary keeps
+the mechanics entry point review-only while leaving the assumptions work for a
+later batch.
+
+## UTF-8 PDF extraction
+
+The PDF extraction runner should force UTF-8 output when reading formula-heavy
+pages, because the VM-20 manual includes Unicode minus signs and other
+non-ASCII glyphs that can break the default Windows console encoding.

@@ -80,6 +80,8 @@ import sys
 from pathlib import Path
 from PyPDF2 import PdfReader
 
+sys.stdout.reconfigure(encoding="utf-8")
+
 file_path = Path(sys.argv[1])
 start_page = int(sys.argv[2])
 end_page = int(sys.argv[3])
@@ -100,6 +102,10 @@ print(json.dumps({
 `
   const result = spawnSync('python', ['-c', pythonCode, filePath, String(startPage), String(endPage)], {
     encoding: 'utf8',
+    env: {
+      ...process.env,
+      PYTHONIOENCODING: 'utf-8',
+    },
   })
   if (result.status !== 0) {
     throw new Error(
