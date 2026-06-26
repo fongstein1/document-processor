@@ -11,3 +11,9 @@
   plus reusable review-packet templates and demo fixtures. Validation now
   checks the schemas, templates, sample fixtures, and refreshed working batch
   manifest.
+- 2026-06-26: Ran the first tiny real-source pilot batch using a narrow VM
+  guideline, a VM-20 practice note, and a superseded AG 52 text note. Created
+  the pilot batch manifest, source inventory, chunk manifest, extraction
+  output, review packet, validation report, and unresolved-issues summary in
+  ignored working storage, then validated the scaffold and pilot outputs
+  successfully.

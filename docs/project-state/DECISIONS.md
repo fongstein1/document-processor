@@ -48,3 +48,10 @@ source processing should not start until those contracts validate cleanly.
 The committed contract demo fixtures are mock-only examples. They exist to
 prove the contract layer and must not be confused with raw source content or
 learner-facing exports.
+
+## Review-only pilots can omit promotion outputs
+
+Tiny pilot batches are allowed to stay review-only and do not need to produce
+approved-promoted or app-ready exports until a human explicitly approves a
+promotion candidate. The pilot should still produce auditable inventory,
+extraction, chunk, review, validation, and unresolved-issues artifacts.

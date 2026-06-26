@@ -101,6 +101,64 @@ const paths = {
     'batch-001',
     'batch-manifest.json',
   ),
+  pilotChunkManifest: path.join(
+    repoRoot,
+    'data',
+    'work',
+    'batches',
+    'batch-001',
+    'chunk-manifest.json',
+  ),
+  pilotSourceInventory: path.join(
+    repoRoot,
+    'data',
+    'work',
+    'batches',
+    'batch-001',
+    'source-inventory.json',
+  ),
+  pilotExtractionOutput: path.join(
+    repoRoot,
+    'data',
+    'work',
+    'batches',
+    'batch-001',
+    'extraction-output.json',
+  ),
+  pilotReviewPacketJson: path.join(
+    repoRoot,
+    'data',
+    'work',
+    'batches',
+    'batch-001',
+    'review',
+    'review-packet.json',
+  ),
+  pilotReviewPacketMd: path.join(
+    repoRoot,
+    'data',
+    'work',
+    'batches',
+    'batch-001',
+    'review',
+    'review-packet.md',
+  ),
+  pilotValidationReport: path.join(
+    repoRoot,
+    'data',
+    'work',
+    'batches',
+    'batch-001',
+    'validation-report.json',
+  ),
+  pilotUnresolvedIssuesSummary: path.join(
+    repoRoot,
+    'data',
+    'work',
+    'batches',
+    'batch-001',
+    'unresolved-issues-summary.md',
+  ),
 }
 
 const requiredFiles = [
@@ -139,6 +197,7 @@ const requiredFiles = [
   'docs/project-state/SESSION_LOG.md',
   'scripts/bootstrap-small-batch.mjs',
   'scripts/validate-scaffold.mjs',
+  'scripts/run-pilot-batch.mjs',
 ]
 
 const requiredReviewHeadings = [
@@ -240,7 +299,19 @@ const expectedBatchOutputs = [
   'unresolved_issues_summary',
 ]
 
-const validateBatchManifestLike = (manifest, label) => {
+const pilotExpectedOutputs = [
+  'source_inventory',
+  'chunk_manifest',
+  'review_packet',
+  'validation_report',
+  'unresolved_issues_summary',
+]
+
+const validateBatchManifestLike = (manifest, label, options = {}) => {
+  const { mode = 'template' } = options
+  const isPilot = mode === 'pilot'
+  const isScaffold = mode === 'scaffold'
+
   if (!expectObject(manifest, label)) return
 
   const sourceFamilies = manifest.sourceFamilies
@@ -273,6 +344,28 @@ const validateBatchManifestLike = (manifest, label) => {
   if (!expectObject(processingIntent, `${label}.processingIntent`)) return
   if (!expectObject(boundaries, `${label}.boundaries`)) return
   if (!expectObject(reviewStatus, `${label}.reviewStatus`)) return
+
+  if (isPilot && sourceFiles.length === 0) {
+    problems.push(`${label}: pilot batch must include at least one source file`)
+  }
+  if (isPilot && manifest.status !== 'review_pending' && manifest.status !== 'complete') {
+    problems.push(`${label}: pilot batch status must be review_pending or complete`)
+  }
+  if (isPilot && boundaries.noRealProcessing !== false) {
+    problems.push(`${label}.boundaries: noRealProcessing must be false for a real pilot batch`)
+  }
+  if (isScaffold && boundaries.noRealProcessing !== true) {
+    problems.push(`${label}.boundaries: noRealProcessing must be true for scaffold validation`)
+  }
+  if (isPilot && processingIntent.appExportRequested !== false) {
+    problems.push(`${label}.processingIntent: appExportRequested must be false for the pilot batch`)
+  }
+  if (!isPilot && processingIntent.appExportRequested !== true) {
+    problems.push(`${label}.processingIntent: appExportRequested must be true for scaffold validation`)
+  }
+  if (isPilot && !sourceFiles.every((sourceFile) => sourceFile.processingStatus === 'selected')) {
+    problems.push(`${label}.sourceFiles: pilot source files must be marked selected`)
+  }
 
   sourceFamilies.forEach((family, index) => {
     const familyLabel = `${label}.sourceFamilies[${index}]`
@@ -321,14 +414,24 @@ const validateBatchManifestLike = (manifest, label) => {
   if (processingIntent.learnerFacingBlocked !== true) {
     problems.push(`${label}.processingIntent: learnerFacingBlocked must be true`)
   }
-  if (processingIntent.appExportRequested !== true) {
-    problems.push(`${label}.processingIntent: appExportRequested must be true`)
-  }
   if (processingIntent.ragReadinessRequested !== true) {
     problems.push(`${label}.processingIntent: ragReadinessRequested must be true`)
   }
   if (processingIntent.reviewStrategy !== 'exception_first') {
     problems.push(`${label}.processingIntent: reviewStrategy must be exception_first`)
+  }
+  if (isPilot) {
+    ;['inventory', 'extraction', 'chunking', 'labeling', 'review', 'validation'].forEach((stage) => {
+      if (!processingIntent.pipelineStages.includes(stage)) {
+        problems.push(`${label}.processingIntent: pilot batch must include pipeline stage ${stage}`)
+      }
+    })
+    if (processingIntent.pipelineStages.includes('promotion')) {
+      problems.push(`${label}.processingIntent: pilot batch must not include promotion stage`)
+    }
+    if (processingIntent.pipelineStages.includes('export')) {
+      problems.push(`${label}.processingIntent: pilot batch must not include export stage`)
+    }
   }
 
   if (boundaries.rawMaterialExternal !== true) {
@@ -336,9 +439,6 @@ const validateBatchManifestLike = (manifest, label) => {
   }
   if (boundaries.gitExcludesRawFiles !== true) {
     problems.push(`${label}.boundaries: gitExcludesRawFiles must be true`)
-  }
-  if (boundaries.noRealProcessing !== true) {
-    problems.push(`${label}.boundaries: noRealProcessing must be true`)
   }
   if (boundaries.noLearnerFacingPromotion !== true) {
     problems.push(`${label}.boundaries: noLearnerFacingPromotion must be true`)
@@ -353,11 +453,19 @@ const validateBatchManifestLike = (manifest, label) => {
   if (!Array.isArray(manifest.expectedOutputs)) {
     problems.push(`${label}: expectedOutputs must be an array`)
   } else {
-    expectedBatchOutputs.forEach((output) => {
+    const requiredOutputs = isPilot ? pilotExpectedOutputs : expectedBatchOutputs
+    requiredOutputs.forEach((output) => {
       if (!manifest.expectedOutputs.includes(output)) {
         problems.push(`${label}: expectedOutputs missing ${output}`)
       }
     })
+    if (isPilot) {
+      ['approved_promoted_export', 'app_ready_export'].forEach((output) => {
+        if (manifest.expectedOutputs.includes(output)) {
+          problems.push(`${label}: pilot batch must not expect ${output}`)
+        }
+      })
+    }
   }
 
   if (reviewStatus.defaultStatus !== 'draft_candidate') {
@@ -378,6 +486,61 @@ const validateBatchManifestLike = (manifest, label) => {
   if (reviewStatus.reviewPacketRequired !== true) {
     problems.push(`${label}.reviewStatus: reviewPacketRequired must be true`)
   }
+}
+
+const validateChunkManifestLike = (chunkManifest, label) => {
+  if (!expectObject(chunkManifest, label)) return
+  if (chunkManifest.schemaVersion !== '1.0') {
+    problems.push(`${label}: schemaVersion must be 1.0`)
+  }
+  ;['chunkManifestId', 'batchId', 'generatedAt', 'processingStatus'].forEach((field) => {
+    if (!hasString(chunkManifest[field])) {
+      problems.push(`${label}: missing ${field}`)
+    }
+  })
+  if (!expectArray(chunkManifest.sourceFiles, `${label}.sourceFiles`, false)) return
+  if (!expectArray(chunkManifest.chunks, `${label}.chunks`, false)) return
+  chunkManifest.sourceFiles.forEach((item, index) => {
+    const itemLabel = `${label}.sourceFiles[${index}]`
+    if (!expectObject(item, itemLabel)) return
+    ;['sourceId', 'filename', 'sourceFamilyId', 'domainId', 'documentType', 'processingStatus', 'notes'].forEach(
+      (field) => {
+        if (!hasString(item[field])) {
+          problems.push(`${itemLabel}: missing ${field}`)
+        }
+      },
+    )
+  })
+  chunkManifest.chunks.forEach((chunk, index) => {
+    const chunkLabel = `${label}.chunks[${index}]`
+    if (!expectObject(chunk, chunkLabel)) return
+    ;[
+      'stableId',
+      'chunkId',
+      'sourceId',
+      'sourceFamilyId',
+      'domainId',
+      'documentType',
+      'chunkText',
+      'summary',
+      'confidence',
+      'reviewStatus',
+      'nonLearnerFacingNotes',
+    ].forEach((field) => {
+      if (!hasString(chunk[field])) {
+        problems.push(`${chunkLabel}: missing ${field}`)
+      }
+    })
+    if (!expectArray(chunk.keywords, `${chunkLabel}.keywords`, false)) return
+    if (!expectArray(chunk.citations, `${chunkLabel}.citations`, false)) return
+    if (!expectArray(chunk.reviewFlags, `${chunkLabel}.reviewFlags`, false)) return
+    if (chunk.learnerFacingEligible !== false) {
+      problems.push(`${chunkLabel}: learnerFacingEligible must be false`)
+    }
+    if (chunk.appReadyEligible !== false) {
+      problems.push(`${chunkLabel}: appReadyEligible must be false`)
+    }
+  })
 }
 
 const validateSourceInventoryLike = (inventory, label) => {
@@ -658,6 +821,51 @@ const validateReviewMarkdown = async (filePath, label) => {
   }
 }
 
+const validateValidationReportLike = (report, label) => {
+  if (!expectObject(report, label)) return
+  if (report.schemaVersion !== '1.0') {
+    problems.push(`${label}: schemaVersion must be 1.0`)
+  }
+  ;['reportId', 'batchId', 'generatedAt', 'status'].forEach((field) => {
+    if (!hasString(report[field])) {
+      problems.push(`${label}: missing ${field}`)
+    }
+  })
+  if (report.status !== 'passed') {
+    problems.push(`${label}: status must be passed`)
+  }
+  if (!expectObject(report.checkedArtifacts, `${label}.checkedArtifacts`)) return
+  if (!expectObject(report.pilotSummary, `${label}.pilotSummary`)) return
+  if (!Array.isArray(report.notes) || report.notes.length === 0) {
+    problems.push(`${label}: notes must be a non-empty array`)
+  }
+  ;['batchManifest', 'sourceInventory', 'chunkManifest', 'extractionOutput', 'reviewPacketJson', 'reviewPacketMd', 'unresolvedIssuesSummary'].forEach(
+    (field) => {
+      if (!hasString(report.checkedArtifacts[field])) {
+        problems.push(`${label}.checkedArtifacts: missing ${field}`)
+      }
+    },
+  )
+  ;['selectedSourceCount', 'extractedItemCount', 'reviewOnlyItemCount', 'exceptionCount'].forEach((field) => {
+    if (!Number.isInteger(report.pilotSummary[field])) {
+      problems.push(`${label}.pilotSummary: ${field} must be an integer`)
+    }
+  })
+}
+
+const validateUnresolvedIssuesSummary = async (filePath, label) => {
+  const text = await readText(filePath)
+  if (!text.trim()) {
+    problems.push(`${label}: must not be empty`)
+  }
+  if (!text.includes('AG 52')) {
+    problems.push(`${label}: must mention AG 52`)
+  }
+  if (!text.includes('review-only')) {
+    problems.push(`${label}: must mention review-only handling`)
+  }
+}
+
 for (const relativePath of requiredFiles) {
   await requireFile(relativePath)
 }
@@ -682,7 +890,12 @@ validateSchemaEnvelope(reviewPacketSchema, 'review-packet.schema.json')
 
 validateBatchManifestLike(batchManifestTemplate, 'batch-manifest.template.json')
 validateBatchManifestLike(sampleBatchManifest, 'batch-manifest.sample.json')
-validateBatchManifestLike(workingBatchManifest, 'data/work/batches/batch-001/batch-manifest.json')
+const workingBatchIsPilot =
+  Array.isArray(workingBatchManifest.sourceFiles) && workingBatchManifest.sourceFiles.length > 0
+
+validateBatchManifestLike(workingBatchManifest, 'data/work/batches/batch-001/batch-manifest.json', {
+  mode: workingBatchIsPilot ? 'pilot' : 'scaffold',
+})
 
 validateSourceInventoryLike(sampleSourceInventory, 'source-inventory.sample.json')
 validateExtractionOutputLike(sampleExtractionOutput, 'extraction-output.sample.json')
@@ -702,6 +915,39 @@ if (!Array.isArray(config.domains) || config.domains.length < 3) {
   problems.push('config/source-families.json: expected portability domains to be present')
 }
 
+if (workingBatchIsPilot) {
+  const pilotRequiredFiles = [
+    'data/work/batches/batch-001/source-inventory.json',
+    'data/work/batches/batch-001/chunk-manifest.json',
+    'data/work/batches/batch-001/extraction-output.json',
+    'data/work/batches/batch-001/review/review-packet.json',
+    'data/work/batches/batch-001/review/review-packet.md',
+    'data/work/batches/batch-001/validation-report.json',
+    'data/work/batches/batch-001/unresolved-issues-summary.md',
+  ]
+
+  for (const relativePath of pilotRequiredFiles) {
+    await requireFile(relativePath)
+  }
+
+  const pilotSourceInventory = await readJson(paths.pilotSourceInventory)
+  const pilotChunkManifest = await readJson(paths.pilotChunkManifest)
+  const pilotExtractionOutput = await readJson(paths.pilotExtractionOutput)
+  const pilotReviewPacketJson = await readJson(paths.pilotReviewPacketJson)
+  const pilotValidationReport = await readJson(paths.pilotValidationReport)
+
+  validateSourceInventoryLike(pilotSourceInventory, 'data/work/batches/batch-001/source-inventory.json')
+  validateChunkManifestLike(pilotChunkManifest, 'data/work/batches/batch-001/chunk-manifest.json')
+  validateExtractionOutputLike(pilotExtractionOutput, 'data/work/batches/batch-001/extraction-output.json')
+  validateReviewPacketLike(pilotReviewPacketJson, 'data/work/batches/batch-001/review/review-packet.json')
+  validateValidationReportLike(pilotValidationReport, 'data/work/batches/batch-001/validation-report.json')
+  await validateReviewMarkdown(paths.pilotReviewPacketMd, 'data/work/batches/batch-001/review/review-packet.md')
+  await validateUnresolvedIssuesSummary(
+    paths.pilotUnresolvedIssuesSummary,
+    'data/work/batches/batch-001/unresolved-issues-summary.md',
+  )
+}
+
 if (problems.length > 0) {
   console.error('Scaffold validation failed.')
   for (const problem of problems) {
@@ -715,6 +961,11 @@ if (problems.length > 0) {
   console.log(`- Demo sources in inventory sample: ${sampleSourceInventory.items.length}`)
   console.log(`- Demo source groups in extraction sample: ${sampleExtractionOutput.sourceGroups.length}`)
   console.log(`- Review packet headings verified: ${requiredReviewHeadings.length}`)
+  if (workingBatchIsPilot) {
+    console.log(`- Pilot source files: ${workingBatchManifest.sourceFiles.length}`)
+    console.log(`- Pilot extracted items: ${workingBatchManifest.sourceFiles.length}`)
+    console.log(`- Pilot review packet: validated`)
+  }
 }
 
 for (const warning of warnings) {

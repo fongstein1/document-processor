@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "bootstrap": "node scripts/bootstrap-small-batch.mjs",
-    "check": "node scripts/validate-scaffold.mjs"
+    "check": "node scripts/validate-scaffold.mjs",
+    "pilot": "node scripts/run-pilot-batch.mjs"
   }
 }

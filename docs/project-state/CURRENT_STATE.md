@@ -8,32 +8,37 @@
 
 `main`
 
-## Latest known commit
+## Latest known commit before this pilot commit
 
-`24330e5` - Add processor contract layer
+`43baf45` - Refresh processor state docs
 
 ## Validation status
 
-Scaffold validation passed for the first contract layer.
+Scaffold validation now also passes for the first real pilot batch.
 
 - `npm run bootstrap`: passed; refreshed `data/work/batches/batch-001/batch-manifest.json`
+- `npm run pilot`: passed; created the tiny real-source pilot batch outputs in
+  `data/work/batches/batch-001/`
 - `npm run check`: passed; confirmed the schemas, templates, demo fixtures,
-  and refreshed batch manifest
+  scaffold/pilot batch manifest rules, and the pilot review packet
 
 ## Working posture
 
 - Raw source material stays external at
   `D:\Work\AI Projects\NAIC Valuation Manual Course`.
 - The reference app repo is read-only context only.
-- This repo currently contains the processor scaffold, config, schemas,
-  templates, demo fixtures, and state docs only.
-- No inventory, extraction, chunking, or export run has happened yet.
-- The first batch workspace scaffold exists but no real source files have been
-  selected yet.
-- The repository is currently clean on `main` apart from this state refresh,
-  and the refreshed working manifest remains ignored.
+- This repo now contains the processor scaffold, config, schemas, templates,
+  demo fixtures, state docs, and one tiny real-source pilot batch in ignored
+  working storage.
+- The pilot batch selected 3 real source files and produced source inventory,
+  chunk manifest, extraction output, review packet, validation report, and
+  unresolved-issues summary artifacts.
+- No learner-facing or app-ready promotion has been produced.
+- The real pilot outputs remain ignored under `data/work/`.
+- The repository will be clean on `main` once this state refresh is committed,
+  aside from ignored working files.
 
 ## Current focus
 
-Select the first small representative source batch and begin the real
-inventory/extraction pipeline only after the contract layer is approved.
+Keep the pilot batch review-only, resolve the AG 52 edge-case disposition, and
+use the tiny pilot as the baseline for the next small source batch.

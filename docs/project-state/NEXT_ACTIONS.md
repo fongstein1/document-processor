@@ -2,20 +2,18 @@
 
 ## Next immediate task
 
-Choose the first small source batch and decide which family will be used for
-the pilot. The contract layer is ready.
+Review the first tiny pilot batch, confirm the AG 52 edge-case disposition, and
+decide whether the next tiny batch should stay within NAIC guideline/practice
+note material or widen to another source family.
 
 ## Build tasks
 
-- Create inventory extraction logic for the selected batch.
-- Add chunk manifest generation with stable IDs and source references.
-- Add review-packet generation focused on exceptions and promotion candidates.
-- Add a sanitized app-ready export shape that does not change the app UI.
-- Add validation checks for source references, chunk IDs, and learner-facing
-  eligibility.
-- Use the external raw source root and keep every raw file out of Git.
-- Use the new schemas and review-packet templates as the contract foundation
-  for the first real source run.
+- Confirm the AG 52 edge-case disposition and keep it review-only unless a
+  human reviewer says otherwise.
+- Choose the next tiny batch, either another narrow VM source or a first look
+  at a neighboring family.
+- Expand validation only if the pilot reveals a genuine schema or workflow gap.
+- Keep app-ready export work deferred until a real promotion candidate exists.
 
 ## Source-family tasks
 
@@ -27,4 +25,6 @@ the pilot. The contract layer is ready.
 
 - Keep raw source material out of Git.
 - Keep generated heavy outputs in ignored working folders.
+- Keep pilot batches tiny and review-first until the citation pattern is
+  confirmed.
 - Commit only lightweight, auditable artifacts.
