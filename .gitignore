@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.tmp-tests/
+*.log
+.DS_Store
+
+data/cache/
+data/extracted/
+data/generated/
+data/raw/
+data/work/

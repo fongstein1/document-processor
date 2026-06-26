@@ -1,0 +1,10 @@
+{
+  "name": "document-processor",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "bootstrap": "node scripts/bootstrap-small-batch.mjs",
+    "check": "node scripts/validate-scaffold.mjs"
+  }
+}

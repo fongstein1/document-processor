@@ -1,0 +1,118 @@
+{
+  "project": {
+    "name": "Document Processor",
+    "purpose": "Build a source-bound document-processing factory for NAIC valuation, regulatory, pricing, liability-modeling, and governance material.",
+    "rawSourceRoot": "D:\\Work\\AI Projects\\NAIC Valuation Manual Course",
+    "referenceAppRepo": "C:\\Users\\David\\Documents\\Codex\\2026-06-23\\please-build-a-self-hosted-elearning"
+  },
+  "domains": [
+    {
+      "domainId": "naic_regulatory",
+      "label": "NAIC Regulatory Documents",
+      "description": "Current project focus for NAIC valuation, regulations, and guidance.",
+      "sourceFamilyIds": [
+        "valuation_manual_pdfs",
+        "actuarial_guidelines",
+        "practice_notes",
+        "ny_regulations"
+      ]
+    },
+    {
+      "domainId": "pricing_documents",
+      "label": "Pricing Documents",
+      "description": "Future portability target for pricing and rate-setting source material.",
+      "sourceFamilyIds": []
+    },
+    {
+      "domainId": "liability_modeling",
+      "label": "Liability Modeling Documents",
+      "description": "Future portability target for liability-model documentation and evidence.",
+      "sourceFamilyIds": []
+    },
+    {
+      "domainId": "actuarial_governance",
+      "label": "Actuarial Governance and Process Documents",
+      "description": "Future portability target for actuarial governance and workflow material.",
+      "sourceFamilyIds": []
+    }
+  ],
+  "sourceFamilies": [
+    {
+      "familyId": "valuation_manual_pdfs",
+      "label": "Valuation Manual PDFs",
+      "domainId": "naic_regulatory",
+      "sourceRoots": [
+        "D:\\Work\\AI Projects\\NAIC Valuation Manual Course"
+      ],
+      "includes": [
+        "lhmanual26.pdf",
+        "pbr_data_valuation_manual_2026.pdf"
+      ],
+      "notes": "Root PDFs in the raw source folder."
+    },
+    {
+      "familyId": "actuarial_guidelines",
+      "label": "Actuarial Guidelines",
+      "domainId": "naic_regulatory",
+      "sourceRoots": [
+        "D:\\Work\\AI Projects\\NAIC Valuation Manual Course\\Actuarial Guidelines"
+      ],
+      "notes": "Actuarial guideline source family."
+    },
+    {
+      "familyId": "practice_notes",
+      "label": "Practice Notes",
+      "domainId": "naic_regulatory",
+      "sourceRoots": [
+        "D:\\Work\\AI Projects\\NAIC Valuation Manual Course\\Practice Notes"
+      ],
+      "notes": "Practice-note source family."
+    },
+    {
+      "familyId": "ny_regulations",
+      "label": "NY Regulations",
+      "domainId": "naic_regulatory",
+      "sourceRoots": [
+        "D:\\Work\\AI Projects\\NAIC Valuation Manual Course\\NY Regulations"
+      ],
+      "notes": "State-regulation source family for portability testing."
+    }
+  ],
+  "batchDefaults": {
+    "mode": "small_pilot",
+    "reviewStrategy": "exception_first",
+    "promotionGate": "source citation exists, source support is clear, wording is not misleading, confidence is high, and no unresolved review flags exist"
+  },
+  "outputContracts": [
+    "source_inventory",
+    "chunk_manifest",
+    "review_packet",
+    "approved_promoted_export",
+    "app_ready_export",
+    "validation_report",
+    "unresolved_issues_summary"
+  ],
+  "reviewPolicy": {
+    "defaultStatus": "draft_candidate",
+    "needsHumanReviewLabel": "needs_human_review",
+    "reviewFocus": "exceptions_only"
+  },
+  "privacyPolicy": {
+    "rawMaterialsStayExternal": true,
+    "doNotCommit": [
+      "raw internal documents",
+      "proprietary pricing files",
+      "liability model documentation",
+      "videos",
+      "large PDFs",
+      "sensitive data"
+    ],
+    "trackedArtifacts": [
+      "manifests",
+      "schemas",
+      "scripts",
+      "docs",
+      "sanitized exports"
+    ]
+  }
+}
