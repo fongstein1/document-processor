@@ -59,3 +59,5 @@
   the project-state docs to reflect the Section 3.C through Section 9 batch
   sequence. `npm run check` passed after the rebind, and batch-006 is ready to
   start next.
+- 2026-06-26: Committed the control-plan refresh as `a43b412`, then refreshed
+  the current project state so the next batch starts from the new baseline.

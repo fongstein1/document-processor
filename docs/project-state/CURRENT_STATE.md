@@ -10,7 +10,7 @@
 
 ## Latest known commit before this batch
 
-`16d7ea8aef162ae3468ad774e2e7a4766809b01f`
+`a43b412`
 
 ## Validation status
 
@@ -29,6 +29,8 @@ and the re-bound remaining VM-20 batch plan validate cleanly.
   review-packet contracts, the VM-20 plan artifacts, the no-promotion
   guardrails, and the synchronized batch definitions for batches 003-012
 
+The control-plan refresh commit re-bound batches 006-012 to the actual PDF
+section order and added runner shortcuts for the remaining controlled slices.
 The remaining VM-20 batches are now re-bound to the actual section order in
 the PDF. Batch-006 is ready to start the Section 3.C assumption slice, and
 the remaining windows follow the deterministic reserve, stochastic reserve,
