@@ -10,7 +10,7 @@
 
 ## Latest known commit
 
-`e62e99f` - Record scaffold validation state
+`24330e5` - Add processor contract layer
 
 ## Validation status
 
@@ -30,7 +30,7 @@ Scaffold validation passed for the first contract layer.
 - No inventory, extraction, chunking, or export run has happened yet.
 - The first batch workspace scaffold exists but no real source files have been
   selected yet.
-- The repository is clean on `main` after the latest committed scaffold state,
+- The repository is currently clean on `main` apart from this state refresh,
   and the refreshed working manifest remains ignored.
 
 ## Current focus
