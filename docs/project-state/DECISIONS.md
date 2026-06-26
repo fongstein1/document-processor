@@ -68,3 +68,17 @@ page citation that does not exist.
 Pilot review packets should make unresolved issues and no-promotion guardrails
 explicit so the reviewer can focus on exceptions, citation gaps, and approval
 gates without guessing at hidden status.
+
+## Batch definitions drive pilot runs
+
+Tiny pilot batches should be declared in `scripts/batch-definitions.mjs`, and
+the runner should read that definition instead of hard-coding batch-specific
+logic. The check script should scan whatever working batches exist and apply
+the same guardrails to each one.
+
+## Core VM slices stay narrow until expanded
+
+Reserve-mechanics, reporting cross-references, and definition slices from the
+core Valuation Manual may stay review-only when they are intentionally narrow.
+Human review should decide when to split them further or add later reporting
+pages before any promotion is considered.

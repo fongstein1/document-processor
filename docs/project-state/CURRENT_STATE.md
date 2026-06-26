@@ -10,18 +10,17 @@
 
 ## Latest known commit before this pilot commit
 
-`43baf45` - Refresh processor state docs
+`471e71cf`
 
 ## Validation status
 
-Scaffold validation now also passes for the first real pilot batch.
+The scaffold and both tiny real-source pilot batches validate cleanly.
 
-- `npm run bootstrap`: passed; refreshed `data/work/batches/batch-001/batch-manifest.json`
-- `npm run pilot`: passed; created the tiny real-source pilot batch outputs in
-  `data/work/batches/batch-001/`
+- `npm run pilot:course-core`: passed; created the core VM course pilot batch
+  outputs in `data/work/batches/batch-002/`
 - `npm run check`: passed; confirmed the schemas, templates, demo fixtures,
-  scaffold/pilot batch manifest rules, the pilot review packet, and the
-  no-promotion guardrails
+  review-packet contracts, and no-promotion guardrails across both ignored
+  pilot batches
 
 ## Working posture
 
@@ -29,14 +28,14 @@ Scaffold validation now also passes for the first real pilot batch.
   `D:\Work\AI Projects\NAIC Valuation Manual Course`.
 - The reference app repo is read-only context only.
 - This repo now contains the processor scaffold, config, schemas, templates,
-  demo fixtures, state docs, and one tiny real-source pilot batch in ignored
+  demo fixtures, state docs, and two tiny real-source pilot batches in ignored
   working storage.
-- The pilot batch selected 3 real source files and produced source inventory,
-  chunk manifest, extraction output, review packet, validation report, and
-  unresolved-issues summary artifacts.
-- The hardened pilot review packet now carries source references, locators,
-  unresolved issues, and validation checks that keep review-only status
-  explicit.
+- Batch 001 remains the mixed-source pilot, and batch 002 now proves a tiny
+  core Valuation Manual course slice with VM-20 reserve mechanics plus VM-31
+  reporting and definition boundaries.
+- The batch-002 review packet explicitly separates extracted facts, human
+  decisions, unresolved issues, exception flags, promotion status, and
+  learner-facing/app-ready status.
 - No learner-facing or app-ready promotion has been produced.
 - The real pilot outputs remain ignored under `data/work/`.
 - The repository will be clean on `main` once this state refresh is committed,
@@ -44,5 +43,6 @@ Scaffold validation now also passes for the first real pilot batch.
 
 ## Current focus
 
-Keep the pilot batch review-only, resolve the AG 52 edge-case disposition,
-and use the hardened pilot as the baseline for the next small source batch.
+Keep the course-core pilot review-only, resolve the VM-20 and VM-31 boundary
+questions, and use the batch-002 result as the baseline before any broader
+expansion.

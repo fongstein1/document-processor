@@ -3,15 +3,33 @@ import fs from 'node:fs/promises'
 import path from 'node:path'
 import { spawnSync } from 'node:child_process'
 import { fileURLToPath } from 'node:url'
+import { batchDefinitions } from './batch-definitions.mjs'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 const repoRoot = path.resolve(__dirname, '..')
 
 const rawRoot = 'D:\\Work\\AI Projects\\NAIC Valuation Manual Course'
-const batchId = 'batch-001'
-const batchName = 'Pilot batch 001 - narrow VM sources'
-const batchSlug = 'pilot-001'
+const getCliArg = (flag, fallback) => {
+  const index = process.argv.indexOf(`--${flag}`)
+  if (index >= 0 && index + 1 < process.argv.length) {
+    const value = process.argv[index + 1]
+    if (!value.startsWith('--')) {
+      return value
+    }
+  }
+  return fallback
+}
+const requestedBatchId = getCliArg('batch', 'batch-001')
+const batchDefinition = batchDefinitions[requestedBatchId]
+if (!batchDefinition) {
+  throw new Error(`Unknown batch id: ${requestedBatchId}`)
+}
+const batchId = requestedBatchId
+const batchName = batchDefinition.batchName
+const batchSlug = batchDefinition.batchSlug
+const batchProfile = batchDefinition.batchProfile
+const sourceSelections = batchDefinition.sourceSelections
 const batchRoot = path.join(repoRoot, 'data', 'work', 'batches', batchId)
 const reviewRoot = path.join(batchRoot, 'review')
 const validationReportPath = path.join(batchRoot, 'validation-report.json')
@@ -107,67 +125,18 @@ const reviewTemplatePath = path.join(
 const config = await readJson(configPath)
 const manifestTemplate = await readJson(manifestTemplatePath)
 const reviewTemplate = await readJson(reviewTemplatePath)
-
-const sourceSelections = [
-  {
-    sourceId: 'ag53-aat-2022',
-    relativePath: 'Actuarial Guidelines/AG 53-AAT as adopted by LATF-20220616.pdf',
-    sourceFamilyId: 'actuarial_guidelines',
-    documentType: 'actuarial_guideline',
-    sourceTitle: 'Actuarial Guideline AAT',
-    sourceReference: 'Adopted by the Life Actuarial (A) Task Force June 16, 2022',
-    versionDate: '2022-06-16',
-    pageWindow: [1, 2],
-    confidence: 'high',
-    reviewFlags: ['pilot_slice'],
-    reviewStatus: 'draft_candidate',
-    itemKind: 'chunk',
-    notes: 'Primary narrow VM-related source for the first pilot batch.',
-    summary:
-      'Adopted AAT guideline explains why VM-30 asset adequacy analysis needs uniform support for assumptions and defines applicability thresholds and asset types.',
-    keywords: ['VM-30', 'asset adequacy analysis', 'complex assets', 'reserves', 'definitions'],
-    sourceNotes: 'First two pages only; enough to exercise source-bound extraction.',
-  },
-  {
-    sourceId: 'vm20-practice-note-2020',
-    relativePath: 'Practice Notes/AAA - VM-20_PN_2020_Version.pdf',
-    sourceFamilyId: 'practice_notes',
-    documentType: 'practice_note',
-    sourceTitle: 'Life Principle-Based Reserves (PBR) Under VM-20',
-    sourceReference: 'American Academy of Actuaries practice note, April 2020',
-    versionDate: null,
-    pageWindow: [1, 3],
-    confidence: 'high',
-    reviewFlags: ['non_binding_guidance'],
-    reviewStatus: 'draft_candidate',
-    itemKind: 'chunk',
-    notes: 'Companion source for the pilot batch; serves as a supporting practice note.',
-    summary:
-      "Practice note identifies itself as non-binding guidance for VM-20 PBR, warns later events may make it obsolete, and lists the note's update work group.",
-    keywords: ['VM-20', 'practice note', 'PBR', 'non-binding', 'guidance'],
-    sourceNotes: 'First three pages only; title, disclaimer, and table of contents slice.',
-  },
-  {
-    sourceId: 'ag52-early-adoption-text',
-    relativePath:
-      'Actuarial Guidelines/AG 52-Early Adoption of VM-21 for VA in 2019-repealed-as of 2020.txt',
-    sourceFamilyId: 'actuarial_guidelines',
-    documentType: 'actuarial_guideline_text',
-    sourceTitle: 'Variable Annuity Early Adoption',
-    sourceReference: 'Plain text guideline note',
-    versionDate: null,
-    pageWindow: null,
-    confidence: 'high',
-    reviewFlags: ['superseded_or_repealed'],
-    reviewStatus: 'needs_human_review',
-    itemKind: 'review_note',
-    notes: 'Edge-case text file; retained to test exception-first handling of superseded guidance.',
-    summary:
-      'Text note says a company may elect early adoption of VM-21 for the December 31, 2019 valuation, requires related AG XLIII, RBC, and VM-31 treatment, and states AG 52 is no longer applicable as of 2020.',
-    keywords: ['VM-21', 'early adoption', 'repealed', 'superseded', 'text note'],
-    sourceNotes: 'Plain text source; no page numbers are available, so line references are used.',
-  },
-]
+const reviewPacketFlags = batchDefinition.reviewPacketFlags ?? []
+const reviewPacketCitationIssues = batchDefinition.reviewPacketCitationIssues ?? []
+const reviewPacketHumanDecisions = batchDefinition.reviewPacketHumanDecisions ?? []
+const unresolvedIssues = batchDefinition.unresolvedIssues ?? []
+const validationChecks = batchDefinition.validationChecks ?? []
+const processingIntentText = batchDefinition.processingIntentText
+const processingIntentNotes = batchDefinition.processingIntentNotes
+const batchSummaryText = batchDefinition.batchSummaryText
+const batchSummaryNotes = batchDefinition.batchSummaryNotes
+const reviewPacketReason = batchDefinition.reviewPacketReason
+const reviewPacketNextStep = batchDefinition.reviewPacketNextStep
+const reviewerNotes = batchDefinition.reviewerNotes
 
 const sourceFamiliesById = new Map(config.sourceFamilies.map((family) => [family.familyId, family]))
 const selectedFamilies = ensureArray(sourceSelections)
@@ -184,10 +153,6 @@ const extractedSourceGroups = []
 const chunkManifestChunks = []
 const reviewPacketSourceFiles = []
 const reviewPacketItems = []
-const reviewPacketFlags = []
-const reviewPacketCitationIssues = []
-const reviewPacketHumanDecisions = []
-const unresolvedIssueLines = []
 
 for (const [index, selection] of sourceSelections.entries()) {
   const filePath = rawPath(selection.relativePath)
@@ -212,10 +177,12 @@ for (const [index, selection] of sourceSelections.entries()) {
   let sectionReference = null
   let lineReference = null
   let citations = []
-  let processingStatus = 'inventoried'
+  let processingStatus = selection.artifactProcessingStatus ?? 'inventoried'
   let itemReviewFlags = [...selection.reviewFlags]
   let itemReviewStatus = selection.reviewStatus
-  let nonLearnerFacingNotes = 'Pilot batch item; retain as review-only until the pilot is explicitly expanded.'
+  let nonLearnerFacingNotes =
+    selection.nonLearnerFacingNotes ??
+    'Pilot batch item; retain as review-only until the pilot is explicitly expanded.'
   let itemKind = selection.itemKind
   let chunkId = `chunk-${selection.sourceId}-${batchSlug}`
   let extractedItemId = `item-${selection.sourceId}-${batchSlug}`
@@ -233,16 +200,10 @@ for (const [index, selection] of sourceSelections.entries()) {
       pdfSlice.pages.map((page) => page.text || '').join('\n'),
     )
     pageReference = `pp. ${startPage}-${endPage}`
-    sectionReference =
-      selection.sourceId === 'ag53-aat-2022'
-        ? 'Background / applicability / definitions'
-        : 'Introduction / disclaimer / table of contents'
+    sectionReference = selection.sectionReference ?? 'n/a'
     citations = [
       {
-        citationText:
-          selection.sourceId === 'ag53-aat-2022'
-            ? 'Adopted by the Life Actuarial (A) Task Force June 16, 2022'
-            : 'A PUBLIC POLICY PRACTICE NOTE',
+        citationText: selection.citationText ?? selection.sourceReference ?? selection.sourceTitle,
         pageReference,
         sectionReference,
         sourceReference: selection.sourceReference,
@@ -250,10 +211,6 @@ for (const [index, selection] of sourceSelections.entries()) {
         pageEnd: endPage,
       },
     ]
-    if (selection.sourceId === 'vm20-practice-note-2020') {
-      itemReviewFlags = [...itemReviewFlags, 'supporting_source']
-      itemReviewStatus = 'draft_candidate'
-    }
   } else {
     const text = await fs.readFile(filePath, 'utf8')
     const lines = text.replace(/\r/g, '').split('\n')
@@ -262,23 +219,22 @@ for (const [index, selection] of sourceSelections.entries()) {
     sliceText = cleanedLines.join('\n')
     normalizedText = normalizeWhitespace(sliceText)
     lineReference = `lines 1-${lineCount}`
-    sectionReference = 'Closing note'
+    sectionReference = selection.sectionReference ?? 'n/a'
     pageCount = null
     citations = [
       {
-        citationText: 'As of 2020, AG 52 is no longer applicable.',
+        citationText: selection.citationText ?? selection.sourceReference ?? selection.sourceTitle,
         lineReference,
         sectionReference,
         sourceReference: selection.sourceReference,
       },
     ]
-    itemReviewStatus = 'needs_human_review'
+    itemReviewStatus = selection.reviewStatus ?? 'needs_human_review'
     itemReviewFlags = [...itemReviewFlags, 'line_reference_only']
-    processingStatus = 'review_pending'
+    processingStatus = selection.artifactProcessingStatus ?? 'review_pending'
     nonLearnerFacingNotes =
-      'Edge-case text note retained for exception-first review only; the source itself says AG 52 is no longer applicable as of 2020.'
-    chunkId = `chunk-${selection.sourceId}-${batchSlug}`
-    extractedItemId = `item-${selection.sourceId}-${batchSlug}`
+      selection.nonLearnerFacingNotes ??
+      'Edge-case text note retained for exception-first review only.'
   }
 
   const sourceArtifact = {
@@ -293,7 +249,7 @@ for (const [index, selection] of sourceSelections.entries()) {
     versionDate: selection.versionDate,
     pageCount,
     processingStatus,
-    notes: selection.sourceNotes,
+    notes: selection.sourceNotes ?? selection.notes,
   }
   sourceArtifacts.push(sourceArtifact)
 
@@ -308,13 +264,8 @@ for (const [index, selection] of sourceSelections.entries()) {
     sourceReference: selection.sourceReference,
     versionDate: selection.versionDate,
     pageCount,
-    processingStatus: selection.sourceId === 'ag52-early-adoption-text' ? 'needs_human_review' : 'inventoried',
-    authorityLevel:
-      selection.sourceId === 'ag53-aat-2022'
-        ? 'guidance'
-        : selection.sourceId === 'vm20-practice-note-2020'
-          ? 'supporting_guidance'
-          : 'edge_case_note',
+    processingStatus: selection.inventoryProcessingStatus ?? processingStatus,
+    authorityLevel: selection.authorityLevel ?? 'guidance',
     jurisdiction: 'United States',
     confidentiality: 'public',
     fileHash,
@@ -419,22 +370,17 @@ for (const [index, selection] of sourceSelections.entries()) {
     extractedItems: [extractedItem],
   })
 
-  reviewPacketSourceFiles.push({
+    reviewPacketSourceFiles.push({
     sourceId: selection.sourceId,
     filename,
     sourceReference: selection.sourceReference,
     sourceFamilyId: selection.sourceFamilyId,
     domainId,
     documentType: selection.documentType,
-    processingStatus,
+    processingStatus: selection.reviewPacketProcessingStatus ?? processingStatus,
     pageCount,
-    issueCount: selection.sourceId === 'ag52-early-adoption-text' ? 1 : 0,
-    notes:
-      selection.sourceId === 'ag52-early-adoption-text'
-        ? 'Edge-case text retained for exception-first review.'
-        : selection.sourceId === 'vm20-practice-note-2020'
-          ? 'Supporting practice note stays review-only.'
-          : 'Primary narrow VM-related source stays review-only.',
+    issueCount: selection.reviewPacketIssueCount ?? 0,
+    notes: selection.reviewPacketNotes ?? selection.notes,
   })
 
   reviewPacketItems.push({
@@ -453,95 +399,9 @@ for (const [index, selection] of sourceSelections.entries()) {
     reviewFlags: itemReviewFlags,
     learnerFacingEligible: false,
     appReadyEligible: false,
-    notes:
-      selection.sourceId === 'ag52-early-adoption-text'
-        ? 'Review-only because the source text says AG 52 is no longer applicable as of 2020.'
-        : selection.sourceId === 'vm20-practice-note-2020'
-          ? 'Supporting practice note remains non-binding and review-only.'
-          : 'Primary source slice remains draft-candidate only.',
+    notes: selection.reviewPacketNotes ?? selection.notes,
   })
 }
-
-reviewPacketFlags.push(
-  {
-    flagId: 'flag-ag52-superseded',
-    severity: 'high',
-    sourceId: 'ag52-early-adoption-text',
-    itemId: 'item-ag52-early-adoption-text-pilot-001',
-    flagType: 'superseded_source',
-    message: 'Source text explicitly states AG 52 is no longer applicable as of 2020.',
-    notes: 'Keep review-only and do not promote.',
-  },
-  {
-    flagId: 'flag-vm20-supporting',
-    severity: 'low',
-    sourceId: 'vm20-practice-note-2020',
-    itemId: 'item-vm20-practice-note-2020-pilot-001',
-    flagType: 'supporting_material',
-    message:
-      'Practice note is explicitly non-binding and should remain a support source rather than learner-facing content.',
-    notes: 'Suitable for review-only support, not promotion.',
-  },
-)
-
-reviewPacketCitationIssues.push({
-  issueId: 'citation-ag52-line-locator',
-  sourceId: 'ag52-early-adoption-text',
-  itemId: 'item-ag52-early-adoption-text-pilot-001',
-  issueType: 'page_reference_missing',
-  details: 'Plain-text source has line locators only; no page-based locator is available.',
-  recommendedAction: 'Keep the line-level locator and do not force a page citation onto the text note.',
-})
-
-reviewPacketHumanDecisions.push(
-  {
-    decisionId: 'decision-ag52-disposition',
-    decisionType: 'ambiguity_resolution',
-    question:
-      'Should the AG 52 text note stay in the working corpus as a review-only edge case, or should it be excluded from future pilot batches?',
-    whyItMatters:
-      'Superseded source material should not leak into learner-facing or approved indexes.',
-    recommendedOwner: 'source reviewer',
-    priority: 'high',
-  },
-  {
-    decisionId: 'decision-vm20-citation-slice',
-    decisionType: 'citation_check',
-    question:
-      'Is the current page-range citation for the VM-20 practice note sufficient for the first pilot, or should a later slice be added before expansion?',
-    whyItMatters:
-      'The pilot needs a stable citation pattern before the corpus grows beyond the first tiny batch.',
-    recommendedOwner: 'processor owner',
-    priority: 'medium',
-  },
-)
-
-const unresolvedIssues = [
-  {
-    issueId: 'issue-ag52-disposition',
-    severity: 'high',
-    issueType: 'superseded_source_disposition',
-    sourceId: 'ag52-early-adoption-text',
-    itemId: 'item-ag52-early-adoption-text-pilot-001',
-    message:
-      'The AG 52 text note explicitly says it is no longer applicable as of 2020 and should remain review-only until the disposition is confirmed.',
-    recommendedAction:
-      'Confirm whether AG 52 should remain excluded from future pilot batches and approved indexes.',
-    evidence: 'As of 2020, AG 52 is no longer applicable.',
-  },
-  {
-    issueId: 'issue-vm20-citation-slice',
-    severity: 'medium',
-    issueType: 'citation_scope_confirmation',
-    sourceId: 'vm20-practice-note-2020',
-    itemId: 'chunk-vm20-practice-note-2020-pilot-001',
-    message:
-      'The VM-20 practice note slice is enough for a pilot, but the exact citation window should be confirmed before the batch grows.',
-    recommendedAction:
-      'Confirm whether the current page-range citation is sufficient or whether a later slice should be added before expansion.',
-    evidence: 'First three pages only; title, disclaimer, and table of contents slice.',
-  },
-]
 
 const batchManifest = {
   ...manifestTemplate,
@@ -563,7 +423,7 @@ const batchManifest = {
   })),
   sourceFiles: manifestSourceFiles,
   processingIntent: {
-    mode: 'small_pilot',
+    mode: manifestTemplate.processingIntent?.mode ?? 'small_pilot',
     targetDomains: selectedDomainIds,
     pipelineStages: ['inventory', 'extraction', 'chunking', 'labeling', 'review', 'validation'],
     smallPilot: true,
@@ -571,8 +431,7 @@ const batchManifest = {
     appExportRequested: false,
     ragReadinessRequested: true,
     reviewStrategy: 'exception_first',
-    notes:
-      'Tiny real-source pilot with one narrow VM-related guideline, one companion practice note, and one superseded text edge case.',
+    notes: processingIntentText,
   },
   boundaries: {
     rawSourceRoot: config.project.rawSourceRoot,
@@ -582,8 +441,7 @@ const batchManifest = {
     noLearnerFacingPromotion: true,
     domainConfigPath: 'config/source-families.json',
     ignoredWorkingPaths: ['data/work', 'data/cache', 'data/extracted', 'data/generated'],
-    notes:
-      'Pilot batch only; source files stay external and the processing scope is limited to the selected tiny batch.',
+    notes: processingIntentNotes,
   },
   expectedOutputs: [
     'source_inventory',
@@ -603,11 +461,11 @@ const batchManifest = {
     reviewPacketRequired: true,
     notes: 'Pilot batch is review-only; no learner-facing or app-ready promotion is permitted.',
   },
-  notes:
-    'First real pilot batch. It is intentionally tiny, source-bound, review-only, and not learner-facing.',
+  notes: batchSummaryNotes,
   extensions: {
     pilot: true,
     batchSlug,
+    batchProfile,
   },
 }
 
@@ -631,13 +489,13 @@ const sourceInventory = {
     domains: selectedDomainIds,
     sourceFamilies: selectedFamilies.map((family) => family.familyId),
     selectedSourceIds: sourceSelections.map((selection) => selection.sourceId),
-    reviewOnlySourceCount: inventoryItems.filter((item) => item.processingStatus === 'needs_human_review').length,
+    reviewOnlySourceCount: inventoryItems.length,
   },
-  notes:
-    'Tiny pilot inventory created before extraction. Raw documents remain external and all selected files stay review-only.',
+  notes: processingIntentNotes,
   extensions: {
     pilot: true,
     batchSlug,
+    batchProfile,
   },
 }
 
@@ -664,11 +522,11 @@ const chunkManifest = {
     reviewOnlyChunkCount: chunkManifestChunks.length,
     sourceIds: chunkManifestChunks.map((chunk) => chunk.sourceId),
   },
-  notes:
-    'Compact pilot chunk manifest for the first real source batch; all items remain non-learner-facing.',
+  notes: batchSummaryNotes,
   extensions: {
     pilot: true,
     batchSlug,
+    batchProfile,
   },
 }
 
@@ -687,41 +545,13 @@ const extractionOutput = {
     reviewOnlyItemCount: extractedSourceGroups.length,
     sourceIds: extractedSourceGroups.map((group) => group.sourceId),
   },
-  notes:
-    'Formal extraction output for the first real pilot batch. All items are draft candidates or review-only and remain blocked from learner-facing promotion.',
+  notes: batchSummaryText,
   extensions: {
     pilot: true,
     batchSlug,
+    batchProfile,
   },
 }
-
-const validationChecks = [
-  {
-    checkId: 'batch-manifest-guardrails',
-    status: 'passed',
-    details: 'Pilot manifest blocks learner-facing promotion and app-ready export.',
-  },
-  {
-    checkId: 'source-reference-coverage',
-    status: 'passed',
-    details: 'Each pilot item carries a source reference and a locator appropriate to the file type.',
-  },
-  {
-    checkId: 'unresolved-issues-tracked',
-    status: 'passed',
-    details: 'The review packet and unresolved-issues summary both capture the open review items.',
-  },
-  {
-    checkId: 'no-promotion-output',
-    status: 'passed',
-    details: 'No approved-promoted or app-ready export was produced for the pilot.',
-  },
-  {
-    checkId: 'review-only-guardrails',
-    status: 'passed',
-    details: 'Review packet stays not approved and unresolved issues remain visible for human review.',
-  },
-]
 
 const reviewPacket = {
   ...reviewTemplate,
@@ -733,14 +563,12 @@ const reviewPacket = {
   batchSummary: {
     batchName,
     sourceFamilies: selectedFamilies.map((family) => family.familyId),
-    processingIntent:
-      'Tiny real-source pilot: one narrow VM-related guideline, one companion practice note, and one superseded edge-case text note.',
+    processingIntent: processingIntentText,
     sourceFileCount: reviewPacketSourceFiles.length,
     extractedItemCount: reviewPacketItems.length,
     exceptionCount: reviewPacketFlags.length,
-    summary:
-      'Pilot batch remains review-only. The main guideline and practice note are draft candidates, and the text edge case is retained for human review because it is superseded.',
-    notes: 'No learner-facing approval is granted.',
+    summary: batchSummaryText,
+    notes: batchSummaryNotes,
   },
   sourceFilesProcessed: reviewPacketSourceFiles,
   extractedItems: reviewPacketItems,
@@ -750,9 +578,8 @@ const reviewPacket = {
   unresolvedIssues,
   promotionRecommendation: {
     status: 'not_recommended',
-    reason:
-      'This pilot is intentionally review-only and includes a superseded text edge case that should not be promoted.',
-    recommendedNextStep: 'Resolve the AG 52 disposition and confirm the citation pattern before widening the batch.',
+    reason: reviewPacketReason,
+    recommendedNextStep: reviewPacketNextStep,
     targetExport: 'review_packet',
   },
   learnerFacingStatus: {
@@ -772,11 +599,11 @@ const reviewPacket = {
     targetExports: ['approved_promoted_export', 'app_ready_export'],
     notes: 'App export is intentionally omitted from the first pilot.',
   },
-  reviewerNotes:
-    'Small pilot batch only. Keep the work review-first, preserve source-bound locators, and do not promote any item.',
+  reviewerNotes,
   extensions: {
     pilot: true,
     batchSlug,
+    batchProfile,
   },
 }
 
@@ -786,6 +613,7 @@ const unresolvedIssuesSummary = [
   ...unresolvedIssues.map(
     (issue) => `- ${issue.issueId}: ${issue.message} [${issue.severity}; ${issue.issueType}]`,
   ),
+  '- This batch remains review-only until a human approves any promotion candidate.',
   '- No learner-facing promotion candidates were produced in the pilot batch.',
   '- No app-ready export was produced, by design.',
   '- The pilot should stay tiny until the citation pattern is confirmed by human review.',
@@ -818,6 +646,11 @@ const validationReport = {
     'No learner-facing content, approved promotions, or app-ready exports were created.',
     'All outputs remain review-only, and unresolved issues are recorded in the review packet and summary file.',
   ],
+  extensions: {
+    pilot: true,
+    batchSlug,
+    batchProfile,
+  },
 }
 
 await fs.mkdir(reviewRoot, { recursive: true })

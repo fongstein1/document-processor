@@ -1,10 +1,12 @@
 import fs from 'node:fs/promises'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { batchDefinitions } from './batch-definitions.mjs'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 const repoRoot = path.resolve(__dirname, '..')
+const workBatchesRoot = path.join(repoRoot, 'data', 'work', 'batches')
 
 const paths = {
   config: path.join(repoRoot, 'config', 'source-families.json'),
@@ -93,72 +95,6 @@ const paths = {
     'contract-demo',
     'README.md',
   ),
-  workingBatchManifest: path.join(
-    repoRoot,
-    'data',
-    'work',
-    'batches',
-    'batch-001',
-    'batch-manifest.json',
-  ),
-  pilotChunkManifest: path.join(
-    repoRoot,
-    'data',
-    'work',
-    'batches',
-    'batch-001',
-    'chunk-manifest.json',
-  ),
-  pilotSourceInventory: path.join(
-    repoRoot,
-    'data',
-    'work',
-    'batches',
-    'batch-001',
-    'source-inventory.json',
-  ),
-  pilotExtractionOutput: path.join(
-    repoRoot,
-    'data',
-    'work',
-    'batches',
-    'batch-001',
-    'extraction-output.json',
-  ),
-  pilotReviewPacketJson: path.join(
-    repoRoot,
-    'data',
-    'work',
-    'batches',
-    'batch-001',
-    'review',
-    'review-packet.json',
-  ),
-  pilotReviewPacketMd: path.join(
-    repoRoot,
-    'data',
-    'work',
-    'batches',
-    'batch-001',
-    'review',
-    'review-packet.md',
-  ),
-  pilotValidationReport: path.join(
-    repoRoot,
-    'data',
-    'work',
-    'batches',
-    'batch-001',
-    'validation-report.json',
-  ),
-  pilotUnresolvedIssuesSummary: path.join(
-    repoRoot,
-    'data',
-    'work',
-    'batches',
-    'batch-001',
-    'unresolved-issues-summary.md',
-  ),
 }
 
 const requiredFiles = [
@@ -234,6 +170,23 @@ const exists = async (filePath) => {
     return true
   } catch {
     return false
+  }
+}
+
+const getBatchPaths = (batchId) => {
+  const batchRoot = path.join(workBatchesRoot, batchId)
+  const reviewRoot = path.join(batchRoot, 'review')
+  return {
+    batchRoot,
+    reviewRoot,
+    batchManifest: path.join(batchRoot, 'batch-manifest.json'),
+    sourceInventory: path.join(batchRoot, 'source-inventory.json'),
+    chunkManifest: path.join(batchRoot, 'chunk-manifest.json'),
+    extractionOutput: path.join(batchRoot, 'extraction-output.json'),
+    reviewPacketJson: path.join(reviewRoot, 'review-packet.json'),
+    reviewPacketMd: path.join(reviewRoot, 'review-packet.md'),
+    validationReport: path.join(batchRoot, 'validation-report.json'),
+    unresolvedIssuesSummary: path.join(batchRoot, 'unresolved-issues-summary.md'),
   }
 }
 
@@ -900,16 +853,21 @@ const validateValidationReportLike = (report, label) => {
   })
 }
 
-const validateUnresolvedIssuesSummary = async (filePath, label) => {
+const validateUnresolvedIssuesSummary = async (filePath, label, unresolvedIssues = []) => {
   const text = await readText(filePath)
   if (!text.trim()) {
     problems.push(`${label}: must not be empty`)
   }
-  if (!text.includes('AG 52')) {
-    problems.push(`${label}: must mention AG 52`)
-  }
   if (!text.includes('review-only')) {
     problems.push(`${label}: must mention review-only handling`)
+  }
+  if (!text.includes('No app-ready export')) {
+    problems.push(`${label}: must mention the app-ready export status`)
+  }
+  for (const issue of unresolvedIssues) {
+    if (issue?.issueId && !text.includes(issue.issueId)) {
+      problems.push(`${label}: must mention unresolved issue ${issue.issueId}`)
+    }
   }
 }
 
@@ -928,7 +886,6 @@ const sampleBatchManifest = await readJson(paths.sampleBatchManifest)
 const sampleSourceInventory = await readJson(paths.sampleSourceInventory)
 const sampleExtractionOutput = await readJson(paths.sampleExtractionOutput)
 const sampleReviewPacketJson = await readJson(paths.sampleReviewPacketJson)
-const workingBatchManifest = await readJson(paths.workingBatchManifest)
 
 validateSchemaEnvelope(batchManifestSchema, 'batch-manifest.schema.json')
 validateSchemaEnvelope(sourceInventorySchema, 'source-inventory.schema.json')
@@ -937,12 +894,6 @@ validateSchemaEnvelope(reviewPacketSchema, 'review-packet.schema.json')
 
 validateBatchManifestLike(batchManifestTemplate, 'batch-manifest.template.json')
 validateBatchManifestLike(sampleBatchManifest, 'batch-manifest.sample.json')
-const workingBatchIsPilot =
-  Array.isArray(workingBatchManifest.sourceFiles) && workingBatchManifest.sourceFiles.length > 0
-
-validateBatchManifestLike(workingBatchManifest, 'data/work/batches/batch-001/batch-manifest.json', {
-  mode: workingBatchIsPilot ? 'pilot' : 'scaffold',
-})
 
 validateSourceInventoryLike(sampleSourceInventory, 'source-inventory.sample.json')
 validateExtractionOutputLike(sampleExtractionOutput, 'extraction-output.sample.json')
@@ -962,73 +913,100 @@ if (!Array.isArray(config.domains) || config.domains.length < 3) {
   problems.push('config/source-families.json: expected portability domains to be present')
 }
 
-if (workingBatchIsPilot) {
+const batchDirs = (await fs.readdir(workBatchesRoot, { withFileTypes: true })).filter((dirent) =>
+  dirent.isDirectory(),
+)
+let validatedPilotBatchCount = 0
+for (const dirent of batchDirs) {
+  const batchId = dirent.name
+  const batchPaths = getBatchPaths(batchId)
+  if (!(await exists(batchPaths.batchManifest))) {
+    continue
+  }
+
+  const batchDefinition = batchDefinitions[batchId]
+  if (!batchDefinition) {
+    warnings.push(`No batch definition found for ${batchId}; validating only the generic scaffold rules.`)
+  }
+
+  const batchManifest = await readJson(batchPaths.batchManifest)
+  const isPilotBatch = batchManifest.boundaries?.noRealProcessing === false
+  validateBatchManifestLike(batchManifest, `${batchId}/batch-manifest.json`, {
+    mode: isPilotBatch ? 'pilot' : 'scaffold',
+  })
+
+  if (!isPilotBatch) {
+    continue
+  }
+
+  validatedPilotBatchCount += 1
+
   const pilotRequiredFiles = [
-    'data/work/batches/batch-001/source-inventory.json',
-    'data/work/batches/batch-001/chunk-manifest.json',
-    'data/work/batches/batch-001/extraction-output.json',
-    'data/work/batches/batch-001/review/review-packet.json',
-    'data/work/batches/batch-001/review/review-packet.md',
-    'data/work/batches/batch-001/validation-report.json',
-    'data/work/batches/batch-001/unresolved-issues-summary.md',
+    batchPaths.sourceInventory,
+    batchPaths.chunkManifest,
+    batchPaths.extractionOutput,
+    batchPaths.reviewPacketJson,
+    batchPaths.reviewPacketMd,
+    batchPaths.validationReport,
+    batchPaths.unresolvedIssuesSummary,
   ]
 
-  for (const relativePath of pilotRequiredFiles) {
-    await requireFile(relativePath)
+  for (const filePath of pilotRequiredFiles) {
+    if (!(await exists(filePath))) {
+      problems.push(`${path.relative(repoRoot, filePath)}: missing pilot output file`)
+    }
   }
 
-  const pilotSourceInventory = await readJson(paths.pilotSourceInventory)
-  const pilotChunkManifest = await readJson(paths.pilotChunkManifest)
-  const pilotExtractionOutput = await readJson(paths.pilotExtractionOutput)
-  const pilotReviewPacketJson = await readJson(paths.pilotReviewPacketJson)
-  const pilotValidationReport = await readJson(paths.pilotValidationReport)
+  const pilotSourceInventory = await readJson(batchPaths.sourceInventory)
+  const pilotChunkManifest = await readJson(batchPaths.chunkManifest)
+  const pilotExtractionOutput = await readJson(batchPaths.extractionOutput)
+  const pilotReviewPacketJson = await readJson(batchPaths.reviewPacketJson)
+  const pilotValidationReport = await readJson(batchPaths.validationReport)
 
-  validateSourceInventoryLike(pilotSourceInventory, 'data/work/batches/batch-001/source-inventory.json')
-  validateChunkManifestLike(pilotChunkManifest, 'data/work/batches/batch-001/chunk-manifest.json')
-  validateExtractionOutputLike(pilotExtractionOutput, 'data/work/batches/batch-001/extraction-output.json')
-  validateReviewPacketLike(pilotReviewPacketJson, 'data/work/batches/batch-001/review/review-packet.json')
-  validateValidationReportLike(pilotValidationReport, 'data/work/batches/batch-001/validation-report.json')
+  validateSourceInventoryLike(pilotSourceInventory, `${batchId}/source-inventory.json`)
+  validateChunkManifestLike(pilotChunkManifest, `${batchId}/chunk-manifest.json`)
+  validateExtractionOutputLike(pilotExtractionOutput, `${batchId}/extraction-output.json`)
+  validateReviewPacketLike(pilotReviewPacketJson, `${batchId}/review/review-packet.json`)
+  validateValidationReportLike(pilotValidationReport, `${batchId}/validation-report.json`)
 
   if (pilotReviewPacketJson.promotionRecommendation?.status !== 'not_recommended') {
-    problems.push(
-      'data/work/batches/batch-001/review/review-packet.json: pilot review packet must remain not_recommended',
-    )
+    problems.push(`${batchId}/review/review-packet.json: pilot review packet must remain not_recommended`)
+  }
+  if (pilotReviewPacketJson.learnerFacingStatus?.ready !== false) {
+    problems.push(`${batchId}/review/review-packet.json: learner-facing status must stay false`)
+  }
+  if (pilotReviewPacketJson.appExportReadiness?.ready !== false) {
+    problems.push(`${batchId}/review/review-packet.json: app export readiness must stay false`)
+  }
+  if (pilotReviewPacketJson.ragReadiness?.ready !== false) {
+    problems.push(`${batchId}/review/review-packet.json: RAG readiness must stay false`)
   }
   if (!Array.isArray(pilotReviewPacketJson.unresolvedIssues) || pilotReviewPacketJson.unresolvedIssues.length === 0) {
-    problems.push(
-      'data/work/batches/batch-001/review/review-packet.json: pilot review packet must include unresolved issues',
-    )
+    problems.push(`${batchId}/review/review-packet.json: pilot review packet must include unresolved issues`)
   }
+
+  const expectedCheckIds = batchDefinition?.validationChecks?.map((check) => check.checkId) ?? []
   const pilotCheckIds = new Map(
     Array.isArray(pilotValidationReport.checks)
       ? pilotValidationReport.checks.map((check) => [check.checkId, check])
       : [],
   )
-  for (const checkId of [
-    'batch-manifest-guardrails',
-    'source-reference-coverage',
-    'unresolved-issues-tracked',
-    'no-promotion-output',
-    'review-only-guardrails',
-  ]) {
+  for (const checkId of expectedCheckIds) {
     const check = pilotCheckIds.get(checkId)
     if (!check) {
-      problems.push(
-        `data/work/batches/batch-001/validation-report.json: missing pilot check ${checkId}`,
-      )
+      problems.push(`${batchId}/validation-report.json: missing pilot check ${checkId}`)
       continue
     }
     if (check.status !== 'passed') {
-      problems.push(
-        `data/work/batches/batch-001/validation-report.json: pilot check ${checkId} must be passed`,
-      )
+      problems.push(`${batchId}/validation-report.json: pilot check ${checkId} must be passed`)
     }
   }
 
-  await validateReviewMarkdown(paths.pilotReviewPacketMd, 'data/work/batches/batch-001/review/review-packet.md')
+  await validateReviewMarkdown(batchPaths.reviewPacketMd, `${batchId}/review/review-packet.md`)
   await validateUnresolvedIssuesSummary(
-    paths.pilotUnresolvedIssuesSummary,
-    'data/work/batches/batch-001/unresolved-issues-summary.md',
+    batchPaths.unresolvedIssuesSummary,
+    `${batchId}/unresolved-issues-summary.md`,
+    pilotReviewPacketJson.unresolvedIssues,
   )
 }
 
@@ -1045,10 +1023,8 @@ if (problems.length > 0) {
   console.log(`- Demo sources in inventory sample: ${sampleSourceInventory.items.length}`)
   console.log(`- Demo source groups in extraction sample: ${sampleExtractionOutput.sourceGroups.length}`)
   console.log(`- Review packet headings verified: ${requiredReviewHeadings.length}`)
-  if (workingBatchIsPilot) {
-    console.log(`- Pilot source files: ${workingBatchManifest.sourceFiles.length}`)
-    console.log(`- Pilot extracted items: ${workingBatchManifest.sourceFiles.length}`)
-    console.log(`- Pilot review packet: validated`)
+  if (validatedPilotBatchCount > 0) {
+    console.log(`- Pilot batches validated: ${validatedPilotBatchCount}`)
   }
 }
 
