@@ -2,9 +2,8 @@
 
 ## Next immediate task
 
-Review the batch-005 NPR mechanics entry output and decide whether the next
-batch should begin with Section 3.C assumptions or whether another NPR branch
-needs to be isolated first.
+Run batch-006 on the Section 3.C assumption slice, then continue through the
+re-bound remaining VM-20 batches in order.
 
 ## Build tasks
 
@@ -13,17 +12,15 @@ needs to be isolated first.
 - Keep batch 003 review-only until the boundary decision is made.
 - Keep batch 004 review-only until the mechanics-start decision is made.
 - Keep batch 005 review-only until the Section 3.C boundary decision is made.
+- Keep batch 006 review-only until the Section 3.C boundary decision is made.
 - Treat `docs/processor/vm20_extraction_plan.md` and
-  `config/vm20-batch-plan.json` as the source of truth for the next VM-20
-  planning step.
-- Use the new `npm run vm20:batch-003` entry for reruns or review refreshes
-  when the controlled overview batch needs to be regenerated.
-- Use the new `npm run vm20:batch-004` entry for reruns or review refreshes
-  when the controlled role-map batch needs to be regenerated.
-- Use the new `npm run vm20:batch-005` entry for reruns or review refreshes
-  when the NPR mechanics entry batch needs to be regenerated.
-- Extend `scripts/batch-definitions.mjs` later only if the next VM-20 batch
-  needs a new narrow boundary slice beyond the current NPR entry point.
+  `config/vm20-batch-plan.json` as the source of truth for the remaining
+  controlled VM-20 batches.
+- Use `npm run vm20:batch-006` through `npm run vm20:batch-012` for reruns or
+  review refreshes when the controlled Section 3.C to Section 9 slices need
+  to be regenerated.
+- Keep `scripts/batch-definitions.mjs` synchronized with the planned batch
+  IDs and actual source order.
 - Expand validation only if the plan or a later batch reveals a genuine schema
   or workflow gap.
 - Keep app-ready export work deferred until a real promotion candidate exists.
@@ -50,6 +47,9 @@ needs to be isolated first.
   stays easy to reason about.
 - Keep the NPR setup slice and formula slice together in a narrow review-only
   entry batch, but stop before Section 3.C assumptions.
+- Keep the Section 3.C assumption slice separate from the Section 4 and
+  Section 5 entry points, then split Section 7 into structure and asset
+  mechanics batches before the final reinsurance boundary batch.
 - Keep the PDF extraction runner UTF-8-safe because formula pages can include
   Unicode minus signs and other non-ASCII glyphs.
 - Commit only lightweight, auditable artifacts.

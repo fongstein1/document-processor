@@ -117,3 +117,13 @@ later batch.
 The PDF extraction runner should force UTF-8 output when reading formula-heavy
 pages, because the VM-20 manual includes Unicode minus signs and other
 non-ASCII glyphs that can break the default Windows console encoding.
+
+## Remaining VM-20 order
+
+The remaining controlled VM-20 batches should follow the actual PDF section
+order rather than the earlier placeholder page windows: Section 3.C
+assumptions, the Section 4 deterministic reserve opener, the Section 5
+stochastic reserve opener, the Section 6 exclusion tests, Section 7 split into
+structure and asset-mechanics slices, and the final Section 8 reinsurance /
+Section 9 boundary batch. The plan config and batch definitions should stay
+synchronized with that order.

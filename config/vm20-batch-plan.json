@@ -64,8 +64,24 @@
       ]
     },
     {
+      "topicId": "vm20-section3c-assumptions",
+      "label": "Section 3.C assumptions",
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "assumption_control",
+        "boundary_confirmation",
+        "cross_reference_mapping"
+      ],
+      "crossReferenceWatchlist": [
+        "VM-01",
+        "VM-30",
+        "VM-31",
+        "VM-M"
+      ]
+    },
+    {
       "topicId": "vm20-dr-mechanics",
-      "label": "Deterministic reserve mechanics",
+      "label": "Deterministic reserve entry point",
       "reviewComplexity": "high",
       "expectedIssueTypes": [
         "reserve_boundary",
@@ -80,7 +96,7 @@
     },
     {
       "topicId": "vm20-sr-mechanics",
-      "label": "Stochastic reserve mechanics",
+      "label": "Stochastic reserve entry point",
       "reviewComplexity": "high",
       "expectedIssueTypes": [
         "model_assumption_review",
@@ -109,37 +125,40 @@
       ]
     },
     {
-      "topicId": "vm20-assumptions-margins",
-      "label": "Assumptions and margins",
+      "topicId": "vm20-cash-flow-model-structure",
+      "label": "Cash-flow model structure",
       "reviewComplexity": "high",
       "expectedIssueTypes": [
-        "assumption_control",
-        "margin_interpretation",
-        "stale_or_companion_guidance"
+        "model_structure",
+        "asset_allocation",
+        "boundary_split"
       ],
       "crossReferenceWatchlist": [
         "VM-01",
         "VM-30",
-        "VM-31"
+        "VM-31",
+        "VM-G"
       ]
     },
     {
-      "topicId": "vm20-asset-assumptions",
-      "label": "Asset assumptions",
+      "topicId": "vm20-cash-flow-model-asset-mechanics",
+      "label": "Cash-flow model asset mechanics",
       "reviewComplexity": "high",
       "expectedIssueTypes": [
         "asset_modeling_judgment",
-        "supporting_guidance",
+        "proxy_mapping",
         "boundary_spillover"
       ],
       "crossReferenceWatchlist": [
+        "VM-01",
         "VM-30",
-        "VM-31"
+        "VM-31",
+        "VM-G"
       ]
     },
     {
       "topicId": "vm20-reinsurance",
-      "label": "Reinsurance",
+      "label": "Reinsurance and Section 9 boundary",
       "reviewComplexity": "high",
       "expectedIssueTypes": [
         "ceded_reserve_treatment",
@@ -150,35 +169,6 @@
         "VM-30",
         "VM-31",
         "VM-G"
-      ]
-    },
-    {
-      "topicId": "vm20-doc-report-refs",
-      "label": "Documentation and reporting cross-references",
-      "reviewComplexity": "medium",
-      "expectedIssueTypes": [
-        "cross_reference_cleanup",
-        "definition_only_content",
-        "citation_precision"
-      ],
-      "crossReferenceWatchlist": [
-        "VM-30",
-        "VM-31",
-        "VM-G"
-      ]
-    },
-    {
-      "topicId": "vm20-definitions-crossrefs",
-      "label": "Definitions and cross-references handled elsewhere",
-      "reviewComplexity": "low",
-      "expectedIssueTypes": [
-        "lookup_only",
-        "scope_cleanup",
-        "non_promotable_reference"
-      ],
-      "crossReferenceWatchlist": [
-        "VM-01",
-        "VM-31"
       ]
     }
   ],
@@ -258,18 +248,64 @@
     {
       "plannedBatchId": "batch-006",
       "topicIds": [
-        "vm20-sr-mechanics"
+        "vm20-section3c-assumptions"
       ],
-      "title": "Stochastic reserve mechanics",
+      "title": "Section 3.C assumptions",
       "pageTarget": {
         "knownWindow": [
-          45,
-          51
+          58,
+          65
         ],
         "specificPages": null,
-        "notes": "Pin after DR because stochastic reserve modeling should stay separate."
+        "notes": "Capture mortality, interest, and lapse assumptions, then stop before the Section 4 deterministic reserve entry point."
       },
-      "rationale": "Separate stochastic reserve modeling from deterministic and net premium language.",
+      "rationale": "Keep Section 3.C assumptions separate from the later reserve entry points and the Section 4 boundary.",
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "assumption_control",
+        "margin_interpretation",
+        "boundary_confirmation"
+      ],
+      "reviewOnlyByDefault": true
+    },
+    {
+      "plannedBatchId": "batch-007",
+      "topicIds": [
+        "vm20-dr-mechanics"
+      ],
+      "title": "Deterministic reserve entry point",
+      "pageTarget": {
+        "knownWindow": [
+          66,
+          66
+        ],
+        "specificPages": null,
+        "notes": "Capture the Section 4 entry language and the first DR rule only."
+      },
+      "rationale": "Keep DR separate from the preceding NPR floor context and the later stochastic reserve entry.",
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "reserve_boundary",
+        "actuarial_judgment",
+        "citation_precision"
+      ],
+      "reviewOnlyByDefault": true
+    },
+    {
+      "plannedBatchId": "batch-008",
+      "topicIds": [
+        "vm20-sr-mechanics"
+      ],
+      "title": "Stochastic reserve entry point",
+      "pageTarget": {
+        "knownWindow": [
+          67,
+          68
+        ],
+        "specificPages": null,
+        "notes": "Capture the Section 5 opener and the first SR aggregation language."
+      },
+      "rationale": "Separate SR entry language from deterministic reserve text and exclusion tests.",
       "reviewComplexity": "high",
       "expectedIssueTypes": [
         "model_assumption_review",
@@ -279,20 +315,20 @@
       "reviewOnlyByDefault": true
     },
     {
-      "plannedBatchId": "batch-007",
+      "plannedBatchId": "batch-009",
       "topicIds": [
         "vm20-exclusion-tests"
       ],
       "title": "Exclusion tests",
       "pageTarget": {
         "knownWindow": [
-          45,
-          51
+          69,
+          74
         ],
         "specificPages": null,
-        "notes": "Split eligibility language away from reserve mechanics."
+        "notes": "Capture SET, SERT, and DET boundary language before Section 7 begins."
       },
-      "rationale": "Keep exclusion language separate because it often overlaps with boundary transition text.",
+      "rationale": "Keep eligibility tests separate from reserve mechanics and the cash-flow model structure.",
       "reviewComplexity": "medium",
       "expectedIssueTypes": [
         "eligibility_threshold",
@@ -302,117 +338,71 @@
       "reviewOnlyByDefault": true
     },
     {
-      "plannedBatchId": "batch-008",
-      "topicIds": [
-        "vm20-assumptions-margins"
-      ],
-      "title": "Assumptions and margins",
-      "pageTarget": {
-        "knownWindow": [
-          45,
-          51
-        ],
-        "specificPages": null,
-        "notes": "Capture only after the mechanics are isolated."
-      },
-      "rationale": "Assumptions and margins need their own review lane because they often require actuarial judgment.",
-      "reviewComplexity": "high",
-      "expectedIssueTypes": [
-        "assumption_control",
-        "margin_interpretation",
-        "stale_or_companion_guidance"
-      ],
-      "reviewOnlyByDefault": true
-    },
-    {
-      "plannedBatchId": "batch-009",
-      "topicIds": [
-        "vm20-asset-assumptions"
-      ],
-      "title": "Asset assumptions",
-      "pageTarget": {
-        "knownWindow": [
-          45,
-          51
-        ],
-        "specificPages": null,
-        "notes": "Keep asset assumptions separate from reserve formulas."
-      },
-      "rationale": "Asset assumptions often cross-reference other sections and should be isolated.",
-      "reviewComplexity": "high",
-      "expectedIssueTypes": [
-        "asset_modeling_judgment",
-        "supporting_guidance",
-        "boundary_spillover"
-      ],
-      "reviewOnlyByDefault": true
-    },
-    {
       "plannedBatchId": "batch-010",
       "topicIds": [
-        "vm20-reinsurance"
+        "vm20-cash-flow-model-structure"
       ],
-      "title": "Reinsurance",
+      "title": "Cash-flow model structure",
       "pageTarget": {
         "knownWindow": [
-          45,
-          51
+          75,
+          79
         ],
         "specificPages": null,
-        "notes": "Treat ceded reserve text as its own review lane."
+        "notes": "Capture model structure, NGE, starting assets, and the PIMR boundary."
       },
-      "rationale": "Reinsurance treatment tends to cross-reference other guidance and should remain isolated.",
+      "rationale": "Isolate the Section 7 entry layer before proxy-fund and derivative mechanics begin.",
       "reviewComplexity": "high",
       "expectedIssueTypes": [
-        "ceded_reserve_treatment",
-        "supporting_guidance",
-        "cross_reference_mapping"
+        "model_structure",
+        "asset_allocation",
+        "boundary_split"
       ],
       "reviewOnlyByDefault": true
     },
     {
       "plannedBatchId": "batch-011",
       "topicIds": [
-        "vm20-doc-report-refs"
+        "vm20-cash-flow-model-asset-mechanics"
       ],
-      "title": "Documentation and reporting cross-references",
+      "title": "Cash-flow model asset mechanics",
       "pageTarget": {
         "knownWindow": [
-          45,
-          51
+          80,
+          87
         ],
         "specificPages": null,
-        "notes": "Capture cross-references without absorbing the full reporting instructions."
+        "notes": "Capture asset return, proxy-fund, scenario, and derivative-program mechanics while stopping before Section 8."
       },
-      "rationale": "Documentation references should stay separate from the operational instructions they point to.",
-      "reviewComplexity": "medium",
+      "rationale": "Keep the heavy Section 7 asset mechanics and scenario language separate from reinsurance.",
+      "reviewComplexity": "high",
       "expectedIssueTypes": [
-        "cross_reference_cleanup",
-        "definition_only_content",
-        "citation_precision"
+        "asset_modeling_judgment",
+        "proxy_mapping",
+        "boundary_spillover"
       ],
       "reviewOnlyByDefault": true
     },
     {
       "plannedBatchId": "batch-012",
       "topicIds": [
-        "vm20-definitions-crossrefs"
+        "vm20-reinsurance"
       ],
-      "title": "Definitions and cross-references handled elsewhere",
+      "title": "Reinsurance and Section 9 boundary",
       "pageTarget": {
         "knownWindow": [
-          45,
-          51
+          88,
+          95
         ],
         "specificPages": null,
-        "notes": "Use this as a cleanup batch for lookup-only material."
+        "notes": "Capture reinsurance credit, ceded cash flows, and the first Section 9 assumptions language."
       },
-      "rationale": "Finish with definitions and lookup-only references so they do not clutter the mechanics batches.",
-      "reviewComplexity": "low",
+      "rationale": "Close the controlled VM-20 sequence with reinsurance treatment and the Section 9 assumptions boundary.",
+      "reviewComplexity": "high",
       "expectedIssueTypes": [
-        "lookup_only",
-        "scope_cleanup",
-        "non_promotable_reference"
+        "ceded_reserve_treatment",
+        "supporting_guidance",
+        "cross_reference_mapping"
       ],
       "reviewOnlyByDefault": true
     }
@@ -462,9 +452,9 @@
       "Batch-definition synchronization when real VM-20 batches are created."
     ],
     "scriptImplications": [
-      "scripts/batch-definitions.mjs should eventually gain the planned VM-20 batches when extraction is authorized.",
-      "scripts/validate-scaffold.mjs should continue to treat the plan as configuration-only until extraction begins."
+      "scripts/batch-definitions.mjs should stay synchronized with the planned VM-20 batch IDs and section-order splits.",
+      "scripts/validate-scaffold.mjs should verify that each planned VM-20 batch has a matching batch definition."
     ]
   },
-  "notes": "Planning artifact only. No VM-20 extraction run is authorized by this config."
+  "notes": "Controlled VM-20 planning artifact. Planned batches 003-012 are review-only by default and are executed through the batch runner."
 }

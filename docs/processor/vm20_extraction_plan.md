@@ -58,14 +58,13 @@ avoid mixing unrelated reserve concepts in one run.
 | --- | --- | --- | --- | --- |
 | `vm20-framework-overview` | NPR / DR / SR framework overview | Medium | boundary confirmation, terminology alignment, cross-reference mapping | VM-01, VM-30, VM-31, VM-G |
 | `vm20-npr-mechanics` | Net premium reserve mechanics | High | formula boundary, margin interpretation, assumption spillover | VM-01, VM-30, VM-31 |
-| `vm20-dr-mechanics` | Deterministic reserve mechanics | High | reserve mechanics boundary, actuarial judgment, citation precision | VM-01, VM-30, VM-31 |
-| `vm20-sr-mechanics` | Stochastic reserve mechanics | High | model assumption review, calibration, actuarial judgment | VM-01, VM-30, VM-31 |
+| `vm20-section3c-assumptions` | Section 3.C assumptions | High | assumption control, boundary confirmation, cross-reference mapping | VM-01, VM-30, VM-31, VM-M |
+| `vm20-dr-mechanics` | Deterministic reserve entry point | High | reserve boundary, actuarial judgment, citation precision | VM-01, VM-30, VM-31 |
+| `vm20-sr-mechanics` | Stochastic reserve entry point | High | model assumption review, calibration, actuarial judgment | VM-01, VM-30, VM-31 |
 | `vm20-exclusion-tests` | Exclusion tests | Medium | eligibility thresholds, boundary splits, cross-reference mapping | VM-01, VM-30, VM-31 |
-| `vm20-assumptions-margins` | Assumptions and margins | High | assumption control, margin interpretation, stale or companion guidance | VM-01, VM-30, VM-31 |
-| `vm20-asset-assumptions` | Asset assumptions | High | asset modeling judgment, supporting guidance, boundary spillover | VM-30, VM-31 |
-| `vm20-reinsurance` | Reinsurance | High | ceded reserve treatment, supporting guidance, cross-reference mapping | VM-30, VM-31, VM-G |
-| `vm20-doc-report-refs` | Documentation and reporting cross-references | Medium | cross-reference cleanup, definition-only content, citation precision | VM-30, VM-31, VM-G |
-| `vm20-definitions-crossrefs` | Definitions and cross-references handled elsewhere | Low to medium | lookup-only items, scope cleanup, non-promotable references | VM-01, VM-31 |
+| `vm20-cash-flow-model-structure` | Cash-flow model structure | High | model structure, asset allocation, boundary split | VM-01, VM-30, VM-31, VM-G |
+| `vm20-cash-flow-model-asset-mechanics` | Cash-flow model asset mechanics | High | asset modeling judgment, proxy mapping, boundary spillover | VM-01, VM-30, VM-31, VM-G |
+| `vm20-reinsurance` | Reinsurance and Section 9 boundary | High | ceded reserve treatment, supporting guidance, cross-reference mapping | VM-30, VM-31, VM-G |
 
 ## Proposed Batch Sequence
 
@@ -74,21 +73,25 @@ avoid mixing unrelated reserve concepts in one run.
 | `batch-003` | VM-20 framework overview | Confirm within pages 45-51 | Pin the chapter boundary and terminology before mechanics | Medium |
 | `batch-004` | NPR / DR / SR role map completion | Confirm within pages 45-51 | Complete the high-level role map before detailed NPR mechanics begin | Medium |
 | `batch-005` | NPR mechanics entry point | Pages 52-57 | Capture the first NPR calculation structure after the applicability opener and stop before Section 3.C assumptions | High |
-| `batch-006` | Stochastic reserve mechanics | Confirm within pages 45-51 | Separate stochastic reserve modeling from deterministic and net premium language | High |
-| `batch-007` | Exclusion tests | Confirm within pages 45-51 | Split eligibility and exclusion language away from reserve mechanics | Medium |
-| `batch-008` | Assumptions and margins | Confirm within pages 45-51 | Keep assumption and margin language isolated because it usually needs actuarial judgment | High |
-| `batch-009` | Asset assumptions | Confirm within pages 45-51 | Separate asset-related assumptions from reserve formula mechanics | High |
-| `batch-010` | Reinsurance | Confirm within pages 45-51 | Keep reinsurance treatment isolated because it often cross-references other sections | High |
-| `batch-011` | Documentation and reporting cross-references | Confirm within pages 45-51 | Capture reporting references without folding in the full reporting instructions | Medium |
-| `batch-012` | Definitions and cross-references handled elsewhere | Confirm within pages 45-51 | Clean up lookup-only and cross-reference-only material after the main mechanics are isolated | Low to medium |
+| `batch-006` | Section 3.C assumptions | Pages 58-65 | Capture mortality, interest, and lapse assumptions, then stop before the Section 4 deterministic reserve entry point | High |
+| `batch-007` | Deterministic reserve entry point | Page 66 | Capture the Section 4 entry language and the first DR rule only | High |
+| `batch-008` | Stochastic reserve entry point | Pages 67-68 | Capture the Section 5 opener and the first SR aggregation language | High |
+| `batch-009` | Exclusion tests | Pages 69-74 | Capture SET, SERT, and DET boundary language before Section 7 begins | Medium |
+| `batch-010` | Cash-flow model structure | Pages 75-79 | Capture model structure, NGE, starting assets, and the PIMR boundary | High |
+| `batch-011` | Cash-flow model asset mechanics | Pages 80-87 | Capture asset return, proxy-fund, scenario, and derivative-program mechanics while stopping before Section 8 | High |
+| `batch-012` | Reinsurance and Section 9 boundary | Pages 88-95 | Capture reinsurance credit, ceded cash flows, and the first Section 9 assumptions language | High |
 
-The exact page splits are still to be confirmed. The only confirmed range is
-the batch-002 observation window on pages 45-51. Batch-004 intentionally uses
-the explicit Section 3 / Section 4 / Section 5 role statement on page 48 and
-the Section 3 applicability opener on pages 50-51 to close the framework map
-before the detailed mechanics batches begin. Batch-005 then starts the NPR
-mechanics entry point on pages 52-57, keeping the setup and formula context
-together while leaving Section 3.C assumptions for later review.
+The exact page splits for the remaining batches now follow the source order
+observed in the PDF: Section 3.C assumptions on pages 58-65, the Section 4
+deterministic reserve entry on page 66, the Section 5 stochastic reserve
+entry on pages 67-68, the Section 6 exclusion tests on pages 69-74, the
+Section 7 cash-flow model split across pages 75-87, and the Section 8 / 9
+boundary on pages 88-95. Batch-004 intentionally uses the explicit Section 3
+/ Section 4 / Section 5 role statement on page 48 and the Section 3
+applicability opener on pages 50-51 to close the framework map before the
+detailed mechanics batches begin. Batch-005 then starts the NPR mechanics
+entry point on pages 52-57, keeping the setup and formula context together
+while leaving Section 3.C assumptions for later review.
 
 ## Review Standards
 

@@ -1086,4 +1086,1045 @@ export const batchDefinitions = {
       },
     ],
   },
+  'batch-007': {
+    batchName: 'Controlled VM-20 batch 007 - deterministic reserve entry point',
+    batchSlug: 'vm20-dr-entry-007',
+    batchProfile: 'vm20_dr_entry',
+    processingIntentText:
+      'Capture the Section 4 deterministic reserve entry point and stop before the Section 5 stochastic reserve opener.',
+    processingIntentNotes:
+      'Controlled VM-20 workflow proof only. This batch stays review-only and keeps the DR opener separate from SR mechanics.',
+    batchSummaryText:
+      'Batch 007 remains review-only. The Section 4 slice captures the deterministic reserve entry language while leaving the Section 5 stochastic reserve opener for the next batch.',
+    batchSummaryNotes: 'No learner-facing approval is granted.',
+    reviewPacketReason:
+      'This controlled VM-20 batch is intentionally limited to the deterministic reserve entry point; the DR opener is not promoted.',
+    reviewPacketNextStep:
+      'Confirm whether batch-008 should begin at the Section 5 opener or whether any additional boundary context is needed first.',
+    reviewerNotes:
+      'Tiny DR entry batch only. Keep the work review-first, preserve source-bound locators, and do not promote any item.',
+    reviewPacketFlags: [
+      {
+        flagId: 'flag-vm20-section4-entry',
+        severity: 'medium',
+        sourceId: 'vm20-section4-entry',
+        itemId: 'item-vm20-section4-entry-vm20-dr-entry-007',
+        flagType: 'section4_boundary_slice',
+        message:
+          'The Section 4 opener is a narrow deterministic reserve boundary slice and should stay review-only.',
+        notes: 'Keep review-only and do not promote.',
+      },
+    ],
+    reviewPacketCitationIssues: [
+      {
+        issueId: 'citation-vm20-section4-boundary',
+        sourceId: 'vm20-section4-entry',
+        itemId: 'item-vm20-section4-entry-vm20-dr-entry-007',
+        issueType: 'boundary_confirmation',
+        details:
+          'The Section 4 opener is concise and leads quickly toward the Section 5 stochastic reserve opener.',
+        recommendedAction:
+          'Keep the DR opener separate from the SR opener and do not merge the two reserve families.',
+      },
+    ],
+    reviewPacketHumanDecisions: [
+      {
+        decisionId: 'decision-vm20-dr-openersplit',
+        decisionType: 'scope_split',
+        question:
+          'Should the deterministic reserve opener remain a one-page boundary slice, or should it be expanded with one more page for context?',
+        whyItMatters:
+          'The DR entry point should stay narrow enough to preserve the handoff into the SR opener.',
+        recommendedOwner: 'processor owner',
+        priority: 'high',
+      },
+      {
+        decisionId: 'decision-vm20-sr-start',
+        decisionType: 'coverage_check',
+        question:
+          'Should batch-008 begin immediately at the Section 5 opener, or is a shared boundary page still needed?',
+        whyItMatters:
+          'The next batch should start cleanly at the stochastic reserve entry point.',
+        recommendedOwner: 'source reviewer',
+        priority: 'medium',
+      },
+    ],
+    unresolvedIssues: [
+      {
+        issueId: 'issue-vm20-section4-rule',
+        severity: 'medium',
+        issueType: 'reserve_boundary',
+        sourceId: 'vm20-section4-entry',
+        itemId: 'item-vm20-section4-entry-vm20-dr-entry-007',
+        message:
+          'The Section 4 language is an opener rather than the full deterministic reserve treatment, so it should remain review-only.',
+        recommendedAction:
+          'Use this slice only as the DR entry point and keep later DR mechanics for subsequent batches.',
+        evidence: 'Page 66 introduces the Section 4 deterministic reserve boundary.',
+      },
+    ],
+    validationChecks: [
+      {
+        checkId: 'batch-manifest-guardrails',
+        status: 'passed',
+        details: 'Pilot manifest blocks learner-facing promotion and app-ready export.',
+      },
+      {
+        checkId: 'section4-entry-coverage',
+        status: 'passed',
+        details: 'The selected page captures the deterministic reserve entry point only.',
+      },
+      {
+        checkId: 'source-reference-coverage',
+        status: 'passed',
+        details: 'The DR opener carries a source reference and a page locator.',
+      },
+      {
+        checkId: 'unresolved-issues-tracked',
+        status: 'passed',
+        details: 'The review packet and unresolved-issues summary both capture the open review items.',
+      },
+      {
+        checkId: 'no-promotion-output',
+        status: 'passed',
+        details: 'No approved-promoted or app-ready export was produced for the batch.',
+      },
+      {
+        checkId: 'review-only-guardrails',
+        status: 'passed',
+        details: 'Review packet stays not approved and unresolved issues remain visible for human review.',
+      },
+    ],
+    sourceSelections: [
+      {
+        sourceId: 'vm20-section4-entry',
+        relativePath: 'pbr_data_valuation_manual_2026.pdf',
+        sourceFamilyId: 'valuation_manual_pdfs',
+        documentType: 'valuation_manual_section',
+        sourceTitle: 'Valuation Manual',
+        sourceReference: '2026 NAIC Valuation Manual',
+        versionDate: null,
+        pageWindow: [66, 66],
+        sectionReference: 'Section 4: Deterministic Reserve (entry point)',
+        citationText:
+          'For a universal life policy, the NPR shall not be less than the greater of:',
+        confidence: 'high',
+        reviewFlags: [
+          'core_vm_course',
+          'deterministic_reserve',
+          'regulatory_requirement',
+          'mechanics_boundary',
+          'requires_human_interpretation',
+        ],
+        reviewStatus: 'draft_candidate',
+        itemKind: 'chunk',
+        notes:
+          'Section 4 opener; keep review-only and stop before the stochastic reserve opener.',
+        summary:
+          'Section 4 opens the deterministic reserve floor by tying the NPR to the policy cash surrender value and related cost-of-insurance floor language before the broader DR mechanics continue.',
+        keywords: ['VM-20', 'Section 4', 'deterministic reserve', 'NPR floor', 'entry point'],
+      },
+    ],
+  },
+  'batch-008': {
+    batchName: 'Controlled VM-20 batch 008 - stochastic reserve entry point',
+    batchSlug: 'vm20-sr-entry-008',
+    batchProfile: 'vm20_sr_entry',
+    processingIntentText:
+      'Capture the Section 5 stochastic reserve opener and the first aggregation language, then stop before Section 6 exclusion tests.',
+    processingIntentNotes:
+      'Controlled VM-20 workflow proof only. This batch stays review-only and keeps the SR opener separate from the exclusion-test section.',
+    batchSummaryText:
+      'Batch 008 remains review-only. The Section 5 slice captures the SR opener and early aggregation language while leaving the Section 6 exclusion tests for the next batch.',
+    batchSummaryNotes: 'No learner-facing approval is granted.',
+    reviewPacketReason:
+      'This controlled VM-20 batch is intentionally limited to the stochastic reserve entry point; the SR opener is not promoted.',
+    reviewPacketNextStep:
+      'Confirm whether batch-009 should begin at the SET opener or whether any SR boundary context needs to remain with this slice.',
+    reviewerNotes:
+      'Tiny SR entry batch only. Keep the work review-first, preserve source-bound locators, and do not promote any item.',
+    reviewPacketFlags: [
+      {
+        flagId: 'flag-vm20-section5-entry',
+        severity: 'medium',
+        sourceId: 'vm20-section5-entry',
+        itemId: 'item-vm20-section5-entry-vm20-sr-entry-008',
+        flagType: 'section5_boundary_slice',
+        message:
+          'The Section 5 opener is a narrow stochastic reserve boundary slice and should stay review-only.',
+        notes: 'Keep review-only and do not promote.',
+      },
+    ],
+    reviewPacketCitationIssues: [
+      {
+        issueId: 'citation-vm20-section5-boundary',
+        sourceId: 'vm20-section5-entry',
+        itemId: 'item-vm20-section5-entry-vm20-sr-entry-008',
+        issueType: 'boundary_confirmation',
+        details:
+          'The Section 5 opener quickly leads into aggregation language that is only a small part of the later SR mechanics.',
+        recommendedAction:
+          'Keep the SR opener separate from the Section 6 exclusion-test language and do not treat it as the full SR treatment.',
+      },
+    ],
+    reviewPacketHumanDecisions: [
+      {
+        decisionId: 'decision-vm20-sr-openersplit',
+        decisionType: 'scope_split',
+        question:
+          'Should the Section 5 opener remain a narrow entry slice, or should one more page of aggregation context be carried with it?',
+        whyItMatters:
+          'The SR entry point should stay narrow enough to preserve the exclusion-test boundary.',
+        recommendedOwner: 'processor owner',
+        priority: 'high',
+      },
+      {
+        decisionId: 'decision-vm20-exclusion-start',
+        decisionType: 'coverage_check',
+        question:
+          'Should batch-009 begin immediately at the Section 6 opener, or is a shared boundary page still needed?',
+        whyItMatters:
+          'The next batch should start cleanly at the exclusion-test section.',
+        recommendedOwner: 'source reviewer',
+        priority: 'medium',
+      },
+    ],
+    unresolvedIssues: [
+      {
+        issueId: 'issue-vm20-section5-rule',
+        severity: 'medium',
+        issueType: 'reserve_boundary',
+        sourceId: 'vm20-section5-entry',
+        itemId: 'item-vm20-section5-entry-vm20-sr-entry-008',
+        message:
+          'The Section 5 language is an opener rather than the full stochastic reserve treatment, so it should remain review-only.',
+        recommendedAction:
+          'Use this slice only as the SR entry point and keep later SR mechanics for subsequent batches.',
+        evidence: 'Pages 67-68 introduce the Section 5 stochastic reserve boundary and aggregation language.',
+      },
+    ],
+    validationChecks: [
+      {
+        checkId: 'batch-manifest-guardrails',
+        status: 'passed',
+        details: 'Pilot manifest blocks learner-facing promotion and app-ready export.',
+      },
+      {
+        checkId: 'section5-entry-coverage',
+        status: 'passed',
+        details: 'The selected pages capture the stochastic reserve entry point only.',
+      },
+      {
+        checkId: 'source-reference-coverage',
+        status: 'passed',
+        details: 'The SR opener carries a source reference and a page locator.',
+      },
+      {
+        checkId: 'unresolved-issues-tracked',
+        status: 'passed',
+        details: 'The review packet and unresolved-issues summary both capture the open review items.',
+      },
+      {
+        checkId: 'no-promotion-output',
+        status: 'passed',
+        details: 'No approved-promoted or app-ready export was produced for the batch.',
+      },
+      {
+        checkId: 'review-only-guardrails',
+        status: 'passed',
+        details: 'Review packet stays not approved and unresolved issues remain visible for human review.',
+      },
+    ],
+    sourceSelections: [
+      {
+        sourceId: 'vm20-section5-entry',
+        relativePath: 'pbr_data_valuation_manual_2026.pdf',
+        sourceFamilyId: 'valuation_manual_pdfs',
+        documentType: 'valuation_manual_section',
+        sourceTitle: 'Valuation Manual',
+        sourceReference: '2026 NAIC Valuation Manual',
+        versionDate: null,
+        pageWindow: [67, 68],
+        sectionReference: 'Section 5: Stochastic Reserve (entry point and aggregation)',
+        citationText:
+          'In determining the SR, the company shall determine the number and composition of subgroups for aggregation purposes.',
+        confidence: 'high',
+        reviewFlags: [
+          'core_vm_course',
+          'stochastic_reserve',
+          'regulatory_requirement',
+          'mechanics_boundary',
+          'requires_human_interpretation',
+        ],
+        reviewStatus: 'needs_human_review',
+        itemKind: 'review_note',
+        notes:
+          'Section 5 opener; keep review-only and stop before Section 6 exclusion tests.',
+        summary:
+          'Section 5 opens the stochastic reserve framework and begins the subgroup aggregation language before the exclusion tests take over in Section 6.',
+        keywords: ['VM-20', 'Section 5', 'stochastic reserve', 'aggregation', 'entry point'],
+      },
+    ],
+  },
+  'batch-009': {
+    batchName: 'Controlled VM-20 batch 009 - exclusion tests',
+    batchSlug: 'vm20-exclusion-009',
+    batchProfile: 'vm20_exclusion_tests',
+    processingIntentText:
+      'Capture the Section 6 stochastic and deterministic exclusion tests, then stop before Section 7 cash-flow models.',
+    processingIntentNotes:
+      'Controlled VM-20 workflow proof only. This batch stays review-only and keeps exclusion-test language separate from the cash-flow model section.',
+    batchSummaryText:
+      'Batch 009 remains review-only. The Section 6 slice captures the exclusion-test framework, including SET, SERT, and DET boundaries, while leaving Section 7 for later batches.',
+    batchSummaryNotes: 'No learner-facing approval is granted.',
+    reviewPacketReason:
+      'This controlled VM-20 batch is intentionally limited to the exclusion-test section; the test language is not promoted.',
+    reviewPacketNextStep:
+      'Confirm whether batch-010 should begin at the Section 7 model-structure opener or whether a shared boundary page is still needed.',
+    reviewerNotes:
+      'Tiny exclusion-test batch only. Keep the work review-first, preserve source-bound locators, and do not promote any item.',
+    reviewPacketFlags: [
+      {
+        flagId: 'flag-vm20-section6-tests',
+        severity: 'medium',
+        sourceId: 'vm20-section6-exclusion-tests',
+        itemId: 'item-vm20-section6-exclusion-tests-vm20-exclusion-009',
+        flagType: 'exclusion_test_slice',
+        message:
+          'Section 6 contains both stochastic and deterministic exclusion tests and should remain review-only until the boundary is clear.',
+        notes: 'Keep review-only and do not promote.',
+      },
+    ],
+    reviewPacketCitationIssues: [
+      {
+        issueId: 'citation-vm20-section6-boundary',
+        sourceId: 'vm20-section6-exclusion-tests',
+        itemId: 'item-vm20-section6-exclusion-tests-vm20-exclusion-009',
+        issueType: 'boundary_split',
+        details:
+          'The SET, SERT, and DET language spans multiple pages and leads into the cash-flow model section.',
+        recommendedAction:
+          'Keep the exclusion tests separate from Section 7 and do not fold the boundary text into model mechanics.',
+      },
+    ],
+    reviewPacketHumanDecisions: [
+      {
+        decisionId: 'decision-vm20-section6-split',
+        decisionType: 'scope_split',
+        question:
+          'Should the SET/SERT language stay grouped with the DET boundary, or should those tests be split into separate later review slices?',
+        whyItMatters:
+          'The exclusion-test batch should stay narrow enough that the Section 7 handoff remains clean.',
+        recommendedOwner: 'processor owner',
+        priority: 'high',
+      },
+      {
+        decisionId: 'decision-vm20-section7-start',
+        decisionType: 'coverage_check',
+        question:
+          'Should batch-010 begin at the Section 7 model-structure opener, or is one more transition slice needed first?',
+        whyItMatters:
+          'The next batch should start cleanly at the cash-flow model section.',
+        recommendedOwner: 'source reviewer',
+        priority: 'medium',
+      },
+    ],
+    unresolvedIssues: [
+      {
+        issueId: 'issue-vm20-section6-set',
+        severity: 'medium',
+        issueType: 'eligibility_threshold',
+        sourceId: 'vm20-section6-exclusion-tests',
+        itemId: 'item-vm20-section6-exclusion-tests-vm20-exclusion-009',
+        message:
+          'The SET and SERT requirements are explicit eligibility thresholds, but the later DET material remains adjacent and review-only.',
+        recommendedAction:
+          'Keep the exclusion-test thresholds as review-only until the cash-flow model boundary is handled separately.',
+        evidence: 'Pages 69-72 cover the SET and SERT framework.',
+      },
+      {
+        issueId: 'issue-vm20-section6-det-boundary',
+        severity: 'medium',
+        issueType: 'boundary_confirmation',
+        sourceId: 'vm20-section6-exclusion-tests',
+        itemId: 'item-vm20-section6-exclusion-tests-vm20-exclusion-009',
+        message:
+          'The DET material reaches the Section 7 boundary, so later batches should not absorb cash-flow-model language into this slice.',
+        recommendedAction:
+          'Keep Section 7 for the next batch and treat the DET language as a boundary slice only.',
+        evidence: 'Pages 73-74 transition out of Section 6 and toward Section 7.',
+      },
+    ],
+    validationChecks: [
+      {
+        checkId: 'batch-manifest-guardrails',
+        status: 'passed',
+        details: 'Pilot manifest blocks learner-facing promotion and app-ready export.',
+      },
+      {
+        checkId: 'section6-coverage',
+        status: 'passed',
+        details: 'The selected pages capture the Section 6 exclusion-test framework and stop before Section 7.',
+      },
+      {
+        checkId: 'source-reference-coverage',
+        status: 'passed',
+        details: 'The exclusion-test slice carries a source reference and a page locator.',
+      },
+      {
+        checkId: 'unresolved-issues-tracked',
+        status: 'passed',
+        details: 'The review packet and unresolved-issues summary both capture the open review items.',
+      },
+      {
+        checkId: 'no-promotion-output',
+        status: 'passed',
+        details: 'No approved-promoted or app-ready export was produced for the batch.',
+      },
+      {
+        checkId: 'review-only-guardrails',
+        status: 'passed',
+        details: 'Review packet stays not approved and unresolved issues remain visible for human review.',
+      },
+    ],
+    sourceSelections: [
+      {
+        sourceId: 'vm20-section6-exclusion-tests',
+        relativePath: 'pbr_data_valuation_manual_2026.pdf',
+        sourceFamilyId: 'valuation_manual_pdfs',
+        documentType: 'valuation_manual_section',
+        sourceTitle: 'Valuation Manual',
+        sourceReference: '2026 NAIC Valuation Manual',
+        versionDate: null,
+        pageWindow: [69, 74],
+        sectionReference: 'Section 6: Stochastic and Deterministic Exclusion Tests',
+        citationText:
+          'Groups of policies pass the SET if one of the following is met:',
+        confidence: 'high',
+        reviewFlags: [
+          'core_vm_course',
+          'exclusion_tests',
+          'regulatory_requirement',
+          'cross_reference_mapping',
+          'mechanics_boundary',
+        ],
+        reviewStatus: 'draft_candidate',
+        itemKind: 'chunk',
+        notes:
+          'Section 6 exclusion-test slice; keep review-only and stop before Section 7.',
+        summary:
+          'Section 6 lays out the stochastic and deterministic exclusion tests, including SET, SERT, and DET language that determines whether the reserve mechanics continue into Section 7.',
+        keywords: ['VM-20', 'Section 6', 'SET', 'SERT', 'DET', 'exclusion tests'],
+      },
+    ],
+  },
+  'batch-010': {
+    batchName: 'Controlled VM-20 batch 010 - cash-flow model structure',
+    batchSlug: 'vm20-cfm-structure-010',
+    batchProfile: 'vm20_cash_flow_model_structure',
+    processingIntentText:
+      'Capture the Section 7 cash-flow model structure, NGE, starting assets, and PIMR boundary, then stop before the deeper asset mechanics.',
+    processingIntentNotes:
+      'Controlled VM-20 workflow proof only. This batch stays review-only and keeps the Section 7 entry layer separate from the later asset mechanics.',
+    batchSummaryText:
+      'Batch 010 remains review-only. The Section 7 structure slice captures model structure, NGE, starting assets, and PIMR context while leaving the later asset mechanics for the next batch.',
+    batchSummaryNotes: 'No learner-facing approval is granted.',
+    reviewPacketReason:
+      'This controlled VM-20 batch is intentionally limited to the Section 7 structure slice; the model-entry language is not promoted.',
+    reviewPacketNextStep:
+      'Confirm whether batch-011 should begin with the asset-return and proxy mechanics or whether a shorter boundary slice is needed first.',
+    reviewerNotes:
+      'Tiny Section 7 structure batch only. Keep the work review-first, preserve source-bound locators, and do not promote any item.',
+    reviewPacketFlags: [
+      {
+        flagId: 'flag-vm20-section7-structure',
+        severity: 'medium',
+        sourceId: 'vm20-section7-model-structure',
+        itemId: 'item-vm20-section7-model-structure-vm20-cfm-structure-010',
+        flagType: 'cash_flow_model_structure',
+        message:
+          'The Section 7 model structure slice is a narrow entry point and should stay review-only.',
+        notes: 'Keep review-only and do not promote.',
+      },
+    ],
+    reviewPacketCitationIssues: [
+      {
+        issueId: 'citation-vm20-section7-boundary',
+        sourceId: 'vm20-section7-model-structure',
+        itemId: 'item-vm20-section7-model-structure-vm20-cfm-structure-010',
+        issueType: 'boundary_split',
+        details:
+          'The Section 7 entry language leads directly into starting-asset and PIMR treatment, which will need later review slices.',
+        recommendedAction:
+          'Keep the Section 7 structure slice separate from the later asset mechanics and avoid absorbing the proxy-fund language.',
+      },
+    ],
+    reviewPacketHumanDecisions: [
+      {
+        decisionId: 'decision-vm20-section7-structure-split',
+        decisionType: 'scope_split',
+        question:
+          'Should the Section 7 structure batch stay limited to the model-structure opener, or should it also absorb one more starting-asset page?',
+        whyItMatters:
+          'The Section 7 entry layer needs to remain narrow enough that the asset-mechanics batch can start cleanly.',
+        recommendedOwner: 'processor owner',
+        priority: 'high',
+      },
+      {
+        decisionId: 'decision-vm20-section7-asset-start',
+        decisionType: 'coverage_check',
+        question:
+          'Should batch-011 begin at the asset-mechanics boundary, or does the current slice already include enough starting-asset context?',
+        whyItMatters:
+          'The next batch should start cleanly at the asset mechanics.',
+        recommendedOwner: 'source reviewer',
+        priority: 'medium',
+      },
+    ],
+    unresolvedIssues: [
+      {
+        issueId: 'issue-vm20-section7-structure',
+        severity: 'medium',
+        issueType: 'model_structure',
+        sourceId: 'vm20-section7-model-structure',
+        itemId: 'item-vm20-section7-model-structure-vm20-cfm-structure-010',
+        message:
+          'The model-structure language is explicit but still only an entry point into the cash-flow model section.',
+        recommendedAction:
+          'Keep the structure slice review-only and leave later asset-return and proxy mechanics for the next batch.',
+        evidence: 'Pages 75-79 cover model structure, NGE, starting assets, and PIMR context.',
+      },
+      {
+        issueId: 'issue-vm20-section7-pimr-boundary',
+        severity: 'medium',
+        issueType: 'boundary_confirmation',
+        sourceId: 'vm20-section7-model-structure',
+        itemId: 'item-vm20-section7-model-structure-vm20-cfm-structure-010',
+        message:
+          'The PIMR language is a boundary issue because it is tied to the starting-assets discussion that continues in the next batch.',
+        recommendedAction:
+          'Keep PIMR in this structure slice only as review context and do not promote it.',
+        evidence: 'Page 79 ties PIMR treatment to the Section 7 model-structure discussion.',
+      },
+    ],
+    validationChecks: [
+      {
+        checkId: 'batch-manifest-guardrails',
+        status: 'passed',
+        details: 'Pilot manifest blocks learner-facing promotion and app-ready export.',
+      },
+      {
+        checkId: 'section7-structure-coverage',
+        status: 'passed',
+        details: 'The selected pages capture the Section 7 model-structure entry layer and stop before the deeper asset mechanics.',
+      },
+      {
+        checkId: 'source-reference-coverage',
+        status: 'passed',
+        details: 'The Section 7 structure slice carries a source reference and a page locator.',
+      },
+      {
+        checkId: 'unresolved-issues-tracked',
+        status: 'passed',
+        details: 'The review packet and unresolved-issues summary both capture the open review items.',
+      },
+      {
+        checkId: 'no-promotion-output',
+        status: 'passed',
+        details: 'No approved-promoted or app-ready export was produced for the batch.',
+      },
+      {
+        checkId: 'review-only-guardrails',
+        status: 'passed',
+        details: 'Review packet stays not approved and unresolved issues remain visible for human review.',
+      },
+    ],
+    sourceSelections: [
+      {
+        sourceId: 'vm20-section7-model-structure',
+        relativePath: 'pbr_data_valuation_manual_2026.pdf',
+        sourceFamilyId: 'valuation_manual_pdfs',
+        documentType: 'valuation_manual_section',
+        sourceTitle: 'Valuation Manual',
+        sourceReference: '2026 NAIC Valuation Manual',
+        versionDate: null,
+        pageWindow: [75, 79],
+        sectionReference: 'Section 7: Cash-Flow Models (model structure and starting assets)',
+        citationText:
+          'The company shall design and use a cash-flow model that:',
+        confidence: 'high',
+        reviewFlags: [
+          'core_vm_course',
+          'cash_flow_models',
+          'regulatory_requirement',
+          'asset_allocation',
+          'requires_human_interpretation',
+        ],
+        reviewStatus: 'draft_candidate',
+        itemKind: 'chunk',
+        notes:
+          'Section 7 model-structure slice; keep review-only and stop before the deeper asset mechanics.',
+        summary:
+          'Section 7 requires a cash-flow model that follows ASOPs, uses asset-segmentation-consistent model segments, and ties starting assets to the later PIMR and reserve calculations.',
+        keywords: ['VM-20', 'Section 7', 'cash-flow model', 'NGE', 'starting assets', 'PIMR'],
+      },
+    ],
+  },
+  'batch-011': {
+    batchName: 'Controlled VM-20 batch 011 - cash-flow model asset mechanics',
+    batchSlug: 'vm20-cfm-assets-011',
+    batchProfile: 'vm20_cash_flow_model_asset_mechanics',
+    processingIntentText:
+      'Capture the Section 7 asset-return, proxy-fund, scenario, and derivative-program mechanics, then stop before Section 8 reinsurance.',
+    processingIntentNotes:
+      'Controlled VM-20 workflow proof only. This batch stays review-only and keeps the Section 7 asset mechanics separate from reinsurance.',
+    batchSummaryText:
+      'Batch 011 remains review-only. The Section 7 asset-mechanics slice captures asset returns, proxy funds, scenario language, and derivative-program context while leaving Section 8 for the final batch.',
+    batchSummaryNotes: 'No learner-facing approval is granted.',
+    reviewPacketReason:
+      'This controlled VM-20 batch is intentionally limited to the asset-mechanics slice; the scenario and proxy language is not promoted.',
+    reviewPacketNextStep:
+      'Confirm whether batch-012 should begin at the Section 8 reinsurance opener or whether one more Section 7 cleanup slice is needed first.',
+    reviewerNotes:
+      'Tiny Section 7 asset-mechanics batch only. Keep the work review-first, preserve source-bound locators, and do not promote any item.',
+    reviewPacketFlags: [
+      {
+        flagId: 'flag-vm20-section7-assets',
+        severity: 'medium',
+        sourceId: 'vm20-section7-asset-mechanics',
+        itemId: 'item-vm20-section7-asset-mechanics-vm20-cfm-assets-011',
+        flagType: 'asset_mechanics_slice',
+        message:
+          'The Section 7 asset-mechanics slice is intentionally narrow and should remain review-only.',
+        notes: 'Keep review-only and do not promote.',
+      },
+    ],
+    reviewPacketCitationIssues: [
+      {
+        issueId: 'citation-vm20-section7-assets-boundary',
+        sourceId: 'vm20-section7-asset-mechanics',
+        itemId: 'item-vm20-section7-asset-mechanics-vm20-cfm-assets-011',
+        issueType: 'boundary_split',
+        details:
+          'The asset-mechanics language spans proxy funds, scenario returns, and derivative-program mechanics and ends at the Section 8 boundary.',
+        recommendedAction:
+          'Keep the Section 7 asset mechanics separate from reinsurance and do not merge the Section 8 opener into this slice.',
+      },
+    ],
+    reviewPacketHumanDecisions: [
+      {
+        decisionId: 'decision-vm20-section7-assets-split',
+        decisionType: 'scope_split',
+        question:
+          'Should the Section 7 asset batch stay as one slice, or should proxy-fund language be separated from the derivative-program language?',
+        whyItMatters:
+          'The asset-mechanics batch needs to remain reviewable without becoming too bulky.',
+        recommendedOwner: 'processor owner',
+        priority: 'high',
+      },
+      {
+        decisionId: 'decision-vm20-section8-start',
+        decisionType: 'coverage_check',
+        question:
+          'Should batch-012 begin at the Section 8 reinsurance opener, or is one more boundary slice needed from Section 7 first?',
+        whyItMatters:
+          'The last batch should start cleanly at the reinsurance section.',
+        recommendedOwner: 'source reviewer',
+        priority: 'medium',
+      },
+    ],
+    unresolvedIssues: [
+      {
+        issueId: 'issue-vm20-section7-assets',
+        severity: 'medium',
+        issueType: 'asset_modeling_judgment',
+        sourceId: 'vm20-section7-asset-mechanics',
+        itemId: 'item-vm20-section7-asset-mechanics-vm20-cfm-assets-011',
+        message:
+          'The asset-return, proxy-fund, and derivative-program language requires judgment and should stay review-only.',
+        recommendedAction:
+          'Keep the Section 7 asset mechanics out of learner-facing output until the boundary is confirmed.',
+        evidence: 'Pages 80-87 cover asset returns, proxy funds, scenario language, and derivative programs.',
+      },
+      {
+        issueId: 'issue-vm20-section7-boundary',
+        severity: 'medium',
+        issueType: 'mechanics_boundary_confirmation',
+        sourceId: 'vm20-section7-asset-mechanics',
+        itemId: 'item-vm20-section7-asset-mechanics-vm20-cfm-assets-011',
+        message:
+          'The asset-mechanics text ends at the Section 8 boundary and should not absorb the reinsurance material.',
+        recommendedAction:
+          'Leave Section 8 for the final batch and keep this slice review-only.',
+        evidence: 'Page 87 leads directly into the derivative-program boundary and the next section.',
+      },
+    ],
+    validationChecks: [
+      {
+        checkId: 'batch-manifest-guardrails',
+        status: 'passed',
+        details: 'Pilot manifest blocks learner-facing promotion and app-ready export.',
+      },
+      {
+        checkId: 'section7-asset-coverage',
+        status: 'passed',
+        details: 'The selected pages capture the Section 7 asset mechanics and stop before Section 8.',
+      },
+      {
+        checkId: 'source-reference-coverage',
+        status: 'passed',
+        details: 'The Section 7 asset slice carries a source reference and a page locator.',
+      },
+      {
+        checkId: 'unresolved-issues-tracked',
+        status: 'passed',
+        details: 'The review packet and unresolved-issues summary both capture the open review items.',
+      },
+      {
+        checkId: 'no-promotion-output',
+        status: 'passed',
+        details: 'No approved-promoted or app-ready export was produced for the batch.',
+      },
+      {
+        checkId: 'review-only-guardrails',
+        status: 'passed',
+        details: 'Review packet stays not approved and unresolved issues remain visible for human review.',
+      },
+    ],
+    sourceSelections: [
+      {
+        sourceId: 'vm20-section7-asset-mechanics',
+        relativePath: 'pbr_data_valuation_manual_2026.pdf',
+        sourceFamilyId: 'valuation_manual_pdfs',
+        documentType: 'valuation_manual_section',
+        sourceTitle: 'Valuation Manual',
+        sourceReference: '2026 NAIC Valuation Manual',
+        versionDate: null,
+        pageWindow: [80, 87],
+        sectionReference: 'Section 7: Cash-Flow Models (asset mechanics)',
+        citationText:
+          'The company shall map each of the proxy funds defined in Section 7.I and Section 7.J to the prescribed fund returns defined in Section 7.G.2.a.',
+        confidence: 'high',
+        reviewFlags: [
+          'core_vm_course',
+          'cash_flow_models',
+          'asset_modeling_judgment',
+          'proxy_mapping',
+          'boundary_spillover',
+          'requires_human_interpretation',
+        ],
+        reviewStatus: 'needs_human_review',
+        itemKind: 'review_note',
+        notes:
+          'Section 7 asset-mechanics slice; keep review-only and stop before Section 8.',
+        summary:
+          'Section 7 continues through asset returns, borrowing assumptions, reinvestment assets, proxy-fund mapping, scenario counts, and derivative-program mechanics before the reinsurance section begins.',
+        keywords: ['VM-20', 'Section 7', 'asset mechanics', 'proxy funds', 'scenario returns', 'derivatives'],
+      },
+    ],
+  },
+  'batch-012': {
+    batchName: 'Controlled VM-20 batch 012 - reinsurance and Section 9 boundary',
+    batchSlug: 'vm20-reinsurance-012',
+    batchProfile: 'vm20_reinsurance_boundary',
+    processingIntentText:
+      'Capture the Section 8 reinsurance treatment and the Section 9 assumptions boundary, then end the controlled sequence.',
+    processingIntentNotes:
+      'Controlled VM-20 workflow proof only. This batch stays review-only and keeps the reinsurance treatment separate from the later assumptions section.',
+    batchSummaryText:
+      'Batch 012 remains review-only. The Section 8 slice captures reinsurance credit, ceded cash flows, and the pre-reinsurance reserve boundary while leaving the Section 9 assumptions opening for review-only cleanup.',
+    batchSummaryNotes: 'No learner-facing approval is granted.',
+    reviewPacketReason:
+      'This controlled VM-20 batch is intentionally limited to the reinsurance and Section 9 boundary slice; the material is not promoted.',
+    reviewPacketNextStep:
+      'Review the unresolved issues and decide whether Section 9 assumptions need a later cleanup batch before any larger expansion.',
+    reviewerNotes:
+      'Tiny reinsurance boundary batch only. Keep the work review-first, preserve source-bound locators, and do not promote any item.',
+    reviewPacketFlags: [
+      {
+        flagId: 'flag-vm20-section8-reinsurance',
+        severity: 'medium',
+        sourceId: 'vm20-section8-reinsurance',
+        itemId: 'item-vm20-section8-reinsurance-vm20-reinsurance-012',
+        flagType: 'reinsurance_slice',
+        message:
+          'The Section 8 reinsurance treatment is intentionally isolated and should remain review-only.',
+        notes: 'Keep review-only and do not promote.',
+      },
+    ],
+    reviewPacketCitationIssues: [
+      {
+        issueId: 'citation-vm20-section8-boundary',
+        sourceId: 'vm20-section8-reinsurance',
+        itemId: 'item-vm20-section8-reinsurance-vm20-reinsurance-012',
+        issueType: 'boundary_split',
+        details:
+          'The reinsurance language leads directly into the Section 9 assumptions opening, so the boundary must stay visible.',
+        recommendedAction:
+          'Keep the Section 8 material review-only and do not merge the Section 9 assumptions into learner-facing output.',
+      },
+    ],
+    reviewPacketHumanDecisions: [
+      {
+        decisionId: 'decision-vm20-section8-split',
+        decisionType: 'scope_split',
+        question:
+          'Should the Section 8 reinsurance batch stay as one slice, or should the pre-reinsurance reserve boundary be separated from the ceded-cash-flow language?',
+        whyItMatters:
+          'The reinsurance batch needs to remain reviewable without becoming too bulky.',
+        recommendedOwner: 'processor owner',
+        priority: 'high',
+      },
+      {
+        decisionId: 'decision-vm20-section9-followup',
+        decisionType: 'coverage_check',
+        question:
+          'Should Section 9 assumptions be left as review-only cleanup in this batch, or should a later batch isolate them further?',
+        whyItMatters:
+          'The controlled VM-20 sequence ends here, so any Section 9 cleanup needs a clear reviewer decision.',
+        recommendedOwner: 'source reviewer',
+        priority: 'medium',
+      },
+    ],
+    unresolvedIssues: [
+      {
+        issueId: 'issue-vm20-section8-reinsurance',
+        severity: 'medium',
+        issueType: 'ceded_reserve_treatment',
+        sourceId: 'vm20-section8-reinsurance',
+        itemId: 'item-vm20-section8-reinsurance-vm20-reinsurance-012',
+        message:
+          'The reinsurance credit and cash-flow language depends on assumptions and should stay review-only until a human confirms the treatment.',
+        recommendedAction:
+          'Keep the Section 8 reinsurance language out of learner-facing output until the boundary is confirmed.',
+        evidence: 'Pages 88-93 cover the reinsurance credit and ceded cash-flow requirements.',
+      },
+      {
+        issueId: 'issue-vm20-section9-boundary',
+        severity: 'medium',
+        issueType: 'boundary_confirmation',
+        sourceId: 'vm20-section8-reinsurance',
+        itemId: 'item-vm20-section8-reinsurance-vm20-reinsurance-012',
+        message:
+          'The Section 9 assumptions opening appears immediately after the reinsurance boundary and should remain review-only cleanup.',
+        recommendedAction:
+          'Leave Section 9 assumptions for later cleanup if the reviewer wants a separate slice.',
+        evidence: 'Pages 94-95 transition from Section 8 into Section 9 assumptions language.',
+      },
+    ],
+    validationChecks: [
+      {
+        checkId: 'batch-manifest-guardrails',
+        status: 'passed',
+        details: 'Pilot manifest blocks learner-facing promotion and app-ready export.',
+      },
+      {
+        checkId: 'section8-boundary-coverage',
+        status: 'passed',
+        details: 'The selected pages capture the reinsurance treatment and the Section 9 boundary.',
+      },
+      {
+        checkId: 'source-reference-coverage',
+        status: 'passed',
+        details: 'The reinsurance slice carries a source reference and a page locator.',
+      },
+      {
+        checkId: 'unresolved-issues-tracked',
+        status: 'passed',
+        details: 'The review packet and unresolved-issues summary both capture the open review items.',
+      },
+      {
+        checkId: 'no-promotion-output',
+        status: 'passed',
+        details: 'No approved-promoted or app-ready export was produced for the batch.',
+      },
+      {
+        checkId: 'review-only-guardrails',
+        status: 'passed',
+        details: 'Review packet stays not approved and unresolved issues remain visible for human review.',
+      },
+    ],
+    sourceSelections: [
+      {
+        sourceId: 'vm20-section8-reinsurance',
+        relativePath: 'pbr_data_valuation_manual_2026.pdf',
+        sourceFamilyId: 'valuation_manual_pdfs',
+        documentType: 'valuation_manual_section',
+        sourceTitle: 'Valuation Manual',
+        sourceReference: '2026 NAIC Valuation Manual',
+        versionDate: null,
+        pageWindow: [88, 95],
+        sectionReference: 'Section 8: Reinsurance and Section 9 assumptions boundary',
+        citationText:
+          'The credit taken under a coinsurance arrangement shall be calculated using the same methodology and assumptions used in determining its NPR, but only for the percentage of the risk that was reinsured.',
+        confidence: 'high',
+        reviewFlags: [
+          'core_vm_course',
+          'reinsurance',
+          'regulatory_requirement',
+          'cross_reference_mapping',
+          'requires_human_interpretation',
+        ],
+        reviewStatus: 'needs_human_review',
+        itemKind: 'review_note',
+        notes:
+          'Section 8 reinsurance slice; keep review-only and stop at the Section 9 boundary.',
+        summary:
+          'Section 8 explains the credit to NPR for ceded reinsurance, projected ceded cash flows, and the pre-reinsurance-ceded minimum reserve boundary while Section 9 assumptions begin at the end of the slice.',
+        keywords: ['VM-20', 'Section 8', 'reinsurance', 'ceded cash flows', 'Section 9', 'boundary'],
+      },
+    ],
+  },
+  'batch-006': {
+    batchName: 'Controlled VM-20 batch 006 - Section 3.C assumptions',
+    batchSlug: 'vm20-section3c-006',
+    batchProfile: 'vm20_section3c_assumptions',
+    processingIntentText:
+      'Capture the Section 3.C assumption block for mortality, interest, and lapse, then stop before the Section 4 deterministic reserve entry point.',
+    processingIntentNotes:
+      'Controlled VM-20 workflow proof only. This batch stays review-only and keeps Section 3.C separate from the deterministic reserve entry point.',
+    batchSummaryText:
+      'Batch 006 remains review-only. The Section 3.C assumptions slice captures the mortality, interest, and lapse framework while leaving the Section 4 deterministic reserve entry point for later.',
+    batchSummaryNotes: 'No learner-facing approval is granted.',
+    reviewPacketReason:
+      'This controlled VM-20 batch is intentionally limited to Section 3.C assumptions; the assumptions layer is not promoted.',
+    reviewPacketNextStep:
+      'Confirm whether batch-007 should begin at the Section 4 opener or whether any additional floor-language context needs to stay with the assumption slice.',
+    reviewerNotes:
+      'Tiny assumptions batch only. Keep the work review-first, preserve source-bound locators, and do not promote any item.',
+    reviewPacketFlags: [
+      {
+        flagId: 'flag-vm20-section3c-assumptions',
+        severity: 'medium',
+        sourceId: 'vm20-section3c-assumptions',
+        itemId: 'item-vm20-section3c-assumptions-vm20-section3c-006',
+        flagType: 'assumption_slice',
+        message:
+          'The Section 3.C assumption block is intentionally isolated so later DR and SR mechanics do not absorb it.',
+        notes: 'Keep review-only and do not promote.',
+      },
+    ],
+    reviewPacketCitationIssues: [
+      {
+        issueId: 'citation-vm20-section3c-scope',
+        sourceId: 'vm20-section3c-assumptions',
+        itemId: 'item-vm20-section3c-assumptions-vm20-section3c-006',
+        issueType: 'assumptions_scope_confirmation',
+        details:
+          'The Section 3.C slice includes mortality, interest, and lapse assumptions but stops before the Section 4 deterministic reserve entry.',
+        recommendedAction:
+          'Keep Section 3.C as a review-only assumption slice and do not collapse it into later reserve mechanics.',
+      },
+    ],
+    reviewPacketHumanDecisions: [
+      {
+        decisionId: 'decision-vm20-section3c-split',
+        decisionType: 'scope_split',
+        question:
+          'Should mortality stay grouped with the interest and lapse assumptions, or should any of those assumptions be split into a later boundary batch?',
+        whyItMatters:
+          'The assumptions slice needs to stay narrow enough that later DR and SR mechanics remain separate.',
+        recommendedOwner: 'source reviewer',
+        priority: 'high',
+      },
+      {
+        decisionId: 'decision-vm20-section4-start',
+        decisionType: 'coverage_check',
+        question:
+          'Should batch-007 begin at the Section 4 opener, or is one more floor-language slice needed before the deterministic reserve entry point?',
+        whyItMatters:
+          'The next batch should start cleanly at Section 4 rather than reopening the assumption layer.',
+        recommendedOwner: 'processor owner',
+        priority: 'medium',
+      },
+    ],
+    unresolvedIssues: [
+      {
+        issueId: 'issue-vm20-section3c-mortality',
+        severity: 'medium',
+        issueType: 'assumption_control',
+        sourceId: 'vm20-section3c-assumptions',
+        itemId: 'item-vm20-section3c-assumptions-vm20-section3c-006',
+        message:
+          'Mortality table substitutions, improvement factors, and non-US table adjustments are all assumption-layer material and should stay review-only.',
+        recommendedAction:
+          'Keep the mortality material as a boundary slice until the later mechanics batches are reviewed.',
+        evidence: 'Pages 58-62 cover mortality tables, preferred structure tables, and non-US valuation mortality guidance.',
+      },
+      {
+        issueId: 'issue-vm20-section3c-boundary',
+        severity: 'medium',
+        issueType: 'mechanics_boundary_confirmation',
+        sourceId: 'vm20-section3c-assumptions',
+        itemId: 'item-vm20-section3c-assumptions-vm20-section3c-006',
+        message:
+          'The interest and lapse lines reach the edge of the Section 4 boundary, so later batches should not backfill the deterministic reserve opener into this slice.',
+        recommendedAction:
+          'Keep the Section 4 opener separate and start the next batch at the DR entry point.',
+        evidence: 'Pages 63-65 end at the start of the Section 4 boundary language.',
+      },
+    ],
+    validationChecks: [
+      {
+        checkId: 'batch-manifest-guardrails',
+        status: 'passed',
+        details: 'Pilot manifest blocks learner-facing promotion and app-ready export.',
+      },
+      {
+        checkId: 'section3c-coverage',
+        status: 'passed',
+        details: 'The selected pages capture the Section 3.C assumption block and stop before Section 4.',
+      },
+      {
+        checkId: 'source-reference-coverage',
+        status: 'passed',
+        details: 'The assumption slice carries a source reference and a page locator.',
+      },
+      {
+        checkId: 'unresolved-issues-tracked',
+        status: 'passed',
+        details: 'The review packet and unresolved-issues summary both capture the open review items.',
+      },
+      {
+        checkId: 'no-promotion-output',
+        status: 'passed',
+        details: 'No approved-promoted or app-ready export was produced for the batch.',
+      },
+      {
+        checkId: 'review-only-guardrails',
+        status: 'passed',
+        details: 'Review packet stays not approved and unresolved issues remain visible for human review.',
+      },
+    ],
+    sourceSelections: [
+      {
+        sourceId: 'vm20-section3c-assumptions',
+        relativePath: 'pbr_data_valuation_manual_2026.pdf',
+        sourceFamilyId: 'valuation_manual_pdfs',
+        documentType: 'valuation_manual_section',
+        sourceTitle: 'Valuation Manual',
+        sourceReference: '2026 NAIC Valuation Manual',
+        versionDate: null,
+        pageWindow: [58, 65],
+        sectionReference: 'Section 3.C assumptions (mortality, interest, lapse)',
+        citationText:
+          'The mortality tables to be used are those defined in Section 3.C.1 and in VM-M Section 1.H.',
+        confidence: 'high',
+        reviewFlags: [
+          'core_vm_course',
+          'assumption_layer',
+          'regulatory_requirement',
+          'cross_reference_mapping',
+          'requires_human_interpretation',
+        ],
+        reviewStatus: 'needs_human_review',
+        itemKind: 'review_note',
+        notes:
+          'Section 3.C assumption block; keep review-only and stop before Section 4.',
+        summary:
+          'Section 3.C establishes the mortality table framework, interest-rate rounding, and lapse-rate rules that feed the NPR before the Section 4 deterministic reserve entry point begins.',
+        keywords: ['VM-20', 'Section 3.C', 'mortality', 'interest', 'lapse', 'assumptions'],
+      },
+    ],
+  },
 }

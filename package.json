@@ -10,6 +10,13 @@
     "pilot:course-core": "node scripts/run-pilot-batch.mjs --batch batch-002",
     "vm20:batch-003": "node scripts/run-pilot-batch.mjs --batch batch-003",
     "vm20:batch-004": "node scripts/run-pilot-batch.mjs --batch batch-004",
-    "vm20:batch-005": "node scripts/run-pilot-batch.mjs --batch batch-005"
+    "vm20:batch-005": "node scripts/run-pilot-batch.mjs --batch batch-005",
+    "vm20:batch-006": "node scripts/run-pilot-batch.mjs --batch batch-006",
+    "vm20:batch-007": "node scripts/run-pilot-batch.mjs --batch batch-007",
+    "vm20:batch-008": "node scripts/run-pilot-batch.mjs --batch batch-008",
+    "vm20:batch-009": "node scripts/run-pilot-batch.mjs --batch batch-009",
+    "vm20:batch-010": "node scripts/run-pilot-batch.mjs --batch batch-010",
+    "vm20:batch-011": "node scripts/run-pilot-batch.mjs --batch batch-011",
+    "vm20:batch-012": "node scripts/run-pilot-batch.mjs --batch batch-012"
   }
 }

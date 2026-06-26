@@ -53,3 +53,9 @@
   PDF extraction runner for UTF-8 output so formula-heavy pages with Unicode
   minus signs would not fail. Ran `npm run vm20:batch-005` and
   `npm run check` successfully across five ignored batches.
+- 2026-06-26: Re-bound the remaining VM-20 plan to the actual PDF section
+  order by inspecting pages 58-95, added runner shortcuts for batches 006-012,
+  synchronized the scaffold validation with the planned batch IDs, and updated
+  the project-state docs to reflect the Section 3.C through Section 9 batch
+  sequence. `npm run check` passed after the rebind, and batch-006 is ready to
+  start next.
