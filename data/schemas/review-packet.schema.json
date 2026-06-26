@@ -1,0 +1,486 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://codex.local/schemas/review-packet.schema.json",
+  "title": "Document Processor Review Packet",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "packetId",
+    "batchId",
+    "generatedAt",
+    "reviewMode",
+    "batchSummary",
+    "sourceFilesProcessed",
+    "extractedItems",
+    "requiredHumanDecisions",
+    "exceptionsAndFlags",
+    "citationIssues",
+    "promotionRecommendation",
+    "learnerFacingStatus",
+    "ragReadiness",
+    "appExportReadiness"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "const": "1.0"
+    },
+    "packetId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "batchId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "generatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "reviewMode": {
+      "type": "string",
+      "enum": [
+        "exception_first",
+        "full_review",
+        "hybrid"
+      ]
+    },
+    "batchSummary": {
+      "$ref": "#/$defs/batchSummary"
+    },
+    "sourceFilesProcessed": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/sourceFileProcessed"
+      }
+    },
+    "extractedItems": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/extractedItemReview"
+      }
+    },
+    "requiredHumanDecisions": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/humanDecision"
+      }
+    },
+    "exceptionsAndFlags": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/flag"
+      }
+    },
+    "citationIssues": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/citationIssue"
+      }
+    },
+    "promotionRecommendation": {
+      "$ref": "#/$defs/promotionRecommendation"
+    },
+    "learnerFacingStatus": {
+      "$ref": "#/$defs/statusBlock"
+    },
+    "ragReadiness": {
+      "$ref": "#/$defs/statusBlock"
+    },
+    "appExportReadiness": {
+      "$ref": "#/$defs/statusBlock"
+    },
+    "reviewerNotes": {
+      "type": "string"
+    },
+    "extensions": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  },
+  "$defs": {
+    "batchSummary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "batchName",
+        "sourceFamilies",
+        "processingIntent",
+        "sourceFileCount",
+        "extractedItemCount",
+        "summary"
+      ],
+      "properties": {
+        "batchName": {
+          "type": "string"
+        },
+        "sourceFamilies": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "processingIntent": {
+          "type": "string"
+        },
+        "sourceFileCount": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "extractedItemCount": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "exceptionCount": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "sourceFileProcessed": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "sourceId",
+        "filename",
+        "sourceFamilyId",
+        "documentType",
+        "processingStatus",
+        "notes"
+      ],
+      "properties": {
+        "sourceId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "filename": {
+          "type": "string",
+          "minLength": 1
+        },
+        "filePath": {
+          "type": "string"
+        },
+        "sourceFamilyId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "domainId": {
+          "type": "string"
+        },
+        "documentType": {
+          "type": "string",
+          "minLength": 1
+        },
+        "processingStatus": {
+          "type": "string",
+          "enum": [
+            "selected",
+            "extracted",
+            "review_pending",
+            "blocked",
+            "error"
+          ]
+        },
+        "pageCount": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "issueCount": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "notes": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "extractedItemReview": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "stableId",
+        "sourceId",
+        "sourceFamilyId",
+        "documentType",
+        "summary",
+        "confidence",
+        "reviewFlags",
+        "learnerFacingEligible",
+        "appReadyEligible",
+        "notes"
+      ],
+      "properties": {
+        "stableId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sourceId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sourceFamilyId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "domainId": {
+          "type": "string"
+        },
+        "documentType": {
+          "type": "string",
+          "minLength": 1
+        },
+        "pageReference": {
+          "type": "string"
+        },
+        "sectionReference": {
+          "type": "string"
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "confidence": {
+          "type": "string",
+          "enum": [
+            "low",
+            "medium",
+            "high"
+          ]
+        },
+        "reviewFlags": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "learnerFacingEligible": {
+          "type": "boolean"
+        },
+        "appReadyEligible": {
+          "type": "boolean"
+        },
+        "notes": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "humanDecision": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "decisionId",
+        "decisionType",
+        "question",
+        "whyItMatters",
+        "recommendedOwner"
+      ],
+      "properties": {
+        "decisionId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "decisionType": {
+          "type": "string",
+          "enum": [
+            "citation_check",
+            "promotion_gate",
+            "ambiguity_resolution",
+            "contradiction_resolution",
+            "actuarial_judgment"
+          ]
+        },
+        "question": {
+          "type": "string",
+          "minLength": 1
+        },
+        "whyItMatters": {
+          "type": "string",
+          "minLength": 1
+        },
+        "recommendedOwner": {
+          "type": "string",
+          "minLength": 1
+        },
+        "priority": {
+          "type": "string",
+          "enum": [
+            "low",
+            "medium",
+            "high",
+            "critical"
+          ]
+        }
+      }
+    },
+    "flag": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "flagId",
+        "severity",
+        "flagType",
+        "message"
+      ],
+      "properties": {
+        "flagId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "severity": {
+          "type": "string",
+          "enum": [
+            "info",
+            "low",
+            "medium",
+            "high",
+            "critical"
+          ]
+        },
+        "sourceId": {
+          "type": "string"
+        },
+        "itemId": {
+          "type": "string"
+        },
+        "flagType": {
+          "type": "string",
+          "minLength": 1
+        },
+        "message": {
+          "type": "string",
+          "minLength": 1
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "citationIssue": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "issueId",
+        "issueType",
+        "details",
+        "recommendedAction"
+      ],
+      "properties": {
+        "issueId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sourceId": {
+          "type": "string"
+        },
+        "itemId": {
+          "type": "string"
+        },
+        "issueType": {
+          "type": "string",
+          "enum": [
+            "missing_citation",
+            "approximate_citation",
+            "page_reference_missing",
+            "section_reference_missing",
+            "source_reference_missing",
+            "citation_conflict"
+          ]
+        },
+        "details": {
+          "type": "string",
+          "minLength": 1
+        },
+        "recommendedAction": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "promotionRecommendation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "reason",
+        "recommendedNextStep"
+      ],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "not_recommended",
+            "review_candidate",
+            "approved_for_promotion",
+            "blocked"
+          ]
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        },
+        "recommendedNextStep": {
+          "type": "string",
+          "minLength": 1
+        },
+        "targetExport": {
+          "type": "string"
+        }
+      }
+    },
+    "statusBlock": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "ready",
+        "reason"
+      ],
+      "properties": {
+        "ready": {
+          "type": "boolean"
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        },
+        "indexableItemCount": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "notes": {
+          "type": "string"
+        },
+        "targetExports": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "statusText": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

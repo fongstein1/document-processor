@@ -1,0 +1,76 @@
+{
+  "schemaVersion": "1.0",
+  "inventoryId": "inventory-demo-001",
+  "batchId": "sample-batch-001",
+  "generatedAt": "2026-06-26T00:00:00Z",
+  "sourceRoot": "D:\\example\\contract-demo",
+  "domainId": "naic_regulatory",
+  "processingStatus": "inventoried",
+  "sourceFamilies": [
+    {
+      "sourceFamilyId": "valuation_manual_pdfs",
+      "label": "Valuation Manual PDFs",
+      "domainId": "naic_regulatory",
+      "notes": "Current NAIC source family."
+    },
+    {
+      "sourceFamilyId": "pricing_ratebooks_demo",
+      "label": "Pricing Ratebooks Demo",
+      "domainId": "pricing_documents",
+      "notes": "Future-domain placeholder to prove portability."
+    }
+  ],
+  "items": [
+    {
+      "sourceId": "vm26-manual",
+      "filename": "pbr_data_valuation_manual_2026.pdf",
+      "filePath": "D:\\example\\naic\\pbr_data_valuation_manual_2026.pdf",
+      "sourceFamilyId": "valuation_manual_pdfs",
+      "domainId": "naic_regulatory",
+      "documentType": "valuation_manual",
+      "sourceTitle": "NAIC Valuation Manual 2026",
+      "sourceReference": "official manual PDF placeholder",
+      "versionDate": "2026-01-01",
+      "pageCount": 512,
+      "processingStatus": "inventoried",
+      "authorityLevel": "primary_requirement",
+      "jurisdiction": "United States",
+      "confidentiality": "internal",
+      "fileHash": "demo-hash-vm26",
+      "sizeBytes": 4476496,
+      "extension": ".pdf",
+      "notes": "Representative NAIC manual source for contract testing."
+    },
+    {
+      "sourceId": "pricing-ratebook-demo",
+      "filename": "sample_ratebook_2026.xlsx",
+      "filePath": "D:\\example\\pricing\\sample_ratebook_2026.xlsx",
+      "sourceFamilyId": "pricing_ratebooks_demo",
+      "domainId": "pricing_documents",
+      "documentType": "pricing_ratebook",
+      "sourceTitle": "Sample Pricing Ratebook",
+      "sourceReference": "mock pricing workbook placeholder",
+      "versionDate": "2026-02-15",
+      "pageCount": null,
+      "processingStatus": "selected",
+      "authorityLevel": "company_practice",
+      "jurisdiction": "Company internal",
+      "confidentiality": "confidential",
+      "fileHash": "demo-hash-ratebook",
+      "sizeBytes": 120000,
+      "extension": ".xlsx",
+      "notes": "Future-domain placeholder for portability testing."
+    }
+  ],
+  "summary": {
+    "sourceCount": 2,
+    "domains": [
+      "naic_regulatory",
+      "pricing_documents"
+    ]
+  },
+  "notes": "Mock inventory used to validate schema shape only.",
+  "extensions": {
+    "demo": true
+  }
+}

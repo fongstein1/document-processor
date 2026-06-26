@@ -3,7 +3,7 @@
 ## Next immediate task
 
 Choose the first small source batch and decide which family will be used for
-the pilot. The `batch-001` scaffold is ready.
+the pilot. The contract layer is ready.
 
 ## Build tasks
 
@@ -14,6 +14,8 @@ the pilot. The `batch-001` scaffold is ready.
 - Add validation checks for source references, chunk IDs, and learner-facing
   eligibility.
 - Use the external raw source root and keep every raw file out of Git.
+- Use the new schemas and review-packet templates as the contract foundation
+  for the first real source run.
 
 ## Source-family tasks
 

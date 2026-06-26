@@ -6,3 +6,8 @@
   batch template, project-state docs, and starter scripts.
 - 2026-06-26: Bootstrapped the first batch workspace, created the working
   batch manifest, and validated the scaffold successfully with `npm run check`.
+- 2026-06-26: Added the first formal processor contract layer: JSON schemas for
+  batch manifests, source inventories, extraction outputs, and review packets,
+  plus reusable review-packet templates and demo fixtures. Validation now
+  checks the schemas, templates, sample fixtures, and refreshed working batch
+  manifest.

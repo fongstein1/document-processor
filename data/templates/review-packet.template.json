@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "1.0",
+  "packetId": "review-packet-demo",
+  "batchId": "batch-001",
+  "generatedAt": "{{generatedAt}}",
+  "reviewMode": "exception_first",
+  "batchSummary": {
+    "batchName": "Initial contract scaffold",
+    "sourceFamilies": [],
+    "processingIntent": "Small pilot scaffold only; do not process real files yet.",
+    "sourceFileCount": 0,
+    "extractedItemCount": 0,
+    "exceptionCount": 0,
+    "summary": "Placeholder review packet template for exception-first source review.",
+    "notes": "Keep learner-facing status blocked until human review completes."
+  },
+  "sourceFilesProcessed": [],
+  "extractedItems": [],
+  "requiredHumanDecisions": [],
+  "exceptionsAndFlags": [],
+  "citationIssues": [],
+  "promotionRecommendation": {
+    "status": "not_recommended",
+    "reason": "This is a template only.",
+    "recommendedNextStep": "Populate the batch from reviewed source material.",
+    "targetExport": "review_packet"
+  },
+  "learnerFacingStatus": {
+    "ready": false,
+    "reason": "Not approved for learner-facing use.",
+    "statusText": "not approved"
+  },
+  "ragReadiness": {
+    "ready": false,
+    "reason": "No approved indexed material has been attached yet.",
+    "indexableItemCount": 0,
+    "notes": "Populate stable IDs, citations, and review flags before indexing."
+  },
+  "appExportReadiness": {
+    "ready": false,
+    "reason": "No sanitized promotion output exists yet.",
+    "targetExports": [
+      "approved_promoted_export",
+      "app_ready_export"
+    ],
+    "notes": "Templates remain review-only until a batch is processed."
+  },
+  "reviewerNotes": "Review packet template only.",
+  "extensions": {}
+}

@@ -1,0 +1,138 @@
+{
+  "schemaVersion": "1.0",
+  "extractionRunId": "extraction-demo-001",
+  "batchId": "sample-batch-001",
+  "generatedAt": "2026-06-26T00:00:00Z",
+  "processingStatus": "extracted",
+  "extractionMethod": "mock text extraction for contract validation",
+  "sourceGroups": [
+    {
+      "sourceId": "vm26-manual",
+      "filename": "pbr_data_valuation_manual_2026.pdf",
+      "filePath": "D:\\example\\naic\\pbr_data_valuation_manual_2026.pdf",
+      "sourceFamilyId": "valuation_manual_pdfs",
+      "domainId": "naic_regulatory",
+      "documentType": "valuation_manual",
+      "sourceTitle": "NAIC Valuation Manual 2026",
+      "sourceReference": "official manual PDF placeholder",
+      "versionDate": "2026-01-01",
+      "pageCount": 512,
+      "processingStatus": "extracted",
+      "notes": "Mock extraction group for NAIC source testing.",
+      "extractedItems": [
+        {
+          "stableId": "chunk-vm26-0001",
+          "extractedItemId": "vm26-item-0001",
+          "itemKind": "chunk",
+          "sourceId": "vm26-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "domainId": "naic_regulatory",
+          "documentType": "valuation_manual",
+          "sourceTitle": "NAIC Valuation Manual 2026",
+          "sourceReference": "official manual PDF placeholder",
+          "sourcePath": "D:\\example\\naic\\pbr_data_valuation_manual_2026.pdf",
+          "pageReference": "p. 1-2",
+          "sectionReference": "VM-20 placeholder",
+          "chunkText": "Sample extracted chunk text for contract validation only.",
+          "normalizedText": "Sample extracted chunk text for contract validation only.",
+          "summary": "Mock summary for validation only.",
+          "keywords": [
+            "VM-20",
+            "sample",
+            "contract"
+          ],
+          "citations": [
+            {
+              "citationText": "NAIC Valuation Manual 2026, VM-20, pp. 1-2",
+              "pageReference": "p. 1-2",
+              "sectionReference": "VM-20 placeholder",
+              "sourceReference": "official manual PDF placeholder"
+            }
+          ],
+          "confidence": "medium",
+          "reviewFlags": [
+            "needs_human_review"
+          ],
+          "reviewStatus": "draft_candidate",
+          "learnerFacingEligible": false,
+          "appReadyEligible": false,
+          "nonLearnerFacingNotes": "Mock extraction item only.",
+          "notes": "Demonstration item for schema validation.",
+          "extensions": {
+            "demo": true
+          }
+        }
+      ],
+      "extensions": {
+        "demo": true
+      }
+    },
+    {
+      "sourceId": "pricing-ratebook-demo",
+      "filename": "sample_ratebook_2026.xlsx",
+      "filePath": "D:\\example\\pricing\\sample_ratebook_2026.xlsx",
+      "sourceFamilyId": "pricing_ratebooks_demo",
+      "domainId": "pricing_documents",
+      "documentType": "pricing_ratebook",
+      "sourceTitle": "Sample Pricing Ratebook",
+      "sourceReference": "mock pricing workbook placeholder",
+      "versionDate": "2026-02-15",
+      "pageCount": null,
+      "processingStatus": "extracted",
+      "notes": "Mock extraction group for pricing portability testing.",
+      "extractedItems": [
+        {
+          "stableId": "chunk-ratebook-0001",
+          "extractedItemId": "ratebook-item-0001",
+          "itemKind": "summary_candidate",
+          "sourceId": "pricing-ratebook-demo",
+          "sourceFamilyId": "pricing_ratebooks_demo",
+          "domainId": "pricing_documents",
+          "documentType": "pricing_ratebook",
+          "sourceTitle": "Sample Pricing Ratebook",
+          "sourceReference": "mock pricing workbook placeholder",
+          "sourcePath": "D:\\example\\pricing\\sample_ratebook_2026.xlsx",
+          "sectionReference": "Rate table placeholder",
+          "chunkText": "Sample pricing row text for contract validation only.",
+          "summary": "Mock pricing summary for validation only.",
+          "keywords": [
+            "pricing",
+            "ratebook",
+            "sample"
+          ],
+          "citations": [
+            {
+              "citationText": "Sample pricing ratebook, rate table placeholder",
+              "sectionReference": "Rate table placeholder",
+              "sourceReference": "mock pricing workbook placeholder"
+            }
+          ],
+          "confidence": "low",
+          "reviewFlags": [
+            "needs_human_review",
+            "citation_pending"
+          ],
+          "reviewStatus": "needs_human_review",
+          "learnerFacingEligible": false,
+          "appReadyEligible": false,
+          "nonLearnerFacingNotes": "Future-domain placeholder only.",
+          "notes": "Demonstration item for schema validation.",
+          "extensions": {
+            "demo": true
+          }
+        }
+      ],
+      "extensions": {
+        "demo": true
+      }
+    }
+  ],
+  "summary": {
+    "sourceGroupCount": 2,
+    "extractedItemCount": 2
+  },
+  "notes": "Mock extraction output used to validate schema shape only.",
+  "extensions": {
+    "demo": true
+  }
+}

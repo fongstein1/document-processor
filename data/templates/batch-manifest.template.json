@@ -1,16 +1,76 @@
 {
+  "schemaVersion": "1.0",
   "batchId": "batch-001",
+  "batchName": "Initial contract scaffold",
   "status": "draft",
-  "createdAt": "",
+  "createdAt": "{{createdAt}}",
+  "updatedAt": "{{updatedAt}}",
   "projectName": "Document Processor",
   "projectPurpose": "Build a source-bound document-processing factory for NAIC valuation, regulatory, pricing, liability-modeling, and governance material.",
-  "rawSourceRoot": "D:\\Work\\AI Projects\\NAIC Valuation Manual Course",
-  "referenceAppRepo": "C:\\Users\\David\\Documents\\Codex\\2026-06-23\\please-build-a-self-hosted-elearning",
-  "sourceFamilyIds": [],
-  "sourceFamilyLabels": [],
-  "candidateSourceRoots": [],
-  "selectedSourceFiles": [],
-  "requiredDeliverables": [
+  "sourceFamilies": [
+    {
+      "sourceFamilyId": "valuation_manual_pdfs",
+      "label": "Valuation Manual PDFs",
+      "domainId": "naic_regulatory",
+      "notes": "Current NAIC source family."
+    },
+    {
+      "sourceFamilyId": "actuarial_guidelines",
+      "label": "Actuarial Guidelines",
+      "domainId": "naic_regulatory",
+      "notes": "Current NAIC guidance family."
+    },
+    {
+      "sourceFamilyId": "practice_notes",
+      "label": "Practice Notes",
+      "domainId": "naic_regulatory",
+      "notes": "Current practice-note family."
+    },
+    {
+      "sourceFamilyId": "ny_regulations",
+      "label": "NY Regulations",
+      "domainId": "naic_regulatory",
+      "notes": "Current state regulation family."
+    }
+  ],
+  "sourceFiles": [],
+  "processingIntent": {
+    "mode": "small_pilot",
+    "targetDomains": [
+      "naic_regulatory"
+    ],
+    "pipelineStages": [
+      "inventory",
+      "extraction",
+      "chunking",
+      "labeling",
+      "review",
+      "export",
+      "validation"
+    ],
+    "smallPilot": true,
+    "learnerFacingBlocked": true,
+    "appExportRequested": true,
+    "ragReadinessRequested": true,
+    "reviewStrategy": "exception_first",
+    "notes": "Populate sourceFiles with a small representative batch before real processing."
+  },
+  "boundaries": {
+    "rawSourceRoot": "D:\\Work\\AI Projects\\NAIC Valuation Manual Course",
+    "rawMaterialExternal": true,
+    "gitExcludesRawFiles": true,
+    "noRealProcessing": true,
+    "noLearnerFacingPromotion": true,
+    "domainConfigPath": "config/source-families.json",
+    "ignoredWorkingPaths": [
+      "data/work",
+      "data/cache",
+      "data/extracted",
+      "data/generated"
+    ],
+    "notes": "Populate sourceFiles with a small representative batch before real processing."
+  },
+  "expectedOutputs": [
     "source_inventory",
     "chunk_manifest",
     "review_packet",
@@ -19,30 +79,16 @@
     "validation_report",
     "unresolved_issues_summary"
   ],
-  "skillGuardrails": [
-    "source_bound_extraction",
-    "learner_facing_promotion_gate",
-    "rag_readiness",
-    "exception_first_review",
-    "cross_domain_portability",
-    "privacy_and_data_hygiene",
-    "app_export_contract"
-  ],
-  "reviewPolicy": {
+  "reviewStatus": {
     "defaultStatus": "draft_candidate",
-    "needsHumanReviewLabel": "needs_human_review",
-    "reviewFocus": "exceptions_only"
+    "reviewStrategy": "exception_first",
+    "reviewFocus": "exceptions_only",
+    "promotionGate": "source citation exists, source support is clear, wording is not misleading, confidence is high, and no unresolved review flags exist",
+    "learnerFacingAllowed": false,
+    "appReadyAllowed": false,
+    "reviewPacketRequired": true,
+    "notes": "Populate sourceFiles with a small representative batch before real processing."
   },
-  "privacyPolicy": {
-    "rawMaterialsStayExternal": true,
-    "doNotCommit": [
-      "raw internal documents",
-      "proprietary pricing files",
-      "liability model documentation",
-      "videos",
-      "large PDFs",
-      "sensitive data"
-    ]
-  },
-  "notes": "Populate selectedSourceFiles with a small representative batch before running real processing."
+  "notes": "Populate sourceFiles with a small representative batch before real processing.",
+  "extensions": {}
 }

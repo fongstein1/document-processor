@@ -29,6 +29,26 @@ The pipeline should support:
 - Keep raw material separate from Git; store only scripts, schemas, docs,
   templates, lightweight manifests, and sanitized exports here.
 
+## Formal contract layer
+
+The first stable processor contracts live in `data/schemas/` and
+`data/templates/`.
+
+Contract files:
+
+- `data/schemas/batch-manifest.schema.json`
+- `data/schemas/source-inventory.schema.json`
+- `data/schemas/extraction-output.schema.json`
+- `data/schemas/review-packet.schema.json`
+- `data/templates/batch-manifest.template.json`
+- `data/templates/review-packet.template.json`
+- `data/templates/review-packet.template.md`
+- `data/samples/contract-demo/`
+
+These contracts are intentionally generic. NAIC-specific assumptions stay in
+`config/source-families.json`, while the schemas remain portable enough for
+pricing, liability modeling, experience studies, and internal model documents.
+
 Raw source root:
 
 `D:\Work\AI Projects\NAIC Valuation Manual Course`

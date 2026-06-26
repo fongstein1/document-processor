@@ -10,29 +10,30 @@
 
 ## Latest known commit
 
-`d3cea90` - Initialize document processor scaffold
+`e62e99f` - Record scaffold validation state
 
 ## Validation status
 
-Scaffold validation passed.
+Scaffold validation passed for the first contract layer.
 
-- `npm run bootstrap`: passed; created `data/work/batches/batch-001/batch-manifest.json`
-- `npm run check`: passed; confirmed the processor brief, skill docs, config,
-  batch template, and raw source roots
+- `npm run bootstrap`: passed; refreshed `data/work/batches/batch-001/batch-manifest.json`
+- `npm run check`: passed; confirmed the schemas, templates, demo fixtures,
+  and refreshed batch manifest
 
 ## Working posture
 
 - Raw source material stays external at
   `D:\Work\AI Projects\NAIC Valuation Manual Course`.
 - The reference app repo is read-only context only.
-- This repo currently contains the processor scaffold, config, templates, and
-  state docs only.
+- This repo currently contains the processor scaffold, config, schemas,
+  templates, demo fixtures, and state docs only.
 - No inventory, extraction, chunking, or export run has happened yet.
 - The first batch workspace scaffold exists but no real source files have been
   selected yet.
-- The repository is clean on `main` after the first scaffold commit.
+- The repository is clean on `main` after the latest committed scaffold state,
+  and the refreshed working manifest remains ignored.
 
 ## Current focus
 
-Stand up the processor scaffold and prepare the first small representative
-source batch.
+Select the first small representative source batch and begin the real
+inventory/extraction pipeline only after the contract layer is approved.

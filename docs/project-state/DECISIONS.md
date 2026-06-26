@@ -36,3 +36,15 @@ the same processor can support pricing and liability-modeling material later.
 
 Human review should focus on extraction failures, missing citations, ambiguous
 language, contradictions, and promotion candidates.
+
+## Formal contract layer first
+
+Batch manifests, source inventories, extraction outputs, and review packets are
+now treated as formal JSON-schema contracts with committed demo fixtures. Real
+source processing should not start until those contracts validate cleanly.
+
+## Demo fixtures remain non-source
+
+The committed contract demo fixtures are mock-only examples. They exist to
+prove the contract layer and must not be confused with raw source content or
+learner-facing exports.

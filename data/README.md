@@ -8,7 +8,10 @@ External source roots live under:
 
 Tracked data in this repo should stay lightweight and auditable:
 
-- `data/templates/` for reusable manifest templates
+- `data/schemas/` for formal JSON Schema contracts
+- `data/templates/` for reusable batch and review packet templates
+- `data/samples/contract-demo/` for tiny mock fixtures that validate the
+  contract layer
 - `data/review/` for concise review packets
 - `data/exports/` for sanitized app-ready outputs
 - `data/manifests/` for small source inventories and batch manifests when

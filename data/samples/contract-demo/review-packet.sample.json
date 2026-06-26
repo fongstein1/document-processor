@@ -1,0 +1,167 @@
+{
+  "schemaVersion": "1.0",
+  "packetId": "review-packet-demo-001",
+  "batchId": "sample-batch-001",
+  "generatedAt": "2026-06-26T00:00:00Z",
+  "reviewMode": "exception_first",
+  "batchSummary": {
+    "batchName": "Contract demo batch",
+    "sourceFamilies": [
+      "valuation_manual_pdfs",
+      "pricing_ratebooks_demo"
+    ],
+    "processingIntent": "Small pilot contract fixture with mixed-domain demo sources.",
+    "sourceFileCount": 2,
+    "extractedItemCount": 2,
+    "exceptionCount": 2,
+    "summary": "Demo review packet showing exception-first review for NAIC and pricing fixtures.",
+    "notes": "No learner-facing approval is granted."
+  },
+  "sourceFilesProcessed": [
+    {
+      "sourceId": "vm26-manual",
+      "filename": "pbr_data_valuation_manual_2026.pdf",
+      "sourceFamilyId": "valuation_manual_pdfs",
+      "domainId": "naic_regulatory",
+      "documentType": "valuation_manual",
+      "processingStatus": "extracted",
+      "pageCount": 512,
+      "issueCount": 1,
+      "notes": "One citation issue flagged for human review."
+    },
+    {
+      "sourceId": "pricing-ratebook-demo",
+      "filename": "sample_ratebook_2026.xlsx",
+      "sourceFamilyId": "pricing_ratebooks_demo",
+      "domainId": "pricing_documents",
+      "documentType": "pricing_ratebook",
+      "processingStatus": "extracted",
+      "pageCount": null,
+      "issueCount": 1,
+      "notes": "Future-domain portability fixture."
+    }
+  ],
+  "extractedItems": [
+    {
+      "stableId": "chunk-vm26-0001",
+      "sourceId": "vm26-manual",
+      "sourceFamilyId": "valuation_manual_pdfs",
+      "domainId": "naic_regulatory",
+      "documentType": "valuation_manual",
+      "pageReference": "p. 1-2",
+      "sectionReference": "VM-20 placeholder",
+      "summary": "Mock summary for validation only.",
+      "confidence": "medium",
+      "reviewFlags": [
+        "needs_human_review"
+      ],
+      "learnerFacingEligible": false,
+      "appReadyEligible": false,
+      "notes": "Demo review item for NAIC source."
+    },
+    {
+      "stableId": "chunk-ratebook-0001",
+      "sourceId": "pricing-ratebook-demo",
+      "sourceFamilyId": "pricing_ratebooks_demo",
+      "domainId": "pricing_documents",
+      "documentType": "pricing_ratebook",
+      "pageReference": "",
+      "sectionReference": "Rate table placeholder",
+      "summary": "Mock pricing summary for validation only.",
+      "confidence": "low",
+      "reviewFlags": [
+        "needs_human_review",
+        "citation_pending"
+      ],
+      "learnerFacingEligible": false,
+      "appReadyEligible": false,
+      "notes": "Demo review item for pricing source."
+    }
+  ],
+  "requiredHumanDecisions": [
+    {
+      "decisionId": "decision-001",
+      "decisionType": "citation_check",
+      "question": "Should the NAIC item keep its current page and section reference format?",
+      "whyItMatters": "Exact citation format must be stable before any learner-facing promotion.",
+      "recommendedOwner": "source reviewer",
+      "priority": "high"
+    },
+    {
+      "decisionId": "decision-002",
+      "decisionType": "promotion_gate",
+      "question": "Should the pricing fixture stay review-only until real pricing sources are added?",
+      "whyItMatters": "Future-domain placeholders must not become learner-facing by accident.",
+      "recommendedOwner": "processor owner",
+      "priority": "medium"
+    }
+  ],
+  "exceptionsAndFlags": [
+    {
+      "flagId": "flag-001",
+      "severity": "high",
+      "sourceId": "vm26-manual",
+      "itemId": "chunk-vm26-0001",
+      "flagType": "citation_review_needed",
+      "message": "Placeholder citation should be replaced with source-verified locator before promotion.",
+      "notes": "Keep in review packet only."
+    },
+    {
+      "flagId": "flag-002",
+      "severity": "medium",
+      "sourceId": "pricing-ratebook-demo",
+      "itemId": "chunk-ratebook-0001",
+      "flagType": "future_domain_placeholder",
+      "message": "Pricing example is intentionally synthetic and should remain review-only.",
+      "notes": "Demonstrates portability without real source content."
+    }
+  ],
+  "citationIssues": [
+    {
+      "issueId": "citation-001",
+      "sourceId": "vm26-manual",
+      "itemId": "chunk-vm26-0001",
+      "issueType": "approximate_citation",
+      "details": "Placeholder page and section reference need source verification.",
+      "recommendedAction": "Replace with exact source locator before any promotion."
+    },
+    {
+      "issueId": "citation-002",
+      "sourceId": "pricing-ratebook-demo",
+      "itemId": "chunk-ratebook-0001",
+      "issueType": "source_reference_missing",
+      "details": "Synthetic pricing fixture does not have a real source reference.",
+      "recommendedAction": "Keep review-only; do not export as approved content."
+    }
+  ],
+  "promotionRecommendation": {
+    "status": "review_candidate",
+    "reason": "The demo illustrates the review workflow but contains no approved learner-facing material.",
+    "recommendedNextStep": "Confirm citation handling and then move on to a real pilot batch.",
+    "targetExport": "review_packet"
+  },
+  "learnerFacingStatus": {
+    "ready": false,
+    "reason": "Not approved for learner-facing use.",
+    "statusText": "not approved"
+  },
+  "ragReadiness": {
+    "ready": false,
+    "reason": "No approved indexed material exists in the demo fixture.",
+    "indexableItemCount": 0,
+    "notes": "Stable IDs and review flags are present, but approval is intentionally blocked."
+  },
+  "appExportReadiness": {
+    "ready": false,
+    "reason": "No approved promoted export has been created.",
+    "targetExports": [
+      "approved_promoted_export",
+      "app_ready_export"
+    ],
+    "notes": "App export remains blocked until real source review is completed."
+  },
+  "reviewerNotes": "Mock review packet for contract validation only.",
+  "extensions": {
+    "demo": true
+  }
+}

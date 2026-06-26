@@ -1,0 +1,422 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://codex.local/schemas/batch-manifest.schema.json",
+  "title": "Document Processor Batch Manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "batchId",
+    "status",
+    "createdAt",
+    "projectName",
+    "projectPurpose",
+    "sourceFamilies",
+    "sourceFiles",
+    "processingIntent",
+    "boundaries",
+    "expectedOutputs",
+    "reviewStatus"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "const": "1.0"
+    },
+    "batchId": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]*$"
+    },
+    "batchName": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "queued",
+        "processing",
+        "review_pending",
+        "complete",
+        "blocked"
+      ]
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "projectName": {
+      "type": "string",
+      "minLength": 1
+    },
+    "projectPurpose": {
+      "type": "string",
+      "minLength": 1
+    },
+    "sourceFamilies": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/sourceFamily"
+      }
+    },
+    "sourceFiles": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/sourceFile"
+      }
+    },
+    "processingIntent": {
+      "$ref": "#/$defs/processingIntent"
+    },
+    "boundaries": {
+      "$ref": "#/$defs/boundaries"
+    },
+    "expectedOutputs": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "enum": [
+          "source_inventory",
+          "chunk_manifest",
+          "review_packet",
+          "approved_promoted_export",
+          "app_ready_export",
+          "validation_report",
+          "unresolved_issues_summary"
+        ]
+      }
+    },
+    "reviewStatus": {
+      "$ref": "#/$defs/reviewStatus"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "extensions": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  },
+  "$defs": {
+    "sourceFamily": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "sourceFamilyId",
+        "label",
+        "domainId"
+      ],
+      "properties": {
+        "sourceFamilyId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "domainId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "description": {
+          "type": "string"
+        },
+        "sourceRoots": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "sourceFile": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "sourceId",
+        "filename",
+        "sourceFamilyId",
+        "documentType",
+        "processingStatus"
+      ],
+      "properties": {
+        "sourceId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "filename": {
+          "type": "string",
+          "minLength": 1
+        },
+        "filePath": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sourceFamilyId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "domainId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "documentType": {
+          "type": "string",
+          "minLength": 1
+        },
+        "versionDate": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date"
+        },
+        "pageCount": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "processingStatus": {
+          "type": "string",
+          "enum": [
+            "planned",
+            "selected",
+            "inventoried",
+            "excluded",
+            "queued_for_processing",
+            "needs_human_review",
+            "error"
+          ]
+        },
+        "sourceReference": {
+          "type": "string"
+        },
+        "jurisdiction": {
+          "type": "string"
+        },
+        "confidentiality": {
+          "type": "string",
+          "enum": [
+            "public",
+            "internal",
+            "confidential",
+            "restricted"
+          ]
+        },
+        "sourceTitle": {
+          "type": "string"
+        },
+        "notes": {
+          "type": "string"
+        },
+        "fileHash": {
+          "type": "string"
+        },
+        "sizeBytes": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "processingIntent": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mode",
+        "targetDomains",
+        "pipelineStages",
+        "smallPilot",
+        "learnerFacingBlocked",
+        "appExportRequested",
+        "ragReadinessRequested",
+        "reviewStrategy"
+      ],
+      "properties": {
+        "mode": {
+          "type": "string",
+          "enum": [
+            "small_pilot",
+            "inventory_only",
+            "full_pipeline",
+            "review_only"
+          ]
+        },
+        "targetDomains": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "pipelineStages": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "enum": [
+              "inventory",
+              "extraction",
+              "chunking",
+              "labeling",
+              "summary",
+              "review",
+              "promotion",
+              "export",
+              "validation"
+            ]
+          }
+        },
+        "smallPilot": {
+          "type": "boolean"
+        },
+        "learnerFacingBlocked": {
+          "type": "boolean"
+        },
+        "appExportRequested": {
+          "type": "boolean"
+        },
+        "ragReadinessRequested": {
+          "type": "boolean"
+        },
+        "reviewStrategy": {
+          "type": "string",
+          "enum": [
+            "exception_first",
+            "full_review",
+            "hybrid"
+          ]
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "boundaries": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "rawSourceRoot",
+        "rawMaterialExternal",
+        "gitExcludesRawFiles",
+        "noRealProcessing",
+        "noLearnerFacingPromotion",
+        "domainConfigPath"
+      ],
+      "properties": {
+        "rawSourceRoot": {
+          "type": "string",
+          "minLength": 1
+        },
+        "rawMaterialExternal": {
+          "type": "boolean"
+        },
+        "gitExcludesRawFiles": {
+          "type": "boolean"
+        },
+        "noRealProcessing": {
+          "type": "boolean"
+        },
+        "noLearnerFacingPromotion": {
+          "type": "boolean"
+        },
+        "domainConfigPath": {
+          "type": "string",
+          "minLength": 1
+        },
+        "ignoredWorkingPaths": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "reviewStatus": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "defaultStatus",
+        "reviewStrategy",
+        "reviewFocus",
+        "promotionGate",
+        "learnerFacingAllowed",
+        "appReadyAllowed"
+      ],
+      "properties": {
+        "defaultStatus": {
+          "type": "string",
+          "enum": [
+            "draft_candidate",
+            "needs_human_review",
+            "review_pending",
+            "approved",
+            "blocked"
+          ]
+        },
+        "reviewStrategy": {
+          "type": "string",
+          "enum": [
+            "exception_first",
+            "full_review",
+            "hybrid"
+          ]
+        },
+        "reviewFocus": {
+          "type": "string",
+          "enum": [
+            "exceptions_only",
+            "full_batch",
+            "promotion_candidates_only"
+          ]
+        },
+        "promotionGate": {
+          "type": "string",
+          "minLength": 1
+        },
+        "learnerFacingAllowed": {
+          "type": "boolean"
+        },
+        "appReadyAllowed": {
+          "type": "boolean"
+        },
+        "reviewPacketRequired": {
+          "type": "boolean"
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

@@ -26,14 +26,6 @@ const writeJson = async (filePath, value) => {
   await ensureDir(path.dirname(filePath))
   await fs.writeFile(filePath, `${JSON.stringify(value, null, 2)}\n`, 'utf8')
 }
-const exists = async (filePath) => {
-  try {
-    await fs.access(filePath)
-    return true
-  } catch {
-    return false
-  }
-}
 const unique = (values) => Array.from(new Set(values.filter(Boolean)))
 
 const [config, template] = await Promise.all([
@@ -41,31 +33,76 @@ const [config, template] = await Promise.all([
   readJson(templatePath),
 ])
 
-const sourceFamilyIds = config.sourceFamilies.map((family) => family.familyId)
-const sourceFamilyLabels = config.sourceFamilies.map((family) => family.label)
-const candidateSourceRoots = unique(
-  config.sourceFamilies.flatMap((family) => family.sourceRoots ?? []),
+const sourceFamilies = config.sourceFamilies.map((family) => ({
+  sourceFamilyId: family.familyId,
+  label: family.label,
+  domainId: family.domainId,
+  ...(family.description ? { description: family.description } : {}),
+  ...(family.sourceRoots?.length ? { sourceRoots: family.sourceRoots } : {}),
+  ...(family.notes ? { notes: family.notes } : {}),
+}))
+
+const targetDomains = unique(
+  config.domains.flatMap((domain) => {
+    return domain.sourceFamilyIds?.length ? [domain.domainId] : []
+  }),
 )
 
 const batchManifest = {
   ...template,
+  schemaVersion: template.schemaVersion ?? '1.0',
   batchId: 'batch-001',
+  batchName: 'Initial contract scaffold',
   status: 'draft',
   createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
   projectName: config.project.name,
   projectPurpose: config.project.purpose,
-  rawSourceRoot: config.project.rawSourceRoot,
-  referenceAppRepo: config.project.referenceAppRepo,
-  sourceFamilyIds,
-  sourceFamilyLabels,
-  candidateSourceRoots,
-  selectedSourceFiles: [],
-  requiredDeliverables: config.outputContracts,
-  reviewPolicy: config.reviewPolicy,
-  privacyPolicy: config.privacyPolicy,
-  skillGuardrails: template.skillGuardrails,
-  notes:
-    'Select a small representative source batch before running real processing.',
+  sourceFamilies,
+  sourceFiles: [],
+  processingIntent: {
+    mode: 'small_pilot',
+    targetDomains,
+    pipelineStages: [
+      'inventory',
+      'extraction',
+      'chunking',
+      'labeling',
+      'review',
+      'export',
+      'validation',
+    ],
+    smallPilot: true,
+    learnerFacingBlocked: true,
+    appExportRequested: true,
+    ragReadinessRequested: true,
+    reviewStrategy: 'exception_first',
+    notes: 'Populate sourceFiles with a small representative batch before real processing.',
+  },
+  boundaries: {
+    rawSourceRoot: config.project.rawSourceRoot,
+    rawMaterialExternal: true,
+    gitExcludesRawFiles: true,
+    noRealProcessing: true,
+    noLearnerFacingPromotion: true,
+    domainConfigPath: 'config/source-families.json',
+    ignoredWorkingPaths: ['data/work', 'data/cache', 'data/extracted', 'data/generated'],
+    notes: 'Populate sourceFiles with a small representative batch before real processing.',
+  },
+  expectedOutputs: template.expectedOutputs ?? config.outputContracts,
+  reviewStatus: {
+    defaultStatus: 'draft_candidate',
+    reviewStrategy: 'exception_first',
+    reviewFocus: 'exceptions_only',
+    promotionGate:
+      'source citation exists, source support is clear, wording is not misleading, confidence is high, and no unresolved review flags exist',
+    learnerFacingAllowed: false,
+    appReadyAllowed: false,
+    reviewPacketRequired: true,
+    notes: 'Populate sourceFiles with a small representative batch before real processing.',
+  },
+  notes: 'Populate sourceFiles with a small representative batch before real processing.',
+  extensions: template.extensions ?? {},
 }
 
 await Promise.all([
@@ -75,9 +112,7 @@ await Promise.all([
   ensureDir(exportsRoot),
 ])
 
-if (!(await exists(manifestPath))) {
-  await writeJson(manifestPath, batchManifest)
-}
+await writeJson(manifestPath, batchManifest)
 
 console.log(`Prepared batch scaffold at ${batchRoot}`)
 console.log(`Manifest: ${manifestPath}`)

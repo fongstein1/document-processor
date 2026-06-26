@@ -1,0 +1,219 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://codex.local/schemas/source-inventory.schema.json",
+  "title": "Document Processor Source Inventory",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "inventoryId",
+    "batchId",
+    "generatedAt",
+    "sourceRoot",
+    "sourceFamilies",
+    "items"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "const": "1.0"
+    },
+    "inventoryId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "batchId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "generatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "sourceRoot": {
+      "type": "string",
+      "minLength": 1
+    },
+    "domainId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "processingStatus": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "inventoried",
+        "selected",
+        "review_pending",
+        "blocked",
+        "complete"
+      ]
+    },
+    "sourceFamilies": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/sourceFamily"
+      }
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/inventoryItem"
+      }
+    },
+    "summary": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "notes": {
+      "type": "string"
+    },
+    "extensions": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  },
+  "$defs": {
+    "sourceFamily": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "sourceFamilyId",
+        "label",
+        "domainId"
+      ],
+      "properties": {
+        "sourceFamilyId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "domainId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "inventoryItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "sourceId",
+        "filename",
+        "filePath",
+        "sourceFamilyId",
+        "domainId",
+        "documentType",
+        "processingStatus",
+        "notes"
+      ],
+      "properties": {
+        "sourceId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "filename": {
+          "type": "string",
+          "minLength": 1
+        },
+        "filePath": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sourceFamilyId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "domainId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "documentType": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sourceTitle": {
+          "type": "string"
+        },
+        "sourceReference": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "versionDate": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date"
+        },
+        "pageCount": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "processingStatus": {
+          "type": "string",
+          "enum": [
+            "discovered",
+            "inventoried",
+            "selected",
+            "excluded",
+            "queued_for_processing",
+            "needs_human_review",
+            "processed",
+            "error"
+          ]
+        },
+        "authorityLevel": {
+          "type": "string"
+        },
+        "jurisdiction": {
+          "type": "string"
+        },
+        "confidentiality": {
+          "type": "string",
+          "enum": [
+            "public",
+            "internal",
+            "confidential",
+            "restricted"
+          ]
+        },
+        "fileHash": {
+          "type": "string"
+        },
+        "sizeBytes": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "extension": {
+          "type": "string"
+        },
+        "notes": {
+          "type": "string"
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    }
+  }
+}

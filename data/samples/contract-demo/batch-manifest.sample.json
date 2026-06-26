@@ -1,0 +1,116 @@
+{
+  "schemaVersion": "1.0",
+  "batchId": "sample-batch-001",
+  "batchName": "Contract demo batch",
+  "status": "draft",
+  "createdAt": "2026-06-26T00:00:00Z",
+  "updatedAt": "2026-06-26T00:00:00Z",
+  "projectName": "Document Processor",
+  "projectPurpose": "Demonstrate the formal manifest contract before any real source files are processed.",
+  "sourceFamilies": [
+    {
+      "sourceFamilyId": "valuation_manual_pdfs",
+      "label": "Valuation Manual PDFs",
+      "domainId": "naic_regulatory",
+      "notes": "Current NAIC source family."
+    },
+    {
+      "sourceFamilyId": "pricing_ratebooks_demo",
+      "label": "Pricing Ratebooks Demo",
+      "domainId": "pricing_documents",
+      "notes": "Future-domain placeholder to prove portability."
+    }
+  ],
+  "sourceFiles": [
+    {
+      "sourceId": "vm26-manual",
+      "filename": "pbr_data_valuation_manual_2026.pdf",
+      "filePath": "D:\\example\\naic\\pbr_data_valuation_manual_2026.pdf",
+      "sourceFamilyId": "valuation_manual_pdfs",
+      "domainId": "naic_regulatory",
+      "documentType": "valuation_manual",
+      "versionDate": "2026-01-01",
+      "pageCount": 512,
+      "processingStatus": "selected",
+      "sourceReference": "official manual PDF placeholder",
+      "jurisdiction": "United States",
+      "confidentiality": "internal",
+      "notes": "Representative NAIC manual source for contract testing."
+    },
+    {
+      "sourceId": "pricing-ratebook-demo",
+      "filename": "sample_ratebook_2026.xlsx",
+      "filePath": "D:\\example\\pricing\\sample_ratebook_2026.xlsx",
+      "sourceFamilyId": "pricing_ratebooks_demo",
+      "domainId": "pricing_documents",
+      "documentType": "pricing_ratebook",
+      "versionDate": "2026-02-15",
+      "pageCount": null,
+      "processingStatus": "selected",
+      "sourceReference": "mock pricing workbook placeholder",
+      "jurisdiction": "Company internal",
+      "confidentiality": "confidential",
+      "notes": "Future-domain placeholder for portability testing."
+    }
+  ],
+  "processingIntent": {
+    "mode": "small_pilot",
+    "targetDomains": [
+      "naic_regulatory",
+      "pricing_documents"
+    ],
+    "pipelineStages": [
+      "inventory",
+      "extraction",
+      "chunking",
+      "labeling",
+      "review",
+      "export",
+      "validation"
+    ],
+    "smallPilot": true,
+    "learnerFacingBlocked": true,
+    "appExportRequested": true,
+    "ragReadinessRequested": true,
+    "reviewStrategy": "exception_first",
+    "notes": "Demo only. No real processing should occur from this fixture."
+  },
+  "boundaries": {
+    "rawSourceRoot": "D:\\Work\\AI Projects\\NAIC Valuation Manual Course",
+    "rawMaterialExternal": true,
+    "gitExcludesRawFiles": true,
+    "noRealProcessing": true,
+    "noLearnerFacingPromotion": true,
+    "domainConfigPath": "config/source-families.json",
+    "ignoredWorkingPaths": [
+      "data/work",
+      "data/cache",
+      "data/extracted",
+      "data/generated"
+    ],
+    "notes": "Mock fixture only; never use for learner-facing promotion."
+  },
+  "expectedOutputs": [
+    "source_inventory",
+    "chunk_manifest",
+    "review_packet",
+    "approved_promoted_export",
+    "app_ready_export",
+    "validation_report",
+    "unresolved_issues_summary"
+  ],
+  "reviewStatus": {
+    "defaultStatus": "draft_candidate",
+    "reviewStrategy": "exception_first",
+    "reviewFocus": "exceptions_only",
+    "promotionGate": "source citation exists, source support is clear, wording is not misleading, confidence is high, and no unresolved review flags exist",
+    "learnerFacingAllowed": false,
+    "appReadyAllowed": false,
+    "reviewPacketRequired": true,
+    "notes": "Template-only contract fixture."
+  },
+  "notes": "Sample contract fixture only.",
+  "extensions": {
+    "demo": true
+  }
+}

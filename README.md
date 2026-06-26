@@ -10,6 +10,9 @@ material.
   validation
 - durable project-state docs for handoff and auditability
 - source-family config and batch templates
+- formal JSON schemas for batch manifests, inventories, extraction outputs,
+  and review packets
+- lightweight contract fixtures under `data/samples/contract-demo/`
 - lightweight manifests, sanitized exports, and review packets
 
 ## What stays out
