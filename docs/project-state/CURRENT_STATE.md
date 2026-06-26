@@ -10,7 +10,7 @@
 
 ## Latest known commit before this batch
 
-`6779460`
+`05b9489`
 
 ## Validation status
 
@@ -31,15 +31,24 @@ and the re-bound remaining VM-20 batch plan validate cleanly.
   batch in `data/work/batches/batch-007/`
 - `npm run vm20:batch-008`: passed; created the stochastic reserve entry
   batch in `data/work/batches/batch-008/`
+- `npm run vm20:batch-009`: passed; created the exclusion-test batch in
+  `data/work/batches/batch-009/`
+- `npm run vm20:batch-010`: passed; created the Section 7 model-structure
+  batch in `data/work/batches/batch-010/`
+- `npm run vm20:batch-011`: passed; created the Section 7 asset-mechanics
+  batch in `data/work/batches/batch-011/`
+- `npm run vm20:batch-012`: passed; created the reinsurance and Section 9
+  boundary batch in `data/work/batches/batch-012/`
 - `npm run check`: passed; confirmed the schemas, templates, demo fixtures,
   review-packet contracts, the VM-20 plan artifacts, the no-promotion
   guardrails, and the synchronized batch definitions for batches 003-012
 
 The control-plan refresh commit re-bound batches 006-012 to the actual PDF
 section order and added runner shortcuts for the remaining controlled slices.
-The first three re-bound batches are now complete, and the remaining windows
-follow the exclusion-test, cash-flow model, and reinsurance / Section 9
-boundary order.
+The full re-bound VM-20 sequence is now complete. All controlled batches 006
+through 012 stayed review-only, and the remaining windows ended at the
+reinsurance / Section 9 boundary without producing learner-facing or app-
+ready output.
 
 ## Working posture
 
@@ -65,8 +74,10 @@ boundary order.
   order: Section 3.C assumptions, Section 4, Section 5, Section 6, Section 7
   split into structure and asset-mechanics slices, and the final Section 8 /
   Section 9 boundary batch.
-- Batches 006-008 now complete the Section 3.C assumption slice, the Section
-  4 deterministic reserve opener, and the Section 5 stochastic reserve opener.
+- Batches 006-012 now complete the Section 3.C assumption slice, the Section
+  4 deterministic reserve opener, the Section 5 stochastic reserve opener,
+  the Section 6 exclusion tests, the split Section 7 model batches, and the
+  final reinsurance / Section 9 boundary batch.
 - The batch-003 and batch-004 review packets both surface review flags as
   extraction categories, keep boundary slices separate from overview slices,
   and preserve the no-promotion status in both JSON and markdown.
@@ -85,5 +96,5 @@ boundary order.
 
 ## Current focus
 
-Run batch-009 on the Section 6 exclusion-test slice, then continue through the
-remaining re-bound VM-20 batches in order.
+Review the completed VM-20 batch outputs and prepare the end-of-process
+handoff.

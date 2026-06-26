@@ -66,3 +66,9 @@
   deterministic reserve opener, and batch-008 captured the Section 5
   stochastic reserve opener. Each batch stayed review-only in ignored working
   storage, and `npm run check` passed across eight validated pilot batches.
+- 2026-06-26: Completed the remaining re-bound VM-20 batches. Batch-009
+  captured the Section 6 exclusion tests, batch-010 captured the Section 7
+  model structure, batch-011 captured the Section 7 asset mechanics, and
+  batch-012 captured the reinsurance / Section 9 boundary. All slices stayed
+  review-only in ignored working storage, and `npm run check` passed across
+  twelve validated pilot batches.

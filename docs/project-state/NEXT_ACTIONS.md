@@ -2,24 +2,18 @@
 
 ## Next immediate task
 
-Run batch-009 on the Section 6 exclusion-test slice, then continue through the
-remaining re-bound VM-20 batches in order.
+Review the completed VM-20 batch outputs and prepare the end-of-process
+handoff.
 
 ## Build tasks
 
-- Keep batch 001 and batch 002 review-only unless a human reviewer explicitly
+- Keep batches 001 through 012 review-only unless a human reviewer explicitly
   approves promotion.
-- Keep batch 003 review-only until the boundary decision is made.
-- Keep batch 004 review-only until the mechanics-start decision is made.
-- Keep batch 005 review-only until the Section 3.C boundary decision is made.
-- Keep batches 006, 007, and 008 review-only until their respective boundary
-  decisions are made.
 - Treat `docs/processor/vm20_extraction_plan.md` and
-  `config/vm20-batch-plan.json` as the source of truth for the remaining
-  controlled VM-20 batches.
-- Use `npm run vm20:batch-009` through `npm run vm20:batch-012` for reruns or
-  review refreshes when the remaining controlled Section 6 to Section 9
-  slices need to be regenerated.
+  `config/vm20-batch-plan.json` as the source of truth for the controlled
+  VM-20 sequence and any later reruns.
+- Use `npm run vm20:batch-003` through `npm run vm20:batch-012` for reruns or
+  review refreshes when any controlled VM-20 slice needs to be regenerated.
 - Keep `scripts/batch-definitions.mjs` synchronized with the planned batch
   IDs and actual source order.
 - Expand validation only if the plan or a later batch reveals a genuine schema
@@ -54,6 +48,8 @@ remaining re-bound VM-20 batches in order.
 - Keep the Section 6 exclusion tests separate from the Section 7 cash-flow
   model slices, and keep the Section 8 reinsurance boundary distinct from the
   Section 9 assumptions cleanup.
+- Keep all completed VM-20 slices review-only until a deliberate promotion
+  decision is made in the separate app/product thread.
 - Keep the PDF extraction runner UTF-8-safe because formula pages can include
   Unicode minus signs and other non-ASCII glyphs.
 - Commit only lightweight, auditable artifacts.
