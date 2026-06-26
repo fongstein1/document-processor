@@ -31,3 +31,9 @@
   `scripts/batch-definitions.mjs`, the runner accepts a batch ID, the check
   script scans working batches dynamically, and a dedicated
   `npm run pilot:course-core` entry runs the core VM pilot.
+- 2026-06-26: Added a controlled VM-20 extraction plan and batch map in
+  `docs/processor/vm20_extraction_plan.md` and `config/vm20-batch-plan.json`
+  so future VM-20 extraction can stay section-by-section, review-only by
+  default, and boundary-aware.
+- 2026-06-26: Extended scaffold validation to require the VM-20 planning
+  artifacts and confirm the plan stays well-formed and review-only by default.

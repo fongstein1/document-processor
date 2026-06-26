@@ -82,3 +82,10 @@ Reserve-mechanics, reporting cross-references, and definition slices from the
 core Valuation Manual may stay review-only when they are intentionally narrow.
 Human review should decide when to split them further or add later reporting
 pages before any promotion is considered.
+
+## VM-20 planning comes before extraction
+
+The VM-20 chapter should be driven by a tracked section-by-section plan before
+any larger extraction run begins. Planned batches should remain review-only by
+default, and the plan config should serve as the source of truth until actual
+VM-20 extraction is authorized.

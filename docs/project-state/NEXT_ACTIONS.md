@@ -2,30 +2,35 @@
 
 ## Next immediate task
 
-Review the batch-002 VM-20 and VM-31 boundary questions, then decide whether
-the next tiny batch should split the reserve-mechanics slice more cleanly or
-capture later VM-31 reporting pages before any expansion.
+Review the VM-20 extraction plan and decide whether the first planned
+sub-batch should become the next tiny extraction run or stay on hold until the
+boundary map is approved.
 
 ## Build tasks
 
 - Keep batch 001 and batch 002 review-only unless a human reviewer explicitly
   approves promotion.
-- Keep using `scripts/batch-definitions.mjs` as the source of truth for tiny
-  pilot selection and review metadata.
-- Expand validation only if a later batch reveals a genuine schema or workflow
-  gap.
+- Treat `docs/processor/vm20_extraction_plan.md` and
+  `config/vm20-batch-plan.json` as the source of truth for the next VM-20
+  planning step.
+- Extend `scripts/batch-definitions.mjs` later, only when actual VM-20
+  extraction batches are authorized.
+- Expand validation only if the plan or a later batch reveals a genuine schema
+  or workflow gap.
 - Keep app-ready export work deferred until a real promotion candidate exists.
 
 ## Source-family tasks
 
 - Keep the NAIC valuation-manual core family isolated from future pricing and
   liability-modeling families.
-- Expand the config only after the core VM course workflow proves stable.
+- Keep VM-20 planning review-only until the batch map is explicitly accepted.
 
 ## Hygiene tasks
 
 - Keep raw source material out of Git.
 - Keep generated heavy outputs in ignored working folders.
+- Keep planned batches as lightweight docs/config only until extraction is
+  authorized.
 - Keep pilot batches tiny and review-first until the citation pattern is
   confirmed.
 - Keep source-reference, unresolved-issues, and no-promotion coverage visible
