@@ -55,3 +55,16 @@ Tiny pilot batches are allowed to stay review-only and do not need to produce
 approved-promoted or app-ready exports until a human explicitly approves a
 promotion candidate. The pilot should still produce auditable inventory,
 extraction, chunk, review, validation, and unresolved-issues artifacts.
+
+## Line-level locators are first-class
+
+Plain-text and other non-page sources may use `lineReference` in extraction and
+review contracts when page numbers are unavailable. The review packet and
+validation checks should keep those line locators visible instead of forcing a
+page citation that does not exist.
+
+## Review-only pilots must surface exceptions
+
+Pilot review packets should make unresolved issues and no-promotion guardrails
+explicit so the reviewer can focus on exceptions, citation gaps, and approval
+gates without guessing at hidden status.

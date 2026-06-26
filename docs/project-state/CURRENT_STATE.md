@@ -20,7 +20,8 @@ Scaffold validation now also passes for the first real pilot batch.
 - `npm run pilot`: passed; created the tiny real-source pilot batch outputs in
   `data/work/batches/batch-001/`
 - `npm run check`: passed; confirmed the schemas, templates, demo fixtures,
-  scaffold/pilot batch manifest rules, and the pilot review packet
+  scaffold/pilot batch manifest rules, the pilot review packet, and the
+  no-promotion guardrails
 
 ## Working posture
 
@@ -33,6 +34,9 @@ Scaffold validation now also passes for the first real pilot batch.
 - The pilot batch selected 3 real source files and produced source inventory,
   chunk manifest, extraction output, review packet, validation report, and
   unresolved-issues summary artifacts.
+- The hardened pilot review packet now carries source references, locators,
+  unresolved issues, and validation checks that keep review-only status
+  explicit.
 - No learner-facing or app-ready promotion has been produced.
 - The real pilot outputs remain ignored under `data/work/`.
 - The repository will be clean on `main` once this state refresh is committed,
@@ -40,5 +44,5 @@ Scaffold validation now also passes for the first real pilot batch.
 
 ## Current focus
 
-Keep the pilot batch review-only, resolve the AG 52 edge-case disposition, and
-use the tiny pilot as the baseline for the next small source batch.
+Keep the pilot batch review-only, resolve the AG 52 edge-case disposition,
+and use the hardened pilot as the baseline for the next small source batch.

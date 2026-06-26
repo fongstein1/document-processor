@@ -16,6 +16,7 @@
     "requiredHumanDecisions",
     "exceptionsAndFlags",
     "citationIssues",
+    "unresolvedIssues",
     "promotionRecommendation",
     "learnerFacingStatus",
     "ragReadiness",
@@ -77,6 +78,12 @@
       "type": "array",
       "items": {
         "$ref": "#/$defs/citationIssue"
+      }
+    },
+    "unresolvedIssues": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/unresolvedIssue"
       }
     },
     "promotionRecommendation": {
@@ -169,6 +176,9 @@
         "filePath": {
           "type": "string"
         },
+        "sourceReference": {
+          "type": "string"
+        },
         "sourceFamilyId": {
           "type": "string",
           "minLength": 1
@@ -245,10 +255,19 @@
           "type": "string",
           "minLength": 1
         },
+        "sourceReference": {
+          "type": "string"
+        },
+        "sourcePath": {
+          "type": "string"
+        },
         "pageReference": {
           "type": "string"
         },
         "sectionReference": {
+          "type": "string"
+        },
+        "lineReference": {
           "type": "string"
         },
         "summary": {
@@ -411,6 +430,54 @@
         "recommendedAction": {
           "type": "string",
           "minLength": 1
+        }
+      }
+    },
+    "unresolvedIssue": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "issueId",
+        "severity",
+        "issueType",
+        "message",
+        "recommendedAction"
+      ],
+      "properties": {
+        "issueId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "severity": {
+          "type": "string",
+          "enum": [
+            "info",
+            "low",
+            "medium",
+            "high",
+            "critical"
+          ]
+        },
+        "issueType": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sourceId": {
+          "type": "string"
+        },
+        "itemId": {
+          "type": "string"
+        },
+        "message": {
+          "type": "string",
+          "minLength": 1
+        },
+        "recommendedAction": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence": {
+          "type": "string"
         }
       }
     },

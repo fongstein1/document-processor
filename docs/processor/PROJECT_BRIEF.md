@@ -198,3 +198,6 @@ Every batch should end with:
 - unresolved-issues summary
 
 These outputs should remain lightweight, versioned, and easy to import.
+Review-only pilot batches may stop after the review packet, validation report,
+and unresolved-issues summary until a promotion candidate is explicitly
+approved.

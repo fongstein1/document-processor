@@ -207,6 +207,7 @@ const requiredReviewHeadings = [
   '## Required Human Decisions',
   '## Exceptions/Flags',
   '## Citation/Source-Reference Issues',
+  '## Unresolved Issues',
   '## Promotion Recommendation',
   '## RAG Readiness',
   '## App Export Readiness',
@@ -366,6 +367,9 @@ const validateBatchManifestLike = (manifest, label, options = {}) => {
   if (isPilot && !sourceFiles.every((sourceFile) => sourceFile.processingStatus === 'selected')) {
     problems.push(`${label}.sourceFiles: pilot source files must be marked selected`)
   }
+  if (isPilot && !sourceFiles.every((sourceFile) => hasString(sourceFile.sourceReference))) {
+    problems.push(`${label}.sourceFiles: pilot source files must include sourceReference values`)
+  }
 
   sourceFamilies.forEach((family, index) => {
     const familyLabel = `${label}.sourceFamilies[${index}]`
@@ -510,6 +514,9 @@ const validateChunkManifestLike = (chunkManifest, label) => {
         }
       },
     )
+    if (!hasString(item.sourceReference)) {
+      problems.push(`${itemLabel}: missing sourceReference`)
+    }
   })
   chunkManifest.chunks.forEach((chunk, index) => {
     const chunkLabel = `${label}.chunks[${index}]`
@@ -521,6 +528,8 @@ const validateChunkManifestLike = (chunkManifest, label) => {
       'sourceFamilyId',
       'domainId',
       'documentType',
+      'sourceReference',
+      'sourcePath',
       'chunkText',
       'summary',
       'confidence',
@@ -534,6 +543,9 @@ const validateChunkManifestLike = (chunkManifest, label) => {
     if (!expectArray(chunk.keywords, `${chunkLabel}.keywords`, false)) return
     if (!expectArray(chunk.citations, `${chunkLabel}.citations`, false)) return
     if (!expectArray(chunk.reviewFlags, `${chunkLabel}.reviewFlags`, false)) return
+    if (!hasString(chunk.pageReference) && !hasString(chunk.sectionReference) && !hasString(chunk.lineReference)) {
+      problems.push(`${chunkLabel}: missing pageReference, sectionReference, or lineReference`)
+    }
     if (chunk.learnerFacingEligible !== false) {
       problems.push(`${chunkLabel}: learnerFacingEligible must be false`)
     }
@@ -573,7 +585,7 @@ const validateSourceInventoryLike = (inventory, label) => {
   inventory.items.forEach((item, index) => {
     const itemLabel = `${label}.items[${index}]`
     if (!expectObject(item, itemLabel)) return
-    ;['sourceId', 'filename', 'filePath', 'sourceFamilyId', 'domainId', 'documentType', 'processingStatus', 'notes'].forEach(
+    ;['sourceId', 'filename', 'filePath', 'sourceFamilyId', 'domainId', 'documentType', 'processingStatus', 'sourceReference', 'notes'].forEach(
       (field) => {
         if (!hasString(item[field])) {
           problems.push(`${itemLabel}: missing ${field}`)
@@ -621,7 +633,7 @@ const validateExtractionOutputLike = (output, label) => {
   output.sourceGroups.forEach((group, groupIndex) => {
     const groupLabel = `${label}.sourceGroups[${groupIndex}]`
     if (!expectObject(group, groupLabel)) return
-    ;['sourceId', 'filename', 'filePath', 'sourceFamilyId', 'domainId', 'documentType', 'processingStatus'].forEach(
+    ;['sourceId', 'filename', 'filePath', 'sourceFamilyId', 'domainId', 'documentType', 'processingStatus', 'sourceReference'].forEach(
       (field) => {
         if (!hasString(group[field])) {
           problems.push(`${groupLabel}: missing ${field}`)
@@ -641,6 +653,8 @@ const validateExtractionOutputLike = (output, label) => {
         'sourceFamilyId',
         'domainId',
         'documentType',
+        'sourceReference',
+        'sourcePath',
         'chunkText',
         'summary',
         'nonLearnerFacingNotes',
@@ -649,6 +663,9 @@ const validateExtractionOutputLike = (output, label) => {
           problems.push(`${itemLabel}: missing ${field}`)
         }
       })
+      if (!hasString(item.pageReference) && !hasString(item.sectionReference) && !hasString(item.lineReference)) {
+        problems.push(`${itemLabel}: missing pageReference, sectionReference, or lineReference`)
+      }
       if (!expectArray(item.keywords, `${itemLabel}.keywords`, false)) return
       if (!expectArray(item.citations, `${itemLabel}.citations`, false)) return
       if (!expectArray(item.reviewFlags, `${itemLabel}.reviewFlags`, false)) return
@@ -697,6 +714,7 @@ const validateReviewPacketLike = (packet, label) => {
   if (!expectArray(packet.requiredHumanDecisions, `${label}.requiredHumanDecisions`)) return
   if (!expectArray(packet.exceptionsAndFlags, `${label}.exceptionsAndFlags`)) return
   if (!expectArray(packet.citationIssues, `${label}.citationIssues`)) return
+  if (!expectArray(packet.unresolvedIssues, `${label}.unresolvedIssues`)) return
   if (!expectObject(packet.promotionRecommendation, `${label}.promotionRecommendation`)) return
   if (!expectObject(packet.learnerFacingStatus, `${label}.learnerFacingStatus`)) return
   if (!expectObject(packet.ragReadiness, `${label}.ragReadiness`)) return
@@ -754,7 +772,7 @@ const validateReviewPacketLike = (packet, label) => {
   packet.sourceFilesProcessed.forEach((item, index) => {
     const itemLabel = `${label}.sourceFilesProcessed[${index}]`
     if (!expectObject(item, itemLabel)) return
-    ;['sourceId', 'filename', 'sourceFamilyId', 'documentType', 'processingStatus', 'notes'].forEach((field) => {
+    ;['sourceId', 'filename', 'sourceReference', 'sourceFamilyId', 'documentType', 'processingStatus', 'notes'].forEach((field) => {
       if (!hasString(item[field])) {
         problems.push(`${itemLabel}: missing ${field}`)
       }
@@ -764,12 +782,15 @@ const validateReviewPacketLike = (packet, label) => {
   packet.extractedItems.forEach((item, index) => {
     const itemLabel = `${label}.extractedItems[${index}]`
     if (!expectObject(item, itemLabel)) return
-    ;['stableId', 'sourceId', 'sourceFamilyId', 'documentType', 'summary', 'notes'].forEach((field) => {
+    ;['stableId', 'sourceId', 'sourceFamilyId', 'documentType', 'sourceReference', 'sourcePath', 'summary', 'notes'].forEach((field) => {
       if (!hasString(item[field])) {
         problems.push(`${itemLabel}: missing ${field}`)
       }
     })
     if (!expectArray(item.reviewFlags, `${itemLabel}.reviewFlags`, false)) return
+    if (!hasString(item.pageReference) && !hasString(item.sectionReference) && !hasString(item.lineReference)) {
+      problems.push(`${itemLabel}: missing pageReference, sectionReference, or lineReference`)
+    }
     if (item.learnerFacingEligible !== false) {
       problems.push(`${itemLabel}: learnerFacingEligible must be false`)
     }
@@ -807,6 +828,19 @@ const validateReviewPacketLike = (packet, label) => {
       }
     })
   })
+
+  packet.unresolvedIssues.forEach((item, index) => {
+    const itemLabel = `${label}.unresolvedIssues[${index}]`
+    if (!expectObject(item, itemLabel)) return
+    ;['issueId', 'severity', 'issueType', 'message', 'recommendedAction'].forEach((field) => {
+      if (!hasString(item[field])) {
+        problems.push(`${itemLabel}: missing ${field}`)
+      }
+    })
+    if (['high', 'critical'].includes(item.severity) && !hasString(item.sourceId) && !hasString(item.itemId)) {
+      problems.push(`${itemLabel}: high-severity unresolved issues should identify a source or item`)
+    }
+  })
 }
 
 const validateReviewMarkdown = async (filePath, label) => {
@@ -835,6 +869,7 @@ const validateValidationReportLike = (report, label) => {
     problems.push(`${label}: status must be passed`)
   }
   if (!expectObject(report.checkedArtifacts, `${label}.checkedArtifacts`)) return
+  if (!expectArray(report.checks, `${label}.checks`, false)) return
   if (!expectObject(report.pilotSummary, `${label}.pilotSummary`)) return
   if (!Array.isArray(report.notes) || report.notes.length === 0) {
     problems.push(`${label}: notes must be a non-empty array`)
@@ -849,6 +884,18 @@ const validateValidationReportLike = (report, label) => {
   ;['selectedSourceCount', 'extractedItemCount', 'reviewOnlyItemCount', 'exceptionCount'].forEach((field) => {
     if (!Number.isInteger(report.pilotSummary[field])) {
       problems.push(`${label}.pilotSummary: ${field} must be an integer`)
+    }
+  })
+  report.checks.forEach((check, index) => {
+    const checkLabel = `${label}.checks[${index}]`
+    if (!expectObject(check, checkLabel)) return
+    ;['checkId', 'status', 'details'].forEach((field) => {
+      if (!hasString(check[field])) {
+        problems.push(`${checkLabel}: missing ${field}`)
+      }
+    })
+    if (!['passed', 'needs_review', 'failed'].includes(check.status)) {
+      problems.push(`${checkLabel}: invalid status`)
     }
   })
 }
@@ -941,6 +988,43 @@ if (workingBatchIsPilot) {
   validateExtractionOutputLike(pilotExtractionOutput, 'data/work/batches/batch-001/extraction-output.json')
   validateReviewPacketLike(pilotReviewPacketJson, 'data/work/batches/batch-001/review/review-packet.json')
   validateValidationReportLike(pilotValidationReport, 'data/work/batches/batch-001/validation-report.json')
+
+  if (pilotReviewPacketJson.promotionRecommendation?.status !== 'not_recommended') {
+    problems.push(
+      'data/work/batches/batch-001/review/review-packet.json: pilot review packet must remain not_recommended',
+    )
+  }
+  if (!Array.isArray(pilotReviewPacketJson.unresolvedIssues) || pilotReviewPacketJson.unresolvedIssues.length === 0) {
+    problems.push(
+      'data/work/batches/batch-001/review/review-packet.json: pilot review packet must include unresolved issues',
+    )
+  }
+  const pilotCheckIds = new Map(
+    Array.isArray(pilotValidationReport.checks)
+      ? pilotValidationReport.checks.map((check) => [check.checkId, check])
+      : [],
+  )
+  for (const checkId of [
+    'batch-manifest-guardrails',
+    'source-reference-coverage',
+    'unresolved-issues-tracked',
+    'no-promotion-output',
+    'review-only-guardrails',
+  ]) {
+    const check = pilotCheckIds.get(checkId)
+    if (!check) {
+      problems.push(
+        `data/work/batches/batch-001/validation-report.json: missing pilot check ${checkId}`,
+      )
+      continue
+    }
+    if (check.status !== 'passed') {
+      problems.push(
+        `data/work/batches/batch-001/validation-report.json: pilot check ${checkId} must be passed`,
+      )
+    }
+  }
+
   await validateReviewMarkdown(paths.pilotReviewPacketMd, 'data/work/batches/batch-001/review/review-packet.md')
   await validateUnresolvedIssuesSummary(
     paths.pilotUnresolvedIssuesSummary,

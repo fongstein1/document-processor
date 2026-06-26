@@ -21,6 +21,7 @@
     {
       "sourceId": "vm26-manual",
       "filename": "pbr_data_valuation_manual_2026.pdf",
+      "sourceReference": "Demo valuation manual reference",
       "sourceFamilyId": "valuation_manual_pdfs",
       "domainId": "naic_regulatory",
       "documentType": "valuation_manual",
@@ -32,6 +33,7 @@
     {
       "sourceId": "pricing-ratebook-demo",
       "filename": "sample_ratebook_2026.xlsx",
+      "sourceReference": "Demo pricing ratebook reference",
       "sourceFamilyId": "pricing_ratebooks_demo",
       "domainId": "pricing_documents",
       "documentType": "pricing_ratebook",
@@ -45,6 +47,8 @@
     {
       "stableId": "chunk-vm26-0001",
       "sourceId": "vm26-manual",
+      "sourceReference": "Demo valuation manual reference",
+      "sourcePath": "mock/source/pbr_data_valuation_manual_2026.pdf",
       "sourceFamilyId": "valuation_manual_pdfs",
       "domainId": "naic_regulatory",
       "documentType": "valuation_manual",
@@ -62,6 +66,8 @@
     {
       "stableId": "chunk-ratebook-0001",
       "sourceId": "pricing-ratebook-demo",
+      "sourceReference": "Demo pricing ratebook reference",
+      "sourcePath": "mock/source/sample_ratebook_2026.xlsx",
       "sourceFamilyId": "pricing_ratebooks_demo",
       "domainId": "pricing_documents",
       "documentType": "pricing_ratebook",
@@ -132,6 +138,26 @@
       "issueType": "source_reference_missing",
       "details": "Synthetic pricing fixture does not have a real source reference.",
       "recommendedAction": "Keep review-only; do not export as approved content."
+    }
+  ],
+  "unresolvedIssues": [
+    {
+      "issueId": "issue-001",
+      "severity": "high",
+      "issueType": "citation_scope_confirmation",
+      "sourceId": "vm26-manual",
+      "itemId": "chunk-vm26-0001",
+      "message": "The NAIC demo item still uses a placeholder page-range citation.",
+      "recommendedAction": "Replace the placeholder citation with a source-verified locator before any promotion."
+    },
+    {
+      "issueId": "issue-002",
+      "severity": "medium",
+      "issueType": "future_domain_placeholder",
+      "sourceId": "pricing-ratebook-demo",
+      "itemId": "chunk-ratebook-0001",
+      "message": "The pricing fixture is synthetic and not tied to a real source workbook.",
+      "recommendedAction": "Keep the pricing fixture review-only until a real pricing source is added."
     }
   ],
   "promotionRecommendation": {

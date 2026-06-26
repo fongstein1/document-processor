@@ -31,6 +31,10 @@
 
 {{citationIssuesList}}
 
+## Unresolved Issues
+
+{{unresolvedIssuesList}}
+
 ## Promotion Recommendation
 
 - Status: {{promotionRecommendation.status}}

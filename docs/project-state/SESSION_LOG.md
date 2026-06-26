@@ -17,3 +17,8 @@
   output, review packet, validation report, and unresolved-issues summary in
   ignored working storage, then validated the scaffold and pilot outputs
   successfully.
+- 2026-06-26: Hardened the pilot review layer after the first real batch by
+  adding line-level locator support to the extraction/review contracts,
+  requiring source references in the chunk manifest, expanding the pilot
+  validation checks, and clarifying the review-only output contract. The tiny
+  pilot batch was regenerated and the scaffold validation passed again.

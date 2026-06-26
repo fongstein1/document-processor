@@ -19,6 +19,7 @@
   "requiredHumanDecisions": [],
   "exceptionsAndFlags": [],
   "citationIssues": [],
+  "unresolvedIssues": [],
   "promotionRecommendation": {
     "status": "not_recommended",
     "reason": "This is a template only.",

@@ -38,6 +38,11 @@
 - citation-001: Placeholder page and section reference need source verification.
 - citation-002: Synthetic pricing fixture does not have a real source reference.
 
+## Unresolved Issues
+
+- issue-001: The NAIC demo item still uses a placeholder page-range citation.
+- issue-002: The pricing fixture is synthetic and not tied to a real source workbook.
+
 ## Promotion Recommendation
 
 - Status: review_candidate

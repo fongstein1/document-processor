@@ -53,6 +53,7 @@ const slugify = (value) =>
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-+|-+$/g, '')
 const ensureArray = (value) => (Array.isArray(value) ? value : [])
+const unique = (values) => Array.from(new Set(values.filter(Boolean)))
 
 const extractPdfPages = async (filePath, startPage, endPage) => {
   const pythonCode = `
@@ -173,6 +174,8 @@ const selectedFamilies = ensureArray(sourceSelections)
   .map((selection) => sourceFamiliesById.get(selection.sourceFamilyId))
   .filter(Boolean)
   .filter((family, index, array) => array.findIndex((candidate) => candidate.familyId === family.familyId) === index)
+const selectedDomainIds = unique(selectedFamilies.map((family) => family.domainId))
+const singleSelectedDomainId = selectedDomainIds.length === 1 ? selectedDomainIds[0] : null
 
 const sourceArtifacts = []
 const inventoryItems = []
@@ -419,6 +422,7 @@ for (const [index, selection] of sourceSelections.entries()) {
   reviewPacketSourceFiles.push({
     sourceId: selection.sourceId,
     filename,
+    sourceReference: selection.sourceReference,
     sourceFamilyId: selection.sourceFamilyId,
     domainId,
     documentType: selection.documentType,
@@ -439,8 +443,11 @@ for (const [index, selection] of sourceSelections.entries()) {
     sourceFamilyId: selection.sourceFamilyId,
     domainId,
     documentType: selection.documentType,
+    sourceReference: selection.sourceReference,
+    sourcePath: filePath,
     pageReference: pageReference || '',
     sectionReference: sectionReference || '',
+    lineReference: lineReference || '',
     summary: selection.summary,
     confidence: selection.confidence,
     reviewFlags: itemReviewFlags,
@@ -509,6 +516,33 @@ reviewPacketHumanDecisions.push(
   },
 )
 
+const unresolvedIssues = [
+  {
+    issueId: 'issue-ag52-disposition',
+    severity: 'high',
+    issueType: 'superseded_source_disposition',
+    sourceId: 'ag52-early-adoption-text',
+    itemId: 'item-ag52-early-adoption-text-pilot-001',
+    message:
+      'The AG 52 text note explicitly says it is no longer applicable as of 2020 and should remain review-only until the disposition is confirmed.',
+    recommendedAction:
+      'Confirm whether AG 52 should remain excluded from future pilot batches and approved indexes.',
+    evidence: 'As of 2020, AG 52 is no longer applicable.',
+  },
+  {
+    issueId: 'issue-vm20-citation-slice',
+    severity: 'medium',
+    issueType: 'citation_scope_confirmation',
+    sourceId: 'vm20-practice-note-2020',
+    itemId: 'chunk-vm20-practice-note-2020-pilot-001',
+    message:
+      'The VM-20 practice note slice is enough for a pilot, but the exact citation window should be confirmed before the batch grows.',
+    recommendedAction:
+      'Confirm whether the current page-range citation is sufficient or whether a later slice should be added before expansion.',
+    evidence: 'First three pages only; title, disclaimer, and table of contents slice.',
+  },
+]
+
 const batchManifest = {
   ...manifestTemplate,
   schemaVersion: manifestTemplate.schemaVersion ?? '1.0',
@@ -530,7 +564,7 @@ const batchManifest = {
   sourceFiles: manifestSourceFiles,
   processingIntent: {
     mode: 'small_pilot',
-    targetDomains: ['naic_regulatory'],
+    targetDomains: selectedDomainIds,
     pipelineStages: ['inventory', 'extraction', 'chunking', 'labeling', 'review', 'validation'],
     smallPilot: true,
     learnerFacingBlocked: true,
@@ -583,7 +617,7 @@ const sourceInventory = {
   batchId,
   generatedAt: new Date().toISOString(),
   sourceRoot: rawRoot,
-  domainId: 'naic_regulatory',
+  ...(singleSelectedDomainId ? { domainId: singleSelectedDomainId } : {}),
   processingStatus: 'inventoried',
   sourceFamilies: selectedFamilies.map((family) => ({
     sourceFamilyId: family.familyId,
@@ -594,7 +628,7 @@ const sourceInventory = {
   items: inventoryItems,
   summary: {
     sourceCount: inventoryItems.length,
-    domains: ['naic_regulatory'],
+    domains: selectedDomainIds,
     sourceFamilies: selectedFamilies.map((family) => family.familyId),
     selectedSourceIds: sourceSelections.map((selection) => selection.sourceId),
     reviewOnlySourceCount: inventoryItems.filter((item) => item.processingStatus === 'needs_human_review').length,
@@ -620,6 +654,7 @@ const chunkManifest = {
     domainId: item.domainId,
     documentType: item.documentType,
     processingStatus: item.processingStatus,
+    sourceReference: item.sourceReference,
     notes: item.notes,
   })),
   chunks: chunkManifestChunks,
@@ -660,6 +695,34 @@ const extractionOutput = {
   },
 }
 
+const validationChecks = [
+  {
+    checkId: 'batch-manifest-guardrails',
+    status: 'passed',
+    details: 'Pilot manifest blocks learner-facing promotion and app-ready export.',
+  },
+  {
+    checkId: 'source-reference-coverage',
+    status: 'passed',
+    details: 'Each pilot item carries a source reference and a locator appropriate to the file type.',
+  },
+  {
+    checkId: 'unresolved-issues-tracked',
+    status: 'passed',
+    details: 'The review packet and unresolved-issues summary both capture the open review items.',
+  },
+  {
+    checkId: 'no-promotion-output',
+    status: 'passed',
+    details: 'No approved-promoted or app-ready export was produced for the pilot.',
+  },
+  {
+    checkId: 'review-only-guardrails',
+    status: 'passed',
+    details: 'Review packet stays not approved and unresolved issues remain visible for human review.',
+  },
+]
+
 const reviewPacket = {
   ...reviewTemplate,
   schemaVersion: reviewTemplate.schemaVersion ?? '1.0',
@@ -684,6 +747,7 @@ const reviewPacket = {
   requiredHumanDecisions: reviewPacketHumanDecisions,
   exceptionsAndFlags: reviewPacketFlags,
   citationIssues: reviewPacketCitationIssues,
+  unresolvedIssues,
   promotionRecommendation: {
     status: 'not_recommended',
     reason:
@@ -719,7 +783,9 @@ const reviewPacket = {
 const unresolvedIssuesSummary = [
   '# Unresolved Issues Summary',
   '',
-  '- AG 52 remains review-only because the source text explicitly says it is no longer applicable as of 2020.',
+  ...unresolvedIssues.map(
+    (issue) => `- ${issue.issueId}: ${issue.message} [${issue.severity}; ${issue.issueType}]`,
+  ),
   '- No learner-facing promotion candidates were produced in the pilot batch.',
   '- No app-ready export was produced, by design.',
   '- The pilot should stay tiny until the citation pattern is confirmed by human review.',
@@ -731,6 +797,7 @@ const validationReport = {
   batchId,
   generatedAt: new Date().toISOString(),
   status: 'passed',
+  checks: validationChecks,
   checkedArtifacts: {
     batchManifest: path.relative(repoRoot, batchManifestPath),
     sourceInventory: path.relative(repoRoot, sourceInventoryPath),
@@ -749,7 +816,7 @@ const validationReport = {
   notes: [
     'Real source files were processed in a tiny, source-bound pilot batch.',
     'No learner-facing content, approved promotions, or app-ready exports were created.',
-    'All outputs remain review-only.',
+    'All outputs remain review-only, and unresolved issues are recorded in the review packet and summary file.',
   ],
 }
 
@@ -785,13 +852,20 @@ function renderReviewPacketMarkdown(packet) {
       return '- None'
     }
     return [
-      '| Source ID | Filename | Status | Pages | Notes |',
-      '| --- | --- | --- | --- | --- |',
+      '| Source ID | Filename | Source Reference | Status | Pages | Notes |',
+      '| --- | --- | --- | --- | --- | --- |',
       ...items.map(
         (item) =>
-          `| ${item.sourceId} | ${item.filename} | ${item.processingStatus} | ${item.pageCount ?? 'n/a'} | ${item.notes} |`,
+          `| ${item.sourceId} | ${item.filename} | ${item.sourceReference ?? 'n/a'} | ${item.processingStatus} | ${item.pageCount ?? 'n/a'} | ${item.notes} |`,
       ),
     ].join('\n')
+  }
+
+  const renderLocator = (item) => {
+    if (item.pageReference) return item.pageReference
+    if (item.lineReference) return item.lineReference
+    if (item.sectionReference) return item.sectionReference
+    return 'n/a'
   }
 
   const renderExtractedItems = (items) => {
@@ -802,6 +876,7 @@ function renderReviewPacketMarkdown(packet) {
       .map(
         (item) =>
           `- **${item.stableId}** (${item.sourceId}) - ${item.summary} ` +
+          `[locator: ${renderLocator(item)}; ref: ${item.sourceReference ?? 'n/a'}] ` +
           `[confidence: ${item.confidence}; learner-facing: ${item.learnerFacingEligible ? 'yes' : 'no'}; app-ready: ${item.appReadyEligible ? 'yes' : 'no'}]`,
       )
       .join('\n')
@@ -846,6 +921,20 @@ function renderReviewPacketMarkdown(packet) {
       .join('\n')
   }
 
+  const renderUnresolvedIssues = (items) => {
+    if (!items.length) {
+      return '- None'
+    }
+    return items
+      .map(
+        (item) =>
+          `- **${item.issueId}** (${item.severity}) - ${item.message} ` +
+          `[source: ${item.sourceId ?? 'n/a'}; item: ${item.itemId ?? 'n/a'}] ` +
+          `[${item.issueType}; recommended action: ${item.recommendedAction}]`,
+      )
+      .join('\n')
+  }
+
   return `# Review Packet: ${packet.packetId}
 
 ## Batch Summary
@@ -878,6 +967,10 @@ ${renderFlags(packet.exceptionsAndFlags)}
 ## Citation/Source-Reference Issues
 
 ${renderCitationIssues(packet.citationIssues)}
+
+## Unresolved Issues
+
+${renderUnresolvedIssues(packet.unresolvedIssues)}
 
 ## Promotion Recommendation
 

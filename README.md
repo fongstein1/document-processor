@@ -44,10 +44,15 @@ Each batch should produce:
 - source inventory
 - chunk manifest
 - review packet
-- approved/promoted content export
-- app-ready export
+- approved/promoted content export, when a promotion candidate has been
+  explicitly approved
+- app-ready export, when approved content is ready for the app thread
 - validation report
 - unresolved-issues summary
+
+Review-only pilot batches may stop after the review packet, validation report,
+and unresolved-issues summary. The approved and app-ready exports stay out of
+the batch until a human promotion decision is made.
 
 See `docs/processor/PROJECT_BRIEF.md` for the operating rules and folder
 layout.

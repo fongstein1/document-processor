@@ -264,6 +264,9 @@
         "sectionReference": {
           "type": "string"
         },
+        "lineReference": {
+          "type": "string"
+        },
         "chunkText": {
           "type": "string",
           "minLength": 1
