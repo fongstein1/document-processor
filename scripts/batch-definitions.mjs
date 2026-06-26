@@ -656,4 +656,211 @@ export const batchDefinitions = {
       },
     ],
   },
+  'batch-004': {
+    batchName: 'Controlled VM-20 batch 004 - role map completion',
+    batchSlug: 'vm20-rolemap-004',
+    batchProfile: 'vm20_role_map_completion',
+    processingIntentText:
+      'Complete the high-level VM-20 role map by capturing the explicit Section 3 / Section 4 / Section 5 responsibilities and a narrow Section 3 opener, then stop before detailed mechanics.',
+    processingIntentNotes:
+      'Controlled VM-20 workflow proof only. This batch stays review-only and uses tiny excerpt windows to keep the role-map layer separate from the mechanics batches.',
+    batchSummaryText:
+      'Batch 004 remains review-only. The role-map statement and the Section 3 opener complete the high-level NPR / DR / SR framework map, while the calculation terms remain deferred to later batches.',
+    batchSummaryNotes: 'No learner-facing approval is granted.',
+    reviewPacketReason:
+      'This controlled VM-20 batch is intentionally limited to the role-map layer and a small Section 3 boundary slice; neither excerpt is approved for promotion.',
+    reviewPacketNextStep:
+      'Confirm whether batch-005 should start at the first detailed Section 3 calculation terms or whether any additional role-map context is still needed.',
+    reviewerNotes:
+      'Tiny role-map completion batch only. Keep the work review-first, preserve source-bound locators, and do not promote any item.',
+    reviewPacketFlags: [
+      {
+        flagId: 'flag-vm20-role-map',
+        severity: 'medium',
+        sourceId: 'vm20-role-map-sections-3-4-5',
+        itemId: 'item-vm20-role-map-sections-3-4-5-vm20-rolemap-004',
+        flagType: 'role_map_completion',
+        message:
+          'The explicit Section 3 / Section 4 / Section 5 role statement is useful for framework orientation, but it remains review-only.',
+        notes: 'Keep review-only and do not promote.',
+      },
+      {
+        flagId: 'flag-vm20-section3-opener',
+        severity: 'medium',
+        sourceId: 'vm20-section3-opener',
+        itemId: 'item-vm20-section3-opener-vm20-rolemap-004',
+        flagType: 'section3_boundary_slice',
+        message:
+          'The Section 3 opener confirms the NPR role but stops short of the detailed calculation mechanics that belong in a later batch.',
+        notes: 'Suitable for review-only support, not promotion.',
+      },
+    ],
+    reviewPacketCitationIssues: [
+      {
+        issueId: 'citation-vm20-role-map-crossref',
+        sourceId: 'vm20-role-map-sections-3-4-5',
+        itemId: 'item-vm20-role-map-sections-3-4-5-vm20-rolemap-004',
+        issueType: 'cross_reference_boundary',
+        details:
+          'The role-map statement sits inside Section 2 text and points forward to Sections 3, 4, and 5; keep it as review-only framework context.',
+        recommendedAction:
+          'Keep the explicit role statement visible in review output and do not collapse it into mechanics content.',
+      },
+    ],
+    reviewPacketHumanDecisions: [
+      {
+        decisionId: 'decision-vm20-rolemap-split',
+        decisionType: 'scope_split',
+        question:
+          'Should pages 50-51 stay with the role-map completion batch, or should they move into the first detailed mechanics batch?',
+        whyItMatters:
+          'The batch should close the framework map without drifting into mechanics too early.',
+        recommendedOwner: 'processor owner',
+        priority: 'high',
+      },
+      {
+        decisionId: 'decision-vm20-batch005-start',
+        decisionType: 'coverage_check',
+        question:
+          'Should batch-005 begin at the first detailed Section 3 calculation terms, or is one more boundary slice needed first?',
+        whyItMatters:
+          'The next batch should start cleanly at mechanics rather than reopening the framework map.',
+        recommendedOwner: 'source reviewer',
+        priority: 'medium',
+      },
+    ],
+    unresolvedIssues: [
+      {
+        issueId: 'issue-vm20-role-map-boundary',
+        severity: 'medium',
+        issueType: 'role_map_completion',
+        sourceId: 'vm20-role-map-sections-3-4-5',
+        itemId: 'item-vm20-role-map-sections-3-4-5-vm20-rolemap-004',
+        message:
+          'The role map is explicit but embedded in Section 2 text, so it should stay review-only and not be treated as mechanics.',
+        recommendedAction:
+          'Keep the role-map slice visible for review and do not promote it ahead of the mechanics batches.',
+        evidence: 'Section 2 text explicitly maps Section 3 to NPR, Section 4 to DR, and Section 5 to SR.',
+      },
+      {
+        issueId: 'issue-vm20-section3-boundary',
+        severity: 'medium',
+        issueType: 'mechanics_boundary_confirmation',
+        sourceId: 'vm20-section3-opener',
+        itemId: 'item-vm20-section3-opener-vm20-rolemap-004',
+        message:
+          'Section 3 applicability confirms the NPR role, but calculation terms begin immediately afterward and should be left for later mechanics batches.',
+        recommendedAction:
+          'Keep the Section 3 opener review-only and start detailed NPR mechanics in the next batch.',
+        evidence: 'Pages 50-51 open Section 3 and begin the term definitions.',
+      },
+    ],
+    validationChecks: [
+      {
+        checkId: 'batch-manifest-guardrails',
+        status: 'passed',
+        details: 'Pilot manifest blocks learner-facing promotion and app-ready export.',
+      },
+      {
+        checkId: 'role-map-coverage',
+        status: 'passed',
+        details:
+          'The selected pages complete the high-level Section 3 / Section 4 / Section 5 role map before mechanics begin.',
+      },
+      {
+        checkId: 'source-reference-coverage',
+        status: 'passed',
+        details: 'Each pilot item carries a source reference and a locator appropriate to the file type.',
+      },
+      {
+        checkId: 'unresolved-issues-tracked',
+        status: 'passed',
+        details: 'The review packet and unresolved-issues summary both capture the open review items.',
+      },
+      {
+        checkId: 'no-promotion-output',
+        status: 'passed',
+        details: 'No approved-promoted or app-ready export was produced for the pilot.',
+      },
+      {
+        checkId: 'review-only-guardrails',
+        status: 'passed',
+        details: 'Review packet stays not approved and unresolved issues remain visible for human review.',
+      },
+    ],
+    sourceSelections: [
+      {
+        sourceId: 'vm20-role-map-sections-3-4-5',
+        relativePath: 'pbr_data_valuation_manual_2026.pdf',
+        sourceFamilyId: 'valuation_manual_pdfs',
+        documentType: 'valuation_manual_section',
+        sourceTitle: 'Valuation Manual',
+        sourceReference: '2026 NAIC Valuation Manual',
+        versionDate: null,
+        pageWindow: [48, 48],
+        sectionReference: 'Section 2: Minimum Reserve (role map statement)',
+        citationText:
+          'Section 3 defines the requirements for the policy NPR. Section 4 defines the requirements for the DR, and Section 4.C defines how that reserve is attributed to a VM-20 reserving category. Section 5 defines the requirements for the SR, and Section 5.G defines how that reserve is determined for each VM-20 reserving category.',
+        confidence: 'high',
+        reviewFlags: [
+          'core_vm_course',
+          'reserve_role_statement',
+          'framework_overview',
+          'cross_reference_mapping',
+          'regulatory_requirement',
+        ],
+        reviewStatus: 'draft_candidate',
+        itemKind: 'chunk',
+        notes:
+          'Explicit role-map sentence that closes the framework map before the mechanics batches begin.',
+        summary:
+          'VM-20 explicitly assigns Section 3 to NPR, Section 4 to DR, and Section 5 to SR, while pointing to Section 4.C and Section 5.G for reserving-category attribution and determination.',
+        keywords: ['VM-20', 'NPR', 'DR', 'SR', 'role map', 'cross-reference'],
+        sourceNotes: 'Single-page role-map slice from the core valuation manual.',
+        artifactProcessingStatus: 'inventoried',
+        inventoryProcessingStatus: 'inventoried',
+        authorityLevel: 'core_manual_section',
+        reviewPacketNotes: 'Role-map slice remains review-only until the later mechanics batches are added.',
+        reviewPacketIssueCount: 1,
+        reviewPacketProcessingStatus: 'inventoried',
+        nonLearnerFacingNotes: 'Review-only framework map slice for the controlled VM-20 batch.',
+      },
+      {
+        sourceId: 'vm20-section3-opener',
+        relativePath: 'pbr_data_valuation_manual_2026.pdf',
+        sourceFamilyId: 'valuation_manual_pdfs',
+        documentType: 'valuation_manual_section',
+        sourceTitle: 'Valuation Manual',
+        sourceReference: '2026 NAIC Valuation Manual',
+        versionDate: null,
+        pageWindow: [50, 51],
+        sectionReference: 'Section 3: Net Premium Reserve (applicability and opener)',
+        citationText: 'The NPR for each policy must be determined on a seriatim basis pursuant to Section 3.',
+        confidence: 'high',
+        reviewFlags: [
+          'core_vm_course',
+          'reserve_role_statement',
+          'regulatory_requirement',
+          'definition_or_terminology',
+          'mechanics_boundary',
+          'requires_human_interpretation',
+        ],
+        reviewStatus: 'needs_human_review',
+        itemKind: 'review_note',
+        notes:
+          'Section 3 opener confirms the NPR role but immediately approaches calculation terms; keep review-only.',
+        summary:
+          'Section 3 opens by confirming NPR applies on a seriatim basis to each policy, and the excerpt stays just before the detailed Section 3 calculation terms that will drive the next mechanics batch.',
+        keywords: ['VM-20', 'NPR', 'Section 3', 'seriatim', 'applicability', 'review-only'],
+        sourceNotes: 'Pages 50-51 only; opener and boundary slice for Section 3.',
+        artifactProcessingStatus: 'review_pending',
+        inventoryProcessingStatus: 'needs_human_review',
+        authorityLevel: 'core_manual_section',
+        reviewPacketNotes: 'Section 3 opener remains review-only until the detailed mechanics batch begins.',
+        reviewPacketIssueCount: 1,
+        reviewPacketProcessingStatus: 'review_pending',
+        nonLearnerFacingNotes: 'Review-only boundary slice; not sufficient to teach mechanics.',
+      },
+    ],
+  },
 }

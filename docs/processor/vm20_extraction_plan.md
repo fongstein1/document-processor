@@ -45,8 +45,9 @@ The core pilot worked, but the narrow VM-20 slice proved two things:
 2. The first slice should be split more carefully because the observed window
    mixes reserve mechanics and exclusion-test transition language.
 
-This plan therefore starts with a boundary-confirmation batch and then moves
-topic by topic.
+This plan therefore starts with a boundary-confirmation batch, then a role-map
+completion batch that locks the NPR / DR / SR responsibilities, and only then
+moves topic by topic into mechanics.
 
 ## Section / Topic Map
 
@@ -71,7 +72,7 @@ avoid mixing unrelated reserve concepts in one run.
 | Planned batch | Purpose | Page target | Rationale | Review complexity |
 | --- | --- | --- | --- | --- |
 | `batch-003` | VM-20 framework overview | Confirm within pages 45-51 | Pin the chapter boundary and terminology before mechanics | Medium |
-| `batch-004` | Net premium reserve mechanics | Confirm within pages 45-51 | Isolate NPR language so reserve formulas do not leak into other reserve concepts | High |
+| `batch-004` | NPR / DR / SR role map completion | Confirm within pages 45-51 | Complete the high-level role map before detailed NPR mechanics begin | Medium |
 | `batch-005` | Deterministic reserve mechanics | Confirm within pages 45-51 | Keep deterministic reserve treatment separate from NPR and SR content | High |
 | `batch-006` | Stochastic reserve mechanics | Confirm within pages 45-51 | Separate stochastic reserve modeling from deterministic and net premium language | High |
 | `batch-007` | Exclusion tests | Confirm within pages 45-51 | Split eligibility and exclusion language away from reserve mechanics | Medium |
@@ -82,7 +83,10 @@ avoid mixing unrelated reserve concepts in one run.
 | `batch-012` | Definitions and cross-references handled elsewhere | Confirm within pages 45-51 | Clean up lookup-only and cross-reference-only material after the main mechanics are isolated | Low to medium |
 
 The exact page splits are still to be confirmed. The only confirmed range is
-the batch-002 observation window on pages 45-51.
+the batch-002 observation window on pages 45-51. Batch-004 intentionally uses
+the explicit Section 3 / Section 4 / Section 5 role statement on page 48 and
+the Section 3 applicability opener on pages 50-51 to close the framework map
+before the detailed mechanics batches begin.
 
 ## Review Standards
 

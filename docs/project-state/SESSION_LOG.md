@@ -43,3 +43,8 @@
   dedicated `npm run vm20:batch-003` entry, surfaced review flags as
   extraction categories in the review packet markdown, and passed
   `npm run check` across three ignored pilot batches.
+- 2026-06-26: Refined the VM-20 plan so batch-004 closes the high-level
+  NPR/DR/SR role map before detailed mechanics begin, then ran batch-004 with
+  a page-48 role-map slice and a narrow Section 3 opener on pages 50-51.
+  Added `npm run vm20:batch-004`, updated the role-map boundary notes in the
+  plan/config, and passed `npm run check` across four ignored batches.

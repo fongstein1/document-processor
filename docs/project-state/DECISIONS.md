@@ -96,3 +96,10 @@ When a single VM-20 source file needs to be split for review, controlled
 batches may use multiple narrow excerpt windows from that file so the overview
 language stays separate from mechanics boundary slices. Those excerpt windows
 must remain review-only and clearly labeled in the batch outputs.
+
+## Role map before mechanics
+
+For VM-20, the high-level NPR / DR / SR role map should be closed out before
+detailed reserve mechanics begin. If a narrow Section 3 opener is needed to
+confirm the NPR role, it may remain review-only as a boundary slice rather than
+being promoted into mechanics content.

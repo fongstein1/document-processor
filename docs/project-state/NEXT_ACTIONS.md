@@ -2,20 +2,23 @@
 
 ## Next immediate task
 
-Review the batch-003 VM-20 overview output and decide whether page 47 stays in
-the controlled overview batch or becomes the first mechanics slice for the
-next VM-20 batch.
+Review the batch-004 VM-20 role-map output and decide whether the next batch
+should start at the detailed Section 3 calculation terms or whether one more
+boundary slice is needed first.
 
 ## Build tasks
 
 - Keep batch 001 and batch 002 review-only unless a human reviewer explicitly
   approves promotion.
 - Keep batch 003 review-only until the boundary decision is made.
+- Keep batch 004 review-only until the mechanics-start decision is made.
 - Treat `docs/processor/vm20_extraction_plan.md` and
   `config/vm20-batch-plan.json` as the source of truth for the next VM-20
   planning step.
 - Use the new `npm run vm20:batch-003` entry for reruns or review refreshes
   when the controlled overview batch needs to be regenerated.
+- Use the new `npm run vm20:batch-004` entry for reruns or review refreshes
+  when the controlled role-map batch needs to be regenerated.
 - Extend `scripts/batch-definitions.mjs` later, only when the next VM-20
   mechanics batch is authorized.
 - Expand validation only if the plan or a later batch reveals a genuine schema
@@ -40,4 +43,6 @@ next VM-20 batch.
   in pilot review packets.
 - Keep overview and mechanics-boundary excerpt windows distinct when a single
   source file needs to be split across controlled VM-20 batches.
+- Keep role-map completion separate from detailed mechanics so batch numbering
+  stays easy to reason about.
 - Commit only lightweight, auditable artifacts.

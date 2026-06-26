@@ -209,23 +209,24 @@
     {
       "plannedBatchId": "batch-004",
       "topicIds": [
-        "vm20-npr-mechanics"
+        "vm20-framework-overview"
       ],
-      "title": "Net premium reserve mechanics",
+      "title": "NPR / DR / SR role map completion",
       "pageTarget": {
         "knownWindow": [
           45,
           51
         ],
         "specificPages": null,
-        "notes": "Pin after the overview batch isolates the NPR language."
+        "notes": "Use the explicit Section 3/4/5 role statement on page 48 and the Section 3 applicability opener on pages 50-51."
       },
-      "rationale": "Isolate NPR formulas so they do not leak into the other reserve concepts.",
-      "reviewComplexity": "high",
+      "rationale": "Complete the high-level role map before detailed NPR mechanics begin.",
+      "reviewComplexity": "medium",
       "expectedIssueTypes": [
-        "formula_boundary",
-        "margin_interpretation",
-        "assumption_spillover"
+        "boundary_confirmation",
+        "terminology_alignment",
+        "cross_reference_mapping",
+        "mechanics_boundary"
       ],
       "reviewOnlyByDefault": true
     },
