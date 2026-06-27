@@ -112,7 +112,7 @@ const makeAg04Batch = (spec) => {
         sectionReference: spec.sectionReference,
         citationText: spec.citationText,
         confidence: 'high',
-        reviewFlags: ['regulatory_requirement', ...spec.reviewFlags],
+        reviewFlags: Array.from(new Set(['regulatory_requirement', ...spec.reviewFlags])),
         reviewStatus: spec.reviewStatus ?? 'needs_human_review',
         itemKind: spec.itemKind ?? 'review_note',
         notes: spec.notes,

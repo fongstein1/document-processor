@@ -12,6 +12,8 @@ regulation repository. It consolidates the completed review-only extraction
 waves without changing the status of the underlying batch outputs or review
 indexes.
 
+The handoff now spans 9 review indexes.
+
 This summary is review-only, not learner-facing, not app-ready, not RAG-ready,
 and not promoted.
 
@@ -29,6 +31,8 @@ review indexes:
 - `docs/review/ag01_self_review.md`
 - `docs/review/ag02_review_index.md`
 - `docs/review/ag02_self_review.md`
+- `docs/review/ag04_review_index.md`
+- `docs/review/ag04_self_review.md`
 
 ## Executive Status
 
@@ -52,6 +56,8 @@ What has been built:
   unit in `docs/review/ag01_self_review.md`
 - tracked AG 02 review index and self-review note for the two-page guideline
   unit in `docs/review/ag02_self_review.md`
+- tracked AG 04 review index and self-review note for the two-page guideline
+  unit in `docs/review/ag04_self_review.md`
 - project-state docs that preserve the handoff history
 
 What source families / chapters have been processed:
@@ -70,7 +76,7 @@ What source families / chapters have been processed:
 - AG 03 single-page guideline, `batch-076`
 - AG 01 single-page guideline, `batch-077`
 - AG 02 two-page guideline, `batch-078`
-- AG 01 single-page guideline, `batch-077`
+- AG 04 two-page guideline, `batch-079`
 
 What remains review-only:
 
@@ -132,6 +138,7 @@ The repository now includes the core processor asset set:
 - the tracked AG 03 review index and self-review note in `docs/review/`
 - the tracked AG 01 review index and self-review note in `docs/review/`
 - the tracked AG 02 review index and self-review note in `docs/review/`
+- the tracked AG 04 review index and self-review note in `docs/review/`
 - VM chapter planning artifacts in `docs/processor/` and `config/`
 - project-state docs in `docs/project-state/`
 - runner / validator scripts in `scripts/`
@@ -142,9 +149,10 @@ documents remain external to Git.
 ## Validation Posture
 
 - `npm run check` passes
-- the scaffold reports 78 batches validated
+- the scaffold reports 79 batches validated
 - the validator now checks the tracked VM-20, supporting, VM-21, VM-22,
-  practice-note, AG 03, AG 01, AG 02, and POC status summary handoff files
+  practice-note, AG 03, AG 01, AG 02, AG 04, and POC status summary handoff
+  files
 - review-only and no-promotion guardrails are enforced in the batch manifests
   and review packets
 - ignored working outputs stay under `data/work/`
@@ -153,7 +161,7 @@ documents remain external to Git.
 
 ## Human Review Posture
 
-- Reviewers should start from the eight review indexes listed above.
+- Reviewers should start from the nine review indexes listed above.
 - The review packets remain the detailed evidence layer behind those
   summaries.
 - All batch content remains source-bound and review-only unless a separate

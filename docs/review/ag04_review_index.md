@@ -1,0 +1,104 @@
+# AG 04 End-of-Sequence Review Index
+
+Status:
+- Review-only
+- Not learner-facing
+- Not app-ready
+- Not RAG-ready
+- Not promoted
+
+This tracked index summarizes the ignored review packet for controlled AG 04
+batch `batch-079`. It is a handoff summary only. The underlying batch outputs
+remain in `data/work/batches/` and are not promoted by this file.
+
+This index is not learner-facing, not app-ready, not RAG-ready, and not
+promoted.
+
+Note on commit hashes: the hash below refers to the tracked planning baseline
+commit that immediately preceded the AG 04 batch, `95fd5be`, not to the
+ignored working files themselves.
+
+## Overall AG 04 Extraction Status
+
+- The controlled AG 04 sequence is complete.
+- The batch remains review-only by default.
+- No extracted item is learner-facing.
+- No extracted item is app-ready.
+- No extracted item is RAG-ready.
+- No extracted item is promoted.
+- The recurring review work is short-guideline reserve interpretation and
+  source-quality caution, not content approval.
+
+## Batch Table
+
+| Batch | Source / chapter | Selected pages / sections | Topic | Boundary rationale | Extraction categories | Self-review | Unresolved issues / review concerns | Validation | Commit |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `batch-079` | Actuarial Guideline IV / AG 04 - Minimum Reserves for Certain Forms of Term Insurance.pdf | pages 1-2; AG 04 minimum-reserve / term life insurance interpretation | Two-page term-life reserve interpretation | This two-page guideline is intentionally limited to the full guideline pages and is retained for review-only analysis. | regulatory_requirement, reserve_method_structure, prescribed_assumption, formula_context, cross_reference_mapping, requires_human_interpretation, boundary_control_window | reasonable_with_minor_cautions | The pages are a two-page encoded PDF, so human review should confirm the wording and indexing choice before any later promotion decision. | passed | `95fd5be` |
+
+## Higher-Caution Section
+
+- The pages explain the minimum-reserve treatment for certain forms of term
+  life insurance, so the interpretive boundary should stay visible.
+- The PDF text layer is noisy enough that the reviewer may need to confirm the
+  wording against the page images.
+- The pages carry the 1958 CSO mortality-table reference, the level-premium
+  reserve logic, and the reinsured-business treatment, so the batch should not
+  be widened into other guideline files or later legal text.
+
+## Human Review Checklist
+
+- Are the extracted items source-bound and tied to the AG 04 page locator?
+- Is the page reference sufficient for review even though the text layer is
+  noisy?
+- Is the term-life-reserve language kept distinct from the explanatory
+  framing?
+- Are the Standard Valuation Law references mapped but not over-interpreted?
+- Is the source-quality caveat clear enough for a human reviewer?
+- Are any items candidates for future learner-facing promotion?
+- Are any items candidates for future RAG or app-export use?
+
+## Promotion Decision Area
+
+- [ ] Keep review-only
+- [ ] Revise extraction
+- [ ] Promote selected items to learner-facing draft
+- [ ] Prepare RAG-ready candidate set
+- [ ] Prepare app-export candidate set
+
+None of the boxes above are selected by default. Any promotion decision belongs
+in a later human review step, not in the completed review-only batch.
+
+## Recommended Review Order
+
+1. The AG 04 page 1 narrative.
+2. The AG 04 page 2 continuation and reserve logic.
+3. If needed, the underlying Standard Valuation Law text that the pages
+   reference.
+
+## Relationship to Other Review Indexes
+
+- `docs/review/vm20_review_index.md`
+- `docs/review/supporting_vm_review_index.md`
+- `docs/review/vm21_review_index.md`
+- `docs/review/vm22_review_index.md`
+- `docs/review/vm20_practice_note_review_index.md`
+- `docs/review/ag03_review_index.md`
+- `docs/review/ag01_review_index.md`
+- `docs/review/ag02_review_index.md`
+
+This AG 04 index should be reviewed alongside the VM chapter review indexes,
+the practice-note index, and the earlier AG indexes whenever a cross-reference
+or interpretation note points back to binding source text.
+
+## Self-Review Note
+
+A separate self-review note at `docs/review/ag04_self_review.md` records the
+batch-level reasonableness pass and the recurring caution areas.
+
+## Review Notes
+
+- The underlying batch review packet remains the source record for flags,
+  unresolved issues, and validation outcomes.
+- This index is intentionally compact so it can be used as a handoff aid
+  without reclassifying any extracted item.
+- The underlying batch outputs remain ignored in `data/work/batches/`.

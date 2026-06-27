@@ -69,6 +69,7 @@ VM-21 / VM-22 planning and execution artifacts validate cleanly.
 - `npm run check`: passed after the VM-22 review-index refresh; confirmed the schemas, templates, demo fixtures, review-packet contracts, the VM-20 plan artifacts, the tracked review indexes, the supporting-chapter plan artifacts, the VM-21 plan artifacts, the new VM-22 plan artifacts, the no-promotion guardrails, and the synchronized batch definitions for batches 038-054
 - `npm run check`: passed after the repository POC status summary refresh; confirmed the schemas, templates, demo fixtures, review-packet contracts, the four tracked review indexes, the new POC status summary, the no-promotion guardrails, and the synchronized batch definitions for batches 038-054
 - `npm run check`: passed after the practice-note review-index refresh; confirmed the schemas, templates, demo fixtures, review-packet contracts, the five tracked review indexes, the new POC status summary, the no-promotion guardrails, and the synchronized batch definitions for batches 055-075
+- `npm run check`: passed after the AG 04 review-index refresh; confirmed the schemas, templates, demo fixtures, review-packet contracts, the nine tracked review indexes, the updated POC status summary, the no-promotion guardrails, and the synchronized batch definitions for batches 055-079
 
 The control-plan refresh commit re-bound batches 006-012 to the actual PDF
 section order and added runner shortcuts for the remaining controlled slices.
@@ -199,7 +200,7 @@ do not change the learner-facing or app-ready posture.
 - The tracked VM-22 review index now gives the reviewer a single summary view
   of the ignored batch packets without changing their review-only status.
 - The tracked valuation-regulation repository POC summary now consolidates the
-  four review indexes into a single proof-of-concept handoff view.
+  nine review indexes into a single proof-of-concept handoff view.
 - The repository will be clean on `main` once this state refresh is committed,
   aside from ignored working files.
 
@@ -209,7 +210,7 @@ The controlled VM-21 sequence is complete. The controlled VM-22 sequence is
 complete: batches 038-054 are done, the tracked VM-22 review index now
 summarizes the ignored batch packets, and the resulting ignored working
 outputs remain review-only. The tracked valuation-regulation repository POC
-summary now consolidates the four review indexes into a single handoff view.
+summary now consolidates the nine review indexes into a single handoff view.
 Keep VM-25 and later chapters out of scope unless a future plan explicitly
 opens them.
 
@@ -218,10 +219,10 @@ through `batch-075` were processed review-only, and the tracked practice-note
 review index plus self-review note now summarize that wave without promoting
 any extracted content.
 
-The next source unit is AG 04, a short Actuarial Guideline interpretation
-that is being prepared as `batch-079`. It will stay review-only and
-source-bound so the short-guideline pattern stays consistent with the earlier
-AG units.
+The AG 04 batch is now complete in ignored working storage, and the tracked
+AG 04 review index plus self-review note are the current handoff artifacts.
+The slice stays review-only and source-bound so the short-guideline pattern
+remains consistent with the earlier AG units.
 
 The controlled AG 03 one-page guideline batch is complete in ignored working
 storage, and the tracked AG 03 review index plus self-review note are the
@@ -230,10 +231,7 @@ complete in ignored working storage, and the tracked AG 01 review index plus
 self-review note are committed handoff artifacts. The controlled AG 02
 two-page guideline batch is complete in ignored working storage, and the
 tracked AG 02 review index plus self-review note are the next handoff
-artifacts. The AG 04 planning layer is now drafted in working files as a
-standalone two-page term-life reserve interpretation and is next in line for
-validation and execution as batch-079. The AG 52 text note already lives in
-the mixed pilot batch and is
+artifacts. The AG 52 text note already lives in the mixed pilot batch and is
 not being reprocessed. The remaining Practice Notes files and other
 Actuarial Guideline / NY regulation files stay out of scope until separately
 planned.

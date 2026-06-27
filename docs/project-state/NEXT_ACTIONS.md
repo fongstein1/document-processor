@@ -2,10 +2,10 @@
 
 ## Next immediate task
 
-Finish the AG 04 planning commit, then run the new batch-079 slice for the
-two-page term-life reserve interpretation. AG 03, AG 01, and AG 02 are already
-captured in the tracked review handoff sets, and AG 52 is already captured in
-the mixed pilot batch and should not be reprocessed.
+Review the proof-of-concept package, then select the next small Actuarial
+Guideline or NY regulation source unit. AG 03, AG 01, AG 02, and AG 04 are
+already captured in the tracked review handoff sets, and AG 52 is already
+captured in the mixed pilot batch and should not be reprocessed.
 
 ## Build tasks
 
@@ -40,16 +40,15 @@ the mixed pilot batch and should not be reprocessed.
 - Treat `docs/review/ag02_review_index.md` and
   `docs/review/ag02_self_review.md` as the current AG 02 handoff set.
 - Treat `docs/processor/ag04_extraction_plan.md` and
-  `config/ag04-batch-plan.json` as the current AG 04 planning set.
+  `config/ag04-batch-plan.json` as the current AG 04 planning set, and treat
+  `docs/review/ag04_review_index.md` and `docs/review/ag04_self_review.md`
+  as the current AG 04 handoff set.
 - Treat `scripts/ag04-batch-definitions.mjs` as synchronized with the AG 04
-  planning set.
+  planning and handoff set.
 - Use `npm run ag04:batch` only if the AG 04 review packet needs to be
   regenerated.
 - Keep the AG 04 batch review-only unless a later human review explicitly
   approves promotion.
-- Keep `docs/review/ag04_review_index.md` and
-  `docs/review/ag04_self_review.md` aligned with the ignored AG 04 review
-  packet once the batch runs.
 - Treat `docs/review/valuation_regulation_repository_poc_status.md` as the
   current repository-level proof-of-concept summary.
 - Treat `docs/processor/vm20_practice_note_extraction_plan.md` and
