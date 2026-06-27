@@ -11,7 +11,8 @@ its review index plus self-review note now form the current handoff set. AG
 self-review note now form the current handoff set. AG 10 is complete in
 ignored working storage and its review index plus self-review note now form
 the current handoff set. AG 11 is complete in the tracked review handoff
-set, and AG 12 is now the next short guideline candidate if the continuation
+set, AG 12 is complete in the tracked review handoff
+set, and AG 13 is now the next short guideline candidate if the continuation
 pass keeps going. AG 05 is already captured in the tracked review handoff
 set, and AG 03, AG 01, AG 02, and AG 04 remain captured as well. AG 52 is
 already captured in the mixed pilot batch and should not be reprocessed.
