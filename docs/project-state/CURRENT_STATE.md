@@ -24,8 +24,9 @@ the AG 09 planning / review-handoff artifacts, the AG 10 planning /
 review-handoff artifacts, the AG 11 planning and review-handoff artifacts,
 the AG 12 planning and review-handoff artifacts, the AG 13 planning,
 execution, and review-handoff artifacts, the AG 14 planning and
-review-handoff artifacts, and the AG 15 planning and review-handoff
-artifacts validate cleanly.
+review-handoff artifacts, the AG 15 planning and review-handoff
+artifacts, and the AG 16 planning, execution, and review-handoff artifacts
+validate cleanly.
 
 - `npm run pilot:course-core`: passed; created the core VM course pilot batch
   outputs in `data/work/batches/batch-002/`
@@ -134,9 +135,9 @@ The AG 15 review-only step is now complete as batch-093. Its tracked review
 index and self-review note summarize the historical illustration guideline
 without promoting any extracted content.
 
-The AG 16 planning layer is now drafted so batch-094 can capture the CRVM
-select-mortality / split-interest guideline as the next review-only step if
-the continuation pass keeps going.
+The AG 16 review-only step is now complete as batch-094. Its tracked review
+index and self-review note summarize the historical CRVM select-mortality /
+split-interest guideline without promoting any extracted content.
 
 ## Working posture
 
