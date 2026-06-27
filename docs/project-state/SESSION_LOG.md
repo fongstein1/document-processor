@@ -253,3 +253,6 @@
   review index plus self-review note as the new handoff artifacts, and
   refreshed the repository POC summary so the fifteenth review index and 88
   validated batches are now visible in the handoff layer.
+- 2026-06-27: Confirmed AG 11 as the next short guideline unit, verified its
+  one-page page range, and drafted the AG 11 planning layer so batch-089 can
+  be validated before extraction starts.
