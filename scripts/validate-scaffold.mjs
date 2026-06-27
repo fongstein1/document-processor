@@ -139,6 +139,8 @@ const paths = {
   ag07ExtractionPlanMd: path.join(repoRoot, 'docs', 'processor', 'ag07_extraction_plan.md'),
   ag07ReviewIndexMd: path.join(repoRoot, 'docs', 'review', 'ag07_review_index.md'),
   ag07SelfReviewMd: path.join(repoRoot, 'docs', 'review', 'ag07_self_review.md'),
+  ag08BatchPlanJson: path.join(repoRoot, 'config', 'ag08-batch-plan.json'),
+  ag08ExtractionPlanMd: path.join(repoRoot, 'docs', 'processor', 'ag08_extraction_plan.md'),
   practiceNoteReviewIndexMd: path.join(
     repoRoot,
     'docs',
@@ -220,6 +222,7 @@ const requiredFiles = [
   'docs/processor/ag05_extraction_plan.md',
   'docs/processor/ag06_extraction_plan.md',
   'docs/processor/ag07_extraction_plan.md',
+  'docs/processor/ag08_extraction_plan.md',
   'docs/processor/vm22_extraction_plan.md',
   'docs/review/vm20_review_index.md',
   'docs/review/supporting_vm_review_index.md',
@@ -253,6 +256,7 @@ const requiredFiles = [
   'config/ag05-batch-plan.json',
   'config/ag06-batch-plan.json',
   'config/ag07-batch-plan.json',
+  'config/ag08-batch-plan.json',
   'config/ag02-batch-plan.json',
   'config/vm22-batch-plan.json',
   'scripts/vm21-batch-definitions.mjs',
@@ -264,6 +268,7 @@ const requiredFiles = [
   'scripts/ag05-batch-definitions.mjs',
   'scripts/ag06-batch-definitions.mjs',
   'scripts/ag07-batch-definitions.mjs',
+  'scripts/ag08-batch-definitions.mjs',
   'scripts/ag02-batch-definitions.mjs',
   'scripts/bootstrap-small-batch.mjs',
   'scripts/validate-scaffold.mjs',
@@ -2271,6 +2276,7 @@ const ag04BatchPlan = await readJson(paths.ag04BatchPlanJson)
 const ag05BatchPlan = await readJson(paths.ag05BatchPlanJson)
 const ag06BatchPlan = await readJson(paths.ag06BatchPlanJson)
 const ag07BatchPlan = await readJson(paths.ag07BatchPlanJson)
+const ag08BatchPlan = await readJson(paths.ag08BatchPlanJson)
 
 validateSchemaEnvelope(batchManifestSchema, 'batch-manifest.schema.json')
 validateSchemaEnvelope(sourceInventorySchema, 'source-inventory.schema.json')
@@ -3069,6 +3075,42 @@ const validateAg07PlanMarkdown = async (filePath, label) => {
   })
 }
 
+const validateAg08PlanMarkdown = async (filePath, label) => {
+  const text = await readText(filePath)
+  const requiredHeadings = [
+    '## Source Scope',
+    '## Topic Map',
+    '## Proposed Batch Sequence',
+    '## Review Standards',
+    '## Promotion Gates',
+    '## Validation Implications',
+    '## Operating Note',
+  ]
+  requiredHeadings.forEach((heading) => {
+    if (!text.includes(heading)) {
+      problems.push(`${label}: missing heading ${heading}`)
+    }
+  })
+  ;[
+    'review-only',
+    'not learner-facing',
+    'not app-ready',
+    'not RAG-ready',
+    'not promoted',
+    'AG 08',
+    'batch-083',
+    'Actuarial Guideline VIII',
+    'page 1',
+    'single premium deferred annuities',
+    'discounted values',
+    'cash surrender values',
+  ].forEach((phrase) => {
+    if (!text.includes(phrase)) {
+      problems.push(`${label}: must mention ${phrase}`)
+    }
+  })
+}
+
 const validateAg02PlanMarkdown = async (filePath, label) => {
   const text = await readText(filePath)
   const requiredHeadings = [
@@ -3454,6 +3496,7 @@ await validateAg07SelfReviewMarkdown(paths.ag07SelfReviewMd, 'docs/review/ag07_s
 await validateAg05PlanMarkdown(paths.ag05ExtractionPlanMd, 'docs/processor/ag05_extraction_plan.md')
 await validateAg06PlanMarkdown(paths.ag06ExtractionPlanMd, 'docs/processor/ag06_extraction_plan.md')
 await validateAg07PlanMarkdown(paths.ag07ExtractionPlanMd, 'docs/processor/ag07_extraction_plan.md')
+await validateAg08PlanMarkdown(paths.ag08ExtractionPlanMd, 'docs/processor/ag08_extraction_plan.md')
 await validateAg02PlanMarkdown(paths.ag02ExtractionPlanMd, 'docs/processor/ag02_extraction_plan.md')
 await validatePocStatusSummaryMarkdown(
   paths.pocStatusSummaryMd,
@@ -3602,6 +3645,7 @@ if (problems.length > 0) {
   console.log(`- AG 05 plan verified: ${ag05BatchPlan.proposedBatches.length} batches`)
   console.log(`- AG 06 plan verified: ${ag06BatchPlan.proposedBatches.length} batches`)
   console.log(`- AG 07 plan verified: ${ag07BatchPlan.proposedBatches.length} batches`)
+  console.log(`- AG 08 plan verified: ${ag08BatchPlan.proposedBatches.length} batches`)
   console.log(`- POC status summary verified: 12 review indexes`)
   if (validatedPilotBatchCount > 0) {
     console.log(`- Pilot batches validated: ${validatedPilotBatchCount}`)

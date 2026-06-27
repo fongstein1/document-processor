@@ -6,9 +6,11 @@ AG 06 is complete in ignored working storage and its review index plus
 self-review note now form the current handoff set. AG 07 is complete in
 ignored working storage and its review index plus self-review note now form
 the current handoff set. AG 08 is the next short guideline candidate after a
-limited inspection. AG 05 is already captured in the tracked review handoff
-set, and AG 03, AG 01, AG 02, and AG 04 remain captured as well. AG 52 is
-already captured in the mixed pilot batch and should not be reprocessed.
+limited inspection, and its planning layer is now validated so `batch-083`
+can run next in review-only mode. AG 05 is already captured in the tracked
+review handoff set, and AG 03, AG 01, AG 02, and AG 04 remain captured as
+well. AG 52 is already captured in the mixed pilot batch and should not be
+reprocessed.
 
 ## Build tasks
 

@@ -226,3 +226,7 @@
   tracked AG 07 review index plus self-review note as the new handoff
   artifacts, and refreshed the repository POC summary so the twelfth review
   index and 82 validated batches are now visible in the handoff layer.
+- 2026-06-27: Selected AG 08 as the next short guideline unit, confirmed the
+  single-page span for the valuation of individual single premium deferred
+  annuities, drafted the AG 08 planning layer, and validated the planning
+  artifact so batch-083 can run next in review-only mode.
