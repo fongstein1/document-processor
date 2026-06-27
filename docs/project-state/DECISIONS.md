@@ -135,3 +135,12 @@ under `docs/review/` that summarizes the ignored batch review packets without
 promoting extracted content. The index should remain a summary-only handoff
 artifact and should not replace the underlying review packets or batch
 manifests.
+
+## Supporting chapter wave
+
+The lighter supporting VM chapter wave should be planned separately from
+VM-20, should remain review-only by default, and should cover VM-01, VM-02,
+VM-25, VM-26, VM-30, and VM-31 only. VM-21 and VM-22 remain out of scope
+until a separate plan is approved. The supporting-wave plan should record the
+observed page windows before extraction starts and should preserve the same
+stop conditions used for VM-20.

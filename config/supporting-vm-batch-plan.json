@@ -1,0 +1,453 @@
+{
+  "planId": "supporting-vm-control-plan",
+  "planVersion": "1.0",
+  "status": "planned",
+  "sourceScope": {
+    "sourceFamilyId": "valuation_manual_pdfs",
+    "primarySourceFile": "pbr_data_valuation_manual_2026.pdf",
+    "sourceTitle": "Valuation Manual",
+    "sourceReference": "2026 NAIC Valuation Manual",
+    "domainId": "naic_regulatory",
+    "rawSourceRoot": "D:\\Work\\AI Projects\\NAIC Valuation Manual Course",
+    "observedChapterWindows": [
+      {
+        "chapterId": "VM-01",
+        "pageRange": [25, 39],
+        "printedPageRange": ["01-1", "01-15"],
+        "note": "Definitions and introductory material."
+      },
+      {
+        "chapterId": "VM-02",
+        "pageRange": [41, 44],
+        "printedPageRange": ["02-1", "02-4"],
+        "note": "Minimum nonforfeiture mortality and interest."
+      },
+      {
+        "chapterId": "VM-25",
+        "pageRange": [319, 320],
+        "printedPageRange": ["25-1", "25-2"],
+        "note": "Health insurance reserves minimum reserve requirements."
+      },
+      {
+        "chapterId": "VM-26",
+        "pageRange": [321, 324],
+        "printedPageRange": ["26-1", "26-4"],
+        "note": "Credit life and disability reserve requirements."
+      },
+      {
+        "chapterId": "VM-30",
+        "pageRange": [325, 339],
+        "printedPageRange": ["30-1", "30-15"],
+        "note": "Actuarial opinion and memorandum requirements."
+      },
+      {
+        "chapterId": "VM-31",
+        "pageRange": [341, 386],
+        "printedPageRange": ["31-1", "31-46"],
+        "note": "PBR actuarial report requirements; stops before VM-50 starts on page 387."
+      }
+    ],
+    "boundaries": [
+      "Keep planning focused on the lighter supporting VM chapters listed in this wave.",
+      "Do not widen into VM-20.",
+      "Keep VM-21 and VM-22 out of scope for this wave unless separately approved.",
+      "Keep cross-references review-only unless the same batch also captures the referenced operational section.",
+      "Keep stale, superseded, repealed, companion, or implementation guidance as notes only."
+    ],
+    "exclusions": [
+      "No full-document processing.",
+      "No learner-facing content.",
+      "No app-ready exports.",
+      "No RAG-ready exports.",
+      "No approved/promoted exports.",
+      "No eLearning scripts, slides, quizzes, or app exports.",
+      "No raw source files in Git."
+    ]
+  },
+  "chapterMap": [
+    {
+      "chapterId": "VM-01",
+      "label": "Definitions / introductory material",
+      "pageRange": [25, 39],
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "definition_scope",
+        "terminology_alignment",
+        "cross_reference_mapping"
+      ],
+      "crossReferenceWatchlist": [
+        "AP&P Manual",
+        "VM-20",
+        "VM-30",
+        "VM-31"
+      ],
+      "boundaryNote": "Keep definitions review-only when they are only explanatory or cross-referenced."
+    },
+    {
+      "chapterId": "VM-02",
+      "label": "Minimum nonforfeiture mortality and interest",
+      "pageRange": [41, 44],
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "reserve_method_structure",
+        "nonforfeiture_boundary",
+        "cross_reference_mapping"
+      ],
+      "crossReferenceWatchlist": [
+        "Model #820",
+        "VM-01"
+      ],
+      "boundaryNote": "Keep the reserve-method structure separate from broader valuation-law discussion."
+    },
+    {
+      "chapterId": "VM-25",
+      "label": "Health insurance reserves minimum reserve requirements",
+      "pageRange": [319, 320],
+      "reviewComplexity": "low to medium",
+      "expectedIssueTypes": [
+        "applicability_boundary",
+        "requirement_vs_guidance",
+        "cross_reference_mapping"
+      ],
+      "crossReferenceWatchlist": [
+        "AP&P Manual",
+        "Appendix A",
+        "Appendix C"
+      ],
+      "boundaryNote": "Keep the A&H reserve requirements narrow and source-bound."
+    },
+    {
+      "chapterId": "VM-26",
+      "label": "Credit life and disability reserve requirements",
+      "pageRange": [321, 324],
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "contract_reserve_boundary",
+        "claim_reserve_boundary",
+        "documentation_scope",
+        "cross_reference_mapping"
+      ],
+      "crossReferenceWatchlist": [
+        "Model #820",
+        "VM-01",
+        "VM-30"
+      ],
+      "boundaryNote": "Keep contract reserve and claim reserve language distinct."
+    },
+    {
+      "chapterId": "VM-30",
+      "label": "Actuarial opinion and memorandum requirements",
+      "pageRange": [325, 339],
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "reporting_requirement",
+        "documentation_expectation",
+        "governance_control",
+        "actuarial_judgment"
+      ],
+      "crossReferenceWatchlist": [
+        "VM-01",
+        "VM-20",
+        "VM-31"
+      ],
+      "boundaryNote": "Keep the reporting frame separate from detailed opinion and memorandum text."
+    },
+    {
+      "chapterId": "VM-31",
+      "label": "PBR actuarial report requirements",
+      "pageRange": [341, 386],
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "reporting_requirement",
+        "documentation_expectation",
+        "governance_control",
+        "cross_reference_mapping",
+        "vm20_boundary"
+      ],
+      "crossReferenceWatchlist": [
+        "VM-20",
+        "VM-21",
+        "VM-22",
+        "VM-30"
+      ],
+      "boundaryNote": "Keep VM-21 and VM-22 references review-only and stop before the VM-50 opener."
+    }
+  ],
+  "proposedBatches": [
+    {
+      "plannedBatchId": "batch-013",
+      "chapterIds": [
+        "VM-01"
+      ],
+      "title": "VM-01 definitions and introduction",
+      "pageTarget": {
+        "knownWindow": [
+          25,
+          39
+        ],
+        "notes": "Capture the opening definitions and keep them separate from the next chapter."
+      },
+      "rationale": "Close the definitions / introductory chapter before any reporting or reserve-focused supporting chapter.",
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "definition_scope",
+        "terminology_alignment",
+        "cross_reference_mapping"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    },
+    {
+      "plannedBatchId": "batch-014",
+      "chapterIds": [
+        "VM-02"
+      ],
+      "title": "VM-02 nonforfeiture mortality and interest",
+      "pageTarget": {
+        "knownWindow": [
+          41,
+          44
+        ],
+        "notes": "Capture the nonforfeiture reserve-method structure as a separate slice."
+      },
+      "rationale": "Capture the nonforfeiture mortality / interest structure as a separate reserve-method slice.",
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "reserve_method_structure",
+        "nonforfeiture_boundary",
+        "cross_reference_mapping"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    },
+    {
+      "plannedBatchId": "batch-015",
+      "chapterIds": [
+        "VM-25"
+      ],
+      "title": "VM-25 health insurance reserves",
+      "pageTarget": {
+        "knownWindow": [
+          319,
+          320
+        ],
+        "notes": "Capture the small A&H reserve-requirement chapter on its own."
+      },
+      "rationale": "Capture the small A&H reserve-requirement chapter on its own so applicability and requirement language stay clear.",
+      "reviewComplexity": "low to medium",
+      "expectedIssueTypes": [
+        "applicability_boundary",
+        "requirement_vs_guidance",
+        "cross_reference_mapping"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    },
+    {
+      "plannedBatchId": "batch-016",
+      "chapterIds": [
+        "VM-26"
+      ],
+      "title": "VM-26 credit life and disability reserves",
+      "pageTarget": {
+        "knownWindow": [
+          321,
+          324
+        ],
+        "notes": "Keep credit life and disability reserve requirements separate from VM-25 and VM-30 reporting text."
+      },
+      "rationale": "Keep credit life and disability reserve requirements separate from VM-25 and VM-30 reporting text.",
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "contract_reserve_boundary",
+        "claim_reserve_boundary",
+        "documentation_scope",
+        "cross_reference_mapping"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    },
+    {
+      "plannedBatchId": "batch-017",
+      "chapterIds": [
+        "VM-30"
+      ],
+      "title": "VM-30 scope and general requirements",
+      "pageTarget": {
+        "knownWindow": [
+          325,
+          329
+        ],
+        "notes": "Capture the scope and general requirements layer before the detailed opinion and memorandum language."
+      },
+      "rationale": "Capture the scope and general requirements layer before the more detailed opinion and memorandum language.",
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "reporting_requirement",
+        "documentation_expectation",
+        "governance_control",
+        "cross_reference_mapping"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions-with-boundary-caution"
+    },
+    {
+      "plannedBatchId": "batch-018",
+      "chapterIds": [
+        "VM-30"
+      ],
+      "title": "VM-30 opinion and memorandum details",
+      "pageTarget": {
+        "knownWindow": [
+          330,
+          339
+        ],
+        "notes": "Capture the detailed opinion, memorandum, and retention language after the reporting frame is established."
+      },
+      "rationale": "Capture the detailed opinion, memorandum, and retention language after the reporting frame is established.",
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "reporting_requirement",
+        "documentation_expectation",
+        "actuarial_judgment",
+        "retention_boundary"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions-with-boundary-caution"
+    },
+    {
+      "plannedBatchId": "batch-019",
+      "chapterIds": [
+        "VM-31"
+      ],
+      "title": "VM-31 purpose and general requirements",
+      "pageTarget": {
+        "knownWindow": [
+          341,
+          354
+        ],
+        "notes": "Capture the purpose, general requirements, and early report structure before the dense detail block begins."
+      },
+      "rationale": "Capture the purpose, general requirements, and early report structure before the dense detail block begins.",
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "reporting_requirement",
+        "documentation_expectation",
+        "governance_control",
+        "cross_reference_mapping"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions-with-boundary-caution"
+    },
+    {
+      "plannedBatchId": "batch-020",
+      "chapterIds": [
+        "VM-31"
+      ],
+      "title": "VM-31 core report detail block",
+      "pageTarget": {
+        "knownWindow": [
+          355,
+          371
+        ],
+        "notes": "Capture the core report-detail block covering methods, assumptions, assets, experience studies, and model controls."
+      },
+      "rationale": "Capture the core report-detail block covering methods, assumptions, assets, experience studies, and model controls.",
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "documentation_expectation",
+        "cross_reference_mapping",
+        "model_or_assumption_boundary"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions-with-boundary-caution"
+    },
+    {
+      "plannedBatchId": "batch-021",
+      "chapterIds": [
+        "VM-31"
+      ],
+      "title": "VM-31 late detail block and closing boundary",
+      "pageTarget": {
+        "knownWindow": [
+          372,
+          386
+        ],
+        "notes": "Finish the remaining report detail and stop cleanly before VM-50 starts on page 387."
+      },
+      "rationale": "Finish the remaining report detail and stop cleanly before VM-50 starts on page 387.",
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "boundary_cleanup",
+        "cross_reference_mapping",
+        "valuation_date_disclosure"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions-with-boundary-caution"
+    }
+  ],
+  "reviewStandards": {
+    "regulatoryRequirement": "Treat explicit must, shall, or required language as the requirement; preserve the exact citation and chapter context.",
+    "definitionOrTerminology": "Treat terms, glossary material, and term-boundary clarification as definition or terminology content.",
+    "reportingRequirement": "Treat filing, submission, or report-content instructions as reporting requirements.",
+    "documentationExpectation": "Treat retention, support-file, narrative, exhibit, or evidence language as documentation expectation content.",
+    "governanceControlExpectation": "Treat oversight, review, assignment, approval, or control language as governance or control content.",
+    "crossReferenceMapping": "Treat references to other chapters, manuals, or documents as cross-reference mapping unless the same batch also captures the referenced operational section.",
+    "explanatoryBackground": "Treat introductory prose, examples, context, or navigation language as explanatory or background content unless the text imposes an obligation.",
+    "staleSupersededCompanionGuidance": "Treat repealed, superseded, companion, or implementation guidance as review-only support rather than authoritative text.",
+    "requiresHumanInterpretation": "Treat assumptions, margins, model selection, reserve judgment, or boundary cases as requiring human actuarial interpretation unless the text is explicit."
+  },
+  "promotionGates": {
+    "defaultState": "review_only",
+    "learnerFacing": [
+      "source citation exists",
+      "source support is clear",
+      "wording is not misleading",
+      "confidence is high",
+      "no unresolved review flags exist",
+      "no cross-reference ambiguity remains"
+    ],
+    "appReady": [
+      "learner-facing criteria are already satisfied",
+      "export is sanitized, stable, and versioned",
+      "no unresolved review issues remain"
+    ],
+    "ragReady": [
+      "approved indexed material only",
+      "stable ID",
+      "source reference",
+      "locator",
+      "review status no longer requires human disposition"
+    ]
+  },
+  "validationImplications": {
+    "currentChecksNeeded": [
+      "Plan file exists and parses as JSON.",
+      "The supporting plan markdown exists and carries the expected headings.",
+      "Every proposed batch is review-only by default.",
+      "The plan explicitly excludes VM-21 and VM-22.",
+      "The plan remains review-only and not learner-facing or app-ready."
+    ],
+    "futureChecksSuggested": [
+      "Chapter-window checks for VM-01, VM-02, VM-25, VM-26, VM-30, and VM-31.",
+      "Cross-reference flag coverage for the supporting chapter wave.",
+      "Unexpected source-family leakage checks.",
+      "No learner-facing, app-ready, or RAG-ready promotion checks.",
+      "Batch-definition synchronization once supporting extraction starts."
+    ],
+    "scriptImplications": [
+      "scripts/batch-definitions.mjs should stay synchronized with the planned batch-013 onward sequence when extraction is authorized.",
+      "scripts/validate-scaffold.mjs should verify that the supporting plan file exists, parses cleanly, and preserves the VM-21 / VM-22 exclusion."
+    ]
+  },
+  "notes": "Controlled supporting-chapter planning artifact. Planned batches 013-021 remain review-only by default and are not extraction runs."
+}

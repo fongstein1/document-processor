@@ -10,13 +10,13 @@
 
 ## Latest known commit before this batch
 
-`5d4b44d2caa02ca6244e0d95f535e364fd1f45f9`
+`1115b98`
 
 ## Validation status
 
 The scaffold, the tiny real-source pilot batches, the VM-20 planning layer,
-the re-bound remaining VM-20 batch plan, and the tracked VM-20 review index
-validate cleanly.
+the re-bound remaining VM-20 batch plan, the tracked VM-20 review index, and
+the new supporting-chapter planning artifacts validate cleanly.
 
 - `npm run pilot:course-core`: passed; created the core VM course pilot batch
   outputs in `data/work/batches/batch-002/`
@@ -42,8 +42,8 @@ validate cleanly.
   boundary batch in `data/work/batches/batch-012/`
 - `npm run check`: passed; confirmed the schemas, templates, demo fixtures,
   review-packet contracts, the VM-20 plan artifacts, the tracked review
-  index, the no-promotion guardrails, and the synchronized batch definitions
-  for batches 003-012
+  index, the supporting-chapter plan artifacts, the no-promotion guardrails,
+  and the synchronized batch definitions for batches 003-012
 
 The control-plan refresh commit re-bound batches 006-012 to the actual PDF
 section order and added runner shortcuts for the remaining controlled slices.
@@ -54,6 +54,10 @@ ready, or RAG-ready output.
 
 The new tracked VM-20 review index summarizes the ignored batch review
 packets without promoting any extracted content.
+
+A new supporting-chapter control plan now covers VM-01, VM-02, VM-25, VM-26,
+VM-30, and VM-31. VM-21 and VM-22 are explicitly out of scope for that wave
+until a separate plan is approved.
 
 ## Working posture
 
@@ -85,6 +89,9 @@ packets without promoting any extracted content.
   final reinsurance / Section 9 boundary batch.
 - The tracked VM-20 review index now gives the reviewer a single summary view
   of the ignored batch packets without changing their review-only status.
+- The new supporting-chapter control plan records the lighter VM chapter
+  windows separately from VM-20 so the next extraction wave can stay portable
+  and review-only by default.
 - The batch-003 and batch-004 review packets both surface review flags as
   extraction categories, keep boundary slices separate from overview slices,
   and preserve the no-promotion status in both JSON and markdown.
@@ -103,6 +110,6 @@ packets without promoting any extracted content.
 
 ## Current focus
 
-Review the tracked VM-20 review index and decide whether any batch item is a
-candidate for future revision, learner-facing promotion, or RAG/app export
-work.
+Review the tracked VM-20 review index and the new supporting-chapter plan, and
+decide whether any future batch item is a candidate for revision or later
+promotion work.

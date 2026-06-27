@@ -77,3 +77,9 @@
   `npm run check` confirms the index exists and references batches 003-012,
   and refreshed the project-state docs to treat the index as a summary-only
   handoff artifact.
+- 2026-06-26: Performed a limited chapter-boundary scan of
+  `pbr_data_valuation_manual_2026.pdf` to locate the lighter supporting VM
+  windows, confirmed VM-01, VM-02, VM-25, VM-26, VM-30, and VM-31 page
+  ranges, confirmed the VM-50 boundary at page 387, and drafted a separate
+  supporting-chapter plan/config that keeps VM-21 and VM-22 out of scope for
+  this wave.
