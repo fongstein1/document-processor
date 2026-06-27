@@ -185,3 +185,6 @@
   set.
 - 2026-06-27: Created the tracked AG 01 review index and self-review note as
   the new handoff artifacts for the one-page guideline unit.
+- 2026-06-27: Confirmed AG 02 as the next small Actuarial Guideline unit and
+  drafted the AG 02 planning layer so the next batch can be validated before
+  extraction.
