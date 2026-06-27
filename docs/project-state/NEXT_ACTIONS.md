@@ -3,11 +3,11 @@
 ## Next immediate task
 
 AG 06 is complete in ignored working storage and its review index plus
-self-review note now form the current handoff set. Move to the next safe
-source unit after the AG 06 review handoff is validated. AG 05 is already
-captured in the tracked review handoff set, and AG 03, AG 01, AG 02, and AG
-04 remain captured as well. AG 52 is already captured in the mixed pilot
-batch and should not be reprocessed.
+self-review note now form the current handoff set. AG 07 is the next short
+guideline unit; finish the AG 07 planning commit, then run batch-082 once the
+plan is validated. AG 05 is already captured in the tracked review handoff
+set, and AG 03, AG 01, AG 02, and AG 04 remain captured as well. AG 52 is
+already captured in the mixed pilot batch and should not be reprocessed.
 
 ## Build tasks
 
@@ -53,12 +53,16 @@ batch and should not be reprocessed.
   `config/ag06-batch-plan.json` as the current AG 06 planning set.
 - Treat `docs/review/ag06_review_index.md` and `docs/review/ag06_self_review.md`
   as the current AG 06 handoff set.
+- Treat `docs/processor/ag07_extraction_plan.md` and
+  `config/ag07-batch-plan.json` as the current AG 07 planning set.
 - Treat `scripts/ag04-batch-definitions.mjs` as synchronized with the AG 04
   planning and handoff set.
 - Treat `scripts/ag05-batch-definitions.mjs` as synchronized with the AG 05
   planning set.
 - Treat `scripts/ag06-batch-definitions.mjs` as synchronized with the AG 06
   planning and handoff set.
+- Treat `scripts/ag07-batch-definitions.mjs` as synchronized with the AG 07
+  planning set.
 - Use `npm run ag04:batch` only if the AG 04 review packet needs to be
   regenerated.
 - Use `npm run ag05:batch` only if the AG 05 review packet needs to be
@@ -68,6 +72,8 @@ batch and should not be reprocessed.
 - Keep `docs/review/ag06_review_index.md` and `docs/review/ag06_self_review.md`
   synchronized with the ignored AG 06 review packet if the wave is ever
   regenerated.
+- Use `npm run ag07:batch` only if the AG 07 review packet needs to be
+  regenerated.
 - Keep the AG 04 batch review-only unless a later human review explicitly
   approves promotion.
 - Keep the AG 05 batch review-only unless a later human review explicitly
@@ -75,6 +81,8 @@ batch and should not be reprocessed.
 - Keep the AG 05 review index and self-review note synchronized with the
   ignored AG 05 review packet if the wave is ever regenerated.
 - Keep the AG 06 batch review-only unless a later human review explicitly
+  approves promotion.
+- Keep the AG 07 batch review-only unless a later human review explicitly
   approves promotion.
 - Treat `docs/review/valuation_regulation_repository_poc_status.md` as the
   current repository-level proof-of-concept summary.
@@ -142,6 +150,9 @@ batch and should not be reprocessed.
   stable page locator and no promotion until the indexing choice is
   confirmed.
 - Keep the two-page AG 06 guideline as a single review-only batch with a
+  stable page locator and no promotion until the indexing choice is
+  confirmed.
+- Keep the two-page AG 07 guideline as a single review-only batch with a
   stable page locator and no promotion until the indexing choice is
   confirmed.
 - Leave VM-21 and VM-22 out of the supporting wave unless a separate plan is

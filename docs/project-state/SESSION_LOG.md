@@ -217,3 +217,7 @@
   review index plus self-review note as the new handoff artifacts, and
   refreshed the repository POC summary so the eleventh review index and 81
   validated batches are now visible in the handoff layer.
+- 2026-06-27: Selected AG 07 as the next short guideline unit, confirmed the
+  two-page span for the calculation of equivalent level amounts, and drafted
+  the AG 07 planning layer so batch-082 can be validated before extraction
+  starts. `npm run check` passed for the AG 07 planning refresh.
