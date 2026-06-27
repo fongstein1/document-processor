@@ -239,3 +239,9 @@
   confirmed the page windows for AG 09, AG 09-A, AG 09-B, and AG 09-C,
   drafted the AG 09 planning layer, and validated the planning artifact so
   batch-084 can run next in review-only mode.
+- 2026-06-27: Ran the AG 09 family wave sequentially (batch-084 through
+  batch-087) in ignored working storage, kept every batch review-only,
+  created the tracked AG 09 review index plus self-review note as the new
+  handoff artifacts, and refreshed the repository POC summary so the
+  fourteenth review index and 87 validated batches are now visible in the
+  handoff layer.
