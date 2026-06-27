@@ -22,8 +22,10 @@ VM-21 / VM-22 planning and execution artifacts, the AG 06 planning /
 review-handoff artifacts, the AG 08 planning / review-handoff artifacts,
 the AG 09 planning / review-handoff artifacts, the AG 10 planning /
 review-handoff artifacts, the AG 11 planning and review-handoff artifacts,
-the AG 12 planning and review-handoff artifacts, and the AG 13 planning,
-execution, and review-handoff artifacts validate cleanly.
+the AG 12 planning and review-handoff artifacts, the AG 13 planning,
+execution, and review-handoff artifacts, the AG 14 planning and
+review-handoff artifacts, and the AG 15 planning and review-handoff
+artifacts validate cleanly.
 
 - `npm run pilot:course-core`: passed; created the core VM course pilot batch
   outputs in `data/work/batches/batch-002/`
@@ -128,9 +130,9 @@ batch outputs without promoting any extracted content.
 The next short guideline candidate will be selected from the remaining AG
 files if the continuation pass keeps going.
 
-The AG 15 planning layer is now drafted so batch-093 can capture the
-historical illustration guideline as the next review-only step if the
-continuation pass keeps going.
+The AG 15 review-only step is now complete as batch-093. Its tracked review
+index and self-review note summarize the historical illustration guideline
+without promoting any extracted content.
 
 ## Working posture
 

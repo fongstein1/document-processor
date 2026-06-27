@@ -269,3 +269,4 @@
 - 2026-06-27: Validated the AG 14 planning layer cleanly, keeping the historical surveillance procedure review-only and ready for batch-092 execution.
 - 2026-06-27: Ran the AG 14 two-page historical surveillance-procedure batch (`batch-092`) in ignored working storage, kept it review-only, and created the tracked AG 14 review index plus self-review note as the new handoff artifacts.
 - 2026-06-27: Refreshed the scaffold validator and repository proof-of-concept summary so AG 14 is counted alongside the other completed review indexes, and kept the historical surveillance wording visible as a review-only caveat.
+- 2026-06-27: Completed the AG 15 historical illustration guideline batch (`batch-093`) in ignored working storage, kept it review-only, and created the tracked AG 15 review index plus self-review note as the new handoff artifacts.
