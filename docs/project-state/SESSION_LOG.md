@@ -154,3 +154,8 @@
   lightweight validation check so `npm run check` confirms the summary exists
   and references the four review indexes, and refreshed the project-state
   docs so the repository-level handoff stays summary-only.
+- 2026-06-27: Inspected the VM-20 companion practice note
+  `Practice Notes/AAA - VM-20_PN_2020_Version.pdf`, confirmed its
+  non-binding disclaimer and 21-section structure, and drafted a dedicated
+  review-only practice-note plan/config pair that keeps the source separate
+  from the other Practice Notes files until a separate plan is approved.

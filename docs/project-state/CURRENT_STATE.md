@@ -208,3 +208,10 @@ outputs remain review-only. The tracked valuation-regulation repository POC
 summary now consolidates the four review indexes into a single handoff view.
 Keep VM-25 and later chapters out of scope unless a future plan explicitly
 opens them.
+
+The next controlled unit is the VM-20 companion practice note
+`Practice Notes/AAA - VM-20_PN_2020_Version.pdf`. It is non-binding
+implementation guidance, not authoritative regulatory text, and it will be
+processed review-only by default. Batches `batch-055` through `batch-075`
+are reserved for that source-file wave, while the other Practice Notes files
+stay out of scope until a separate plan is approved.

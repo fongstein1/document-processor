@@ -1,0 +1,1243 @@
+{
+  "planId": "vm20-practice-note-control-plan",
+  "planVersion": "1.0",
+  "status": "planned",
+  "sourceScope": {
+    "sourceFamilyId": "practice_notes",
+    "primarySourceFile": "AAA - VM-20_PN_2020_Version.pdf",
+    "sourceFolder": "Practice Notes",
+    "sourceTitle": "Life Principle-Based Reserves (PBR) Under VM-20",
+    "sourceReference": "American Academy of Actuaries practice note, April 2020",
+    "domainId": "naic_regulatory",
+    "rawSourceRoot": "D:\\Work\\AI Projects\\NAIC Valuation Manual Course",
+    "confirmedPageRange": [
+      1,
+      115
+    ],
+    "observedSectionWindows": [
+      {
+        "sectionId": "front-matter-section-1",
+        "pageRange": [
+          1,
+          9
+        ],
+        "note": "Title pages, disclaimer, introduction, calculation schematic, and Section 1 opener."
+      },
+      {
+        "sectionId": "section-2-common-practice",
+        "pageRange": [
+          10,
+          10
+        ],
+        "note": "Available information on common practice."
+      },
+      {
+        "sectionId": "section-3-calculation-overview",
+        "pageRange": [
+          11,
+          17
+        ],
+        "note": "VM-20 calculation overview."
+      },
+      {
+        "sectionId": "section-4-npr-overview",
+        "pageRange": [
+          18,
+          27
+        ],
+        "note": "Net Premium Reserve overview."
+      },
+      {
+        "sectionId": "section-5-dr-overview",
+        "pageRange": [
+          28,
+          32
+        ],
+        "note": "Deterministic Reserve overview."
+      },
+      {
+        "sectionId": "section-6-sr-overview",
+        "pageRange": [
+          33,
+          35
+        ],
+        "note": "Stochastic Reserve overview."
+      },
+      {
+        "sectionId": "section-7-stochastic-exclusion",
+        "pageRange": [
+          36,
+          42
+        ],
+        "note": "Stochastic exclusion test."
+      },
+      {
+        "sectionId": "section-8-deterministic-exclusion",
+        "pageRange": [
+          43,
+          45
+        ],
+        "note": "Deterministic exclusion test."
+      },
+      {
+        "sectionId": "section-9-scenario-reserve",
+        "pageRange": [
+          46,
+          48
+        ],
+        "note": "Difference from cash flow testing and scenario reserve calculation."
+      },
+      {
+        "sectionId": "section-10-other-than-valuation-date",
+        "pageRange": [
+          49,
+          50
+        ],
+        "note": "Other-than-valuation-date considerations."
+      },
+      {
+        "sectionId": "section-11-starting-assets",
+        "pageRange": [
+          51,
+          67
+        ],
+        "note": "Starting assets and asset modeling."
+      },
+      {
+        "sectionId": "section-12-scenarios-econ",
+        "pageRange": [
+          68,
+          72
+        ],
+        "note": "Scenarios, generators, and economic assumptions."
+      },
+      {
+        "sectionId": "section-13-prudent-estimate",
+        "pageRange": [
+          73,
+          76
+        ],
+        "note": "Prudent estimate and anticipated experience assumptions."
+      },
+      {
+        "sectionId": "section-14-margins",
+        "pageRange": [
+          77,
+          81
+        ],
+        "note": "Margins."
+      },
+      {
+        "sectionId": "section-15-mortality",
+        "pageRange": [
+          82,
+          92
+        ],
+        "note": "Mortality assumptions."
+      },
+      {
+        "sectionId": "section-16-premium",
+        "pageRange": [
+          93,
+          94
+        ],
+        "note": "Premium assumptions."
+      },
+      {
+        "sectionId": "section-17-behavior",
+        "pageRange": [
+          95,
+          98
+        ],
+        "note": "Policyholder behavior assumptions other than premiums."
+      },
+      {
+        "sectionId": "section-18-expense",
+        "pageRange": [
+          99,
+          100
+        ],
+        "note": "Expense assumptions."
+      },
+      {
+        "sectionId": "section-19-nge",
+        "pageRange": [
+          101,
+          103
+        ],
+        "note": "Non-guaranteed element assumptions."
+      },
+      {
+        "sectionId": "section-20-reinsurance",
+        "pageRange": [
+          104,
+          108
+        ],
+        "note": "Treatment of reinsurance."
+      },
+      {
+        "sectionId": "section-21-hedging",
+        "pageRange": [
+          109,
+          115
+        ],
+        "note": "Hedging / derivative programs."
+      }
+    ],
+    "boundaries": [
+      "Keep planning focused on the single practice note file (AAA - VM-20_PN_2020_Version.pdf).",
+      "Do not widen into the other Practice Notes files in the same folder.",
+      "Keep VM-20, VM-21, VM-22, VM-A, VM-C, VM-G, VM-M, VM-30, and VM-31 references review-only unless the same batch intentionally includes the referenced operational text.",
+      "Keep the practice note disclaimer and non-binding obsolescence warning visible as companion-guidance context, not as authoritative regulatory text.",
+      "Keep stale, superseded, companion, or implementation guidance as notes only."
+    ],
+    "exclusions": [
+      "No full-document processing outside this source file.",
+      "No learner-facing content.",
+      "No app-ready exports.",
+      "No RAG-ready exports.",
+      "No approved/promoted exports.",
+      "No eLearning scripts, slides, quizzes, or app exports.",
+      "No raw source files in Git.",
+      "No other Practice Notes files in the same wave."
+    ]
+  },
+  "topicMap": [
+    {
+      "topicId": "vm20-pn-front-matter",
+      "label": "Front matter and Section 1 opener",
+      "pageRange": [
+        1,
+        9
+      ],
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "background_content",
+        "non_binding_guidance",
+        "cross_reference_mapping",
+        "boundary_control_window"
+      ],
+      "crossReferenceWatchlist": [
+        "VM-20",
+        "VM-21",
+        "VM-22",
+        "VM-01",
+        "VM-A",
+        "VM-C"
+      ],
+      "boundaryNote": "Keep this slice within pages 1-9 and do not absorb adjacent practice-note material."
+    },
+    {
+      "topicId": "vm20-pn-common-practice",
+      "label": "Section 2 available information on common practice",
+      "pageRange": [
+        10,
+        10
+      ],
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "implementation_guidance",
+        "background_content",
+        "cross_reference_mapping"
+      ],
+      "crossReferenceWatchlist": [
+        "VM-20",
+        "VM-30",
+        "VM-31",
+        "VM-A",
+        "VM-C"
+      ],
+      "boundaryNote": "Keep this slice within page 10 and do not absorb adjacent practice-note material."
+    },
+    {
+      "topicId": "vm20-pn-calculation-overview",
+      "label": "Section 3 VM-20 calculation overview",
+      "pageRange": [
+        11,
+        17
+      ],
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "calculation_structure",
+        "formula_context",
+        "cross_reference_mapping"
+      ],
+      "crossReferenceWatchlist": [
+        "VM-20",
+        "VM-30",
+        "VM-31",
+        "VM-A",
+        "VM-C"
+      ],
+      "boundaryNote": "Keep this slice within pages 11-17 and do not absorb adjacent practice-note material."
+    },
+    {
+      "topicId": "vm20-pn-npr-overview",
+      "label": "Section 4 NPR overview",
+      "pageRange": [
+        18,
+        27
+      ],
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "reserve_method_structure",
+        "formula_context",
+        "cross_reference_mapping"
+      ],
+      "crossReferenceWatchlist": [
+        "VM-20",
+        "VM-30",
+        "VM-31",
+        "VM-A",
+        "VM-C"
+      ],
+      "boundaryNote": "Keep this slice within pages 18-27 and do not absorb adjacent practice-note material."
+    },
+    {
+      "topicId": "vm20-pn-dr-overview",
+      "label": "Section 5 deterministic reserve overview",
+      "pageRange": [
+        28,
+        32
+      ],
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "reserve_method_structure",
+        "formula_context",
+        "cross_reference_mapping"
+      ],
+      "crossReferenceWatchlist": [
+        "VM-20",
+        "VM-30",
+        "VM-31",
+        "VM-A",
+        "VM-C"
+      ],
+      "boundaryNote": "Keep this slice within pages 28-32 and do not absorb adjacent practice-note material."
+    },
+    {
+      "topicId": "vm20-pn-sr-overview",
+      "label": "Section 6 stochastic reserve overview",
+      "pageRange": [
+        33,
+        35
+      ],
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "reserve_method_structure",
+        "formula_context",
+        "cross_reference_mapping"
+      ],
+      "crossReferenceWatchlist": [
+        "VM-20",
+        "VM-30",
+        "VM-31",
+        "VM-G",
+        "VM-C"
+      ],
+      "boundaryNote": "Keep this slice within pages 33-35 and do not absorb adjacent practice-note material."
+    },
+    {
+      "topicId": "vm20-pn-stochastic-exclusion",
+      "label": "Section 7 stochastic exclusion test",
+      "pageRange": [
+        36,
+        42
+      ],
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "scenario_or_stochastic_requirement",
+        "boundary_control_window",
+        "cross_reference_mapping"
+      ],
+      "crossReferenceWatchlist": [
+        "VM-20",
+        "VM-30",
+        "VM-31",
+        "VM-G",
+        "VM-C"
+      ],
+      "boundaryNote": "Keep this slice within pages 36-42 and do not absorb adjacent practice-note material."
+    },
+    {
+      "topicId": "vm20-pn-deterministic-exclusion",
+      "label": "Section 8 deterministic exclusion test",
+      "pageRange": [
+        43,
+        45
+      ],
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "reserve_method_structure",
+        "cross_reference_mapping",
+        "boundary_control_window"
+      ],
+      "crossReferenceWatchlist": [
+        "VM-20",
+        "VM-30",
+        "VM-31",
+        "VM-G",
+        "VM-C"
+      ],
+      "boundaryNote": "Keep this slice within pages 43-45 and do not absorb adjacent practice-note material."
+    },
+    {
+      "topicId": "vm20-pn-scenario-reserve",
+      "label": "Section 9 scenario reserve calculation",
+      "pageRange": [
+        46,
+        48
+      ],
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "calculation_structure",
+        "formula_context",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": [
+        "VM-20",
+        "VM-30",
+        "VM-31",
+        "VM-G",
+        "VM-C"
+      ],
+      "boundaryNote": "Keep this slice within pages 46-48 and do not absorb adjacent practice-note material."
+    },
+    {
+      "topicId": "vm20-pn-valuation-date",
+      "label": "Section 10 other-than-valuation-date considerations",
+      "pageRange": [
+        49,
+        50
+      ],
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "background_content",
+        "boundary_control_window",
+        "cross_reference_mapping"
+      ],
+      "crossReferenceWatchlist": [
+        "VM-20",
+        "VM-30",
+        "VM-31",
+        "VM-G"
+      ],
+      "boundaryNote": "Keep this slice within pages 49-50 and do not absorb adjacent practice-note material."
+    },
+    {
+      "topicId": "vm20-pn-starting-assets",
+      "label": "Section 11 starting assets and asset modeling",
+      "pageRange": [
+        51,
+        67
+      ],
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "asset_modeling_judgment",
+        "formula_context",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": [
+        "VM-20",
+        "VM-30",
+        "VM-31",
+        "VM-G",
+        "VM-C"
+      ],
+      "boundaryNote": "Keep this slice within pages 51-67 and do not absorb adjacent practice-note material."
+    },
+    {
+      "topicId": "vm20-pn-scenarios-econ",
+      "label": "Section 12 scenarios / generators / economic assumptions",
+      "pageRange": [
+        68,
+        72
+      ],
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "scenario_or_stochastic_requirement",
+        "formula_context",
+        "cross_reference_mapping"
+      ],
+      "crossReferenceWatchlist": [
+        "VM-20",
+        "VM-30",
+        "VM-31",
+        "VM-G",
+        "VM-C"
+      ],
+      "boundaryNote": "Keep this slice within pages 68-72 and do not absorb adjacent practice-note material."
+    },
+    {
+      "topicId": "vm20-pn-prudent-estimate",
+      "label": "Section 13 prudent estimate and anticipated experience assumptions",
+      "pageRange": [
+        73,
+        76
+      ],
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "company_or_prudent_estimate_assumption",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": [
+        "VM-20",
+        "VM-30",
+        "VM-31",
+        "VM-G",
+        "VM-M"
+      ],
+      "boundaryNote": "Keep this slice within pages 73-76 and do not absorb adjacent practice-note material."
+    },
+    {
+      "topicId": "vm20-pn-margins",
+      "label": "Section 14 margins",
+      "pageRange": [
+        77,
+        81
+      ],
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "company_or_prudent_estimate_assumption",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": [
+        "VM-20",
+        "VM-30",
+        "VM-31",
+        "VM-G",
+        "VM-M"
+      ],
+      "boundaryNote": "Keep this slice within pages 77-81 and do not absorb adjacent practice-note material."
+    },
+    {
+      "topicId": "vm20-pn-mortality",
+      "label": "Section 15 mortality assumptions",
+      "pageRange": [
+        82,
+        92
+      ],
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "prescribed_assumption",
+        "company_or_prudent_estimate_assumption",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": [
+        "VM-20",
+        "VM-30",
+        "VM-31",
+        "VM-G",
+        "VM-M"
+      ],
+      "boundaryNote": "Keep this slice within pages 82-92 and do not absorb adjacent practice-note material."
+    },
+    {
+      "topicId": "vm20-pn-premium",
+      "label": "Section 16 premium assumptions",
+      "pageRange": [
+        93,
+        94
+      ],
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "prescribed_assumption",
+        "cross_reference_mapping",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": [
+        "VM-20",
+        "VM-30",
+        "VM-31",
+        "VM-G",
+        "VM-M"
+      ],
+      "boundaryNote": "Keep this slice within pages 93-94 and do not absorb adjacent practice-note material."
+    },
+    {
+      "topicId": "vm20-pn-behavior",
+      "label": "Section 17 policyholder behavior assumptions other than premiums",
+      "pageRange": [
+        95,
+        98
+      ],
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "company_or_prudent_estimate_assumption",
+        "requires_human_interpretation",
+        "cross_reference_mapping"
+      ],
+      "crossReferenceWatchlist": [
+        "VM-20",
+        "VM-30",
+        "VM-31",
+        "VM-G",
+        "VM-M"
+      ],
+      "boundaryNote": "Keep this slice within pages 95-98 and do not absorb adjacent practice-note material."
+    },
+    {
+      "topicId": "vm20-pn-expense",
+      "label": "Section 18 expense assumptions",
+      "pageRange": [
+        99,
+        100
+      ],
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "company_or_prudent_estimate_assumption",
+        "documentation_expectation",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": [
+        "VM-20",
+        "VM-30",
+        "VM-31",
+        "VM-G"
+      ],
+      "boundaryNote": "Keep this slice within pages 99-100 and do not absorb adjacent practice-note material."
+    },
+    {
+      "topicId": "vm20-pn-nge",
+      "label": "Section 19 non-guaranteed element assumptions",
+      "pageRange": [
+        101,
+        103
+      ],
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "company_or_prudent_estimate_assumption",
+        "documentation_expectation",
+        "cross_reference_mapping"
+      ],
+      "crossReferenceWatchlist": [
+        "VM-20",
+        "VM-30",
+        "VM-31",
+        "VM-G"
+      ],
+      "boundaryNote": "Keep this slice within pages 101-103 and do not absorb adjacent practice-note material."
+    },
+    {
+      "topicId": "vm20-pn-reinsurance",
+      "label": "Section 20 treatment of reinsurance",
+      "pageRange": [
+        104,
+        108
+      ],
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "reinsurance",
+        "cross_reference_mapping",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": [
+        "VM-20",
+        "VM-21",
+        "VM-22",
+        "VM-30",
+        "VM-31",
+        "VM-G"
+      ],
+      "boundaryNote": "Keep this slice within pages 104-108 and do not absorb adjacent practice-note material."
+    },
+    {
+      "topicId": "vm20-pn-hedging",
+      "label": "Section 21 treatment of hedging / derivative programs",
+      "pageRange": [
+        109,
+        115
+      ],
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "hedging_or_risk_mitigation",
+        "documentation_expectation",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": [
+        "VM-20",
+        "VM-21",
+        "VM-22",
+        "VM-30",
+        "VM-31",
+        "VM-G"
+      ],
+      "boundaryNote": "Keep this slice within pages 109-115 and do not absorb adjacent practice-note material."
+    }
+  ],
+  "proposedBatches": [
+    {
+      "plannedBatchId": "batch-055",
+      "topicIds": [
+        "vm20-pn-front-matter"
+      ],
+      "title": "Front matter and Section 1 opener",
+      "pageTarget": {
+        "knownWindow": [
+          1,
+          9
+        ],
+        "notes": "Capture the title pages, disclaimer, introduction, schematic, and the Section 1 opener."
+      },
+      "rationale": "Keep the non-binding disclaimer and product-coverage opener together before the practice-note implementation sections begin.",
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "background_content",
+        "non_binding_guidance",
+        "cross_reference_mapping",
+        "boundary_control_window"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    },
+    {
+      "plannedBatchId": "batch-056",
+      "topicIds": [
+        "vm20-pn-common-practice"
+      ],
+      "title": "Section 2 available information on common practice",
+      "pageTarget": {
+        "knownWindow": [
+          10,
+          10
+        ],
+        "notes": "Capture the common-practice discussion as a separate implementation-guidance slice."
+      },
+      "rationale": "Keep the common-practice discussion separate from the calculation overview.",
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "implementation_guidance",
+        "background_content",
+        "cross_reference_mapping"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    },
+    {
+      "plannedBatchId": "batch-057",
+      "topicIds": [
+        "vm20-pn-calculation-overview"
+      ],
+      "title": "Section 3 VM-20 calculation overview",
+      "pageTarget": {
+        "knownWindow": [
+          11,
+          17
+        ],
+        "notes": "Capture the calculation overview before the reserve-specific overviews begin."
+      },
+      "rationale": "Capture the practice-note calculation overview before the reserve-specific overviews begin.",
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "calculation_structure",
+        "formula_context",
+        "cross_reference_mapping"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions-with-boundary-caution"
+    },
+    {
+      "plannedBatchId": "batch-058",
+      "topicIds": [
+        "vm20-pn-npr-overview"
+      ],
+      "title": "Section 4 NPR overview",
+      "pageTarget": {
+        "knownWindow": [
+          18,
+          27
+        ],
+        "notes": "Capture the NPR overview and keep it separate from deterministic and stochastic reserve detail."
+      },
+      "rationale": "Keep the NPR overview separate from deterministic and stochastic reserve detail.",
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "reserve_method_structure",
+        "formula_context",
+        "cross_reference_mapping"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions-with-boundary-caution"
+    },
+    {
+      "plannedBatchId": "batch-059",
+      "topicIds": [
+        "vm20-pn-dr-overview"
+      ],
+      "title": "Section 5 deterministic reserve overview",
+      "pageTarget": {
+        "knownWindow": [
+          28,
+          32
+        ],
+        "notes": "Capture the deterministic reserve overview and stop before the stochastic reserve section."
+      },
+      "rationale": "Keep the deterministic reserve overview separate from the later SR and test sections.",
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "reserve_method_structure",
+        "formula_context",
+        "cross_reference_mapping"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions-with-boundary-caution"
+    },
+    {
+      "plannedBatchId": "batch-060",
+      "topicIds": [
+        "vm20-pn-sr-overview"
+      ],
+      "title": "Section 6 stochastic reserve overview",
+      "pageTarget": {
+        "knownWindow": [
+          33,
+          35
+        ],
+        "notes": "Capture the SR overview and stop before the stochastic exclusion test."
+      },
+      "rationale": "Keep the stochastic reserve overview separate from the exclusion tests.",
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "reserve_method_structure",
+        "formula_context",
+        "cross_reference_mapping"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions-with-boundary-caution"
+    },
+    {
+      "plannedBatchId": "batch-061",
+      "topicIds": [
+        "vm20-pn-stochastic-exclusion"
+      ],
+      "title": "Section 7 stochastic exclusion test",
+      "pageTarget": {
+        "knownWindow": [
+          36,
+          42
+        ],
+        "notes": "Capture stochastic exclusion and test language while keeping it separate from deterministic exclusion."
+      },
+      "rationale": "Keep stochastic exclusion and test language separate from deterministic exclusion.",
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "scenario_or_stochastic_requirement",
+        "boundary_control_window",
+        "cross_reference_mapping"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    },
+    {
+      "plannedBatchId": "batch-062",
+      "topicIds": [
+        "vm20-pn-deterministic-exclusion"
+      ],
+      "title": "Section 8 deterministic exclusion test",
+      "pageTarget": {
+        "knownWindow": [
+          43,
+          45
+        ],
+        "notes": "Capture deterministic exclusion and keep it separate from the scenario reserve discussion."
+      },
+      "rationale": "Keep the deterministic exclusion test separate from the scenario reserve discussion.",
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "reserve_method_structure",
+        "cross_reference_mapping",
+        "boundary_control_window"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    },
+    {
+      "plannedBatchId": "batch-063",
+      "topicIds": [
+        "vm20-pn-scenario-reserve"
+      ],
+      "title": "Section 9 scenario reserve calculation",
+      "pageTarget": {
+        "knownWindow": [
+          46,
+          48
+        ],
+        "notes": "Capture the scenario reserve calculation without absorbing the valuation-date timing language."
+      },
+      "rationale": "Capture the scenario reserve calculation while keeping the valuation-date timing language separate.",
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "calculation_structure",
+        "formula_context",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions-with-boundary-caution"
+    },
+    {
+      "plannedBatchId": "batch-064",
+      "topicIds": [
+        "vm20-pn-valuation-date"
+      ],
+      "title": "Section 10 other-than-valuation-date considerations",
+      "pageTarget": {
+        "knownWindow": [
+          49,
+          50
+        ],
+        "notes": "Capture the timing and valuation-date discussion as a boundary slice."
+      },
+      "rationale": "Keep the timing discussion separate from starting assets.",
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "background_content",
+        "boundary_control_window",
+        "cross_reference_mapping"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    },
+    {
+      "plannedBatchId": "batch-065",
+      "topicIds": [
+        "vm20-pn-starting-assets"
+      ],
+      "title": "Section 11 starting assets and asset modeling",
+      "pageTarget": {
+        "knownWindow": [
+          51,
+          67
+        ],
+        "notes": "Capture the asset setup and asset-modeling guidance while stopping before scenario assumptions begin."
+      },
+      "rationale": "Keep the asset setup and asset-modeling guidance together while stopping before scenario assumptions begin.",
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "asset_modeling_judgment",
+        "formula_context",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions-with-boundary-caution"
+    },
+    {
+      "plannedBatchId": "batch-066",
+      "topicIds": [
+        "vm20-pn-scenarios-econ"
+      ],
+      "title": "Section 12 scenarios / generators / economic assumptions",
+      "pageTarget": {
+        "knownWindow": [
+          68,
+          72
+        ],
+        "notes": "Capture scenario-generation and economic-assumption guidance as a review-only slice."
+      },
+      "rationale": "Keep the scenario-generation and economic-assumption guidance together as a review-only slice.",
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "scenario_or_stochastic_requirement",
+        "formula_context",
+        "cross_reference_mapping"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions-with-boundary-caution"
+    },
+    {
+      "plannedBatchId": "batch-067",
+      "topicIds": [
+        "vm20-pn-prudent-estimate"
+      ],
+      "title": "Section 13 prudent estimate and anticipated experience assumptions",
+      "pageTarget": {
+        "knownWindow": [
+          73,
+          76
+        ],
+        "notes": "Capture the prudent-estimate guidance before the margins section."
+      },
+      "rationale": "Keep the prudent-estimate guidance narrow before the margins section.",
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "company_or_prudent_estimate_assumption",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions-with-boundary-caution"
+    },
+    {
+      "plannedBatchId": "batch-068",
+      "topicIds": [
+        "vm20-pn-margins"
+      ],
+      "title": "Section 14 margins",
+      "pageTarget": {
+        "knownWindow": [
+          77,
+          81
+        ],
+        "notes": "Capture the margins discussion and stop before mortality assumptions."
+      },
+      "rationale": "Keep the margin discussion separate from the mortality assumptions.",
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "company_or_prudent_estimate_assumption",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    },
+    {
+      "plannedBatchId": "batch-069",
+      "topicIds": [
+        "vm20-pn-mortality"
+      ],
+      "title": "Section 15 mortality assumptions",
+      "pageTarget": {
+        "knownWindow": [
+          82,
+          92
+        ],
+        "notes": "Capture mortality credibility, tables, and guidance while stopping before premium assumptions begin."
+      },
+      "rationale": "Keep mortality credibility, tables, and guidance together while stopping before premium assumptions begin.",
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "prescribed_assumption",
+        "company_or_prudent_estimate_assumption",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions-with-boundary-caution"
+    },
+    {
+      "plannedBatchId": "batch-070",
+      "topicIds": [
+        "vm20-pn-premium"
+      ],
+      "title": "Section 16 premium assumptions",
+      "pageTarget": {
+        "knownWindow": [
+          93,
+          94
+        ],
+        "notes": "Capture the premium-assumption discussion as a narrow review slice."
+      },
+      "rationale": "Keep the premium-assumption discussion narrow and review-only.",
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "prescribed_assumption",
+        "cross_reference_mapping",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    },
+    {
+      "plannedBatchId": "batch-071",
+      "topicIds": [
+        "vm20-pn-behavior"
+      ],
+      "title": "Section 17 policyholder behavior assumptions other than premiums",
+      "pageTarget": {
+        "knownWindow": [
+          95,
+          98
+        ],
+        "notes": "Capture behavior assumptions and sensitivity language while stopping before expense assumptions."
+      },
+      "rationale": "Keep behavior assumptions and sensitivity language together while stopping before expense assumptions.",
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "company_or_prudent_estimate_assumption",
+        "requires_human_interpretation",
+        "cross_reference_mapping"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    },
+    {
+      "plannedBatchId": "batch-072",
+      "topicIds": [
+        "vm20-pn-expense"
+      ],
+      "title": "Section 18 expense assumptions",
+      "pageTarget": {
+        "knownWindow": [
+          99,
+          100
+        ],
+        "notes": "Capture expense assumptions and stop before the NGE discussion."
+      },
+      "rationale": "Keep expense assumptions separate from the non-guaranteed element discussion.",
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "company_or_prudent_estimate_assumption",
+        "documentation_expectation",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    },
+    {
+      "plannedBatchId": "batch-073",
+      "topicIds": [
+        "vm20-pn-nge"
+      ],
+      "title": "Section 19 non-guaranteed element assumptions",
+      "pageTarget": {
+        "knownWindow": [
+          101,
+          103
+        ],
+        "notes": "Capture the NGE assumptions and stop before reinsurance begins."
+      },
+      "rationale": "Keep the NGE assumptions separate from the reinsurance section.",
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "company_or_prudent_estimate_assumption",
+        "documentation_expectation",
+        "cross_reference_mapping"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    },
+    {
+      "plannedBatchId": "batch-074",
+      "topicIds": [
+        "vm20-pn-reinsurance"
+      ],
+      "title": "Section 20 treatment of reinsurance",
+      "pageTarget": {
+        "knownWindow": [
+          104,
+          108
+        ],
+        "notes": "Capture the reinsurance treatment and stop before hedging / derivative programs."
+      },
+      "rationale": "Keep the reinsurance treatment separate from hedging / derivative programs.",
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "reinsurance",
+        "cross_reference_mapping",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions-with-boundary-caution"
+    },
+    {
+      "plannedBatchId": "batch-075",
+      "topicIds": [
+        "vm20-pn-hedging"
+      ],
+      "title": "Section 21 treatment of hedging / derivative programs",
+      "pageTarget": {
+        "knownWindow": [
+          109,
+          115
+        ],
+        "notes": "Capture the hedge / derivative guidance and stop at the end of the source file."
+      },
+      "rationale": "Close the practice note with the hedge / derivative guidance and stop at the end of the source file.",
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "hedging_or_risk_mitigation",
+        "documentation_expectation",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions-with-boundary-caution"
+    }
+  ],
+  "reviewStandards": {
+    "regulatoryRequirement": "Treat explicit must, shall, or required language as the requirement; preserve the citation and source context.",
+    "implementationGuidance": "Treat explanatory practice-note language as guidance for implementation, not as binding text.",
+    "companionGuidance": "Treat the practice note itself as companion guidance unless a later review explicitly promotes a supported item.",
+    "nonBindingGuidance": "Treat the disclaimer and implementation commentary as non-binding context that should remain review-only.",
+    "definitionOrTerminology": "Treat terms and term-boundary clarifications as terminology content unless they impose a duty.",
+    "reserveMethodStructure": "Treat reserve-method organization, aggregation, and reserve-floor language as structural method content.",
+    "calculationStructure": "Treat formulas, formula steps, and calculation ordering as calculation structure.",
+    "formulaContext": "Keep formulas with their setup terms, defined variables, and immediate explanatory context.",
+    "prescribedAssumption": "Treat prescribed assumption values or formula inputs as fixed-source assumptions.",
+    "companyOrPrudentEstimateAssumption": "Treat prudent-estimate or company-selected assumptions as review-only until the actuarial basis is clear.",
+    "scenarioOrStochasticRequirement": "Treat scenario generation, stochastic projections, and simulation rules as stochastic requirements.",
+    "assetModelingJudgment": "Treat asset mix, investment strategy, hedge selection, and proxy mapping as human judgment unless the text is explicit.",
+    "hedgingOrRiskMitigation": "Treat hedging, derivative, and risk-mitigation language as review-only unless the section fully spells out the rule.",
+    "reinsurance": "Treat ceded and assumed reinsurance cash flows, treaty features, and reserve adjustments as review-only until the operational treatment is fully captured.",
+    "reportingRequirement": "Treat filing, submission, report, and disclosure requirements as reporting requirements.",
+    "documentationExpectation": "Treat retention, memorandum, support-file, and evidence language as documentation expectations.",
+    "crossReferenceMapping": "Treat references to other VM sections, models, or appendices as mapping notes unless the operational text is included.",
+    "backgroundContent": "Treat introductions, examples, navigation text, and chapter background as background content unless it imposes a duty.",
+    "boundaryControlWindow": "Treat boundary slices and transition pages as review-only windows that should not be merged forward.",
+    "requiresHumanInterpretation": "Treat assumptions, margins, reserve interpretations, and boundary cases as requiring human actuarial interpretation unless the text is explicit.",
+    "staleSupersededCompanionGuidance": "Treat stale, superseded, companion, or implementation guidance as review-only support and do not promote it."
+  },
+  "promotionGates": {
+    "defaultState": "review_only",
+    "learnerFacing": [
+      "source citation exists",
+      "source support is clear",
+      "wording is not misleading",
+      "confidence is high",
+      "no unresolved review flags exist",
+      "no cross-reference ambiguity remains"
+    ],
+    "appReady": [
+      "learner-facing criteria are already satisfied",
+      "export is sanitized, stable, and versioned",
+      "no unresolved review issues remain"
+    ],
+    "ragReady": [
+      "approved indexed material only",
+      "stable ID",
+      "source reference",
+      "locator",
+      "review status no longer requires human disposition"
+    ]
+  },
+  "validationImplications": {
+    "currentChecksNeeded": [
+      "Plan file exists and parses as JSON.",
+      "The practice-note plan markdown exists and carries the expected headings.",
+      "Every proposed batch is review-only by default.",
+      "The plan explicitly marks the source as non-binding companion guidance.",
+      "Each planned batch has a matching batch definition.",
+      "The practice-note batch definition file stays synchronized with the plan."
+    ],
+    "futureChecksSuggested": [
+      "One-topic-per-batch checks for the 21 practice-note sections.",
+      "Cross-reference flag coverage for VM-20, VM-21, VM-22, VM-A, VM-C, VM-G, VM-M, VM-30, and VM-31.",
+      "Unexpected source-family leakage checks.",
+      "No learner-facing, app-ready, or RAG-ready promotion checks.",
+      "Batch-definition synchronization once practice-note extraction starts."
+    ],
+    "scriptImplications": [
+      "scripts/vm20-practice-note-batch-definitions.mjs should stay synchronized with the planned batch-055 onward sequence when extraction is authorized.",
+      "scripts/batch-definitions.mjs should import the practice-note definition file so the shared runner can find the planned batch IDs.",
+      "scripts/validate-scaffold.mjs should verify that the practice-note plan file exists, parses cleanly, and preserves the non-binding companion-guidance posture.",
+      "The shared runner should continue to honor the same stop conditions used for the VM-20 batches."
+    ]
+  },
+  "notes": "Controlled practice-note planning artifact. Planned batches 055-075 remain review-only by default and are not extraction runs."
+}

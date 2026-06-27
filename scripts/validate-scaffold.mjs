@@ -123,6 +123,17 @@ const paths = {
   vm21ExtractionPlanMd: path.join(repoRoot, 'docs', 'processor', 'vm21_extraction_plan.md'),
   vm22BatchPlanJson: path.join(repoRoot, 'config', 'vm22-batch-plan.json'),
   vm22ExtractionPlanMd: path.join(repoRoot, 'docs', 'processor', 'vm22_extraction_plan.md'),
+  practiceNoteBatchPlanJson: path.join(
+    repoRoot,
+    'config',
+    'vm20-practice-note-batch-plan.json',
+  ),
+  practiceNoteExtractionPlanMd: path.join(
+    repoRoot,
+    'docs',
+    'processor',
+    'vm20_practice_note_extraction_plan.md',
+  ),
 }
 
 const requiredFiles = [
@@ -162,6 +173,7 @@ const requiredFiles = [
   'docs/project-state/NEXT_ACTIONS.md',
   'docs/project-state/SESSION_LOG.md',
   'docs/processor/vm20_extraction_plan.md',
+  'docs/processor/vm20_practice_note_extraction_plan.md',
   'docs/processor/vm22_extraction_plan.md',
   'docs/review/vm20_review_index.md',
   'docs/review/supporting_vm_review_index.md',
@@ -171,9 +183,11 @@ const requiredFiles = [
   'config/supporting-vm-batch-plan.json',
   'config/vm21-batch-plan.json',
   'config/vm20-batch-plan.json',
+  'config/vm20-practice-note-batch-plan.json',
   'config/vm22-batch-plan.json',
   'scripts/vm21-batch-definitions.mjs',
   'scripts/vm22-batch-definitions.mjs',
+  'scripts/vm20-practice-note-batch-definitions.mjs',
   'scripts/bootstrap-small-batch.mjs',
   'scripts/validate-scaffold.mjs',
   'scripts/run-pilot-batch.mjs',
@@ -1667,6 +1681,257 @@ const validateVm22PlanLike = (plan, label) => {
   if (!expectArray(plan.validationImplications.scriptImplications, `${label}.validationImplications.scriptImplications`, false)) return
 }
 
+const validatePracticeNotePlanLike = (plan, label) => {
+  if (!expectObject(plan, label)) return
+
+  if (plan.planId !== 'vm20-practice-note-control-plan') {
+    problems.push(`${label}: planId must be vm20-practice-note-control-plan`)
+  }
+  if (plan.planVersion !== '1.0') {
+    problems.push(`${label}: planVersion must be 1.0`)
+  }
+  if (plan.status !== 'planned') {
+    problems.push(`${label}: status must be planned`)
+  }
+  if (!expectObject(plan.sourceScope, `${label}.sourceScope`)) return
+  if (plan.sourceScope.sourceFamilyId !== 'practice_notes') {
+    problems.push(`${label}.sourceScope: sourceFamilyId must be practice_notes`)
+  }
+  if (plan.sourceScope.primarySourceFile !== 'AAA - VM-20_PN_2020_Version.pdf') {
+    problems.push(
+      `${label}.sourceScope: primarySourceFile must be AAA - VM-20_PN_2020_Version.pdf`,
+    )
+  }
+  if (!hasString(plan.sourceScope.sourceFolder)) {
+    problems.push(`${label}.sourceScope: missing sourceFolder`)
+  }
+  if (!hasString(plan.sourceScope.sourceTitle)) {
+    problems.push(`${label}.sourceScope: missing sourceTitle`)
+  }
+  if (!hasString(plan.sourceScope.sourceReference)) {
+    problems.push(`${label}.sourceScope: missing sourceReference`)
+  }
+  if (!hasString(plan.sourceScope.domainId)) {
+    problems.push(`${label}.sourceScope: missing domainId`)
+  }
+  if (!hasString(plan.sourceScope.rawSourceRoot)) {
+    problems.push(`${label}.sourceScope: missing rawSourceRoot`)
+  }
+  if (!expectArray(plan.sourceScope.confirmedPageRange, `${label}.sourceScope.confirmedPageRange`, false)) return
+  if (plan.sourceScope.confirmedPageRange.length !== 2) {
+    problems.push(`${label}.sourceScope.confirmedPageRange must contain exactly two page bounds`)
+  }
+  if (plan.sourceScope.confirmedPageRange[0] !== 1 || plan.sourceScope.confirmedPageRange[1] !== 115) {
+    problems.push(`${label}.sourceScope.confirmedPageRange must be [1, 115]`)
+  }
+  if (!expectArray(plan.sourceScope.observedSectionWindows, `${label}.sourceScope.observedSectionWindows`, false)) return
+  if (!expectArray(plan.sourceScope.boundaries, `${label}.sourceScope.boundaries`, false)) return
+  if (!expectArray(plan.sourceScope.exclusions, `${label}.sourceScope.exclusions`, false)) return
+  if (
+    !plan.sourceScope.boundaries.some(
+      (entry) => typeof entry === 'string' && entry.includes('single practice note file'),
+    )
+  ) {
+    problems.push(`${label}.sourceScope.boundaries: must mention the single practice-note file`)
+  }
+  if (
+    !plan.sourceScope.boundaries.some(
+      (entry) => typeof entry === 'string' && entry.includes('other Practice Notes files'),
+    )
+  ) {
+    problems.push(`${label}.sourceScope.boundaries: must mention the other Practice Notes files`)
+  }
+  if (
+    !plan.sourceScope.boundaries.some(
+      (entry) => typeof entry === 'string' && entry.includes('non-binding') && entry.includes('companion-guidance'),
+    )
+  ) {
+    problems.push(`${label}.sourceScope.boundaries: must mention non-binding companion-guidance posture`)
+  }
+  if (
+    !plan.sourceScope.exclusions.some(
+      (entry) => typeof entry === 'string' && entry.includes('learner-facing'),
+    )
+  ) {
+    problems.push(`${label}.sourceScope.exclusions: must mention learner-facing exclusion`)
+  }
+  if (
+    !plan.sourceScope.exclusions.some(
+      (entry) => typeof entry === 'string' && entry.includes('other Practice Notes files'),
+    )
+  ) {
+    problems.push(`${label}.sourceScope.exclusions: must mention other Practice Notes file exclusion`)
+  }
+
+  if (!expectArray(plan.topicMap, `${label}.topicMap`, false)) return
+  if (!expectArray(plan.proposedBatches, `${label}.proposedBatches`, false)) return
+  if (!expectObject(plan.reviewStandards, `${label}.reviewStandards`)) return
+  if (!expectObject(plan.promotionGates, `${label}.promotionGates`)) return
+  if (!expectObject(plan.validationImplications, `${label}.validationImplications`)) return
+
+  const topicIds = new Set()
+  plan.topicMap.forEach((topic, index) => {
+    const topicLabel = `${label}.topicMap[${index}]`
+    if (!expectObject(topic, topicLabel)) return
+    ;['topicId', 'label', 'reviewComplexity', 'boundaryNote'].forEach((field) => {
+      if (!hasString(topic[field])) {
+        problems.push(`${topicLabel}: missing ${field}`)
+      }
+    })
+    if (!expectArray(topic.pageRange, `${topicLabel}.pageRange`, false)) return
+    if (topic.pageRange.length !== 2) {
+      problems.push(`${topicLabel}.pageRange must contain exactly two page bounds`)
+    }
+    if (topic.pageRange[0] < 1 || topic.pageRange[1] > 115) {
+      problems.push(`${topicLabel}.pageRange must stay within the confirmed practice-note page range`)
+    }
+    if (!expectArray(topic.expectedIssueTypes, `${topicLabel}.expectedIssueTypes`, false)) return
+    if (!expectArray(topic.crossReferenceWatchlist, `${topicLabel}.crossReferenceWatchlist`, false)) return
+    topicIds.add(topic.topicId)
+  })
+
+  const observedTopicIds = new Set()
+  plan.proposedBatches.forEach((batch, index) => {
+    const batchLabel = `${label}.proposedBatches[${index}]`
+    if (!expectObject(batch, batchLabel)) return
+    ;['plannedBatchId', 'title', 'reviewComplexity', 'rationale', 'automationFit'].forEach((field) => {
+      if (!hasString(batch[field])) {
+        problems.push(`${batchLabel}: missing ${field}`)
+      }
+    })
+    if (!expectArray(batch.topicIds, `${batchLabel}.topicIds`, false)) return
+    if (!expectArray(batch.expectedIssueTypes, `${batchLabel}.expectedIssueTypes`, false)) return
+    if (!expectObject(batch.pageTarget, `${batchLabel}.pageTarget`)) return
+    if (batch.reviewOnlyByDefault !== true) {
+      problems.push(`${batchLabel}: reviewOnlyByDefault must be true`)
+    }
+    if (batch.sameStopConditionsAsVm20 !== true) {
+      problems.push(`${batchLabel}: sameStopConditionsAsVm20 must be true`)
+    }
+    batch.topicIds.forEach((topicId) => {
+      if (!topicIds.has(topicId)) {
+        problems.push(`${batchLabel}: unknown topicId ${topicId}`)
+      }
+      observedTopicIds.add(topicId)
+    })
+    if (!expectArray(batch.pageTarget.knownWindow, `${batchLabel}.pageTarget.knownWindow`, false)) return
+    if (batch.pageTarget.knownWindow.length !== 2) {
+      problems.push(`${batchLabel}.pageTarget.knownWindow must contain exactly two page bounds`)
+    }
+    if (batch.pageTarget.knownWindow[0] < 1 || batch.pageTarget.knownWindow[1] > 115) {
+      problems.push(`${batchLabel}.pageTarget.knownWindow must stay within the confirmed practice-note page range`)
+    }
+  })
+
+  topicIds.forEach((topicId) => {
+    if (!observedTopicIds.has(topicId)) {
+      problems.push(`${label}.proposedBatches: missing batch coverage for topicId ${topicId}`)
+    }
+  })
+
+  ;[
+    'regulatoryRequirement',
+    'implementationGuidance',
+    'companionGuidance',
+    'nonBindingGuidance',
+    'definitionOrTerminology',
+    'reserveMethodStructure',
+    'calculationStructure',
+    'formulaContext',
+    'prescribedAssumption',
+    'companyOrPrudentEstimateAssumption',
+    'scenarioOrStochasticRequirement',
+    'assetModelingJudgment',
+    'hedgingOrRiskMitigation',
+    'reinsurance',
+    'reportingRequirement',
+    'documentationExpectation',
+    'crossReferenceMapping',
+    'backgroundContent',
+    'boundaryControlWindow',
+    'requiresHumanInterpretation',
+    'staleSupersededCompanionGuidance',
+  ].forEach((field) => {
+    if (!hasString(plan.reviewStandards[field])) {
+      problems.push(`${label}.reviewStandards: missing ${field}`)
+    }
+  })
+
+  if (plan.promotionGates.defaultState !== 'review_only') {
+    problems.push(`${label}.promotionGates.defaultState must be review_only`)
+  }
+  if (!expectArray(plan.promotionGates.learnerFacing, `${label}.promotionGates.learnerFacing`, false)) return
+  if (!expectArray(plan.promotionGates.appReady, `${label}.promotionGates.appReady`, false)) return
+  if (!expectArray(plan.promotionGates.ragReady, `${label}.promotionGates.ragReady`, false)) return
+  if (!expectArray(plan.validationImplications.currentChecksNeeded, `${label}.validationImplications.currentChecksNeeded`, false)) return
+  if (!expectArray(plan.validationImplications.futureChecksSuggested, `${label}.validationImplications.futureChecksSuggested`, false)) return
+  if (!expectArray(plan.validationImplications.scriptImplications, `${label}.validationImplications.scriptImplications`, false)) return
+}
+
+const validatePracticeNotePlanMarkdown = async (filePath, label) => {
+  const text = await readText(filePath)
+  const requiredHeadings = [
+    '## Source Scope',
+    '## Section / Topic Map',
+    '## Proposed Batch Sequence',
+    '## Review Standards',
+    '## Promotion Gates',
+    '## Validation Implications',
+    '## Operating Note',
+  ]
+  requiredHeadings.forEach((heading) => {
+    if (!text.includes(heading)) {
+      problems.push(`${label}: missing heading ${heading}`)
+    }
+  })
+  ;[
+    'review-only',
+    'not learner-facing',
+    'not app-ready',
+    'not RAG-ready',
+    'not promoted',
+    'AAA - VM-20_PN_2020_Version.pdf',
+    'Practice Notes',
+    'non-binding',
+    'companion guidance',
+    'VM-20',
+    'VM-21',
+    'VM-22',
+    'VM-A',
+    'VM-C',
+    'VM-G',
+    'VM-M',
+    'VM-30',
+    'VM-31',
+    'pages 1-115',
+    'batch-055',
+    'batch-056',
+    'batch-057',
+    'batch-058',
+    'batch-059',
+    'batch-060',
+    'batch-061',
+    'batch-062',
+    'batch-063',
+    'batch-064',
+    'batch-065',
+    'batch-066',
+    'batch-067',
+    'batch-068',
+    'batch-069',
+    'batch-070',
+    'batch-071',
+    'batch-072',
+    'batch-073',
+    'batch-074',
+    'batch-075',
+  ].forEach((phrase) => {
+    if (!text.includes(phrase)) {
+      problems.push(`${label}: must mention ${phrase}`)
+    }
+  })
+}
+
 const validateVm22PlanMarkdown = async (filePath, label) => {
   const text = await readText(filePath)
   const requiredHeadings = [
@@ -1743,6 +2008,7 @@ const vm20BatchPlan = await readJson(paths.vm20BatchPlanJson)
 const supportingVmBatchPlan = await readJson(paths.supportingVmBatchPlanJson)
 const vm21BatchPlan = await readJson(paths.vm21BatchPlanJson)
 const vm22BatchPlan = await readJson(paths.vm22BatchPlanJson)
+const practiceNoteBatchPlan = await readJson(paths.practiceNoteBatchPlanJson)
 
 validateSchemaEnvelope(batchManifestSchema, 'batch-manifest.schema.json')
 validateSchemaEnvelope(sourceInventorySchema, 'source-inventory.schema.json')
@@ -1760,6 +2026,7 @@ validateVm20PlanLike(vm20BatchPlan, 'config/vm20-batch-plan.json')
 validateSupportingVmPlanLike(supportingVmBatchPlan, 'config/supporting-vm-batch-plan.json')
 validateVm21PlanLike(vm21BatchPlan, 'config/vm21-batch-plan.json')
 validateVm22PlanLike(vm22BatchPlan, 'config/vm22-batch-plan.json')
+validatePracticeNotePlanLike(practiceNoteBatchPlan, 'config/vm20-practice-note-batch-plan.json')
 
 const plannedVm20BatchIds = Array.isArray(vm20BatchPlan.proposedBatches)
   ? vm20BatchPlan.proposedBatches
@@ -2000,9 +2267,24 @@ for (const plannedBatchId of plannedVm21BatchIds) {
   }
 }
 
+const plannedPracticeNoteBatchIds = Array.isArray(practiceNoteBatchPlan.proposedBatches)
+  ? practiceNoteBatchPlan.proposedBatches
+      .map((batch) => batch?.plannedBatchId)
+      .filter((batchId) => typeof batchId === 'string' && batchId.length > 0)
+  : []
+for (const plannedBatchId of plannedPracticeNoteBatchIds) {
+  if (!batchDefinitions[plannedBatchId]) {
+    problems.push(`scripts/batch-definitions.mjs: missing batch definition for ${plannedBatchId}`)
+  }
+}
+
 await validateReviewMarkdown(paths.reviewPacketTemplateMd, 'review-packet.template.md')
 await validateReviewMarkdown(paths.sampleReviewPacketMd, 'review-packet.sample.md')
 await validateVm20PlanMarkdown(paths.vm20ExtractionPlanMd, 'docs/processor/vm20_extraction_plan.md')
+await validatePracticeNotePlanMarkdown(
+  paths.practiceNoteExtractionPlanMd,
+  'docs/processor/vm20_practice_note_extraction_plan.md',
+)
 await validateVm20ReviewIndexMarkdown(paths.vm20ReviewIndexMd, 'docs/review/vm20_review_index.md')
 await validateSupportingVmReviewIndexMarkdown(
   paths.supportingVmReviewIndexMd,
@@ -2148,6 +2430,7 @@ if (problems.length > 0) {
   console.log(`- VM-21 review index verified: 16 batches`)
   console.log(`- VM-22 plan verified: ${vm22BatchPlan.proposedBatches.length} batches`)
   console.log(`- VM-22 review index verified: 17 batches`)
+  console.log(`- Practice-note plan verified: ${practiceNoteBatchPlan.proposedBatches.length} batches`)
   console.log(`- POC status summary verified: 4 review indexes`)
   if (validatedPilotBatchCount > 0) {
     console.log(`- Pilot batches validated: ${validatedPilotBatchCount}`)

@@ -2,9 +2,8 @@
 
 ## Next immediate task
 
-Review the proof-of-concept status summary and decide whether the next gated
-step should be a promotion workflow or a new pricing / liability-modeling
-repository family.
+Validate and commit the new VM-20 practice-note plan, then run
+`batch-055` through `batch-075` sequentially in review-only mode.
 
 ## Build tasks
 
@@ -25,6 +24,9 @@ repository family.
   summary.
 - Treat `docs/review/valuation_regulation_repository_poc_status.md` as the
   current repository-level proof-of-concept summary.
+- Treat `docs/processor/vm20_practice_note_extraction_plan.md` and
+  `config/vm20-practice-note-batch-plan.json` as the current practice-note
+  planning set.
 - Treat batches 038-054 as completed in ignored working storage.
 - Treat `docs/processor/supporting_vm_chapters_extraction_plan.md` and
   `config/supporting-vm-batch-plan.json` as the current supporting-chapter
@@ -66,8 +68,12 @@ repository family.
   with `config/vm21-batch-plan.json`.
 - Keep the dedicated `scripts/vm22-batch-definitions.mjs` file synchronized
   with `config/vm22-batch-plan.json`.
+- Keep the new VM-20 practice-note plan synchronized with the shared runner
+  and validator before its first batch executes.
 - Leave VM-21 and VM-22 out of the supporting wave unless a separate plan is
   approved.
+- Leave the other Practice Notes files out of the current wave unless a
+  separate plan is approved.
 - Keep VM-22 out of the VM-21 wave unless a future plan explicitly opens it.
 - Expand validation only if the plan or a later batch reveals a genuine schema
   or workflow gap.

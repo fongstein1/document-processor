@@ -205,6 +205,13 @@ stay aligned with the ignored batch review packets and must not be treated as
 promoted content, learner-facing content, app-ready output, or RAG-ready
 material.
 
+## Practice note companion guidance
+
+Practice notes are handled as companion / implementation guidance. They may be
+processed for review-only analysis, but they are not authoritative regulatory
+text and should not be promoted unless a later human review explicitly pairs
+them with binding source support.
+
 ## Repository proof-of-concept summary
 
 The tracked valuation-regulation repository proof-of-concept summary is a
