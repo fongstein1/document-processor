@@ -2,10 +2,12 @@
 
 ## Next immediate task
 
-Finish the AG 05 planning commit, then run the new batch-080 slice for the
-two-page continuous-functions interpretation. AG 03, AG 01, AG 02, and AG 04
-are already captured in the tracked review handoff sets, and AG 52 is
-already captured in the mixed pilot batch and should not be reprocessed.
+Inspect the remaining raw source inventory and select the next safe
+single-source, single-chapter, or tightly related source-family unit to
+process under the same review-only workflow. AG 05 is now captured in the
+tracked review handoff set, and AG 03, AG 01, AG 02, and AG 04 remain
+captured as well. AG 52 is already captured in the mixed pilot batch and
+should not be reprocessed.
 
 ## Build tasks
 
@@ -44,7 +46,9 @@ already captured in the mixed pilot batch and should not be reprocessed.
   `docs/review/ag04_review_index.md` and `docs/review/ag04_self_review.md`
   as the current AG 04 handoff set.
 - Treat `docs/processor/ag05_extraction_plan.md` and
-  `config/ag05-batch-plan.json` as the current AG 05 planning set.
+  `config/ag05-batch-plan.json` as the current AG 05 planning set, and
+  treat `docs/review/ag05_review_index.md` and
+  `docs/review/ag05_self_review.md` as the current AG 05 handoff set.
 - Treat `scripts/ag04-batch-definitions.mjs` as synchronized with the AG 04
   planning and handoff set.
 - Treat `scripts/ag05-batch-definitions.mjs` as synchronized with the AG 05
@@ -57,6 +61,8 @@ already captured in the mixed pilot batch and should not be reprocessed.
   approves promotion.
 - Keep the AG 05 batch review-only unless a later human review explicitly
   approves promotion.
+- Keep the AG 05 review index and self-review note synchronized with the
+  ignored AG 05 review packet if the wave is ever regenerated.
 - Treat `docs/review/valuation_regulation_repository_poc_status.md` as the
   current repository-level proof-of-concept summary.
 - Treat `docs/processor/vm20_practice_note_extraction_plan.md` and

@@ -203,3 +203,8 @@
   continuous-functions interpretation, wired `batch-080` into the shared
   runner and validator, and kept the short-guideline pattern review-only and
   source-bound for the next batch.
+- 2026-06-27: Ran the AG 05 two-page continuous-functions batch (`batch-080`)
+  in ignored working storage, kept it review-only, created the tracked AG 05
+  review index plus self-review note, and refreshed the repository POC
+  summary and scaffold validator so the tenth review index and 80 validated
+  batches are now visible in the handoff layer.

@@ -10,7 +10,7 @@
 
 ## Latest known commit before this batch
 
-`4def796`
+`48b18cb`
 
 ## Validation status
 
@@ -71,6 +71,7 @@ VM-21 / VM-22 planning and execution artifacts validate cleanly.
 - `npm run check`: passed after the practice-note review-index refresh; confirmed the schemas, templates, demo fixtures, review-packet contracts, the five tracked review indexes, the new POC status summary, the no-promotion guardrails, and the synchronized batch definitions for batches 055-075
 - `npm run check`: passed after the AG 04 review-index refresh; confirmed the schemas, templates, demo fixtures, review-packet contracts, the nine tracked review indexes, the updated POC status summary, the no-promotion guardrails, and the synchronized batch definitions for batches 055-079
 - `npm run check`: passed after the AG 05 planning refresh; confirmed the schemas, templates, demo fixtures, review-packet contracts, the nine tracked review indexes, the new AG 05 plan artifacts, the no-promotion guardrails, and the synchronized batch definitions for batches 055-079
+- `npm run check`: passed after the AG 05 review-index refresh; confirmed the schemas, templates, demo fixtures, review-packet contracts, the ten tracked review indexes, the updated POC status summary, the no-promotion guardrails, and the synchronized batch definitions for batches 055-080
 
 The control-plan refresh commit re-bound batches 006-012 to the actual PDF
 section order and added runner shortcuts for the remaining controlled slices.
@@ -201,7 +202,7 @@ do not change the learner-facing or app-ready posture.
 - The tracked VM-22 review index now gives the reviewer a single summary view
   of the ignored batch packets without changing their review-only status.
 - The tracked valuation-regulation repository POC summary now consolidates the
-  nine review indexes into a single proof-of-concept handoff view.
+  ten review indexes into a single proof-of-concept handoff view.
 - The repository will be clean on `main` once this state refresh is committed,
   aside from ignored working files.
 
@@ -211,9 +212,10 @@ The controlled VM-21 sequence is complete. The controlled VM-22 sequence is
 complete: batches 038-054 are done, the tracked VM-22 review index now
 summarizes the ignored batch packets, and the resulting ignored working
 outputs remain review-only. The tracked valuation-regulation repository POC
-summary now consolidates the nine review indexes into a single handoff view.
-Keep VM-25 and later chapters out of scope unless a future plan explicitly
-opens them.
+summary now consolidates the ten review indexes into a single handoff view.
+AG 05 is complete in ignored working storage and its tracked review index
+plus self-review note now summarize that wave. Keep VM-25 and later chapters
+out of scope unless a future plan explicitly opens them.
 
 The VM-20 companion practice-note wave is complete: batches `batch-055`
 through `batch-075` were processed review-only, and the tracked practice-note
@@ -225,9 +227,10 @@ AG 04 review index plus self-review note are the current handoff artifacts.
 The slice stays review-only and source-bound so the short-guideline pattern
 remains consistent with the earlier AG units.
 
-The AG 05 planning layer is now drafted in working files as a two-page
-continuous-functions interpretation and is next in line for validation and
-execution as batch-080.
+The AG 05 extraction batch is complete in ignored working storage, and the
+tracked AG 05 review index plus self-review note are the current handoff
+artifacts. The AG 05 planning layer remains the canonical batch map for
+future regeneration.
 
 The controlled AG 03 one-page guideline batch is complete in ignored working
 storage, and the tracked AG 03 review index plus self-review note are the
