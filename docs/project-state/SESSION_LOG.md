@@ -159,3 +159,11 @@
   non-binding disclaimer and 21-section structure, and drafted a dedicated
   review-only practice-note plan/config pair that keeps the source separate
   from the other Practice Notes files until a separate plan is approved.
+- 2026-06-27: Ran the VM-20 companion practice-note wave sequentially
+  (batch-055 through batch-075), kept every batch review-only in ignored
+  working storage, validated the wave after each batch, and created the
+  tracked practice-note review index plus self-review note alongside the
+  refreshed repository POC summary.
+- 2026-06-27: Inspected the repealed AG 52 early-adoption note and marked it
+  as the leading candidate for the next caveat-focused source unit, pending a
+  separate plan.

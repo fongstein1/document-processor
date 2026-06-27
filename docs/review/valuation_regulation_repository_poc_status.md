@@ -22,6 +22,7 @@ review indexes:
 - `docs/review/supporting_vm_review_index.md`
 - `docs/review/vm21_review_index.md`
 - `docs/review/vm22_review_index.md`
+- `docs/review/vm20_practice_note_review_index.md`
 
 ## Executive Status
 
@@ -35,7 +36,7 @@ What has been built:
   extraction outputs, and review packets
 - reusable templates and demo fixtures for the same contracts
 - controlled batch definitions and chapter plans for VM-20, supporting VM
-  chapters, VM-21, and VM-22
+  chapters, VM-21, VM-22, and the VM-20 companion practice note
 - review-packet and unresolved-issues workflows that keep exception-first
   review visible
 - tracked end-of-sequence review indexes for the completed waves
@@ -53,6 +54,7 @@ What source families / chapters have been processed:
   - VM-31, `batch-019` through `batch-021`
 - VM-21, batches `batch-022` through `batch-037`
 - VM-22, batches `batch-038` through `batch-054`
+- VM-20 companion practice note, batches `batch-055` through `batch-075`
 
 What remains review-only:
 
@@ -75,6 +77,8 @@ What is explicitly out of scope:
 - unapproved RAG-ready export
 - future pricing and liability-modeling repository work until separately
   planned
+- the other Practice Notes files and unplanned Actuarial Guideline or NY
+  regulation files until separately planned
 - any unplanned Valuation Manual chapter families outside the completed
   controlled waves
 
@@ -91,6 +95,7 @@ What is explicitly out of scope:
 | VM-31 | `pp. 341-386` | `batch-019` through `batch-021` | `docs/review/supporting_vm_review_index.md` | Complete; review-only | PBR Actuarial Report requirements, controls, and the closing boundary before VM-50 |
 | VM-21 | `pp. 143-225` | `batch-022` through `batch-037` | `docs/review/vm21_review_index.md` | Complete; review-only | Scope, reserve methodology, SR projection, asset mechanics, hedging, assumptions, and closing allocation |
 | VM-22 | `pp. 227-318` | `batch-038` through `batch-054` | `docs/review/vm22_review_index.md` | Complete; review-only | Background / scope, reserve methodology, projection and asset mechanics, stochastic exclusions, scenario generation, hedging, assumptions, and page-318 closure before VM-25 |
+| VM-20 companion practice note | `pp. 1-115` | `batch-055` through `batch-075` | `docs/review/vm20_practice_note_review_index.md` | Complete; review-only | Non-binding disclaimer, calculation overview, reserve overviews, assumptions, reinsurance, hedging, and implementation-guidance boundaries |
 
 ## Completed Assets
 
@@ -103,6 +108,8 @@ The repository now includes the core processor asset set:
   review packets, validation reports, and unresolved-issues summaries for the
   controlled batches under `data/work/batches/`
 - tracked review indexes in `docs/review/`
+- the tracked VM-20 practice-note review index and self-review note in
+  `docs/review/`
 - VM chapter planning artifacts in `docs/processor/` and `config/`
 - project-state docs in `docs/project-state/`
 - runner / validator scripts in `scripts/`
@@ -113,9 +120,9 @@ documents remain external to Git.
 ## Validation Posture
 
 - `npm run check` passes
-- the scaffold reports 54 batches validated
-- the validator now checks the tracked VM-20, supporting, VM-21, VM-22, and
-  POC status summary handoff files
+- the scaffold reports 75 batches validated
+- the validator now checks the tracked VM-20, supporting, VM-21, VM-22,
+  practice-note, and POC status summary handoff files
 - review-only and no-promotion guardrails are enforced in the batch manifests
   and review packets
 - ignored working outputs stay under `data/work/`
@@ -124,7 +131,7 @@ documents remain external to Git.
 
 ## Human Review Posture
 
-- Reviewers should start from the four review indexes listed above.
+- Reviewers should start from the five review indexes listed above.
 - The review packets remain the detailed evidence layer behind those
   summaries.
 - All batch content remains source-bound and review-only unless a separate
@@ -152,6 +159,8 @@ The proof-of-concept pipeline is complete for the controlled waves in this
 workspace, but future work may still include:
 
 - any additional Valuation Manual chapters that are approved later
+- any additional Practice Notes, Actuarial Guidelines, or NY regulations that
+  are approved later
 - future pricing repository work
 - future liability-modeling repository work
 - a framework layer that can align liability, valuation-regulation, and

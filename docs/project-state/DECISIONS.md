@@ -212,9 +212,16 @@ processed for review-only analysis, but they are not authoritative regulatory
 text and should not be promoted unless a later human review explicitly pairs
 them with binding source support.
 
+## Repealed or obsolete guidance
+
+Sources that explicitly say they are repealed, obsolete, or no longer
+applicable may be processed as caveat-only review units. They should stay
+review-only and non-authoritative unless later binding-source support changes
+the status.
+
 ## Repository proof-of-concept summary
 
 The tracked valuation-regulation repository proof-of-concept summary is a
-summary-only handoff artifact. It should stay aligned with the four chapter
-review indexes and must not be treated as promoted content, learner-facing
-content, app-ready output, or RAG-ready material.
+summary-only handoff artifact. It should stay aligned with the five review
+indexes and must not be treated as promoted content, learner-facing content,
+app-ready output, or RAG-ready material.

@@ -123,6 +123,18 @@ const paths = {
   vm21ExtractionPlanMd: path.join(repoRoot, 'docs', 'processor', 'vm21_extraction_plan.md'),
   vm22BatchPlanJson: path.join(repoRoot, 'config', 'vm22-batch-plan.json'),
   vm22ExtractionPlanMd: path.join(repoRoot, 'docs', 'processor', 'vm22_extraction_plan.md'),
+  practiceNoteReviewIndexMd: path.join(
+    repoRoot,
+    'docs',
+    'review',
+    'vm20_practice_note_review_index.md',
+  ),
+  practiceNoteSelfReviewMd: path.join(
+    repoRoot,
+    'docs',
+    'review',
+    'vm20_practice_note_self_review.md',
+  ),
   practiceNoteBatchPlanJson: path.join(
     repoRoot,
     'config',
@@ -179,6 +191,8 @@ const requiredFiles = [
   'docs/review/supporting_vm_review_index.md',
   'docs/review/vm21_review_index.md',
   'docs/review/vm22_review_index.md',
+  'docs/review/vm20_practice_note_review_index.md',
+  'docs/review/vm20_practice_note_self_review.md',
   'docs/review/valuation_regulation_repository_poc_status.md',
   'config/supporting-vm-batch-plan.json',
   'config/vm21-batch-plan.json',
@@ -2196,6 +2210,93 @@ const validateVm22ReviewIndexMarkdown = async (filePath, label) => {
   })
 }
 
+const validatePracticeNoteReviewIndexMarkdown = async (filePath, label) => {
+  const text = await readText(filePath)
+  const requiredHeadings = [
+    '## Overall Practice-Note Extraction Status',
+    '## Batch Table',
+    '## Higher-Caution Section',
+    '## Human Review Checklist',
+    '## Promotion Decision Area',
+    '## Recommended Review Order',
+    '## Relationship to Other Review Indexes',
+    '## Self-Review Note',
+    '## Review Notes',
+  ]
+  requiredHeadings.forEach((heading) => {
+    if (!text.includes(heading)) {
+      problems.push(`${label}: missing heading ${heading}`)
+    }
+  })
+  ;[
+    'review-only',
+    'not learner-facing',
+    'not app-ready',
+    'not RAG-ready',
+    'not promoted',
+    'Non-binding companion guidance',
+    'VM-20',
+    'AAA - VM-20_PN_2020_Version.pdf',
+    'Practice Notes',
+    'batch-055',
+    'batch-056',
+    'batch-057',
+    'batch-058',
+    'batch-059',
+    'batch-060',
+    'batch-061',
+    'batch-062',
+    'batch-063',
+    'batch-064',
+    'batch-065',
+    'batch-066',
+    'batch-067',
+    'batch-068',
+    'batch-069',
+    'batch-070',
+    'batch-071',
+    'batch-072',
+    'batch-073',
+    'batch-074',
+    'batch-075',
+    'docs/review/vm20_review_index.md',
+    'docs/review/supporting_vm_review_index.md',
+    'docs/review/vm21_review_index.md',
+    'docs/review/vm22_review_index.md',
+    'docs/review/vm20_practice_note_self_review.md',
+  ].forEach((phrase) => {
+    if (!text.includes(phrase)) {
+      problems.push(`${label}: must mention ${phrase}`)
+    }
+  })
+}
+
+const validatePracticeNoteSelfReviewMarkdown = async (filePath, label) => {
+  const text = await readText(filePath)
+  const requiredHeadings = [
+    '## Batch Classifications',
+    '## Recurring Observations',
+    '## Skill-Hardening Note',
+    '## Review Outcome',
+  ]
+  requiredHeadings.forEach((heading) => {
+    if (!text.includes(heading)) {
+      problems.push(`${label}: missing heading ${heading}`)
+    }
+  })
+  ;[
+    'reasonable_with_minor_cautions',
+    'batch-055',
+    'batch-075',
+    'companion-guidance',
+    'no tracked skill file update was necessary',
+  ].forEach((phrase) => {
+    if (!text.includes(phrase)) {
+      problems.push(`${label}: must mention ${phrase}`)
+    }
+  })
+}
+
 const validatePocStatusSummaryMarkdown = async (filePath, label) => {
   const text = await readText(filePath)
   const requiredHeadings = [
@@ -2232,9 +2333,10 @@ const validatePocStatusSummaryMarkdown = async (filePath, label) => {
     'docs/review/supporting_vm_review_index.md',
     'docs/review/vm21_review_index.md',
     'docs/review/vm22_review_index.md',
+    'docs/review/vm20_practice_note_review_index.md',
     'npm run check',
     'git diff --check',
-    '54 batches validated',
+    '75 batches validated',
     'ignored working storage',
     'future pricing',
     'future liability-modeling',
@@ -2292,6 +2394,14 @@ await validateSupportingVmReviewIndexMarkdown(
 )
 await validateVm21ReviewIndexMarkdown(paths.vm21ReviewIndexMd, 'docs/review/vm21_review_index.md')
 await validateVm22ReviewIndexMarkdown(paths.vm22ReviewIndexMd, 'docs/review/vm22_review_index.md')
+await validatePracticeNoteReviewIndexMarkdown(
+  paths.practiceNoteReviewIndexMd,
+  'docs/review/vm20_practice_note_review_index.md',
+)
+await validatePracticeNoteSelfReviewMarkdown(
+  paths.practiceNoteSelfReviewMd,
+  'docs/review/vm20_practice_note_self_review.md',
+)
 await validatePocStatusSummaryMarkdown(
   paths.pocStatusSummaryMd,
   'docs/review/valuation_regulation_repository_poc_status.md',
@@ -2431,7 +2541,8 @@ if (problems.length > 0) {
   console.log(`- VM-22 plan verified: ${vm22BatchPlan.proposedBatches.length} batches`)
   console.log(`- VM-22 review index verified: 17 batches`)
   console.log(`- Practice-note plan verified: ${practiceNoteBatchPlan.proposedBatches.length} batches`)
-  console.log(`- POC status summary verified: 4 review indexes`)
+  console.log(`- Practice-note review index verified: 21 batches`)
+  console.log(`- POC status summary verified: 5 review indexes`)
   if (validatedPilotBatchCount > 0) {
     console.log(`- Pilot batches validated: ${validatedPilotBatchCount}`)
   }

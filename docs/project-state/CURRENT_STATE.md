@@ -10,7 +10,7 @@
 
 ## Latest known commit before this batch
 
-`7fe8549d52f72d64c289efb1461c54ad7c4f5460`
+`917c2402abcc270ac8b17694fa1f9c3d9048d544`
 
 ## Validation status
 
@@ -68,6 +68,7 @@ VM-21 / VM-22 planning and execution artifacts validate cleanly.
 - `npm run check`: passed after batches 048-054 of the VM-22 wave; confirmed the schemas, templates, demo fixtures, review-packet contracts, the VM-20 plan artifacts, the tracked review indexes, the supporting-chapter plan artifacts, the VM-21 plan artifacts, the new VM-22 plan artifacts, the no-promotion guardrails, and the synchronized batch definitions for batches 038-054
 - `npm run check`: passed after the VM-22 review-index refresh; confirmed the schemas, templates, demo fixtures, review-packet contracts, the VM-20 plan artifacts, the tracked review indexes, the supporting-chapter plan artifacts, the VM-21 plan artifacts, the new VM-22 plan artifacts, the no-promotion guardrails, and the synchronized batch definitions for batches 038-054
 - `npm run check`: passed after the repository POC status summary refresh; confirmed the schemas, templates, demo fixtures, review-packet contracts, the four tracked review indexes, the new POC status summary, the no-promotion guardrails, and the synchronized batch definitions for batches 038-054
+- `npm run check`: passed after the practice-note review-index refresh; confirmed the schemas, templates, demo fixtures, review-packet contracts, the five tracked review indexes, the new POC status summary, the no-promotion guardrails, and the synchronized batch definitions for batches 055-075
 
 The control-plan refresh commit re-bound batches 006-012 to the actual PDF
 section order and added runner shortcuts for the remaining controlled slices.
@@ -169,6 +170,9 @@ do not change the learner-facing or app-ready posture.
   `data/work/`.
 - The tracked VM-20 and supporting review indexes are summary-only handoff
   artifacts and do not replace the underlying batch outputs.
+- The tracked VM-20 practice-note review index and self-review note are now
+  summary-only handoff artifacts for the companion-guidance wave and do not
+  replace the underlying batch outputs.
 - The VM-21 plan is now committed as a tracked planning artifact, the
   controlled VM-21 extraction batches have now completed in ignored working
   storage, and the tracked VM-21 review index now summarizes the batch review
@@ -209,9 +213,13 @@ summary now consolidates the four review indexes into a single handoff view.
 Keep VM-25 and later chapters out of scope unless a future plan explicitly
 opens them.
 
-The next controlled unit is the VM-20 companion practice note
-`Practice Notes/AAA - VM-20_PN_2020_Version.pdf`. It is non-binding
-implementation guidance, not authoritative regulatory text, and it will be
-processed review-only by default. Batches `batch-055` through `batch-075`
-are reserved for that source-file wave, while the other Practice Notes files
-stay out of scope until a separate plan is approved.
+The VM-20 companion practice-note wave is complete: batches `batch-055`
+through `batch-075` were processed review-only, and the tracked practice-note
+review index plus self-review note now summarize that wave without promoting
+any extracted content.
+
+The next likely small candidate is the repealed AG 52 text note
+`Actuarial Guidelines/AG 52-Early Adoption of VM-21 for VA in 2019-repealed-as of 2020.txt`.
+It is caveat-only material, and it should stay review-only until a separate
+plan is approved. The remaining Practice Notes files and other Actuarial
+Guideline / NY regulation files stay out of scope until separately planned.

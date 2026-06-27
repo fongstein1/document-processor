@@ -2,8 +2,10 @@
 
 ## Next immediate task
 
-Validate and commit the new VM-20 practice-note plan, then run
-`batch-055` through `batch-075` sequentially in review-only mode.
+Commit the VM-20 practice-note review index, self-review note, validator
+updates, and repository POC summary refresh, then select the next small
+caveat/regulatory source unit from the remaining inventory. The repealed AG
+52 note is the current likely candidate.
 
 ## Build tasks
 
@@ -22,6 +24,9 @@ Validate and commit the new VM-20 practice-note plan, then run
   `config/vm22-batch-plan.json` as the current VM-22 planning set.
 - Treat `docs/review/vm22_review_index.md` as the current VM-22 handoff
   summary.
+- Treat `docs/review/vm20_practice_note_review_index.md` and
+  `docs/review/vm20_practice_note_self_review.md` as the current practice-note
+  handoff set.
 - Treat `docs/review/valuation_regulation_repository_poc_status.md` as the
   current repository-level proof-of-concept summary.
 - Treat `docs/processor/vm20_practice_note_extraction_plan.md` and
@@ -70,6 +75,8 @@ Validate and commit the new VM-20 practice-note plan, then run
   with `config/vm22-batch-plan.json`.
 - Keep the new VM-20 practice-note plan synchronized with the shared runner
   and validator before its first batch executes.
+- Keep the practice-note review index and self-review note synchronized with
+  the ignored practice-note review packets if the wave is ever regenerated.
 - Leave VM-21 and VM-22 out of the supporting wave unless a separate plan is
   approved.
 - Leave the other Practice Notes files out of the current wave unless a
