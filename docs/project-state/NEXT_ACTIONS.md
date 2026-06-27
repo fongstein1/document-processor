@@ -12,7 +12,7 @@ self-review note now form the current handoff set. AG 10 is complete in
 ignored working storage and its review index plus self-review note now form
 the current handoff set. AG 11 is complete in the tracked review handoff
 set, AG 12 is complete in the tracked review handoff
-set, and AG 13 is now the next short guideline candidate if the continuation
+set, and AG 13 planning is now the next short guideline step if the continuation
 pass keeps going. AG 05 is already captured in the tracked review handoff
 set, and AG 03, AG 01, AG 02, and AG 04 remain captured as well. AG 52 is
 already captured in the mixed pilot batch and should not be reprocessed.
@@ -65,6 +65,8 @@ already captured in the mixed pilot batch and should not be reprocessed.
   `config/ag07-batch-plan.json` as the current AG 07 planning set, and treat
   `docs/review/ag07_review_index.md` and `docs/review/ag07_self_review.md`
   as the current AG 07 handoff set.
+- Treat `docs/processor/ag13_extraction_plan.md` and
+  `config/ag13-batch-plan.json` as the current AG 13 planning set.
 - Treat `scripts/ag04-batch-definitions.mjs` as synchronized with the AG 04
   planning and handoff set.
 - Treat `scripts/ag05-batch-definitions.mjs` as synchronized with the AG 05
@@ -96,6 +98,8 @@ already captured in the mixed pilot batch and should not be reprocessed.
 - Keep the AG 06 batch review-only unless a later human review explicitly
   approves promotion.
 - Keep the AG 07 batch review-only unless a later human review explicitly
+  approves promotion.
+- Keep the AG 13 batch review-only unless a later human review explicitly
   approves promotion.
 - Treat `docs/review/valuation_regulation_repository_poc_status.md` as the
   current repository-level proof-of-concept summary.
@@ -166,6 +170,9 @@ already captured in the mixed pilot batch and should not be reprocessed.
   stable page locator and no promotion until the indexing choice is
   confirmed.
 - Keep the two-page AG 07 guideline as a single review-only batch with a
+  stable page locator and no promotion until the indexing choice is
+  confirmed.
+- Keep the two-page AG 13 guideline as a single review-only batch with a
   stable page locator and no promotion until the indexing choice is
   confirmed.
 - Leave VM-21 and VM-22 out of the supporting wave unless a separate plan is

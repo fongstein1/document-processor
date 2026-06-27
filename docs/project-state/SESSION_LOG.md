@@ -261,3 +261,5 @@
   the AG 11 handoff is now summarized alongside the ignored batch outputs.
 - 2026-06-27: Confirmed AG 12 as the next short guideline unit, verified its one-page withdrawn page range, and drafted the AG 12 planning layer so batch-090 can be validated before extraction starts.
 - 2026-06-27: Ran the AG 12 withdrawn one-page guideline batch (`batch-090`) in ignored working storage, kept it review-only, created the tracked AG 12 review index plus self-review note as the new handoff artifacts, and refreshed the repository POC summary so the seventeenth review index and 90 validated batches are now visible in the handoff layer.
+- 2026-06-27: Inspected AG 13, confirmed the two-page historical CARVM page range, and drafted the AG 13 planning layer so batch-091 can be validated before extraction starts.
+- 2026-06-27: Validated the AG 13 planning layer cleanly, keeping the historical CARVM guidance review-only and ready for batch-091 execution.

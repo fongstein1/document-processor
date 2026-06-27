@@ -10,7 +10,7 @@
 
 ## Latest known commit before this batch
 
-`6c8fb44`
+`db7482f`
 
 ## Validation status
 
@@ -21,7 +21,7 @@ VM-22 review index, the new supporting-chapter planning artifacts, the
 VM-21 / VM-22 planning and execution artifacts, the AG 06 planning /
 review-handoff artifacts, the AG 08 planning / review-handoff artifacts,
 the AG 09 planning / review-handoff artifacts, the AG 10 planning /
-review-handoff artifacts, and the AG 11 planning and review-handoff artifacts, and the AG 12 planning and review-handoff artifacts validate cleanly.
+review-handoff artifacts, and the AG 11 planning and review-handoff artifacts, and the AG 12 planning and review-handoff artifacts validate cleanly. The AG 13 planning artifacts validate cleanly.
 
 - `npm run pilot:course-core`: passed; created the core VM course pilot batch
   outputs in `data/work/batches/batch-002/`
@@ -268,7 +268,7 @@ artifacts. The AG 09 planning layer remains the canonical batch map for
 future regeneration. The AG 10 extraction batch is complete in ignored
 working storage, and the tracked AG 10 review index plus self-review note are
 the current handoff artifacts. The AG 10 planning layer remains the canonical
-batch map for future regeneration. The AG 11 planning layer has now been executed and the tracked AG 11 review index plus self-review note are the current handoff artifacts for batch-089. The AG 12 planning layer has now been executed and the tracked AG 12 review index plus self-review note are the current handoff artifacts for batch-090. The withdrawn one-page guideline stays review-only as a caveat-first historical note, and AG 13 is now the next likely two-page guideline candidate if the continuation pass keeps going.
+batch map for future regeneration. The AG 11 planning layer has now been executed and the tracked AG 11 review index plus self-review note are the current handoff artifacts for batch-089. The AG 12 planning layer has now been executed and the tracked AG 12 review index plus self-review note are the current handoff artifacts for batch-090. The withdrawn one-page guideline stays review-only as a caveat-first historical note, and the AG 13 planning layer is now drafted so batch-091 can capture the historical CARVM guidance as the next review-only step if the continuation pass keeps going.
 
 The controlled AG 03 one-page guideline batch is complete in ignored working
 storage, and the tracked AG 03 review index plus self-review note are the

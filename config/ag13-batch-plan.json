@@ -1,0 +1,160 @@
+{
+  "planId": "ag13-historical-carvm-guidance-plan",
+  "planVersion": "1.0",
+  "status": "planned",
+  "sourceScope": {
+    "sourceFamilyId": "actuarial_guidelines",
+    "primarySourceFile": "AG 13 - Guideline Concerning the Commissioners' Annuity Reserve Valuation Method.pdf",
+    "sourceFolder": "Actuarial Guidelines",
+    "sourceTitle": "AG 13 - Guideline Concerning the Commissioners' Annuity Reserve Valuation Method",
+    "sourceReference": "Actuarial Guideline XIII",
+    "sourceStatus": "historical",
+    "domainId": "naic_regulatory",
+    "rawSourceRoot": "D:\\Work\\AI Projects\\NAIC Valuation Manual Course",
+    "confirmedPageRange": [
+      1,
+      2
+    ],
+    "observedSectionWindows": [
+      {
+        "sectionId": "ag13-historical-carvm-contingent-surrender-charges",
+        "pageRange": [
+          1,
+          2
+        ],
+        "note": "Two-page historical CARVM guidance on contingent surrender charges and bail-out rate treatment."
+      }
+    ],
+    "boundaries": [
+      "Keep planning focused on this single AG 13 PDF.",
+      "Do not widen into AG 14 or later guideline files.",
+      "Keep the historical CARVM posture explicit in every batch artifact.",
+      "Treat the guideline as caveat-first historical guidance, not learner-facing policy text.",
+      "Keep any PDF text-extraction noise visible as a caveat, not a promotion signal.",
+      "Keep the batch source-bound and review-only."
+    ],
+    "exclusions": [
+      "No learner-facing content.",
+      "No app-ready export.",
+      "No RAG-ready export.",
+      "No approved/promoted export.",
+      "No eLearning scripts, slides, quizzes, or app exports.",
+      "No raw source files in Git.",
+      "No other guideline files in the same wave."
+    ]
+  },
+  "topicMap": [
+    {
+      "topicId": "ag13-historical-carvm-contingent-surrender-charges",
+      "label": "Historical CARVM guidance on contingent surrender charges and bail-out rates",
+      "pageRange": [
+        1,
+        2
+      ],
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "regulatory_requirement",
+        "definition_or_terminology",
+        "caveat_or_companion_guidance",
+        "cross_reference_mapping",
+        "requires_human_interpretation",
+        "boundary_control_window"
+      ],
+      "crossReferenceWatchlist": [
+        "CARVM",
+        "contingent surrender charges",
+        "bail-out rates",
+        "external index",
+        "guaranteed duration",
+        "severe hardship"
+      ],
+      "boundaryNote": "Keep this slice within pages 1-2 and do not absorb later guideline files."
+    }
+  ],
+  "proposedBatches": [
+    {
+      "plannedBatchId": "batch-091",
+      "topicIds": [
+        "ag13-historical-carvm-contingent-surrender-charges"
+      ],
+      "title": "Two-page AG 13 historical CARVM guidance",
+      "pageTarget": {
+        "knownWindow": [
+          1,
+          2
+        ],
+        "notes": "Capture the full two-page historical guideline as a single review-only slice and stop at the page boundary."
+      },
+      "rationale": "Capture the full two-page historical guideline as a single review-only slice and stop at the page boundary.",
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "regulatory_requirement",
+        "definition_or_terminology",
+        "caveat_or_companion_guidance",
+        "cross_reference_mapping",
+        "requires_human_interpretation",
+        "boundary_control_window"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    }
+  ],
+  "reviewStandards": {
+    "regulatoryRequirement": "Treat explicit must, shall, or required language as the requirement; preserve the citation and source context.",
+    "definitionOrTerminology": "Treat CARVM, contingent surrender charge, bail-out rate, and guarantee language as historical context unless they impose a current duty.",
+    "caveatOnlyHistoricalGuidance": "Treat the historical framing around contingent surrender charges as caveat-first guidance, not active policy text.",
+    "crossReferenceMapping": "Treat references to CARVM, guaranteed duration, external index values, cash surrender values, or severe hardship as mapping notes unless operational text is included.",
+    "backgroundContent": "Treat the title line and framing sentence as background content unless they impose a duty.",
+    "boundaryControlWindow": "Treat the two-page slice as a review-only window that should not be merged forward.",
+    "requiresHumanInterpretation": "Treat the indexing choice and the OCR / encoded text layer as requiring human actuarial interpretation unless the text is explicit.",
+    "sourceQualityCaveat": "Treat text-layer noise as review-only caveats and do not widen the batch because of them."
+  },
+  "promotionGates": {
+    "defaultState": "review_only",
+    "learnerFacing": [
+      "source citation exists",
+      "source support is clear",
+      "wording is not misleading",
+      "confidence is high",
+      "no unresolved review flags exist"
+    ],
+    "appReady": [
+      "learner-facing criteria are already satisfied",
+      "export is sanitized, stable, and versioned",
+      "no unresolved review issues remain"
+    ],
+    "ragReady": [
+      "approved indexed material only",
+      "stable ID",
+      "source reference",
+      "locator",
+      "review status no longer requires human disposition"
+    ]
+  },
+  "validationImplications": {
+    "currentChecksNeeded": [
+      "Plan file exists and parses as JSON.",
+      "The AG 13 plan markdown exists and carries the expected headings.",
+      "Every proposed batch is review-only by default.",
+      "The plan keeps the scope to two pages only.",
+      "The source posture is explicitly historical.",
+      "Each planned batch has a matching batch definition.",
+      "The AG 13 batch definition file stays synchronized with the plan."
+    ],
+    "futureChecksSuggested": [
+      "Two-page guideline checks for future short guideline files.",
+      "Historical-guidance and caveat-first tagging checks.",
+      "Unexpected source-family leakage checks.",
+      "No learner-facing, app-ready, or RAG-ready promotion checks.",
+      "Text-layer quality caveat checks once extraction starts."
+    ],
+    "scriptImplications": [
+      "scripts/ag13-batch-definitions.mjs should stay synchronized with the planned batch-091 slice when extraction is authorized.",
+      "scripts/batch-definitions.mjs should import the AG 13 definition file so the shared runner can find the planned batch ID.",
+      "scripts/validate-scaffold.mjs should verify that the AG 13 plan file exists, parses cleanly, and preserves the review-only posture.",
+      "The shared runner should continue to honor the same stop conditions used for the VM-20 batches."
+    ]
+  },
+  "notes": "Controlled AG 13 planning artifact. Planned batch 091 remains review-only by default and is not an extraction run."
+}
