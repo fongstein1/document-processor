@@ -97,6 +97,7 @@ const paths = {
   ),
   vm20BatchPlanJson: path.join(repoRoot, 'config', 'vm20-batch-plan.json'),
   vm20ExtractionPlanMd: path.join(repoRoot, 'docs', 'processor', 'vm20_extraction_plan.md'),
+  vm20ReviewIndexMd: path.join(repoRoot, 'docs', 'review', 'vm20_review_index.md'),
 }
 
 const requiredFiles = [
@@ -134,6 +135,7 @@ const requiredFiles = [
   'docs/project-state/NEXT_ACTIONS.md',
   'docs/project-state/SESSION_LOG.md',
   'docs/processor/vm20_extraction_plan.md',
+  'docs/review/vm20_review_index.md',
   'config/vm20-batch-plan.json',
   'scripts/bootstrap-small-batch.mjs',
   'scripts/validate-scaffold.mjs',
@@ -1008,6 +1010,50 @@ const validateVm20PlanMarkdown = async (filePath, label) => {
   }
 }
 
+const validateVm20ReviewIndexMarkdown = async (filePath, label) => {
+  const text = await readText(filePath)
+  const requiredHeadings = [
+    '## Overall VM-20 Extraction Status',
+    '## Batch Table',
+    '## Human Review Checklist',
+    '## Promotion Decision Area',
+    '## Known Caution Areas',
+    '## Recommended Review Order',
+  ]
+  requiredHeadings.forEach((heading) => {
+    if (!text.includes(heading)) {
+      problems.push(`${label}: missing heading ${heading}`)
+    }
+  })
+  ;[
+    'review-only',
+    'not learner-facing',
+    'not app-ready',
+    'not RAG-ready',
+    'not promoted',
+  ].forEach((phrase) => {
+    if (!text.includes(phrase)) {
+      problems.push(`${label}: must mention ${phrase}`)
+    }
+  })
+  ;[
+    'batch-003',
+    'batch-004',
+    'batch-005',
+    'batch-006',
+    'batch-007',
+    'batch-008',
+    'batch-009',
+    'batch-010',
+    'batch-011',
+    'batch-012',
+  ].forEach((batchId) => {
+    if (!text.includes(batchId)) {
+      problems.push(`${label}: must reference ${batchId}`)
+    }
+  })
+}
+
 for (const relativePath of requiredFiles) {
   await requireFile(relativePath)
 }
@@ -1053,6 +1099,7 @@ for (const plannedBatchId of plannedVm20BatchIds) {
 await validateReviewMarkdown(paths.reviewPacketTemplateMd, 'review-packet.template.md')
 await validateReviewMarkdown(paths.sampleReviewPacketMd, 'review-packet.sample.md')
 await validateVm20PlanMarkdown(paths.vm20ExtractionPlanMd, 'docs/processor/vm20_extraction_plan.md')
+await validateVm20ReviewIndexMarkdown(paths.vm20ReviewIndexMd, 'docs/review/vm20_review_index.md')
 
 if (!config.project?.name) {
   problems.push('config/source-families.json: missing project.name')

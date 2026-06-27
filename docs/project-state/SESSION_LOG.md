@@ -72,3 +72,8 @@
   batch-012 captured the reinsurance / Section 9 boundary. All slices stayed
   review-only in ignored working storage, and `npm run check` passed across
   twelve validated pilot batches.
+- 2026-06-26: Created the tracked VM-20 end-of-sequence review index at
+  `docs/review/vm20_review_index.md`, added a lightweight validation check so
+  `npm run check` confirms the index exists and references batches 003-012,
+  and refreshed the project-state docs to treat the index as a summary-only
+  handoff artifact.

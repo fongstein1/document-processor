@@ -10,12 +10,13 @@
 
 ## Latest known commit before this batch
 
-`05b9489`
+`5d4b44d2caa02ca6244e0d95f535e364fd1f45f9`
 
 ## Validation status
 
 The scaffold, the tiny real-source pilot batches, the VM-20 planning layer,
-and the re-bound remaining VM-20 batch plan validate cleanly.
+the re-bound remaining VM-20 batch plan, and the tracked VM-20 review index
+validate cleanly.
 
 - `npm run pilot:course-core`: passed; created the core VM course pilot batch
   outputs in `data/work/batches/batch-002/`
@@ -40,15 +41,19 @@ and the re-bound remaining VM-20 batch plan validate cleanly.
 - `npm run vm20:batch-012`: passed; created the reinsurance and Section 9
   boundary batch in `data/work/batches/batch-012/`
 - `npm run check`: passed; confirmed the schemas, templates, demo fixtures,
-  review-packet contracts, the VM-20 plan artifacts, the no-promotion
-  guardrails, and the synchronized batch definitions for batches 003-012
+  review-packet contracts, the VM-20 plan artifacts, the tracked review
+  index, the no-promotion guardrails, and the synchronized batch definitions
+  for batches 003-012
 
 The control-plan refresh commit re-bound batches 006-012 to the actual PDF
 section order and added runner shortcuts for the remaining controlled slices.
 The full re-bound VM-20 sequence is now complete. All controlled batches 006
 through 012 stayed review-only, and the remaining windows ended at the
-reinsurance / Section 9 boundary without producing learner-facing or app-
-ready output.
+reinsurance / Section 9 boundary without producing learner-facing, app-
+ready, or RAG-ready output.
+
+The new tracked VM-20 review index summarizes the ignored batch review
+packets without promoting any extracted content.
 
 ## Working posture
 
@@ -78,6 +83,8 @@ ready output.
   4 deterministic reserve opener, the Section 5 stochastic reserve opener,
   the Section 6 exclusion tests, the split Section 7 model batches, and the
   final reinsurance / Section 9 boundary batch.
+- The tracked VM-20 review index now gives the reviewer a single summary view
+  of the ignored batch packets without changing their review-only status.
 - The batch-003 and batch-004 review packets both surface review flags as
   extraction categories, keep boundary slices separate from overview slices,
   and preserve the no-promotion status in both JSON and markdown.
@@ -96,5 +103,6 @@ ready output.
 
 ## Current focus
 
-Review the completed VM-20 batch outputs and prepare the end-of-process
-handoff.
+Review the tracked VM-20 review index and decide whether any batch item is a
+candidate for future revision, learner-facing promotion, or RAG/app export
+work.

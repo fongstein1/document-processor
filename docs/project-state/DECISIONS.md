@@ -127,3 +127,11 @@ stochastic reserve opener, the Section 6 exclusion tests, Section 7 split into
 structure and asset-mechanics slices, and the final Section 8 reinsurance /
 Section 9 boundary batch. The plan config and batch definitions should stay
 synchronized with that order.
+
+## Tracked review index
+
+When a controlled VM-20 sequence is complete, create a tracked review index
+under `docs/review/` that summarizes the ignored batch review packets without
+promoting extracted content. The index should remain a summary-only handoff
+artifact and should not replace the underlying review packets or batch
+manifests.

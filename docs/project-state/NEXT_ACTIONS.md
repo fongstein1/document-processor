@@ -2,20 +2,20 @@
 
 ## Next immediate task
 
-Review the completed VM-20 batch outputs and prepare the end-of-process
-handoff.
+Review the tracked VM-20 review index and use it as the human handoff aid for
+the completed controlled sequence.
 
 ## Build tasks
 
 - Keep batches 001 through 012 review-only unless a human reviewer explicitly
   approves promotion.
-- Treat `docs/processor/vm20_extraction_plan.md` and
-  `config/vm20-batch-plan.json` as the source of truth for the controlled
-  VM-20 sequence and any later reruns.
-- Use `npm run vm20:batch-003` through `npm run vm20:batch-012` for reruns or
-  review refreshes when any controlled VM-20 slice needs to be regenerated.
+- Treat `docs/processor/vm20_extraction_plan.md`,
+  `config/vm20-batch-plan.json`, and `docs/review/vm20_review_index.md` as
+  the current controlled VM-20 handoff set.
+- Use `npm run vm20:batch-003` through `npm run vm20:batch-012` only if a
+  review packet needs to be regenerated.
 - Keep `scripts/batch-definitions.mjs` synchronized with the planned batch
-  IDs and actual source order.
+  IDs, actual source order, and the tracked review index.
 - Expand validation only if the plan or a later batch reveals a genuine schema
   or workflow gap.
 - Keep app-ready export work deferred until a real promotion candidate exists.
@@ -48,6 +48,8 @@ handoff.
 - Keep the Section 6 exclusion tests separate from the Section 7 cash-flow
   model slices, and keep the Section 8 reinsurance boundary distinct from the
   Section 9 assumptions cleanup.
+- Keep the tracked review index aligned with the ignored review packets so it
+  remains a summary aid rather than a promoted artifact.
 - Keep all completed VM-20 slices review-only until a deliberate promotion
   decision is made in the separate app/product thread.
 - Keep the PDF extraction runner UTF-8-safe because formula pages can include
