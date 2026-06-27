@@ -230,3 +230,8 @@
   single-page span for the valuation of individual single premium deferred
   annuities, drafted the AG 08 planning layer, and validated the planning
   artifact so batch-083 can run next in review-only mode.
+- 2026-06-27: Ran the AG 08 single-page guideline batch (`batch-083`) in
+  ignored working storage, kept it review-only, created the tracked AG 08
+  review index plus self-review note as the new handoff artifacts, and
+  refreshed the repository POC summary so the thirteenth review index and 83
+  validated batches are now visible in the handoff layer.

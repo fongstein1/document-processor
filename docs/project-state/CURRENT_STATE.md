@@ -10,7 +10,7 @@
 
 ## Latest known commit before this batch
 
-`2823a5f`
+`3c3d046`
 
 ## Validation status
 
@@ -19,7 +19,8 @@ the re-bound remaining VM-20 batch plan, the tracked VM-20 review index, the
 tracked supporting review index, the tracked VM-21 review index, the tracked
 VM-22 review index, the new supporting-chapter planning artifacts, the
 VM-21 / VM-22 planning and execution artifacts, the AG 06 planning /
-review-handoff artifacts, and the AG 08 planning layer validate cleanly.
+review-handoff artifacts, and the AG 08 planning / review-handoff artifacts
+validate cleanly.
 
 - `npm run pilot:course-core`: passed; created the core VM course pilot batch
   outputs in `data/work/batches/batch-002/`
@@ -76,6 +77,8 @@ review-handoff artifacts, and the AG 08 planning layer validate cleanly.
 - `npm run check`: passed after the AG 06 review-handoff refresh; confirmed the schemas, templates, demo fixtures, review-packet contracts, the eleven tracked review indexes, the new AG 06 review-handoff artifacts, the no-promotion guardrails, and the synchronized batch definitions for batches 055-081
 - `npm run check`: passed after the AG 07 review-handoff refresh; confirmed the schemas, templates, demo fixtures, review-packet contracts, the AG 06 review-handoff artifacts, the AG 07 review-handoff artifacts, the no-promotion guardrails, and the synchronized batch definitions for batches 055-082
 - `npm run check`: passed after the AG 08 planning refresh; confirmed the schemas, templates, demo fixtures, review-packet contracts, the AG 06 review-handoff artifacts, the AG 07 review-handoff artifacts, the new AG 08 planning layer, the no-promotion guardrails, and the synchronized batch definitions for batches 055-083
+- `npm run ag08:batch`: passed; created the AG 08 review-only batch outputs in `data/work/batches/batch-083/`
+- `npm run check`: passed after the AG 08 review-handoff refresh; confirmed the schemas, templates, demo fixtures, review-packet contracts, the AG 06 / AG 07 / AG 08 review-handoff artifacts, the no-promotion guardrails, and the synchronized batch definitions for batches 055-083
 
 The control-plan refresh commit re-bound batches 006-012 to the actual PDF
 section order and added runner shortcuts for the remaining controlled slices.
@@ -246,9 +249,10 @@ tracked AG 07 review index plus self-review note are the current handoff
 artifacts. The AG 07 planning layer remains the canonical batch map for
 future regeneration.
 
-The AG 08 planning layer is now validated and ready for the single-page
-guideline batch (`batch-083`), which should remain review-only in ignored
-working storage until the review-handoff artifacts are created.
+The AG 08 extraction batch is complete in ignored working storage, and the
+tracked AG 08 review index plus self-review note are the current handoff
+artifacts. The AG 08 planning layer remains the canonical batch map for
+future regeneration.
 
 The controlled AG 03 one-page guideline batch is complete in ignored working
 storage, and the tracked AG 03 review index plus self-review note are the
