@@ -137,6 +137,8 @@ const paths = {
   ag06SelfReviewMd: path.join(repoRoot, 'docs', 'review', 'ag06_self_review.md'),
   ag07BatchPlanJson: path.join(repoRoot, 'config', 'ag07-batch-plan.json'),
   ag07ExtractionPlanMd: path.join(repoRoot, 'docs', 'processor', 'ag07_extraction_plan.md'),
+  ag07ReviewIndexMd: path.join(repoRoot, 'docs', 'review', 'ag07_review_index.md'),
+  ag07SelfReviewMd: path.join(repoRoot, 'docs', 'review', 'ag07_self_review.md'),
   practiceNoteReviewIndexMd: path.join(
     repoRoot,
     'docs',
@@ -237,6 +239,8 @@ const requiredFiles = [
   'docs/review/ag05_self_review.md',
   'docs/review/ag06_review_index.md',
   'docs/review/ag06_self_review.md',
+  'docs/review/ag07_review_index.md',
+  'docs/review/ag07_self_review.md',
   'docs/processor/ag02_extraction_plan.md',
   'docs/review/valuation_regulation_repository_poc_status.md',
   'config/supporting-vm-batch-plan.json',
@@ -2884,6 +2888,81 @@ const validateAg06SelfReviewMarkdown = async (filePath, label) => {
   })
 }
 
+const validateAg07ReviewIndexMarkdown = async (filePath, label) => {
+  const text = await readText(filePath)
+  const requiredHeadings = [
+    '## Overall AG 07 Extraction Status',
+    '## Batch Table',
+    '## Higher-Caution Section',
+    '## Human Review Checklist',
+    '## Promotion Decision Area',
+    '## Recommended Review Order',
+    '## Relationship to Other Review Indexes',
+    '## Self-Review Note',
+    '## Review Notes',
+  ]
+  requiredHeadings.forEach((heading) => {
+    if (!text.includes(heading)) {
+      problems.push(`${label}: missing heading ${heading}`)
+    }
+  })
+  ;[
+    'review-only',
+    'not learner-facing',
+    'not app-ready',
+    'not RAG-ready',
+    'not promoted',
+    'AG 07',
+    'batch-082',
+    'page 1',
+    'page 2',
+    'equivalent level amounts',
+    'Actuarial Guideline VII',
+    'docs/review/vm20_review_index.md',
+    'docs/review/supporting_vm_review_index.md',
+    'docs/review/vm21_review_index.md',
+    'docs/review/vm22_review_index.md',
+    'docs/review/vm20_practice_note_review_index.md',
+    'docs/review/ag06_review_index.md',
+    'docs/review/ag05_review_index.md',
+    'docs/review/ag04_review_index.md',
+    'docs/review/ag03_review_index.md',
+    'docs/review/ag01_review_index.md',
+    'docs/review/ag02_review_index.md',
+    'docs/review/ag07_self_review.md',
+  ].forEach((phrase) => {
+    if (!text.includes(phrase)) {
+      problems.push(`${label}: must mention ${phrase}`)
+    }
+  })
+}
+
+const validateAg07SelfReviewMarkdown = async (filePath, label) => {
+  const text = await readText(filePath)
+  const requiredHeadings = [
+    '## Batch Classifications',
+    '## Recurring Observations',
+    '## Skill-Hardening Note',
+    '## Review Outcome',
+  ]
+  requiredHeadings.forEach((heading) => {
+    if (!text.includes(heading)) {
+      problems.push(`${label}: missing heading ${heading}`)
+    }
+  })
+  ;[
+    'reasonable_with_minor_cautions',
+    'batch-082',
+    'encoded text layer',
+    'No tracked skill file update was necessary',
+    'equivalent level amounts',
+  ].forEach((phrase) => {
+    if (!text.includes(phrase)) {
+      problems.push(`${label}: must mention ${phrase}`)
+    }
+  })
+}
+
 const validateAg01ReviewIndexMarkdown = async (filePath, label) => {
   const text = await readText(filePath)
   const requiredHeadings = [
@@ -3145,10 +3224,12 @@ const validatePocStatusSummaryMarkdown = async (filePath, label) => {
     'docs/review/ag05_self_review.md',
     'docs/review/ag06_review_index.md',
     'docs/review/ag06_self_review.md',
+    'docs/review/ag07_review_index.md',
+    'docs/review/ag07_self_review.md',
     'npm run check',
     'git diff --check',
-    '81 batches validated',
-    '11 review indexes',
+    '82 batches validated',
+    '12 review indexes',
     'ignored working storage',
     'future pricing',
     'future liability-modeling',
@@ -3157,6 +3238,7 @@ const validatePocStatusSummaryMarkdown = async (filePath, label) => {
     'AG 04',
     'AG 05',
     'AG 06',
+    'AG 07',
   ].forEach((phrase) => {
     if (!text.includes(phrase)) {
       problems.push(`${label}: must mention ${phrase}`)
@@ -3367,6 +3449,8 @@ await validateAg05ReviewIndexMarkdown(paths.ag05ReviewIndexMd, 'docs/review/ag05
 await validateAg05SelfReviewMarkdown(paths.ag05SelfReviewMd, 'docs/review/ag05_self_review.md')
 await validateAg06ReviewIndexMarkdown(paths.ag06ReviewIndexMd, 'docs/review/ag06_review_index.md')
 await validateAg06SelfReviewMarkdown(paths.ag06SelfReviewMd, 'docs/review/ag06_self_review.md')
+await validateAg07ReviewIndexMarkdown(paths.ag07ReviewIndexMd, 'docs/review/ag07_review_index.md')
+await validateAg07SelfReviewMarkdown(paths.ag07SelfReviewMd, 'docs/review/ag07_self_review.md')
 await validateAg05PlanMarkdown(paths.ag05ExtractionPlanMd, 'docs/processor/ag05_extraction_plan.md')
 await validateAg06PlanMarkdown(paths.ag06ExtractionPlanMd, 'docs/processor/ag06_extraction_plan.md')
 await validateAg07PlanMarkdown(paths.ag07ExtractionPlanMd, 'docs/processor/ag07_extraction_plan.md')
@@ -3518,7 +3602,7 @@ if (problems.length > 0) {
   console.log(`- AG 05 plan verified: ${ag05BatchPlan.proposedBatches.length} batches`)
   console.log(`- AG 06 plan verified: ${ag06BatchPlan.proposedBatches.length} batches`)
   console.log(`- AG 07 plan verified: ${ag07BatchPlan.proposedBatches.length} batches`)
-  console.log(`- POC status summary verified: 11 review indexes`)
+  console.log(`- POC status summary verified: 12 review indexes`)
   if (validatedPilotBatchCount > 0) {
     console.log(`- Pilot batches validated: ${validatedPilotBatchCount}`)
   }

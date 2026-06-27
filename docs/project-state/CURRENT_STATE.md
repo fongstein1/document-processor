@@ -74,7 +74,7 @@ review-handoff artifacts validate cleanly.
 - `npm run check`: passed after the AG 05 planning refresh; confirmed the schemas, templates, demo fixtures, review-packet contracts, the nine tracked review indexes, the new AG 05 plan artifacts, the no-promotion guardrails, and the synchronized batch definitions for batches 055-079
 - `npm run check`: passed after the AG 05 review-index refresh; confirmed the schemas, templates, demo fixtures, review-packet contracts, the ten tracked review indexes, the updated POC status summary, the no-promotion guardrails, and the synchronized batch definitions for batches 055-080
 - `npm run check`: passed after the AG 06 review-handoff refresh; confirmed the schemas, templates, demo fixtures, review-packet contracts, the eleven tracked review indexes, the new AG 06 review-handoff artifacts, the no-promotion guardrails, and the synchronized batch definitions for batches 055-081
-- `npm run check`: passed after the AG 07 planning refresh; confirmed the schemas, templates, demo fixtures, review-packet contracts, the AG 06 review-handoff artifacts, the new AG 07 plan artifacts, the no-promotion guardrails, and the synchronized batch definitions for batches 055-082
+- `npm run check`: passed after the AG 07 review-handoff refresh; confirmed the schemas, templates, demo fixtures, review-packet contracts, the AG 06 review-handoff artifacts, the AG 07 review-handoff artifacts, the no-promotion guardrails, and the synchronized batch definitions for batches 055-082
 
 The control-plan refresh commit re-bound batches 006-012 to the actual PDF
 section order and added runner shortcuts for the remaining controlled slices.
@@ -240,9 +240,10 @@ tracked AG 06 review index plus self-review note are the current handoff
 artifacts. The AG 06 planning layer remains the canonical batch map for
 future regeneration.
 
-AG 07 is the next short guideline unit. Its planning layer now targets the
-two-page interpretation regarding calculation of equivalent level amounts,
-and the batch should remain review-only until extraction starts.
+The AG 07 extraction batch is complete in ignored working storage, and the
+tracked AG 07 review index plus self-review note are the current handoff
+artifacts. The AG 07 planning layer remains the canonical batch map for
+future regeneration.
 
 The controlled AG 03 one-page guideline batch is complete in ignored working
 storage, and the tracked AG 03 review index plus self-review note are the

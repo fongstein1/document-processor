@@ -3,9 +3,10 @@
 ## Next immediate task
 
 AG 06 is complete in ignored working storage and its review index plus
-self-review note now form the current handoff set. AG 07 is the next short
-guideline unit; finish the AG 07 planning commit, then run batch-082 once the
-plan is validated. AG 05 is already captured in the tracked review handoff
+self-review note now form the current handoff set. AG 07 is complete in
+ignored working storage and its review index plus self-review note now form
+the current handoff set. AG 08 is the next short guideline candidate after a
+limited inspection. AG 05 is already captured in the tracked review handoff
 set, and AG 03, AG 01, AG 02, and AG 04 remain captured as well. AG 52 is
 already captured in the mixed pilot batch and should not be reprocessed.
 
@@ -54,7 +55,9 @@ already captured in the mixed pilot batch and should not be reprocessed.
 - Treat `docs/review/ag06_review_index.md` and `docs/review/ag06_self_review.md`
   as the current AG 06 handoff set.
 - Treat `docs/processor/ag07_extraction_plan.md` and
-  `config/ag07-batch-plan.json` as the current AG 07 planning set.
+  `config/ag07-batch-plan.json` as the current AG 07 planning set, and treat
+  `docs/review/ag07_review_index.md` and `docs/review/ag07_self_review.md`
+  as the current AG 07 handoff set.
 - Treat `scripts/ag04-batch-definitions.mjs` as synchronized with the AG 04
   planning and handoff set.
 - Treat `scripts/ag05-batch-definitions.mjs` as synchronized with the AG 05
@@ -62,7 +65,7 @@ already captured in the mixed pilot batch and should not be reprocessed.
 - Treat `scripts/ag06-batch-definitions.mjs` as synchronized with the AG 06
   planning and handoff set.
 - Treat `scripts/ag07-batch-definitions.mjs` as synchronized with the AG 07
-  planning set.
+  planning and handoff set.
 - Use `npm run ag04:batch` only if the AG 04 review packet needs to be
   regenerated.
 - Use `npm run ag05:batch` only if the AG 05 review packet needs to be
@@ -73,6 +76,9 @@ already captured in the mixed pilot batch and should not be reprocessed.
   synchronized with the ignored AG 06 review packet if the wave is ever
   regenerated.
 - Use `npm run ag07:batch` only if the AG 07 review packet needs to be
+  regenerated.
+- Keep `docs/review/ag07_review_index.md` and `docs/review/ag07_self_review.md`
+  synchronized with the ignored AG 07 review packet if the wave is ever
   regenerated.
 - Keep the AG 04 batch review-only unless a later human review explicitly
   approves promotion.
