@@ -179,3 +179,9 @@
 - 2026-06-27: Re-entered the Actuarial Guidelines folder, confirmed AG 01 as
   the next single-page guideline candidate, and drafted the AG 01 planning
   layer so the next batch can be validated before extraction.
+- 2026-06-27: Ran the AG 01 single-page guideline batch (`batch-077`) in
+  ignored working storage, kept it review-only, and preserved the encoded
+  page as a review-only interpretive slice with a one-item unresolved issue
+  set.
+- 2026-06-27: Created the tracked AG 01 review index and self-review note as
+  the new handoff artifacts for the one-page guideline unit.

@@ -25,6 +25,8 @@ review indexes:
 - `docs/review/vm20_practice_note_review_index.md`
 - `docs/review/ag03_review_index.md`
 - `docs/review/ag03_self_review.md`
+- `docs/review/ag01_review_index.md`
+- `docs/review/ag01_self_review.md`
 
 ## Executive Status
 
@@ -44,6 +46,8 @@ What has been built:
 - tracked end-of-sequence review indexes for the completed waves
 - tracked AG 03 review index and self-review note for the one-page guideline
   unit in `docs/review/ag03_self_review.md`
+- tracked AG 01 review index and self-review note for the one-page guideline
+  unit in `docs/review/ag01_self_review.md`
 - project-state docs that preserve the handoff history
 
 What source families / chapters have been processed:
@@ -60,6 +64,8 @@ What source families / chapters have been processed:
 - VM-22, batches `batch-038` through `batch-054`
 - VM-20 companion practice note, batches `batch-055` through `batch-075`
 - AG 03 single-page guideline, `batch-076`
+- AG 01 single-page guideline, `batch-077`
+- AG 01 single-page guideline, `batch-077`
 
 What remains review-only:
 
@@ -102,6 +108,7 @@ What is explicitly out of scope:
 | VM-22 | `pp. 227-318` | `batch-038` through `batch-054` | `docs/review/vm22_review_index.md` | Complete; review-only | Background / scope, reserve methodology, projection and asset mechanics, stochastic exclusions, scenario generation, hedging, assumptions, and page-318 closure before VM-25 |
 | VM-20 companion practice note | `pp. 1-115` | `batch-055` through `batch-075` | `docs/review/vm20_practice_note_review_index.md` | Complete; review-only | Non-binding disclaimer, calculation overview, reserve overviews, assumptions, reinsurance, hedging, and implementation-guidance boundaries |
 | AG 03 single-page guideline | `p. 1` | `batch-076` | `docs/review/ag03_review_index.md` | Complete; review-only | Maturity-value interpretation, cash surrender treatment, and encoded-text caveat |
+| AG 01 single-page guideline | `p. 1` | `batch-077` | `docs/review/ag01_review_index.md` | Complete; review-only | Valuation net premium / gross premium interpretation and encoded-text caveat |
 
 ## Completed Assets
 
@@ -117,6 +124,7 @@ The repository now includes the core processor asset set:
 - the tracked VM-20 practice-note review index and self-review note in
   `docs/review/`
 - the tracked AG 03 review index and self-review note in `docs/review/`
+- the tracked AG 01 review index and self-review note in `docs/review/`
 - VM chapter planning artifacts in `docs/processor/` and `config/`
 - project-state docs in `docs/project-state/`
 - runner / validator scripts in `scripts/`
@@ -127,9 +135,9 @@ documents remain external to Git.
 ## Validation Posture
 
 - `npm run check` passes
-- the scaffold reports 76 batches validated
+- the scaffold reports 77 batches validated
 - the validator now checks the tracked VM-20, supporting, VM-21, VM-22,
-  practice-note, AG 03, and POC status summary handoff files
+  practice-note, AG 03, AG 01, and POC status summary handoff files
 - review-only and no-promotion guardrails are enforced in the batch manifests
   and review packets
 - ignored working outputs stay under `data/work/`
@@ -138,7 +146,7 @@ documents remain external to Git.
 
 ## Human Review Posture
 
-- Reviewers should start from the six review indexes listed above.
+- Reviewers should start from the seven review indexes listed above.
 - The review packets remain the detailed evidence layer behind those
   summaries.
 - All batch content remains source-bound and review-only unless a separate

@@ -2,10 +2,9 @@
 
 ## Next immediate task
 
-Commit the AG 01 planning artifacts, runner alias, and validator updates,
-then run batch-077 for the one-page AG 01 guideline. AG 03 is already
-captured in the tracked review handoff set, and AG 52 is already captured in
-the mixed pilot batch and should not be reprocessed.
+Select the next small Actuarial Guideline or NY regulation source unit. AG 03
+and AG 01 are already captured in the tracked review handoff sets, and AG 52
+is already captured in the mixed pilot batch and should not be reprocessed.
 
 ## Build tasks
 
@@ -33,6 +32,8 @@ the mixed pilot batch and should not be reprocessed.
   `docs/review/ag03_self_review.md` as the current AG 03 handoff set.
 - Treat `docs/processor/ag01_extraction_plan.md` and
   `config/ag01-batch-plan.json` as the current AG 01 planning set.
+- Treat `docs/review/ag01_review_index.md` and
+  `docs/review/ag01_self_review.md` as the current AG 01 handoff set.
 - Treat `docs/review/valuation_regulation_repository_poc_status.md` as the
   current repository-level proof-of-concept summary.
 - Treat `docs/processor/vm20_practice_note_extraction_plan.md` and
