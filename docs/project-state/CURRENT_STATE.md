@@ -205,7 +205,7 @@ do not change the learner-facing or app-ready posture.
 - The tracked VM-22 review index now gives the reviewer a single summary view
   of the ignored batch packets without changing their review-only status.
 - The tracked valuation-regulation repository POC summary now consolidates the
-  eleven review indexes into a single proof-of-concept handoff view.
+  twelve review indexes into a single proof-of-concept handoff view.
 - The repository will be clean on `main` once this state refresh is committed,
   aside from ignored working files.
 
@@ -215,7 +215,7 @@ The controlled VM-21 sequence is complete. The controlled VM-22 sequence is
 complete: batches 038-054 are done, the tracked VM-22 review index now
 summarizes the ignored batch packets, and the resulting ignored working
 outputs remain review-only. The tracked valuation-regulation repository POC
-summary now consolidates the eleven review indexes into a single handoff view.
+summary now consolidates the twelve review indexes into a single handoff view.
 AG 05 is complete in ignored working storage and its tracked review index
 plus self-review note now summarize that wave. Keep VM-25 and later chapters
 out of scope unless a future plan explicitly opens them.
