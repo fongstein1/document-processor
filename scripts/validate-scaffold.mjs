@@ -123,6 +123,8 @@ const paths = {
   vm21ExtractionPlanMd: path.join(repoRoot, 'docs', 'processor', 'vm21_extraction_plan.md'),
   vm22BatchPlanJson: path.join(repoRoot, 'config', 'vm22-batch-plan.json'),
   vm22ExtractionPlanMd: path.join(repoRoot, 'docs', 'processor', 'vm22_extraction_plan.md'),
+  ag01BatchPlanJson: path.join(repoRoot, 'config', 'ag01-batch-plan.json'),
+  ag01ExtractionPlanMd: path.join(repoRoot, 'docs', 'processor', 'ag01_extraction_plan.md'),
   practiceNoteReviewIndexMd: path.join(
     repoRoot,
     'docs',
@@ -191,6 +193,7 @@ const requiredFiles = [
   'docs/processor/vm20_extraction_plan.md',
   'docs/processor/vm20_practice_note_extraction_plan.md',
   'docs/processor/ag03_extraction_plan.md',
+  'docs/processor/ag01_extraction_plan.md',
   'docs/processor/vm22_extraction_plan.md',
   'docs/review/vm20_review_index.md',
   'docs/review/supporting_vm_review_index.md',
@@ -206,11 +209,13 @@ const requiredFiles = [
   'config/vm20-batch-plan.json',
   'config/vm20-practice-note-batch-plan.json',
   'config/ag03-batch-plan.json',
+  'config/ag01-batch-plan.json',
   'config/vm22-batch-plan.json',
   'scripts/vm21-batch-definitions.mjs',
   'scripts/vm22-batch-definitions.mjs',
   'scripts/vm20-practice-note-batch-definitions.mjs',
   'scripts/ag03-batch-definitions.mjs',
+  'scripts/ag01-batch-definitions.mjs',
   'scripts/bootstrap-small-batch.mjs',
   'scripts/validate-scaffold.mjs',
   'scripts/run-pilot-batch.mjs',
@@ -1990,6 +1995,40 @@ const validateAg03PlanMarkdown = async (filePath, label) => {
   })
 }
 
+const validateAg01PlanMarkdown = async (filePath, label) => {
+  const text = await readText(filePath)
+  const requiredHeadings = [
+    '## Source Scope',
+    '## Topic Map',
+    '## Proposed Batch Sequence',
+    '## Review Standards',
+    '## Promotion Gates',
+    '## Validation Implications',
+    '## Operating Note',
+  ]
+  requiredHeadings.forEach((heading) => {
+    if (!text.includes(heading)) {
+      problems.push(`${label}: missing heading ${heading}`)
+    }
+  })
+  ;[
+    'review-only',
+    'not learner-facing',
+    'not app-ready',
+    'not RAG-ready',
+    'not promoted',
+    'AG 01',
+    'batch-077',
+    'Actuarial Guideline I',
+    'page 1 only',
+    'Standard Valuation Law',
+  ].forEach((phrase) => {
+    if (!text.includes(phrase)) {
+      problems.push(`${label}: must mention ${phrase}`)
+    }
+  })
+}
+
 const validateVm22PlanMarkdown = async (filePath, label) => {
   const text = await readText(filePath)
   const requiredHeadings = [
@@ -2068,6 +2107,7 @@ const vm21BatchPlan = await readJson(paths.vm21BatchPlanJson)
 const vm22BatchPlan = await readJson(paths.vm22BatchPlanJson)
 const practiceNoteBatchPlan = await readJson(paths.practiceNoteBatchPlanJson)
 const ag03BatchPlan = await readJson(paths.ag03BatchPlanJson)
+const ag01BatchPlan = await readJson(paths.ag01BatchPlanJson)
 
 validateSchemaEnvelope(batchManifestSchema, 'batch-manifest.schema.json')
 validateSchemaEnvelope(sourceInventorySchema, 'source-inventory.schema.json')
@@ -2086,8 +2126,35 @@ validateSupportingVmPlanLike(supportingVmBatchPlan, 'config/supporting-vm-batch-
 validateVm21PlanLike(vm21BatchPlan, 'config/vm21-batch-plan.json')
 validateVm22PlanLike(vm22BatchPlan, 'config/vm22-batch-plan.json')
 validatePracticeNotePlanLike(practiceNoteBatchPlan, 'config/vm20-practice-note-batch-plan.json')
+await validateAg01PlanMarkdown(paths.ag01ExtractionPlanMd, 'docs/processor/ag01_extraction_plan.md')
 if (!Array.isArray(ag03BatchPlan.proposedBatches) || ag03BatchPlan.proposedBatches.length !== 1) {
   problems.push('config/ag03-batch-plan.json: expected exactly one proposed batch')
+}
+if (ag01BatchPlan.status !== 'planned') {
+  problems.push('config/ag01-batch-plan.json: status must be planned')
+}
+if (!Array.isArray(ag01BatchPlan.proposedBatches) || ag01BatchPlan.proposedBatches.length !== 1) {
+  problems.push('config/ag01-batch-plan.json: expected exactly one proposed batch')
+}
+if (
+  ag01BatchPlan.sourceScope?.confirmedPageRange?.[0] !== 1 ||
+  ag01BatchPlan.sourceScope?.confirmedPageRange?.[1] !== 1
+) {
+  problems.push('config/ag01-batch-plan.json: confirmedPageRange must be [1, 1]')
+}
+
+const plannedAg01BatchIds = Array.isArray(ag01BatchPlan.proposedBatches)
+  ? ag01BatchPlan.proposedBatches
+      .map((batch) => batch?.plannedBatchId)
+      .filter((batchId) => typeof batchId === 'string' && batchId.length > 0)
+  : []
+for (const plannedBatchId of plannedAg01BatchIds) {
+  if (!batchDefinitions[plannedBatchId]) {
+    problems.push(`scripts/batch-definitions.mjs: missing batch definition for ${plannedBatchId}`)
+  }
+}
+if (!plannedAg01BatchIds.includes('batch-077')) {
+  problems.push('config/ag01-batch-plan.json: expected batch-077 to be planned')
 }
 
 const plannedVm20BatchIds = Array.isArray(vm20BatchPlan.proposedBatches)
@@ -2689,6 +2756,8 @@ if (problems.length > 0) {
   console.log(`- VM-22 review index verified: 17 batches`)
   console.log(`- Practice-note plan verified: ${practiceNoteBatchPlan.proposedBatches.length} batches`)
   console.log(`- Practice-note review index verified: 21 batches`)
+  console.log(`- AG 03 plan verified: ${ag03BatchPlan.proposedBatches.length} batches`)
+  console.log(`- AG 01 plan verified: ${ag01BatchPlan.proposedBatches.length} batches`)
   console.log(`- POC status summary verified: 6 review indexes`)
   if (validatedPilotBatchCount > 0) {
     console.log(`- Pilot batches validated: ${validatedPilotBatchCount}`)

@@ -10,7 +10,7 @@
 
 ## Latest known commit before this batch
 
-`574ac6d`
+`037ae0f`
 
 ## Validation status
 
@@ -220,8 +220,9 @@ any extracted content.
 
 The controlled AG 03 one-page guideline batch is complete in ignored working
 storage, and the tracked AG 03 review index plus self-review note are the
-next handoff artifacts. The next likely small candidate is another remaining
-Actuarial Guideline or NY regulation source file. The AG 52 text note already
-lives in the mixed pilot batch and is not being reprocessed. The remaining
-Practice Notes files and other Actuarial Guideline / NY regulation files stay
-out of scope until separately planned.
+current handoff artifacts. The next likely small candidate is the one-page
+AG 01 guideline, which now has a planning draft and should be validated
+before extraction. The AG 52 text note already lives in the mixed pilot
+batch and is not being reprocessed. The remaining Practice Notes files and
+other Actuarial Guideline / NY regulation files stay out of scope until
+separately planned.

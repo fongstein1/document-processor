@@ -1,0 +1,151 @@
+{
+  "planId": "ag01-single-page-guideline-control-plan",
+  "planVersion": "1.0",
+  "status": "planned",
+  "sourceScope": {
+    "sourceFamilyId": "actuarial_guidelines",
+    "primarySourceFile": "AG 01 - Valuation of Policies in Which the Net Premium Exceeds the Gross Premium.pdf",
+    "sourceFolder": "Actuarial Guidelines",
+    "sourceTitle": "AG 01 - Valuation of Policies in Which the Net Premium Exceeds the Gross Premium",
+    "sourceReference": "Actuarial Guideline I",
+    "domainId": "naic_regulatory",
+    "rawSourceRoot": "D:\\Work\\AI Projects\\NAIC Valuation Manual Course",
+    "confirmedPageRange": [
+      1,
+      1
+    ],
+    "observedSectionWindows": [
+      {
+        "sectionId": "ag01-net-premium-interpretation",
+        "pageRange": [
+          1,
+          1
+        ],
+        "note": "Single-page valuation net premium / gross premium interpretation."
+      }
+    ],
+    "boundaries": [
+      "Keep planning focused on the single AG 01 PDF.",
+      "Do not widen into other Actuarial Guidelines files in the same folder.",
+      "Keep the valuation-net-premium and gross-premium language review-only until a human confirms the indexing decision.",
+      "Keep any PDF text-extraction noise visible as a caveat, not a promotion signal.",
+      "Keep the batch source-bound and review-only."
+    ],
+    "exclusions": [
+      "No learner-facing content.",
+      "No app-ready export.",
+      "No RAG-ready export.",
+      "No approved/promoted export.",
+      "No eLearning scripts, slides, quizzes, or app exports.",
+      "No raw source files in Git.",
+      "No other guideline files in the same wave."
+    ]
+  },
+  "topicMap": [
+    {
+      "topicId": "ag01-net-premium-interpretation",
+      "label": "Single-page valuation net premium / gross premium interpretation",
+      "pageRange": [
+        1,
+        1
+      ],
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "regulatory_requirement",
+        "definition_or_terminology",
+        "cross_reference_mapping",
+        "requires_human_interpretation",
+        "boundary_control_window"
+      ],
+      "crossReferenceWatchlist": [
+        "Standard Valuation Law",
+        "valuation net premium",
+        "gross premium"
+      ],
+      "boundaryNote": "Keep this slice within page 1 and do not absorb other guideline files."
+    }
+  ],
+  "proposedBatches": [
+    {
+      "plannedBatchId": "batch-077",
+      "topicIds": [
+        "ag01-net-premium-interpretation"
+      ],
+      "title": "Single-page AG 01 interpretation",
+      "pageTarget": {
+        "knownWindow": [
+          1,
+          1
+        ],
+        "notes": "Capture the whole one-page guideline as a single review-only slice and stop at the page boundary."
+      },
+      "rationale": "Capture the entire one-page guideline as a single review-only slice and stop at the page boundary.",
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "regulatory_requirement",
+        "definition_or_terminology",
+        "cross_reference_mapping",
+        "requires_human_interpretation",
+        "boundary_control_window"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    }
+  ],
+  "reviewStandards": {
+    "regulatoryRequirement": "Treat explicit must, shall, or required language as the requirement; preserve the citation and source context.",
+    "definitionOrTerminology": "Treat valuation net premium, gross premium, and related nonforfeiture terms as terminology content unless they impose a duty.",
+    "crossReferenceMapping": "Treat references to the Standard Valuation Law as mapping notes unless the operational text is included.",
+    "backgroundContent": "Treat the title line and framing sentence as background content unless they impose a duty.",
+    "boundaryControlWindow": "Treat the one-page slice as a review-only window that should not be merged forward.",
+    "requiresHumanInterpretation": "Treat the indexing choice and the OCR / encoded text layer as requiring human actuarial interpretation unless the text is explicit.",
+    "sourceQualityCaveat": "Treat text-layer noise or encoding issues as review-only caveats and do not widen the batch because of them."
+  },
+  "promotionGates": {
+    "defaultState": "review_only",
+    "learnerFacing": [
+      "source citation exists",
+      "source support is clear",
+      "wording is not misleading",
+      "confidence is high",
+      "no unresolved review flags exist"
+    ],
+    "appReady": [
+      "learner-facing criteria are already satisfied",
+      "export is sanitized, stable, and versioned",
+      "no unresolved review issues remain"
+    ],
+    "ragReady": [
+      "approved indexed material only",
+      "stable ID",
+      "source reference",
+      "locator",
+      "review status no longer requires human disposition"
+    ]
+  },
+  "validationImplications": {
+    "currentChecksNeeded": [
+      "Plan file exists and parses as JSON.",
+      "The AG 01 plan markdown exists and carries the expected headings.",
+      "Every proposed batch is review-only by default.",
+      "The plan keeps the scope to one page only.",
+      "Each planned batch has a matching batch definition.",
+      "The AG 01 batch definition file stays synchronized with the plan."
+    ],
+    "futureChecksSuggested": [
+      "One-page guideline checks for future short guideline files.",
+      "Cross-reference flag coverage for the Standard Valuation Law reference.",
+      "Unexpected source-family leakage checks.",
+      "No learner-facing, app-ready, or RAG-ready promotion checks.",
+      "Text-layer quality caveat checks once extraction starts."
+    ],
+    "scriptImplications": [
+      "scripts/ag01-batch-definitions.mjs should stay synchronized with the planned batch-077 slice when extraction is authorized.",
+      "scripts/batch-definitions.mjs should import the AG 01 definition file so the shared runner can find the planned batch ID.",
+      "scripts/validate-scaffold.mjs should verify that the AG 01 plan file exists, parses cleanly, and preserves the review-only posture.",
+      "The shared runner should continue to honor the same stop conditions used for the VM-20 batches."
+    ]
+  },
+  "notes": "Controlled AG 01 planning artifact. Planned batch 077 remains review-only by default and is not an extraction run."
+}

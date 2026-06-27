@@ -10,6 +10,7 @@
     "pilot:course-core": "node scripts/run-pilot-batch.mjs --batch batch-002",
     "practice-notes:batch": "node scripts/run-pilot-batch.mjs",
     "ag03:batch": "node scripts/run-pilot-batch.mjs --batch batch-076",
+    "ag01:batch": "node scripts/run-pilot-batch.mjs --batch batch-077",
     "vm20:batch-003": "node scripts/run-pilot-batch.mjs --batch batch-003",
     "vm20:batch-004": "node scripts/run-pilot-batch.mjs --batch batch-004",
     "vm20:batch-005": "node scripts/run-pilot-batch.mjs --batch batch-005",

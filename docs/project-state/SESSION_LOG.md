@@ -176,3 +176,6 @@
 - 2026-06-27: Ran the AG 03 single-page guideline batch (`batch-076`) in
   ignored working storage, kept it review-only, and wrote the tracked AG 03
   review index plus self-review note as the new handoff artifacts.
+- 2026-06-27: Re-entered the Actuarial Guidelines folder, confirmed AG 01 as
+  the next single-page guideline candidate, and drafted the AG 01 planning
+  layer so the next batch can be validated before extraction.
