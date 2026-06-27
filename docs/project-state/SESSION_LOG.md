@@ -199,3 +199,7 @@
   duplicated regulatory flag in the batch definition, and created the tracked
   AG 04 review index plus self-review note as the new handoff artifacts for
   the short guideline unit.
+- 2026-06-27: Drafted the AG 05 planning layer for the two-page
+  continuous-functions interpretation, wired `batch-080` into the shared
+  runner and validator, and kept the short-guideline pattern review-only and
+  source-bound for the next batch.
