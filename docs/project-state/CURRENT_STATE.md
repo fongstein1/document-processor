@@ -135,6 +135,10 @@ do not change the learner-facing or app-ready posture.
 - Batches 022 through 025 have completed as the first controlled VM-21
   group. They remain review-only in ignored working storage and cover the
   background, scope, reserve-methodology, and SR projection entry slices.
+- Batches 026 through 029 have completed as the second controlled VM-21
+  group. They remain review-only in ignored working storage and cover the SR
+  asset and iteration mechanics, the reinsurance / Section 6 entry, the
+  Section 6 assumptions, and the Section 6 factor tables.
 - The batch-003 and batch-004 review packets both surface review flags as
   extraction categories, keep boundary slices separate from overview slices,
   and preserve the no-promotion status in both JSON and markdown.
@@ -159,5 +163,5 @@ do not change the learner-facing or app-ready posture.
 
 ## Current focus
 
-Continue the controlled VM-21 sequence with batch-026 through batch-037,
+Continue the controlled VM-21 sequence with batch-030 through batch-037,
 keeping the review-only posture intact and preserving the VM-22 boundary.

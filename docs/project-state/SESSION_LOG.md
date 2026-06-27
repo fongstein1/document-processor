@@ -106,3 +106,8 @@
   (batch-022 through batch-025), regenerating the ignored working outputs for
   the background, scope, reserve-methodology, and SR projection-entry slices
   while `npm run check` passed after each batch.
+- 2026-06-27: Ran the second controlled VM-21 batch group sequentially
+  (batch-026 through batch-029), regenerating the ignored working outputs for
+  the SR asset mechanics, reinsurance / Section 6 entry, Section 6
+  assumptions, and Section 6 factor-table slices while `npm run check`
+  passed after each batch.

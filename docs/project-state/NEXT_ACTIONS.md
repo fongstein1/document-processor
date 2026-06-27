@@ -29,6 +29,9 @@ whether any later refinement or promotion discussion is needed.
   `npm run vm21:batch -- --batch batch-037` once the VM-21 extraction sequence
   is underway.
 - Continue with `npm run vm21:batch -- --batch batch-026` through
+  `npm run vm21:batch -- --batch batch-029` for the second controlled VM-21
+  group.
+- Continue with `npm run vm21:batch -- --batch batch-030` through
   `npm run vm21:batch -- --batch batch-037` for the remaining controlled
   VM-21 batches.
 - Keep `scripts/batch-definitions.mjs` synchronized with the planned VM-20
