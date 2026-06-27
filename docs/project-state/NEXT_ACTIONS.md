@@ -2,8 +2,8 @@
 
 ## Next immediate task
 
-Run the next controlled VM-22 batch block from batch-048 through batch-054 in
-ignored working storage.
+Review the completed VM-22 batch packets and decide whether a hardening pass
+or a tracked VM-22 review index is worth creating.
 
 ## Build tasks
 
@@ -20,8 +20,7 @@ ignored working storage.
   summary.
 - Treat `docs/processor/vm22_extraction_plan.md` and
   `config/vm22-batch-plan.json` as the current VM-22 planning set.
-- Treat batches 038-047 as completed in ignored working storage and continue
-  with batches 048-054 next.
+- Treat batches 038-054 as completed in ignored working storage.
 - Treat `docs/processor/supporting_vm_chapters_extraction_plan.md` and
   `config/supporting-vm-batch-plan.json` as the current supporting-chapter
   planning set.
@@ -31,8 +30,8 @@ ignored working storage.
   `node scripts/run-pilot-batch.mjs --batch batch-054` for the controlled
   VM-22 sequence after the plan commits.
 - Use `node scripts/run-pilot-batch.mjs --batch batch-048` through
-  `node scripts/run-pilot-batch.mjs --batch batch-054` for the final VM-22
-  block before the wave closes.
+  `node scripts/run-pilot-batch.mjs --batch batch-054` only if a VM-22 review
+  packet needs to be regenerated.
 - Use `npm run vm20:batch-003` through `npm run vm20:batch-012` only if a
   review packet needs to be regenerated.
 - Use `npm run pilot -- --batch batch-013` through `npm run pilot -- --batch
@@ -46,6 +45,8 @@ ignored working storage.
   review packets so it remains a summary aid rather than a promoted artifact.
 - Keep VM-25 and later chapters out of the VM-22 wave except for the closing
   boundary confirmation on page 318.
+- Keep the completed VM-22 wave review-only unless a later human review
+  explicitly approves promotion.
 - Keep the completed VM-22 Section 6 block review-only unless a later human
   review explicitly approves promotion.
 - Keep the completed VM-22 early block review-only unless a later human review

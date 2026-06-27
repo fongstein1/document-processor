@@ -65,6 +65,7 @@ artifacts validate cleanly.
 - `npm run check`: passed after the VM-21 review-index refresh; confirmed the schemas, templates, demo fixtures, review-packet contracts, the VM-20 plan artifacts, the tracked review indexes, the supporting-chapter plan artifacts, the VM-21 plan artifacts, the no-promotion guardrails, and the synchronized batch definitions for batches 022-037
 - `npm run check`: passed after the VM-22 planning-layer refresh; confirmed the schemas, templates, demo fixtures, review-packet contracts, the VM-20 plan artifacts, the tracked review indexes, the supporting-chapter plan artifacts, the VM-21 plan artifacts, the new VM-22 plan artifacts, the no-promotion guardrails, and the synchronized batch definitions for batches 038-054
 - `npm run check`: passed after batches 043-047 of the VM-22 wave; confirmed the schemas, templates, demo fixtures, review-packet contracts, the VM-20 plan artifacts, the tracked review indexes, the supporting-chapter plan artifacts, the VM-21 plan artifacts, the new VM-22 plan artifacts, the no-promotion guardrails, and the synchronized batch definitions for batches 038-054
+- `npm run check`: passed after batches 048-054 of the VM-22 wave; confirmed the schemas, templates, demo fixtures, review-packet contracts, the VM-20 plan artifacts, the tracked review indexes, the supporting-chapter plan artifacts, the VM-21 plan artifacts, the new VM-22 plan artifacts, the no-promotion guardrails, and the synchronized batch definitions for batches 038-054
 
 The control-plan refresh commit re-bound batches 006-012 to the actual PDF
 section order and added runner shortcuts for the remaining controlled slices.
@@ -185,13 +186,16 @@ do not change the learner-facing or app-ready posture.
   Section 6 overview, the Section 6 contract mechanics, the lapse / rate
   factor slice, the first mortality-table slice, and the remaining mortality
   tables plus the Section 7 boundary slice.
+- Batches 048-054 are now complete in ignored working storage. They cover the
+  stochastic exclusion tests, scenario generation, hedging, behavior
+  assumptions, mortality assumptions, other assumptions, and the closing
+  allocation boundary.
 - The repository will be clean on `main` once this state refresh is committed,
   aside from ignored working files.
 
 ## Current focus
 
 The controlled VM-21 sequence is complete. The controlled VM-22 sequence is
-well underway: batches 038-047 are complete, and the next block is batch-048
-through batch-054 for the stochastic, hedging, assumption, and closing
-boundary work. Keep VM-25 and later chapters out of scope except for the
-page-318 boundary confirmation.
+complete: batches 038-054 are done, and the resulting ignored working
+outputs remain review-only. Keep VM-25 and later chapters out of scope unless
+a future plan explicitly opens them.

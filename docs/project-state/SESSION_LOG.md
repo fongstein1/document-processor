@@ -138,3 +138,8 @@
   contract mechanics, lapse / rate factors, the first mortality-table block,
   and the remaining mortality tables plus the Section 7 boundary, and each
   batch passed `npm run check` and `git diff --check`.
+- 2026-06-27: Completed the final VM-22 batch block (batches 048-054) in
+  ignored working storage. The block covers stochastic exclusion tests,
+  scenario generation, hedging, behavior assumptions, mortality
+  assumptions, other assumptions, and the closing allocation boundary, and
+  each batch passed `npm run check` and `git diff --check`.
