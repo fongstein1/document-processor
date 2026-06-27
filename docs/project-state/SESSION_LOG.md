@@ -83,3 +83,9 @@
   ranges, confirmed the VM-50 boundary at page 387, and drafted a separate
   supporting-chapter plan/config that keeps VM-21 and VM-22 out of scope for
   this wave.
+- 2026-06-26: Wired the supporting-wave batch registry into the shared batch
+  definitions, synchronized the validator with the planned batch-013 through
+  batch-021 IDs, and then ran the full supporting VM wave sequentially.
+  Batches 013-021 all stayed review-only in ignored working storage, and
+  `npm run check` passed after each batch with 21 total pilot/supporting
+  batches validated.

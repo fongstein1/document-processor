@@ -10,7 +10,7 @@
 
 ## Latest known commit before this batch
 
-`1115b98`
+`1906b7cf17c76b867d51d2b9762740ef10701751`
 
 ## Validation status
 
@@ -44,6 +44,15 @@ the new supporting-chapter planning artifacts validate cleanly.
   review-packet contracts, the VM-20 plan artifacts, the tracked review
   index, the supporting-chapter plan artifacts, the no-promotion guardrails,
   and the synchronized batch definitions for batches 003-012
+- `npm run pilot -- --batch batch-013` through `npm run pilot -- --batch
+  batch-021`: passed; created the supporting VM wave outputs in
+  `data/work/batches/batch-013/` through `data/work/batches/batch-021/`, all
+  review-only in ignored working storage
+- `npm run check`: passed after each supporting batch; confirmed the schemas,
+  templates, demo fixtures, review-packet contracts, the VM-20 plan
+  artifacts, the tracked review index, the supporting-chapter plan artifacts,
+  the no-promotion guardrails, and the synchronized batch definitions for
+  batches 013-021
 
 The control-plan refresh commit re-bound batches 006-012 to the actual PDF
 section order and added runner shortcuts for the remaining controlled slices.
@@ -59,14 +68,20 @@ A new supporting-chapter control plan now covers VM-01, VM-02, VM-25, VM-26,
 VM-30, and VM-31. VM-21 and VM-22 are explicitly out of scope for that wave
 until a separate plan is approved.
 
+The supporting VM wave is now complete as a second review-only sequence.
+Batches 013 through 021 stayed narrow, source-bound, and unpromoted while
+covering VM-01, VM-02, VM-25, VM-26, VM-30, and VM-31 in the planned order.
+The ignored working outputs for that wave remain in `data/work/batches/` and
+do not change the learner-facing or app-ready posture.
+
 ## Working posture
 
 - Raw source material stays external at
   `D:\Work\AI Projects\NAIC Valuation Manual Course`.
 - The reference app repo is read-only context only.
 - This repo now contains the processor scaffold, config, schemas, templates,
-  demo fixtures, state docs, the VM-20 extraction plan, and five tiny
-  real-source pilot batches in ignored working storage.
+  demo fixtures, state docs, the VM-20 extraction plan, and the tiny real-
+  source pilot and supporting-wave batches in ignored working storage.
 - Batch 001 remains the mixed-source pilot, and batch 002 now proves a tiny
   core Valuation Manual course slice with VM-20 reserve mechanics plus VM-31
   reporting and definition boundaries.
@@ -92,6 +107,9 @@ until a separate plan is approved.
 - The new supporting-chapter control plan records the lighter VM chapter
   windows separately from VM-20 so the next extraction wave can stay portable
   and review-only by default.
+- The supporting-wave batch registry now uses the same full `batch-###` IDs
+  as the runner and validator, so the planned sequence stays synchronized
+  across scripts and checks.
 - The batch-003 and batch-004 review packets both surface review flags as
   extraction categories, keep boundary slices separate from overview slices,
   and preserve the no-promotion status in both JSON and markdown.
@@ -104,12 +122,12 @@ until a separate plan is approved.
 - The PDF extraction runner now forces UTF-8 output so formula-heavy pages
   with Unicode minus characters can be processed reliably.
 - No learner-facing or app-ready promotion has been produced.
-- The real pilot outputs remain ignored under `data/work/`.
+- The real pilot and supporting-wave outputs remain ignored under
+  `data/work/`.
 - The repository will be clean on `main` once this state refresh is committed,
   aside from ignored working files.
 
 ## Current focus
 
-Review the tracked VM-20 review index and the new supporting-chapter plan, and
-decide whether any future batch item is a candidate for revision or later
-promotion work.
+Review the completed supporting-wave review packets and decide whether any
+future batch item needs a revision or a separate promotion discussion.

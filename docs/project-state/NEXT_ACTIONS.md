@@ -2,13 +2,14 @@
 
 ## Next immediate task
 
-Review the tracked VM-20 review index and the new supporting-chapter planning
-artifacts, then decide whether the lighter VM chapter wave should be
-authorized for extraction later.
+Review the completed supporting-wave review packets and decide whether any
+later refinement or promotion discussion is needed.
 
 ## Build tasks
 
 - Keep batches 001 through 012 review-only unless a human reviewer explicitly
+  approves promotion.
+- Keep batches 013 through 021 review-only unless a human reviewer explicitly
   approves promotion.
 - Treat `docs/processor/vm20_extraction_plan.md`,
   `config/vm20-batch-plan.json`, and `docs/review/vm20_review_index.md` as
@@ -18,8 +19,11 @@ authorized for extraction later.
   planning set.
 - Use `npm run vm20:batch-003` through `npm run vm20:batch-012` only if a
   review packet needs to be regenerated.
+- Use `npm run pilot -- --batch batch-013` through `npm run pilot -- --batch
+  batch-021` only if a supporting review packet needs to be regenerated.
 - Keep `scripts/batch-definitions.mjs` synchronized with the planned VM-20
-  batch IDs, actual source order, and the tracked review index.
+  batch IDs, the supporting batch IDs, the actual source order, and the
+  tracked review index.
 - Leave VM-21 and VM-22 out of the supporting wave unless a separate plan is
   approved.
 - Expand validation only if the plan or a later batch reveals a genuine schema
@@ -59,6 +63,8 @@ authorized for extraction later.
 - Keep the supporting-chapter plan aligned with the observed page windows for
   VM-01, VM-02, VM-25, VM-26, VM-30, and VM-31, and keep VM-21 and VM-22 out
   of that wave.
+- Keep the supporting-wave batch registry keyed by full `batch-###` IDs so the
+  runner and validator stay synchronized.
 - Keep all completed VM-20 slices review-only until a deliberate promotion
   decision is made in the separate app/product thread.
 - Keep the PDF extraction runner UTF-8-safe because formula pages can include

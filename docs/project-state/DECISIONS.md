@@ -144,3 +144,10 @@ VM-25, VM-26, VM-30, and VM-31 only. VM-21 and VM-22 remain out of scope
 until a separate plan is approved. The supporting-wave plan should record the
 observed page windows before extraction starts and should preserve the same
 stop conditions used for VM-20.
+
+## Supporting batch registry
+
+The supporting-wave batch definitions should use the same full `batch-###`
+keys as the runner and validator. That keeps the planned sequence, the batch
+registry, and the scaffold checks synchronized without hard-coding extra
+support-wave logic into the extraction runner.

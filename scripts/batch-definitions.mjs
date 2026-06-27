@@ -1,3 +1,5 @@
+import { supportingBatchDefinitions } from './supporting-batch-definitions.mjs'
+
 export const batchDefinitions = {
   'batch-001': {
     batchName: 'Pilot batch 001 - narrow VM sources',
@@ -2127,4 +2129,5 @@ export const batchDefinitions = {
       },
     ],
   },
+  ...supportingBatchDefinitions,
 }
