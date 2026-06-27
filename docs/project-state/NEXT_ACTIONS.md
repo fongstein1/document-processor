@@ -2,8 +2,8 @@
 
 ## Next immediate task
 
-Review the completed VM-22 batch packets and decide whether a hardening pass
-or a tracked VM-22 review index is worth creating.
+Review the completed VM-22 batch packets alongside the new tracked VM-22
+review index if a hardening pass or later promotion decision is needed.
 
 ## Build tasks
 
@@ -20,6 +20,8 @@ or a tracked VM-22 review index is worth creating.
   summary.
 - Treat `docs/processor/vm22_extraction_plan.md` and
   `config/vm22-batch-plan.json` as the current VM-22 planning set.
+- Treat `docs/review/vm22_review_index.md` as the current VM-22 handoff
+  summary.
 - Treat batches 038-054 as completed in ignored working storage.
 - Treat `docs/processor/supporting_vm_chapters_extraction_plan.md` and
   `config/supporting-vm-batch-plan.json` as the current supporting-chapter
@@ -27,8 +29,8 @@ or a tracked VM-22 review index is worth creating.
 - Treat `docs/processor/vm21_extraction_plan.md` and
   `config/vm21-batch-plan.json` as the current VM-21 planning set.
 - Use `node scripts/run-pilot-batch.mjs --batch batch-038` through
-  `node scripts/run-pilot-batch.mjs --batch batch-054` for the controlled
-  VM-22 sequence after the plan commits.
+  `node scripts/run-pilot-batch.mjs --batch batch-054` only if a VM-22
+  review packet needs to be regenerated.
 - Use `node scripts/run-pilot-batch.mjs --batch batch-048` through
   `node scripts/run-pilot-batch.mjs --batch batch-054` only if a VM-22 review
   packet needs to be regenerated.

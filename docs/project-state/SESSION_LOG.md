@@ -143,3 +143,8 @@
   scenario generation, hedging, behavior assumptions, mortality
   assumptions, other assumptions, and the closing allocation boundary, and
   each batch passed `npm run check` and `git diff --check`.
+- 2026-06-27: Created the tracked VM-22 end-of-sequence review index at
+  `docs/review/vm22_review_index.md`, added a lightweight validation check so
+  `npm run check` confirms the index exists and references batches 038-054,
+  and refreshed the project-state docs so the VM-22 handoff is now summary-
+  only alongside the ignored batch review packets.

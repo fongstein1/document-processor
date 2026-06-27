@@ -105,6 +105,7 @@ const paths = {
     'supporting_vm_review_index.md',
   ),
   vm21ReviewIndexMd: path.join(repoRoot, 'docs', 'review', 'vm21_review_index.md'),
+  vm22ReviewIndexMd: path.join(repoRoot, 'docs', 'review', 'vm22_review_index.md'),
   supportingVmBatchPlanJson: path.join(repoRoot, 'config', 'supporting-vm-batch-plan.json'),
   supportingVmExtractionPlanMd: path.join(
     repoRoot,
@@ -159,6 +160,7 @@ const requiredFiles = [
   'docs/review/vm20_review_index.md',
   'docs/review/supporting_vm_review_index.md',
   'docs/review/vm21_review_index.md',
+  'docs/review/vm22_review_index.md',
   'config/supporting-vm-batch-plan.json',
   'config/vm21-batch-plan.json',
   'config/vm20-batch-plan.json',
@@ -1865,6 +1867,61 @@ const validateVm21ReviewIndexMarkdown = async (filePath, label) => {
   })
 }
 
+const validateVm22ReviewIndexMarkdown = async (filePath, label) => {
+  const text = await readText(filePath)
+  const requiredHeadings = [
+    '## Overall VM-22 Extraction Status',
+    '## Batch Table',
+    '## Higher-Caution Section',
+    '## Human Review Checklist',
+    '## Promotion Decision Area',
+    '## Recommended Review Order',
+    '## Relationship to Other Review Indexes',
+  ]
+  requiredHeadings.forEach((heading) => {
+    if (!text.includes(heading)) {
+      problems.push(`${label}: missing heading ${heading}`)
+    }
+  })
+  ;[
+    'review-only',
+    'not learner-facing',
+    'not app-ready',
+    'not RAG-ready',
+    'not promoted',
+    'VM-22',
+    'VM-20',
+    'VM-21',
+    'docs/review/vm20_review_index.md',
+    'docs/review/supporting_vm_review_index.md',
+    'docs/review/vm21_review_index.md',
+    'batch-038',
+    'batch-039',
+    'batch-040',
+    'batch-041',
+    'batch-042',
+    'batch-043',
+    'batch-044',
+    'batch-045',
+    'batch-046',
+    'batch-047',
+    'batch-048',
+    'batch-049',
+    'batch-050',
+    'batch-051',
+    'batch-052',
+    'batch-053',
+    'batch-054',
+    'VM-25',
+    'page 319',
+    'page 318',
+  ].forEach((phrase) => {
+    if (!text.includes(phrase)) {
+      problems.push(`${label}: must mention ${phrase}`)
+    }
+  })
+}
+
 const plannedSupportingBatchIds = Array.isArray(supportingVmBatchPlan.proposedBatches)
   ? supportingVmBatchPlan.proposedBatches
       .map((batch) => batch?.plannedBatchId)
@@ -1896,6 +1953,7 @@ await validateSupportingVmReviewIndexMarkdown(
   'docs/review/supporting_vm_review_index.md',
 )
 await validateVm21ReviewIndexMarkdown(paths.vm21ReviewIndexMd, 'docs/review/vm21_review_index.md')
+await validateVm22ReviewIndexMarkdown(paths.vm22ReviewIndexMd, 'docs/review/vm22_review_index.md')
 await validateSupportingVmPlanMarkdown(
   paths.supportingVmExtractionPlanMd,
   'docs/processor/supporting_vm_chapters_extraction_plan.md',
@@ -2029,6 +2087,7 @@ if (problems.length > 0) {
   console.log(`- VM-21 batches validated: ${vm21BatchPlan.proposedBatches.length}`)
   console.log(`- VM-21 review index verified: 16 batches`)
   console.log(`- VM-22 plan verified: ${vm22BatchPlan.proposedBatches.length} batches`)
+  console.log(`- VM-22 review index verified: 17 batches`)
   if (validatedPilotBatchCount > 0) {
     console.log(`- Pilot batches validated: ${validatedPilotBatchCount}`)
   }

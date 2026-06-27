@@ -10,15 +10,15 @@
 
 ## Latest known commit before this batch
 
-`8e1b144`
+`7fe8549d52f72d64c289efb1461c54ad7c4f5460`
 
 ## Validation status
 
 The scaffold, the tiny real-source pilot batches, the VM-20 planning layer,
 the re-bound remaining VM-20 batch plan, the tracked VM-20 review index, the
-tracked supporting review index, the tracked VM-21 review index, the new
-supporting-chapter planning artifacts, and the VM-21 planning and execution
-artifacts validate cleanly.
+tracked supporting review index, the tracked VM-21 review index, the tracked
+VM-22 review index, the new supporting-chapter planning artifacts, and the
+VM-21 / VM-22 planning and execution artifacts validate cleanly.
 
 - `npm run pilot:course-core`: passed; created the core VM course pilot batch
   outputs in `data/work/batches/batch-002/`
@@ -66,6 +66,7 @@ artifacts validate cleanly.
 - `npm run check`: passed after the VM-22 planning-layer refresh; confirmed the schemas, templates, demo fixtures, review-packet contracts, the VM-20 plan artifacts, the tracked review indexes, the supporting-chapter plan artifacts, the VM-21 plan artifacts, the new VM-22 plan artifacts, the no-promotion guardrails, and the synchronized batch definitions for batches 038-054
 - `npm run check`: passed after batches 043-047 of the VM-22 wave; confirmed the schemas, templates, demo fixtures, review-packet contracts, the VM-20 plan artifacts, the tracked review indexes, the supporting-chapter plan artifacts, the VM-21 plan artifacts, the new VM-22 plan artifacts, the no-promotion guardrails, and the synchronized batch definitions for batches 038-054
 - `npm run check`: passed after batches 048-054 of the VM-22 wave; confirmed the schemas, templates, demo fixtures, review-packet contracts, the VM-20 plan artifacts, the tracked review indexes, the supporting-chapter plan artifacts, the VM-21 plan artifacts, the new VM-22 plan artifacts, the no-promotion guardrails, and the synchronized batch definitions for batches 038-054
+- `npm run check`: passed after the VM-22 review-index refresh; confirmed the schemas, templates, demo fixtures, review-packet contracts, the VM-20 plan artifacts, the tracked review indexes, the supporting-chapter plan artifacts, the VM-21 plan artifacts, the new VM-22 plan artifacts, the no-promotion guardrails, and the synchronized batch definitions for batches 038-054
 
 The control-plan refresh commit re-bound batches 006-012 to the actual PDF
 section order and added runner shortcuts for the remaining controlled slices.
@@ -190,12 +191,15 @@ do not change the learner-facing or app-ready posture.
   stochastic exclusion tests, scenario generation, hedging, behavior
   assumptions, mortality assumptions, other assumptions, and the closing
   allocation boundary.
+- The tracked VM-22 review index now gives the reviewer a single summary view
+  of the ignored batch packets without changing their review-only status.
 - The repository will be clean on `main` once this state refresh is committed,
   aside from ignored working files.
 
 ## Current focus
 
 The controlled VM-21 sequence is complete. The controlled VM-22 sequence is
-complete: batches 038-054 are done, and the resulting ignored working
+complete: batches 038-054 are done, the tracked VM-22 review index now
+summarizes the ignored batch packets, and the resulting ignored working
 outputs remain review-only. Keep VM-25 and later chapters out of scope unless
 a future plan explicitly opens them.
