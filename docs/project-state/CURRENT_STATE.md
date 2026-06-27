@@ -21,7 +21,7 @@ VM-22 review index, the new supporting-chapter planning artifacts, the
 VM-21 / VM-22 planning and execution artifacts, the AG 06 planning /
 review-handoff artifacts, the AG 08 planning / review-handoff artifacts,
 the AG 09 planning / review-handoff artifacts, the AG 10 planning /
-review-handoff artifacts, and the AG 11 planning artifacts validate cleanly.
+review-handoff artifacts, and the AG 11 planning and review-handoff artifacts, and the AG 12 planning artifacts validate cleanly.
 
 - `npm run pilot:course-core`: passed; created the core VM course pilot batch
   outputs in `data/work/batches/batch-002/`

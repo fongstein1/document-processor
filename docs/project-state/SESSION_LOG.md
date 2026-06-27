@@ -259,3 +259,4 @@
 - 2026-06-27: Created the tracked AG 11 review index and self-review note,
   validated the review-handoff layer, and refreshed the project-state docs so
   the AG 11 handoff is now summarized alongside the ignored batch outputs.
+- 2026-06-27: Confirmed AG 12 as the next short guideline unit, verified its one-page withdrawn page range, and drafted the AG 12 planning layer so batch-090 can be validated before extraction starts.
