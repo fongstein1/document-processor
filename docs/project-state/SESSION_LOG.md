@@ -248,3 +248,8 @@
 - 2026-06-27: Confirmed AG 10 as the next short guideline unit, verified its
   one-page page range, and drafted the AG 10 planning layer so batch-088 can
   be validated before extraction starts.
+- 2026-06-27: Ran the AG 10 single-page guideline batch (`batch-088`) in
+  ignored working storage, kept it review-only, created the tracked AG 10
+  review index plus self-review note as the new handoff artifacts, and
+  refreshed the repository POC summary so the fifteenth review index and 88
+  validated batches are now visible in the handoff layer.

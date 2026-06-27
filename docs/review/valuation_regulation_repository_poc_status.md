@@ -12,7 +12,7 @@ regulation repository. It consolidates the completed review-only extraction
 waves without changing the status of the underlying batch outputs or review
 indexes.
 
-The handoff now spans 14 review indexes.
+The handoff now spans 15 review indexes.
 
 This summary is review-only, not learner-facing, not app-ready, not RAG-ready,
 and not promoted.
@@ -43,6 +43,8 @@ review indexes:
 - `docs/review/ag08_self_review.md`
 - `docs/review/ag09_review_index.md`
 - `docs/review/ag09_self_review.md`
+- `docs/review/ag10_review_index.md`
+- `docs/review/ag10_self_review.md`
 
 ## Executive Status
 
@@ -76,6 +78,8 @@ What has been built:
   unit in `docs/review/ag08_self_review.md`
 - tracked AG 09 review index and self-review note for the short guideline
   family in `docs/review/ag09_self_review.md`
+- tracked AG 10 review index and self-review note for the one-page guideline
+  unit in `docs/review/ag10_self_review.md`
 - project-state docs that preserve the handoff history
 
 What source families / chapters have been processed:
@@ -100,6 +104,7 @@ What source families / chapters have been processed:
 - AG 07 two-page guideline, `batch-082`
 - AG 08 single-page guideline, `batch-083`
 - AG 09 family, batches `batch-084` through `batch-087`
+- AG 10 single-page guideline, `batch-088`
 
 What remains review-only:
 
@@ -150,6 +155,7 @@ What is explicitly out of scope:
 | AG 07 two-page guideline | `pp. 1-2` | `batch-082` | `docs/review/ag07_review_index.md` | Complete; review-only | Equivalent-level-amount interpretation, pure-endowment caveat, and encoded-text caveat |
 | AG 08 single-page guideline | `p. 1` | `batch-083` | `docs/review/ag08_review_index.md` | Complete; review-only | Single-page deferred-annuity interpretation, discounted values, cash surrender values, and encoded-text caveat |
 | AG 09 family | `p. 1; pp. 1-2; pp. 1-4; pp. 1-3` | `batch-084` through `batch-087` | `docs/review/ag09_review_index.md` | Complete; review-only | Form classification title/OCR mismatch, structured-settlement mortality tables, methods clarification, immediate-annuity mortality tables, and noisy text-layer caveats |
+| AG 10 single-page guideline | `p. 1` | `batch-088` | `docs/review/ag10_review_index.md` | Complete; review-only | Nonforfeiture interpretation, cash surrender benefits, additional amounts, maturity values, and noisy text-layer caveat |
 
 ## Completed Assets
 
@@ -173,6 +179,7 @@ The repository now includes the core processor asset set:
 - the tracked AG 07 review index and self-review note in `docs/review/`
 - the tracked AG 08 review index and self-review note in `docs/review/`
 - the tracked AG 09 review index and self-review note in `docs/review/`
+- the tracked AG 10 review index and self-review note in `docs/review/`
 - VM chapter planning artifacts in `docs/processor/` and `config/`
 - project-state docs in `docs/project-state/`
 - runner / validator scripts in `scripts/`
@@ -183,10 +190,10 @@ documents remain external to Git.
 ## Validation Posture
 
 - `npm run check` passes
-- the scaffold reports 87 batches validated
+- the scaffold reports 88 batches validated
 - the validator now checks the tracked VM-20, supporting, VM-21, VM-22,
   practice-note, AG 03, AG 01, AG 02, AG 04, AG 05, AG 06, AG 07, AG 08,
-  AG 09, and POC status summary handoff files
+  AG 09, AG 10, and POC status summary handoff files
 - review-only and no-promotion guardrails are enforced in the batch manifests
   and review packets
 - ignored working outputs stay under `data/work/`
@@ -195,7 +202,7 @@ documents remain external to Git.
 
 ## Human Review Posture
 
-- Reviewers should start from the fourteen review indexes listed above.
+- Reviewers should start from the fifteen review indexes listed above.
 - The review packets remain the detailed evidence layer behind those
   summaries.
 - All batch content remains source-bound and review-only unless a separate

@@ -8,9 +8,10 @@ ignored working storage and its review index plus self-review note now form
 the current handoff set. AG 08 is complete in ignored working storage and
 its review index plus self-review note now form the current handoff set. AG
 09 is complete in ignored working storage and its review index plus
-self-review note now form the current handoff set. AG 10 is now drafted as
-the next short guideline unit and batch-088 is ready for validation and
-execution. AG 05 is already captured in
+self-review note now form the current handoff set. AG 10 is complete in
+ignored working storage and its review index plus self-review note now form
+the current handoff set. AG 11 is the next short guideline candidate after a
+limited inspection. AG 05 is already captured in
 the tracked review handoff set, and AG 03, AG 01, AG 02, and AG 04 remain
 captured as well. AG 52 is already captured in the mixed pilot batch and
 should not be reprocessed.
@@ -177,6 +178,8 @@ should not be reprocessed.
 - Keep the repository-level proof-of-concept summary review-only until a
   later stakeholder decision changes the handoff model.
 - Keep the AG 10 short guideline review-only until batch-088 is executed and
+  its summary artifacts are committed.
+- Keep the AG 11 short guideline review-only until its batch is executed and
   its summary artifacts are committed.
 
 ## Source-family tasks
