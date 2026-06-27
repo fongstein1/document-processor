@@ -167,3 +167,9 @@
 - 2026-06-27: Inspected the repealed AG 52 early-adoption note and marked it
   as the leading candidate for the next caveat-focused source unit, pending a
   separate plan.
+- 2026-06-27: Confirmed that AG 52 already lives in the mixed pilot batch and
+  selected the one-page AG 03 guideline as the next unprocessed source unit,
+  keeping it as a single review-only batch with a stable page locator.
+- 2026-06-27: Recorded a durable decision that self-contained one-page
+  guideline or interpretation PDFs may be processed as single review-only
+  batches when the page locator is stable and the content stays source-bound.

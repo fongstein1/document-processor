@@ -2,10 +2,9 @@
 
 ## Next immediate task
 
-Commit the VM-20 practice-note review index, self-review note, validator
-updates, and repository POC summary refresh, then select the next small
-caveat/regulatory source unit from the remaining inventory. The repealed AG
-52 note is the current likely candidate.
+Commit the AG 03 planning artifacts, validator updates, and project-state
+refresh, then run the single AG 03 batch-076 unit. AG 52 is already captured
+in the mixed pilot batch and should not be reprocessed.
 
 ## Build tasks
 
@@ -27,6 +26,8 @@ caveat/regulatory source unit from the remaining inventory. The repealed AG
 - Treat `docs/review/vm20_practice_note_review_index.md` and
   `docs/review/vm20_practice_note_self_review.md` as the current practice-note
   handoff set.
+- Treat `docs/processor/ag03_extraction_plan.md` and
+  `config/ag03-batch-plan.json` as the current AG 03 planning set.
 - Treat `docs/review/valuation_regulation_repository_poc_status.md` as the
   current repository-level proof-of-concept summary.
 - Treat `docs/processor/vm20_practice_note_extraction_plan.md` and
@@ -77,6 +78,9 @@ caveat/regulatory source unit from the remaining inventory. The repealed AG
   and validator before its first batch executes.
 - Keep the practice-note review index and self-review note synchronized with
   the ignored practice-note review packets if the wave is ever regenerated.
+- Keep the one-page AG 03 guideline as a single review-only batch with a
+  stable page locator and no promotion until the indexing choice is
+  confirmed.
 - Leave VM-21 and VM-22 out of the supporting wave unless a separate plan is
   approved.
 - Leave the other Practice Notes files out of the current wave unless a

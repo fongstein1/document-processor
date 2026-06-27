@@ -10,7 +10,7 @@
 
 ## Latest known commit before this batch
 
-`917c2402abcc270ac8b17694fa1f9c3d9048d544`
+`b926d65`
 
 ## Validation status
 
@@ -218,8 +218,11 @@ through `batch-075` were processed review-only, and the tracked practice-note
 review index plus self-review note now summarize that wave without promoting
 any extracted content.
 
-The next likely small candidate is the repealed AG 52 text note
-`Actuarial Guidelines/AG 52-Early Adoption of VM-21 for VA in 2019-repealed-as of 2020.txt`.
-It is caveat-only material, and it should stay review-only until a separate
-plan is approved. The remaining Practice Notes files and other Actuarial
-Guideline / NY regulation files stay out of scope until separately planned.
+The next likely small candidate is the one-page AG 03 guideline
+`Actuarial Guidelines/AG 03 - Definition of the Term Maturity Value in the
+Standard Nonforfeiture Law of Individual Deferred Annuities.pdf`. It is a
+self-contained review-only interpretation with a stable page locator, and it
+should stay review-only until the indexing choice is confirmed. The AG 52 text
+note already lives in the mixed pilot batch and is not being reprocessed. The
+remaining Practice Notes files and other Actuarial Guideline / NY regulation
+files stay out of scope until separately planned.

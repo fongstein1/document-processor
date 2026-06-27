@@ -146,6 +146,8 @@ const paths = {
     'processor',
     'vm20_practice_note_extraction_plan.md',
   ),
+  ag03BatchPlanJson: path.join(repoRoot, 'config', 'ag03-batch-plan.json'),
+  ag03ExtractionPlanMd: path.join(repoRoot, 'docs', 'processor', 'ag03_extraction_plan.md'),
 }
 
 const requiredFiles = [
@@ -186,6 +188,7 @@ const requiredFiles = [
   'docs/project-state/SESSION_LOG.md',
   'docs/processor/vm20_extraction_plan.md',
   'docs/processor/vm20_practice_note_extraction_plan.md',
+  'docs/processor/ag03_extraction_plan.md',
   'docs/processor/vm22_extraction_plan.md',
   'docs/review/vm20_review_index.md',
   'docs/review/supporting_vm_review_index.md',
@@ -198,10 +201,12 @@ const requiredFiles = [
   'config/vm21-batch-plan.json',
   'config/vm20-batch-plan.json',
   'config/vm20-practice-note-batch-plan.json',
+  'config/ag03-batch-plan.json',
   'config/vm22-batch-plan.json',
   'scripts/vm21-batch-definitions.mjs',
   'scripts/vm22-batch-definitions.mjs',
   'scripts/vm20-practice-note-batch-definitions.mjs',
+  'scripts/ag03-batch-definitions.mjs',
   'scripts/bootstrap-small-batch.mjs',
   'scripts/validate-scaffold.mjs',
   'scripts/run-pilot-batch.mjs',
@@ -1946,6 +1951,41 @@ const validatePracticeNotePlanMarkdown = async (filePath, label) => {
   })
 }
 
+const validateAg03PlanMarkdown = async (filePath, label) => {
+  const text = await readText(filePath)
+  const requiredHeadings = [
+    '## Source Scope',
+    '## Topic Map',
+    '## Proposed Batch Sequence',
+    '## Review Standards',
+    '## Promotion Gates',
+    '## Validation Implications',
+    '## Operating Note',
+  ]
+  requiredHeadings.forEach((heading) => {
+    if (!text.includes(heading)) {
+      problems.push(`${label}: missing heading ${heading}`)
+    }
+  })
+  ;[
+    'review-only',
+    'not learner-facing',
+    'not app-ready',
+    'not RAG-ready',
+    'not promoted',
+    'AG 03',
+    'Standard Nonforfeiture Law',
+    'maturity value',
+    'cash surrender value',
+    'page 1',
+    'batch-076',
+  ].forEach((phrase) => {
+    if (!text.includes(phrase)) {
+      problems.push(`${label}: must mention ${phrase}`)
+    }
+  })
+}
+
 const validateVm22PlanMarkdown = async (filePath, label) => {
   const text = await readText(filePath)
   const requiredHeadings = [
@@ -2023,6 +2063,7 @@ const supportingVmBatchPlan = await readJson(paths.supportingVmBatchPlanJson)
 const vm21BatchPlan = await readJson(paths.vm21BatchPlanJson)
 const vm22BatchPlan = await readJson(paths.vm22BatchPlanJson)
 const practiceNoteBatchPlan = await readJson(paths.practiceNoteBatchPlanJson)
+const ag03BatchPlan = await readJson(paths.ag03BatchPlanJson)
 
 validateSchemaEnvelope(batchManifestSchema, 'batch-manifest.schema.json')
 validateSchemaEnvelope(sourceInventorySchema, 'source-inventory.schema.json')
@@ -2380,6 +2421,33 @@ for (const plannedBatchId of plannedPracticeNoteBatchIds) {
   }
 }
 
+if (ag03BatchPlan.status !== 'planned') {
+  problems.push('config/ag03-batch-plan.json: status must be planned')
+}
+if (!Array.isArray(ag03BatchPlan.proposedBatches) || ag03BatchPlan.proposedBatches.length !== 1) {
+  problems.push('config/ag03-batch-plan.json: expected exactly one proposed batch')
+}
+if (
+  ag03BatchPlan.sourceScope?.confirmedPageRange?.[0] !== 1 ||
+  ag03BatchPlan.sourceScope?.confirmedPageRange?.[1] !== 1
+) {
+  problems.push('config/ag03-batch-plan.json: confirmedPageRange must be [1, 1]')
+}
+
+const plannedAg03BatchIds = Array.isArray(ag03BatchPlan.proposedBatches)
+  ? ag03BatchPlan.proposedBatches
+      .map((batch) => batch?.plannedBatchId)
+      .filter((batchId) => typeof batchId === 'string' && batchId.length > 0)
+  : []
+for (const plannedBatchId of plannedAg03BatchIds) {
+  if (!batchDefinitions[plannedBatchId]) {
+    problems.push(`scripts/batch-definitions.mjs: missing batch definition for ${plannedBatchId}`)
+  }
+}
+if (!plannedAg03BatchIds.includes('batch-076')) {
+  problems.push('config/ag03-batch-plan.json: expected batch-076 to be planned')
+}
+
 await validateReviewMarkdown(paths.reviewPacketTemplateMd, 'review-packet.template.md')
 await validateReviewMarkdown(paths.sampleReviewPacketMd, 'review-packet.sample.md')
 await validateVm20PlanMarkdown(paths.vm20ExtractionPlanMd, 'docs/processor/vm20_extraction_plan.md')
@@ -2387,6 +2455,7 @@ await validatePracticeNotePlanMarkdown(
   paths.practiceNoteExtractionPlanMd,
   'docs/processor/vm20_practice_note_extraction_plan.md',
 )
+await validateAg03PlanMarkdown(paths.ag03ExtractionPlanMd, 'docs/processor/ag03_extraction_plan.md')
 await validateVm20ReviewIndexMarkdown(paths.vm20ReviewIndexMd, 'docs/review/vm20_review_index.md')
 await validateSupportingVmReviewIndexMarkdown(
   paths.supportingVmReviewIndexMd,

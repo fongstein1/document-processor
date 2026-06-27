@@ -1,4 +1,5 @@
 import { supportingBatchDefinitions } from './supporting-batch-definitions.mjs'
+import { ag03BatchDefinitions } from './ag03-batch-definitions.mjs'
 import { vm20PracticeNoteBatchDefinitions } from './vm20-practice-note-batch-definitions.mjs'
 import { vm21BatchDefinitions } from './vm21-batch-definitions.mjs'
 import { vm22BatchDefinitions } from './vm22-batch-definitions.mjs'
@@ -2132,6 +2133,7 @@ export const batchDefinitions = {
       },
     ],
   },
+  ...ag03BatchDefinitions,
   ...vm20PracticeNoteBatchDefinitions,
   ...supportingBatchDefinitions,
   ...vm21BatchDefinitions,
