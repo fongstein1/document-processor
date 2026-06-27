@@ -2,11 +2,12 @@
 
 ## Next immediate task
 
-Finish the AG 06 planning commit, then run the new batch-081 slice for the
-two-page interpretation regarding use of single or joint life mortality
-tables. AG 05 is already captured in the tracked review handoff set, and AG
-03, AG 01, AG 02, and AG 04 remain captured as well. AG 52 is already
-captured in the mixed pilot batch and should not be reprocessed.
+AG 06 is complete in ignored working storage and its review index plus
+self-review note now form the current handoff set. Move to the next safe
+source unit after the AG 06 review handoff is validated. AG 05 is already
+captured in the tracked review handoff set, and AG 03, AG 01, AG 02, and AG
+04 remain captured as well. AG 52 is already captured in the mixed pilot
+batch and should not be reprocessed.
 
 ## Build tasks
 
@@ -50,17 +51,22 @@ captured in the mixed pilot batch and should not be reprocessed.
   `docs/review/ag05_self_review.md` as the current AG 05 handoff set.
 - Treat `docs/processor/ag06_extraction_plan.md` and
   `config/ag06-batch-plan.json` as the current AG 06 planning set.
+- Treat `docs/review/ag06_review_index.md` and `docs/review/ag06_self_review.md`
+  as the current AG 06 handoff set.
 - Treat `scripts/ag04-batch-definitions.mjs` as synchronized with the AG 04
   planning and handoff set.
 - Treat `scripts/ag05-batch-definitions.mjs` as synchronized with the AG 05
   planning set.
 - Treat `scripts/ag06-batch-definitions.mjs` as synchronized with the AG 06
-  planning set.
+  planning and handoff set.
 - Use `npm run ag04:batch` only if the AG 04 review packet needs to be
   regenerated.
 - Use `npm run ag05:batch` only if the AG 05 review packet needs to be
   regenerated.
 - Use `npm run ag06:batch` only if the AG 06 review packet needs to be
+  regenerated.
+- Keep `docs/review/ag06_review_index.md` and `docs/review/ag06_self_review.md`
+  synchronized with the ignored AG 06 review packet if the wave is ever
   regenerated.
 - Keep the AG 04 batch review-only unless a later human review explicitly
   approves promotion.

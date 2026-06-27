@@ -212,3 +212,8 @@
   two-page span for the interpretation regarding use of single or joint life
   mortality tables, and drafted the AG 06 planning layer so batch-081 can be
   validated before extraction starts.
+- 2026-06-27: Ran the AG 06 two-page mortality-table batch (`batch-081`) in
+  ignored working storage, kept it review-only, created the tracked AG 06
+  review index plus self-review note as the new handoff artifacts, and
+  refreshed the repository POC summary so the eleventh review index and 81
+  validated batches are now visible in the handoff layer.

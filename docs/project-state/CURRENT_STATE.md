@@ -10,15 +10,16 @@
 
 ## Latest known commit before this batch
 
-`1c55608`
+`4af5472`
 
 ## Validation status
 
 The scaffold, the tiny real-source pilot batches, the VM-20 planning layer,
 the re-bound remaining VM-20 batch plan, the tracked VM-20 review index, the
 tracked supporting review index, the tracked VM-21 review index, the tracked
-VM-22 review index, the new supporting-chapter planning artifacts, and the
-VM-21 / VM-22 planning and execution artifacts validate cleanly.
+VM-22 review index, the new supporting-chapter planning artifacts, the
+VM-21 / VM-22 planning and execution artifacts, and the AG 06 planning /
+review-handoff artifacts validate cleanly.
 
 - `npm run pilot:course-core`: passed; created the core VM course pilot batch
   outputs in `data/work/batches/batch-002/`
@@ -72,6 +73,7 @@ VM-21 / VM-22 planning and execution artifacts validate cleanly.
 - `npm run check`: passed after the AG 04 review-index refresh; confirmed the schemas, templates, demo fixtures, review-packet contracts, the nine tracked review indexes, the updated POC status summary, the no-promotion guardrails, and the synchronized batch definitions for batches 055-079
 - `npm run check`: passed after the AG 05 planning refresh; confirmed the schemas, templates, demo fixtures, review-packet contracts, the nine tracked review indexes, the new AG 05 plan artifacts, the no-promotion guardrails, and the synchronized batch definitions for batches 055-079
 - `npm run check`: passed after the AG 05 review-index refresh; confirmed the schemas, templates, demo fixtures, review-packet contracts, the ten tracked review indexes, the updated POC status summary, the no-promotion guardrails, and the synchronized batch definitions for batches 055-080
+- `npm run check`: passed after the AG 06 review-handoff refresh; confirmed the schemas, templates, demo fixtures, review-packet contracts, the eleven tracked review indexes, the new AG 06 review-handoff artifacts, the no-promotion guardrails, and the synchronized batch definitions for batches 055-081
 
 The control-plan refresh commit re-bound batches 006-012 to the actual PDF
 section order and added runner shortcuts for the remaining controlled slices.
@@ -202,7 +204,7 @@ do not change the learner-facing or app-ready posture.
 - The tracked VM-22 review index now gives the reviewer a single summary view
   of the ignored batch packets without changing their review-only status.
 - The tracked valuation-regulation repository POC summary now consolidates the
-  ten review indexes into a single proof-of-concept handoff view.
+  eleven review indexes into a single proof-of-concept handoff view.
 - The repository will be clean on `main` once this state refresh is committed,
   aside from ignored working files.
 
@@ -212,7 +214,7 @@ The controlled VM-21 sequence is complete. The controlled VM-22 sequence is
 complete: batches 038-054 are done, the tracked VM-22 review index now
 summarizes the ignored batch packets, and the resulting ignored working
 outputs remain review-only. The tracked valuation-regulation repository POC
-summary now consolidates the ten review indexes into a single handoff view.
+summary now consolidates the eleven review indexes into a single handoff view.
 AG 05 is complete in ignored working storage and its tracked review index
 plus self-review note now summarize that wave. Keep VM-25 and later chapters
 out of scope unless a future plan explicitly opens them.
@@ -232,9 +234,10 @@ tracked AG 05 review index plus self-review note are the current handoff
 artifacts. The AG 05 planning layer remains the canonical batch map for
 future regeneration.
 
-AG 06 is the next short guideline unit. Its planning layer now targets the
-two-page interpretation regarding use of single or joint life mortality
-tables, and the batch should remain review-only until the plan is validated.
+The AG 06 extraction batch is complete in ignored working storage, and the
+tracked AG 06 review index plus self-review note are the current handoff
+artifacts. The AG 06 planning layer remains the canonical batch map for
+future regeneration.
 
 The controlled AG 03 one-page guideline batch is complete in ignored working
 storage, and the tracked AG 03 review index plus self-review note are the
