@@ -10,7 +10,7 @@
 
 ## Latest known commit before this batch
 
-`ae056c4`
+`f1484a0`
 
 ## Validation status
 
@@ -19,8 +19,9 @@ the re-bound remaining VM-20 batch plan, the tracked VM-20 review index, the
 tracked supporting review index, the tracked VM-21 review index, the tracked
 VM-22 review index, the new supporting-chapter planning artifacts, the
 VM-21 / VM-22 planning and execution artifacts, the AG 06 planning /
-review-handoff artifacts, the AG 08 planning / review-handoff artifacts, and
-the AG 09 planning / review-handoff artifacts validate cleanly.
+review-handoff artifacts, the AG 08 planning / review-handoff artifacts,
+the AG 09 planning / review-handoff artifacts, and the AG 10 planning
+artifacts validate cleanly.
 
 - `npm run pilot:course-core`: passed; created the core VM course pilot batch
   outputs in `data/work/batches/batch-002/`
@@ -261,7 +262,8 @@ The AG 09 extraction family is complete in ignored working storage, and the
 tracked AG 09 review index plus self-review note are the current handoff
 artifacts. The AG 09 planning layer remains the canonical batch map for
 future regeneration. The AG 10 file is the next short guideline candidate
-after a limited inspection.
+after a limited inspection, and the AG 10 planning layer is now drafted for
+batch-088.
 
 The controlled AG 03 one-page guideline batch is complete in ignored working
 storage, and the tracked AG 03 review index plus self-review note are the

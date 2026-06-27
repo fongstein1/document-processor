@@ -245,3 +245,6 @@
   handoff artifacts, and refreshed the repository POC summary so the
   fourteenth review index and 87 validated batches are now visible in the
   handoff layer.
+- 2026-06-27: Confirmed AG 10 as the next short guideline unit, verified its
+  one-page page range, and drafted the AG 10 planning layer so batch-088 can
+  be validated before extraction starts.
