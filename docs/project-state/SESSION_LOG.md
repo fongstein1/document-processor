@@ -133,3 +133,8 @@
   ignored working storage. The block covers background/scope, reserve
   methodology, Section 4 projection entry, Section 4 asset projection, and
   reinsurance, and each batch passed `npm run check` and `git diff --check`.
+- 2026-06-27: Completed the Section 6 VM-22 batch block (batches 043-047) in
+  ignored working storage. The block covers the Section 6 overview,
+  contract mechanics, lapse / rate factors, the first mortality-table block,
+  and the remaining mortality tables plus the Section 7 boundary, and each
+  batch passed `npm run check` and `git diff --check`.
