@@ -10,13 +10,14 @@
 
 ## Latest known commit before this batch
 
-`1906b7cf17c76b867d51d2b9762740ef10701751`
+`782843cb94b91d666fba6d252c0f3adf75eeb582`
 
 ## Validation status
 
 The scaffold, the tiny real-source pilot batches, the VM-20 planning layer,
-the re-bound remaining VM-20 batch plan, the tracked VM-20 review index, and
-the new supporting-chapter planning artifacts validate cleanly.
+the re-bound remaining VM-20 batch plan, the tracked VM-20 review index, the
+tracked supporting review index, and the new supporting-chapter planning
+artifacts validate cleanly.
 
 - `npm run pilot:course-core`: passed; created the core VM course pilot batch
   outputs in `data/work/batches/batch-002/`
@@ -51,8 +52,8 @@ the new supporting-chapter planning artifacts validate cleanly.
 - `npm run check`: passed after each supporting batch; confirmed the schemas,
   templates, demo fixtures, review-packet contracts, the VM-20 plan
   artifacts, the tracked review index, the supporting-chapter plan artifacts,
-  the no-promotion guardrails, and the synchronized batch definitions for
-  batches 013-021
+  the supporting review index, the no-promotion guardrails, and the
+  synchronized batch definitions for batches 013-021
 
 The control-plan refresh commit re-bound batches 006-012 to the actual PDF
 section order and added runner shortcuts for the remaining controlled slices.
@@ -63,6 +64,9 @@ ready, or RAG-ready output.
 
 The new tracked VM-20 review index summarizes the ignored batch review
 packets without promoting any extracted content.
+
+The new tracked supporting review index does the same for the supporting
+chapter wave and should be reviewed alongside the VM-20 index.
 
 A new supporting-chapter control plan now covers VM-01, VM-02, VM-25, VM-26,
 VM-30, and VM-31. VM-21 and VM-22 are explicitly out of scope for that wave
@@ -104,6 +108,9 @@ do not change the learner-facing or app-ready posture.
   final reinsurance / Section 9 boundary batch.
 - The tracked VM-20 review index now gives the reviewer a single summary view
   of the ignored batch packets without changing their review-only status.
+- The tracked supporting review index now gives the reviewer a single summary
+  view of the ignored supporting batch packets without changing their
+  review-only status.
 - The new supporting-chapter control plan records the lighter VM chapter
   windows separately from VM-20 so the next extraction wave can stay portable
   and review-only by default.
@@ -124,10 +131,13 @@ do not change the learner-facing or app-ready posture.
 - No learner-facing or app-ready promotion has been produced.
 - The real pilot and supporting-wave outputs remain ignored under
   `data/work/`.
+- The tracked VM-20 and supporting review indexes are summary-only handoff
+  artifacts and do not replace the underlying batch outputs.
 - The repository will be clean on `main` once this state refresh is committed,
   aside from ignored working files.
 
 ## Current focus
 
-Review the completed supporting-wave review packets and decide whether any
-future batch item needs a revision or a separate promotion discussion.
+Review the tracked VM-20 and supporting review indexes together, then decide
+whether any future batch item needs a revision or a separate promotion
+discussion.

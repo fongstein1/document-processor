@@ -98,6 +98,12 @@ const paths = {
   vm20BatchPlanJson: path.join(repoRoot, 'config', 'vm20-batch-plan.json'),
   vm20ExtractionPlanMd: path.join(repoRoot, 'docs', 'processor', 'vm20_extraction_plan.md'),
   vm20ReviewIndexMd: path.join(repoRoot, 'docs', 'review', 'vm20_review_index.md'),
+  supportingVmReviewIndexMd: path.join(
+    repoRoot,
+    'docs',
+    'review',
+    'supporting_vm_review_index.md',
+  ),
   supportingVmBatchPlanJson: path.join(repoRoot, 'config', 'supporting-vm-batch-plan.json'),
   supportingVmExtractionPlanMd: path.join(
     repoRoot,
@@ -144,6 +150,7 @@ const requiredFiles = [
   'docs/project-state/SESSION_LOG.md',
   'docs/processor/vm20_extraction_plan.md',
   'docs/review/vm20_review_index.md',
+  'docs/review/supporting_vm_review_index.md',
   'config/supporting-vm-batch-plan.json',
   'config/vm20-batch-plan.json',
   'scripts/bootstrap-small-batch.mjs',
@@ -1300,6 +1307,53 @@ for (const plannedBatchId of plannedVm20BatchIds) {
   }
 }
 
+const validateSupportingVmReviewIndexMarkdown = async (filePath, label) => {
+  const text = await readText(filePath)
+  const requiredHeadings = [
+    '## Overall Supporting-Wave Extraction Status',
+    '## Batch Table',
+    '## Higher-Caution Section',
+    '## Human Review Checklist',
+    '## Promotion Decision Area',
+    '## Recommended Review Order',
+    '## Relationship to VM-20',
+  ]
+  requiredHeadings.forEach((heading) => {
+    if (!text.includes(heading)) {
+      problems.push(`${label}: missing heading ${heading}`)
+    }
+  })
+  ;[
+    'review-only',
+    'not learner-facing',
+    'not app-ready',
+    'not RAG-ready',
+    'not promoted',
+    'VM-21',
+    'VM-22',
+    'VM-01',
+    'VM-02',
+    'VM-25',
+    'VM-26',
+    'VM-30',
+    'VM-31',
+    'batch-013',
+    'batch-014',
+    'batch-015',
+    'batch-016',
+    'batch-017',
+    'batch-018',
+    'batch-019',
+    'batch-020',
+    'batch-021',
+    'docs/review/vm20_review_index.md',
+  ].forEach((phrase) => {
+    if (!text.includes(phrase)) {
+      problems.push(`${label}: must mention ${phrase}`)
+    }
+  })
+}
+
 const plannedSupportingBatchIds = Array.isArray(supportingVmBatchPlan.proposedBatches)
   ? supportingVmBatchPlan.proposedBatches
       .map((batch) => batch?.plannedBatchId)
@@ -1315,6 +1369,10 @@ await validateReviewMarkdown(paths.reviewPacketTemplateMd, 'review-packet.templa
 await validateReviewMarkdown(paths.sampleReviewPacketMd, 'review-packet.sample.md')
 await validateVm20PlanMarkdown(paths.vm20ExtractionPlanMd, 'docs/processor/vm20_extraction_plan.md')
 await validateVm20ReviewIndexMarkdown(paths.vm20ReviewIndexMd, 'docs/review/vm20_review_index.md')
+await validateSupportingVmReviewIndexMarkdown(
+  paths.supportingVmReviewIndexMd,
+  'docs/review/supporting_vm_review_index.md',
+)
 await validateSupportingVmPlanMarkdown(
   paths.supportingVmExtractionPlanMd,
   'docs/processor/supporting_vm_chapters_extraction_plan.md',
@@ -1442,6 +1500,7 @@ if (problems.length > 0) {
   console.log(`- Review packet headings verified: ${requiredReviewHeadings.length}`)
   console.log(`- Supporting chapter windows verified: ${supportingVmBatchPlan.sourceScope.observedChapterWindows.length}`)
   console.log(`- Supporting batches validated: ${supportingVmBatchPlan.proposedBatches.length}`)
+  console.log(`- Supporting review index verified: 9 batches`)
   if (validatedPilotBatchCount > 0) {
     console.log(`- Pilot batches validated: ${validatedPilotBatchCount}`)
   }

@@ -151,3 +151,11 @@ The supporting-wave batch definitions should use the same full `batch-###`
 keys as the runner and validator. That keeps the planned sequence, the batch
 registry, and the scaffold checks synchronized without hard-coding extra
 support-wave logic into the extraction runner.
+
+## Supporting review index
+
+When the supporting VM wave is complete, create a tracked review index under
+`docs/review/` that summarizes the ignored supporting batch packets without
+promoting extracted content. The index should remain a summary-only handoff
+artifact and should not replace the underlying review packets or batch
+manifests.

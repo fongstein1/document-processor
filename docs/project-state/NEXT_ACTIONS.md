@@ -2,8 +2,8 @@
 
 ## Next immediate task
 
-Review the completed supporting-wave review packets and decide whether any
-later refinement or promotion discussion is needed.
+Review the tracked VM-20 and supporting review indexes together and decide
+whether any later refinement or promotion discussion is needed.
 
 ## Build tasks
 
@@ -14,6 +14,8 @@ later refinement or promotion discussion is needed.
 - Treat `docs/processor/vm20_extraction_plan.md`,
   `config/vm20-batch-plan.json`, and `docs/review/vm20_review_index.md` as
   the current controlled VM-20 handoff set.
+- Treat `docs/review/supporting_vm_review_index.md` as the current
+  supporting-wave handoff summary.
 - Treat `docs/processor/supporting_vm_chapters_extraction_plan.md` and
   `config/supporting-vm-batch-plan.json` as the current supporting-chapter
   planning set.
@@ -60,6 +62,9 @@ later refinement or promotion discussion is needed.
   Section 9 assumptions cleanup.
 - Keep the tracked review index aligned with the ignored review packets so it
   remains a summary aid rather than a promoted artifact.
+- Keep the tracked supporting review index aligned with the ignored
+  supporting review packets so it remains a summary aid rather than a
+  promoted artifact.
 - Keep the supporting-chapter plan aligned with the observed page windows for
   VM-01, VM-02, VM-25, VM-26, VM-30, and VM-31, and keep VM-21 and VM-22 out
   of that wave.

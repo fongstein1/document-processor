@@ -89,3 +89,8 @@
   Batches 013-021 all stayed review-only in ignored working storage, and
   `npm run check` passed after each batch with 21 total pilot/supporting
   batches validated.
+- 2026-06-26: Created the tracked supporting VM end-of-sequence review index
+  at `docs/review/supporting_vm_review_index.md`, added a lightweight
+  validation check so `npm run check` confirms the index exists and
+  references batches 013-021, and refreshed the project-state docs so the
+  supporting index is treated as a summary-only handoff artifact.
