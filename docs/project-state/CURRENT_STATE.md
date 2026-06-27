@@ -119,12 +119,14 @@ do not change the learner-facing or app-ready posture.
 
 AG 13 is now complete as a review-only historical guideline unit. Its tracked
 review index and self-review note summarize the ignored batch outputs without
-promoting any extracted content, and the next short guideline candidate is
-AG 14 if the continuation pass keeps going.
+promoting any extracted content.
 
-The AG 14 planning layer is now drafted so batch-092 can capture the
-historical surveillance procedure as the next review-only step if the
-continuation pass keeps going.
+AG 14 is now complete as a review-only historical surveillance procedure
+unit. Its tracked review index and self-review note summarize the ignored
+batch outputs without promoting any extracted content.
+
+The next short guideline candidate will be selected from the remaining AG
+files if the continuation pass keeps going.
 
 ## Working posture
 

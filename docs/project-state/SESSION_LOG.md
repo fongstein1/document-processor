@@ -267,3 +267,5 @@
 - 2026-06-27: Refreshed the scaffold validator and repository proof-of-concept summary so AG 13 is counted alongside the other completed review indexes, and recorded the page-image backstop rule for noisy text layers in the source-bound extraction skill and project decisions.
 - 2026-06-27: Inspected AG 14, confirmed the two-page surveillance-procedure page range, and drafted the AG 14 planning layer so batch-092 can be validated before extraction starts.
 - 2026-06-27: Validated the AG 14 planning layer cleanly, keeping the historical surveillance procedure review-only and ready for batch-092 execution.
+- 2026-06-27: Ran the AG 14 two-page historical surveillance-procedure batch (`batch-092`) in ignored working storage, kept it review-only, and created the tracked AG 14 review index plus self-review note as the new handoff artifacts.
+- 2026-06-27: Refreshed the scaffold validator and repository proof-of-concept summary so AG 14 is counted alongside the other completed review indexes, and kept the historical surveillance wording visible as a review-only caveat.

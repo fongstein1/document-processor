@@ -236,6 +236,6 @@ widening the batch just because OCR is uncertain.
 ## Repository proof-of-concept summary
 
 The tracked valuation-regulation repository proof-of-concept summary is a
-summary-only handoff artifact. It should stay aligned with the eighteen
+summary-only handoff artifact. It should stay aligned with the nineteen
 review indexes and must not be treated as promoted content, learner-facing
 content, app-ready output, or RAG-ready material.
