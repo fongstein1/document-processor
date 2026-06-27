@@ -114,6 +114,8 @@ const paths = {
   ),
   vm21BatchPlanJson: path.join(repoRoot, 'config', 'vm21-batch-plan.json'),
   vm21ExtractionPlanMd: path.join(repoRoot, 'docs', 'processor', 'vm21_extraction_plan.md'),
+  vm22BatchPlanJson: path.join(repoRoot, 'config', 'vm22-batch-plan.json'),
+  vm22ExtractionPlanMd: path.join(repoRoot, 'docs', 'processor', 'vm22_extraction_plan.md'),
 }
 
 const requiredFiles = [
@@ -153,13 +155,16 @@ const requiredFiles = [
   'docs/project-state/NEXT_ACTIONS.md',
   'docs/project-state/SESSION_LOG.md',
   'docs/processor/vm20_extraction_plan.md',
+  'docs/processor/vm22_extraction_plan.md',
   'docs/review/vm20_review_index.md',
   'docs/review/supporting_vm_review_index.md',
   'docs/review/vm21_review_index.md',
   'config/supporting-vm-batch-plan.json',
   'config/vm21-batch-plan.json',
   'config/vm20-batch-plan.json',
+  'config/vm22-batch-plan.json',
   'scripts/vm21-batch-definitions.mjs',
+  'scripts/vm22-batch-definitions.mjs',
   'scripts/bootstrap-small-batch.mjs',
   'scripts/validate-scaffold.mjs',
   'scripts/run-pilot-batch.mjs',
@@ -1473,6 +1478,243 @@ const validateVm21PlanMarkdown = async (filePath, label) => {
   })
 }
 
+const validateVm22PlanLike = (plan, label) => {
+  if (!expectObject(plan, label)) return
+
+  if (plan.planId !== 'vm22-control-plan') {
+    problems.push(`${label}: planId must be vm22-control-plan`)
+  }
+  if (plan.planVersion !== '1.0') {
+    problems.push(`${label}: planVersion must be 1.0`)
+  }
+  if (plan.status !== 'planned') {
+    problems.push(`${label}: status must be planned`)
+  }
+  if (!expectObject(plan.sourceScope, `${label}.sourceScope`)) return
+  if (plan.sourceScope.sourceFamilyId !== 'valuation_manual_pdfs') {
+    problems.push(`${label}.sourceScope: sourceFamilyId must be valuation_manual_pdfs`)
+  }
+  if (plan.sourceScope.primarySourceFile !== 'pbr_data_valuation_manual_2026.pdf') {
+    problems.push(`${label}.sourceScope: primarySourceFile must be pbr_data_valuation_manual_2026.pdf`)
+  }
+  if (!hasString(plan.sourceScope.sourceTitle)) {
+    problems.push(`${label}.sourceScope: missing sourceTitle`)
+  }
+  if (!hasString(plan.sourceScope.sourceReference)) {
+    problems.push(`${label}.sourceScope: missing sourceReference`)
+  }
+  if (!hasString(plan.sourceScope.domainId)) {
+    problems.push(`${label}.sourceScope: missing domainId`)
+  }
+  if (!hasString(plan.sourceScope.rawSourceRoot)) {
+    problems.push(`${label}.sourceScope: missing rawSourceRoot`)
+  }
+  if (!expectArray(plan.sourceScope.confirmedPageRange, `${label}.sourceScope.confirmedPageRange`, false)) return
+  if (plan.sourceScope.confirmedPageRange.length !== 2) {
+    problems.push(`${label}.sourceScope.confirmedPageRange must contain exactly two page bounds`)
+  }
+  if (plan.sourceScope.confirmedPageRange[0] !== 227 || plan.sourceScope.confirmedPageRange[1] !== 318) {
+    problems.push(`${label}.sourceScope.confirmedPageRange must be [227, 318]`)
+  }
+  if (!expectArray(plan.sourceScope.boundaries, `${label}.sourceScope.boundaries`, false)) return
+  if (!expectArray(plan.sourceScope.exclusions, `${label}.sourceScope.exclusions`, false)) return
+  if (
+    !plan.sourceScope.boundaries.some(
+      (entry) => typeof entry === 'string' && entry.includes('VM-20') && entry.includes('out of scope'),
+    )
+  ) {
+    problems.push(`${label}.sourceScope.boundaries: must mention VM-20 out-of-scope handling`)
+  }
+  if (
+    !plan.sourceScope.boundaries.some(
+      (entry) => typeof entry === 'string' && entry.includes('VM-21') && entry.includes('out of scope'),
+    )
+  ) {
+    problems.push(`${label}.sourceScope.boundaries: must mention VM-21 out-of-scope handling`)
+  }
+  if (
+    !plan.sourceScope.boundaries.some(
+      (entry) => typeof entry === 'string' && entry.includes('VM-25') && entry.includes('page 319'),
+    )
+  ) {
+    problems.push(`${label}.sourceScope.boundaries: must mention the VM-25 boundary on page 319`)
+  }
+  ;['VM-30', 'VM-31', 'VM-G', 'VM-C', 'VM-M'].forEach((chapterId) => {
+    if (
+      !plan.sourceScope.boundaries.some(
+        (entry) => typeof entry === 'string' && entry.includes(chapterId) && entry.includes('review-only'),
+      )
+    ) {
+      problems.push(`${label}.sourceScope.boundaries: must mention ${chapterId} review-only handling`)
+    }
+  })
+  if (
+    !plan.sourceScope.exclusions.some(
+      (entry) => typeof entry === 'string' && entry.includes('learner-facing'),
+    )
+  ) {
+    problems.push(`${label}.sourceScope.exclusions: must mention learner-facing exclusion`)
+  }
+
+  if (!expectArray(plan.topicMap, `${label}.topicMap`, false)) return
+  if (!expectArray(plan.proposedBatches, `${label}.proposedBatches`, false)) return
+  if (!expectObject(plan.reviewStandards, `${label}.reviewStandards`)) return
+  if (!expectObject(plan.promotionGates, `${label}.promotionGates`)) return
+  if (!expectObject(plan.validationImplications, `${label}.validationImplications`)) return
+
+  const topicIds = new Set()
+  plan.topicMap.forEach((topic, index) => {
+    const topicLabel = `${label}.topicMap[${index}]`
+    if (!expectObject(topic, topicLabel)) return
+    ;['topicId', 'label', 'reviewComplexity', 'boundaryNote'].forEach((field) => {
+      if (!hasString(topic[field])) {
+        problems.push(`${topicLabel}: missing ${field}`)
+      }
+    })
+    if (!expectArray(topic.pageRange, `${topicLabel}.pageRange`, false)) return
+    if (topic.pageRange.length !== 2) {
+      problems.push(`${topicLabel}.pageRange must contain exactly two page bounds`)
+    }
+    if (topic.pageRange[0] < 227 || topic.pageRange[1] > 318) {
+      problems.push(`${topicLabel}.pageRange must stay within the confirmed VM-22 page range`)
+    }
+    if (!expectArray(topic.expectedIssueTypes, `${topicLabel}.expectedIssueTypes`, false)) return
+    if (!expectArray(topic.crossReferenceWatchlist, `${topicLabel}.crossReferenceWatchlist`, false)) return
+    topicIds.add(topic.topicId)
+  })
+
+  const observedTopicIds = new Set()
+  plan.proposedBatches.forEach((batch, index) => {
+    const batchLabel = `${label}.proposedBatches[${index}]`
+    if (!expectObject(batch, batchLabel)) return
+    ;['plannedBatchId', 'title', 'reviewComplexity', 'rationale', 'automationFit'].forEach((field) => {
+      if (!hasString(batch[field])) {
+        problems.push(`${batchLabel}: missing ${field}`)
+      }
+    })
+    if (!expectArray(batch.topicIds, `${batchLabel}.topicIds`, false)) return
+    if (!expectArray(batch.expectedIssueTypes, `${batchLabel}.expectedIssueTypes`, false)) return
+    if (!expectObject(batch.pageTarget, `${batchLabel}.pageTarget`)) return
+    if (batch.reviewOnlyByDefault !== true) {
+      problems.push(`${batchLabel}: reviewOnlyByDefault must be true`)
+    }
+    if (batch.sameStopConditionsAsVm20 !== true) {
+      problems.push(`${batchLabel}: sameStopConditionsAsVm20 must be true`)
+    }
+    batch.topicIds.forEach((topicId) => {
+      if (!topicIds.has(topicId)) {
+        problems.push(`${batchLabel}: unknown topicId ${topicId}`)
+      }
+      observedTopicIds.add(topicId)
+    })
+    if (!expectArray(batch.pageTarget.knownWindow, `${batchLabel}.pageTarget.knownWindow`, false)) return
+    if (batch.pageTarget.knownWindow.length !== 2) {
+      problems.push(`${batchLabel}.pageTarget.knownWindow must contain exactly two page bounds`)
+    }
+    if (batch.pageTarget.knownWindow[0] < 227 || batch.pageTarget.knownWindow[1] > 318) {
+      problems.push(`${batchLabel}.pageTarget.knownWindow must stay within the confirmed VM-22 page range`)
+    }
+  })
+
+  topicIds.forEach((topicId) => {
+    if (!observedTopicIds.has(topicId)) {
+      problems.push(`${label}.proposedBatches: missing batch coverage for topicId ${topicId}`)
+    }
+  })
+
+  ;[
+    'regulatoryRequirement',
+    'definitionOrTerminology',
+    'reserveMethodStructure',
+    'calculationStructure',
+    'formulaContext',
+    'prescribedAssumption',
+    'companyOrPrudentEstimateAssumption',
+    'scenarioOrStochasticRequirement',
+    'assetModelingJudgment',
+    'hedgingOrRiskMitigation',
+    'reinsurance',
+    'reportingRequirement',
+    'documentationExpectation',
+    'crossReferenceMapping',
+    'backgroundContent',
+    'boundaryControlWindow',
+    'requiresHumanInterpretation',
+    'staleSupersededCompanionGuidance',
+  ].forEach((field) => {
+    if (!hasString(plan.reviewStandards[field])) {
+      problems.push(`${label}.reviewStandards: missing ${field}`)
+    }
+  })
+
+  if (plan.promotionGates.defaultState !== 'review_only') {
+    problems.push(`${label}.promotionGates.defaultState must be review_only`)
+  }
+  if (!expectArray(plan.promotionGates.learnerFacing, `${label}.promotionGates.learnerFacing`, false)) return
+  if (!expectArray(plan.promotionGates.appReady, `${label}.promotionGates.appReady`, false)) return
+  if (!expectArray(plan.promotionGates.ragReady, `${label}.promotionGates.ragReady`, false)) return
+  if (!expectArray(plan.validationImplications.currentChecksNeeded, `${label}.validationImplications.currentChecksNeeded`, false)) return
+  if (!expectArray(plan.validationImplications.futureChecksSuggested, `${label}.validationImplications.futureChecksSuggested`, false)) return
+  if (!expectArray(plan.validationImplications.scriptImplications, `${label}.validationImplications.scriptImplications`, false)) return
+}
+
+const validateVm22PlanMarkdown = async (filePath, label) => {
+  const text = await readText(filePath)
+  const requiredHeadings = [
+    '## Source Scope',
+    '## Chapter / Topic Map',
+    '## Proposed Batch Sequence',
+    '## Review Standards',
+    '## Promotion Gates',
+    '## Validation Implications',
+    '## Operating Note',
+  ]
+  requiredHeadings.forEach((heading) => {
+    if (!text.includes(heading)) {
+      problems.push(`${label}: missing heading ${heading}`)
+    }
+  })
+  ;[
+    'review-only',
+    'not learner-facing',
+    'not app-ready',
+    'not RAG-ready',
+    'not promoted',
+    'VM-22',
+    'VM-20',
+    'VM-21',
+    'VM-30',
+    'VM-31',
+    'VM-G',
+    'VM-C',
+    'VM-M',
+    'VM-25',
+    'page 318',
+    'page 319',
+    'batch-038',
+    'batch-039',
+    'batch-040',
+    'batch-041',
+    'batch-042',
+    'batch-043',
+    'batch-044',
+    'batch-045',
+    'batch-046',
+    'batch-047',
+    'batch-048',
+    'batch-049',
+    'batch-050',
+    'batch-051',
+    'batch-052',
+    'batch-053',
+    'batch-054',
+  ].forEach((phrase) => {
+    if (!text.includes(phrase)) {
+      problems.push(`${label}: must mention ${phrase}`)
+    }
+  })
+}
+
 for (const relativePath of requiredFiles) {
   await requireFile(relativePath)
 }
@@ -1491,6 +1733,7 @@ const sampleReviewPacketJson = await readJson(paths.sampleReviewPacketJson)
 const vm20BatchPlan = await readJson(paths.vm20BatchPlanJson)
 const supportingVmBatchPlan = await readJson(paths.supportingVmBatchPlanJson)
 const vm21BatchPlan = await readJson(paths.vm21BatchPlanJson)
+const vm22BatchPlan = await readJson(paths.vm22BatchPlanJson)
 
 validateSchemaEnvelope(batchManifestSchema, 'batch-manifest.schema.json')
 validateSchemaEnvelope(sourceInventorySchema, 'source-inventory.schema.json')
@@ -1507,6 +1750,7 @@ validateReviewPacketLike(sampleReviewPacketJson, 'review-packet.sample.json')
 validateVm20PlanLike(vm20BatchPlan, 'config/vm20-batch-plan.json')
 validateSupportingVmPlanLike(supportingVmBatchPlan, 'config/supporting-vm-batch-plan.json')
 validateVm21PlanLike(vm21BatchPlan, 'config/vm21-batch-plan.json')
+validateVm22PlanLike(vm22BatchPlan, 'config/vm22-batch-plan.json')
 
 const plannedVm20BatchIds = Array.isArray(vm20BatchPlan.proposedBatches)
   ? vm20BatchPlan.proposedBatches
@@ -1657,6 +1901,7 @@ await validateSupportingVmPlanMarkdown(
   'docs/processor/supporting_vm_chapters_extraction_plan.md',
 )
 await validateVm21PlanMarkdown(paths.vm21ExtractionPlanMd, 'docs/processor/vm21_extraction_plan.md')
+await validateVm22PlanMarkdown(paths.vm22ExtractionPlanMd, 'docs/processor/vm22_extraction_plan.md')
 
 if (!config.project?.name) {
   problems.push('config/source-families.json: missing project.name')
@@ -1783,6 +2028,7 @@ if (problems.length > 0) {
   console.log(`- Supporting review index verified: 9 batches`)
   console.log(`- VM-21 batches validated: ${vm21BatchPlan.proposedBatches.length}`)
   console.log(`- VM-21 review index verified: 16 batches`)
+  console.log(`- VM-22 plan verified: ${vm22BatchPlan.proposedBatches.length} batches`)
   if (validatedPilotBatchCount > 0) {
     console.log(`- Pilot batches validated: ${validatedPilotBatchCount}`)
   }

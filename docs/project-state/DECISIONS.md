@@ -181,3 +181,19 @@ The tracked VM-21 review index is a summary-only handoff artifact. It should
 stay aligned with the ignored batch review packets and must not be treated as
 promoted content, learner-facing content, app-ready output, or RAG-ready
 material.
+
+## VM-22 planning and registry
+
+The VM-22 chapter gets its own dedicated control plan and batch-definition
+file rather than sharing the VM-20, supporting-wave, or VM-21 registries. The
+confirmed VM-22 page span is pages 227-318, VM-20 and VM-21 remain out of
+scope for this wave, VM-25 stays out of scope except for the closing boundary
+confirmation, and the planned VM-22 batches run from batch-038 through
+batch-054 in review-only mode by default.
+
+## VM-22 execution state tracking
+
+The VM-22 plan file remains the canonical batch map after the controlled
+execution run completes. Execution status is tracked in the project-state
+documents and ignored working outputs, while the plan and validator keep the
+batch sequence synchronized for future regeneration.

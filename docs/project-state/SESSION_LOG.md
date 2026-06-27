@@ -122,3 +122,10 @@
   `npm run check` confirms the index exists and references batches 022-037,
   and refreshed the project-state docs so the VM-21 handoff now includes the
   summary-only index alongside the ignored batch review packets.
+- 2026-06-27: Confirmed the VM-22 chapter span by limited PDF inspection,
+  verified the chapter runs from pages 227-318 and that VM-25 begins later,
+  and drafted a dedicated VM-22 control plan plus batch registry that keeps
+  the extraction wave review-only by default.
+- 2026-06-27: Validated the VM-22 planning layer successfully with
+  `npm run check`, confirming the new plan/config pair, the VM-22 batch
+  registry, and the control-plan boundary before any extraction batches run.

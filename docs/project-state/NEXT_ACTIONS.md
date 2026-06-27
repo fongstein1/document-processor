@@ -2,8 +2,9 @@
 
 ## Next immediate task
 
-Review the tracked VM-20, supporting, and VM-21 review indexes together, and
-decide whether any hardening pass or summary refinement is worth creating.
+Validate the new VM-22 planning layer, commit it, and then run the controlled
+VM-22 batch sequence from batch-038 through batch-054 in ignored working
+storage.
 
 ## Build tasks
 
@@ -18,11 +19,16 @@ decide whether any hardening pass or summary refinement is worth creating.
   supporting-wave handoff summary.
 - Treat `docs/review/vm21_review_index.md` as the current VM-21 handoff
   summary.
+- Treat `docs/processor/vm22_extraction_plan.md` and
+  `config/vm22-batch-plan.json` as the current VM-22 planning set.
 - Treat `docs/processor/supporting_vm_chapters_extraction_plan.md` and
   `config/supporting-vm-batch-plan.json` as the current supporting-chapter
   planning set.
 - Treat `docs/processor/vm21_extraction_plan.md` and
   `config/vm21-batch-plan.json` as the current VM-21 planning set.
+- Use `node scripts/run-pilot-batch.mjs --batch batch-038` through
+  `node scripts/run-pilot-batch.mjs --batch batch-054` for the controlled
+  VM-22 sequence after the plan commits.
 - Use `npm run vm20:batch-003` through `npm run vm20:batch-012` only if a
   review packet needs to be regenerated.
 - Use `npm run pilot -- --batch batch-013` through `npm run pilot -- --batch
@@ -34,11 +40,15 @@ decide whether any hardening pass or summary refinement is worth creating.
   explicitly approves promotion.
 - Keep `docs/review/vm21_review_index.md` aligned with the ignored VM-21
   review packets so it remains a summary aid rather than a promoted artifact.
+- Keep VM-25 and later chapters out of the VM-22 wave except for the closing
+  boundary confirmation on page 318.
 - Keep `scripts/batch-definitions.mjs` synchronized with the planned VM-20
   batch IDs, the supporting batch IDs, the VM-21 batch IDs, the actual
   source order, and the tracked review indexes.
 - Keep the dedicated `scripts/vm21-batch-definitions.mjs` file synchronized
   with `config/vm21-batch-plan.json`.
+- Keep the dedicated `scripts/vm22-batch-definitions.mjs` file synchronized
+  with `config/vm22-batch-plan.json`.
 - Leave VM-21 and VM-22 out of the supporting wave unless a separate plan is
   approved.
 - Keep VM-22 out of the VM-21 wave unless a future plan explicitly opens it.
@@ -91,6 +101,8 @@ decide whether any hardening pass or summary refinement is worth creating.
 - Keep all completed VM-20 slices review-only until a deliberate promotion
   decision is made in the separate app/product thread.
 - Keep the completed VM-21 slices review-only until a deliberate promotion
+  decision is made in the separate app/product thread.
+- Keep the controlled VM-22 slices review-only until a deliberate promotion
   decision is made in the separate app/product thread.
 - Keep the PDF extraction runner UTF-8-safe because formula pages can include
   Unicode minus signs and other non-ASCII glyphs.

@@ -63,6 +63,7 @@ artifacts validate cleanly.
 - `npm run vm21:batch -- --batch batch-030` through `npm run vm21:batch -- --batch batch-037`: passed; created the remaining controlled VM-21 wave outputs in `data/work/batches/batch-030/` through `data/work/batches/batch-037/`, all review-only in ignored working storage
 - `npm run check`: passed after each of the final VM-21 batches; confirmed the schemas, templates, demo fixtures, review-packet contracts, the VM-20 plan artifacts, the tracked review indexes, the supporting-chapter plan artifacts, the VM-21 plan artifacts, the no-promotion guardrails, and the synchronized batch definitions for batches 022-037
 - `npm run check`: passed after the VM-21 review-index refresh; confirmed the schemas, templates, demo fixtures, review-packet contracts, the VM-20 plan artifacts, the tracked review indexes, the supporting-chapter plan artifacts, the VM-21 plan artifacts, the no-promotion guardrails, and the synchronized batch definitions for batches 022-037
+- `npm run check`: passed after the VM-22 planning-layer refresh; confirmed the schemas, templates, demo fixtures, review-packet contracts, the VM-20 plan artifacts, the tracked review indexes, the supporting-chapter plan artifacts, the VM-21 plan artifacts, the new VM-22 plan artifacts, the no-promotion guardrails, and the synchronized batch definitions for batches 038-054
 
 The control-plan refresh commit re-bound batches 006-012 to the actual PDF
 section order and added runner shortcuts for the remaining controlled slices.
@@ -168,12 +169,20 @@ do not change the learner-facing or app-ready posture.
   controlled VM-21 extraction batches have now completed in ignored working
   storage, and the tracked VM-21 review index now summarizes the batch review
   packets without promoting any extracted content.
+- A new VM-22 control plan now confirms pages 227-318 for the non-variable
+  annuity chapter and maps a controlled batch sequence from batch-038 through
+  batch-054. The wave remains review-only by default, keeps VM-20 and VM-21
+  out of scope, and stops at the page-318 boundary before VM-25 begins.
+- The VM-22 planning layer has already been validated successfully, so the
+  next step is to commit the plan and then run the controlled batch sequence
+  in ignored working storage.
 - The repository will be clean on `main` once this state refresh is committed,
   aside from ignored working files.
 
 ## Current focus
 
-The controlled VM-21 sequence is complete. Review the completed batch-022
-through batch-037 outputs and the tracked VM-21 review index if a hardening
-pass or summary artifact is needed, and keep VM-22 out of scope unless a
-future plan explicitly opens it.
+The controlled VM-21 sequence is complete. The next controlled wave is VM-22:
+validate the new plan artifacts, commit the planning layer, and then execute
+batch-038 through batch-054 sequentially in ignored working storage while
+keeping VM-25 and later chapters out of scope except for the page-318
+boundary confirmation.
