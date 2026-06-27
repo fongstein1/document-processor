@@ -176,13 +176,17 @@ do not change the learner-facing or app-ready posture.
 - The VM-22 planning layer has already been validated successfully, so the
   next step is to commit the plan and then run the controlled batch sequence
   in ignored working storage.
+- Batches 038-042 are now complete in ignored working storage. They cover the
+  background / scope slice, the reserve-methodology slice, the Section 4
+  projection-entry slice, the Section 4 asset-projection slice, and the
+  reinsurance slice.
 - The repository will be clean on `main` once this state refresh is committed,
   aside from ignored working files.
 
 ## Current focus
 
-The controlled VM-21 sequence is complete. The next controlled wave is VM-22:
-validate the new plan artifacts, commit the planning layer, and then execute
-batch-038 through batch-054 sequentially in ignored working storage while
-keeping VM-25 and later chapters out of scope except for the page-318
-boundary confirmation.
+The controlled VM-21 sequence is complete. The controlled VM-22 sequence is
+underway: batches 038-042 are complete, and the next block is batch-043
+through batch-047 for the Section 6 opener and mortality-table work. Keep
+VM-25 and later chapters out of scope except for the page-318 boundary
+confirmation.

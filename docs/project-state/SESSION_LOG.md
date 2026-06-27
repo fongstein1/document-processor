@@ -129,3 +129,7 @@
 - 2026-06-27: Validated the VM-22 planning layer successfully with
   `npm run check`, confirming the new plan/config pair, the VM-22 batch
   registry, and the control-plan boundary before any extraction batches run.
+- 2026-06-27: Completed the first VM-22 batch block (batches 038-042) in
+  ignored working storage. The block covers background/scope, reserve
+  methodology, Section 4 projection entry, Section 4 asset projection, and
+  reinsurance, and each batch passed `npm run check` and `git diff --check`.
