@@ -128,6 +128,10 @@ batch outputs without promoting any extracted content.
 The next short guideline candidate will be selected from the remaining AG
 files if the continuation pass keeps going.
 
+The AG 15 planning layer is now drafted so batch-093 can capture the
+historical illustration guideline as the next review-only step if the
+continuation pass keeps going.
+
 ## Working posture
 
 - Raw source material stays external at

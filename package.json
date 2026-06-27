@@ -23,6 +23,7 @@
     "ag12:batch": "node scripts/run-pilot-batch.mjs --batch batch-090",
     "ag13:batch": "node scripts/run-pilot-batch.mjs --batch batch-091",
     "ag14:batch": "node scripts/run-pilot-batch.mjs --batch batch-092",
+    "ag15:batch": "node scripts/run-pilot-batch.mjs --batch batch-093",
     "vm20:batch-003": "node scripts/run-pilot-batch.mjs --batch batch-003",
     "vm20:batch-004": "node scripts/run-pilot-batch.mjs --batch batch-004",
     "vm20:batch-005": "node scripts/run-pilot-batch.mjs --batch batch-005",

@@ -157,6 +157,8 @@ const paths = {
   ag13ExtractionPlanMd: path.join(repoRoot, 'docs', 'processor', 'ag13_extraction_plan.md'),
   ag14BatchPlanJson: path.join(repoRoot, 'config', 'ag14-batch-plan.json'),
   ag14ExtractionPlanMd: path.join(repoRoot, 'docs', 'processor', 'ag14_extraction_plan.md'),
+  ag15BatchPlanJson: path.join(repoRoot, 'config', 'ag15-batch-plan.json'),
+  ag15ExtractionPlanMd: path.join(repoRoot, 'docs', 'processor', 'ag15_extraction_plan.md'),
   ag12ReviewIndexMd: path.join(repoRoot, 'docs', 'review', 'ag12_review_index.md'),
   ag12SelfReviewMd: path.join(repoRoot, 'docs', 'review', 'ag12_self_review.md'),
   ag13ReviewIndexMd: path.join(repoRoot, 'docs', 'review', 'ag13_review_index.md'),
@@ -296,6 +298,9 @@ const requiredFiles = [
   'docs/processor/ag14_extraction_plan.md',
   'config/ag14-batch-plan.json',
   'scripts/ag14-batch-definitions.mjs',
+  'docs/processor/ag15_extraction_plan.md',
+  'config/ag15-batch-plan.json',
+  'scripts/ag15-batch-definitions.mjs',
   'docs/processor/ag10_extraction_plan.md',
   'config/ag10-batch-plan.json',
   'scripts/ag10-batch-definitions.mjs',
@@ -2341,6 +2346,7 @@ const ag11BatchPlan = await readJson(paths.ag11BatchPlanJson)
 const ag12BatchPlan = await readJson(paths.ag12BatchPlanJson)
 const ag13BatchPlan = await readJson(paths.ag13BatchPlanJson)
 const ag14BatchPlan = await readJson(paths.ag14BatchPlanJson)
+const ag15BatchPlan = await readJson(paths.ag15BatchPlanJson)
 
 validateSchemaEnvelope(batchManifestSchema, 'batch-manifest.schema.json')
 validateSchemaEnvelope(sourceInventorySchema, 'source-inventory.schema.json')
@@ -3968,6 +3974,50 @@ const validateAg14PlanMarkdown = async (filePath, label) => {
   })
 }
 
+const validateAg15PlanMarkdown = async (filePath, label) => {
+  const text = await readText(filePath)
+  const requiredHeadings = [
+    '## Source Scope',
+    '## Topic Map',
+    '## Proposed Batch Sequence',
+    '## Review Standards',
+    '## Promotion Gates',
+    '## Validation Implications',
+    '## Operating Note',
+  ]
+  requiredHeadings.forEach((heading) => {
+    if (!text.includes(heading)) {
+      problems.push(`${label}: missing heading ${heading}`)
+    }
+  })
+  ;[
+    'review-only',
+    'not learner-facing',
+    'not app-ready',
+    'not RAG-ready',
+    'not promoted',
+    'AG 15',
+    'batch-093',
+    'Actuarial Guideline XV',
+    'page 1',
+    'historical',
+    'illustration',
+    'variable life insurance',
+    'page-image',
+    'docs/review/ag14_review_index.md',
+    'docs/review/ag13_review_index.md',
+    'docs/review/vm20_review_index.md',
+    'docs/review/supporting_vm_review_index.md',
+    'docs/review/vm21_review_index.md',
+    'docs/review/vm22_review_index.md',
+    'docs/review/valuation_regulation_repository_poc_status.md',
+  ].forEach((phrase) => {
+    if (!text.includes(phrase)) {
+      problems.push(`${label}: must mention ${phrase}`)
+    }
+  })
+}
+
 const validateAg02PlanMarkdown = async (filePath, label) => {
   const text = await readText(filePath)
   const requiredHeadings = [
@@ -4544,6 +4594,7 @@ await validateAg11PlanMarkdown(paths.ag11ExtractionPlanMd, 'docs/processor/ag11_
 await validateAg12PlanMarkdown(paths.ag12ExtractionPlanMd, 'docs/processor/ag12_extraction_plan.md')
 await validateAg13PlanMarkdown(paths.ag13ExtractionPlanMd, 'docs/processor/ag13_extraction_plan.md')
 await validateAg14PlanMarkdown(paths.ag14ExtractionPlanMd, 'docs/processor/ag14_extraction_plan.md')
+await validateAg15PlanMarkdown(paths.ag15ExtractionPlanMd, 'docs/processor/ag15_extraction_plan.md')
 await validateAg02PlanMarkdown(paths.ag02ExtractionPlanMd, 'docs/processor/ag02_extraction_plan.md')
 await validatePocStatusSummaryMarkdown(
   paths.pocStatusSummaryMd,
@@ -4699,6 +4750,7 @@ if (problems.length > 0) {
   console.log(`- AG 12 plan verified: ${ag12BatchPlan.proposedBatches.length} batches`)
   console.log(`- AG 13 plan verified: ${ag13BatchPlan.proposedBatches.length} batches`)
   console.log(`- AG 14 plan verified: ${ag14BatchPlan.proposedBatches.length} batches`)
+  console.log(`- AG 15 plan verified: ${ag15BatchPlan.proposedBatches.length} batches`)
   console.log(`- AG 10 review index verified: 1 batch`)
   console.log(`- AG 11 review index verified: 1 batch`)
   console.log(`- AG 12 review index verified: 1 batch`)
