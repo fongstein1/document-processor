@@ -2,8 +2,9 @@
 
 ## Next immediate task
 
-Review the completed VM-22 batch packets alongside the new tracked VM-22
-review index if a hardening pass or later promotion decision is needed.
+Review the proof-of-concept status summary and decide whether the next gated
+step should be a promotion workflow or a new pricing / liability-modeling
+repository family.
 
 ## Build tasks
 
@@ -22,6 +23,8 @@ review index if a hardening pass or later promotion decision is needed.
   `config/vm22-batch-plan.json` as the current VM-22 planning set.
 - Treat `docs/review/vm22_review_index.md` as the current VM-22 handoff
   summary.
+- Treat `docs/review/valuation_regulation_repository_poc_status.md` as the
+  current repository-level proof-of-concept summary.
 - Treat batches 038-054 as completed in ignored working storage.
 - Treat `docs/processor/supporting_vm_chapters_extraction_plan.md` and
   `config/supporting-vm-batch-plan.json` as the current supporting-chapter
@@ -45,6 +48,9 @@ review index if a hardening pass or later promotion decision is needed.
   explicitly approves promotion.
 - Keep `docs/review/vm21_review_index.md` aligned with the ignored VM-21
   review packets so it remains a summary aid rather than a promoted artifact.
+- Keep `docs/review/valuation_regulation_repository_poc_status.md` aligned
+  with the four chapter review indexes so it remains a summary aid rather
+  than a promoted artifact.
 - Keep VM-25 and later chapters out of the VM-22 wave except for the closing
   boundary confirmation on page 318.
 - Keep the completed VM-22 wave review-only unless a later human review
@@ -66,6 +72,8 @@ review index if a hardening pass or later promotion decision is needed.
 - Expand validation only if the plan or a later batch reveals a genuine schema
   or workflow gap.
 - Keep app-ready export work deferred until a real promotion candidate exists.
+- Keep the repository-level proof-of-concept summary review-only until a
+  later stakeholder decision changes the handoff model.
 
 ## Source-family tasks
 

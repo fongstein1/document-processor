@@ -148,3 +148,9 @@
   `npm run check` confirms the index exists and references batches 038-054,
   and refreshed the project-state docs so the VM-22 handoff is now summary-
   only alongside the ignored batch review packets.
+- 2026-06-27: Created the tracked valuation-regulation repository proof-of-
+  concept status summary at
+  `docs/review/valuation_regulation_repository_poc_status.md`, added a
+  lightweight validation check so `npm run check` confirms the summary exists
+  and references the four review indexes, and refreshed the project-state
+  docs so the repository-level handoff stays summary-only.

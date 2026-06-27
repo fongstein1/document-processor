@@ -204,3 +204,10 @@ The tracked VM-22 review index is a summary-only handoff artifact. It should
 stay aligned with the ignored batch review packets and must not be treated as
 promoted content, learner-facing content, app-ready output, or RAG-ready
 material.
+
+## Repository proof-of-concept summary
+
+The tracked valuation-regulation repository proof-of-concept summary is a
+summary-only handoff artifact. It should stay aligned with the four chapter
+review indexes and must not be treated as promoted content, learner-facing
+content, app-ready output, or RAG-ready material.

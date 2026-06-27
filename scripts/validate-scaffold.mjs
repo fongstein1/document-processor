@@ -106,6 +106,12 @@ const paths = {
   ),
   vm21ReviewIndexMd: path.join(repoRoot, 'docs', 'review', 'vm21_review_index.md'),
   vm22ReviewIndexMd: path.join(repoRoot, 'docs', 'review', 'vm22_review_index.md'),
+  pocStatusSummaryMd: path.join(
+    repoRoot,
+    'docs',
+    'review',
+    'valuation_regulation_repository_poc_status.md',
+  ),
   supportingVmBatchPlanJson: path.join(repoRoot, 'config', 'supporting-vm-batch-plan.json'),
   supportingVmExtractionPlanMd: path.join(
     repoRoot,
@@ -161,6 +167,7 @@ const requiredFiles = [
   'docs/review/supporting_vm_review_index.md',
   'docs/review/vm21_review_index.md',
   'docs/review/vm22_review_index.md',
+  'docs/review/valuation_regulation_repository_poc_status.md',
   'config/supporting-vm-batch-plan.json',
   'config/vm21-batch-plan.json',
   'config/vm20-batch-plan.json',
@@ -1922,6 +1929,55 @@ const validateVm22ReviewIndexMarkdown = async (filePath, label) => {
   })
 }
 
+const validatePocStatusSummaryMarkdown = async (filePath, label) => {
+  const text = await readText(filePath)
+  const requiredHeadings = [
+    '## Executive Status',
+    '## Coverage Table',
+    '## Completed Assets',
+    '## Validation Posture',
+    '## Human Review Posture',
+    '## Promotion Gates',
+    '## Remaining Work',
+    '## Recommended Next Step',
+  ]
+  requiredHeadings.forEach((heading) => {
+    if (!text.includes(heading)) {
+      problems.push(`${label}: missing heading ${heading}`)
+    }
+  })
+  ;[
+    'review-only',
+    'not learner-facing',
+    'not app-ready',
+    'not RAG-ready',
+    'not promoted',
+    'VM-20',
+    'VM-01',
+    'VM-02',
+    'VM-25',
+    'VM-26',
+    'VM-30',
+    'VM-31',
+    'VM-21',
+    'VM-22',
+    'docs/review/vm20_review_index.md',
+    'docs/review/supporting_vm_review_index.md',
+    'docs/review/vm21_review_index.md',
+    'docs/review/vm22_review_index.md',
+    'npm run check',
+    'git diff --check',
+    '54 batches validated',
+    'ignored working storage',
+    'future pricing',
+    'future liability-modeling',
+  ].forEach((phrase) => {
+    if (!text.includes(phrase)) {
+      problems.push(`${label}: must mention ${phrase}`)
+    }
+  })
+}
+
 const plannedSupportingBatchIds = Array.isArray(supportingVmBatchPlan.proposedBatches)
   ? supportingVmBatchPlan.proposedBatches
       .map((batch) => batch?.plannedBatchId)
@@ -1954,6 +2010,10 @@ await validateSupportingVmReviewIndexMarkdown(
 )
 await validateVm21ReviewIndexMarkdown(paths.vm21ReviewIndexMd, 'docs/review/vm21_review_index.md')
 await validateVm22ReviewIndexMarkdown(paths.vm22ReviewIndexMd, 'docs/review/vm22_review_index.md')
+await validatePocStatusSummaryMarkdown(
+  paths.pocStatusSummaryMd,
+  'docs/review/valuation_regulation_repository_poc_status.md',
+)
 await validateSupportingVmPlanMarkdown(
   paths.supportingVmExtractionPlanMd,
   'docs/processor/supporting_vm_chapters_extraction_plan.md',
@@ -2088,6 +2148,7 @@ if (problems.length > 0) {
   console.log(`- VM-21 review index verified: 16 batches`)
   console.log(`- VM-22 plan verified: ${vm22BatchPlan.proposedBatches.length} batches`)
   console.log(`- VM-22 review index verified: 17 batches`)
+  console.log(`- POC status summary verified: 4 review indexes`)
   if (validatedPilotBatchCount > 0) {
     console.log(`- Pilot batches validated: ${validatedPilotBatchCount}`)
   }
