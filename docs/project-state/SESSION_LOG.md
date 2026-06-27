@@ -188,3 +188,9 @@
 - 2026-06-27: Confirmed AG 02 as the next small Actuarial Guideline unit and
   drafted the AG 02 planning layer so the next batch can be validated before
   extraction.
+- 2026-06-27: Ran the AG 02 two-page guideline batch (`batch-078`) in
+  ignored working storage, kept it review-only, and preserved the encoded
+  pages as a review-only interpretive slice with a one-item unresolved issue
+  set.
+- 2026-06-27: Created the tracked AG 02 review index and self-review note as
+  the new handoff artifacts for the two-page guideline unit.

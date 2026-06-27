@@ -10,7 +10,7 @@
 
 ## Latest known commit before this batch
 
-`c36b472`
+`b0ad871`
 
 ## Validation status
 
@@ -223,8 +223,9 @@ storage, and the tracked AG 03 review index plus self-review note are the
 current handoff artifacts. The controlled AG 01 one-page guideline batch is
 complete in ignored working storage, and the tracked AG 01 review index plus
 self-review note are committed handoff artifacts. The controlled AG 02
-two-page guideline now has a planning draft in the working tree and should be
-validated before extraction. The AG 52 text note already lives in the mixed
-pilot batch and is not being reprocessed. The remaining Practice Notes files
-and other Actuarial Guideline / NY regulation files stay out of scope until
-separately planned.
+two-page guideline batch is complete in ignored working storage, and the
+tracked AG 02 review index plus self-review note are the next handoff
+artifacts. The AG 52 text note already lives in the mixed pilot batch and is
+not being reprocessed. The remaining Practice Notes files and other
+Actuarial Guideline / NY regulation files stay out of scope until separately
+planned.
