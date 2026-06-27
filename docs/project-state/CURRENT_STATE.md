@@ -139,6 +139,10 @@ The AG 16 review-only step is now complete as batch-094. Its tracked review
 index and self-review note summarize the historical CRVM select-mortality /
 split-interest guideline without promoting any extracted content.
 
+The AG 17 planning layer is now drafted so batch-095 can capture the CRVM
+non-level death-benefit guideline as the next review-only step if the
+continuation pass keeps going.
+
 ## Working posture
 
 - Raw source material stays external at

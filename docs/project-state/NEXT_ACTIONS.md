@@ -81,6 +81,8 @@ already captured in the mixed pilot batch and should not be reprocessed.
   `config/ag16-batch-plan.json` as the current AG 16 planning set.
 - Treat `docs/review/ag16_review_index.md` and
   `docs/review/ag16_self_review.md` as the current AG 16 handoff set.
+- Treat `docs/processor/ag17_extraction_plan.md` and
+  `config/ag17-batch-plan.json` as the current AG 17 planning set.
 - Treat `scripts/ag04-batch-definitions.mjs` as synchronized with the AG 04
   planning and handoff set.
 - Treat `scripts/ag05-batch-definitions.mjs` as synchronized with the AG 05

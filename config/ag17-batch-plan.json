@@ -1,0 +1,165 @@
+{
+  "planId": "ag17-crvm-nonlevel-death-benefits-plan",
+  "planVersion": "1.0",
+  "status": "planned",
+  "sourceScope": {
+    "sourceFamilyId": "actuarial_guidelines",
+    "primarySourceFile": "AG 17 - Guideline for Calculation of Commissioners' Reserve Valuation Method When Death Benefits are Not Level.pdf",
+    "sourceFolder": "Actuarial Guidelines",
+    "sourceTitle": "AG 17 - Guideline for Calculation of Commissioners' Reserve Valuation Method When Death Benefits are Not Level",
+    "sourceReference": "Actuarial Guideline XVII",
+    "sourceStatus": "historical",
+    "domainId": "naic_regulatory",
+    "rawSourceRoot": "D:\\Work\\AI Projects\\NAIC Valuation Manual Course",
+    "confirmedPageRange": [
+      1,
+      1
+    ],
+    "observedSectionWindows": [
+      {
+        "sectionId": "ag17-crvm-nonlevel-death-benefits",
+        "pageRange": [
+          1,
+          1
+        ],
+        "note": "One-page CRVM guideline for non-level death benefits."
+      }
+    ],
+    "boundaries": [
+      "Keep planning focused on this single AG 17 PDF.",
+      "Do not widen into AG 18 or later guideline files.",
+      "Keep the historical guideline posture explicit in every batch artifact.",
+      "Treat the guideline as caveat-first historical guidance, not learner-facing policy text.",
+      "Keep any PDF text-extraction noise visible as a caveat, not a promotion signal.",
+      "Keep the batch source-bound and review-only."
+    ],
+    "exclusions": [
+      "No learner-facing content.",
+      "No app-ready export.",
+      "No RAG-ready export.",
+      "No approved/promoted export.",
+      "No eLearning scripts, slides, quizzes, or app exports.",
+      "No raw source files in Git.",
+      "No other guideline files in the same wave."
+    ]
+  },
+  "topicMap": [
+    {
+      "topicId": "ag17-crvm-nonlevel-death-benefits",
+      "label": "CRVM non-level death-benefit interpretation",
+      "pageRange": [
+        1,
+        1
+      ],
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "regulatory_requirement",
+        "definition_or_terminology",
+        "formula_context",
+        "cross_reference_mapping",
+        "background_content",
+        "requires_human_interpretation",
+        "boundary_control_window",
+        "historical_guidance"
+      ],
+      "crossReferenceWatchlist": [
+        "equivalent level renewal amount",
+        "average amount of insurance",
+        "Standard Valuation Law",
+        "Section 5-c",
+        "1980 CSO Table",
+        "jumping juvenile"
+      ],
+      "boundaryNote": "Keep this slice within page 1 and do not absorb later guideline files."
+    }
+  ],
+  "proposedBatches": [
+    {
+      "plannedBatchId": "batch-095",
+      "topicIds": [
+        "ag17-crvm-nonlevel-death-benefits"
+      ],
+      "title": "One-page AG 17 non-level death-benefit guideline",
+      "pageTarget": {
+        "knownWindow": [
+          1,
+          1
+        ],
+        "notes": "Capture the full one-page guideline as a single review-only slice and stop at the page boundary."
+      },
+      "rationale": "Capture the full one-page guideline as a single review-only slice and stop at the page boundary.",
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "regulatory_requirement",
+        "definition_or_terminology",
+        "formula_context",
+        "cross_reference_mapping",
+        "background_content",
+        "requires_human_interpretation",
+        "boundary_control_window",
+        "historical_guidance"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    }
+  ],
+  "reviewStandards": {
+    "regulatoryRequirement": "Treat explicit must, shall, should, or required language as the requirement; preserve the citation and source context.",
+    "definitionOrTerminology": "Treat equivalent level renewal amount, average amount of insurance, non-level death benefit, and Section 5-c phrasing as terminology when the text explains rather than directs.",
+    "formulaContext": "Treat formula notation and reserve-calculation notation as context until the text clearly instructs a calculation step.",
+    "caveatOnlyHistoricalGuidance": "Treat the guideline framing as caveat-first historical guidance, not active policy text.",
+    "crossReferenceMapping": "Treat references to the Standard Valuation Law, Section 5-c, the 1980 CSO Table, or non-level-death-benefit terminology as mapping notes unless operational text is included.",
+    "backgroundContent": "Treat the title line and framing sentence as background content unless they impose a duty.",
+    "boundaryControlWindow": "Treat the one-page slice as a review-only window that should not be merged forward.",
+    "requiresHumanInterpretation": "Treat the indexing choice and the OCR / encoded text layer as requiring human actuarial interpretation unless the text is explicit.",
+    "sourceQualityCaveat": "Treat text-layer noise as review-only caveats and do not widen the batch because of them."
+  },
+  "promotionGates": {
+    "defaultState": "review_only",
+    "learnerFacing": [
+      "source citation exists",
+      "source support is clear",
+      "wording is not misleading",
+      "confidence is high",
+      "no unresolved review flags exist"
+    ],
+    "appReady": [
+      "learner-facing criteria are already satisfied",
+      "export is sanitized, stable, and versioned",
+      "no unresolved review issues remain"
+    ],
+    "ragReady": [
+      "approved indexed material only",
+      "stable ID",
+      "source reference",
+      "locator",
+      "review status no longer requires human disposition"
+    ]
+  },
+  "validationImplications": {
+    "currentChecksNeeded": [
+      "Plan file exists and parses as JSON.",
+      "The AG 17 plan markdown exists and carries the expected headings.",
+      "Every proposed batch is review-only by default.",
+      "The plan keeps the scope to one page only.",
+      "The source posture is explicitly historical.",
+      "Each planned batch has a matching batch definition.",
+      "The AG 17 batch definition file stays synchronized with the plan."
+    ],
+    "futureChecksSuggested": [
+      "One-page guideline checks for future short guideline files.",
+      "Historical-guidance and caveat-first tagging checks.",
+      "Unexpected source-family leakage checks.",
+      "No learner-facing, app-ready, or RAG-ready promotion checks.",
+      "Text-layer quality caveat checks once extraction starts."
+    ],
+    "scriptImplications": [
+      "scripts/ag17-batch-definitions.mjs should stay synchronized with the planned batch-095 slice when extraction is authorized.",
+      "scripts/batch-definitions.mjs should import the AG 17 definition file so the shared runner can find the planned batch ID.",
+      "scripts/validate-scaffold.mjs should verify that the AG 17 plan file exists, parses cleanly, and preserves the review-only posture.",
+      "The shared runner should continue to honor the same stop conditions used for the VM-20 batches."
+    ]
+  },
+  "notes": "Controlled AG 17 planning artifact. Planned batch 095 remains review-only by default and is not an extraction run."
+}
