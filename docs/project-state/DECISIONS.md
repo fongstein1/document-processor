@@ -167,3 +167,10 @@ file rather than sharing the VM-20 or supporting-wave registry. The confirmed
 VM-21 page span is pages 143-225, VM-22 remains out of scope for this wave,
 and the planned VM-21 batches run from batch-022 through batch-037 in
 review-only mode by default.
+
+## VM-21 execution state tracking
+
+The VM-21 plan file remains the canonical batch map even after the controlled
+execution run completes. Execution status is tracked in the project-state
+documents and ignored working outputs, while the plan and validator keep the
+batch sequence synchronized for future regeneration.

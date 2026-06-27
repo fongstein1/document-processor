@@ -2,8 +2,8 @@
 
 ## Next immediate task
 
-Review the tracked VM-20 and supporting review indexes together and decide
-whether any later refinement or promotion discussion is needed.
+Review the tracked VM-20 and supporting review indexes together, and decide
+whether a VM-21 summary artifact or hardening pass is worth creating.
 
 ## Build tasks
 
@@ -26,14 +26,10 @@ whether any later refinement or promotion discussion is needed.
 - Use `npm run pilot -- --batch batch-013` through `npm run pilot -- --batch
   batch-021` only if a supporting review packet needs to be regenerated.
 - Use `npm run vm21:batch -- --batch batch-022` through
-  `npm run vm21:batch -- --batch batch-037` once the VM-21 extraction sequence
-  is underway.
-- Continue with `npm run vm21:batch -- --batch batch-026` through
-  `npm run vm21:batch -- --batch batch-029` for the second controlled VM-21
-  group.
-- Continue with `npm run vm21:batch -- --batch batch-030` through
-  `npm run vm21:batch -- --batch batch-037` for the remaining controlled
-  VM-21 batches.
+  `npm run vm21:batch -- --batch batch-037` only if a VM-21 review packet
+  needs to be regenerated.
+- Keep the completed VM-21 batches review-only unless a later human review
+  explicitly approves promotion.
 - Keep `scripts/batch-definitions.mjs` synchronized with the planned VM-20
   batch IDs, the supporting batch IDs, the VM-21 batch IDs, the actual
   source order, and the tracked review indexes.

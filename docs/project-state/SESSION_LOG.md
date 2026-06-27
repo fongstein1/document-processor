@@ -111,3 +111,9 @@
   the SR asset mechanics, reinsurance / Section 6 entry, Section 6
   assumptions, and Section 6 factor-table slices while `npm run check`
   passed after each batch.
+- 2026-06-27: Ran the final controlled VM-21 batch group sequentially
+  (batch-030 through batch-037), regenerating the ignored working outputs for
+  the alternative-methodology general layer, the factor tables, scenario
+  generation, hedging, behavior assumptions, mortality assumptions, the
+  remaining assumption guidance, and the closing allocation boundary while
+  `npm run check` passed after each batch.

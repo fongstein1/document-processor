@@ -10,14 +10,14 @@
 
 ## Latest known commit before this batch
 
-`413bcf7bd141b6898aa16ef63e62bced72e18849`
+`7ba609e`
 
 ## Validation status
 
 The scaffold, the tiny real-source pilot batches, the VM-20 planning layer,
 the re-bound remaining VM-20 batch plan, the tracked VM-20 review index, the
 tracked supporting review index, the new supporting-chapter planning
-artifacts, and the new VM-21 planning artifacts validate cleanly.
+artifacts, and the VM-21 planning and execution artifacts validate cleanly.
 
 - `npm run pilot:course-core`: passed; created the core VM course pilot batch
   outputs in `data/work/batches/batch-002/`
@@ -59,6 +59,8 @@ artifacts, and the new VM-21 planning artifacts validate cleanly.
   artifacts, the tracked review indexes, the supporting-chapter plan
   artifacts, the VM-21 plan artifacts, the no-promotion guardrails, and the
   synchronized batch definitions for batches 022-037
+- `npm run vm21:batch -- --batch batch-030` through `npm run vm21:batch -- --batch batch-037`: passed; created the remaining controlled VM-21 wave outputs in `data/work/batches/batch-030/` through `data/work/batches/batch-037/`, all review-only in ignored working storage
+- `npm run check`: passed after each of the final VM-21 batches; confirmed the schemas, templates, demo fixtures, review-packet contracts, the VM-20 plan artifacts, the tracked review indexes, the supporting-chapter plan artifacts, the VM-21 plan artifacts, the no-promotion guardrails, and the synchronized batch definitions for batches 022-037
 
 The control-plan refresh commit re-bound batches 006-012 to the actual PDF
 section order and added runner shortcuts for the remaining controlled slices.
@@ -139,6 +141,11 @@ do not change the learner-facing or app-ready posture.
   group. They remain review-only in ignored working storage and cover the SR
   asset and iteration mechanics, the reinsurance / Section 6 entry, the
   Section 6 assumptions, and the Section 6 factor tables.
+- Batches 030 through 037 have completed as the final controlled VM-21
+  group. They remain review-only in ignored working storage and cover the
+  alternative-methodology general layer, the factor tables, scenario
+  generation, hedging, behavior assumptions, mortality assumptions, the
+  remaining assumption guidance, and the closing allocation boundary.
 - The batch-003 and batch-004 review packets both surface review flags as
   extraction categories, keep boundary slices separate from overview slices,
   and preserve the no-promotion status in both JSON and markdown.
@@ -155,13 +162,14 @@ do not change the learner-facing or app-ready posture.
   `data/work/`.
 - The tracked VM-20 and supporting review indexes are summary-only handoff
   artifacts and do not replace the underlying batch outputs.
-- The VM-21 plan is now committed as a tracked planning artifact, but the
-  controlled VM-21 extraction batches are now underway in ignored working
+- The VM-21 plan is now committed as a tracked planning artifact, and the
+  controlled VM-21 extraction batches have now completed in ignored working
   storage.
 - The repository will be clean on `main` once this state refresh is committed,
   aside from ignored working files.
 
 ## Current focus
 
-Continue the controlled VM-21 sequence with batch-030 through batch-037,
-keeping the review-only posture intact and preserving the VM-22 boundary.
+The controlled VM-21 sequence is complete. Review the completed batch-022
+through batch-037 outputs if a hardening pass or summary artifact is needed,
+and keep VM-22 out of scope unless a future plan explicitly opens it.
