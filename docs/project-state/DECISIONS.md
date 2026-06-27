@@ -226,9 +226,16 @@ processed as a single review-only batch when the page locator is stable and
 the content stays source-bound. Keep OCR or encoding caveats visible in the
 review packet rather than widening the batch.
 
+## Page-image backstop for noisy text layers
+
+When a PDF text layer is noisy, encoded, or otherwise unreliable, the page
+image becomes the backstop for exact wording. Review-only batches should keep
+the page locator stable, flag the wording caveat explicitly, and avoid
+widening the batch just because OCR is uncertain.
+
 ## Repository proof-of-concept summary
 
 The tracked valuation-regulation repository proof-of-concept summary is a
-summary-only handoff artifact. It should stay aligned with the five review
-indexes and must not be treated as promoted content, learner-facing content,
-app-ready output, or RAG-ready material.
+summary-only handoff artifact. It should stay aligned with the eighteen
+review indexes and must not be treated as promoted content, learner-facing
+content, app-ready output, or RAG-ready material.

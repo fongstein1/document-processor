@@ -11,11 +11,12 @@ its review index plus self-review note now form the current handoff set. AG
 self-review note now form the current handoff set. AG 10 is complete in
 ignored working storage and its review index plus self-review note now form
 the current handoff set. AG 11 is complete in the tracked review handoff
-set, AG 12 is complete in the tracked review handoff
-set, and AG 13 planning is now the next short guideline step if the continuation
-pass keeps going. AG 05 is already captured in the tracked review handoff
-set, and AG 03, AG 01, AG 02, and AG 04 remain captured as well. AG 52 is
-already captured in the mixed pilot batch and should not be reprocessed.
+set, AG 12 is complete in the tracked review handoff set, and AG 13 is
+complete in the tracked review handoff set. AG 14 is the next likely short
+guideline step if the continuation pass keeps going. AG 05 is already
+captured in the tracked review handoff set, and AG 03, AG 01, AG 02, and AG
+04 remain captured as well. AG 52 is already captured in the mixed pilot
+batch and should not be reprocessed.
 
 ## Build tasks
 
@@ -67,6 +68,8 @@ already captured in the mixed pilot batch and should not be reprocessed.
   as the current AG 07 handoff set.
 - Treat `docs/processor/ag13_extraction_plan.md` and
   `config/ag13-batch-plan.json` as the current AG 13 planning set.
+- Treat `docs/review/ag13_review_index.md` and
+  `docs/review/ag13_self_review.md` as the current AG 13 handoff set.
 - Treat `scripts/ag04-batch-definitions.mjs` as synchronized with the AG 04
   planning and handoff set.
 - Treat `scripts/ag05-batch-definitions.mjs` as synchronized with the AG 05
@@ -101,6 +104,9 @@ already captured in the mixed pilot batch and should not be reprocessed.
   approves promotion.
 - Keep the AG 13 batch review-only unless a later human review explicitly
   approves promotion.
+- Keep `docs/review/ag13_review_index.md` and
+  `docs/review/ag13_self_review.md` synchronized with the ignored AG 13
+  review packet if the wave is ever regenerated.
 - Treat `docs/review/valuation_regulation_repository_poc_status.md` as the
   current repository-level proof-of-concept summary.
 - Treat `docs/processor/vm20_practice_note_extraction_plan.md` and

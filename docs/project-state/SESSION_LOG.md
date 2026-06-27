@@ -263,3 +263,5 @@
 - 2026-06-27: Ran the AG 12 withdrawn one-page guideline batch (`batch-090`) in ignored working storage, kept it review-only, created the tracked AG 12 review index plus self-review note as the new handoff artifacts, and refreshed the repository POC summary so the seventeenth review index and 90 validated batches are now visible in the handoff layer.
 - 2026-06-27: Inspected AG 13, confirmed the two-page historical CARVM page range, and drafted the AG 13 planning layer so batch-091 can be validated before extraction starts.
 - 2026-06-27: Validated the AG 13 planning layer cleanly, keeping the historical CARVM guidance review-only and ready for batch-091 execution.
+- 2026-06-27: Ran the AG 13 two-page historical CARVM batch (`batch-091`) in ignored working storage, kept it review-only, and created the tracked AG 13 review index plus self-review note as the new handoff artifacts.
+- 2026-06-27: Refreshed the scaffold validator and repository proof-of-concept summary so AG 13 is counted alongside the other completed review indexes, and recorded the page-image backstop rule for noisy text layers in the source-bound extraction skill and project decisions.
