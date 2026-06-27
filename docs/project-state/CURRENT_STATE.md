@@ -268,7 +268,7 @@ artifacts. The AG 09 planning layer remains the canonical batch map for
 future regeneration. The AG 10 extraction batch is complete in ignored
 working storage, and the tracked AG 10 review index plus self-review note are
 the current handoff artifacts. The AG 10 planning layer remains the canonical
-batch map for future regeneration. The AG 11 planning layer has now been executed and the tracked AG 11 review index plus self-review note are the current handoff artifacts for batch-089. The AG 12 planning layer has now been executed and the tracked AG 12 review index plus self-review note are the current handoff artifacts for batch-090. The withdrawn one-page guideline stays review-only as a caveat-first historical note, and AG 13 is now the next likely short-guideline candidate if the continuation pass keeps going.
+batch map for future regeneration. The AG 11 planning layer has now been executed and the tracked AG 11 review index plus self-review note are the current handoff artifacts for batch-089. The AG 12 planning layer has now been executed and the tracked AG 12 review index plus self-review note are the current handoff artifacts for batch-090. The withdrawn one-page guideline stays review-only as a caveat-first historical note, and AG 13 is now the next likely two-page guideline candidate if the continuation pass keeps going.
 
 The controlled AG 03 one-page guideline batch is complete in ignored working
 storage, and the tracked AG 03 review index plus self-review note are the
