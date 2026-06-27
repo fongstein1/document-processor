@@ -143,6 +143,8 @@ const paths = {
   ag08SelfReviewMd: path.join(repoRoot, 'docs', 'review', 'ag08_self_review.md'),
   ag08BatchPlanJson: path.join(repoRoot, 'config', 'ag08-batch-plan.json'),
   ag08ExtractionPlanMd: path.join(repoRoot, 'docs', 'processor', 'ag08_extraction_plan.md'),
+  ag09BatchPlanJson: path.join(repoRoot, 'config', 'ag09-batch-plan.json'),
+  ag09ExtractionPlanMd: path.join(repoRoot, 'docs', 'processor', 'ag09_extraction_plan.md'),
   practiceNoteReviewIndexMd: path.join(
     repoRoot,
     'docs',
@@ -248,6 +250,9 @@ const requiredFiles = [
   'docs/review/ag07_self_review.md',
   'docs/review/ag08_review_index.md',
   'docs/review/ag08_self_review.md',
+  'docs/processor/ag09_extraction_plan.md',
+  'config/ag09-batch-plan.json',
+  'scripts/ag09-batch-definitions.mjs',
   'docs/processor/ag02_extraction_plan.md',
   'docs/review/valuation_regulation_repository_poc_status.md',
   'config/supporting-vm-batch-plan.json',
@@ -2281,6 +2286,7 @@ const ag05BatchPlan = await readJson(paths.ag05BatchPlanJson)
 const ag06BatchPlan = await readJson(paths.ag06BatchPlanJson)
 const ag07BatchPlan = await readJson(paths.ag07BatchPlanJson)
 const ag08BatchPlan = await readJson(paths.ag08BatchPlanJson)
+const ag09BatchPlan = await readJson(paths.ag09BatchPlanJson)
 
 validateSchemaEnvelope(batchManifestSchema, 'batch-manifest.schema.json')
 validateSchemaEnvelope(sourceInventorySchema, 'source-inventory.schema.json')
@@ -3191,6 +3197,51 @@ const validateAg08PlanMarkdown = async (filePath, label) => {
   })
 }
 
+const validateAg09PlanMarkdown = async (filePath, label) => {
+  const text = await readText(filePath)
+  const requiredHeadings = [
+    '## Source Scope',
+    '## Topic Map',
+    '## Proposed Batch Sequence',
+    '## Review Standards',
+    '## Promotion Gates',
+    '## Validation Implications',
+    '## Operating Note',
+  ]
+  requiredHeadings.forEach((heading) => {
+    if (!text.includes(heading)) {
+      problems.push(`${label}: missing heading ${heading}`)
+    }
+  })
+  ;[
+    'review-only',
+    'not learner-facing',
+    'not app-ready',
+    'not RAG-ready',
+    'not promoted',
+    'AG 09',
+    'batch-084',
+    'batch-085',
+    'batch-086',
+    'batch-087',
+    'Actuarial Guideline IX',
+    'Actuarial Guideline IX-A',
+    'Actuarial Guideline IX-B',
+    'Actuarial Guideline IX-C',
+    'page 1',
+    'page 4',
+    'single premium annuities',
+    'structured settlements',
+    'immediate annuities',
+    'substandard annuity mortality tables',
+    'OCR/title mismatch',
+  ].forEach((phrase) => {
+    if (!text.includes(phrase)) {
+      problems.push(`${label}: must mention ${phrase}`)
+    }
+  })
+}
+
 const validateAg02PlanMarkdown = async (filePath, label) => {
   const text = await readText(filePath)
   const requiredHeadings = [
@@ -3538,6 +3589,45 @@ if (!plannedAg07BatchIds.includes('batch-082')) {
   problems.push('config/ag07-batch-plan.json: expected batch-082 to be planned')
 }
 
+if (ag09BatchPlan.status !== 'planned') {
+  problems.push('config/ag09-batch-plan.json: status must be planned')
+}
+if (!Array.isArray(ag09BatchPlan.proposedBatches) || ag09BatchPlan.proposedBatches.length !== 4) {
+  problems.push('config/ag09-batch-plan.json: expected exactly four proposed batches')
+}
+if (!Array.isArray(ag09BatchPlan.sourceScope?.sourceFiles) || ag09BatchPlan.sourceScope.sourceFiles.length !== 4) {
+  problems.push('config/ag09-batch-plan.json: expected exactly four source files')
+}
+const ag09ExpectedPageRanges = [
+  [1, 1],
+  [1, 2],
+  [1, 4],
+  [1, 3],
+]
+ag09ExpectedPageRanges.forEach((expectedRange, index) => {
+  const actualRange = ag09BatchPlan.sourceScope?.sourceFiles?.[index]?.pageRange
+  if (actualRange?.[0] !== expectedRange[0] || actualRange?.[1] !== expectedRange[1]) {
+    problems.push(
+      `config/ag09-batch-plan.json: source file ${index + 1} pageRange must be [${expectedRange[0]}, ${expectedRange[1]}]`,
+    )
+  }
+})
+const plannedAg09BatchIds = Array.isArray(ag09BatchPlan.proposedBatches)
+  ? ag09BatchPlan.proposedBatches
+      .map((batch) => batch?.plannedBatchId)
+      .filter((batchId) => typeof batchId === 'string' && batchId.length > 0)
+  : []
+for (const plannedBatchId of plannedAg09BatchIds) {
+  if (!batchDefinitions[plannedBatchId]) {
+    problems.push(`scripts/batch-definitions.mjs: missing batch definition for ${plannedBatchId}`)
+  }
+}
+;['batch-084', 'batch-085', 'batch-086', 'batch-087'].forEach((batchId) => {
+  if (!plannedAg09BatchIds.includes(batchId)) {
+    problems.push(`config/ag09-batch-plan.json: expected ${batchId} to be planned`)
+  }
+})
+
 await validateReviewMarkdown(paths.reviewPacketTemplateMd, 'review-packet.template.md')
 await validateReviewMarkdown(paths.sampleReviewPacketMd, 'review-packet.sample.md')
 await validateVm20PlanMarkdown(paths.vm20ExtractionPlanMd, 'docs/processor/vm20_extraction_plan.md')
@@ -3581,6 +3671,7 @@ await validateAg05PlanMarkdown(paths.ag05ExtractionPlanMd, 'docs/processor/ag05_
 await validateAg06PlanMarkdown(paths.ag06ExtractionPlanMd, 'docs/processor/ag06_extraction_plan.md')
 await validateAg07PlanMarkdown(paths.ag07ExtractionPlanMd, 'docs/processor/ag07_extraction_plan.md')
 await validateAg08PlanMarkdown(paths.ag08ExtractionPlanMd, 'docs/processor/ag08_extraction_plan.md')
+await validateAg09PlanMarkdown(paths.ag09ExtractionPlanMd, 'docs/processor/ag09_extraction_plan.md')
 await validateAg02PlanMarkdown(paths.ag02ExtractionPlanMd, 'docs/processor/ag02_extraction_plan.md')
 await validatePocStatusSummaryMarkdown(
   paths.pocStatusSummaryMd,
@@ -3730,6 +3821,7 @@ if (problems.length > 0) {
   console.log(`- AG 06 plan verified: ${ag06BatchPlan.proposedBatches.length} batches`)
   console.log(`- AG 07 plan verified: ${ag07BatchPlan.proposedBatches.length} batches`)
   console.log(`- AG 08 plan verified: ${ag08BatchPlan.proposedBatches.length} batches`)
+  console.log(`- AG 09 plan verified: ${ag09BatchPlan.proposedBatches.length} batches`)
   console.log(`- POC status summary verified: 13 review indexes`)
   if (validatedPilotBatchCount > 0) {
     console.log(`- Pilot batches validated: ${validatedPilotBatchCount}`)

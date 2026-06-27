@@ -235,3 +235,7 @@
   review index plus self-review note as the new handoff artifacts, and
   refreshed the repository POC summary so the thirteenth review index and 83
   validated batches are now visible in the handoff layer.
+- 2026-06-27: Selected the AG 09 family as the next short guideline wave,
+  confirmed the page windows for AG 09, AG 09-A, AG 09-B, and AG 09-C,
+  drafted the AG 09 planning layer, and validated the planning artifact so
+  batch-084 can run next in review-only mode.

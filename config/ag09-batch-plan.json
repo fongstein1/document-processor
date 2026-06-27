@@ -1,0 +1,311 @@
+{
+  "planId": "ag09-family-guideline-interpretation-plan",
+  "planVersion": "1.0",
+  "status": "planned",
+  "sourceScope": {
+    "sourceFamilyId": "actuarial_guidelines",
+    "sourceFolder": "Actuarial Guidelines",
+    "familyTitle": "AG 09 family",
+    "domainId": "naic_regulatory",
+    "rawSourceRoot": "D:\\Work\\AI Projects\\NAIC Valuation Manual Course",
+    "sourceFiles": [
+      {
+        "sourceId": "ag09-form-classification",
+        "filename": "AG 09 - Form Classification of Individual Single Premium Annuities for Application of the Valuation and Nonforfeiture Laws.pdf",
+        "sourceReference": "Actuarial Guideline IX",
+        "pageRange": [1, 1],
+        "pageCount": 1
+      },
+      {
+        "sourceId": "ag09-substandard-structured-settlements",
+        "filename": "AG 09-A - Use of Substandard Annuity Mortality Tables in Valuing Impaired Lives Under Structured Settlements.pdf",
+        "sourceReference": "Actuarial Guideline IX-A",
+        "pageRange": [1, 2],
+        "pageCount": 2
+      },
+      {
+        "sourceId": "ag09-clarification-of-methods",
+        "filename": "AG 09-B - Clarification of methods for immediate and deferred annuities and structured sttlement contracts.pdf",
+        "sourceReference": "Actuarial Guideline IX-B",
+        "pageRange": [1, 4],
+        "pageCount": 4
+      },
+      {
+        "sourceId": "ag09-substandard-immediate-annuities",
+        "filename": "AG 09-C - Use of Substandard Annuity Mortality Tables in Valuing Impaired Lives Under Individual Single Premium Immediate Annuities.pdf",
+        "sourceReference": "Actuarial Guideline IX-C",
+        "pageRange": [1, 3],
+        "pageCount": 3
+      }
+    ],
+    "observedSectionWindows": [
+      {
+        "sectionId": "ag09-form-classification",
+        "pageRange": [1, 1],
+        "note": "Single-page form-classification note with a title/OCR mismatch that should remain review-only."
+      },
+      {
+        "sectionId": "ag09-substandard-structured-settlements",
+        "pageRange": [1, 2],
+        "note": "Structured-settlement mortality-table guidance."
+      },
+      {
+        "sectionId": "ag09-clarification-of-methods",
+        "pageRange": [1, 4],
+        "note": "Clarification note under Standard Valuation Law."
+      },
+      {
+        "sectionId": "ag09-substandard-immediate-annuities",
+        "pageRange": [1, 3],
+        "note": "Immediate-annuity mortality-table guidance."
+      }
+    ],
+    "boundaries": [
+      "Keep planning focused on the AG 09 family only.",
+      "Do not widen into AG 10 or later guideline files.",
+      "Keep the AG 09 main title / OCR mismatch visible as a review-only caveat.",
+      "Keep each companion file review-only until a human confirms the indexing choice.",
+      "Keep the family source-bound and review-only."
+    ],
+    "exclusions": [
+      "No learner-facing content.",
+      "No app-ready export.",
+      "No RAG-ready export.",
+      "No approved/promoted export.",
+      "No eLearning scripts, slides, quizzes, or app exports.",
+      "No raw source files in Git.",
+      "No later guideline files in the same wave."
+    ]
+  },
+  "topicMap": [
+    {
+      "topicId": "ag09-form-classification",
+      "label": "Form classification of individual single premium annuities",
+      "pageRange": [1, 1],
+      "reviewComplexity": "low",
+      "expectedIssueTypes": [
+        "definition_or_terminology",
+        "regulatory_requirement",
+        "cross_reference_mapping",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": [
+        "immediate annuities",
+        "deferred annuities",
+        "valuation laws",
+        "nonforfeiture laws",
+        "OCR/title mismatch"
+      ],
+      "boundaryNote": "Keep the title/OCR mismatch visible and do not widen the slice."
+    },
+    {
+      "topicId": "ag09-substandard-structured-settlements",
+      "label": "Substandard annuity mortality tables under structured settlements",
+      "pageRange": [1, 2],
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "prescribed_assumption",
+        "cross_reference_mapping",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": [
+        "structured settlements",
+        "impaired lives",
+        "substandard mortality tables"
+      ],
+      "boundaryNote": "Keep the structured-settlement guidance separate from the immediate-annuity guidance."
+    },
+    {
+      "topicId": "ag09-clarification-of-methods",
+      "label": "Clarification of methods under Standard Valuation Law",
+      "pageRange": [1, 4],
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "regulatory_requirement",
+        "formula_context",
+        "definition_or_terminology",
+        "cross_reference_mapping",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": [
+        "immediate annuities",
+        "deferred payments",
+        "structured settlement contracts",
+        "Standard Valuation Law"
+      ],
+      "boundaryNote": "Keep this clarification note review-only and stop at the page boundary."
+    },
+    {
+      "topicId": "ag09-substandard-immediate-annuities",
+      "label": "Substandard annuity mortality tables under immediate annuities",
+      "pageRange": [1, 3],
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "prescribed_assumption",
+        "cross_reference_mapping",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": [
+        "immediate annuities",
+        "impaired lives",
+        "substandard mortality tables"
+      ],
+      "boundaryNote": "Keep the immediate-annuity guidance separate from the structured-settlement guidance."
+    }
+  ],
+  "proposedBatches": [
+    {
+      "plannedBatchId": "batch-084",
+      "topicIds": [
+        "ag09-form-classification"
+      ],
+      "title": "AG 09 form classification",
+      "pageTarget": {
+        "knownWindow": [1, 1],
+        "notes": "Capture the one-page form-classification note as a single review-only slice and keep the OCR/title mismatch visible."
+      },
+      "rationale": "Capture the one-page form-classification note as a single review-only slice and keep the OCR/title mismatch visible.",
+      "reviewComplexity": "low",
+      "expectedIssueTypes": [
+        "definition_or_terminology",
+        "regulatory_requirement",
+        "cross_reference_mapping",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    },
+    {
+      "plannedBatchId": "batch-085",
+      "topicIds": [
+        "ag09-substandard-structured-settlements"
+      ],
+      "title": "AG 09-A structured-settlement mortality tables",
+      "pageTarget": {
+        "knownWindow": [1, 2],
+        "notes": "Capture the structured-settlement companion guidance as a narrow review-only slice."
+      },
+      "rationale": "Capture the structured-settlement companion guidance as a narrow review-only slice.",
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "prescribed_assumption",
+        "cross_reference_mapping",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    },
+    {
+      "plannedBatchId": "batch-086",
+      "topicIds": [
+        "ag09-clarification-of-methods"
+      ],
+      "title": "AG 09-B clarification of methods",
+      "pageTarget": {
+        "knownWindow": [1, 4],
+        "notes": "Capture the four-page clarification note as a single review-only slice."
+      },
+      "rationale": "Capture the four-page clarification note as a single review-only slice because the methods text is tightly related.",
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "regulatory_requirement",
+        "formula_context",
+        "definition_or_terminology",
+        "cross_reference_mapping",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    },
+    {
+      "plannedBatchId": "batch-087",
+      "topicIds": [
+        "ag09-substandard-immediate-annuities"
+      ],
+      "title": "AG 09-C immediate-annuity mortality tables",
+      "pageTarget": {
+        "knownWindow": [1, 3],
+        "notes": "Capture the immediate-annuity mortality-table guidance as a separate narrow review slice."
+      },
+      "rationale": "Capture the immediate-annuity mortality-table guidance as a separate narrow review slice.",
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "prescribed_assumption",
+        "cross_reference_mapping",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    }
+  ],
+  "reviewStandards": {
+    "regulatoryRequirement": "Treat explicit must, shall, or required language as the requirement; preserve the citation and source context.",
+    "definitionOrTerminology": "Treat immediate annuities, deferred annuities, structured settlements, impaired lives, substandard mortality tables, and the actuarial-function references as terminology content unless they impose a duty.",
+    "formulaContext": "Treat valuation or mortality-table references as context that needs source-bound preservation rather than promotion.",
+    "prescribedAssumption": "Treat explicit mortality-table instructions or required table-selection language as prescribed assumptions unless the text clearly says otherwise.",
+    "crossReferenceMapping": "Treat references to the Standard Valuation Law, nonforfeiture laws, structured settlements, or deferred payments as mapping notes unless the operational text is included.",
+    "backgroundContent": "Treat the title line and framing sentence as background content unless they impose a duty.",
+    "boundaryControlWindow": "Treat each small file window as a review-only window that should not be merged forward.",
+    "requiresHumanInterpretation": "Treat the indexing choice and the OCR / encoded text layer as requiring human actuarial interpretation unless the text is explicit.",
+    "sourceQualityCaveat": "Treat text-layer noise or title/OCR mismatch as review-only caveats and do not widen the batch because of them."
+  },
+  "promotionGates": {
+    "defaultState": "review_only",
+    "learnerFacing": [
+      "source citation exists",
+      "source support is clear",
+      "wording is not misleading",
+      "confidence is high",
+      "no unresolved review flags exist"
+    ],
+    "appReady": [
+      "learner-facing criteria are already satisfied",
+      "export is sanitized, stable, and versioned",
+      "no unresolved review issues remain"
+    ],
+    "ragReady": [
+      "approved indexed material only",
+      "stable ID",
+      "source reference",
+      "locator",
+      "review status no longer requires human disposition"
+    ]
+  },
+  "validationImplications": {
+    "currentChecksNeeded": [
+      "Plan file exists and parses as JSON.",
+      "The AG 09 plan markdown exists and carries the expected headings.",
+      "Every proposed batch is review-only by default.",
+      "The plan keeps the family to four small files only.",
+      "Each planned batch has a matching batch definition.",
+      "The AG 09 batch definition file stays synchronized with the plan."
+    ],
+    "futureChecksSuggested": [
+      "Family-wave checks for future short guideline families.",
+      "OCR/title mismatch checks for the AG 09 main file.",
+      "Mortality-table and structured-settlement tagging checks.",
+      "Unexpected source-family leakage checks.",
+      "No learner-facing, app-ready, or RAG-ready promotion checks.",
+      "Text-layer quality caveat checks once extraction starts."
+    ],
+    "scriptImplications": [
+      "scripts/ag09-batch-definitions.mjs should stay synchronized with the planned batch-084 through batch-087 slices when extraction is authorized.",
+      "scripts/batch-definitions.mjs should import the AG 09 definition file so the shared runner can find the planned batch IDs.",
+      "scripts/validate-scaffold.mjs should verify that the AG 09 plan file exists, parses cleanly, and preserves the review-only posture.",
+      "The shared runner should continue to honor the same stop conditions used for the VM-20 batches."
+    ]
+  },
+  "notes": "Controlled AG 09 family planning artifact. Planned batches 084 through 087 remain review-only by default and are not extraction runs."
+}
