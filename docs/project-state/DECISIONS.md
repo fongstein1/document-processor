@@ -219,12 +219,12 @@ applicable may be processed as caveat-only review units. They should stay
 review-only and non-authoritative unless later binding-source support changes
 the status.
 
-## Single-page guideline units
+## Short guideline units
 
-Self-contained one-page guideline or interpretation PDFs may be processed as a
-single review-only batch when the page locator is stable and the content stays
-source-bound. Keep OCR or encoding caveats visible in the review packet rather
-than widening the batch.
+Self-contained one- or two-page guideline or interpretation PDFs may be
+processed as a single review-only batch when the page locator is stable and
+the content stays source-bound. Keep OCR or encoding caveats visible in the
+review packet rather than widening the batch.
 
 ## Repository proof-of-concept summary
 

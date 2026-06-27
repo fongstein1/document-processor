@@ -194,3 +194,8 @@
   set.
 - 2026-06-27: Created the tracked AG 02 review index and self-review note as
   the new handoff artifacts for the two-page guideline unit.
+- 2026-06-27: Drafted the AG 04 planning layer for the two-page term-life
+  reserve interpretation, wired `batch-079` into the shared runner and
+  validator, and tightened the short-guideline decision so the AG 04 slice
+  stays review-only and source-bound until the plan is committed and
+  executed.

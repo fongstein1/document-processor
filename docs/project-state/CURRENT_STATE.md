@@ -10,7 +10,7 @@
 
 ## Latest known commit before this batch
 
-`b0ad871`
+`4def796`
 
 ## Validation status
 
@@ -218,6 +218,11 @@ through `batch-075` were processed review-only, and the tracked practice-note
 review index plus self-review note now summarize that wave without promoting
 any extracted content.
 
+The next source unit is AG 04, a short Actuarial Guideline interpretation
+that is being prepared as `batch-079`. It will stay review-only and
+source-bound so the short-guideline pattern stays consistent with the earlier
+AG units.
+
 The controlled AG 03 one-page guideline batch is complete in ignored working
 storage, and the tracked AG 03 review index plus self-review note are the
 current handoff artifacts. The controlled AG 01 one-page guideline batch is
@@ -225,7 +230,10 @@ complete in ignored working storage, and the tracked AG 01 review index plus
 self-review note are committed handoff artifacts. The controlled AG 02
 two-page guideline batch is complete in ignored working storage, and the
 tracked AG 02 review index plus self-review note are the next handoff
-artifacts. The AG 52 text note already lives in the mixed pilot batch and is
+artifacts. The AG 04 planning layer is now drafted in working files as a
+standalone two-page term-life reserve interpretation and is next in line for
+validation and execution as batch-079. The AG 52 text note already lives in
+the mixed pilot batch and is
 not being reprocessed. The remaining Practice Notes files and other
 Actuarial Guideline / NY regulation files stay out of scope until separately
 planned.
