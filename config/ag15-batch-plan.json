@@ -12,12 +12,14 @@
     "domainId": "naic_regulatory",
     "rawSourceRoot": "D:\\Work\\AI Projects\\NAIC Valuation Manual Course",
     "confirmedPageRange": [
+      1,
       1
     ],
     "observedSectionWindows": [
       {
         "sectionId": "ag15-variable-life-illustration-guideline",
         "pageRange": [
+          1,
           1
         ],
         "note": "One-page illustration guideline for variable life insurance model regulation."
@@ -46,6 +48,7 @@
       "topicId": "ag15-variable-life-illustration-guideline",
       "label": "Illustration rules for variable life insurance model regulation",
       "pageRange": [
+        1,
         1
       ],
       "reviewComplexity": "medium",
@@ -81,6 +84,7 @@
       "title": "One-page AG 15 illustration guideline",
       "pageTarget": {
         "knownWindow": [
+          1,
           1
         ],
         "notes": "Capture the full one-page guideline as a single review-only slice and stop at the page boundary."

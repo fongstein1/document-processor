@@ -191,7 +191,7 @@ const ag15BatchSpecs = [
       'AG 15 - Illustration Guideline for Variable Life Insurance Model Regulation',
     sourceReference: 'Actuarial Guideline XV',
     batchTitle: 'illustration guideline',
-    pageWindow: [1],
+        pageWindow: [1, 1],
     sectionReference:
       'AG 15: Illustration Guideline for Variable Life Insurance Model Regulation (historical illustration guidance)',
     citationText:
