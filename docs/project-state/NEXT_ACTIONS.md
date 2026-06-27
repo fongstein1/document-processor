@@ -77,6 +77,8 @@ already captured in the mixed pilot batch and should not be reprocessed.
   `config/ag15-batch-plan.json` as the current AG 15 planning set.
 - Treat `docs/review/ag15_review_index.md` and
   `docs/review/ag15_self_review.md` as the current AG 15 handoff set.
+- Treat `docs/processor/ag16_extraction_plan.md` and
+  `config/ag16-batch-plan.json` as the current AG 16 planning set.
 - Treat `scripts/ag04-batch-definitions.mjs` as synchronized with the AG 04
   planning and handoff set.
 - Treat `scripts/ag05-batch-definitions.mjs` as synchronized with the AG 05
@@ -124,6 +126,8 @@ already captured in the mixed pilot batch and should not be reprocessed.
 - Keep `docs/review/ag15_review_index.md` and
   `docs/review/ag15_self_review.md` synchronized with the ignored AG 15
   review packet if the wave is ever regenerated.
+- Keep the AG 16 batch review-only unless a later human review explicitly
+  approves promotion.
 - Treat `docs/review/valuation_regulation_repository_poc_status.md` as the
   current repository-level proof-of-concept summary.
 - Treat `docs/processor/vm20_practice_note_extraction_plan.md` and

@@ -134,6 +134,10 @@ The AG 15 review-only step is now complete as batch-093. Its tracked review
 index and self-review note summarize the historical illustration guideline
 without promoting any extracted content.
 
+The AG 16 planning layer is now drafted so batch-094 can capture the CRVM
+select-mortality / split-interest guideline as the next review-only step if
+the continuation pass keeps going.
+
 ## Working posture
 
 - Raw source material stays external at
