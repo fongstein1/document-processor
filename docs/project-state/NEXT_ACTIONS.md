@@ -2,9 +2,10 @@
 
 ## Next immediate task
 
-Commit the AG 03 planning artifacts, validator updates, and project-state
-refresh, then run the single AG 03 batch-076 unit. AG 52 is already captured
-in the mixed pilot batch and should not be reprocessed.
+Commit the AG 03 review index, self-review note, POC summary refresh, and
+validator updates, then select the next small Actuarial Guideline or NY
+regulation source unit. AG 52 is already captured in the mixed pilot batch and
+should not be reprocessed.
 
 ## Build tasks
 
@@ -28,6 +29,8 @@ in the mixed pilot batch and should not be reprocessed.
   handoff set.
 - Treat `docs/processor/ag03_extraction_plan.md` and
   `config/ag03-batch-plan.json` as the current AG 03 planning set.
+- Treat `docs/review/ag03_review_index.md` and
+  `docs/review/ag03_self_review.md` as the current AG 03 handoff set.
 - Treat `docs/review/valuation_regulation_repository_poc_status.md` as the
   current repository-level proof-of-concept summary.
 - Treat `docs/processor/vm20_practice_note_extraction_plan.md` and

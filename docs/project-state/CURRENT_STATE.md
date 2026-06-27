@@ -10,7 +10,7 @@
 
 ## Latest known commit before this batch
 
-`b926d65`
+`574ac6d`
 
 ## Validation status
 
@@ -218,11 +218,10 @@ through `batch-075` were processed review-only, and the tracked practice-note
 review index plus self-review note now summarize that wave without promoting
 any extracted content.
 
-The next likely small candidate is the one-page AG 03 guideline
-`Actuarial Guidelines/AG 03 - Definition of the Term Maturity Value in the
-Standard Nonforfeiture Law of Individual Deferred Annuities.pdf`. It is a
-self-contained review-only interpretation with a stable page locator, and it
-should stay review-only until the indexing choice is confirmed. The AG 52 text
-note already lives in the mixed pilot batch and is not being reprocessed. The
-remaining Practice Notes files and other Actuarial Guideline / NY regulation
-files stay out of scope until separately planned.
+The controlled AG 03 one-page guideline batch is complete in ignored working
+storage, and the tracked AG 03 review index plus self-review note are the
+next handoff artifacts. The next likely small candidate is another remaining
+Actuarial Guideline or NY regulation source file. The AG 52 text note already
+lives in the mixed pilot batch and is not being reprocessed. The remaining
+Practice Notes files and other Actuarial Guideline / NY regulation files stay
+out of scope until separately planned.

@@ -23,6 +23,8 @@ review indexes:
 - `docs/review/vm21_review_index.md`
 - `docs/review/vm22_review_index.md`
 - `docs/review/vm20_practice_note_review_index.md`
+- `docs/review/ag03_review_index.md`
+- `docs/review/ag03_self_review.md`
 
 ## Executive Status
 
@@ -40,6 +42,8 @@ What has been built:
 - review-packet and unresolved-issues workflows that keep exception-first
   review visible
 - tracked end-of-sequence review indexes for the completed waves
+- tracked AG 03 review index and self-review note for the one-page guideline
+  unit in `docs/review/ag03_self_review.md`
 - project-state docs that preserve the handoff history
 
 What source families / chapters have been processed:
@@ -55,6 +59,7 @@ What source families / chapters have been processed:
 - VM-21, batches `batch-022` through `batch-037`
 - VM-22, batches `batch-038` through `batch-054`
 - VM-20 companion practice note, batches `batch-055` through `batch-075`
+- AG 03 single-page guideline, `batch-076`
 
 What remains review-only:
 
@@ -96,6 +101,7 @@ What is explicitly out of scope:
 | VM-21 | `pp. 143-225` | `batch-022` through `batch-037` | `docs/review/vm21_review_index.md` | Complete; review-only | Scope, reserve methodology, SR projection, asset mechanics, hedging, assumptions, and closing allocation |
 | VM-22 | `pp. 227-318` | `batch-038` through `batch-054` | `docs/review/vm22_review_index.md` | Complete; review-only | Background / scope, reserve methodology, projection and asset mechanics, stochastic exclusions, scenario generation, hedging, assumptions, and page-318 closure before VM-25 |
 | VM-20 companion practice note | `pp. 1-115` | `batch-055` through `batch-075` | `docs/review/vm20_practice_note_review_index.md` | Complete; review-only | Non-binding disclaimer, calculation overview, reserve overviews, assumptions, reinsurance, hedging, and implementation-guidance boundaries |
+| AG 03 single-page guideline | `p. 1` | `batch-076` | `docs/review/ag03_review_index.md` | Complete; review-only | Maturity-value interpretation, cash surrender treatment, and encoded-text caveat |
 
 ## Completed Assets
 
@@ -110,6 +116,7 @@ The repository now includes the core processor asset set:
 - tracked review indexes in `docs/review/`
 - the tracked VM-20 practice-note review index and self-review note in
   `docs/review/`
+- the tracked AG 03 review index and self-review note in `docs/review/`
 - VM chapter planning artifacts in `docs/processor/` and `config/`
 - project-state docs in `docs/project-state/`
 - runner / validator scripts in `scripts/`
@@ -120,9 +127,9 @@ documents remain external to Git.
 ## Validation Posture
 
 - `npm run check` passes
-- the scaffold reports 75 batches validated
+- the scaffold reports 76 batches validated
 - the validator now checks the tracked VM-20, supporting, VM-21, VM-22,
-  practice-note, and POC status summary handoff files
+  practice-note, AG 03, and POC status summary handoff files
 - review-only and no-promotion guardrails are enforced in the batch manifests
   and review packets
 - ignored working outputs stay under `data/work/`
@@ -131,7 +138,7 @@ documents remain external to Git.
 
 ## Human Review Posture
 
-- Reviewers should start from the five review indexes listed above.
+- Reviewers should start from the six review indexes listed above.
 - The review packets remain the detailed evidence layer behind those
   summaries.
 - All batch content remains source-bound and review-only unless a separate
@@ -170,7 +177,8 @@ workspace, but future work may still include:
 ## Recommended Next Step
 
 Review the proof-of-concept package first. If the stakeholder decision is to
-expand rather than pause, the next gated step should be to create a promotion
-workflow for selected reviewed items. If the broader roadmap needs to split
-by domain, the clean follow-on is to start a pricing repository or a
-liability-modeling repository as a separate family.
+expand rather than pause, the next gated step should be to select the next
+small Actuarial Guideline or NY regulation source unit and continue the same
+review-only workflow. If the broader roadmap needs to split by domain, the
+clean follow-on is to start a pricing repository or a liability-modeling
+repository as a separate family.

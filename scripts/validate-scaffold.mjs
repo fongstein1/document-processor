@@ -135,6 +135,8 @@ const paths = {
     'review',
     'vm20_practice_note_self_review.md',
   ),
+  ag03ReviewIndexMd: path.join(repoRoot, 'docs', 'review', 'ag03_review_index.md'),
+  ag03SelfReviewMd: path.join(repoRoot, 'docs', 'review', 'ag03_self_review.md'),
   practiceNoteBatchPlanJson: path.join(
     repoRoot,
     'config',
@@ -196,6 +198,8 @@ const requiredFiles = [
   'docs/review/vm22_review_index.md',
   'docs/review/vm20_practice_note_review_index.md',
   'docs/review/vm20_practice_note_self_review.md',
+  'docs/review/ag03_review_index.md',
+  'docs/review/ag03_self_review.md',
   'docs/review/valuation_regulation_repository_poc_status.md',
   'config/supporting-vm-batch-plan.json',
   'config/vm21-batch-plan.json',
@@ -2082,6 +2086,9 @@ validateSupportingVmPlanLike(supportingVmBatchPlan, 'config/supporting-vm-batch-
 validateVm21PlanLike(vm21BatchPlan, 'config/vm21-batch-plan.json')
 validateVm22PlanLike(vm22BatchPlan, 'config/vm22-batch-plan.json')
 validatePracticeNotePlanLike(practiceNoteBatchPlan, 'config/vm20-practice-note-batch-plan.json')
+if (!Array.isArray(ag03BatchPlan.proposedBatches) || ag03BatchPlan.proposedBatches.length !== 1) {
+  problems.push('config/ag03-batch-plan.json: expected exactly one proposed batch')
+}
 
 const plannedVm20BatchIds = Array.isArray(vm20BatchPlan.proposedBatches)
   ? vm20BatchPlan.proposedBatches
@@ -2338,6 +2345,73 @@ const validatePracticeNoteSelfReviewMarkdown = async (filePath, label) => {
   })
 }
 
+const validateAg03ReviewIndexMarkdown = async (filePath, label) => {
+  const text = await readText(filePath)
+  const requiredHeadings = [
+    '## Overall AG 03 Extraction Status',
+    '## Batch Table',
+    '## Higher-Caution Section',
+    '## Human Review Checklist',
+    '## Promotion Decision Area',
+    '## Recommended Review Order',
+    '## Relationship to Other Review Indexes',
+    '## Self-Review Note',
+    '## Review Notes',
+  ]
+  requiredHeadings.forEach((heading) => {
+    if (!text.includes(heading)) {
+      problems.push(`${label}: missing heading ${heading}`)
+    }
+  })
+  ;[
+    'review-only',
+    'not learner-facing',
+    'not app-ready',
+    'not RAG-ready',
+    'not promoted',
+    'AG 03',
+    'batch-076',
+    'single-page',
+    'maturity value',
+    'cash surrender value',
+    'docs/review/vm20_review_index.md',
+    'docs/review/supporting_vm_review_index.md',
+    'docs/review/vm21_review_index.md',
+    'docs/review/vm22_review_index.md',
+    'docs/review/vm20_practice_note_review_index.md',
+    'docs/review/ag03_self_review.md',
+  ].forEach((phrase) => {
+    if (!text.includes(phrase)) {
+      problems.push(`${label}: must mention ${phrase}`)
+    }
+  })
+}
+
+const validateAg03SelfReviewMarkdown = async (filePath, label) => {
+  const text = await readText(filePath)
+  const requiredHeadings = [
+    '## Batch Classifications',
+    '## Recurring Observations',
+    '## Skill-Hardening Note',
+    '## Review Outcome',
+  ]
+  requiredHeadings.forEach((heading) => {
+    if (!text.includes(heading)) {
+      problems.push(`${label}: missing heading ${heading}`)
+    }
+  })
+  ;[
+    'reasonable_with_minor_cautions',
+    'batch-076',
+    'encoded text layer',
+    'No tracked skill file update was necessary',
+  ].forEach((phrase) => {
+    if (!text.includes(phrase)) {
+      problems.push(`${label}: must mention ${phrase}`)
+    }
+  })
+}
+
 const validatePocStatusSummaryMarkdown = async (filePath, label) => {
   const text = await readText(filePath)
   const requiredHeadings = [
@@ -2375,9 +2449,11 @@ const validatePocStatusSummaryMarkdown = async (filePath, label) => {
     'docs/review/vm21_review_index.md',
     'docs/review/vm22_review_index.md',
     'docs/review/vm20_practice_note_review_index.md',
+    'docs/review/ag03_review_index.md',
+    'docs/review/ag03_self_review.md',
     'npm run check',
     'git diff --check',
-    '75 batches validated',
+    '76 batches validated',
     'ignored working storage',
     'future pricing',
     'future liability-modeling',
@@ -2471,6 +2547,8 @@ await validatePracticeNoteSelfReviewMarkdown(
   paths.practiceNoteSelfReviewMd,
   'docs/review/vm20_practice_note_self_review.md',
 )
+await validateAg03ReviewIndexMarkdown(paths.ag03ReviewIndexMd, 'docs/review/ag03_review_index.md')
+await validateAg03SelfReviewMarkdown(paths.ag03SelfReviewMd, 'docs/review/ag03_self_review.md')
 await validatePocStatusSummaryMarkdown(
   paths.pocStatusSummaryMd,
   'docs/review/valuation_regulation_repository_poc_status.md',
@@ -2611,7 +2689,7 @@ if (problems.length > 0) {
   console.log(`- VM-22 review index verified: 17 batches`)
   console.log(`- Practice-note plan verified: ${practiceNoteBatchPlan.proposedBatches.length} batches`)
   console.log(`- Practice-note review index verified: 21 batches`)
-  console.log(`- POC status summary verified: 5 review indexes`)
+  console.log(`- POC status summary verified: 6 review indexes`)
   if (validatedPilotBatchCount > 0) {
     console.log(`- Pilot batches validated: ${validatedPilotBatchCount}`)
   }

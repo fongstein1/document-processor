@@ -173,3 +173,6 @@
 - 2026-06-27: Recorded a durable decision that self-contained one-page
   guideline or interpretation PDFs may be processed as single review-only
   batches when the page locator is stable and the content stays source-bound.
+- 2026-06-27: Ran the AG 03 single-page guideline batch (`batch-076`) in
+  ignored working storage, kept it review-only, and wrote the tracked AG 03
+  review index plus self-review note as the new handoff artifacts.
