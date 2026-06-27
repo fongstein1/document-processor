@@ -111,6 +111,8 @@ const paths = {
     'processor',
     'supporting_vm_chapters_extraction_plan.md',
   ),
+  vm21BatchPlanJson: path.join(repoRoot, 'config', 'vm21-batch-plan.json'),
+  vm21ExtractionPlanMd: path.join(repoRoot, 'docs', 'processor', 'vm21_extraction_plan.md'),
 }
 
 const requiredFiles = [
@@ -133,6 +135,7 @@ const requiredFiles = [
   'data/samples/contract-demo/review-packet.sample.md',
   'docs/processor/PROJECT_BRIEF.md',
   'docs/processor/supporting_vm_chapters_extraction_plan.md',
+  'docs/processor/vm21_extraction_plan.md',
   'docs/codex/skills/README.md',
   'docs/codex/skills/SOURCE_BOUND_EXTRACTION_SKILL.md',
   'docs/codex/skills/LEARNER_FACING_PROMOTION_GATE_SKILL.md',
@@ -152,7 +155,9 @@ const requiredFiles = [
   'docs/review/vm20_review_index.md',
   'docs/review/supporting_vm_review_index.md',
   'config/supporting-vm-batch-plan.json',
+  'config/vm21-batch-plan.json',
   'config/vm20-batch-plan.json',
+  'scripts/vm21-batch-definitions.mjs',
   'scripts/bootstrap-small-batch.mjs',
   'scripts/validate-scaffold.mjs',
   'scripts/run-pilot-batch.mjs',
@@ -1263,6 +1268,209 @@ const validateSupportingVmPlanMarkdown = async (filePath, label) => {
   })
 }
 
+const validateVm21PlanLike = (plan, label) => {
+  if (!expectObject(plan, label)) return
+  if (plan.planVersion !== '1.0') {
+    problems.push(`${label}: planVersion must be 1.0`)
+  }
+  if (!hasString(plan.planId)) {
+    problems.push(`${label}: missing planId`)
+  }
+  if (plan.status !== 'planned') {
+    problems.push(`${label}: status must be planned`)
+  }
+  if (!expectObject(plan.sourceScope, `${label}.sourceScope`)) return
+  if (plan.sourceScope.primarySourceFile !== 'pbr_data_valuation_manual_2026.pdf') {
+    problems.push(`${label}.sourceScope: unexpected primarySourceFile`)
+  }
+  if (!hasString(plan.sourceScope.sourceFamilyId)) {
+    problems.push(`${label}.sourceScope: missing sourceFamilyId`)
+  }
+  if (!hasString(plan.sourceScope.sourceTitle)) {
+    problems.push(`${label}.sourceScope: missing sourceTitle`)
+  }
+  if (!hasString(plan.sourceScope.sourceReference)) {
+    problems.push(`${label}.sourceScope: missing sourceReference`)
+  }
+  if (!hasString(plan.sourceScope.domainId)) {
+    problems.push(`${label}.sourceScope: missing domainId`)
+  }
+  if (!hasString(plan.sourceScope.rawSourceRoot)) {
+    problems.push(`${label}.sourceScope: missing rawSourceRoot`)
+  }
+  if (!expectArray(plan.sourceScope.confirmedPageRange, `${label}.sourceScope.confirmedPageRange`, false)) return
+  if (plan.sourceScope.confirmedPageRange.length !== 2) {
+    problems.push(`${label}.sourceScope.confirmedPageRange must contain exactly two page bounds`)
+  }
+  if (
+    plan.sourceScope.confirmedPageRange[0] !== 143 ||
+    plan.sourceScope.confirmedPageRange[1] !== 225
+  ) {
+    problems.push(`${label}.sourceScope.confirmedPageRange must be [143, 225]`)
+  }
+  if (!expectArray(plan.sourceScope.boundaries, `${label}.sourceScope.boundaries`, false)) return
+  if (!expectArray(plan.sourceScope.exclusions, `${label}.sourceScope.exclusions`, false)) return
+  if (
+    !plan.sourceScope.boundaries.some(
+      (entry) =>
+        typeof entry === 'string' && entry.includes('VM-22') && entry.includes('out of scope'),
+    )
+  ) {
+    problems.push(`${label}.sourceScope.boundaries: must mention VM-22 out-of-scope handling`)
+  }
+  if (
+    !plan.sourceScope.exclusions.some(
+      (entry) => typeof entry === 'string' && entry.includes('learner-facing'),
+    )
+  ) {
+    problems.push(`${label}.sourceScope.exclusions: must mention learner-facing exclusion`)
+  }
+
+  if (!expectArray(plan.topicMap, `${label}.topicMap`, false)) return
+  if (!expectArray(plan.proposedBatches, `${label}.proposedBatches`, false)) return
+  if (!expectObject(plan.reviewStandards, `${label}.reviewStandards`)) return
+  if (!expectObject(plan.promotionGates, `${label}.promotionGates`)) return
+  if (!expectObject(plan.validationImplications, `${label}.validationImplications`)) return
+
+  const topicIds = new Set()
+  plan.topicMap.forEach((topic, index) => {
+    const topicLabel = `${label}.topicMap[${index}]`
+    if (!expectObject(topic, topicLabel)) return
+    ;['topicId', 'label', 'reviewComplexity', 'boundaryNote'].forEach((field) => {
+      if (!hasString(topic[field])) {
+        problems.push(`${topicLabel}: missing ${field}`)
+      }
+    })
+    if (!expectArray(topic.pageRange, `${topicLabel}.pageRange`, false)) return
+    if (topic.pageRange.length !== 2) {
+      problems.push(`${topicLabel}.pageRange must contain exactly two page bounds`)
+    }
+    if (!expectArray(topic.expectedIssueTypes, `${topicLabel}.expectedIssueTypes`, false)) return
+    if (!expectArray(topic.crossReferenceWatchlist, `${topicLabel}.crossReferenceWatchlist`, false)) return
+    topicIds.add(topic.topicId)
+  })
+
+  const observedTopicIds = new Set()
+  plan.proposedBatches.forEach((batch, index) => {
+    const batchLabel = `${label}.proposedBatches[${index}]`
+    if (!expectObject(batch, batchLabel)) return
+    ;['plannedBatchId', 'title', 'reviewComplexity', 'rationale', 'automationFit'].forEach((field) => {
+      if (!hasString(batch[field])) {
+        problems.push(`${batchLabel}: missing ${field}`)
+      }
+    })
+    if (!expectArray(batch.topicIds, `${batchLabel}.topicIds`, false)) return
+    if (!expectArray(batch.expectedIssueTypes, `${batchLabel}.expectedIssueTypes`, false)) return
+    if (!expectObject(batch.pageTarget, `${batchLabel}.pageTarget`)) return
+    if (batch.reviewOnlyByDefault !== true) {
+      problems.push(`${batchLabel}: reviewOnlyByDefault must be true`)
+    }
+    if (batch.sameStopConditionsAsVm20 !== true) {
+      problems.push(`${batchLabel}: sameStopConditionsAsVm20 must be true`)
+    }
+    batch.topicIds.forEach((topicId) => {
+      if (!topicIds.has(topicId)) {
+        problems.push(`${batchLabel}: unknown topicId ${topicId}`)
+      }
+      observedTopicIds.add(topicId)
+    })
+    if (!expectArray(batch.pageTarget.knownWindow, `${batchLabel}.pageTarget.knownWindow`, false)) return
+    if (batch.pageTarget.knownWindow.length !== 2) {
+      problems.push(`${batchLabel}.pageTarget.knownWindow must contain exactly two page bounds`)
+    }
+    if (batch.pageTarget.knownWindow[0] < 143 || batch.pageTarget.knownWindow[1] > 225) {
+      problems.push(`${batchLabel}.pageTarget.knownWindow must stay within the confirmed VM-21 page range`)
+    }
+  })
+
+  topicIds.forEach((topicId) => {
+    if (!observedTopicIds.has(topicId)) {
+      problems.push(`${label}.proposedBatches: missing batch coverage for topicId ${topicId}`)
+    }
+  })
+
+  ;[
+    'regulatoryRequirement',
+    'definitionOrTerminology',
+    'reserveMethodStructure',
+    'calculationStructure',
+    'formulaContext',
+    'prescribedAssumption',
+    'companyOrPrudentEstimateAssumption',
+    'scenarioOrStochasticRequirement',
+    'assetModelingJudgment',
+    'hedgingOrRiskMitigation',
+    'reportingRequirement',
+    'documentationExpectation',
+    'crossReferenceMapping',
+    'backgroundContent',
+    'boundaryControlWindow',
+    'requiresHumanInterpretation',
+    'staleSupersededCompanionGuidance',
+  ].forEach((field) => {
+    if (!hasString(plan.reviewStandards[field])) {
+      problems.push(`${label}.reviewStandards: missing ${field}`)
+    }
+  })
+
+  if (plan.promotionGates.defaultState !== 'review_only') {
+    problems.push(`${label}.promotionGates.defaultState must be review_only`)
+  }
+  if (!expectArray(plan.promotionGates.learnerFacing, `${label}.promotionGates.learnerFacing`, false)) return
+  if (!expectArray(plan.promotionGates.appReady, `${label}.promotionGates.appReady`, false)) return
+  if (!expectArray(plan.promotionGates.ragReady, `${label}.promotionGates.ragReady`, false)) return
+  if (!expectArray(plan.validationImplications.currentChecksNeeded, `${label}.validationImplications.currentChecksNeeded`, false)) return
+  if (!expectArray(plan.validationImplications.futureChecksSuggested, `${label}.validationImplications.futureChecksSuggested`, false)) return
+  if (!expectArray(plan.validationImplications.scriptImplications, `${label}.validationImplications.scriptImplications`, false)) return
+}
+
+const validateVm21PlanMarkdown = async (filePath, label) => {
+  const text = await readText(filePath)
+  const requiredHeadings = [
+    '## Source Scope',
+    '## Chapter / Topic Map',
+    '## Proposed Batch Sequence',
+    '## Review Standards',
+    '## Promotion Gates',
+    '## Validation Implications',
+    '## Operating Note',
+  ]
+  requiredHeadings.forEach((heading) => {
+    if (!text.includes(heading)) {
+      problems.push(`${label}: missing heading ${heading}`)
+    }
+  })
+  ;[
+    'review-only',
+    'not learner-facing',
+    'not app-ready',
+    'not RAG-ready',
+    'not promoted',
+    'VM-21',
+    'VM-22',
+    'batch-022',
+    'batch-023',
+    'batch-024',
+    'batch-025',
+    'batch-026',
+    'batch-027',
+    'batch-028',
+    'batch-029',
+    'batch-030',
+    'batch-031',
+    'batch-032',
+    'batch-033',
+    'batch-034',
+    'batch-035',
+    'batch-036',
+    'batch-037',
+  ].forEach((phrase) => {
+    if (!text.includes(phrase)) {
+      problems.push(`${label}: must mention ${phrase}`)
+    }
+  })
+}
+
 for (const relativePath of requiredFiles) {
   await requireFile(relativePath)
 }
@@ -1280,6 +1488,7 @@ const sampleExtractionOutput = await readJson(paths.sampleExtractionOutput)
 const sampleReviewPacketJson = await readJson(paths.sampleReviewPacketJson)
 const vm20BatchPlan = await readJson(paths.vm20BatchPlanJson)
 const supportingVmBatchPlan = await readJson(paths.supportingVmBatchPlanJson)
+const vm21BatchPlan = await readJson(paths.vm21BatchPlanJson)
 
 validateSchemaEnvelope(batchManifestSchema, 'batch-manifest.schema.json')
 validateSchemaEnvelope(sourceInventorySchema, 'source-inventory.schema.json')
@@ -1295,6 +1504,7 @@ validateReviewPacketLike(reviewPacketTemplateJson, 'review-packet.template.json'
 validateReviewPacketLike(sampleReviewPacketJson, 'review-packet.sample.json')
 validateVm20PlanLike(vm20BatchPlan, 'config/vm20-batch-plan.json')
 validateSupportingVmPlanLike(supportingVmBatchPlan, 'config/supporting-vm-batch-plan.json')
+validateVm21PlanLike(vm21BatchPlan, 'config/vm21-batch-plan.json')
 
 const plannedVm20BatchIds = Array.isArray(vm20BatchPlan.proposedBatches)
   ? vm20BatchPlan.proposedBatches
@@ -1365,6 +1575,17 @@ for (const plannedBatchId of plannedSupportingBatchIds) {
   }
 }
 
+const plannedVm21BatchIds = Array.isArray(vm21BatchPlan.proposedBatches)
+  ? vm21BatchPlan.proposedBatches
+      .map((batch) => batch?.plannedBatchId)
+      .filter((batchId) => typeof batchId === 'string' && batchId.length > 0)
+  : []
+for (const plannedBatchId of plannedVm21BatchIds) {
+  if (!batchDefinitions[plannedBatchId]) {
+    problems.push(`scripts/batch-definitions.mjs: missing batch definition for ${plannedBatchId}`)
+  }
+}
+
 await validateReviewMarkdown(paths.reviewPacketTemplateMd, 'review-packet.template.md')
 await validateReviewMarkdown(paths.sampleReviewPacketMd, 'review-packet.sample.md')
 await validateVm20PlanMarkdown(paths.vm20ExtractionPlanMd, 'docs/processor/vm20_extraction_plan.md')
@@ -1377,6 +1598,7 @@ await validateSupportingVmPlanMarkdown(
   paths.supportingVmExtractionPlanMd,
   'docs/processor/supporting_vm_chapters_extraction_plan.md',
 )
+await validateVm21PlanMarkdown(paths.vm21ExtractionPlanMd, 'docs/processor/vm21_extraction_plan.md')
 
 if (!config.project?.name) {
   problems.push('config/source-families.json: missing project.name')
@@ -1501,6 +1723,7 @@ if (problems.length > 0) {
   console.log(`- Supporting chapter windows verified: ${supportingVmBatchPlan.sourceScope.observedChapterWindows.length}`)
   console.log(`- Supporting batches validated: ${supportingVmBatchPlan.proposedBatches.length}`)
   console.log(`- Supporting review index verified: 9 batches`)
+  console.log(`- VM-21 batches validated: ${vm21BatchPlan.proposedBatches.length}`)
   if (validatedPilotBatchCount > 0) {
     console.log(`- Pilot batches validated: ${validatedPilotBatchCount}`)
   }

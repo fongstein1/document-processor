@@ -10,14 +10,14 @@
 
 ## Latest known commit before this batch
 
-`782843cb94b91d666fba6d252c0f3adf75eeb582`
+`413bcf7bd141b6898aa16ef63e62bced72e18849`
 
 ## Validation status
 
 The scaffold, the tiny real-source pilot batches, the VM-20 planning layer,
 the re-bound remaining VM-20 batch plan, the tracked VM-20 review index, the
-tracked supporting review index, and the new supporting-chapter planning
-artifacts validate cleanly.
+tracked supporting review index, the new supporting-chapter planning
+artifacts, and the new VM-21 planning artifacts validate cleanly.
 
 - `npm run pilot:course-core`: passed; created the core VM course pilot batch
   outputs in `data/work/batches/batch-002/`
@@ -54,6 +54,11 @@ artifacts validate cleanly.
   artifacts, the tracked review index, the supporting-chapter plan artifacts,
   the supporting review index, the no-promotion guardrails, and the
   synchronized batch definitions for batches 013-021
+- `npm run check`: passed after the VM-21 planning refresh; confirmed the
+  schemas, templates, demo fixtures, review-packet contracts, the VM-20 plan
+  artifacts, the tracked review indexes, the supporting-chapter plan
+  artifacts, the VM-21 plan artifacts, the no-promotion guardrails, and the
+  synchronized batch definitions for batches 022-037
 
 The control-plan refresh commit re-bound batches 006-012 to the actual PDF
 section order and added runner shortcuts for the remaining controlled slices.
@@ -117,6 +122,16 @@ do not change the learner-facing or app-ready posture.
 - The supporting-wave batch registry now uses the same full `batch-###` IDs
   as the runner and validator, so the planned sequence stays synchronized
   across scripts and checks.
+- A new VM-21 control plan now confirms pages 143-225 for the chapter span
+  and maps a controlled batch sequence from batch-022 through batch-037.
+  That plan keeps VM-21 review-only by default, keeps VM-22 out of scope,
+  and isolates VM-30, VM-31, VM-G, VM-C, and VM-M references as review-only
+  unless the same batch also captures the operational text.
+- The VM-21 batch registry now lives in a dedicated
+  `scripts/vm21-batch-definitions.mjs` file, and the shared runner has a
+  generic `npm run vm21:batch` shortcut for controlled reruns.
+- `npm run check` now validates the VM-21 planning artifacts alongside the
+  existing VM-20 and supporting-wave plans, templates, and review indexes.
 - The batch-003 and batch-004 review packets both surface review flags as
   extraction categories, keep boundary slices separate from overview slices,
   and preserve the no-promotion status in both JSON and markdown.
@@ -133,11 +148,12 @@ do not change the learner-facing or app-ready posture.
   `data/work/`.
 - The tracked VM-20 and supporting review indexes are summary-only handoff
   artifacts and do not replace the underlying batch outputs.
+- The VM-21 plan is now committed as a tracked planning artifact, but the
+  controlled VM-21 extraction batches have not been run yet.
 - The repository will be clean on `main` once this state refresh is committed,
   aside from ignored working files.
 
 ## Current focus
 
-Review the tracked VM-20 and supporting review indexes together, then decide
-whether any future batch item needs a revision or a separate promotion
-discussion.
+Commit the VM-21 planning refresh, then start the controlled VM-21 batches in
+order once the new plan is on main.

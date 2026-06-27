@@ -1,0 +1,484 @@
+{
+  "planId": "vm21-control-plan",
+  "planVersion": "1.0",
+  "status": "planned",
+  "sourceScope": {
+    "sourceFamilyId": "valuation_manual_pdfs",
+    "primarySourceFile": "pbr_data_valuation_manual_2026.pdf",
+    "sourceTitle": "Valuation Manual",
+    "sourceReference": "2026 NAIC Valuation Manual",
+    "domainId": "naic_regulatory",
+    "rawSourceRoot": "D:\\Work\\AI Projects\\NAIC Valuation Manual Course",
+    "confirmedPageRange": [143, 225],
+    "boundaries": [
+      "Keep planning focused on VM-21 only.",
+      "Do not widen into VM-20 during this wave.",
+      "Keep VM-22 out of scope for this run unless separately approved.",
+      "Keep VM-30, VM-31, VM-G, VM-C, and VM-M references review-only unless the same batch intentionally includes the referenced operational text.",
+      "Keep stale, superseded, repealed, companion, or implementation guidance as notes only."
+    ],
+    "exclusions": [
+      "No full-document processing.",
+      "No learner-facing content.",
+      "No app-ready exports.",
+      "No RAG-ready exports.",
+      "No approved/promoted exports.",
+      "No eLearning scripts, slides, quizzes, or app exports.",
+      "No raw source files in Git."
+    ]
+  },
+  "topicMap": [
+    {
+      "topicId": "vm21-background-principles",
+      "label": "Background and principles",
+      "pageRange": [143, 147],
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": ["background_content", "cross_reference_mapping", "requires_human_interpretation"],
+      "crossReferenceWatchlist": ["VM-20", "VM-30", "VM-31", "VM-G"],
+      "boundaryNote": "Keep the background material review-only until the scope and effective-date slice is captured."
+    },
+    {
+      "topicId": "vm21-scope-phase-in",
+      "label": "Scope and effective date",
+      "pageRange": [148, 151],
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": ["regulatory_requirement", "boundary_control_window", "cross_reference_mapping"],
+      "crossReferenceWatchlist": ["VM-20", "VM-30", "VM-31", "VM-G"],
+      "boundaryNote": "Keep the applicability and phase-in language separate from reserve mechanics."
+    },
+    {
+      "topicId": "vm21-reserve-methodology",
+      "label": "Reserve methodology and aggregate reserve structure",
+      "pageRange": [151, 152],
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": ["reserve_method_structure", "calculation_structure", "cross_reference_mapping"],
+      "crossReferenceWatchlist": ["VM-20", "VM-30", "VM-31", "VM-C"],
+      "boundaryNote": "Keep the aggregate-reserve rule separate from the later SR projection mechanics."
+    },
+    {
+      "topicId": "vm21-sr-projection-entry",
+      "label": "SR projection entry",
+      "pageRange": [153, 159],
+      "reviewComplexity": "high",
+      "expectedIssueTypes": ["calculation_structure", "formula_boundary", "cross_reference_mapping"],
+      "crossReferenceWatchlist": ["VM-20", "VM-30", "VM-31", "VM-G"],
+      "boundaryNote": "Keep the accumulated-deficiency projection and starting-asset context together, but stop before the later asset mechanics."
+    },
+    {
+      "topicId": "vm21-sr-asset-iteration",
+      "label": "SR asset and iteration mechanics",
+      "pageRange": [160, 165],
+      "reviewComplexity": "high",
+      "expectedIssueTypes": ["asset_modeling_judgment", "formula_context", "requires_human_interpretation"],
+      "crossReferenceWatchlist": ["VM-20", "VM-30", "VM-31", "VM-G"],
+      "boundaryNote": "Keep NAER, direct iteration, annuitization, and ASOP context review-only."
+    },
+    {
+      "topicId": "vm21-reinsurance-section6-entry",
+      "label": "Reinsurance ceded and Section 6 opener",
+      "pageRange": [166, 170],
+      "reviewComplexity": "high",
+      "expectedIssueTypes": ["reinsurance", "cross_reference_mapping", "reporting_requirement", "requires_human_interpretation"],
+      "crossReferenceWatchlist": ["VM-20", "VM-30", "VM-31", "VM-G"],
+      "boundaryNote": "Keep the reinsurance opener separate from the prescribed projection details."
+    },
+    {
+      "topicId": "vm21-section6-assumptions",
+      "label": "Section 6 assumptions and cohort mechanics",
+      "pageRange": [171, 175],
+      "reviewComplexity": "high",
+      "expectedIssueTypes": ["prescribed_assumption", "company_or_prudent_estimate_assumption", "formula_context"],
+      "crossReferenceWatchlist": ["VM-20", "VM-30", "VM-31", "VM-G"],
+      "boundaryNote": "Keep the expense, withdrawal, and cohort assumptions narrow and review-only."
+    },
+    {
+      "topicId": "vm21-section6-tables",
+      "label": "Section 6 ITM tables and look-ups",
+      "pageRange": [176, 181],
+      "reviewComplexity": "high",
+      "expectedIssueTypes": ["formula_context", "boundary_control_window", "requires_human_interpretation"],
+      "crossReferenceWatchlist": ["VM-20", "VM-30", "VM-31", "VM-G"],
+      "boundaryNote": "Keep the ITM tables and factor look-ups separate from Section 7."
+    },
+    {
+      "topicId": "vm21-alt-method-general",
+      "label": "Alternative methodology general layer",
+      "pageRange": [182, 188],
+      "reviewComplexity": "high",
+      "expectedIssueTypes": ["calculation_structure", "definition_or_terminology", "cross_reference_mapping"],
+      "crossReferenceWatchlist": ["VM-C", "VM-20", "VM-30", "VM-31"],
+      "boundaryNote": "Keep the general alternative-methodology rule and the VM-C cross-reference review-only."
+    },
+    {
+      "topicId": "vm21-alt-method-tables",
+      "label": "Alternative methodology tables and product characteristics",
+      "pageRange": [189, 198],
+      "reviewComplexity": "high",
+      "expectedIssueTypes": ["formula_context", "asset_modeling_judgment", "cross_reference_mapping"],
+      "crossReferenceWatchlist": ["VM-C", "VM-20", "VM-30", "VM-31"],
+      "boundaryNote": "Keep the GC factor tables, asset-class tables, and product-characteristic look-ups separate from Section 8."
+    },
+    {
+      "topicId": "vm21-scenario-generation",
+      "label": "Scenario generation",
+      "pageRange": [199, 201],
+      "reviewComplexity": "high",
+      "expectedIssueTypes": ["scenario_or_stochastic_requirement", "formula_context", "cross_reference_mapping"],
+      "crossReferenceWatchlist": ["VM-20", "VM-G", "VM-30", "VM-31"],
+      "boundaryNote": "Keep the stochastic scenario-generation opener separate from the hedging section."
+    },
+    {
+      "topicId": "vm21-hedging-cdhs",
+      "label": "Hedging under a future non-index credit hedging strategy",
+      "pageRange": [202, 208],
+      "reviewComplexity": "high",
+      "expectedIssueTypes": ["hedging_or_risk_mitigation", "documentation_expectation", "requires_human_interpretation"],
+      "crossReferenceWatchlist": ["VM-20", "VM-G", "VM-30", "VM-31"],
+      "boundaryNote": "Keep hedge strategy, error-factor, and documentation language review-only."
+    },
+    {
+      "topicId": "vm21-behavior-assumptions",
+      "label": "Contract holder behavior assumptions",
+      "pageRange": [209, 212],
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": ["company_or_prudent_estimate_assumption", "requires_human_interpretation", "cross_reference_mapping"],
+      "crossReferenceWatchlist": ["VM-20", "VM-30", "VM-31"],
+      "boundaryNote": "Keep behavior assumptions and sensitivity concepts narrow and review-only."
+    },
+    {
+      "topicId": "vm21-mortality-assumptions",
+      "label": "Prudent estimate mortality assumptions",
+      "pageRange": [213, 218],
+      "reviewComplexity": "high",
+      "expectedIssueTypes": ["prescribed_assumption", "company_or_prudent_estimate_assumption", "requires_human_interpretation"],
+      "crossReferenceWatchlist": ["VM-M", "VM-20", "VM-30", "VM-31"],
+      "boundaryNote": "Keep mortality credibility, improvement, and margin language separate from later assumption guidance."
+    },
+    {
+      "topicId": "vm21-other-assumptions",
+      "label": "Other guidance and requirements for assumptions",
+      "pageRange": [218, 221],
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": ["company_or_prudent_estimate_assumption", "documentation_expectation", "requires_human_interpretation"],
+      "crossReferenceWatchlist": ["VM-20", "VM-30", "VM-31", "VM-G"],
+      "boundaryNote": "Keep the margin, sensitivity, and expense cleanup layer review-only."
+    },
+    {
+      "topicId": "vm21-allocation",
+      "label": "Allocation of aggregate reserves to the contract level",
+      "pageRange": [222, 225],
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": ["regulatory_requirement", "cross_reference_mapping", "boundary_control_window"],
+      "crossReferenceWatchlist": ["VM-20", "VM-30", "VM-31"],
+      "boundaryNote": "Keep the closing boundary explicit so VM-22 stays out of scope."
+    }
+  ],
+  "proposedBatches": [
+    {
+      "plannedBatchId": "batch-022",
+      "topicIds": ["vm21-background-principles"],
+      "title": "VM-21 background and principles",
+      "pageTarget": {
+        "knownWindow": [143, 147],
+        "notes": "Capture the chapter frame and background principles only."
+      },
+      "rationale": "Anchor the chapter frame before scope and mechanics begin.",
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": ["background_content", "cross_reference_mapping", "requires_human_interpretation"],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    },
+    {
+      "plannedBatchId": "batch-023",
+      "topicIds": ["vm21-scope-phase-in"],
+      "title": "VM-21 scope and effective date",
+      "pageTarget": {
+        "knownWindow": [148, 151],
+        "notes": "Capture scope, effective date, and phase-in language."
+      },
+      "rationale": "Lock applicability before reserve methodology begins.",
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": ["regulatory_requirement", "boundary_control_window", "cross_reference_mapping"],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    },
+    {
+      "plannedBatchId": "batch-024",
+      "topicIds": ["vm21-reserve-methodology"],
+      "title": "VM-21 reserve methodology",
+      "pageTarget": {
+        "knownWindow": [151, 152],
+        "notes": "Capture the aggregate reserve structure and the alternative-method boundary."
+      },
+      "rationale": "Keep the reserve-method frame separate from later SR mechanics.",
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": ["reserve_method_structure", "calculation_structure", "cross_reference_mapping"],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    },
+    {
+      "plannedBatchId": "batch-025",
+      "topicIds": ["vm21-sr-projection-entry"],
+      "title": "VM-21 SR projection entry",
+      "pageTarget": {
+        "knownWindow": [153, 159],
+        "notes": "Capture the projection of accumulated deficiencies and the starting-asset context."
+      },
+      "rationale": "Start the SR mechanics with the projection layer and keep the asset context together.",
+      "reviewComplexity": "high",
+      "expectedIssueTypes": ["calculation_structure", "formula_boundary", "cross_reference_mapping"],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions-with-boundary-caution"
+    },
+    {
+      "plannedBatchId": "batch-026",
+      "topicIds": ["vm21-sr-asset-iteration"],
+      "title": "VM-21 SR asset and iteration mechanics",
+      "pageTarget": {
+        "knownWindow": [160, 165],
+        "notes": "Capture NAER, direct iteration, annuitization, and ASOP context."
+      },
+      "rationale": "Separate the SR asset mechanics and iteration logic from the earlier projection layer.",
+      "reviewComplexity": "high",
+      "expectedIssueTypes": ["asset_modeling_judgment", "formula_context", "requires_human_interpretation"],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions-with-boundary-caution"
+    },
+    {
+      "plannedBatchId": "batch-027",
+      "topicIds": ["vm21-reinsurance-section6-entry"],
+      "title": "VM-21 reinsurance ceded and Section 6 entry",
+      "pageTarget": {
+        "knownWindow": [166, 170],
+        "notes": "Capture the reinsurance opener and the Section 6 prescribed-projection entry."
+      },
+      "rationale": "Keep reinsurance treatment separate from the downstream prescribed-projection details.",
+      "reviewComplexity": "high",
+      "expectedIssueTypes": ["reinsurance", "cross_reference_mapping", "reporting_requirement", "requires_human_interpretation"],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions-with-boundary-caution"
+    },
+    {
+      "plannedBatchId": "batch-028",
+      "topicIds": ["vm21-section6-assumptions"],
+      "title": "VM-21 Section 6 assumptions and cohort mechanics",
+      "pageTarget": {
+        "knownWindow": [171, 175],
+        "notes": "Capture maintenance expense, withdrawal, and cohort simplification language."
+      },
+      "rationale": "Keep the Section 6 assumption layer narrow and reviewable.",
+      "reviewComplexity": "high",
+      "expectedIssueTypes": ["prescribed_assumption", "company_or_prudent_estimate_assumption", "formula_context"],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions-with-boundary-caution"
+    },
+    {
+      "plannedBatchId": "batch-029",
+      "topicIds": ["vm21-section6-tables"],
+      "title": "VM-21 Section 6 ITM tables and look-ups",
+      "pageTarget": {
+        "knownWindow": [176, 181],
+        "notes": "Capture ITM calculations, annuitization tables, and factor look-ups."
+      },
+      "rationale": "Finish Section 6 without absorbing the Section 7 opener.",
+      "reviewComplexity": "high",
+      "expectedIssueTypes": ["formula_context", "boundary_control_window", "requires_human_interpretation"],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions-with-boundary-caution"
+    },
+    {
+      "plannedBatchId": "batch-030",
+      "topicIds": ["vm21-alt-method-general"],
+      "title": "VM-21 alternative methodology general layer",
+      "pageTarget": {
+        "knownWindow": [182, 188],
+        "notes": "Capture the general alternative-methodology rule and the VM-C cross-reference."
+      },
+      "rationale": "Open Section 7 without pulling in the factor tables too early.",
+      "reviewComplexity": "high",
+      "expectedIssueTypes": ["calculation_structure", "definition_or_terminology", "cross_reference_mapping"],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions-with-boundary-caution"
+    },
+    {
+      "plannedBatchId": "batch-031",
+      "topicIds": ["vm21-alt-method-tables"],
+      "title": "VM-21 alternative methodology tables and product characteristics",
+      "pageTarget": {
+        "knownWindow": [189, 198],
+        "notes": "Capture factor tables, product characteristics, and lookup mechanics."
+      },
+      "rationale": "Keep the calibration-heavy tables separate from the scenario-generation chapter.",
+      "reviewComplexity": "high",
+      "expectedIssueTypes": ["formula_context", "asset_modeling_judgment", "cross_reference_mapping"],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions-with-boundary-caution"
+    },
+    {
+      "plannedBatchId": "batch-032",
+      "topicIds": ["vm21-scenario-generation"],
+      "title": "VM-21 scenario generation",
+      "pageTarget": {
+        "knownWindow": [199, 201],
+        "notes": "Capture the stochastic scenario generation opener."
+      },
+      "rationale": "Separate stochastic model setup from the later hedging section.",
+      "reviewComplexity": "high",
+      "expectedIssueTypes": ["scenario_or_stochastic_requirement", "formula_context", "cross_reference_mapping"],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions-with-boundary-caution"
+    },
+    {
+      "plannedBatchId": "batch-033",
+      "topicIds": ["vm21-hedging-cdhs"],
+      "title": "VM-21 hedging under a future non-index credit hedging strategy",
+      "pageTarget": {
+        "knownWindow": [202, 208],
+        "notes": "Capture hedging strategy, error-factor, and documentation language."
+      },
+      "rationale": "Keep hedging and documentation expectations review-only.",
+      "reviewComplexity": "high",
+      "expectedIssueTypes": ["hedging_or_risk_mitigation", "documentation_expectation", "requires_human_interpretation"],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions-with-boundary-caution"
+    },
+    {
+      "plannedBatchId": "batch-034",
+      "topicIds": ["vm21-behavior-assumptions"],
+      "title": "VM-21 contract holder behavior assumptions",
+      "pageTarget": {
+        "knownWindow": [209, 212],
+        "notes": "Capture behavior assumptions and sensitivity thinking."
+      },
+      "rationale": "Keep behavior assumptions and sensitivity concepts narrow and review-only.",
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": ["company_or_prudent_estimate_assumption", "requires_human_interpretation", "cross_reference_mapping"],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    },
+    {
+      "plannedBatchId": "batch-035",
+      "topicIds": ["vm21-mortality-assumptions"],
+      "title": "VM-21 mortality assumptions",
+      "pageTarget": {
+        "knownWindow": [213, 218],
+        "notes": "Capture mortality credibility, improvement, and margin treatment."
+      },
+      "rationale": "Keep the mortality assumption layer narrow and reviewable before the remaining assumptions cleanup.",
+      "reviewComplexity": "high",
+      "expectedIssueTypes": ["prescribed_assumption", "company_or_prudent_estimate_assumption", "requires_human_interpretation"],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions-with-boundary-caution"
+    },
+    {
+      "plannedBatchId": "batch-036",
+      "topicIds": ["vm21-other-assumptions"],
+      "title": "VM-21 other guidance and requirements for assumptions",
+      "pageTarget": {
+        "knownWindow": [218, 221],
+        "notes": "Capture the margin, sensitivity, and expense cleanup layer."
+      },
+      "rationale": "Finish the assumption guidance without absorbing the final allocation boundary.",
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": ["company_or_prudent_estimate_assumption", "documentation_expectation", "requires_human_interpretation"],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions-with-boundary-caution"
+    },
+    {
+      "plannedBatchId": "batch-037",
+      "topicIds": ["vm21-allocation"],
+      "title": "VM-21 allocation of aggregate reserves and closing boundary",
+      "pageTarget": {
+        "knownWindow": [222, 225],
+        "notes": "Capture contract-level allocation and the closing boundary before VM-22."
+      },
+      "rationale": "Close the chapter cleanly and keep VM-22 out of the controlled wave.",
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": ["regulatory_requirement", "cross_reference_mapping", "boundary_control_window"],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    }
+  ],
+  "reviewStandards": {
+    "regulatoryRequirement": "Treat explicit must, shall, or required language as the requirement; preserve the citation and chapter context.",
+    "definitionOrTerminology": "Treat terms and term-boundary clarifications as terminology content unless they impose a duty.",
+    "reserveMethodStructure": "Treat reserve-method organization, aggregation, and reserve-floor language as structural method content.",
+    "calculationStructure": "Treat formulas, formula steps, and calculation ordering as calculation structure.",
+    "formulaContext": "Keep formulas with their setup terms, defined variables, and immediate explanatory context.",
+    "prescribedAssumption": "Treat prescribed assumption values or formula inputs as fixed-source assumptions.",
+    "companyOrPrudentEstimateAssumption": "Treat prudent-estimate or company-selected assumptions as review-only until the actuarial basis is clear.",
+    "scenarioOrStochasticRequirement": "Treat scenario generation, stochastic projections, and simulation rules as stochastic requirements.",
+    "assetModelingJudgment": "Treat asset mix, investment strategy, hedge selection, and proxy mapping as human judgment unless the text is explicit.",
+    "hedgingOrRiskMitigation": "Treat hedging, derivative, and risk-mitigation language as review-only unless the section fully spells out the rule.",
+    "reportingRequirement": "Treat filing, submission, report, and opinion requirements as reporting requirements.",
+    "documentationExpectation": "Treat retention, memorandum, support-file, and evidence language as documentation expectations.",
+    "crossReferenceMapping": "Treat references to other VM sections, models, or appendices as mapping notes unless the operational text is included.",
+    "backgroundContent": "Treat introductions, examples, navigation text, and chapter background as background content unless it imposes a duty.",
+    "boundaryControlWindow": "Treat boundary slices and transition pages as review-only windows that should not be merged forward.",
+    "requiresHumanInterpretation": "Treat assumptions, margins, reserve interpretations, and boundary cases as requiring human actuarial interpretation unless the text is explicit.",
+    "staleSupersededCompanionGuidance": "Treat stale, superseded, companion, or implementation guidance as review-only support and do not promote it."
+  },
+  "promotionGates": {
+    "defaultState": "review_only",
+    "learnerFacing": [
+      "source citation exists",
+      "source support is clear",
+      "wording is not misleading",
+      "confidence is high",
+      "no unresolved review flags exist",
+      "no cross-reference ambiguity remains"
+    ],
+    "appReady": [
+      "learner-facing criteria are already satisfied",
+      "export is sanitized, stable, and versioned",
+      "no unresolved review issues remain"
+    ],
+    "ragReady": [
+      "approved indexed material only",
+      "stable ID",
+      "source reference",
+      "locator",
+      "review status no longer requires human disposition"
+    ]
+  },
+  "validationImplications": {
+    "currentChecksNeeded": [
+      "Plan file exists and parses as JSON.",
+      "The VM-21 plan markdown exists and carries the expected headings.",
+      "Every proposed batch is review-only by default.",
+      "The plan explicitly excludes VM-22.",
+      "Each planned batch has a matching batch definition.",
+      "The VM-21 batch definition file stays synchronized with the plan."
+    ],
+    "futureChecksSuggested": [
+      "Chapter-window checks for the confirmed VM-21 page range 143-225.",
+      "Cross-reference flag coverage for VM-20, VM-C, VM-G, VM-30, VM-31, and VM-M.",
+      "Unexpected source-family leakage checks.",
+      "No learner-facing, app-ready, or RAG-ready promotion checks.",
+      "Batch-definition synchronization once VM-21 extraction starts."
+    ],
+    "scriptImplications": [
+      "scripts/vm21-batch-definitions.mjs should stay synchronized with the planned batch-022 onward sequence when extraction is authorized.",
+      "scripts/batch-definitions.mjs should import the VM-21 definition file so the shared runner can find the planned batch IDs.",
+      "scripts/validate-scaffold.mjs should verify that the VM-21 plan file exists, parses cleanly, and preserves the VM-22 exclusion.",
+      "npm run vm21:batch should use the shared runner and continue to honor the same stop conditions as the VM-20 batches."
+    ]
+  },
+  "notes": "Controlled VM-21 planning artifact. Planned batches 022-037 remain review-only by default and are not extraction runs."
+}

@@ -159,3 +159,11 @@ When the supporting VM wave is complete, create a tracked review index under
 promoting extracted content. The index should remain a summary-only handoff
 artifact and should not replace the underlying review packets or batch
 manifests.
+
+## VM-21 planning and registry
+
+The VM-21 chapter gets its own dedicated control plan and batch-definition
+file rather than sharing the VM-20 or supporting-wave registry. The confirmed
+VM-21 page span is pages 143-225, VM-22 remains out of scope for this wave,
+and the planned VM-21 batches run from batch-022 through batch-037 in
+review-only mode by default.

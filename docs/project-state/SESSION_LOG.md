@@ -94,3 +94,11 @@
   validation check so `npm run check` confirms the index exists and
   references batches 013-021, and refreshed the project-state docs so the
   supporting index is treated as a summary-only handoff artifact.
+- 2026-06-27: Confirmed the VM-21 chapter span by limited PDF inspection,
+  verified the chapter runs from pages 143-225 and that VM-22 begins later,
+  and drafted a dedicated VM-21 control plan that keeps the extraction wave
+  review-only by default.
+- 2026-06-27: Added a dedicated VM-21 batch registry and plan/config pair,
+  wired the shared validator to require the new VM-21 artifacts, added a
+  generic `npm run vm21:batch` shortcut, and passed `npm run check` with the
+  new VM-21 planning layer validated.

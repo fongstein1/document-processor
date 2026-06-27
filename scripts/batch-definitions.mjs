@@ -1,4 +1,5 @@
 import { supportingBatchDefinitions } from './supporting-batch-definitions.mjs'
+import { vm21BatchDefinitions } from './vm21-batch-definitions.mjs'
 
 export const batchDefinitions = {
   'batch-001': {
@@ -2130,4 +2131,5 @@ export const batchDefinitions = {
     ],
   },
   ...supportingBatchDefinitions,
+  ...vm21BatchDefinitions,
 }

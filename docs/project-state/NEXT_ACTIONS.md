@@ -19,15 +19,23 @@ whether any later refinement or promotion discussion is needed.
 - Treat `docs/processor/supporting_vm_chapters_extraction_plan.md` and
   `config/supporting-vm-batch-plan.json` as the current supporting-chapter
   planning set.
+- Treat `docs/processor/vm21_extraction_plan.md` and
+  `config/vm21-batch-plan.json` as the current VM-21 planning set.
 - Use `npm run vm20:batch-003` through `npm run vm20:batch-012` only if a
   review packet needs to be regenerated.
 - Use `npm run pilot -- --batch batch-013` through `npm run pilot -- --batch
   batch-021` only if a supporting review packet needs to be regenerated.
+- Use `npm run vm21:batch -- --batch batch-022` through
+  `npm run vm21:batch -- --batch batch-037` once the VM-21 extraction sequence
+  is underway.
 - Keep `scripts/batch-definitions.mjs` synchronized with the planned VM-20
-  batch IDs, the supporting batch IDs, the actual source order, and the
-  tracked review index.
+  batch IDs, the supporting batch IDs, the VM-21 batch IDs, the actual
+  source order, and the tracked review indexes.
+- Keep the dedicated `scripts/vm21-batch-definitions.mjs` file synchronized
+  with `config/vm21-batch-plan.json`.
 - Leave VM-21 and VM-22 out of the supporting wave unless a separate plan is
   approved.
+- Keep VM-22 out of the VM-21 wave unless a future plan explicitly opens it.
 - Expand validation only if the plan or a later batch reveals a genuine schema
   or workflow gap.
 - Keep app-ready export work deferred until a real promotion candidate exists.
@@ -68,8 +76,12 @@ whether any later refinement or promotion discussion is needed.
 - Keep the supporting-chapter plan aligned with the observed page windows for
   VM-01, VM-02, VM-25, VM-26, VM-30, and VM-31, and keep VM-21 and VM-22 out
   of that wave.
+- Keep the VM-21 plan aligned with the confirmed page range 143-225, the
+  batch-022 through batch-037 sequence, and the VM-22 exclusion.
 - Keep the supporting-wave batch registry keyed by full `batch-###` IDs so the
   runner and validator stay synchronized.
+- Keep the VM-21 batch registry keyed by full `batch-###` IDs so the runner
+  and validator stay synchronized.
 - Keep all completed VM-20 slices review-only until a deliberate promotion
   decision is made in the separate app/product thread.
 - Keep the PDF extraction runner UTF-8-safe because formula pages can include
