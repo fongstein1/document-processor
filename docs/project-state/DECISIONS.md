@@ -174,3 +174,10 @@ The VM-21 plan file remains the canonical batch map even after the controlled
 execution run completes. Execution status is tracked in the project-state
 documents and ignored working outputs, while the plan and validator keep the
 batch sequence synchronized for future regeneration.
+
+## VM-21 review index
+
+The tracked VM-21 review index is a summary-only handoff artifact. It should
+stay aligned with the ignored batch review packets and must not be treated as
+promoted content, learner-facing content, app-ready output, or RAG-ready
+material.

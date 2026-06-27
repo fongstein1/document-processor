@@ -2,8 +2,8 @@
 
 ## Next immediate task
 
-Review the tracked VM-20 and supporting review indexes together, and decide
-whether a VM-21 summary artifact or hardening pass is worth creating.
+Review the tracked VM-20, supporting, and VM-21 review indexes together, and
+decide whether any hardening pass or summary refinement is worth creating.
 
 ## Build tasks
 
@@ -16,6 +16,8 @@ whether a VM-21 summary artifact or hardening pass is worth creating.
   the current controlled VM-20 handoff set.
 - Treat `docs/review/supporting_vm_review_index.md` as the current
   supporting-wave handoff summary.
+- Treat `docs/review/vm21_review_index.md` as the current VM-21 handoff
+  summary.
 - Treat `docs/processor/supporting_vm_chapters_extraction_plan.md` and
   `config/supporting-vm-batch-plan.json` as the current supporting-chapter
   planning set.
@@ -30,6 +32,8 @@ whether a VM-21 summary artifact or hardening pass is worth creating.
   needs to be regenerated.
 - Keep the completed VM-21 batches review-only unless a later human review
   explicitly approves promotion.
+- Keep `docs/review/vm21_review_index.md` aligned with the ignored VM-21
+  review packets so it remains a summary aid rather than a promoted artifact.
 - Keep `scripts/batch-definitions.mjs` synchronized with the planned VM-20
   batch IDs, the supporting batch IDs, the VM-21 batch IDs, the actual
   source order, and the tracked review indexes.

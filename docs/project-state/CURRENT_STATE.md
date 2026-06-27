@@ -10,14 +10,15 @@
 
 ## Latest known commit before this batch
 
-`7ba609e`
+`8e1b144`
 
 ## Validation status
 
 The scaffold, the tiny real-source pilot batches, the VM-20 planning layer,
 the re-bound remaining VM-20 batch plan, the tracked VM-20 review index, the
-tracked supporting review index, the new supporting-chapter planning
-artifacts, and the VM-21 planning and execution artifacts validate cleanly.
+tracked supporting review index, the tracked VM-21 review index, the new
+supporting-chapter planning artifacts, and the VM-21 planning and execution
+artifacts validate cleanly.
 
 - `npm run pilot:course-core`: passed; created the core VM course pilot batch
   outputs in `data/work/batches/batch-002/`
@@ -61,6 +62,7 @@ artifacts, and the VM-21 planning and execution artifacts validate cleanly.
   synchronized batch definitions for batches 022-037
 - `npm run vm21:batch -- --batch batch-030` through `npm run vm21:batch -- --batch batch-037`: passed; created the remaining controlled VM-21 wave outputs in `data/work/batches/batch-030/` through `data/work/batches/batch-037/`, all review-only in ignored working storage
 - `npm run check`: passed after each of the final VM-21 batches; confirmed the schemas, templates, demo fixtures, review-packet contracts, the VM-20 plan artifacts, the tracked review indexes, the supporting-chapter plan artifacts, the VM-21 plan artifacts, the no-promotion guardrails, and the synchronized batch definitions for batches 022-037
+- `npm run check`: passed after the VM-21 review-index refresh; confirmed the schemas, templates, demo fixtures, review-packet contracts, the VM-20 plan artifacts, the tracked review indexes, the supporting-chapter plan artifacts, the VM-21 plan artifacts, the no-promotion guardrails, and the synchronized batch definitions for batches 022-037
 
 The control-plan refresh commit re-bound batches 006-012 to the actual PDF
 section order and added runner shortcuts for the remaining controlled slices.
@@ -162,14 +164,16 @@ do not change the learner-facing or app-ready posture.
   `data/work/`.
 - The tracked VM-20 and supporting review indexes are summary-only handoff
   artifacts and do not replace the underlying batch outputs.
-- The VM-21 plan is now committed as a tracked planning artifact, and the
+- The VM-21 plan is now committed as a tracked planning artifact, the
   controlled VM-21 extraction batches have now completed in ignored working
-  storage.
+  storage, and the tracked VM-21 review index now summarizes the batch review
+  packets without promoting any extracted content.
 - The repository will be clean on `main` once this state refresh is committed,
   aside from ignored working files.
 
 ## Current focus
 
 The controlled VM-21 sequence is complete. Review the completed batch-022
-through batch-037 outputs if a hardening pass or summary artifact is needed,
-and keep VM-22 out of scope unless a future plan explicitly opens it.
+through batch-037 outputs and the tracked VM-21 review index if a hardening
+pass or summary artifact is needed, and keep VM-22 out of scope unless a
+future plan explicitly opens it.

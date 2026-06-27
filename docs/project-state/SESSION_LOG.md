@@ -117,3 +117,8 @@
   generation, hedging, behavior assumptions, mortality assumptions, the
   remaining assumption guidance, and the closing allocation boundary while
   `npm run check` passed after each batch.
+- 2026-06-27: Created the tracked VM-21 end-of-sequence review index at
+  `docs/review/vm21_review_index.md`, added a lightweight validation check so
+  `npm run check` confirms the index exists and references batches 022-037,
+  and refreshed the project-state docs so the VM-21 handoff now includes the
+  summary-only index alongside the ignored batch review packets.
