@@ -10,7 +10,7 @@
 
 ## Latest known commit before this batch
 
-`48b18cb`
+`1c55608`
 
 ## Validation status
 
@@ -231,6 +231,10 @@ The AG 05 extraction batch is complete in ignored working storage, and the
 tracked AG 05 review index plus self-review note are the current handoff
 artifacts. The AG 05 planning layer remains the canonical batch map for
 future regeneration.
+
+AG 06 is the next short guideline unit. Its planning layer now targets the
+two-page interpretation regarding use of single or joint life mortality
+tables, and the batch should remain review-only until the plan is validated.
 
 The controlled AG 03 one-page guideline batch is complete in ignored working
 storage, and the tracked AG 03 review index plus self-review note are the

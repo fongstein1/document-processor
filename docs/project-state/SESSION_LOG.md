@@ -208,3 +208,7 @@
   review index plus self-review note, and refreshed the repository POC
   summary and scaffold validator so the tenth review index and 80 validated
   batches are now visible in the handoff layer.
+- 2026-06-27: Selected AG 06 as the next short guideline unit, confirmed the
+  two-page span for the interpretation regarding use of single or joint life
+  mortality tables, and drafted the AG 06 planning layer so batch-081 can be
+  validated before extraction starts.
