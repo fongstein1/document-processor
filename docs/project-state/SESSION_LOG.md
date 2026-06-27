@@ -102,3 +102,7 @@
   wired the shared validator to require the new VM-21 artifacts, added a
   generic `npm run vm21:batch` shortcut, and passed `npm run check` with the
   new VM-21 planning layer validated.
+- 2026-06-27: Ran the first controlled VM-21 batch group sequentially
+  (batch-022 through batch-025), regenerating the ignored working outputs for
+  the background, scope, reserve-methodology, and SR projection-entry slices
+  while `npm run check` passed after each batch.

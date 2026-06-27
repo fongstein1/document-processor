@@ -132,6 +132,9 @@ do not change the learner-facing or app-ready posture.
   generic `npm run vm21:batch` shortcut for controlled reruns.
 - `npm run check` now validates the VM-21 planning artifacts alongside the
   existing VM-20 and supporting-wave plans, templates, and review indexes.
+- Batches 022 through 025 have completed as the first controlled VM-21
+  group. They remain review-only in ignored working storage and cover the
+  background, scope, reserve-methodology, and SR projection entry slices.
 - The batch-003 and batch-004 review packets both surface review flags as
   extraction categories, keep boundary slices separate from overview slices,
   and preserve the no-promotion status in both JSON and markdown.
@@ -149,11 +152,12 @@ do not change the learner-facing or app-ready posture.
 - The tracked VM-20 and supporting review indexes are summary-only handoff
   artifacts and do not replace the underlying batch outputs.
 - The VM-21 plan is now committed as a tracked planning artifact, but the
-  controlled VM-21 extraction batches have not been run yet.
+  controlled VM-21 extraction batches are now underway in ignored working
+  storage.
 - The repository will be clean on `main` once this state refresh is committed,
   aside from ignored working files.
 
 ## Current focus
 
-Commit the VM-21 planning refresh, then start the controlled VM-21 batches in
-order once the new plan is on main.
+Continue the controlled VM-21 sequence with batch-026 through batch-037,
+keeping the review-only posture intact and preserving the VM-22 boundary.

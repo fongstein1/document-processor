@@ -28,6 +28,9 @@ whether any later refinement or promotion discussion is needed.
 - Use `npm run vm21:batch -- --batch batch-022` through
   `npm run vm21:batch -- --batch batch-037` once the VM-21 extraction sequence
   is underway.
+- Continue with `npm run vm21:batch -- --batch batch-026` through
+  `npm run vm21:batch -- --batch batch-037` for the remaining controlled
+  VM-21 batches.
 - Keep `scripts/batch-definitions.mjs` synchronized with the planned VM-20
   batch IDs, the supporting batch IDs, the VM-21 batch IDs, the actual
   source order, and the tracked review indexes.
@@ -83,6 +86,8 @@ whether any later refinement or promotion discussion is needed.
 - Keep the VM-21 batch registry keyed by full `batch-###` IDs so the runner
   and validator stay synchronized.
 - Keep all completed VM-20 slices review-only until a deliberate promotion
+  decision is made in the separate app/product thread.
+- Keep the completed VM-21 slices review-only until a deliberate promotion
   decision is made in the separate app/product thread.
 - Keep the PDF extraction runner UTF-8-safe because formula pages can include
   Unicode minus signs and other non-ASCII glyphs.
