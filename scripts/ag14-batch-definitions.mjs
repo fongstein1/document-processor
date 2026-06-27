@@ -1,0 +1,256 @@
+const rawSourceFolder = 'Actuarial Guidelines'
+const sourceFamilyId = 'actuarial_guidelines'
+const defaultNonLearnerNotes =
+  'AG 14 stays review-only. Keep the unit source-bound, preserve the page locator, and do not promote any item.'
+
+const makeAg14Batch = (spec) => {
+  const sourceId = spec.sourceId
+  const itemId = `item-${sourceId}-${spec.batchSlug}`
+  return {
+    batchName: `AG 14 controlled batch ${spec.plannedBatchId} - ${spec.batchTitle}`,
+    batchSlug: spec.batchSlug,
+    batchProfile: 'ag14_surveillance_procedure',
+    processingIntentText:
+      spec.processingIntentText ??
+      'Tiny AG 14 historical-guidance batch: capture the two-page surveillance procedure for review of the Actuarial Opinion for life and health insurers and keep the documentation / reporting language review-only.',
+    processingIntentNotes: spec.processingIntentNotes ?? defaultNonLearnerNotes,
+    batchSummaryText:
+      spec.batchSummaryText ??
+      'Batch remains review-only. AG 14 is retained as historical surveillance guidance and is not approved for promotion.',
+    batchSummaryNotes: 'No learner-facing approval is granted.',
+    reviewPacketReason: `This historical two-page AG 14 guideline is intentionally limited to ${spec.batchTitle} and is retained for review-only analysis.`,
+    reviewPacketNextStep: spec.nextStep,
+    reviewerNotes:
+      'Small AG 14 historical-guidance batch. Keep the work review-first, preserve the page locator, and do not promote any item.',
+    reviewPacketFlags: [
+      {
+        flagId: `flag-${sourceId}`,
+        severity: 'medium',
+        sourceId,
+        itemId,
+        flagType: 'historical_guidance',
+        message:
+          'AG 14 is historical surveillance guidance and should stay review-only unless a later human review changes the indexing choice.',
+        notes: 'Keep review-only and do not promote.',
+      },
+      {
+        flagId: `flag-${sourceId}-text-layer`,
+        severity: 'low',
+        sourceId,
+        itemId,
+        flagType: 'encoded_text_layer',
+        message:
+          'The text layer is noisy, so the page image should be used to confirm the surveillance-procedure wording.',
+        notes: 'Confirm wording against the page image before any later indexing choice.',
+      },
+    ],
+    reviewPacketCitationIssues: [
+      {
+        issueId: `citation-${sourceId}-page-image`,
+        sourceId,
+        itemId,
+        issueType: 'page_image_confirmation',
+        details:
+          'The PDF text layer is noisy on both pages, so the exact wording should be confirmed against the page images before any later indexing choice.',
+        recommendedAction:
+          'Keep the page locator, confirm the page image wording, and do not promote it as active guidance.',
+      },
+      {
+        issueId: `citation-${sourceId}-historical-disposition`,
+        sourceId,
+        itemId,
+        issueType: 'historical_status_confirmation',
+        details:
+          'The source appears historical rather than withdrawn, but the indexing disposition should be confirmed before promotion or cross-linking.',
+        recommendedAction:
+          'Treat AG 14 as caveat-first historical guidance unless a later human review changes the indexing choice.',
+      },
+    ],
+    reviewPacketHumanDecisions: [
+      {
+        decisionId: `decision-${sourceId}-indexing-disposition`,
+        decisionType: 'indexing_choice',
+        question:
+          'Should AG 14 remain indexed as historical caveat-first guidance, or should it be linked only as a surveillance-procedure note for actuarial-opinion review?',
+        whyItMatters:
+          'The indexing choice affects future review and promotion decisions.',
+        recommendedOwner: 'processor owner',
+        priority: 'high',
+      },
+      {
+        decisionId: `decision-${sourceId}-page-image-check`,
+        decisionType: 'citation_check',
+        question:
+          'Does the page image confirm the surveillance-procedure wording used in the review packet?',
+        whyItMatters:
+          'The text layer is noisy and exact wording matters for later review.',
+        recommendedOwner: 'source reviewer',
+        priority: 'medium',
+      },
+    ],
+    unresolvedIssues: [
+      {
+        issueId: `issue-${sourceId}-page-image`,
+        severity: 'high',
+        issueType: 'page_image_confirmation',
+        sourceId,
+        itemId,
+        message:
+          'The AG 14 page image should be checked because the text layer is encoded/noisy and the exact wording matters for a later indexing choice.',
+        recommendedAction:
+          'Confirm the page-image wording before any later promotion or cross-linking decision.',
+        evidence:
+          'The rendered pages show a historical surveillance procedure for actuarial opinion review, but the text layer is noisy.',
+      },
+      {
+        issueId: `issue-${sourceId}-historical-disposition`,
+        severity: 'medium',
+        issueType: 'historical_status_confirmation',
+        sourceId,
+        itemId,
+        message:
+          'The source appears historical rather than withdrawn, but the review packet should not overstate the indexing choice without human confirmation.',
+        recommendedAction:
+          'Keep the unit review-only and confirm whether it should remain caveat-first historical guidance.',
+        evidence: 'The scanned copy does not show a withdrawn notice.',
+      },
+    ],
+    validationChecks: [
+      {
+        checkId: 'batch-manifest-guardrails',
+        status: 'passed',
+        details: 'Pilot manifest blocks learner-facing promotion and app-ready export.',
+      },
+      {
+        checkId: 'ag14-two-page-coverage',
+        status: 'passed',
+        details: 'The selected pages capture the full two-page AG 14 guideline.',
+      },
+      {
+        checkId: 'source-reference-coverage',
+        status: 'passed',
+        details: 'The AG 14 slice carries a source reference and a page locator.',
+      },
+      {
+        checkId: 'historical-status-tracked',
+        status: 'passed',
+        details: 'The review packet and unresolved-issues summary both capture the historical status caveat.',
+      },
+      {
+        checkId: 'no-promotion-output',
+        status: 'passed',
+        details: 'No approved-promoted or app-ready export was produced for the batch.',
+      },
+      {
+        checkId: 'review-only-guardrails',
+        status: 'passed',
+        details: 'Review packet stays not approved and unresolved issues remain visible for human review.',
+      },
+    ],
+    sourceSelections: [
+      {
+        sourceId,
+        relativePath: `${rawSourceFolder}/${spec.filename}`,
+        sourceFamilyId,
+        documentType: 'actuarial_guideline',
+        sourceTitle: spec.sourceTitle,
+        sourceReference: spec.sourceReference,
+        versionDate: null,
+        pageWindow: spec.pageWindow,
+        sectionReference: spec.sectionReference,
+        citationText: spec.citationText,
+        confidence: 'high',
+        reviewFlags: spec.reviewFlags,
+        reviewStatus: 'needs_human_review',
+        itemKind: 'review_note',
+        notes: spec.notes,
+        summary: spec.summary,
+        keywords: spec.keywords,
+        sourceNotes: spec.sourceNotes,
+        artifactProcessingStatus: 'inventoried',
+        inventoryProcessingStatus: 'inventoried',
+        authorityLevel: 'historical',
+        reviewPacketNotes: 'Historical surveillance slice remains review-only.',
+        reviewPacketIssueCount: 2,
+        reviewPacketProcessingStatus: 'inventoried',
+        nonLearnerFacingNotes:
+          'AG 14 slice retained as historical caveat guidance until the indexing choice is confirmed.',
+      },
+    ],
+  }
+}
+
+const ag14BatchSpecs = [
+  {
+    plannedBatchId: 'batch-092',
+    batchSlug: 'ag14-092-surveillance-opinion-procedure',
+    sourceId: 'ag14-surveillance-opinion-procedure',
+    filename:
+      'AG 14 - Surveillance Procedure Regarding the Actuarial Opinion for Life and Health Insurers.pdf',
+    sourceTitle:
+      'AG 14 - Surveillance Procedure Regarding the Actuarial Opinion for Life and Health Insurers',
+    sourceReference: 'Actuarial Guideline XIV',
+    batchTitle: 'surveillance procedure',
+    pageWindow: [1, 2],
+    sectionReference:
+      'AG 14: Surveillance Procedure Regarding the Actuarial Opinion for Life and Health Insurers (historical interim procedure)',
+    citationText:
+      'To assist regulators in their responsibility for surveillance of life and health insurers, the NAIC adopts the following interim procedure for use of the Actuarial Opinion to be used until such time as model legislation and/or regulations are adopted and become effective.',
+    summary:
+      'AG 14 is a historical interim surveillance procedure that explains how regulators may review the Actuarial Opinion for life and health insurers.',
+    keywords: [
+      'AG 14',
+      'Actuarial Guideline XIV',
+      'surveillance procedure',
+      'actuarial opinion',
+      'life and health insurers',
+      'IRIS ratios',
+      'confidentiality',
+    ],
+    notes:
+      'Two-page historical interim procedure; keep review-only and stop at the page boundary.',
+    sourceNotes:
+      'Historical surveillance procedure; the page-image wording should be checked because the text layer is noisy.',
+    summaryLead:
+      'AG 14 is a two-page historical surveillance procedure for actuarial-opinion review.',
+    flagMessage:
+      'AG 14 is historical surveillance guidance and should stay review-only unless a later human review changes the indexing choice.',
+    textLayerMessage:
+      'The text layer is noisy, so the page image should be used to confirm the surveillance-procedure wording.',
+    citationIssueDetails:
+      'The PDF text layer renders with noise on both pages, so the exact wording should be confirmed against the page images before any later indexing choice.',
+    historicalDispositionDetails:
+      'The source appears historical rather than withdrawn, but the indexing disposition should be confirmed before promotion or cross-linking.',
+    decisionQuestion:
+      'Should AG 14 remain indexed as historical caveat-first guidance, or should it be linked only as a surveillance-procedure note for actuarial-opinion review?',
+    decisionWhy:
+      'The indexing choice affects future review and promotion decisions.',
+    pageImageQuestion:
+      'Does the page image confirm the surveillance-procedure wording used in the review packet?',
+    pageImageWhy:
+      'The text layer is noisy and exact wording matters for later review.',
+    issueMessage:
+      'The AG 14 page image should be checked because the text layer is encoded/noisy and the exact wording matters for a later indexing choice.',
+    issueAction:
+      'Confirm the page-image wording before any later promotion or cross-linking decision.',
+    evidence:
+      'The rendered pages show a historical surveillance procedure for actuarial opinion review, but the text layer is noisy.',
+    historicalIssueMessage:
+      'The source appears historical rather than withdrawn, but the review packet should not overstate the indexing choice without human confirmation.',
+    historicalIssueAction:
+      'Keep the unit review-only and confirm whether it should remain caveat-first historical guidance.',
+    reviewPacketReason:
+      'This historical two-page AG 14 guideline is intentionally limited to the surveillance procedure and is retained for review-only analysis.',
+    nextStep:
+      'Confirm the page-image wording and decide whether AG 14 should stay indexed as historical caveat-first guidance in the next review pass.',
+    reviewFlags: [
+      'historical_guidance',
+      'surveillance_procedure_judgment',
+      'encoded_text_layer',
+    ],
+  },
+]
+
+export const ag14BatchDefinitions = Object.fromEntries(
+  ag14BatchSpecs.map((spec) => [spec.plannedBatchId, makeAg14Batch(spec)]),
+)

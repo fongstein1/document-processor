@@ -1,0 +1,167 @@
+{
+  "planId": "ag14-surveillance-opinion-review-plan",
+  "planVersion": "1.0",
+  "status": "planned",
+  "sourceScope": {
+    "sourceFamilyId": "actuarial_guidelines",
+    "primarySourceFile": "AG 14 - Surveillance Procedure Regarding the Actuarial Opinion for Life and Health Insurers.pdf",
+    "sourceFolder": "Actuarial Guidelines",
+    "sourceTitle": "AG 14 - Surveillance Procedure Regarding the Actuarial Opinion for Life and Health Insurers",
+    "sourceReference": "Actuarial Guideline XIV",
+    "sourceStatus": "historical",
+    "domainId": "naic_regulatory",
+    "rawSourceRoot": "D:\\Work\\AI Projects\\NAIC Valuation Manual Course",
+    "confirmedPageRange": [
+      1,
+      2
+    ],
+    "observedSectionWindows": [
+      {
+        "sectionId": "ag14-surveillance-procedure-actuarial-opinion",
+        "pageRange": [
+          1,
+          2
+        ],
+        "note": "Two-page interim surveillance procedure for review of the Actuarial Opinion for life and health insurers."
+      }
+    ],
+    "boundaries": [
+      "Keep planning focused on this single AG 14 PDF.",
+      "Do not widen into AG 15 or later guideline files.",
+      "Keep the historical / interim procedure posture explicit in every batch artifact.",
+      "Treat the guideline as caveat-first historical guidance, not learner-facing policy text.",
+      "Keep any PDF text-extraction noise visible as a caveat, not a promotion signal.",
+      "Keep the batch source-bound and review-only."
+    ],
+    "exclusions": [
+      "No learner-facing content.",
+      "No app-ready export.",
+      "No RAG-ready export.",
+      "No approved/promoted export.",
+      "No eLearning scripts, slides, quizzes, or app exports.",
+      "No raw source files in Git.",
+      "No other guideline files in the same wave."
+    ]
+  },
+  "topicMap": [
+    {
+      "topicId": "ag14-surveillance-procedure-actuarial-opinion",
+      "label": "Interim surveillance procedure for review of the Actuarial Opinion for life and health insurers",
+      "pageRange": [
+        1,
+        2
+      ],
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "regulatory_requirement",
+        "reporting_requirement",
+        "documentation_expectation",
+        "governance_or_control_expectation",
+        "caveat_or_companion_guidance",
+        "cross_reference_mapping",
+        "requires_human_interpretation",
+        "boundary_control_window"
+      ],
+      "crossReferenceWatchlist": [
+        "actuarial opinion",
+        "actuarial report",
+        "qualified actuaries",
+        "documentation",
+        "confidentiality",
+        "IRIS ratios",
+        "model legislation",
+        "regulations"
+      ],
+      "boundaryNote": "Keep this slice within pages 1-2 and do not absorb later guideline files."
+    }
+  ],
+  "proposedBatches": [
+    {
+      "plannedBatchId": "batch-092",
+      "topicIds": [
+        "ag14-surveillance-procedure-actuarial-opinion"
+      ],
+      "title": "Two-page AG 14 surveillance procedure",
+      "pageTarget": {
+        "knownWindow": [
+          1,
+          2
+        ],
+        "notes": "Capture the full two-page interim procedure as a single review-only slice and stop at the page boundary."
+      },
+      "rationale": "Capture the full two-page interim procedure as a single review-only slice and stop at the page boundary.",
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "regulatory_requirement",
+        "reporting_requirement",
+        "documentation_expectation",
+        "governance_or_control_expectation",
+        "caveat_or_companion_guidance",
+        "cross_reference_mapping",
+        "requires_human_interpretation",
+        "boundary_control_window"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    }
+  ],
+  "reviewStandards": {
+    "regulatoryRequirement": "Treat explicit must, shall, should, or required language as the requirement; preserve the citation and source context.",
+    "reportingRequirement": "Treat any instruction to produce, review, or furnish an Actuarial Opinion or related report as reporting context unless the text clearly imposes a broader duty.",
+    "documentationExpectation": "Treat requests for support documents, work papers, or explanatory material as documentation expectations unless the source clearly imposes a different duty.",
+    "caveatOnlyHistoricalGuidance": "Treat the interim procedure framing as caveat-first historical guidance, not active policy text.",
+    "crossReferenceMapping": "Treat references to actuarial opinion instructions, actuarial reports, IRIS ratios, model legislation, regulations, or confidentiality rules as mapping notes unless operational text is included.",
+    "backgroundContent": "Treat the title line and framing sentence as background content unless they impose a duty.",
+    "boundaryControlWindow": "Treat the two-page slice as a review-only window that should not be merged forward.",
+    "requiresHumanInterpretation": "Treat the indexing choice and the OCR / encoded text layer as requiring human actuarial interpretation unless the text is explicit.",
+    "sourceQualityCaveat": "Treat text-layer noise as review-only caveats and do not widen the batch because of them."
+  },
+  "promotionGates": {
+    "defaultState": "review_only",
+    "learnerFacing": [
+      "source citation exists",
+      "source support is clear",
+      "wording is not misleading",
+      "confidence is high",
+      "no unresolved review flags exist"
+    ],
+    "appReady": [
+      "learner-facing criteria are already satisfied",
+      "export is sanitized, stable, and versioned",
+      "no unresolved review issues remain"
+    ],
+    "ragReady": [
+      "approved indexed material only",
+      "stable ID",
+      "source reference",
+      "locator",
+      "review status no longer requires human disposition"
+    ]
+  },
+  "validationImplications": {
+    "currentChecksNeeded": [
+      "Plan file exists and parses as JSON.",
+      "The AG 14 plan markdown exists and carries the expected headings.",
+      "Every proposed batch is review-only by default.",
+      "The plan keeps the scope to two pages only.",
+      "The source posture is explicitly historical / interim procedure.",
+      "Each planned batch has a matching batch definition.",
+      "The AG 14 batch definition file stays synchronized with the plan."
+    ],
+    "futureChecksSuggested": [
+      "Two-page guideline checks for future short guideline files.",
+      "Historical-guidance and caveat-first tagging checks.",
+      "Unexpected source-family leakage checks.",
+      "No learner-facing, app-ready, or RAG-ready promotion checks.",
+      "Text-layer quality caveat checks once extraction starts."
+    ],
+    "scriptImplications": [
+      "scripts/ag14-batch-definitions.mjs should stay synchronized with the planned batch-092 slice when extraction is authorized.",
+      "scripts/batch-definitions.mjs should import the AG 14 definition file so the shared runner can find the planned batch ID.",
+      "scripts/validate-scaffold.mjs should verify that the AG 14 plan file exists, parses cleanly, and preserves the review-only posture.",
+      "The shared runner should continue to honor the same stop conditions used for the VM-20 batches."
+    ]
+  },
+  "notes": "Controlled AG 14 planning artifact. Planned batch 092 remains review-only by default and is not an extraction run."
+}

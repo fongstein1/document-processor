@@ -122,6 +122,10 @@ review index and self-review note summarize the ignored batch outputs without
 promoting any extracted content, and the next short guideline candidate is
 AG 14 if the continuation pass keeps going.
 
+The AG 14 planning layer is now drafted so batch-092 can capture the
+historical surveillance procedure as the next review-only step if the
+continuation pass keeps going.
+
 ## Working posture
 
 - Raw source material stays external at
