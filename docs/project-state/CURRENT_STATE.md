@@ -10,7 +10,7 @@
 
 ## Latest known commit before this batch
 
-`1aec60e`
+`6c8fb44`
 
 ## Validation status
 
@@ -86,6 +86,7 @@ review-handoff artifacts, and the AG 11 planning artifacts validate cleanly.
 - `npm run ag10:batch`: passed; created the AG 10 review-only batch outputs in `data/work/batches/batch-088/`
 - `npm run check`: passed after the AG 10 review-handoff refresh; confirmed the schemas, templates, demo fixtures, review-packet contracts, the AG 06 / AG 07 / AG 08 / AG 09 / AG 10 review-handoff artifacts, the no-promotion guardrails, and the synchronized batch definitions for batches 055-088
 - `npm run check`: passed after the AG 11 planning refresh; confirmed the schemas, templates, demo fixtures, review-packet contracts, the AG 06 / AG 07 / AG 08 / AG 09 / AG 10 review-handoff artifacts, the new AG 11 planning artifacts, the no-promotion guardrails, and the synchronized batch definitions for batches 055-089
+- `npm run check`: passed after the AG 11 review-handoff refresh; confirmed the schemas, templates, demo fixtures, review-packet contracts, the AG 06 / AG 07 / AG 08 / AG 09 / AG 10 / AG 11 review-handoff artifacts, the no-promotion guardrails, and the synchronized batch definitions for batches 055-089
 
 The control-plan refresh commit re-bound batches 006-012 to the actual PDF
 section order and added runner shortcuts for the remaining controlled slices.
@@ -267,8 +268,11 @@ artifacts. The AG 09 planning layer remains the canonical batch map for
 future regeneration. The AG 10 extraction batch is complete in ignored
 working storage, and the tracked AG 10 review index plus self-review note are
 the current handoff artifacts. The AG 10 planning layer remains the canonical
-batch map for future regeneration. The AG 11 planning layer is now drafted
-for batch-089.
+batch map for future regeneration. The AG 11 planning layer has now been
+executed and the tracked AG 11 review index plus self-review note are the
+current handoff artifacts for batch-089. The next likely short-guideline
+candidate is the withdrawn AG 12 one-page guideline, which can be planned
+separately if the continuation pass keeps going.
 
 The controlled AG 03 one-page guideline batch is complete in ignored working
 storage, and the tracked AG 03 review index plus self-review note are the
