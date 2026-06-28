@@ -635,3 +635,9 @@
   claim-reserve guideline, drafted the AG 50 planning layer for batches
   160-162, and kept the wave review-only by default with the page-image
   wording backstop visible because the text layer is encoding-noisy.
+- 2026-06-28: Completed the AG 50 review-only wave as batches 160-162,
+  created the tracked AG 50 review index and self-review note, refreshed the
+  repository POC summary and project-state docs, and kept the page-image
+  wording backstop visible because the text layer is encoding-noisy and line
+  references were not available. The existing low-quality PDF text-layer
+  handling skill remained sufficient, so no new skill instruction was needed.

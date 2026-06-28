@@ -12,7 +12,7 @@ regulation repository. It consolidates the completed review-only extraction
 waves without changing the status of the underlying batch outputs or review
 indexes.
 
-The handoff now spans 54 review indexes, up from 53 review indexes. The
+The handoff now spans 55 review indexes, up from 54 review indexes. The
 earlier 51 review indexes checkpoint remains part of the handoff history, the
 earlier 50 review indexes checkpoint remains part of the handoff history, the
 earlier 49 review indexes checkpoint remains part of the handoff history, the
@@ -384,7 +384,7 @@ documents remain external to Git.
 
 - `npm run check` passes
 - the scaffold previously reported 152 batches validated; the current run
-  reports 159 batches validated
+  reports 162 batches validated
 - the validator now checks the tracked VM-20, supporting, VM-21, VM-22,
   practice-note, AG 03, AG 01, AG 02, AG 04, AG 05, AG 06, AG 07, AG 08,
   AG 09, AG 10, AG 11, AG 12, AG 13, AG 14, AG 15, AG 16, AG 17, AG 18,
@@ -400,7 +400,7 @@ documents remain external to Git.
 
 ## Human Review Posture
 
-- Reviewers should start from the fifty-four review indexes listed above.
+- Reviewers should start from the fifty-five review indexes listed above.
 - The review packets remain the detailed evidence layer behind those
   summaries.
 - All batch content remains source-bound and review-only unless a separate
@@ -732,6 +732,16 @@ now part of the handoff set: `docs/review/ag49_review_index.md` and
 visible because the text layer is encoding-noisy, line references were not
 available, the 2021 Law Manual reprint stayed out of scope, and AG 50 is the
 next likely candidate if the continuation pass keeps going.
+
+## AG 50 Note
+
+AG 50 is complete as batches `batch-160`, `batch-161`, and `batch-162` in
+ignored working storage. Its tracked review index and self-review note are
+now part of the handoff set: `docs/review/ag50_review_index.md` and
+`docs/review/ag50_self_review.md`. The page-image wording backstop remains
+visible because the text layer is encoding-noisy, line references were not
+available, the 2013 IDI Valuation Table reprint stayed out of scope, and AG
+51 is the next likely candidate if the continuation pass keeps going.
 
 ## Promotion Gates
 
