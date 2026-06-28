@@ -1,0 +1,164 @@
+{
+  "planId": "ag41-nonforfeiture-projection-plan",
+  "planVersion": "1.0",
+  "status": "planned",
+  "sourceScope": {
+    "sourceFamilyId": "actuarial_guidelines",
+    "primarySourceFile": "AG 41 - Projection of Guaranteed Nonforfeiture Benefits Under CARVM.pdf",
+    "sourceFolder": "Actuarial Guidelines",
+    "sourceTitle": "AG 41 - Projection of Guaranteed Nonforfeiture Benefits Under CARVM",
+    "sourceReference": "Actuarial Guideline XLI",
+    "sourceStatus": "active",
+    "domainId": "naic_regulatory",
+    "rawSourceRoot": "D:\\Work\\AI Projects\\NAIC Valuation Manual Course",
+    "confirmedPageRange": [
+      1,
+      2
+    ],
+    "observedSectionWindows": [
+      {
+        "sectionId": "ag41-background-scope-text-applicability",
+        "pageRange": [
+          1,
+          2
+        ],
+        "note": "Background, scope, text, applicability, and valuation-date assumption context."
+      }
+    ],
+    "boundaries": [
+      "Keep planning focused on the active AG 41 PDF only.",
+      "Do not widen into later guideline files.",
+      "Keep the page-image wording backstop because the text layer is encoding-noisy and stable line references are not expected.",
+      "Use page locators rather than line locators when the text layer does not support stable line mapping.",
+      "Treat the guideline as review-only regulatory guidance, not learner-facing policy text.",
+      "Keep the batch source-bound and review-only."
+    ],
+    "exclusions": [
+      "No learner-facing content.",
+      "No app-ready export.",
+      "No RAG-ready export.",
+      "No approved/promoted export.",
+      "No eLearning scripts, slides, quizzes, or app exports.",
+      "No raw source files in Git.",
+      "No later guideline files in the same wave.",
+      "not app-ready, not RAG-ready, and not promoted."
+    ]
+  },
+  "topicMap": [
+    {
+      "topicId": "ag41-background-scope-text-applicability",
+      "label": "Background, scope, text, and applicability",
+      "pageRange": [
+        1,
+        2
+      ],
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "regulatory_requirement",
+        "definition_or_terminology",
+        "calculation_structure",
+        "formula_context",
+        "cross_reference_mapping",
+        "background_content",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": [
+        "Standard Valuation Law",
+        "Standard Nonforfeiture Law",
+        "CARVM",
+        "SNLIDA",
+        "valuation date",
+        "future nonforfeiture benefits",
+        "AG 40"
+      ],
+      "boundaryNote": "Keep the projected nonforfeiture-benefit discussion and the valuation-date assumptions together as a single review-only slice."
+    }
+  ],
+  "proposedBatches": [
+    {
+      "plannedBatchId": "batch-137",
+      "topicIds": [
+        "ag41-background-scope-text-applicability"
+      ],
+      "title": "AG 41 background, scope, and projected nonforfeiture-benefit slice",
+      "pageTarget": {
+        "knownWindow": [
+          1,
+          2
+        ],
+        "notes": "Capture the short guideline as one narrow review-only batch."
+      },
+      "rationale": "Capture the short guideline as one narrow review-only batch.",
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "page_image_confirmation",
+        "calculation_structure",
+        "formula_context",
+        "cross_reference_mapping",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    }
+  ],
+  "reviewStandards": {
+    "regulatoryRequirement": "Treat the projection and applicability language as regulatory text when it directs how nonforfeiture benefits are projected under CARVM.",
+    "definitionOrTerminology": "Treat nonforfeiture-benefit, CARVM, SNLIDA, and valuation-date labels as terminology when the text explains rather than directs.",
+    "calculationStructure": "Treat the projection steps and valuation-date assumptions as calculation structure.",
+    "formulaContext": "Treat NI, VI, and the rate-projection rule as formula context unless explicit computational rules are given.",
+    "crossReferenceMapping": "Treat references to CARVM, Standard Valuation Law, and Standard Nonforfeiture Law as cross-reference context unless operationalized.",
+    "backgroundContent": "Treat the title, introduction, and section labels as background unless they impose a requirement.",
+    "boundaryControlWindow": "Treat the page 1-2 window as review-only and do not split it unless later cleanup explicitly needs that split.",
+    "requiresHumanInterpretation": "Treat the encoding-noisy text layer and projection-rule judgment calls as requiring human review unless the source text is explicit."
+  },
+  "promotionGates": {
+    "defaultState": "review_only",
+    "learnerFacing": [
+      "source citation exists",
+      "source support is clear",
+      "wording is not misleading",
+      "confidence is high",
+      "no unresolved review flags exist"
+    ],
+    "appReady": [
+      "learner-facing criteria are already satisfied",
+      "export is sanitized, stable, and versioned",
+      "no unresolved review issues remain"
+    ],
+    "ragReady": [
+      "approved indexed material only",
+      "stable ID",
+      "source reference and locator",
+      "review status no longer requires human disposition"
+    ]
+  },
+  "validationImplications": {
+    "currentChecksNeeded": [
+      "Plan file exists and parses as JSON.",
+      "The AG 41 plan markdown must exist and carry the expected headings.",
+      "Every planned batch must remain review-only by default.",
+      "The source posture must stay explicitly active.",
+      "Each planned batch must have a matching batch definition.",
+      "The AG 41 batch definition file must stay synchronized with the plan.",
+      "The page-image backstop and page-locator-only posture must stay visible for the noisy text layer."
+    ],
+    "futureChecksSuggested": [
+      "Page-image wording backstop checks.",
+      "Line-reference availability checks.",
+      "Unexpected source-family leakage checks.",
+      "No learner-facing, app-ready, or RAG-ready promotion checks.",
+      "Later guideline file boundary checks.",
+      "Projection and nonforfeiture boundary checks."
+    ],
+    "scriptImplications": [
+      "scripts/ag41-batch-definitions.mjs should stay synchronized with the planned batch-137 slice when extraction is authorized.",
+      "scripts/batch-definitions.mjs should import the AG 41 definition file so the shared runner can find batch-137.",
+      "scripts/validate-scaffold.mjs should verify that the AG 41 plan file exists, parses cleanly, and preserves the review-only posture.",
+      "The shared runner should continue to honor the same stop conditions used for the earlier guideline batches.",
+      "The page-image wording backstop should remain visible in the review packet because the AG 41 text layer is noisy and line references are not expected."
+    ]
+  },
+  "notes": "Controlled AG 41 planning artifact. Planned batch 137 remains review-only by default and is not an extraction run."
+}

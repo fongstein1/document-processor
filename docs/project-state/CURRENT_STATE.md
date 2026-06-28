@@ -10,7 +10,7 @@
 
 ## Latest known commit before this batch
 
-`ab3b5a1`
+`3670839`
 
 ## Validation status
 
