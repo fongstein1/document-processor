@@ -38,6 +38,11 @@ tracked review index and self-review note now form part of the review
 handoff set. AG 30 is the next likely candidate if the continuation pass
 keeps going.
 
+AG 30 is now the next planned short guideline unit. Its planning layer is
+being assembled so batch-112 can be validated before extraction starts, and
+the opening page is expected to keep the page-image wording backstop visible
+because the text layer contains encoding noise.
+
 ## Build tasks
 
 - Keep batches 001 through 012 review-only unless a human reviewer explicitly

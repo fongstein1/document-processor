@@ -1,0 +1,150 @@
+{
+  "planId": "ag30-plan-type-gic-guidance-plan",
+  "planVersion": "1.0",
+  "status": "planned",
+  "sourceScope": {
+    "sourceFamilyId": "actuarial_guidelines",
+    "primarySourceFile": "AG 30 - Guideline for the Application of Plan Type to Guaranteed Interest Contracts (GICs) With Benefit Responsive Payment Provisions Used to Fund Emp.pdf",
+    "sourceFolder": "Actuarial Guidelines",
+    "sourceTitle": "AG 30 - Guideline for the Application of Plan Type to Guaranteed Interest Contracts (GICs) With Benefit Responsive Payment Provisions Used to Fund Employee Benefit Plans",
+    "sourceReference": "Actuarial Guideline XXX",
+    "sourceStatus": "active",
+    "domainId": "naic_regulatory",
+    "rawSourceRoot": "D:\\Work\\AI Projects\\NAIC Valuation Manual Course",
+    "confirmedPageRange": [1, 2],
+    "observedSectionWindows": [
+      {
+        "sectionId": "ag30-plan-type-gic-guidance",
+        "pageRange": [1, 2],
+        "note": "Plan-type background, benefit-responsive GIC payment provisions, C-3 risk reduction, insurer administration, and periodic review boundary."
+      }
+    ],
+    "boundaries": [
+      "Keep planning focused on this single AG 30 PDF.",
+      "Do not widen into AG 31 or later guideline files.",
+      "Keep the plan-type / policyholder / C-3-risk context explicit in every batch artifact.",
+      "Keep the page image as the backstop for exact wording because the first page contains encoding noise.",
+      "Treat the guideline as review-only regulatory guidance, not learner-facing policy text.",
+      "Keep the batch source-bound and review-only."
+    ],
+    "exclusions": [
+      "No learner-facing content.",
+      "No app-ready export.",
+      "No RAG-ready export.",
+      "No approved/promoted export.",
+      "No eLearning scripts, slides, quizzes, or app exports.",
+      "No raw source files in Git.",
+      "No other guideline files in the same wave."
+    ]
+  },
+  "topicMap": [
+    {
+      "topicId": "ag30-plan-type-gic-guidance",
+      "label": "Plan type and GIC guidance",
+      "pageRange": [1, 2],
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "regulatory_requirement",
+        "definition_or_terminology",
+        "cross_reference_mapping",
+        "governance_or_control_expectation",
+        "company_or_prudent_estimate_assumption",
+        "background_content",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": [
+        "plan type",
+        "policyholder",
+        "benefit responsive payment provisions",
+        "C-3 risk",
+        "certificate of intent",
+        "insurer administration",
+        "periodic review",
+        "actual experience"
+      ],
+      "boundaryNote": "Keep the two-page window together and do not widen into AG 31."
+    }
+  ],
+  "proposedBatches": [
+    {
+      "plannedBatchId": "batch-112",
+      "topicIds": [
+        "ag30-plan-type-gic-guidance"
+      ],
+      "title": "AG 30 plan type and GIC guidance slice",
+      "pageTarget": {
+        "knownWindow": [1, 2],
+        "notes": "Capture the full two-page guideline as one review-only slice because the plan-type framing, C-3 risk discussion, and control language belong together."
+      },
+      "rationale": "Capture the full two-page guideline as one review-only slice because the plan-type framing, C-3 risk discussion, and control language belong together.",
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "regulatory_requirement",
+        "definition_or_terminology",
+        "cross_reference_mapping",
+        "governance_or_control_expectation",
+        "company_or_prudent_estimate_assumption",
+        "background_content",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    }
+  ],
+  "reviewStandards": {
+    "regulatoryRequirement": "Treat the plan-type and withdrawal-treatment language as regulatory text when the guideline directs how benefit-responsive GIC withdrawals should be interpreted.",
+    "definitionOrTerminology": "Treat plan type, policyholder, benefit-responsive payment provisions, C-3 risk, and certificate-of-intent references as terminology or context when the text explains rather than directs.",
+    "crossReferenceMapping": "Treat references to the Standard Valuation Law, C-3 risk, plan provisions, and insurer administration as cross-reference context unless the text operationalizes them.",
+    "governanceOrControlExpectation": "Treat the certificate-of-intent and administration language as governance or control expectation guidance that should remain review-only unless later confirmation makes it operational.",
+    "companyOrPrudentEstimateAssumption": "Treat the plan-type assumption and periodic experience review language as assumption-setting context that requires human review before promotion.",
+    "backgroundContent": "Treat the title, scene-setting paragraphs, and explanatory transition language as background unless they impose a requirement.",
+    "boundaryControlWindow": "Treat the page 1-2 window as a review-only slice and do not split it unless a later cleanup pass explicitly needs that split.",
+    "requiresHumanInterpretation": "Treat the encoded first page, plan-type application, and C-3-risk administration examples as requiring human review unless the source text is explicit."
+  },
+  "promotionGates": {
+    "defaultState": "review_only",
+    "learnerFacing": [
+      "source citation exists",
+      "source support is clear",
+      "wording is not misleading",
+      "confidence is high",
+      "no unresolved review flags exist"
+    ],
+    "appReady": [
+      "learner-facing criteria are already satisfied",
+      "export is sanitized, stable, and versioned",
+      "no unresolved review issues remain"
+    ],
+    "ragReady": [
+      "approved indexed material only",
+      "stable ID",
+      "source reference and locator",
+      "review status no longer requires human disposition"
+    ]
+  },
+  "validationImplications": {
+    "currentChecksNeeded": [
+      "Plan file exists and parses as JSON.",
+      "The AG 30 plan markdown exists and carries the expected headings.",
+      "Every proposed batch remains review-only by default.",
+      "The source posture is explicitly active.",
+      "Each planned batch has a matching batch definition.",
+      "The AG 30 batch definition file stays synchronized with the plan."
+    ],
+    "futureChecksSuggested": [
+      "Page-image wording backstop checks.",
+      "Unexpected source-family leakage checks.",
+      "No learner-facing, app-ready, or RAG-ready promotion checks."
+    ],
+    "scriptImplications": [
+      "scripts/ag30-batch-definitions.mjs should stay synchronized with the planned batch-112 slice when extraction is authorized.",
+      "scripts/batch-definitions.mjs should import the AG 30 definition file so the shared runner can find batch-112.",
+      "scripts/validate-scaffold.mjs should verify that the AG 30 plan file exists, parses cleanly, and preserves the review-only posture.",
+      "The shared runner should continue to honor the same stop conditions used for the earlier guideline batches."
+    ]
+  },
+  "notes": "Controlled AG 30 planning artifact. Planned batch 112 remains review-only by default and is not an extraction run."
+}
