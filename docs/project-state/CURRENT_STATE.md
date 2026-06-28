@@ -410,3 +410,7 @@ visible, and batch-124 is the next AG 36 slice to run.
 Batch-124 is now complete in ignored working storage. The attachments and
 method-mechanics slice stayed review-only, the page-image backstop remained
 visible, and batch-125 is the next AG 36 slice to run.
+
+Batch-125 is now complete in ignored working storage. The hedged-as-required
+and notification slice stayed review-only, the page-image backstop remained
+visible, and batch-126 is the next AG 36 slice to run.
