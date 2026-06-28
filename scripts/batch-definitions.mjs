@@ -16,6 +16,7 @@ import { ag14BatchDefinitions } from './ag14-batch-definitions.mjs'
 import { ag15BatchDefinitions } from './ag15-batch-definitions.mjs'
 import { ag16BatchDefinitions } from './ag16-batch-definitions.mjs'
 import { ag17BatchDefinitions } from './ag17-batch-definitions.mjs'
+import { ag18BatchDefinitions } from './ag18-batch-definitions.mjs'
 import { vm20PracticeNoteBatchDefinitions } from './vm20-practice-note-batch-definitions.mjs'
 import { vm21BatchDefinitions } from './vm21-batch-definitions.mjs'
 import { vm22BatchDefinitions } from './vm22-batch-definitions.mjs'
@@ -2166,6 +2167,7 @@ export const batchDefinitions = {
   ...ag15BatchDefinitions,
   ...ag16BatchDefinitions,
   ...ag17BatchDefinitions,
+  ...ag18BatchDefinitions,
   ...vm20PracticeNoteBatchDefinitions,
   ...supportingBatchDefinitions,
   ...vm21BatchDefinitions,

@@ -89,6 +89,10 @@ confirmation before any new batch is planned.
   `docs/review/ag17_self_review.md` as the current AG 17 handoff set.
 - Treat `docs/processor/ag17_extraction_plan.md` and
   `config/ag17-batch-plan.json` as the current AG 17 planning set.
+- Treat `docs/processor/ag18_extraction_plan.md` and
+  `config/ag18-batch-plan.json` as the current AG 18 planning set.
+- Treat `scripts/ag18-batch-definitions.mjs` as synchronized with the AG 18
+  planning set.
 - Treat `scripts/ag04-batch-definitions.mjs` as synchronized with the AG 04
   planning and handoff set.
 - Treat `scripts/ag05-batch-definitions.mjs` as synchronized with the AG 05
@@ -146,6 +150,8 @@ confirmation before any new batch is planned.
 - Keep `docs/review/ag17_review_index.md` and
   `docs/review/ag17_self_review.md` synchronized with the ignored AG 17
   review packet if the wave is ever regenerated.
+- Use `npm run ag18:batch` only if the AG 18 review packet needs to be
+  regenerated.
 - Treat `docs/review/valuation_regulation_repository_poc_status.md` as the
   current repository-level proof-of-concept summary.
 - Treat `docs/processor/vm20_practice_note_extraction_plan.md` and

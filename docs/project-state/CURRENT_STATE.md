@@ -26,8 +26,8 @@ the AG 12 planning and review-handoff artifacts, the AG 13 planning,
 execution, and review-handoff artifacts, the AG 14 planning and
 review-handoff artifacts, the AG 15 planning and review-handoff
 artifacts, the AG 16 planning, execution, and review-handoff artifacts, and
-the AG 17 planning, execution, and review-handoff artifacts validate
-cleanly.
+the AG 17 planning, execution, and review-handoff artifacts, and the AG 18
+planning artifacts validate cleanly.
 
 - `npm run pilot:course-core`: passed; created the core VM course pilot batch
   outputs in `data/work/batches/batch-002/`
@@ -97,6 +97,7 @@ cleanly.
 - `npm run check`: passed after the AG 13 planning refresh; confirmed the schemas, templates, demo fixtures, review-packet contracts, the AG 06 / AG 07 / AG 08 / AG 09 / AG 10 / AG 11 / AG 12 review-handoff artifacts, the new AG 13 planning artifacts, the no-promotion guardrails, and the synchronized batch definitions for batches 055-091
 - `npm run ag13:batch`: passed; created the AG 13 review-only batch outputs in `data/work/batches/batch-091/`
 - `npm run check`: passed after the AG 13 review-handoff refresh; confirmed the schemas, templates, demo fixtures, review-packet contracts, the AG 06 / AG 07 / AG 08 / AG 09 / AG 10 / AG 11 / AG 12 / AG 13 review-handoff artifacts, the no-promotion guardrails, and the synchronized batch definitions for batches 055-091
+- `npm run check`: passed after the AG 18 planning refresh; confirmed the schemas, templates, demo fixtures, review-packet contracts, the AG 06 / AG 07 / AG 08 / AG 09 / AG 10 / AG 11 / AG 12 / AG 13 / AG 14 / AG 15 / AG 16 / AG 17 review-handoff artifacts, the new AG 18 planning artifacts, the no-promotion guardrails, and the synchronized batch definitions for batches 055-096
 
 The control-plan refresh commit re-bound batches 006-012 to the actual PDF
 section order and added runner shortcuts for the remaining controlled slices.
@@ -143,6 +144,10 @@ split-interest guideline without promoting any extracted content.
 The AG 17 review-only step is now complete as batch-095. Its tracked review
 index and self-review note summarize the historical CRVM non-level
 death-benefit guideline without promoting any extracted content.
+
+The AG 18 planning layer is now drafted so batch-096 can capture the
+semi-continuous / fully continuous / discounted continuous guideline as the
+next review-only step if the continuation pass keeps going.
 
 ## Working posture
 
