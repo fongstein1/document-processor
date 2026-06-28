@@ -10,7 +10,7 @@
 
 ## Latest known commit before this batch
 
-`5b769e4`
+`572661e`
 
 ## Validation status
 
@@ -26,8 +26,9 @@ the AG 12 planning and review-handoff artifacts, the AG 13 planning,
 execution, and review-handoff artifacts, the AG 14 planning and
 review-handoff artifacts, the AG 15 planning and review-handoff
 artifacts, the AG 16 planning, execution, and review-handoff artifacts, and
-the AG 17 planning, execution, and review-handoff artifacts, and the AG 18
-planning, execution, and review-handoff artifacts validate cleanly.
+the AG 17 planning, execution, and review-handoff artifacts, the AG 18
+planning, execution, and review-handoff artifacts, and the AG 19 planning
+artifacts validate cleanly.
 
 - `npm run pilot:course-core`: passed; created the core VM course pilot batch
   outputs in `data/work/batches/batch-002/`
@@ -99,6 +100,7 @@ planning, execution, and review-handoff artifacts validate cleanly.
 - `npm run check`: passed after the AG 13 review-handoff refresh; confirmed the schemas, templates, demo fixtures, review-packet contracts, the AG 06 / AG 07 / AG 08 / AG 09 / AG 10 / AG 11 / AG 12 / AG 13 review-handoff artifacts, the no-promotion guardrails, and the synchronized batch definitions for batches 055-091
 - `npm run check`: passed after the AG 18 planning refresh; confirmed the schemas, templates, demo fixtures, review-packet contracts, the AG 06 / AG 07 / AG 08 / AG 09 / AG 10 / AG 11 / AG 12 / AG 13 / AG 14 / AG 15 / AG 16 / AG 17 review-handoff artifacts, the new AG 18 planning artifacts, the no-promotion guardrails, and the synchronized batch definitions for batches 055-096
 - `npm run check`: passed after the AG 18 review-handoff refresh; confirmed the schemas, templates, demo fixtures, review-packet contracts, the AG 06 / AG 07 / AG 08 / AG 09 / AG 10 / AG 11 / AG 12 / AG 13 / AG 14 / AG 15 / AG 16 / AG 17 / AG 18 review-handoff artifacts, the no-promotion guardrails, and the synchronized batch definitions for batches 055-096
+- `npm run check`: passed after the AG 19 planning refresh; confirmed the schemas, templates, demo fixtures, review-packet contracts, the AG 06 / AG 07 / AG 08 / AG 09 / AG 10 / AG 11 / AG 12 / AG 13 / AG 14 / AG 15 / AG 16 / AG 17 / AG 18 review-handoff artifacts, the new AG 19 planning artifacts, the no-promotion guardrails, and the synchronized batch definitions for batches 055-097
 
 The control-plan refresh commit re-bound batches 006-012 to the actual PDF
 section order and added runner shortcuts for the remaining controlled slices.
@@ -149,8 +151,9 @@ death-benefit guideline without promoting any extracted content.
 The AG 18 review-only step is now complete as batch-096. Its tracked review
 index and self-review note summarize the current CRVM continuous-basis
 guideline without promoting any extracted content, and the page-image
-wording backstop remains visible as a review-only caveat. The next short
-guideline candidate is AG 19.
+wording backstop remains visible as a review-only caveat. The AG 19 planning
+layer is now drafted so batch-097 can capture the 1980 CSO mortality-table
+guideline as the next review-only step if the continuation pass keeps going.
 
 ## Working posture
 

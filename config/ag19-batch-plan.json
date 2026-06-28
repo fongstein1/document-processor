@@ -1,0 +1,163 @@
+{
+  "planId": "ag19-1980-cso-select-mortality-factors-plan",
+  "planVersion": "1.0",
+  "status": "planned",
+  "sourceScope": {
+    "sourceFamilyId": "actuarial_guidelines",
+    "primarySourceFile": "AG 19 - Guideline Concerning 1980 Commissioners' Standard Ordinary Mortality Table With 10-Year Select Mortality Factors.pdf",
+    "sourceFolder": "Actuarial Guidelines",
+    "sourceTitle": "AG 19 - Guideline Concerning 1980 Commissioners' Standard Ordinary Mortality Table With 10-Year Select Mortality Factors",
+    "sourceReference": "Actuarial Guideline XIX",
+    "sourceStatus": "active",
+    "domainId": "naic_regulatory",
+    "rawSourceRoot": "D:\\Work\\AI Projects\\NAIC Valuation Manual Course",
+    "confirmedPageRange": [
+      1,
+      1
+    ],
+    "observedSectionWindows": [
+      {
+        "sectionId": "ag19-1980-cso-select-mortality-factors",
+        "pageRange": [
+          1,
+          1
+        ],
+        "note": "One-page mortality-table guideline for the 1980 CSO select mortality factors."
+      }
+    ],
+    "boundaries": [
+      "Keep planning focused on this single AG 19 PDF.",
+      "Do not widen into AG 20 or later guideline files.",
+      "Keep the active guideline posture explicit in every batch artifact.",
+      "Treat the guideline as review-only mortality-table guidance, not learner-facing policy text.",
+      "Keep any PDF text-extraction noise visible as a caveat, not a promotion signal.",
+      "Keep the batch source-bound and review-only."
+    ],
+    "exclusions": [
+      "No learner-facing content.",
+      "No app-ready export.",
+      "No RAG-ready export.",
+      "No approved/promoted export.",
+      "No eLearning scripts, slides, quizzes, or app exports.",
+      "No raw source files in Git.",
+      "No other guideline files in the same wave."
+    ]
+  },
+  "topicMap": [
+    {
+      "topicId": "ag19-1980-cso-select-mortality-factors",
+      "label": "1980 CSO mortality table with ten-year select mortality factors interpretation",
+      "pageRange": [
+        1,
+        1
+      ],
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "regulatory_requirement",
+        "definition_or_terminology",
+        "cross_reference_mapping",
+        "formula_context",
+        "background_content",
+        "requires_human_interpretation",
+        "boundary_control_window"
+      ],
+      "crossReferenceWatchlist": [
+        "1980 Commissioners' Standard Ordinary Mortality Table",
+        "Ten-Year Select Mortality Factors",
+        "Standard Valuation Law",
+        "Standard Nonforfeiture Law",
+        "Society of Actuaries Special Committee",
+        "alternative select factors"
+      ],
+      "boundaryNote": "Keep this slice within page 1 and do not absorb later guideline files."
+    }
+  ],
+  "proposedBatches": [
+    {
+      "plannedBatchId": "batch-097",
+      "topicIds": [
+        "ag19-1980-cso-select-mortality-factors"
+      ],
+      "title": "One-page AG 19 mortality-table guideline",
+      "pageTarget": {
+        "knownWindow": [
+          1,
+          1
+        ],
+        "notes": "Capture the full one-page guideline as a single review-only slice and stop at the page boundary."
+      },
+      "rationale": "Capture the full one-page guideline as a single review-only slice and stop at the page boundary.",
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "regulatory_requirement",
+        "definition_or_terminology",
+        "cross_reference_mapping",
+        "formula_context",
+        "background_content",
+        "requires_human_interpretation",
+        "boundary_control_window"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    }
+  ],
+  "reviewStandards": {
+    "regulatoryRequirement": "Treat explicit must, shall, should, or required language as the requirement; preserve the citation and source context.",
+    "definitionOrTerminology": "Treat 1980 CSO mortality table, Ten-Year Select Mortality Factors, and alternative select-factor phrasing as terminology when the text explains rather than directs.",
+    "calculationStructure": "Treat the mortality-table and select-factor framing as calculation structure until the text clearly instructs a separate duty.",
+    "formulaContext": "Treat table-factor references and mortality-table wording as context until the text clearly instructs a calculation step.",
+    "crossReferenceMapping": "Treat references to the Standard Valuation Law, the Standard Nonforfeiture Law, or Society of Actuaries materials as mapping notes unless operational text is included.",
+    "backgroundContent": "Treat the title line and framing sentence as background content unless they impose a duty.",
+    "boundaryControlWindow": "Treat the one-page slice as a review-only window that should not be merged forward.",
+    "requiresHumanInterpretation": "Treat the indexing choice and the OCR / encoded text layer as requiring human actuarial interpretation unless the text is explicit.",
+    "sourceQualityCaveat": "Treat text-layer noise as review-only caveats and do not widen the batch because of them."
+  },
+  "promotionGates": {
+    "defaultState": "review_only",
+    "learnerFacing": [
+      "source citation exists",
+      "source support is clear",
+      "wording is not misleading",
+      "confidence is high",
+      "no unresolved review flags exist"
+    ],
+    "appReady": [
+      "learner-facing criteria are already satisfied",
+      "export is sanitized, stable, and versioned",
+      "no unresolved review issues remain"
+    ],
+    "ragReady": [
+      "approved indexed material only",
+      "stable ID",
+      "source reference",
+      "locator",
+      "review status no longer requires human disposition"
+    ]
+  },
+  "validationImplications": {
+    "currentChecksNeeded": [
+      "Plan file exists and parses as JSON.",
+      "The AG 19 plan markdown exists and carries the expected headings.",
+      "Every proposed batch is review-only by default.",
+      "The plan keeps the scope to one page only.",
+      "The source posture is explicitly active.",
+      "Each planned batch has a matching batch definition.",
+      "The AG 19 batch definition file stays synchronized with the plan."
+    ],
+    "futureChecksSuggested": [
+      "One-page guideline checks for future short guideline files.",
+      "Mortality-table context and cross-reference mapping checks.",
+      "Unexpected source-family leakage checks.",
+      "No learner-facing, app-ready, or RAG-ready promotion checks.",
+      "Text-layer quality caveat checks once extraction starts."
+    ],
+    "scriptImplications": [
+      "scripts/ag19-batch-definitions.mjs should stay synchronized with the planned batch-097 slice when extraction is authorized.",
+      "scripts/batch-definitions.mjs should import the AG 19 definition file so the shared runner can find the planned batch ID.",
+      "scripts/validate-scaffold.mjs should verify that the AG 19 plan file exists, parses cleanly, and preserves the review-only posture.",
+      "The shared runner should continue to honor the same stop conditions used for the VM-20 batches."
+    ]
+  },
+  "notes": "Controlled AG 19 planning artifact. Planned batch 097 remains review-only by default and is not an extraction run."
+}
