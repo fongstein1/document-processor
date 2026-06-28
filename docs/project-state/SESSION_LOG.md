@@ -406,3 +406,12 @@
   be validated before extraction starts. The opening page contains encoding
   noise, so the page-image wording backstop should remain visible and the
   plan stays review-only until the plan is committed.
+- 2026-06-27: Ran the AG 30 two-page plan-type and GIC guidance batch
+  (`batch-112`) in ignored working storage, kept it review-only, and created
+  the tracked AG 30 review index plus self-review note as the new handoff
+  artifacts. The page-image backstop stayed visible, the plan-type and
+  C-3-risk context remained review-only, and the repository proof-of-concept
+  summary is being refreshed so the thirty-fifth review index and 112
+  validated batches are now visible in the handoff layer. No new tracked
+  skill file update was necessary because the existing source-bound rule
+  already covers encoded text layers and the page-image backstop.
