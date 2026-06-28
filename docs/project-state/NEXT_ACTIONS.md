@@ -31,9 +31,10 @@ Its tracked review index and self-review note now form part of the review
 handoff set. AG 26 is complete as batch-106, and its tracked review index
 and self-review note now form part of the review handoff set. AG 27 is
 complete as batches 107-109, and its tracked review index and self-review
-note now form part of the review handoff set. AG 28 is now staged as the
-next one-page review-only guideline unit, and the planning draft is ready to
-be validated before batch-110 runs.
+note now form part of the review handoff set. AG 28 is now complete as
+batch-110, and its tracked review index plus self-review note are being
+added to the handoff set. AG 29 is the next likely candidate if the
+continuation pass keeps going.
 
 ## Build tasks
 

@@ -314,9 +314,9 @@ backstop remains visible because the text layer is noisy / encoded. AG 26 is
 now complete as batch-106, and its tracked review index plus self-review note
 are being added to the handoff set. AG 27 is now complete as batches
 107-109, and its tracked review index plus self-review note are being added
-to the handoff set. AG 28 is now staged as the next one-page review-only
-guideline unit, with the planning draft in place and batch-110 ready to be
-validated next.
+to the handoff set. AG 28 is now complete as batch-110, and its tracked
+review index plus self-review note are being added to the handoff set. AG 29
+is the next likely candidate if the continuation pass keeps going.
 
 The VM-20 companion practice-note wave is complete: batches `batch-055`
 through `batch-075` were processed review-only, and the tracked practice-note

@@ -393,6 +393,8 @@ const requiredFiles = [
   'scripts/ag28-batch-definitions.mjs',
   'docs/review/ag27_review_index.md',
   'docs/review/ag27_self_review.md',
+  'docs/review/ag28_review_index.md',
+  'docs/review/ag28_self_review.md',
   'docs/review/ag26_review_index.md',
   'docs/review/ag26_self_review.md',
   'docs/review/ag25_review_index.md',
@@ -5504,6 +5506,75 @@ const validateAg27SelfReviewMarkdown = async (filePath, label) => {
   })
 }
 
+const validateAg28ReviewIndexMarkdown = async (filePath, label) => {
+  const text = await readText(filePath)
+  const requiredHeadings = [
+    '## Overall AG 28 Extraction Status',
+    '## Batch Table',
+    '## Higher-Caution Section',
+    '## Human Review Checklist',
+    '## Promotion Decision Area',
+    '## Recommended Review Order',
+    '## Relationship to Other Review Indexes',
+    '## Review Notes',
+  ]
+  requiredHeadings.forEach((heading) => {
+    if (!text.includes(heading)) {
+      problems.push(`${label}: missing heading ${heading}`)
+    }
+  })
+  ;[
+    'review-only',
+    'not learner-facing',
+    'not app-ready',
+    'not RAG-ready',
+    'not promoted',
+    'AG 28',
+    'batch-110',
+    'Actuarial Guideline XXVIII',
+    'page 1',
+    'page-image',
+    'active',
+    'survivor income benefit',
+    'group long-term disability',
+    'AG 29 explicitly remains out of scope',
+  ].forEach((phrase) => {
+    if (!text.includes(phrase)) {
+      problems.push(`${label}: must mention ${phrase}`)
+    }
+  })
+}
+
+const validateAg28SelfReviewMarkdown = async (filePath, label) => {
+  const text = await readText(filePath)
+  const requiredHeadings = [
+    '## Batch Classification',
+    '## Recurring Observations',
+    '## Batch-by-Batch Checks',
+    '## Review Outcome',
+  ]
+  requiredHeadings.forEach((heading) => {
+    if (!text.includes(heading)) {
+      problems.push(`${label}: missing heading ${heading}`)
+    }
+  })
+  ;[
+    'reasonable_with_minor_cautions',
+    'page-image backstop',
+    'no new skill file update was necessary',
+    'batch-110',
+    'review-only',
+    'not learner-facing',
+    'not app-ready',
+    'not RAG-ready',
+    'not promoted',
+  ].forEach((phrase) => {
+    if (!text.includes(phrase)) {
+      problems.push(`${label}: must mention ${phrase}`)
+    }
+  })
+}
+
 const validateAg02PlanMarkdown = async (filePath, label) => {
   const text = await readText(filePath)
   const requiredHeadings = [
@@ -5928,10 +5999,12 @@ const validatePocStatusSummaryMarkdown = async (filePath, label) => {
     'docs/review/ag26_self_review.md',
     'docs/review/ag27_review_index.md',
     'docs/review/ag27_self_review.md',
+    'docs/review/ag28_review_index.md',
+    'docs/review/ag28_self_review.md',
     'npm run check',
     'git diff --check',
-    '109 batches validated',
-    '32 review indexes',
+    '110 batches validated',
+    '33 review indexes',
     'AG 18',
     'batch-096',
     'AG 19',
@@ -5956,6 +6029,8 @@ const validatePocStatusSummaryMarkdown = async (filePath, label) => {
     'batch-107',
     'batch-108',
     'batch-109',
+    'AG 28',
+    'batch-110',
     'five-page accelerated-benefits guideline',
     'accelerated-benefits',
     'interest-accrual disclosure',
@@ -6681,6 +6756,8 @@ await validateAg27PlanMarkdown(paths.ag27ExtractionPlanMd, 'docs/processor/ag27_
 await validateAg28PlanMarkdown(paths.ag28ExtractionPlanMd, 'docs/processor/ag28_extraction_plan.md')
 await validateAg27ReviewIndexMarkdown(paths.ag27ReviewIndexMd, 'docs/review/ag27_review_index.md')
 await validateAg27SelfReviewMarkdown(paths.ag27SelfReviewMd, 'docs/review/ag27_self_review.md')
+await validateAg28ReviewIndexMarkdown(paths.ag28ReviewIndexMd, 'docs/review/ag28_review_index.md')
+await validateAg28SelfReviewMarkdown(paths.ag28SelfReviewMd, 'docs/review/ag28_self_review.md')
 await validateAg05PlanMarkdown(paths.ag05ExtractionPlanMd, 'docs/processor/ag05_extraction_plan.md')
 await validateAg06PlanMarkdown(paths.ag06ExtractionPlanMd, 'docs/processor/ag06_extraction_plan.md')
 await validateAg07PlanMarkdown(paths.ag07ExtractionPlanMd, 'docs/processor/ag07_extraction_plan.md')
@@ -6890,7 +6967,9 @@ if (problems.length > 0) {
   console.log(`- AG 26 review index verified: 1 batch`)
   console.log(`- AG 26 self-review verified: 1 batch`)
   console.log(`- AG 26 plan verified: ${ag26BatchPlan.proposedBatches.length} batches`)
-  console.log(`- POC status summary verified: 32 review indexes`)
+  console.log(`- AG 28 review index verified: 1 batch`)
+  console.log(`- AG 28 self-review verified: 1 batch`)
+  console.log(`- POC status summary verified: 33 review indexes`)
   if (validatedPilotBatchCount > 0) {
     console.log(`- Pilot batches validated: ${validatedPilotBatchCount}`)
   }

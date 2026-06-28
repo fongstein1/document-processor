@@ -378,3 +378,12 @@
   Within A Survivor Income Benefit Provision.pdf` is a single-page active
   guideline with a page-image backstop caveat, and drafted the AG 28
   planning layer so batch-110 can be validated before extraction starts.
+- 2026-06-27: Ran the AG 28 one-page survivor-income-benefit batch
+  (`batch-110`) in ignored working storage, kept it review-only, and created
+  the tracked AG 28 review index plus self-review note as the new handoff
+  artifacts. The page-image backstop stayed visible, the reserve
+  approximation remained review-only, and the repository proof-of-concept
+  summary is being refreshed so the thirty-third review index and 110
+  validated batches are now visible in the handoff layer. No new tracked
+  skill file update was necessary because the existing source-bound rule
+  already covers noisy OCR and page-image backstops.
