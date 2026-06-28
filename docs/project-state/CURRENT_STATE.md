@@ -384,3 +384,9 @@ artifacts. The AG 52 text note already lives in the mixed pilot batch and is
 not being reprocessed. The remaining Practice Notes files and other
 Actuarial Guideline / NY regulation files stay out of scope until separately
 planned.
+
+AG 34 is now complete as batches 117-119. Its tracked review index and
+self-review note are the current handoff artifacts for the active MGDB
+reserve guideline. The page-image wording backstop remains visible because
+the text layer is noisy / encoded, and the AG 35 boundary stayed out of
+scope for this wave.

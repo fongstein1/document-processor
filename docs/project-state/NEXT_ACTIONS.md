@@ -400,6 +400,9 @@ review-only windows and keep AG 35 out of scope.
   decision is made in the separate app/product thread.
 - Keep the controlled VM-22 slices review-only until a deliberate promotion
   decision is made in the separate app/product thread.
+- Keep the AG 34 handoff artifacts aligned with the ignored batch packets,
+  and treat AG 35 as the next likely candidate only if the continuation pass
+  keeps going.
 - Keep the PDF extraction runner UTF-8-safe because formula pages can include
   Unicode minus signs and other non-ASCII glyphs.
 - Commit only lightweight, auditable artifacts.
