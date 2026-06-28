@@ -524,3 +524,9 @@
   forty-third review index and 133 validated batches are now visible in the
   handoff layer. The existing low-quality PDF text-layer skill remained
   sufficient, so no new skill instruction was needed.
+- 2026-06-28: Inspected AG 39, confirmed the two-page VAGLB guideline,
+  rendered the source text as a noisy but usable review-only slice with the
+  page-image wording backstop, and drafted the AG 39 planning layer so
+  batch-134 can be validated before extraction starts. Line references are
+  not expected for the encoded text layer, and the existing low-quality PDF
+  text-layer skill remains sufficient so no new skill instruction was needed.

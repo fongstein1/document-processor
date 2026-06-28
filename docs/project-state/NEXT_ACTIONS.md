@@ -56,6 +56,9 @@ batches 127-129. AG 38 is now complete as batches 130-133. Its tracked
 review index and self-review note now form part of the handoff set, and AG 39
 is the next likely candidate if the continuation pass keeps going. The
 planning layer has been drafted for the 13-page Model 830 source file.
+AG 39 planning is now underway for the two-page VAGLB guideline, and the
+page-image wording backstop stays visible because line references are not
+expected.
 
 ## Build tasks
 

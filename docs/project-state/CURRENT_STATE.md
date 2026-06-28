@@ -10,7 +10,7 @@
 
 ## Latest known commit before this batch
 
-`03f30fe`
+`7b2cc65`
 
 ## Validation status
 
@@ -405,6 +405,11 @@ of the handoff set, the page-image wording backstop remained visible because
 line references were unavailable, and AG 39 is the next likely candidate if
 the continuation pass keeps going. The new low-quality PDF text-layer skill
 remains in place so noisy OCR sources stay page-image-backed and review-only.
+
+AG 39 planning is now underway for the two-page VAGLB guideline. The plan
+keeps the page-image wording backstop visible, treats line references as not
+expected, and keeps batch-134 review-only by default until the batch is
+committed and executed.
 
 Batch-123 is now complete in ignored working storage. The foundation and
 method-overview slice stayed review-only, the page-image backstop remained

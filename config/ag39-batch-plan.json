@@ -1,0 +1,166 @@
+{
+  "planId": "ag39-vaglb-reserve-plan",
+  "planVersion": "1.0",
+  "status": "planned",
+  "sourceScope": {
+    "sourceFamilyId": "actuarial_guidelines",
+    "primarySourceFile": "AG 39 - Reserves For Variable Annuities With Guaranteed Living Benefits (VAGLBs).pdf",
+    "sourceFolder": "Actuarial Guidelines",
+    "sourceTitle": "AG 39 - Reserves For Variable Annuities With Guaranteed Living Benefits (VAGLBs)",
+    "sourceReference": "Actuarial Guideline XXXIX",
+    "sourceStatus": "active",
+    "domainId": "naic_regulatory",
+    "rawSourceRoot": "D:\\Work\\AI Projects\\NAIC Valuation Manual Course",
+    "confirmedPageRange": [1, 2],
+    "observedSectionWindows": [
+      {
+        "sectionId": "ag39-background-and-reserve-requirement",
+        "pageRange": [1, 2],
+        "note": "Background, temporary interpretation, reserve-language overview, reinsurance, and asset adequacy analysis requirement."
+      }
+    ],
+    "boundaries": [
+      "Keep planning focused on the active AG 39 PDF only.",
+      "Do not widen into AG 40 or later guideline files.",
+      "Keep the page-image wording backstop because the text layer is encoding-noisy and stable line references are not expected.",
+      "Use page locators rather than line locators when the text layer does not support stable line mapping.",
+      "Treat the guideline as review-only regulatory guidance, not learner-facing policy text.",
+      "Keep the batch source-bound and review-only.",
+      "AG 40 remains out of scope."
+    ],
+    "exclusions": [
+      "No learner-facing content.",
+      "No app-ready export.",
+      "No RAG-ready export.",
+      "No approved/promoted export.",
+      "No eLearning scripts, slides, quizzes, or app exports.",
+      "No raw source files in Git.",
+      "No other guideline files in the same wave.",
+      "not app-ready, not RAG-ready, and not promoted."
+    ]
+  },
+  "topicMap": [
+    {
+      "topicId": "ag39-background-and-reserve-requirement",
+      "label": "Background and reserve requirement",
+      "pageRange": [1, 2],
+      "reviewComplexity": "medium-high",
+      "expectedIssueTypes": [
+        "regulatory_requirement",
+        "definition_or_terminology",
+        "reserve_method_structure",
+        "calculation_structure",
+        "formula_context",
+        "prescribed_assumption",
+        "company_or_prudent_estimate_assumption",
+        "reinsurance",
+        "reporting_requirement",
+        "documentation_expectation",
+        "cross_reference_mapping",
+        "background_content",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": [
+        "VAGLBs",
+        "Model Standard Valuation Law",
+        "AG 38",
+        "AG 40",
+        "asset adequacy analysis",
+        "general account"
+      ],
+      "boundaryNote": "Keep the background, temporary interpretation, reserve language, reinsurance, and asset-adequacy requirement together as a single review-only slice."
+    }
+  ],
+  "proposedBatches": [
+    {
+      "plannedBatchId": "batch-134",
+      "topicIds": [
+        "ag39-background-and-reserve-requirement"
+      ],
+      "title": "AG 39 background and reserve-requirement slice",
+      "pageTarget": {
+        "knownWindow": [1, 2],
+        "notes": "Capture the short VAGLB guideline in one narrow review-only batch rather than splitting a two-page file."
+      },
+      "rationale": "Capture the short VAGLB guideline in one narrow review-only batch rather than splitting a two-page file.",
+      "reviewComplexity": "medium-high",
+      "expectedIssueTypes": [
+        "page_image_confirmation",
+        "reserve_method_structure",
+        "formula_context",
+        "reinsurance",
+        "asset_modeling_judgment",
+        "cross_reference_mapping",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    }
+  ],
+  "reviewStandards": {
+    "regulatoryRequirement": "Treat background, reserve, reinsurance, and asset-adequacy language as regulatory text when the guideline directs how VAGLB reserves should be handled.",
+    "definitionOrTerminology": "Treat VAGLB terms, reserve labels, and example labels as terminology or context when the text explains rather than directs.",
+    "reserveMethodStructure": "Treat the reserve framework and example mechanics as method structure when the text is describing how the reserve works.",
+    "calculationStructure": "Treat the reserve steps, reserve components, and valuation-date application as calculation structure when the text specifies how the method is applied.",
+    "formulaContext": "Treat reserve components and valuation-rate references as formula context unless the text gives an explicit computational rule.",
+    "prescribedAssumption": "Treat table-driven or fixed inputs as prescribed assumptions when they are stated as requirements.",
+    "companyOrPrudentEstimateAssumption": "Treat experience-sensitive or judgment-sensitive language as company / prudent-estimate context when the text expressly allows or recommends it.",
+    "reinsurance": "Treat reserve-credit and treaty language as reinsurance context when the text addresses ceded or assumed VAGLB exposure.",
+    "reportingRequirement": "Treat asset adequacy, opinion, and filing-direction language as reporting requirement material when the text says what must be filed or disclosed.",
+    "documentationExpectation": "Treat explanatory implementation language as documentation expectation material when the text tells the reviewer what must accompany the filing.",
+    "crossReferenceMapping": "Treat references to VAGLBs, the Standard Valuation Law, AG 38, and AG 40 as cross-reference context unless the text operationalizes them.",
+    "backgroundContent": "Treat the title, introduction, and section labels as background unless they impose a requirement.",
+    "boundaryControlWindow": "Treat the page 1-2 window as a review-only slice and do not split it unless a later cleanup pass explicitly needs that split.",
+    "requiresHumanInterpretation": "Treat the encoding-noisy text layer and reserve / asset-adequacy judgment calls as requiring human review unless the source text is explicit."
+  },
+  "promotionGates": {
+    "defaultState": "review_only",
+    "learnerFacing": [
+      "source citation exists",
+      "source support is clear",
+      "wording is not misleading",
+      "confidence is high",
+      "no unresolved review flags exist"
+    ],
+    "appReady": [
+      "learner-facing criteria are already satisfied",
+      "export is sanitized, stable, and versioned",
+      "no unresolved review issues remain"
+    ],
+    "ragReady": [
+      "approved indexed material only",
+      "stable ID",
+      "source reference and locator",
+      "review status no longer requires human disposition"
+    ]
+  },
+  "validationImplications": {
+    "currentChecksNeeded": [
+      "Plan file exists and parses as JSON.",
+      "The AG 39 plan markdown must exist and carry the expected headings.",
+      "Every planned batch must remain review-only by default.",
+      "The source posture must stay explicitly active.",
+      "Each planned batch must have a matching batch definition.",
+      "The AG 39 batch definition file must stay synchronized with the plan.",
+      "The page-image backstop and page-locator-only posture must stay visible for the noisy text layer."
+    ],
+    "futureChecksSuggested": [
+      "Page-image wording backstop checks.",
+      "Line-reference availability checks.",
+      "Unexpected source-family leakage checks.",
+      "No learner-facing, app-ready, or RAG-ready promotion checks.",
+      "AG 40 boundary checks.",
+      "Reinsurance and asset-adequacy boundary checks."
+    ],
+    "scriptImplications": [
+      "scripts/ag39-batch-definitions.mjs should stay synchronized with the planned batch-134 slice when extraction is authorized.",
+      "scripts/batch-definitions.mjs should import the AG 39 definition file so the shared runner can find batch-134.",
+      "scripts/validate-scaffold.mjs should verify that the AG 39 plan file exists, parses cleanly, and preserves the review-only posture.",
+      "The shared runner should continue to honor the same stop conditions used for the earlier guideline batches.",
+      "The page-image wording backstop should remain visible in the review packet because the AG 39 text layer is noisy and line references are not expected."
+    ]
+  },
+  "notes": "Controlled AG 39 planning artifact. Planned batch 134 remains review-only by default and is not an extraction run."
+}
