@@ -28,7 +28,9 @@ self-review note now form part of the review handoff set. The AG 24 guideline
 is complete as batches 102-104. Its tracked review index and self-review note
 now form part of the review handoff set. AG 25 is the next candidate and
 should be planned as a compact review-only guideline unit if the continuation
-pass keeps going.
+pass keeps going. AG 25 has now been inspected as a three-page indexed
+increasing death-benefits guideline, and batch-105 should remain review-only
+unless a later review changes the disposition.
 
 ## Build tasks
 
@@ -126,6 +128,10 @@ pass keeps going.
   `config/ag24-batch-plan.json` as the AG 24 planning baseline.
 - Treat `scripts/ag24-batch-definitions.mjs` as synchronized with the AG 24
   planning baseline and the completed batches.
+- Treat `docs/processor/ag25_extraction_plan.md` and
+  `config/ag25-batch-plan.json` as the AG 25 planning baseline.
+- Treat `scripts/ag25-batch-definitions.mjs` as synchronized with the AG 25
+  planning baseline once the planning commit lands.
 - Treat `docs/processor/ag17_extraction_plan.md` and
   `config/ag17-batch-plan.json` as the current AG 17 planning set.
 - Treat `docs/processor/ag18_extraction_plan.md` and

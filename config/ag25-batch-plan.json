@@ -1,0 +1,155 @@
+{
+  "planId": "ag25-indexed-increasing-death-benefits-plan",
+  "planVersion": "1.0",
+  "status": "planned",
+  "sourceScope": {
+    "sourceFamilyId": "actuarial_guidelines",
+    "primarySourceFile": "AG 25 - Guideline for Calculation of Minimum Reserves and Minimum Non-Forfeiture Values for Policies with Guaranteed Increasing Death Benefits Based o.pdf",
+    "sourceFolder": "Actuarial Guidelines",
+    "sourceTitle": "AG 25 - Guideline for Calculation of Minimum Reserves and Minimum Non-Forfeiture Values for Policies with Guaranteed Increasing Death Benefits Based on an Index",
+    "sourceReference": "Actuarial Guideline XXV",
+    "sourceStatus": "active",
+    "domainId": "naic_regulatory",
+    "rawSourceRoot": "D:\\Work\\AI Projects\\NAIC Valuation Manual Course",
+    "confirmedPageRange": [1, 3],
+    "observedSectionWindows": [
+      {
+        "sectionId": "ag25-indexed-increasing-death-benefits",
+        "pageRange": [1, 3],
+        "note": "Title, CPI-based annual increase assumptions, low-amount exception, and the closing boundary."
+      }
+    ],
+    "boundaries": [
+      "Keep planning focused on this single AG 25 PDF.",
+      "Do not widen into AG 26 or later guideline files.",
+      "Keep the active guideline posture explicit in every batch artifact.",
+      "Keep the page image as the backstop for exact wording because the text layer is noisy / encoded.",
+      "Treat the guideline as review-only regulatory guidance, not learner-facing policy text.",
+      "Keep the batch source-bound and review-only."
+    ],
+    "exclusions": [
+      "No learner-facing content.",
+      "No app-ready export.",
+      "No RAG-ready export.",
+      "No approved/promoted export.",
+      "No eLearning scripts, slides, quizzes, or app exports.",
+      "No raw source files in Git.",
+      "No other guideline files in the same wave."
+    ]
+  },
+  "topicMap": [
+    {
+      "topicId": "ag25-indexed-increasing-death-benefits",
+      "label": "Indexed increasing death-benefit guideline",
+      "pageRange": [1, 3],
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "regulatory_requirement",
+        "definition_or_terminology",
+        "calculation_structure",
+        "formula_context",
+        "cross_reference_mapping",
+        "background_content",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": [
+        "Consumer Price Index",
+        "cash value accumulation test",
+        "IRS Section 7702",
+        "maximum valuation interest rate",
+        "annual increase",
+        "threshold amount"
+      ],
+      "boundaryNote": "Keep this slice within pages 1-3 and do not widen into AG 26."
+    }
+  ],
+  "proposedBatches": [
+    {
+      "plannedBatchId": "batch-105",
+      "topicIds": [
+        "ag25-indexed-increasing-death-benefits"
+      ],
+      "title": "AG 25 indexed increasing death-benefits slice",
+      "pageTarget": {
+        "knownWindow": [1, 3],
+        "notes": "Capture the full three-page guideline as one review-only slice because the OCR-noisy wording and exception language should stay together."
+      },
+      "rationale": "Capture the full three-page guideline as one review-only slice because the OCR-noisy wording and exception language should stay together.",
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "regulatory_requirement",
+        "definition_or_terminology",
+        "calculation_structure",
+        "formula_context",
+        "cross_reference_mapping",
+        "background_content",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    }
+  ],
+  "reviewStandards": {
+    "regulatoryRequirement": "Treat express duty, allowance, cap, or required nonforfeiture language as regulatory text when the guideline says it must be followed.",
+    "definitionOrTerminology": "Treat valuation rate, death-benefit increase terms, threshold amount, and related terms as terminology when the text explains rather than directs.",
+    "reserveMethodStructure": "Treat indexed-death-benefit reserve framing as structure until the text clearly states a separate duty.",
+    "calculationStructure": "Treat the death-benefit adjustments, present-value adjustments, and low-amount exceptions as calculation structure until a duty is explicit.",
+    "formulaContext": "Treat formula labels, annual-increase percentages, and policy-value comparisons as context until interpretation is explicit.",
+    "prescribedAssumption": "Treat stated valuation assumptions, CPI-based limits, and table-based assumptions as prescribed when the guideline says they are fixed.",
+    "companyOrPrudentEstimateAssumption": "Use this label only when the guideline leaves a choice to the insurer or references company-determined treatment.",
+    "scenarioOrStochasticRequirement": "Not expected in AG 25; use only if a later page explicitly introduces a scenario requirement.",
+    "assetModelingJudgment": "Treat only explicit asset-value or investment-return judgments as asset-modeling judgment.",
+    "crossReferenceMapping": "Treat references to the Consumer Price Index, IRS Section 7702, and the cash value accumulation test as cross-reference context unless the text operationalizes them.",
+    "backgroundContent": "Treat title, framing, and explanatory notes as background unless they impose a requirement.",
+    "boundaryControlWindow": "Treat the page 1-3 window as a review-only slice and do not split it unless a later cleanup pass explicitly needs that split.",
+    "requiresHumanInterpretation": "Treat the OCR noise, formula-heavy prose, and threshold / exception choices as requiring human review unless the source text is explicit."
+  },
+  "promotionGates": {
+    "defaultState": "review_only",
+    "learnerFacing": [
+      "source citation exists",
+      "source support is clear",
+      "wording is not misleading",
+      "confidence is high",
+      "no unresolved review flags exist"
+    ],
+    "appReady": [
+      "learner-facing criteria are already satisfied",
+      "export is sanitized, stable, and versioned",
+      "no unresolved review issues remain"
+    ],
+    "ragReady": [
+      "approved indexed material only",
+      "stable ID",
+      "source reference and locator",
+      "review status no longer requires human disposition"
+    ]
+  },
+  "validationImplications": {
+    "currentChecksNeeded": [
+      "Plan file exists and parses as JSON.",
+      "The AG 25 plan markdown exists and carries the expected headings.",
+      "Every proposed batch is review-only by default.",
+      "The plan keeps the scope to pages 1-3 only.",
+      "The source posture is explicitly active.",
+      "Each planned batch has a matching batch definition.",
+      "The AG 25 batch definition file stays synchronized with the plan."
+    ],
+    "futureChecksSuggested": [
+      "Formula-heavy page checks for future indexed-death-benefit guideline files.",
+      "Page-image wording backstop checks.",
+      "Unexpected source-family leakage checks.",
+      "No learner-facing, app-ready, or RAG-ready promotion checks."
+    ],
+    "scriptImplications": [
+      "scripts/ag25-batch-definitions.mjs should stay synchronized with the planned batch-105 slice when extraction is authorized.",
+      "scripts/batch-definitions.mjs should import the AG 25 definition file so the shared runner can find the planned batch ID.",
+      "scripts/validate-scaffold.mjs should verify that the AG 25 plan file exists, parses cleanly, and preserves the review-only posture.",
+      "The shared runner should continue to honor the same stop conditions used for the earlier guideline batches."
+    ]
+  },
+  "notes": "Controlled AG 25 planning artifact. Planned batch 105 remains review-only by default and is not an extraction run."
+}

@@ -337,3 +337,8 @@
   POC summary so the twenty-ninth review index and 104 validated batches are
   now visible in the handoff layer. No new tracked skill file update was
   necessary.
+- 2026-06-27: Inspected AG 25, confirmed the three-page indexed increasing
+  death-benefits guideline, and drafted the AG 25 planning layer so
+  batch-105 can be validated before extraction starts. The page-image
+  wording backstop remains visible because the text layer is noisy / encoded,
+  and the planning layer keeps the batch review-only by default.
