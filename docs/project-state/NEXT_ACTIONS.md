@@ -19,7 +19,8 @@ review handoff set. AG 05 is already captured in the tracked review handoff
 set, and AG 03, AG 01, AG 02, and AG 04 remain captured as well. AG 52 is
 already captured in the mixed pilot batch and should not be reprocessed.
 The AG 18 review-only step is complete in the tracked review handoff set.
-The next source candidate to inspect is AG 19, subject to a limited
+The AG 19 review-only step is complete in the tracked review handoff set.
+The next source candidate to inspect is AG 20, subject to a limited
 page-range confirmation before any new batch is planned.
 
 ## Build tasks
@@ -90,6 +91,8 @@ page-range confirmation before any new batch is planned.
   `docs/review/ag17_self_review.md` as the current AG 17 handoff set.
 - Treat `docs/review/ag18_review_index.md` and
   `docs/review/ag18_self_review.md` as the current AG 18 handoff set.
+- Treat `docs/review/ag19_review_index.md` and
+  `docs/review/ag19_self_review.md` as the current AG 19 handoff set.
 - Treat `docs/processor/ag17_extraction_plan.md` and
   `config/ag17-batch-plan.json` as the current AG 17 planning set.
 - Treat `docs/processor/ag18_extraction_plan.md` and

@@ -10,7 +10,7 @@
 
 ## Latest known commit before this batch
 
-`572661e`
+`4489778`
 
 ## Validation status
 
@@ -28,7 +28,7 @@ review-handoff artifacts, the AG 15 planning and review-handoff
 artifacts, the AG 16 planning, execution, and review-handoff artifacts, and
 the AG 17 planning, execution, and review-handoff artifacts, the AG 18
 planning, execution, and review-handoff artifacts, and the AG 19 planning
-artifacts validate cleanly.
+and review-handoff artifacts validate cleanly.
 
 - `npm run pilot:course-core`: passed; created the core VM course pilot batch
   outputs in `data/work/batches/batch-002/`
@@ -151,9 +151,11 @@ death-benefit guideline without promoting any extracted content.
 The AG 18 review-only step is now complete as batch-096. Its tracked review
 index and self-review note summarize the current CRVM continuous-basis
 guideline without promoting any extracted content, and the page-image
-wording backstop remains visible as a review-only caveat. The AG 19 planning
-layer is now drafted so batch-097 can capture the 1980 CSO mortality-table
-guideline as the next review-only step if the continuation pass keeps going.
+wording backstop remains visible as a review-only caveat. The AG 19 review-
+only step is now complete as batch-097. Its tracked review index and
+self-review note summarize the 1980 CSO mortality-table guideline without
+promoting any extracted content, and AG 20 is the next candidate if the
+continuation pass keeps going.
 
 ## Working posture
 

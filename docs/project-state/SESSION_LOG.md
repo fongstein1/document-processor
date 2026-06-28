@@ -278,3 +278,8 @@
 - 2026-06-27: Ran the AG 18 one-page current CRVM batch (`batch-096`) in ignored working storage, kept it review-only, and created the tracked AG 18 review index plus self-review note as the new handoff artifacts.
 - 2026-06-27: Refreshed the scaffold validator and repository proof-of-concept summary so AG 18 is counted alongside the other completed review indexes, and confirmed the AG 18 handoff with 23 review indexes and 96 validated batches.
 - 2026-06-27: Inspected AG 19, confirmed the one-page 1980 CSO mortality-table guideline, and drafted the AG 19 planning layer so batch-097 can be validated before extraction starts.
+- 2026-06-27: Created the tracked AG 19 review index and self-review note,
+  refreshed the scaffold validator and repository proof-of-concept summary so
+  AG 19 is counted alongside the other completed review indexes, and kept the
+  review-only mortality-table wording backstop visible. The next candidate to
+  inspect is AG 20.

@@ -324,6 +324,8 @@ const requiredFiles = [
   'docs/review/ag17_self_review.md',
   'docs/review/ag18_review_index.md',
   'docs/review/ag18_self_review.md',
+  'docs/review/ag19_review_index.md',
+  'docs/review/ag19_self_review.md',
   'docs/processor/ag15_extraction_plan.md',
   'config/ag15-batch-plan.json',
   'scripts/ag15-batch-definitions.mjs',
@@ -3953,6 +3955,83 @@ const validateAg18SelfReviewMarkdown = async (filePath, label) => {
   })
 }
 
+const validateAg19ReviewIndexMarkdown = async (filePath, label) => {
+  const text = await readText(filePath)
+  const requiredHeadings = [
+    '## Overall AG 19 Extraction Status',
+    '## Batch Table',
+    '## Higher-Caution Section',
+    '## Human Review Checklist',
+    '## Promotion Decision Area',
+    '## Recommended Review Order',
+    '## Relationship to Other Review Indexes',
+    '## Self-Review Note',
+    '## Review Notes',
+  ]
+  requiredHeadings.forEach((heading) => {
+    if (!text.includes(heading)) {
+      problems.push(`${label}: missing heading ${heading}`)
+    }
+  })
+  ;[
+    'review-only',
+    'not learner-facing',
+    'not app-ready',
+    'not RAG-ready',
+    'not promoted',
+    'AG 19',
+    'batch-097',
+    'Actuarial Guideline XIX',
+    'page 1',
+    'active',
+    '1980 CSO',
+    'Ten-Year Select Mortality Factors',
+    'page-image',
+    'docs/review/ag19_self_review.md',
+    'docs/review/ag18_review_index.md',
+    'docs/review/vm20_review_index.md',
+    'docs/review/supporting_vm_review_index.md',
+    'docs/review/vm21_review_index.md',
+    'docs/review/vm22_review_index.md',
+    'docs/review/valuation_regulation_repository_poc_status.md',
+  ].forEach((phrase) => {
+    if (!text.includes(phrase)) {
+      problems.push(`${label}: must mention ${phrase}`)
+    }
+  })
+}
+
+const validateAg19SelfReviewMarkdown = async (filePath, label) => {
+  const text = await readText(filePath)
+  const requiredHeadings = [
+    '## Batch Classifications',
+    '## Recurring Observations',
+    '## Skill-Hardening Note',
+    '## Review Outcome',
+  ]
+  requiredHeadings.forEach((heading) => {
+    if (!text.includes(heading)) {
+      problems.push(`${label}: missing heading ${heading}`)
+    }
+  })
+  ;[
+    'reasonable_with_minor_cautions',
+    'batch-097',
+    'active',
+    'page-image backstop',
+    'review-only',
+    'not learner-facing',
+    'not app-ready',
+    'not RAG-ready',
+    'not promoted',
+    'No new tracked skill file update was necessary',
+  ].forEach((phrase) => {
+    if (!text.includes(phrase)) {
+      problems.push(`${label}: must mention ${phrase}`)
+    }
+  })
+}
+
 const validateAg01ReviewIndexMarkdown = async (filePath, label) => {
   const text = await readText(filePath)
   const requiredHeadings = [
@@ -4754,12 +4833,16 @@ const validatePocStatusSummaryMarkdown = async (filePath, label) => {
     'docs/review/ag17_self_review.md',
     'docs/review/ag18_review_index.md',
     'docs/review/ag18_self_review.md',
+    'docs/review/ag19_review_index.md',
+    'docs/review/ag19_self_review.md',
     'npm run check',
     'git diff --check',
-    '96 batches validated',
-    '23 review indexes',
+    '97 batches validated',
+    '24 review indexes',
     'AG 18',
     'batch-096',
+    'AG 19',
+    'batch-097',
     'ignored working storage',
     'future pricing',
     'future liability-modeling',
@@ -5276,11 +5359,13 @@ await validateAg15ReviewIndexMarkdown(paths.ag15ReviewIndexMd, 'docs/review/ag15
 await validateAg15SelfReviewMarkdown(paths.ag15SelfReviewMd, 'docs/review/ag15_self_review.md')
 await validateAg16ReviewIndexMarkdown(paths.ag16ReviewIndexMd, 'docs/review/ag16_review_index.md')
 await validateAg16SelfReviewMarkdown(paths.ag16SelfReviewMd, 'docs/review/ag16_self_review.md')
-await validateAg17ReviewIndexMarkdown(paths.ag17ReviewIndexMd, 'docs/review/ag17_review_index.md')
-await validateAg17SelfReviewMarkdown(paths.ag17SelfReviewMd, 'docs/review/ag17_self_review.md')
-await validateAg18ReviewIndexMarkdown(paths.ag18ReviewIndexMd, 'docs/review/ag18_review_index.md')
-await validateAg18SelfReviewMarkdown(paths.ag18SelfReviewMd, 'docs/review/ag18_self_review.md')
-await validateAg05PlanMarkdown(paths.ag05ExtractionPlanMd, 'docs/processor/ag05_extraction_plan.md')
+  await validateAg17ReviewIndexMarkdown(paths.ag17ReviewIndexMd, 'docs/review/ag17_review_index.md')
+  await validateAg17SelfReviewMarkdown(paths.ag17SelfReviewMd, 'docs/review/ag17_self_review.md')
+  await validateAg18ReviewIndexMarkdown(paths.ag18ReviewIndexMd, 'docs/review/ag18_review_index.md')
+  await validateAg18SelfReviewMarkdown(paths.ag18SelfReviewMd, 'docs/review/ag18_self_review.md')
+  await validateAg19ReviewIndexMarkdown(paths.ag19ReviewIndexMd, 'docs/review/ag19_review_index.md')
+  await validateAg19SelfReviewMarkdown(paths.ag19SelfReviewMd, 'docs/review/ag19_self_review.md')
+  await validateAg05PlanMarkdown(paths.ag05ExtractionPlanMd, 'docs/processor/ag05_extraction_plan.md')
 await validateAg06PlanMarkdown(paths.ag06ExtractionPlanMd, 'docs/processor/ag06_extraction_plan.md')
 await validateAg07PlanMarkdown(paths.ag07ExtractionPlanMd, 'docs/processor/ag07_extraction_plan.md')
 await validateAg08PlanMarkdown(paths.ag08ExtractionPlanMd, 'docs/processor/ag08_extraction_plan.md')
@@ -5464,7 +5549,8 @@ if (problems.length > 0) {
   console.log(`- AG 16 review index verified: 1 batch`)
   console.log(`- AG 17 review index verified: 1 batch`)
   console.log(`- AG 18 review index verified: 1 batch`)
-  console.log(`- POC status summary verified: 23 review indexes`)
+  console.log(`- AG 19 review index verified: 1 batch`)
+  console.log(`- POC status summary verified: 24 review indexes`)
   if (validatedPilotBatchCount > 0) {
     console.log(`- Pilot batches validated: ${validatedPilotBatchCount}`)
   }
