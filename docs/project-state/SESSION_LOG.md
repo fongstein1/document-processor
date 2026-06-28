@@ -304,3 +304,7 @@
   summary plus project-state docs were refreshed so the handoff now counts AG
   21 alongside the other completed review indexes. No new tracked skill file
   update was necessary.
+- 2026-06-27: Inspected AG 22, confirmed the one-page indeterminate-premiums
+  guideline, and drafted the AG 22 planning layer so batch-100 can be
+  validated before extraction starts. The page-image wording backstop remains
+  visible because the text layer is noisy.
