@@ -330,3 +330,10 @@
   nonforfeiture values guideline, and drafted the AG 24 planning layer so
   batches 102-104 can be validated before extraction starts. The page-image
   wording backstop remains visible because the text layer is noisy / encoded.
+- 2026-06-27: Ran the AG 24 six-page variable life nonforfeiture values
+  wave sequentially (batch-102 through batch-104) in ignored working storage,
+  kept every batch review-only, created the tracked AG 24 review index plus
+  self-review note as the new handoff artifacts, and refreshed the repository
+  POC summary so the twenty-ninth review index and 104 validated batches are
+  now visible in the handoff layer. No new tracked skill file update was
+  necessary.

@@ -12,7 +12,7 @@ regulation repository. It consolidates the completed review-only extraction
 waves without changing the status of the underlying batch outputs or review
 indexes.
 
-The handoff now spans 28 review indexes.
+The handoff now spans 29 review indexes.
 
 This summary is review-only, not learner-facing, not app-ready, not RAG-ready,
 and not promoted.
@@ -71,6 +71,8 @@ review indexes:
 - `docs/review/ag21_self_review.md`
 - `docs/review/ag23_review_index.md`
 - `docs/review/ag23_self_review.md`
+- `docs/review/ag24_review_index.md`
+- `docs/review/ag24_self_review.md`
 
 ## Executive Status
 
@@ -162,6 +164,8 @@ What source families / chapters have been processed:
 - AG 21 one-page CRVM reserve-comparison guideline, `batch-099`
 - AG 22 one-page indeterminate premiums guideline, `batch-100`
 - AG 23 one-page separate account investments guideline, `batch-101`
+- AG 24 six-page variable life nonforfeiture values guideline,
+  `batch-102` through `batch-104`
 
 What remains review-only:
 
@@ -218,6 +222,7 @@ What is explicitly out of scope:
 | AG 21 one-page CRVM reserve-comparison guideline | `p. 1` | `batch-099` | `docs/review/ag21_review_index.md` | Complete; review-only | CRVM reserve-comparison context, noisy OCR, page-image backstop, and page-boundary review note |
 | AG 22 one-page indeterminate premiums guideline | `p. 1` | `batch-100` | `docs/review/ag22_review_index.md` | Complete; review-only | Indeterminate premiums context, noisy OCR, page-image backstop, and page-boundary review note |
 | AG 23 one-page separate account investments guideline | `p. 1` | `batch-101` | `docs/review/ag23_review_index.md` | Complete; review-only | Separate account investments context, noisy OCR, page-image backstop, placeholder statutory reference, readily marketable assets, net investment income, `15%`, and `10%` |
+| AG 24 six-page variable life nonforfeiture values guideline | `pp. 1-6` | `batch-102` through `batch-104` | `docs/review/ag24_review_index.md` | Complete; review-only | Variable life nonforfeiture values, retrospective and prospective method framing, surrender-charge caps, paid-up benefits, noisy OCR, and formula-context caution |
 
 ## Completed Assets
 
@@ -255,6 +260,7 @@ The repository now includes the core processor asset set:
 - the tracked AG 21 review index and self-review note in `docs/review/`
 - the tracked AG 22 review index and self-review note in `docs/review/`
 - the tracked AG 23 review index and self-review note in `docs/review/`
+- the tracked AG 24 review index and self-review note in `docs/review/`
 - VM chapter planning artifacts in `docs/processor/` and `config/`
 - project-state docs in `docs/project-state/`
 - runner / validator scripts in `scripts/`
@@ -265,11 +271,11 @@ documents remain external to Git.
 ## Validation Posture
 
 - `npm run check` passes
-- the scaffold reports 101 batches validated
+- the scaffold reports 104 batches validated
 - the validator now checks the tracked VM-20, supporting, VM-21, VM-22,
   practice-note, AG 03, AG 01, AG 02, AG 04, AG 05, AG 06, AG 07, AG 08,
   AG 09, AG 10, AG 11, AG 12, AG 13, AG 14, AG 15, AG 16, AG 17, AG 18,
-  AG 19, AG 20, AG 21, AG 22, AG 23, and POC status summary handoff files
+  AG 19, AG 20, AG 21, AG 22, AG 23, AG 24, and POC status summary handoff files
 - review-only and no-promotion guardrails are enforced in the batch manifests
   and review packets
 - ignored working outputs stay under `data/work/`
@@ -278,7 +284,7 @@ documents remain external to Git.
 
 ## Human Review Posture
 
-- Reviewers should start from the twenty-eight review indexes listed above.
+- Reviewers should start from the twenty-nine review indexes listed above.
 - The review packets remain the detailed evidence layer behind those
   summaries.
 - All batch content remains source-bound and review-only unless a separate
@@ -332,6 +338,15 @@ AG 22 was added after the original POC package was first assembled. Its tracked 
 ## AG 23 Note
 
 AG 23 was added after the original POC package was first assembled. Its tracked review index and self-review note are now part of the same review-only hand-off set as the other completed waves, and they preserve the one-page separate account investments guideline as a review-only note. The page-image backstop remains visible, and the placeholder statutory reference, readily marketable assets, net investment income, `15%`, and `10%` language remains review-only context.
+
+## AG 24 Note
+
+AG 24 was added after the original POC package was first assembled. Its tracked review index and self-review note are now part of the same review-only hand-off set as the other completed waves, and they preserve the six-page variable life nonforfeiture values guideline as a review-only note. The page-image backstop remains visible, and the retrospective method, prospective method, surrender-charge caps, paid-up nonforfeiture benefits, and formula context remain review-only context.
+
+AG 24 is now complete as batches `batch-102`, `batch-103`, and `batch-104`.
+Its tracked review index and self-review note summarize the six-page guideline
+without promoting any extracted content, and AG 25 is the next candidate if
+the continuation pass keeps going.
 
 ## Promotion Gates
 

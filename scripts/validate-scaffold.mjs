@@ -179,6 +179,8 @@ const paths = {
   ag24ExtractionPlanMd: path.join(repoRoot, 'docs', 'processor', 'ag24_extraction_plan.md'),
   ag23ReviewIndexMd: path.join(repoRoot, 'docs', 'review', 'ag23_review_index.md'),
   ag23SelfReviewMd: path.join(repoRoot, 'docs', 'review', 'ag23_self_review.md'),
+  ag24ReviewIndexMd: path.join(repoRoot, 'docs', 'review', 'ag24_review_index.md'),
+  ag24SelfReviewMd: path.join(repoRoot, 'docs', 'review', 'ag24_self_review.md'),
   ag22ReviewIndexMd: path.join(repoRoot, 'docs', 'review', 'ag22_review_index.md'),
   ag22SelfReviewMd: path.join(repoRoot, 'docs', 'review', 'ag22_self_review.md'),
   ag21ReviewIndexMd: path.join(repoRoot, 'docs', 'review', 'ag21_review_index.md'),
@@ -363,6 +365,8 @@ const requiredFiles = [
   'scripts/ag24-batch-definitions.mjs',
   'docs/review/ag23_review_index.md',
   'docs/review/ag23_self_review.md',
+  'docs/review/ag24_review_index.md',
+  'docs/review/ag24_self_review.md',
   'docs/review/ag22_review_index.md',
   'docs/review/ag22_self_review.md',
   'docs/review/ag21_review_index.md',
@@ -5347,6 +5351,86 @@ const validateAg02SelfReviewMarkdown = async (filePath, label) => {
   })
 }
 
+const validateAg24ReviewIndexMarkdown = async (filePath, label) => {
+  const text = await readText(filePath)
+  const requiredHeadings = [
+    '## Overall AG 24 Extraction Status',
+    '## Batch Table',
+    '## Higher-Caution Section',
+    '## Human Review Checklist',
+    '## Promotion Decision Area',
+    '## Recommended Review Order',
+    '## Relationship to Other Review Indexes',
+    '## Self-Review Note',
+    '## Review Notes',
+  ]
+  requiredHeadings.forEach((heading) => {
+    if (!text.includes(heading)) {
+      problems.push(`${label}: missing heading ${heading}`)
+    }
+  })
+  ;[
+    'review-only',
+    'not learner-facing',
+    'not app-ready',
+    'not RAG-ready',
+    'not promoted',
+    'AG 24',
+    'batch-102',
+    'batch-103',
+    'batch-104',
+    'Actuarial Guideline XXIV',
+    'page 1',
+    'page 6',
+    'page-image',
+    'noisy',
+    'formula context',
+    'maximum allowable surrender charge',
+    'variable life nonforfeiture values',
+    'docs/review/ag24_self_review.md',
+    'docs/review/ag23_review_index.md',
+    'docs/review/valuation_regulation_repository_poc_status.md',
+  ].forEach((phrase) => {
+    if (!text.includes(phrase)) {
+      problems.push(`${label}: must mention ${phrase}`)
+    }
+  })
+}
+
+const validateAg24SelfReviewMarkdown = async (filePath, label) => {
+  const text = await readText(filePath)
+  const requiredHeadings = [
+    '## Batch Classifications',
+    '## Recurring Observations',
+    '## Skill-Hardening Note',
+    '## Review Outcome',
+  ]
+  requiredHeadings.forEach((heading) => {
+    if (!text.includes(heading)) {
+      problems.push(`${label}: missing heading ${heading}`)
+    }
+  })
+  ;[
+    'reasonable_with_minor_cautions',
+    'batch-102',
+    'batch-103',
+    'batch-104',
+    'review-only',
+    'not learner-facing',
+    'not app-ready',
+    'not RAG-ready',
+    'not promoted',
+    'noisy OCR layer',
+    'page-image backstop',
+    'formula context',
+    'No tracked skill file update was necessary',
+  ].forEach((phrase) => {
+    if (!text.includes(phrase)) {
+      problems.push(`${label}: must mention ${phrase}`)
+    }
+  })
+}
+
 const validatePocStatusSummaryMarkdown = async (filePath, label) => {
   const text = await readText(filePath)
   const requiredHeadings = [
@@ -5430,10 +5514,12 @@ const validatePocStatusSummaryMarkdown = async (filePath, label) => {
     'docs/review/ag22_self_review.md',
     'docs/review/ag23_review_index.md',
     'docs/review/ag23_self_review.md',
+    'docs/review/ag24_review_index.md',
+    'docs/review/ag24_self_review.md',
     'npm run check',
     'git diff --check',
-    '101 batches validated',
-    '28 review indexes',
+    '104 batches validated',
+    '29 review indexes',
     'AG 18',
     'batch-096',
     'AG 19',
@@ -5446,6 +5532,10 @@ const validatePocStatusSummaryMarkdown = async (filePath, label) => {
     'batch-100',
     'AG 23',
     'batch-101',
+    'AG 24',
+    'batch-102',
+    'batch-103',
+    'batch-104',
     'ignored working storage',
     'future pricing',
     'future liability-modeling',
@@ -6147,6 +6237,8 @@ await validateAg22ReviewIndexMarkdown(paths.ag22ReviewIndexMd, 'docs/review/ag22
 await validateAg22SelfReviewMarkdown(paths.ag22SelfReviewMd, 'docs/review/ag22_self_review.md')
 await validateAg23ReviewIndexMarkdown(paths.ag23ReviewIndexMd, 'docs/review/ag23_review_index.md')
 await validateAg23SelfReviewMarkdown(paths.ag23SelfReviewMd, 'docs/review/ag23_self_review.md')
+await validateAg24ReviewIndexMarkdown(paths.ag24ReviewIndexMd, 'docs/review/ag24_review_index.md')
+await validateAg24SelfReviewMarkdown(paths.ag24SelfReviewMd, 'docs/review/ag24_self_review.md')
 await validateAg05PlanMarkdown(paths.ag05ExtractionPlanMd, 'docs/processor/ag05_extraction_plan.md')
 await validateAg06PlanMarkdown(paths.ag06ExtractionPlanMd, 'docs/processor/ag06_extraction_plan.md')
 await validateAg07PlanMarkdown(paths.ag07ExtractionPlanMd, 'docs/processor/ag07_extraction_plan.md')
@@ -6332,6 +6424,8 @@ if (problems.length > 0) {
   console.log(`- AG 22 plan verified: ${ag22BatchPlan.proposedBatches.length} batches`)
   console.log(`- AG 23 plan verified: ${ag23BatchPlan.proposedBatches.length} batches`)
   console.log(`- AG 24 plan verified: ${ag24BatchPlan.proposedBatches.length} batches`)
+  console.log(`- AG 24 review index verified: 3 batches`)
+  console.log(`- AG 24 self-review verified: 3 batches`)
   console.log(`- AG 10 review index verified: 1 batch`)
   console.log(`- AG 11 review index verified: 1 batch`)
   console.log(`- AG 12 review index verified: 1 batch`)
@@ -6348,7 +6442,7 @@ if (problems.length > 0) {
   console.log(`- AG 21 self-review verified: 1 batch`)
   console.log(`- AG 22 review index verified: 1 batch`)
   console.log(`- AG 22 self-review verified: 1 batch`)
-  console.log(`- POC status summary verified: 28 review indexes`)
+  console.log(`- POC status summary verified: 29 review indexes`)
   if (validatedPilotBatchCount > 0) {
     console.log(`- Pilot batches validated: ${validatedPilotBatchCount}`)
   }

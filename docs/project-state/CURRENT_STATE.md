@@ -146,9 +146,11 @@ AG 23 is now complete as batch-101. Its tracked review index and self-review
 note summarize the one-page separate-account-investments guideline without
 promoting any extracted content, and the page-image backstop remains visible
 because the text layer includes a placeholder statutory reference.
-AG 24 is now the next variable-life nonforfeiture candidate; its planning
-layer is being drafted around pages 1-6 so batch-102 can be validated before
-extraction starts.
+AG 24 is now complete as batches 102-104. Its tracked review index and
+self-review note summarize the six-page variable-life nonforfeiture values
+guideline without promoting any extracted content, and the page-image
+backstop remains visible because the text layer is noisy / encoded. AG 25 is
+the next candidate and should be inspected after this handoff is committed.
 
 The AG 15 review-only step is now complete as batch-093. Its tracked review
 index and self-review note summarize the historical illustration guideline
@@ -287,7 +289,7 @@ The controlled VM-21 sequence is complete. The controlled VM-22 sequence is
 complete: batches 038-054 are done, the tracked VM-22 review index now
 summarizes the ignored batch packets, and the resulting ignored working
 outputs remain review-only. The tracked valuation-regulation repository POC
-summary now consolidates the twenty-six review indexes into a single handoff view.
+summary now consolidates the twenty-nine review indexes into a single handoff view.
 AG 20 is now complete as batch-098. Its tracked review index and self-review
 note summarize the seven-page joint-life-functions guideline without
 promoting any extracted content. AG 21 is now complete as batch-099. Its
@@ -302,9 +304,11 @@ AG 23 is now complete as batch-101. Its tracked review index and self-review
 note summarize the one-page separate-account-investments guideline without
 promoting any extracted content, and the page-image backstop remains visible
 because the text layer includes a placeholder statutory reference.
-AG 24 is now the next variable-life nonforfeiture candidate; its planning
-layer is being drafted around pages 1-6 so batch-102 can be validated before
-extraction starts.
+AG 24 is now complete as batches 102-104. Its tracked review index and
+self-review note summarize the six-page variable-life nonforfeiture values
+guideline without promoting any extracted content, and the page-image
+backstop remains visible because the text layer is noisy / encoded. AG 25 is
+the next candidate and should be inspected after this handoff is committed.
 
 The VM-20 companion practice-note wave is complete: batches `batch-055`
 through `batch-075` were processed review-only, and the tracked practice-note
