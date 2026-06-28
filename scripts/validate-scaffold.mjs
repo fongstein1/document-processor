@@ -213,6 +213,10 @@ const paths = {
   ag34SelfReviewMd: path.join(repoRoot, 'docs', 'review', 'ag34_self_review.md'),
   ag34BatchPlanJson: path.join(repoRoot, 'config', 'ag34-batch-plan.json'),
   ag34ExtractionPlanMd: path.join(repoRoot, 'docs', 'processor', 'ag34_extraction_plan.md'),
+  ag35ReviewIndexMd: path.join(repoRoot, 'docs', 'review', 'ag35_review_index.md'),
+  ag35SelfReviewMd: path.join(repoRoot, 'docs', 'review', 'ag35_self_review.md'),
+  ag35BatchPlanJson: path.join(repoRoot, 'config', 'ag35-batch-plan.json'),
+  ag35ExtractionPlanMd: path.join(repoRoot, 'docs', 'processor', 'ag35_extraction_plan.md'),
   ag26ReviewIndexMd: path.join(repoRoot, 'docs', 'review', 'ag26_review_index.md'),
   ag26SelfReviewMd: path.join(repoRoot, 'docs', 'review', 'ag26_self_review.md'),
   ag23ReviewIndexMd: path.join(repoRoot, 'docs', 'review', 'ag23_review_index.md'),
@@ -2526,6 +2530,7 @@ const ag31BatchPlan = await readJson(paths.ag31BatchPlanJson)
 const ag32BatchPlan = await readJson(paths.ag32BatchPlanJson)
 const ag33BatchPlan = await readJson(paths.ag33BatchPlanJson)
 const ag34BatchPlan = await readJson(paths.ag34BatchPlanJson)
+const ag35BatchPlan = await readJson(paths.ag35BatchPlanJson)
 
 validateSchemaEnvelope(batchManifestSchema, 'batch-manifest.schema.json')
 validateSchemaEnvelope(sourceInventorySchema, 'source-inventory.schema.json')
@@ -5944,6 +5949,127 @@ const validateAg34PlanMarkdown = async (filePath, label) => {
   })
 }
 
+const validateAg35ReviewIndexMarkdown = async (filePath, label) => {
+  const text = await readText(filePath)
+  const requiredHeadings = [
+    '## Overall AG 35 Extraction Status',
+    '## Batch Table',
+    '## Higher-Caution Section',
+    '## Human Review Checklist',
+    '## Promotion Decision Area',
+    '## Recommended Review Order',
+    '## Relationship to Other Review Indexes',
+    '## Review Notes',
+  ]
+  requiredHeadings.forEach((heading) => {
+    if (!text.includes(heading)) {
+      problems.push(`${label}: missing heading ${heading}`)
+    }
+  })
+  ;[
+    'review-only',
+    'not learner-facing',
+    'not app-ready',
+    'not RAG-ready',
+    'not promoted',
+    'AG 35',
+    'batch-120',
+    'batch-121',
+    'batch-122',
+    'Actuarial Guideline XXXV',
+    'pp. 1-3',
+    'pp. 4-6',
+    'pp. 7-9',
+    'page-image',
+    'active',
+    'AG 36 remains out of scope',
+    'line references were not available',
+    'docs/review/ag35_self_review.md',
+    'docs/review/ag34_review_index.md',
+    'docs/review/valuation_regulation_repository_poc_status.md',
+  ].forEach((phrase) => {
+    if (!text.includes(phrase)) {
+      problems.push(`${label}: must mention ${phrase}`)
+    }
+  })
+}
+
+const validateAg35SelfReviewMarkdown = async (filePath, label) => {
+  const text = await readText(filePath)
+  const requiredHeadings = [
+    '## Batch Classification',
+    '## Recurring Observations',
+    '## Batch-by-Batch Checks',
+    '## Review Outcome',
+  ]
+  requiredHeadings.forEach((heading) => {
+    if (!text.includes(heading)) {
+      problems.push(`${label}: missing heading ${heading}`)
+    }
+  })
+  ;[
+    'reasonable_with_minor_cautions',
+    'batch-120',
+    'batch-121',
+    'batch-122',
+    'review-only',
+    'not learner-facing',
+    'not app-ready',
+    'not RAG-ready',
+    'not promoted',
+    'page-image backstop',
+    'line references were not available',
+    'no new skill file update was necessary',
+    'hedged as required',
+    'AG 36 boundary',
+  ].forEach((phrase) => {
+    if (!text.includes(phrase)) {
+      problems.push(`${label}: must mention ${phrase}`)
+    }
+  })
+}
+
+const validateAg35PlanMarkdown = async (filePath, label) => {
+  const text = await readText(filePath)
+  const requiredHeadings = [
+    '## Source Scope',
+    '## Topic Map',
+    '## Proposed Batch Sequence',
+    '## Review Standards',
+    '## Promotion Gates',
+    '## Validation Implications',
+    '## Operating Note',
+  ]
+  requiredHeadings.forEach((heading) => {
+    if (!text.includes(heading)) {
+      problems.push(`${label}: missing heading ${heading}`)
+    }
+  })
+  ;[
+    'review-only',
+    'not learner-facing',
+    'not app-ready',
+    'not RAG-ready',
+    'not promoted',
+    'AG 35',
+    'batch-120',
+    'batch-121',
+    'batch-122',
+    'Actuarial Guideline XXXV',
+    'page 1',
+    'page 4',
+    'page 7',
+    'page-image',
+    'active',
+    "The Application of the Commissioners' Annuity Reserve Method to Equity Indexed Annuities",
+    'AG 36 remains out of scope',
+  ].forEach((phrase) => {
+    if (!text.includes(phrase)) {
+      problems.push(`${label}: must mention ${phrase}`)
+    }
+  })
+}
+
 const validateAg31ReviewIndexMarkdown = async (filePath, label) => {
   const text = await readText(filePath)
   const requiredHeadings = [
@@ -7639,9 +7765,14 @@ await validateAg32SelfReviewMarkdown(paths.ag32SelfReviewMd, 'docs/review/ag32_s
 await validateAg33ReviewIndexMarkdown(paths.ag33ReviewIndexMd, 'docs/review/ag33_review_index.md')
 await validateAg33SelfReviewMarkdown(paths.ag33SelfReviewMd, 'docs/review/ag33_self_review.md')
 await validateAg34PlanMarkdown(paths.ag34ExtractionPlanMd, 'docs/processor/ag34_extraction_plan.md')
+await validateAg35PlanMarkdown(paths.ag35ExtractionPlanMd, 'docs/processor/ag35_extraction_plan.md')
 if ((await exists(paths.ag34ReviewIndexMd)) && (await exists(paths.ag34SelfReviewMd))) {
   await validateAg34ReviewIndexMarkdown(paths.ag34ReviewIndexMd, 'docs/review/ag34_review_index.md')
   await validateAg34SelfReviewMarkdown(paths.ag34SelfReviewMd, 'docs/review/ag34_self_review.md')
+}
+if ((await exists(paths.ag35ReviewIndexMd)) && (await exists(paths.ag35SelfReviewMd))) {
+  await validateAg35ReviewIndexMarkdown(paths.ag35ReviewIndexMd, 'docs/review/ag35_review_index.md')
+  await validateAg35SelfReviewMarkdown(paths.ag35SelfReviewMd, 'docs/review/ag35_self_review.md')
 }
 await validateAg27ReviewIndexMarkdown(paths.ag27ReviewIndexMd, 'docs/review/ag27_review_index.md')
 await validateAg27SelfReviewMarkdown(paths.ag27SelfReviewMd, 'docs/review/ag27_self_review.md')
@@ -7868,6 +7999,7 @@ if (problems.length > 0) {
   console.log(`- AG 32 plan verified: ${ag32BatchPlan.proposedBatches.length} batches`)
   console.log(`- AG 33 plan verified: ${ag33BatchPlan.proposedBatches.length} batches`)
   console.log(`- AG 34 plan verified: ${ag34BatchPlan.proposedBatches.length} batches`)
+  console.log(`- AG 35 plan verified: ${ag35BatchPlan.proposedBatches.length} batches`)
   console.log(`- AG 29 review index verified: 1 batch`)
   console.log(`- AG 29 self-review verified: 1 batch`)
   console.log(`- AG 30 review index verified: 1 batch`)
@@ -7884,7 +8016,15 @@ if (problems.length > 0) {
     console.log(`- AG 34 review index verified: 3 batches`)
     console.log(`- AG 34 self-review verified: 3 batches`)
   }
-  console.log(`- POC status summary verified: ${ag34ReviewArtifactsPresent ? 39 : 38} review indexes`)
+  const ag35ReviewArtifactsPresent =
+    (await exists(paths.ag35ReviewIndexMd)) && (await exists(paths.ag35SelfReviewMd))
+  if (ag35ReviewArtifactsPresent) {
+    console.log(`- AG 35 review index verified: 3 batches`)
+    console.log(`- AG 35 self-review verified: 3 batches`)
+  }
+  console.log(
+    `- POC status summary verified: ${ag35ReviewArtifactsPresent ? 40 : ag34ReviewArtifactsPresent ? 39 : 38} review indexes`,
+  )
   if (validatedPilotBatchCount > 0) {
     console.log(`- Pilot batches validated: ${validatedPilotBatchCount}`)
   }

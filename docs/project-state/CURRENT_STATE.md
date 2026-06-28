@@ -390,3 +390,7 @@ self-review note are the current handoff artifacts for the active MGDB
 reserve guideline. The page-image wording backstop remains visible because
 the text layer is noisy / encoded, and the AG 35 boundary stayed out of
 scope for this wave.
+
+AG 35 is now the next likely candidate if the continuation pass keeps going;
+its planning layer is being drafted as a three-window review-only wave with
+AG 36 out of scope.

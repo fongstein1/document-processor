@@ -403,6 +403,8 @@ review-only windows and keep AG 35 out of scope.
 - Keep the AG 34 handoff artifacts aligned with the ignored batch packets,
   and treat AG 35 as the next likely candidate only if the continuation pass
   keeps going.
+- Keep the AG 35 planning layer aligned with the inspected 9-page active
+  guideline, and keep AG 36 out of scope for that wave.
 - Keep the PDF extraction runner UTF-8-safe because formula pages can include
   Unicode minus signs and other non-ASCII glyphs.
 - Commit only lightweight, auditable artifacts.
