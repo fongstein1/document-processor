@@ -30,7 +30,9 @@ the AG 17 planning, execution, and review-handoff artifacts, the AG 18
 planning, execution, and review-handoff artifacts, and the AG 19 planning
 and review-handoff artifacts validate cleanly. The AG 20 review-only
 batch-098 handoff now stays in ignored working storage, and the tracked review
-index plus self-review note summarize the seven-page guideline.
+index plus self-review note summarize the seven-page guideline. The AG 21
+planning layer has now been drafted around page 1 and will be validated
+before batch-099 runs.
 
 - `npm run pilot:course-core`: passed; created the core VM course pilot batch
   outputs in `data/work/batches/batch-002/`
@@ -280,10 +282,12 @@ outputs remain review-only. The tracked valuation-regulation repository POC
 summary now consolidates the twenty-five review indexes into a single handoff view.
 AG 20 is now complete as batch-098. Its tracked review index and self-review
 note summarize the seven-page joint-life-functions guideline without
-promoting any extracted content. AG 05 is complete in ignored working
-storage and its tracked review index plus self-review note now summarize that
-wave. Keep VM-25 and later chapters out of scope unless a future plan
-explicitly opens them.
+promoting any extracted content. AG 21 is the next short guideline candidate;
+its page range is confirmed as page 1 and its planning layer is being
+prepared as batch-099. AG 05 is complete in ignored working storage and its
+tracked review index plus self-review note now summarize that wave. Keep
+VM-25 and later chapters out of scope unless a future plan explicitly opens
+them.
 
 The VM-20 companion practice-note wave is complete: batches `batch-055`
 through `batch-075` were processed review-only, and the tracked practice-note

@@ -293,3 +293,7 @@
   repository proof-of-concept summary plus project-state docs were refreshed
   so the handoff now counts AG 20 alongside the other completed review
   indexes. No new tracked skill file update was necessary.
+- 2026-06-27: Inspected AG 21, confirmed the one-page CRVM reserve-comparison
+  guideline, and drafted the AG 21 planning layer so batch-099 can be
+  validated before extraction starts. The page-image wording backstop remains
+  visible because the text layer is noisy.
