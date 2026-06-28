@@ -509,3 +509,7 @@
   guideline, kept the companion 2021 Law Manual reprint out of scope, and
   added a durable low-quality PDF text-layer skill so noisy OCR sources stay
   page-image-backed and review-only.
+- 2026-06-28: Ran AG 37 batches 127-129, kept the background, reserve-entry,
+  and effective-date slices review-only in ignored working storage, updated
+  the AG 37 self-review note, created the tracked AG 37 review index, and
+  left AG 38 as the next likely candidate for the continuation pass.

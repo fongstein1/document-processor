@@ -397,12 +397,12 @@ guideline. The page-image wording backstop remains visible because the text
 layer is noisy / encoded, and the AG 36 boundary stayed out of scope for
 this wave.
 
-AG 37 is now the next active guideline candidate. The planning layer has
-been drafted for the 6-page GMDB source file, the 2021 Law Manual reprint
-stays excluded as companion material, and the next step is to validate and
-commit the AG 37 plan before batches 127-129 run in ignored working
-storage. The new low-quality PDF text-layer skill is also tracked so noisy
-OCR sources stay page-image-backed and review-only.
+AG 37 is now complete as batches 127-129. Its tracked review index and
+self-review note are now part of the handoff set, the 2021 Law Manual
+reprint stayed excluded as companion material, and AG 38 is now the next
+likely candidate if the continuation pass keeps going. The new low-quality
+PDF text-layer skill remains in place so noisy OCR sources stay
+page-image-backed and review-only.
 
 Batch-123 is now complete in ignored working storage. The foundation and
 method-overview slice stayed review-only, the page-image backstop remained
@@ -419,5 +419,5 @@ visible, and batch-126 is the next AG 36 slice to run.
 Batch-126 is now complete in ignored working storage. The certification and
 closeout slice stayed review-only, the page-image backstop remained visible,
 the tracked AG 36 review index and self-review note are now part of the
-handoff set, and AG 37 is the next likely candidate if the continuation pass
-keeps going.
+handoff set, and AG 38 is now the next likely candidate if the continuation
+pass keeps going.
