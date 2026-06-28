@@ -292,7 +292,7 @@ The controlled VM-21 sequence is complete. The controlled VM-22 sequence is
 complete: batches 038-054 are done, the tracked VM-22 review index now
 summarizes the ignored batch packets, and the resulting ignored working
 outputs remain review-only. The tracked valuation-regulation repository POC
-summary now consolidates the fifty-two review indexes into a single handoff
+summary now consolidates the fifty-four review indexes into a single handoff
 view. AG 40 is now complete as batches 135-136 in ignored working storage,
 and the tracked review index plus self-review note are now part of the
 handoff set. AG 41 is now complete as batch-137 in ignored working storage,
@@ -444,8 +444,10 @@ AG 48 is complete as batches 154-156 in ignored working storage. Its tracked
 review index and self-review note are now part of the handoff set, the
 page-image wording backstop remained visible because the text layer is
 encoding-noisy and line references were not available, the 2021 Law Manual
-reprint stayed out of scope for this wave, and AG 49 is the next likely
-candidate if the continuation pass keeps going.
+reprint stayed out of scope for this wave, and AG 49 is now complete as
+batches 157-159 in ignored working storage. Its tracked review index and
+self-review note are now part of the handoff set, and AG 50 is the next
+likely candidate if the continuation pass keeps going.
 
 AG 39 batch-134 has completed in ignored working storage, and the tracked
 AG 39 review index and self-review note are now part of the handoff set. The

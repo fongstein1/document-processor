@@ -625,3 +625,9 @@
   wording backstop visible because the text layer is encoding-noisy and line
   references were not available. AG 49 is now the next likely candidate if
   the continuation pass keeps going.
+- 2026-06-28: Completed the AG 49 review-only wave as batches 157-159,
+  created the tracked AG 49 review index and self-review note, refreshed the
+  repository POC summary and project-state docs, and kept the page-image
+  wording backstop visible because the text layer is encoding-noisy and line
+  references were not available. The existing low-quality PDF text-layer
+  handling skill remained sufficient, so no new skill instruction was needed.
