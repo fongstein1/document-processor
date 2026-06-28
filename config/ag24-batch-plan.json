@@ -1,0 +1,276 @@
+{
+  "planId": "ag24-variable-life-nonforfeiture-values-plan",
+  "planVersion": "1.0",
+  "status": "planned",
+  "sourceScope": {
+    "sourceFamilyId": "actuarial_guidelines",
+    "primarySourceFile": "AG 24 - Guideline for Variable Life Non-Forfeiture Values.pdf",
+    "sourceFolder": "Actuarial Guidelines",
+    "sourceTitle": "AG 24 - Guideline for Variable Life Non-Forfeiture Values",
+    "sourceReference": "Actuarial Guideline XXIV",
+    "sourceStatus": "active",
+    "domainId": "naic_regulatory",
+    "rawSourceRoot": "D:\\Work\\AI Projects\\NAIC Valuation Manual Course",
+    "confirmedPageRange": [1, 6],
+    "observedSectionWindows": [
+      {
+        "sectionId": "ag24-overview-retrospective",
+        "pageRange": [1, 2],
+        "note": "Title, definitions, valuation rate, retrospective method, and early charge framing."
+      },
+      {
+        "sectionId": "ag24-prospective-charge-framework",
+        "pageRange": [3, 4],
+        "note": "Prospective method and the charge framework that feeds the policy-value calculation."
+      },
+      {
+        "sectionId": "ag24-charge-caps-paid-up-benefits",
+        "pageRange": [5, 6],
+        "note": "Surrender-charge caps, deferred acquisition charges, paid-up nonforfeiture benefits, and the closing boundary."
+      }
+    ],
+    "boundaries": [
+      "Keep planning focused on this single AG 24 PDF.",
+      "Do not widen into AG 25 or later guideline files.",
+      "Keep the active guideline posture explicit in every batch artifact.",
+      "Keep the page image as the backstop for exact wording because the text layer is noisy / encoded.",
+      "Treat the guideline as review-only regulatory guidance, not learner-facing policy text.",
+      "Keep the batch source-bound and review-only."
+    ],
+    "exclusions": [
+      "No learner-facing content.",
+      "No app-ready export.",
+      "No RAG-ready export.",
+      "No approved/promoted export.",
+      "No eLearning scripts, slides, quizzes, or app exports.",
+      "No raw source files in Git.",
+      "No other guideline files in the same wave."
+    ]
+  },
+  "topicMap": [
+    {
+      "topicId": "ag24-overview-retrospective",
+      "label": "Variable life nonforfeiture overview and retrospective method",
+      "pageRange": [1, 2],
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "regulatory_requirement",
+        "definition_or_terminology",
+        "calculation_structure",
+        "cross_reference_mapping",
+        "background_content",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": [
+        "valuation rate",
+        "net cash surrender value",
+        "cash surrender value",
+        "policy value",
+        "retrospective method",
+        "Standard Nonforfeiture Law",
+        "Section 5",
+        "Section 5a",
+        "Section 5c"
+      ],
+      "boundaryNote": "Keep this slice within pages 1-2 and do not absorb the later prospective or charge-caps language."
+    },
+    {
+      "topicId": "ag24-prospective-charge-framework",
+      "label": "Variable life prospective method and charge framework",
+      "pageRange": [3, 4],
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "regulatory_requirement",
+        "definition_or_terminology",
+        "reserve_method_structure",
+        "calculation_structure",
+        "formula_context",
+        "cross_reference_mapping",
+        "background_content",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": [
+        "prospective method",
+        "present value of future benefits",
+        "present value of future adjusted premiums",
+        "service charges",
+        "administrative charges",
+        "acquisition and other charges",
+        "deferred acquisition charges",
+        "CPI"
+      ],
+      "boundaryNote": "Keep this slice within pages 3-4 and do not absorb the paid-up-benefit closing pages."
+    },
+    {
+      "topicId": "ag24-charge-caps-paid-up-benefits",
+      "label": "Surrender-charge caps and paid-up nonforfeiture benefits",
+      "pageRange": [5, 6],
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "regulatory_requirement",
+        "definition_or_terminology",
+        "calculation_structure",
+        "formula_context",
+        "prescribed_assumption",
+        "cross_reference_mapping",
+        "background_content",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": [
+        "maximum allowable surrender charge",
+        "l[x+t]/l[x]",
+        "paid-up nonforfeiture benefit",
+        "secondary guarantees",
+        "substandard mortality",
+        "Standard Nonforfeiture Law",
+        "surrender charge",
+        "policy default"
+      ],
+      "boundaryNote": "Keep this slice within pages 5-6 and do not widen past the closing paid-up-benefit boundary."
+    }
+  ],
+  "proposedBatches": [
+    {
+      "plannedBatchId": "batch-102",
+      "topicIds": [
+        "ag24-overview-retrospective"
+      ],
+      "title": "AG 24 overview and retrospective-method slice",
+      "pageTarget": {
+        "knownWindow": [1, 2],
+        "notes": "Capture the opening definitions and retrospective-method material while preserving the page-image backstop."
+      },
+      "rationale": "Capture the opening definitions and retrospective-method material while preserving the page-image backstop.",
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "regulatory_requirement",
+        "definition_or_terminology",
+        "calculation_structure",
+        "cross_reference_mapping",
+        "background_content",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    },
+    {
+      "plannedBatchId": "batch-103",
+      "topicIds": [
+        "ag24-prospective-charge-framework"
+      ],
+      "title": "AG 24 prospective-method and charge-framework slice",
+      "pageTarget": {
+        "knownWindow": [3, 4],
+        "notes": "Capture the prospective-method structure and charge framework without widening into the paid-up-benefit closing pages."
+      },
+      "rationale": "Capture the prospective-method structure and charge framework without widening into the paid-up-benefit closing pages.",
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "regulatory_requirement",
+        "definition_or_terminology",
+        "reserve_method_structure",
+        "calculation_structure",
+        "formula_context",
+        "cross_reference_mapping",
+        "background_content",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    },
+    {
+      "plannedBatchId": "batch-104",
+      "topicIds": [
+        "ag24-charge-caps-paid-up-benefits"
+      ],
+      "title": "AG 24 charge-caps and paid-up-benefits slice",
+      "pageTarget": {
+        "knownWindow": [5, 6],
+        "notes": "Capture the surrender-charge formulas and the paid-up nonforfeiture benefit closing boundary as a single review-only slice."
+      },
+      "rationale": "Capture the surrender-charge formulas and the paid-up nonforfeiture benefit closing boundary as a single review-only slice.",
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "regulatory_requirement",
+        "definition_or_terminology",
+        "calculation_structure",
+        "formula_context",
+        "prescribed_assumption",
+        "cross_reference_mapping",
+        "background_content",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    }
+  ],
+  "reviewStandards": {
+    "regulatoryRequirement": "Treat express duty, allowance, cap, or required nonforfeiture language as regulatory text when the guideline says it must be followed.",
+    "definitionOrTerminology": "Treat valuation rate, policy value, net cash surrender value, paid-up nonforfeiture benefit, and related terms as terminology when the text explains rather than directs.",
+    "reserveMethodStructure": "Treat retrospective and prospective method framing as structure until the text clearly states a separate duty.",
+    "calculationStructure": "Treat the charge formulas, cash-surrender formula, and paid-up-basis formula as calculation structure until a duty is explicit.",
+    "formulaContext": "Treat formula labels, charge caps, and policy-value comparisons as context until interpretation is explicit.",
+    "prescribedAssumption": "Treat stated valuation assumptions, interest-rate references, and table-based assumptions as prescribed when the guideline says they are fixed.",
+    "companyOrPrudentEstimateAssumption": "Use this label only when the guideline leaves a choice to the insurer or references company-determined treatment.",
+    "scenarioOrStochasticRequirement": "Not expected in AG 24; use only if a later page explicitly introduces a scenario requirement.",
+    "assetModelingJudgment": "Treat only explicit asset-value or investment-return judgments as asset-modeling judgment.",
+    "crossReferenceMapping": "Treat references to the Standard Nonforfeiture Law, Sections 5 / 5a / 5c, and CPI adjustment language as cross-reference context unless the text operationalizes them.",
+    "backgroundContent": "Treat title, framing, and explanatory notes as background unless they impose a requirement.",
+    "boundaryControlWindow": "Treat each page window as a review-only slice and do not merge the batches together.",
+    "requiresHumanInterpretation": "Treat the OCR noise, formula-heavy prose, and charge / benefit boundary choices as requiring human review unless the source text is explicit."
+  },
+  "promotionGates": {
+    "defaultState": "review_only",
+    "learnerFacing": [
+      "source citation exists",
+      "source support is clear",
+      "wording is not misleading",
+      "confidence is high",
+      "no unresolved review flags exist"
+    ],
+    "appReady": [
+      "learner-facing criteria are already satisfied",
+      "export is sanitized, stable, and versioned",
+      "no unresolved review issues remain"
+    ],
+    "ragReady": [
+      "approved indexed material only",
+      "stable ID",
+      "source reference and locator",
+      "review status no longer requires human disposition"
+    ]
+  },
+  "validationImplications": {
+    "currentChecksNeeded": [
+      "Plan file exists and parses as JSON.",
+      "The AG 24 plan markdown exists and carries the expected headings.",
+      "Every proposed batch is review-only by default.",
+      "The plan keeps the scope to pages 1-6 only.",
+      "The source posture is explicitly active.",
+      "Each planned batch has a matching batch definition.",
+      "The AG 24 batch definition file stays synchronized with the plan."
+    ],
+    "futureChecksSuggested": [
+      "Formula-heavy page checks for future variable-life guideline files.",
+      "Page-image wording backstop checks.",
+      "Unexpected source-family leakage checks.",
+      "No learner-facing, app-ready, or RAG-ready promotion checks."
+    ],
+    "scriptImplications": [
+      "scripts/ag24-batch-definitions.mjs should stay synchronized with the planned batch-102 through batch-104 slices when extraction is authorized.",
+      "scripts/batch-definitions.mjs should import the AG 24 definition file so the shared runner can find the planned batch IDs.",
+      "scripts/validate-scaffold.mjs should verify that the AG 24 plan file exists, parses cleanly, and preserves the review-only posture.",
+      "The shared runner should continue to honor the same stop conditions used for the earlier guideline batches."
+    ]
+  },
+  "notes": "Controlled AG 24 planning artifact. Planned batches 102 through 104 remain review-only by default and are not extraction runs."
+}

@@ -146,6 +146,9 @@ AG 23 is now complete as batch-101. Its tracked review index and self-review
 note summarize the one-page separate-account-investments guideline without
 promoting any extracted content, and the page-image backstop remains visible
 because the text layer includes a placeholder statutory reference.
+AG 24 is now the next variable-life nonforfeiture candidate; its planning
+layer is being drafted around pages 1-6 so batch-102 can be validated before
+extraction starts.
 
 The AG 15 review-only step is now complete as batch-093. Its tracked review
 index and self-review note summarize the historical illustration guideline
@@ -299,6 +302,9 @@ AG 23 is now complete as batch-101. Its tracked review index and self-review
 note summarize the one-page separate-account-investments guideline without
 promoting any extracted content, and the page-image backstop remains visible
 because the text layer includes a placeholder statutory reference.
+AG 24 is now the next variable-life nonforfeiture candidate; its planning
+layer is being drafted around pages 1-6 so batch-102 can be validated before
+extraction starts.
 
 The VM-20 companion practice-note wave is complete: batches `batch-055`
 through `batch-075` were processed review-only, and the tracked practice-note

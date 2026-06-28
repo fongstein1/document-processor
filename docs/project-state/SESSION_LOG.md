@@ -326,3 +326,7 @@
   artifacts. The page-image backstop stayed visible, and the repository POC
   summary is being refreshed so the handoff now counts AG 23 alongside the
   other completed review indexes.
+- 2026-06-27: Inspected AG 24, confirmed the six-page variable life
+  nonforfeiture values guideline, and drafted the AG 24 planning layer so
+  batches 102-104 can be validated before extraction starts. The page-image
+  wording backstop remains visible because the text layer is noisy / encoded.

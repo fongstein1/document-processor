@@ -233,6 +233,14 @@ image becomes the backstop for exact wording. Review-only batches should keep
 the page locator stable, flag the wording caveat explicitly, and avoid
 widening the batch just because OCR is uncertain.
 
+## Multi-page guideline windows
+
+When a guideline spans multiple pages and the text layer is noisy or
+formula-heavy, split it into narrow review-only page windows at page
+boundaries instead of extracting the whole file in one broad pass. Keep the
+page image as the wording backstop and do not widen the batch just because a
+later page is difficult to read.
+
 ## Repository proof-of-concept summary
 
 The tracked valuation-regulation repository proof-of-concept summary is a
