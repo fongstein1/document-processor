@@ -33,8 +33,9 @@ batch-098 handoff now stays in ignored working storage, and the tracked review
 index plus self-review note summarize the seven-page guideline. The AG 21
 review-only batch-099 handoff now stays in ignored working storage, and the
 tracked review index plus self-review note summarize the one-page guideline.
-AG 22 is now the next short guideline candidate; its planning layer is being
-drafted around page 1 so batch-100 can be validated before extraction starts.
+AG 22 is now complete as batch-100. Its tracked review index and self-review
+note summarize the one-page indeterminate-premiums guideline without
+promoting any extracted content.
 
 - `npm run pilot:course-core`: passed; created the core VM course pilot batch
   outputs in `data/work/batches/batch-002/`
@@ -290,8 +291,8 @@ reserve-comparison guideline without promoting any extracted content. AG 05
 is complete in ignored working storage and its tracked review index plus
 self-review note now summarize that wave. Keep VM-25 and later chapters out
 of scope unless a future plan explicitly opens them.
-AG 22 is the next short guideline candidate; keep it review-only by default
-and do not widen beyond the one-page indeterminate-premiums note.
+AG 22 is complete as batch-100; keep it review-only by default and do not
+widen beyond the one-page indeterminate-premiums note.
 
 The VM-20 companion practice-note wave is complete: batches `batch-055`
 through `batch-075` were processed review-only, and the tracked practice-note

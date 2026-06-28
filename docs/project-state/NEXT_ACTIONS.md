@@ -22,8 +22,9 @@ The AG 18 review-only step is complete in the tracked review handoff set.
 The AG 19 review-only step is complete in the tracked review handoff set.
 The AG 20 review-only step is complete in the tracked review handoff set.
 The AG 21 review-only step is complete in the tracked review handoff set.
-The AG 22 guideline is the next short guideline candidate and should be
-planned as batch-100 if the continuation pass keeps going.
+The AG 22 review-only step is complete in the tracked review handoff set.
+The next short guideline candidate should be selected from the remaining AG
+files if the continuation pass keeps going.
 
 ## Build tasks
 
@@ -99,6 +100,8 @@ planned as batch-100 if the continuation pass keeps going.
   `docs/review/ag20_self_review.md` as the current AG 20 handoff set.
 - Treat `docs/review/ag21_review_index.md` and
   `docs/review/ag21_self_review.md` as the current AG 21 handoff set.
+- Treat `docs/review/ag22_review_index.md` and
+  `docs/review/ag22_self_review.md` as the current AG 22 handoff set.
 - Treat `docs/processor/ag21_extraction_plan.md` and
   `config/ag21-batch-plan.json` as the current AG 21 planning set.
 - Treat `scripts/ag21-batch-definitions.mjs` as synchronized with the AG 21
