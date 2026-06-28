@@ -450,3 +450,7 @@
   self-review note as the new handoff artifacts, and refreshed the
   repository POC summary and scaffold validator so the thirty-eighth review
   index and 116 validated batches are now visible in the handoff layer.
+- 2026-06-28: Inspected AG 34, confirmed the 11-page active guideline and
+  the AG 35 boundary, and drafted the AG 34 planning layer so batches
+  117-119 can be validated before extraction starts. The page-image backstop
+  remains visible because the text layer is noisy / encoded.

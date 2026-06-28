@@ -49,9 +49,22 @@ backstop stayed visible, and AG 32 is now complete as batch-114. Its
 tracked review index and self-review note now form part of the review
 handoff set. AG 33 is now complete as batches 115 and 116. Its tracked
 review index and self-review note now form part of the review handoff set,
-and AG 34 is the next likely candidate if the continuation pass keeps going.
+and AG 34 is now the next likely candidate if the continuation pass keeps
+going. The AG 34 planning layer should split pages 1-11 into three
+review-only windows and keep AG 35 out of scope.
 
 ## Build tasks
+
+- AG 34 is now the next likely candidate if the continuation pass keeps
+  going. The AG 34 planning layer should split pages 1-11 into three
+  review-only windows and keep AG 35 out of scope.
+
+- Treat `docs/processor/ag34_extraction_plan.md` and
+  `config/ag34-batch-plan.json` as the current AG 34 planning set.
+- Treat `scripts/ag34-batch-definitions.mjs` as synchronized with the AG 34
+  planning set.
+- Keep AG 34 review-only by default, and keep AG 35 out of scope for this
+  wave.
 
 - Keep batches 001 through 012 review-only unless a human reviewer explicitly
   approves promotion.

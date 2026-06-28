@@ -331,8 +331,9 @@ remained visible. AG 32 is now complete as batch-114, and its tracked review
 index and self-review note are now part of the handoff set. The page-image
 backstop stayed visible, and AG 33 is now complete as batches 115 and 116.
 Its tracked review index and self-review note are now part of the handoff
-set. The page-image backstop stayed visible, and AG 34 is the next likely
-candidate if the continuation pass keeps going.
+set. The page-image backstop stayed visible, and AG 34 is now the next
+likely candidate if the continuation pass keeps going; its planning layer is
+being added as a three-window review-only wave with AG 35 out of scope.
 
 The VM-20 companion practice-note wave is complete: batches `batch-055`
 through `batch-075` were processed review-only, and the tracked practice-note

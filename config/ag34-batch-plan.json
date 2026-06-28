@@ -1,0 +1,269 @@
+{
+  "planId": "ag34-vamgdb-reserves-plan",
+  "planVersion": "1.0",
+  "status": "planned",
+  "sourceScope": {
+    "sourceFamilyId": "actuarial_guidelines",
+    "primarySourceFile": "AG 34 - Variable Annuity Minimum Guaranteed Death Benefit Reserves.pdf",
+    "sourceFolder": "Actuarial Guidelines",
+    "sourceTitle": "AG 34 - Variable Annuity Minimum Guaranteed Death Benefit Reserves",
+    "sourceReference": "Actuarial Guideline XXXIV",
+    "sourceStatus": "active",
+    "domainId": "naic_regulatory",
+    "rawSourceRoot": "D:\\Work\\AI Projects\\NAIC Valuation Manual Course",
+    "confirmedPageRange": [1, 11],
+    "observedSectionWindows": [
+      {
+        "sectionId": "ag34-foundation-and-methodology",
+        "pageRange": [1, 3],
+        "note": "Background, scope, definitions, and reserve-method foundation."
+      },
+      {
+        "sectionId": "ag34-mortality-basis-and-asset-adequacy",
+        "pageRange": [4, 6],
+        "note": "Mortality basis, asset adequacy analysis requirement, effective date, and the immediate-drop / gross-assumed-returns table."
+      },
+      {
+        "sectionId": "ag34-mortality-tables-and-appendix",
+        "pageRange": [7, 11],
+        "note": "Mortality tables and Appendix II asset-class descriptions."
+      }
+    ],
+    "boundaries": [
+      "Keep planning focused on this single AG 34 PDF.",
+      "Do not widen into AG 35 or later guideline files.",
+      "Keep the page image as the backstop for exact wording because the text layer is encoding-noisy.",
+      "Treat the guideline as review-only regulatory guidance, not learner-facing policy text.",
+      "Keep the batch source-bound and review-only."
+    ],
+    "exclusions": [
+      "No learner-facing content.",
+      "No app-ready export.",
+      "No RAG-ready export.",
+      "No approved/promoted export.",
+      "No eLearning scripts, slides, quizzes, or app exports.",
+      "No raw source files in Git.",
+      "No other guideline files in the same wave."
+    ]
+  },
+  "topicMap": [
+    {
+      "topicId": "ag34-foundation-and-methodology",
+      "label": "Foundation and reserve-method methodology",
+      "pageRange": [1, 3],
+      "reviewComplexity": "medium-high",
+      "expectedIssueTypes": [
+        "regulatory_requirement",
+        "definition_or_terminology",
+        "reserve_method_structure",
+        "cross_reference_mapping",
+        "background_content",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": [
+        "CARVM",
+        "MGDB",
+        "valuation reserves",
+        "separate account reserve",
+        "integrated reserve",
+        "AG 35"
+      ],
+      "boundaryNote": "Keep the three-page foundation window together and do not widen into AG 35."
+    },
+    {
+      "topicId": "ag34-mortality-basis-and-asset-adequacy",
+      "label": "Mortality basis, asset adequacy, and immediate-drop table",
+      "pageRange": [4, 6],
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "regulatory_requirement",
+        "definition_or_terminology",
+        "reserve_method_structure",
+        "calculation_structure",
+        "formula_context",
+        "prescribed_assumption",
+        "company_or_prudent_estimate_assumption",
+        "cross_reference_mapping",
+        "background_content",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": [
+        "mortality basis",
+        "asset adequacy analysis",
+        "effective date",
+        "immediate drop percentages",
+        "gross assumed returns",
+        "actuarial opinion and memorandum"
+      ],
+      "boundaryNote": "Keep the mortality basis, asset adequacy, effective-date, and return-table material together as one review-only slice."
+    },
+    {
+      "topicId": "ag34-mortality-tables-and-appendix",
+      "label": "Mortality tables and Appendix II asset-class descriptions",
+      "pageRange": [7, 11],
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "prescribed_assumption",
+        "definition_or_terminology",
+        "formula_context",
+        "cross_reference_mapping",
+        "background_content",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": [
+        "female age last birthday",
+        "male age last birthday",
+        "female age nearest birthday",
+        "male age nearest birthday",
+        "Appendix II",
+        "equity class",
+        "bond class",
+        "balanced class",
+        "money market class",
+        "specialty class"
+      ],
+      "boundaryNote": "Keep the mortality tables and Appendix II asset-class descriptions together and leave AG 35 for a later plan."
+    }
+  ],
+  "proposedBatches": [
+    {
+      "plannedBatchId": "batch-117",
+      "topicIds": [
+        "ag34-foundation-and-methodology"
+      ],
+      "title": "AG 34 foundation and reserve-methodology slice",
+      "pageTarget": {
+        "knownWindow": [1, 3],
+        "notes": "Capture the title, purpose, scope, definitions, and reserve-method foundation before the mortality basis and appendix material begins."
+      },
+      "rationale": "Keep the title, purpose, scope, definitions, and reserve-method foundation together before the mortality and appendix material begins.",
+      "reviewComplexity": "medium-high",
+      "expectedIssueTypes": [
+        "regulatory_requirement",
+        "definition_or_terminology",
+        "reserve_method_structure",
+        "cross_reference_mapping",
+        "background_content",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    },
+    {
+      "plannedBatchId": "batch-118",
+      "topicIds": [
+        "ag34-mortality-basis-and-asset-adequacy"
+      ],
+      "title": "AG 34 mortality basis and asset-adequacy slice",
+      "pageTarget": {
+        "knownWindow": [4, 6],
+        "notes": "Capture the mortality basis, asset adequacy analysis requirement, effective date, and the immediate-drop / gross-assumed-returns table."
+      },
+      "rationale": "Keep the mortality basis, asset adequacy analysis requirement, effective date, and the immediate-drop / gross-assumed-returns table together as one review-only mechanics slice.",
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "regulatory_requirement",
+        "definition_or_terminology",
+        "reserve_method_structure",
+        "calculation_structure",
+        "formula_context",
+        "prescribed_assumption",
+        "company_or_prudent_estimate_assumption",
+        "cross_reference_mapping",
+        "background_content",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    },
+    {
+      "plannedBatchId": "batch-119",
+      "topicIds": [
+        "ag34-mortality-tables-and-appendix"
+      ],
+      "title": "AG 34 mortality tables and appendix slice",
+      "pageTarget": {
+        "knownWindow": [7, 11],
+        "notes": "Capture the mortality tables and Appendix II asset-class descriptions as one review-only appendix window."
+      },
+      "rationale": "Keep the mortality tables and Appendix II asset-class descriptions together so the table-driven material stays reviewable as one unit.",
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "prescribed_assumption",
+        "definition_or_terminology",
+        "formula_context",
+        "cross_reference_mapping",
+        "background_content",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    }
+  ],
+  "reviewStandards": {
+    "regulatoryRequirement": "Treat the reserve rules and asset-adequacy direction as regulatory text when the guideline directs how reserves should be determined or tested.",
+    "definitionOrTerminology": "Treat MGDB, separate reserve, integrated reserve, calculation period, and asset-class labels as terminology or context when the text explains rather than directs.",
+    "reserveMethodStructure": "Treat the reserve methodology, separate/integrated reserve split, and method framing as reserve-method structure when the text is describing the method rather than the numeric outcome.",
+    "calculationStructure": "Treat the examples, table lookups, and reserve-setting sequences as calculation structure when they specify how the method is applied.",
+    "formulaContext": "Treat references to present value, discounting, immediate drops, gross assumed returns, and mortality factors as formula context unless the text gives an explicit computational rule.",
+    "prescribedAssumption": "Treat mortality tables and specified input rates as prescribed assumptions when they are stated as fixed or table-driven requirements.",
+    "companyOrPrudentEstimateAssumption": "Treat company or experience-sensitive language as company/prudent-estimate context when the text expressly allows or recommends it.",
+    "crossReferenceMapping": "Treat references to the Standard Valuation Law, the Model Actuarial Opinion and Memorandum Regulation, Appendix II, and the AG 35 boundary as cross-reference context unless the text operationalizes them.",
+    "backgroundContent": "Treat the title, introduction, examples, and appendix labels as background unless they impose a requirement.",
+    "boundaryControlWindow": "Treat the page 1-3, page 4-6, and page 7-11 windows as review-only slices and do not split them unless a later cleanup pass explicitly needs that split.",
+    "requiresHumanInterpretation": "Treat the encoded text layer, table-heavy pages, and example-driven judgment calls as requiring human review unless the source text is explicit."
+  },
+  "promotionGates": {
+    "defaultState": "review_only",
+    "learnerFacing": [
+      "source citation exists",
+      "source support is clear",
+      "wording is not misleading",
+      "confidence is high",
+      "no unresolved review flags exist"
+    ],
+    "appReady": [
+      "learner-facing criteria are already satisfied",
+      "export is sanitized, stable, and versioned",
+      "no unresolved review issues remain"
+    ],
+    "ragReady": [
+      "approved indexed material only",
+      "stable ID",
+      "source reference and locator",
+      "review status no longer requires human disposition"
+    ]
+  },
+  "validationImplications": {
+    "currentChecksNeeded": [
+      "Plan file exists and parses as JSON.",
+      "The AG 34 plan markdown must exist and carry the expected headings.",
+      "Every proposed batch must remain review-only by default.",
+      "The source posture must stay explicitly active.",
+      "Each planned batch must have a matching batch definition.",
+      "The AG 34 batch definition file must stay synchronized with the plan."
+    ],
+    "futureChecksSuggested": [
+      "Page-image wording backstop checks.",
+      "Unexpected source-family leakage checks.",
+      "No learner-facing, app-ready, or RAG-ready promotion checks.",
+      "AG 35 boundary checks."
+    ],
+    "scriptImplications": [
+      "scripts/ag34-batch-definitions.mjs should stay synchronized with the planned batch-117, batch-118, and batch-119 slices when extraction is authorized.",
+      "scripts/batch-definitions.mjs should import the AG 34 definition file so the shared runner can find batch-117, batch-118, and batch-119.",
+      "scripts/validate-scaffold.mjs should verify that the AG 34 plan file exists, parses cleanly, and preserves the review-only posture.",
+      "The shared runner should continue to honor the same stop conditions used for the earlier guideline batches."
+    ]
+  },
+  "notes": "Controlled AG 34 planning artifact. Planned batches 117, 118, and 119 remain review-only by default and are not extraction runs."
+}
