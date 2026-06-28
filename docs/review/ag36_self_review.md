@@ -137,3 +137,62 @@
 - No skill-hardening update is needed yet because the observed cautions are
   already covered by the existing source-bound and page-image backstop
   guidance.
+
+## Batch-126 Addendum
+
+- batch-126: reasonable_with_minor_cautions
+- status: review-only
+- learner-facing: not learner-facing
+- app-ready: not app-ready
+- RAG-ready: not RAG-ready
+- promoted: not promoted
+
+### Batch-126 Checks
+
+- Did the selected pages/sections match the plan? Yes, pages 9-11 matched the
+  certification and closeout slice.
+- Did the extraction stay source-bound? Yes, the extracted item stayed tied to
+  the AG 36 source file and page range.
+- Are page and line references specific enough? Page references are specific;
+  line references were not available for this encoded source.
+- If line references are unavailable, are page locators explicit and is a
+  page-image wording backstop noted? Yes.
+- Is active vs withdrawn/repealed/superseded status clear? Yes, the source is
+  treated as active guidance.
+- Are regulatory requirements separated from background/caveat content? Yes,
+  the certification slice stayed review-only and did not absorb earlier
+  mechanics text.
+- Are formulas, assumptions, and actuarial interpretations clearly separated?
+  Yes, the batch stayed in the certification window without widening into any
+  later guideline.
+- Are cross-references mapped without over-interpretation? Yes, AG 37 remained
+  a boundary note rather than a promoted comparison point.
+- Are unresolved issues meaningful? Yes, the unresolved issues focus on the
+  encoded text layer, the page-image wording backstop, and the AG 37 boundary.
+- Are all no-promotion statuses intact? Yes.
+- Does a human reviewer need to confirm wording against the page image? Yes.
+- Did the batch become too broad or too thin? No, the three-page closeout slice
+  stayed narrow and reviewable.
+
+### Batch-126 Outcome
+
+- Batch-126 is reasonable_with_minor_cautions.
+- The batch completed the AG 36 review-only wave.
+- no new skill file update was necessary
+- wave complete
+- No skill-hardening update is needed because the observed cautions are
+  already covered by the existing source-bound and page-image backstop
+  guidance.
+
+## Wave Outcome
+
+- The AG 36 wave is complete.
+- All four batches were reasonable_with_minor_cautions.
+- AG 36 remains review-only, not learner-facing, not app-ready, not
+  RAG-ready, and not promoted.
+- The page-image backstop remained visible throughout the wave.
+- `docs/review/ag36_review_index.md` now serves as the summary-only handoff
+  artifact for the wave.
+- `docs/review/ag35_review_index.md` and
+  `docs/review/valuation_regulation_repository_poc_status.md` remain the
+  neighboring summary references.

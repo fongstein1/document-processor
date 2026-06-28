@@ -87,6 +87,11 @@ scope as companion material.
   immediate task is batch-126, which should stay within the certification and
   closeout slice and keep the page-image backstop visible.
 
+- AG 36 batch-126 is now complete in ignored working storage. The tracked AG
+  36 review index and self-review note now form part of the review handoff
+  set, and AG 37 is the next likely candidate if the continuation pass keeps
+  going.
+
 - Keep batches 001 through 012 review-only unless a human reviewer explicitly
   approves promotion.
 - Keep batches 013 through 021 review-only unless a human reviewer explicitly
