@@ -426,10 +426,11 @@ continuation pass stays clean. AG 46 remains a later candidate only if the
 continuation pass keeps going.
 
 AG 45 is now complete as batch-151 in ignored working storage. Its tracked
-review index and self-review note are now part of the handoff set, the
-page-image wording backstop remains visible, and AG 46 now has a drafted
-planning layer as batch-152. The next action is to validate the plan and
-run the controlled batch if the repo stays clean.
+review index and self-review note are now part of the handoff set. AG 46 is
+complete as batch-152 in ignored working storage, and its tracked review
+index and self-review note are now part of the handoff set. The page-image
+wording backstop remains visible, and AG 47 is the next likely candidate if
+the continuation pass keeps going.
 
 AG 39 batch-134 has completed in ignored working storage, and the tracked
 AG 39 review index and self-review note are now part of the handoff set. The

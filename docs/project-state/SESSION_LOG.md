@@ -598,3 +598,8 @@
   wired the shared runner and validator for the new batch, and kept the
   existing low-quality PDF text-layer skill in place because the page-image
   wording backstop and line-reference gap are already covered.
+- 2026-06-28: Completed the AG 46 review-only wave as batch-152, created
+  the tracked AG 46 review index and self-review note, refreshed the
+  repository POC summary and project-state docs, and kept the page-image
+  wording backstop visible because the text layer is encoding-noisy and line
+  references were not available.

@@ -12,12 +12,12 @@ regulation repository. It consolidates the completed review-only extraction
 waves without changing the status of the underlying batch outputs or review
 indexes.
 
-The handoff now spans 50 review indexes, up from 49 review indexes. The
+The handoff now spans 51 review indexes, up from 50 review indexes. The
+earlier 50 review indexes checkpoint remains part of the handoff history, the
 earlier 49 review indexes checkpoint remains part of the handoff history, the
 earlier 48 review indexes checkpoint remains part of the handoff history, the
-earlier 47 review indexes checkpoint remains part of the handoff history, the
-earlier 45 review indexes checkpoint remains part of the handoff history, and
-the earlier 39 review indexes checkpoint remains part of the handoff history.
+earlier 47 review indexes checkpoint remains part of the handoff history, and
+the earlier 45 review indexes checkpoint remains part of the handoff history.
 
 This summary is review-only, not learner-facing, not app-ready, not RAG-ready,
 and not promoted.
@@ -58,6 +58,8 @@ review indexes:
 - `docs/review/ag44_self_review.md`
 - `docs/review/ag45_review_index.md`
 - `docs/review/ag45_self_review.md`
+- `docs/review/ag46_review_index.md`
+- `docs/review/ag46_self_review.md`
 - `docs/review/ag03_review_index.md`
 - `docs/review/ag03_self_review.md`
 - `docs/review/ag01_review_index.md`
@@ -381,7 +383,7 @@ documents remain external to Git.
 
 - `npm run check` passes
 - the scaffold previously reported 116 batches validated; the current run
-  reports 151 batches validated
+  reports 152 batches validated
 - the validator now checks the tracked VM-20, supporting, VM-21, VM-22,
   practice-note, AG 03, AG 01, AG 02, AG 04, AG 05, AG 06, AG 07, AG 08,
   AG 09, AG 10, AG 11, AG 12, AG 13, AG 14, AG 15, AG 16, AG 17, AG 18,
@@ -673,6 +675,14 @@ AG 45 is complete as batch-151 in ignored working storage. Its tracked
 review index and self-review note are now part of the handoff set. The page-
 image wording backstop remains visible because the text layer is encoding-
 noisy, line references were not available, and AG 46 is the next likely
+candidate if the continuation pass keeps going.
+
+## AG 46 Note
+
+AG 46 is complete as batch-152 in ignored working storage. Its tracked
+review index and self-review note are now part of the handoff set. The page-
+image wording backstop remains visible because the text layer is encoding-
+noisy, line references were not available, and AG 47 is the next likely
 candidate if the continuation pass keeps going.
 
 ## Promotion Gates
