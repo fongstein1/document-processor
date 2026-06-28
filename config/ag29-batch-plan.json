@@ -1,0 +1,147 @@
+{
+  "planId": "ag29-rehabilitation-reserve-plan",
+  "planVersion": "1.0",
+  "status": "planned",
+  "sourceScope": {
+    "sourceFamilyId": "actuarial_guidelines",
+    "primarySourceFile": "AG 29 - Guideline Concerning Reserves of Companies in Rehabilitation.pdf",
+    "sourceFolder": "Actuarial Guidelines",
+    "sourceTitle": "AG 29 - Guideline Concerning Reserves of Companies in Rehabilitation",
+    "sourceReference": "Actuarial Guideline XXIX",
+    "sourceStatus": "active",
+    "domainId": "naic_regulatory",
+    "rawSourceRoot": "D:\\Work\\AI Projects\\NAIC Valuation Manual Course",
+    "confirmedPageRange": [1, 2],
+    "observedSectionWindows": [
+      {
+        "sectionId": "ag29-rehabilitation-reserve-guidance",
+        "pageRange": [1, 2],
+        "note": "Rehabilitation background, reserve interpretation, issue-date context, expense-allowance context, and the closing boundary note."
+      }
+    ],
+    "boundaries": [
+      "Keep planning focused on this single AG 29 PDF.",
+      "Do not widen into AG 30 or later guideline files.",
+      "Keep the rehabilitation / court-order context explicit in every batch artifact.",
+      "Keep the page image as the backstop for exact wording because the text layer includes encoding noise.",
+      "Treat the guideline as review-only regulatory guidance, not learner-facing policy text.",
+      "Keep the batch source-bound and review-only."
+    ],
+    "exclusions": [
+      "No learner-facing content.",
+      "No app-ready export.",
+      "No RAG-ready export.",
+      "No approved/promoted export.",
+      "No eLearning scripts, slides, quizzes, or app exports.",
+      "No raw source files in Git.",
+      "No other guideline files in the same wave."
+    ]
+  },
+  "topicMap": [
+    {
+      "topicId": "ag29-rehabilitation-reserve-guidance",
+      "label": "Rehabilitation reserve guidance",
+      "pageRange": [1, 2],
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "regulatory_requirement",
+        "definition_or_terminology",
+        "cross_reference_mapping",
+        "caveat_or_companion_guidance",
+        "background_content",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": [
+        "court-ordered rehabilitation",
+        "Standard Valuation Law",
+        "CRVM",
+        "CARVM",
+        "issue date",
+        "expense allowance",
+        "restructured contracts",
+        "surrender restrictions"
+      ],
+      "boundaryNote": "Keep the two-page window together and do not widen into AG 30."
+    }
+  ],
+  "proposedBatches": [
+    {
+      "plannedBatchId": "batch-111",
+      "topicIds": [
+        "ag29-rehabilitation-reserve-guidance"
+      ],
+      "title": "AG 29 rehabilitation reserve guidance slice",
+      "pageTarget": {
+        "knownWindow": [1, 2],
+        "notes": "Capture the full two-page guideline as one review-only slice because the rehabilitation caveat, issue-date context, and expense-allowance language belong together."
+      },
+      "rationale": "Capture the full two-page guideline as one review-only slice because the rehabilitation caveat, issue-date context, and expense-allowance language belong together.",
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "regulatory_requirement",
+        "definition_or_terminology",
+        "cross_reference_mapping",
+        "caveat_or_companion_guidance",
+        "background_content",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    }
+  ],
+  "reviewStandards": {
+    "regulatoryRequirement": "Treat the reserve-interpreting language as regulatory text when the guideline directs how reserves should be interpreted in rehabilitation.",
+    "definitionOrTerminology": "Treat rehabilitation, issue date, surrender restrictions, CRVM, and CARVM references as terminology or context when the text explains rather than directs.",
+    "crossReferenceMapping": "Treat references to the Standard Valuation Law, CRVM, CARVM, and surrender values as cross-reference context unless the text operationalizes them.",
+    "caveatOrCompanionGuidance": "Treat the rehabilitation-specific caveats, court-order framing, and issue-date examples as review-only caveat guidance.",
+    "backgroundContent": "Treat the title, scene-setting paragraphs, and explanatory transition language as background unless they impose a requirement.",
+    "boundaryControlWindow": "Treat the page 1-2 window as a review-only slice and do not split it unless a later cleanup pass explicitly needs that split.",
+    "requiresHumanInterpretation": "Treat the encoded text layer, rehabilitation-specific reserve interpretation, and issue-date / expense-allowance examples as requiring human review unless the source text is explicit."
+  },
+  "promotionGates": {
+    "defaultState": "review_only",
+    "learnerFacing": [
+      "source citation exists",
+      "source support is clear",
+      "wording is not misleading",
+      "confidence is high",
+      "no unresolved review flags exist"
+    ],
+    "appReady": [
+      "learner-facing criteria are already satisfied",
+      "export is sanitized, stable, and versioned",
+      "no unresolved review issues remain"
+    ],
+    "ragReady": [
+      "approved indexed material only",
+      "stable ID",
+      "source reference and locator",
+      "review status no longer requires human disposition"
+    ]
+  },
+  "validationImplications": {
+    "currentChecksNeeded": [
+      "Plan file exists and parses as JSON.",
+      "The AG 29 plan markdown exists and carries the expected headings.",
+      "Every proposed batch remains review-only by default.",
+      "The source posture is explicitly active.",
+      "Each planned batch has a matching batch definition.",
+      "The AG 29 batch definition file stays synchronized with the plan."
+    ],
+    "futureChecksSuggested": [
+      "Page-image wording backstop checks.",
+      "Unexpected source-family leakage checks.",
+      "No learner-facing, app-ready, or RAG-ready promotion checks."
+    ],
+    "scriptImplications": [
+      "scripts/ag29-batch-definitions.mjs should stay synchronized with the planned batch-111 slice when extraction is authorized.",
+      "scripts/batch-definitions.mjs should import the AG 29 definition file so the shared runner can find batch-111.",
+      "scripts/validate-scaffold.mjs should verify that the AG 29 plan file exists, parses cleanly, and preserves the review-only posture.",
+      "The shared runner should continue to honor the same stop conditions used for the earlier guideline batches."
+    ]
+  },
+  "notes": "Controlled AG 29 planning artifact. Planned batch 111 remains review-only by default and is not an extraction run."
+}

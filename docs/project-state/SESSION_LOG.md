@@ -387,3 +387,8 @@
   validated batches are now visible in the handoff layer. No new tracked
   skill file update was necessary because the existing source-bound rule
   already covers noisy OCR and page-image backstops.
+- 2026-06-27: Inspected AG 29, confirmed the two-page rehabilitation
+  guideline, and drafted the AG 29 planning layer so batch-111 can be
+  validated before extraction starts. The page-image wording backstop
+  remains visible because the text layer is encoded, and the rehabilitation /
+  court-order wording stays review-only until the plan is committed.

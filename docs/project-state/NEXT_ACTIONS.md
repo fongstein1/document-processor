@@ -36,6 +36,10 @@ batch-110, and its tracked review index plus self-review note are being
 added to the handoff set. AG 29 is the next likely candidate if the
 continuation pass keeps going.
 
+AG 29 is now the next immediate task. Its two-page rehabilitation /
+court-order window has been confirmed, and the planning layer will be
+committed before batch-111 executes.
+
 ## Build tasks
 
 - Keep batches 001 through 012 review-only unless a human reviewer explicitly
