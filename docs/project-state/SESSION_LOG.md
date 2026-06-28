@@ -350,3 +350,7 @@
   handoff layer. No new tracked skill file update was necessary because the
   existing source-bound rule already covers noisy OCR and page-image
   backstops.
+- 2026-06-27: Inspected AG 26, confirmed the one-page operative-dates
+  guideline, and drafted the AG 26 planning layer so batch-106 can be
+  validated before extraction starts. The page-image wording backstop
+  remains visible because the text layer is noisy / encoded.

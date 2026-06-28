@@ -179,6 +179,8 @@ const paths = {
   ag24ExtractionPlanMd: path.join(repoRoot, 'docs', 'processor', 'ag24_extraction_plan.md'),
   ag25BatchPlanJson: path.join(repoRoot, 'config', 'ag25-batch-plan.json'),
   ag25ExtractionPlanMd: path.join(repoRoot, 'docs', 'processor', 'ag25_extraction_plan.md'),
+  ag26BatchPlanJson: path.join(repoRoot, 'config', 'ag26-batch-plan.json'),
+  ag26ExtractionPlanMd: path.join(repoRoot, 'docs', 'processor', 'ag26_extraction_plan.md'),
   ag23ReviewIndexMd: path.join(repoRoot, 'docs', 'review', 'ag23_review_index.md'),
   ag23SelfReviewMd: path.join(repoRoot, 'docs', 'review', 'ag23_self_review.md'),
   ag24ReviewIndexMd: path.join(repoRoot, 'docs', 'review', 'ag24_review_index.md'),
@@ -370,6 +372,9 @@ const requiredFiles = [
   'docs/processor/ag25_extraction_plan.md',
   'config/ag25-batch-plan.json',
   'scripts/ag25-batch-definitions.mjs',
+  'docs/processor/ag26_extraction_plan.md',
+  'config/ag26-batch-plan.json',
+  'scripts/ag26-batch-definitions.mjs',
   'docs/review/ag25_review_index.md',
   'docs/review/ag25_self_review.md',
   'docs/review/ag23_review_index.md',
@@ -2450,6 +2455,7 @@ const ag21BatchPlan = await readJson(paths.ag21BatchPlanJson)
 const ag22BatchPlan = await readJson(paths.ag22BatchPlanJson)
 const ag23BatchPlan = await readJson(paths.ag23BatchPlanJson)
 const ag24BatchPlan = await readJson(paths.ag24BatchPlanJson)
+const ag26BatchPlan = await readJson(paths.ag26BatchPlanJson)
 
 validateSchemaEnvelope(batchManifestSchema, 'batch-manifest.schema.json')
 validateSchemaEnvelope(sourceInventorySchema, 'source-inventory.schema.json')
@@ -5291,6 +5297,43 @@ const validateAg25PlanMarkdown = async (filePath, label) => {
   })
 }
 
+const validateAg26PlanMarkdown = async (filePath, label) => {
+  const text = await readText(filePath)
+  const requiredHeadings = [
+    '## Source Scope',
+    '## Topic Map',
+    '## Proposed Batch Sequence',
+    '## Review Standards',
+    '## Promotion Gates',
+    '## Validation Implications',
+    '## Operating Note',
+  ]
+  requiredHeadings.forEach((heading) => {
+    if (!text.includes(heading)) {
+      problems.push(`${label}: missing heading ${heading}`)
+    }
+  })
+  ;[
+    'review-only',
+    'not learner-facing',
+    'not app-ready',
+    'not RAG-ready',
+    'not promoted',
+    'AG 26',
+    'batch-106',
+    'Actuarial Guideline XXVI',
+    'page 1',
+    'page-image',
+    'active',
+    'Standard Valuation Law',
+    'Standard Non-Forfeiture Law',
+  ].forEach((phrase) => {
+    if (!text.includes(phrase)) {
+      problems.push(`${label}: must mention ${phrase}`)
+    }
+  })
+}
+
 const validateAg02PlanMarkdown = async (filePath, label) => {
   const text = await readText(filePath)
   const requiredHeadings = [
@@ -6370,6 +6413,7 @@ await validateAg24SelfReviewMarkdown(paths.ag24SelfReviewMd, 'docs/review/ag24_s
 await validateAg25ReviewIndexMarkdown(paths.ag25ReviewIndexMd, 'docs/review/ag25_review_index.md')
 await validateAg25SelfReviewMarkdown(paths.ag25SelfReviewMd, 'docs/review/ag25_self_review.md')
 await validateAg25PlanMarkdown(paths.ag25ExtractionPlanMd, 'docs/processor/ag25_extraction_plan.md')
+await validateAg26PlanMarkdown(paths.ag26ExtractionPlanMd, 'docs/processor/ag26_extraction_plan.md')
 await validateAg05PlanMarkdown(paths.ag05ExtractionPlanMd, 'docs/processor/ag05_extraction_plan.md')
 await validateAg06PlanMarkdown(paths.ag06ExtractionPlanMd, 'docs/processor/ag06_extraction_plan.md')
 await validateAg07PlanMarkdown(paths.ag07ExtractionPlanMd, 'docs/processor/ag07_extraction_plan.md')
@@ -6576,6 +6620,7 @@ if (problems.length > 0) {
   console.log(`- AG 25 review index verified: 1 batch`)
   console.log(`- AG 25 self-review verified: 1 batch`)
   console.log(`- AG 25 plan verified: 1 batch`)
+  console.log(`- AG 26 plan verified: ${ag26BatchPlan.proposedBatches.length} batches`)
   console.log(`- POC status summary verified: 30 review indexes`)
   if (validatedPilotBatchCount > 0) {
     console.log(`- Pilot batches validated: ${validatedPilotBatchCount}`)
