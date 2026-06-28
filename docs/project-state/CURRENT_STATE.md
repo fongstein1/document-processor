@@ -312,7 +312,9 @@ self-review note summarize the six-page variable-life nonforfeiture values
 guideline without promoting any extracted content, and the page-image
 backstop remains visible because the text layer is noisy / encoded. AG 26 is
 now complete as batch-106, and its tracked review index plus self-review note
-are being added to the handoff set.
+are being added to the handoff set. AG 27 is now the next active guideline
+candidate, and its planning layer is drafted as a three-batch review-only
+wave that keeps AG 28 out of scope.
 
 The VM-20 companion practice-note wave is complete: batches `batch-055`
 through `batch-075` were processed review-only, and the tracked practice-note

@@ -181,6 +181,8 @@ const paths = {
   ag25ExtractionPlanMd: path.join(repoRoot, 'docs', 'processor', 'ag25_extraction_plan.md'),
   ag26BatchPlanJson: path.join(repoRoot, 'config', 'ag26-batch-plan.json'),
   ag26ExtractionPlanMd: path.join(repoRoot, 'docs', 'processor', 'ag26_extraction_plan.md'),
+  ag27BatchPlanJson: path.join(repoRoot, 'config', 'ag27-batch-plan.json'),
+  ag27ExtractionPlanMd: path.join(repoRoot, 'docs', 'processor', 'ag27_extraction_plan.md'),
   ag26ReviewIndexMd: path.join(repoRoot, 'docs', 'review', 'ag26_review_index.md'),
   ag26SelfReviewMd: path.join(repoRoot, 'docs', 'review', 'ag26_self_review.md'),
   ag23ReviewIndexMd: path.join(repoRoot, 'docs', 'review', 'ag23_review_index.md'),
@@ -377,6 +379,9 @@ const requiredFiles = [
   'docs/processor/ag26_extraction_plan.md',
   'config/ag26-batch-plan.json',
   'scripts/ag26-batch-definitions.mjs',
+  'docs/processor/ag27_extraction_plan.md',
+  'config/ag27-batch-plan.json',
+  'scripts/ag27-batch-definitions.mjs',
   'docs/review/ag26_review_index.md',
   'docs/review/ag26_self_review.md',
   'docs/review/ag25_review_index.md',
@@ -5338,6 +5343,45 @@ const validateAg26PlanMarkdown = async (filePath, label) => {
   })
 }
 
+const validateAg27PlanMarkdown = async (filePath, label) => {
+  const text = await readText(filePath)
+  const requiredHeadings = [
+    '## Source Scope',
+    '## Topic Map',
+    '## Proposed Batch Sequence',
+    '## Review Standards',
+    '## Promotion Gates',
+    '## Validation Implications',
+    '## Operating Note',
+  ]
+  requiredHeadings.forEach((heading) => {
+    if (!text.includes(heading)) {
+      problems.push(`${label}: missing heading ${heading}`)
+    }
+  })
+  ;[
+    'review-only',
+    'not learner-facing',
+    'not app-ready',
+    'not RAG-ready',
+    'not promoted',
+    'AG 27',
+    'batch-107',
+    'Actuarial Guideline XXVII',
+    'pages 1-5',
+    'page-image',
+    'active',
+    'non-discounted acceleration',
+    'actuarially discounted acceleration',
+    'interest accrual',
+    'benefit payment lien',
+  ].forEach((phrase) => {
+    if (!text.includes(phrase)) {
+      problems.push(`${label}: must mention ${phrase}`)
+    }
+  })
+}
+
 const validateAg02PlanMarkdown = async (filePath, label) => {
   const text = await readText(filePath)
   const requiredHeadings = [
@@ -6500,6 +6544,7 @@ await validateAg25PlanMarkdown(paths.ag25ExtractionPlanMd, 'docs/processor/ag25_
 await validateAg26ReviewIndexMarkdown(paths.ag26ReviewIndexMd, 'docs/review/ag26_review_index.md')
 await validateAg26SelfReviewMarkdown(paths.ag26SelfReviewMd, 'docs/review/ag26_self_review.md')
 await validateAg26PlanMarkdown(paths.ag26ExtractionPlanMd, 'docs/processor/ag26_extraction_plan.md')
+await validateAg27PlanMarkdown(paths.ag27ExtractionPlanMd, 'docs/processor/ag27_extraction_plan.md')
 await validateAg05PlanMarkdown(paths.ag05ExtractionPlanMd, 'docs/processor/ag05_extraction_plan.md')
 await validateAg06PlanMarkdown(paths.ag06ExtractionPlanMd, 'docs/processor/ag06_extraction_plan.md')
 await validateAg07PlanMarkdown(paths.ag07ExtractionPlanMd, 'docs/processor/ag07_extraction_plan.md')
@@ -6709,7 +6754,7 @@ if (problems.length > 0) {
   console.log(`- AG 26 review index verified: 1 batch`)
   console.log(`- AG 26 self-review verified: 1 batch`)
   console.log(`- AG 26 plan verified: ${ag26BatchPlan.proposedBatches.length} batches`)
-  console.log(`- POC status summary verified: 30 review indexes`)
+  console.log(`- POC status summary verified: 31 review indexes`)
   if (validatedPilotBatchCount > 0) {
     console.log(`- Pilot batches validated: ${validatedPilotBatchCount}`)
   }

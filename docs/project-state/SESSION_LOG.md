@@ -360,3 +360,8 @@
   page-image backstop stayed visible, and the repository proof-of-concept
   summary is being refreshed so the thirty-first review index and 106
   validated batches are now visible in the handoff layer.
+- 2026-06-27: Inspected AG 27, confirmed the five-page accelerated-benefits
+  guideline, and drafted the AG 27 planning layer so batch-107 can be
+  validated before extraction starts. The page-image wording backstop stays
+  visible because the text layer is noisy / encoded, and the plan keeps the
+  overview, interest-accrual, and lien-mechanics slices separate.
