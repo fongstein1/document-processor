@@ -52,8 +52,10 @@ review index and self-review note now form part of the review handoff set,
 and AG 34 is now the next likely candidate if the continuation pass keeps
 going. The AG 34 planning layer should split pages 1-11 into three
 review-only windows and keep AG 35 out of scope. AG 37 is now complete as
-batches 127-129, and AG 38 is now the next active guideline candidate.
-The planning layer has been drafted for the 13-page Model 830 source file.
+batches 127-129. AG 38 is now complete as batches 130-133. Its tracked
+review index and self-review note now form part of the handoff set, and AG 39
+is the next likely candidate if the continuation pass keeps going. The
+planning layer has been drafted for the 13-page Model 830 source file.
 
 ## Build tasks
 
@@ -81,8 +83,10 @@ The planning layer has been drafted for the 13-page Model 830 source file.
   scope for this wave, and keep the page-image wording backstop visible for
   the noisy GMDB source.
 - AG 37 is now complete as batches 127-129. Its tracked review index and
-  self-review note now form part of the handoff set, and AG 38 is the next
-  active guideline candidate if the continuation pass keeps going.
+  self-review note now form part of the handoff set. AG 38 is now complete as
+  batches 130-133. Its tracked review index and self-review note now form
+  part of the handoff set, and AG 39 is the next likely candidate if the
+  continuation pass keeps going.
 
 - AG 36 batch-123 is now complete in ignored working storage. The next
   immediate task is batch-124, which should stay within the attachments and

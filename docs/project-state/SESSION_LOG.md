@@ -517,3 +517,10 @@
   guidance, kept the 2021 Law Manual reprint out of scope, and wired the
   runner / validator hooks so the next review-only wave can validate before
   extraction starts.
+- 2026-06-28: Ran AG 38 batches 130-133, kept the background, example,
+  deterministic-step, and opinion / closeout slices review-only in ignored
+  working storage, created the AG 38 self-review note and review index, and
+  refreshed the repository POC summary and project-state docs so the
+  forty-third review index and 133 validated batches are now visible in the
+  handoff layer. The existing low-quality PDF text-layer skill remained
+  sufficient, so no new skill instruction was needed.

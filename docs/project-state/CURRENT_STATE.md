@@ -10,7 +10,7 @@
 
 ## Latest known commit before this batch
 
-`7223346`
+`03f30fe`
 
 ## Validation status
 
@@ -399,12 +399,12 @@ this wave.
 
 AG 37 is now complete as batches 127-129. Its tracked review index and
 self-review note are now part of the handoff set, the 2021 Law Manual
-reprint stayed excluded as companion material, and AG 38 is now the next
-active guideline candidate. The planning layer has been drafted for the
-13-page Model 830 source file, and the next step is to validate and commit
-the AG 38 plan before batches 130-133 run in ignored working storage. The
-new low-quality PDF text-layer skill remains in place so noisy OCR sources
-stay page-image-backed and review-only.
+reprint stayed excluded as companion material, and AG 38 is now complete as
+batches 130-133. Its tracked review index and self-review note are now part
+of the handoff set, the page-image wording backstop remained visible because
+line references were unavailable, and AG 39 is the next likely candidate if
+the continuation pass keeps going. The new low-quality PDF text-layer skill
+remains in place so noisy OCR sources stay page-image-backed and review-only.
 
 Batch-123 is now complete in ignored working storage. The foundation and
 method-overview slice stayed review-only, the page-image backstop remained
