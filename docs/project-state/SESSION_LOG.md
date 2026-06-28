@@ -536,3 +536,10 @@
   docs so the next handoff set now includes the AG 39 guideline. The
   page-image wording backstop stayed visible and line references remained
   unavailable, so no new skill instruction was needed.
+- 2026-06-28: Committed the AG 39 review handoff artifacts as `28b6e67`,
+  keeping the review index, self-review note, POC summary, and project-state
+  docs aligned before moving on to the next guideline source.
+- 2026-06-28: Drafted the AG 40 planning layer for the 4-page bailout-
+  provision guideline, kept the page-image wording backstop visible because
+  the text layer is noisy, and updated the validator and next-action notes so
+  `batch-135` and `batch-136` can be run as the next review-only wave.

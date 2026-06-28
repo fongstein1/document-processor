@@ -2,6 +2,11 @@
 
 ## Next immediate task
 
+AG 40 is now the next likely candidate if the continuation pass keeps going.
+Its planning layer has been drafted as a short bailout-provision guideline wave
+with `batch-135` and `batch-136`, and AG 41 remains out of scope for this
+pass.
+
 AG 06 is complete in ignored working storage and its review index plus
 self-review note now form the current handoff set. AG 07 is complete in
 ignored working storage and its review index plus self-review note now form
