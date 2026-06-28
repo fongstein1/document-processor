@@ -118,6 +118,15 @@ The PDF extraction runner should force UTF-8 output when reading formula-heavy
 pages, because the VM-20 manual includes Unicode minus signs and other
 non-ASCII glyphs that can break the default Windows console encoding.
 
+## Low-quality PDF text layers stay page-image-backed
+
+When a source PDF has a noisy, encoded, or partially unreliable text layer,
+the processor should prefer page locators over line references, keep a
+page-image wording backstop visible, and classify the batch cautiously unless
+the page image confirms the wording. If the text layer is too weak to support
+source-bound extraction, the batch should stop for human review instead of
+overclaiming exact wording or promotion readiness.
+
 ## Remaining VM-20 order
 
 The remaining controlled VM-20 batches should follow the actual PDF section

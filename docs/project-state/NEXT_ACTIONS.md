@@ -51,10 +51,10 @@ handoff set. AG 33 is now complete as batches 115 and 116. Its tracked
 review index and self-review note now form part of the review handoff set,
 and AG 34 is now the next likely candidate if the continuation pass keeps
 going. The AG 34 planning layer should split pages 1-11 into three
-review-only windows and keep AG 35 out of scope. AG 36 is now the next
-likely candidate after AG 35, and its planning layer should stay focused on
-the active EIUL/CARVM file while keeping the 2021 Law Manual reprint out of
-scope as companion material.
+review-only windows and keep AG 35 out of scope. AG 37 is now the next
+likely candidate after AG 36, and its planning layer should stay focused on
+the active GMDB guidance file while keeping the 2021 Law Manual reprint out
+of scope as companion material.
 
 ## Build tasks
 
@@ -74,6 +74,13 @@ scope as companion material.
   planning set.
 - Keep AG 36 review-only by default, and keep the 2021 Law Manual reprint
   out of scope for this wave.
+- Treat `docs/processor/ag37_extraction_plan.md` and
+  `config/ag37-batch-plan.json` as the current AG 37 planning set.
+- Treat `scripts/ag37-batch-definitions.mjs` as synchronized with the AG 37
+  planning set.
+- Keep AG 37 review-only by default, keep the 2021 Law Manual reprint out of
+  scope for this wave, and keep the page-image wording backstop visible for
+  the noisy GMDB source.
 
 - AG 36 batch-123 is now complete in ignored working storage. The next
   immediate task is batch-124, which should stay within the attachments and

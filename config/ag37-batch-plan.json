@@ -1,0 +1,261 @@
+{
+  "planId": "ag37-gmdb-reserves-plan",
+  "planVersion": "1.0",
+  "status": "planned",
+  "sourceScope": {
+    "sourceFamilyId": "actuarial_guidelines",
+    "primarySourceFile": "AG 37 - Variable Life Insurance Reserves for Guaranteed Minimum Death Benefits.pdf",
+    "companionOnlySourceFile": "AG 37 - CRVM for VUL-from 2021 Law Manual.pdf",
+    "sourceFolder": "Actuarial Guidelines",
+    "sourceTitle": "AG 37 - Variable Life Insurance Reserves for Guaranteed Minimum Death Benefits",
+    "sourceReference": "Actuarial Guideline XXXVII",
+    "sourceStatus": "active",
+    "domainId": "naic_regulatory",
+    "rawSourceRoot": "D:\\Work\\AI Projects\\NAIC Valuation Manual Course",
+    "confirmedPageRange": [1, 6],
+    "observedSectionWindows": [
+      {
+        "sectionId": "ag37-background-and-scope",
+        "pageRange": [1, 3],
+        "note": "Background, purpose, scope, and early definitions for GMDB reserves."
+      },
+      {
+        "sectionId": "ag37-definitions-and-reserve-entry",
+        "pageRange": [4, 5],
+        "note": "Remaining definitions, GMDB revenue, term cost, 1/3-Asset Drop, and the AALR reserve entry point."
+      },
+      {
+        "sectionId": "ag37-effective-date-and-closeout",
+        "pageRange": [6, 6],
+        "note": "Effective date, retroactive application, and closeout boundary language."
+      }
+    ],
+    "boundaries": [
+      "Keep planning focused on the active AG 37 PDF only.",
+      "Treat the 2021 Law Manual reprint as companion-only and out of scope.",
+      "Do not widen into AG 38 or later guideline files.",
+      "Keep the page image as the wording backstop because the text layer is encoding-noisy.",
+      "Treat the guideline as review-only regulatory guidance, not learner-facing policy text.",
+      "Keep the batch source-bound and review-only.",
+      "AG 38 remains out of scope."
+    ],
+    "exclusions": [
+      "No learner-facing content.",
+      "No app-ready export.",
+      "No RAG-ready export.",
+      "No approved/promoted export.",
+      "No eLearning scripts, slides, quizzes, or app exports.",
+      "No raw source files in Git.",
+      "No other guideline files in the same wave.",
+      "not app-ready, not RAG-ready, and not promoted."
+    ]
+  },
+  "topicMap": [
+    {
+      "topicId": "ag37-background-and-scope",
+      "label": "Background and scope",
+      "pageRange": [1, 3],
+      "reviewComplexity": "medium-high",
+      "expectedIssueTypes": [
+        "regulatory_requirement",
+        "definition_or_terminology",
+        "reserve_method_structure",
+        "cross_reference_mapping",
+        "background_content",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": [
+        "Standard Valuation Law",
+        "Variable Life Insurance Model Regulation",
+        "Universal Life Insurance Model Regulation",
+        "AG 38"
+      ],
+      "boundaryNote": "Keep the background and scope material together and do not widen into AG 38."
+    },
+    {
+      "topicId": "ag37-definitions-and-reserve-entry",
+      "label": "Definitions and reserve entry",
+      "pageRange": [4, 5],
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "regulatory_requirement",
+        "definition_or_terminology",
+        "reserve_method_structure",
+        "calculation_structure",
+        "formula_context",
+        "prescribed_assumption",
+        "company_or_prudent_estimate_assumption",
+        "cross_reference_mapping",
+        "background_content",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": [
+        "GMDB Revenue",
+        "Term cost",
+        "1/3-Asset Drop",
+        "Attained Age Level Reserves",
+        "1983 Group Annuity Mortality Basic Table",
+        "AG 38"
+      ],
+      "boundaryNote": "Keep the definition layer and the reserve-entry language together as one narrow review-only slice."
+    },
+    {
+      "topicId": "ag37-effective-date-and-closeout",
+      "label": "Effective date and closeout",
+      "pageRange": [6, 6],
+      "reviewComplexity": "medium-high",
+      "expectedIssueTypes": [
+        "regulatory_requirement",
+        "reporting_requirement",
+        "documentation_expectation",
+        "governance_or_control_expectation",
+        "cross_reference_mapping",
+        "background_content",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": [
+        "effective date",
+        "retroactive application",
+        "grade in period",
+        "residue",
+        "AG 38"
+      ],
+      "boundaryNote": "Keep the effective-date material as a separate closing window and leave AG 38 out of scope."
+    }
+  ],
+  "proposedBatches": [
+    {
+      "plannedBatchId": "batch-127",
+      "topicIds": [
+        "ag37-background-and-scope"
+      ],
+      "title": "AG 37 background and scope slice",
+      "pageTarget": {
+        "knownWindow": [1, 3],
+        "notes": "Capture the background, purpose, scope, and opening projection-assumption framing before the reserve-entry definitions begin."
+      },
+      "rationale": "Keep the background, purpose, scope, and opening projection-assumption framing together before the reserve-entry definitions begin.",
+      "reviewComplexity": "medium-high",
+      "expectedIssueTypes": [
+        "page_image_confirmation",
+        "scope_boundary",
+        "cross_reference_mapping",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    },
+    {
+      "plannedBatchId": "batch-128",
+      "topicIds": [
+        "ag37-definitions-and-reserve-entry"
+      ],
+      "title": "AG 37 definitions and reserve-entry slice",
+      "pageTarget": {
+        "knownWindow": [4, 5],
+        "notes": "Keep the remaining definitions, GMDB revenue, term cost, 1/3-Asset Drop, and AALR reserve entry point together as one narrow review-only slice."
+      },
+      "rationale": "Keep the remaining definitions, GMDB revenue, term cost, 1/3-Asset Drop, and AALR reserve entry point together as one narrow review-only slice.",
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "page_image_confirmation",
+        "reserve_method_structure",
+        "calculation_structure",
+        "formula_context",
+        "cross_reference_mapping",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    },
+    {
+      "plannedBatchId": "batch-129",
+      "topicIds": [
+        "ag37-effective-date-and-closeout"
+      ],
+      "title": "AG 37 effective-date closeout slice",
+      "pageTarget": {
+        "knownWindow": [6, 6],
+        "notes": "Keep the effective-date and retroactive-application language separate as the closing review window."
+      },
+      "rationale": "Keep the effective-date and retroactive-application language separate as the closing review window.",
+      "reviewComplexity": "medium-high",
+      "expectedIssueTypes": [
+        "page_image_confirmation",
+        "reporting_requirement",
+        "documentation_expectation",
+        "governance_or_control_expectation",
+        "cross_reference_mapping",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    }
+  ],
+  "reviewStandards": {
+    "regulatoryRequirement": "Treat reserve, scope, and effective-date language as regulatory text when the guideline directs how GMDB reserves or filings should be handled.",
+    "definitionOrTerminology": "Treat GMDB Revenue, Term cost, 1/3-Asset Drop, AALR, and related model references as terminology or context when the text explains rather than directs.",
+    "reserveMethodStructure": "Treat the GMDB reserve framework, projection assumptions, and reserve-entry structure as method structure when the text is describing how the reserve works.",
+    "calculationStructure": "Treat the reserve steps, reserve components, and effective-date setup as calculation structure when the text specifies how the method is applied.",
+    "formulaContext": "Treat projected policy values, reserve components, and valuation-rate references as formula context unless the text gives an explicit computational rule.",
+    "prescribedAssumption": "Treat table-driven or fixed inputs as prescribed assumptions when they are stated as requirements.",
+    "companyOrPrudentEstimateAssumption": "Treat experience-sensitive or judgment-sensitive language as company / prudent-estimate context when the text expressly allows or recommends it.",
+    "reportingRequirement": "Treat effective-date, filing, and implementation direction as reporting requirement material when the text says what must be filed or disclosed.",
+    "documentationExpectation": "Treat explanatory implementation language as documentation expectation material when the text tells the user what must accompany the filing.",
+    "crossReferenceMapping": "Treat references to the Standard Valuation Law, model regulations, and AG 38 as cross-reference context unless the text operationalizes them.",
+    "backgroundContent": "Treat the title, introduction, examples, and section labels as background unless they impose a requirement.",
+    "boundaryControlWindow": "Treat the page 1-3, page 4-5, and page 6 windows as review-only slices and do not split them unless a later cleanup pass explicitly needs that split.",
+    "requiresHumanInterpretation": "Treat the encoding-noisy text layer, table-heavy passages, and reserve judgment calls as requiring human review unless the source text is explicit."
+  },
+  "promotionGates": {
+    "defaultState": "review_only",
+    "learnerFacing": [
+      "source citation exists",
+      "source support is clear",
+      "wording is not misleading",
+      "confidence is high",
+      "no unresolved review flags exist"
+    ],
+    "appReady": [
+      "learner-facing criteria are already satisfied",
+      "export is sanitized, stable, and versioned",
+      "no unresolved review issues remain"
+    ],
+    "ragReady": [
+      "approved indexed material only",
+      "stable ID",
+      "source reference and locator",
+      "review status no longer requires human disposition"
+    ]
+  },
+  "validationImplications": {
+    "currentChecksNeeded": [
+      "Plan file exists and parses as JSON.",
+      "The AG 37 plan markdown must exist and carry the expected headings.",
+      "Every planned batch must remain review-only by default.",
+      "The source posture must stay explicitly active.",
+      "Each planned batch must have a matching batch definition.",
+      "The AG 37 batch definition file must stay synchronized with the plan."
+    ],
+    "futureChecksSuggested": [
+      "Page-image wording backstop checks.",
+      "Unexpected source-family leakage checks.",
+      "No learner-facing, app-ready, or RAG-ready promotion checks.",
+      "AG 38 boundary checks.",
+      "Companion reprint leakage checks."
+    ],
+    "scriptImplications": [
+      "scripts/ag37-batch-definitions.mjs should stay synchronized with the planned batch-127, batch-128, and batch-129 slices when extraction is authorized.",
+      "scripts/batch-definitions.mjs should import the AG 37 definition file so the shared runner can find batch-127, batch-128, and batch-129.",
+      "scripts/validate-scaffold.mjs should verify that the AG 37 plan file exists, parses cleanly, and preserves the review-only posture.",
+      "The shared runner should continue to honor the same stop conditions used for the earlier guideline batches."
+    ]
+  },
+  "notes": "Controlled AG 37 planning artifact. Planned batches 127, 128, and 129 remain review-only by default and are not extraction runs."
+}

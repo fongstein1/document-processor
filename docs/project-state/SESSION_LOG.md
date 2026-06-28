@@ -505,3 +505,7 @@
   reasonable_with_minor_cautions classification. The page-image backstop
   stayed visible, the AG 37 boundary remained out of scope, and the tracked
   AG 36 review index is now being added to the handoff set.
+- 2026-06-28: Drafted the AG 37 planning layer for the active GMDB reserves
+  guideline, kept the companion 2021 Law Manual reprint out of scope, and
+  added a durable low-quality PDF text-layer skill so noisy OCR sources stay
+  page-image-backed and review-only.

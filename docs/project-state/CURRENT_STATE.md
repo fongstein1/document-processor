@@ -10,7 +10,7 @@
 
 ## Latest known commit before this batch
 
-`e1d76bc`
+`7223346`
 
 ## Validation status
 
@@ -397,11 +397,12 @@ guideline. The page-image wording backstop remains visible because the text
 layer is noisy / encoded, and the AG 36 boundary stayed out of scope for
 this wave.
 
-AG 36 is now the next active guideline candidate. The planning layer has
-been drafted for the 11-page EIUL/CARVM source file, the 2021 Law Manual
-reprint stays excluded as companion material, and the next step is to
-validate and commit the AG 36 plan before batches 123-126 run in ignored
-working storage.
+AG 37 is now the next active guideline candidate. The planning layer has
+been drafted for the 6-page GMDB source file, the 2021 Law Manual reprint
+stays excluded as companion material, and the next step is to validate and
+commit the AG 37 plan before batches 127-129 run in ignored working
+storage. The new low-quality PDF text-layer skill is also tracked so noisy
+OCR sources stay page-image-backed and review-only.
 
 Batch-123 is now complete in ignored working storage. The foundation and
 method-overview slice stayed review-only, the page-image backstop remained
