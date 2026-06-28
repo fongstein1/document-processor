@@ -13,9 +13,13 @@ ignored working storage and its review index plus self-review note now form
 the current handoff set. AG 11 is complete in the tracked review handoff
 set, AG 12 is complete in the tracked review handoff set, and AG 13 is
 complete in the tracked review handoff set. AG 14 is complete in the tracked
+review handoff set. AG 15 is complete in the tracked review handoff set. AG 16
+is complete in the tracked review handoff set. AG 17 is complete in the tracked
 review handoff set. AG 05 is already captured in the tracked review handoff
 set, and AG 03, AG 01, AG 02, and AG 04 remain captured as well. AG 52 is
 already captured in the mixed pilot batch and should not be reprocessed.
+The next source candidate to inspect is AG 18, subject to a limited page-range
+confirmation before any new batch is planned.
 
 ## Build tasks
 
@@ -81,6 +85,8 @@ already captured in the mixed pilot batch and should not be reprocessed.
   `config/ag16-batch-plan.json` as the current AG 16 planning set.
 - Treat `docs/review/ag16_review_index.md` and
   `docs/review/ag16_self_review.md` as the current AG 16 handoff set.
+- Treat `docs/review/ag17_review_index.md` and
+  `docs/review/ag17_self_review.md` as the current AG 17 handoff set.
 - Treat `docs/processor/ag17_extraction_plan.md` and
   `config/ag17-batch-plan.json` as the current AG 17 planning set.
 - Treat `scripts/ag04-batch-definitions.mjs` as synchronized with the AG 04
@@ -134,6 +140,11 @@ already captured in the mixed pilot batch and should not be reprocessed.
   approves promotion.
 - Keep `docs/review/ag16_review_index.md` and
   `docs/review/ag16_self_review.md` synchronized with the ignored AG 16
+  review packet if the wave is ever regenerated.
+- Keep the AG 17 batch review-only unless a later human review explicitly
+  approves promotion.
+- Keep `docs/review/ag17_review_index.md` and
+  `docs/review/ag17_self_review.md` synchronized with the ignored AG 17
   review packet if the wave is ever regenerated.
 - Treat `docs/review/valuation_regulation_repository_poc_status.md` as the
   current repository-level proof-of-concept summary.

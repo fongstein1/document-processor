@@ -273,3 +273,4 @@
 - 2026-06-27: Inspected AG 16, confirmed the one-page CRVM select-mortality / split-interest guideline, and drafted the AG 16 planning layer so batch-094 can be validated before extraction starts.
 - 2026-06-27: Completed the AG 16 historical CRVM guideline batch (`batch-094`) in ignored working storage, kept it review-only, and created the tracked AG 16 review index plus self-review note as the new handoff artifacts.
 - 2026-06-27: Inspected AG 17, confirmed the one-page CRVM non-level death-benefit guideline, and drafted the AG 17 planning layer so batch-095 can be validated before extraction starts.
+- 2026-06-27: Ran the AG 17 historical CRVM guideline batch (`batch-095`) in ignored working storage, kept it review-only, and created the tracked AG 17 review index plus self-review note as the new handoff artifacts.
