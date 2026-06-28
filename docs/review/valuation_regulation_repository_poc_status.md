@@ -12,7 +12,7 @@ regulation repository. It consolidates the completed review-only extraction
 waves without changing the status of the underlying batch outputs or review
 indexes.
 
-The handoff now spans 35 review indexes.
+The handoff now spans 36 review indexes.
 
 This summary is review-only, not learner-facing, not app-ready, not RAG-ready,
 and not promoted.
@@ -26,6 +26,8 @@ review indexes:
 - `docs/review/vm22_review_index.md`
 - `docs/review/ag30_review_index.md`
 - `docs/review/ag30_self_review.md`
+- `docs/review/ag31_review_index.md`
+- `docs/review/ag31_self_review.md`
 - `docs/review/vm20_practice_note_review_index.md`
 - `docs/review/ag03_review_index.md`
 - `docs/review/ag03_self_review.md`
@@ -183,6 +185,7 @@ What source families / chapters have been processed:
 - AG 28 one-page survivor-income-benefit guideline, `batch-110`
 - AG 29 two-page rehabilitation guideline, `batch-111`
 - AG 30 two-page plan type and GIC guidance guideline, `batch-112`
+- AG 31 one-page policy form approval caveat guideline, `batch-113`
 
 What remains review-only:
 
@@ -246,6 +249,7 @@ What is explicitly out of scope:
 | AG 28 one-page survivor-income-benefit guideline | `p. 1` | `batch-110` | `docs/review/ag28_review_index.md` | Complete; review-only | Survivor-income-benefit reserve framing, reserve approximation, noisy OCR, page-image backstop, and closing boundary note |
 | AG 29 two-page rehabilitation guideline | `pp. 1-2` | `batch-111` | `docs/review/ag29_review_index.md` | Complete; review-only | Rehabilitation reserve interpretation, court-ordered restructuring context, issue-date / expense-allowance context, noisy OCR, page-image backstop, and closing boundary note |
 | AG 30 two-page plan type and GIC guidance guideline | `pp. 1-2` | `batch-112` | `docs/review/ag30_review_index.md` | Complete; review-only | Plan type and policyholder treatment, C-3 risk reduction, insurer administration, periodic review, noisy OCR, page-image backstop, and closing boundary note |
+| AG 31 one-page policy form approval caveat guideline | `p. 1` | `batch-113` | `docs/review/ag31_review_index.md` | Complete; review-only | Policy form approval caveat, annual statement reserve context, noisy OCR, page-image backstop, and closing boundary note |
 
 ## Completed Assets
 
@@ -294,6 +298,8 @@ The repository now includes the core processor asset set:
   self-review note at `docs/review/ag29_self_review.md`
 - the tracked AG 30 review index at `docs/review/ag30_review_index.md` and
   self-review note at `docs/review/ag30_self_review.md`
+- the tracked AG 31 review index at `docs/review/ag31_review_index.md` and
+  self-review note at `docs/review/ag31_self_review.md`
 - VM chapter planning artifacts in `docs/processor/` and `config/`
 - project-state docs in `docs/project-state/`
 - runner / validator scripts in `scripts/`
@@ -304,12 +310,12 @@ documents remain external to Git.
 ## Validation Posture
 
 - `npm run check` passes
-- the scaffold reports 112 batches validated
+- the scaffold reports 113 batches validated
 - the validator now checks the tracked VM-20, supporting, VM-21, VM-22,
   practice-note, AG 03, AG 01, AG 02, AG 04, AG 05, AG 06, AG 07, AG 08,
   AG 09, AG 10, AG 11, AG 12, AG 13, AG 14, AG 15, AG 16, AG 17, AG 18,
   AG 19, AG 20, AG 21, AG 22, AG 23, AG 24, AG 25, AG 26, AG 27, AG 28,
-  AG 29, AG 30, and POC status summary handoff files
+  AG 29, AG 30, AG 31, and POC status summary handoff files
 - review-only and no-promotion guardrails are enforced in the batch manifests
   and review packets
 - ignored working outputs stay under `data/work/`
@@ -318,7 +324,7 @@ documents remain external to Git.
 
 ## Human Review Posture
 
-- Reviewers should start from the thirty-five review indexes listed above.
+- Reviewers should start from the thirty-six review indexes listed above.
 - The review packets remain the detailed evidence layer behind those
   summaries.
 - All batch content remains source-bound and review-only unless a separate
@@ -445,6 +451,15 @@ review index and self-review note are now part of the same review-only
 hand-off set as the other completed waves. The page-image backstop remains
 visible, and the plan type / C-3-risk wording stays review-only context until
 a human reviewer confirms the wording against the page image.
+
+## AG 31 Note
+
+AG 31 was added after the AG 30 package was already in place. Its tracked
+review index and self-review note are now part of the same review-only
+hand-off set as the other completed waves. The page-image backstop remains
+visible, and the policy form approval caveat and annual statement reserve
+context stay review-only until a human reviewer confirms the wording against
+the page image.
 
 ## Promotion Gates
 

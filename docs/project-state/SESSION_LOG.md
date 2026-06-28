@@ -420,3 +420,13 @@
   validated before extraction starts. The page contains encoding noise, so
   the page-image wording backstop should remain visible and the plan stays
   review-only until the plan is committed.
+- 2026-06-27: Ran the AG 31 one-page policy-form approval caveat batch
+  (`batch-113`) in ignored working storage, kept it review-only, and created
+  the tracked AG 31 review index plus self-review note as the new handoff
+  artifacts. The page-image backstop stayed visible, the policy-form and
+  annual-statement context remained review-only, and the repository
+  proof-of-concept summary is being refreshed so the thirty-sixth review
+  index and 113 validated batches are now visible in the handoff layer. No
+  new tracked skill file update was necessary because the existing
+  source-bound rule already covers encoded text layers and the page-image
+  backstop.
