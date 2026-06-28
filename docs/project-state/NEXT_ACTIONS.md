@@ -2,11 +2,12 @@
 
 ## Next immediate task
 
-AG 53 is now complete as batches 165-167 in ignored working storage. Its
-tracked review index and self-review note now form part of the handoff set,
-the page-locator backstop remained visible because stable line references
-were not available, the page-image wording backstop remained visible, and
-AG 54 is now the next likely candidate if the continuation pass keeps going.
+AG 54 has now been drafted as the next controlled AG unit. The planning
+layer targets `AG 54-Indexed Linked Variable Annuities (ILVA) Nonforfeiture
+as adopted by LATF-20221211.docx`, keeps it review-only by default, and
+maps the wave to batches 168-170 while preserving paragraph locators and
+line references as the primary anchor. The plan is ready for validation and
+execution if the continuation pass keeps going.
 
 AG 40 is now complete as batches 135-136 in ignored working storage. Its
 tracked review index and self-review note now form part of the handoff set.

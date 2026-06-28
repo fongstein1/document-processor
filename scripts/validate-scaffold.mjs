@@ -285,6 +285,10 @@ const paths = {
   ag53ExtractionPlanMd: path.join(repoRoot, 'docs', 'processor', 'ag53_extraction_plan.md'),
   ag53ReviewIndexMd: path.join(repoRoot, 'docs', 'review', 'ag53_review_index.md'),
   ag53SelfReviewMd: path.join(repoRoot, 'docs', 'review', 'ag53_self_review.md'),
+  ag54BatchPlanJson: path.join(repoRoot, 'config', 'ag54-batch-plan.json'),
+  ag54ExtractionPlanMd: path.join(repoRoot, 'docs', 'processor', 'ag54_extraction_plan.md'),
+  ag54ReviewIndexMd: path.join(repoRoot, 'docs', 'review', 'ag54_review_index.md'),
+  ag54SelfReviewMd: path.join(repoRoot, 'docs', 'review', 'ag54_self_review.md'),
   ag26ReviewIndexMd: path.join(repoRoot, 'docs', 'review', 'ag26_review_index.md'),
   ag26SelfReviewMd: path.join(repoRoot, 'docs', 'review', 'ag26_self_review.md'),
   ag23ReviewIndexMd: path.join(repoRoot, 'docs', 'review', 'ag23_review_index.md'),
@@ -2621,6 +2625,7 @@ const ag49BatchPlan = await readJson(paths.ag49BatchPlanJson)
 const ag50BatchPlan = await readJson(paths.ag50BatchPlanJson)
 const ag51BatchPlan = await readJson(paths.ag51BatchPlanJson)
 const ag53BatchPlan = await readJson(paths.ag53BatchPlanJson)
+const ag54BatchPlan = await readJson(paths.ag54BatchPlanJson)
 
 validateSchemaEnvelope(batchManifestSchema, 'batch-manifest.schema.json')
 validateSchemaEnvelope(sourceInventorySchema, 'source-inventory.schema.json')
@@ -9750,6 +9755,129 @@ async function validateAg53SelfReviewMarkdown(filePath, label) {
   })
 }
 
+async function validateAg54PlanMarkdown(filePath, label) {
+  const text = await readText(filePath)
+  const requiredHeadings = [
+    '## Source Scope',
+    '## Topic Map',
+    '## Proposed Batch Sequence',
+    '## Review Standards',
+    '## Promotion Gates',
+    '## Validation Implications',
+    '## Operating Note',
+  ]
+  requiredHeadings.forEach((heading) => {
+    if (!text.includes(heading)) {
+      problems.push(`${label}: missing heading ${heading}`)
+    }
+  })
+  ;[
+    'review-only',
+    'not learner-facing',
+    'not app-ready',
+    'not RAG-ready',
+    'not promoted',
+    'AG 54',
+    'batch-168',
+    'batch-169',
+    'batch-170',
+    'Actuarial Guideline LIV',
+    'paragraphs 1-56',
+    'paragraph locators',
+    'line references',
+    'active',
+    'Model 805',
+    'Model 250',
+    'AG 53',
+    'AG 55',
+  ].forEach((phrase) => {
+    if (!text.includes(phrase)) {
+      problems.push(`${label}: must mention ${phrase}`)
+    }
+  })
+}
+
+async function validateAg54ReviewIndexMarkdown(filePath, label) {
+  const text = await readText(filePath)
+  const requiredHeadings = [
+    '## Overall AG 54 Extraction Status',
+    '## Batch Table',
+    '## Higher-Caution Section',
+    '## Human Review Checklist',
+    '## Promotion Decision Area',
+    '## Recommended Review Order',
+    '## Relationship to Other Review Indexes',
+  ]
+  requiredHeadings.forEach((heading) => {
+    if (!text.includes(heading)) {
+      problems.push(`${label}: missing heading ${heading}`)
+    }
+  })
+  ;[
+    'review-only',
+    'not learner-facing',
+    'not app-ready',
+    'not RAG-ready',
+    'not promoted',
+    'AG 54',
+    'batch-168',
+    'batch-169',
+    'batch-170',
+    'Actuarial Guideline LIV',
+    'paragraphs 1-18',
+    'paragraphs 19-40',
+    'paragraphs 41-56',
+    'paragraph locators',
+    'line references',
+    'docs/review/ag54_self_review.md',
+    'docs/review/ag53_review_index.md',
+    'docs/review/valuation_regulation_repository_poc_status.md',
+    'AG 55',
+  ].forEach((phrase) => {
+    if (!text.includes(phrase)) {
+      problems.push(`${label}: must mention ${phrase}`)
+    }
+  })
+}
+
+async function validateAg54SelfReviewMarkdown(filePath, label) {
+  const text = await readText(filePath)
+  const requiredHeadings = [
+    '## Batch Classification',
+    '## Recurring Observations',
+    '## Batch-by-Batch Checks',
+    '## Review Outcome',
+    '## Batch-168 Addendum',
+    '## Batch-169 Addendum',
+    '## Batch-170 Addendum',
+  ]
+  requiredHeadings.forEach((heading) => {
+    if (!text.includes(heading)) {
+      problems.push(`${label}: missing heading ${heading}`)
+    }
+  })
+  ;[
+    'reasonable_with_minor_cautions',
+    'batch-168',
+    'batch-169',
+    'batch-170',
+    'review-only',
+    'not learner-facing',
+    'not app-ready',
+    'not RAG-ready',
+    'not promoted',
+    'paragraph locators',
+    'line references were preserved',
+    'AG 53 boundary',
+    'AG 55 boundary',
+    'human reviewer should confirm the wording against the source text',
+  ].forEach((phrase) => {
+    if (!text.includes(phrase)) {
+      problems.push(`${label}: must mention ${phrase}`)
+    }
+  })
+}
+
 const validateAg46PlanMarkdown = async (filePath, label) => {
   const text = await readText(filePath)
   const requiredHeadings = [
@@ -10854,6 +10982,7 @@ await validateAg49PlanMarkdown(paths.ag49ExtractionPlanMd, 'docs/processor/ag49_
 await validateAg50PlanMarkdown(paths.ag50ExtractionPlanMd, 'docs/processor/ag50_extraction_plan.md')
 await validateAg51PlanMarkdown(paths.ag51ExtractionPlanMd, 'docs/processor/ag51_extraction_plan.md')
 await validateAg53PlanMarkdown(paths.ag53ExtractionPlanMd, 'docs/processor/ag53_extraction_plan.md')
+await validateAg54PlanMarkdown(paths.ag54ExtractionPlanMd, 'docs/processor/ag54_extraction_plan.md')
 await validateVm20ReviewIndexMarkdown(paths.vm20ReviewIndexMd, 'docs/review/vm20_review_index.md')
 await validateSupportingVmReviewIndexMarkdown(
   paths.supportingVmReviewIndexMd,
@@ -11032,6 +11161,8 @@ if (ag42ReviewArtifactsPresent) {
     (await exists(paths.ag51ReviewIndexMd)) && (await exists(paths.ag51SelfReviewMd))
   const ag53ReviewArtifactsPresent =
     (await exists(paths.ag53ReviewIndexMd)) && (await exists(paths.ag53SelfReviewMd))
+  const ag54ReviewArtifactsPresent =
+    (await exists(paths.ag54ReviewIndexMd)) && (await exists(paths.ag54SelfReviewMd))
   if (ag51ReviewArtifactsPresent) {
     await validateAg51ReviewIndexMarkdown(paths.ag51ReviewIndexMd, 'docs/review/ag51_review_index.md')
     await validateAg51SelfReviewMarkdown(paths.ag51SelfReviewMd, 'docs/review/ag51_self_review.md')
@@ -11045,6 +11176,10 @@ if (ag42ReviewArtifactsPresent) {
   if (ag53ReviewArtifactsPresent) {
     await validateAg53ReviewIndexMarkdown(paths.ag53ReviewIndexMd, 'docs/review/ag53_review_index.md')
     await validateAg53SelfReviewMarkdown(paths.ag53SelfReviewMd, 'docs/review/ag53_self_review.md')
+  }
+  if (ag54ReviewArtifactsPresent) {
+    await validateAg54ReviewIndexMarkdown(paths.ag54ReviewIndexMd, 'docs/review/ag54_review_index.md')
+    await validateAg54SelfReviewMarkdown(paths.ag54SelfReviewMd, 'docs/review/ag54_self_review.md')
   }
 await validateAg27ReviewIndexMarkdown(paths.ag27ReviewIndexMd, 'docs/review/ag27_review_index.md')
 await validateAg27SelfReviewMarkdown(paths.ag27SelfReviewMd, 'docs/review/ag27_self_review.md')
@@ -11367,8 +11502,13 @@ if (problems.length > 0) {
       console.log(`- AG 53 self-review verified: ${ag53BatchPlan.proposedBatches.length} batches`)
     }
     console.log(`- AG 53 plan verified: ${ag53BatchPlan.proposedBatches.length} batches`)
+    if (ag54ReviewArtifactsPresent) {
+      console.log(`- AG 54 review index verified: ${ag54BatchPlan.proposedBatches.length} batches`)
+      console.log(`- AG 54 self-review verified: ${ag54BatchPlan.proposedBatches.length} batches`)
+    }
+    console.log(`- AG 54 plan verified: ${ag54BatchPlan.proposedBatches.length} batches`)
     console.log(
-      `- POC status summary verified: ${ag53ReviewArtifactsPresent ? 57 : ag51ReviewArtifactsPresent ? 56 : ag50ReviewArtifactsPresent ? 55 : ag49ReviewArtifactsPresent ? 54 : ag48ReviewArtifactsPresent ? 53 : ag47ReviewArtifactsPresent ? 52 : ag46ReviewArtifactsPresent ? 51 : ag45ReviewArtifactsPresent ? 50 : ag44ReviewArtifactsPresent ? 49 : ag43ReviewArtifactsPresent ? 48 : ag42ReviewArtifactsPresent ? 47 : ag41ReviewArtifactsPresent ? 46 : ag40ReviewArtifactsPresent ? 45 : ag39ReviewArtifactsPresent ? 44 : ag38ReviewArtifactsPresent ? 43 : ag37ReviewArtifactsPresent ? 42 : ag36ReviewArtifactsPresent ? 41 : ag35ReviewArtifactsPresent ? 40 : ag34ReviewArtifactsPresent ? 39 : 38} review indexes`,
+      `- POC status summary verified: ${ag54ReviewArtifactsPresent ? 60 : ag53ReviewArtifactsPresent ? 57 : ag51ReviewArtifactsPresent ? 56 : ag50ReviewArtifactsPresent ? 55 : ag49ReviewArtifactsPresent ? 54 : ag48ReviewArtifactsPresent ? 53 : ag47ReviewArtifactsPresent ? 52 : ag46ReviewArtifactsPresent ? 51 : ag45ReviewArtifactsPresent ? 50 : ag44ReviewArtifactsPresent ? 49 : ag43ReviewArtifactsPresent ? 48 : ag42ReviewArtifactsPresent ? 47 : ag41ReviewArtifactsPresent ? 46 : ag40ReviewArtifactsPresent ? 45 : ag39ReviewArtifactsPresent ? 44 : ag38ReviewArtifactsPresent ? 43 : ag37ReviewArtifactsPresent ? 42 : ag36ReviewArtifactsPresent ? 41 : ag35ReviewArtifactsPresent ? 40 : ag34ReviewArtifactsPresent ? 39 : 38} review indexes`,
     )
   if (validatedPilotBatchCount > 0) {
     console.log(`- Pilot batches validated: ${validatedPilotBatchCount}`)

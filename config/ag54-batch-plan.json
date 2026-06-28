@@ -1,0 +1,298 @@
+{
+  "planId": "ag54-ilva-nonforfeiture-plan",
+  "planVersion": "1.0",
+  "status": "planned",
+  "sourceScope": {
+    "sourceFamilyId": "actuarial_guidelines",
+    "primarySourceFile": "AG 54-Indexed Linked Variable Annuities (ILVA) Nonforfeiture as adopted by LATF-20221211.docx",
+    "sourceFolder": "Actuarial Guidelines",
+    "sourceTitle": "Nonforfeiture Requirements for Index-Linked Variable Annuity Products",
+    "sourceReference": "Actuarial Guideline LIV",
+    "sourceStatus": "active",
+    "domainId": "naic_regulatory",
+    "rawSourceRoot": "D:\\Work\\AI Projects\\NAIC Valuation Manual Course",
+    "confirmedParagraphRange": [
+      1,
+      56
+    ],
+    "observedSectionWindows": [
+      {
+        "sectionId": "ag54-background-scope-definitions",
+        "paragraphRange": [
+          1,
+          18
+        ],
+        "note": "Disclaimer, background, scope, principles, and core definitions."
+      },
+      {
+        "sectionId": "ag54-methodology-consistency",
+        "paragraphRange": [
+          19,
+          40
+        ],
+        "note": "Interim values, hypothetical portfolio methodology, market-value adjustment context, and consistency testing."
+      },
+      {
+        "sectionId": "ag54-filing-certification-effective-date",
+        "paragraphRange": [
+          41,
+          56
+        ],
+        "note": "Actuarial memorandum and certification requirements, descriptions, and effective date."
+      }
+    ],
+    "boundaries": [
+      "Keep AG 54 focused on the active LATF-adopted draft ILVA nonforfeiture guidance only and keep AG 53 and AG 55 out of scope for this wave.",
+      "Treat the not-yet-committee-adopted disclaimer as a review-only caveat rather than a repeal or supersession signal.",
+      "Preserve paragraph locators and line references where available because this is a text-based source.",
+      "Keep the batch source-bound and review-only."
+    ],
+    "exclusions": [
+      "No learner-facing content.",
+      "No app-ready export.",
+      "No RAG-ready export.",
+      "No approved/promoted export.",
+      "No eLearning scripts, slides, quizzes, or app exports.",
+      "No raw source files in Git.",
+      "No AG 53 or AG 55 files in the same wave."
+    ]
+  },
+  "topicMap": [
+    {
+      "topicId": "ag54-background-scope-definitions",
+      "label": "Background, scope, principles, and definitions",
+      "paragraphRange": [
+        1,
+        18
+      ],
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "regulatory_requirement",
+        "definition_or_terminology",
+        "background_content",
+        "cross_reference_mapping",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": [
+        "Model 805",
+        "Model 250",
+        "variable annuity",
+        "separate account",
+        "ILVA / RILA terminology"
+      ],
+      "boundaryNote": "Keep the disclaimer, background, scope, principles, and core definitions together as one narrow review-only slice."
+    },
+    {
+      "topicId": "ag54-methodology-consistency",
+      "label": "Methodology and consistency slice",
+      "paragraphRange": [
+        19,
+        40
+      ],
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "regulatory_requirement",
+        "definition_or_terminology",
+        "calculation_structure",
+        "formula_context",
+        "prescribed_assumption",
+        "company_or_prudent_estimate_assumption",
+        "asset_modeling_judgment",
+        "cross_reference_mapping",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": [
+        "Hypothetical Portfolio",
+        "Index Strategy Base",
+        "Index Strategy Term",
+        "Interim Value",
+        "Trading Cost",
+        "fair value",
+        "market value adjustment"
+      ],
+      "boundaryNote": "Keep the methodology, interim-value, and consistency-testing material together as one narrow review-only slice."
+    },
+    {
+      "topicId": "ag54-filing-certification-effective-date",
+      "label": "Filing, certification, descriptions, and effective date",
+      "paragraphRange": [
+        41,
+        56
+      ],
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "reporting_requirement",
+        "documentation_expectation",
+        "governance_or_control_expectation",
+        "regulatory_requirement",
+        "cross_reference_mapping",
+        "background_content",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": [
+        "actuarial memorandum",
+        "actuarial certification",
+        "Model 250 Section 7",
+        "modeling technique disclosure",
+        "effective date"
+      ],
+      "boundaryNote": "Keep the filing, certification, description, and effective-date guidance together as one narrow review-only slice."
+    }
+  ],
+  "proposedBatches": [
+    {
+      "plannedBatchId": "batch-168",
+      "topicIds": [
+        "ag54-background-scope-definitions"
+      ],
+      "title": "AG 54 background, scope, principles, and definitions slice",
+      "paragraphTarget": {
+        "knownWindow": [
+          1,
+          18
+        ],
+        "notes": "Capture the disclaimer, background, scope, principles, and core definitions as one narrow review-only slice."
+      },
+      "rationale": "Capture the disclaimer, background, scope, principles, and core definitions as one narrow review-only slice.",
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "regulatory_requirement",
+        "definition_or_terminology",
+        "background_content",
+        "cross_reference_mapping",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    },
+    {
+      "plannedBatchId": "batch-169",
+      "topicIds": [
+        "ag54-methodology-consistency"
+      ],
+      "title": "AG 54 methodology and consistency slice",
+      "paragraphTarget": {
+        "knownWindow": [
+          19,
+          40
+        ],
+        "notes": "Capture the interim-value, hypothetical-portfolio, market-value-adjustment, and consistency-testing material as one narrow review-only slice."
+      },
+      "rationale": "Capture the interim-value, hypothetical-portfolio, market-value-adjustment, and consistency-testing material as one narrow review-only slice.",
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "regulatory_requirement",
+        "definition_or_terminology",
+        "calculation_structure",
+        "formula_context",
+        "prescribed_assumption",
+        "company_or_prudent_estimate_assumption",
+        "asset_modeling_judgment",
+        "cross_reference_mapping",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    },
+    {
+      "plannedBatchId": "batch-170",
+      "topicIds": [
+        "ag54-filing-certification-effective-date"
+      ],
+      "title": "AG 54 filing, certification, descriptions, and effective date slice",
+      "paragraphTarget": {
+        "knownWindow": [
+          41,
+          56
+        ],
+        "notes": "Capture the memorandum, certification, description, and effective-date guidance as one narrow review-only slice."
+      },
+      "rationale": "Capture the memorandum, certification, description, and effective-date guidance as one narrow review-only slice.",
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "reporting_requirement",
+        "documentation_expectation",
+        "governance_or_control_expectation",
+        "regulatory_requirement",
+        "cross_reference_mapping",
+        "background_content",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    }
+  ],
+  "reviewStandards": {
+    "regulatoryRequirement": "Treat the authority, scope, conditions, and effective-date instructions as regulatory text when they direct what the company must do.",
+    "definitionOrTerminology": "Treat ILVA, Hypothetical Portfolio, Interim Value, Index Strategy, and related labels as terminology when the text explains rather than directs.",
+    "reserveMethodStructure": "Treat the hypothetical-portfolio framing as structure only when the source operationalizes it; otherwise keep it as cross-reference context.",
+    "calculationStructure": "Treat the interim-value and market-value-adjustment formulas as review-only context unless the guideline explicitly prescribes a computation step.",
+    "formulaContext": "Treat formulas as context when they support the review slice but do not promote them into learner-facing content.",
+    "prescribedAssumption": "Treat prescribed assumptions as review-only source text when the guideline explicitly directs a company assumption.",
+    "companyOrPrudentEstimateAssumption": "Treat company or prudent-estimate assumptions as review-only when the source distinguishes company judgment from prescribed rules.",
+    "assetModelingJudgment": "Treat fair-value, market-value-adjustment, and derivative-proxy judgments as a separate review-only category when the text requires a human judgment call.",
+    "scenarioOrStochasticRequirement": "Treat scenario or stochastic requirements as review-only context when the guideline references them.",
+    "reportingRequirement": "Treat actuarial memorandum and certification instructions as reporting requirements if they appear.",
+    "documentationExpectation": "Treat supporting-text instructions as documentation expectations if they appear.",
+    "governanceOrControlExpectation": "Treat committee references, compliance statements, and control language as governance or control expectations if they appear.",
+    "crossReferenceMapping": "Treat references to Model 805, Model 250, fair value, and related tables as cross-reference context unless operationalized.",
+    "backgroundContent": "Treat the title, introduction, and section labels as background unless they impose a requirement.",
+    "boundaryControlWindow": "Treat each paragraph window as review-only and do not widen it unless later cleanup explicitly needs that split.",
+    "requiresHumanInterpretation": "Treat the drafting note, consistency test language, and any dense valuation wording as requiring human review unless the source text is explicit."
+  },
+  "promotionGates": {
+    "defaultState": "review_only",
+    "learnerFacing": {
+      "sourceCitationExists": true,
+      "sourceSupportIsClear": true,
+      "wordingIsNotMisleading": true,
+      "confidenceIsHigh": true,
+      "noUnresolvedReviewFlagsExist": true
+    },
+    "appReady": {
+      "learnerFacingCriteriaAreAlreadySatisfied": true,
+      "exportIsSanitizedStableAndVersioned": true,
+      "noUnresolvedReviewIssuesRemain": true
+    },
+    "ragReady": {
+      "approvedIndexedMaterialOnly": true,
+      "stableId": true,
+      "sourceReferenceAndLocator": true,
+      "reviewStatusNoLongerRequiresHumanDisposition": true
+    }
+  },
+  "validationImplications": {
+    "currentChecksNeeded": [
+      "Plan file exists and parses as JSON.",
+      "The AG 54 plan markdown must exist and carry the expected headings.",
+      "Every planned batch must remain review-only by default.",
+      "The source posture must stay explicitly active.",
+      "Each planned batch must have a matching batch definition.",
+      "The AG 54 batch definition file must stay synchronized with the plan.",
+      "Paragraph locators and line references should remain visible in the review packet."
+    ],
+    "futureChecksSuggested": [
+      "Cross-reference mapping checks against Model 805 and Model 250.",
+      "Unexpected source-family leakage checks.",
+      "No learner-facing, app-ready, or RAG-ready promotion checks.",
+      "Committee-adoption caveat checks."
+    ],
+    "scriptImplications": [
+      "`scripts/ag54-batch-definitions.mjs` should stay synchronized with the planned batch-168 through batch-170 slices when extraction is authorized.",
+      "`scripts/batch-definitions.mjs` should import the AG 54 definition file so the shared runner can find batches 168-170.",
+      "`scripts/validate-scaffold.mjs` should verify that the AG 54 plan file exists, parses cleanly, and preserves the review-only posture.",
+      "The shared runner should continue to honor the same stop conditions used for the earlier guideline batches.",
+      "Paragraph locators and line references should remain visible in the review packet because this source is text-based."
+    ]
+  },
+  "operatingNote": "Controlled AG 54 planning artifact. Planned batches 168, 169, and 170 remain review-only by default and are not extraction runs."
+}

@@ -664,3 +664,9 @@
   page-locator backstop and page-image wording backstop visible because line
   references were not expected. AG 54 is now the next likely candidate if
   the continuation pass keeps going.
+- 2026-06-28: Inspected AG 54, confirmed the active 56-paragraph
+  `AG 54-Indexed Linked Variable Annuities (ILVA) Nonforfeiture as adopted
+  by LATF-20221211.docx` guidance, drafted the AG 54 planning layer for
+  batches 168-170, and kept the wave review-only by default with paragraph
+  locators as the primary anchor because line references should be preserved
+  for this text-based source.

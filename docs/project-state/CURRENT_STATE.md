@@ -464,7 +464,10 @@ storage. Its tracked review index and self-review note now form part of the
 handoff set, the page-locator backstop remained visible because stable line
 references were not available, the page-image wording backstop remained
 visible, and AG 54 is now the next likely candidate if the continuation pass
-keeps going.
+keeps going. The AG 54 planning layer has been drafted against the active
+56-paragraph `AG 54-Indexed Linked Variable Annuities (ILVA) Nonforfeiture
+as adopted by LATF-20221211.docx` guidance and is waiting for validation and
+execution as batches 168-170.
 
 AG 39 batch-134 has completed in ignored working storage, and the tracked
 AG 39 review index and self-review note are now part of the handoff set. The
