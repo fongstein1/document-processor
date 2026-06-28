@@ -31,8 +31,9 @@ Its tracked review index and self-review note now form part of the review
 handoff set. AG 26 is complete as batch-106, and its tracked review index
 and self-review note now form part of the review handoff set. AG 27 is
 complete as batches 107-109, and its tracked review index and self-review
-note now form part of the review handoff set. AG 28 is the next likely
-candidate if the continuation pass keeps going.
+note now form part of the review handoff set. AG 28 is now staged as the
+next one-page review-only guideline unit, and the planning draft is ready to
+be validated before batch-110 runs.
 
 ## Build tasks
 
@@ -146,6 +147,13 @@ candidate if the continuation pass keeps going.
   planning set.
 - Treat `docs/review/ag27_review_index.md` and
   `docs/review/ag27_self_review.md` as the AG 27 handoff set.
+- Treat `docs/processor/ag28_extraction_plan.md` and
+  `config/ag28-batch-plan.json` as the AG 28 planning set.
+- Treat `scripts/ag28-batch-definitions.mjs` as synchronized with the AG 28
+  planning set.
+- Treat `docs/review/ag28_review_index.md` and
+  `docs/review/ag28_self_review.md` as the AG 28 handoff set when that wave
+  is complete.
 - Treat `docs/processor/ag17_extraction_plan.md` and
   `config/ag17-batch-plan.json` as the current AG 17 planning set.
 - Treat `docs/processor/ag18_extraction_plan.md` and

@@ -1,0 +1,151 @@
+{
+  "planId": "ag28-survivor-income-benefit-plan",
+  "planVersion": "1.0",
+  "status": "planned",
+  "sourceScope": {
+    "sourceFamilyId": "actuarial_guidelines",
+    "primarySourceFile": "AG 28 - Statutory Reserves for Group Long-Term Disability Contracts Within A Survivor Income Benefit Provision.pdf",
+    "sourceFolder": "Actuarial Guidelines",
+    "sourceTitle": "AG 28 - Statutory Reserves for Group Long-Term Disability Contracts Within A Survivor Income Benefit Provision",
+    "sourceReference": "Actuarial Guideline XXVIII",
+    "sourceStatus": "active",
+    "domainId": "naic_regulatory",
+    "rawSourceRoot": "D:\\Work\\AI Projects\\NAIC Valuation Manual Course",
+    "confirmedPageRange": [1, 1],
+    "observedSectionWindows": [
+      {
+        "sectionId": "ag28-survivor-income-benefit-reserve-guidance",
+        "pageRange": [1, 1],
+        "note": "Survivor-income-benefit background, reserve approximation guidance, and the closing boundary note."
+      }
+    ],
+    "boundaries": [
+      "Keep planning focused on this single AG 28 PDF.",
+      "Do not widen into AG 29 or later guideline files.",
+      "Keep the active guideline posture explicit in every batch artifact.",
+      "Keep the page image as the backstop for exact wording because the text layer includes encoding noise.",
+      "Treat the guideline as review-only regulatory guidance, not learner-facing policy text.",
+      "Keep the batch source-bound and review-only."
+    ],
+    "exclusions": [
+      "No learner-facing content.",
+      "No app-ready export.",
+      "No RAG-ready export.",
+      "No approved/promoted export.",
+      "No eLearning scripts, slides, quizzes, or app exports.",
+      "No raw source files in Git.",
+      "No other guideline files in the same wave."
+    ]
+  },
+  "topicMap": [
+    {
+      "topicId": "ag28-survivor-income-benefit-reserve-guidance",
+      "label": "Survivor income benefit reserve guidance",
+      "pageRange": [1, 1],
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "regulatory_requirement",
+        "definition_or_terminology",
+        "reserve_method_structure",
+        "calculation_structure",
+        "formula_context",
+        "cross_reference_mapping",
+        "background_content",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": [
+        "survivor income benefit",
+        "group long-term disability contracts",
+        "minimum disability period",
+        "valuation interest rate",
+        "basic disability reserve",
+        "reserve approximation"
+      ],
+      "boundaryNote": "Keep this slice within page 1 and do not widen into AG 29."
+    }
+  ],
+  "proposedBatches": [
+    {
+      "plannedBatchId": "batch-110",
+      "topicIds": [
+        "ag28-survivor-income-benefit-reserve-guidance"
+      ],
+      "title": "AG 28 survivor income benefit reserve slice",
+      "pageTarget": {
+        "knownWindow": [1, 1],
+        "notes": "Capture the full one-page guideline as one review-only slice because the survivor-income-benefit reserve rule and the reserve approximation example should stay together."
+      },
+      "rationale": "Capture the full one-page guideline as one review-only slice because the survivor-income-benefit reserve rule and the reserve approximation example should stay together.",
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "regulatory_requirement",
+        "definition_or_terminology",
+        "reserve_method_structure",
+        "calculation_structure",
+        "formula_context",
+        "cross_reference_mapping",
+        "background_content",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    }
+  ],
+  "reviewStandards": {
+    "regulatoryRequirement": "Treat the reserve guidance and any express direction as regulatory text when the guideline says it must be followed.",
+    "definitionOrTerminology": "Treat survivor income benefit, disability period, and related reserve terms as terminology when the text explains rather than directs.",
+    "reserveMethodStructure": "Treat the reserve approximation and combined-reserve framing as structure until the text clearly states a separate duty.",
+    "calculationStructure": "Treat the approximation test and reserve comparison language as calculation structure until a duty is explicit.",
+    "formulaContext": "Treat the interest-rate comparison and approximation language as context until interpretation is explicit.",
+    "crossReferenceMapping": "Treat references to long-term disability contracts, disability periods, and valuation interest rates as cross-reference context unless the text operationalizes them.",
+    "backgroundContent": "Treat title, framing, and explanatory notes as background unless they impose a requirement.",
+    "boundaryControlWindow": "Treat the page 1 window as a review-only slice and do not split it unless a later cleanup pass explicitly needs that split.",
+    "requiresHumanInterpretation": "Treat the OCR noise, reserve approximation, and numeric example as requiring human review unless the source text is explicit."
+  },
+  "promotionGates": {
+    "defaultState": "review_only",
+    "learnerFacing": [
+      "source citation exists",
+      "source support is clear",
+      "wording is not misleading",
+      "confidence is high",
+      "no unresolved review flags exist"
+    ],
+    "appReady": [
+      "learner-facing criteria are already satisfied",
+      "export is sanitized, stable, and versioned",
+      "no unresolved review issues remain"
+    ],
+    "ragReady": [
+      "approved indexed material only",
+      "stable ID",
+      "source reference and locator",
+      "review status no longer requires human disposition"
+    ]
+  },
+  "validationImplications": {
+    "currentChecksNeeded": [
+      "Plan file exists and parses as JSON.",
+      "The AG 28 plan markdown exists and carries the expected headings.",
+      "Every proposed batch remains review-only by default.",
+      "The source posture is explicitly active.",
+      "Each planned batch has a matching batch definition.",
+      "The AG 28 batch definition file stays synchronized with the plan."
+    ],
+    "futureChecksSuggested": [
+      "Page-image wording backstop checks.",
+      "Unexpected source-family leakage checks.",
+      "No learner-facing, app-ready, or RAG-ready promotion checks."
+    ],
+    "scriptImplications": [
+      "scripts/ag28-batch-definitions.mjs should stay synchronized with the planned batch-110 slice when extraction is authorized.",
+      "scripts/batch-definitions.mjs should import the AG 28 definition file so the shared runner can find batch-110.",
+      "scripts/validate-scaffold.mjs should verify that the AG 28 plan file exists, parses cleanly, and preserves the review-only posture.",
+      "The shared runner should continue to honor the same stop conditions used for the earlier guideline batches."
+    ]
+  },
+  "notes": "Controlled AG 28 planning artifact. Planned batch 110 remains review-only by default and is not an extraction run."
+}

@@ -373,3 +373,8 @@
   and 109 validated batches are now visible in the handoff layer. No new
   tracked skill file update was necessary because the existing source-bound
   rule already covers noisy OCR and page-image backstops.
+- 2026-06-27: Confirmed AG 28 as the next one-page guideline unit, verified
+  that `AG 28 - Statutory Reserves for Group Long-Term Disability Contracts
+  Within A Survivor Income Benefit Provision.pdf` is a single-page active
+  guideline with a page-image backstop caveat, and drafted the AG 28
+  planning layer so batch-110 can be validated before extraction starts.

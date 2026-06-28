@@ -185,6 +185,10 @@ const paths = {
   ag27ExtractionPlanMd: path.join(repoRoot, 'docs', 'processor', 'ag27_extraction_plan.md'),
   ag27ReviewIndexMd: path.join(repoRoot, 'docs', 'review', 'ag27_review_index.md'),
   ag27SelfReviewMd: path.join(repoRoot, 'docs', 'review', 'ag27_self_review.md'),
+  ag28BatchPlanJson: path.join(repoRoot, 'config', 'ag28-batch-plan.json'),
+  ag28ExtractionPlanMd: path.join(repoRoot, 'docs', 'processor', 'ag28_extraction_plan.md'),
+  ag28ReviewIndexMd: path.join(repoRoot, 'docs', 'review', 'ag28_review_index.md'),
+  ag28SelfReviewMd: path.join(repoRoot, 'docs', 'review', 'ag28_self_review.md'),
   ag26ReviewIndexMd: path.join(repoRoot, 'docs', 'review', 'ag26_review_index.md'),
   ag26SelfReviewMd: path.join(repoRoot, 'docs', 'review', 'ag26_self_review.md'),
   ag23ReviewIndexMd: path.join(repoRoot, 'docs', 'review', 'ag23_review_index.md'),
@@ -384,6 +388,9 @@ const requiredFiles = [
   'docs/processor/ag27_extraction_plan.md',
   'config/ag27-batch-plan.json',
   'scripts/ag27-batch-definitions.mjs',
+  'docs/processor/ag28_extraction_plan.md',
+  'config/ag28-batch-plan.json',
+  'scripts/ag28-batch-definitions.mjs',
   'docs/review/ag27_review_index.md',
   'docs/review/ag27_self_review.md',
   'docs/review/ag26_review_index.md',
@@ -5386,6 +5393,44 @@ const validateAg27PlanMarkdown = async (filePath, label) => {
   })
 }
 
+const validateAg28PlanMarkdown = async (filePath, label) => {
+  const text = await readText(filePath)
+  const requiredHeadings = [
+    '## Source Scope',
+    '## Topic Map',
+    '## Proposed Batch Sequence',
+    '## Review Standards',
+    '## Promotion Gates',
+    '## Validation Implications',
+    '## Operating Note',
+  ]
+  requiredHeadings.forEach((heading) => {
+    if (!text.includes(heading)) {
+      problems.push(`${label}: missing heading ${heading}`)
+    }
+  })
+  ;[
+    'review-only',
+    'not learner-facing',
+    'not app-ready',
+    'not RAG-ready',
+    'not promoted',
+    'AG 28',
+    'batch-110',
+    'Actuarial Guideline XXVIII',
+    'page 1',
+    'page-image',
+    'active',
+    'survivor income benefit',
+    'group long-term disability',
+    'AG 29 remains out of scope',
+  ].forEach((phrase) => {
+    if (!text.includes(phrase)) {
+      problems.push(`${label}: must mention ${phrase}`)
+    }
+  })
+}
+
 const validateAg27ReviewIndexMarkdown = async (filePath, label) => {
   const text = await readText(filePath)
   const requiredHeadings = [
@@ -6633,6 +6678,7 @@ await validateAg26ReviewIndexMarkdown(paths.ag26ReviewIndexMd, 'docs/review/ag26
 await validateAg26SelfReviewMarkdown(paths.ag26SelfReviewMd, 'docs/review/ag26_self_review.md')
 await validateAg26PlanMarkdown(paths.ag26ExtractionPlanMd, 'docs/processor/ag26_extraction_plan.md')
 await validateAg27PlanMarkdown(paths.ag27ExtractionPlanMd, 'docs/processor/ag27_extraction_plan.md')
+await validateAg28PlanMarkdown(paths.ag28ExtractionPlanMd, 'docs/processor/ag28_extraction_plan.md')
 await validateAg27ReviewIndexMarkdown(paths.ag27ReviewIndexMd, 'docs/review/ag27_review_index.md')
 await validateAg27SelfReviewMarkdown(paths.ag27SelfReviewMd, 'docs/review/ag27_self_review.md')
 await validateAg05PlanMarkdown(paths.ag05ExtractionPlanMd, 'docs/processor/ag05_extraction_plan.md')
