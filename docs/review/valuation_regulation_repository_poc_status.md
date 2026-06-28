@@ -12,7 +12,8 @@ regulation repository. It consolidates the completed review-only extraction
 waves without changing the status of the underlying batch outputs or review
 indexes.
 
-The handoff now spans 47 review indexes, up from 46 review indexes. The
+The handoff now spans 48 review indexes, up from 47 review indexes. The
+earlier 47 review indexes checkpoint remains part of the handoff history, the
 earlier 45 review indexes checkpoint remains part of the handoff history, and
 the earlier 39 review indexes checkpoint remains part of the handoff history.
 
@@ -49,6 +50,8 @@ review indexes:
 - `docs/review/ag41_self_review.md`
 - `docs/review/ag42_review_index.md`
 - `docs/review/ag42_self_review.md`
+- `docs/review/ag43_review_index.md`
+- `docs/review/ag43_self_review.md`
 - `docs/review/ag03_review_index.md`
 - `docs/review/ag03_self_review.md`
 - `docs/review/ag01_review_index.md`
@@ -223,6 +226,9 @@ What source families / chapters have been processed:
 - AG 39 2-page VAGLB guideline, `batch-134`
 - AG 40 4-page bailout-provision guideline, `batch-135`, and `batch-136`
 - AG 41 2-page nonforfeiture-projection guideline, `batch-137`
+- AG 42 4-page preferred-mortality guideline, `batch-138` and `batch-139`
+- AG 43 71-page CARVM variable-annuity guideline, `batch-140` through
+  `batch-148`
 
 What remains review-only:
 
@@ -369,13 +375,13 @@ documents remain external to Git.
 
 - `npm run check` passes
 - the scaffold previously reported 116 batches validated; the current run
-  reports 139 batches validated
-  - the validator now checks the tracked VM-20, supporting, VM-21, VM-22,
+  reports 148 batches validated
+- the validator now checks the tracked VM-20, supporting, VM-21, VM-22,
   practice-note, AG 03, AG 01, AG 02, AG 04, AG 05, AG 06, AG 07, AG 08,
   AG 09, AG 10, AG 11, AG 12, AG 13, AG 14, AG 15, AG 16, AG 17, AG 18,
   AG 19, AG 20, AG 21, AG 22, AG 23, AG 24, AG 25, AG 26, AG 27, AG 28,
   AG 29, AG 30, AG 31, AG 32, AG 33, AG 34, AG 35, AG 36, AG 37, AG 38,
-  AG 39, AG 40, AG 41, AG 42, and POC status summary handoff files
+  AG 39, AG 40, AG 41, AG 42, AG 43, and POC status summary handoff files
 - review-only and no-promotion guardrails are enforced in the batch manifests
   and review packets
 - ignored working outputs stay under `data/work/`
@@ -384,7 +390,7 @@ documents remain external to Git.
 
 ## Human Review Posture
 
-- Reviewers should start from the forty-seven review indexes listed above.
+- Reviewers should start from the forty-eight review indexes listed above.
 - The review packets remain the detailed evidence layer behind those
   summaries.
 - All batch content remains source-bound and review-only unless a separate
@@ -628,6 +634,19 @@ background/scope/assessment slice stays review-only until a human reviewer
 confirms the wording against the page image. AG 42 is complete as batches
 `batch-138` and `batch-139`, and the tracked review index and self-review
 note are `docs/review/ag42_review_index.md` and `docs/review/ag42_self_review.md`.
+
+## AG 43 Note
+
+AG 43 was added after the AG 42 handoff was already in place. Its tracked
+review index and self-review note are now part of the same review-only
+hand-off set as the other completed waves. The page-image wording backstop
+remains visible, line references were not available, and the
+background/scope/CTE/calibration/hedging/mortality slices stay review-only
+until a human reviewer confirms the wording against the page image. AG 43 is
+complete as batches `batch-140`, `batch-141`, `batch-142`, `batch-143`,
+`batch-144`, `batch-145`, `batch-146`, `batch-147`, and `batch-148`, and the
+tracked review index and self-review note are
+`docs/review/ag43_review_index.md` and `docs/review/ag43_self_review.md`.
 
 ## Promotion Gates
 
