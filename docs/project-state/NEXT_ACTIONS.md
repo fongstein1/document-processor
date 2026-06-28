@@ -33,12 +33,10 @@ and self-review note now form part of the review handoff set. AG 27 is
 complete as batches 107-109, and its tracked review index and self-review
 note now form part of the review handoff set. AG 28 is now complete as
 batch-110, and its tracked review index plus self-review note are being
-added to the handoff set. AG 29 is the next likely candidate if the
-continuation pass keeps going.
-
-AG 29 is now the next immediate task. Its two-page rehabilitation /
-court-order window has been confirmed, and the planning layer will be
-committed before batch-111 executes.
+added to the handoff set. AG 29 is now complete as batch-111, and its
+tracked review index and self-review note now form part of the review
+handoff set. AG 30 is the next likely candidate if the continuation pass
+keeps going.
 
 ## Build tasks
 

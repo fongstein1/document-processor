@@ -10,7 +10,7 @@
 
 ## Latest known commit before this batch
 
-`1737b14`
+`d51b93d`
 
 ## Validation status
 
@@ -316,9 +316,9 @@ are being added to the handoff set. AG 27 is now complete as batches
 107-109, and its tracked review index plus self-review note are being added
 to the handoff set. AG 28 is now complete as batch-110, and its tracked
 review index plus self-review note are being added to the handoff set. AG 29
-is the next short guideline candidate; its two-page rehabilitation / court-
-order window has been confirmed and batch-111 will be the next controlled
-unit once the plan is committed.
+is now complete as batch-111, and its tracked review index plus self-review
+note are being added to the handoff set. AG 30 is the next likely candidate
+if the continuation pass keeps going.
 
 The VM-20 companion practice-note wave is complete: batches `batch-055`
 through `batch-075` were processed review-only, and the tracked practice-note

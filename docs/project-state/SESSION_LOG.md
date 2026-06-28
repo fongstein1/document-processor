@@ -392,3 +392,12 @@
   validated before extraction starts. The page-image wording backstop
   remains visible because the text layer is encoded, and the rehabilitation /
   court-order wording stays review-only until the plan is committed.
+- 2026-06-27: Ran the AG 29 two-page rehabilitation batch (`batch-111`) in
+  ignored working storage, kept it review-only, and created the tracked AG
+  29 review index plus self-review note as the new handoff artifacts. The
+  page-image backstop stayed visible, the rehabilitation and issue-date
+  context remained review-only, and the repository proof-of-concept summary
+  is being refreshed so the thirty-fourth review index and 111 validated
+  batches are now visible in the handoff layer. No new tracked skill file
+  update was necessary because the existing source-bound rule already covers
+  encoded text layers and the page-image backstop.
