@@ -79,6 +79,10 @@ scope as companion material.
   immediate task is batch-124, which should stay within the attachments and
   method-mechanics slice and keep the page-image backstop visible.
 
+- AG 36 batch-124 is now complete in ignored working storage. The next
+  immediate task is batch-125, which should stay within the hedged-as-
+  required and notification slice and keep the page-image backstop visible.
+
 - Keep batches 001 through 012 review-only unless a human reviewer explicitly
   approves promotion.
 - Keep batches 013 through 021 review-only unless a human reviewer explicitly

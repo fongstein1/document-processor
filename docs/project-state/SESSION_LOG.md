@@ -487,3 +487,9 @@
   reasonable_with_minor_cautions classification. The page-image backstop
   stayed visible, the AG 37 boundary remained out of scope, and batch-124 is
   next.
+- 2026-06-28: Ran AG 36 batch-124, captured the attachments and
+  method-mechanics slice, kept the batch review-only in ignored working
+  storage, and extended the AG 36 self-review note with a
+  reasonable_with_minor_cautions classification. The page-image backstop
+  stayed visible, the AG 37 boundary remained out of scope, and batch-125 is
+  next.

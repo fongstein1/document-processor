@@ -406,3 +406,7 @@ working storage.
 Batch-123 is now complete in ignored working storage. The foundation and
 method-overview slice stayed review-only, the page-image backstop remained
 visible, and batch-124 is the next AG 36 slice to run.
+
+Batch-124 is now complete in ignored working storage. The attachments and
+method-mechanics slice stayed review-only, the page-image backstop remained
+visible, and batch-125 is the next AG 36 slice to run.
