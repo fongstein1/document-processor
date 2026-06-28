@@ -12,7 +12,7 @@ regulation repository. It consolidates the completed review-only extraction
 waves without changing the status of the underlying batch outputs or review
 indexes.
 
-The handoff now spans 45 review indexes, up from 44 review indexes. The
+The handoff now spans 46 review indexes, up from 45 review indexes. The
 earlier 39 review indexes checkpoint remains part of the handoff history.
 
 This summary is review-only, not learner-facing, not app-ready, not RAG-ready,
@@ -44,6 +44,8 @@ review indexes:
 - `docs/review/ag39_self_review.md`
 - `docs/review/ag40_review_index.md`
 - `docs/review/ag40_self_review.md`
+- `docs/review/ag41_review_index.md`
+- `docs/review/ag41_self_review.md`
 - `docs/review/ag03_review_index.md`
 - `docs/review/ag03_self_review.md`
 - `docs/review/ag01_review_index.md`
@@ -216,8 +218,8 @@ What source families / chapters have been processed:
 - AG 38 13-page Model 830 application guideline, `batch-130`, `batch-131`,
   `batch-132`, and `batch-133`
 - AG 39 2-page VAGLB guideline, `batch-134`
-- AG 36 11-page EIUL/CARVM guideline, `batch-123`, `batch-124`,
-  `batch-125`, and `batch-126`
+- AG 40 4-page bailout-provision guideline, `batch-135`, and `batch-136`
+- AG 41 2-page nonforfeiture-projection guideline, `batch-137`
 
 What remains review-only:
 
@@ -347,6 +349,12 @@ The repository now includes the core processor asset set:
   self-review note at `docs/review/ag37_self_review.md`
 - the tracked AG 38 review index at `docs/review/ag38_review_index.md` and
   self-review note at `docs/review/ag38_self_review.md`
+- the tracked AG 39 review index at `docs/review/ag39_review_index.md` and
+  self-review note at `docs/review/ag39_self_review.md`
+- the tracked AG 40 review index at `docs/review/ag40_review_index.md` and
+  self-review note at `docs/review/ag40_self_review.md`
+- the tracked AG 41 review index at `docs/review/ag41_review_index.md` and
+  self-review note at `docs/review/ag41_self_review.md`
 - VM chapter planning artifacts in `docs/processor/` and `config/`
 - project-state docs in `docs/project-state/`
 - runner / validator scripts in `scripts/`
@@ -358,13 +366,13 @@ documents remain external to Git.
 
 - `npm run check` passes
 - the scaffold previously reported 116 batches validated; the current run
-  reports 136 batches validated
+  reports 137 batches validated
   - the validator now checks the tracked VM-20, supporting, VM-21, VM-22,
   practice-note, AG 03, AG 01, AG 02, AG 04, AG 05, AG 06, AG 07, AG 08,
   AG 09, AG 10, AG 11, AG 12, AG 13, AG 14, AG 15, AG 16, AG 17, AG 18,
   AG 19, AG 20, AG 21, AG 22, AG 23, AG 24, AG 25, AG 26, AG 27, AG 28,
   AG 29, AG 30, AG 31, AG 32, AG 33, AG 34, AG 35, AG 36, AG 37, AG 38,
-  AG 39, AG 40, and POC status summary handoff files
+  AG 39, AG 40, AG 41, and POC status summary handoff files
 - review-only and no-promotion guardrails are enforced in the batch manifests
   and review packets
 - ignored working outputs stay under `data/work/`
@@ -373,7 +381,7 @@ documents remain external to Git.
 
 ## Human Review Posture
 
-- Reviewers should start from the forty-five review indexes listed above.
+- Reviewers should start from the forty-six review indexes listed above.
 - The review packets remain the detailed evidence layer behind those
   summaries.
 - All batch content remains source-bound and review-only unless a separate
@@ -595,6 +603,17 @@ boundary stay review-only until a human reviewer confirms the wording
 against the page image. AG 40 is complete as batches `batch-135` and
 `batch-136`, and the tracked review index and self-review note are
 `docs/review/ag40_review_index.md` and `docs/review/ag40_self_review.md`.
+
+## AG 41 Note
+
+AG 41 was added after the AG 40 handoff was already in place. Its tracked
+review index and self-review note are now part of the same review-only
+hand-off set as the other completed waves. The page-image wording backstop
+remains visible, line references were not available, and the
+background/scope/projection slice stays review-only until a human reviewer
+confirms the wording against the page image. AG 41 is complete as batch
+`batch-137`, and the tracked review index and self-review note are
+`docs/review/ag41_review_index.md` and `docs/review/ag41_self_review.md`.
 
 ## Promotion Gates
 

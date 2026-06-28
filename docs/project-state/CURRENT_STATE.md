@@ -10,7 +10,7 @@
 
 ## Latest known commit before this batch
 
-`3670839`
+`48fd8b1`
 
 ## Validation status
 
@@ -292,10 +292,12 @@ The controlled VM-21 sequence is complete. The controlled VM-22 sequence is
 complete: batches 038-054 are done, the tracked VM-22 review index now
 summarizes the ignored batch packets, and the resulting ignored working
 outputs remain review-only. The tracked valuation-regulation repository POC
-summary now consolidates the forty-five review indexes into a single handoff
+summary now consolidates the forty-six review indexes into a single handoff
 view. AG 40 is now complete as batches 135-136 in ignored working storage,
 and the tracked review index plus self-review note are now part of the
-handoff set. AG 41 is the next likely candidate if the continuation pass
+handoff set. AG 41 is now complete as batch-137 in ignored working storage,
+and the tracked review index plus self-review note are now part of the
+handoff set. AG 42 is the next likely candidate if the continuation pass
 keeps going.
 AG 20 is now complete as batch-098. Its tracked review index and self-review
 note summarize the seven-page joint-life-functions guideline without
@@ -406,14 +408,14 @@ self-review note are now part of the handoff set, the 2021 Law Manual
 reprint stayed excluded as companion material, and AG 38 is now complete as
 batches 130-133. Its tracked review index and self-review note are now part
 of the handoff set, the page-image wording backstop remained visible because
-line references were unavailable, and AG 40 is the next likely candidate if
+line references were unavailable, and AG 42 is the next likely candidate if
 the continuation pass keeps going. The new low-quality PDF text-layer skill
 remains in place so noisy OCR sources stay page-image-backed and review-only.
 
 AG 39 batch-134 has completed in ignored working storage, and the tracked
 AG 39 review index and self-review note are now part of the handoff set. The
 page-image wording backstop stays visible, treats line references as not
-expected, and keeps the batch review-only by default. AG 40 is the next
+expected, and keeps the batch review-only by default. AG 42 is the next
 likely candidate if the continuation pass keeps going.
 
 Batch-123 is now complete in ignored working storage. The foundation and

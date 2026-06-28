@@ -551,3 +551,8 @@
 - 2026-06-28: Committed the AG 40 review handoff artifacts as `3670839`,
   keeping the review index, self-review note, POC summary, and project-state
   docs aligned before moving on to AG 41.
+- 2026-06-28: Completed the AG 41 review-only wave as batch-137, created the
+  tracked AG 41 review index and self-review note, refreshed the repository
+  POC summary and project-state docs, and kept the existing low-quality PDF
+  text-layer skill unchanged because it already covers the page-image
+  backstop and line-reference gap.

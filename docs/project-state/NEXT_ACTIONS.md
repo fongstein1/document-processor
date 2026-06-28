@@ -3,8 +3,10 @@
 ## Next immediate task
 
 AG 40 is now complete as batches 135-136 in ignored working storage. Its
-tracked review index and self-review note now form part of the handoff set,
-and AG 41 is the next likely candidate if the continuation pass keeps going.
+tracked review index and self-review note now form part of the handoff set.
+AG 41 is now complete as batch-137 in ignored working storage. Its tracked
+review index and self-review note now form part of the handoff set, and AG 42
+is the next likely candidate if the continuation pass keeps going.
 
 AG 06 is complete in ignored working storage and its review index plus
 self-review note now form the current handoff set. AG 07 is complete in
@@ -63,7 +65,7 @@ planning layer has been drafted for the 13-page Model 830 source file.
 AG 39 batch-134 has now completed in ignored working storage, and its
 tracked review index and self-review note are now part of the handoff set.
 The page-image wording backstop stays visible because line references are not
-expected, and AG 41 is the next likely candidate if the continuation pass
+expected, and AG 42 is the next likely candidate if the continuation pass
 keeps going.
 
 ## Build tasks
@@ -94,7 +96,7 @@ keeps going.
 - AG 37 is now complete as batches 127-129. Its tracked review index and
   self-review note now form part of the handoff set. AG 38 is now complete as
   batches 130-133. Its tracked review index and self-review note now form
-  part of the handoff set, and AG 41 is the next likely candidate if the
+  part of the handoff set, and AG 42 is the next likely candidate if the
   continuation pass keeps going.
 
 - AG 36 batch-123 is now complete in ignored working storage. The next
