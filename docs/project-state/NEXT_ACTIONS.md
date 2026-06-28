@@ -20,8 +20,9 @@ set, and AG 03, AG 01, AG 02, and AG 04 remain captured as well. AG 52 is
 already captured in the mixed pilot batch and should not be reprocessed.
 The AG 18 review-only step is complete in the tracked review handoff set.
 The AG 19 review-only step is complete in the tracked review handoff set.
-The AG 20 guideline has been confirmed as pages 1-7 and is the next
-short guideline candidate to plan as batch-098.
+The AG 20 review-only step is complete in the tracked review handoff set.
+The next short guideline candidate should be selected from the remaining AG
+files if the continuation pass keeps going.
 
 ## Build tasks
 
@@ -93,6 +94,8 @@ short guideline candidate to plan as batch-098.
   `docs/review/ag18_self_review.md` as the current AG 18 handoff set.
 - Treat `docs/review/ag19_review_index.md` and
   `docs/review/ag19_self_review.md` as the current AG 19 handoff set.
+- Treat `docs/review/ag20_review_index.md` and
+  `docs/review/ag20_self_review.md` as the current AG 20 handoff set.
 - Treat `docs/processor/ag17_extraction_plan.md` and
   `config/ag17-batch-plan.json` as the current AG 17 planning set.
 - Treat `docs/processor/ag18_extraction_plan.md` and

@@ -10,7 +10,7 @@
 
 ## Latest known commit before this batch
 
-`4034cc1`
+`606416b`
 
 ## Validation status
 
@@ -28,9 +28,9 @@ review-handoff artifacts, the AG 15 planning and review-handoff
 artifacts, the AG 16 planning, execution, and review-handoff artifacts, and
 the AG 17 planning, execution, and review-handoff artifacts, the AG 18
 planning, execution, and review-handoff artifacts, and the AG 19 planning
-and review-handoff artifacts validate cleanly. The AG 20 planning layer has
-now been drafted around pages 1-7 and will be validated before batch-098
-runs.
+and review-handoff artifacts validate cleanly. The AG 20 review-only
+batch-098 handoff now stays in ignored working storage, and the tracked review
+index plus self-review note summarize the seven-page guideline.
 
 - `npm run pilot:course-core`: passed; created the core VM course pilot batch
   outputs in `data/work/batches/batch-002/`
@@ -103,6 +103,8 @@ runs.
 - `npm run check`: passed after the AG 18 planning refresh; confirmed the schemas, templates, demo fixtures, review-packet contracts, the AG 06 / AG 07 / AG 08 / AG 09 / AG 10 / AG 11 / AG 12 / AG 13 / AG 14 / AG 15 / AG 16 / AG 17 review-handoff artifacts, the new AG 18 planning artifacts, the no-promotion guardrails, and the synchronized batch definitions for batches 055-096
 - `npm run check`: passed after the AG 18 review-handoff refresh; confirmed the schemas, templates, demo fixtures, review-packet contracts, the AG 06 / AG 07 / AG 08 / AG 09 / AG 10 / AG 11 / AG 12 / AG 13 / AG 14 / AG 15 / AG 16 / AG 17 / AG 18 review-handoff artifacts, the no-promotion guardrails, and the synchronized batch definitions for batches 055-096
 - `npm run check`: passed after the AG 19 planning refresh; confirmed the schemas, templates, demo fixtures, review-packet contracts, the AG 06 / AG 07 / AG 08 / AG 09 / AG 10 / AG 11 / AG 12 / AG 13 / AG 14 / AG 15 / AG 16 / AG 17 / AG 18 review-handoff artifacts, the new AG 19 planning artifacts, the no-promotion guardrails, and the synchronized batch definitions for batches 055-097
+- `npm run ag20:batch`: passed; created the AG 20 review-only batch outputs in `data/work/batches/batch-098/`
+- `npm run check`: passed after the AG 20 review-handoff refresh; confirmed the schemas, templates, demo fixtures, review-packet contracts, the AG 06 / AG 07 / AG 08 / AG 09 / AG 10 / AG 11 / AG 12 / AG 13 / AG 14 / AG 15 / AG 16 / AG 17 / AG 18 / AG 19 review-handoff artifacts, the new AG 20 review-handoff artifacts, the no-promotion guardrails, and the synchronized batch definitions for batches 055-098
 
 The control-plan refresh commit re-bound batches 006-012 to the actual PDF
 section order and added runner shortcuts for the remaining controlled slices.
@@ -265,7 +267,7 @@ continuation pass keeps going.
 - The tracked VM-22 review index now gives the reviewer a single summary view
   of the ignored batch packets without changing their review-only status.
 - The tracked valuation-regulation repository POC summary now consolidates the
-  twelve review indexes into a single proof-of-concept handoff view.
+  twenty-five review indexes into a single proof-of-concept handoff view.
 - The repository will be clean on `main` once this state refresh is committed,
   aside from ignored working files.
 
@@ -275,12 +277,13 @@ The controlled VM-21 sequence is complete. The controlled VM-22 sequence is
 complete: batches 038-054 are done, the tracked VM-22 review index now
 summarizes the ignored batch packets, and the resulting ignored working
 outputs remain review-only. The tracked valuation-regulation repository POC
-summary now consolidates the twelve review indexes into a single handoff view.
-AG 20 is the next short guideline candidate; its page range is confirmed as
-pages 1-7 and its planning layer is being prepared as batch-098. AG 05 is
-complete in ignored working storage and its tracked review index plus
-self-review note now summarize that wave. Keep VM-25 and later chapters out
-of scope unless a future plan explicitly opens them.
+summary now consolidates the twenty-five review indexes into a single handoff view.
+AG 20 is now complete as batch-098. Its tracked review index and self-review
+note summarize the seven-page joint-life-functions guideline without
+promoting any extracted content. AG 05 is complete in ignored working
+storage and its tracked review index plus self-review note now summarize that
+wave. Keep VM-25 and later chapters out of scope unless a future plan
+explicitly opens them.
 
 The VM-20 companion practice-note wave is complete: batches `batch-055`
 through `batch-075` were processed review-only, and the tracked practice-note
