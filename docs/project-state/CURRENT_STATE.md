@@ -142,8 +142,8 @@ AG 14 is now complete as a review-only historical surveillance procedure
 unit. Its tracked review index and self-review note summarize the ignored
 batch outputs without promoting any extracted content.
 
-The next short guideline candidate will be selected from the remaining AG
-files if the continuation pass keeps going.
+AG 23 is now the next short guideline candidate; its planning layer is being
+drafted around page 1 so batch-101 can be validated before extraction starts.
 
 The AG 15 review-only step is now complete as batch-093. Its tracked review
 index and self-review note summarize the historical illustration guideline
@@ -293,6 +293,8 @@ self-review note now summarize that wave. Keep VM-25 and later chapters out
 of scope unless a future plan explicitly opens them.
 AG 22 is complete as batch-100; keep it review-only by default and do not
 widen beyond the one-page indeterminate-premiums note.
+AG 23 is now the next short guideline candidate; its planning layer is being
+drafted around page 1 so batch-101 can be validated before extraction starts.
 
 The VM-20 companion practice-note wave is complete: batches `batch-055`
 through `batch-075` were processed review-only, and the tracked practice-note
