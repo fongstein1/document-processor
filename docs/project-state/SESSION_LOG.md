@@ -653,3 +653,8 @@
   future VM-30 incorporation note stayed review-only context, AG 52 remained
   out of scope, and AG 53 is now the next likely candidate if the
   continuation pass keeps going.
+- 2026-06-28: Inspected AG 53, confirmed the active 7-page
+  `AG 53-AAT as adopted by LATF-20220616.pdf` guideline, drafted the AG 53
+  planning layer for batches 165-167, and kept the wave review-only by
+  default with page locators as the primary anchor because line references
+  are not expected for this PDF runner path.
