@@ -297,3 +297,10 @@
   guideline, and drafted the AG 21 planning layer so batch-099 can be
   validated before extraction starts. The page-image wording backstop remains
   visible because the text layer is noisy.
+- 2026-06-27: Ran the AG 21 one-page CRVM reserve-comparison batch (`batch-099`)
+  in ignored working storage, kept it review-only, and created the tracked
+  AG 21 review index plus self-review note as the new handoff artifacts. The
+  page-image backstop stayed visible, and the repository proof-of-concept
+  summary plus project-state docs were refreshed so the handoff now counts AG
+  21 alongside the other completed review indexes. No new tracked skill file
+  update was necessary.

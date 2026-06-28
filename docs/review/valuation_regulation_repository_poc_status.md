@@ -12,7 +12,7 @@ regulation repository. It consolidates the completed review-only extraction
 waves without changing the status of the underlying batch outputs or review
 indexes.
 
-The handoff now spans 25 review indexes.
+The handoff now spans 26 review indexes.
 
 This summary is review-only, not learner-facing, not app-ready, not RAG-ready,
 and not promoted.
@@ -65,6 +65,8 @@ review indexes:
 - `docs/review/ag19_self_review.md`
 - `docs/review/ag20_review_index.md`
 - `docs/review/ag20_self_review.md`
+- `docs/review/ag21_review_index.md`
+- `docs/review/ag21_self_review.md`
 
 ## Executive Status
 
@@ -153,6 +155,7 @@ What source families / chapters have been processed:
 - AG 18 one-page current CRVM guideline, `batch-096`
 - AG 19 one-page mortality-table guideline, `batch-097`
 - AG 20 seven-page joint-life-functions guideline, `batch-098`
+- AG 21 one-page CRVM reserve-comparison guideline, `batch-099`
 
 What remains review-only:
 
@@ -206,6 +209,7 @@ What is explicitly out of scope:
 | AG 10 single-page guideline | `p. 1` | `batch-088` | `docs/review/ag10_review_index.md` | Complete; review-only | Nonforfeiture interpretation, cash surrender benefits, additional amounts, maturity values, and noisy text-layer caveat |
 | AG 19 single-page mortality-table guideline | `p. 1` | `batch-097` | `docs/review/ag19_review_index.md` | Complete; review-only | 1980 CSO mortality-table context, select-factor interpretation, and page-image caveat |
 | AG 20 seven-page joint-life-functions guideline | `pp. 1-7` | `batch-098` | `docs/review/ag20_review_index.md` | Complete; review-only | Joint-life-functions context, blank separator page, table continuity, and page-boundary review note |
+| AG 21 one-page CRVM reserve-comparison guideline | `p. 1` | `batch-099` | `docs/review/ag21_review_index.md` | Complete; review-only | CRVM reserve-comparison context, noisy OCR, page-image backstop, and page-boundary review note |
 
 ## Completed Assets
 
@@ -240,6 +244,7 @@ The repository now includes the core processor asset set:
 - the tracked AG 18 review index and self-review note in `docs/review/`
 - the tracked AG 19 review index and self-review note in `docs/review/`
 - the tracked AG 20 review index and self-review note in `docs/review/`
+- the tracked AG 21 review index and self-review note in `docs/review/`
 - VM chapter planning artifacts in `docs/processor/` and `config/`
 - project-state docs in `docs/project-state/`
 - runner / validator scripts in `scripts/`
@@ -250,11 +255,11 @@ documents remain external to Git.
 ## Validation Posture
 
 - `npm run check` passes
-- the scaffold reports 98 batches validated
+- the scaffold reports 99 batches validated
 - the validator now checks the tracked VM-20, supporting, VM-21, VM-22,
   practice-note, AG 03, AG 01, AG 02, AG 04, AG 05, AG 06, AG 07, AG 08,
   AG 09, AG 10, AG 11, AG 12, AG 13, AG 14, AG 15, AG 16, AG 17, AG 18,
-  AG 19, AG 20, and POC status summary handoff files
+  AG 19, AG 20, AG 21, and POC status summary handoff files
 - review-only and no-promotion guardrails are enforced in the batch manifests
   and review packets
 - ignored working outputs stay under `data/work/`
@@ -263,7 +268,7 @@ documents remain external to Git.
 
 ## Human Review Posture
 
-- Reviewers should start from the twenty-five review indexes listed above.
+- Reviewers should start from the twenty-six review indexes listed above.
 - The review packets remain the detailed evidence layer behind those
   summaries.
 - All batch content remains source-bound and review-only unless a separate
@@ -305,6 +310,10 @@ AG 19 was added after the original POC package was first assembled. Its tracked 
 ## AG 20 Note
 
 AG 20 was added after the original POC package was first assembled. Its tracked review index and self-review note are now part of the same review-only hand-off set as the other completed waves, and they preserve the seven-page joint-life-functions guideline as a review-only note. The blank page 3 separator remains a visible boundary marker, and the Actuarial Guideline XX Appendix 5 tables, including A5-1, A5-6, A5-7, and the equivalent equal ages language, remain review-only context.
+
+## AG 21 Note
+
+AG 21 was added after the original POC package was first assembled. Its tracked review index and self-review note are now part of the same review-only hand-off set as the other completed waves, and they preserve the one-page CRVM reserve-comparison guideline as a review-only note. The page-image backstop remains visible, and the Standard Valuation Law / modified net premiums / 1980 CSO Tables / full preliminary term method language remains review-only context.
 
 ## Promotion Gates
 
