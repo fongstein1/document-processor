@@ -658,3 +658,9 @@
   planning layer for batches 165-167, and kept the wave review-only by
   default with page locators as the primary anchor because line references
   are not expected for this PDF runner path.
+- 2026-06-28: Completed the AG 53 review-only wave as batches 165-167,
+  created the tracked AG 53 review index and self-review note, refreshed the
+  repository POC summary and project-state docs, and kept both the
+  page-locator backstop and page-image wording backstop visible because line
+  references were not expected. AG 54 is now the next likely candidate if
+  the continuation pass keeps going.

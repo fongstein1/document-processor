@@ -2,11 +2,11 @@
 
 ## Next immediate task
 
-AG 53 has now been drafted as the next controlled AG unit. The planning
-layer targets `AG 53-AAT as adopted by LATF-20220616.pdf`, keeps it
-review-only by default, and maps the wave to batches 165-167 while
-preserving page locators as the primary anchor. The plan is ready for
-validation and execution if the continuation pass keeps going.
+AG 53 is now complete as batches 165-167 in ignored working storage. Its
+tracked review index and self-review note now form part of the handoff set,
+the page-locator backstop remained visible because stable line references
+were not available, the page-image wording backstop remained visible, and
+AG 54 is now the next likely candidate if the continuation pass keeps going.
 
 AG 40 is now complete as batches 135-136 in ignored working storage. Its
 tracked review index and self-review note now form part of the handoff set.
@@ -33,8 +33,8 @@ working storage. Its tracked review index and self-review note now form part
 of the handoff set. AG 51 is now complete as batches 163-164 in ignored working
 of the handoff set, the page-locator backstop remained visible because
 stable line references were not available, the future VM-30 incorporation
-note stayed review-only context, and AG 53 is now the next likely candidate
-if the continuation pass keeps going.
+note stayed review-only context, and AG 53 is now complete as batches
+165-167 in ignored working storage.
 
 AG 06 is complete in ignored working storage and its review index plus
 self-review note now form the current handoff set. AG 07 is complete in
