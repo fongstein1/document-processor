@@ -450,7 +450,7 @@ self-review note are now part of the handoff set, and AG 50 is the next
 likely candidate if the continuation pass keeps going.
 The AG 50 planning layer has now been executed as batches 160-162, and its
 tracked review index and self-review note are now part of the handoff set.
-AG 51 is the next likely candidate if the continuation pass keeps going.
+AG 51 planning is now being added as the next review-only source unit.
 
 AG 39 batch-134 has completed in ignored working storage, and the tracked
 AG 39 review index and self-review note are now part of the handoff set. The

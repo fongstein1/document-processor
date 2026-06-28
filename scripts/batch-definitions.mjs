@@ -49,6 +49,7 @@ import { ag47BatchDefinitions } from './ag47-batch-definitions.mjs'
 import { ag48BatchDefinitions } from './ag48-batch-definitions.mjs'
 import { ag49BatchDefinitions } from './ag49-batch-definitions.mjs'
 import { ag50BatchDefinitions } from './ag50-batch-definitions.mjs'
+import { ag51BatchDefinitions } from './ag51-batch-definitions.mjs'
 import { vm20PracticeNoteBatchDefinitions } from './vm20-practice-note-batch-definitions.mjs'
 import { vm21BatchDefinitions } from './vm21-batch-definitions.mjs'
 import { vm22BatchDefinitions } from './vm22-batch-definitions.mjs'
@@ -2232,6 +2233,7 @@ export const batchDefinitions = {
   ...ag48BatchDefinitions,
   ...ag49BatchDefinitions,
   ...ag50BatchDefinitions,
+  ...ag51BatchDefinitions,
   ...vm20PracticeNoteBatchDefinitions,
   ...supportingBatchDefinitions,
   ...vm21BatchDefinitions,

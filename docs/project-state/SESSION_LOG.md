@@ -641,3 +641,8 @@
   wording backstop visible because the text layer is encoding-noisy and line
   references were not available. The existing low-quality PDF text-layer
   handling skill remained sufficient, so no new skill instruction was needed.
+- 2026-06-28: Inspected AG 51, confirmed the 5-page active LTC asset-
+  adequacy-testing guideline, drafted the AG 51 planning layer for batches
+  163-164, and kept the wave review-only by default with page locators as the
+  primary anchor because the PDF runner is not expected to emit stable line
+  references.
