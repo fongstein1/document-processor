@@ -608,3 +608,9 @@
   batch-153 can be validated before extraction starts. The page-image
   wording backstop remains visible because the text layer is noisy / encoded
   and stable line references are not expected.
+- 2026-06-28: Completed the AG 47 review-only wave as batch-153, created the
+  tracked AG 47 review index and self-review note, refreshed the repository
+  POC summary and project-state docs, and kept the page-image wording
+  backstop visible because the text layer is encoding-noisy and line
+  references were not available. AG 48 is now the next likely candidate if
+  the continuation pass keeps going.

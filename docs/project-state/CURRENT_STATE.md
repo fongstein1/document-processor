@@ -10,7 +10,7 @@
 
 ## Latest known commit before this batch
 
-`8975a0e`
+`4deb12d`
 
 ## Validation status
 
@@ -292,7 +292,7 @@ The controlled VM-21 sequence is complete. The controlled VM-22 sequence is
 complete: batches 038-054 are done, the tracked VM-22 review index now
 summarizes the ignored batch packets, and the resulting ignored working
 outputs remain review-only. The tracked valuation-regulation repository POC
-summary now consolidates the forty-six review indexes into a single handoff
+summary now consolidates the fifty-two review indexes into a single handoff
 view. AG 40 is now complete as batches 135-136 in ignored working storage,
 and the tracked review index plus self-review note are now part of the
 handoff set. AG 41 is now complete as batch-137 in ignored working storage,
@@ -300,8 +300,13 @@ and the tracked review index plus self-review note are now part of the
 handoff set. AG 42 is complete as batches 138-139, and its tracked review
 index and self-review note are now part of the handoff set. AG 44 is
 complete as batches 149-150, and its tracked review index and self-review
-note are now part of the handoff set. AG 45 is the next likely candidate if
-the continuation pass keeps going.
+note are now part of the handoff set. AG 48 is the next likely candidate if
+the continuation pass keeps going. AG 47 is now complete as batch-153 in
+ignored working storage. Its tracked review index and self-review note are
+now part of the handoff set, and the page-image wording backstop remains
+visible because the text layer is encoding-noisy, line references were not
+available, and AG 48 is the next likely candidate if the continuation pass
+keeps going.
 AG 20 is now complete as batch-098. Its tracked review index and self-review
 note summarize the seven-page joint-life-functions guideline without
 promoting any extracted content. AG 21 is now complete as batch-099. Its
@@ -429,9 +434,11 @@ AG 45 is now complete as batch-151 in ignored working storage. Its tracked
 review index and self-review note are now part of the handoff set. AG 46 is
 complete as batch-152 in ignored working storage, and its tracked review
 index and self-review note are now part of the handoff set. The page-image
-wording backstop remains visible, and AG 47 is the next likely candidate if
-the continuation pass keeps going. AG 47 is now being added as a review-only
-planning layer with batch-153 as the next controlled slice.
+wording backstop remains visible, and AG 48 is the next likely candidate if
+the continuation pass keeps going. AG 47 is complete as batch-153 in
+ignored working storage, and its tracked review index and self-review note
+are now part of the handoff set. AG 48 is the next likely candidate if the
+continuation pass keeps going.
 
 AG 39 batch-134 has completed in ignored working storage, and the tracked
 AG 39 review index and self-review note are now part of the handoff set. The

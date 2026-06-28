@@ -12,7 +12,8 @@ regulation repository. It consolidates the completed review-only extraction
 waves without changing the status of the underlying batch outputs or review
 indexes.
 
-The handoff now spans 51 review indexes, up from 50 review indexes. The
+The handoff now spans 52 review indexes, up from 51 review indexes. The
+earlier 51 review indexes checkpoint remains part of the handoff history, the
 earlier 50 review indexes checkpoint remains part of the handoff history, the
 earlier 49 review indexes checkpoint remains part of the handoff history, the
 earlier 48 review indexes checkpoint remains part of the handoff history, the
@@ -382,8 +383,8 @@ documents remain external to Git.
 ## Validation Posture
 
 - `npm run check` passes
-- the scaffold previously reported 116 batches validated; the current run
-  reports 152 batches validated
+- the scaffold previously reported 152 batches validated; the current run
+  reports 153 batches validated
 - the validator now checks the tracked VM-20, supporting, VM-21, VM-22,
   practice-note, AG 03, AG 01, AG 02, AG 04, AG 05, AG 06, AG 07, AG 08,
   AG 09, AG 10, AG 11, AG 12, AG 13, AG 14, AG 15, AG 16, AG 17, AG 18,
@@ -399,7 +400,7 @@ documents remain external to Git.
 
 ## Human Review Posture
 
-- Reviewers should start from the forty-eight review indexes listed above.
+- Reviewers should start from the fifty-two review indexes listed above.
 - The review packets remain the detailed evidence layer behind those
   summaries.
 - All batch content remains source-bound and review-only unless a separate
@@ -682,8 +683,20 @@ candidate if the continuation pass keeps going.
 AG 46 is complete as batch-152 in ignored working storage. Its tracked
 review index and self-review note are now part of the handoff set. The page-
 image wording backstop remains visible because the text layer is encoding-
-noisy, line references were not available, and AG 47 is the next likely
+noisy, line references were not available, and AG 48 is the next likely
+candidate if the continuation pass keeps going. AG 47 is complete as
+batch-153 in ignored working storage, and its tracked review index and
+self-review note are now part of the handoff set. AG 48 is the next likely
 candidate if the continuation pass keeps going.
+
+## AG 47 Note
+
+AG 47 is complete as batch-153 in ignored working storage. Its tracked
+review index and self-review note are now part of the handoff set:
+`docs/review/ag47_review_index.md` and `docs/review/ag47_self_review.md`.
+The page-image wording backstop remains visible because the text layer is
+encoding-noisy, line references were not available, and AG 48 is the next
+likely candidate if the continuation pass keeps going.
 
 ## Promotion Gates
 
