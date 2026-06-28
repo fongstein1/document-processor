@@ -43,6 +43,11 @@ note now form part of the review handoff set, the page-image wording backstop
 stayed visible, and AG 31 is the next likely candidate if the continuation
 pass keeps going.
 
+AG 31 is now the next planned one-page guideline unit. Its planning layer is
+being assembled so batch-113 can be validated before extraction starts, and
+the page-image wording backstop is expected to remain visible because the
+page contains encoding noise.
+
 ## Build tasks
 
 - Keep batches 001 through 012 review-only unless a human reviewer explicitly

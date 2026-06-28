@@ -415,3 +415,8 @@
   validated batches are now visible in the handoff layer. No new tracked
   skill file update was necessary because the existing source-bound rule
   already covers encoded text layers and the page-image backstop.
+- 2026-06-27: Inspected AG 31, confirmed the one-page policy-form approval
+  caveat guideline, and drafted the AG 31 planning layer so batch-113 can be
+  validated before extraction starts. The page contains encoding noise, so
+  the page-image wording backstop should remain visible and the plan stays
+  review-only until the plan is committed.
