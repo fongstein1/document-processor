@@ -434,3 +434,9 @@
   claims guideline with page 3 reserved for AG 33, drafted the AG 32
   planning layer and batch registry for batch-114, and started wiring the
   shared validator so the plan can be committed before extraction begins.
+- 2026-06-27: Ran the AG 32 two-page immediate-payment-of-claims batch
+  (`batch-114`) in ignored working storage, kept it review-only, created the
+  tracked AG 32 review index plus self-review note as the new handoff
+  artifacts, and refreshed the repository POC summary and scaffold validator
+  so the thirty-seventh review index and 114 validated batches are now
+  visible in the handoff layer.
