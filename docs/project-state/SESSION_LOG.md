@@ -365,3 +365,11 @@
   validated before extraction starts. The page-image wording backstop stays
   visible because the text layer is noisy / encoded, and the plan keeps the
   overview, interest-accrual, and lien-mechanics slices separate.
+- 2026-06-27: Ran the AG 27 accelerated-benefits wave sequentially
+  (batch-107 through batch-109) in ignored working storage, kept every batch
+  review-only, created the tracked AG 27 review index plus self-review note
+  as the new handoff artifacts, and refreshed the repository proof-of-
+  concept summary and project-state docs so the thirty-second review index
+  and 109 validated batches are now visible in the handoff layer. No new
+  tracked skill file update was necessary because the existing source-bound
+  rule already covers noisy OCR and page-image backstops.

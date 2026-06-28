@@ -12,7 +12,7 @@ regulation repository. It consolidates the completed review-only extraction
 waves without changing the status of the underlying batch outputs or review
 indexes.
 
-The handoff now spans 31 review indexes.
+The handoff now spans 32 review indexes.
 
 This summary is review-only, not learner-facing, not app-ready, not RAG-ready,
 and not promoted.
@@ -231,6 +231,7 @@ What is explicitly out of scope:
 | AG 24 six-page variable life nonforfeiture values guideline | `pp. 1-6` | `batch-102` through `batch-104` | `docs/review/ag24_review_index.md` | Complete; review-only | Variable life nonforfeiture values, retrospective and prospective method framing, surrender-charge caps, paid-up benefits, noisy OCR, and formula-context caution |
 | AG 25 three-page indexed increasing death-benefits guideline | `pp. 1-3` | `batch-105` | `docs/review/ag25_review_index.md` | Complete; review-only | Indexed increasing death benefits, CPI-based annual increase assumptions, threshold amount language, low-amount exception, noisy OCR, and page-image backstop |
 | AG 26 one-page operative-dates guideline | `p. 1` | `batch-106` | `docs/review/ag26_review_index.md` | Complete; review-only | Operative-date election rule, dynamic interest-rate boundary, noisy OCR, page-image backstop, and Standard Valuation Law / Standard Non-Forfeiture Law cross references |
+| AG 27 five-page accelerated-benefits guideline | `pp. 1-5` | `batch-107` through `batch-109` | `docs/review/ag27_review_index.md` | Complete; review-only | Accelerated-benefits overview, reserve framing, interest-accrual disclosure, lien mechanics, noisy OCR, page-image backstop, and AG 28 closing boundary |
 
 ## Completed Assets
 
@@ -271,6 +272,8 @@ The repository now includes the core processor asset set:
 - the tracked AG 24 review index and self-review note in `docs/review/`
 - the tracked AG 25 review index and self-review note in `docs/review/`
 - the tracked AG 26 review index and self-review note in `docs/review/`
+- the tracked AG 27 review index at `docs/review/ag27_review_index.md` and
+  self-review note at `docs/review/ag27_self_review.md`
 - VM chapter planning artifacts in `docs/processor/` and `config/`
 - project-state docs in `docs/project-state/`
 - runner / validator scripts in `scripts/`
@@ -281,7 +284,7 @@ documents remain external to Git.
 ## Validation Posture
 
 - `npm run check` passes
-- the scaffold reports 106 batches validated
+- the scaffold reports 109 batches validated
 - the validator now checks the tracked VM-20, supporting, VM-21, VM-22,
   practice-note, AG 03, AG 01, AG 02, AG 04, AG 05, AG 06, AG 07, AG 08,
   AG 09, AG 10, AG 11, AG 12, AG 13, AG 14, AG 15, AG 16, AG 17, AG 18,
@@ -294,7 +297,7 @@ documents remain external to Git.
 
 ## Human Review Posture
 
-- Reviewers should start from the thirty-one review indexes listed above.
+- Reviewers should start from the thirty-two review indexes listed above.
 - The review packets remain the detailed evidence layer behind those
   summaries.
 - All batch content remains source-bound and review-only unless a separate
@@ -377,6 +380,20 @@ Non-Forfeiture Law cross references remain review-only context.
 
 AG 26 is now complete as batch-106.
 Its tracked review index and self-review note summarize the one-page
+guideline without promoting any extracted content.
+
+## AG 27 Note
+
+AG 27 was added after the original POC package was first assembled. Its
+tracked review index and self-review note are now part of the same
+review-only hand-off set as the other completed waves, and they preserve the
+five-page accelerated-benefits guideline as a review-only note. The
+page-image backstop remains visible, and the accelerated-benefits overview,
+interest-accrual disclosure, lien mechanics, and AG 28 closing boundary
+remain review-only context.
+
+AG 27 is now complete as batches `batch-107`, `batch-108`, and `batch-109`.
+Its tracked review index and self-review note summarize the five-page
 guideline without promoting any extracted content.
 
 ## Promotion Gates
