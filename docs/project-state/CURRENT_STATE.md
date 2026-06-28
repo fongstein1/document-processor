@@ -292,7 +292,7 @@ The controlled VM-21 sequence is complete. The controlled VM-22 sequence is
 complete: batches 038-054 are done, the tracked VM-22 review index now
 summarizes the ignored batch packets, and the resulting ignored working
 outputs remain review-only. The tracked valuation-regulation repository POC
-summary now consolidates the fifty-four review indexes into a single handoff
+summary now consolidates the fifty-six review indexes into a single handoff
 view. AG 40 is now complete as batches 135-136 in ignored working storage,
 and the tracked review index plus self-review note are now part of the
 handoff set. AG 41 is now complete as batch-137 in ignored working storage,
@@ -306,7 +306,12 @@ ignored working storage. Its tracked review index and self-review note are
 now part of the handoff set, and the page-image wording backstop remains
 visible because the text layer is encoding-noisy, line references were not
 available, and AG 48 is the next likely candidate if the continuation pass
-keeps going.
+keeps going. AG 51 is now complete as batches 163-164 in ignored working
+storage. Its tracked review index and self-review note are now part of the
+handoff set, the page-locator backstop remained visible because stable line
+references were not available, the future VM-30 incorporation note stayed
+review-only context, and AG 53 is the next likely candidate if the
+continuation pass keeps going.
 AG 20 is now complete as batch-098. Its tracked review index and self-review
 note summarize the seven-page joint-life-functions guideline without
 promoting any extracted content. AG 21 is now complete as batch-099. Its
@@ -450,7 +455,12 @@ self-review note are now part of the handoff set, and AG 50 is the next
 likely candidate if the continuation pass keeps going.
 The AG 50 planning layer has now been executed as batches 160-162, and its
 tracked review index and self-review note are now part of the handoff set.
-AG 51 planning is now being added as the next review-only source unit.
+AG 51 is now complete as batches 163-164 in ignored working storage. Its
+tracked review index and self-review note now form part of the handoff set,
+the page-locator backstop remained visible because stable line references
+were not available, the future VM-30 incorporation note stayed review-only
+context, and AG 53 is the next likely candidate if the continuation pass
+keeps going.
 
 AG 39 batch-134 has completed in ignored working storage, and the tracked
 AG 39 review index and self-review note are now part of the handoff set. The

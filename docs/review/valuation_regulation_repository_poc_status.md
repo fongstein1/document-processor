@@ -12,7 +12,7 @@ regulation repository. It consolidates the completed review-only extraction
 waves without changing the status of the underlying batch outputs or review
 indexes.
 
-The handoff now spans 55 review indexes, up from 54 review indexes. The
+The handoff now spans 56 review indexes, up from 55 review indexes. The
 earlier 51 review indexes checkpoint remains part of the handoff history, the
 earlier 50 review indexes checkpoint remains part of the handoff history, the
 earlier 49 review indexes checkpoint remains part of the handoff history, the
@@ -741,7 +741,23 @@ now part of the handoff set: `docs/review/ag50_review_index.md` and
 `docs/review/ag50_self_review.md`. The page-image wording backstop remains
 visible because the text layer is encoding-noisy, line references were not
 available, the 2013 IDI Valuation Table reprint stayed out of scope, and AG
-51 is the next likely candidate if the continuation pass keeps going.
+51 is complete as batches `batch-163` and `batch-164` in ignored working
+storage. Its tracked review index and self-review note are now part of the
+handoff set: `docs/review/ag51_review_index.md` and
+`docs/review/ag51_self_review.md`. The page-locator backstop remained
+visible because stable line references were not available, the future VM-30
+incorporation note stayed review-only context, and AG 53 is the next likely
+candidate if the continuation pass keeps going.
+
+## AG 51 Note
+
+AG 51 is complete as batches `batch-163` and `batch-164` in ignored working
+storage. Its tracked review index and self-review note are now part of the
+handoff set: `docs/review/ag51_review_index.md` and
+`docs/review/ag51_self_review.md`. The page-locator backstop remained
+visible because stable line references were not available, the future VM-30
+incorporation note stayed review-only context, and AG 53 is the next likely
+candidate if the continuation pass keeps going.
 
 ## Promotion Gates
 

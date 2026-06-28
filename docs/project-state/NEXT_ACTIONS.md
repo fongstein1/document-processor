@@ -24,8 +24,11 @@ wave, and AG 49 is now complete as batches 157-159 in ignored working
 storage. Its tracked review index and self-review note now form part of the
 handoff set, and AG 50 is now complete as batches 160-162 in ignored
 working storage. Its tracked review index and self-review note now form part
-of the handoff set. AG 51 planning is now being added as the next controlled
-source unit.
+of the handoff set. AG 51 is now complete as batches 163-164 in ignored working
+of the handoff set, the page-locator backstop remained visible because
+stable line references were not available, the future VM-30 incorporation
+note stayed review-only context, and AG 53 is the next likely candidate if
+the continuation pass keeps going.
 
 AG 06 is complete in ignored working storage and its review index plus
 self-review note now form the current handoff set. AG 07 is complete in

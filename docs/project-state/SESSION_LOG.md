@@ -646,3 +646,10 @@
   163-164, and kept the wave review-only by default with page locators as the
   primary anchor because the PDF runner is not expected to emit stable line
   references.
+- 2026-06-28: Completed the AG 51 review-only wave as batches 163-164,
+  created the tracked AG 51 review index and self-review note, refreshed the
+  repository POC summary and project-state docs, and kept the page-locator
+  backstop visible because stable line references were not available. The
+  future VM-30 incorporation note stayed review-only context, AG 52 remained
+  out of scope, and AG 53 is now the next likely candidate if the
+  continuation pass keeps going.
