@@ -221,10 +221,14 @@ const paths = {
   ag36SelfReviewMd: path.join(repoRoot, 'docs', 'review', 'ag36_self_review.md'),
   ag36BatchPlanJson: path.join(repoRoot, 'config', 'ag36-batch-plan.json'),
   ag36ExtractionPlanMd: path.join(repoRoot, 'docs', 'processor', 'ag36_extraction_plan.md'),
-  ag37BatchPlanJson: path.join(repoRoot, 'config', 'ag37-batch-plan.json'),
-  ag37ExtractionPlanMd: path.join(repoRoot, 'docs', 'processor', 'ag37_extraction_plan.md'),
-  ag37ReviewIndexMd: path.join(repoRoot, 'docs', 'review', 'ag37_review_index.md'),
-  ag37SelfReviewMd: path.join(repoRoot, 'docs', 'review', 'ag37_self_review.md'),
+    ag37BatchPlanJson: path.join(repoRoot, 'config', 'ag37-batch-plan.json'),
+    ag37ExtractionPlanMd: path.join(repoRoot, 'docs', 'processor', 'ag37_extraction_plan.md'),
+    ag37ReviewIndexMd: path.join(repoRoot, 'docs', 'review', 'ag37_review_index.md'),
+    ag37SelfReviewMd: path.join(repoRoot, 'docs', 'review', 'ag37_self_review.md'),
+    ag38BatchPlanJson: path.join(repoRoot, 'config', 'ag38-batch-plan.json'),
+    ag38ExtractionPlanMd: path.join(repoRoot, 'docs', 'processor', 'ag38_extraction_plan.md'),
+    ag38ReviewIndexMd: path.join(repoRoot, 'docs', 'review', 'ag38_review_index.md'),
+    ag38SelfReviewMd: path.join(repoRoot, 'docs', 'review', 'ag38_self_review.md'),
   ag26ReviewIndexMd: path.join(repoRoot, 'docs', 'review', 'ag26_review_index.md'),
   ag26SelfReviewMd: path.join(repoRoot, 'docs', 'review', 'ag26_self_review.md'),
   ag23ReviewIndexMd: path.join(repoRoot, 'docs', 'review', 'ag23_review_index.md'),
@@ -2540,8 +2544,9 @@ const ag32BatchPlan = await readJson(paths.ag32BatchPlanJson)
 const ag33BatchPlan = await readJson(paths.ag33BatchPlanJson)
 const ag34BatchPlan = await readJson(paths.ag34BatchPlanJson)
 const ag35BatchPlan = await readJson(paths.ag35BatchPlanJson)
-const ag36BatchPlan = await readJson(paths.ag36BatchPlanJson)
-const ag37BatchPlan = await readJson(paths.ag37BatchPlanJson)
+  const ag36BatchPlan = await readJson(paths.ag36BatchPlanJson)
+  const ag37BatchPlan = await readJson(paths.ag37BatchPlanJson)
+  const ag38BatchPlan = await readJson(paths.ag38BatchPlanJson)
 
 validateSchemaEnvelope(batchManifestSchema, 'batch-manifest.schema.json')
 validateSchemaEnvelope(sourceInventorySchema, 'source-inventory.schema.json')
@@ -6204,6 +6209,135 @@ const validateAg37SelfReviewMarkdown = async (filePath, label) => {
   ].forEach((phrase) => {
     if (!text.includes(phrase)) {
       problems.push(`${label}: must mention ${phrase}`)
+      }
+    })
+  }
+
+const validateAg38PlanMarkdown = async (filePath, label) => {
+  const text = await readText(filePath)
+  const requiredHeadings = [
+    '## Source Scope',
+    '## Topic Map',
+    '## Proposed Batch Sequence',
+    '## Review Standards',
+    '## Promotion Gates',
+    '## Validation Implications',
+    '## Operating Note',
+  ]
+  requiredHeadings.forEach((heading) => {
+    if (!text.includes(heading)) {
+      problems.push(`${label}: missing heading ${heading}`)
+    }
+  })
+  ;[
+    'review-only',
+    'not learner-facing',
+    'not app-ready',
+    'not RAG-ready',
+    'not promoted',
+    'AG 38',
+    'batch-130',
+    'batch-131',
+    'batch-132',
+    'batch-133',
+    'Actuarial Guideline XXXVIII',
+    'pages 1-3',
+    'pages 4-6',
+    'pages 7-10',
+    'pages 11-13',
+    'page-image',
+    'active',
+    'AG 39 remains out of scope',
+    '2021 Law Manual reprint',
+  ].forEach((phrase) => {
+    if (!text.includes(phrase)) {
+      problems.push(`${label}: must mention ${phrase}`)
+    }
+  })
+}
+
+const validateAg38ReviewIndexMarkdown = async (filePath, label) => {
+  const text = await readText(filePath)
+  const requiredHeadings = [
+    '## Overall AG 38 Extraction Status',
+    '## Batch Table',
+    '## Higher-Caution Section',
+    '## Human Review Checklist',
+    '## Promotion Decision Area',
+    '## Recommended Review Order',
+    '## Relationship to Other Review Indexes',
+    '## Review Notes',
+  ]
+  requiredHeadings.forEach((heading) => {
+    if (!text.includes(heading)) {
+      problems.push(`${label}: missing heading ${heading}`)
+    }
+  })
+  ;[
+    'review-only',
+    'not learner-facing',
+    'not app-ready',
+    'not RAG-ready',
+    'not promoted',
+    'AG 38',
+    'batch-130',
+    'batch-131',
+    'batch-132',
+    'batch-133',
+    'Actuarial Guideline XXXVIII',
+    'pp. 1-3',
+    'pp. 4-6',
+    'pp. 7-10',
+    'pp. 11-13',
+    'page-image',
+    'active',
+    'line references were not available',
+    'AG 39 remains out of scope',
+    'docs/review/ag38_self_review.md',
+    'docs/review/ag37_review_index.md',
+    'docs/review/valuation_regulation_repository_poc_status.md',
+    '2021 Law Manual reprint',
+  ].forEach((phrase) => {
+    if (!text.includes(phrase)) {
+      problems.push(`${label}: must mention ${phrase}`)
+    }
+  })
+}
+
+const validateAg38SelfReviewMarkdown = async (filePath, label) => {
+  const text = await readText(filePath)
+  const requiredHeadings = [
+    '## Batch Classification',
+    '## Recurring Observations',
+    '## Batch-by-Batch Checks',
+    '## Review Outcome',
+    '## Batch-131 Addendum',
+    '## Batch-132 Addendum',
+    '## Batch-133 Addendum',
+  ]
+  requiredHeadings.forEach((heading) => {
+    if (!text.includes(heading)) {
+      problems.push(`${label}: missing heading ${heading}`)
+    }
+  })
+  ;[
+    'reasonable_with_minor_cautions',
+    'batch-130',
+    'batch-131',
+    'batch-132',
+    'batch-133',
+    'review-only',
+    'not learner-facing',
+    'not app-ready',
+    'not RAG-ready',
+    'not promoted',
+    'page-image backstop',
+    'line references were not available',
+    'AG 39 boundary',
+    'wave complete',
+  ].forEach((phrase) => {
+    if (!text.includes(phrase)) {
+      problems.push(`${label}: must mention ${phrase}`)
     }
   })
 }
@@ -8032,6 +8166,7 @@ await validateAg33SelfReviewMarkdown(paths.ag33SelfReviewMd, 'docs/review/ag33_s
   await validateAg35PlanMarkdown(paths.ag35ExtractionPlanMd, 'docs/processor/ag35_extraction_plan.md')
   await validateAg36PlanMarkdown(paths.ag36ExtractionPlanMd, 'docs/processor/ag36_extraction_plan.md')
   await validateAg37PlanMarkdown(paths.ag37ExtractionPlanMd, 'docs/processor/ag37_extraction_plan.md')
+  await validateAg38PlanMarkdown(paths.ag38ExtractionPlanMd, 'docs/processor/ag38_extraction_plan.md')
   if ((await exists(paths.ag34ReviewIndexMd)) && (await exists(paths.ag34SelfReviewMd))) {
     await validateAg34ReviewIndexMarkdown(paths.ag34ReviewIndexMd, 'docs/review/ag34_review_index.md')
     await validateAg34SelfReviewMarkdown(paths.ag34SelfReviewMd, 'docs/review/ag34_self_review.md')
@@ -8049,6 +8184,12 @@ if ((await exists(paths.ag35ReviewIndexMd)) && (await exists(paths.ag35SelfRevie
   if (ag37ReviewArtifactsPresent) {
     await validateAg37ReviewIndexMarkdown(paths.ag37ReviewIndexMd, 'docs/review/ag37_review_index.md')
     await validateAg37SelfReviewMarkdown(paths.ag37SelfReviewMd, 'docs/review/ag37_self_review.md')
+  }
+  const ag38ReviewArtifactsPresent =
+    (await exists(paths.ag38ReviewIndexMd)) && (await exists(paths.ag38SelfReviewMd))
+  if (ag38ReviewArtifactsPresent) {
+    await validateAg38ReviewIndexMarkdown(paths.ag38ReviewIndexMd, 'docs/review/ag38_review_index.md')
+    await validateAg38SelfReviewMarkdown(paths.ag38SelfReviewMd, 'docs/review/ag38_self_review.md')
   }
 await validateAg27ReviewIndexMarkdown(paths.ag27ReviewIndexMd, 'docs/review/ag27_review_index.md')
 await validateAg27SelfReviewMarkdown(paths.ag27SelfReviewMd, 'docs/review/ag27_self_review.md')
@@ -8310,8 +8451,13 @@ if (problems.length > 0) {
       console.log(`- AG 37 self-review verified: ${ag37BatchPlan.proposedBatches.length} batches`)
     }
     console.log(`- AG 37 plan verified: ${ag37BatchPlan.proposedBatches.length} batches`)
+    if (ag38ReviewArtifactsPresent) {
+      console.log(`- AG 38 review index verified: ${ag38BatchPlan.proposedBatches.length} batches`)
+      console.log(`- AG 38 self-review verified: ${ag38BatchPlan.proposedBatches.length} batches`)
+    }
+    console.log(`- AG 38 plan verified: ${ag38BatchPlan.proposedBatches.length} batches`)
     console.log(
-      `- POC status summary verified: ${ag37ReviewArtifactsPresent ? 42 : ag36ReviewArtifactsPresent ? 41 : ag35ReviewArtifactsPresent ? 40 : ag34ReviewArtifactsPresent ? 39 : 38} review indexes`,
+      `- POC status summary verified: ${ag38ReviewArtifactsPresent ? 43 : ag37ReviewArtifactsPresent ? 42 : ag36ReviewArtifactsPresent ? 41 : ag35ReviewArtifactsPresent ? 40 : ag34ReviewArtifactsPresent ? 39 : 38} review indexes`,
     )
   if (validatedPilotBatchCount > 0) {
     console.log(`- Pilot batches validated: ${validatedPilotBatchCount}`)

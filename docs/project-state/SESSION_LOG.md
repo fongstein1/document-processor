@@ -513,3 +513,7 @@
   and effective-date slices review-only in ignored working storage, updated
   the AG 37 self-review note, created the tracked AG 37 review index, and
   left AG 38 as the next likely candidate for the continuation pass.
+- 2026-06-28: Drafted the AG 38 planning layer for the active Model 830
+  guidance, kept the 2021 Law Manual reprint out of scope, and wired the
+  runner / validator hooks so the next review-only wave can validate before
+  extraction starts.

@@ -1,0 +1,320 @@
+{
+  "planId": "ag38-model-830-application-plan",
+  "planVersion": "1.0",
+  "status": "planned",
+  "sourceScope": {
+    "sourceFamilyId": "actuarial_guidelines",
+    "primarySourceFile": "AG 38 - Application of the Valuation of Life Insurance Policies Model Regulation (Model).pdf",
+    "companionOnlySourceFile": "AG 38 - CRVM for UL-from 2021 Law Manual.pdf",
+    "sourceFolder": "Actuarial Guidelines",
+    "sourceTitle": "AG 38 - Application of the Valuation of Life Insurance Policies Model Regulation (Model)",
+    "sourceReference": "Actuarial Guideline XXXVIII",
+    "sourceStatus": "active",
+    "domainId": "naic_regulatory",
+    "rawSourceRoot": "D:\\Work\\AI Projects\\NAIC Valuation Manual Course",
+    "confirmedPageRange": [1, 13],
+    "observedSectionWindows": [
+      {
+        "sectionId": "ag38-background-and-application",
+        "pageRange": [1, 3],
+        "note": "Introduction, application framing, and early examples for the revised Model 830 guidance."
+      },
+      {
+        "sectionId": "ag38-example-mechanics",
+        "pageRange": [4, 6],
+        "note": "Reserve-construction examples, premium derivation, and catch-up / deficiency-reserve mechanics."
+      },
+      {
+        "sectionId": "ag38-deterministic-reserve-and-step-boundaries",
+        "pageRange": [7, 10],
+        "note": "Deterministic-reserve language, Step 2 / Step 8 / Step 9 style mechanics, and the valuation-date application window."
+      },
+      {
+        "sectionId": "ag38-opinion-representation-and-closeout",
+        "pageRange": [11, 13],
+        "note": "Assumptions, actuarial opinion / company representation, and scope closeout language."
+      }
+    ],
+    "boundaries": [
+      "Keep planning focused on the active AG 38 PDF only.",
+      "Treat the 2021 Law Manual reprint as companion-only and out of scope.",
+      "Do not widen into AG 39 or later guideline files.",
+      "Keep the page image as the wording backstop because the text layer is encoding-noisy.",
+      "Treat the guideline as review-only regulatory guidance, not learner-facing policy text.",
+      "Keep the batch source-bound and review-only.",
+      "AG 39 remains out of scope."
+    ],
+    "exclusions": [
+      "No learner-facing content.",
+      "No app-ready export.",
+      "No RAG-ready export.",
+      "No approved/promoted export.",
+      "No eLearning scripts, slides, quizzes, or app exports.",
+      "No raw source files in Git.",
+      "No other guideline files in the same wave.",
+      "not app-ready, not RAG-ready, and not promoted."
+    ]
+  },
+  "topicMap": [
+    {
+      "topicId": "ag38-background-and-application",
+      "label": "Background and application",
+      "pageRange": [1, 3],
+      "reviewComplexity": "medium-high",
+      "expectedIssueTypes": [
+        "regulatory_requirement",
+        "definition_or_terminology",
+        "background_content",
+        "cross_reference_mapping",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": [
+        "Model 830",
+        "Standard Valuation Law",
+        "AG 37",
+        "AG 39"
+      ],
+      "boundaryNote": "Keep the introduction and application framing together and do not widen into AG 39."
+    },
+    {
+      "topicId": "ag38-example-mechanics",
+      "label": "Example mechanics",
+      "pageRange": [4, 6],
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "regulatory_requirement",
+        "definition_or_terminology",
+        "reserve_method_structure",
+        "calculation_structure",
+        "formula_context",
+        "prescribed_assumption",
+        "company_or_prudent_estimate_assumption",
+        "cross_reference_mapping",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": [
+        "minimum gross premium",
+        "catch-up amount",
+        "basic reserve",
+        "deficiency reserve",
+        "guarantee requirements",
+        "Model 830 examples"
+      ],
+      "boundaryNote": "Keep the reserve-construction examples together as one narrow review-only slice."
+    },
+    {
+      "topicId": "ag38-deterministic-reserve-and-step-boundaries",
+      "label": "Deterministic reserve and step boundaries",
+      "pageRange": [7, 10],
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "regulatory_requirement",
+        "reserve_method_structure",
+        "calculation_structure",
+        "formula_context",
+        "prescribed_assumption",
+        "company_or_prudent_estimate_assumption",
+        "reporting_requirement",
+        "documentation_expectation",
+        "cross_reference_mapping",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": [
+        "Section 8A",
+        "Section 8B",
+        "Section 8C",
+        "Section 8D",
+        "deterministic reserve",
+        "specified premiums",
+        "premium load allowance"
+      ],
+      "boundaryNote": "Keep the step-based mechanics narrow and do not widen into later opinion text."
+    },
+    {
+      "topicId": "ag38-opinion-representation-and-closeout",
+      "label": "Opinion, representation, and closeout",
+      "pageRange": [11, 13],
+      "reviewComplexity": "medium-high",
+      "expectedIssueTypes": [
+        "regulatory_requirement",
+        "reporting_requirement",
+        "documentation_expectation",
+        "governance_or_control_expectation",
+        "cross_reference_mapping",
+        "background_content",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": [
+        "actuarial opinion",
+        "company representation",
+        "assumptions",
+        "Model 830 scope",
+        "AG 39"
+      ],
+      "boundaryNote": "Keep the opinion / representation material as a closing window and leave AG 39 out of scope."
+    }
+  ],
+  "proposedBatches": [
+    {
+      "plannedBatchId": "batch-130",
+      "topicIds": [
+        "ag38-background-and-application"
+      ],
+      "title": "AG 38 background and application slice",
+      "pageTarget": {
+        "knownWindow": [1, 3],
+        "notes": "Capture the introductory application framing and early examples before the reserve mechanics begin."
+      },
+      "rationale": "Keep the background, purpose, and early application framing together before the reserve mechanics begin.",
+      "reviewComplexity": "medium-high",
+      "expectedIssueTypes": [
+        "page_image_confirmation",
+        "scope_boundary",
+        "cross_reference_mapping",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    },
+    {
+      "plannedBatchId": "batch-131",
+      "topicIds": [
+        "ag38-example-mechanics"
+      ],
+      "title": "AG 38 example mechanics slice",
+      "pageTarget": {
+        "knownWindow": [4, 6],
+        "notes": "Keep the reserve-construction examples together as one narrow review-only slice."
+      },
+      "rationale": "Keep the reserve-construction examples together as one narrow review-only slice.",
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "page_image_confirmation",
+        "reserve_method_structure",
+        "calculation_structure",
+        "formula_context",
+        "cross_reference_mapping",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    },
+    {
+      "plannedBatchId": "batch-132",
+      "topicIds": [
+        "ag38-deterministic-reserve-and-step-boundaries"
+      ],
+      "title": "AG 38 deterministic reserve and step-boundary slice",
+      "pageTarget": {
+        "knownWindow": [7, 10],
+        "notes": "Keep the step-based reserve mechanics together and stop before the opinion / representation material begins."
+      },
+      "rationale": "Keep the step-based reserve mechanics together and stop before the opinion / representation material begins.",
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "page_image_confirmation",
+        "reserve_method_structure",
+        "calculation_structure",
+        "formula_context",
+        "reporting_requirement",
+        "documentation_expectation",
+        "cross_reference_mapping",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    },
+    {
+      "plannedBatchId": "batch-133",
+      "topicIds": [
+        "ag38-opinion-representation-and-closeout"
+      ],
+      "title": "AG 38 opinion, representation, and closeout slice",
+      "pageTarget": {
+        "knownWindow": [11, 13],
+        "notes": "Keep the opinion / company-representation material together as the closing review window."
+      },
+      "rationale": "Keep the opinion / company-representation material together as the closing review window.",
+      "reviewComplexity": "medium-high",
+      "expectedIssueTypes": [
+        "page_image_confirmation",
+        "reporting_requirement",
+        "documentation_expectation",
+        "governance_or_control_expectation",
+        "cross_reference_mapping",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    }
+  ],
+  "reviewStandards": {
+    "regulatoryRequirement": "Treat application, reserve, and closeout language as regulatory text when the guideline directs how Model 830 should be handled.",
+    "definitionOrTerminology": "Treat Model 830 terms, reserve labels, and example labels as terminology or context when the text explains rather than directs.",
+    "reserveMethodStructure": "Treat the reserve framework, step structure, and example mechanics as method structure when the text is describing how the reserve works.",
+    "calculationStructure": "Treat the reserve steps, reserve components, and boundary setup as calculation structure when the text specifies how the method is applied.",
+    "formulaContext": "Treat premium derivation, reserve components, and valuation-rate references as formula context unless the text gives an explicit computational rule.",
+    "prescribedAssumption": "Treat table-driven or fixed inputs as prescribed assumptions when they are stated as requirements.",
+    "companyOrPrudentEstimateAssumption": "Treat experience-sensitive or judgment-sensitive language as company / prudent-estimate context when the text expressly allows or recommends it.",
+    "reportingRequirement": "Treat opinion, representation, and filing-direction language as reporting requirement material when the text says what must be filed or disclosed.",
+    "documentationExpectation": "Treat explanatory implementation language as documentation expectation material when the text tells the reviewer what must accompany the filing.",
+    "crossReferenceMapping": "Treat references to Model 830, the Standard Valuation Law, AG 37, and AG 39 as cross-reference context unless the text operationalizes them.",
+    "backgroundContent": "Treat the title, introduction, examples, and section labels as background unless they impose a requirement.",
+    "boundaryControlWindow": "Treat the page 1-3, page 4-6, page 7-10, and page 11-13 windows as review-only slices and do not split them unless a later cleanup pass explicitly needs that split.",
+    "requiresHumanInterpretation": "Treat the encoding-noisy text layer, table-heavy passages, and reserve judgment calls as requiring human review unless the source text is explicit."
+  },
+  "promotionGates": {
+    "defaultState": "review_only",
+    "learnerFacing": [
+      "source citation exists",
+      "source support is clear",
+      "wording is not misleading",
+      "confidence is high",
+      "no unresolved review flags exist"
+    ],
+    "appReady": [
+      "learner-facing criteria are already satisfied",
+      "export is sanitized, stable, and versioned",
+      "no unresolved review issues remain"
+    ],
+    "ragReady": [
+      "approved indexed material only",
+      "stable ID",
+      "source reference and locator",
+      "review status no longer requires human disposition"
+    ]
+  },
+  "validationImplications": {
+    "currentChecksNeeded": [
+      "Plan file exists and parses as JSON.",
+      "The AG 38 plan markdown must exist and carry the expected headings.",
+      "Every planned batch must remain review-only by default.",
+      "The source posture must stay explicitly active.",
+      "Each planned batch must have a matching batch definition.",
+      "The AG 38 batch definition file must stay synchronized with the plan."
+    ],
+    "futureChecksSuggested": [
+      "Page-image wording backstop checks.",
+      "Unexpected source-family leakage checks.",
+      "No learner-facing, app-ready, or RAG-ready promotion checks.",
+      "AG 39 boundary checks.",
+      "Companion reprint leakage checks."
+    ],
+    "scriptImplications": [
+      "scripts/ag38-batch-definitions.mjs should stay synchronized with the planned batch-130, batch-131, batch-132, and batch-133 slices when extraction is authorized.",
+      "scripts/batch-definitions.mjs should import the AG 38 definition file so the shared runner can find batch-130, batch-131, batch-132, and batch-133.",
+      "scripts/validate-scaffold.mjs should verify that the AG 38 plan file exists, parses cleanly, and preserves the review-only posture.",
+      "The shared runner should continue to honor the same stop conditions used for the earlier guideline batches."
+    ]
+  },
+  "notes": "Controlled AG 38 planning artifact. Planned batches 130, 131, 132, and 133 remain review-only by default and are not extraction runs."
+}
+
