@@ -20,8 +20,8 @@ set, and AG 03, AG 01, AG 02, and AG 04 remain captured as well. AG 52 is
 already captured in the mixed pilot batch and should not be reprocessed.
 The AG 18 review-only step is complete in the tracked review handoff set.
 The AG 19 review-only step is complete in the tracked review handoff set.
-The next source candidate to inspect is AG 20, subject to a limited
-page-range confirmation before any new batch is planned.
+The AG 20 guideline has been confirmed as pages 1-7 and is the next
+short guideline candidate to plan as batch-098.
 
 ## Build tasks
 
@@ -99,9 +99,13 @@ page-range confirmation before any new batch is planned.
   `config/ag18-batch-plan.json` as the current AG 18 planning set.
 - Treat `docs/processor/ag19_extraction_plan.md` and
   `config/ag19-batch-plan.json` as the current AG 19 planning set.
+- Treat `docs/processor/ag20_extraction_plan.md` and
+  `config/ag20-batch-plan.json` as the current AG 20 planning set.
 - Treat `scripts/ag18-batch-definitions.mjs` as synchronized with the AG 18
   planning set.
 - Treat `scripts/ag19-batch-definitions.mjs` as synchronized with the AG 19
+  planning set.
+- Treat `scripts/ag20-batch-definitions.mjs` as synchronized with the AG 20
   planning set.
 - Treat `scripts/ag04-batch-definitions.mjs` as synchronized with the AG 04
   planning and handoff set.
@@ -123,6 +127,8 @@ page-range confirmation before any new batch is planned.
 - Use `npm run ag07:batch` only if the AG 07 review packet needs to be
   regenerated.
 - Use `npm run ag19:batch` only if the AG 19 review packet needs to be
+  regenerated.
+- Use `npm run ag20:batch` only if the AG 20 review packet needs to be
   regenerated.
 - Keep `docs/review/ag07_review_index.md` and `docs/review/ag07_self_review.md`
   synchronized with the ignored AG 07 review packet if the wave is ever

@@ -283,3 +283,6 @@
   AG 19 is counted alongside the other completed review indexes, and kept the
   review-only mortality-table wording backstop visible. The next candidate to
   inspect is AG 20.
+- 2026-06-27: Confirmed AG 20 as the next short guideline unit, verified the
+  seven-page page range and blank separator page, and drafted the AG 20
+  planning layer so batch-098 can be validated before extraction starts.
