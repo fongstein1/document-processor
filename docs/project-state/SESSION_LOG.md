@@ -440,3 +440,7 @@
   artifacts, and refreshed the repository POC summary and scaffold validator
   so the thirty-seventh review index and 114 validated batches are now
   visible in the handoff layer.
+- 2026-06-27: Inspected AG 33, confirmed the six-page elective-benefit CARVM
+  guideline and its page 1-6 span, drafted the AG 33 planning layer and
+  batch registry for batches 115-116, and started wiring the shared
+  validator so the plan can be committed before extraction begins.

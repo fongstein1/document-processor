@@ -205,6 +205,8 @@ const paths = {
   ag32SelfReviewMd: path.join(repoRoot, 'docs', 'review', 'ag32_self_review.md'),
   ag32BatchPlanJson: path.join(repoRoot, 'config', 'ag32-batch-plan.json'),
   ag32ExtractionPlanMd: path.join(repoRoot, 'docs', 'processor', 'ag32_extraction_plan.md'),
+  ag33BatchPlanJson: path.join(repoRoot, 'config', 'ag33-batch-plan.json'),
+  ag33ExtractionPlanMd: path.join(repoRoot, 'docs', 'processor', 'ag33_extraction_plan.md'),
   ag26ReviewIndexMd: path.join(repoRoot, 'docs', 'review', 'ag26_review_index.md'),
   ag26SelfReviewMd: path.join(repoRoot, 'docs', 'review', 'ag26_self_review.md'),
   ag23ReviewIndexMd: path.join(repoRoot, 'docs', 'review', 'ag23_review_index.md'),
@@ -2516,6 +2518,7 @@ const ag29BatchPlan = await readJson(paths.ag29BatchPlanJson)
 const ag30BatchPlan = await readJson(paths.ag30BatchPlanJson)
 const ag31BatchPlan = await readJson(paths.ag31BatchPlanJson)
 const ag32BatchPlan = await readJson(paths.ag32BatchPlanJson)
+const ag33BatchPlan = await readJson(paths.ag33BatchPlanJson)
 
 validateSchemaEnvelope(batchManifestSchema, 'batch-manifest.schema.json')
 validateSchemaEnvelope(sourceInventorySchema, 'source-inventory.schema.json')
@@ -5696,6 +5699,46 @@ const validateAg32PlanMarkdown = async (filePath, label) => {
   })
 }
 
+const validateAg33PlanMarkdown = async (filePath, label) => {
+  const text = await readText(filePath)
+  const requiredHeadings = [
+    '## Source Scope',
+    '## Topic Map',
+    '## Proposed Batch Sequence',
+    '## Review Standards',
+    '## Promotion Gates',
+    '## Validation Implications',
+    '## Operating Note',
+  ]
+  requiredHeadings.forEach((heading) => {
+    if (!text.includes(heading)) {
+      problems.push(`${label}: missing heading ${heading}`)
+    }
+  })
+  ;[
+    'review-only',
+    'not learner-facing',
+    'not app-ready',
+    'not RAG-ready',
+    'not promoted',
+    'AG 33',
+    'batch-115',
+    'batch-116',
+    'Actuarial Guideline XXXIII',
+    'page 1',
+    'page 4',
+    'page 6',
+    'page-image',
+    'active',
+    'Annuity Contracts With Elective Benefits',
+    'AG 34 remains out of scope',
+  ].forEach((phrase) => {
+    if (!text.includes(phrase)) {
+      problems.push(`${label}: must mention ${phrase}`)
+    }
+  })
+}
+
 const validateAg31ReviewIndexMarkdown = async (filePath, label) => {
   const text = await readText(filePath)
   const requiredHeadings = [
@@ -7376,6 +7419,7 @@ await validateAg29PlanMarkdown(paths.ag29ExtractionPlanMd, 'docs/processor/ag29_
 await validateAg30PlanMarkdown(paths.ag30ExtractionPlanMd, 'docs/processor/ag30_extraction_plan.md')
 await validateAg31PlanMarkdown(paths.ag31ExtractionPlanMd, 'docs/processor/ag31_extraction_plan.md')
 await validateAg32PlanMarkdown(paths.ag32ExtractionPlanMd, 'docs/processor/ag32_extraction_plan.md')
+await validateAg33PlanMarkdown(paths.ag33ExtractionPlanMd, 'docs/processor/ag33_extraction_plan.md')
 await validateAg31ReviewIndexMarkdown(paths.ag31ReviewIndexMd, 'docs/review/ag31_review_index.md')
 await validateAg31SelfReviewMarkdown(paths.ag31SelfReviewMd, 'docs/review/ag31_self_review.md')
 await validateAg32ReviewIndexMarkdown(paths.ag32ReviewIndexMd, 'docs/review/ag32_review_index.md')
@@ -7603,6 +7647,7 @@ if (problems.length > 0) {
   console.log(`- AG 30 plan verified: ${ag30BatchPlan.proposedBatches.length} batches`)
   console.log(`- AG 31 plan verified: ${ag31BatchPlan.proposedBatches.length} batches`)
   console.log(`- AG 32 plan verified: ${ag32BatchPlan.proposedBatches.length} batches`)
+  console.log(`- AG 33 plan verified: ${ag33BatchPlan.proposedBatches.length} batches`)
   console.log(`- AG 29 review index verified: 1 batch`)
   console.log(`- AG 29 self-review verified: 1 batch`)
   console.log(`- AG 30 review index verified: 1 batch`)

@@ -47,8 +47,8 @@ AG 31 is now complete as batch-113. Its tracked review index and self-review
 note now form part of the review handoff set, the page-image wording
 backstop stayed visible, and AG 32 is now complete as batch-114. Its
 tracked review index and self-review note now form part of the review
-handoff set, and AG 33 is the next likely candidate if the continuation pass
-keeps going.
+handoff set, and AG 33 planning is now drafted for batch-115 and batch-116.
+The next step is to validate and commit that plan before extraction starts.
 
 ## Build tasks
 
