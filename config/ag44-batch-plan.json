@@ -1,0 +1,240 @@
+{
+  "planId": "ag44-group-term-life-waiver-of-premium-disabled-lives-reserves-plan",
+  "planVersion": "1.0",
+  "status": "planned",
+  "sourceScope": {
+    "sourceFamilyId": "actuarial_guidelines",
+    "primarySourceFile": "AG 44 - Group Term Life Waiver of Premium Disabled Lives Reserves.pdf",
+    "sourceFolder": "Actuarial Guidelines",
+    "sourceTitle": "AG 44 - Group Term Life Waiver of Premium Disabled Lives Reserves",
+    "sourceReference": "Actuarial Guideline XLIV",
+    "sourceStatus": "active",
+    "domainId": "naic_regulatory",
+    "rawSourceRoot": "D:\\Work\\AI Projects\\NAIC Valuation Manual Course",
+    "confirmedPageRange": [
+      1,
+      7
+    ],
+    "observedSectionWindows": [
+      {
+        "sectionId": "ag44-background-scope-experience",
+        "pageRange": [
+          1,
+          3
+        ],
+        "note": "Background, scope, definitions, company experience, and the reserve-calculation opener."
+      },
+      {
+        "sectionId": "ag44-attachment-tables",
+        "pageRange": [
+          4,
+          7
+        ],
+        "note": "Attachment A-D mortality and recovery tables plus the closing boundary."
+      }
+    ],
+    "boundaries": [
+      "Keep planning focused on the active AG 44 PDF only.",
+      "Do not widen into later guideline files.",
+      "Keep the page-image wording backstop because the text layer is encoding-noisy and stable line references are not expected.",
+      "Use page locators rather than line locators when the text layer does not support stable line mapping.",
+      "Treat the guideline as review-only regulatory guidance, not learner-facing policy text.",
+      "Keep the batch source-bound and review-only.",
+      "Keep AG 45 out of scope for this wave."
+    ],
+    "exclusions": [
+      "No learner-facing content.",
+      "No app-ready export.",
+      "No RAG-ready export.",
+      "No approved/promoted export.",
+      "No eLearning scripts, slides, quizzes, or app exports.",
+      "No raw source files in Git.",
+      "No later guideline files in the same wave.",
+      "AG 45 remains out of scope for this wave."
+    ]
+  },
+  "topicMap": [
+    {
+      "topicId": "ag44-background-scope-experience",
+      "label": "Background, scope, definitions, company experience, and reserve-calculation opener",
+      "pageRange": [
+        1,
+        3
+      ],
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "regulatory_requirement",
+        "definition_or_terminology",
+        "reserve_method_structure",
+        "calculation_structure",
+        "formula_context",
+        "cross_reference_mapping",
+        "background_content",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": [
+        "Group Term Life Waiver of Premium Disabled Lives Reserves",
+        "Standard Valuation Law",
+        "company experience",
+        "reserve calculation",
+        "2005 GTLW tables"
+      ],
+      "boundaryNote": "Keep the opening guidance and company-experience material together as one narrow review-only slice."
+    },
+    {
+      "topicId": "ag44-attachment-tables",
+      "label": "Attachment A-D mortality and recovery tables plus the closing boundary",
+      "pageRange": [
+        4,
+        7
+      ],
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "definition_or_terminology",
+        "prescribed_assumption",
+        "company_or_prudent_estimate_assumption",
+        "formula_context",
+        "cross_reference_mapping",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": [
+        "Attachment A",
+        "Attachment B",
+        "Attachment C",
+        "Attachment D",
+        "2005 GTLW Mortality and Recovery Tables",
+        "disabled life reserves"
+      ],
+      "boundaryNote": "Keep the attachment tables together and stop cleanly at the end of the file."
+    }
+  ],
+  "proposedBatches": [
+    {
+      "plannedBatchId": "batch-149",
+      "topicIds": [
+        "ag44-background-scope-experience"
+      ],
+      "title": "AG 44 background, scope, definitions, and reserve-calculation opener slice",
+      "pageTarget": {
+        "knownWindow": [
+          1,
+          3
+        ],
+        "notes": "Capture the opening guidance, scope, definitions, company-experience review, and reserve-calculation opener as one narrow review-only batch."
+      },
+      "rationale": "Capture the opening guidance, scope, definitions, company-experience review, and reserve-calculation opener as one narrow review-only batch.",
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "page_image_confirmation",
+        "definition_or_terminology",
+        "reserve_method_structure",
+        "calculation_structure",
+        "formula_context",
+        "cross_reference_mapping",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    },
+    {
+      "plannedBatchId": "batch-150",
+      "topicIds": [
+        "ag44-attachment-tables"
+      ],
+      "title": "AG 44 attachment tables and closing boundary slice",
+      "pageTarget": {
+        "knownWindow": [
+          4,
+          7
+        ],
+        "notes": "Capture Attachment A-D mortality and recovery tables and stop cleanly at the AG 45 boundary."
+      },
+      "rationale": "Capture Attachment A-D mortality and recovery tables and stop cleanly at the AG 45 boundary.",
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "page_image_confirmation",
+        "definition_or_terminology",
+        "prescribed_assumption",
+        "company_or_prudent_estimate_assumption",
+        "formula_context",
+        "cross_reference_mapping",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    }
+  ],
+  "reviewStandards": {
+    "regulatoryRequirement": "Treat the background, scope, reserve-calculation, and attachment-table language as regulatory text when it directs what the appointed actuary must do.",
+    "definitionOrTerminology": "Treat table labels, disabled-life reserve terms, and company-experience references as terminology when the text explains rather than directs.",
+    "reserveMethodStructure": "Treat the opening reserve-calculation guidance and the attachment-table framework as reserve structure.",
+    "calculationStructure": "Treat the reserve formulas, company-experience adjustments, and table-driven mechanics as calculation structure.",
+    "formulaContext": "Treat the reserve calculation and table references as formula context unless explicit computational rules are given.",
+    "prescribedAssumption": "Treat any requirement that fixes a mortality or recovery basis as a prescribed assumption.",
+    "companyOrPrudentEstimateAssumption": "Treat company-experience review and credibility-style adjustments as company / prudent-estimate assumptions.",
+    "scenarioOrStochasticRequirement": "Treat scenario language, if any appears, as stochastic requirement language only when the source explicitly uses it.",
+    "assetModelingJudgment": "Treat any asset-modeling choice as asset-modeling judgment only when the source explicitly makes such a choice.",
+    "hedgingOrRiskMitigation": "Treat hedge language as hedging / risk mitigation only if it appears in the source.",
+    "reportingRequirement": "Treat any certification, report, or statutory-reporting instruction as a reporting requirement if it appears in the source.",
+    "documentationExpectation": "Treat support, memo, or review instructions as documentation expectations if they appear in the source.",
+    "governanceOrControlExpectation": "Treat commissioner approval, review, and control language as governance or control expectations.",
+    "crossReferenceMapping": "Treat references to the Standard Valuation Law, the 2005 GTLW tables, and other appendix material as cross-reference context unless operationalized.",
+    "backgroundContent": "Treat the title, introduction, and section labels as background unless they impose a requirement.",
+    "boundaryControlWindow": "Treat each page window as review-only and do not widen it unless later cleanup explicitly needs that split.",
+    "requiresHumanInterpretation": "Treat the encoded text layer, the attachment tables, and judgment-heavy company-experience boundaries as requiring human review unless the source text is explicit."
+  },
+  "promotionGates": {
+    "defaultState": "review_only",
+    "learnerFacing": [
+      "source citation exists",
+      "source support is clear",
+      "wording is not misleading",
+      "confidence is high",
+      "no unresolved review flags exist"
+    ],
+    "appReady": [
+      "learner-facing criteria are already satisfied",
+      "export is sanitized, stable, and versioned",
+      "no unresolved review issues remain"
+    ],
+    "ragReady": [
+      "approved indexed material only",
+      "stable ID",
+      "source reference and locator",
+      "review status no longer requires human disposition"
+    ]
+  },
+  "validationImplications": {
+    "currentChecksNeeded": [
+      "Plan file exists and parses as JSON.",
+      "The AG 44 plan markdown must exist and carry the expected headings.",
+      "Every planned batch must remain review-only by default.",
+      "The source posture must stay explicitly active.",
+      "Each planned batch must have a matching batch definition.",
+      "The AG 44 batch definition file must stay synchronized with the plan.",
+      "The page-image backstop and page-locator-only posture must stay visible for the noisy text layer.",
+      "AG 45 must remain out of scope for this wave."
+    ],
+    "futureChecksSuggested": [
+      "Page-image wording backstop checks.",
+      "Line-reference availability checks.",
+      "Unexpected source-family leakage checks.",
+      "No learner-facing, app-ready, or RAG-ready promotion checks.",
+      "Attachment-table boundary checks.",
+      "Company-experience and table-boundary checks."
+    ],
+    "scriptImplications": [
+      "scripts/ag44-batch-definitions.mjs should stay synchronized with the planned batch-149 through batch-150 slices when extraction is authorized.",
+      "scripts/batch-definitions.mjs should import the AG 44 definition file so the shared runner can find batch-149 through batch-150.",
+      "scripts/validate-scaffold.mjs should verify that the AG 44 plan file exists, parses cleanly, and preserves the review-only posture.",
+      "The shared runner should continue to honor the same stop conditions used for the earlier guideline batches.",
+      "The page-image wording backstop should remain visible in the review packet because the AG 44 text layer is noisy and line references are not expected."
+    ]
+  },
+  "notes": "Controlled AG 44 planning artifact. Planned batches 149 through 150 remain review-only by default and are not extraction runs."
+}

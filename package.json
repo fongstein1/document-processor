@@ -52,6 +52,7 @@
     "ag41:batch": "node scripts/run-pilot-batch.mjs",
     "ag42:batch": "node scripts/run-pilot-batch.mjs",
     "ag43:batch": "node scripts/run-pilot-batch.mjs",
+    "ag44:batch": "node scripts/run-pilot-batch.mjs",
     "vm20:batch-003": "node scripts/run-pilot-batch.mjs --batch batch-003",
     "vm20:batch-004": "node scripts/run-pilot-batch.mjs --batch batch-004",
     "vm20:batch-005": "node scripts/run-pilot-batch.mjs --batch batch-005",

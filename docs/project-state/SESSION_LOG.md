@@ -572,3 +572,8 @@
   validator to expect the new AG 43 plan and markdown. The existing
   low-quality PDF text-layer skill still covers the noisy OCR / page-image
   backstop pattern, so no new skill instruction was added.
+- 2026-06-28: Inspected AG 44, confirmed the 7-page group-term-life waiver of
+  premium disabled-lives reserve guideline, and drafted the AG 44 planning
+  layer so batches 149-150 can be validated before extraction starts. The
+  existing low-quality PDF text-layer skill remains sufficient for the noisy
+  page-image backstop pattern, so no new skill instruction was added.
