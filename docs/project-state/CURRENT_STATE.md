@@ -10,7 +10,7 @@
 
 ## Latest known commit before this batch
 
-`4deb12d`
+`afed7e7`
 
 ## Validation status
 
@@ -439,6 +439,13 @@ the continuation pass keeps going. AG 47 is complete as batch-153 in
 ignored working storage, and its tracked review index and self-review note
 are now part of the handoff set. AG 48 is the next likely candidate if the
 continuation pass keeps going.
+
+The AG 48 planning layer is now drafted for the active
+`AG 48 - Actuarial Opinion and Memorandum Requirements for the Reinsurance
+of Policies Required to be Valued under Sections 6 and 7 of the NAIC
+Valuation of Life Insurance Policies Model Regulation (Model 830)` PDF, with
+batch-154 through batch-156 split into review-only windows and the 2021 Law
+Manual reprint kept out of scope for this wave.
 
 AG 39 batch-134 has completed in ignored working storage, and the tracked
 AG 39 review index and self-review note are now part of the handoff set. The

@@ -614,3 +614,8 @@
   backstop visible because the text layer is encoding-noisy and line
   references were not available. AG 48 is now the next likely candidate if
   the continuation pass keeps going.
+- 2026-06-28: Inspected AG 48, confirmed the 12-page active opinion and
+  memorandum guideline, drafted the AG 48 planning layer for batches 154-156,
+  and kept the 2021 Law Manual reprint out of scope for this wave. The
+  page-image wording backstop remains visible because the text layer is noisy
+  / encoded and stable line references are not expected.

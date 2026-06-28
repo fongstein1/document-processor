@@ -16,7 +16,9 @@ wording backstop remains visible, and AG 48 is the next likely candidate if
 the continuation pass keeps going. AG 47 is complete as batch-153 in
 ignored working storage, and its tracked review index and self-review note
 now form part of the handoff set. AG 48 is the next likely candidate if the
-continuation pass keeps going.
+continuation pass keeps going. AG 48 is now the next controlled source unit,
+and the AG 48 planning layer is drafted for batch-154 through batch-156
+while the 2021 Law Manual reprint stays out of scope for this wave.
 
 AG 06 is complete in ignored working storage and its review index plus
 self-review note now form the current handoff set. AG 07 is complete in
