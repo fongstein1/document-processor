@@ -1,0 +1,148 @@
+{
+  "planId": "ag32-immediate-payment-reserve-plan",
+  "planVersion": "1.0",
+  "status": "planned",
+  "sourceScope": {
+    "sourceFamilyId": "actuarial_guidelines",
+    "primarySourceFile": "AG 32 - Reserve for Immediate Payment of Claims.pdf",
+    "sourceFolder": "Actuarial Guidelines",
+    "sourceTitle": "AG 32 - Reserve for Immediate Payment of Claims",
+    "sourceReference": "Actuarial Guideline XXXII",
+    "sourceStatus": "active",
+    "domainId": "naic_regulatory",
+    "rawSourceRoot": "D:\\Work\\AI Projects\\NAIC Valuation Manual Course",
+    "confirmedPageRange": [1, 2],
+    "observedSectionWindows": [
+      {
+        "sectionId": "ag32-immediate-payment-of-claims-guidance",
+        "pageRange": [1, 2],
+        "note": "Immediate-payment reserve guidance, reserve adjustment percentages, and the closing boundary note."
+      }
+    ],
+    "boundaries": [
+      "Keep planning focused on this single AG 32 PDF.",
+      "Do not widen into AG 33 or later guideline files.",
+      "Keep the immediate-payment / reserve-adjustment context explicit in every batch artifact.",
+      "Keep the page image as the backstop for exact wording because the text layer is encoding-noisy.",
+      "Treat the guideline as review-only regulatory guidance, not learner-facing policy text.",
+      "Keep the batch source-bound and review-only."
+    ],
+    "exclusions": [
+      "No learner-facing content.",
+      "No app-ready export.",
+      "No RAG-ready export.",
+      "No approved/promoted export.",
+      "No eLearning scripts, slides, quizzes, or app exports.",
+      "No raw source files in Git.",
+      "No other guideline files in the same wave."
+    ]
+  },
+  "topicMap": [
+    {
+      "topicId": "ag32-immediate-payment-of-claims-guidance",
+      "label": "Immediate payment of claims reserve guidance",
+      "pageRange": [1, 2],
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "regulatory_requirement",
+        "caveat_or_companion_guidance",
+        "definition_or_terminology",
+        "cross_reference_mapping",
+        "background_content",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": [
+        "immediate payment of claims",
+        "curtate reserves",
+        "continuous payment of claims",
+        "annual statement",
+        "policy year",
+        "proof of death",
+        "valuation rate of interest",
+        "AG 33 modifications"
+      ],
+      "boundaryNote": "Keep the two-page window together and do not widen into AG 33."
+    }
+  ],
+  "proposedBatches": [
+    {
+      "plannedBatchId": "batch-114",
+      "topicIds": [
+        "ag32-immediate-payment-of-claims-guidance"
+      ],
+      "title": "AG 32 immediate-payment-of-claims reserve guidance slice",
+      "pageTarget": {
+        "knownWindow": [1, 2],
+        "notes": "Capture the full two-page guideline as one review-only slice because the immediate-payment reserve context and reserve-adjustment language belong together."
+      },
+      "rationale": "Capture the full two-page guideline as one review-only slice because the immediate-payment reserve context and percentage adjustment language belong together.",
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "regulatory_requirement",
+        "caveat_or_companion_guidance",
+        "definition_or_terminology",
+        "cross_reference_mapping",
+        "background_content",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    }
+  ],
+  "reviewStandards": {
+    "regulatoryRequirement": "Treat the reserve-language as regulatory text when the guideline directs how immediate-payment claims reserves should be understood.",
+    "caveatOrCompanionGuidance": "Treat the immediate-payment reserve guidance as review-only guidance that should stay separate from any endorsement or product-approval claim.",
+    "definitionOrTerminology": "Treat immediate payment of claims, curtate reserves, continuous or semi-continuous functions, annual statement, policy year, and proof of death references as terminology or context when the text explains rather than directs.",
+    "crossReferenceMapping": "Treat references to Section 5 reserve valuation, annual statement instructions, death-claim timing, and AG 33 modifications as cross-reference context unless the text operationalizes them.",
+    "backgroundContent": "Treat the title, scene-setting paragraph, and percentage-table introduction as background unless they impose a requirement.",
+    "boundaryControlWindow": "Treat the page 1-2 window as a review-only slice and do not split it unless a later cleanup pass explicitly needs that split.",
+    "requiresHumanInterpretation": "Treat the encoded page, reserve-adjustment examples, and boundary note as requiring human review unless the source text is explicit."
+  },
+  "promotionGates": {
+    "defaultState": "review_only",
+    "learnerFacing": [
+      "source citation exists",
+      "source support is clear",
+      "wording is not misleading",
+      "confidence is high",
+      "no unresolved review flags exist"
+    ],
+    "appReady": [
+      "learner-facing criteria are already satisfied",
+      "export is sanitized, stable, and versioned",
+      "no unresolved review issues remain"
+    ],
+    "ragReady": [
+      "approved indexed material only",
+      "stable ID",
+      "source reference and locator",
+      "review status no longer requires human disposition"
+    ]
+  },
+  "validationImplications": {
+    "currentChecksNeeded": [
+      "Plan file exists and parses as JSON.",
+      "The AG 32 plan markdown exists and carries the expected headings.",
+      "Every proposed batch must remain review-only by default.",
+      "The source posture must stay explicitly active.",
+      "Each planned batch must have a matching batch definition.",
+      "The AG 32 batch definition file must stay synchronized with the plan."
+    ],
+    "futureChecksSuggested": [
+      "Page-image wording backstop checks.",
+      "Unexpected source-family leakage checks.",
+      "No learner-facing, app-ready, or RAG-ready promotion checks.",
+      "AG 33 boundary checks."
+    ],
+    "scriptImplications": [
+      "scripts/ag32-batch-definitions.mjs should stay synchronized with the planned batch-114 slice when extraction is authorized.",
+      "scripts/batch-definitions.mjs should import the AG 32 definition file so the shared runner can find batch-114.",
+      "scripts/validate-scaffold.mjs should verify that the AG 32 plan file exists, parses cleanly, and preserves the review-only posture.",
+      "The shared runner should continue to honor the same stop conditions used for the earlier guideline batches."
+    ]
+  },
+  "notes": "Controlled AG 32 planning artifact. Planned batch 114 remains review-only by default and is not an extraction run."
+}

@@ -10,7 +10,7 @@
 
 ## Latest known commit before this batch
 
-`72214bc`
+`641bc75`
 
 ## Validation status
 
@@ -327,8 +327,8 @@ the continuation pass keeps going.
 
 AG 31 is now complete as batch-113. Its tracked review index and self-review
 note are being added to the handoff set, and the page-image wording backstop
-remained visible. AG 32 is the next likely candidate if the continuation
-pass keeps going.
+remained visible. AG 32 planning is now drafted for batch-114, and the next
+step is to validate and commit that plan before extraction starts.
 
 The VM-20 companion practice-note wave is complete: batches `batch-055`
 through `batch-075` were processed review-only, and the tracked practice-note

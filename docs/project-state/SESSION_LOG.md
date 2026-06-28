@@ -430,3 +430,7 @@
   new tracked skill file update was necessary because the existing
   source-bound rule already covers encoded text layers and the page-image
   backstop.
+- 2026-06-27: Inspected AG 32, confirmed the two-page immediate-payment-of-
+  claims guideline with page 3 reserved for AG 33, drafted the AG 32
+  planning layer and batch registry for batch-114, and started wiring the
+  shared validator so the plan can be committed before extraction begins.

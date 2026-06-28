@@ -201,6 +201,8 @@ const paths = {
   ag31ExtractionPlanMd: path.join(repoRoot, 'docs', 'processor', 'ag31_extraction_plan.md'),
   ag31ReviewIndexMd: path.join(repoRoot, 'docs', 'review', 'ag31_review_index.md'),
   ag31SelfReviewMd: path.join(repoRoot, 'docs', 'review', 'ag31_self_review.md'),
+  ag32BatchPlanJson: path.join(repoRoot, 'config', 'ag32-batch-plan.json'),
+  ag32ExtractionPlanMd: path.join(repoRoot, 'docs', 'processor', 'ag32_extraction_plan.md'),
   ag26ReviewIndexMd: path.join(repoRoot, 'docs', 'review', 'ag26_review_index.md'),
   ag26SelfReviewMd: path.join(repoRoot, 'docs', 'review', 'ag26_self_review.md'),
   ag23ReviewIndexMd: path.join(repoRoot, 'docs', 'review', 'ag23_review_index.md'),
@@ -414,6 +416,9 @@ const requiredFiles = [
   'docs/processor/ag31_extraction_plan.md',
   'config/ag31-batch-plan.json',
   'scripts/ag31-batch-definitions.mjs',
+  'docs/processor/ag32_extraction_plan.md',
+  'config/ag32-batch-plan.json',
+  'scripts/ag32-batch-definitions.mjs',
   'docs/review/ag31_review_index.md',
   'docs/review/ag31_self_review.md',
   'docs/review/ag27_review_index.md',
@@ -2508,6 +2513,7 @@ const ag26BatchPlan = await readJson(paths.ag26BatchPlanJson)
 const ag29BatchPlan = await readJson(paths.ag29BatchPlanJson)
 const ag30BatchPlan = await readJson(paths.ag30BatchPlanJson)
 const ag31BatchPlan = await readJson(paths.ag31BatchPlanJson)
+const ag32BatchPlan = await readJson(paths.ag32BatchPlanJson)
 
 validateSchemaEnvelope(batchManifestSchema, 'batch-manifest.schema.json')
 validateSchemaEnvelope(sourceInventorySchema, 'source-inventory.schema.json')
@@ -5650,6 +5656,44 @@ const validateAg31PlanMarkdown = async (filePath, label) => {
   })
 }
 
+const validateAg32PlanMarkdown = async (filePath, label) => {
+  const text = await readText(filePath)
+  const requiredHeadings = [
+    '## Source Scope',
+    '## Topic Map',
+    '## Proposed Batch Sequence',
+    '## Review Standards',
+    '## Promotion Gates',
+    '## Validation Implications',
+    '## Operating Note',
+  ]
+  requiredHeadings.forEach((heading) => {
+    if (!text.includes(heading)) {
+      problems.push(`${label}: missing heading ${heading}`)
+    }
+  })
+  ;[
+    'review-only',
+    'not learner-facing',
+    'not app-ready',
+    'not RAG-ready',
+    'not promoted',
+    'AG 32',
+    'batch-114',
+    'Actuarial Guideline XXXII',
+    'page 1',
+    'page 2',
+    'page-image',
+    'active',
+    'immediate payment of claims',
+    'AG 33 remains out of scope',
+  ].forEach((phrase) => {
+    if (!text.includes(phrase)) {
+      problems.push(`${label}: must mention ${phrase}`)
+    }
+  })
+}
+
 const validateAg31ReviewIndexMarkdown = async (filePath, label) => {
   const text = await readText(filePath)
   const requiredHeadings = [
@@ -7141,6 +7185,35 @@ if (!plannedAg31BatchIds.includes('batch-113')) {
   problems.push('config/ag31-batch-plan.json: expected batch-113 to be planned')
 }
 
+if (ag32BatchPlan.status !== 'planned') {
+  problems.push('config/ag32-batch-plan.json: status must be planned')
+}
+if (!Array.isArray(ag32BatchPlan.proposedBatches) || ag32BatchPlan.proposedBatches.length !== 1) {
+  problems.push('config/ag32-batch-plan.json: expected exactly one proposed batch')
+}
+if (
+  ag32BatchPlan.sourceScope?.confirmedPageRange?.[0] !== 1 ||
+  ag32BatchPlan.sourceScope?.confirmedPageRange?.[1] !== 2
+) {
+  problems.push('config/ag32-batch-plan.json: confirmedPageRange must be [1, 2]')
+}
+if (ag32BatchPlan.sourceScope?.sourceStatus !== 'active') {
+  problems.push('config/ag32-batch-plan.json: sourceStatus must be active')
+}
+const plannedAg32BatchIds = Array.isArray(ag32BatchPlan.proposedBatches)
+  ? ag32BatchPlan.proposedBatches
+      .map((batch) => batch?.plannedBatchId)
+      .filter((batchId) => typeof batchId === 'string' && batchId.length > 0)
+  : []
+for (const plannedBatchId of plannedAg32BatchIds) {
+  if (!batchDefinitions[plannedBatchId]) {
+    problems.push(`scripts/batch-definitions.mjs: missing batch definition for ${plannedBatchId}`)
+  }
+}
+if (!plannedAg32BatchIds.includes('batch-114')) {
+  problems.push('config/ag32-batch-plan.json: expected batch-114 to be planned')
+}
+
 await validateReviewMarkdown(paths.reviewPacketTemplateMd, 'review-packet.template.md')
 await validateReviewMarkdown(paths.sampleReviewPacketMd, 'review-packet.sample.md')
 await validateVm20PlanMarkdown(paths.vm20ExtractionPlanMd, 'docs/processor/vm20_extraction_plan.md')
@@ -7223,6 +7296,7 @@ await validateAg28PlanMarkdown(paths.ag28ExtractionPlanMd, 'docs/processor/ag28_
 await validateAg29PlanMarkdown(paths.ag29ExtractionPlanMd, 'docs/processor/ag29_extraction_plan.md')
 await validateAg30PlanMarkdown(paths.ag30ExtractionPlanMd, 'docs/processor/ag30_extraction_plan.md')
 await validateAg31PlanMarkdown(paths.ag31ExtractionPlanMd, 'docs/processor/ag31_extraction_plan.md')
+await validateAg32PlanMarkdown(paths.ag32ExtractionPlanMd, 'docs/processor/ag32_extraction_plan.md')
 await validateAg31ReviewIndexMarkdown(paths.ag31ReviewIndexMd, 'docs/review/ag31_review_index.md')
 await validateAg31SelfReviewMarkdown(paths.ag31SelfReviewMd, 'docs/review/ag31_self_review.md')
 await validateAg27ReviewIndexMarkdown(paths.ag27ReviewIndexMd, 'docs/review/ag27_review_index.md')
@@ -7447,6 +7521,7 @@ if (problems.length > 0) {
   console.log(`- AG 29 plan verified: ${ag29BatchPlan.proposedBatches.length} batches`)
   console.log(`- AG 30 plan verified: ${ag30BatchPlan.proposedBatches.length} batches`)
   console.log(`- AG 31 plan verified: ${ag31BatchPlan.proposedBatches.length} batches`)
+  console.log(`- AG 32 plan verified: ${ag32BatchPlan.proposedBatches.length} batches`)
   console.log(`- AG 29 review index verified: 1 batch`)
   console.log(`- AG 29 self-review verified: 1 batch`)
   console.log(`- AG 30 review index verified: 1 batch`)

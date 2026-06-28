@@ -45,8 +45,8 @@ pass keeps going.
 
 AG 31 is now complete as batch-113. Its tracked review index and self-review
 note now form part of the review handoff set, the page-image wording
-backstop stayed visible, and AG 32 is the next likely candidate if the
-continuation pass keeps going.
+backstop stayed visible, and AG 32 planning is now drafted for batch-114.
+The next step is to validate and commit that plan before extraction starts.
 
 ## Build tasks
 
