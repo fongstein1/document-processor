@@ -12,7 +12,7 @@ regulation repository. It consolidates the completed review-only extraction
 waves without changing the status of the underlying batch outputs or review
 indexes.
 
-The handoff now spans 30 review indexes.
+The handoff now spans 31 review indexes.
 
 This summary is review-only, not learner-facing, not app-ready, not RAG-ready,
 and not promoted.
@@ -75,6 +75,8 @@ review indexes:
 - `docs/review/ag24_self_review.md`
 - `docs/review/ag25_review_index.md`
 - `docs/review/ag25_self_review.md`
+- `docs/review/ag26_review_index.md`
+- `docs/review/ag26_self_review.md`
 
 ## Executive Status
 
@@ -168,6 +170,8 @@ What source families / chapters have been processed:
 - AG 23 one-page separate account investments guideline, `batch-101`
 - AG 24 six-page variable life nonforfeiture values guideline,
   `batch-102` through `batch-104`
+- AG 25 three-page indexed increasing death-benefits guideline, `batch-105`
+- AG 26 one-page operative-dates guideline, `batch-106`
 
 What remains review-only:
 
@@ -226,6 +230,7 @@ What is explicitly out of scope:
 | AG 23 one-page separate account investments guideline | `p. 1` | `batch-101` | `docs/review/ag23_review_index.md` | Complete; review-only | Separate account investments context, noisy OCR, page-image backstop, placeholder statutory reference, readily marketable assets, net investment income, `15%`, and `10%` |
 | AG 24 six-page variable life nonforfeiture values guideline | `pp. 1-6` | `batch-102` through `batch-104` | `docs/review/ag24_review_index.md` | Complete; review-only | Variable life nonforfeiture values, retrospective and prospective method framing, surrender-charge caps, paid-up benefits, noisy OCR, and formula-context caution |
 | AG 25 three-page indexed increasing death-benefits guideline | `pp. 1-3` | `batch-105` | `docs/review/ag25_review_index.md` | Complete; review-only | Indexed increasing death benefits, CPI-based annual increase assumptions, threshold amount language, low-amount exception, noisy OCR, and page-image backstop |
+| AG 26 one-page operative-dates guideline | `p. 1` | `batch-106` | `docs/review/ag26_review_index.md` | Complete; review-only | Operative-date election rule, dynamic interest-rate boundary, noisy OCR, page-image backstop, and Standard Valuation Law / Standard Non-Forfeiture Law cross references |
 
 ## Completed Assets
 
@@ -265,6 +270,7 @@ The repository now includes the core processor asset set:
 - the tracked AG 23 review index and self-review note in `docs/review/`
 - the tracked AG 24 review index and self-review note in `docs/review/`
 - the tracked AG 25 review index and self-review note in `docs/review/`
+- the tracked AG 26 review index and self-review note in `docs/review/`
 - VM chapter planning artifacts in `docs/processor/` and `config/`
 - project-state docs in `docs/project-state/`
 - runner / validator scripts in `scripts/`
@@ -275,7 +281,7 @@ documents remain external to Git.
 ## Validation Posture
 
 - `npm run check` passes
-- the scaffold reports 105 batches validated
+- the scaffold reports 106 batches validated
 - the validator now checks the tracked VM-20, supporting, VM-21, VM-22,
   practice-note, AG 03, AG 01, AG 02, AG 04, AG 05, AG 06, AG 07, AG 08,
   AG 09, AG 10, AG 11, AG 12, AG 13, AG 14, AG 15, AG 16, AG 17, AG 18,
@@ -288,7 +294,7 @@ documents remain external to Git.
 
 ## Human Review Posture
 
-- Reviewers should start from the thirty review indexes listed above.
+- Reviewers should start from the thirty-one review indexes listed above.
 - The review packets remain the detailed evidence layer behind those
   summaries.
 - All batch content remains source-bound and review-only unless a separate
@@ -358,6 +364,20 @@ AG 25 was added after the original POC package was first assembled. Its tracked 
 AG 25 is now complete as batch-105.
 Its tracked review index and self-review note summarize the three-page guideline
 without promoting any extracted content.
+
+## AG 26 Note
+
+AG 26 was added after the original POC package was first assembled. Its
+tracked review index and self-review note are now part of the same
+review-only hand-off set as the other completed waves, and they preserve the
+one-page operative-dates guideline as a review-only note. The page-image
+backstop remains visible, and the operative-date limitation, the dynamic
+interest-rate boundary, and the Standard Valuation Law / Standard
+Non-Forfeiture Law cross references remain review-only context.
+
+AG 26 is now complete as batch-106.
+Its tracked review index and self-review note summarize the one-page
+guideline without promoting any extracted content.
 
 ## Promotion Gates
 

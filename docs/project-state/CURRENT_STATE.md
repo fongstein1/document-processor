@@ -311,7 +311,8 @@ AG 24 is now complete as batches 102-104. Its tracked review index and
 self-review note summarize the six-page variable-life nonforfeiture values
 guideline without promoting any extracted content, and the page-image
 backstop remains visible because the text layer is noisy / encoded. AG 26 is
-the next candidate and its planning layer is being prepared as batch-106.
+now complete as batch-106, and its tracked review index plus self-review note
+are being added to the handoff set.
 
 The VM-20 companion practice-note wave is complete: batches `batch-055`
 through `batch-075` were processed review-only, and the tracked practice-note

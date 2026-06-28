@@ -354,3 +354,9 @@
   guideline, and drafted the AG 26 planning layer so batch-106 can be
   validated before extraction starts. The page-image wording backstop
   remains visible because the text layer is noisy / encoded.
+- 2026-06-27: Ran the AG 26 one-page operative-dates batch (`batch-106`) in
+  ignored working storage, kept it review-only, and created the tracked AG 26
+  review index plus self-review note as the new handoff artifacts. The
+  page-image backstop stayed visible, and the repository proof-of-concept
+  summary is being refreshed so the thirty-first review index and 106
+  validated batches are now visible in the handoff layer.
