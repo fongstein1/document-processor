@@ -75,6 +75,10 @@ scope as companion material.
 - Keep AG 36 review-only by default, and keep the 2021 Law Manual reprint
   out of scope for this wave.
 
+- AG 36 batch-123 is now complete in ignored working storage. The next
+  immediate task is batch-124, which should stay within the attachments and
+  method-mechanics slice and keep the page-image backstop visible.
+
 - Keep batches 001 through 012 review-only unless a human reviewer explicitly
   approves promotion.
 - Keep batches 013 through 021 review-only unless a human reviewer explicitly

@@ -481,3 +481,9 @@
   planning layer so batches 123-126 can be validated before extraction
   starts. The page-image wording backstop remains visible because the text
   layer is noisy / encoded, and AG 37 remains out of scope.
+- 2026-06-28: Ran AG 36 batch-123, captured the foundation and
+  method-overview slice, kept the batch review-only in ignored working
+  storage, and wrote the AG 36 self-review note with a
+  reasonable_with_minor_cautions classification. The page-image backstop
+  stayed visible, the AG 37 boundary remained out of scope, and batch-124 is
+  next.

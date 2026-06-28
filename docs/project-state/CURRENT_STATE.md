@@ -402,3 +402,7 @@ been drafted for the 11-page EIUL/CARVM source file, the 2021 Law Manual
 reprint stays excluded as companion material, and the next step is to
 validate and commit the AG 36 plan before batches 123-126 run in ignored
 working storage.
+
+Batch-123 is now complete in ignored working storage. The foundation and
+method-overview slice stayed review-only, the page-image backstop remained
+visible, and batch-124 is the next AG 36 slice to run.
