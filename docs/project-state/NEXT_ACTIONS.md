@@ -51,7 +51,10 @@ handoff set. AG 33 is now complete as batches 115 and 116. Its tracked
 review index and self-review note now form part of the review handoff set,
 and AG 34 is now the next likely candidate if the continuation pass keeps
 going. The AG 34 planning layer should split pages 1-11 into three
-review-only windows and keep AG 35 out of scope.
+review-only windows and keep AG 35 out of scope. AG 36 is now the next
+likely candidate after AG 35, and its planning layer should stay focused on
+the active EIUL/CARVM file while keeping the 2021 Law Manual reprint out of
+scope as companion material.
 
 ## Build tasks
 
@@ -65,6 +68,12 @@ review-only windows and keep AG 35 out of scope.
   planning set.
 - Keep AG 34 review-only by default, and keep AG 35 out of scope for this
   wave.
+- Treat `docs/processor/ag36_extraction_plan.md` and
+  `config/ag36-batch-plan.json` as the current AG 36 planning set.
+- Treat `scripts/ag36-batch-definitions.mjs` as synchronized with the AG 36
+  planning set.
+- Keep AG 36 review-only by default, and keep the 2021 Law Manual reprint
+  out of scope for this wave.
 
 - Keep batches 001 through 012 review-only unless a human reviewer explicitly
   approves promotion.
@@ -345,7 +354,7 @@ review-only windows and keep AG 35 out of scope.
 - Keep the repository-level proof-of-concept summary review-only until a
   later stakeholder decision changes the handoff model.
 - Keep the repository-level proof-of-concept summary aligned with the
-  twenty-nine review indexes so it remains a summary aid rather than a
+  forty review indexes so it remains a summary aid rather than a
   promoted artifact.
 - Keep the AG 10 short guideline review-only until batch-088 is executed and
   its summary artifacts are committed.
@@ -406,6 +415,9 @@ review-only windows and keep AG 35 out of scope.
 - Keep the AG 35 handoff artifacts aligned with the ignored batch packets,
   and treat AG 36 as the next likely candidate only if the continuation pass
   keeps going.
+- Keep the AG 36 handoff artifacts aligned with the ignored batch packets,
+  and treat the 2021 Law Manual reprint as companion-only out-of-scope
+  material for this wave.
 - Keep the PDF extraction runner UTF-8-safe because formula pages can include
   Unicode minus signs and other non-ASCII glyphs.
 - Commit only lightweight, auditable artifacts.

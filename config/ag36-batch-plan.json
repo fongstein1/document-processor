@@ -1,0 +1,317 @@
+{
+  "planId": "ag36-eiul-carvm-plan",
+  "planVersion": "1.0",
+  "status": "planned",
+  "sourceScope": {
+    "sourceFamilyId": "actuarial_guidelines",
+    "primarySourceFile": "AG 36 - The Application of the Commissioners’ Reserve Valuation Method to Equity Indexed Life Insurance Policies.pdf",
+    "sourceFolder": "Actuarial Guidelines",
+    "sourceTitle": "AG 36 - The Application of the Commissioners’ Reserve Valuation Method to Equity Indexed Life Insurance Policies",
+    "sourceReference": "Actuarial Guideline XXXVI",
+    "sourceStatus": "active",
+    "domainId": "naic_regulatory",
+    "rawSourceRoot": "D:\\Work\\AI Projects\\NAIC Valuation Manual Course",
+    "confirmedPageRange": [1, 11],
+    "observedSectionWindows": [
+      {
+        "sectionId": "ag36-foundation-and-method-overview",
+        "pageRange": [1, 3],
+        "note": "Background, scope, definitions, CARVM framing, and the Type 1 / Type 2 overview."
+      },
+      {
+        "sectionId": "ag36-attachments-and-method-mechanics",
+        "pageRange": [4, 6],
+        "note": "Attachment 1 computational-method descriptions and the implied-guaranteed-rate / option-based mechanics."
+      },
+      {
+        "sectionId": "ag36-hedged-as-required-and-notification",
+        "pageRange": [7, 8],
+        "note": "Attachment 2 Hedged as Required criteria and the notification threshold material."
+      },
+      {
+        "sectionId": "ag36-certification-and-closeout",
+        "pageRange": [9, 11],
+        "note": "Reasonableness certifications and the updated market-value certification material."
+      }
+    ],
+    "boundaries": [
+      "Keep planning focused on this single active AG 36 PDF.",
+      "Do not widen into AG 37 or later guideline files.",
+      "Do not widen into the 2021 Law Manual reprint file unless a separate companion-source plan is approved later.",
+      "Keep the page image as the backstop for exact wording because the text layer is encoding-noisy.",
+      "Treat the guideline as review-only regulatory guidance, not learner-facing policy text.",
+      "Keep the batch source-bound and review-only.",
+      "AG 37 remains out of scope."
+    ],
+    "exclusions": [
+      "No learner-facing content.",
+      "No app-ready export.",
+      "No RAG-ready export.",
+      "No approved/promoted export.",
+      "No eLearning scripts, slides, quizzes, or app exports.",
+      "No raw source files in Git.",
+      "No other guideline files in the same wave.",
+      "not app-ready, not RAG-ready, and not promoted."
+    ]
+  },
+  "topicMap": [
+    {
+      "topicId": "ag36-foundation-and-method-overview",
+      "label": "Foundation and method overview",
+      "pageRange": [1, 3],
+      "reviewComplexity": "medium-high",
+      "expectedIssueTypes": [
+        "regulatory_requirement",
+        "definition_or_terminology",
+        "reserve_method_structure",
+        "cross_reference_mapping",
+        "background_content",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": [
+        "CARVM",
+        "MVRM",
+        "option values",
+        "Type 1",
+        "Type 2",
+        "AG 37"
+      ],
+      "boundaryNote": "Keep the three-page foundation window together and do not widen into AG 37."
+    },
+    {
+      "topicId": "ag36-attachments-and-method-mechanics",
+      "label": "Attachments and method mechanics",
+      "pageRange": [4, 6],
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "regulatory_requirement",
+        "definition_or_terminology",
+        "reserve_method_structure",
+        "calculation_structure",
+        "formula_context",
+        "prescribed_assumption",
+        "company_or_prudent_estimate_assumption",
+        "cross_reference_mapping",
+        "background_content",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": [
+        "Attachment 1",
+        "implied guaranteed rate method",
+        "option cost",
+        "historical moving average cost",
+        "Type 1",
+        "Type 2"
+      ],
+      "boundaryNote": "Keep the computational-method descriptions and the rate-mechanics material together as one narrow review-only mechanics slice."
+    },
+    {
+      "topicId": "ag36-hedged-as-required-and-notification",
+      "label": "Hedged as Required and notification",
+      "pageRange": [7, 8],
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "regulatory_requirement",
+        "hedging_or_risk_mitigation",
+        "reporting_requirement",
+        "governance_or_control_expectation",
+        "cross_reference_mapping",
+        "background_content",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": [
+        "Attachment 2",
+        "Hedged as Required",
+        "quarterly notification",
+        "option replication",
+        "reserve hedging",
+        "AG 37"
+      ],
+      "boundaryNote": "Keep the hedged-as-required criteria and the notification threshold together as one narrow review-only slice."
+    },
+    {
+      "topicId": "ag36-certification-and-closeout",
+      "label": "Certification and closeout",
+      "pageRange": [9, 11],
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "regulatory_requirement",
+        "reporting_requirement",
+        "documentation_expectation",
+        "governance_or_control_expectation",
+        "cross_reference_mapping",
+        "background_content",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": [
+        "reasonableness certification",
+        "consistency certification",
+        "updated market value",
+        "appointed actuary",
+        "AG 37"
+      ],
+      "boundaryNote": "Keep the certification pages together and leave AG 37 for a later plan."
+    }
+  ],
+  "proposedBatches": [
+    {
+      "plannedBatchId": "batch-123",
+      "topicIds": [
+        "ag36-foundation-and-method-overview"
+      ],
+      "title": "AG 36 foundation and method-overview slice",
+      "pageTarget": {
+        "knownWindow": [1, 3],
+        "notes": "Capture the title, purpose, scope, CARVM framing, and the Type 1 / Type 2 overview before the attachment-driven mechanics begin."
+      },
+      "rationale": "Keep the title, purpose, scope, CARVM framing, and the Type 1 / Type 2 overview together before the attachment-driven mechanics begin.",
+      "reviewComplexity": "medium-high",
+      "expectedIssueTypes": [
+        "page_image_confirmation",
+        "method_overview_boundary",
+        "cross_reference_mapping",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    },
+    {
+      "plannedBatchId": "batch-124",
+      "topicIds": [
+        "ag36-attachments-and-method-mechanics"
+      ],
+      "title": "AG 36 attachments and method-mechanics slice",
+      "pageTarget": {
+        "knownWindow": [4, 6],
+        "notes": "Keep the computational-method descriptions and the rate-mechanics material together as one review-only mechanics slice."
+      },
+      "rationale": "Keep the computational-method descriptions and the rate-mechanics material together as one review-only mechanics slice.",
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "page_image_confirmation",
+        "formula_context",
+        "prescribed_assumption",
+        "company_or_prudent_estimate_assumption",
+        "cross_reference_mapping",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    },
+    {
+      "plannedBatchId": "batch-125",
+      "topicIds": [
+        "ag36-hedged-as-required-and-notification"
+      ],
+      "title": "AG 36 hedged-as-required and notification slice",
+      "pageTarget": {
+        "knownWindow": [7, 8],
+        "notes": "Keep the hedged-as-required criteria and the notification threshold together as one review-only slice."
+      },
+      "rationale": "Keep the hedged-as-required criteria and the notification threshold together as one review-only slice.",
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "page_image_confirmation",
+        "hedging_or_risk_mitigation",
+        "reporting_requirement",
+        "governance_or_control_expectation",
+        "cross_reference_mapping",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    },
+    {
+      "plannedBatchId": "batch-126",
+      "topicIds": [
+        "ag36-certification-and-closeout"
+      ],
+      "title": "AG 36 certification and closeout slice",
+      "pageTarget": {
+        "knownWindow": [9, 11],
+        "notes": "Capture the reasonableness and consistency certifications as the closing review window."
+      },
+      "rationale": "Keep the reasonableness and consistency certifications together as the closing review window.",
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "page_image_confirmation",
+        "reporting_requirement",
+        "documentation_expectation",
+        "governance_or_control_expectation",
+        "cross_reference_mapping",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    }
+  ],
+  "reviewStandards": {
+    "regulatoryRequirement": "Treat the reserve rules, notification rules, and certification rules as regulatory text when the guideline directs how reserves or filings should be handled.",
+    "definitionOrTerminology": "Treat CARVM, MVRM, implied guaranteed rate, option values, Type 1, Type 2, and hedged-as-required language as terminology or context when the text explains rather than directs.",
+    "reserveMethodStructure": "Treat the computational-method framework, Type 1 / Type 2 split, and reserve-method framing as structure when the text is describing the method rather than the numeric result.",
+    "calculationStructure": "Treat the examples, attachment-driven method steps, and reserve-setting sequences as calculation structure when they specify how the method is applied.",
+    "formulaContext": "Treat references to future value, projected index, market value, option replication, and moving-average option cost as formula context unless the text gives an explicit computational rule.",
+    "prescribedAssumption": "Treat table-driven or fixed input assumptions as prescribed assumptions when they are stated as requirements.",
+    "companyOrPrudentEstimateAssumption": "Treat experience-sensitive or judgment-sensitive language as company / prudent-estimate context when the text expressly allows or recommends it.",
+    "hedgingOrRiskMitigation": "Treat hedged-as-required criteria, option replication, and related certifications as hedging or risk-mitigation material when the text operationalizes those controls.",
+    "reportingRequirement": "Treat notification, certification, and filing direction as reporting requirement material when the text says what must be filed or disclosed.",
+    "documentationExpectation": "Treat signed certifications and explanatory filing language as documentation expectation material when the text tells the user what must accompany the filing.",
+    "crossReferenceMapping": "Treat references to the Standard Valuation Law, Actuarial Guideline 33, Attachments 1-2, and AG 37 as cross-reference context unless the text operationalizes them.",
+    "backgroundContent": "Treat the title, introduction, examples, and attachment labels as background unless they impose a requirement.",
+    "boundaryControlWindow": "Treat the page 1-3, page 4-6, page 7-8, and page 9-11 windows as review-only slices and do not split them unless a later cleanup pass explicitly needs that split.",
+    "requiresHumanInterpretation": "Treat the encoding-noisy text layer, table-heavy pages, and certification judgment calls as requiring human review unless the source text is explicit."
+  },
+  "promotionGates": {
+    "defaultState": "review_only",
+    "learnerFacing": [
+      "source citation exists",
+      "source support is clear",
+      "wording is not misleading",
+      "confidence is high",
+      "no unresolved review flags exist"
+    ],
+    "appReady": [
+      "learner-facing criteria are already satisfied",
+      "export is sanitized, stable, and versioned",
+      "no unresolved review issues remain"
+    ],
+    "ragReady": [
+      "approved indexed material only",
+      "stable ID",
+      "source reference and locator",
+      "review status no longer requires human disposition"
+    ]
+  },
+  "validationImplications": {
+    "currentChecksNeeded": [
+      "Plan file exists and parses as JSON.",
+      "The AG 36 plan markdown must exist and carry the expected headings.",
+      "Every planned batch must remain review-only by default.",
+      "The source posture must stay explicitly active.",
+      "Each planned batch must have a matching batch definition.",
+      "The AG 36 batch definition file must stay synchronized with the plan."
+    ],
+    "futureChecksSuggested": [
+      "Page-image wording backstop checks.",
+      "Unexpected source-family leakage checks.",
+      "No learner-facing, app-ready, or RAG-ready promotion checks.",
+      "AG 37 boundary checks.",
+      "Companion reprint leakage checks."
+    ],
+    "scriptImplications": [
+      "scripts/ag36-batch-definitions.mjs should stay synchronized with the planned batch-123, batch-124, batch-125, and batch-126 slices when extraction is authorized.",
+      "scripts/batch-definitions.mjs should import the AG 36 definition file so the shared runner can find batch-123, batch-124, batch-125, and batch-126.",
+      "scripts/validate-scaffold.mjs should verify that the AG 36 plan file exists, parses cleanly, and preserves the review-only posture.",
+      "The shared runner should continue to honor the same stop conditions used for the earlier guideline batches."
+    ]
+  },
+  "notes": "Controlled AG 36 planning artifact. Planned batches 123, 124, 125, and 126 remain review-only by default and are not extraction runs."
+}

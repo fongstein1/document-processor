@@ -292,7 +292,7 @@ The controlled VM-21 sequence is complete. The controlled VM-22 sequence is
 complete: batches 038-054 are done, the tracked VM-22 review index now
 summarizes the ignored batch packets, and the resulting ignored working
 outputs remain review-only. The tracked valuation-regulation repository POC
-summary now consolidates the twenty-nine review indexes into a single handoff view.
+summary now consolidates the forty review indexes into a single handoff view.
 AG 20 is now complete as batch-098. Its tracked review index and self-review
 note summarize the seven-page joint-life-functions guideline without
 promoting any extracted content. AG 21 is now complete as batch-099. Its
@@ -396,3 +396,9 @@ self-review note are the current handoff artifacts for the active EIA/CARVM
 guideline. The page-image wording backstop remains visible because the text
 layer is noisy / encoded, and the AG 36 boundary stayed out of scope for
 this wave.
+
+AG 36 is now the next active guideline candidate. The planning layer has
+been drafted for the 11-page EIUL/CARVM source file, the 2021 Law Manual
+reprint stays excluded as companion material, and the next step is to
+validate and commit the AG 36 plan before batches 123-126 run in ignored
+working storage.

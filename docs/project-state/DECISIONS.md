@@ -247,3 +247,9 @@ The tracked valuation-regulation repository proof-of-concept summary is a
 summary-only handoff artifact. It should stay aligned with the thirty-eight
 review indexes and must not be treated as promoted content, learner-facing
 content, app-ready output, or RAG-ready material.
+
+## AG 36 companion reprint exclusion
+
+For AG 36, the active 11-page EIUL/CARVM PDF is the canonical source for the
+wave. The 2021 Law Manual reprint remains companion-only and out of scope for
+this wave unless a later plan explicitly approves it.

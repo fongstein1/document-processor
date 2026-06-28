@@ -476,3 +476,8 @@
   handoff layer. No new tracked skill file update was necessary because the
   existing source-bound rule already covers noisy OCR and page-image
   backstops.
+- 2026-06-28: Inspected AG 36, confirmed the active 11-page EIUL/CARVM
+  guideline and the companion 2021 Law Manual reprint, and drafted the AG 36
+  planning layer so batches 123-126 can be validated before extraction
+  starts. The page-image wording backstop remains visible because the text
+  layer is noisy / encoded, and AG 37 remains out of scope.

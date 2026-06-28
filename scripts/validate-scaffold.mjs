@@ -217,6 +217,8 @@ const paths = {
   ag35SelfReviewMd: path.join(repoRoot, 'docs', 'review', 'ag35_self_review.md'),
   ag35BatchPlanJson: path.join(repoRoot, 'config', 'ag35-batch-plan.json'),
   ag35ExtractionPlanMd: path.join(repoRoot, 'docs', 'processor', 'ag35_extraction_plan.md'),
+  ag36BatchPlanJson: path.join(repoRoot, 'config', 'ag36-batch-plan.json'),
+  ag36ExtractionPlanMd: path.join(repoRoot, 'docs', 'processor', 'ag36_extraction_plan.md'),
   ag26ReviewIndexMd: path.join(repoRoot, 'docs', 'review', 'ag26_review_index.md'),
   ag26SelfReviewMd: path.join(repoRoot, 'docs', 'review', 'ag26_self_review.md'),
   ag23ReviewIndexMd: path.join(repoRoot, 'docs', 'review', 'ag23_review_index.md'),
@@ -2531,6 +2533,7 @@ const ag32BatchPlan = await readJson(paths.ag32BatchPlanJson)
 const ag33BatchPlan = await readJson(paths.ag33BatchPlanJson)
 const ag34BatchPlan = await readJson(paths.ag34BatchPlanJson)
 const ag35BatchPlan = await readJson(paths.ag35BatchPlanJson)
+const ag36BatchPlan = await readJson(paths.ag36BatchPlanJson)
 
 validateSchemaEnvelope(batchManifestSchema, 'batch-manifest.schema.json')
 validateSchemaEnvelope(sourceInventorySchema, 'source-inventory.schema.json')
@@ -6070,6 +6073,49 @@ const validateAg35PlanMarkdown = async (filePath, label) => {
   })
 }
 
+const validateAg36PlanMarkdown = async (filePath, label) => {
+  const text = await readText(filePath)
+  const requiredHeadings = [
+    '## Source Scope',
+    '## Topic Map',
+    '## Proposed Batch Sequence',
+    '## Review Standards',
+    '## Promotion Gates',
+    '## Validation Implications',
+    '## Operating Note',
+  ]
+  requiredHeadings.forEach((heading) => {
+    if (!text.includes(heading)) {
+      problems.push(`${label}: missing heading ${heading}`)
+    }
+  })
+  ;[
+    'review-only',
+    'not learner-facing',
+    'not app-ready',
+    'not RAG-ready',
+    'not promoted',
+    'AG 36',
+    'batch-123',
+    'batch-124',
+    'batch-125',
+    'batch-126',
+    'Actuarial Guideline XXXVI',
+    'page 1',
+    'page 4',
+    'page 7',
+    'page-image',
+    'active',
+    'The Application of the Commissioners’ Reserve Valuation Method to Equity Indexed Life Insurance Policies',
+    'AG 37 remains out of scope',
+    '2021 Law Manual reprint',
+  ].forEach((phrase) => {
+    if (!text.includes(phrase)) {
+      problems.push(`${label}: must mention ${phrase}`)
+    }
+  })
+}
+
 const validateAg31ReviewIndexMarkdown = async (filePath, label) => {
   const text = await readText(filePath)
   const requiredHeadings = [
@@ -7766,6 +7812,7 @@ await validateAg33ReviewIndexMarkdown(paths.ag33ReviewIndexMd, 'docs/review/ag33
 await validateAg33SelfReviewMarkdown(paths.ag33SelfReviewMd, 'docs/review/ag33_self_review.md')
 await validateAg34PlanMarkdown(paths.ag34ExtractionPlanMd, 'docs/processor/ag34_extraction_plan.md')
 await validateAg35PlanMarkdown(paths.ag35ExtractionPlanMd, 'docs/processor/ag35_extraction_plan.md')
+await validateAg36PlanMarkdown(paths.ag36ExtractionPlanMd, 'docs/processor/ag36_extraction_plan.md')
 if ((await exists(paths.ag34ReviewIndexMd)) && (await exists(paths.ag34SelfReviewMd))) {
   await validateAg34ReviewIndexMarkdown(paths.ag34ReviewIndexMd, 'docs/review/ag34_review_index.md')
   await validateAg34SelfReviewMarkdown(paths.ag34SelfReviewMd, 'docs/review/ag34_self_review.md')
@@ -8022,6 +8069,7 @@ if (problems.length > 0) {
     console.log(`- AG 35 review index verified: 3 batches`)
     console.log(`- AG 35 self-review verified: 3 batches`)
   }
+  console.log(`- AG 36 plan verified: ${ag36BatchPlan.proposedBatches.length} batches`)
   console.log(
     `- POC status summary verified: ${ag35ReviewArtifactsPresent ? 40 : ag34ReviewArtifactsPresent ? 39 : 38} review indexes`,
   )
