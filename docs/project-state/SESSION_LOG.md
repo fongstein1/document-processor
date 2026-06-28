@@ -275,3 +275,5 @@
 - 2026-06-27: Inspected AG 17, confirmed the one-page CRVM non-level death-benefit guideline, and drafted the AG 17 planning layer so batch-095 can be validated before extraction starts.
 - 2026-06-27: Ran the AG 17 historical CRVM guideline batch (`batch-095`) in ignored working storage, kept it review-only, and created the tracked AG 17 review index plus self-review note as the new handoff artifacts.
 - 2026-06-27: Inspected AG 18, confirmed the one-page semi-continuous / fully continuous / discounted continuous CRVM guideline, and drafted the AG 18 planning layer so batch-096 can be validated before extraction starts.
+- 2026-06-27: Ran the AG 18 one-page current CRVM batch (`batch-096`) in ignored working storage, kept it review-only, and created the tracked AG 18 review index plus self-review note as the new handoff artifacts.
+- 2026-06-27: Refreshed the scaffold validator and repository proof-of-concept summary so AG 18 is counted alongside the other completed review indexes, and confirmed the AG 18 handoff with 23 review indexes and 96 validated batches.
