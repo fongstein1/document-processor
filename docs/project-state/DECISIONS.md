@@ -244,6 +244,6 @@ later page is difficult to read.
 ## Repository proof-of-concept summary
 
 The tracked valuation-regulation repository proof-of-concept summary is a
-summary-only handoff artifact. It should stay aligned with the thirty-seven
+summary-only handoff artifact. It should stay aligned with the thirty-eight
 review indexes and must not be treated as promoted content, learner-facing
 content, app-ready output, or RAG-ready material.

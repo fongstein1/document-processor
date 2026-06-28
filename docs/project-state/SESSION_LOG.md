@@ -444,3 +444,9 @@
   guideline and its page 1-6 span, drafted the AG 33 planning layer and
   batch registry for batches 115-116, and started wiring the shared
   validator so the plan can be committed before extraction begins.
+- 2026-06-27: Ran the AG 33 six-page elective-benefit CARVM wave
+  sequentially (batch-115 and batch-116) in ignored working storage, kept
+  both batches review-only, created the tracked AG 33 review index plus
+  self-review note as the new handoff artifacts, and refreshed the
+  repository POC summary and scaffold validator so the thirty-eighth review
+  index and 116 validated batches are now visible in the handoff layer.

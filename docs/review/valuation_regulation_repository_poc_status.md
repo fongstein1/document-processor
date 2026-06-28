@@ -12,7 +12,7 @@ regulation repository. It consolidates the completed review-only extraction
 waves without changing the status of the underlying batch outputs or review
 indexes.
 
-The handoff now spans 37 review indexes.
+The handoff now spans 38 review indexes.
 
 This summary is review-only, not learner-facing, not app-ready, not RAG-ready,
 and not promoted.
@@ -30,6 +30,8 @@ review indexes:
 - `docs/review/ag31_self_review.md`
 - `docs/review/ag32_review_index.md`
 - `docs/review/ag32_self_review.md`
+- `docs/review/ag33_review_index.md`
+- `docs/review/ag33_self_review.md`
 - `docs/review/vm20_practice_note_review_index.md`
 - `docs/review/ag03_review_index.md`
 - `docs/review/ag03_self_review.md`
@@ -253,6 +255,7 @@ What is explicitly out of scope:
 | AG 30 two-page plan type and GIC guidance guideline | `pp. 1-2` | `batch-112` | `docs/review/ag30_review_index.md` | Complete; review-only | Plan type and policyholder treatment, C-3 risk reduction, insurer administration, periodic review, noisy OCR, page-image backstop, and closing boundary note |
 | AG 31 one-page policy form approval caveat guideline | `p. 1` | `batch-113` | `docs/review/ag31_review_index.md` | Complete; review-only | Policy form approval caveat, annual statement reserve context, noisy OCR, page-image backstop, and closing boundary note |
 | AG 32 two-page immediate-payment-of-claims reserve guidance guideline | `pp. 1-2` | `batch-114` | `docs/review/ag32_review_index.md` | Complete; review-only | Immediate-payment reserve guidance, reserve-adjustment context, noisy OCR, page-image backstop, and closing boundary note |
+| AG 33 six-page elective-benefit CARVM guideline | `pp. 1-6` | `batch-115` and `batch-116` | `docs/review/ag33_review_index.md` | Complete; review-only | Elective-benefit CARVM foundation and mechanics, integrated benefit streams, guarantee duration, plan type, change in fund basis, noisy OCR, page-image backstop, and AG 34 closing boundary |
 
 ## Completed Assets
 
@@ -313,12 +316,12 @@ documents remain external to Git.
 ## Validation Posture
 
 - `npm run check` passes
-- the scaffold reports 114 batches validated
+- the scaffold reports 116 batches validated
 - the validator now checks the tracked VM-20, supporting, VM-21, VM-22,
   practice-note, AG 03, AG 01, AG 02, AG 04, AG 05, AG 06, AG 07, AG 08,
   AG 09, AG 10, AG 11, AG 12, AG 13, AG 14, AG 15, AG 16, AG 17, AG 18,
   AG 19, AG 20, AG 21, AG 22, AG 23, AG 24, AG 25, AG 26, AG 27, AG 28,
-  AG 29, AG 30, AG 31, AG 32, and POC status summary handoff files
+  AG 29, AG 30, AG 31, AG 32, AG 33, and POC status summary handoff files
 - review-only and no-promotion guardrails are enforced in the batch manifests
   and review packets
 - ignored working outputs stay under `data/work/`
@@ -327,7 +330,7 @@ documents remain external to Git.
 
 ## Human Review Posture
 
-- Reviewers should start from the thirty-seven review indexes listed above.
+- Reviewers should start from the thirty-eight review indexes listed above.
 - The review packets remain the detailed evidence layer behind those
   summaries.
 - All batch content remains source-bound and review-only unless a separate
@@ -472,6 +475,15 @@ hand-off set as the other completed waves. The page-image backstop remains
 visible, and the immediate-payment reserve guidance and AG 33 boundary stay
 review-only until a human reviewer confirms the wording against the page
 image.
+
+## AG 33 Note
+
+AG 33 was added after the AG 32 package was already in place. Its tracked
+review index and self-review note are now part of the same review-only
+hand-off set as the other completed waves. The page-image backstop remains
+visible, and the elective-benefit CARVM foundation, mechanics, and AG 34
+boundary stay review-only until a human reviewer confirms the wording
+against the page image.
 
 ## Promotion Gates
 
