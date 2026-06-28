@@ -127,6 +127,10 @@ the page image confirms the wording. If the text layer is too weak to support
 source-bound extraction, the batch should stop for human review instead of
 overclaiming exact wording or promotion readiness.
 
+The review notes should say explicitly when line references are not available
+and should name the page-image wording backstop so the reviewer does not infer
+precision that the text layer cannot support.
+
 ## Remaining VM-20 order
 
 The remaining controlled VM-20 batches should follow the actual PDF section

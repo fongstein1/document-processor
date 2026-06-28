@@ -68,10 +68,9 @@ The page-image wording backstop stays visible because line references are not
 expected, and AG 42 is the next likely candidate if the continuation pass
 keeps going.
 
-The AG 42 planning layer is now validated and ready for the controlled
-preferred-mortality wave. Continue with batch-138 first, then batch-139,
-keeping the page-image backstop visible and leaving later guideline files out
-of scope.
+AG 42 is complete as batches 138-139. Its tracked review index and
+self-review note are now part of the handoff set. AG 43 is the next likely
+candidate if the continuation pass keeps going.
 
 ## Build tasks
 
@@ -101,13 +100,10 @@ of scope.
 - AG 37 is now complete as batches 127-129. Its tracked review index and
   self-review note now form part of the handoff set. AG 38 is now complete as
   batches 130-133. Its tracked review index and self-review note now form
-  part of the handoff set, and AG 42 is the next likely candidate if the
-  continuation pass keeps going.
-
-  The AG 42 planning layer is now validated and ready for the controlled
-  preferred-mortality wave. Continue with batch-138 first, then batch-139,
-  keeping the page-image backstop visible and leaving later guideline files
-  out of scope.
+  part of the handoff set, and AG 42 is complete as batches 138-139. Its
+  tracked review index and self-review note are now part of the handoff
+  set. AG 43 is the next likely candidate if the continuation pass keeps
+  going.
 
 - AG 36 batch-123 is now complete in ignored working storage. The next
   immediate task is batch-124, which should stay within the attachments and

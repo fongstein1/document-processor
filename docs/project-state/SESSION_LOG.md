@@ -561,3 +561,9 @@
   planning artifacts successfully. The wave will stay review-only by default,
   keep later guideline files out of scope, and use page-image-backed slices
   because stable line references are not expected.
+- 2026-06-28: Completed the AG 42 review-only wave as batches 138-139,
+  created the tracked AG 42 review index and self-review note, refreshed the
+  repository POC summary and project-state docs, and kept the low-quality
+  PDF text-layer skill explicitly focused on line-reference gaps and the
+  page-image wording backstop. The AG 43 boundary is now the next likely
+  candidate if the continuation pass keeps going.

@@ -8,6 +8,10 @@ otherwise unreliable for exact wording.
 - Prefer page locators over line references when the text layer does not
   support stable line mapping.
 - Keep the page image as the wording backstop when OCR is noisy.
+- State explicitly when line references are not available so reviewers do not
+  infer a precision level that the text layer cannot support.
+- Use the phrase "page-image wording backstop" in review notes when the page
+  image is the authority for exact wording.
 - Do not overclaim exact wording from an uncertain text layer.
 - Keep review packets and unresolved-issues notes explicit about the text-layer
   caveat.
@@ -30,6 +34,8 @@ otherwise unreliable for exact wording.
 - guideline PDFs with broken OCR
 - table-heavy pages where the text extraction is incomplete
 - batch packets that need a page-image wording backstop
+- repeated noisy-text guideline slices where the same caution pattern is likely
+  to recur in future batches
 
 ## When not to use
 

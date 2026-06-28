@@ -297,10 +297,9 @@ view. AG 40 is now complete as batches 135-136 in ignored working storage,
 and the tracked review index plus self-review note are now part of the
 handoff set. AG 41 is now complete as batch-137 in ignored working storage,
 and the tracked review index plus self-review note are now part of the
-handoff set. AG 42 is the next likely candidate if the continuation pass
-keeps going. The AG 42 planning layer is now validated, keeps the active
-preferred-mortality guideline review-only by default, and splits the 4-page
-file into two narrow page-image-backed slices for batches 138-139.
+handoff set. AG 42 is complete as batches 138-139, and its tracked review
+index and self-review note are now part of the handoff set. AG 43 is the
+next likely candidate if the continuation pass keeps going.
 AG 20 is now complete as batch-098. Its tracked review index and self-review
 note summarize the seven-page joint-life-functions guideline without
 promoting any extracted content. AG 21 is now complete as batch-099. Its
@@ -410,12 +409,11 @@ self-review note are now part of the handoff set, the 2021 Law Manual
 reprint stayed excluded as companion material, and AG 38 is now complete as
 batches 130-133. Its tracked review index and self-review note are now part
 of the handoff set, the page-image wording backstop remained visible because
-line references were unavailable, and AG 42 is the next likely candidate if
-the continuation pass keeps going. The new low-quality PDF text-layer skill
-remains in place so noisy OCR sources stay page-image-backed and review-only.
-The AG 42 planning layer is now validated, keeps the active preferred-
-mortality guideline review-only by default, and splits the 4-page file into
-two narrow page-image-backed slices for batches 138-139.
+line references were unavailable, and AG 42 is complete as batches 138-139.
+Its tracked review index and self-review note are now part of the handoff
+set. AG 43 is the next likely candidate if the continuation pass keeps
+going. The new low-quality PDF text-layer skill remains in place so noisy
+OCR sources stay page-image-backed and review-only.
 
 AG 39 batch-134 has completed in ignored working storage, and the tracked
 AG 39 review index and self-review note are now part of the handoff set. The
