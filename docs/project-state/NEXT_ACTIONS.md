@@ -8,6 +8,11 @@ AG 41 is now complete as batch-137 in ignored working storage. Its tracked
 review index and self-review note now form part of the handoff set, and AG 42
 is the next likely candidate if the continuation pass keeps going.
 
+AG 45 is now the immediate follow-on candidate. Its planning layer is
+drafted as batch-151, the page-image wording backstop remains visible, and
+the next action is to validate the plan and run the controlled batch if the
+repo stays clean.
+
 AG 06 is complete in ignored working storage and its review index plus
 self-review note now form the current handoff set. AG 07 is complete in
 ignored working storage and its review index plus self-review note now form

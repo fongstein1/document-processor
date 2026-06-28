@@ -583,3 +583,8 @@
   and project-state docs, and kept the low-quality PDF text-layer skill
   unchanged because the existing page-image backstop guidance still covers the
   noisy text layer.
+- 2026-06-28: Inspected AG 45, confirmed the 3-page intermediate-cash-
+  benefits guideline, drafted the AG 45 planning layer for batch-151, wired
+  the shared runner and validator for the new batch, and kept the existing
+  low-quality PDF text-layer skill in place because the page-image wording
+  backstop and line-reference gap are already covered.
