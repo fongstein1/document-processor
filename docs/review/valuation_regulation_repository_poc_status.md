@@ -12,7 +12,7 @@ regulation repository. It consolidates the completed review-only extraction
 waves without changing the status of the underlying batch outputs or review
 indexes.
 
-The handoff now spans 39 review indexes.
+The handoff now spans 40 review indexes, up from 39 review indexes.
 
 This summary is review-only, not learner-facing, not app-ready, not RAG-ready,
 and not promoted.
@@ -34,6 +34,8 @@ review indexes:
 - `docs/review/ag33_self_review.md`
 - `docs/review/ag34_review_index.md`
 - `docs/review/ag34_self_review.md`
+- `docs/review/ag35_review_index.md`
+- `docs/review/ag35_self_review.md`
 - `docs/review/vm20_practice_note_review_index.md`
 - `docs/review/ag03_review_index.md`
 - `docs/review/ag03_self_review.md`
@@ -198,6 +200,8 @@ What source families / chapters have been processed:
   `batch-116`
 - AG 34 11-page MGDB reserve guidance guideline, `batch-117`, `batch-118`,
   and `batch-119`
+- AG 35 9-page EIA/CARVM guideline, `batch-120`, `batch-121`, and
+  `batch-122`
 
 What remains review-only:
 
@@ -265,6 +269,7 @@ What is explicitly out of scope:
 | AG 32 two-page immediate-payment-of-claims reserve guidance guideline | `pp. 1-2` | `batch-114` | `docs/review/ag32_review_index.md` | Complete; review-only | Immediate-payment reserve guidance, reserve-adjustment context, noisy OCR, page-image backstop, and closing boundary note |
 | AG 33 six-page elective-benefit CARVM guideline | `pp. 1-6` | `batch-115` and `batch-116` | `docs/review/ag33_review_index.md` | Complete; review-only | Elective-benefit CARVM foundation and mechanics, integrated benefit streams, guarantee duration, plan type, change in fund basis, noisy OCR, page-image backstop, and AG 34 closing boundary |
 | AG 34 11-page MGDB reserve guidance guideline | `pp. 1-11` | `batch-117` through `batch-119` | `docs/review/ag34_review_index.md` | Complete; review-only | MGDB reserve foundation, mortality-basis mechanics, mortality tables, page-image backstop, line-reference gap, and AG 35 closing boundary |
+| AG 35 9-page EIA/CARVM guideline | `pp. 1-9` | `batch-120` through `batch-122` | `docs/review/ag35_review_index.md` | Complete; review-only | CARVM overview, hedged-as-required criteria, quarterly notification and certification requirements, page-image backstop, line-reference gap, and AG 36 closing boundary |
 
 ## Completed Assets
 
@@ -317,6 +322,8 @@ The repository now includes the core processor asset set:
   self-review note at `docs/review/ag31_self_review.md`
 - the tracked AG 34 review index at `docs/review/ag34_review_index.md` and
   self-review note at `docs/review/ag34_self_review.md`
+- the tracked AG 35 review index at `docs/review/ag35_review_index.md` and
+  self-review note at `docs/review/ag35_self_review.md`
 - VM chapter planning artifacts in `docs/processor/` and `config/`
 - project-state docs in `docs/project-state/`
 - runner / validator scripts in `scripts/`
@@ -328,12 +335,12 @@ documents remain external to Git.
 
 - `npm run check` passes
 - the scaffold previously reported 116 batches validated; the current run
-  reports 119 batches validated
+  reports 122 batches validated
 - the validator now checks the tracked VM-20, supporting, VM-21, VM-22,
   practice-note, AG 03, AG 01, AG 02, AG 04, AG 05, AG 06, AG 07, AG 08,
   AG 09, AG 10, AG 11, AG 12, AG 13, AG 14, AG 15, AG 16, AG 17, AG 18,
   AG 19, AG 20, AG 21, AG 22, AG 23, AG 24, AG 25, AG 26, AG 27, AG 28,
-  AG 29, AG 30, AG 31, AG 32, AG 33, AG 34, and POC status summary handoff files
+  AG 29, AG 30, AG 31, AG 32, AG 33, AG 34, AG 35, and POC status summary handoff files
 - review-only and no-promotion guardrails are enforced in the batch manifests
   and review packets
 - ignored working outputs stay under `data/work/`
@@ -342,7 +349,7 @@ documents remain external to Git.
 
 ## Human Review Posture
 
-- Reviewers should start from the thirty-nine review indexes listed above.
+- Reviewers should start from the forty review indexes listed above.
 - The review packets remain the detailed evidence layer behind those
   summaries.
 - All batch content remains source-bound and review-only unless a separate
@@ -504,6 +511,15 @@ review index and self-review note are now part of the same review-only
 hand-off set as the other completed waves. The page-image backstop remains
 visible, and the MGDB reserve foundation, mortality-basis slice, mortality
 tables, and AG 35 boundary stay review-only until a human reviewer confirms
+the wording against the page image.
+
+## AG 35 Note
+
+AG 35 was added after the AG 34 package was already in place. Its tracked
+review index and self-review note are now part of the same review-only
+hand-off set as the other completed waves. The page-image backstop remains
+visible, and the CARVM foundation, hedged-as-required slice, certification
+slice, and AG 36 boundary stay review-only until a human reviewer confirms
 the wording against the page image.
 
 ## Promotion Gates

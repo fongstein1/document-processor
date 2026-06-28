@@ -467,3 +467,12 @@
   AG 36 boundary, and drafted the AG 35 planning layer so batches 120-122
   can be validated before extraction starts. The page-image backstop remains
   visible because the text layer is noisy / encoded.
+- 2026-06-28: Ran the AG 35 three-window review-only wave (batches 120-122)
+  in ignored working storage, kept it review-only, and created the tracked
+  AG 35 review index plus self-review note as the new handoff artifacts. The
+  page-image backstop stayed visible, line references were unavailable, and
+  the repository proof-of-concept summary is being refreshed so the
+  fortieth review index and 122 validated batches are now visible in the
+  handoff layer. No new tracked skill file update was necessary because the
+  existing source-bound rule already covers noisy OCR and page-image
+  backstops.
