@@ -530,3 +530,9 @@
   batch-134 can be validated before extraction starts. Line references are
   not expected for the encoded text layer, and the existing low-quality PDF
   text-layer skill remains sufficient so no new skill instruction was needed.
+- 2026-06-28: Ran AG 39 batch-134, kept the two-page VAGLB slice review-only
+  in ignored working storage, created the tracked AG 39 self-review note and
+  review index, and refreshed the repository POC summary and project-state
+  docs so the next handoff set now includes the AG 39 guideline. The
+  page-image wording backstop stayed visible and line references remained
+  unavailable, so no new skill instruction was needed.

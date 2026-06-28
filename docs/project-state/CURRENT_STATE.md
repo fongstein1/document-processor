@@ -10,7 +10,7 @@
 
 ## Latest known commit before this batch
 
-`7b2cc65`
+`5041937`
 
 ## Validation status
 
@@ -402,14 +402,15 @@ self-review note are now part of the handoff set, the 2021 Law Manual
 reprint stayed excluded as companion material, and AG 38 is now complete as
 batches 130-133. Its tracked review index and self-review note are now part
 of the handoff set, the page-image wording backstop remained visible because
-line references were unavailable, and AG 39 is the next likely candidate if
+line references were unavailable, and AG 40 is the next likely candidate if
 the continuation pass keeps going. The new low-quality PDF text-layer skill
 remains in place so noisy OCR sources stay page-image-backed and review-only.
 
-AG 39 planning is now underway for the two-page VAGLB guideline. The plan
-keeps the page-image wording backstop visible, treats line references as not
-expected, and keeps batch-134 review-only by default until the batch is
-committed and executed.
+AG 39 batch-134 has completed in ignored working storage, and the tracked
+AG 39 review index and self-review note are now part of the handoff set. The
+page-image wording backstop stays visible, treats line references as not
+expected, and keeps the batch review-only by default. AG 40 is the next
+likely candidate if the continuation pass keeps going.
 
 Batch-123 is now complete in ignored working storage. The foundation and
 method-overview slice stayed review-only, the page-image backstop remained
