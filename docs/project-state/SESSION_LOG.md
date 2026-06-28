@@ -556,3 +556,8 @@
   POC summary and project-state docs, and kept the existing low-quality PDF
   text-layer skill unchanged because it already covers the page-image
   backstop and line-reference gap.
+- 2026-06-28: Inspected AG 42, confirmed the 4-page active preferred-
+  mortality guideline, drafted the AG 42 planning layer, and validated the
+  planning artifacts successfully. The wave will stay review-only by default,
+  keep later guideline files out of scope, and use page-image-backed slices
+  because stable line references are not expected.

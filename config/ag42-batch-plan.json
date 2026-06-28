@@ -1,0 +1,228 @@
+{
+  "planId": "ag42-preferred-mortality-tables-plan",
+  "planVersion": "1.0",
+  "status": "planned",
+  "sourceScope": {
+    "sourceFamilyId": "actuarial_guidelines",
+    "primarySourceFile": "AG 42 - The Application of the Model Regulation Permitting the Recognition of Preferred Mortality Tables for Use in Determining Minimum Reserve Liabil.pdf",
+    "sourceFolder": "Actuarial Guidelines",
+    "sourceTitle": "AG 42 - The Application of the Model Regulation Permitting the Recognition of Preferred Mortality Tables for Use in Determining Minimum Reserve Liabilities",
+    "sourceReference": "Actuarial Guideline XLII",
+    "sourceStatus": "active",
+    "domainId": "naic_regulatory",
+    "rawSourceRoot": "D:\\Work\\AI Projects\\NAIC Valuation Manual Course",
+    "confirmedPageRange": [
+      1,
+      4
+    ],
+    "observedSectionWindows": [
+      {
+        "sectionId": "ag42-background-scope-definitions",
+        "pageRange": [
+          1,
+          2
+        ],
+        "note": "Purpose, effective date, scope, definitions, and initial preferred-mortality selection / certification criteria."
+      },
+      {
+        "sectionId": "ag42-periodic-assessment-communications",
+        "pageRange": [
+          3,
+          4
+        ],
+        "note": "Periodic assessment of anticipated mortality and annual communications / disclosures."
+      }
+    ],
+    "boundaries": [
+      "Keep planning focused on the active AG 42 PDF only.",
+      "Do not widen into later guideline files.",
+      "Keep the page-image wording backstop because the text layer is encoding-noisy and stable line references are not expected.",
+      "Use page locators rather than line locators when the text layer does not support stable line mapping.",
+      "Treat the guideline as review-only regulatory guidance, not learner-facing policy text.",
+      "Keep the batch source-bound and review-only."
+    ],
+    "exclusions": [
+      "No learner-facing content.",
+      "No app-ready export.",
+      "No RAG-ready export.",
+      "No approved/promoted export.",
+      "No eLearning scripts, slides, quizzes, or app exports.",
+      "No raw source files in Git.",
+      "No later guideline files in the same wave.",
+      "not app-ready, not RAG-ready, and not promoted."
+    ]
+  },
+  "topicMap": [
+    {
+      "topicId": "ag42-background-scope-definitions",
+      "label": "Background, scope, definitions, and selection criteria",
+      "pageRange": [
+        1,
+        2
+      ],
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "regulatory_requirement",
+        "definition_or_terminology",
+        "calculation_structure",
+        "formula_context",
+        "cross_reference_mapping",
+        "background_content",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": [
+        "2001 CSO Preferred Class Structure Mortality Table",
+        "Model Regulation Permitting the Recognition of Preferred Mortality Tables",
+        "Actuarial Opinion and Memorandum Regulation",
+        "Standard Valuation Law",
+        "valuation date",
+        "anticipated mortality",
+        "underwriting-based justification"
+      ],
+      "boundaryNote": "Keep the purpose, scope, and initial certification language together as a narrow review-only slice."
+    },
+    {
+      "topicId": "ag42-periodic-assessment-communications",
+      "label": "Periodic assessment and disclosure slice",
+      "pageRange": [
+        3,
+        4
+      ],
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "regulatory_requirement",
+        "reporting_requirement",
+        "documentation_expectation",
+        "governance_or_control_expectation",
+        "cross_reference_mapping",
+        "background_content",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": [
+        "annual certification",
+        "annual report",
+        "credibility methodology",
+        "underwriting-based justification",
+        "valuation basic table",
+        "2001 CSO Preferred Class Structure Mortality Table"
+      ],
+      "boundaryNote": "Keep the periodic-assessment and reporting/disclosure material together as the second review-only slice."
+    }
+  ],
+  "proposedBatches": [
+    {
+      "plannedBatchId": "batch-138",
+      "topicIds": [
+        "ag42-background-scope-definitions"
+      ],
+      "title": "AG 42 background, scope, definitions, and selection-criteria slice",
+      "pageTarget": {
+        "knownWindow": [
+          1,
+          2
+        ],
+        "notes": "Capture the opening guidance and the initial preferred-mortality selection framework as one narrow review-only batch."
+      },
+      "rationale": "Capture the opening guidance and the initial preferred-mortality selection framework as one narrow review-only batch.",
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "page_image_confirmation",
+        "definition_or_terminology",
+        "calculation_structure",
+        "formula_context",
+        "cross_reference_mapping",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    },
+    {
+      "plannedBatchId": "batch-139",
+      "topicIds": [
+        "ag42-periodic-assessment-communications"
+      ],
+      "title": "AG 42 periodic assessment and disclosure slice",
+      "pageTarget": {
+        "knownWindow": [
+          3,
+          4
+        ],
+        "notes": "Capture the ongoing assessment and reporting/disclosure obligations as a narrow review-only batch."
+      },
+      "rationale": "Capture the ongoing assessment and reporting/disclosure obligations as a narrow review-only batch.",
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "page_image_confirmation",
+        "reporting_requirement",
+        "documentation_expectation",
+        "governance_or_control_expectation",
+        "cross_reference_mapping",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    }
+  ],
+  "reviewStandards": {
+    "regulatoryRequirement": "Treat the purpose, scope, selection, assessment, certification, and disclosure language as regulatory text when it directs what the appointed actuary must do.",
+    "definitionOrTerminology": "Treat mortality-table labels, anticipated mortality, class, credibility, and valuation-basic-table labels as terminology when the text explains rather than directs.",
+    "calculationStructure": "Treat the certification tests and anticipated-mortality derivation logic as calculation structure.",
+    "formulaContext": "Treat the mortality comparisons and credibility methodology references as formula context unless explicit computational rules are given.",
+    "crossReferenceMapping": "Treat references to the Model Regulation, Actuarial Opinion and Memorandum Regulation, and Standard Valuation Law as cross-reference context unless operationalized.",
+    "backgroundContent": "Treat the title, introduction, and section labels as background unless they impose a requirement.",
+    "boundaryControlWindow": "Treat the page 1-4 window as review-only and do not split it unless later cleanup explicitly needs that split.",
+    "requiresHumanInterpretation": "Treat the encoding-noisy text layer and mortality-selection judgment calls as requiring human review unless the source text is explicit."
+  },
+  "promotionGates": {
+    "defaultState": "review_only",
+    "learnerFacing": [
+      "source citation exists",
+      "source support is clear",
+      "wording is not misleading",
+      "confidence is high",
+      "no unresolved review flags exist"
+    ],
+    "appReady": [
+      "learner-facing criteria are already satisfied",
+      "export is sanitized, stable, and versioned",
+      "no unresolved review issues remain"
+    ],
+    "ragReady": [
+      "approved indexed material only",
+      "stable ID",
+      "source reference and locator",
+      "review status no longer requires human disposition"
+    ]
+  },
+  "validationImplications": {
+    "currentChecksNeeded": [
+      "Plan file exists and parses as JSON.",
+      "The AG 42 plan markdown must exist and carry the expected headings.",
+      "Every planned batch must remain review-only by default.",
+      "The source posture must stay explicitly active.",
+      "Each planned batch must have a matching batch definition.",
+      "The AG 42 batch definition file must stay synchronized with the plan.",
+      "The page-image backstop and page-locator-only posture must stay visible for the noisy text layer."
+    ],
+    "futureChecksSuggested": [
+      "Page-image wording backstop checks.",
+      "Line-reference availability checks.",
+      "Unexpected source-family leakage checks.",
+      "No learner-facing, app-ready, or RAG-ready promotion checks.",
+      "Later guideline file boundary checks.",
+      "Preferred-mortality and certification boundary checks."
+    ],
+    "scriptImplications": [
+      "scripts/ag42-batch-definitions.mjs should stay synchronized with the planned batch-138 and batch-139 slices when extraction is authorized.",
+      "scripts/batch-definitions.mjs should import the AG 42 definition file so the shared runner can find batch-138 and batch-139.",
+      "scripts/validate-scaffold.mjs should verify that the AG 42 plan file exists, parses cleanly, and preserves the review-only posture.",
+      "The shared runner should continue to honor the same stop conditions used for the earlier guideline batches.",
+      "The page-image wording backstop should remain visible in the review packet because the AG 42 text layer is noisy and line references are not expected."
+    ]
+  },
+  "notes": "Controlled AG 42 planning artifact. Planned batches 138 and 139 remain review-only by default and are not extraction runs."
+}
