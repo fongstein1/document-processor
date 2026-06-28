@@ -69,9 +69,10 @@ expected, and AG 42 is the next likely candidate if the continuation pass
 keeps going.
 
 AG 42 is complete as batches 138-139. Its tracked review index and
-self-review note are now part of the handoff set. AG 44 is now the next
-planning unit, and batch-149 should be the first review-only slice once the
-AG 44 planning layer is committed.
+self-review note are now part of the handoff set. AG 44 is complete as
+batches 149-150, and its tracked review index and self-review note are now
+part of the handoff set. AG 45 is the next likely candidate if the
+continuation pass keeps going.
 
 ## Build tasks
 
@@ -103,8 +104,9 @@ AG 44 planning layer is committed.
   batches 130-133. Its tracked review index and self-review note now form
   part of the handoff set, and AG 42 is complete as batches 138-139. Its
   tracked review index and self-review note are now part of the handoff
-  set. AG 44 is now the next planning unit, and batch-149 should be the
-  first review-only slice once the AG 44 planning layer is committed.
+  set. AG 44 is complete as batches 149-150, and its tracked review index
+  and self-review note are now part of the handoff set. AG 45 is the next
+  likely candidate if the continuation pass keeps going.
 
 - AG 36 batch-123 is now complete in ignored working storage. The next
   immediate task is batch-124, which should stay within the attachments and

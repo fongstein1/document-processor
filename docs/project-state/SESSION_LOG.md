@@ -577,3 +577,9 @@
   layer so batches 149-150 can be validated before extraction starts. The
   existing low-quality PDF text-layer skill remains sufficient for the noisy
   page-image backstop pattern, so no new skill instruction was added.
+- 2026-06-28: Ran the AG 44 review-only wave as batches 149-150, kept both
+  batches review-only in ignored working storage, created the tracked AG 44
+  review index plus self-review note, refreshed the repository POC summary
+  and project-state docs, and kept the low-quality PDF text-layer skill
+  unchanged because the existing page-image backstop guidance still covers the
+  noisy text layer.

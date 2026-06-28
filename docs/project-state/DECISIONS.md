@@ -273,3 +273,11 @@ The AG 43 planning layer reuses the existing low-quality PDF text-layer skill
 instead of adding a new AG-specific skill. The current skill already covers
 page-image wording backstops, line-reference gaps, and review-only handling
 for noisy OCR sources.
+
+## AG 44 noisy text layer handled by existing skill
+
+AG 44 follows the same pattern as AG 43: the existing low-quality PDF
+text-layer skill is still sufficient for the noisy OCR and page-image
+backstop pattern, so no AG 44-specific skill file was added. The review-only
+wave stayed page-locator anchored, line references were not available, and
+the attachment tables remained separate from the opening guidance.

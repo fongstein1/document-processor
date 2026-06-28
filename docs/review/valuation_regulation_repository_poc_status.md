@@ -12,7 +12,8 @@ regulation repository. It consolidates the completed review-only extraction
 waves without changing the status of the underlying batch outputs or review
 indexes.
 
-The handoff now spans 48 review indexes, up from 47 review indexes. The
+The handoff now spans 49 review indexes, up from 48 review indexes. The
+earlier 48 review indexes checkpoint remains part of the handoff history, the
 earlier 47 review indexes checkpoint remains part of the handoff history, the
 earlier 45 review indexes checkpoint remains part of the handoff history, and
 the earlier 39 review indexes checkpoint remains part of the handoff history.
@@ -52,6 +53,8 @@ review indexes:
 - `docs/review/ag42_self_review.md`
 - `docs/review/ag43_review_index.md`
 - `docs/review/ag43_self_review.md`
+- `docs/review/ag44_review_index.md`
+- `docs/review/ag44_self_review.md`
 - `docs/review/ag03_review_index.md`
 - `docs/review/ag03_self_review.md`
 - `docs/review/ag01_review_index.md`
@@ -375,13 +378,14 @@ documents remain external to Git.
 
 - `npm run check` passes
 - the scaffold previously reported 116 batches validated; the current run
-  reports 148 batches validated
+  reports 150 batches validated
 - the validator now checks the tracked VM-20, supporting, VM-21, VM-22,
   practice-note, AG 03, AG 01, AG 02, AG 04, AG 05, AG 06, AG 07, AG 08,
   AG 09, AG 10, AG 11, AG 12, AG 13, AG 14, AG 15, AG 16, AG 17, AG 18,
   AG 19, AG 20, AG 21, AG 22, AG 23, AG 24, AG 25, AG 26, AG 27, AG 28,
   AG 29, AG 30, AG 31, AG 32, AG 33, AG 34, AG 35, AG 36, AG 37, AG 38,
-  AG 39, AG 40, AG 41, AG 42, AG 43, and POC status summary handoff files
+  AG 39, AG 40, AG 41, AG 42, AG 43, AG 44, and POC status summary handoff
+  files
 - review-only and no-promotion guardrails are enforced in the batch manifests
   and review packets
 - ignored working outputs stay under `data/work/`
@@ -647,6 +651,18 @@ complete as batches `batch-140`, `batch-141`, `batch-142`, `batch-143`,
 `batch-144`, `batch-145`, `batch-146`, `batch-147`, and `batch-148`, and the
 tracked review index and self-review note are
 `docs/review/ag43_review_index.md` and `docs/review/ag43_self_review.md`.
+
+## AG 44 Note
+
+AG 44 was added after the AG 43 handoff was already in place. Its tracked
+review index and self-review note are now part of the same review-only
+hand-off set as the other completed waves. The page-image wording backstop
+remains visible, line references were not available, and the
+opening-guidance, attachment-table, and AG 45 boundary slices stay review-
+only until a human reviewer confirms the wording against the page image.
+AG 44 is complete as batches `batch-149` and `batch-150`, and the tracked
+review index and self-review note are `docs/review/ag44_review_index.md`
+and `docs/review/ag44_self_review.md`.
 
 ## Promotion Gates
 

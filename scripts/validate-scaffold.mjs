@@ -8143,6 +8143,81 @@ const validateAg44PlanMarkdown = async (filePath, label) => {
   })
 }
 
+const validateAg44ReviewIndexMarkdown = async (filePath, label) => {
+  const text = await readText(filePath)
+  const requiredHeadings = [
+    '## Overall AG 44 Extraction Status',
+    '## Batch Table',
+    '## Higher-Caution Section',
+    '## Human Review Checklist',
+    '## Promotion Decision Area',
+    '## Recommended Review Order',
+    '## Relationship to Other Review Indexes',
+  ]
+  requiredHeadings.forEach((heading) => {
+    if (!text.includes(heading)) {
+      problems.push(`${label}: missing heading ${heading}`)
+    }
+  })
+  ;[
+    'review-only',
+    'not learner-facing',
+    'not app-ready',
+    'not RAG-ready',
+    'not promoted',
+    'AG 44',
+    'batch-149',
+    'batch-150',
+    'Actuarial Guideline XLIV',
+    '7-page',
+    'page-image wording backstop',
+    'line references were not available',
+    'AG 45 remains out of scope',
+    'docs/review/ag44_self_review.md',
+    'docs/review/ag43_review_index.md',
+    'docs/review/valuation_regulation_repository_poc_status.md',
+  ].forEach((phrase) => {
+    if (!text.includes(phrase)) {
+      problems.push(`${label}: must mention ${phrase}`)
+    }
+  })
+}
+
+const validateAg44SelfReviewMarkdown = async (filePath, label) => {
+  const text = await readText(filePath)
+  const requiredHeadings = [
+    '## Batch Classification',
+    '## Recurring Observations',
+    '## Batch-by-Batch Checks',
+    '## Review Outcome',
+    '## Batch-149 Addendum',
+    '## Batch-150 Addendum',
+  ]
+  requiredHeadings.forEach((heading) => {
+    if (!text.includes(heading)) {
+      problems.push(`${label}: missing heading ${heading}`)
+    }
+  })
+  ;[
+    'reasonable_with_minor_cautions',
+    'batch-149',
+    'batch-150',
+    'review-only',
+    'not learner-facing',
+    'not app-ready',
+    'not RAG-ready',
+    'not promoted',
+    'page-image backstop',
+    'line references were not available',
+    'AG 45 boundary',
+    'wave complete',
+  ].forEach((phrase) => {
+    if (!text.includes(phrase)) {
+      problems.push(`${label}: must mention ${phrase}`)
+    }
+  })
+}
+
 const validatePocStatusSummaryMarkdown = async (filePath, label) => {
   const text = await readText(filePath)
   const ag34ReviewArtifactsPresent =
@@ -8151,6 +8226,8 @@ const validatePocStatusSummaryMarkdown = async (filePath, label) => {
     (await exists(paths.ag40ReviewIndexMd)) && (await exists(paths.ag40SelfReviewMd))
   const ag43ReviewArtifactsPresent =
     (await exists(paths.ag43ReviewIndexMd)) && (await exists(paths.ag43SelfReviewMd))
+  const ag44ReviewArtifactsPresent =
+    (await exists(paths.ag44ReviewIndexMd)) && (await exists(paths.ag44SelfReviewMd))
   const requiredHeadings = [
     '## Executive Status',
     '## Coverage Table',
@@ -8274,18 +8351,31 @@ const validatePocStatusSummaryMarkdown = async (filePath, label) => {
           'batch-148',
         ]
       : []),
+    ...(ag44ReviewArtifactsPresent
+      ? [
+          'docs/review/ag44_review_index.md',
+          'docs/review/ag44_self_review.md',
+          'AG 44',
+          'batch-149',
+          'batch-150',
+        ]
+      : []),
     'npm run check',
     'git diff --check',
-    ag43ReviewArtifactsPresent
-      ? '148 batches validated'
+    ag44ReviewArtifactsPresent
+      ? '150 batches validated'
+      : ag43ReviewArtifactsPresent
+        ? '148 batches validated'
       : '116 batches validated',
-    ag43ReviewArtifactsPresent
-      ? '48 review indexes'
-      : ag40ReviewArtifactsPresent
-        ? '45 review indexes'
-        : ag34ReviewArtifactsPresent
-          ? '39 review indexes'
-          : '38 review indexes',
+    ag44ReviewArtifactsPresent
+      ? '49 review indexes'
+      : ag43ReviewArtifactsPresent
+        ? '48 review indexes'
+        : ag40ReviewArtifactsPresent
+          ? '45 review indexes'
+          : ag34ReviewArtifactsPresent
+            ? '39 review indexes'
+            : '38 review indexes',
     'AG 18',
     'batch-096',
     'AG 19',
@@ -9233,6 +9323,12 @@ if (ag42ReviewArtifactsPresent) {
     (await exists(paths.ag43ReviewIndexMd)) && (await exists(paths.ag43SelfReviewMd))
   await validateAg43ReviewIndexMarkdown(paths.ag43ReviewIndexMd, 'docs/review/ag43_review_index.md')
   await validateAg43SelfReviewMarkdown(paths.ag43SelfReviewMd, 'docs/review/ag43_self_review.md')
+  const ag44ReviewArtifactsPresent =
+    (await exists(paths.ag44ReviewIndexMd)) && (await exists(paths.ag44SelfReviewMd))
+  if (ag44ReviewArtifactsPresent) {
+    await validateAg44ReviewIndexMarkdown(paths.ag44ReviewIndexMd, 'docs/review/ag44_review_index.md')
+    await validateAg44SelfReviewMarkdown(paths.ag44SelfReviewMd, 'docs/review/ag44_self_review.md')
+  }
 await validateAg27ReviewIndexMarkdown(paths.ag27ReviewIndexMd, 'docs/review/ag27_review_index.md')
 await validateAg27SelfReviewMarkdown(paths.ag27SelfReviewMd, 'docs/review/ag27_self_review.md')
 await validateAg28ReviewIndexMarkdown(paths.ag28ReviewIndexMd, 'docs/review/ag28_review_index.md')
@@ -9519,8 +9615,13 @@ if (problems.length > 0) {
       console.log(`- AG 43 self-review verified: ${ag43BatchPlan.proposedBatches.length} batches`)
     }
     console.log(`- AG 43 plan verified: ${ag43BatchPlan.proposedBatches.length} batches`)
+    if (ag44ReviewArtifactsPresent) {
+      console.log(`- AG 44 review index verified: ${ag44BatchPlan.proposedBatches.length} batches`)
+      console.log(`- AG 44 self-review verified: ${ag44BatchPlan.proposedBatches.length} batches`)
+    }
+    console.log(`- AG 44 plan verified: ${ag44BatchPlan.proposedBatches.length} batches`)
     console.log(
-      `- POC status summary verified: ${ag43ReviewArtifactsPresent ? 48 : ag42ReviewArtifactsPresent ? 47 : ag41ReviewArtifactsPresent ? 46 : ag40ReviewArtifactsPresent ? 45 : ag39ReviewArtifactsPresent ? 44 : ag38ReviewArtifactsPresent ? 43 : ag37ReviewArtifactsPresent ? 42 : ag36ReviewArtifactsPresent ? 41 : ag35ReviewArtifactsPresent ? 40 : ag34ReviewArtifactsPresent ? 39 : 38} review indexes`,
+      `- POC status summary verified: ${ag44ReviewArtifactsPresent ? 49 : ag43ReviewArtifactsPresent ? 48 : ag42ReviewArtifactsPresent ? 47 : ag41ReviewArtifactsPresent ? 46 : ag40ReviewArtifactsPresent ? 45 : ag39ReviewArtifactsPresent ? 44 : ag38ReviewArtifactsPresent ? 43 : ag37ReviewArtifactsPresent ? 42 : ag36ReviewArtifactsPresent ? 41 : ag35ReviewArtifactsPresent ? 40 : ag34ReviewArtifactsPresent ? 39 : 38} review indexes`,
     )
   if (validatedPilotBatchCount > 0) {
     console.log(`- Pilot batches validated: ${validatedPilotBatchCount}`)

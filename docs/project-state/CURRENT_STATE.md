@@ -10,7 +10,7 @@
 
 ## Latest known commit before this batch
 
-`48fd8b1`
+`8975a0e`
 
 ## Validation status
 
@@ -298,9 +298,10 @@ and the tracked review index plus self-review note are now part of the
 handoff set. AG 41 is now complete as batch-137 in ignored working storage,
 and the tracked review index plus self-review note are now part of the
 handoff set. AG 42 is complete as batches 138-139, and its tracked review
-index and self-review note are now part of the handoff set. AG 44 is the
-next planning unit, with batch-149 set up as the first review-only slice
-once the plan is committed.
+index and self-review note are now part of the handoff set. AG 44 is
+complete as batches 149-150, and its tracked review index and self-review
+note are now part of the handoff set. AG 45 is the next likely candidate if
+the continuation pass keeps going.
 AG 20 is now complete as batch-098. Its tracked review index and self-review
 note summarize the seven-page joint-life-functions guideline without
 promoting any extracted content. AG 21 is now complete as batch-099. Its
@@ -412,16 +413,17 @@ batches 130-133. Its tracked review index and self-review note are now part
 of the handoff set, the page-image wording backstop remained visible because
 line references were unavailable, and AG 42 is complete as batches 138-139.
 Its tracked review index and self-review note are now part of the handoff
-set. AG 44 is the next likely candidate if the continuation pass keeps
-going. The new low-quality PDF text-layer skill remains in place so noisy
-OCR sources stay page-image-backed and review-only.
+set. AG 44 is complete as batches 149-150, and its tracked review index and
+self-review note are now part of the handoff set. The page-image wording
+backstop remains visible because the text layer is noisy, and AG 45 is the
+next likely candidate if the continuation pass keeps going.
 
-AG 44 is now the next planning unit. Its tracked extraction plan and batch
-map are in progress for the 7-page group-term-life waiver-of-premium
-guideline, the page-image wording backstop remains visible because the text
-layer is noisy, and batch-149 should be the first review-only slice once the
-planning layer is committed. AG 45 and AG 46 look like the next short
-follow-on candidates if the continuation pass stays clean.
+AG 44 is now complete as batches 149-150 in ignored working storage. Its
+tracked review index and self-review note are now part of the handoff set,
+the page-image wording backstop remained visible because the text layer is
+noisy, and AG 45 looks like the next short follow-on candidate if the
+continuation pass stays clean. AG 46 remains a later candidate only if the
+continuation pass keeps going.
 
 AG 39 batch-134 has completed in ignored working storage, and the tracked
 AG 39 review index and self-review note are now part of the handoff set. The
