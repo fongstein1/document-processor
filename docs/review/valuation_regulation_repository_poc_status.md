@@ -12,7 +12,7 @@ regulation repository. It consolidates the completed review-only extraction
 waves without changing the status of the underlying batch outputs or review
 indexes.
 
-The handoff now spans 52 review indexes, up from 51 review indexes. The
+The handoff now spans 53 review indexes, up from 52 review indexes. The
 earlier 51 review indexes checkpoint remains part of the handoff history, the
 earlier 50 review indexes checkpoint remains part of the handoff history, the
 earlier 49 review indexes checkpoint remains part of the handoff history, the
@@ -384,14 +384,14 @@ documents remain external to Git.
 
 - `npm run check` passes
 - the scaffold previously reported 152 batches validated; the current run
-  reports 153 batches validated
+  reports 156 batches validated
 - the validator now checks the tracked VM-20, supporting, VM-21, VM-22,
   practice-note, AG 03, AG 01, AG 02, AG 04, AG 05, AG 06, AG 07, AG 08,
   AG 09, AG 10, AG 11, AG 12, AG 13, AG 14, AG 15, AG 16, AG 17, AG 18,
   AG 19, AG 20, AG 21, AG 22, AG 23, AG 24, AG 25, AG 26, AG 27, AG 28,
   AG 29, AG 30, AG 31, AG 32, AG 33, AG 34, AG 35, AG 36, AG 37, AG 38,
-  AG 39, AG 40, AG 41, AG 42, AG 43, AG 44, and POC status summary handoff
-  files
+  AG 39, AG 40, AG 41, AG 42, AG 43, AG 44, AG 47, AG 48, and POC status
+  summary handoff files
 - review-only and no-promotion guardrails are enforced in the batch manifests
   and review packets
 - ignored working outputs stay under `data/work/`
@@ -683,11 +683,12 @@ candidate if the continuation pass keeps going.
 AG 46 is complete as batch-152 in ignored working storage. Its tracked
 review index and self-review note are now part of the handoff set. The page-
 image wording backstop remains visible because the text layer is encoding-
-noisy, line references were not available, and AG 48 is the next likely
-candidate if the continuation pass keeps going. AG 47 is complete as
-batch-153 in ignored working storage, and its tracked review index and
-self-review note are now part of the handoff set. AG 48 is the next likely
-candidate if the continuation pass keeps going.
+noisy, line references were not available. AG 47 is complete as batch-153 in
+ignored working storage, and its tracked review index and self-review note are
+now part of the handoff set. AG 48 is complete as batches `batch-154`,
+`batch-155`, and `batch-156` in ignored working storage, and its tracked
+review index and self-review note are now part of the handoff set. AG 49 is
+now the next likely candidate if the continuation pass keeps going.
 
 ## AG 47 Note
 
@@ -695,8 +696,24 @@ AG 47 is complete as batch-153 in ignored working storage. Its tracked
 review index and self-review note are now part of the handoff set:
 `docs/review/ag47_review_index.md` and `docs/review/ag47_self_review.md`.
 The page-image wording backstop remains visible because the text layer is
-encoding-noisy, line references were not available, and AG 48 is the next
-likely candidate if the continuation pass keeps going.
+encoding-noisy, line references were not available. AG 48 is complete as
+batches `batch-154`, `batch-155`, and `batch-156` in ignored working storage,
+and its tracked review index and self-review note are now part of the handoff
+set: `docs/review/ag48_review_index.md` and `docs/review/ag48_self_review.md`.
+The page-image wording backstop remains visible because the text layer is
+encoding-noisy, line references were not available, the 2021 Law Manual
+reprint stayed out of scope, and AG 49 is now the next likely candidate if
+the continuation pass keeps going.
+
+## AG 48 Note
+
+AG 48 is complete as batches `batch-154`, `batch-155`, and `batch-156` in
+ignored working storage. Its tracked review index and self-review note are
+now part of the handoff set: `docs/review/ag48_review_index.md` and
+`docs/review/ag48_self_review.md`. The page-image wording backstop remains
+visible because the text layer is encoding-noisy, line references were not
+available, the 2021 Law Manual reprint stayed out of scope, and AG 49 is now
+the next likely candidate if the continuation pass keeps going.
 
 ## Promotion Gates
 

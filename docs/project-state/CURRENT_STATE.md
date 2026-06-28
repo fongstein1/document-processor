@@ -440,12 +440,12 @@ ignored working storage, and its tracked review index and self-review note
 are now part of the handoff set. AG 48 is the next likely candidate if the
 continuation pass keeps going.
 
-The AG 48 planning layer is now drafted for the active
-`AG 48 - Actuarial Opinion and Memorandum Requirements for the Reinsurance
-of Policies Required to be Valued under Sections 6 and 7 of the NAIC
-Valuation of Life Insurance Policies Model Regulation (Model 830)` PDF, with
-batch-154 through batch-156 split into review-only windows and the 2021 Law
-Manual reprint kept out of scope for this wave.
+AG 48 is complete as batches 154-156 in ignored working storage. Its tracked
+review index and self-review note are now part of the handoff set, the
+page-image wording backstop remained visible because the text layer is
+encoding-noisy and line references were not available, the 2021 Law Manual
+reprint stayed out of scope for this wave, and AG 49 is the next likely
+candidate if the continuation pass keeps going.
 
 AG 39 batch-134 has completed in ignored working storage, and the tracked
 AG 39 review index and self-review note are now part of the handoff set. The

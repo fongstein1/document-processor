@@ -15,10 +15,12 @@ index and self-review note now form part of the handoff set. The page-image
 wording backstop remains visible, and AG 48 is the next likely candidate if
 the continuation pass keeps going. AG 47 is complete as batch-153 in
 ignored working storage, and its tracked review index and self-review note
-now form part of the handoff set. AG 48 is the next likely candidate if the
-continuation pass keeps going. AG 48 is now the next controlled source unit,
-and the AG 48 planning layer is drafted for batch-154 through batch-156
-while the 2021 Law Manual reprint stays out of scope for this wave.
+now form part of the handoff set. AG 48 is complete as batches 154-156 in
+ignored working storage. Its tracked review index and self-review note now
+form part of the handoff set, the page-image wording backstop remained
+visible because the text layer is encoding-noisy and line references were
+not available, the 2021 Law Manual reprint stayed out of scope for this
+wave, and AG 49 is now the next controlled source unit.
 
 AG 06 is complete in ignored working storage and its review index plus
 self-review note now form the current handoff set. AG 07 is complete in
