@@ -603,3 +603,8 @@
   repository POC summary and project-state docs, and kept the page-image
   wording backstop visible because the text layer is encoding-noisy and line
   references were not available.
+- 2026-06-28: Inspected AG 47, confirmed the 4-page active claim-reserve
+  company-experience guideline, and drafted the AG 47 planning layer so
+  batch-153 can be validated before extraction starts. The page-image
+  wording backstop remains visible because the text layer is noisy / encoded
+  and stable line references are not expected.

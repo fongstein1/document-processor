@@ -13,7 +13,8 @@ review index and self-review note now form part of the handoff set. AG 46 is
 complete as batch-152 in ignored working storage, and its tracked review
 index and self-review note now form part of the handoff set. The page-image
 wording backstop remains visible, and AG 47 is the next likely candidate if
-the continuation pass keeps going.
+the continuation pass keeps going. AG 47 is now being added as a review-only
+planning layer with batch-153 as the next controlled slice.
 
 AG 06 is complete in ignored working storage and its review index plus
 self-review note now form the current handoff set. AG 07 is complete in
