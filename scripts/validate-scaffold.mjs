@@ -8478,8 +8478,10 @@ const validatePocStatusSummaryMarkdown = async (filePath, label) => {
       : []),
     'npm run check',
     'git diff --check',
-    ag44ReviewArtifactsPresent
-      ? '150 batches validated'
+    ag45ReviewArtifactsPresent
+      ? '151 batches validated'
+      : ag44ReviewArtifactsPresent
+        ? '150 batches validated'
       : ag43ReviewArtifactsPresent
         ? '148 batches validated'
       : '116 batches validated',

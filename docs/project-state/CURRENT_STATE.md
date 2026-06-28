@@ -425,9 +425,10 @@ noisy, and AG 45 looks like the next short follow-on candidate if the
 continuation pass stays clean. AG 46 remains a later candidate only if the
 continuation pass keeps going.
 
-AG 45 is now the immediate follow-on candidate. Its planning layer is
-drafted as batch-151, the page-image wording backstop remains visible, and
-the source stays review-only until the controlled batch is run and indexed.
+AG 45 is now complete as batch-151 in ignored working storage. Its tracked
+review index and self-review note are now part of the handoff set, the
+page-image wording backstop remains visible, and AG 46 is the next likely
+candidate if the continuation pass keeps going.
 
 AG 39 batch-134 has completed in ignored working storage, and the tracked
 AG 39 review index and self-review note are now part of the handoff set. The
