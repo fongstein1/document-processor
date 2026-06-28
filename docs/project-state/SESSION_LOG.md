@@ -543,3 +543,8 @@
   provision guideline, kept the page-image wording backstop visible because
   the text layer is noisy, and updated the validator and next-action notes so
   `batch-135` and `batch-136` can be run as the next review-only wave.
+- 2026-06-28: Completed the AG 40 review-only wave as batches 135-136,
+  created the tracked AG 40 review index and self-review note, refreshed the
+  repository POC summary and project-state docs, and kept the existing low-
+  quality PDF text-layer skill unchanged because it already covers the
+  page-image backstop and line-reference gap.

@@ -10,7 +10,7 @@
 
 ## Latest known commit before this batch
 
-`28b6e67`
+`ab3b5a1`
 
 ## Validation status
 
@@ -292,7 +292,11 @@ The controlled VM-21 sequence is complete. The controlled VM-22 sequence is
 complete: batches 038-054 are done, the tracked VM-22 review index now
 summarizes the ignored batch packets, and the resulting ignored working
 outputs remain review-only. The tracked valuation-regulation repository POC
-summary now consolidates the forty review indexes into a single handoff view.
+summary now consolidates the forty-five review indexes into a single handoff
+view. AG 40 is now complete as batches 135-136 in ignored working storage,
+and the tracked review index plus self-review note are now part of the
+handoff set. AG 41 is the next likely candidate if the continuation pass
+keeps going.
 AG 20 is now complete as batch-098. Its tracked review index and self-review
 note summarize the seven-page joint-life-functions guideline without
 promoting any extracted content. AG 21 is now complete as batch-099. Its
