@@ -266,3 +266,10 @@ content, app-ready output, or RAG-ready material.
 For AG 36, the active 11-page EIUL/CARVM PDF is the canonical source for the
 wave. The 2021 Law Manual reprint remains companion-only and out of scope for
 this wave unless a later plan explicitly approves it.
+
+## AG 43 noisy text layer handled by existing skill
+
+The AG 43 planning layer reuses the existing low-quality PDF text-layer skill
+instead of adding a new AG-specific skill. The current skill already covers
+page-image wording backstops, line-reference gaps, and review-only handling
+for noisy OCR sources.

@@ -567,3 +567,8 @@
   PDF text-layer skill explicitly focused on line-reference gaps and the
   page-image wording backstop. The AG 43 boundary is now the next likely
   candidate if the continuation pass keeps going.
+- 2026-06-28: Drafted the AG 43 planning layer for the 71-page CARVM
+  variable-annuity guideline, kept AG 44 out of scope, and wired the scaffold
+  validator to expect the new AG 43 plan and markdown. The existing
+  low-quality PDF text-layer skill still covers the noisy OCR / page-image
+  backstop pattern, so no new skill instruction was added.
