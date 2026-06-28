@@ -320,3 +320,9 @@
   can be validated before extraction starts. The page-image wording backstop
   remains visible because the text layer is noisy and the source includes a
   placeholder statutory reference.
+- 2026-06-27: Ran the AG 23 one-page separate-account-investments batch
+  (`batch-101`) in ignored working storage, kept it review-only, and created
+  the tracked AG 23 review index plus self-review note as the new handoff
+  artifacts. The page-image backstop stayed visible, and the repository POC
+  summary is being refreshed so the handoff now counts AG 23 alongside the
+  other completed review indexes.

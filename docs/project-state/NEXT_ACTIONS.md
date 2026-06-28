@@ -23,8 +23,10 @@ The AG 19 review-only step is complete in the tracked review handoff set.
 The AG 20 review-only step is complete in the tracked review handoff set.
 The AG 21 review-only step is complete in the tracked review handoff set.
 The AG 22 review-only step is complete in the tracked review handoff set.
-The AG 23 guideline is the next short guideline candidate and should be
-planned as batch-101 if the continuation pass keeps going.
+The AG 23 guideline is complete as batch-101. Its tracked review index and
+self-review note now form part of the review handoff set, and the next short
+guideline candidate should be selected from the remaining AG source units if
+the continuation pass keeps going.
 
 ## Build tasks
 
@@ -114,6 +116,8 @@ planned as batch-101 if the continuation pass keeps going.
   `config/ag23-batch-plan.json` as the current AG 23 planning set.
 - Treat `scripts/ag23-batch-definitions.mjs` as synchronized with the AG 23
   planning set.
+- Treat `docs/review/ag23_review_index.md` and `docs/review/ag23_self_review.md`
+  as the current AG 23 handoff set.
 - Treat `docs/processor/ag17_extraction_plan.md` and
   `config/ag17-batch-plan.json` as the current AG 17 planning set.
 - Treat `docs/processor/ag18_extraction_plan.md` and
@@ -275,6 +279,9 @@ planned as batch-101 if the continuation pass keeps going.
 - Keep app-ready export work deferred until a real promotion candidate exists.
 - Keep the repository-level proof-of-concept summary review-only until a
   later stakeholder decision changes the handoff model.
+- Keep the repository-level proof-of-concept summary aligned with the
+  twenty-eight review indexes so it remains a summary aid rather than a
+  promoted artifact.
 - Keep the AG 10 short guideline review-only until batch-088 is executed and
   its summary artifacts are committed.
 - Keep the AG 11 short guideline review-only until batch-089 is executed and
