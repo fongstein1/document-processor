@@ -150,9 +150,10 @@ AG 24 is now complete as batches 102-104. Its tracked review index and
 self-review note summarize the six-page variable-life nonforfeiture values
 guideline without promoting any extracted content, and the page-image
 backstop remains visible because the text layer is noisy / encoded. AG 25 is
-the next candidate and has now been inspected as a three-page indexed
-increasing death-benefits guideline. Its planning layer is in progress and
-batch-105 should stay review-only.
+now complete as batch-105. Its tracked review index and self-review note
+summarize the three-page indexed increasing death-benefits guideline
+without promoting any extracted content, and the page-image backstop remains
+visible because the text layer is noisy / encoded.
 
 The AG 15 review-only step is now complete as batch-093. Its tracked review
 index and self-review note summarize the historical illustration guideline

@@ -342,3 +342,11 @@
   batch-105 can be validated before extraction starts. The page-image
   wording backstop remains visible because the text layer is noisy / encoded,
   and the planning layer keeps the batch review-only by default.
+- 2026-06-27: Ran the AG 25 three-page indexed increasing death-benefits
+  batch (`batch-105`) in ignored working storage, kept it review-only,
+  created the tracked AG 25 review index plus self-review note as the new
+  handoff artifacts, and refreshed the repository POC summary so the
+  thirtieth review index and 105 validated batches are now visible in the
+  handoff layer. No new tracked skill file update was necessary because the
+  existing source-bound rule already covers noisy OCR and page-image
+  backstops.
