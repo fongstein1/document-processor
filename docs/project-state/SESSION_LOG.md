@@ -631,3 +631,7 @@
   wording backstop visible because the text layer is encoding-noisy and line
   references were not available. The existing low-quality PDF text-layer
   handling skill remained sufficient, so no new skill instruction was needed.
+- 2026-06-28: Inspected AG 50, confirmed the 4-page active disability-income
+  claim-reserve guideline, drafted the AG 50 planning layer for batches
+  160-162, and kept the wave review-only by default with the page-image
+  wording backstop visible because the text layer is encoding-noisy.
