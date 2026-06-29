@@ -559,3 +559,10 @@ The next safe source unit has now been selected from the received inventory:
 The planning layer is in place for pages 1-41, the batch map runs from
 batch-198 through batch-201, and the source remains review-only,
 non-binding companion guidance until the wave is executed and indexed.
+
+The life reinsurance practice note wave is now complete as batches 198-201 in
+ignored working storage. The tracked review index and self-review note are in
+place at `docs/review/life_reinsurance_reserve_credit_practice_note_review_index.md`
+and `docs/review/life_reinsurance_reserve_credit_practice_note_self_review.md`,
+the wave stayed review-only, and the next safe continuation step is to inspect
+the remaining inventory again before selecting another source unit.

@@ -554,3 +554,10 @@ has now been selected as the next safe source unit. The new plan covers pages
 Execute that practice-note wave review-only, keep the non-binding companion
 guidance caveat visible, and use the bundled Node runner if the shell runner
 is still flaky for validation.
+
+## Life Reinsurance complete
+
+The life reinsurance practice note wave is complete as batches 198-201 in
+ignored working storage. The next step is to inspect the remaining inventory
+again, compare it against the tracked review indexes, and select the next safe
+source unit without guessing from memory.

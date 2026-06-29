@@ -12,7 +12,7 @@ regulation repository. It consolidates the completed review-only extraction
 waves without changing the status of the underlying batch outputs or review
 indexes.
 
-The handoff now spans 68 review indexes, up from 57 review indexes. The
+The handoff now spans 69 review indexes, up from 68 review indexes. The
 earlier 51 review indexes checkpoint remains part of the handoff history, the
 earlier 50 review indexes checkpoint remains part of the handoff history, the
 earlier 49 review indexes checkpoint remains part of the handoff history, the
@@ -875,3 +875,13 @@ The LTCI practice note wave is now complete as batches 195-197 in ignored
 working storage. The tracked review index and self-review note for the
 companion-guidance note have been added locally, and the proof-of-concept
 summary now includes one more review index than the previous handoff.
+
+## Life Reinsurance practice note addendum
+
+The life reinsurance practice note wave is complete as batches 198-201 in
+ignored working storage. The tracked review index and self-review note for
+the companion-guidance note are `docs/review/life_reinsurance_reserve_credit_practice_note_review_index.md`
+and `docs/review/life_reinsurance_reserve_credit_practice_note_self_review.md`, and the broader
+proof-of-concept handoff now spans one additional review index beyond the
+LTCI summary. The next safe continuation step is to select the next source
+from the remaining inventory once validation is refreshed.
