@@ -377,6 +377,29 @@ const paths = {
     'review',
     'model_regulation_xxx_practice_note_self_review.md',
   ),
+  lifeReinsuranceReserveCreditPracticeNoteBatchPlanJson: path.join(
+    repoRoot,
+    'config',
+    'life-reinsurance-reserve-credit-practice-note-batch-plan.json',
+  ),
+  lifeReinsuranceReserveCreditPracticeNoteExtractionPlanMd: path.join(
+    repoRoot,
+    'docs',
+    'processor',
+    'life_reinsurance_reserve_credit_practice_note_extraction_plan.md',
+  ),
+  lifeReinsuranceReserveCreditPracticeNoteReviewIndexMd: path.join(
+    repoRoot,
+    'docs',
+    'review',
+    'life_reinsurance_reserve_credit_practice_note_review_index.md',
+  ),
+  lifeReinsuranceReserveCreditPracticeNoteSelfReviewMd: path.join(
+    repoRoot,
+    'docs',
+    'review',
+    'life_reinsurance_reserve_credit_practice_note_self_review.md',
+  ),
   ltciPracticeNoteBatchPlanJson: path.join(
     repoRoot,
     'config',
@@ -6102,6 +6125,179 @@ const validateModelRegulationXXXPracticeNotePlanLike = (plan, label) => {
   ) {
     problems.push(
       `${label}.validationImplications.planFile: must be config/model-regulation-xxx-practice-note-batch-plan.json`,
+    )
+  }
+}
+
+const validateLifeReinsuranceReserveCreditPracticeNotePlanMarkdown = async (filePath, label) => {
+  const text = await readText(filePath)
+  const requiredHeadings = [
+    '## Source Scope',
+    '## Section / Topic Map',
+    '## Proposed Batch Sequence',
+    '## Review Standards',
+    '## Promotion Gates',
+    '## Validation Implications',
+    '## Operating Note',
+  ]
+  requiredHeadings.forEach((heading) => {
+    if (!text.includes(heading)) {
+      problems.push(`${label}: missing heading ${heading}`)
+    }
+  })
+  ;[
+    'review-only',
+    'not learner-facing',
+    'not app-ready',
+    'not RAG-ready',
+    'not promoted',
+    'AAA - Life_Reinsurance_Reserve_Credit_Practice_Note_Feb_2018.pdf',
+    'Practice Notes',
+    'Credit for Life Reinsurance practice note',
+    'non-binding',
+    'companion guidance',
+    'Credit for Life Reinsurance',
+    'pages 1-41',
+    'batch-198',
+    'batch-199',
+    'batch-200',
+    'batch-201',
+    'AG 48',
+    'reinsurance model law',
+    'valuation',
+    'asset adequacy',
+  ].forEach((phrase) => {
+    if (!text.includes(phrase)) {
+      problems.push(`${label}: must mention ${phrase}`)
+    }
+  })
+}
+
+const validateLifeReinsuranceReserveCreditPracticeNotePlanLike = (plan, label) => {
+  if (!expectObject(plan, label)) return
+
+  if (plan.planId !== 'life-reinsurance-reserve-credit-practice-note-control-plan') {
+    problems.push(`${label}: planId must be life-reinsurance-reserve-credit-practice-note-control-plan`)
+  }
+  if (plan.planVersion !== '1.0') {
+    problems.push(`${label}: planVersion must be 1.0`)
+  }
+  if (plan.status !== 'planned') {
+    problems.push(`${label}: status must be planned`)
+  }
+  if (!expectObject(plan.sourceScope, `${label}.sourceScope`)) return
+
+  if (plan.sourceScope.sourceFamilyId !== 'practice_notes') {
+    problems.push(`${label}.sourceScope.sourceFamilyId: must be practice_notes`)
+  }
+  if (
+    plan.sourceScope.primarySourceFile !==
+    'Practice Notes/AAA - Life_Reinsurance_Reserve_Credit_Practice_Note_Feb_2018.pdf'
+  ) {
+    problems.push(
+      `${label}.sourceScope.primarySourceFile: must be Practice Notes/AAA - Life_Reinsurance_Reserve_Credit_Practice_Note_Feb_2018.pdf`,
+    )
+  }
+  if (plan.sourceScope.sourceTitle !== 'Credit for Life Reinsurance practice note') {
+    problems.push(
+      `${label}.sourceScope.sourceTitle: must be Credit for Life Reinsurance practice note`,
+    )
+  }
+  if (
+    plan.sourceScope.sourceReference !==
+    'American Academy of Actuaries practice note, February 2018'
+  ) {
+    problems.push(
+      `${label}.sourceScope.sourceReference: must be American Academy of Actuaries practice note, February 2018`,
+    )
+  }
+  if (plan.sourceScope.domainId !== 'naic_regulatory') {
+    problems.push(`${label}.sourceScope.domainId: must be naic_regulatory`)
+  }
+  if (plan.sourceScope.sourceStatus !== 'active') {
+    problems.push(`${label}.sourceScope.sourceStatus: must be active`)
+  }
+  if (
+    !Array.isArray(plan.sourceScope.confirmedPageRange) ||
+    plan.sourceScope.confirmedPageRange.length !== 2 ||
+    plan.sourceScope.confirmedPageRange[0] !== 1 ||
+    plan.sourceScope.confirmedPageRange[1] !== 41
+  ) {
+    problems.push(`${label}.sourceScope.confirmedPageRange: must be [1, 41]`)
+  }
+  if (
+    !Array.isArray(plan.sourceScope.observedSectionWindows) ||
+    plan.sourceScope.observedSectionWindows.length !== 4
+  ) {
+    problems.push(`${label}.sourceScope.observedSectionWindows: must describe four section windows`)
+  }
+  if (
+    !Array.isArray(plan.sourceScope.boundaries) ||
+    !plan.sourceScope.boundaries.some((entry) => typeof entry === 'string' && entry.includes('single practice note file'))
+  ) {
+    problems.push(`${label}.sourceScope.boundaries: must mention the single practice-note file`)
+  }
+  if (
+    !Array.isArray(plan.sourceScope.boundaries) ||
+    !plan.sourceScope.boundaries.some((entry) => typeof entry === 'string' && entry.includes('other Practice Notes files'))
+  ) {
+    problems.push(`${label}.sourceScope.boundaries: must mention the other Practice Notes files`)
+  }
+  if (
+    !Array.isArray(plan.sourceScope.boundaries) ||
+    !plan.sourceScope.boundaries.some(
+      (entry) =>
+        typeof entry === 'string' &&
+        entry.includes('non-binding') &&
+        entry.includes('companion-guidance'),
+    )
+  ) {
+    problems.push(`${label}.sourceScope.boundaries: must mention the non-binding companion-guidance posture`)
+  }
+  if (
+    !Array.isArray(plan.sourceScope.boundaries) ||
+    !plan.sourceScope.boundaries.some((entry) => typeof entry === 'string' && entry.includes('page locators'))
+  ) {
+    problems.push(`${label}.sourceScope.boundaries: must mention page locators`)
+  }
+  if (
+    !Array.isArray(plan.sourceScope.exclusions) ||
+    !plan.sourceScope.exclusions.some((entry) => typeof entry === 'string' && entry.includes('No other Practice Notes files'))
+  ) {
+    problems.push(`${label}.sourceScope.exclusions: must mention the other Practice Notes file exclusion`)
+  }
+
+  if (!expectArray(plan.topicMap, `${label}.topicMap`, false)) return
+  if (plan.topicMap.length !== 4) {
+    problems.push(`${label}.topicMap: expected exactly four topic windows`)
+  }
+  if (!expectArray(plan.proposedBatches, `${label}.proposedBatches`, false)) return
+  if (plan.proposedBatches.length !== 4) {
+    problems.push(`${label}.proposedBatches: expected exactly four batches`)
+  }
+  ;['batch-198', 'batch-199', 'batch-200', 'batch-201'].forEach((batchId) => {
+    if (!plan.proposedBatches.some((entry) => entry.plannedBatchId === batchId)) {
+      problems.push(`${label}.proposedBatches: missing ${batchId}`)
+    }
+  })
+  if (!expectObject(plan.reviewStandards, `${label}.reviewStandards`)) return
+  if (
+    !Array.isArray(plan.reviewStandards.categories) ||
+    !plan.reviewStandards.categories.includes('non_binding_practice_note')
+  ) {
+    problems.push(`${label}.reviewStandards.categories: must include non_binding_practice_note`)
+  }
+  if (!expectObject(plan.promotionGates, `${label}.promotionGates`)) return
+  if (plan.promotionGates.reviewOnlyByDefault !== true) {
+    problems.push(`${label}.promotionGates.reviewOnlyByDefault: must be true`)
+  }
+  if (!expectObject(plan.validationImplications, `${label}.validationImplications`)) return
+  if (
+    plan.validationImplications.planFile !==
+    'config/life-reinsurance-reserve-credit-practice-note-batch-plan.json'
+  ) {
+    problems.push(
+      `${label}.validationImplications.planFile: must be config/life-reinsurance-reserve-credit-practice-note-batch-plan.json`,
     )
   }
 }
@@ -12674,6 +12870,55 @@ if (problems.length > 0) {
     )
   }
   console.log(`- Model governance plan verified: ${modelGovernancePracticeNoteBatchPlan.proposedBatches.length} batches`)
+  await validateLifeReinsuranceReserveCreditPracticeNotePlanMarkdown(
+    paths.lifeReinsuranceReserveCreditPracticeNoteExtractionPlanMd,
+    'docs/processor/life_reinsurance_reserve_credit_practice_note_extraction_plan.md',
+  )
+  const lifeReinsuranceReserveCreditPracticeNoteBatchPlan = await readJson(
+    paths.lifeReinsuranceReserveCreditPracticeNoteBatchPlanJson,
+  )
+  validateLifeReinsuranceReserveCreditPracticeNotePlanLike(
+    lifeReinsuranceReserveCreditPracticeNoteBatchPlan,
+    'config/life-reinsurance-reserve-credit-practice-note-batch-plan.json',
+  )
+  const lifeReinsuranceReserveCreditPracticeNoteBatchIds =
+    lifeReinsuranceReserveCreditPracticeNoteBatchPlan.proposedBatches.map((batch) => batch.plannedBatchId)
+  const lifeReinsuranceReserveCreditPracticeNoteReviewIndexText = (await exists(
+    paths.lifeReinsuranceReserveCreditPracticeNoteReviewIndexMd,
+  ))
+    ? await readText(paths.lifeReinsuranceReserveCreditPracticeNoteReviewIndexMd)
+    : ''
+  const lifeReinsuranceReserveCreditPracticeNoteSelfReviewText = (await exists(
+    paths.lifeReinsuranceReserveCreditPracticeNoteSelfReviewMd,
+  ))
+    ? await readText(paths.lifeReinsuranceReserveCreditPracticeNoteSelfReviewMd)
+    : ''
+  const lifeReinsuranceReserveCreditPracticeNoteReviewIndexReady =
+    lifeReinsuranceReserveCreditPracticeNoteReviewIndexText.length > 0 &&
+    lifeReinsuranceReserveCreditPracticeNoteBatchIds.every((batchId) =>
+      lifeReinsuranceReserveCreditPracticeNoteReviewIndexText.includes(batchId),
+    )
+  const lifeReinsuranceReserveCreditPracticeNoteSelfReviewReady =
+    lifeReinsuranceReserveCreditPracticeNoteSelfReviewText.length > 0 &&
+    lifeReinsuranceReserveCreditPracticeNoteBatchIds.every((batchId) =>
+      lifeReinsuranceReserveCreditPracticeNoteSelfReviewText.includes(batchId),
+    )
+  const lifeReinsuranceReserveCreditPracticeNoteReviewArtifactsPresent =
+    lifeReinsuranceReserveCreditPracticeNoteReviewIndexReady &&
+    lifeReinsuranceReserveCreditPracticeNoteSelfReviewReady
+  if (lifeReinsuranceReserveCreditPracticeNoteReviewIndexReady) {
+    console.log(
+      `- Life reinsurance practice-note review index verified: ${lifeReinsuranceReserveCreditPracticeNoteBatchPlan.proposedBatches.length} batches`,
+    )
+  }
+  if (lifeReinsuranceReserveCreditPracticeNoteSelfReviewReady) {
+    console.log(
+      `- Life reinsurance practice-note self-review verified: ${lifeReinsuranceReserveCreditPracticeNoteBatchPlan.proposedBatches.length} batches`,
+    )
+  }
+  console.log(
+    `- Life reinsurance practice-note plan verified: ${lifeReinsuranceReserveCreditPracticeNoteBatchPlan.proposedBatches.length} batches`,
+  )
   await validateModelRegulationXXXPracticeNotePlanMarkdown(
     paths.modelRegulationXXXPracticeNoteExtractionPlanMd,
     'docs/processor/model_regulation_xxx_practice_note_extraction_plan.md',
@@ -12712,7 +12957,7 @@ if (problems.length > 0) {
   }
   console.log(`- Model Regulation XXX plan verified: ${modelRegulationXXXBatchPlan.proposedBatches.length} batches`)
   console.log(
-    `- POC status summary verified: ${modelRegulationXXXReviewArtifactsPresent ? 67 : reg213ReviewArtifactsPresent ? 66 : reg210ReviewArtifactsPresent ? 65 : modelGovernanceReviewArtifactsPresent ? 64 : reg141ReviewArtifactsPresent ? 63 : ag55ReviewArtifactsPresent ? 62 : ag54ReviewArtifactsPresent ? 61 : ag53ReviewArtifactsPresent ? 58 : ag52ReviewArtifactsPresent ? 57 : ag51ReviewArtifactsPresent ? 56 : ag50ReviewArtifactsPresent ? 55 : ag49ReviewArtifactsPresent ? 54 : ag48ReviewArtifactsPresent ? 53 : ag47ReviewArtifactsPresent ? 52 : ag46ReviewArtifactsPresent ? 51 : ag45ReviewArtifactsPresent ? 50 : ag44ReviewArtifactsPresent ? 49 : ag43ReviewArtifactsPresent ? 48 : ag42ReviewArtifactsPresent ? 47 : ag41ReviewArtifactsPresent ? 46 : ag40ReviewArtifactsPresent ? 45 : ag39ReviewArtifactsPresent ? 44 : ag38ReviewArtifactsPresent ? 43 : ag37ReviewArtifactsPresent ? 42 : ag36ReviewArtifactsPresent ? 41 : ag35ReviewArtifactsPresent ? 40 : ag34ReviewArtifactsPresent ? 39 : 38} review indexes`,
+    `- POC status summary verified: ${modelRegulationXXXReviewArtifactsPresent ? 68 : lifeReinsuranceReserveCreditPracticeNoteReviewArtifactsPresent ? 67 : reg213ReviewArtifactsPresent ? 66 : reg210ReviewArtifactsPresent ? 65 : modelGovernanceReviewArtifactsPresent ? 64 : reg141ReviewArtifactsPresent ? 63 : ag55ReviewArtifactsPresent ? 62 : ag54ReviewArtifactsPresent ? 61 : ag53ReviewArtifactsPresent ? 58 : ag52ReviewArtifactsPresent ? 57 : ag51ReviewArtifactsPresent ? 56 : ag50ReviewArtifactsPresent ? 55 : ag49ReviewArtifactsPresent ? 54 : ag48ReviewArtifactsPresent ? 53 : ag47ReviewArtifactsPresent ? 52 : ag46ReviewArtifactsPresent ? 51 : ag45ReviewArtifactsPresent ? 50 : ag44ReviewArtifactsPresent ? 49 : ag43ReviewArtifactsPresent ? 48 : ag42ReviewArtifactsPresent ? 47 : ag41ReviewArtifactsPresent ? 46 : ag40ReviewArtifactsPresent ? 45 : ag39ReviewArtifactsPresent ? 44 : ag38ReviewArtifactsPresent ? 43 : ag37ReviewArtifactsPresent ? 42 : ag36ReviewArtifactsPresent ? 41 : ag35ReviewArtifactsPresent ? 40 : ag34ReviewArtifactsPresent ? 39 : 38} review indexes`,
   )
   if (validatedPilotBatchCount > 0) {
     console.log(`- Pilot batches validated: ${validatedPilotBatchCount}`)

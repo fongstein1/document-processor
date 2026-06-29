@@ -545,3 +545,12 @@ source from memory.
 The likely next candidate from the remaining inventory is the next small
 practice-note source, but do not start it until the shell runner can be used
 to inspect and validate it safely.
+
+## Life Reinsurance plan
+
+`Practice Notes/AAA - Life_Reinsurance_Reserve_Credit_Practice_Note_Feb_2018.pdf`
+has now been selected as the next safe source unit. The new plan covers pages
+1-41 and the intended batch sequence is `batch-198` through `batch-201`.
+Execute that practice-note wave review-only, keep the non-binding companion
+guidance caveat visible, and use the bundled Node runner if the shell runner
+is still flaky for validation.

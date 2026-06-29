@@ -726,3 +726,6 @@
 
 ## 2026-06-29
 - Added a narrow ignore rule for the received source inventory file so the local manual intake artifact stays untracked.
+
+## 2026-06-29
+- Selected `Practice Notes/AAA - Life_Reinsurance_Reserve_Credit_Practice_Note_Feb_2018.pdf` from the received inventory as the next safe source unit, drafted the page-1-through-41 planning layer, and validated the plan with the bundled Node runner before starting extraction.

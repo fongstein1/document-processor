@@ -58,6 +58,7 @@ import { reg210BatchDefinitions } from './reg210-batch-definitions.mjs'
 import { reg213BatchDefinitions } from './reg213-batch-definitions.mjs'
 import { modelGovernancePracticeNoteBatchDefinitions } from './model-governance-practice-note-batch-definitions.mjs'
 import { modelRegulationXXXPracticeNoteBatchDefinitions } from './model-regulation-xxx-practice-note-batch-definitions.mjs'
+import { lifeReinsuranceReserveCreditPracticeNoteBatchDefinitions } from './life-reinsurance-reserve-credit-practice-note-batch-definitions.mjs'
 import { ltciPracticeNoteBatchDefinitions } from './ltci-practice-note-batch-definitions.mjs'
 import { vm20PracticeNoteBatchDefinitions } from './vm20-practice-note-batch-definitions.mjs'
 import { vm21BatchDefinitions } from './vm21-batch-definitions.mjs'
@@ -2251,6 +2252,7 @@ export const batchDefinitions = {
   ...reg213BatchDefinitions,
   ...modelGovernancePracticeNoteBatchDefinitions,
   ...modelRegulationXXXPracticeNoteBatchDefinitions,
+  ...lifeReinsuranceReserveCreditPracticeNoteBatchDefinitions,
   ...ltciPracticeNoteBatchDefinitions,
   ...vm20PracticeNoteBatchDefinitions,
   ...supportingBatchDefinitions,

@@ -1,0 +1,265 @@
+{
+  "planId": "life-reinsurance-reserve-credit-practice-note-control-plan",
+  "planVersion": "1.0",
+  "status": "planned",
+  "sourceScope": {
+    "sourceFamilyId": "practice_notes",
+    "primarySourceFile": "Practice Notes/AAA - Life_Reinsurance_Reserve_Credit_Practice_Note_Feb_2018.pdf",
+    "sourceFolder": "Practice Notes",
+    "sourceTitle": "Credit for Life Reinsurance practice note",
+    "sourceReference": "American Academy of Actuaries practice note, February 2018",
+    "sourceStatus": "active",
+    "sourceStatusNote": "Non-binding practice note / companion guidance; not authoritative regulatory text.",
+    "domainId": "naic_regulatory",
+    "rawSourceRoot": "D:\\Work\\AI Projects\\NAIC Valuation Manual Course",
+    "confirmedPageRange": [1, 41],
+    "observedSectionWindows": [
+      {
+        "sectionId": "lrrc-opening-general-issues",
+        "pageRange": [1, 16],
+        "note": "Front matter, disclaimer, introduction, and general issues opener."
+      },
+      {
+        "sectionId": "lrrc-valuation-asset-adequacy",
+        "pageRange": [17, 21],
+        "note": "Valuation, asset adequacy, and related reinsurance-credit issues."
+      },
+      {
+        "sectionId": "lrrc-certified-reinsurers-dodd-frank",
+        "pageRange": [22, 31],
+        "note": "Certified reinsurers, Dodd-Frank / covered-agreement issues, and related implementation questions."
+      },
+      {
+        "sectionId": "lrrc-pbr-ag48-closeout",
+        "pageRange": [32, 41],
+        "note": "Principle-based reserving, AG 48 issues, and closing questions."
+      }
+    ],
+    "boundaries": [
+      "Keep planning focused on this single practice note file.",
+      "Do not widen into the other Practice Notes files in the same folder.",
+      "Keep VM-20, VM-21, VM-22, VM-30, VM-31, AG 48, and reinsurance model law / regulation references review-only unless the same batch intentionally includes the referenced operational text.",
+      "Keep the disclaimer and the non-binding status visible as companion-guidance context, not as authoritative regulatory text.",
+      "Use page locators as the primary citation anchor; line references are not expected for this PDF slice."
+    ],
+    "exclusions": [
+      "No full-document processing outside this source file.",
+      "No learner-facing content.",
+      "No app-ready exports.",
+      "No RAG-ready exports.",
+      "No approved/promoted exports.",
+      "No eLearning scripts, slides, quizzes, or app exports.",
+      "No raw source files in Git.",
+      "No other Practice Notes files in the same wave."
+    ]
+  },
+  "topicMap": [
+    {
+      "topicId": "lrrc-opening-general-issues",
+      "label": "Front matter, disclaimer, introduction, and general issues opener",
+      "pageRange": [1, 16],
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "background_content",
+        "caveat_or_companion_guidance",
+        "cross_reference_mapping",
+        "boundary_control_window"
+      ],
+      "crossReferenceWatchlist": ["credit for reinsurance models", "statutory reporting", "AG 48", "valuation guidance"],
+      "boundaryNote": "Keep the disclaimer, introduction, and general issues together before the valuation / asset-adequacy material begins."
+    },
+    {
+      "topicId": "lrrc-valuation-asset-adequacy",
+      "label": "Valuation, asset adequacy, and related reinsurance-credit issues",
+      "pageRange": [17, 21],
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "reporting_requirement",
+        "documentation_expectation",
+        "calculation_structure",
+        "formula_context",
+        "cross_reference_mapping",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": ["statutory valuation guidance", "asset adequacy analysis", "reinsurance model law / regulation"],
+      "boundaryNote": "Keep the valuation and asset-adequacy discussion together as one review-only slice."
+    },
+    {
+      "topicId": "lrrc-certified-reinsurers-dodd-frank",
+      "label": "Certified reinsurers, Dodd-Frank / covered-agreement issues, and related implementation questions",
+      "pageRange": [22, 31],
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "jurisdiction_specific_requirement",
+        "regulatory_requirement",
+        "cross_reference_mapping",
+        "background_content",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": ["reinsurance law / regulation", "state adoption variants", "statutory reporting"],
+      "boundaryNote": "Keep the certified-reinsurer and covered-agreement material together before the AG 48 follow-on questions begin."
+    },
+    {
+      "topicId": "lrrc-pbr-ag48-closeout",
+      "label": "Principle-based reserving, AG 48 issues, and closing questions",
+      "pageRange": [32, 41],
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "reinsurance",
+        "calculation_structure",
+        "formula_context",
+        "cross_reference_mapping",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": ["VM-20", "VM-21", "VM-22", "AG 48", "reinsurance model law / regulation"],
+      "boundaryNote": "Close the note with the PBR / AG 48 material while keeping the end boundary explicit."
+    }
+  ],
+  "proposedBatches": [
+    {
+      "plannedBatchId": "batch-198",
+      "topicIds": ["lrrc-opening-general-issues"],
+      "title": "Life reinsurance reserve credit opening slice",
+      "paragraphTarget": {
+        "knownWindow": [1, 16],
+        "notes": "Capture the disclaimer, introduction, and general issues opener as one review-only slice."
+      },
+      "rationale": "Capture the opening companion-guidance material before the valuation and asset-adequacy sections begin.",
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "background_content",
+        "caveat_or_companion_guidance",
+        "cross_reference_mapping",
+        "boundary_control_window"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    },
+    {
+      "plannedBatchId": "batch-199",
+      "topicIds": ["lrrc-valuation-asset-adequacy"],
+      "title": "Life reinsurance valuation and asset-adequacy slice",
+      "paragraphTarget": {
+        "knownWindow": [17, 21],
+        "notes": "Keep the valuation and asset-adequacy discussion together as a narrow review-only slice."
+      },
+      "rationale": "Keep the valuation and asset-adequacy discussion together as one review-only slice.",
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "reporting_requirement",
+        "documentation_expectation",
+        "calculation_structure",
+        "formula_context",
+        "cross_reference_mapping",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    },
+    {
+      "plannedBatchId": "batch-200",
+      "topicIds": ["lrrc-certified-reinsurers-dodd-frank"],
+      "title": "Life reinsurance certified reinsurer and Dodd-Frank slice",
+      "paragraphTarget": {
+        "knownWindow": [22, 31],
+        "notes": "Keep the certified-reinsurer and covered-agreement material together before the AG 48 follow-on questions begin."
+      },
+      "rationale": "Keep the certified-reinsurer and covered-agreement material together before the AG 48 follow-on questions begin.",
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "jurisdiction_specific_requirement",
+        "regulatory_requirement",
+        "cross_reference_mapping",
+        "background_content",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    },
+    {
+      "plannedBatchId": "batch-201",
+      "topicIds": ["lrrc-pbr-ag48-closeout"],
+      "title": "Life reinsurance PBR and AG 48 closeout slice",
+      "paragraphTarget": {
+        "knownWindow": [32, 41],
+        "notes": "Close the note with the PBR / AG 48 material while keeping the end boundary explicit."
+      },
+      "rationale": "Close the note with the PBR / AG 48 material while keeping the end boundary explicit.",
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "reinsurance",
+        "calculation_structure",
+        "formula_context",
+        "cross_reference_mapping",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    }
+  ],
+  "reviewStandards": {
+    "reviewOnlyByDefault": true,
+    "categories": [
+      "reporting_requirement",
+      "documentation_expectation",
+      "definition_or_terminology",
+      "calculation_structure",
+      "formula_context",
+      "prescribed_assumption",
+      "company_or_prudent_estimate_assumption",
+      "cross_reference_mapping",
+      "background_content",
+      "caveat_or_companion_guidance",
+      "boundary_control_window",
+      "requires_human_interpretation",
+      "reinsurance",
+      "jurisdiction_specific_requirement",
+      "non_binding_practice_note"
+    ],
+    "notes": [
+      "Use page locators as the primary anchor because line references are not expected for this PDF slice.",
+      "Keep the non-binding practice-note caveat visible in the review packet and review index.",
+      "Treat references to AG 48, reinsurance model law / regulation, and statutory valuation material as cross-reference material unless the operational text is captured in the same batch."
+    ]
+  },
+  "promotionGates": {
+    "reviewOnlyByDefault": true,
+    "learnerFacingCriteria": [
+      "source citation exists",
+      "source support is clear",
+      "wording is not misleading",
+      "confidence is high",
+      "no unresolved review flags exist",
+      "no cross-reference ambiguity remains"
+    ],
+    "appReadyCriteria": [
+      "already eligible for learner-facing use",
+      "sanitized, stable, and versioned for the app thread"
+    ],
+    "ragReadyCriteria": [
+      "approved",
+      "source-bound",
+      "indexed with a stable ID",
+      "citation and locator present",
+      "review status no longer requires human disposition"
+    ]
+  },
+  "validationImplications": {
+    "planFile": "config/life-reinsurance-reserve-credit-practice-note-batch-plan.json",
+    "checkScript": "npm run check",
+    "futureChecks": [
+      "synchronize scripts/life-reinsurance-reserve-credit-practice-note-batch-definitions.mjs with the planned batch IDs",
+      "keep one topic window per batch",
+      "keep cross-reference tagging review-only",
+      "keep no-promotion guardrails visible"
+    ],
+    "portabilityNote": "Keep the plan separate from VM-20, VM-21, VM-22, and the other Practice Notes files so the processor stays portable across source families."
+  },
+  "operatingNote": "This plan is intentionally conservative. It is a boundary-control artifact that should reduce review burden before any controlled life-reinsurance practice-note extraction run begins."
+}

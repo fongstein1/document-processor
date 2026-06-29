@@ -551,3 +551,11 @@ remaining practice-note inventory after validation is refreshed.
 
 Shell process creation is currently failing in this workspace, so the next
 source unit has not been started yet.
+
+## Life Reinsurance practice note addendum
+
+The next safe source unit has now been selected from the received inventory:
+`Practice Notes/AAA - Life_Reinsurance_Reserve_Credit_Practice_Note_Feb_2018.pdf`.
+The planning layer is in place for pages 1-41, the batch map runs from
+batch-198 through batch-201, and the source remains review-only,
+non-binding companion guidance until the wave is executed and indexed.
