@@ -1,0 +1,22 @@
+{
+  "inventory_created_at": "{{inventoryCreatedAt}}",
+  "inventory_created_by": "{{inventoryCreatedBy}}",
+  "raw_source_root": "D:\\Work\\AI Projects\\NAIC Valuation Manual Course",
+  "source_items": [
+    {
+      "source_id": "{{sourceId}}",
+      "filename": "{{filename}}",
+      "relative_path": "{{relativePath}}",
+      "source_family": "{{sourceFamily}}",
+      "jurisdiction": "{{jurisdiction}}",
+      "page_count": null,
+      "file_size_bytes": null,
+      "status_hint": "unclear",
+      "already_processed_hint": "unclear",
+      "notes": "{{notes}}",
+      "safe_to_process_hint": "unclear",
+      "defer_reason": "{{deferReason}}",
+      "priority_hint": "unspecified"
+    }
+  ]
+}

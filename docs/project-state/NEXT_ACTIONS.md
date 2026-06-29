@@ -2,6 +2,16 @@
 
 ## Next immediate task
 
+The raw source folder could not be safely inventoried from this workspace, so
+the next immediate task is to wait for a human-supplied remaining-source
+inventory file under `data/manual-input/` and compare it against the tracked
+review indexes. No new extraction should start until that inventory exists.
+
+The tracked intake workflow now lives at
+`docs/processor/remaining_source_inventory_workflow.md`, and the blank
+placeholder stub at `data/manual-input/remaining-source-inventory.pending.json`
+stays review-only until a human provides a received inventory file.
+
 AG 55 is now complete as batches 171-179 in ignored working storage. Its
 tracked review index and self-review note now form part of the handoff set,
 the paragraph-locator backstop remained visible because line references were
@@ -15,12 +25,7 @@ ignored working storage.
 
 The model-governance practice note is now complete as batches 183-185 in
 ignored working storage. Its tracked review index and self-review note are
-now part of the handoff set, and the next immediate task is to inspect the
-remaining raw source folder for the next safe source unit.
-
-The next immediate task is to inspect the remaining raw source folder for the
-next safe source unit, then plan and validate the next small wave before any
-new extraction starts.
+now part of the handoff set.
 
 AG 40 is now complete as batches 135-136 in ignored working storage. Its
 tracked review index and self-review note now form part of the handoff set.

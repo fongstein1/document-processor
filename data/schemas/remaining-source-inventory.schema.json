@@ -1,0 +1,136 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://codex.local/schemas/remaining-source-inventory.schema.json",
+  "title": "Remaining Source Inventory Intake",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "inventory_created_at",
+    "inventory_created_by",
+    "raw_source_root",
+    "source_items"
+  ],
+  "properties": {
+    "inventory_created_at": {
+      "type": "string",
+      "minLength": 1
+    },
+    "inventory_created_by": {
+      "type": "string",
+      "minLength": 1
+    },
+    "raw_source_root": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_items": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/sourceItem"
+      }
+    }
+  },
+  "$defs": {
+    "sourceItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_id",
+        "filename",
+        "relative_path",
+        "source_family",
+        "status_hint",
+        "already_processed_hint",
+        "notes",
+        "safe_to_process_hint",
+        "defer_reason",
+        "priority_hint"
+      ],
+      "properties": {
+        "source_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "filename": {
+          "type": "string",
+          "minLength": 1
+        },
+        "relative_path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_family": {
+          "type": "string",
+          "minLength": 1
+        },
+        "jurisdiction": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "page_count": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "file_size_bytes": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "status_hint": {
+          "type": "string",
+          "enum": [
+            "active",
+            "historical",
+            "withdrawn",
+            "repealed",
+            "superseded",
+            "companion-only",
+            "non-binding practice note",
+            "regulation",
+            "unclear"
+          ]
+        },
+        "already_processed_hint": {
+          "type": "string",
+          "enum": [
+            "yes",
+            "no",
+            "unclear"
+          ]
+        },
+        "notes": {
+          "type": "string"
+        },
+        "safe_to_process_hint": {
+          "type": "string",
+          "enum": [
+            "yes",
+            "no",
+            "unclear"
+          ]
+        },
+        "defer_reason": {
+          "type": "string"
+        },
+        "priority_hint": {
+          "type": "string",
+          "enum": [
+            "highest",
+            "high",
+            "medium",
+            "low",
+            "hold",
+            "unspecified"
+          ]
+        }
+      }
+    }
+  }
+}

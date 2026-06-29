@@ -10,7 +10,14 @@
 
 ## Latest known commit before this batch
 
-`585fafe`
+`a920cd6`
+
+## Inventory intake gate
+
+The raw source root could not be safely inventoried from this workspace. The
+next safe step is to wait for a human-supplied remaining-source inventory file
+and compare it against the tracked review indexes. No new extraction should
+start until that inventory exists.
 
 ## Validation status
 

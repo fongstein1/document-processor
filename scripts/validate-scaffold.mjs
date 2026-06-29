@@ -95,6 +95,30 @@ const paths = {
     'contract-demo',
     'README.md',
   ),
+  remainingSourceInventorySchema: path.join(
+    repoRoot,
+    'data',
+    'schemas',
+    'remaining-source-inventory.schema.json',
+  ),
+  remainingSourceInventoryTemplate: path.join(
+    repoRoot,
+    'data',
+    'templates',
+    'remaining-source-inventory.template.json',
+  ),
+  remainingSourceInventoryPending: path.join(
+    repoRoot,
+    'data',
+    'manual-input',
+    'remaining-source-inventory.pending.json',
+  ),
+  remainingSourceInventoryWorkflowMd: path.join(
+    repoRoot,
+    'docs',
+    'processor',
+    'remaining_source_inventory_workflow.md',
+  ),
   vm20BatchPlanJson: path.join(repoRoot, 'config', 'vm20-batch-plan.json'),
   vm20ExtractionPlanMd: path.join(repoRoot, 'docs', 'processor', 'vm20_extraction_plan.md'),
   vm20ReviewIndexMd: path.join(repoRoot, 'docs', 'review', 'vm20_review_index.md'),
@@ -1055,6 +1079,69 @@ const validateSourceInventoryLike = (inventory, label) => {
       problems.push(`${itemLabel}: versionDate must be a date string or null`)
     }
   })
+}
+
+const validateRemainingSourceInventoryTemplateLike = (inventory, label) => {
+  if (!expectObject(inventory, label)) return
+  ;['inventory_created_at', 'inventory_created_by', 'raw_source_root'].forEach((field) => {
+    if (!hasString(inventory[field])) {
+      problems.push(`${label}: missing ${field}`)
+    }
+  })
+  if (!expectArray(inventory.source_items, `${label}.source_items`)) return
+  if (inventory.source_items.length < 1) {
+    problems.push(`${label}: source_items should include one example item`)
+  }
+  inventory.source_items.forEach((item, index) => {
+    const itemLabel = `${label}.source_items[${index}]`
+    if (!expectObject(item, itemLabel)) return
+    ;['source_id', 'filename', 'relative_path', 'source_family', 'notes', 'defer_reason'].forEach(
+      (field) => {
+        if (!hasString(item[field])) {
+          problems.push(`${itemLabel}: missing ${field}`)
+        }
+      },
+    )
+    if (!['active', 'historical', 'withdrawn', 'repealed', 'superseded', 'companion-only', 'non-binding practice note', 'regulation', 'unclear'].includes(item.status_hint)) {
+      problems.push(`${itemLabel}: invalid status_hint`)
+    }
+    if (!['yes', 'no', 'unclear'].includes(item.already_processed_hint)) {
+      problems.push(`${itemLabel}: invalid already_processed_hint`)
+    }
+    if (!['yes', 'no', 'unclear'].includes(item.safe_to_process_hint)) {
+      problems.push(`${itemLabel}: invalid safe_to_process_hint`)
+    }
+    if (!['highest', 'high', 'medium', 'low', 'hold', 'unspecified'].includes(item.priority_hint)) {
+      problems.push(`${itemLabel}: invalid priority_hint`)
+    }
+  })
+}
+
+const validateRemainingSourceInventoryPendingLike = (inventory, label) => {
+  if (!expectObject(inventory, label)) return
+  ;['inventory_created_at', 'inventory_created_by', 'raw_source_root'].forEach((field) => {
+    if (typeof inventory[field] !== 'string') {
+      problems.push(`${label}: missing ${field}`)
+    }
+  })
+  if (!expectArray(inventory.source_items, `${label}.source_items`)) return
+  if (inventory.source_items.length !== 0) {
+    problems.push(`${label}: source_items must stay empty in the tracked pending placeholder`)
+  }
+}
+
+const validateRemainingSourceInventoryWorkflowMarkdown = async (filePath, label) => {
+  const text = await readText(filePath)
+  const requiredPhrases = [
+    'Missing inventory means no new extraction should start.',
+    'Do not guess the next source unit from memory.',
+    'Do not infer unlisted files.',
+    'review-only',
+  ]
+  const missingPhrases = requiredPhrases.filter((phrase) => !text.includes(phrase))
+  if (missingPhrases.length > 0) {
+    throw new Error(`${label}:\n- missing required phrase: ${missingPhrases.join('\n- missing required phrase: ')}`)
+  }
 }
 
 const validateExtractionOutputLike = (output, label) => {
@@ -2765,6 +2852,9 @@ const sampleBatchManifest = await readJson(paths.sampleBatchManifest)
 const sampleSourceInventory = await readJson(paths.sampleSourceInventory)
 const sampleExtractionOutput = await readJson(paths.sampleExtractionOutput)
 const sampleReviewPacketJson = await readJson(paths.sampleReviewPacketJson)
+const remainingSourceInventorySchema = await readJson(paths.remainingSourceInventorySchema)
+const remainingSourceInventoryTemplate = await readJson(paths.remainingSourceInventoryTemplate)
+const remainingSourceInventoryPending = await readJson(paths.remainingSourceInventoryPending)
 const vm20BatchPlan = await readJson(paths.vm20BatchPlanJson)
 const supportingVmBatchPlan = await readJson(paths.supportingVmBatchPlanJson)
 const vm21BatchPlan = await readJson(paths.vm21BatchPlanJson)
@@ -2830,6 +2920,10 @@ validateSchemaEnvelope(batchManifestSchema, 'batch-manifest.schema.json')
 validateSchemaEnvelope(sourceInventorySchema, 'source-inventory.schema.json')
 validateSchemaEnvelope(extractionOutputSchema, 'extraction-output.schema.json')
 validateSchemaEnvelope(reviewPacketSchema, 'review-packet.schema.json')
+validateSchemaEnvelope(
+  remainingSourceInventorySchema,
+  'remaining-source-inventory.schema.json',
+)
 
 validateBatchManifestLike(batchManifestTemplate, 'batch-manifest.template.json')
 validateBatchManifestLike(sampleBatchManifest, 'batch-manifest.sample.json')
@@ -2838,6 +2932,14 @@ validateSourceInventoryLike(sampleSourceInventory, 'source-inventory.sample.json
 validateExtractionOutputLike(sampleExtractionOutput, 'extraction-output.sample.json')
 validateReviewPacketLike(reviewPacketTemplateJson, 'review-packet.template.json')
 validateReviewPacketLike(sampleReviewPacketJson, 'review-packet.sample.json')
+validateRemainingSourceInventoryTemplateLike(
+  remainingSourceInventoryTemplate,
+  'remaining-source-inventory.template.json',
+)
+validateRemainingSourceInventoryPendingLike(
+  remainingSourceInventoryPending,
+  'data/manual-input/remaining-source-inventory.pending.json',
+)
 validateVm20PlanLike(vm20BatchPlan, 'config/vm20-batch-plan.json')
 validateSupportingVmPlanLike(supportingVmBatchPlan, 'config/supporting-vm-batch-plan.json')
 validateVm21PlanLike(vm21BatchPlan, 'config/vm21-batch-plan.json')
@@ -11793,6 +11895,10 @@ await validateSupportingVmPlanMarkdown(
 )
 await validateVm21PlanMarkdown(paths.vm21ExtractionPlanMd, 'docs/processor/vm21_extraction_plan.md')
 await validateVm22PlanMarkdown(paths.vm22ExtractionPlanMd, 'docs/processor/vm22_extraction_plan.md')
+await validateRemainingSourceInventoryWorkflowMarkdown(
+  paths.remainingSourceInventoryWorkflowMd,
+  'docs/processor/remaining_source_inventory_workflow.md',
+)
 
 if (!config.project?.name) {
   problems.push('config/source-families.json: missing project.name')

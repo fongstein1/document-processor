@@ -218,6 +218,15 @@ stay aligned with the ignored batch review packets and must not be treated as
 promoted content, learner-facing content, app-ready output, or RAG-ready
 material.
 
+## Remaining-source inventory gate
+
+If the raw source folder cannot be inventoried safely from the current
+workspace, the processor must stop before extraction and wait for a
+human-supplied remaining-source inventory file. The processor should compare
+that inventory against the tracked review indexes and must not guess the next
+source unit from memory or from filenames that are not visible in the current
+workspace.
+
 ## Practice note companion guidance
 
 Practice notes are handled as companion / implementation guidance. They may be
