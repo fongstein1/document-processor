@@ -10,7 +10,7 @@
 
 ## Latest known commit before this batch
 
-`7a0dc2e`
+`dd97417`
 
 ## Validation status
 
@@ -312,7 +312,9 @@ ignored working storage. Its tracked review index and self-review note are
 now part of the handoff set, and the page-image wording backstop remains
 visible because the text layer is encoding-noisy, line references were not
 available, and AG 48 is the next likely candidate if the continuation pass
-keeps going. AG 51 is now complete as batches 163-164 in ignored working
+keeps going. The model-governance practice note is now planned as batches
+183-185, remains companion guidance and non-binding, and should be committed
+before batch-183 runs. AG 51 is now complete as batches 163-164 in ignored working
 storage. Its tracked review index and self-review note are now part of the
 handoff set, the page-locator backstop remained visible because stable line
 references were not available, the future VM-30 incorporation note stayed
@@ -476,7 +478,10 @@ references were preserved, and AG 55 is now complete as batches 171-179 in
 ignored working storage. Its tracked review index and self-review note now
 form part of the handoff set, the paragraph-locator backstop remained visible
 because line references were preserved, and Reg-141 is now the next likely
-candidate if the continuation pass keeps going.
+candidate if the continuation pass keeps going. The model-governance
+practice-note wave is now planned as batches 183-185, and the next immediate
+step is to commit that planning layer and run the three review-only
+companion-guidance slices.
 
 AG 39 batch-134 has completed in ignored working storage, and the tracked
 AG 39 review index and self-review note are now part of the handoff set. The

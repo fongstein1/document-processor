@@ -700,3 +700,4 @@
   paragraph-locator backstop visible because line references were
   preserved. Reg-141 is now the next likely candidate if the continuation
   pass keeps going.
+- 2026-06-28: Inspected the model-governance practice note `Practice Notes/AAA - Model_Governance_PN_042017.pdf`, confirmed the 18-page companion-guidance span, drafted the dedicated review-only planning layer for batches 183-185, wired the runner and validator to the new plan, and validated the scaffold cleanly after adding a model-governance-specific markdown checker.

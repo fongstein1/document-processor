@@ -297,6 +297,29 @@ const paths = {
   reg141ExtractionPlanMd: path.join(repoRoot, 'docs', 'processor', 'reg141_extraction_plan.md'),
   reg141ReviewIndexMd: path.join(repoRoot, 'docs', 'review', 'reg141_review_index.md'),
   reg141SelfReviewMd: path.join(repoRoot, 'docs', 'review', 'reg141_self_review.md'),
+  modelGovernancePracticeNoteBatchPlanJson: path.join(
+    repoRoot,
+    'config',
+    'model-governance-practice-note-batch-plan.json',
+  ),
+  modelGovernancePracticeNoteExtractionPlanMd: path.join(
+    repoRoot,
+    'docs',
+    'processor',
+    'model_governance_practice_note_extraction_plan.md',
+  ),
+  modelGovernancePracticeNoteReviewIndexMd: path.join(
+    repoRoot,
+    'docs',
+    'review',
+    'model_governance_practice_note_review_index.md',
+  ),
+  modelGovernancePracticeNoteSelfReviewMd: path.join(
+    repoRoot,
+    'docs',
+    'review',
+    'model_governance_practice_note_self_review.md',
+  ),
   ag26ReviewIndexMd: path.join(repoRoot, 'docs', 'review', 'ag26_review_index.md'),
   ag26SelfReviewMd: path.join(repoRoot, 'docs', 'review', 'ag26_self_review.md'),
   ag23ReviewIndexMd: path.join(repoRoot, 'docs', 'review', 'ag23_review_index.md'),
@@ -2329,6 +2352,157 @@ const validatePracticeNotePlanMarkdown = async (filePath, label) => {
   })
 }
 
+const validateModelGovernancePracticeNotePlanMarkdown = async (filePath, label) => {
+  const text = await readText(filePath)
+  const requiredHeadings = [
+    '## Source Scope',
+    '## Section / Topic Map',
+    '## Proposed Batch Sequence',
+    '## Review Standards',
+    '## Promotion Gates',
+    '## Validation Implications',
+    '## Operating Note',
+  ]
+  requiredHeadings.forEach((heading) => {
+    if (!text.includes(heading)) {
+      problems.push(`${label}: missing heading ${heading}`)
+    }
+  })
+  ;[
+    'review-only',
+    'not learner-facing',
+    'not app-ready',
+    'not RAG-ready',
+    'not promoted',
+    'AAA - Model_Governance_PN_042017.pdf',
+    'Practice Notes',
+    'Model Governance: Some Considerations for Practicing Life Actuaries',
+    'non-binding',
+    'companion guidance',
+    'model governance',
+    'pages 1-18',
+    'batch-183',
+    'batch-184',
+    'batch-185',
+    'VM-20',
+    'VM-21',
+    'VM-22',
+    'VM-A',
+    'VM-C',
+    'VM-G',
+    'VM-M',
+    'VM-30',
+    'VM-31',
+  ].forEach((phrase) => {
+    if (!text.includes(phrase)) {
+      problems.push(`${label}: must mention ${phrase}`)
+    }
+  })
+}
+
+const validateModelGovernancePracticeNotePlanLike = (plan, label) => {
+  if (!expectObject(plan, label)) return
+
+  if (plan.planId !== 'model-governance-practice-note-control-plan') {
+    problems.push(`${label}: planId must be model-governance-practice-note-control-plan`)
+  }
+  if (plan.planVersion !== '1.0') {
+    problems.push(`${label}: planVersion must be 1.0`)
+  }
+  if (plan.status !== 'planned') {
+    problems.push(`${label}: status must be planned`)
+  }
+  if (!expectObject(plan.sourceScope, `${label}.sourceScope`)) return
+
+  if (plan.sourceScope.sourceFamilyId !== 'practice_notes') {
+    problems.push(`${label}.sourceScope.sourceFamilyId: must be practice_notes`)
+  }
+  if (plan.sourceScope.primarySourceFile !== 'Practice Notes/AAA - Model_Governance_PN_042017.pdf') {
+    problems.push(
+      `${label}.sourceScope.primarySourceFile: must be Practice Notes/AAA - Model_Governance_PN_042017.pdf`,
+    )
+  }
+  if (plan.sourceScope.sourceTitle !== 'Model Governance: Some Considerations for Practicing Life Actuaries') {
+    problems.push(
+      `${label}.sourceScope.sourceTitle: must be Model Governance: Some Considerations for Practicing Life Actuaries`,
+    )
+  }
+  if (plan.sourceScope.sourceReference !== 'American Academy of Actuaries practice note, April 2017') {
+    problems.push(`${label}.sourceScope.sourceReference: must be American Academy of Actuaries practice note, April 2017`)
+  }
+  if (plan.sourceScope.domainId !== 'naic_regulatory') {
+    problems.push(`${label}.sourceScope.domainId: must be naic_regulatory`)
+  }
+  if (plan.sourceScope.sourceStatus !== 'active') {
+    problems.push(`${label}.sourceScope.sourceStatus: must be active`)
+  }
+  if (
+    !Array.isArray(plan.sourceScope.confirmedPageRange) ||
+    plan.sourceScope.confirmedPageRange.length !== 2 ||
+    plan.sourceScope.confirmedPageRange[0] !== 1 ||
+    plan.sourceScope.confirmedPageRange[1] !== 18
+  ) {
+    problems.push(`${label}.sourceScope.confirmedPageRange: must be [1, 18]`)
+  }
+  if (
+    !Array.isArray(plan.sourceScope.observedSectionWindows) ||
+    plan.sourceScope.observedSectionWindows.length !== 3
+  ) {
+    problems.push(`${label}.sourceScope.observedSectionWindows: must describe three section windows`)
+  }
+  if (
+    !Array.isArray(plan.sourceScope.boundaries) ||
+    !plan.sourceScope.boundaries.some(
+      (entry) => typeof entry === 'string' && entry.includes('single practice note file'),
+    )
+  ) {
+    problems.push(`${label}.sourceScope.boundaries: must mention the single practice-note file`)
+  }
+  if (
+    !Array.isArray(plan.sourceScope.boundaries) ||
+    !plan.sourceScope.boundaries.some(
+      (entry) => typeof entry === 'string' && entry.includes('other Practice Notes files'),
+    )
+  ) {
+    problems.push(`${label}.sourceScope.boundaries: must mention the other Practice Notes files`)
+  }
+  if (
+    !Array.isArray(plan.sourceScope.boundaries) ||
+    !plan.sourceScope.boundaries.some(
+      (entry) => typeof entry === 'string' && entry.includes('non-binding') && entry.includes('companion-guidance'),
+    )
+  ) {
+    problems.push(`${label}.sourceScope.boundaries: must mention the non-binding companion-guidance posture`)
+  }
+  if (
+    !Array.isArray(plan.sourceScope.exclusions) ||
+    !plan.sourceScope.exclusions.some(
+      (entry) => typeof entry === 'string' && entry.includes('No other Practice Notes files'),
+    )
+  ) {
+    problems.push(`${label}.sourceScope.exclusions: must mention the other Practice Notes file exclusion`)
+  }
+
+  if (!expectArray(plan.topicMap, `${label}.topicMap`, false)) return
+  if (plan.topicMap.length !== 3) {
+    problems.push(`${label}.topicMap: expected exactly three topic windows`)
+  }
+  if (!expectArray(plan.proposedBatches, `${label}.proposedBatches`, false)) return
+  if (plan.proposedBatches.length !== 3) {
+    problems.push(`${label}.proposedBatches: expected exactly three planned batches`)
+  }
+  const expectedBatchIds = ['batch-183', 'batch-184', 'batch-185']
+  for (const batchId of expectedBatchIds) {
+    if (!plan.proposedBatches.some((batch) => batch?.plannedBatchId === batchId)) {
+      problems.push(`${label}.proposedBatches: missing planned batch ${batchId}`)
+    }
+  }
+
+  if (!expectObject(plan.reviewStandards, `${label}.reviewStandards`)) return
+  if (!expectObject(plan.promotionGates, `${label}.promotionGates`)) return
+  if (!expectObject(plan.validationImplications, `${label}.validationImplications`)) return
+}
+
 const validateAg03PlanMarkdown = async (filePath, label) => {
   const text = await readText(filePath)
   const requiredHeadings = [
@@ -2634,8 +2808,11 @@ const ag50BatchPlan = await readJson(paths.ag50BatchPlanJson)
 const ag51BatchPlan = await readJson(paths.ag51BatchPlanJson)
 const ag53BatchPlan = await readJson(paths.ag53BatchPlanJson)
 const ag54BatchPlan = await readJson(paths.ag54BatchPlanJson)
-const ag55BatchPlan = await readJson(paths.ag55BatchPlanJson)
-const reg141BatchPlan = await readJson(paths.reg141BatchPlanJson)
+  const ag55BatchPlan = await readJson(paths.ag55BatchPlanJson)
+  const reg141BatchPlan = await readJson(paths.reg141BatchPlanJson)
+  const modelGovernancePracticeNoteBatchPlan = await readJson(
+    paths.modelGovernancePracticeNoteBatchPlanJson,
+  )
 
 validateSchemaEnvelope(batchManifestSchema, 'batch-manifest.schema.json')
 validateSchemaEnvelope(sourceInventorySchema, 'source-inventory.schema.json')
@@ -2654,6 +2831,10 @@ validateSupportingVmPlanLike(supportingVmBatchPlan, 'config/supporting-vm-batch-
 validateVm21PlanLike(vm21BatchPlan, 'config/vm21-batch-plan.json')
 validateVm22PlanLike(vm22BatchPlan, 'config/vm22-batch-plan.json')
 validatePracticeNotePlanLike(practiceNoteBatchPlan, 'config/vm20-practice-note-batch-plan.json')
+validateModelGovernancePracticeNotePlanLike(
+  modelGovernancePracticeNoteBatchPlan,
+  'config/model-governance-practice-note-batch-plan.json',
+)
 validateAg43PlanLike(ag43BatchPlan, 'config/ag43-batch-plan.json')
 validateAg44PlanLike(ag44BatchPlan, 'config/ag44-batch-plan.json')
 validateAg46PlanLike(ag46BatchPlan, 'config/ag46-batch-plan.json')
@@ -11134,11 +11315,15 @@ if (!plannedAg32BatchIds.includes('batch-114')) {
 await validateReviewMarkdown(paths.reviewPacketTemplateMd, 'review-packet.template.md')
 await validateReviewMarkdown(paths.sampleReviewPacketMd, 'review-packet.sample.md')
 await validateVm20PlanMarkdown(paths.vm20ExtractionPlanMd, 'docs/processor/vm20_extraction_plan.md')
-await validatePracticeNotePlanMarkdown(
-  paths.practiceNoteExtractionPlanMd,
-  'docs/processor/vm20_practice_note_extraction_plan.md',
-)
-await validateAg03PlanMarkdown(paths.ag03ExtractionPlanMd, 'docs/processor/ag03_extraction_plan.md')
+  await validatePracticeNotePlanMarkdown(
+    paths.practiceNoteExtractionPlanMd,
+    'docs/processor/vm20_practice_note_extraction_plan.md',
+  )
+await validateModelGovernancePracticeNotePlanMarkdown(
+    paths.modelGovernancePracticeNoteExtractionPlanMd,
+    'docs/processor/model_governance_practice_note_extraction_plan.md',
+  )
+  await validateAg03PlanMarkdown(paths.ag03ExtractionPlanMd, 'docs/processor/ag03_extraction_plan.md')
 await validateAg42PlanMarkdown(paths.ag42ExtractionPlanMd, 'docs/processor/ag42_extraction_plan.md')
 await validateAg43PlanMarkdown(paths.ag43ExtractionPlanMd, 'docs/processor/ag43_extraction_plan.md')
 await validateAg44PlanMarkdown(paths.ag44ExtractionPlanMd, 'docs/processor/ag44_extraction_plan.md')
@@ -11706,9 +11891,35 @@ if (problems.length > 0) {
     console.log(`- Reg 141 self-review verified: ${reg141BatchPlan.proposedBatches.length} batches`)
   }
   console.log(`- Reg 141 plan verified: ${reg141BatchPlan.proposedBatches.length} batches`)
-  console.log(
-      `- POC status summary verified: ${reg141ReviewArtifactsPresent ? 62 : ag55ReviewArtifactsPresent ? 61 : ag54ReviewArtifactsPresent ? 60 : ag53ReviewArtifactsPresent ? 57 : ag51ReviewArtifactsPresent ? 56 : ag50ReviewArtifactsPresent ? 55 : ag49ReviewArtifactsPresent ? 54 : ag48ReviewArtifactsPresent ? 53 : ag47ReviewArtifactsPresent ? 52 : ag46ReviewArtifactsPresent ? 51 : ag45ReviewArtifactsPresent ? 50 : ag44ReviewArtifactsPresent ? 49 : ag43ReviewArtifactsPresent ? 48 : ag42ReviewArtifactsPresent ? 47 : ag41ReviewArtifactsPresent ? 46 : ag40ReviewArtifactsPresent ? 45 : ag39ReviewArtifactsPresent ? 44 : ag38ReviewArtifactsPresent ? 43 : ag37ReviewArtifactsPresent ? 42 : ag36ReviewArtifactsPresent ? 41 : ag35ReviewArtifactsPresent ? 40 : ag34ReviewArtifactsPresent ? 39 : 38} review indexes`,
+  const modelGovernanceBatchIds = modelGovernancePracticeNoteBatchPlan.proposedBatches.map((batch) => batch.plannedBatchId)
+  const modelGovernanceReviewIndexText = (await exists(paths.modelGovernancePracticeNoteReviewIndexMd))
+    ? await readText(paths.modelGovernancePracticeNoteReviewIndexMd)
+    : ''
+  const modelGovernanceSelfReviewText = (await exists(paths.modelGovernancePracticeNoteSelfReviewMd))
+    ? await readText(paths.modelGovernancePracticeNoteSelfReviewMd)
+    : ''
+  const modelGovernanceReviewIndexReady =
+    modelGovernanceReviewIndexText.length > 0 &&
+    modelGovernanceBatchIds.every((batchId) => modelGovernanceReviewIndexText.includes(batchId))
+  const modelGovernanceSelfReviewReady =
+    modelGovernanceSelfReviewText.length > 0 &&
+    modelGovernanceBatchIds.every((batchId) => modelGovernanceSelfReviewText.includes(batchId))
+  const modelGovernanceReviewArtifactsPresent =
+    modelGovernanceReviewIndexReady && modelGovernanceSelfReviewReady
+  if (modelGovernanceReviewIndexReady) {
+    console.log(
+      `- Model governance review index verified: ${modelGovernancePracticeNoteBatchPlan.proposedBatches.length} batches`,
     )
+  }
+  if (modelGovernanceSelfReviewReady) {
+    console.log(
+      `- Model governance self-review verified: ${modelGovernancePracticeNoteBatchPlan.proposedBatches.length} batches`,
+    )
+  }
+  console.log(`- Model governance plan verified: ${modelGovernancePracticeNoteBatchPlan.proposedBatches.length} batches`)
+  console.log(
+      `- POC status summary verified: ${modelGovernanceReviewArtifactsPresent ? 63 : reg141ReviewArtifactsPresent ? 62 : ag55ReviewArtifactsPresent ? 61 : ag54ReviewArtifactsPresent ? 60 : ag53ReviewArtifactsPresent ? 57 : ag51ReviewArtifactsPresent ? 56 : ag50ReviewArtifactsPresent ? 55 : ag49ReviewArtifactsPresent ? 54 : ag48ReviewArtifactsPresent ? 53 : ag47ReviewArtifactsPresent ? 52 : ag46ReviewArtifactsPresent ? 51 : ag45ReviewArtifactsPresent ? 50 : ag44ReviewArtifactsPresent ? 49 : ag43ReviewArtifactsPresent ? 48 : ag42ReviewArtifactsPresent ? 47 : ag41ReviewArtifactsPresent ? 46 : ag40ReviewArtifactsPresent ? 45 : ag39ReviewArtifactsPresent ? 44 : ag38ReviewArtifactsPresent ? 43 : ag37ReviewArtifactsPresent ? 42 : ag36ReviewArtifactsPresent ? 41 : ag35ReviewArtifactsPresent ? 40 : ag34ReviewArtifactsPresent ? 39 : 38} review indexes`,
+      )
   if (validatedPilotBatchCount > 0) {
     console.log(`- Pilot batches validated: ${validatedPilotBatchCount}`)
   }

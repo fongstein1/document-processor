@@ -1,0 +1,182 @@
+{
+  "planId": "model-governance-practice-note-control-plan",
+  "planVersion": "1.0",
+  "status": "planned",
+  "sourceScope": {
+    "sourceFamilyId": "practice_notes",
+    "primarySourceFile": "Practice Notes/AAA - Model_Governance_PN_042017.pdf",
+    "sourceFolder": "Practice Notes",
+    "sourceTitle": "Model Governance: Some Considerations for Practicing Life Actuaries",
+    "sourceReference": "American Academy of Actuaries practice note, April 2017",
+    "sourceStatus": "active",
+    "sourceStatusNote": "Companion guidance / implementation guidance; non-binding and not authoritative regulatory text.",
+    "domainId": "naic_regulatory",
+    "rawSourceRoot": "D:\\Work\\AI Projects\\NAIC Valuation Manual Course",
+    "confirmedPageRange": [1, 18],
+    "observedSectionWindows": [
+      {
+        "sectionId": "mg-front-matter-intro",
+        "pageRange": [1, 7],
+        "note": "Front matter, introduction, model, and model-development opener."
+      },
+      {
+        "sectionId": "mg-governance-controls",
+        "pageRange": [8, 14],
+        "note": "Governance policy, model risk, controls, and validation."
+      },
+      {
+        "sectionId": "mg-validation-documentation",
+        "pageRange": [15, 18],
+        "note": "Validation-governance relationship, documentation, references, and definitions."
+      }
+    ],
+    "boundaries": [
+      "Keep planning focused on this single practice note file.",
+      "Do not widen into the other Practice Notes files in the same folder.",
+      "Keep VM-20, VM-21, VM-22, VM-A, VM-C, VM-G, VM-M, VM-30, and VM-31 references review-only unless the same batch intentionally includes the referenced operational text.",
+      "Keep ASOP references review-only unless the same batch captures the quoted operational language.",
+      "Keep the disclaimer and the non-binding status visible as companion-guidance context, not as authoritative regulatory text."
+    ],
+    "exclusions": [
+      "No full-document processing outside this source file.",
+      "No learner-facing content.",
+      "No app-ready exports.",
+      "No RAG-ready exports.",
+      "No approved/promoted exports.",
+      "No eLearning scripts, slides, quizzes, or app exports.",
+      "No raw source files in Git.",
+      "No other Practice Notes files in the same wave."
+    ]
+  },
+  "topicMap": [
+    {
+      "topicId": "mg-front-matter-intro",
+      "label": "Front matter, introduction, model, and model development opener",
+      "pageRange": [1, 7],
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": ["background_content", "caveat_or_companion_guidance", "cross_reference_mapping", "boundary_control_window"],
+      "crossReferenceWatchlist": ["ASOP 41", "ASOP 7", "ASOP 11", "VM-20", "VM-30", "VM-31"],
+      "boundaryNote": "Keep the front matter and opening model-development language together and stop before the governance sections begin."
+    },
+    {
+      "topicId": "mg-governance-controls",
+      "label": "Model governance policy, model risk, governance, controls, and validation",
+      "pageRange": [8, 14],
+      "reviewComplexity": "high",
+      "expectedIssueTypes": ["governance_or_control_expectation", "documentation_expectation", "cross_reference_mapping", "requires_human_interpretation"],
+      "crossReferenceWatchlist": ["ASOP 41", "ASOP 7", "ASOP 21", "VM-20", "VM-30", "VM-31"],
+      "boundaryNote": "Keep the governance, controls, and validation guidance together and stop before the documentation closeout."
+    },
+    {
+      "topicId": "mg-validation-documentation",
+      "label": "Validation-governance relationship, documentation, references, and definitions",
+      "pageRange": [15, 18],
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": ["documentation_expectation", "definition_or_terminology", "cross_reference_mapping", "boundary_control_window", "requires_human_interpretation"],
+      "crossReferenceWatchlist": ["ASOP 41", "ASOP 7", "VM-20", "VM-30", "VM-31"],
+      "boundaryNote": "Keep the validation and documentation closeout separate from any later practice note file."
+    }
+  ],
+  "proposedBatches": [
+    {
+      "plannedBatchId": "batch-183",
+      "topicIds": ["mg-front-matter-intro"],
+      "title": "Model governance front matter and introduction slice",
+      "paragraphTarget": {
+        "knownWindow": [1, 7],
+        "notes": "Capture the front matter, disclaimer, introduction, model definition, and early model-development material as one narrow review-only slice."
+      },
+      "rationale": "Capture the disclaimer, introduction, and early model-development material before the governance/control sections begin.",
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": ["background_content", "caveat_or_companion_guidance", "cross_reference_mapping", "boundary_control_window"],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    },
+    {
+      "plannedBatchId": "batch-184",
+      "topicIds": ["mg-governance-controls"],
+      "title": "Model governance, controls, and validation slice",
+      "paragraphTarget": {
+        "knownWindow": [8, 14],
+        "notes": "Capture model governance policy, model risk, controls, and validation as one narrow review-only slice."
+      },
+      "rationale": "Capture the governance and control guidance together as a single companion-guidance slice.",
+      "reviewComplexity": "high",
+      "expectedIssueTypes": ["governance_or_control_expectation", "documentation_expectation", "cross_reference_mapping", "requires_human_interpretation"],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    },
+    {
+      "plannedBatchId": "batch-185",
+      "topicIds": ["mg-validation-documentation"],
+      "title": "Validation, documentation, references, and definitions slice",
+      "paragraphTarget": {
+        "knownWindow": [15, 18],
+        "notes": "Capture the validation-governance relationship, documentation guidance, references, and definitions as the closing review-only slice."
+      },
+      "rationale": "Capture the closing validation and documentation material while keeping the end boundary explicit.",
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": ["documentation_expectation", "definition_or_terminology", "cross_reference_mapping", "boundary_control_window", "requires_human_interpretation"],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    }
+  ],
+  "reviewStandards": {
+    "regulatoryRequirement": "Treat an item as regulatory text only when the practice note explicitly quotes a requirement and the excerpt clearly directs action.",
+    "definitionOrTerminology": "Treat model, role, validation, and governance terms as terminology when the text explains rather than directs.",
+    "governanceOrControlExpectation": "Treat role assignment, access controls, change controls, and validation structure as governance or control expectations when they appear.",
+    "documentationExpectation": "Treat documentation audience, recordkeeping, and validation-report guidance as documentation expectations when they appear.",
+    "crossReferenceMapping": "Treat references to ASOPs, VM-20, VM-30, VM-31, and other practice notes as cross-reference context unless operationalized in the same batch.",
+    "backgroundContent": "Treat title pages, TOC entries, and explanatory prose as background unless they impose a requirement.",
+    "caveatOrCompanionGuidance": "Treat the non-binding disclaimer and companion-guidance posture as caveat material, not as authoritative regulation.",
+    "boundaryControlWindow": "Treat each page window as review-only and do not widen it unless later cleanup explicitly needs that split.",
+    "requiresHumanInterpretation": "Treat model-risk ranking, validation frequency, and documentation audience choices as requiring human review unless the source text is explicit."
+  },
+  "promotionGates": {
+    "defaultState": "review_only",
+    "learnerFacing": {
+      "sourceCitationExists": true,
+      "sourceSupportIsClear": true,
+      "wordingIsNotMisleading": true,
+      "confidenceIsHigh": true,
+      "noUnresolvedReviewFlagsExist": true
+    },
+    "appReady": {
+      "learnerFacingCriteriaAreSatisfied": true,
+      "exportIsSanitizedStableAndVersioned": true,
+      "noUnresolvedReviewIssuesRemain": true
+    },
+    "ragReady": {
+      "approvedIndexedMaterialOnly": true,
+      "stableId": true,
+      "sourceReferenceAndLocatorPresent": true,
+      "reviewStatusNoLongerRequiresHumanDisposition": true
+    }
+  },
+  "validationImplications": {
+    "currentChecksNeeded": [
+      "Plan file exists and parses as JSON.",
+      "The model-governance practice-note plan markdown must exist and carry the expected headings.",
+      "Every planned batch must remain review-only by default.",
+      "The source posture must stay explicitly active, with the companion-guidance note called out.",
+      "Each planned batch must have a matching batch definition.",
+      "The model-governance practice-note batch-definition file must stay synchronized with the plan.",
+      "Page locators should remain visible in the review packet."
+    ],
+    "futureChecksSuggested": [
+      "Keep the plan portable if later practice notes need to be split into additional waves.",
+      "Keep the review-only guardrails visible until the review index and self-review note are created."
+    ]
+  },
+  "operatingNote": {
+    "reviewOnly": true,
+    "sourceType": "practice note PDF source",
+    "citationGuidance": "Page locators are the primary anchor and line references are expected where the runner preserves them.",
+    "boundaryGuidance": "Keep the non-binding disclaimer visible as a review-only caveat rather than a promotion signal.",
+    "appendixGuidance": "Keep the governance, validation, documentation, and definitions closeout separate so the source ends at a visible boundary."
+  }
+}
+

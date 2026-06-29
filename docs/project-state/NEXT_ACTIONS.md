@@ -13,6 +13,10 @@ tracked review index and self-review note now form part of the handoff set,
 and the opening / definitions / procedures slices remain review-only in
 ignored working storage.
 
+The model-governance practice note is now planned as batches 183-185.
+The next immediate task is to commit that planning layer and then run
+batch-183 in review-only mode.
+
 The next immediate task is to inspect the remaining raw source folder for the
 next safe source unit, then plan and validate the next small wave before any
 new extraction starts.
