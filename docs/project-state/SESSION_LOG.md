@@ -670,3 +670,8 @@
   batches 168-170, and kept the wave review-only by default with paragraph
   locators as the primary anchor because line references should be preserved
   for this text-based source.
+- 2026-06-29: Completed the AG 54 review-only wave as batches 168-170,
+  created the tracked AG 54 review index and self-review note, refreshed the
+  repository POC summary and project-state docs, and kept the paragraph-
+  locator backstop visible because line references were preserved. AG 55 is
+  now the next likely candidate if the continuation pass keeps going.
