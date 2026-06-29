@@ -12,7 +12,7 @@ regulation repository. It consolidates the completed review-only extraction
 waves without changing the status of the underlying batch outputs or review
 indexes.
 
-The handoff now spans 69 review indexes, up from 68 review indexes. The
+The handoff now spans 70 review indexes, up from 69 review indexes. The
 earlier 51 review indexes checkpoint remains part of the handoff history, the
 earlier 50 review indexes checkpoint remains part of the handoff history, the
 earlier 49 review indexes checkpoint remains part of the handoff history, the
@@ -22,6 +22,13 @@ the earlier 45 review indexes checkpoint remains part of the handoff history.
 
 This summary is review-only, not learner-facing, not app-ready, not RAG-ready,
 and not promoted.
+
+The Actuarial Memorandum practice-note wave is now complete as batches
+202-205 in ignored working storage. Its tracked review index and self-review
+note are part of the handoff set:
+
+- `docs/review/actuarial_memorandum_practice_note_review_index.md`
+- `docs/review/actuarial_memorandum_practice_note_self_review.md`
 
 The detailed evidence remains in the batch review packets and the chapter
 review indexes:
