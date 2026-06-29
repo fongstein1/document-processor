@@ -65,7 +65,9 @@ review handoff set. AG 15 is complete in the tracked review handoff set. AG 16
 is complete in the tracked review handoff set. AG 17 is complete in the tracked
 review handoff set. AG 05 is already captured in the tracked review handoff
 set, and AG 03, AG 01, AG 02, and AG 04 remain captured as well. AG 52 is
-already captured in the mixed pilot batch and should not be reprocessed.
+already captured in the mixed pilot batch and should not be reprocessed; it
+is now formally indexed in `docs/review/ag52_review_index.md` and
+`docs/review/ag52_self_review.md`.
 The AG 18 review-only step is complete in the tracked review handoff set.
 The AG 19 review-only step is complete in the tracked review handoff set.
 The AG 20 review-only step is complete in the tracked review handoff set.

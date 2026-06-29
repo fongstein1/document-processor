@@ -232,6 +232,13 @@ applicable may be processed as caveat-only review units. They should stay
 review-only and non-authoritative unless later binding-source support changes
 the status.
 
+## AG 52 disposition
+
+The AG 52 early-adoption text note is a caveat-only historical edge case that
+already lives in the mixed pilot batch-001. Keep it review-only, preserve the
+line-locator evidence layer, and do not rerun extraction as a fresh source
+wave unless a later decision explicitly reopens the disposition.
+
 ## Short guideline units
 
 Self-contained one- or two-page guideline or interpretation PDFs may be

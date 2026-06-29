@@ -12,7 +12,7 @@ regulation repository. It consolidates the completed review-only extraction
 waves without changing the status of the underlying batch outputs or review
 indexes.
 
-The handoff now spans 65 review indexes, up from 57 review indexes. The
+The handoff now spans 66 review indexes, up from 57 review indexes. The
 earlier 51 review indexes checkpoint remains part of the handoff history, the
 earlier 50 review indexes checkpoint remains part of the handoff history, the
 earlier 49 review indexes checkpoint remains part of the handoff history, the
@@ -30,6 +30,7 @@ review indexes:
 - `docs/review/supporting_vm_review_index.md`
 - `docs/review/vm21_review_index.md`
 - `docs/review/vm22_review_index.md`
+- `docs/review/ag52_review_index.md`
 - `docs/review/ag30_review_index.md`
 - `docs/review/ag30_self_review.md`
 - `docs/review/ag31_review_index.md`
@@ -422,7 +423,7 @@ documents remain external to Git.
 
 ## Human Review Posture
 
-- Reviewers should start from the sixty review indexes listed above.
+- Reviewers should start from the review indexes listed above.
 - The review packets remain the detailed evidence layer behind those
   summaries.
 - All batch content remains source-bound and review-only unless a separate
@@ -780,6 +781,15 @@ now part of the handoff set: `docs/review/ag53_review_index.md` and
 visible because stable line references were not available, the page-image
 wording backstop remained visible, and AG 54 is now complete as batches
 `batch-168`, `batch-169`, and `batch-170` in ignored working storage.
+
+## AG 52 Note
+
+AG 52 is already captured in the mixed pilot batch-001 and is now formally
+indexed as a review-only caveat note. Its tracked review index and
+self-review note are `docs/review/ag52_review_index.md` and
+`docs/review/ag52_self_review.md`. The source itself says it is no longer
+applicable as of 2020, line locators remain the primary anchor, and the note
+must not be reprocessed as a fresh extraction wave.
 
 ## AG 54 Note
 

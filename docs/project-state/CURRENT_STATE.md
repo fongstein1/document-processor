@@ -413,7 +413,9 @@ self-review note are committed handoff artifacts. The controlled AG 02
 two-page guideline batch is complete in ignored working storage, and the
 tracked AG 02 review index plus self-review note are the next handoff
 artifacts. The AG 52 text note already lives in the mixed pilot batch and is
-not being reprocessed. The remaining Practice Notes files and other
+not being reprocessed; it is now formally indexed in
+`docs/review/ag52_review_index.md` and `docs/review/ag52_self_review.md`.
+The remaining Practice Notes files and other
 Actuarial Guideline / NY regulation files stay out of scope until separately
 planned.
 
