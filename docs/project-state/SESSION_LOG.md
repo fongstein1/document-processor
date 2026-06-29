@@ -707,3 +707,19 @@
 - 2026-06-29: Completed the Reg-213 review-only wave as batches 189-191 in ignored working storage, kept every batch review-only, created the tracked Reg-213 review index plus self-review note, refreshed the repository POC summary and project-state docs, and switched the batch runner to the bundled Python/pypdf fallback so noisy PDF sources can keep using the same review-only workflow in this workspace.
 - 2026-06-29: Formalized the AG 52 mixed-pilot edge case into tracked review-only handoff artifacts without rerunning extraction. The source already lived in batch-001, so the new AG 52 review index and self-review note simply make the no-longer-applicable caveat explicit and keep the mixed-pilot evidence layer visible.
 - 2026-06-29: The raw source folder could not be safely inventoried from this workspace because the shell could not access the external raw root. Added a tracked remaining-source inventory intake workflow, a blank pending stub, and validator checks so the processor can accept a human-supplied inventory instead of guessing the next source unit.
+- 2026-06-29: Received a human-supplied remaining-source inventory file under `data/manual-input/remaining-source-inventory.received.json`, inspected the remaining practice-note candidates, and selected the Model Regulation XXX practice note as the next safe source unit. Started the planning layer for `Practice Notes/AAA - Model Regulation XXX - Dec 2006.pdf` so the next wave stays review-only, non-binding, and companion-guidance aware.
+- 2026-06-29: Completed the Model Regulation XXX practice-note wave as batches 192-194 in ignored working storage, created the tracked review index and self-review note, and kept the non-binding companion-guidance caveat visible with page locators as the primary review anchor.
+## 2026-06-29
+
+- Completed the LTCI practice note wave as batches 195-197 in ignored
+  working storage.
+- Added the tracked LTCI review index and self-review note so the
+  companion-guidance wave remains review-only.
+- Next source selection should come from the remaining practice-note
+  inventory after validation is refreshed.
+- Shell validation follow-up is currently blocked because the shell runner is
+  failing to spawn new processes in this workspace (`CreateProcessAsUserW`
+  error 5), so no additional source unit was started in this turn.
+- The received remaining-source inventory stays local and untracked for now;
+  it contains source file paths, sizes, and timestamps that should not be
+  promoted into the repository without a separate policy decision.

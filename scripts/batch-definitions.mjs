@@ -57,6 +57,8 @@ import { reg141BatchDefinitions } from './reg141-batch-definitions.mjs'
 import { reg210BatchDefinitions } from './reg210-batch-definitions.mjs'
 import { reg213BatchDefinitions } from './reg213-batch-definitions.mjs'
 import { modelGovernancePracticeNoteBatchDefinitions } from './model-governance-practice-note-batch-definitions.mjs'
+import { modelRegulationXXXPracticeNoteBatchDefinitions } from './model-regulation-xxx-practice-note-batch-definitions.mjs'
+import { ltciPracticeNoteBatchDefinitions } from './ltci-practice-note-batch-definitions.mjs'
 import { vm20PracticeNoteBatchDefinitions } from './vm20-practice-note-batch-definitions.mjs'
 import { vm21BatchDefinitions } from './vm21-batch-definitions.mjs'
 import { vm22BatchDefinitions } from './vm22-batch-definitions.mjs'
@@ -2248,6 +2250,8 @@ export const batchDefinitions = {
   ...reg210BatchDefinitions,
   ...reg213BatchDefinitions,
   ...modelGovernancePracticeNoteBatchDefinitions,
+  ...modelRegulationXXXPracticeNoteBatchDefinitions,
+  ...ltciPracticeNoteBatchDefinitions,
   ...vm20PracticeNoteBatchDefinitions,
   ...supportingBatchDefinitions,
   ...vm21BatchDefinitions,

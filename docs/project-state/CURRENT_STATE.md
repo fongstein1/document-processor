@@ -10,14 +10,26 @@
 
 ## Latest known commit before this batch
 
-`a920cd6`
+`cbe34ea`
+
+## Current focus
+
+The Model Regulation XXX practice note
+(`Practice Notes/AAA - Model Regulation XXX - Dec 2006.pdf`) is now complete as
+batches 192-194 in ignored working storage. Its review index and self-review
+note are in place, and the wave remains review-only, non-binding, and
+companion-guidance aware. The LTCI practice note
+(`Practice Notes/AAA-LTCI_Practice_Note_5.21.pdf`) is now complete as
+batches 195-197 in ignored working storage, and its review index and
+self-review note have been added locally so the companion-guidance wave stays
+review-only.
 
 ## Inventory intake gate
 
-The raw source root could not be safely inventoried from this workspace. The
-next safe step is to wait for a human-supplied remaining-source inventory file
-and compare it against the tracked review indexes. No new extraction should
-start until that inventory exists.
+The human-supplied remaining-source inventory has been received at
+`data/manual-input/remaining-source-inventory.received.json`. It should be
+compared against the tracked review indexes before any new source unit is
+started.
 
 ## Validation status
 
@@ -530,3 +542,12 @@ part of the handoff set. Reg-213 is now complete and indexed. The active
 V1-Reg-213-11-NYCRR-S103.pdf` file was inspected, its 27-page span was
 mapped across batches 189-191, and the amendment / FAQ files in the same
 folder remain deferred for a later wave.
+## LTCI handoff addendum
+
+The LTCI practice note wave is now complete as batches 195-197 in ignored
+working storage. The tracked review index and self-review note have been
+added locally, and the next safe source unit should be selected from the
+remaining practice-note inventory after validation is refreshed.
+
+Shell process creation is currently failing in this workspace, so the next
+source unit has not been started yet.

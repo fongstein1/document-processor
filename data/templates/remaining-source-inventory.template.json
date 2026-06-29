@@ -1,4 +1,5 @@
 {
+  "schemaVersion": "1.0",
   "inventory_created_at": "{{inventoryCreatedAt}}",
   "inventory_created_by": "{{inventoryCreatedBy}}",
   "raw_source_root": "D:\\Work\\AI Projects\\NAIC Valuation Manual Course",

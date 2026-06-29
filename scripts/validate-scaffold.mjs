@@ -354,6 +354,52 @@ const paths = {
     'review',
     'model_governance_practice_note_self_review.md',
   ),
+  modelRegulationXXXPracticeNoteBatchPlanJson: path.join(
+    repoRoot,
+    'config',
+    'model-regulation-xxx-practice-note-batch-plan.json',
+  ),
+  modelRegulationXXXPracticeNoteExtractionPlanMd: path.join(
+    repoRoot,
+    'docs',
+    'processor',
+    'model_regulation_xxx_practice_note_extraction_plan.md',
+  ),
+  modelRegulationXXXPracticeNoteReviewIndexMd: path.join(
+    repoRoot,
+    'docs',
+    'review',
+    'model_regulation_xxx_practice_note_review_index.md',
+  ),
+  modelRegulationXXXPracticeNoteSelfReviewMd: path.join(
+    repoRoot,
+    'docs',
+    'review',
+    'model_regulation_xxx_practice_note_self_review.md',
+  ),
+  ltciPracticeNoteBatchPlanJson: path.join(
+    repoRoot,
+    'config',
+    'ltci-practice-note-batch-plan.json',
+  ),
+  ltciPracticeNoteExtractionPlanMd: path.join(
+    repoRoot,
+    'docs',
+    'processor',
+    'ltci_practice_note_extraction_plan.md',
+  ),
+  ltciPracticeNoteReviewIndexMd: path.join(
+    repoRoot,
+    'docs',
+    'review',
+    'ltci_practice_note_review_index.md',
+  ),
+  ltciPracticeNoteSelfReviewMd: path.join(
+    repoRoot,
+    'docs',
+    'review',
+    'ltci_practice_note_self_review.md',
+  ),
   ag26ReviewIndexMd: path.join(repoRoot, 'docs', 'review', 'ag26_review_index.md'),
   ag26SelfReviewMd: path.join(repoRoot, 'docs', 'review', 'ag26_self_review.md'),
   ag23ReviewIndexMd: path.join(repoRoot, 'docs', 'review', 'ag23_review_index.md'),
@@ -5891,6 +5937,339 @@ const validateAg25PlanMarkdown = async (filePath, label) => {
       problems.push(`${label}: must mention ${phrase}`)
     }
   })
+}
+
+const validateModelRegulationXXXPracticeNotePlanMarkdown = async (filePath, label) => {
+  const text = await readText(filePath)
+  const requiredHeadings = [
+    '## Source Scope',
+    '## Section / Topic Map',
+    '## Proposed Batch Sequence',
+    '## Review Standards',
+    '## Promotion Gates',
+    '## Validation Implications',
+    '## Operating Note',
+  ]
+  requiredHeadings.forEach((heading) => {
+    if (!text.includes(heading)) {
+      problems.push(`${label}: missing heading ${heading}`)
+    }
+  })
+  ;[
+    'review-only',
+    'not learner-facing',
+    'not app-ready',
+    'not RAG-ready',
+    'not promoted',
+    'AAA - Model Regulation XXX - Dec 2006.pdf',
+    'Practice Notes',
+    'Model Regulation XXX practice note',
+    'non-binding',
+    'companion guidance',
+    'Model Regulation XXX',
+    'pages 1-18',
+    'batch-192',
+    'batch-193',
+    'batch-194',
+    'ASOP 40',
+    'AG XXXVIII',
+    'X factors',
+    'reinsurance',
+  ].forEach((phrase) => {
+    if (!text.includes(phrase)) {
+      problems.push(`${label}: must mention ${phrase}`)
+    }
+  })
+}
+
+const validateModelRegulationXXXPracticeNotePlanLike = (plan, label) => {
+  if (!expectObject(plan, label)) return
+
+  if (plan.planId !== 'model-regulation-xxx-practice-note-control-plan') {
+    problems.push(`${label}: planId must be model-regulation-xxx-practice-note-control-plan`)
+  }
+  if (plan.planVersion !== '1.0') {
+    problems.push(`${label}: planVersion must be 1.0`)
+  }
+  if (plan.status !== 'planned') {
+    problems.push(`${label}: status must be planned`)
+  }
+  if (!expectObject(plan.sourceScope, `${label}.sourceScope`)) return
+
+  if (plan.sourceScope.sourceFamilyId !== 'practice_notes') {
+    problems.push(`${label}.sourceScope.sourceFamilyId: must be practice_notes`)
+  }
+  if (plan.sourceScope.primarySourceFile !== 'Practice Notes/AAA - Model Regulation XXX - Dec 2006.pdf') {
+    problems.push(
+      `${label}.sourceScope.primarySourceFile: must be Practice Notes/AAA - Model Regulation XXX - Dec 2006.pdf`,
+    )
+  }
+  if (plan.sourceScope.sourceTitle !== 'Model Regulation XXX practice note') {
+    problems.push(`${label}.sourceScope.sourceTitle: must be Model Regulation XXX practice note`)
+  }
+  if (
+    plan.sourceScope.sourceReference !==
+    'American Academy of Actuaries practice note, December 2006'
+  ) {
+    problems.push(
+      `${label}.sourceScope.sourceReference: must be American Academy of Actuaries practice note, December 2006`,
+    )
+  }
+  if (plan.sourceScope.domainId !== 'naic_regulatory') {
+    problems.push(`${label}.sourceScope.domainId: must be naic_regulatory`)
+  }
+  if (plan.sourceScope.sourceStatus !== 'active') {
+    problems.push(`${label}.sourceScope.sourceStatus: must be active`)
+  }
+  if (
+    !Array.isArray(plan.sourceScope.confirmedPageRange) ||
+    plan.sourceScope.confirmedPageRange.length !== 2 ||
+    plan.sourceScope.confirmedPageRange[0] !== 1 ||
+    plan.sourceScope.confirmedPageRange[1] !== 18
+  ) {
+    problems.push(`${label}.sourceScope.confirmedPageRange: must be [1, 18]`)
+  }
+  if (
+    !Array.isArray(plan.sourceScope.observedSectionWindows) ||
+    plan.sourceScope.observedSectionWindows.length !== 3
+  ) {
+    problems.push(`${label}.sourceScope.observedSectionWindows: must describe three section windows`)
+  }
+  if (
+    !Array.isArray(plan.sourceScope.boundaries) ||
+    !plan.sourceScope.boundaries.some((entry) => typeof entry === 'string' && entry.includes('single practice note file'))
+  ) {
+    problems.push(`${label}.sourceScope.boundaries: must mention the single practice-note file`)
+  }
+  if (
+    !Array.isArray(plan.sourceScope.boundaries) ||
+    !plan.sourceScope.boundaries.some((entry) => typeof entry === 'string' && entry.includes('other Practice Notes files'))
+  ) {
+    problems.push(`${label}.sourceScope.boundaries: must mention the other Practice Notes files`)
+  }
+  if (
+    !Array.isArray(plan.sourceScope.boundaries) ||
+    !plan.sourceScope.boundaries.some(
+      (entry) =>
+        typeof entry === 'string' &&
+        entry.includes('non-binding') &&
+        entry.includes('companion-guidance'),
+    )
+  ) {
+    problems.push(`${label}.sourceScope.boundaries: must mention the non-binding companion-guidance posture`)
+  }
+  if (
+    !Array.isArray(plan.sourceScope.boundaries) ||
+    !plan.sourceScope.boundaries.some((entry) => typeof entry === 'string' && entry.includes('page locators'))
+  ) {
+    problems.push(`${label}.sourceScope.boundaries: must mention page locators`)
+  }
+  if (
+    !Array.isArray(plan.sourceScope.exclusions) ||
+    !plan.sourceScope.exclusions.some((entry) => typeof entry === 'string' && entry.includes('No other Practice Notes files'))
+  ) {
+    problems.push(`${label}.sourceScope.exclusions: must mention the other Practice Notes file exclusion`)
+  }
+
+  if (!expectArray(plan.topicMap, `${label}.topicMap`, false)) return
+  if (plan.topicMap.length !== 3) {
+    problems.push(`${label}.topicMap: expected exactly three topic windows`)
+  }
+  if (!expectArray(plan.proposedBatches, `${label}.proposedBatches`, false)) return
+  if (plan.proposedBatches.length !== 3) {
+    problems.push(`${label}.proposedBatches: expected exactly three batches`)
+  }
+  ;['batch-192', 'batch-193', 'batch-194'].forEach((batchId) => {
+    if (!plan.proposedBatches.some((entry) => entry.plannedBatchId === batchId)) {
+      problems.push(`${label}.proposedBatches: missing ${batchId}`)
+    }
+  })
+  if (!expectObject(plan.reviewStandards, `${label}.reviewStandards`)) return
+  if (
+    !Array.isArray(plan.reviewStandards.categories) ||
+    !plan.reviewStandards.categories.includes('non_binding_practice_note')
+  ) {
+    problems.push(`${label}.reviewStandards.categories: must include non_binding_practice_note`)
+  }
+  if (!expectObject(plan.promotionGates, `${label}.promotionGates`)) return
+  if (plan.promotionGates.reviewOnlyByDefault !== true) {
+    problems.push(`${label}.promotionGates.reviewOnlyByDefault: must be true`)
+  }
+  if (!expectObject(plan.validationImplications, `${label}.validationImplications`)) return
+  if (
+    plan.validationImplications.planFile !==
+    'config/model-regulation-xxx-practice-note-batch-plan.json'
+  ) {
+    problems.push(
+      `${label}.validationImplications.planFile: must be config/model-regulation-xxx-practice-note-batch-plan.json`,
+    )
+  }
+}
+
+const validateLtciPracticeNotePlanMarkdown = async (filePath, label) => {
+  const text = await readText(filePath)
+  const requiredHeadings = [
+    '## Source Scope',
+    '## Section / Topic Map',
+    '## Proposed Batch Sequence',
+    '## Review Standards',
+    '## Promotion Gates',
+    '## Validation Implications',
+    '## Operating Note',
+  ]
+  requiredHeadings.forEach((heading) => {
+    if (!text.includes(heading)) {
+      problems.push(`${label}: missing heading ${heading}`)
+    }
+  })
+  ;[
+    'review-only',
+    'not learner-facing',
+    'not app-ready',
+    'not RAG-ready',
+    'not promoted',
+    'AAA-LTCI_Practice_Note_5.21.pdf',
+    'Practice Notes',
+    'Long-Term Care Insurance practice note',
+    'non-binding',
+    'companion guidance',
+    'Long-Term Care Insurance',
+    'pages 1-31',
+    'batch-195',
+    'batch-196',
+    'batch-197',
+    'ASOP 5',
+    'ASOP 18',
+    'ASOP 23',
+    'FASB ASC 944-40',
+    'persistency',
+    'valuation',
+  ].forEach((phrase) => {
+    if (!text.includes(phrase)) {
+      problems.push(`${label}: must mention ${phrase}`)
+    }
+  })
+}
+
+const validateLtciPracticeNotePlanLike = (plan, label) => {
+  if (!expectObject(plan, label)) return
+
+  if (plan.planId !== 'ltci-practice-note-control-plan') {
+    problems.push(`${label}: planId must be ltci-practice-note-control-plan`)
+  }
+  if (plan.planVersion !== '1.0') {
+    problems.push(`${label}: planVersion must be 1.0`)
+  }
+  if (plan.status !== 'planned') {
+    problems.push(`${label}: status must be planned`)
+  }
+  if (!expectObject(plan.sourceScope, `${label}.sourceScope`)) return
+
+  if (plan.sourceScope.sourceFamilyId !== 'practice_notes') {
+    problems.push(`${label}.sourceScope.sourceFamilyId: must be practice_notes`)
+  }
+  if (plan.sourceScope.primarySourceFile !== 'Practice Notes/AAA-LTCI_Practice_Note_5.21.pdf') {
+    problems.push(
+      `${label}.sourceScope.primarySourceFile: must be Practice Notes/AAA-LTCI_Practice_Note_5.21.pdf`,
+    )
+  }
+  if (plan.sourceScope.sourceTitle !== 'Long-Term Care Insurance practice note') {
+    problems.push(`${label}.sourceScope.sourceTitle: must be Long-Term Care Insurance practice note`)
+  }
+  if (plan.sourceScope.sourceReference !== 'American Academy of Actuaries practice note, May 2021') {
+    problems.push(
+      `${label}.sourceScope.sourceReference: must be American Academy of Actuaries practice note, May 2021`,
+    )
+  }
+  if (plan.sourceScope.domainId !== 'naic_regulatory') {
+    problems.push(`${label}.sourceScope.domainId: must be naic_regulatory`)
+  }
+  if (plan.sourceScope.sourceStatus !== 'active') {
+    problems.push(`${label}.sourceScope.sourceStatus: must be active`)
+  }
+  if (
+    !Array.isArray(plan.sourceScope.confirmedPageRange) ||
+    plan.sourceScope.confirmedPageRange.length !== 2 ||
+    plan.sourceScope.confirmedPageRange[0] !== 1 ||
+    plan.sourceScope.confirmedPageRange[1] !== 31
+  ) {
+    problems.push(`${label}.sourceScope.confirmedPageRange: must be [1, 31]`)
+  }
+  if (
+    !Array.isArray(plan.sourceScope.observedSectionWindows) ||
+    plan.sourceScope.observedSectionWindows.length !== 3
+  ) {
+    problems.push(`${label}.sourceScope.observedSectionWindows: must describe three section windows`)
+  }
+  if (
+    !Array.isArray(plan.sourceScope.boundaries) ||
+    !plan.sourceScope.boundaries.some((entry) => typeof entry === 'string' && entry.includes('single practice note file'))
+  ) {
+    problems.push(`${label}.sourceScope.boundaries: must mention the single practice-note file`)
+  }
+  if (
+    !Array.isArray(plan.sourceScope.boundaries) ||
+    !plan.sourceScope.boundaries.some((entry) => typeof entry === 'string' && entry.includes('other Practice Notes files'))
+  ) {
+    problems.push(`${label}.sourceScope.boundaries: must mention the other Practice Notes files`)
+  }
+  if (
+    !Array.isArray(plan.sourceScope.boundaries) ||
+    !plan.sourceScope.boundaries.some(
+      (entry) =>
+        typeof entry === 'string' &&
+        entry.includes('non-binding') &&
+        entry.includes('companion-guidance'),
+    )
+  ) {
+    problems.push(`${label}.sourceScope.boundaries: must mention the non-binding companion-guidance posture`)
+  }
+  if (
+    !Array.isArray(plan.sourceScope.boundaries) ||
+    !plan.sourceScope.boundaries.some((entry) => typeof entry === 'string' && entry.includes('page locators'))
+  ) {
+    problems.push(`${label}.sourceScope.boundaries: must mention page locators`)
+  }
+  if (
+    !Array.isArray(plan.sourceScope.exclusions) ||
+    !plan.sourceScope.exclusions.some((entry) => typeof entry === 'string' && entry.includes('No other Practice Notes files'))
+  ) {
+    problems.push(`${label}.sourceScope.exclusions: must mention the other Practice Notes file exclusion`)
+  }
+
+  if (!expectArray(plan.topicMap, `${label}.topicMap`, false)) return
+  if (plan.topicMap.length !== 3) {
+    problems.push(`${label}.topicMap: expected exactly three topic windows`)
+  }
+  if (!expectArray(plan.proposedBatches, `${label}.proposedBatches`, false)) return
+  if (plan.proposedBatches.length !== 3) {
+    problems.push(`${label}.proposedBatches: expected exactly three batches`)
+  }
+  ;['batch-195', 'batch-196', 'batch-197'].forEach((batchId) => {
+    if (!plan.proposedBatches.some((entry) => entry.plannedBatchId === batchId)) {
+      problems.push(`${label}.proposedBatches: missing ${batchId}`)
+    }
+  })
+  if (!expectObject(plan.reviewStandards, `${label}.reviewStandards`)) return
+  if (
+    !Array.isArray(plan.reviewStandards.categories) ||
+    !plan.reviewStandards.categories.includes('reporting_requirement')
+  ) {
+    problems.push(`${label}.reviewStandards.categories: must include reporting_requirement`)
+  }
+  if (!expectObject(plan.promotionGates, `${label}.promotionGates`)) return
+  if (plan.promotionGates.reviewOnlyByDefault !== true) {
+    problems.push(`${label}.promotionGates.reviewOnlyByDefault: must be true`)
+  }
+  if (!expectObject(plan.validationImplications, `${label}.validationImplications`)) return
+  if (
+    plan.validationImplications.planFile !==
+    'config/ltci-practice-note-batch-plan.json'
+  ) {
+    problems.push(
+      `${label}.validationImplications.planFile: must be config/ltci-practice-note-batch-plan.json`,
+    )
+  }
 }
 
 const validateAg26PlanMarkdown = async (filePath, label) => {
@@ -12295,9 +12674,46 @@ if (problems.length > 0) {
     )
   }
   console.log(`- Model governance plan verified: ${modelGovernancePracticeNoteBatchPlan.proposedBatches.length} batches`)
+  await validateModelRegulationXXXPracticeNotePlanMarkdown(
+    paths.modelRegulationXXXPracticeNoteExtractionPlanMd,
+    'docs/processor/model_regulation_xxx_practice_note_extraction_plan.md',
+  )
+  const modelRegulationXXXBatchPlan = await readJson(paths.modelRegulationXXXPracticeNoteBatchPlanJson)
+  validateModelRegulationXXXPracticeNotePlanLike(
+    modelRegulationXXXBatchPlan,
+    'config/model-regulation-xxx-practice-note-batch-plan.json',
+  )
+  const modelRegulationXXXBatchIds = modelRegulationXXXBatchPlan.proposedBatches.map(
+    (batch) => batch.plannedBatchId,
+  )
+  const modelRegulationXXXReviewIndexText = (await exists(paths.modelRegulationXXXPracticeNoteReviewIndexMd))
+    ? await readText(paths.modelRegulationXXXPracticeNoteReviewIndexMd)
+    : ''
+  const modelRegulationXXXSelfReviewText = (await exists(paths.modelRegulationXXXPracticeNoteSelfReviewMd))
+    ? await readText(paths.modelRegulationXXXPracticeNoteSelfReviewMd)
+    : ''
+  const modelRegulationXXXReviewIndexReady =
+    modelRegulationXXXReviewIndexText.length > 0 &&
+    modelRegulationXXXBatchIds.every((batchId) => modelRegulationXXXReviewIndexText.includes(batchId))
+  const modelRegulationXXXSelfReviewReady =
+    modelRegulationXXXSelfReviewText.length > 0 &&
+    modelRegulationXXXBatchIds.every((batchId) => modelRegulationXXXSelfReviewText.includes(batchId))
+  const modelRegulationXXXReviewArtifactsPresent =
+    modelRegulationXXXReviewIndexReady && modelRegulationXXXSelfReviewReady
+  if (modelRegulationXXXReviewIndexReady) {
+    console.log(
+      `- Model Regulation XXX review index verified: ${modelRegulationXXXBatchPlan.proposedBatches.length} batches`,
+    )
+  }
+  if (modelRegulationXXXSelfReviewReady) {
+    console.log(
+      `- Model Regulation XXX self-review verified: ${modelRegulationXXXBatchPlan.proposedBatches.length} batches`,
+    )
+  }
+  console.log(`- Model Regulation XXX plan verified: ${modelRegulationXXXBatchPlan.proposedBatches.length} batches`)
   console.log(
-      `- POC status summary verified: ${reg213ReviewArtifactsPresent ? 66 : reg210ReviewArtifactsPresent ? 65 : modelGovernanceReviewArtifactsPresent ? 64 : reg141ReviewArtifactsPresent ? 63 : ag55ReviewArtifactsPresent ? 62 : ag54ReviewArtifactsPresent ? 61 : ag53ReviewArtifactsPresent ? 58 : ag52ReviewArtifactsPresent ? 57 : ag51ReviewArtifactsPresent ? 56 : ag50ReviewArtifactsPresent ? 55 : ag49ReviewArtifactsPresent ? 54 : ag48ReviewArtifactsPresent ? 53 : ag47ReviewArtifactsPresent ? 52 : ag46ReviewArtifactsPresent ? 51 : ag45ReviewArtifactsPresent ? 50 : ag44ReviewArtifactsPresent ? 49 : ag43ReviewArtifactsPresent ? 48 : ag42ReviewArtifactsPresent ? 47 : ag41ReviewArtifactsPresent ? 46 : ag40ReviewArtifactsPresent ? 45 : ag39ReviewArtifactsPresent ? 44 : ag38ReviewArtifactsPresent ? 43 : ag37ReviewArtifactsPresent ? 42 : ag36ReviewArtifactsPresent ? 41 : ag35ReviewArtifactsPresent ? 40 : ag34ReviewArtifactsPresent ? 39 : 38} review indexes`,
-      )
+    `- POC status summary verified: ${modelRegulationXXXReviewArtifactsPresent ? 67 : reg213ReviewArtifactsPresent ? 66 : reg210ReviewArtifactsPresent ? 65 : modelGovernanceReviewArtifactsPresent ? 64 : reg141ReviewArtifactsPresent ? 63 : ag55ReviewArtifactsPresent ? 62 : ag54ReviewArtifactsPresent ? 61 : ag53ReviewArtifactsPresent ? 58 : ag52ReviewArtifactsPresent ? 57 : ag51ReviewArtifactsPresent ? 56 : ag50ReviewArtifactsPresent ? 55 : ag49ReviewArtifactsPresent ? 54 : ag48ReviewArtifactsPresent ? 53 : ag47ReviewArtifactsPresent ? 52 : ag46ReviewArtifactsPresent ? 51 : ag45ReviewArtifactsPresent ? 50 : ag44ReviewArtifactsPresent ? 49 : ag43ReviewArtifactsPresent ? 48 : ag42ReviewArtifactsPresent ? 47 : ag41ReviewArtifactsPresent ? 46 : ag40ReviewArtifactsPresent ? 45 : ag39ReviewArtifactsPresent ? 44 : ag38ReviewArtifactsPresent ? 43 : ag37ReviewArtifactsPresent ? 42 : ag36ReviewArtifactsPresent ? 41 : ag35ReviewArtifactsPresent ? 40 : ag34ReviewArtifactsPresent ? 39 : 38} review indexes`,
+  )
   if (validatedPilotBatchCount > 0) {
     console.log(`- Pilot batches validated: ${validatedPilotBatchCount}`)
   }

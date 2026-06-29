@@ -5,12 +5,16 @@
   "type": "object",
   "additionalProperties": false,
   "required": [
+    "schemaVersion",
     "inventory_created_at",
     "inventory_created_by",
     "raw_source_root",
     "source_items"
   ],
   "properties": {
+    "schemaVersion": {
+      "const": "1.0"
+    },
     "inventory_created_at": {
       "type": "string",
       "minLength": 1

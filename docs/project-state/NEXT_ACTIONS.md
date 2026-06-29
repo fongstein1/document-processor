@@ -2,15 +2,17 @@
 
 ## Next immediate task
 
-The raw source folder could not be safely inventoried from this workspace, so
-the next immediate task is to wait for a human-supplied remaining-source
-inventory file under `data/manual-input/` and compare it against the tracked
-review indexes. No new extraction should start until that inventory exists.
+The human-supplied remaining-source inventory has now been received at
+`data/manual-input/remaining-source-inventory.received.json`. The Model
+Regulation XXX practice note is now complete as batches 192-194 in ignored
+working storage, with its tracked review index and self-review note in place.
+The next immediate task is to select the next safe source unit from the
+remaining inventory and repeat the review-only workflow.
 
-The tracked intake workflow now lives at
+The tracked intake workflow still lives at
 `docs/processor/remaining_source_inventory_workflow.md`, and the blank
 placeholder stub at `data/manual-input/remaining-source-inventory.pending.json`
-stays review-only until a human provides a received inventory file.
+stays review-only as the safe fallback template.
 
 AG 55 is now complete as batches 171-179 in ignored working storage. Its
 tracked review index and self-review note now form part of the handoff set,
@@ -26,6 +28,10 @@ ignored working storage.
 The model-governance practice note is now complete as batches 183-185 in
 ignored working storage. Its tracked review index and self-review note are
 now part of the handoff set.
+
+The next source unit queued from the received inventory will be selected from
+the remaining practice-note inventory once the reviewer confirms the next safe
+boundary. The batch wave will stay review-only and companion-guidance aware.
 
 AG 40 is now complete as batches 135-136 in ignored working storage. Its
 tracked review index and self-review note now form part of the handoff set.
@@ -526,3 +532,16 @@ continuation pass keeps going.
   remaining raw source candidates, select the next safe source unit, and
   keep the amendment / FAQ files in the Reg-213 folder deferred unless a
   later wave explicitly revisits them.
+## LTCI next step
+
+The LTCI practice note wave is complete as batches 195-197 in ignored
+working storage. The next immediate step is to refresh validation for the
+new LTCI handoff files and then select the next safe source from the
+remaining practice-note inventory.
+If the shell runner remains unavailable, resume with the same next source
+selection once process spawning is restored rather than guessing a new
+source from memory.
+
+The likely next candidate from the remaining inventory is the next small
+practice-note source, but do not start it until the shell runner can be used
+to inspect and validate it safely.

@@ -12,7 +12,7 @@ regulation repository. It consolidates the completed review-only extraction
 waves without changing the status of the underlying batch outputs or review
 indexes.
 
-The handoff now spans 66 review indexes, up from 57 review indexes. The
+The handoff now spans 68 review indexes, up from 57 review indexes. The
 earlier 51 review indexes checkpoint remains part of the handoff history, the
 earlier 50 review indexes checkpoint remains part of the handoff history, the
 earlier 49 review indexes checkpoint remains part of the handoff history, the
@@ -46,6 +46,10 @@ review indexes:
 - `docs/review/vm20_practice_note_review_index.md`
 - `docs/review/model_governance_practice_note_review_index.md`
 - `docs/review/model_governance_practice_note_self_review.md`
+- `docs/review/model_regulation_xxx_practice_note_review_index.md`
+- `docs/review/model_regulation_xxx_practice_note_self_review.md`
+- `docs/review/ltci_practice_note_review_index.md`
+- `docs/review/ltci_practice_note_self_review.md`
 - `docs/review/reg141_review_index.md`
 - `docs/review/reg141_self_review.md`
 - `docs/review/reg210_review_index.md`
@@ -858,3 +862,16 @@ small Actuarial Guideline or NY regulation source unit and continue the same
 review-only workflow. If the broader roadmap needs to split by domain, the
 clean follow-on is to start a pricing repository or a liability-modeling
 repository as a separate family.
+## LTCI practice note addendum
+
+The LTCI practice note wave is complete as batches 195-197 in ignored
+working storage. The tracked review index and self-review note for the
+companion-guidance note have been added locally, and the broader
+proof-of-concept handoff now spans one additional review index beyond the
+previous summary. The next safe continuation step is to select the next
+practice-note source from the remaining inventory once validation is
+refreshed.
+The LTCI practice note wave is now complete as batches 195-197 in ignored
+working storage. The tracked review index and self-review note for the
+companion-guidance note have been added locally, and the proof-of-concept
+summary now includes one more review index than the previous handoff.

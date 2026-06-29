@@ -1,0 +1,221 @@
+{
+  "planId": "ltci-practice-note-control-plan",
+  "planVersion": "1.0",
+  "status": "planned",
+  "sourceScope": {
+    "sourceFamilyId": "practice_notes",
+    "primarySourceFile": "Practice Notes/AAA-LTCI_Practice_Note_5.21.pdf",
+    "sourceFolder": "Practice Notes",
+    "sourceTitle": "Long-Term Care Insurance practice note",
+    "sourceReference": "American Academy of Actuaries practice note, May 2021",
+    "sourceStatus": "active",
+    "sourceStatusNote": "Non-binding practice note / companion guidance; not authoritative regulatory text.",
+    "domainId": "naic_regulatory",
+    "rawSourceRoot": "D:\\Work\\AI Projects\\NAIC Valuation Manual Course",
+    "confirmedPageRange": [1, 31],
+    "observedSectionWindows": [
+      {
+        "sectionId": "ltci-experience-assumptions",
+        "pageRange": [1, 10],
+        "note": "Front matter, introduction, experience studies, morbidity, and assumption-setting opener."
+      },
+      {
+        "sectionId": "ltci-persistency-mortality-investment",
+        "pageRange": [11, 20],
+        "note": "Persistency, mortality, lapse, benefit exhaustion, anti-selection, and investment-return / discounting methods."
+      },
+      {
+        "sectionId": "ltci-financial-reporting-valuation",
+        "pageRange": [21, 31],
+        "note": "Financial reporting, valuation, reserve calculations, incurred claim reserve discussion, and first-principles / conversion closeout."
+      }
+    ],
+    "boundaries": [
+      "Keep planning focused on this single practice note file.",
+      "Do not widen into the other Practice Notes files in the same folder.",
+      "Keep VM-20, VM-21, VM-22, VM-30, VM-31, ASOP 5, ASOP 18, ASOP 23, and FASB ASC 944-40 references review-only unless the same batch intentionally includes the referenced operational text.",
+      "Keep the disclaimer and the non-binding status visible as companion-guidance context, not as authoritative regulatory text.",
+      "Use page locators as the primary citation anchor; line references are not expected for this PDF slice."
+    ],
+    "exclusions": [
+      "No full-document processing outside this source file.",
+      "No learner-facing content.",
+      "No app-ready exports.",
+      "No RAG-ready exports.",
+      "No approved/promoted exports.",
+      "No eLearning scripts, slides, quizzes, or app exports.",
+      "No raw source files in Git.",
+      "No other Practice Notes files in the same wave."
+    ]
+  },
+  "topicMap": [
+    {
+      "topicId": "ltci-experience-assumptions",
+      "label": "Front matter, introduction, experience studies, morbidity, and assumption-setting opener",
+      "pageRange": [1, 10],
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "background_content",
+        "caveat_or_companion_guidance",
+        "cross_reference_mapping",
+        "boundary_control_window"
+      ],
+      "crossReferenceWatchlist": ["ASOP 5", "ASOP 18", "ASOP 23", "valuation guidance"],
+      "boundaryNote": "Keep the disclaimer, introduction, morbidity, and early experience-study material together before persistency begins."
+    },
+    {
+      "topicId": "ltci-persistency-mortality-investment",
+      "label": "Persistency, mortality, lapse, benefit exhaustion, anti-selection, and investment-return / discounting methods",
+      "pageRange": [11, 20],
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "definition_or_terminology",
+        "calculation_structure",
+        "formula_context",
+        "prescribed_assumption",
+        "company_or_prudent_estimate_assumption",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": ["ASOP 18", "ASOP 23", "statutory reserving guidance"],
+      "boundaryNote": "Keep the core assumption-setting and persistency material together as one narrow review-only slice."
+    },
+    {
+      "topicId": "ltci-financial-reporting-valuation",
+      "label": "Financial reporting, valuation, reserve calculations, incurred claim reserve discussion, and first-principles / conversion closeout",
+      "pageRange": [21, 31],
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "reporting_requirement",
+        "documentation_expectation",
+        "cross_reference_mapping",
+        "background_content",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": ["ASOP 5", "ASOP 18", "FASB ASC 944-40", "statutory reserving guidance"],
+      "boundaryNote": "Close the note with the financial reporting and valuation material while keeping the end boundary explicit."
+    }
+  ],
+  "proposedBatches": [
+    {
+      "plannedBatchId": "batch-195",
+      "topicIds": ["ltci-experience-assumptions"],
+      "title": "LTCI front matter and experience-assumption slice",
+      "paragraphTarget": {
+        "knownWindow": [1, 10],
+        "notes": "Capture the disclaimer, introduction, experience studies, morbidity, and assumption-setting opener as one review-only slice."
+      },
+      "rationale": "Capture the opening companion-guidance material before persistency begins.",
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "background_content",
+        "caveat_or_companion_guidance",
+        "cross_reference_mapping",
+        "boundary_control_window"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    },
+    {
+      "plannedBatchId": "batch-196",
+      "topicIds": ["ltci-persistency-mortality-investment"],
+      "title": "LTCI persistency, mortality, and investment slice",
+      "paragraphTarget": {
+        "knownWindow": [11, 20],
+        "notes": "Keep the core assumption-setting, persistency, mortality, lapse, and investment-return material together."
+      },
+      "rationale": "Keep the core assumption-setting and persistency material together as one narrow review-only slice.",
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "definition_or_terminology",
+        "calculation_structure",
+        "formula_context",
+        "prescribed_assumption",
+        "company_or_prudent_estimate_assumption",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    },
+    {
+      "plannedBatchId": "batch-197",
+      "topicIds": ["ltci-financial-reporting-valuation"],
+      "title": "LTCI financial reporting and valuation slice",
+      "paragraphTarget": {
+        "knownWindow": [21, 31],
+        "notes": "Close the note with financial reporting, valuation, reserve, and first-principles / conversion material while keeping the end boundary explicit."
+      },
+      "rationale": "Close the note with the financial reporting and valuation material while keeping the end boundary explicit.",
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "reporting_requirement",
+        "documentation_expectation",
+        "cross_reference_mapping",
+        "background_content",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    }
+  ],
+  "reviewStandards": {
+    "reviewOnlyByDefault": true,
+    "categories": [
+      "reporting_requirement",
+      "documentation_expectation",
+      "definition_or_terminology",
+      "calculation_structure",
+      "formula_context",
+      "prescribed_assumption",
+      "company_or_prudent_estimate_assumption",
+      "cross_reference_mapping",
+      "background_content",
+      "caveat_or_companion_guidance",
+      "boundary_control_window",
+      "requires_human_interpretation"
+    ],
+    "notes": [
+      "Use page locators as the primary anchor because line references are not expected for this PDF slice.",
+      "Keep the non-binding practice-note caveat visible in the review packet and review index.",
+      "Treat references to ASOP 5, ASOP 18, ASOP 23, and FASB ASC 944-40 as cross-reference material unless the operational text is captured in the same batch."
+    ]
+  },
+  "promotionGates": {
+    "reviewOnlyByDefault": true,
+    "learnerFacingCriteria": [
+      "source citation exists",
+      "source support is clear",
+      "wording is not misleading",
+      "confidence is high",
+      "no unresolved review flags exist",
+      "no cross-reference ambiguity remains"
+    ],
+    "appReadyCriteria": [
+      "already eligible for learner-facing use",
+      "sanitized, stable, and versioned for the app thread"
+    ],
+    "ragReadyCriteria": [
+      "approved",
+      "source-bound",
+      "indexed with a stable ID",
+      "citation and locator present",
+      "review status no longer requires human disposition"
+    ]
+  },
+  "validationImplications": {
+    "planFile": "config/ltci-practice-note-batch-plan.json",
+    "checkScript": "npm run check",
+    "futureChecks": [
+      "synchronize scripts/ltci-practice-note-batch-definitions.mjs with the planned batch IDs",
+      "keep one topic window per batch",
+      "keep cross-reference tagging review-only",
+      "keep no-promotion guardrails visible"
+    ],
+    "portabilityNote": "Keep the plan separate from VM-20, VM-21, VM-22, and the other Practice Notes files so the processor stays portable across source families."
+  },
+  "operatingNote": "This plan is intentionally conservative. It is a boundary-control artifact that should reduce review burden before any controlled LTCI practice-note extraction run begins."
+}

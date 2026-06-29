@@ -1,0 +1,219 @@
+{
+  "planId": "model-regulation-xxx-practice-note-control-plan",
+  "planVersion": "1.0",
+  "status": "planned",
+  "sourceScope": {
+    "sourceFamilyId": "practice_notes",
+    "primarySourceFile": "Practice Notes/AAA - Model Regulation XXX - Dec 2006.pdf",
+    "sourceFolder": "Practice Notes",
+    "sourceTitle": "Model Regulation XXX practice note",
+    "sourceReference": "American Academy of Actuaries practice note, December 2006",
+    "sourceStatus": "active",
+    "sourceStatusNote": "Non-binding practice note / companion guidance; not authoritative regulatory text.",
+    "domainId": "naic_regulatory",
+    "rawSourceRoot": "D:\\Work\\AI Projects\\NAIC Valuation Manual Course",
+    "confirmedPageRange": [1, 18],
+    "observedSectionWindows": [
+      {
+        "sectionId": "mrx-front-matter-scope",
+        "pageRange": [1, 7],
+        "note": "Front matter, introduction, purpose/scope, early regulatory requirements, and the first group-life boundary questions."
+      },
+      {
+        "sectionId": "mrx-x-factor-selection",
+        "pageRange": [8, 12],
+        "note": "X-factor selection, classing, credibility, and mortality-distribution / approximation methods."
+      },
+      {
+        "sectionId": "mrx-reinsurance-secondary-guarantee",
+        "pageRange": [13, 18],
+        "note": "Reinsurance, mean reserve / tax reserve handling, substandard policy discussion, and AG XXXVIII / secondary-guarantee questions."
+      }
+    ],
+    "boundaries": [
+      "Keep planning focused on this single practice note file.",
+      "Do not widen into the other Practice Notes files in the same folder.",
+      "Keep VM-20, VM-21, VM-22, VM-A, VM-C, VM-G, VM-M, VM-30, and VM-31 references review-only unless the same batch intentionally includes the referenced operational text.",
+      "Keep ASOP 40 and AG XXXVIII references review-only unless the same batch captures the quoted operational language.",
+      "Keep the disclaimer and the non-binding status visible as companion-guidance context, not as authoritative regulatory text.",
+      "Use page locators as the primary citation anchor; line references are not expected for this PDF slice."
+    ],
+    "exclusions": [
+      "No full-document processing outside this source file.",
+      "No learner-facing content.",
+      "No app-ready exports.",
+      "No RAG-ready exports.",
+      "No approved/promoted exports.",
+      "No eLearning scripts, slides, quizzes, or app exports.",
+      "No raw source files in Git.",
+      "No other Practice Notes files in the same wave."
+    ]
+  },
+  "topicMap": [
+    {
+      "topicId": "mrx-front-matter-scope",
+      "label": "Front matter, introduction, purpose/scope, early regulatory requirements, and the first group-life boundary questions",
+      "pageRange": [1, 7],
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "background_content",
+        "caveat_or_companion_guidance",
+        "cross_reference_mapping",
+        "boundary_control_window"
+      ],
+      "crossReferenceWatchlist": ["ASOP 40", "Model Regulation XXX", "VM-20", "VM-30", "VM-31"],
+      "boundaryNote": "Keep the disclaimer, introduction, early scope guidance, and the first regulatory questions together before the X-factor material begins."
+    },
+    {
+      "topicId": "mrx-x-factor-selection",
+      "label": "X-factor selection, classing, credibility, and mortality-distribution / approximation methods",
+      "pageRange": [8, 12],
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "regulatory_requirement",
+        "definition_or_terminology",
+        "calculation_structure",
+        "formula_context",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": ["ASOP 40", "Model Regulation XXX", "VM-20", "VM-30", "VM-31"],
+      "boundaryNote": "Keep the X-factor selection logic and approximation methods together as one narrow review-only slice."
+    },
+    {
+      "topicId": "mrx-reinsurance-secondary-guarantee",
+      "label": "Reinsurance, mean reserve / tax reserve handling, substandard policy discussion, and AG XXXVIII / secondary-guarantee questions",
+      "pageRange": [13, 18],
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "reinsurance",
+        "calculation_structure",
+        "cross_reference_mapping",
+        "background_content",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": ["ASOP 40", "AG XXXVIII", "VM-20", "VM-30", "VM-31"],
+      "boundaryNote": "Close the note with the later reinsurance, reserve, and secondary-guarantee material while keeping the end boundary explicit."
+    }
+  ],
+  "proposedBatches": [
+    {
+      "plannedBatchId": "batch-192",
+      "topicIds": ["mrx-front-matter-scope"],
+      "title": "Model Regulation XXX front matter and early scope slice",
+      "paragraphTarget": {
+        "knownWindow": [1, 7],
+        "notes": "Capture the disclaimer, introduction, purpose/scope, early regulatory requirements, and first group-life boundary questions as one review-only slice."
+      },
+      "rationale": "Capture the disclaimer, introduction, and early scope guidance before the X-factor selection material begins.",
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "background_content",
+        "caveat_or_companion_guidance",
+        "cross_reference_mapping",
+        "boundary_control_window"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    },
+    {
+      "plannedBatchId": "batch-193",
+      "topicIds": ["mrx-x-factor-selection"],
+      "title": "Model Regulation XXX X-factor selection and approximation slice",
+      "paragraphTarget": {
+        "knownWindow": [8, 12],
+        "notes": "Keep the X-factor selection logic and approximation methods together as one narrow review-only slice."
+      },
+      "rationale": "Keep the X-factor selection logic and mortality-distribution methods together as one narrow review-only slice.",
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "regulatory_requirement",
+        "definition_or_terminology",
+        "calculation_structure",
+        "formula_context",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    },
+    {
+      "plannedBatchId": "batch-194",
+      "topicIds": ["mrx-reinsurance-secondary-guarantee"],
+      "title": "Model Regulation XXX reinsurance and secondary-guarantee slice",
+      "paragraphTarget": {
+        "knownWindow": [13, 18],
+        "notes": "Close the note with reinsurance, reserve, and AG XXXVIII / secondary-guarantee material while keeping the end boundary explicit."
+      },
+      "rationale": "Close the note with the later reinsurance, reserve, and secondary-guarantee material while keeping the end boundary explicit.",
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "reinsurance",
+        "calculation_structure",
+        "cross_reference_mapping",
+        "background_content",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    }
+  ],
+  "reviewStandards": {
+    "reviewOnlyByDefault": true,
+    "categories": [
+      "regulatory_requirement",
+      "definition_or_terminology",
+      "calculation_structure",
+      "formula_context",
+      "reinsurance",
+      "cross_reference_mapping",
+      "background_content",
+      "caveat_or_companion_guidance",
+      "non_binding_practice_note",
+      "boundary_control_window",
+      "requires_human_interpretation"
+    ],
+    "notes": [
+      "Use page locators as the primary anchor because line references are not expected for this PDF slice.",
+      "Keep the non-binding practice-note caveat visible in the review packet and review index.",
+      "Treat references to ASOP 40 and AG XXXVIII as cross-reference material unless the operational text is captured in the same batch."
+    ]
+  },
+  "promotionGates": {
+    "reviewOnlyByDefault": true,
+    "learnerFacingCriteria": [
+      "source citation exists",
+      "source support is clear",
+      "wording is not misleading",
+      "confidence is high",
+      "no unresolved review flags exist",
+      "no cross-reference ambiguity remains"
+    ],
+    "appReadyCriteria": [
+      "already eligible for learner-facing use",
+      "sanitized, stable, and versioned for the app thread"
+    ],
+    "ragReadyCriteria": [
+      "approved",
+      "source-bound",
+      "indexed with a stable ID",
+      "citation and locator present",
+      "review status no longer requires human disposition"
+    ]
+  },
+  "validationImplications": {
+    "planFile": "config/model-regulation-xxx-practice-note-batch-plan.json",
+    "checkScript": "npm run check",
+    "futureChecks": [
+      "synchronize scripts/model-regulation-xxx-practice-note-batch-definitions.mjs with the planned batch IDs",
+      "keep one topic window per batch",
+      "keep cross-reference tagging review-only",
+      "keep no-promotion guardrails visible"
+    ],
+    "portabilityNote": "Keep the plan separate from VM-20, VM-21, VM-22, and the other Practice Notes files so the processor stays portable across source families."
+  },
+  "operatingNote": "This plan is intentionally conservative. It is a boundary-control artifact that should reduce review burden before any controlled practice-note extraction run begins."
+}
