@@ -1,0 +1,260 @@
+{
+  "planId": "actuarial-memorandum-practice-note-control-plan",
+  "planVersion": "1.0",
+  "status": "planned",
+  "sourceScope": {
+    "sourceFamilyId": "practice_notes",
+    "primarySourceFile": "Practice Notes/Actuarial Memorandum Practice Note 01142020.pdf",
+    "sourceFolder": "Practice Notes",
+    "sourceTitle": "Actuarial Memorandum practice note",
+    "sourceReference": "American Academy of Actuaries exposure draft, January 2020",
+    "sourceStatus": "companion-only",
+    "sourceStatusNote": "Exposure draft / non-binding practice note; not authoritative regulatory text.",
+    "domainId": "naic_regulatory",
+    "rawSourceRoot": "D:\\Work\\AI Projects\\NAIC Valuation Manual Course",
+    "confirmedPageRange": [1, 37],
+    "observedSectionWindows": [
+      {
+        "sectionId": "am-opening-guidance",
+        "pageRange": [1, 8],
+        "note": "Front matter, introduction, and background / scope guidance."
+      },
+      {
+        "sectionId": "am-drafting-content-considerations",
+        "pageRange": [9, 18],
+        "note": "Drafting the memorandum, narrative and technical content considerations, and sample content."
+      },
+      {
+        "sectionId": "am-judgment-and-reserve-items",
+        "pageRange": [19, 27],
+        "note": "Actuarial judgment, reserve items, unpaid claims / liability line items, and risk-sharing references."
+      },
+      {
+        "sectionId": "am-appendices-and-checklist",
+        "pageRange": [28, 37],
+        "note": "Appendix I ASOP references, Appendix II practice notes / SAPs, and Appendix III checklist."
+      }
+    ],
+    "boundaries": [
+      "Keep planning focused on this single practice note file.",
+      "Do not widen into the other Practice Notes files in the same folder.",
+      "Keep VM-20, VM-21, VM-22, VM-30, VM-31, ASOP 5, ASOP 41, ASOP 45, health reserve guidance, and statutory accounting references review-only unless the same batch intentionally includes the referenced operational text.",
+      "Keep the disclaimer and the non-binding status visible as companion-guidance context, not as authoritative regulatory text.",
+      "Use page locators as the primary citation anchor; line references are not expected for this PDF slice."
+    ],
+    "exclusions": [
+      "No full-document processing outside this source file.",
+      "No learner-facing content.",
+      "No app-ready exports.",
+      "No RAG-ready exports.",
+      "No approved/promoted exports.",
+      "No eLearning scripts, slides, quizzes, or app exports.",
+      "No raw source files in Git.",
+      "No other Practice Notes files in the same wave."
+    ]
+  },
+  "topicMap": [
+    {
+      "topicId": "am-opening-guidance",
+      "label": "Front matter, introduction, and background / scope guidance",
+      "pageRange": [1, 8],
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "background_content",
+        "caveat_or_companion_guidance",
+        "cross_reference_mapping",
+        "boundary_control_window"
+      ],
+      "crossReferenceWatchlist": ["ASOP 5", "ASOP 41", "health memorandum instructions", "statutory accounting guidance"],
+      "boundaryNote": "Keep the exposure-draft framing and background guidance together before drafting content begins."
+    },
+    {
+      "topicId": "am-drafting-content-considerations",
+      "label": "Drafting the memorandum, narrative and technical content considerations, and sample content",
+      "pageRange": [9, 18],
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "reporting_requirement",
+        "documentation_expectation",
+        "definition_or_terminology",
+        "cross_reference_mapping",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": ["Annual Statement Instructions", "valuation guidance", "health reserve guidance"],
+      "boundaryNote": "Keep the drafting guidance together as one narrow review-only slice."
+    },
+    {
+      "topicId": "am-judgment-and-reserve-items",
+      "label": "Actuarial judgment, reserve items, unpaid claims / liability line items, and risk-sharing references",
+      "pageRange": [19, 27],
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "calculation_structure",
+        "formula_context",
+        "reporting_requirement",
+        "documentation_expectation",
+        "cross_reference_mapping",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": ["reinsurance", "risk adjustment", "ASOP 5", "ASOP 23", "annual statement detail"],
+      "boundaryNote": "Keep the judgment-heavy content together while preserving the operational reporting boundary."
+    },
+    {
+      "topicId": "am-appendices-and-checklist",
+      "label": "Appendix I ASOP references, Appendix II practice notes / SAPs, and Appendix III checklist",
+      "pageRange": [28, 37],
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "cross_reference_mapping",
+        "background_content",
+        "caveat_or_companion_guidance",
+        "boundary_control_window"
+      ],
+      "crossReferenceWatchlist": ["ASOP 5", "ASOP 23", "ASOP 41", "ASOP 45", "SSAPs", "annual statement instructions"],
+      "boundaryNote": "Close the note with the appendix material while keeping the end boundary explicit."
+    }
+  ],
+  "proposedBatches": [
+    {
+      "plannedBatchId": "batch-202",
+      "topicIds": ["am-opening-guidance"],
+      "title": "Actuarial memorandum opening slice",
+      "paragraphTarget": {
+        "knownWindow": [1, 8],
+        "notes": "Capture the exposure-draft framing and background guidance as one review-only slice."
+      },
+      "rationale": "Capture the opening companion-guidance material before drafting content begins.",
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "background_content",
+        "caveat_or_companion_guidance",
+        "cross_reference_mapping",
+        "boundary_control_window"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    },
+    {
+      "plannedBatchId": "batch-203",
+      "topicIds": ["am-drafting-content-considerations"],
+      "title": "Actuarial memorandum drafting slice",
+      "paragraphTarget": {
+        "knownWindow": [9, 18],
+        "notes": "Keep the drafting guidance together as a narrow review-only slice."
+      },
+      "rationale": "Keep the drafting guidance together as one narrow review-only slice.",
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "reporting_requirement",
+        "documentation_expectation",
+        "definition_or_terminology",
+        "cross_reference_mapping",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    },
+    {
+      "plannedBatchId": "batch-204",
+      "topicIds": ["am-judgment-and-reserve-items"],
+      "title": "Actuarial memorandum judgment and reserve slice",
+      "paragraphTarget": {
+        "knownWindow": [19, 27],
+        "notes": "Keep the judgment-heavy content together while preserving the reporting boundary."
+      },
+      "rationale": "Keep the judgment-heavy content together while preserving the operational reporting boundary.",
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "calculation_structure",
+        "formula_context",
+        "reporting_requirement",
+        "documentation_expectation",
+        "cross_reference_mapping",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    },
+    {
+      "plannedBatchId": "batch-205",
+      "topicIds": ["am-appendices-and-checklist"],
+      "title": "Actuarial memorandum appendices and checklist slice",
+      "paragraphTarget": {
+        "knownWindow": [28, 37],
+        "notes": "Close the note with the appendix material while keeping the end boundary explicit."
+      },
+      "rationale": "Close the note with the appendix material while keeping the end boundary explicit.",
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "cross_reference_mapping",
+        "background_content",
+        "caveat_or_companion_guidance",
+        "boundary_control_window"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    }
+  ],
+  "reviewStandards": {
+    "reviewOnlyByDefault": true,
+    "categories": [
+      "reporting_requirement",
+      "documentation_expectation",
+      "definition_or_terminology",
+      "calculation_structure",
+      "formula_context",
+      "prescribed_assumption",
+      "company_or_prudent_estimate_assumption",
+      "cross_reference_mapping",
+      "background_content",
+      "caveat_or_companion_guidance",
+      "boundary_control_window",
+      "requires_human_interpretation",
+      "jurisdiction_specific_requirement",
+      "non_binding_practice_note"
+    ],
+    "notes": [
+      "Use page locators as the primary anchor because line references are not expected for this PDF slice.",
+      "Keep the non-binding practice-note caveat visible in the review packet and review index.",
+      "Treat references to ASOPs, statutory accounting principles, annual statement instructions, and health reserve guidance as cross-reference material unless the operational text is captured in the same batch."
+    ]
+  },
+  "promotionGates": {
+    "reviewOnlyByDefault": true,
+    "learnerFacingCriteria": [
+      "source citation exists",
+      "source support is clear",
+      "wording is not misleading",
+      "confidence is high",
+      "no unresolved review flags exist",
+      "no cross-reference ambiguity remains"
+    ],
+    "appReadyCriteria": [
+      "already eligible for learner-facing use",
+      "sanitized, stable, and versioned for the app thread"
+    ],
+    "ragReadyCriteria": [
+      "approved",
+      "source-bound",
+      "indexed with a stable ID",
+      "citation and locator present",
+      "review status no longer requires human disposition"
+    ]
+  },
+  "validationImplications": {
+    "planFile": "config/actuarial-memorandum-practice-note-batch-plan.json",
+    "checkScript": "npm run check",
+    "futureChecks": [
+      "synchronize scripts/actuarial-memorandum-practice-note-batch-definitions.mjs with the planned batch IDs",
+      "keep one topic window per batch",
+      "keep cross-reference tagging review-only",
+      "keep no-promotion guardrails visible"
+    ],
+    "portabilityNote": "Keep the plan separate from VM-20, VM-21, VM-22, and the other Practice Notes files so the processor stays portable across source families."
+  },
+  "operatingNote": "This plan is intentionally conservative. It is a boundary-control artifact that should reduce review burden before any controlled actuarial memorandum practice-note extraction run begins."
+}

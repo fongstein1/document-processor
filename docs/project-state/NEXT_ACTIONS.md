@@ -33,6 +33,11 @@ The next source unit queued from the received inventory will be selected from
 the remaining practice-note inventory once the reviewer confirms the next safe
 boundary. The batch wave will stay review-only and companion-guidance aware.
 
+The next immediate source unit has now been selected as
+`Practice Notes/Actuarial Memorandum Practice Note 01142020.pdf`. The
+planning layer is staged locally, and the next step is to validate and commit
+that plan before running batch-202 through batch-205.
+
 AG 40 is now complete as batches 135-136 in ignored working storage. Its
 tracked review index and self-review note now form part of the handoff set.
 AG 41 is now complete as batch-137 in ignored working storage. Its tracked

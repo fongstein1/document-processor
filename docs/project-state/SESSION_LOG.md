@@ -732,3 +732,4 @@
 
 ## 2026-06-29
 - Completed the life reinsurance practice-note wave as batches 198-201 in ignored working storage, created the tracked review index and self-review note, and refreshed the repository POC summary and project-state docs while keeping the non-binding companion-guidance caveat visible.
+- Selected `Practice Notes/Actuarial Memorandum Practice Note 01142020.pdf` as the next safe source unit from the received inventory, staged its planning layer locally, and wired the shared batch registry and scaffold validator to recognize the planned batch-202 through batch-205 wave while keeping the source review-only and companion-guidance aware.

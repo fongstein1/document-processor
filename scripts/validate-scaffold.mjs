@@ -354,6 +354,29 @@ const paths = {
     'review',
     'model_governance_practice_note_self_review.md',
   ),
+  actuarialMemorandumPracticeNoteBatchPlanJson: path.join(
+    repoRoot,
+    'config',
+    'actuarial-memorandum-practice-note-batch-plan.json',
+  ),
+  actuarialMemorandumPracticeNoteExtractionPlanMd: path.join(
+    repoRoot,
+    'docs',
+    'processor',
+    'actuarial_memorandum_practice_note_extraction_plan.md',
+  ),
+  actuarialMemorandumPracticeNoteReviewIndexMd: path.join(
+    repoRoot,
+    'docs',
+    'review',
+    'actuarial_memorandum_practice_note_review_index.md',
+  ),
+  actuarialMemorandumPracticeNoteSelfReviewMd: path.join(
+    repoRoot,
+    'docs',
+    'review',
+    'actuarial_memorandum_practice_note_self_review.md',
+  ),
   modelRegulationXXXPracticeNoteBatchPlanJson: path.join(
     repoRoot,
     'config',
@@ -12919,6 +12942,70 @@ if (problems.length > 0) {
   console.log(
     `- Life reinsurance practice-note plan verified: ${lifeReinsuranceReserveCreditPracticeNoteBatchPlan.proposedBatches.length} batches`,
   )
+  const actuarialMemorandumPracticeNotePlanText = (await exists(
+    paths.actuarialMemorandumPracticeNoteExtractionPlanMd,
+  ))
+    ? await readText(paths.actuarialMemorandumPracticeNoteExtractionPlanMd)
+    : ''
+  if (!actuarialMemorandumPracticeNotePlanText) {
+    problems.push(
+      'docs/processor/actuarial_memorandum_practice_note_extraction_plan.md: missing Actuarial Memorandum practice-note plan',
+    )
+  }
+  const actuarialMemorandumPracticeNoteBatchPlan = await readJson(
+    paths.actuarialMemorandumPracticeNoteBatchPlanJson,
+  )
+  const actuarialMemorandumPracticeNoteBatchIds = actuarialMemorandumPracticeNoteBatchPlan.proposedBatches.map(
+    (batch) => batch.plannedBatchId,
+  )
+  const actuarialMemorandumPracticeNoteRegistryReady = actuarialMemorandumPracticeNoteBatchIds.every((batchId) =>
+    Object.prototype.hasOwnProperty.call(batchDefinitions, batchId),
+  )
+  if (!actuarialMemorandumPracticeNoteRegistryReady) {
+    problems.push(
+      'scripts/batch-definitions.mjs: missing Actuarial Memorandum practice-note batch definition coverage',
+    )
+  }
+  if (actuarialMemorandumPracticeNoteRegistryReady) {
+    console.log(
+      `- Actuarial memorandum practice-note registry verified: ${actuarialMemorandumPracticeNoteBatchPlan.proposedBatches.length} batches`,
+    )
+  }
+  const actuarialMemorandumPracticeNoteReviewIndexText = (await exists(
+    paths.actuarialMemorandumPracticeNoteReviewIndexMd,
+  ))
+    ? await readText(paths.actuarialMemorandumPracticeNoteReviewIndexMd)
+    : ''
+  const actuarialMemorandumPracticeNoteSelfReviewText = (await exists(
+    paths.actuarialMemorandumPracticeNoteSelfReviewMd,
+  ))
+    ? await readText(paths.actuarialMemorandumPracticeNoteSelfReviewMd)
+    : ''
+  const actuarialMemorandumPracticeNoteReviewIndexReady =
+    actuarialMemorandumPracticeNoteReviewIndexText.length > 0 &&
+    actuarialMemorandumPracticeNoteBatchIds.every((batchId) =>
+      actuarialMemorandumPracticeNoteReviewIndexText.includes(batchId),
+    )
+  const actuarialMemorandumPracticeNoteSelfReviewReady =
+    actuarialMemorandumPracticeNoteSelfReviewText.length > 0 &&
+    actuarialMemorandumPracticeNoteBatchIds.every((batchId) =>
+      actuarialMemorandumPracticeNoteSelfReviewText.includes(batchId),
+    )
+  const actuarialMemorandumPracticeNoteReviewArtifactsPresent =
+    actuarialMemorandumPracticeNoteReviewIndexReady && actuarialMemorandumPracticeNoteSelfReviewReady
+  if (actuarialMemorandumPracticeNoteReviewIndexReady) {
+    console.log(
+      `- Actuarial memorandum practice-note review index verified: ${actuarialMemorandumPracticeNoteBatchPlan.proposedBatches.length} batches`,
+    )
+  }
+  if (actuarialMemorandumPracticeNoteSelfReviewReady) {
+    console.log(
+      `- Actuarial memorandum practice-note self-review verified: ${actuarialMemorandumPracticeNoteBatchPlan.proposedBatches.length} batches`,
+    )
+  }
+  console.log(
+    `- Actuarial memorandum practice-note plan verified: ${actuarialMemorandumPracticeNoteBatchPlan.proposedBatches.length} batches`,
+  )
   await validateModelRegulationXXXPracticeNotePlanMarkdown(
     paths.modelRegulationXXXPracticeNoteExtractionPlanMd,
     'docs/processor/model_regulation_xxx_practice_note_extraction_plan.md',
@@ -12957,7 +13044,7 @@ if (problems.length > 0) {
   }
   console.log(`- Model Regulation XXX plan verified: ${modelRegulationXXXBatchPlan.proposedBatches.length} batches`)
   console.log(
-    `- POC status summary verified: ${lifeReinsuranceReserveCreditPracticeNoteReviewArtifactsPresent ? 69 : modelRegulationXXXReviewArtifactsPresent ? 68 : reg213ReviewArtifactsPresent ? 66 : reg210ReviewArtifactsPresent ? 65 : modelGovernanceReviewArtifactsPresent ? 64 : reg141ReviewArtifactsPresent ? 63 : ag55ReviewArtifactsPresent ? 62 : ag54ReviewArtifactsPresent ? 61 : ag53ReviewArtifactsPresent ? 58 : ag52ReviewArtifactsPresent ? 57 : ag51ReviewArtifactsPresent ? 56 : ag50ReviewArtifactsPresent ? 55 : ag49ReviewArtifactsPresent ? 54 : ag48ReviewArtifactsPresent ? 53 : ag47ReviewArtifactsPresent ? 52 : ag46ReviewArtifactsPresent ? 51 : ag45ReviewArtifactsPresent ? 50 : ag44ReviewArtifactsPresent ? 49 : ag43ReviewArtifactsPresent ? 48 : ag42ReviewArtifactsPresent ? 47 : ag41ReviewArtifactsPresent ? 46 : ag40ReviewArtifactsPresent ? 45 : ag39ReviewArtifactsPresent ? 44 : ag38ReviewArtifactsPresent ? 43 : ag37ReviewArtifactsPresent ? 42 : ag36ReviewArtifactsPresent ? 41 : ag35ReviewArtifactsPresent ? 40 : ag34ReviewArtifactsPresent ? 39 : 38} review indexes`,
+    `- POC status summary verified: ${actuarialMemorandumPracticeNoteReviewArtifactsPresent ? 70 : lifeReinsuranceReserveCreditPracticeNoteReviewArtifactsPresent ? 69 : modelRegulationXXXReviewArtifactsPresent ? 68 : reg213ReviewArtifactsPresent ? 66 : reg210ReviewArtifactsPresent ? 65 : modelGovernanceReviewArtifactsPresent ? 64 : reg141ReviewArtifactsPresent ? 63 : ag55ReviewArtifactsPresent ? 62 : ag54ReviewArtifactsPresent ? 61 : ag53ReviewArtifactsPresent ? 58 : ag52ReviewArtifactsPresent ? 57 : ag51ReviewArtifactsPresent ? 56 : ag50ReviewArtifactsPresent ? 55 : ag49ReviewArtifactsPresent ? 54 : ag48ReviewArtifactsPresent ? 53 : ag47ReviewArtifactsPresent ? 52 : ag46ReviewArtifactsPresent ? 51 : ag45ReviewArtifactsPresent ? 50 : ag44ReviewArtifactsPresent ? 49 : ag43ReviewArtifactsPresent ? 48 : ag42ReviewArtifactsPresent ? 47 : ag41ReviewArtifactsPresent ? 46 : ag40ReviewArtifactsPresent ? 45 : ag39ReviewArtifactsPresent ? 44 : ag38ReviewArtifactsPresent ? 43 : ag37ReviewArtifactsPresent ? 42 : ag36ReviewArtifactsPresent ? 41 : ag35ReviewArtifactsPresent ? 40 : ag34ReviewArtifactsPresent ? 39 : 38} review indexes`,
   )
   if (validatedPilotBatchCount > 0) {
     console.log(`- Pilot batches validated: ${validatedPilotBatchCount}`)

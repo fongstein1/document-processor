@@ -60,6 +60,11 @@ The model-governance practice-note wave is now complete as batches 183-185,
 and its tracked review index plus self-review note are part of the handoff
 set.
 
+The next safe source unit selected from the received inventory is
+`Practice Notes/Actuarial Memorandum Practice Note 01142020.pdf`. Its
+planning layer is drafted locally and remains review-only until the batch
+wave is executed and indexed.
+
 - `npm run pilot:course-core`: passed; created the core VM course pilot batch
   outputs in `data/work/batches/batch-002/`
 - `npm run vm20:batch-003`: passed; created the first controlled VM-20
