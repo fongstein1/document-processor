@@ -675,3 +675,8 @@
   repository POC summary and project-state docs, and kept the paragraph-
   locator backstop visible because line references were preserved. AG 55 is
   now the next likely candidate if the continuation pass keeps going.
+- 2026-06-28: Inspected AG 55, confirmed the active 268-paragraph
+  `AG 55-Reinsurance AAT as adopted by LATF-20250610.docx` draft guidance,
+  drafted the AG 55 planning layer for batches 171-179, and kept the wave
+  review-only by default with paragraph locators as the primary anchor
+  because line references are expected for this text-based source.

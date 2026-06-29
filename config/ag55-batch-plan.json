@@ -1,0 +1,362 @@
+{
+  "planId": "ag55-reinsurance-aat-plan",
+  "planVersion": "1.0",
+  "status": "planned",
+  "sourceScope": {
+    "sourceFamilyId": "actuarial_guidelines",
+    "primarySourceFile": "AG 55-Reinsurance AAT as adopted by LATF-20250610.docx",
+    "sourceFolder": "Actuarial Guidelines",
+    "sourceTitle": "Application of the Valuation Manual for Testing the Adequacy of Reserves Related to Certain Life Reinsurance Treaties",
+    "sourceReference": "Actuarial Guideline LV",
+    "sourceStatus": "active",
+    "sourceStatusNote": "LATF-adopted draft guidance, pending NAIC committee adoption",
+    "domainId": "naic_regulatory",
+    "rawSourceRoot": "D:\\Work\\AI Projects\\NAIC Valuation Manual Course",
+    "confirmedParagraphRange": [1, 268],
+    "observedSectionWindows": [
+      {
+        "sectionId": "ag55-opening-effective-date",
+        "paragraphRange": [1, 18],
+        "note": "Disclaimer, background, and effective-date guidance."
+      },
+      {
+        "sectionId": "ag55-scope-applicability",
+        "paragraphRange": [19, 38],
+        "note": "Scope and applicability refinement before definitions begin."
+      },
+      {
+        "sectionId": "ag55-definitions-core-terms",
+        "paragraphRange": [39, 75],
+        "note": "Definitions for reserve and reinsurance terms."
+      },
+      {
+        "sectionId": "ag55-risk-identification-analysis-documentation",
+        "paragraphRange": [76, 114],
+        "note": "Risk identification and documentation expectations."
+      },
+      {
+        "sectionId": "ag55-cash-flow-testing-details",
+        "paragraphRange": [115, 161],
+        "note": "Starting asset amount rules, modeling expectations, and related documentation."
+      },
+      {
+        "sectionId": "ag55-attribution-aggregation",
+        "paragraphRange": [162, 188],
+        "note": "Attribution analysis and aggregation considerations."
+      },
+      {
+        "sectionId": "ag55-reporting-documentation-assumptions",
+        "paragraphRange": [190, 224],
+        "note": "Reporting, treaty information, and assumption documentation."
+      },
+      {
+        "sectionId": "ag55-results-attribution-risk-identification",
+        "paragraphRange": [225, 255],
+        "note": "Cash-flow results, attribution, risk identification, and templates."
+      },
+      {
+        "sectionId": "ag55-appendix-new-york-7-scenarios",
+        "paragraphRange": [258, 268],
+        "note": "Appendix interest-rate scenarios and closing boundary."
+      }
+    ],
+    "boundaries": [
+      "Keep AG 55 focused on the LATF-adopted draft reinsurance adequacy guidance only and keep AG 54 out of scope for this wave.",
+      "Treat the opening disclaimer as a review-only caveat because the document is LATF-adopted but not yet committee-adopted.",
+      "Preserve paragraph locators and line references where available because this is a text-based Word source.",
+      "Keep the appendix separate from the main body so the closing boundary stays reviewable."
+    ],
+    "exclusions": [
+      "No learner-facing content.",
+      "No app-ready export.",
+      "No RAG-ready export.",
+      "No approved/promoted export.",
+      "No eLearning scripts, slides, quizzes, or app exports.",
+      "No raw source files in Git.",
+      "No AG 54 files in the same wave."
+    ]
+  },
+  "topicMap": [
+    {
+      "topicId": "ag55-opening-effective-date",
+      "label": "Opening disclaimer, background, and effective date",
+      "paragraphRange": [1, 18],
+      "reviewComplexity": "high",
+      "expectedIssueTypes": ["regulatory_requirement", "background_content", "cross_reference_mapping", "boundary_control_window", "requires_human_interpretation"],
+      "crossReferenceWatchlist": ["VM-30", "asset adequacy analysis", "committee adoption status"],
+      "boundaryNote": "Keep the disclaimer, background, and effective-date guidance together as one narrow review-only slice."
+    },
+    {
+      "topicId": "ag55-scope-applicability",
+      "label": "Scope and applicability refinement",
+      "paragraphRange": [19, 38],
+      "reviewComplexity": "high",
+      "expectedIssueTypes": ["regulatory_requirement", "definition_or_terminology", "cross_reference_mapping", "boundary_control_window", "requires_human_interpretation"],
+      "crossReferenceWatchlist": ["scope threshold", "applying treaty", "cedent / assuming company", "exempted business", "significant risk"],
+      "boundaryNote": "Keep the scope and applicability material together and stop before the definitions section begins."
+    },
+    {
+      "topicId": "ag55-definitions-core-terms",
+      "label": "Definitions and core terms",
+      "paragraphRange": [39, 75],
+      "reviewComplexity": "high",
+      "expectedIssueTypes": ["definition_or_terminology", "reinsurance", "reserve_method_structure", "calculation_structure", "formula_context", "cross_reference_mapping", "boundary_control_window", "requires_human_interpretation"],
+      "crossReferenceWatchlist": ["Alternative Run", "Asset Intensive Reinsurance Transactions", "Attribution Analysis", "Deficient Block", "Excess Capital", "Guideline Excluded Assets", "Pre-reinsurance Reserve", "Post-reinsurance Reserve", "Reserve Decrease", "Similar Memorandum", "Starting Asset Amount", "Sufficient Block"],
+      "boundaryNote": "Keep the definitions together as one review-only slice and stop before the risk-identification section begins."
+    },
+    {
+      "topicId": "ag55-risk-identification-analysis-documentation",
+      "label": "Risk identification and analysis/documentation expectations",
+      "paragraphRange": [76, 114],
+      "reviewComplexity": "high",
+      "expectedIssueTypes": ["regulatory_requirement", "reinsurance", "documentation_expectation", "governance_or_control_expectation", "cross_reference_mapping", "boundary_control_window", "requires_human_interpretation"],
+      "crossReferenceWatchlist": ["collectability risk", "reinsurer rating", "trusts and funds withheld", "risk mitigants", "domestic regulator discretion"],
+      "boundaryNote": "Keep the risk-identification language separate from the later cash-flow testing details."
+    },
+    {
+      "topicId": "ag55-cash-flow-testing-details",
+      "label": "Cash-flow testing details",
+      "paragraphRange": [115, 161],
+      "reviewComplexity": "high",
+      "expectedIssueTypes": ["regulatory_requirement", "calculation_structure", "formula_context", "prescribed_assumption", "company_or_prudent_estimate_assumption", "asset_modeling_judgment", "reinsurance", "cross_reference_mapping", "boundary_control_window", "requires_human_interpretation"],
+      "crossReferenceWatchlist": ["Starting Asset Amount", "Post-reinsurance Reserve", "Alternative Run", "Excess Capital", "New York 7", "VM-30", "AG 53"],
+      "boundaryNote": "Keep the starting-asset and projection guidance together, but do not absorb the attribution and aggregation sections."
+    },
+    {
+      "topicId": "ag55-attribution-aggregation",
+      "label": "Attribution analysis and aggregation",
+      "paragraphRange": [162, 188],
+      "reviewComplexity": "high",
+      "expectedIssueTypes": ["reporting_requirement", "documentation_expectation", "calculation_structure", "formula_context", "cross_reference_mapping", "boundary_control_window", "requires_human_interpretation"],
+      "crossReferenceWatchlist": ["reserve decrease", "pre-reinsurance reserve", "post-reinsurance reserve", "aggregation by counterparty", "deficient block", "sufficient block"],
+      "boundaryNote": "Keep the attribution and aggregation language together as a single review window and stop before the reporting section begins."
+    },
+    {
+      "topicId": "ag55-reporting-documentation-assumptions",
+      "label": "Reporting, treaty documentation, and assumption information",
+      "paragraphRange": [190, 224],
+      "reviewComplexity": "high",
+      "expectedIssueTypes": ["reporting_requirement", "documentation_expectation", "governance_or_control_expectation", "reinsurance", "cross_reference_mapping", "boundary_control_window", "requires_human_interpretation"],
+      "crossReferenceWatchlist": ["VM-30 actuarial memorandum", "Schedule S", "reserve credit", "trust amount", "funds withheld", "net asset yield", "mortality assumption", "lapse assumption", "benefit utilization"],
+      "boundaryNote": "Keep the reporting and treaty documentation material together and stop before the cash-flow results and template worksheets material becomes the focus."
+    },
+    {
+      "topicId": "ag55-results-attribution-risk-identification",
+      "label": "Cash-flow results, attribution, risk identification, and templates",
+      "paragraphRange": [225, 255],
+      "reviewComplexity": "high",
+      "expectedIssueTypes": ["reporting_requirement", "documentation_expectation", "calculation_structure", "cross_reference_mapping", "boundary_control_window", "requires_human_interpretation"],
+      "crossReferenceWatchlist": ["ending surplus", "New York 7 scenarios", "sensitivity tests", "interim negative results", "attribution analysis template", "Guideline Excluded Assets", "risk mitigants", "template worksheets"],
+      "boundaryNote": "Keep the results, attribution, risk-identification, and template material together, but do not absorb the appendix scenario excerpt."
+    },
+    {
+      "topicId": "ag55-appendix-new-york-7-scenarios",
+      "label": "Appendix 1 and closing boundary",
+      "paragraphRange": [258, 268],
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": ["regulatory_requirement", "formula_context", "cross_reference_mapping", "boundary_control_window", "requires_human_interpretation"],
+      "crossReferenceWatchlist": ["New York 7", "interest rate scenarios", "Regulation 126"],
+      "boundaryNote": "Keep the appendix separate from the main body so the closing boundary remains explicit."
+    }
+  ],
+  "proposedBatches": [
+    {
+      "plannedBatchId": "batch-171",
+      "topicIds": ["ag55-opening-effective-date"],
+      "title": "AG 55 opening disclaimer, background, and effective-date slice",
+      "paragraphTarget": {
+        "knownWindow": [1, 18],
+        "notes": "Capture the LATF-adopted-draft disclaimer, background, and effective-date guidance as one narrow review-only slice."
+      },
+      "rationale": "Capture the LATF-adopted-draft disclaimer, background, and effective-date guidance as one narrow review-only slice.",
+      "reviewComplexity": "high",
+      "expectedIssueTypes": ["regulatory_requirement", "background_content", "cross_reference_mapping", "boundary_control_window", "requires_human_interpretation"],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    },
+    {
+      "plannedBatchId": "batch-172",
+      "topicIds": ["ag55-scope-applicability"],
+      "title": "AG 55 scope and applicability slice",
+      "paragraphTarget": {
+        "knownWindow": [19, 38],
+        "notes": "Capture the scope and applicability refinement before definitions begin."
+      },
+      "rationale": "Capture the scope and applicability refinement before definitions begin.",
+      "reviewComplexity": "high",
+      "expectedIssueTypes": ["regulatory_requirement", "definition_or_terminology", "cross_reference_mapping", "boundary_control_window", "requires_human_interpretation"],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    },
+    {
+      "plannedBatchId": "batch-173",
+      "topicIds": ["ag55-definitions-core-terms"],
+      "title": "AG 55 definitions and core terms slice",
+      "paragraphTarget": {
+        "knownWindow": [39, 75],
+        "notes": "Capture the reserve and reinsurance terminology as one narrow review-only slice."
+      },
+      "rationale": "Capture the reserve and reinsurance terminology as one narrow review-only slice.",
+      "reviewComplexity": "high",
+      "expectedIssueTypes": ["definition_or_terminology", "reinsurance", "reserve_method_structure", "calculation_structure", "formula_context", "cross_reference_mapping", "boundary_control_window", "requires_human_interpretation"],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    },
+    {
+      "plannedBatchId": "batch-174",
+      "topicIds": ["ag55-risk-identification-analysis-documentation"],
+      "title": "AG 55 risk identification and analysis/documentation expectations slice",
+      "paragraphTarget": {
+        "knownWindow": [76, 114],
+        "notes": "Capture the risk-identification language and the analysis/documentation expectations before the cash-flow testing details begin."
+      },
+      "rationale": "Capture the risk-identification language and the analysis/documentation expectations before the cash-flow testing details begin.",
+      "reviewComplexity": "high",
+      "expectedIssueTypes": ["regulatory_requirement", "reinsurance", "documentation_expectation", "governance_or_control_expectation", "cross_reference_mapping", "boundary_control_window", "requires_human_interpretation"],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    },
+    {
+      "plannedBatchId": "batch-175",
+      "topicIds": ["ag55-cash-flow-testing-details"],
+      "title": "AG 55 cash-flow testing details slice",
+      "paragraphTarget": {
+        "knownWindow": [115, 161],
+        "notes": "Capture the starting asset rules, alternative-run guidance, projection expectations, and asset-modeling caveats as one review-only slice."
+      },
+      "rationale": "Capture the starting asset rules, alternative-run guidance, projection expectations, and asset-modeling caveats as one review-only slice.",
+      "reviewComplexity": "high",
+      "expectedIssueTypes": ["regulatory_requirement", "calculation_structure", "formula_context", "prescribed_assumption", "company_or_prudent_estimate_assumption", "asset_modeling_judgment", "reinsurance", "cross_reference_mapping", "boundary_control_window", "requires_human_interpretation"],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    },
+    {
+      "plannedBatchId": "batch-176",
+      "topicIds": ["ag55-attribution-aggregation"],
+      "title": "AG 55 attribution analysis and aggregation slice",
+      "paragraphTarget": {
+        "knownWindow": [162, 188],
+        "notes": "Capture the reserve-decrease attribution and the aggregation conditions together before the reporting section begins."
+      },
+      "rationale": "Capture the reserve-decrease attribution and the aggregation conditions together before the reporting section begins.",
+      "reviewComplexity": "high",
+      "expectedIssueTypes": ["reporting_requirement", "documentation_expectation", "calculation_structure", "formula_context", "cross_reference_mapping", "boundary_control_window", "requires_human_interpretation"],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    },
+    {
+      "plannedBatchId": "batch-177",
+      "topicIds": ["ag55-reporting-documentation-assumptions"],
+      "title": "AG 55 reporting, treaty documentation, and assumption information slice",
+      "paragraphTarget": {
+        "knownWindow": [190, 224],
+        "notes": "Capture the VM-30 memorandum linkage, treaty documentation, and assumption-information requirements in one review-only slice."
+      },
+      "rationale": "Capture the VM-30 memorandum linkage, treaty documentation, and assumption-information requirements in one review-only slice.",
+      "reviewComplexity": "high",
+      "expectedIssueTypes": ["reporting_requirement", "documentation_expectation", "governance_or_control_expectation", "reinsurance", "cross_reference_mapping", "boundary_control_window", "requires_human_interpretation"],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    },
+    {
+      "plannedBatchId": "batch-178",
+      "topicIds": ["ag55-results-attribution-risk-identification"],
+      "title": "AG 55 results, attribution, risk identification, and templates slice",
+      "paragraphTarget": {
+        "knownWindow": [225, 255],
+        "notes": "Capture the numerical results, attribution analysis, risk identification, and sample template material as one review-only slice."
+      },
+      "rationale": "Capture the numerical results, attribution analysis, risk identification, and sample template material as one review-only slice.",
+      "reviewComplexity": "high",
+      "expectedIssueTypes": ["reporting_requirement", "documentation_expectation", "calculation_structure", "cross_reference_mapping", "boundary_control_window", "requires_human_interpretation"],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    },
+    {
+      "plannedBatchId": "batch-179",
+      "topicIds": ["ag55-appendix-new-york-7-scenarios"],
+      "title": "AG 55 appendix New York 7 scenarios and closing boundary",
+      "paragraphTarget": {
+        "knownWindow": [258, 268],
+        "notes": "Capture the appendix scenario excerpt and keep the closing boundary explicit."
+      },
+      "rationale": "Capture the appendix scenario excerpt and keep the closing boundary explicit.",
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": ["regulatory_requirement", "formula_context", "cross_reference_mapping", "boundary_control_window", "requires_human_interpretation"],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    }
+  ],
+  "reviewStandards": {
+    "regulatoryRequirement": "Treat the authority, scope, conditions, and effective-date instructions as regulatory text when they direct what the company must do.",
+    "definitionOrTerminology": "Treat reinsurance, reserve, block, and scenario labels as terminology when the text explains rather than directs.",
+    "reserveMethodStructure": "Treat the starting-asset and cash-flow-test framing as structure only when the source operationalizes it; otherwise keep it as cross-reference context.",
+    "calculationStructure": "Treat the cash-flow testing and attribution material as review-only context unless the guideline explicitly prescribes a computation step.",
+    "formulaContext": "Treat formulas and scenario descriptions as context when they support the review slice but do not promote them into learner-facing content.",
+    "prescribedAssumption": "Treat prescribed assumptions as review-only source text when the guideline explicitly directs a company assumption.",
+    "companyOrPrudentEstimateAssumption": "Treat company or prudent-estimate assumptions as review-only when the source distinguishes company judgment from prescribed rules.",
+    "scenarioOrStochasticRequirement": "Treat scenario or stochastic requirements as review-only context when the guideline references them.",
+    "assetModelingJudgment": "Treat asset, collateral, and funds-withheld modeling judgments as a separate review-only category when the text requires a human judgment call.",
+    "hedgingOrRiskMitigation": "Treat trusts, collateral, and other risk mitigants as review-only context when the source discusses them.",
+    "reinsurance": "Treat treaty mechanics, collectability, and reserve-credit references as reinsurance content when they appear.",
+    "reportingRequirement": "Treat memorandum, review, and template instructions as reporting requirements if they appear.",
+    "documentationExpectation": "Treat supporting-text instructions as documentation expectations if they appear.",
+    "governanceOrControlExpectation": "Treat committee references, regulator notifications, and control language as governance or control expectations if they appear.",
+    "crossReferenceMapping": "Treat references to VM-30, VM-53, ASOPs, Model 820, Model 126, and related tables as cross-reference context unless operationalized.",
+    "backgroundContent": "Treat the title, introduction, and section labels as background unless they impose a requirement.",
+    "boundaryControlWindow": "Treat each paragraph window as review-only and do not widen it unless later cleanup explicitly needs that split.",
+    "requiresHumanInterpretation": "Treat the draft-guidance disclaimer, dense reinsurance wording, and any complex valuation language as requiring human review unless the source text is explicit."
+  },
+  "promotionGates": {
+    "defaultState": "review_only",
+    "learnerFacing": {
+      "sourceCitationExists": true,
+      "sourceSupportIsClear": true,
+      "wordingIsNotMisleading": true,
+      "confidenceIsHigh": true,
+      "noUnresolvedReviewFlagsExist": true
+    },
+    "appReady": {
+      "learnerFacingCriteriaAreSatisfied": true,
+      "exportIsSanitizedStableAndVersioned": true,
+      "noUnresolvedReviewIssuesRemain": true
+    },
+    "ragReady": {
+      "approvedIndexedMaterialOnly": true,
+      "stableId": true,
+      "sourceReferenceAndLocatorPresent": true,
+      "reviewStatusNoLongerRequiresHumanDisposition": true
+    }
+  },
+  "validationImplications": {
+    "currentChecksNeeded": [
+      "Plan file exists and parses as JSON.",
+      "The AG 55 plan markdown must exist and carry the expected headings.",
+      "Every planned batch must remain review-only by default.",
+      "The source posture must stay explicitly active, with the pending committee-adoption caveat visible.",
+      "Each planned batch must have a matching batch definition.",
+      "The AG 55 batch definition file must stay synchronized with the plan.",
+      "Paragraph locators and line references should remain visible in the review packet."
+    ],
+    "futureChecksSuggested": [
+      "Keep the plan portable if the AG 55 appendix or closing boundary needs to be split further.",
+      "Keep the review-only guardrails visible until the review index and self-review note are created."
+    ]
+  },
+  "operatingNote": {
+    "reviewOnly": true,
+    "sourceType": "text-based Word source",
+    "citationGuidance": "Paragraph locators are the primary anchor and line references are expected.",
+    "boundaryGuidance": "The pending committee-adoption disclaimer should remain visible as a review-only caveat rather than a repeal or replacement signal.",
+    "appendixGuidance": "Keep the appendix separate from the main body, and keep AG 54 out of this wave."
+  }
+}
