@@ -10,6 +10,8 @@ const __dirname = path.dirname(__filename)
 const repoRoot = path.resolve(__dirname, '..')
 
 const rawRoot = 'D:\\Work\\AI Projects\\NAIC Valuation Manual Course'
+const bundledPythonPath =
+  'C:\\Users\\David\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe'
 const getCliArg = (flag, fallback) => {
   const index = process.argv.indexOf(`--${flag}`)
   if (index >= 0 && index + 1 < process.argv.length) {
@@ -74,11 +76,11 @@ const ensureArray = (value) => (Array.isArray(value) ? value : [])
 const unique = (values) => Array.from(new Set(values.filter(Boolean)))
 
 const extractPdfPages = async (filePath, startPage, endPage) => {
+  const pythonExecutable = (await exists(bundledPythonPath)) ? bundledPythonPath : 'python'
   const pythonCode = `
 import json
 import sys
 from pathlib import Path
-from PyPDF2 import PdfReader
 
 sys.stdout.reconfigure(encoding="utf-8")
 
@@ -86,30 +88,58 @@ file_path = Path(sys.argv[1])
 start_page = int(sys.argv[2])
 end_page = int(sys.argv[3])
 
-reader = PdfReader(str(file_path))
-pages = []
-for index in range(max(start_page, 1) - 1, min(end_page, len(reader.pages))):
-    text = (reader.pages[index].extract_text() or "").replace("\\r", "")
-    pages.append({
-        "pageNumber": index + 1,
-        "text": text,
-    })
+def extract_with_pypdf():
+    from pypdf import PdfReader
+
+    reader = PdfReader(str(file_path), strict=False)
+    pages = []
+    for index in range(max(start_page, 1) - 1, min(end_page, len(reader.pages))):
+        text = (reader.pages[index].extract_text() or "").replace("\\r", "")
+        pages.append({
+            "pageNumber": index + 1,
+            "text": text,
+        })
+    return len(reader.pages), pages
+
+
+def extract_with_pdfplumber():
+    import pdfplumber
+
+    pages = []
+    with pdfplumber.open(str(file_path)) as pdf:
+        for index in range(max(start_page, 1) - 1, min(end_page, len(pdf.pages))):
+            text = (pdf.pages[index].extract_text() or "").replace("\\r", "")
+            pages.append({
+                "pageNumber": index + 1,
+                "text": text,
+            })
+        return len(pdf.pages), pages
+
+
+try:
+    page_count, pages = extract_with_pypdf()
+except Exception:
+    page_count, pages = extract_with_pdfplumber()
 
 print(json.dumps({
-    "pageCount": len(reader.pages),
+    "pageCount": page_count,
     "pages": pages,
 }, ensure_ascii=False))
-`
-  const result = spawnSync('python', ['-c', pythonCode, filePath, String(startPage), String(endPage)], {
+  `
+  const result = spawnSync(
+    pythonExecutable,
+    ['-c', pythonCode, filePath, String(startPage), String(endPage)],
+    {
     encoding: 'utf8',
     env: {
       ...process.env,
       PYTHONIOENCODING: 'utf-8',
     },
-  })
+    },
+  )
   if (result.status !== 0) {
     throw new Error(
-      `PDF extraction failed for ${filePath}: ${result.stderr || result.stdout || 'unknown error'}`,
+      `PDF extraction failed for ${filePath}: ${result.stderr || result.stdout || result.error?.message || 'unknown error'}`,
     )
   }
   return JSON.parse(result.stdout)

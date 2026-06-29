@@ -301,3 +301,8 @@ the attachment tables remained separate from the opening guidance.
   unit. Keep it in its own wave, keep the amendment / FAQ files in the same
   folder out of this wave, treat the OCR layer as noisy, and use the page
   image as the wording backstop.
+- 2026-06-29: Use the bundled Python executable plus the `pypdf` / `pdfplumber`
+  fallback path in `scripts/run-pilot-batch.mjs` for PDF extraction in this
+  workspace. The local shell does not reliably expose `python` on PATH, and
+  the fallback keeps noisy PDF sources on the same review-only workflow
+  without changing the source-bound boundaries.

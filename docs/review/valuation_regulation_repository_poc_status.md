@@ -12,7 +12,7 @@ regulation repository. It consolidates the completed review-only extraction
 waves without changing the status of the underlying batch outputs or review
 indexes.
 
-The handoff now spans 64 review indexes, up from 57 review indexes. The
+The handoff now spans 65 review indexes, up from 57 review indexes. The
 earlier 51 review indexes checkpoint remains part of the handoff history, the
 earlier 50 review indexes checkpoint remains part of the handoff history, the
 earlier 49 review indexes checkpoint remains part of the handoff history, the
@@ -49,6 +49,8 @@ review indexes:
 - `docs/review/reg141_self_review.md`
 - `docs/review/reg210_review_index.md`
 - `docs/review/reg210_self_review.md`
+- `docs/review/reg213_review_index.md`
+- `docs/review/reg213_self_review.md`
 - `docs/review/ag38_review_index.md`
 - `docs/review/ag38_self_review.md`
 - `docs/review/ag39_review_index.md`

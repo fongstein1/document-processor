@@ -303,6 +303,8 @@ const paths = {
   reg210SelfReviewMd: path.join(repoRoot, 'docs', 'review', 'reg210_self_review.md'),
   reg213BatchPlanJson: path.join(repoRoot, 'config', 'reg213-batch-plan.json'),
   reg213ExtractionPlanMd: path.join(repoRoot, 'docs', 'processor', 'reg213_extraction_plan.md'),
+  reg213ReviewIndexMd: path.join(repoRoot, 'docs', 'review', 'reg213_review_index.md'),
+  reg213SelfReviewMd: path.join(repoRoot, 'docs', 'review', 'reg213_self_review.md'),
   modelGovernancePracticeNoteBatchPlanJson: path.join(
     repoRoot,
     'config',
@@ -590,6 +592,8 @@ const requiredFiles = [
   'scripts/ag09-batch-definitions.mjs',
   'docs/processor/ag02_extraction_plan.md',
   'docs/review/valuation_regulation_repository_poc_status.md',
+  'docs/review/reg213_review_index.md',
+  'docs/review/reg213_self_review.md',
   'config/supporting-vm-batch-plan.json',
   'config/vm21-batch-plan.json',
   'config/vm20-batch-plan.json',
@@ -12051,6 +12055,12 @@ if (problems.length > 0) {
   await validateReg213PlanMarkdown(paths.reg213ExtractionPlanMd, 'docs/processor/reg213_extraction_plan.md')
   const reg213BatchPlan = await readJson(paths.reg213BatchPlanJson)
   const reg213BatchIds = reg213BatchPlan.proposedBatches.map((batch) => batch.plannedBatchId)
+  const reg213ReviewIndexText = (await exists(paths.reg213ReviewIndexMd))
+    ? await readText(paths.reg213ReviewIndexMd)
+    : ''
+  const reg213SelfReviewText = (await exists(paths.reg213SelfReviewMd))
+    ? await readText(paths.reg213SelfReviewMd)
+    : ''
   const reg213RegistryReady = reg213BatchIds.every((batchId) =>
     Object.prototype.hasOwnProperty.call(batchDefinitions, batchId),
   )
@@ -12059,6 +12069,17 @@ if (problems.length > 0) {
   }
   if (reg213RegistryReady) {
     console.log(`- Reg 213 registry verified: ${reg213BatchPlan.proposedBatches.length} batches`)
+  }
+  const reg213ReviewIndexReady =
+    reg213ReviewIndexText.length > 0 && reg213BatchIds.every((batchId) => reg213ReviewIndexText.includes(batchId))
+  const reg213SelfReviewReady =
+    reg213SelfReviewText.length > 0 && reg213BatchIds.every((batchId) => reg213SelfReviewText.includes(batchId))
+  const reg213ReviewArtifactsPresent = reg213ReviewIndexReady && reg213SelfReviewReady
+  if (reg213ReviewIndexReady) {
+    console.log(`- Reg 213 review index verified: ${reg213BatchPlan.proposedBatches.length} batches`)
+  }
+  if (reg213SelfReviewReady) {
+    console.log(`- Reg 213 self-review verified: ${reg213BatchPlan.proposedBatches.length} batches`)
   }
   console.log(`- Reg 213 plan verified: ${reg213BatchPlan.proposedBatches.length} batches`)
   const modelGovernanceBatchIds = modelGovernancePracticeNoteBatchPlan.proposedBatches.map((batch) => batch.plannedBatchId)
@@ -12088,7 +12109,7 @@ if (problems.length > 0) {
   }
   console.log(`- Model governance plan verified: ${modelGovernancePracticeNoteBatchPlan.proposedBatches.length} batches`)
   console.log(
-      `- POC status summary verified: ${reg210ReviewArtifactsPresent ? 64 : modelGovernanceReviewArtifactsPresent ? 63 : reg141ReviewArtifactsPresent ? 62 : ag55ReviewArtifactsPresent ? 61 : ag54ReviewArtifactsPresent ? 60 : ag53ReviewArtifactsPresent ? 57 : ag51ReviewArtifactsPresent ? 56 : ag50ReviewArtifactsPresent ? 55 : ag49ReviewArtifactsPresent ? 54 : ag48ReviewArtifactsPresent ? 53 : ag47ReviewArtifactsPresent ? 52 : ag46ReviewArtifactsPresent ? 51 : ag45ReviewArtifactsPresent ? 50 : ag44ReviewArtifactsPresent ? 49 : ag43ReviewArtifactsPresent ? 48 : ag42ReviewArtifactsPresent ? 47 : ag41ReviewArtifactsPresent ? 46 : ag40ReviewArtifactsPresent ? 45 : ag39ReviewArtifactsPresent ? 44 : ag38ReviewArtifactsPresent ? 43 : ag37ReviewArtifactsPresent ? 42 : ag36ReviewArtifactsPresent ? 41 : ag35ReviewArtifactsPresent ? 40 : ag34ReviewArtifactsPresent ? 39 : 38} review indexes`,
+      `- POC status summary verified: ${reg213ReviewArtifactsPresent ? 65 : reg210ReviewArtifactsPresent ? 64 : modelGovernanceReviewArtifactsPresent ? 63 : reg141ReviewArtifactsPresent ? 62 : ag55ReviewArtifactsPresent ? 61 : ag54ReviewArtifactsPresent ? 60 : ag53ReviewArtifactsPresent ? 57 : ag51ReviewArtifactsPresent ? 56 : ag50ReviewArtifactsPresent ? 55 : ag49ReviewArtifactsPresent ? 54 : ag48ReviewArtifactsPresent ? 53 : ag47ReviewArtifactsPresent ? 52 : ag46ReviewArtifactsPresent ? 51 : ag45ReviewArtifactsPresent ? 50 : ag44ReviewArtifactsPresent ? 49 : ag43ReviewArtifactsPresent ? 48 : ag42ReviewArtifactsPresent ? 47 : ag41ReviewArtifactsPresent ? 46 : ag40ReviewArtifactsPresent ? 45 : ag39ReviewArtifactsPresent ? 44 : ag38ReviewArtifactsPresent ? 43 : ag37ReviewArtifactsPresent ? 42 : ag36ReviewArtifactsPresent ? 41 : ag35ReviewArtifactsPresent ? 40 : ag34ReviewArtifactsPresent ? 39 : 38} review indexes`,
       )
   if (validatedPilotBatchCount > 0) {
     console.log(`- Pilot batches validated: ${validatedPilotBatchCount}`)

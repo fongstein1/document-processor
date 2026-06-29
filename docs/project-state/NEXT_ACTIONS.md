@@ -515,8 +515,7 @@ continuation pass keeps going.
 - Commit only lightweight, auditable artifacts.
 
 - Reg-210 is now complete as batches 186-188 in ignored working storage.
-  Reg-213 is the next safe source unit. Commit the Reg-213 planning layer
-  for `NY Regulations/2021 VLM Report_DRAFT-(1-27-2020) with academy
-  Updates V1-Reg-213-11-NYCRR-S103.pdf`, keep the amendment / FAQ files in
-  the same folder out of this wave, and then run batches 189-191 if the plan
-  validates cleanly.
+  Reg-213 is now complete and indexed as batches 189-191. Inspect the
+  remaining raw source candidates, select the next safe source unit, and
+  keep the amendment / FAQ files in the Reg-213 folder deferred unless a
+  later wave explicitly revisits them.
