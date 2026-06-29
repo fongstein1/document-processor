@@ -154,6 +154,15 @@
   lightweight validation check so `npm run check` confirms the summary exists
   and references the four review indexes, and refreshed the project-state
   docs so the repository-level handoff stays summary-only.
+- 2026-06-28: Completed the AG 55 reinsurance guideline wave, created the
+  tracked AG 55 review index and self-review note, refreshed the project-state
+  docs and repository POC summary, and then inspected the NY Regulations
+  folder to identify Regulation 141 as the next safe source family.
+- 2026-06-28: Drafted the Regulation 141 planning layer for
+  `NY Regulations/Reg-141-11-NYCRR-S128-Reinsurance.pdf`, confirmed the
+  11-page span and the three narrow review-only windows, wired the runner and
+  validator to the new plan, and kept the wave review-only by default while
+  staying separate from the AG and VM source families.
 - 2026-06-27: Inspected the VM-20 companion practice note
   `Practice Notes/AAA - VM-20_PN_2020_Version.pdf`, confirmed its
   non-binding disclaimer and 21-section structure, and drafted a dedicated

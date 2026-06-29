@@ -261,6 +261,14 @@ summary-only handoff artifact. It should stay aligned with the thirty-eight
 review indexes and must not be treated as promoted content, learner-facing
 content, app-ready output, or RAG-ready material.
 
+## Dedicated NY regulation waves
+
+Short NY regulation sources should be processed as their own source-family
+wave rather than being mixed into the Actuarial Guideline, VM, or companion
+waves. The Regulation 141 reinsurance source is the first tracked example of
+that pattern, and its batches should remain review-only with page locators and
+line references visible where available.
+
 ## AG 36 companion reprint exclusion
 
 For AG 36, the active 11-page EIUL/CARVM PDF is the canonical source for the

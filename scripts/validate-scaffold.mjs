@@ -293,6 +293,10 @@ const paths = {
   ag55ExtractionPlanMd: path.join(repoRoot, 'docs', 'processor', 'ag55_extraction_plan.md'),
   ag55ReviewIndexMd: path.join(repoRoot, 'docs', 'review', 'ag55_review_index.md'),
   ag55SelfReviewMd: path.join(repoRoot, 'docs', 'review', 'ag55_self_review.md'),
+  reg141BatchPlanJson: path.join(repoRoot, 'config', 'reg141-batch-plan.json'),
+  reg141ExtractionPlanMd: path.join(repoRoot, 'docs', 'processor', 'reg141_extraction_plan.md'),
+  reg141ReviewIndexMd: path.join(repoRoot, 'docs', 'review', 'reg141_review_index.md'),
+  reg141SelfReviewMd: path.join(repoRoot, 'docs', 'review', 'reg141_self_review.md'),
   ag26ReviewIndexMd: path.join(repoRoot, 'docs', 'review', 'ag26_review_index.md'),
   ag26SelfReviewMd: path.join(repoRoot, 'docs', 'review', 'ag26_self_review.md'),
   ag23ReviewIndexMd: path.join(repoRoot, 'docs', 'review', 'ag23_review_index.md'),
@@ -2631,6 +2635,7 @@ const ag51BatchPlan = await readJson(paths.ag51BatchPlanJson)
 const ag53BatchPlan = await readJson(paths.ag53BatchPlanJson)
 const ag54BatchPlan = await readJson(paths.ag54BatchPlanJson)
 const ag55BatchPlan = await readJson(paths.ag55BatchPlanJson)
+const reg141BatchPlan = await readJson(paths.reg141BatchPlanJson)
 
 validateSchemaEnvelope(batchManifestSchema, 'batch-manifest.schema.json')
 validateSchemaEnvelope(sourceInventorySchema, 'source-inventory.schema.json')
@@ -11677,13 +11682,20 @@ if (problems.length > 0) {
       console.log(`- AG 54 self-review verified: ${ag54BatchPlan.proposedBatches.length} batches`)
     }
     console.log(`- AG 54 plan verified: ${ag54BatchPlan.proposedBatches.length} batches`)
-    if (ag55ReviewArtifactsPresent) {
-      console.log(`- AG 55 review index verified: ${ag55BatchPlan.proposedBatches.length} batches`)
-      console.log(`- AG 55 self-review verified: ${ag55BatchPlan.proposedBatches.length} batches`)
-    }
-    console.log(`- AG 55 plan verified: ${ag55BatchPlan.proposedBatches.length} batches`)
-    console.log(
-      `- POC status summary verified: ${ag55ReviewArtifactsPresent ? 61 : ag54ReviewArtifactsPresent ? 60 : ag53ReviewArtifactsPresent ? 57 : ag51ReviewArtifactsPresent ? 56 : ag50ReviewArtifactsPresent ? 55 : ag49ReviewArtifactsPresent ? 54 : ag48ReviewArtifactsPresent ? 53 : ag47ReviewArtifactsPresent ? 52 : ag46ReviewArtifactsPresent ? 51 : ag45ReviewArtifactsPresent ? 50 : ag44ReviewArtifactsPresent ? 49 : ag43ReviewArtifactsPresent ? 48 : ag42ReviewArtifactsPresent ? 47 : ag41ReviewArtifactsPresent ? 46 : ag40ReviewArtifactsPresent ? 45 : ag39ReviewArtifactsPresent ? 44 : ag38ReviewArtifactsPresent ? 43 : ag37ReviewArtifactsPresent ? 42 : ag36ReviewArtifactsPresent ? 41 : ag35ReviewArtifactsPresent ? 40 : ag34ReviewArtifactsPresent ? 39 : 38} review indexes`,
+  if (ag55ReviewArtifactsPresent) {
+    console.log(`- AG 55 review index verified: ${ag55BatchPlan.proposedBatches.length} batches`)
+    console.log(`- AG 55 self-review verified: ${ag55BatchPlan.proposedBatches.length} batches`)
+  }
+  console.log(`- AG 55 plan verified: ${ag55BatchPlan.proposedBatches.length} batches`)
+  const reg141ReviewArtifactsPresent =
+    (await exists(paths.reg141ReviewIndexMd)) && (await exists(paths.reg141SelfReviewMd))
+  if (reg141ReviewArtifactsPresent) {
+    console.log(`- Reg 141 review index verified: ${reg141BatchPlan.proposedBatches.length} batches`)
+    console.log(`- Reg 141 self-review verified: ${reg141BatchPlan.proposedBatches.length} batches`)
+  }
+  console.log(`- Reg 141 plan verified: ${reg141BatchPlan.proposedBatches.length} batches`)
+  console.log(
+      `- POC status summary verified: ${reg141ReviewArtifactsPresent ? 62 : ag55ReviewArtifactsPresent ? 61 : ag54ReviewArtifactsPresent ? 60 : ag53ReviewArtifactsPresent ? 57 : ag51ReviewArtifactsPresent ? 56 : ag50ReviewArtifactsPresent ? 55 : ag49ReviewArtifactsPresent ? 54 : ag48ReviewArtifactsPresent ? 53 : ag47ReviewArtifactsPresent ? 52 : ag46ReviewArtifactsPresent ? 51 : ag45ReviewArtifactsPresent ? 50 : ag44ReviewArtifactsPresent ? 49 : ag43ReviewArtifactsPresent ? 48 : ag42ReviewArtifactsPresent ? 47 : ag41ReviewArtifactsPresent ? 46 : ag40ReviewArtifactsPresent ? 45 : ag39ReviewArtifactsPresent ? 44 : ag38ReviewArtifactsPresent ? 43 : ag37ReviewArtifactsPresent ? 42 : ag36ReviewArtifactsPresent ? 41 : ag35ReviewArtifactsPresent ? 40 : ag34ReviewArtifactsPresent ? 39 : 38} review indexes`,
     )
   if (validatedPilotBatchCount > 0) {
     console.log(`- Pilot batches validated: ${validatedPilotBatchCount}`)

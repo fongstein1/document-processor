@@ -2,14 +2,15 @@
 
 ## Next immediate task
 
-AG 54 is now complete as batches 168-170 in ignored working storage. Its
+AG 55 is now complete as batches 171-179 in ignored working storage. Its
 tracked review index and self-review note now form part of the handoff set,
 the paragraph-locator backstop remained visible because line references were
-preserved, and AG 55 is now complete as batches 171-179 in ignored working
-storage. Its tracked review index and self-review note now form part of the
-handoff set, the paragraph-locator backstop remained visible because line
-references were preserved, and Reg-141 is now the next likely candidate if
-the continuation pass keeps going.
+preserved, and Reg-141 is the next likely candidate if the continuation pass
+keeps going.
+
+Reg-141 is now drafted as its own NY-regulation wave. The next immediate task
+is to validate and commit the planning layer, then run batch-180 as the
+opening purpose-and-applicability slice.
 
 AG 40 is now complete as batches 135-136 in ignored working storage. Its
 tracked review index and self-review note now form part of the handoff set.

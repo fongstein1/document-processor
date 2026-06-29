@@ -10,7 +10,7 @@
 
 ## Latest known commit before this batch
 
-`afed7e7`
+`6837036`
 
 ## Validation status
 
@@ -212,6 +212,10 @@ continuation pass keeps going.
 - The new supporting-chapter control plan records the lighter VM chapter
   windows separately from VM-20 so the next extraction wave can stay portable
   and review-only by default.
+- The NY Regulation 141 control plan now covers the commutation-of-
+  reinsurance-agreements source as its own source-family wave with three
+  review-only batches, keeping the Actuarial Guideline runs and the VM waves
+  separate.
 - The supporting-wave batch registry now uses the same full `batch-###` IDs
   as the runner and validator, so the planned sequence stays synchronized
   across scripts and checks.
