@@ -511,3 +511,8 @@ closeout slice stayed review-only, the page-image backstop remained visible,
 the tracked AG 36 review index and self-review note are now part of the
 handoff set, and AG 38 is now the next likely candidate if the continuation
 pass keeps going.
+
+Reg-210 is now the next safe source unit. The active `NY Regulations/Reg-210-11-NYCRR-S048.pdf`
+file was inspected, its three review windows were mapped, and page 10 is
+retained as blank trailing boundary context only. The planning layer will
+split the wave into batches 186-188 before any extraction begins.

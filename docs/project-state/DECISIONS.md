@@ -289,3 +289,10 @@ text-layer skill is still sufficient for the noisy OCR and page-image
 backstop pattern, so no AG 44-specific skill file was added. The review-only
 wave stayed page-locator anchored, line references were not available, and
 the attachment tables remained separate from the opening guidance.
+
+## NY regulation wave selection
+
+- 2026-06-28: Use `NY Regulations/Reg-210-11-NYCRR-S048.pdf` as the next
+  NY-regulation source unit. Keep it in its own source-family wave, keep
+  page 10 as blank trailing boundary context only, and do not mix practice
+  notes into this wave.

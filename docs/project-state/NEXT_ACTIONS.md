@@ -513,3 +513,8 @@ continuation pass keeps going.
 - Keep the PDF extraction runner UTF-8-safe because formula pages can include
   Unicode minus signs and other non-ASCII glyphs.
 - Commit only lightweight, auditable artifacts.
+
+- Reg-210 is the next safe source unit. Commit the planning layer for
+  `NY Regulations/Reg-210-11-NYCRR-S048.pdf`, run batches 186-188, keep page 10
+  as blank trailing boundary context only, and then move to the next safe raw
+  source unit if the wave stays clean.
