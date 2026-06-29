@@ -301,6 +301,8 @@ const paths = {
   reg210ExtractionPlanMd: path.join(repoRoot, 'docs', 'processor', 'reg210_extraction_plan.md'),
   reg210ReviewIndexMd: path.join(repoRoot, 'docs', 'review', 'reg210_review_index.md'),
   reg210SelfReviewMd: path.join(repoRoot, 'docs', 'review', 'reg210_self_review.md'),
+  reg213BatchPlanJson: path.join(repoRoot, 'config', 'reg213-batch-plan.json'),
+  reg213ExtractionPlanMd: path.join(repoRoot, 'docs', 'processor', 'reg213_extraction_plan.md'),
   modelGovernancePracticeNoteBatchPlanJson: path.join(
     repoRoot,
     'config',
@@ -2873,6 +2875,47 @@ for (const plannedBatchId of plannedAg01BatchIds) {
   if (!batchDefinitions[plannedBatchId]) {
     problems.push(`scripts/batch-definitions.mjs: missing batch definition for ${plannedBatchId}`)
   }
+}
+
+const validateReg213PlanMarkdown = async (filePath, label) => {
+  const text = await readText(filePath)
+  const requiredHeadings = [
+    '## Source Scope',
+    '## Topic Map',
+    '## Proposed Batch Sequence',
+    '## Review Standards',
+    '## Promotion Gates',
+    '## Validation Implications',
+    '## Operating Note',
+  ]
+  requiredHeadings.forEach((heading) => {
+    if (!text.includes(heading)) {
+      problems.push(`${label}: missing heading ${heading}`)
+    }
+  })
+  ;[
+    'review-only',
+    'not learner-facing',
+    'not app-ready',
+    'not RAG-ready',
+    'not promoted',
+    'NY Regulations/2021 VLM Report_DRAFT-(1-27-2020) with academy Updates V1-Reg-213-11-NYCRR-S103.pdf',
+    'NY Regulations',
+    '11 NYCRR Part 103',
+    'Insurance Regulation 213',
+    'state regulation',
+    'New York',
+    'pages 1-27',
+    'batch-189',
+    'batch-190',
+    'batch-191',
+    'page-image wording backstop',
+    'line references are not expected',
+  ].forEach((phrase) => {
+    if (!text.includes(phrase)) {
+      problems.push(`${label}: must mention ${phrase}`)
+    }
+  })
 }
 if (!plannedAg01BatchIds.includes('batch-077')) {
   problems.push('config/ag01-batch-plan.json: expected batch-077 to be planned')
@@ -12005,6 +12048,19 @@ if (problems.length > 0) {
     console.log(`- Reg 210 self-review verified: ${reg210BatchPlan.proposedBatches.length} batches`)
   }
   console.log(`- Reg 210 plan verified: ${reg210BatchPlan.proposedBatches.length} batches`)
+  await validateReg213PlanMarkdown(paths.reg213ExtractionPlanMd, 'docs/processor/reg213_extraction_plan.md')
+  const reg213BatchPlan = await readJson(paths.reg213BatchPlanJson)
+  const reg213BatchIds = reg213BatchPlan.proposedBatches.map((batch) => batch.plannedBatchId)
+  const reg213RegistryReady = reg213BatchIds.every((batchId) =>
+    Object.prototype.hasOwnProperty.call(batchDefinitions, batchId),
+  )
+  if (!reg213RegistryReady) {
+    problems.push('scripts/batch-definitions.mjs: missing Reg 213 batch definition coverage')
+  }
+  if (reg213RegistryReady) {
+    console.log(`- Reg 213 registry verified: ${reg213BatchPlan.proposedBatches.length} batches`)
+  }
+  console.log(`- Reg 213 plan verified: ${reg213BatchPlan.proposedBatches.length} batches`)
   const modelGovernanceBatchIds = modelGovernancePracticeNoteBatchPlan.proposedBatches.map((batch) => batch.plannedBatchId)
   const modelGovernanceReviewIndexText = (await exists(paths.modelGovernancePracticeNoteReviewIndexMd))
     ? await readText(paths.modelGovernancePracticeNoteReviewIndexMd)

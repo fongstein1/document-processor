@@ -516,4 +516,8 @@ Reg-210 is now complete as batches 186-188 in ignored working storage. The
 active `NY Regulations/Reg-210-11-NYCRR-S048.pdf` file was inspected, its
 three review windows were mapped, page 10 remains blank trailing boundary
 context only, and the tracked review index plus self-review note now form
-part of the handoff set.
+part of the handoff set. Reg-213 is now the next safe source unit. The
+active `NY Regulations/2021 VLM Report_DRAFT-(1-27-2020) with academy
+Updates V1-Reg-213-11-NYCRR-S103.pdf` file was inspected, its 27-page span
+was mapped, and the amendment / FAQ files in the same folder are deferred
+for a later wave.

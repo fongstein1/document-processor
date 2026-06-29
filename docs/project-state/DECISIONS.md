@@ -296,3 +296,8 @@ the attachment tables remained separate from the opening guidance.
   NY-regulation source unit. Keep it in its own source-family wave, keep
   page 10 as blank trailing boundary context only, and do not mix practice
   notes into this wave.
+- 2026-06-29: Use `NY Regulations/2021 VLM Report_DRAFT-(1-27-2020) with academy
+  Updates V1-Reg-213-11-NYCRR-S103.pdf` as the next NY-regulation source
+  unit. Keep it in its own wave, keep the amendment / FAQ files in the same
+  folder out of this wave, treat the OCR layer as noisy, and use the page
+  image as the wording backstop.

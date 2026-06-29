@@ -1,0 +1,255 @@
+{
+  "planId": "reg213-principle-based-reserving-plan",
+  "planVersion": "1.0",
+  "status": "planned",
+  "sourceScope": {
+    "sourceFamilyId": "ny_regulations",
+    "primarySourceFile": "NY Regulations/2021 VLM Report_DRAFT-(1-27-2020) with academy Updates V1-Reg-213-11-NYCRR-S103.pdf",
+    "sourceFolder": "NY Regulations",
+    "sourceTitle": "Regulation 213",
+    "sourceReference": "11 NYCRR Part 103 (Insurance Regulation 213)",
+    "sourceStatus": "active",
+    "sourceStatusNote": "PDF metadata title reads \"2021 VLM Report_DRAFT-(1-27-2020) with academy Updates V1.0 changes accepted+rr\"; keep the OCR layer page-image-backed and keep the amendment / FAQ PDFs out of this wave.",
+    "jurisdiction": "New York",
+    "domainId": "naic_regulatory",
+    "rawSourceRoot": "D:\\Work\\AI Projects\\NAIC Valuation Manual Course",
+    "confirmedPageRange": [1, 27],
+    "observedSectionWindows": [
+      {
+        "sectionId": "reg213-opening-scope-definitions",
+        "pageRange": [1, 9],
+        "note": "Opening title, scope, applicability, and early definitions."
+      },
+      {
+        "sectionId": "reg213-core-requirements-control-language",
+        "pageRange": [10, 18],
+        "note": "Core requirements, control language, and middle-file governance / reporting material."
+      },
+      {
+        "sectionId": "reg213-closing-boundary",
+        "pageRange": [19, 27],
+        "note": "Closing requirements and the end-of-source boundary."
+      }
+    ],
+    "boundaries": [
+      "Keep Regulation 213 focused on the core regulation file only.",
+      "Keep the amendment / FAQ PDFs in the same folder out of this wave unless a later amendment-history plan explicitly opens them.",
+      "Preserve page locators and line references where available, but expect the OCR layer to remain noisy and page-image-backed.",
+      "Keep the opening, middle, and closing windows separate so the boundary logic stays easy to review."
+    ],
+    "exclusions": [
+      "No learner-facing content.",
+      "No app-ready export.",
+      "No RAG-ready export.",
+      "No approved/promoted export.",
+      "No eLearning scripts, slides, quizzes, or app exports.",
+      "No raw source files in Git.",
+      "No amendment-history files in the same wave.",
+      "No practice-note files in the same wave."
+    ]
+  },
+  "topicMap": [
+    {
+      "topicId": "reg213-opening-scope-definitions",
+      "label": "Opening title, scope, applicability, and early definitions",
+      "pageRange": [1, 9],
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "state_regulation",
+        "jurisdiction_specific_requirement",
+        "regulatory_requirement",
+        "definition_or_terminology",
+        "cross_reference_mapping",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": [
+        "principle-based reserving",
+        "11 NYCRR Part 103",
+        "insurance regulation 213",
+        "scope",
+        "applicability"
+      ],
+      "boundaryNote": "Keep the opening regulatory frame together and stop before the core requirements begin."
+    },
+    {
+      "topicId": "reg213-core-requirements-control-language",
+      "label": "Core requirements and control language",
+      "pageRange": [10, 18],
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "state_regulation",
+        "jurisdiction_specific_requirement",
+        "regulatory_requirement",
+        "governance_or_control_expectation",
+        "reporting_requirement",
+        "documentation_expectation",
+        "cross_reference_mapping",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": [
+        "filing",
+        "memorandum",
+        "control language",
+        "approved",
+        "records"
+      ],
+      "boundaryNote": "Keep the core requirements together and stop before the closing requirements begin."
+    },
+    {
+      "topicId": "reg213-closing-boundary",
+      "label": "Closing requirements and end-of-source boundary",
+      "pageRange": [19, 27],
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "state_regulation",
+        "jurisdiction_specific_requirement",
+        "regulatory_requirement",
+        "reporting_requirement",
+        "documentation_expectation",
+        "cross_reference_mapping",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": [
+        "records",
+        "retention",
+        "closing boundary",
+        "superintendent",
+        "appendix"
+      ],
+      "boundaryNote": "Keep the closing requirements together and end the source at page 27 without absorbing any amendment-history files."
+    }
+  ],
+  "proposedBatches": [
+    {
+      "plannedBatchId": "batch-189",
+      "topicIds": ["reg213-opening-scope-definitions"],
+      "title": "Regulation 213 opening title, scope, applicability, and early definitions slice",
+      "paragraphTarget": {
+        "knownWindow": [1, 9],
+        "notes": "Capture the opening regulation frame as one narrow review-only slice."
+      },
+      "rationale": "Capture the opening regulation frame as one narrow review-only slice.",
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "state_regulation",
+        "jurisdiction_specific_requirement",
+        "regulatory_requirement",
+        "definition_or_terminology",
+        "cross_reference_mapping",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    },
+    {
+      "plannedBatchId": "batch-190",
+      "topicIds": ["reg213-core-requirements-control-language"],
+      "title": "Regulation 213 core requirements and control language slice",
+      "paragraphTarget": {
+        "knownWindow": [10, 18],
+        "notes": "Capture the middle-file regulatory directives before the closing requirements begin."
+      },
+      "rationale": "Capture the middle-file regulatory directives before the closing requirements begin.",
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "state_regulation",
+        "jurisdiction_specific_requirement",
+        "regulatory_requirement",
+        "governance_or_control_expectation",
+        "reporting_requirement",
+        "documentation_expectation",
+        "cross_reference_mapping",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    },
+    {
+      "plannedBatchId": "batch-191",
+      "topicIds": ["reg213-closing-boundary"],
+      "title": "Regulation 213 closing requirements and end-of-source boundary slice",
+      "paragraphTarget": {
+        "knownWindow": [19, 27],
+        "notes": "Capture the closing requirements and stop at the end of the source without widening into amendment-history files."
+      },
+      "rationale": "Capture the closing requirements and stop at the end of the source without widening into amendment-history files.",
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "state_regulation",
+        "jurisdiction_specific_requirement",
+        "regulatory_requirement",
+        "reporting_requirement",
+        "documentation_expectation",
+        "cross_reference_mapping",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    }
+  ],
+  "reviewStandards": {
+    "stateRegulation": "Treat the source as jurisdiction-specific regulatory text, not as a companion note.",
+    "jurisdictionSpecificRequirement": "Treat New York-specific requirements as jurisdiction-specific requirements when they direct conduct or filing.",
+    "regulatoryRequirement": "Treat direct obligations, prohibitions, filing rules, and control requirements as regulatory text.",
+    "definitionOrTerminology": "Treat defined terms and regulatory labels as terminology when the text explains rather than directs.",
+    "governanceOrControlExpectation": "Treat approval, oversight, control, and responsible-actuary language as governance or control expectations when they appear.",
+    "reportingRequirement": "Treat filing, submission, and notice language as reporting requirements if they appear.",
+    "documentationExpectation": "Treat retention, memorandum, and recordkeeping language as documentation expectations if they appear.",
+    "crossReferenceMapping": "Treat references to other regulations or statutes as mapping context unless the text operationalizes the reference.",
+    "backgroundContent": "Treat title and heading material as background unless the text imposes a duty.",
+    "boundaryControlWindow": "Treat each page window as review-only and do not widen it unless later cleanup explicitly needs that split.",
+    "requiresHumanInterpretation": "Treat dense or noisy regulatory wording as requiring human review unless the page image confirms the wording."
+  },
+  "promotionGates": {
+    "defaultState": "review_only",
+    "learnerFacing": {
+      "sourceCitationExists": true,
+      "sourceSupportIsClear": true,
+      "wordingIsNotMisleading": true,
+      "confidenceIsHigh": true,
+      "noUnresolvedReviewFlagsExist": true
+    },
+    "appReady": {
+      "learnerFacingCriteriaAreSatisfied": true,
+      "exportIsSanitizedStableAndVersioned": true,
+      "noUnresolvedReviewIssuesRemain": true
+    },
+    "ragReady": {
+      "approvedIndexedMaterialOnly": true,
+      "stableId": true,
+      "sourceReferenceAndLocatorPresent": true,
+      "reviewStatusNoLongerRequiresHumanDisposition": true
+    }
+  },
+  "validationImplications": {
+    "currentChecksNeeded": [
+      "Plan file exists and parses as JSON.",
+      "The Reg-213 plan markdown must exist and carry the expected headings.",
+      "The Reg-213 batch-definition file must exist and stay synchronized with the plan.",
+      "Every planned batch must remain review-only by default.",
+      "The source posture must stay explicitly active.",
+      "The OCR layer should remain page-image-backed and the plan should mention that line references are not expected.",
+      "The amendment / FAQ files in the same folder must stay out of this wave."
+    ],
+    "futureChecksSuggested": [
+      "After the wave completes, add review-index and self-review checks plus a proof-of-concept summary reference.",
+      "Keep the plan portable if a later amendment-history wave is approved."
+    ]
+  },
+  "operatingNote": {
+    "reviewOnly": true,
+    "sourceType": "text-based PDF source with noisy OCR",
+    "citationGuidance": "Page locators are the primary anchor and line references are not expected to be stable for this wave.",
+    "boundaryGuidance": "The active regulation text should remain visible as a review-only caveat rather than a promotion signal.",
+    "appendixGuidance": "Keep the amendment and FAQ PDFs in the same folder out of this wave."
+  }
+}
