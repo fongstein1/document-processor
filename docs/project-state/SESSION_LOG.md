@@ -723,3 +723,6 @@
 - The received remaining-source inventory stays local and untracked for now;
   it contains source file paths, sizes, and timestamps that should not be
   promoted into the repository without a separate policy decision.
+
+## 2026-06-29
+- Added a narrow ignore rule for the received source inventory file so the local manual intake artifact stays untracked.

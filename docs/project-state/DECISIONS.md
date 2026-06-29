@@ -322,3 +322,6 @@ the attachment tables remained separate from the opening guidance.
   workspace. The local shell does not reliably expose `python` on PATH, and
   the fallback keeps noisy PDF sources on the same review-only workflow
   without changing the source-bound boundaries.
+
+## Recovery checkpoint note
+- `data/manual-input/remaining-source-inventory.received.json` is treated as a local manual input artifact and should remain untracked because it can contain local paths, file sizes, and timestamps. The tracked template/schema/pending variants remain available for future intake workflows.
