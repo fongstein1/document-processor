@@ -10,7 +10,7 @@
 
 ## Latest known commit before this batch
 
-`dd97417`
+`585fafe`
 
 ## Validation status
 
@@ -36,6 +36,10 @@ tracked review index plus self-review note summarize the one-page guideline.
 AG 22 is now complete as batch-100. Its tracked review index and self-review
 note summarize the one-page indeterminate-premiums guideline without
 promoting any extracted content.
+
+The model-governance practice-note wave is now complete as batches 183-185,
+and its tracked review index plus self-review note are part of the handoff
+set.
 
 - `npm run pilot:course-core`: passed; created the core VM course pilot batch
   outputs in `data/work/batches/batch-002/`
@@ -312,9 +316,10 @@ ignored working storage. Its tracked review index and self-review note are
 now part of the handoff set, and the page-image wording backstop remains
 visible because the text layer is encoding-noisy, line references were not
 available, and AG 48 is the next likely candidate if the continuation pass
-keeps going. The model-governance practice note is now planned as batches
-183-185, remains companion guidance and non-binding, and should be committed
-before batch-183 runs. AG 51 is now complete as batches 163-164 in ignored working
+keeps going. The model-governance practice note is now complete as batches
+183-185 in ignored working storage. Its tracked review index and self-review
+note now form part of the handoff set, and the companion-guidance caveat
+remains visible because the note is non-binding. AG 51 is now complete as batches 163-164 in ignored working
 storage. Its tracked review index and self-review note are now part of the
 handoff set, the page-locator backstop remained visible because stable line
 references were not available, the future VM-30 incorporation note stayed

@@ -3156,6 +3156,79 @@ const validatePracticeNoteSelfReviewMarkdown = async (filePath, label) => {
   })
 }
 
+const validateModelGovernancePracticeNoteReviewIndexMarkdown = async (filePath, label) => {
+  const text = await readText(filePath)
+  const requiredHeadings = [
+    '## Overall Model Governance Practice-Note Extraction Status',
+    '## Batch Table',
+    '## Higher-Caution Areas',
+    '## Human Review Checklist',
+    '## Promotion Decision Area',
+    '## Recommended Review Order',
+    '## Relationship to Other Review Artifacts',
+    '## Self-Review Note',
+    '## Review Notes',
+  ]
+  requiredHeadings.forEach((heading) => {
+    if (!text.includes(heading)) {
+      problems.push(`${label}: missing heading ${heading}`)
+    }
+  })
+  ;[
+    'review-only',
+    'not learner-facing',
+    'not app-ready',
+    'not RAG-ready',
+    'not promoted',
+    'Model Governance: Some Considerations for Practicing Life Actuaries',
+    'AAA - Model_Governance_PN_042017.pdf',
+    'Practice Notes',
+    'companion guidance',
+    'non-binding',
+    'batch-183',
+    'batch-184',
+    'batch-185',
+    'docs/review/vm20_review_index.md',
+    'docs/review/supporting_vm_review_index.md',
+    'docs/review/vm21_review_index.md',
+    'docs/review/vm22_review_index.md',
+    'docs/review/valuation_regulation_repository_poc_status.md',
+    'docs/review/model_governance_practice_note_self_review.md',
+  ].forEach((phrase) => {
+    if (!text.includes(phrase)) {
+      problems.push(`${label}: must mention ${phrase}`)
+    }
+  })
+}
+
+const validateModelGovernancePracticeNoteSelfReviewMarkdown = async (filePath, label) => {
+  const text = await readText(filePath)
+  const requiredHeadings = [
+    '## Batch Classifications',
+    '## Recurring Observations',
+    '## Skill-Hardening Note',
+    '## Review Outcome',
+  ]
+  requiredHeadings.forEach((heading) => {
+    if (!text.includes(heading)) {
+      problems.push(`${label}: missing heading ${heading}`)
+    }
+  })
+  ;[
+    'reasonable_with_minor_cautions',
+    'batch-183',
+    'batch-184',
+    'batch-185',
+    'companion-guidance',
+    'page locators',
+    'No tracked skill file update was necessary',
+  ].forEach((phrase) => {
+    if (!text.includes(phrase)) {
+      problems.push(`${label}: must mention ${phrase}`)
+    }
+  })
+}
+
 const validateAg03ReviewIndexMarkdown = async (filePath, label) => {
   const text = await readText(filePath)
   const requiredHeadings = [
@@ -11351,6 +11424,14 @@ await validatePracticeNoteReviewIndexMarkdown(
 await validatePracticeNoteSelfReviewMarkdown(
   paths.practiceNoteSelfReviewMd,
   'docs/review/vm20_practice_note_self_review.md',
+)
+await validateModelGovernancePracticeNoteReviewIndexMarkdown(
+  paths.modelGovernancePracticeNoteReviewIndexMd,
+  'docs/review/model_governance_practice_note_review_index.md',
+)
+await validateModelGovernancePracticeNoteSelfReviewMarkdown(
+  paths.modelGovernancePracticeNoteSelfReviewMd,
+  'docs/review/model_governance_practice_note_self_review.md',
 )
 await validateAg03ReviewIndexMarkdown(paths.ag03ReviewIndexMd, 'docs/review/ag03_review_index.md')
 await validateAg03SelfReviewMarkdown(paths.ag03SelfReviewMd, 'docs/review/ag03_self_review.md')

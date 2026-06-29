@@ -701,3 +701,4 @@
   preserved. Reg-141 is now the next likely candidate if the continuation
   pass keeps going.
 - 2026-06-28: Inspected the model-governance practice note `Practice Notes/AAA - Model_Governance_PN_042017.pdf`, confirmed the 18-page companion-guidance span, drafted the dedicated review-only planning layer for batches 183-185, wired the runner and validator to the new plan, and validated the scaffold cleanly after adding a model-governance-specific markdown checker.
+- 2026-06-28: Ran the model-governance practice-note wave sequentially as batches 183-185 in ignored working storage, kept every batch review-only, created the tracked model-governance practice-note review index plus self-review note, refreshed the repository POC summary and project-state docs, and kept the companion-guidance posture visible without adding a new tracked skill instruction.
