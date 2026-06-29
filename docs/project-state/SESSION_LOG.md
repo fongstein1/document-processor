@@ -680,3 +680,9 @@
   drafted the AG 55 planning layer for batches 171-179, and kept the wave
   review-only by default with paragraph locators as the primary anchor
   because line references are expected for this text-based source.
+- 2026-06-28: Completed the AG 55 review-only wave as batches 171-179,
+  created the tracked AG 55 review index and self-review note, refreshed
+  the repository POC summary and project-state docs, and kept the
+  paragraph-locator backstop visible because line references were
+  preserved. Reg-141 is now the next likely candidate if the continuation
+  pass keeps going.

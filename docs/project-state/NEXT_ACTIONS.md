@@ -5,10 +5,11 @@
 AG 54 is now complete as batches 168-170 in ignored working storage. Its
 tracked review index and self-review note now form part of the handoff set,
 the paragraph-locator backstop remained visible because line references were
-preserved, and AG 55 is now the next likely candidate if the continuation
-pass keeps going. AG 55 is now being planned as the next review-only wave,
-with the pending committee-adoption disclaimer kept visible and the appendix
-kept separate from the main body.
+preserved, and AG 55 is now complete as batches 171-179 in ignored working
+storage. Its tracked review index and self-review note now form part of the
+handoff set, the paragraph-locator backstop remained visible because line
+references were preserved, and Reg-141 is now the next likely candidate if
+the continuation pass keeps going.
 
 AG 40 is now complete as batches 135-136 in ignored working storage. Its
 tracked review index and self-review note now form part of the handoff set.

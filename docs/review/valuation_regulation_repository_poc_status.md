@@ -12,7 +12,7 @@ regulation repository. It consolidates the completed review-only extraction
 waves without changing the status of the underlying batch outputs or review
 indexes.
 
-The handoff now spans 60 review indexes, up from 57 review indexes. The
+The handoff now spans 61 review indexes, up from 57 review indexes. The
 earlier 51 review indexes checkpoint remains part of the handoff history, the
 earlier 50 review indexes checkpoint remains part of the handoff history, the
 earlier 49 review indexes checkpoint remains part of the handoff history, the
@@ -765,7 +765,20 @@ AG 54 is complete as batches `batch-168`, `batch-169`, and `batch-170` in
 ignored working storage. Its tracked review index and self-review note are
 now part of the handoff set: `docs/review/ag54_review_index.md` and
 `docs/review/ag54_self_review.md`. The paragraph-locator backstop remained
-visible because line references were preserved, and AG 55 is now the next
+visible because line references were preserved, and AG 55 is complete as
+batches `batch-171` through `batch-179` in ignored working storage. Its
+tracked review index and self-review note are now part of the handoff set:
+`docs/review/ag55_review_index.md` and `docs/review/ag55_self_review.md`.
+Reg-141 is now the next likely candidate if the continuation pass keeps
+going.
+
+## AG 55 Note
+
+AG 55 is complete as batches `batch-171` through `batch-179` in ignored
+working storage. Its tracked review index and self-review note are now part
+of the handoff set: `docs/review/ag55_review_index.md` and
+`docs/review/ag55_self_review.md`. The paragraph-locator backstop remained
+visible because line references were preserved, and Reg-141 is now the next
 likely candidate if the continuation pass keeps going.
 
 ## AG 51 Note
