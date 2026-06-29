@@ -8,9 +8,14 @@ the paragraph-locator backstop remained visible because line references were
 preserved, and Reg-141 is the next likely candidate if the continuation pass
 keeps going.
 
-Reg-141 is now drafted as its own NY-regulation wave. The next immediate task
-is to validate and commit the planning layer, then run batch-180 as the
-opening purpose-and-applicability slice.
+Reg-141 is now complete as batches 180-182 in ignored working storage. Its
+tracked review index and self-review note now form part of the handoff set,
+and the opening / definitions / procedures slices remain review-only in
+ignored working storage.
+
+The next immediate task is to inspect the remaining raw source folder for the
+next safe source unit, then plan and validate the next small wave before any
+new extraction starts.
 
 AG 40 is now complete as batches 135-136 in ignored working storage. Its
 tracked review index and self-review note now form part of the handoff set.

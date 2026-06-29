@@ -11687,10 +11687,22 @@ if (problems.length > 0) {
     console.log(`- AG 55 self-review verified: ${ag55BatchPlan.proposedBatches.length} batches`)
   }
   console.log(`- AG 55 plan verified: ${ag55BatchPlan.proposedBatches.length} batches`)
-  const reg141ReviewArtifactsPresent =
-    (await exists(paths.reg141ReviewIndexMd)) && (await exists(paths.reg141SelfReviewMd))
-  if (reg141ReviewArtifactsPresent) {
+  const reg141BatchIds = reg141BatchPlan.proposedBatches.map((batch) => batch.plannedBatchId)
+  const reg141ReviewIndexText = (await exists(paths.reg141ReviewIndexMd))
+    ? await readText(paths.reg141ReviewIndexMd)
+    : ''
+  const reg141SelfReviewText = (await exists(paths.reg141SelfReviewMd))
+    ? await readText(paths.reg141SelfReviewMd)
+    : ''
+  const reg141ReviewIndexReady =
+    reg141ReviewIndexText.length > 0 && reg141BatchIds.every((batchId) => reg141ReviewIndexText.includes(batchId))
+  const reg141SelfReviewReady =
+    reg141SelfReviewText.length > 0 && reg141BatchIds.every((batchId) => reg141SelfReviewText.includes(batchId))
+  const reg141ReviewArtifactsPresent = reg141ReviewIndexReady && reg141SelfReviewReady
+  if (reg141ReviewIndexReady) {
     console.log(`- Reg 141 review index verified: ${reg141BatchPlan.proposedBatches.length} batches`)
+  }
+  if (reg141SelfReviewReady) {
     console.log(`- Reg 141 self-review verified: ${reg141BatchPlan.proposedBatches.length} batches`)
   }
   console.log(`- Reg 141 plan verified: ${reg141BatchPlan.proposedBatches.length} batches`)

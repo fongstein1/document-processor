@@ -10,7 +10,7 @@
 
 ## Latest known commit before this batch
 
-`6837036`
+`7a0dc2e`
 
 ## Validation status
 
@@ -216,6 +216,8 @@ continuation pass keeps going.
   reinsurance-agreements source as its own source-family wave with three
   review-only batches, keeping the Actuarial Guideline runs and the VM waves
   separate.
+- The NY Regulation 141 wave is now complete as batches 180-182, and its
+  tracked review index plus self-review note now form part of the handoff set.
 - The supporting-wave batch registry now uses the same full `batch-###` IDs
   as the runner and validator, so the planned sequence stays synchronized
   across scripts and checks.

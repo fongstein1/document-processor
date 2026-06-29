@@ -163,6 +163,11 @@
   11-page span and the three narrow review-only windows, wired the runner and
   validator to the new plan, and kept the wave review-only by default while
   staying separate from the AG and VM source families.
+- 2026-06-28: Ran the Regulation 141 wave sequentially as batches 180-182 in
+  ignored working storage, kept every batch review-only, created the tracked
+  Regulation 141 review index plus self-review note, and refreshed the
+  project-state docs so the NY regulation wave now joins the review-only
+  handoff set.
 - 2026-06-27: Inspected the VM-20 companion practice note
   `Practice Notes/AAA - VM-20_PN_2020_Version.pdf`, confirmed its
   non-binding disclaimer and 21-section structure, and drafted a dedicated

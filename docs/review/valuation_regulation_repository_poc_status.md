@@ -12,7 +12,7 @@ regulation repository. It consolidates the completed review-only extraction
 waves without changing the status of the underlying batch outputs or review
 indexes.
 
-The handoff now spans 61 review indexes, up from 57 review indexes. The
+The handoff now spans 62 review indexes, up from 57 review indexes. The
 earlier 51 review indexes checkpoint remains part of the handoff history, the
 earlier 50 review indexes checkpoint remains part of the handoff history, the
 earlier 49 review indexes checkpoint remains part of the handoff history, the
@@ -43,6 +43,8 @@ review indexes:
 - `docs/review/ag35_review_index.md`
 - `docs/review/ag35_self_review.md`
 - `docs/review/vm20_practice_note_review_index.md`
+- `docs/review/reg141_review_index.md`
+- `docs/review/reg141_self_review.md`
 - `docs/review/ag38_review_index.md`
 - `docs/review/ag38_self_review.md`
 - `docs/review/ag39_review_index.md`
@@ -134,6 +136,9 @@ What has been built:
 - review-packet and unresolved-issues workflows that keep exception-first
   review visible
 - tracked end-of-sequence review indexes for the completed waves
+- tracked Regulation 141 review index and self-review note for the NY
+  regulation commutation unit in `docs/review/reg141_review_index.md` and
+  `docs/review/reg141_self_review.md`
 - tracked AG 03 review index and self-review note for the one-page guideline
   unit in `docs/review/ag03_self_review.md`
 - tracked AG 01 review index and self-review note for the one-page guideline
@@ -185,6 +190,8 @@ What source families / chapters have been processed:
 - VM-21, batches `batch-022` through `batch-037`
 - VM-22, batches `batch-038` through `batch-054`
 - VM-20 companion practice note, batches `batch-055` through `batch-075`
+- NY Regulation 141 commutation source, batches `batch-180` through
+  `batch-182`
 - AG 03 single-page guideline, `batch-076`
 - AG 01 single-page guideline, `batch-077`
 - AG 02 two-page guideline, `batch-078`
