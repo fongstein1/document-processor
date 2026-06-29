@@ -514,7 +514,7 @@ continuation pass keeps going.
   Unicode minus signs and other non-ASCII glyphs.
 - Commit only lightweight, auditable artifacts.
 
-- Reg-210 is the next safe source unit. Commit the planning layer for
-  `NY Regulations/Reg-210-11-NYCRR-S048.pdf`, run batches 186-188, keep page 10
-  as blank trailing boundary context only, and then move to the next safe raw
-  source unit if the wave stays clean.
+- Reg-210 is now complete as batches 186-188 in ignored working storage.
+  Commit the handoff artifacts, keep page 10 as blank trailing boundary
+  context only, and only then inspect the remaining raw source folder for the
+  next safe source unit.

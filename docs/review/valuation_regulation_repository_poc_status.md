@@ -12,7 +12,7 @@ regulation repository. It consolidates the completed review-only extraction
 waves without changing the status of the underlying batch outputs or review
 indexes.
 
-The handoff now spans 63 review indexes, up from 57 review indexes. The
+The handoff now spans 64 review indexes, up from 57 review indexes. The
 earlier 51 review indexes checkpoint remains part of the handoff history, the
 earlier 50 review indexes checkpoint remains part of the handoff history, the
 earlier 49 review indexes checkpoint remains part of the handoff history, the
@@ -47,6 +47,8 @@ review indexes:
 - `docs/review/model_governance_practice_note_self_review.md`
 - `docs/review/reg141_review_index.md`
 - `docs/review/reg141_self_review.md`
+- `docs/review/reg210_review_index.md`
+- `docs/review/reg210_self_review.md`
 - `docs/review/ag38_review_index.md`
 - `docs/review/ag38_self_review.md`
 - `docs/review/ag39_review_index.md`
@@ -141,6 +143,9 @@ What has been built:
 - tracked Regulation 141 review index and self-review note for the NY
   regulation commutation unit in `docs/review/reg141_review_index.md` and
   `docs/review/reg141_self_review.md`
+- tracked Regulation 210 review index and self-review note for the NY
+  non-guaranteed-elements unit in `docs/review/reg210_review_index.md` and
+  `docs/review/reg210_self_review.md`
 - tracked model-governance practice-note review index and self-review note
   for the companion-guidance unit in
   `docs/review/model_governance_practice_note_review_index.md` and
@@ -198,6 +203,8 @@ What source families / chapters have been processed:
 - VM-20 companion practice note, batches `batch-055` through `batch-075`
 - NY Regulation 141 commutation source, batches `batch-180` through
   `batch-182`
+- NY Regulation 210 non-guaranteed-elements source, batches `batch-186`
+  through `batch-188`
 - AG 03 single-page guideline, `batch-076`
 - AG 01 single-page guideline, `batch-077`
 - AG 02 two-page guideline, `batch-078`
