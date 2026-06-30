@@ -1,0 +1,301 @@
+{
+  "planId": "cia-2023-financial-condition-testing-educational-note-control-plan",
+  "planVersion": "1.0",
+  "status": "planned",
+  "sourceScope": {
+    "sourceFamilyId": "practice_notes",
+    "primarySourceFile": "Practice Notes/223010e.pdf",
+    "sourceFolder": "Practice Notes",
+    "sourceTitle": "Educational Note: Financial Condition Testing",
+    "sourceReference": "Canadian Institute of Actuaries educational note, January 2023",
+    "sourceStatus": "educational note",
+    "sourceStatusNote": "Non-binding educational note / companion guidance; not authoritative regulatory text.",
+    "domainId": "canadian_guidance",
+    "issuingBody": "Canadian Institute of Actuaries",
+    "rawSourceRoot": "D:\\Work\\AI Projects\\NAIC Valuation Manual Course",
+    "confirmedPageRange": [1, 59],
+    "observedSectionWindows": [
+      {
+        "sectionId": "cia-opening-guidance",
+        "pageRange": [1, 8],
+        "note": "Front matter, introduction, and method overview."
+      },
+      {
+        "sectionId": "cia-forecast-and-scenarios",
+        "pageRange": [9, 17],
+        "note": "Forecast period, scenarios, and management actions."
+      },
+      {
+        "sectionId": "cia-modelling-considerations",
+        "pageRange": [18, 23],
+        "note": "Modelling considerations, basic requirements, and enterprise assumptions."
+      },
+      {
+        "sectionId": "cia-reporting-and-results",
+        "pageRange": [24, 31],
+        "note": "Reporting guidance, introduction, results, and ORSA coordination."
+      },
+      {
+        "sectionId": "cia-life-appendix",
+        "pageRange": [32, 45],
+        "note": "Appendix A - life insurers."
+      },
+      {
+        "sectionId": "cia-pc-appendices-and-closeout",
+        "pageRange": [46, 59],
+        "note": "Appendix B/C - property and casualty insurers and closeout."
+      }
+    ],
+    "boundaries": [
+      "Keep planning focused on this single educational note file.",
+      "Do not widen into other practice notes or broader companion sources in the same folder.",
+      "Keep VM-20, VM-21, VM-22, VM-30, VM-31, AG, and regulation references review-only unless a batch intentionally includes the referenced operational text.",
+      "Keep the educational-note caveat visible as companion-guidance context, not as authoritative regulatory text.",
+      "Use page locators as the primary citation anchor; stable line references are not expected for this PDF slice."
+    ],
+    "exclusions": [
+      "No full-document processing outside this source file.",
+      "No learner-facing content.",
+      "No app-ready exports.",
+      "No RAG-ready exports.",
+      "No approved/promoted exports.",
+      "No eLearning scripts, slides, quizzes, or app exports.",
+      "No raw source files in Git.",
+      "No other educational note files in the same wave."
+    ]
+  },
+  "topicMap": [
+    {
+      "topicId": "cia-opening-guidance",
+      "label": "Front matter, introduction, and method overview",
+      "pageRange": [1, 8],
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "background_content",
+        "caveat_or_companion_guidance",
+        "cross_reference_mapping",
+        "boundary_control_window"
+      ],
+      "crossReferenceWatchlist": ["CIA due-process guidance", "standards-of-practice references"],
+      "boundaryNote": "Keep the opening educational-note framing and method overview together before the scenario work begins."
+    },
+    {
+      "topicId": "cia-forecast-and-scenarios",
+      "label": "Forecast period, scenarios, and management actions",
+      "pageRange": [9, 17],
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "scenario_or_stochastic_requirement",
+        "company_or_prudent_estimate_assumption",
+        "cross_reference_mapping",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": ["SOP paragraph 2520.15", "SOP paragraph 2520.26", "reverse stress testing", "management actions"],
+      "boundaryNote": "Keep the forecast horizon, reverse stress testing, going concern framing, and management actions together as one review-only slice."
+    },
+    {
+      "topicId": "cia-modelling-considerations",
+      "label": "Modelling considerations, basic requirements, and enterprise assumptions",
+      "pageRange": [18, 23],
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "definition_or_terminology",
+        "calculation_structure",
+        "formula_context",
+        "asset_modeling_judgment",
+        "cross_reference_mapping"
+      ],
+      "crossReferenceWatchlist": ["capital ratios", "IFRS 17", "notes to the financial statements"],
+      "boundaryNote": "Keep the model-design and assumption framework together without widening into reporting or appendices."
+    },
+    {
+      "topicId": "cia-reporting-and-results",
+      "label": "Reporting guidance, introduction, results, and ORSA coordination",
+      "pageRange": [24, 31],
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "reporting_requirement",
+        "documentation_expectation",
+        "governance_or_control_expectation",
+        "cross_reference_mapping"
+      ],
+      "crossReferenceWatchlist": ["OSFI filing directions", "ORSA", "transfers", "consolidated reporting"],
+      "boundaryNote": "Keep the reporting and results material together and stop cleanly before the appendix deep dive."
+    },
+    {
+      "topicId": "cia-life-appendix",
+      "label": "Appendix A - life insurers",
+      "pageRange": [32, 45],
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "scenario_or_stochastic_requirement",
+        "reinsurance",
+        "asset_modeling_judgment",
+        "cross_reference_mapping",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": ["mortality", "morbidity", "management actions", "climate", "technology"],
+      "boundaryNote": "Keep the life-insurer risk-category appendix together as the main life-focused caution slice."
+    },
+    {
+      "topicId": "cia-pc-appendices-and-closeout",
+      "label": "Appendix B/C - property and casualty insurers and closeout",
+      "pageRange": [46, 59],
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "scenario_or_stochastic_requirement",
+        "reinsurance",
+        "asset_modeling_judgment",
+        "cross_reference_mapping",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": ["claim frequency and severity", "post-event inflation", "business volume", "reinsurance", "solvency standards"],
+      "boundaryNote": "Keep the P&C appendix material and closeout together while preserving the end boundary."
+    }
+  ],
+  "proposedBatches": [
+    {
+      "plannedBatchId": "batch-210",
+      "topicIds": ["cia-opening-guidance"],
+      "title": "educational note opening slice",
+      "paragraphTarget": {
+        "startPage": 1,
+        "endPage": 8
+      },
+      "boundaryRationale": "Keep the front matter, introduction, and method overview together before the scenario work begins.",
+      "expectedReviewComplexity": "medium",
+      "expectedUnresolvedIssueTypes": ["boundary_control_window", "caveat_or_companion_guidance"],
+      "batchCanBeProcessedAutomatically": true,
+      "reviewOnlyGate": "review-only, not learner-facing, not app-ready, not RAG-ready"
+    },
+    {
+      "plannedBatchId": "batch-211",
+      "topicIds": ["cia-forecast-and-scenarios"],
+      "title": "forecast and scenarios slice",
+      "paragraphTarget": {
+        "startPage": 9,
+        "endPage": 17
+      },
+      "boundaryRationale": "Keep the forecast period, reverse stress testing, going concern framing, and management actions together as one review-only slice.",
+      "expectedReviewComplexity": "high",
+      "expectedUnresolvedIssueTypes": ["scenario_or_stochastic_requirement", "requires_human_interpretation"],
+      "batchCanBeProcessedAutomatically": true,
+      "reviewOnlyGate": "review-only, not learner-facing, not app-ready, not RAG-ready"
+    },
+    {
+      "plannedBatchId": "batch-212",
+      "topicIds": ["cia-modelling-considerations"],
+      "title": "modelling considerations and assumptions slice",
+      "paragraphTarget": {
+        "startPage": 18,
+        "endPage": 23
+      },
+      "boundaryRationale": "Keep the model-design and assumption framework together without widening into reporting or appendices.",
+      "expectedReviewComplexity": "medium",
+      "expectedUnresolvedIssueTypes": ["asset_modeling_judgment", "formula_context"],
+      "batchCanBeProcessedAutomatically": true,
+      "reviewOnlyGate": "review-only, not learner-facing, not app-ready, not RAG-ready"
+    },
+    {
+      "plannedBatchId": "batch-213",
+      "topicIds": ["cia-reporting-and-results"],
+      "title": "reporting and results slice",
+      "paragraphTarget": {
+        "startPage": 24,
+        "endPage": 31
+      },
+      "boundaryRationale": "Keep the reporting and results material together and stop cleanly before the appendix deep dive.",
+      "expectedReviewComplexity": "medium",
+      "expectedUnresolvedIssueTypes": ["reporting_requirement", "governance_or_control_expectation"],
+      "batchCanBeProcessedAutomatically": true,
+      "reviewOnlyGate": "review-only, not learner-facing, not app-ready, not RAG-ready"
+    },
+    {
+      "plannedBatchId": "batch-214",
+      "topicIds": ["cia-life-appendix"],
+      "title": "appendix A - life insurers",
+      "paragraphTarget": {
+        "startPage": 32,
+        "endPage": 45
+      },
+      "boundaryRationale": "Keep the life-insurer risk-category appendix together as the main life-focused caution slice.",
+      "expectedReviewComplexity": "high",
+      "expectedUnresolvedIssueTypes": ["reinsurance", "requires_human_interpretation"],
+      "batchCanBeProcessedAutomatically": true,
+      "reviewOnlyGate": "review-only, not learner-facing, not app-ready, not RAG-ready"
+    },
+    {
+      "plannedBatchId": "batch-215",
+      "topicIds": ["cia-pc-appendices-and-closeout"],
+      "title": "appendix B/C and closeout slice",
+      "paragraphTarget": {
+        "startPage": 46,
+        "endPage": 59
+      },
+      "boundaryRationale": "Keep the P&C appendix material and closeout together while preserving the end boundary.",
+      "expectedReviewComplexity": "high",
+      "expectedUnresolvedIssueTypes": ["reinsurance", "boundary_control_window", "requires_human_interpretation"],
+      "batchCanBeProcessedAutomatically": true,
+      "reviewOnlyGate": "review-only, not learner-facing, not app-ready, not RAG-ready"
+    }
+  ],
+  "reviewStandards": {
+    "expectedCategories": [
+      "regulatory_requirement",
+      "definition_or_terminology",
+      "reserve_method_structure",
+      "calculation_structure",
+      "formula_context",
+      "prescribed_assumption",
+      "company_or_prudent_estimate_assumption",
+      "scenario_or_stochastic_requirement",
+      "asset_modeling_judgment",
+      "hedging_or_risk_mitigation",
+      "reinsurance",
+      "reporting_requirement",
+      "documentation_expectation",
+      "governance_or_control_expectation",
+      "cross_reference_mapping",
+      "background_content",
+      "caveat_or_companion_guidance",
+      "non_binding_practice_note",
+      "educational_note",
+      "boundary_control_window",
+      "requires_human_interpretation"
+    ],
+    "promotionGates": {
+      "learnerFacing": [
+        "source citation exists",
+        "source support is clear",
+        "wording is not misleading",
+        "confidence is high",
+        "no unresolved review flags remain"
+      ],
+      "appReady": [
+        "learner-facing gating has already passed",
+        "the wording is stable and concise",
+        "the item can be imported without extra cleanup",
+        "no open source-reference questions remain"
+      ],
+      "ragReady": [
+        "source citation exists",
+        "source support is clear",
+        "no unresolved review flags remain",
+        "the item is suitable for retrieval with citations"
+      ]
+    }
+  },
+  "validationImplications": {
+    "checksNeeded": [
+      "plan file presence",
+      "review index presence",
+      "self-review note presence",
+      "batch registry coverage for batch-210 through batch-215",
+      "no-promotion guardrails",
+      "review-only output expectations"
+    ],
+    "registryNote": "Keep the plan portable across future educational-note or companion-guidance sources.",
+    "lineReferenceNote": "Continue using page locators as the primary anchor because stable line references are not expected for this PDF slice."
+  }
+}

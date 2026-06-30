@@ -12,7 +12,7 @@ regulation repository. It consolidates the completed review-only extraction
 waves without changing the status of the underlying batch outputs or review
 indexes.
 
-The handoff now spans 71 review indexes, up from 70 review indexes. The
+The handoff now spans 72 review indexes, up from 71 review indexes. The
 earlier 51 review indexes checkpoint remains part of the handoff history, the
 earlier 50 review indexes checkpoint remains part of the handoff history, the
 earlier 49 review indexes checkpoint remains part of the handoff history, the
@@ -897,3 +897,8 @@ from the remaining inventory once validation is refreshed.
 ## CIA 2022 Educational Note addendum
 
 The CIA 2022 capital/FCT educational-note wave is complete as batches 206-209 in ignored working storage. The tracked review index and self-review note are `docs/review/cia_2022_capital_fct_educational_note_review_index.md` and `docs/review/cia_2022_capital_fct_educational_note_self_review.md`, the wave stays review-only, and the companion-guidance caveat remains explicit. The next safe continuation step is to inspect the remaining inventory again before selecting the next source unit.
+
+
+## CIA 2023 Educational Note addendum
+
+The CIA 2023 financial-condition-testing educational-note wave is complete as batches 210-215 in ignored working storage. The tracked review index and self-review note are `docs/review/cia_2023_financial_condition_testing_educational_note_review_index.md` and `docs/review/cia_2023_financial_condition_testing_educational_note_self_review.md`, the wave stays review-only, and the companion-guidance caveat remains explicit. The next safe continuation step is to inspect the remaining inventory again before selecting the next source unit.

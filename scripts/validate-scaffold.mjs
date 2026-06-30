@@ -446,6 +446,29 @@ const paths = {
     'review',
     'cia_2022_capital_fct_educational_note_self_review.md',
   ),
+  cia2023FinancialConditionTestingEducationalNoteBatchPlanJson: path.join(
+    repoRoot,
+    'config',
+    'cia-2023-financial-condition-testing-educational-note-batch-plan.json',
+  ),
+  cia2023FinancialConditionTestingEducationalNoteExtractionPlanMd: path.join(
+    repoRoot,
+    'docs',
+    'processor',
+    'cia_2023_financial_condition_testing_educational_note_extraction_plan.md',
+  ),
+  cia2023FinancialConditionTestingEducationalNoteReviewIndexMd: path.join(
+    repoRoot,
+    'docs',
+    'review',
+    'cia_2023_financial_condition_testing_educational_note_review_index.md',
+  ),
+  cia2023FinancialConditionTestingEducationalNoteSelfReviewMd: path.join(
+    repoRoot,
+    'docs',
+    'review',
+    'cia_2023_financial_condition_testing_educational_note_self_review.md',
+  ),
   ltciPracticeNoteBatchPlanJson: path.join(
     repoRoot,
     'config',
@@ -6006,6 +6029,157 @@ const validateAg25PlanMarkdown = async (filePath, label) => {
       problems.push(`${label}: must mention ${phrase}`)
     }
   })
+}
+
+const validateCia2023FinancialConditionTestingEducationalNotePlanMarkdown = async (
+  filePath,
+  label,
+) => {
+  const text = await readText(filePath)
+  const requiredHeadings = [
+    '## Source Scope',
+    '## Section / Topic Map',
+    '## Proposed Batch Sequence',
+    '## Review Standards',
+    '## Promotion Gates',
+    '## Validation Implications',
+    '## Operating Note',
+  ]
+  requiredHeadings.forEach((heading) => {
+    if (!text.includes(heading)) {
+      problems.push(`${label}: missing heading ${heading}`)
+    }
+  })
+  ;[
+    'review-only',
+    'not learner-facing',
+    'not app-ready',
+    'not RAG-ready',
+    'not promoted',
+    'Practice Notes/223010e.pdf',
+    'Educational Note',
+    'educational note',
+    'non-binding practice note',
+    'companion guidance',
+    'financial condition testing',
+    'pages 1-59',
+    'batch-210',
+    'batch-211',
+    'batch-212',
+    'batch-213',
+    'batch-214',
+    'batch-215',
+    'OSFI',
+    'AMF',
+    'IFRS 17',
+    'climate',
+    'ORSA',
+    'reinsurance',
+  ].forEach((phrase) => {
+    if (!text.includes(phrase)) {
+      problems.push(`${label}: must mention ${phrase}`)
+    }
+  })
+}
+
+const validateCia2023FinancialConditionTestingEducationalNotePlanLike = (plan, label) => {
+  if (!expectObject(plan, label)) return
+
+  if (plan.planId !== 'cia-2023-financial-condition-testing-educational-note-control-plan') {
+    problems.push(
+      `${label}: planId must be cia-2023-financial-condition-testing-educational-note-control-plan`,
+    )
+  }
+  if (plan.planVersion !== '1.0') {
+    problems.push(`${label}: planVersion must be 1.0`)
+  }
+  if (plan.status !== 'planned') {
+    problems.push(`${label}: status must be planned`)
+  }
+  if (!expectObject(plan.sourceScope, `${label}.sourceScope`)) return
+
+  if (plan.sourceScope.sourceFamilyId !== 'practice_notes') {
+    problems.push(`${label}.sourceScope: sourceFamilyId must be practice_notes`)
+  }
+  if (plan.sourceScope.primarySourceFile !== 'Practice Notes/223010e.pdf') {
+    problems.push(
+      `${label}.sourceScope: primarySourceFile must be Practice Notes/223010e.pdf`,
+    )
+  }
+  if (!hasString(plan.sourceScope.sourceFolder)) {
+    problems.push(`${label}.sourceScope: missing sourceFolder`)
+  }
+  if (!hasString(plan.sourceScope.sourceTitle)) {
+    problems.push(`${label}.sourceScope: missing sourceTitle`)
+  }
+  if (!hasString(plan.sourceScope.sourceReference)) {
+    problems.push(`${label}.sourceScope: missing sourceReference`)
+  }
+  if (!hasString(plan.sourceScope.domainId)) {
+    problems.push(`${label}.sourceScope: missing domainId`)
+  }
+  if (!hasString(plan.sourceScope.rawSourceRoot)) {
+    problems.push(`${label}.sourceScope: missing rawSourceRoot`)
+  }
+  if (!expectArray(plan.sourceScope.confirmedPageRange, `${label}.sourceScope.confirmedPageRange`, false)) return
+  if (plan.sourceScope.confirmedPageRange.length !== 2) {
+    problems.push(`${label}.sourceScope.confirmedPageRange must contain exactly two page bounds`)
+  }
+  if (plan.sourceScope.confirmedPageRange[0] !== 1 || plan.sourceScope.confirmedPageRange[1] !== 59) {
+    problems.push(`${label}.sourceScope.confirmedPageRange must be [1, 59]`)
+  }
+  if (!expectArray(plan.sourceScope.observedSectionWindows, `${label}.sourceScope.observedSectionWindows`, false)) return
+  if (!expectArray(plan.sourceScope.boundaries, `${label}.sourceScope.boundaries`, false)) return
+  if (!expectArray(plan.sourceScope.exclusions, `${label}.sourceScope.exclusions`, false)) return
+  if (
+    !plan.sourceScope.boundaries.some(
+      (entry) => typeof entry === 'string' && entry.includes('single educational note file'),
+    )
+  ) {
+    problems.push(`${label}.sourceScope.boundaries: must mention the single educational-note file`)
+  }
+  if (
+    !plan.sourceScope.boundaries.some(
+      (entry) => typeof entry === 'string' && entry.includes('other practice notes'),
+    )
+  ) {
+    problems.push(`${label}.sourceScope.boundaries: must mention other practice-notes files`)
+  }
+  if (
+    !plan.sourceScope.boundaries.some(
+      (entry) => typeof entry === 'string' && entry.includes('non-binding') && entry.includes('companion-guidance'),
+    )
+  ) {
+    problems.push(`${label}.sourceScope.boundaries: must mention non-binding companion-guidance posture`)
+  }
+  if (
+    !plan.sourceScope.exclusions.some(
+      (entry) => typeof entry === 'string' && entry.includes('learner-facing'),
+    )
+  ) {
+    problems.push(`${label}.sourceScope.exclusions: must mention learner-facing exclusion`)
+  }
+  if (
+    !plan.sourceScope.exclusions.some(
+      (entry) => typeof entry === 'string' && entry.includes('other practice notes'),
+    )
+  ) {
+    problems.push(`${label}.sourceScope.exclusions: must mention other practice-notes file exclusion`)
+  }
+  if (
+    !plan.sourceScope.exclusions.some(
+      (entry) => typeof entry === 'string' && entry.includes('app-ready'),
+    )
+  ) {
+    problems.push(`${label}.sourceScope.exclusions: must mention app-ready exclusion`)
+  }
+  if (
+    !plan.sourceScope.exclusions.some(
+      (entry) => typeof entry === 'string' && entry.includes('RAG-ready'),
+    )
+  ) {
+    problems.push(`${label}.sourceScope.exclusions: must mention RAG-ready exclusion`)
+  }
 }
 
 const validateModelRegulationXXXPracticeNotePlanMarkdown = async (filePath, label) => {
@@ -13182,6 +13356,57 @@ if (problems.length > 0) {
   console.log(
     `- CIA 2022 capital/FCT educational note plan verified: ${cia2022CapitalFCTEducationalNoteBatchPlan.proposedBatches.length} batches`,
   )
+  await validateCia2023FinancialConditionTestingEducationalNotePlanMarkdown(
+    paths.cia2023FinancialConditionTestingEducationalNoteExtractionPlanMd,
+    'docs/processor/cia_2023_financial_condition_testing_educational_note_extraction_plan.md',
+  )
+  const cia2023FinancialConditionTestingEducationalNoteBatchPlan = await readJson(
+    paths.cia2023FinancialConditionTestingEducationalNoteBatchPlanJson,
+  )
+  validateCia2023FinancialConditionTestingEducationalNotePlanLike(
+    cia2023FinancialConditionTestingEducationalNoteBatchPlan,
+    'config/cia-2023-financial-condition-testing-educational-note-batch-plan.json',
+  )
+  const cia2023FinancialConditionTestingEducationalNoteBatchIds =
+    cia2023FinancialConditionTestingEducationalNoteBatchPlan.proposedBatches.map(
+      (batch) => batch.plannedBatchId,
+    )
+  const cia2023FinancialConditionTestingEducationalNoteReviewIndexText = (await exists(
+    paths.cia2023FinancialConditionTestingEducationalNoteReviewIndexMd,
+  ))
+    ? await readText(paths.cia2023FinancialConditionTestingEducationalNoteReviewIndexMd)
+    : ''
+  const cia2023FinancialConditionTestingEducationalNoteSelfReviewText = (await exists(
+    paths.cia2023FinancialConditionTestingEducationalNoteSelfReviewMd,
+  ))
+    ? await readText(paths.cia2023FinancialConditionTestingEducationalNoteSelfReviewMd)
+    : ''
+  const cia2023FinancialConditionTestingEducationalNoteReviewIndexReady =
+    cia2023FinancialConditionTestingEducationalNoteReviewIndexText.length > 0 &&
+    cia2023FinancialConditionTestingEducationalNoteBatchIds.every((batchId) =>
+      cia2023FinancialConditionTestingEducationalNoteReviewIndexText.includes(batchId),
+    )
+  const cia2023FinancialConditionTestingEducationalNoteSelfReviewReady =
+    cia2023FinancialConditionTestingEducationalNoteSelfReviewText.length > 0 &&
+    cia2023FinancialConditionTestingEducationalNoteBatchIds.every((batchId) =>
+      cia2023FinancialConditionTestingEducationalNoteSelfReviewText.includes(batchId),
+    )
+  const cia2023FinancialConditionTestingEducationalNoteReviewArtifactsPresent =
+    cia2023FinancialConditionTestingEducationalNoteReviewIndexReady &&
+    cia2023FinancialConditionTestingEducationalNoteSelfReviewReady
+  if (cia2023FinancialConditionTestingEducationalNoteReviewIndexReady) {
+    console.log(
+      `- CIA 2023 financial condition testing educational note review index verified: ${cia2023FinancialConditionTestingEducationalNoteBatchPlan.proposedBatches.length} batches`,
+    )
+  }
+  if (cia2023FinancialConditionTestingEducationalNoteSelfReviewReady) {
+    console.log(
+      `- CIA 2023 financial condition testing educational note self-review verified: ${cia2023FinancialConditionTestingEducationalNoteBatchPlan.proposedBatches.length} batches`,
+    )
+  }
+  console.log(
+    `- CIA 2023 financial condition testing educational note plan verified: ${cia2023FinancialConditionTestingEducationalNoteBatchPlan.proposedBatches.length} batches`,
+  )
   await validateModelRegulationXXXPracticeNotePlanMarkdown(
     paths.modelRegulationXXXPracticeNoteExtractionPlanMd,
     'docs/processor/model_regulation_xxx_practice_note_extraction_plan.md',
@@ -13220,7 +13445,7 @@ if (problems.length > 0) {
   }
   console.log(`- Model Regulation XXX plan verified: ${modelRegulationXXXBatchPlan.proposedBatches.length} batches`)
   console.log(
-    `- POC status summary verified: ${cia2022CapitalFCTEducationalNoteReviewArtifactsPresent ? 71 : actuarialMemorandumPracticeNoteReviewArtifactsPresent ? 70 : lifeReinsuranceReserveCreditPracticeNoteReviewArtifactsPresent ? 69 : modelRegulationXXXReviewArtifactsPresent ? 68 : reg213ReviewArtifactsPresent ? 66 : reg210ReviewArtifactsPresent ? 65 : modelGovernanceReviewArtifactsPresent ? 64 : reg141ReviewArtifactsPresent ? 63 : ag55ReviewArtifactsPresent ? 62 : ag54ReviewArtifactsPresent ? 61 : ag53ReviewArtifactsPresent ? 58 : ag52ReviewArtifactsPresent ? 57 : ag51ReviewArtifactsPresent ? 56 : ag50ReviewArtifactsPresent ? 55 : ag49ReviewArtifactsPresent ? 54 : ag48ReviewArtifactsPresent ? 53 : ag47ReviewArtifactsPresent ? 52 : ag46ReviewArtifactsPresent ? 51 : ag45ReviewArtifactsPresent ? 50 : ag44ReviewArtifactsPresent ? 49 : ag43ReviewArtifactsPresent ? 48 : ag42ReviewArtifactsPresent ? 47 : ag41ReviewArtifactsPresent ? 46 : ag40ReviewArtifactsPresent ? 45 : ag39ReviewArtifactsPresent ? 44 : ag38ReviewArtifactsPresent ? 43 : ag37ReviewArtifactsPresent ? 42 : ag36ReviewArtifactsPresent ? 41 : ag35ReviewArtifactsPresent ? 40 : ag34ReviewArtifactsPresent ? 39 : 38} review indexes`,
+    `- POC status summary verified: ${cia2023FinancialConditionTestingEducationalNoteReviewArtifactsPresent ? 72 : cia2022CapitalFCTEducationalNoteReviewArtifactsPresent ? 71 : actuarialMemorandumPracticeNoteReviewArtifactsPresent ? 70 : lifeReinsuranceReserveCreditPracticeNoteReviewArtifactsPresent ? 69 : modelRegulationXXXReviewArtifactsPresent ? 68 : reg213ReviewArtifactsPresent ? 66 : reg210ReviewArtifactsPresent ? 65 : modelGovernanceReviewArtifactsPresent ? 64 : reg141ReviewArtifactsPresent ? 63 : ag55ReviewArtifactsPresent ? 62 : ag54ReviewArtifactsPresent ? 61 : ag53ReviewArtifactsPresent ? 58 : ag52ReviewArtifactsPresent ? 57 : ag51ReviewArtifactsPresent ? 56 : ag50ReviewArtifactsPresent ? 55 : ag49ReviewArtifactsPresent ? 54 : ag48ReviewArtifactsPresent ? 53 : ag47ReviewArtifactsPresent ? 52 : ag46ReviewArtifactsPresent ? 51 : ag45ReviewArtifactsPresent ? 50 : ag44ReviewArtifactsPresent ? 49 : ag43ReviewArtifactsPresent ? 48 : ag42ReviewArtifactsPresent ? 47 : ag41ReviewArtifactsPresent ? 46 : ag40ReviewArtifactsPresent ? 45 : ag39ReviewArtifactsPresent ? 44 : ag38ReviewArtifactsPresent ? 43 : ag37ReviewArtifactsPresent ? 42 : ag36ReviewArtifactsPresent ? 41 : ag35ReviewArtifactsPresent ? 40 : ag34ReviewArtifactsPresent ? 39 : 38} review indexes`,
   )
   if (validatedPilotBatchCount > 0) {
     console.log(`- Pilot batches validated: ${validatedPilotBatchCount}`)

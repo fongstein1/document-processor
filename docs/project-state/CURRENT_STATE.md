@@ -578,3 +578,8 @@ place at `docs/review/life_reinsurance_reserve_credit_practice_note_review_index
 and `docs/review/life_reinsurance_reserve_credit_practice_note_self_review.md`,
 the wave stayed review-only, and the next safe continuation step is to inspect
 the remaining inventory again before selecting another source unit.
+
+
+## CIA 2023 Educational Note addendum
+
+The CIA 2023 financial-condition-testing educational-note wave is complete as batches 210-215 in ignored working storage. Its tracked review index and self-review note are in place, and the next safe source unit should be selected from the remaining inventory after inspection.

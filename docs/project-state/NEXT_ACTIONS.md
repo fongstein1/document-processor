@@ -572,3 +572,6 @@ The life reinsurance practice note wave is complete as batches 198-201 in
 ignored working storage. The next step is to inspect the remaining inventory
 again, compare it against the tracked review indexes, and select the next safe
 source unit without guessing from memory.
+
+
+The CIA 2023 financial-condition-testing educational-note wave is complete as batches 210-215 in ignored working storage. Its tracked review index and self-review note are in place, and the next immediate source unit should be selected from the remaining inventory after inspection.
