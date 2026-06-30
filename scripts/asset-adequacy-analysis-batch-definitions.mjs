@@ -157,6 +157,8 @@ const batchSpecs = [
     validationCheckId: 'aaa-opening-background',
     validationCheckDetails:
       'The opening slice captures the non-binding caveat, introduction, and Section A background before Section B begins.',
+    flagType: 'companion_guidance',
+    flagMessage: 'Keep the opening companion-guidance slice review-only and do not promote it.',
     issueType: 'companion_guidance',
     issueMessage:
       'The opening companion-guidance slice should stay review-only and not be treated as authoritative regulatory text.',
@@ -187,6 +189,8 @@ const batchSpecs = [
     validationCheckId: 'aaa-appointed-actuary-procedures',
     validationCheckDetails:
       'The slice keeps Section B procedures and the Section C opener together without overextending into the modeling detail.',
+    flagType: 'governance_review',
+    flagMessage: 'Keep the appointed-actuary procedures review-only and do not promote them.',
     issueType: 'governance_or_control_expectation',
     issueMessage:
       'Procedural and governance language should remain review-only and not be overread as a compliance checklist.',
@@ -216,6 +220,8 @@ const batchSpecs = [
     validationCheckId: 'aaa-general-modeling',
     validationCheckDetails:
       'The slice keeps the general modeling discussion and IMR / AVR treatment in one narrow review-only block.',
+    flagType: 'modeling_review',
+    flagMessage: 'Keep the general modeling slice review-only and do not promote it.',
     issueType: 'calculation_structure',
     issueMessage:
       'General modeling and reserve-treatment language should remain review-only and not be promoted into instructions.',
@@ -246,6 +252,8 @@ const batchSpecs = [
     validationCheckId: 'aaa-asset-modeling',
     validationCheckDetails:
       'The slice keeps the asset modeling detail together so fixed-income and mortgage topics do not spill into later sections.',
+    flagType: 'asset_modeling_review',
+    flagMessage: 'Keep the asset-modeling slice review-only and do not promote it.',
     issueType: 'asset_modeling_judgment',
     issueMessage:
       'Asset modeling detail should stay review-only because it relies heavily on actuarial and investment judgment.',
@@ -275,6 +283,8 @@ const batchSpecs = [
     validationCheckId: 'aaa-policy-cash-flow-risk',
     validationCheckDetails:
       'The slice keeps policy cash flow risk, expenses, reliance, and analysis of results together as one review block.',
+    flagType: 'risk_results_review',
+    flagMessage: 'Keep the risk-and-results slice review-only and do not promote it.',
     issueType: 'scenario_or_stochastic_requirement',
     issueMessage:
       'Scenario, sensitivity, and reliance language should remain review-only and not be converted into generic instructions.',
@@ -305,6 +315,9 @@ const batchSpecs = [
     validationCheckId: 'aaa-opinion-impacts-appendix',
     validationCheckDetails:
       'The slice keeps opinion / memorandum material together with the AG43 / VM-21 impact discussion and appendix closeout.',
+    flagType: 'closeout_review',
+    flagMessage:
+      'Keep the opinion / memorandum closeout slice review-only and do not promote it.',
     issueType: 'documentation_expectation',
     issueMessage:
       'Opinion, memorandum, and appendix closeout language should remain review-only and not be promoted into instructions.',

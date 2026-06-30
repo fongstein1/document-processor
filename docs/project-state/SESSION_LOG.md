@@ -22,6 +22,10 @@
   non-binding companion guidance, the section windows were mapped by page
   locators, and the batch runner registry was extended to cover the new
   planned batch IDs.
+- 2026-06-29: Completed the Asset Adequacy Analysis practice-note wave as
+  batches 216-221 in ignored working storage and added the tracked review
+  index and self-review note. The wave stays review-only, non-binding, and
+  companion-guidance aware.
 - 2026-06-26: Hardened the pilot review layer after the first real batch by
   adding line-level locator support to the extraction/review contracts,
   requiring source references in the chunk manifest, expanding the pilot

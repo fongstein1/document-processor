@@ -9,10 +9,10 @@ working storage, with its tracked review index and self-review note in place.
 The next immediate task is to select the next safe source unit from the
 remaining inventory and repeat the review-only workflow.
 
-The next selected source unit is the Asset Adequacy Analysis practice note
-(`Practice Notes/2017-Sep-AAA_Asset_Adequacy_Analysis.pdf`). The planning
-layer is in place, and the next step is to execute the planned review-only
-batch wave while keeping the companion-guidance caveat visible.
+The next selected source unit will be chosen from the remaining inventory
+after the Asset Adequacy Analysis practice-note handoff is reviewed. The
+completed wave remains review-only, and the companion-guidance caveat stays
+visible in the review index and self-review note.
 
 The tracked intake workflow still lives at
 `docs/processor/remaining_source_inventory_workflow.md`, and the blank

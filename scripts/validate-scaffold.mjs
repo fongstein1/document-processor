@@ -434,6 +434,18 @@ const paths = {
     'processor',
     'asset_adequacy_analysis_extraction_plan.md',
   ),
+  assetAdequacyAnalysisPracticeNoteReviewIndexMd: path.join(
+    repoRoot,
+    'docs',
+    'review',
+    'asset_adequacy_analysis_review_index.md',
+  ),
+  assetAdequacyAnalysisPracticeNoteSelfReviewMd: path.join(
+    repoRoot,
+    'docs',
+    'review',
+    'asset_adequacy_analysis_self_review.md',
+  ),
   cia2022CapitalFCTEducationalNoteBatchPlanJson: path.join(
     repoRoot,
     'config',
@@ -6555,6 +6567,83 @@ const validateAssetAdequacyAnalysisPracticeNotePlanLike = (plan, label) => {
     !plan.validationImplications.portabilityNote.includes('portable across source families')
   ) {
     problems.push(`${label}.validationImplications.portabilityNote: must mention portability across source families`)
+  }
+}
+
+const validateAssetAdequacyAnalysisPracticeNoteReviewIndexMd = async (filePath, label) => {
+  const text = await readText(filePath)
+  const requiredHeadings = [
+    '## Overall Status',
+    '## Source Summary',
+    '## Batch Table',
+    '## Higher-Caution Areas',
+    '## Human Review Checklist',
+    '## Promotion Decision Area',
+    '## Relationship to Other Review Indexes',
+  ]
+  requiredHeadings.forEach((heading) => {
+    if (!text.includes(heading)) {
+      problems.push(`${label}: missing heading ${heading}`)
+    }
+  })
+  ;[
+    'review-only',
+    'not learner-facing',
+    'not app-ready',
+    'not RAG-ready',
+    'not promoted',
+    'non-binding practice note / companion guidance',
+    'Practice Notes/2017-Sep-AAA_Asset_Adequacy_Analysis.pdf',
+    'pages 1-91',
+    'batch-216',
+    'batch-217',
+    'batch-218',
+    'batch-219',
+    'batch-220',
+    'batch-221',
+    'AOMR',
+    'ASOP 7',
+    'ASOP 11',
+    'ASOP 22',
+    'ASOP 23',
+    'ASOP 41',
+    'AG43 / VM-21',
+    'AG38',
+    'IMR',
+    'AVR',
+    'reinsurance',
+  ].forEach((phrase) => {
+    if (!text.includes(phrase)) {
+      problems.push(`${label}: must mention ${phrase}`)
+    }
+  })
+}
+
+const validateAssetAdequacyAnalysisPracticeNoteSelfReviewMd = async (filePath, label) => {
+  const text = await readText(filePath)
+  const requiredHeadings = [
+    '## Batch-by-Batch Review',
+    '## Recurring Findings',
+    '## Overall Classification',
+  ]
+  requiredHeadings.forEach((heading) => {
+    if (!text.includes(heading)) {
+      problems.push(`${label}: missing heading ${heading}`)
+    }
+  })
+  ;['batch-216', 'batch-217', 'batch-218', 'batch-219', 'batch-220', 'batch-221'].forEach((batchId) => {
+    if (!text.includes(batchId)) {
+      problems.push(`${label}: must mention ${batchId}`)
+    }
+  })
+  if (!text.includes('reasonable_with_minor_cautions')) {
+    problems.push(`${label}: must mention reasonable_with_minor_cautions`)
+  }
+  if (!text.includes('page locators')) {
+    problems.push(`${label}: must mention page locators`)
+  }
+  if (!text.includes('non-binding practice-note caveat')) {
+    problems.push(`${label}: must mention the non-binding practice-note caveat`)
   }
 }
 
@@ -13466,6 +13555,47 @@ if (problems.length > 0) {
   console.log(
     `- Asset adequacy analysis practice-note plan verified: ${assetAdequacyAnalysisPracticeNoteBatchPlan.proposedBatches.length} batches`,
   )
+  const assetAdequacyAnalysisPracticeNoteReviewIndexText = (await exists(
+    paths.assetAdequacyAnalysisPracticeNoteReviewIndexMd,
+  ))
+    ? await readText(paths.assetAdequacyAnalysisPracticeNoteReviewIndexMd)
+    : ''
+  const assetAdequacyAnalysisPracticeNoteSelfReviewText = (await exists(
+    paths.assetAdequacyAnalysisPracticeNoteSelfReviewMd,
+  ))
+    ? await readText(paths.assetAdequacyAnalysisPracticeNoteSelfReviewMd)
+    : ''
+  const assetAdequacyAnalysisPracticeNoteBatchIds = [
+    'batch-216',
+    'batch-217',
+    'batch-218',
+    'batch-219',
+    'batch-220',
+    'batch-221',
+  ]
+  const assetAdequacyAnalysisPracticeNoteReviewIndexReady =
+    assetAdequacyAnalysisPracticeNoteReviewIndexText.length > 0 &&
+    assetAdequacyAnalysisPracticeNoteBatchIds.every((batchId) =>
+      assetAdequacyAnalysisPracticeNoteReviewIndexText.includes(batchId),
+    )
+  const assetAdequacyAnalysisPracticeNoteSelfReviewReady =
+    assetAdequacyAnalysisPracticeNoteSelfReviewText.length > 0 &&
+    assetAdequacyAnalysisPracticeNoteBatchIds.every((batchId) =>
+      assetAdequacyAnalysisPracticeNoteSelfReviewText.includes(batchId),
+    )
+  const assetAdequacyAnalysisPracticeNoteReviewArtifactsPresent =
+    assetAdequacyAnalysisPracticeNoteReviewIndexReady &&
+    assetAdequacyAnalysisPracticeNoteSelfReviewReady
+  if (assetAdequacyAnalysisPracticeNoteReviewIndexReady) {
+    console.log(
+      `- Asset adequacy analysis practice-note review index verified: ${assetAdequacyAnalysisPracticeNoteBatchIds.length} batches`,
+    )
+  }
+  if (assetAdequacyAnalysisPracticeNoteSelfReviewReady) {
+    console.log(
+      `- Asset adequacy analysis practice-note self-review verified: ${assetAdequacyAnalysisPracticeNoteBatchIds.length} batches`,
+    )
+  }
   const actuarialMemorandumPracticeNotePlanText = (await exists(
     paths.actuarialMemorandumPracticeNoteExtractionPlanMd,
   ))
@@ -13668,7 +13798,7 @@ if (problems.length > 0) {
   }
   console.log(`- Model Regulation XXX plan verified: ${modelRegulationXXXBatchPlan.proposedBatches.length} batches`)
   console.log(
-    `- POC status summary verified: ${cia2023FinancialConditionTestingEducationalNoteReviewArtifactsPresent ? 72 : cia2022CapitalFCTEducationalNoteReviewArtifactsPresent ? 71 : actuarialMemorandumPracticeNoteReviewArtifactsPresent ? 70 : lifeReinsuranceReserveCreditPracticeNoteReviewArtifactsPresent ? 69 : modelRegulationXXXReviewArtifactsPresent ? 68 : reg213ReviewArtifactsPresent ? 66 : reg210ReviewArtifactsPresent ? 65 : modelGovernanceReviewArtifactsPresent ? 64 : reg141ReviewArtifactsPresent ? 63 : ag55ReviewArtifactsPresent ? 62 : ag54ReviewArtifactsPresent ? 61 : ag53ReviewArtifactsPresent ? 58 : ag52ReviewArtifactsPresent ? 57 : ag51ReviewArtifactsPresent ? 56 : ag50ReviewArtifactsPresent ? 55 : ag49ReviewArtifactsPresent ? 54 : ag48ReviewArtifactsPresent ? 53 : ag47ReviewArtifactsPresent ? 52 : ag46ReviewArtifactsPresent ? 51 : ag45ReviewArtifactsPresent ? 50 : ag44ReviewArtifactsPresent ? 49 : ag43ReviewArtifactsPresent ? 48 : ag42ReviewArtifactsPresent ? 47 : ag41ReviewArtifactsPresent ? 46 : ag40ReviewArtifactsPresent ? 45 : ag39ReviewArtifactsPresent ? 44 : ag38ReviewArtifactsPresent ? 43 : ag37ReviewArtifactsPresent ? 42 : ag36ReviewArtifactsPresent ? 41 : ag35ReviewArtifactsPresent ? 40 : ag34ReviewArtifactsPresent ? 39 : 38} review indexes`,
+    `- POC status summary verified: ${assetAdequacyAnalysisPracticeNoteReviewArtifactsPresent ? 73 : cia2023FinancialConditionTestingEducationalNoteReviewArtifactsPresent ? 72 : cia2022CapitalFCTEducationalNoteReviewArtifactsPresent ? 71 : actuarialMemorandumPracticeNoteReviewArtifactsPresent ? 70 : lifeReinsuranceReserveCreditPracticeNoteReviewArtifactsPresent ? 69 : modelRegulationXXXReviewArtifactsPresent ? 68 : reg213ReviewArtifactsPresent ? 66 : reg210ReviewArtifactsPresent ? 65 : modelGovernanceReviewArtifactsPresent ? 64 : reg141ReviewArtifactsPresent ? 63 : ag55ReviewArtifactsPresent ? 62 : ag54ReviewArtifactsPresent ? 61 : ag53ReviewArtifactsPresent ? 58 : ag52ReviewArtifactsPresent ? 57 : ag51ReviewArtifactsPresent ? 56 : ag50ReviewArtifactsPresent ? 55 : ag49ReviewArtifactsPresent ? 54 : ag48ReviewArtifactsPresent ? 53 : ag47ReviewArtifactsPresent ? 52 : ag46ReviewArtifactsPresent ? 51 : ag45ReviewArtifactsPresent ? 50 : ag44ReviewArtifactsPresent ? 49 : ag43ReviewArtifactsPresent ? 48 : ag42ReviewArtifactsPresent ? 47 : ag41ReviewArtifactsPresent ? 46 : ag40ReviewArtifactsPresent ? 45 : ag39ReviewArtifactsPresent ? 44 : ag38ReviewArtifactsPresent ? 43 : ag37ReviewArtifactsPresent ? 42 : ag36ReviewArtifactsPresent ? 41 : ag35ReviewArtifactsPresent ? 40 : ag34ReviewArtifactsPresent ? 39 : 38} review indexes`,
   )
   if (validatedPilotBatchCount > 0) {
     console.log(`- Pilot batches validated: ${validatedPilotBatchCount}`)
