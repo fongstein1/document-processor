@@ -38,10 +38,11 @@ The Actuarial Memorandum practice-note wave is now complete as batches
 note are in place, and the next step is to inspect the remaining inventory
 again before selecting the next safe source unit.
 
-The next immediate source unit has now been selected as
-`Practice Notes/222030e.pdf`. The planning layer is being staged locally, and
-the next step is to validate and commit that plan before running batch-206
-through batch-209.
+The CIA 2022 capital/FCT educational-note wave is complete as batches
+206-209 in ignored working storage. Its tracked review index and self-review
+note are in place, and the next immediate source unit has now been selected
+as `Practice Notes/223010e.pdf`. The inspection and planning step should stay
+review-only until the page boundary is confirmed.
 
 AG 40 is now complete as batches 135-136 in ignored working storage. Its
 tracked review index and self-review note now form part of the handoff set.
