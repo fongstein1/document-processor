@@ -14,6 +14,11 @@
 
 ## Current focus
 
+The laptop portability and project-context handoff package has now been added
+as `docs/project-state/LAPTOP_PORTABILITY_HANDOFF.md`. The repo is clean on
+`main`, the received inventory remains local and ignored, and the project is
+ready to be reopened on another laptop without guessing source units.
+
 The Model Regulation XXX practice note
 (`Practice Notes/AAA - Model Regulation XXX - Dec 2006.pdf`) is now complete as
 batches 192-194 in ignored working storage. Its review index and self-review
@@ -37,6 +42,11 @@ compared against the tracked review indexes before any new source unit is
 started.
 
 ## Validation status
+
+The portability handoff document is tracked, the repo state is clean, and the
+recommended resume path is documented for the next laptop. The normal
+validation command remains `npm run check`, with the persistent Node runner as
+the fallback when the Windows shell wrappers cannot spawn cleanly.
 
 The scaffold, the tiny real-source pilot batches, the VM-20 planning layer,
 the re-bound remaining VM-20 batch plan, the tracked VM-20 review index, the

@@ -2,12 +2,19 @@
 
 ## Next immediate task
 
+The laptop portability and project-context handoff package now lives at
+`docs/project-state/LAPTOP_PORTABILITY_HANDOFF.md`. The next immediate task on
+a new laptop is to read that handoff, confirm the raw source path or
+regenerate the received inventory, verify the repo is clean, and only then
+resume source selection from the remaining inventory.
+
 The human-supplied remaining-source inventory has now been received at
 `data/manual-input/remaining-source-inventory.received.json`. The Model
 Regulation XXX practice note is now complete as batches 192-194 in ignored
 working storage, with its tracked review index and self-review note in place.
 The next immediate task is to select the next safe source unit from the
-remaining inventory and repeat the review-only workflow.
+remaining inventory and repeat the review-only workflow once portability is
+confirmed.
 
 The next selected source unit will be chosen from the remaining inventory
 after the Asset Adequacy Analysis practice-note handoff is reviewed. The
@@ -589,3 +596,10 @@ working storage. Its tracked review index and self-review note are in place,
 the source remains non-binding companion guidance, and the next safe step is
 to inspect the remaining inventory again before selecting another source
 unit.
+
+## Next safe source after portability check
+
+`Practice Notes/AAA - C3 Phase 2 and AG 43 - March 2011.pdf` is the next safe
+candidate after the portability checkpoint. It should be treated as a larger
+wave and should not start until the clean-tree / inventory / validation
+requirements in the portability handoff are satisfied.

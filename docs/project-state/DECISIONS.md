@@ -325,3 +325,13 @@ the attachment tables remained separate from the opening guidance.
 
 ## Recovery checkpoint note
 - `data/manual-input/remaining-source-inventory.received.json` is treated as a local manual input artifact and should remain untracked because it can contain local paths, file sizes, and timestamps. The tracked template/schema/pending variants remain available for future intake workflows.
+
+## Laptop portability handoff
+
+- 2026-06-29: A tracked portability handoff package was added at
+  `docs/project-state/LAPTOP_PORTABILITY_HANDOFF.md` so the review-only
+  workflow can be resumed safely on another laptop without guessing the next
+  source unit.
+- 2026-06-29: The received source inventory file remains a local manual input
+  artifact and should stay ignored/untracked; only the narrow ignore rule for
+  that received file is intended to persist.
