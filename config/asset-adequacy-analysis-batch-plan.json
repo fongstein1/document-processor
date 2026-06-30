@@ -1,0 +1,333 @@
+{
+  "planId": "asset-adequacy-analysis-practice-note-control-plan",
+  "planVersion": "1.0",
+  "status": "planned",
+  "sourceScope": {
+    "sourceFamilyId": "practice_notes",
+    "primarySourceFile": "Practice Notes/2017-Sep-AAA_Asset_Adequacy_Analysis.pdf",
+    "sourceFolder": "Practice Notes",
+    "sourceTitle": "Asset Adequacy Analysis practice note",
+    "sourceReference": "American Academy of Actuaries practice note, September 2017",
+    "sourceStatus": "active",
+    "sourceStatusNote": "Non-binding practice note / companion guidance; not authoritative regulatory text.",
+    "domainId": "naic_regulatory",
+    "issuingBody": "American Academy of Actuaries",
+    "rawSourceRoot": "D:\\Work\\AI Projects\\NAIC Valuation Manual Course",
+    "confirmedPageRange": [1, 91],
+    "observedSectionWindows": [
+      {
+        "sectionId": "aaa-introduction-background",
+        "pageRange": [1, 11],
+        "note": "Front matter, disclaimer, introduction, and Section A background."
+      },
+      {
+        "sectionId": "aaa-appointed-actuary-procedures",
+        "pageRange": [12, 25],
+        "note": "Section B procedures and the Section C opener."
+      },
+      {
+        "sectionId": "aaa-general-modeling",
+        "pageRange": [26, 40],
+        "note": "Section C continuation and Section D modeling considerations."
+      },
+      {
+        "sectionId": "aaa-asset-modeling",
+        "pageRange": [41, 57],
+        "note": "Section D continuation and Section E/F asset modeling detail."
+      },
+      {
+        "sectionId": "aaa-policy-cash-flow-risk",
+        "pageRange": [58, 76],
+        "note": "Sections G/H/I/J on policy cash flow risk, expenses, reliance, and results."
+      },
+      {
+        "sectionId": "aaa-opinion-and-impacts",
+        "pageRange": [77, 91],
+        "note": "Sections K/L and Appendix A on opinion, memorandum, AG43 / VM-21 impacts, and acronyms."
+      }
+    ],
+    "boundaries": [
+      "Keep planning focused on this single practice note file.",
+      "Do not widen into the other Practice Notes files in the same folder.",
+      "Keep VM-20, VM-21, VM-22, VM-30, VM-31, AG, and regulation references review-only unless a batch intentionally includes the referenced operational text.",
+      "Keep the disclaimer and the non-binding status visible as companion-guidance context, not as authoritative regulatory text.",
+      "Use page locators as the primary citation anchor; line references are not expected for this PDF slice."
+    ],
+    "exclusions": [
+      "No full-document processing outside this source file.",
+      "No learner-facing content.",
+      "No app-ready exports.",
+      "No RAG-ready exports.",
+      "No approved/promoted exports.",
+      "No eLearning scripts, slides, quizzes, or app exports.",
+      "No raw source files in Git.",
+      "No other Practice Notes files in the same wave."
+    ]
+  },
+  "topicMap": [
+    {
+      "topicId": "aaa-introduction-background",
+      "sectionFamily": "Front matter, disclaimer, introduction, and Section A background",
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "background_content",
+        "caveat_or_companion_guidance",
+        "cross_reference_mapping",
+        "boundary_control_window"
+      ],
+      "crossReferenceWatchlist": [
+        "AOMR",
+        "current-practice framing",
+        "ASOP references"
+      ]
+    },
+    {
+      "topicId": "aaa-appointed-actuary-procedures",
+      "sectionFamily": "Section B on accepting / resigning the appointed actuary and Section C opener",
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "governance_or_control_expectation",
+        "reporting_requirement",
+        "documentation_expectation",
+        "cross_reference_mapping"
+      ],
+      "crossReferenceWatchlist": [
+        "board / management notifications",
+        "personal qualification documentation"
+      ]
+    },
+    {
+      "topicId": "aaa-general-modeling",
+      "sectionFamily": "Section C general considerations and Section D opener",
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "calculation_structure",
+        "formula_context",
+        "cross_reference_mapping",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": [
+        "cash flow testing",
+        "gross premium valuation",
+        "moderately adverse conditions"
+      ]
+    },
+    {
+      "topicId": "aaa-asset-modeling",
+      "sectionFamily": "Section D continuation and Section E / F asset modeling detail",
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "asset_modeling_judgment",
+        "calculation_structure",
+        "formula_context",
+        "cross_reference_mapping"
+      ],
+      "crossReferenceWatchlist": [
+        "IMR",
+        "AVR",
+        "discounted cash flows",
+        "fixed income",
+        "mortgages",
+        "derivatives"
+      ]
+    },
+    {
+      "topicId": "aaa-policy-cash-flow-risk",
+      "sectionFamily": "Sections G / H / I / J on policy cash flow risk, expenses, reliance, and results",
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "scenario_or_stochastic_requirement",
+        "reporting_requirement",
+        "documentation_expectation",
+        "governance_or_control_expectation",
+        "cross_reference_mapping"
+      ],
+      "crossReferenceWatchlist": [
+        "sensitivity testing",
+        "reliance on third parties",
+        "reserve adequacy",
+        "additional reserves"
+      ]
+    },
+    {
+      "topicId": "aaa-opinion-and-impacts",
+      "sectionFamily": "Sections K / L and Appendix A on opinion, memorandum, AG43 / VM-21 impacts, and appendix",
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "reporting_requirement",
+        "documentation_expectation",
+        "cross_reference_mapping",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": [
+        "opinion formats",
+        "memorandum detail",
+        "AG43 / VM-21",
+        "appendix acronyms"
+      ]
+    }
+  ],
+  "proposedBatches": [
+    {
+      "plannedBatchId": "batch-216",
+      "topicIds": ["aaa-introduction-background"],
+      "title": "Front matter, disclaimer, introduction, and Section A background",
+      "pageWindow": [1, 11],
+      "boundaryRationale": "Keep the disclaimer, introduction, and Section A background together before the appointed-actuary procedures begin.",
+      "expectedReviewComplexity": "medium",
+      "expectedUnresolvedIssueTypes": [
+        "companion_guidance",
+        "page_image_backstop",
+        "cross_reference_mapping",
+        "boundary_control_window"
+      ],
+      "batchCanBeProcessedAutomatically": true,
+      "reviewOnlyGate": "Keep review-only and do not promote any item."
+    },
+    {
+      "plannedBatchId": "batch-217",
+      "topicIds": ["aaa-appointed-actuary-procedures"],
+      "title": "Appointed-actuary procedures and Section C opener",
+      "pageWindow": [12, 25],
+      "boundaryRationale": "Keep appointed-actuary procedures and early general considerations together before the deeper modeling sections begin.",
+      "expectedReviewComplexity": "medium",
+      "expectedUnresolvedIssueTypes": [
+        "governance_or_control_expectation",
+        "documentation_expectation",
+        "cross_reference_mapping",
+        "page_image_backstop"
+      ],
+      "batchCanBeProcessedAutomatically": true,
+      "reviewOnlyGate": "Keep review-only and do not promote any item."
+    },
+    {
+      "plannedBatchId": "batch-218",
+      "topicIds": ["aaa-general-modeling"],
+      "title": "General modeling considerations and IMR / AVR treatment",
+      "pageWindow": [26, 40],
+      "boundaryRationale": "Keep the general modeling discussion together, including IMR / AVR and related modeling considerations.",
+      "expectedReviewComplexity": "high",
+      "expectedUnresolvedIssueTypes": [
+        "calculation_structure",
+        "formula_context",
+        "asset_modeling_judgment",
+        "cross_reference_mapping"
+      ],
+      "batchCanBeProcessedAutomatically": true,
+      "reviewOnlyGate": "Keep review-only and do not promote any item."
+    },
+    {
+      "plannedBatchId": "batch-219",
+      "topicIds": ["aaa-asset-modeling"],
+      "title": "Asset modeling specifics, fixed income, and mortgages",
+      "pageWindow": [41, 57],
+      "boundaryRationale": "Keep the asset modeling detail together so fixed-income and mortgage topics do not spill into later sections.",
+      "expectedReviewComplexity": "high",
+      "expectedUnresolvedIssueTypes": [
+        "asset_modeling_judgment",
+        "scenario_or_stochastic_requirement",
+        "cross_reference_mapping",
+        "page_image_backstop"
+      ],
+      "batchCanBeProcessedAutomatically": true,
+      "reviewOnlyGate": "Keep review-only and do not promote any item."
+    },
+    {
+      "plannedBatchId": "batch-220",
+      "topicIds": ["aaa-policy-cash-flow-risk"],
+      "title": "Policy cash flow risk, expenses, reliance, and results",
+      "pageWindow": [58, 76],
+      "boundaryRationale": "Keep policy cash flow risk, expenses, reliance, and analysis of results together as one risk-and-results slice.",
+      "expectedReviewComplexity": "high",
+      "expectedUnresolvedIssueTypes": [
+        "scenario_or_stochastic_requirement",
+        "reporting_requirement",
+        "documentation_expectation",
+        "governance_or_control_expectation",
+        "cross_reference_mapping"
+      ],
+      "batchCanBeProcessedAutomatically": true,
+      "reviewOnlyGate": "Keep review-only and do not promote any item."
+    },
+    {
+      "plannedBatchId": "batch-221",
+      "topicIds": ["aaa-opinion-and-impacts"],
+      "title": "Opinion, memorandum, AG43 / VM-21 impacts, and appendix closeout",
+      "pageWindow": [77, 91],
+      "boundaryRationale": "Keep opinion / memorandum preparation and AG43 / VM-21 impact material together with the appendix closeout.",
+      "expectedReviewComplexity": "high",
+      "expectedUnresolvedIssueTypes": [
+        "reporting_requirement",
+        "documentation_expectation",
+        "cross_reference_mapping",
+        "requires_human_interpretation"
+      ],
+      "batchCanBeProcessedAutomatically": true,
+      "reviewOnlyGate": "Keep review-only and do not promote any item."
+    }
+  ],
+  "reviewStandards": {
+    "reviewOnlyByDefault": true,
+    "categories": [
+      "regulatory_requirement",
+      "definition_or_terminology",
+      "reserve_method_structure",
+      "calculation_structure",
+      "formula_context",
+      "prescribed_assumption",
+      "company_or_prudent_estimate_assumption",
+      "scenario_or_stochastic_requirement",
+      "asset_modeling_judgment",
+      "hedging_or_risk_mitigation",
+      "reinsurance",
+      "reporting_requirement",
+      "documentation_expectation",
+      "governance_or_control_expectation",
+      "cross_reference_mapping",
+      "background_content",
+      "caveat_or_companion_guidance",
+      "non_binding_practice_note",
+      "boundary_control_window",
+      "requires_human_interpretation"
+    ],
+    "notes": [
+      "Use page locators as the primary anchor because line references are not expected for this PDF slice.",
+      "Keep the non-binding practice-note caveat visible in the review packet and review index.",
+      "Treat references to AOMR, ASOP 7, ASOP 11, ASOP 22, ASOP 23, ASOP 41, AG43 / VM-21, and AG38 as cross-reference material unless the operational text is captured in the same batch."
+    ]
+  },
+  "promotionGates": {
+    "reviewOnlyByDefault": true,
+    "learnerFacingCriteria": [
+      "source citation exists",
+      "source support is clear",
+      "wording is not misleading",
+      "confidence is high",
+      "no unresolved review flags exist",
+      "no cross-reference ambiguity remains"
+    ],
+    "appReadyCriteria": [
+      "already eligible for learner-facing use",
+      "sanitized, stable, and versioned for the app thread"
+    ],
+    "ragReadyCriteria": [
+      "approved",
+      "source-bound",
+      "indexed with a stable ID",
+      "citation and locator present",
+      "review status no longer requires human disposition"
+    ]
+  },
+  "validationImplications": {
+    "planFile": "config/asset-adequacy-analysis-batch-plan.json",
+    "checkScript": "npm run check",
+    "futureChecks": [
+      "synchronize scripts/asset-adequacy-analysis-batch-definitions.mjs with the planned batch IDs",
+      "keep one topic window per batch",
+      "keep cross-reference tagging review-only",
+      "keep no-promotion guardrails visible"
+    ],
+    "portabilityNote": "Keep the plan separate from VM-20, VM-21, VM-22, and the other Practice Notes files so the processor stays portable across source families."
+  },
+  "operatingNote": "This source is companion guidance, not authoritative regulatory text. The wave should remain review-only until a later human decision explicitly changes the status."
+}

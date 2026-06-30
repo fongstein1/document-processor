@@ -423,6 +423,17 @@ const paths = {
     'review',
     'life_reinsurance_reserve_credit_practice_note_self_review.md',
   ),
+  assetAdequacyAnalysisPracticeNoteBatchPlanJson: path.join(
+    repoRoot,
+    'config',
+    'asset-adequacy-analysis-batch-plan.json',
+  ),
+  assetAdequacyAnalysisPracticeNoteExtractionPlanMd: path.join(
+    repoRoot,
+    'docs',
+    'processor',
+    'asset_adequacy_analysis_extraction_plan.md',
+  ),
   cia2022CapitalFCTEducationalNoteBatchPlanJson: path.join(
     repoRoot,
     'config',
@@ -6346,6 +6357,204 @@ const validateModelRegulationXXXPracticeNotePlanLike = (plan, label) => {
     problems.push(
       `${label}.validationImplications.planFile: must be config/model-regulation-xxx-practice-note-batch-plan.json`,
     )
+  }
+}
+
+const validateAssetAdequacyAnalysisPracticeNotePlanMarkdown = async (filePath, label) => {
+  const text = await readText(filePath)
+  const requiredHeadings = [
+    '## Source Scope',
+    '## Section / Topic Map',
+    '## Proposed Batch Sequence',
+    '## Review Standards',
+    '## Promotion Gates',
+    '## Validation Implications',
+    '## Operating Note',
+  ]
+  requiredHeadings.forEach((heading) => {
+    if (!text.includes(heading)) {
+      problems.push(`${label}: missing heading ${heading}`)
+    }
+  })
+  ;[
+    'review-only',
+    'not learner-facing',
+    'not app-ready',
+    'not RAG-ready',
+    'not promoted',
+    'Practice Notes/2017-Sep-AAA_Asset_Adequacy_Analysis.pdf',
+    'Practice Notes',
+    'Asset Adequacy Analysis practice note',
+    'non-binding',
+    'companion guidance',
+    'asset adequacy analysis',
+    'pages 1-91',
+    'batch-216',
+    'batch-217',
+    'batch-218',
+    'batch-219',
+    'batch-220',
+    'batch-221',
+    'AOMR',
+    'ASOP 7',
+    'ASOP 11',
+    'ASOP 22',
+    'ASOP 23',
+    'ASOP 41',
+    'AG43 / VM-21',
+    'AG38',
+    'IMR',
+    'AVR',
+    'reinsurance',
+  ].forEach((phrase) => {
+    if (!text.includes(phrase)) {
+      problems.push(`${label}: must mention ${phrase}`)
+    }
+  })
+}
+
+const validateAssetAdequacyAnalysisPracticeNotePlanLike = (plan, label) => {
+  if (!expectObject(plan, label)) return
+
+  if (plan.planId !== 'asset-adequacy-analysis-practice-note-control-plan') {
+    problems.push(`${label}: planId must be asset-adequacy-analysis-practice-note-control-plan`)
+  }
+  if (plan.planVersion !== '1.0') {
+    problems.push(`${label}: planVersion must be 1.0`)
+  }
+  if (plan.status !== 'planned') {
+    problems.push(`${label}: status must be planned`)
+  }
+  if (!expectObject(plan.sourceScope, `${label}.sourceScope`)) return
+
+  if (plan.sourceScope.sourceFamilyId !== 'practice_notes') {
+    problems.push(`${label}.sourceScope.sourceFamilyId: must be practice_notes`)
+  }
+  if (
+    plan.sourceScope.primarySourceFile !==
+    'Practice Notes/2017-Sep-AAA_Asset_Adequacy_Analysis.pdf'
+  ) {
+    problems.push(
+      `${label}.sourceScope.primarySourceFile: must be Practice Notes/2017-Sep-AAA_Asset_Adequacy_Analysis.pdf`,
+    )
+  }
+  if (plan.sourceScope.sourceTitle !== 'Asset Adequacy Analysis practice note') {
+    problems.push(`${label}.sourceScope.sourceTitle: must be Asset Adequacy Analysis practice note`)
+  }
+  if (
+    plan.sourceScope.sourceReference !==
+    'American Academy of Actuaries practice note, September 2017'
+  ) {
+    problems.push(
+      `${label}.sourceScope.sourceReference: must be American Academy of Actuaries practice note, September 2017`,
+    )
+  }
+  if (plan.sourceScope.domainId !== 'naic_regulatory') {
+    problems.push(`${label}.sourceScope.domainId: must be naic_regulatory`)
+  }
+  if (plan.sourceScope.issuingBody !== 'American Academy of Actuaries') {
+    problems.push(`${label}.sourceScope.issuingBody: must be American Academy of Actuaries`)
+  }
+  if (plan.sourceScope.sourceStatus !== 'active') {
+    problems.push(`${label}.sourceScope.sourceStatus: must be active`)
+  }
+  if (
+    !Array.isArray(plan.sourceScope.confirmedPageRange) ||
+    plan.sourceScope.confirmedPageRange.length !== 2 ||
+    plan.sourceScope.confirmedPageRange[0] !== 1 ||
+    plan.sourceScope.confirmedPageRange[1] !== 91
+  ) {
+    problems.push(`${label}.sourceScope.confirmedPageRange: must be [1, 91]`)
+  }
+  if (
+    !Array.isArray(plan.sourceScope.observedSectionWindows) ||
+    plan.sourceScope.observedSectionWindows.length !== 6
+  ) {
+    problems.push(`${label}.sourceScope.observedSectionWindows: must describe six section windows`)
+  }
+  if (
+    !Array.isArray(plan.sourceScope.boundaries) ||
+    !plan.sourceScope.boundaries.some((entry) => typeof entry === 'string' && entry.includes('single practice note file'))
+  ) {
+    problems.push(`${label}.sourceScope.boundaries: must mention the single practice-note file`)
+  }
+  if (
+    !Array.isArray(plan.sourceScope.boundaries) ||
+    !plan.sourceScope.boundaries.some((entry) => typeof entry === 'string' && entry.includes('other Practice Notes files'))
+  ) {
+    problems.push(`${label}.sourceScope.boundaries: must mention the other Practice Notes files`)
+  }
+  if (
+    !Array.isArray(plan.sourceScope.boundaries) ||
+    !plan.sourceScope.boundaries.some(
+      (entry) =>
+        typeof entry === 'string' &&
+        entry.includes('non-binding') &&
+        entry.includes('companion-guidance'),
+    )
+  ) {
+    problems.push(`${label}.sourceScope.boundaries: must mention the non-binding companion-guidance posture`)
+  }
+  if (
+    !Array.isArray(plan.sourceScope.boundaries) ||
+    !plan.sourceScope.boundaries.some((entry) => typeof entry === 'string' && entry.includes('page locators'))
+  ) {
+    problems.push(`${label}.sourceScope.boundaries: must mention page locators`)
+  }
+  if (
+    !Array.isArray(plan.sourceScope.exclusions) ||
+    !plan.sourceScope.exclusions.some((entry) => typeof entry === 'string' && entry.includes('No other Practice Notes files'))
+  ) {
+    problems.push(`${label}.sourceScope.exclusions: must mention the other Practice Notes file exclusion`)
+  }
+
+  if (!expectArray(plan.topicMap, `${label}.topicMap`, false)) return
+  if (plan.topicMap.length !== 6) {
+    problems.push(`${label}.topicMap: expected exactly six topic windows`)
+  }
+  if (!expectArray(plan.proposedBatches, `${label}.proposedBatches`, false)) return
+  if (plan.proposedBatches.length !== 6) {
+    problems.push(`${label}.proposedBatches: expected exactly six batches`)
+  }
+  ;['batch-216', 'batch-217', 'batch-218', 'batch-219', 'batch-220', 'batch-221'].forEach((batchId) => {
+    if (!plan.proposedBatches.some((entry) => entry.plannedBatchId === batchId)) {
+      problems.push(`${label}.proposedBatches: missing ${batchId}`)
+    }
+  })
+  if (!expectObject(plan.reviewStandards, `${label}.reviewStandards`)) return
+  if (plan.reviewStandards.reviewOnlyByDefault !== true) {
+    problems.push(`${label}.reviewStandards.reviewOnlyByDefault: must be true`)
+  }
+  if (
+    !Array.isArray(plan.reviewStandards.categories) ||
+    !plan.reviewStandards.categories.includes('non_binding_practice_note')
+  ) {
+    problems.push(`${label}.reviewStandards.categories: must include non_binding_practice_note`)
+  }
+  if (!expectObject(plan.promotionGates, `${label}.promotionGates`)) return
+  if (plan.promotionGates.reviewOnlyByDefault !== true) {
+    problems.push(`${label}.promotionGates.reviewOnlyByDefault: must be true`)
+  }
+  if (!expectObject(plan.validationImplications, `${label}.validationImplications`)) return
+  if (plan.validationImplications.planFile !== 'config/asset-adequacy-analysis-batch-plan.json') {
+    problems.push(`${label}.validationImplications.planFile: must reference the asset adequacy analysis plan file`)
+  }
+  if (plan.validationImplications.checkScript !== 'npm run check') {
+    problems.push(`${label}.validationImplications.checkScript: must be npm run check`)
+  }
+  if (
+    !Array.isArray(plan.validationImplications.futureChecks) ||
+    !plan.validationImplications.futureChecks.some(
+      (entry) => typeof entry === 'string' && entry.includes('batch-216'),
+    )
+  ) {
+    problems.push(`${label}.validationImplications.futureChecks: must mention the new batch IDs`)
+  }
+  if (
+    !plan.validationImplications.portabilityNote ||
+    !plan.validationImplications.portabilityNote.includes('portable across source families')
+  ) {
+    problems.push(`${label}.validationImplications.portabilityNote: must mention portability across source families`)
   }
 }
 
@@ -13242,6 +13451,20 @@ if (problems.length > 0) {
   }
   console.log(
     `- Life reinsurance practice-note plan verified: ${lifeReinsuranceReserveCreditPracticeNoteBatchPlan.proposedBatches.length} batches`,
+  )
+  await validateAssetAdequacyAnalysisPracticeNotePlanMarkdown(
+    paths.assetAdequacyAnalysisPracticeNoteExtractionPlanMd,
+    'docs/processor/asset_adequacy_analysis_extraction_plan.md',
+  )
+  const assetAdequacyAnalysisPracticeNoteBatchPlan = await readJson(
+    paths.assetAdequacyAnalysisPracticeNoteBatchPlanJson,
+  )
+  validateAssetAdequacyAnalysisPracticeNotePlanLike(
+    assetAdequacyAnalysisPracticeNoteBatchPlan,
+    'config/asset-adequacy-analysis-batch-plan.json',
+  )
+  console.log(
+    `- Asset adequacy analysis practice-note plan verified: ${assetAdequacyAnalysisPracticeNoteBatchPlan.proposedBatches.length} batches`,
   )
   const actuarialMemorandumPracticeNotePlanText = (await exists(
     paths.actuarialMemorandumPracticeNoteExtractionPlanMd,

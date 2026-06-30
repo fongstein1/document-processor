@@ -17,6 +17,11 @@
   output, review packet, validation report, and unresolved-issues summary in
   ignored working storage, then validated the scaffold and pilot outputs
   successfully.
+- 2026-06-29: Added the planning layer for the Asset Adequacy Analysis
+  practice note as the next review-only practice-note wave. The note remains
+  non-binding companion guidance, the section windows were mapped by page
+  locators, and the batch runner registry was extended to cover the new
+  planned batch IDs.
 - 2026-06-26: Hardened the pilot review layer after the first real batch by
   adding line-level locator support to the extraction/review contracts,
   requiring source references in the chunk manifest, expanding the pilot

@@ -10,7 +10,7 @@
 
 ## Latest known commit before this batch
 
-`cbe34ea`
+`37bfeaa`
 
 ## Current focus
 
@@ -23,6 +23,10 @@ companion-guidance aware. The LTCI practice note
 batches 195-197 in ignored working storage, and its review index and
 self-review note have been added locally so the companion-guidance wave stays
 review-only.
+The Asset Adequacy Analysis practice note
+(`Practice Notes/2017-Sep-AAA_Asset_Adequacy_Analysis.pdf`) is the next
+planned source wave. Its planning layer has been added, and the boundary will
+stay review-only, non-binding, and companion-guidance aware.
 
 ## Inventory intake gate
 
