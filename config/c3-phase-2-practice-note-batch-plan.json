@@ -1,0 +1,483 @@
+{
+  "planId": "c3-phase-2-practice-note-control-plan",
+  "planVersion": "1.0",
+  "status": "planned",
+  "sourceScope": {
+    "sourceFamilyId": "practice_notes",
+    "primarySourceFile": "Practice Notes/AAA - C3 Phase 2 - Sep 2006 - life_c3.8.pdf",
+    "sourceFolder": "Practice Notes",
+    "sourceTitle": "C3 Phase 2 practice note",
+    "sourceReference": "American Academy of Actuaries practice note, September 2006",
+    "sourceStatus": "non-binding practice note",
+    "sourceStatusNote": "Companion guidance / implementation note; not authoritative regulatory text.",
+    "issuingBody": "American Academy of Actuaries",
+    "domainId": "naic_regulatory",
+    "rawSourceRoot": "D:\\Work\\AI Projects\\NAIC Valuation Manual Course",
+    "confirmedPageRange": [1, 93],
+    "observedSectionWindows": [
+      {
+        "sectionId": "c3-opening-guidance",
+        "pageRange": [1, 12],
+        "note": "Front matter, products covered, and common practice guidance."
+      },
+      {
+        "sectionId": "c3-model-differences",
+        "pageRange": [13, 25],
+        "note": "VA RBC vs VACARVM differences, model granularity, and starting assets."
+      },
+      {
+        "sectionId": "c3-scenarios-and-economics",
+        "pageRange": [26, 33],
+        "note": "Scenario generation, calibration, fund modeling, and economic assumptions."
+      },
+      {
+        "sectionId": "c3-assumption-framework",
+        "pageRange": [34, 40],
+        "note": "Prudent best estimate, discount rate, and core assumption setting."
+      },
+      {
+        "sectionId": "c3-assumption-closeout",
+        "pageRange": [41, 50],
+        "note": "Revenue sharing, negative assets, interpolation, and informed projection."
+      },
+      {
+        "sectionId": "c3-alternative-methodology-standard-scenario",
+        "pageRange": [51, 60],
+        "note": "Alternative Methodology and Standard Scenario opener."
+      },
+      {
+        "sectionId": "c3-standard-scenario-risk-controls",
+        "pageRange": [61, 70],
+        "note": "Standard Scenario tail, reinsurance, and hedging entry point."
+      },
+      {
+        "sectionId": "c3-certification-documentation",
+        "pageRange": [71, 80],
+        "note": "C-3 Phase I consistency, certification, and documentation requirements."
+      },
+      {
+        "sectionId": "c3-glossary-appendix-closeout",
+        "pageRange": [81, 93],
+        "note": "Peer review, glossary terms, appendix Q&A, and closing boundary."
+      }
+    ],
+    "boundaries": [
+      "Keep planning focused on this single practice note file.",
+      "Do not widen into the other Practice Notes files in the same folder.",
+      "Keep VM-20, VM-21, VM-22, VM-30, VM-31, AG files, and NY regulation files review-only unless the same batch intentionally includes the referenced operational text.",
+      "Keep the disclaimer and the non-binding status visible as companion-guidance context, not as authoritative regulatory text.",
+      "Use page locators as the primary citation anchor; line references are not expected for this PDF slice.",
+      "Keep a page-image wording backstop visible because the text layer is noisy in places and should not be overclaimed."
+    ],
+    "exclusions": [
+      "No full-document processing outside this source file.",
+      "No learner-facing content.",
+      "No app-ready exports.",
+      "No RAG-ready exports.",
+      "No approved/promoted exports.",
+      "No eLearning scripts, slides, quizzes, or app exports.",
+      "No raw source files in Git.",
+      "No other Practice Notes files in the same wave."
+    ]
+  },
+  "topicMap": [
+    {
+      "topicId": "c3-opening-guidance",
+      "label": "Front matter, introduction, products covered, and common practice guidance",
+      "pageRange": [1, 12],
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "background_content",
+        "non_binding_practice_note",
+        "caveat_or_companion_guidance",
+        "cross_reference_mapping",
+        "boundary_control_window"
+      ],
+      "crossReferenceWatchlist": ["VA RBC scope", "VACARVM scope", "ASOP 7", "ASOP 21", "ASOP 41"],
+      "boundaryNote": "Keep the opening guidance together before the model-comparison section begins."
+    },
+    {
+      "topicId": "c3-model-differences",
+      "label": "VA RBC vs VACARVM differences, model types, and starting assets",
+      "pageRange": [13, 25],
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "regulatory_requirement",
+        "calculation_structure",
+        "formula_context",
+        "cross_reference_mapping",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": ["VA RBC instructions", "VACARVM", "AVR / IMR treatment", "model granularity"],
+      "boundaryNote": "Keep the comparison and starting-asset language together while the model differences remain in view."
+    },
+    {
+      "topicId": "c3-scenarios-and-economics",
+      "label": "Scenario generation, calibration, fund modeling, and economic assumptions",
+      "pageRange": [26, 33],
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "scenario_or_stochastic_requirement",
+        "asset_modeling_judgment",
+        "formula_context",
+        "cross_reference_mapping",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": ["S&P 500 calibration", "CAPM / factor models", "risk-neutral scenarios", "hedging"],
+      "boundaryNote": "Keep the scenario-generation slice separate from the assumption-setting and methodology sections."
+    },
+    {
+      "topicId": "c3-assumption-framework",
+      "label": "Prudent best estimate, discount rate, and core assumption setting",
+      "pageRange": [34, 40],
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "prescribed_assumption",
+        "company_or_prudent_estimate_assumption",
+        "calculation_structure",
+        "cross_reference_mapping",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": ["prudent best estimate", "discount rates", "tax adjustment", "revenue sharing", "lapse / mortality"],
+      "boundaryNote": "Keep the assumption framework narrow before the revenue-sharing and interpolation material begins."
+    },
+    {
+      "topicId": "c3-assumption-closeout",
+      "label": "Revenue-sharing closeout, interpolation, and informed projection details",
+      "pageRange": [41, 50],
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "calculation_structure",
+        "formula_context",
+        "boundary_control_window",
+        "cross_reference_mapping",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": ["tax reserve adjustment", "revenue sharing controls", "interpolation", "informed projection"],
+      "boundaryNote": "Keep the valuation-date bridge and interpolation mechanics together before Section 8 begins."
+    },
+    {
+      "topicId": "c3-alternative-methodology-standard-scenario",
+      "label": "Alternative Methodology and Standard Scenario opener",
+      "pageRange": [51, 60],
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "reserve_method_structure",
+        "calculation_structure",
+        "definition_or_terminology",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": ["GC", "CA", "AAR", "ITM logic", "Standard Scenario"],
+      "boundaryNote": "Keep the AM / Standard Scenario relationship readable and do not widen into the hedge tail."
+    },
+    {
+      "topicId": "c3-standard-scenario-risk-controls",
+      "label": "Standard Scenario tail, reinsurance, and hedging entry point",
+      "pageRange": [61, 70],
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "reinsurance",
+        "hedging_or_risk_mitigation",
+        "scenario_or_stochastic_requirement",
+        "calculation_structure",
+        "cross_reference_mapping"
+      ],
+      "crossReferenceWatchlist": ["approved hedges", "risk-neutral scenarios", "C-3 Phase I", "fixed options"],
+      "boundaryNote": "Keep the reinsurance and hedge-credit mechanics contiguous and stop before the certification layer."
+    },
+    {
+      "topicId": "c3-certification-documentation",
+      "label": "Certification, documentation, and peer review interfaces",
+      "pageRange": [71, 80],
+      "reviewComplexity": "medium-high",
+      "expectedIssueTypes": [
+        "reporting_requirement",
+        "documentation_expectation",
+        "governance_or_control_expectation",
+        "cross_reference_mapping",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": ["certification", "reliance", "peer review", "model validation"],
+      "boundaryNote": "Keep certification and documentation together while the reporting/control layer is in view."
+    },
+    {
+      "topicId": "c3-glossary-appendix-closeout",
+      "label": "Peer review, glossary terms, appendix Q&A, and closing boundary",
+      "pageRange": [81, 93],
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "background_content",
+        "caveat_or_companion_guidance",
+        "boundary_control_window",
+        "cross_reference_mapping",
+        "non_binding_practice_note"
+      ],
+      "crossReferenceWatchlist": ["peer review", "glossary", "appendix Q&A", "closing boundary"],
+      "boundaryNote": "Keep the appendix / closeout separate so the source ends cleanly at page 93."
+    }
+  ],
+  "proposedBatches": [
+    {
+      "plannedBatchId": "batch-222",
+      "batchSlug": "c3-phase-2-222-opening-guidance",
+      "sourceId": "c3-opening-guidance",
+      "batchTitle": "opening guidance and products-covered slice",
+      "pageWindow": [1, 12],
+      "sectionReference": "Front matter, products covered, and common practice guidance",
+      "summaryLead": "Front matter, products covered, and common practice guidance keep the note framed as companion guidance",
+      "nextStep": "Proceed to the VA RBC vs VACARVM comparison slice.",
+      "validationCheckId": "c3-opening-guidance-coverage",
+      "validationCheckDetails": "The selected pages capture the opening guidance, products covered, and common-practice material before Section 3 begins.",
+      "sourceNotes": "Pages 1-12 only; title pages, disclaimer, TOC, products covered, and common practice guidance.",
+      "reviewFlags": [
+        "non_binding_practice_note",
+        "caveat_or_companion_guidance",
+        "cross_reference_mapping",
+        "boundary_control_window"
+      ],
+      "flagType": "companion_guidance",
+      "flagMessage": "Keep the non-binding caveat visible while the opening guidance stays separate from the model-comparison section.",
+      "issueType": "companion_guidance",
+      "issueMessage": "The opening slice is intentionally narrow and should stay review-only.",
+      "issueAction": "Keep the opening guidance out of learner-facing output.",
+      "issueEvidence": "Pages 1-12 cover the title matter, disclaimer, products covered, and common practice guidance.",
+      "citationText": "Practice Note for the Application of C-3 Phase II",
+      "reviewStatus": "needs_human_review",
+      "authorityLevel": "supporting_guidance"
+    },
+    {
+      "plannedBatchId": "batch-223",
+      "batchSlug": "c3-phase-2-223-model-differences",
+      "sourceId": "c3-model-differences",
+      "batchTitle": "VA RBC vs VACARVM differences and model granularity slice",
+      "pageWindow": [13, 25],
+      "sectionReference": "VA RBC vs VACARVM differences, model granularity, and starting assets",
+      "summaryLead": "The model-difference and starting-asset language should stay together while the comparison layer is in view",
+      "nextStep": "Proceed to the scenario-generation and calibration slice.",
+      "validationCheckId": "c3-model-differences-coverage",
+      "validationCheckDetails": "The selected pages capture the VA RBC versus VACARVM comparison, the model granularity guidance, and the starting-asset discussion.",
+      "sourceNotes": "Pages 13-25 only; Section 3, Section 4, and Section 5 boundary material.",
+      "reviewFlags": [
+        "regulatory_requirement",
+        "calculation_structure",
+        "formula_context",
+        "cross_reference_mapping",
+        "requires_human_interpretation"
+      ],
+      "flagType": "boundary_review",
+      "flagMessage": "Keep the comparison and starting-asset material review-only and do not overread it as a binding rule.",
+      "issueType": "comparison_boundary",
+      "issueMessage": "The comparison layer should stay source-bound and not be promoted.",
+      "issueAction": "Keep the model-difference material out of learner-facing output.",
+      "issueEvidence": "Pages 13-25 cover the VA RBC / VACARVM comparison, granularity, and starting assets.",
+      "citationText": "Section 3 - Consistency and Differences Between VA RBC and VACARVM Models",
+      "reviewStatus": "needs_human_review",
+      "authorityLevel": "supporting_guidance"
+    },
+    {
+      "plannedBatchId": "batch-224",
+      "batchSlug": "c3-phase-2-224-scenarios-economics",
+      "sourceId": "c3-scenarios-and-economics",
+      "batchTitle": "scenario-generation and calibration slice",
+      "pageWindow": [26, 33],
+      "sectionReference": "Scenario generation, calibration, fund modeling, and economic assumptions",
+      "summaryLead": "The scenario-generation material should stay together as the first stochastic-modeling slice",
+      "nextStep": "Proceed to the prudent-best-estimate and assumption-setting slice.",
+      "validationCheckId": "c3-scenarios-economics-coverage",
+      "validationCheckDetails": "The selected pages capture the fund-return calibration, proxy mapping, and scenario-generation guidance.",
+      "sourceNotes": "Pages 26-33 only; Section 6 scenario generation and calibration guidance.",
+      "reviewFlags": [
+        "scenario_or_stochastic_requirement",
+        "asset_modeling_judgment",
+        "formula_context",
+        "cross_reference_mapping",
+        "requires_human_interpretation"
+      ],
+      "flagType": "scenario_review",
+      "flagMessage": "Keep the calibration and fund-modeling guidance review-only and preserve the boundary to the assumption section.",
+      "issueType": "scenario_boundary",
+      "issueMessage": "The scenario-generation slice is intentionally narrow and should stay review-only.",
+      "issueAction": "Keep the scenario-calibration material out of learner-facing output.",
+      "issueEvidence": "Pages 26-33 cover the scenario-generator and fund-modeling guidance.",
+      "citationText": "Section 6 - Details on Scenarios / Scenario Generators / Economic Assumptions",
+      "reviewStatus": "needs_human_review",
+      "authorityLevel": "supporting_guidance"
+    },
+    {
+      "plannedBatchId": "batch-225",
+      "batchSlug": "c3-phase-2-225-assumption-framework",
+      "sourceId": "c3-assumption-framework",
+      "batchTitle": "prudent-best-estimate and assumption framework slice",
+      "pageWindow": [34, 40],
+      "sectionReference": "Prudent best estimate, discount rate, and core assumption setting",
+      "summaryLead": "The assumption framework should stay narrow before the revenue-sharing and interpolation material begins",
+      "nextStep": "Proceed to the revenue-sharing and interpolation closeout slice.",
+      "validationCheckId": "c3-assumption-framework-coverage",
+      "validationCheckDetails": "The selected pages capture prudent best estimate, discount-rate basis, and the initial assumption-setting guidance.",
+      "sourceNotes": "Pages 34-40 only; Section 7 assumption framework opening.",
+      "reviewFlags": [
+        "prescribed_assumption",
+        "company_or_prudent_estimate_assumption",
+        "calculation_structure",
+        "cross_reference_mapping",
+        "requires_human_interpretation"
+      ],
+      "flagType": "assumption_review",
+      "flagMessage": "Keep the assumption-setting framework source-bound and do not overstate it as a universal rule.",
+      "issueType": "assumption_boundary",
+      "issueMessage": "The prudent-best-estimate slice is intentionally narrow and should stay review-only.",
+      "issueAction": "Keep the assumption framework out of learner-facing output.",
+      "issueEvidence": "Pages 34-40 cover prudent best estimate, discount rates, and core assumption setting.",
+      "citationText": "Section 7 - Details on Actuarial/Modeling Assumptions",
+      "reviewStatus": "needs_human_review",
+      "authorityLevel": "supporting_guidance"
+    },
+    {
+      "plannedBatchId": "batch-226",
+      "batchSlug": "c3-phase-2-226-assumption-closeout",
+      "sourceId": "c3-assumption-closeout",
+      "batchTitle": "revenue-sharing and interpolation closeout slice",
+      "pageWindow": [41, 50],
+      "sectionReference": "Revenue sharing, negative assets, interpolation, and informed projection",
+      "summaryLead": "The revenue-sharing and interpolation material should stay together while the valuation-date bridge is in view",
+      "nextStep": "Proceed to the alternative methodology and standard scenario opener.",
+      "validationCheckId": "c3-assumption-closeout-coverage",
+      "validationCheckDetails": "The selected pages capture the revenue-sharing rules, negative-asset handling, and the interpolation / informed-projection bridge.",
+      "sourceNotes": "Pages 41-50 only; Section 7 closeout and valuation-date bridging details.",
+      "reviewFlags": [
+        "calculation_structure",
+        "formula_context",
+        "boundary_control_window",
+        "cross_reference_mapping",
+        "requires_human_interpretation"
+      ],
+      "flagType": "bridge_review",
+      "flagMessage": "Keep the revenue-sharing bridge and interpolation mechanics review-only and do not widen the slice.",
+      "issueType": "bridge_boundary",
+      "issueMessage": "The interpolation and informed-projection material stays review-only and should not be repackaged as a promotion candidate.",
+      "issueAction": "Keep the valuation-date bridge out of learner-facing output.",
+      "issueEvidence": "Pages 41-50 cover the revenue-sharing closeout and interpolation / informed projection methods.",
+      "citationText": "Section 7 - Details on Actuarial/Modeling Assumptions (continued)",
+      "reviewStatus": "needs_human_review",
+      "authorityLevel": "supporting_guidance"
+    },
+    {
+      "plannedBatchId": "batch-227",
+      "batchSlug": "c3-phase-2-227-am-standard-scenario",
+      "sourceId": "c3-alternative-methodology-standard-scenario",
+      "batchTitle": "alternative methodology and standard scenario opener",
+      "pageWindow": [51, 60],
+      "sectionReference": "Alternative Methodology and Standard Scenario opener",
+      "summaryLead": "The AM / Standard Scenario relationship should stay readable before the risk-control tail begins",
+      "nextStep": "Proceed to the standard-scenario tail, reinsurance, and hedging entry point.",
+      "validationCheckId": "c3-am-standard-scenario-coverage",
+      "validationCheckDetails": "The selected pages capture the alternative-methodology framing, the GC / CA / AAR relationship, and the standard-scenario opener.",
+      "sourceNotes": "Pages 51-60 only; Section 8 and the opening of Section 9.",
+      "reviewFlags": [
+        "reserve_method_structure",
+        "calculation_structure",
+        "definition_or_terminology",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "flagType": "method_review",
+      "flagMessage": "Keep the alternative-methodology and standard-scenario relationship visible without widening into the hedge tail.",
+      "issueType": "method_boundary",
+      "issueMessage": "The AM / Standard Scenario slice is intentionally narrow and should stay review-only.",
+      "issueAction": "Keep the AM / Standard Scenario opener out of learner-facing output.",
+      "issueEvidence": "Pages 51-60 cover the AM and the opening standard-scenario questions.",
+      "citationText": "Section 8 - Details on Alternative Methodology / Section 9 - Details on Standard Scenario",
+      "reviewStatus": "needs_human_review",
+      "authorityLevel": "supporting_guidance"
+    },
+    {
+      "plannedBatchId": "batch-228",
+      "batchSlug": "c3-phase-2-228-risk-controls",
+      "sourceId": "c3-standard-scenario-risk-controls",
+      "batchTitle": "standard scenario tail, reinsurance, and hedging entry slice",
+      "pageWindow": [61, 70],
+      "sectionReference": "Standard Scenario tail, reinsurance, and hedging entry point",
+      "summaryLead": "The standard-scenario tail should keep reinsurance and hedge-credit mechanics contiguous",
+      "nextStep": "Proceed to the C-3 Phase I consistency and certification slice.",
+      "validationCheckId": "c3-risk-controls-coverage",
+      "validationCheckDetails": "The selected pages capture the hedge-credit treatment, reinsurance questions, and the start of the hedging section.",
+      "sourceNotes": "Pages 61-70 only; section 9 tail and section 10-11 risk-control material.",
+      "reviewFlags": [
+        "reinsurance",
+        "hedging_or_risk_mitigation",
+        "scenario_or_stochastic_requirement",
+        "calculation_structure",
+        "cross_reference_mapping"
+      ],
+      "flagType": "risk_control_review",
+      "flagMessage": "Keep the reinsurance and hedging mechanics contiguous and stop before the certification layer.",
+      "issueType": "risk_control_boundary",
+      "issueMessage": "The reinsurance / hedge-credit slice is intentionally narrow and should stay review-only.",
+      "issueAction": "Keep the risk-control material out of learner-facing output.",
+      "issueEvidence": "Pages 61-70 cover reinsurance, hedging, and the beginning of the hedge-effectiveness discussion.",
+      "citationText": "Section 10 - Treatment of Reinsurance / Section 11 - Treatment of Hedging",
+      "reviewStatus": "needs_human_review",
+      "authorityLevel": "supporting_guidance"
+    },
+    {
+      "plannedBatchId": "batch-229",
+      "batchSlug": "c3-phase-2-229-certification-documentation",
+      "sourceId": "c3-certification-documentation",
+      "batchTitle": "certification and documentation slice",
+      "pageWindow": [71, 80],
+      "sectionReference": "C-3 Phase I consistency, certification, and documentation requirements",
+      "summaryLead": "The C-3 Phase I consistency discussion, certification, and documentation layer should stay together",
+      "nextStep": "Proceed to the peer-review and glossary closeout slice.",
+      "validationCheckId": "c3-certification-documentation-coverage",
+      "validationCheckDetails": "The selected pages capture the C-3 Phase I consistency discussion, certification questions, and documentation controls.",
+      "sourceNotes": "Pages 71-80 only; sections 11-13 reporting / documentation material.",
+      "reviewFlags": [
+        "reporting_requirement",
+        "documentation_expectation",
+        "governance_or_control_expectation",
+        "cross_reference_mapping",
+        "requires_human_interpretation"
+      ],
+      "flagType": "documentation_review",
+      "flagMessage": "Keep the certification and documentation material review-only and do not merge it into a promotional output.",
+      "issueType": "documentation_boundary",
+      "issueMessage": "The certification / documentation slice is intentionally narrow and should stay review-only.",
+      "issueAction": "Keep the certification and documentation material out of learner-facing output.",
+      "issueEvidence": "Pages 71-80 cover the C-3 Phase I consistency discussion, certification, and documentation expectations.",
+      "citationText": "Section 12 - Consistency Between VA RBC and C-3 Phase I Models / Section 13 - Details on Certification & Required Documentation",
+      "reviewStatus": "needs_human_review",
+      "authorityLevel": "supporting_guidance"
+    },
+    {
+      "plannedBatchId": "batch-230",
+      "batchSlug": "c3-phase-2-230-closeout",
+      "sourceId": "c3-glossary-appendix-closeout",
+      "batchTitle": "peer review, glossary, appendix Q&A, and closeout slice",
+      "pageWindow": [81, 93],
+      "sectionReference": "Peer review, glossary, appendix Q&A, and closing boundary",
+      "summaryLead": "The appendix and closeout material should end the source cleanly at page 93",
+      "nextStep": "Stop at the source boundary after confirming the closeout pages remain review-only.",
+      "validationCheckId": "c3-glossary-appendix-coverage",
+      "validationCheckDetails": "The selected pages capture the peer-review discussion, glossary terms, appendix Q&A, and the closing boundary through page 93.",
+      "sourceNotes": "Pages 81-93 only; sections 14-15 and appendix closeout.",
+      "reviewFlags": [
+        "background_content",
+        "caveat_or_companion_guidance",
+        "boundary_control_window",
+        "cross_reference_mapping",
+        "non_binding_practice_note"
+      ],
+      "flagType": "closeout_review",
+      "flagMessage": "Keep the appendix and glossary material review-only and do not widen the source family.",
+      "issueType": "closeout_boundary",
+      "issueMessage": "The peer-review and appendix closeout should remain summary-only and review-only.",
+      "issueAction": "Keep the closeout material out of learner-facing output.",
+      "issueEvidence": "Pages 81-93 cover peer review, the glossary, and the appendix Q&A closeout.",
+      "citationText": "Sections 14-15 and Appendix - C-3 Phase II Implementation Questions and Answers",
+      "reviewStatus": "needs_human_review",
+      "authorityLevel": "supporting_guidance"
+    }
+  ]
+}
+

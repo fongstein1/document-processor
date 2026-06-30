@@ -61,6 +61,7 @@ import { modelRegulationXXXPracticeNoteBatchDefinitions } from './model-regulati
 import { lifeReinsuranceReserveCreditPracticeNoteBatchDefinitions } from './life-reinsurance-reserve-credit-practice-note-batch-definitions.mjs'
 import { assetAdequacyAnalysisPracticeNoteBatchDefinitions } from './asset-adequacy-analysis-batch-definitions.mjs'
 import { actuarialMemorandumPracticeNoteBatchDefinitions } from './actuarial-memorandum-practice-note-batch-definitions.mjs'
+import { c3Phase2PracticeNoteBatchDefinitions } from './c3-phase-2-practice-note-batch-definitions.mjs'
 import { cia2022CapitalFCTEducationalNoteBatchDefinitions } from './cia-2022-capital-fct-educational-note-batch-definitions.mjs'
 import { cia2023FinancialConditionTestingEducationalNoteBatchDefinitions } from './cia-2023-financial-condition-testing-educational-note-batch-definitions.mjs'
 import { ltciPracticeNoteBatchDefinitions } from './ltci-practice-note-batch-definitions.mjs'
@@ -2259,6 +2260,7 @@ export const batchDefinitions = {
   ...lifeReinsuranceReserveCreditPracticeNoteBatchDefinitions,
   ...assetAdequacyAnalysisPracticeNoteBatchDefinitions,
   ...actuarialMemorandumPracticeNoteBatchDefinitions,
+  ...c3Phase2PracticeNoteBatchDefinitions,
   ...cia2022CapitalFCTEducationalNoteBatchDefinitions,
   ...cia2023FinancialConditionTestingEducationalNoteBatchDefinitions,
   ...ltciPracticeNoteBatchDefinitions,

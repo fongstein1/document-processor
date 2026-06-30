@@ -748,3 +748,5 @@
 - 2026-06-29: Completed `Practice Notes/222030e.pdf` as a CIA 2022 capital/FCT educational-note wave in batches 206-209, created the tracked review index and self-review note, refreshed the repository POC summary and project-state docs, and kept the companion-guidance caveat visible with page locators as the primary review anchor.
 
 - 2026-06-29: Completed `Practice Notes/223010e.pdf` as a CIA 2023 financial-condition-testing educational-note wave in batches 210-215, created the tracked review index and self-review note, refreshed the repository POC summary and project-state docs, and kept the companion-guidance caveat visible with page locators as the primary review anchor.
+
+- 2026-06-29: Inspected the remaining-source inventory after the CIA educational-note wave, confirmed `Practice Notes/AAA - C3 Phase 2 - Sep 2006 - life_c3.8.pdf` as the next safe practice-note source, drafted the review-only planning layer for batches 222-230, wired the batch registry and scaffold validator to recognize the planned C3 Phase 2 wave, and kept the non-binding companion-guidance caveat explicit with page locators as the primary review anchor.

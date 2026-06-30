@@ -74,8 +74,8 @@ The CIA 2022 capital/FCT educational-note wave is complete as batches
 206-209 in ignored working storage. Its tracked review index and self-review
 note are in place, and the wave remains review-only, non-binding, and
 companion-guidance aware. The next safe source unit selected from the
-received inventory is `Practice Notes/223010e.pdf`, and its page boundary
-should be confirmed before any new wave begins.
+received inventory is `Practice Notes/AAA - C3 Phase 2 - Sep 2006 - life_c3.8.pdf`,
+and its page boundary should be confirmed before any new wave begins.
 
 - `npm run pilot:course-core`: passed; created the core VM course pilot batch
   outputs in `data/work/batches/batch-002/`

@@ -46,8 +46,9 @@ again before selecting the next safe source unit.
 The CIA 2022 capital/FCT educational-note wave is complete as batches
 206-209 in ignored working storage. Its tracked review index and self-review
 note are in place, and the next immediate source unit has now been selected
-as `Practice Notes/223010e.pdf`. The inspection and planning step should stay
-review-only until the page boundary is confirmed.
+as `Practice Notes/AAA - C3 Phase 2 - Sep 2006 - life_c3.8.pdf`. The
+inspection and planning step should stay review-only until the page boundary
+is confirmed.
 
 AG 40 is now complete as batches 135-136 in ignored working storage. Its
 tracked review index and self-review note now form part of the handoff set.
