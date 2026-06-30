@@ -423,6 +423,29 @@ const paths = {
     'review',
     'life_reinsurance_reserve_credit_practice_note_self_review.md',
   ),
+  cia2022CapitalFCTEducationalNoteBatchPlanJson: path.join(
+    repoRoot,
+    'config',
+    'cia-2022-capital-fct-educational-note-batch-plan.json',
+  ),
+  cia2022CapitalFCTEducationalNoteExtractionPlanMd: path.join(
+    repoRoot,
+    'docs',
+    'processor',
+    'cia_2022_capital_fct_educational_note_extraction_plan.md',
+  ),
+  cia2022CapitalFCTEducationalNoteReviewIndexMd: path.join(
+    repoRoot,
+    'docs',
+    'review',
+    'cia_2022_capital_fct_educational_note_review_index.md',
+  ),
+  cia2022CapitalFCTEducationalNoteSelfReviewMd: path.join(
+    repoRoot,
+    'docs',
+    'review',
+    'cia_2022_capital_fct_educational_note_self_review.md',
+  ),
   ltciPracticeNoteBatchPlanJson: path.join(
     repoRoot,
     'config',
@@ -6192,6 +6215,110 @@ const validateLifeReinsuranceReserveCreditPracticeNotePlanMarkdown = async (file
   ].forEach((phrase) => {
     if (!text.includes(phrase)) {
       problems.push(`${label}: must mention ${phrase}`)
+    }
+  })
+}
+
+const validateCia2022CapitalFCTEducationalNotePlanMarkdown = async (filePath, label) => {
+  const text = await readText(filePath)
+  const requiredHeadings = [
+    '## Source Scope',
+    '## Section / Topic Map',
+    '## Proposed Batch Sequence',
+    '## Review Standards',
+    '## Promotion Gates',
+    '## Validation Implications',
+    '## Operating Note',
+  ]
+  requiredHeadings.forEach((heading) => {
+    if (!text.includes(heading)) {
+      problems.push(`${label}: missing heading ${heading}`)
+    }
+  })
+  ;[
+    'review-only',
+    'not learner-facing',
+    'not app-ready',
+    'not RAG-ready',
+    'not promoted',
+    'Practice Notes/222030e.pdf',
+    'Educational Note',
+    'non-binding practice note',
+    'companion guidance',
+    'capital and financial condition testing',
+    'pages 1-20',
+    'batch-206',
+    'batch-207',
+    'batch-208',
+    'batch-209',
+    'OSFI',
+    'AMF',
+    'IFRS 17',
+    'climate',
+    'ORSA',
+    'reinsurance',
+  ].forEach((phrase) => {
+    if (!text.includes(phrase)) {
+      problems.push(`${label}: must mention ${phrase}`)
+    }
+  })
+}
+
+const validateCia2022CapitalFCTEducationalNotePlanLike = (plan, label) => {
+  if (!expectObject(plan, label)) return
+
+  if (plan.planId !== 'cia-2022-capital-fct-educational-note-control-plan') {
+    problems.push(`${label}: planId must be cia-2022-capital-fct-educational-note-control-plan`)
+  }
+  if (plan.planVersion !== '1.0') {
+    problems.push(`${label}: planVersion must be 1.0`)
+  }
+  if (plan.status !== 'planned') {
+    problems.push(`${label}: status must be planned`)
+  }
+  if (!expectObject(plan.sourceScope, `${label}.sourceScope`)) return
+
+  if (plan.sourceScope.sourceFamilyId !== 'practice_notes') {
+    problems.push(`${label}.sourceScope.sourceFamilyId: must be practice_notes`)
+  }
+  if (plan.sourceScope.primarySourceFile !== 'Practice Notes/222030e.pdf') {
+    problems.push(
+      `${label}.sourceScope.primarySourceFile: must be Practice Notes/222030e.pdf`,
+    )
+  }
+  if (
+    plan.sourceScope.sourceTitle !==
+    'Educational Note: Guidance for the 2022 Reporting on Capital and Financial Condition Testing for Life, P&C, and Mortgage Insurers'
+  ) {
+    problems.push(
+      `${label}.sourceScope.sourceTitle: unexpected educational note title`,
+    )
+  }
+  if (
+    plan.sourceScope.sourceReference !==
+    'Canadian Institute of Actuaries educational note, February 2022'
+  ) {
+    problems.push(
+      `${label}.sourceScope.sourceReference: unexpected educational note reference`,
+    )
+  }
+  if (plan.sourceScope.sourceStatus !== 'non-binding practice note') {
+    problems.push(
+      `${label}.sourceScope.sourceStatus: must be non-binding practice note`,
+    )
+  }
+  if (JSON.stringify(plan.sourceScope.confirmedPageRange) !== JSON.stringify([1, 20])) {
+    problems.push(`${label}.sourceScope.confirmedPageRange: must be [1, 20]`)
+  }
+
+  if (!Array.isArray(plan.proposedBatches) || plan.proposedBatches.length !== 4) {
+    problems.push(`${label}.proposedBatches: must contain 4 batches`)
+  }
+  const expectedBatchIds = ['batch-206', 'batch-207', 'batch-208', 'batch-209']
+  expectedBatchIds.forEach((batchId) => {
+    const batch = plan.proposedBatches?.find((candidate) => candidate.plannedBatchId === batchId)
+    if (!batch) {
+      problems.push(`${label}.proposedBatches: missing ${batchId}`)
     }
   })
 }
@@ -13006,6 +13133,55 @@ if (problems.length > 0) {
   console.log(
     `- Actuarial memorandum practice-note plan verified: ${actuarialMemorandumPracticeNoteBatchPlan.proposedBatches.length} batches`,
   )
+  await validateCia2022CapitalFCTEducationalNotePlanMarkdown(
+    paths.cia2022CapitalFCTEducationalNoteExtractionPlanMd,
+    'docs/processor/cia_2022_capital_fct_educational_note_extraction_plan.md',
+  )
+  const cia2022CapitalFCTEducationalNoteBatchPlan = await readJson(
+    paths.cia2022CapitalFCTEducationalNoteBatchPlanJson,
+  )
+  validateCia2022CapitalFCTEducationalNotePlanLike(
+    cia2022CapitalFCTEducationalNoteBatchPlan,
+    'config/cia-2022-capital-fct-educational-note-batch-plan.json',
+  )
+  const cia2022CapitalFCTEducationalNoteBatchIds =
+    cia2022CapitalFCTEducationalNoteBatchPlan.proposedBatches.map((batch) => batch.plannedBatchId)
+  const cia2022CapitalFCTEducationalNoteReviewIndexText = (await exists(
+    paths.cia2022CapitalFCTEducationalNoteReviewIndexMd,
+  ))
+    ? await readText(paths.cia2022CapitalFCTEducationalNoteReviewIndexMd)
+    : ''
+  const cia2022CapitalFCTEducationalNoteSelfReviewText = (await exists(
+    paths.cia2022CapitalFCTEducationalNoteSelfReviewMd,
+  ))
+    ? await readText(paths.cia2022CapitalFCTEducationalNoteSelfReviewMd)
+    : ''
+  const cia2022CapitalFCTEducationalNoteReviewIndexReady =
+    cia2022CapitalFCTEducationalNoteReviewIndexText.length > 0 &&
+    cia2022CapitalFCTEducationalNoteBatchIds.every((batchId) =>
+      cia2022CapitalFCTEducationalNoteReviewIndexText.includes(batchId),
+    )
+  const cia2022CapitalFCTEducationalNoteSelfReviewReady =
+    cia2022CapitalFCTEducationalNoteSelfReviewText.length > 0 &&
+    cia2022CapitalFCTEducationalNoteBatchIds.every((batchId) =>
+      cia2022CapitalFCTEducationalNoteSelfReviewText.includes(batchId),
+    )
+  const cia2022CapitalFCTEducationalNoteReviewArtifactsPresent =
+    cia2022CapitalFCTEducationalNoteReviewIndexReady &&
+    cia2022CapitalFCTEducationalNoteSelfReviewReady
+  if (cia2022CapitalFCTEducationalNoteReviewIndexReady) {
+    console.log(
+      `- CIA 2022 capital/FCT educational note review index verified: ${cia2022CapitalFCTEducationalNoteBatchPlan.proposedBatches.length} batches`,
+    )
+  }
+  if (cia2022CapitalFCTEducationalNoteSelfReviewReady) {
+    console.log(
+      `- CIA 2022 capital/FCT educational note self-review verified: ${cia2022CapitalFCTEducationalNoteBatchPlan.proposedBatches.length} batches`,
+    )
+  }
+  console.log(
+    `- CIA 2022 capital/FCT educational note plan verified: ${cia2022CapitalFCTEducationalNoteBatchPlan.proposedBatches.length} batches`,
+  )
   await validateModelRegulationXXXPracticeNotePlanMarkdown(
     paths.modelRegulationXXXPracticeNoteExtractionPlanMd,
     'docs/processor/model_regulation_xxx_practice_note_extraction_plan.md',
@@ -13044,7 +13220,7 @@ if (problems.length > 0) {
   }
   console.log(`- Model Regulation XXX plan verified: ${modelRegulationXXXBatchPlan.proposedBatches.length} batches`)
   console.log(
-    `- POC status summary verified: ${actuarialMemorandumPracticeNoteReviewArtifactsPresent ? 70 : lifeReinsuranceReserveCreditPracticeNoteReviewArtifactsPresent ? 69 : modelRegulationXXXReviewArtifactsPresent ? 68 : reg213ReviewArtifactsPresent ? 66 : reg210ReviewArtifactsPresent ? 65 : modelGovernanceReviewArtifactsPresent ? 64 : reg141ReviewArtifactsPresent ? 63 : ag55ReviewArtifactsPresent ? 62 : ag54ReviewArtifactsPresent ? 61 : ag53ReviewArtifactsPresent ? 58 : ag52ReviewArtifactsPresent ? 57 : ag51ReviewArtifactsPresent ? 56 : ag50ReviewArtifactsPresent ? 55 : ag49ReviewArtifactsPresent ? 54 : ag48ReviewArtifactsPresent ? 53 : ag47ReviewArtifactsPresent ? 52 : ag46ReviewArtifactsPresent ? 51 : ag45ReviewArtifactsPresent ? 50 : ag44ReviewArtifactsPresent ? 49 : ag43ReviewArtifactsPresent ? 48 : ag42ReviewArtifactsPresent ? 47 : ag41ReviewArtifactsPresent ? 46 : ag40ReviewArtifactsPresent ? 45 : ag39ReviewArtifactsPresent ? 44 : ag38ReviewArtifactsPresent ? 43 : ag37ReviewArtifactsPresent ? 42 : ag36ReviewArtifactsPresent ? 41 : ag35ReviewArtifactsPresent ? 40 : ag34ReviewArtifactsPresent ? 39 : 38} review indexes`,
+    `- POC status summary verified: ${cia2022CapitalFCTEducationalNoteReviewArtifactsPresent ? 71 : actuarialMemorandumPracticeNoteReviewArtifactsPresent ? 70 : lifeReinsuranceReserveCreditPracticeNoteReviewArtifactsPresent ? 69 : modelRegulationXXXReviewArtifactsPresent ? 68 : reg213ReviewArtifactsPresent ? 66 : reg210ReviewArtifactsPresent ? 65 : modelGovernanceReviewArtifactsPresent ? 64 : reg141ReviewArtifactsPresent ? 63 : ag55ReviewArtifactsPresent ? 62 : ag54ReviewArtifactsPresent ? 61 : ag53ReviewArtifactsPresent ? 58 : ag52ReviewArtifactsPresent ? 57 : ag51ReviewArtifactsPresent ? 56 : ag50ReviewArtifactsPresent ? 55 : ag49ReviewArtifactsPresent ? 54 : ag48ReviewArtifactsPresent ? 53 : ag47ReviewArtifactsPresent ? 52 : ag46ReviewArtifactsPresent ? 51 : ag45ReviewArtifactsPresent ? 50 : ag44ReviewArtifactsPresent ? 49 : ag43ReviewArtifactsPresent ? 48 : ag42ReviewArtifactsPresent ? 47 : ag41ReviewArtifactsPresent ? 46 : ag40ReviewArtifactsPresent ? 45 : ag39ReviewArtifactsPresent ? 44 : ag38ReviewArtifactsPresent ? 43 : ag37ReviewArtifactsPresent ? 42 : ag36ReviewArtifactsPresent ? 41 : ag35ReviewArtifactsPresent ? 40 : ag34ReviewArtifactsPresent ? 39 : 38} review indexes`,
   )
   if (validatedPilotBatchCount > 0) {
     console.log(`- Pilot batches validated: ${validatedPilotBatchCount}`)

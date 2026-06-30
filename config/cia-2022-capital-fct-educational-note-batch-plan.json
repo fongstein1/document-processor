@@ -1,0 +1,255 @@
+{
+  "planId": "cia-2022-capital-fct-educational-note-control-plan",
+  "planVersion": "1.0",
+  "status": "planned",
+  "sourceScope": {
+    "sourceFamilyId": "practice_notes",
+    "primarySourceFile": "Practice Notes/222030e.pdf",
+    "sourceFolder": "Practice Notes",
+    "sourceTitle": "Educational Note: Guidance for the 2022 Reporting on Capital and Financial Condition Testing for Life, P&C, and Mortgage Insurers",
+    "sourceReference": "Canadian Institute of Actuaries educational note, February 2022",
+    "sourceStatus": "non-binding practice note",
+    "sourceStatusNote": "Educational note / companion guidance; not authoritative regulatory text.",
+    "domainId": "canadian_guidance",
+    "rawSourceRoot": "D:\\Work\\AI Projects\\NAIC Valuation Manual Course",
+    "confirmedPageRange": [1, 20],
+    "observedSectionWindows": [
+      {
+        "sectionId": "cia-opening-guidance",
+        "pageRange": [1, 6],
+        "note": "Front matter, memorandum, and background guidance."
+      },
+      {
+        "sectionId": "cia-capital-and-fct-overview",
+        "pageRange": [7, 11],
+        "note": "Capital requirements and FCT overview for 2022."
+      },
+      {
+        "sectionId": "cia-additional-guidance",
+        "pageRange": [12, 16],
+        "note": "Additional guidance, climate, COVID-19, ORSA, reinsurance, and model-use references."
+      },
+      {
+        "sectionId": "cia-appendices-and-closeout",
+        "pageRange": [17, 20],
+        "note": "Appendices A-C and closeout material."
+      }
+    ],
+    "boundaries": [
+      "Keep planning focused on this single educational note file.",
+      "Do not widen into other educational notes or broader practice-note files in the same folder.",
+      "Keep VM-20, VM-21, VM-22, VM-30, VM-31, AG, and regulation references review-only unless the same batch intentionally includes the referenced operational text.",
+      "Keep the educational-note caveat visible as companion-guidance context, not as authoritative regulatory text.",
+      "Use page locators as the primary citation anchor; line references are not expected for this PDF slice."
+    ],
+    "exclusions": [
+      "No full-document processing outside this source file.",
+      "No learner-facing content.",
+      "No app-ready exports.",
+      "No RAG-ready exports.",
+      "No approved/promoted exports.",
+      "No eLearning scripts, slides, quizzes, or app exports.",
+      "No raw source files in Git.",
+      "No other educational note files in the same wave."
+    ]
+  },
+  "topicMap": [
+    {
+      "topicId": "cia-opening-guidance",
+      "label": "Front matter, introduction, and background guidance",
+      "pageRange": [1, 6],
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "background_content",
+        "caveat_or_companion_guidance",
+        "cross_reference_mapping",
+        "boundary_control_window"
+      ],
+      "crossReferenceWatchlist": ["CIA due-process guidance", "standards-of-practice references"],
+      "boundaryNote": "Keep the opening educational-note framing together before the main guidance begins."
+    },
+    {
+      "topicId": "cia-capital-and-fct-overview",
+      "label": "Capital requirements and FCT overview for 2022",
+      "pageRange": [7, 11],
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "regulatory_requirement",
+        "reporting_requirement",
+        "documentation_expectation",
+        "cross_reference_mapping"
+      ],
+      "crossReferenceWatchlist": ["OSFI", "AMF", "IFRS 17", "capital guideline references"],
+      "boundaryNote": "Keep the core capital and FCT overview together as one review-only slice."
+    },
+    {
+      "topicId": "cia-additional-guidance",
+      "label": "Additional guidance, climate, COVID-19, ORSA, reinsurance, and model-use references",
+      "pageRange": [12, 16],
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "scenario_or_stochastic_requirement",
+        "reinsurance",
+        "asset_modeling_judgment",
+        "cross_reference_mapping",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": ["OSFI", "AMF", "ORSA", "climate", "management actions"],
+      "boundaryNote": "Keep the caution-heavy guidance together while preserving the regulatory and modeling boundary."
+    },
+    {
+      "topicId": "cia-appendices-and-closeout",
+      "label": "Appendices A-C and closeout material",
+      "pageRange": [17, 20],
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "cross_reference_mapping",
+        "background_content",
+        "caveat_or_companion_guidance",
+        "boundary_control_window"
+      ],
+      "crossReferenceWatchlist": ["OSFI documentation", "AMF documentation", "CIA guidance"],
+      "boundaryNote": "Close the note with the appendix material while keeping the end boundary explicit."
+    }
+  ],
+  "proposedBatches": [
+    {
+      "plannedBatchId": "batch-206",
+      "topicIds": ["cia-opening-guidance"],
+      "title": "Educational note opening slice",
+      "paragraphTarget": {
+        "knownWindow": [1, 6],
+        "notes": "Capture the opening educational-note framing and background guidance as one review-only slice."
+      },
+      "rationale": "Keep the opening companion-guidance material together before the substantive sections begin.",
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "background_content",
+        "caveat_or_companion_guidance",
+        "cross_reference_mapping",
+        "boundary_control_window"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    },
+    {
+      "plannedBatchId": "batch-207",
+      "topicIds": ["cia-capital-and-fct-overview"],
+      "title": "Capital and FCT overview slice",
+      "paragraphTarget": {
+        "knownWindow": [7, 11],
+        "notes": "Keep the core capital and FCT overview together as one review-only slice."
+      },
+      "rationale": "Keep the core capital and FCT overview together as a narrow review-only slice.",
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "regulatory_requirement",
+        "reporting_requirement",
+        "documentation_expectation",
+        "cross_reference_mapping"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    },
+    {
+      "plannedBatchId": "batch-208",
+      "topicIds": ["cia-additional-guidance"],
+      "title": "Additional guidance slice",
+      "paragraphTarget": {
+        "knownWindow": [12, 16],
+        "notes": "Keep the caution-heavy guidance together while preserving the regulatory and modeling boundary."
+      },
+      "rationale": "Keep the caution-heavy guidance together while preserving the regulatory and modeling boundary.",
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "scenario_or_stochastic_requirement",
+        "reinsurance",
+        "asset_modeling_judgment",
+        "cross_reference_mapping",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    },
+    {
+      "plannedBatchId": "batch-209",
+      "topicIds": ["cia-appendices-and-closeout"],
+      "title": "Appendices and closeout slice",
+      "paragraphTarget": {
+        "knownWindow": [17, 20],
+        "notes": "Close the note with the appendix material while keeping the end boundary explicit."
+      },
+      "rationale": "Close the note with the appendix material while keeping the end boundary explicit.",
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "cross_reference_mapping",
+        "background_content",
+        "caveat_or_companion_guidance",
+        "boundary_control_window"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    }
+  ],
+  "reviewStandards": {
+    "reviewOnlyByDefault": true,
+    "categories": [
+      "regulatory_requirement",
+      "reporting_requirement",
+      "documentation_expectation",
+      "definition_or_terminology",
+      "cross_reference_mapping",
+      "background_content",
+      "caveat_or_companion_guidance",
+      "scenario_or_stochastic_requirement",
+      "reinsurance",
+      "asset_modeling_judgment",
+      "boundary_control_window",
+      "requires_human_interpretation",
+      "non_binding_practice_note"
+    ],
+    "notes": [
+      "Use page locators as the primary anchor because line references are not expected for this PDF slice.",
+      "Keep the non-binding educational-note caveat visible in the review packet and review index.",
+      "Treat references to OSFI, AMF, IFRS 17, CIA guidance, and reporting requirements as cross-reference material unless the operational text is captured in the same batch."
+    ]
+  },
+  "promotionGates": {
+    "reviewOnlyByDefault": true,
+    "learnerFacingCriteria": [
+      "source citation exists",
+      "source support is clear",
+      "wording is not misleading",
+      "confidence is high",
+      "no unresolved review flags exist",
+      "no cross-reference ambiguity remains"
+    ],
+    "appReadyCriteria": [
+      "already eligible for learner-facing use",
+      "sanitized, stable, and versioned for the app thread"
+    ],
+    "ragReadyCriteria": [
+      "approved",
+      "source-bound",
+      "indexed with a stable ID",
+      "citation and locator present",
+      "review status no longer requires human disposition"
+    ]
+  },
+  "validationImplications": {
+    "planFile": "config/cia-2022-capital-fct-educational-note-batch-plan.json",
+    "checkScript": "npm run check",
+    "futureChecks": [
+      "synchronize scripts/cia-2022-capital-fct-educational-note-batch-definitions.mjs with the planned batch IDs",
+      "keep one topic window per batch",
+      "keep cross-reference tagging review-only",
+      "keep no-promotion guardrails visible"
+    ],
+    "portabilityNote": "Keep the plan separate from VM-20, VM-21, VM-22, and the other practice-note files so the processor stays portable across source families."
+  },
+  "operatingNote": "This plan is intentionally conservative. It is a boundary-control artifact that should reduce review burden before any controlled educational-note extraction run begins."
+}

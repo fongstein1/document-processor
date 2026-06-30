@@ -65,6 +65,10 @@ The Actuarial Memorandum practice-note wave is now complete as batches
 note are in place, and the wave remains review-only, non-binding, and
 companion-guidance aware.
 
+The next safe source unit selected from the received inventory is
+`Practice Notes/222030e.pdf`. Its planning layer is staged locally and
+remains review-only until the batch wave is executed and indexed.
+
 - `npm run pilot:course-core`: passed; created the core VM course pilot batch
   outputs in `data/work/batches/batch-002/`
 - `npm run vm20:batch-003`: passed; created the first controlled VM-20

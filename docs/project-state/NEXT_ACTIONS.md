@@ -38,6 +38,11 @@ The Actuarial Memorandum practice-note wave is now complete as batches
 note are in place, and the next step is to inspect the remaining inventory
 again before selecting the next safe source unit.
 
+The next immediate source unit has now been selected as
+`Practice Notes/222030e.pdf`. The planning layer is being staged locally, and
+the next step is to validate and commit that plan before running batch-206
+through batch-209.
+
 AG 40 is now complete as batches 135-136 in ignored working storage. Its
 tracked review index and self-review note now form part of the handoff set.
 AG 41 is now complete as batch-137 in ignored working storage. Its tracked
