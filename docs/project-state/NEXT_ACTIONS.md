@@ -581,3 +581,11 @@ source unit without guessing from memory.
 
 
 The CIA 2023 financial-condition-testing educational-note wave is complete as batches 210-215 in ignored working storage. Its tracked review index and self-review note are in place, and the next immediate source unit should be selected from the remaining inventory after inspection.
+
+## C3 Phase 2 practice note next step
+
+The C3 Phase 2 practice note wave is complete as batches 222-230 in ignored
+working storage. Its tracked review index and self-review note are in place,
+the source remains non-binding companion guidance, and the next safe step is
+to inspect the remaining inventory again before selecting another source
+unit.

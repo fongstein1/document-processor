@@ -909,3 +909,12 @@ The CIA 2022 capital/FCT educational-note wave is complete as batches 206-209 in
 ## CIA 2023 Educational Note addendum
 
 The CIA 2023 financial-condition-testing educational-note wave is complete as batches 210-215 in ignored working storage. The tracked review index and self-review note are `docs/review/cia_2023_financial_condition_testing_educational_note_review_index.md` and `docs/review/cia_2023_financial_condition_testing_educational_note_self_review.md`, the wave stays review-only, and the companion-guidance caveat remains explicit. The next safe continuation step is to inspect the remaining inventory again before selecting the next source unit.
+
+## C3 Phase 2 practice note addendum
+
+The C3 Phase 2 practice note wave is complete as batches 222-230 in ignored
+working storage. The tracked review index and self-review note are
+`docs/review/c3_phase_2_practice_note_review_index.md` and
+`docs/review/c3_phase_2_practice_note_self_review.md`, the wave stays
+review-only, and the non-binding companion-guidance caveat remains explicit.
+The broader proof-of-concept handoff now spans 74 review indexes.

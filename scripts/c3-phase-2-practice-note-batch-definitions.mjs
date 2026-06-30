@@ -34,6 +34,7 @@ const makeBatch = (spec) => {
         sourceId: spec.sourceId,
         itemId,
         flagType: spec.flagType,
+        message: spec.flagMessage,
         flagMessage: spec.flagMessage,
         notes: 'Keep review-only and do not promote.',
       },
@@ -85,9 +86,11 @@ const makeBatch = (spec) => {
         details: 'Practice-note manifest blocks learner-facing promotion and app-ready export.',
       },
       {
-        checkId: spec.validationCheckId,
+        checkId: spec.validationCheckId ?? `${spec.sourceId}-coverage`,
         status: 'passed',
-        details: spec.validationCheckDetails,
+        details:
+          spec.validationCheckDetails ??
+          `The selected pages capture the ${spec.batchTitle} and stay review-only.`,
       },
       {
         checkId: 'source-reference-coverage',
@@ -345,6 +348,8 @@ const c3Phase2PracticeNoteBatchSpecs = [
     batchSlug: 'c3-phase-2-228-risk-controls',
     sourceId: 'c3-standard-scenario-risk-controls',
     batchTitle: 'standard scenario tail, reinsurance, and hedging entry slice',
+    summaryLead:
+      'The standard-scenario tail should keep reinsurance and hedge-credit mechanics contiguous',
     pageWindow: [61, 70],
     sectionReference: 'Standard Scenario tail, reinsurance, and hedging entry point',
     citationText: 'Section 10 - Treatment of Reinsurance / Section 11 - Treatment of Hedging',
@@ -442,4 +447,3 @@ const c3Phase2PracticeNoteBatchSpecs = [
 export const c3Phase2PracticeNoteBatchDefinitions = Object.fromEntries(
   c3Phase2PracticeNoteBatchSpecs.map((spec) => [spec.plannedBatchId, makeBatch(spec)]),
 )
-
