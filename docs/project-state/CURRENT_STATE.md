@@ -49,6 +49,7 @@ The Regulation 213 Second Amendment wave (`NY Regulations/Reg-213-11-NYCRR-S103-
 The Regulation 213 First Amendment text wave (`NY Regulations/Reg-213-11-NYCRR-S103-Amendment-1-rf213a1text.pdf`) is now complete as batches 260-265 in ignored working storage. Its tracked review index and self-review note are in place, and the wave remains review-only, certified-amendment aware, and separate from the FAQ and later amendment addenda.
 The Regulation 102 wave (`NY Regulations/2021 VLM Report_DRAFT-(1-27-2020) with academy Updates V1-Reg-102-11-NYCRR-S127.pdf`) is now complete as batch-267 in ignored working storage. Its tracked review index and self-review note are in place, and the wave remains review-only, active, and page-image backed for exact wording.
 The Regulation 128 wave (`NY Regulations/2021 VLM Report_DRAFT-(1-27-2020) with academy Updates V1-Reg-128-11-NYCRR-S097.pdf`) is now complete as batch-268 in ignored working storage. Its tracked review index and self-review note are in place, and the wave remains review-only, active, and page-image backed for exact wording.
+The Regulation 127 wave (`NY Regulations/2021 VLM Report_DRAFT-(1-27-2020) with academy Updates V1-Reg-127-11-NYCRR-S044.pdf`) is now complete as batch-269 in ignored working storage. Its tracked review index and self-review note are in place, and the wave remains review-only, active, and page-image backed for exact wording.
 
 ## Inventory intake gate
 

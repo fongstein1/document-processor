@@ -84,6 +84,9 @@ repository handoff now spans 85 review indexes.
 The Regulation 128 wave is now complete as batch-268 in ignored working
 storage. Its tracked review index and self-review note are in place, and the
 repository handoff now spans 86 review indexes.
+The Regulation 127 wave is now complete as batch-269 in ignored working
+storage. Its tracked review index and self-review note are in place, and the
+repository handoff now spans 87 review indexes.
 
 AG 40 is now complete as batches 135-136 in ignored working storage. Its
 tracked review index and self-review note now form part of the handoff set.
@@ -684,6 +687,15 @@ selecting another source unit.
 ## Reg 128 complete
 
 The Regulation 128 wave is now complete as batch-268 in ignored working
+storage. Its tracked review index and self-review note are in place, the
+source stays review-only and active, and the page-image wording backstop
+remains visible because the text layer is noisy / OCR-like. The next safe
+continuation step is to inspect the remaining inventory again before
+selecting another source unit.
+
+## Reg 127 complete
+
+The Regulation 127 wave is now complete as batch-269 in ignored working
 storage. Its tracked review index and self-review note are in place, the
 source stays review-only and active, and the page-image wording backstop
 remains visible because the text layer is noisy / OCR-like. The next safe
