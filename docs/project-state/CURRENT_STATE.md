@@ -610,5 +610,15 @@ batches 231-244 in ignored working storage. The tracked review index and
 self-review note are `docs/review/c3_phase_2_ag43_2011_practice_note_review_index.md`
 and `docs/review/c3_phase_2_ag43_2011_practice_note_self_review.md`, the
 source stays review-only and non-binding, and the companion-guidance caveat
-remains explicit. The broader proof-of-concept handoff now spans 75 review
+remains explicit. The broader proof-of-concept handoff now spans 76 review
 indexes.
+
+## Reg 213 Amendment No. 1 FAQ addendum
+
+The Regulation 213 Amendment No. 1 FAQ wave is now complete as batches
+245-247 in ignored working storage. The tracked review index and self-review
+note are in place, the source stays review-only and companion-only, and the
+page-image wording backstop remains visible because exact wording should not
+be overclaimed from the wrapped FAQ text. The next safe continuation step is
+to inspect the remaining inventory again before selecting another source
+unit.

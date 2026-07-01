@@ -234,6 +234,13 @@ processed for review-only analysis, but they are not authoritative regulatory
 text and should not be promoted unless a later human review explicitly pairs
 them with binding source support.
 
+## FAQ companion guidance
+
+DFS FAQs and similar guidance-note addenda are handled as companion-only
+implementation support. They may be processed for review-only analysis, but
+they are not authoritative regulatory text and should not be promoted unless
+a later human review explicitly pairs them with binding source support.
+
 ## Repealed or obsolete guidance
 
 Sources that explicitly say they are repealed, obsolete, or no longer

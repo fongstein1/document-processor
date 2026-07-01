@@ -613,3 +613,12 @@ and the companion-guidance caveat remains explicit.
 
 The next safe continuation step is to inspect the remaining inventory again
 before selecting another source unit, rather than guessing from memory.
+
+## Reg 213 FAQ complete
+
+The Regulation 213 Amendment No. 1 FAQ wave is now complete as batches
+245-247 in ignored working storage. Its tracked review index and self-review
+note are in place, and the source stays review-only, companion-only, and
+page-image-backed for exact wording. The next safe continuation step is to
+inspect the remaining inventory again and choose the smallest clearly safe
+source unit that remains.

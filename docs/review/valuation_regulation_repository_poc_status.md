@@ -12,7 +12,7 @@ regulation repository. It consolidates the completed review-only extraction
 waves without changing the status of the underlying batch outputs or review
 indexes.
 
-The handoff now spans 75 review indexes, up from 74 review indexes. The
+The handoff now spans 76 review indexes, up from 75 review indexes. The
 earlier 51 review indexes checkpoint remains part of the handoff history, the
 earlier 50 review indexes checkpoint remains part of the handoff history, the
 earlier 49 review indexes checkpoint remains part of the handoff history, the
@@ -70,6 +70,8 @@ review indexes:
 - `docs/review/reg210_self_review.md`
 - `docs/review/reg213_review_index.md`
 - `docs/review/reg213_self_review.md`
+- `docs/review/reg213_amendment1_faq_review_index.md`
+- `docs/review/reg213_amendment1_faq_self_review.md`
 - `docs/review/ag38_review_index.md`
 - `docs/review/ag38_self_review.md`
 - `docs/review/ag39_review_index.md`
@@ -917,7 +919,7 @@ working storage. The tracked review index and self-review note are
 `docs/review/c3_phase_2_practice_note_review_index.md` and
 `docs/review/c3_phase_2_practice_note_self_review.md`, the wave stays
 review-only, and the non-binding companion-guidance caveat remains explicit.
-The broader proof-of-concept handoff now spans 75 review indexes.
+The broader proof-of-concept handoff now spans 76 review indexes.
 
 ## C3 Phase 2 / AG 43 March 2011 addendum
 
@@ -928,3 +930,13 @@ and `docs/review/c3_phase_2_ag43_2011_practice_note_self_review.md`, the
 wave stays review-only and non-binding, and the companion-guidance caveat
 remains explicit. The broader proof-of-concept handoff now spans 75 review
 indexes.
+
+## Reg 213 Amendment No. 1 FAQ addendum
+
+The Regulation 213 Amendment No. 1 FAQ wave is complete as batches 245-247 in
+ignored working storage. The tracked review index and self-review note are
+`docs/review/reg213_amendment1_faq_review_index.md` and
+`docs/review/reg213_amendment1_faq_self_review.md`, the FAQ stays
+review-only and companion-only, and the page-image wording backstop remains
+visible for exact question / answer wording. The broader proof-of-concept
+handoff now spans 76 review indexes.

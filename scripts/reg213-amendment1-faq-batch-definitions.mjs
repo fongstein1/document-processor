@@ -256,6 +256,8 @@ const reg213Amendment1FaqBatchSpecs = [
       'The opening guidance and early implementation questions should remain separate from the later FAQ pages.',
     topicIssueEvidence: 'Page 1 contains the guidance note caveat and the early implementation questions.',
     topicValidationDetails: 'The opening page stayed confined to the planned page range and kept the caveat visible.',
+    validationCheckId: 'reg213-amendment1-faq-opening-guidance-coverage',
+    validationCheckDetails: 'The opening page stayed confined to the planned page range and kept the caveat visible.',
     reviewFlags: [
       'caveat_or_companion_guidance',
       'jurisdiction_specific_requirement',
@@ -306,6 +308,8 @@ const reg213Amendment1FaqBatchSpecs = [
       'The grading methodology and reserve-structure answers should remain separate from the opening and closeout FAQ pages.',
     topicIssueEvidence: 'Page 2 contains the grading methodology, rate publication, supplement, and reserve questions.',
     topicValidationDetails: 'The middle page stayed confined to the planned page range and kept the caveat visible.',
+    validationCheckId: 'reg213-amendment1-faq-methodology-coverage',
+    validationCheckDetails: 'The middle page stayed confined to the planned page range and kept the caveat visible.',
     reviewFlags: [
       'caveat_or_companion_guidance',
       'regulatory_requirement',
@@ -357,6 +361,8 @@ const reg213Amendment1FaqBatchSpecs = [
       'The later adoption, phase-in reporting, and hedging answers should remain separate from the earlier FAQ pages.',
     topicIssueEvidence: 'Page 3 contains the later-adoption, phase-in, hedging, and closeout questions.',
     topicValidationDetails: 'The closing page stayed confined to the planned page range and kept the caveat visible.',
+    validationCheckId: 'reg213-amendment1-faq-closeout-coverage',
+    validationCheckDetails: 'The closing page stayed confined to the planned page range and kept the caveat visible.',
     reviewFlags: [
       'caveat_or_companion_guidance',
       'regulatory_requirement',
@@ -377,4 +383,3 @@ export const reg213Amendment1FaqBatchDefinitions = Object.fromEntries(
     return [spec.plannedBatchId, batch]
   }),
 )
-

@@ -850,6 +850,8 @@ const requiredFiles = [
   'docs/review/valuation_regulation_repository_poc_status.md',
   'docs/review/reg213_review_index.md',
   'docs/review/reg213_self_review.md',
+  'docs/review/reg213_amendment1_faq_review_index.md',
+  'docs/review/reg213_amendment1_faq_self_review.md',
   'docs/processor/reg213_amendment1_faq_extraction_plan.md',
   'config/reg213-amendment1-faq-batch-plan.json',
   'scripts/reg213-amendment1-faq-batch-definitions.mjs',
