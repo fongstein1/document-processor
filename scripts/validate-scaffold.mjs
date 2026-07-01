@@ -390,6 +390,8 @@ const paths = {
   ),
   lhmanual26BatchPlanJson: path.join(repoRoot, 'config', 'lhmanual26-batch-plan.json'),
   lhmanual26ExtractionPlanMd: path.join(repoRoot, 'docs', 'processor', 'lhmanual26_extraction_plan.md'),
+  lhmanual26ReviewIndexMd: path.join(repoRoot, 'docs', 'review', 'lhmanual26_review_index.md'),
+  lhmanual26SelfReviewMd: path.join(repoRoot, 'docs', 'review', 'lhmanual26_self_review.md'),
   reg213Amendment1FaqReviewIndexMd: path.join(
     repoRoot,
     'docs',
@@ -907,6 +909,8 @@ const requiredFiles = [
   'docs/processor/lhmanual26_extraction_plan.md',
   'config/lhmanual26-batch-plan.json',
   'scripts/lhmanual26-batch-definitions.mjs',
+  'docs/review/lhmanual26_review_index.md',
+  'docs/review/lhmanual26_self_review.md',
   'docs/processor/reg213_amendment1_faq_extraction_plan.md',
   'docs/processor/reg213_amendment6_extraction_plan.md',
   'docs/processor/reg213_amendment5_extraction_plan.md',
@@ -13993,6 +13997,29 @@ if (problems.length > 0) {
   console.log(
     `- Life & Health Valuation Law Manual plan verified: ${lhmanual26BatchPlan.proposedBatches.length} batches`,
   )
+  const lhmanual26ReviewIndexText = (await exists(paths.lhmanual26ReviewIndexMd))
+    ? await readText(paths.lhmanual26ReviewIndexMd)
+    : ''
+  const lhmanual26SelfReviewText = (await exists(paths.lhmanual26SelfReviewMd))
+    ? await readText(paths.lhmanual26SelfReviewMd)
+    : ''
+  const lhmanual26ReviewIndexReady =
+    lhmanual26ReviewIndexText.length > 0 &&
+    lhmanual26BatchIds.every((batchId) => lhmanual26ReviewIndexText.includes(batchId))
+  const lhmanual26SelfReviewReady =
+    lhmanual26SelfReviewText.length > 0 &&
+    lhmanual26BatchIds.every((batchId) => lhmanual26SelfReviewText.includes(batchId))
+  const lhmanual26ReviewArtifactsPresent = lhmanual26ReviewIndexReady && lhmanual26SelfReviewReady
+  if (lhmanual26ReviewIndexReady) {
+    console.log(
+      `- Life & Health Valuation Law Manual review index verified: ${lhmanual26BatchPlan.proposedBatches.length} batches`,
+    )
+  }
+  if (lhmanual26SelfReviewReady) {
+    console.log(
+      `- Life & Health Valuation Law Manual self-review verified: ${lhmanual26BatchPlan.proposedBatches.length} batches`,
+    )
+  }
   const modelGovernanceBatchIds = modelGovernancePracticeNoteBatchPlan.proposedBatches.map((batch) => batch.plannedBatchId)
   const modelGovernanceReviewIndexText = (await exists(paths.modelGovernancePracticeNoteReviewIndexMd))
     ? await readText(paths.modelGovernancePracticeNoteReviewIndexMd)
@@ -14428,7 +14455,7 @@ if (problems.length > 0) {
   }
   console.log(`- Model Regulation XXX plan verified: ${modelRegulationXXXBatchPlan.proposedBatches.length} batches`)
   console.log(
-    `- POC status summary verified: ${reg213Amendment5ReviewArtifactsPresent ? 78 : reg213Amendment6ReviewArtifactsPresent ? 77 : reg213Amendment1FaqReviewArtifactsPresent ? 76 : c3Phase2Ag43March2011PracticeNoteReviewArtifactsPresent ? 75 : c3Phase2PracticeNoteReviewArtifactsPresent ? 74 : assetAdequacyAnalysisPracticeNoteReviewArtifactsPresent ? 73 : cia2023FinancialConditionTestingEducationalNoteReviewArtifactsPresent ? 72 : cia2022CapitalFCTEducationalNoteReviewArtifactsPresent ? 71 : actuarialMemorandumPracticeNoteReviewArtifactsPresent ? 70 : lifeReinsuranceReserveCreditPracticeNoteReviewArtifactsPresent ? 69 : modelRegulationXXXReviewArtifactsPresent ? 68 : reg213ReviewArtifactsPresent ? 66 : reg210ReviewArtifactsPresent ? 65 : modelGovernanceReviewArtifactsPresent ? 64 : reg141ReviewArtifactsPresent ? 63 : ag55ReviewArtifactsPresent ? 62 : ag54ReviewArtifactsPresent ? 61 : ag53ReviewArtifactsPresent ? 58 : ag52ReviewArtifactsPresent ? 57 : ag51ReviewArtifactsPresent ? 56 : ag50ReviewArtifactsPresent ? 55 : ag49ReviewArtifactsPresent ? 54 : ag48ReviewArtifactsPresent ? 53 : ag47ReviewArtifactsPresent ? 52 : ag46ReviewArtifactsPresent ? 51 : ag45ReviewArtifactsPresent ? 50 : ag44ReviewArtifactsPresent ? 49 : ag43ReviewArtifactsPresent ? 48 : ag42ReviewArtifactsPresent ? 47 : ag41ReviewArtifactsPresent ? 46 : ag40ReviewArtifactsPresent ? 45 : ag39ReviewArtifactsPresent ? 44 : ag38ReviewArtifactsPresent ? 43 : ag37ReviewArtifactsPresent ? 42 : ag36ReviewArtifactsPresent ? 41 : ag35ReviewArtifactsPresent ? 40 : ag34ReviewArtifactsPresent ? 39 : 38} review indexes`,
+    `- POC status summary verified: ${lhmanual26ReviewArtifactsPresent ? 79 : reg213Amendment5ReviewArtifactsPresent ? 78 : reg213Amendment6ReviewArtifactsPresent ? 77 : reg213Amendment1FaqReviewArtifactsPresent ? 76 : c3Phase2Ag43March2011PracticeNoteReviewArtifactsPresent ? 75 : c3Phase2PracticeNoteReviewArtifactsPresent ? 74 : assetAdequacyAnalysisPracticeNoteReviewArtifactsPresent ? 73 : cia2023FinancialConditionTestingEducationalNoteReviewArtifactsPresent ? 72 : cia2022CapitalFCTEducationalNoteReviewArtifactsPresent ? 71 : actuarialMemorandumPracticeNoteReviewArtifactsPresent ? 70 : lifeReinsuranceReserveCreditPracticeNoteReviewArtifactsPresent ? 69 : modelRegulationXXXReviewArtifactsPresent ? 68 : reg213ReviewArtifactsPresent ? 66 : reg210ReviewArtifactsPresent ? 65 : modelGovernanceReviewArtifactsPresent ? 64 : reg141ReviewArtifactsPresent ? 63 : ag55ReviewArtifactsPresent ? 62 : ag54ReviewArtifactsPresent ? 61 : ag53ReviewArtifactsPresent ? 58 : ag52ReviewArtifactsPresent ? 57 : ag51ReviewArtifactsPresent ? 56 : ag50ReviewArtifactsPresent ? 55 : ag49ReviewArtifactsPresent ? 54 : ag48ReviewArtifactsPresent ? 53 : ag47ReviewArtifactsPresent ? 52 : ag46ReviewArtifactsPresent ? 51 : ag45ReviewArtifactsPresent ? 50 : ag44ReviewArtifactsPresent ? 49 : ag43ReviewArtifactsPresent ? 48 : ag42ReviewArtifactsPresent ? 47 : ag41ReviewArtifactsPresent ? 46 : ag40ReviewArtifactsPresent ? 45 : ag39ReviewArtifactsPresent ? 44 : ag38ReviewArtifactsPresent ? 43 : ag37ReviewArtifactsPresent ? 42 : ag36ReviewArtifactsPresent ? 41 : ag35ReviewArtifactsPresent ? 40 : ag34ReviewArtifactsPresent ? 39 : 38} review indexes`,
   )
   if (validatedPilotBatchCount > 0) {
     console.log(`- Pilot batches validated: ${validatedPilotBatchCount}`)

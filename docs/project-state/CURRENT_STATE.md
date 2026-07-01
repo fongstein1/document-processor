@@ -38,6 +38,11 @@ The Regulation 213 Fifth Amendment wave
 in ignored working storage. Its tracked review index and self-review note are
 in place, and the wave remains review-only, certified-text aware, and separate
 from the FAQ and Sixth Amendment addenda.
+The Life & Health Valuation Law Manual opening wave (`lhmanual26.pdf`) is now
+complete as batches 251-253 in ignored working storage. Its tracked review
+index and self-review note are in place, and the wave remains review-only,
+reference-manual aware, and separate from the larger sectioned manual that
+follows on page 31.
 
 ## Inventory intake gate
 
