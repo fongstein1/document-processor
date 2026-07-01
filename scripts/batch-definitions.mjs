@@ -56,6 +56,7 @@ import { ag55BatchDefinitions } from './ag55-batch-definitions.mjs'
 import { reg141BatchDefinitions } from './reg141-batch-definitions.mjs'
 import { reg210BatchDefinitions } from './reg210-batch-definitions.mjs'
 import { reg213BatchDefinitions } from './reg213-batch-definitions.mjs'
+import { reg213Amendment1FaqBatchDefinitions } from './reg213-amendment1-faq-batch-definitions.mjs'
 import { modelGovernancePracticeNoteBatchDefinitions } from './model-governance-practice-note-batch-definitions.mjs'
 import { modelRegulationXXXPracticeNoteBatchDefinitions } from './model-regulation-xxx-practice-note-batch-definitions.mjs'
 import { lifeReinsuranceReserveCreditPracticeNoteBatchDefinitions } from './life-reinsurance-reserve-credit-practice-note-batch-definitions.mjs'
@@ -2256,6 +2257,7 @@ export const batchDefinitions = {
   ...reg141BatchDefinitions,
   ...reg210BatchDefinitions,
   ...reg213BatchDefinitions,
+  ...reg213Amendment1FaqBatchDefinitions,
   ...modelGovernancePracticeNoteBatchDefinitions,
   ...modelRegulationXXXPracticeNoteBatchDefinitions,
   ...lifeReinsuranceReserveCreditPracticeNoteBatchDefinitions,

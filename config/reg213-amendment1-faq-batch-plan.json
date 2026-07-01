@@ -1,0 +1,253 @@
+{
+  "planId": "reg213-amendment1-faq-plan",
+  "planVersion": "1.0",
+  "status": "planned",
+  "sourceScope": {
+    "sourceFamilyId": "ny_regulations",
+    "primarySourceFile": "NY Regulations/Reg-213-11-NYCRR-S103-Amendment-1-FAQ.pdf",
+    "sourceFolder": "NY Regulations",
+    "sourceTitle": "Regulation 213 Amendment No. 1 FAQ",
+    "sourceReference": "New York State Department of Financial Services Life Bureau Guidance Note on Amendment No. 1 to Insurance Regulation 213",
+    "sourceStatus": "companion-only",
+    "sourceStatusNote": "Guidance date is July 21, 2020; the FAQ responses are limited to the questions presented and do not represent a pre-determination of compliance.",
+    "jurisdiction": "New York",
+    "domainId": "naic_regulatory",
+    "rawSourceRoot": "C:\\Dev\\NAIC Valuation Manual Course\\NAIC Valuation Regulation",
+    "confirmedPageRange": [1, 3],
+    "observedSectionWindows": [
+      {
+        "sectionId": "reg213-amendment1-faq-opening-caveats",
+        "pageRange": [1, 1],
+        "note": "Opening guidance note, caveat language, and early implementation questions."
+      },
+      {
+        "sectionId": "reg213-amendment1-faq-methodology",
+        "pageRange": [2, 2],
+        "note": "Grading methodology, reporting, and reserve-structure questions."
+      },
+      {
+        "sectionId": "reg213-amendment1-faq-closeout",
+        "pageRange": [3, 3],
+        "note": "Later adoption, phase-in reporting, hedging, and the end-of-source boundary."
+      }
+    ],
+    "boundaries": [
+      "Keep the FAQ separate from the core Regulation 213 wave.",
+      "Keep the other amendment-history PDFs in the same folder out of this wave unless a later amendment-history plan explicitly opens them.",
+      "Preserve page locators and line references where available, but expect the text layer to remain page-image-backed for exact wording.",
+      "Keep the opening, middle, and closing windows separate so the boundary logic stays easy to review."
+    ],
+    "exclusions": [
+      "No learner-facing content.",
+      "No app-ready export.",
+      "No RAG-ready export.",
+      "No approved/promoted export.",
+      "No eLearning scripts, slides, quizzes, or app exports.",
+      "No raw source files in Git.",
+      "No Regulation 213 core-wave extraction in this batch.",
+      "No other amendment-history PDFs in the same wave."
+    ]
+  },
+  "topicMap": [
+    {
+      "topicId": "reg213-amendment1-faq-opening-caveats",
+      "label": "Opening guidance note, disclaimer language, and early implementation questions",
+      "pageRange": [1, 1],
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "caveat_or_companion_guidance",
+        "jurisdiction_specific_requirement",
+        "reporting_requirement",
+        "documentation_expectation",
+        "cross_reference_mapping",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": [
+        "Amendment No. 1",
+        "Regulation 213",
+        "small company exemption",
+        "phase-in",
+        "deferral request",
+        "financial statement"
+      ],
+      "boundaryNote": "Keep the opening caveat language together and stop before the grading-methodology page begins."
+    },
+    {
+      "topicId": "reg213-amendment1-faq-methodology",
+      "label": "Grading methodology and reporting / reserve-structure questions",
+      "pageRange": [2, 2],
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "caveat_or_companion_guidance",
+        "regulatory_requirement",
+        "reporting_requirement",
+        "documentation_expectation",
+        "cross_reference_mapping",
+        "state_regulation",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": [
+        "NAIC grading methodology",
+        "VM-21",
+        "maximum valuation interest rates",
+        "VM-20 Reserves Supplement",
+        "Regulation 126",
+        "deficiency reserves"
+      ],
+      "boundaryNote": "Keep the methodology answers together and stop before the final page begins."
+    },
+    {
+      "topicId": "reg213-amendment1-faq-closeout",
+      "label": "Later adoption, phase-in reporting, hedging, and end-of-source boundary",
+      "pageRange": [3, 3],
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "caveat_or_companion_guidance",
+        "regulatory_requirement",
+        "reporting_requirement",
+        "documentation_expectation",
+        "cross_reference_mapping",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": [
+        "annual updates to the Valuation Manual",
+        "AG43 report",
+        "VM-31 report",
+        "hedges held as of the valuation date",
+        "phase-in period",
+        "Regulation 213"
+      ],
+      "boundaryNote": "Keep the closing questions together and end the source at the final page."
+    }
+  ],
+  "proposedBatches": [
+    {
+      "plannedBatchId": "batch-245",
+      "topicIds": ["reg213-amendment1-faq-opening-caveats"],
+      "title": "Regulation 213 Amendment No. 1 FAQ opening guidance, caveats, and early implementation slice",
+      "paragraphTarget": {
+        "knownWindow": [1, 1],
+        "notes": "Capture the opening FAQ caveat language and the early implementation questions as one narrow review-only slice."
+      },
+      "rationale": "Capture the opening FAQ caveat language and the early implementation questions as one narrow review-only slice.",
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "caveat_or_companion_guidance",
+        "jurisdiction_specific_requirement",
+        "reporting_requirement",
+        "documentation_expectation",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    },
+    {
+      "plannedBatchId": "batch-246",
+      "topicIds": ["reg213-amendment1-faq-methodology"],
+      "title": "Regulation 213 Amendment No. 1 FAQ grading methodology and reporting slice",
+      "paragraphTarget": {
+        "knownWindow": [2, 2],
+        "notes": "Capture the grading-methodology and reserve-structure answers as one review-only slice."
+      },
+      "rationale": "Capture the grading-methodology and reserve-structure answers as one review-only slice.",
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "caveat_or_companion_guidance",
+        "regulatory_requirement",
+        "reporting_requirement",
+        "documentation_expectation",
+        "cross_reference_mapping",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    },
+    {
+      "plannedBatchId": "batch-247",
+      "topicIds": ["reg213-amendment1-faq-closeout"],
+      "title": "Regulation 213 Amendment No. 1 FAQ later adoption, phase-in reporting, and closeout slice",
+      "paragraphTarget": {
+        "knownWindow": [3, 3],
+        "notes": "Capture the later adoption, phase-in reporting, and hedging questions while keeping the end-of-source boundary explicit."
+      },
+      "rationale": "Capture the later adoption, phase-in reporting, and hedging questions while keeping the end-of-source boundary explicit.",
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "caveat_or_companion_guidance",
+        "regulatory_requirement",
+        "reporting_requirement",
+        "documentation_expectation",
+        "cross_reference_mapping",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    }
+  ],
+  "reviewStandards": {
+    "caveatOrCompanionGuidance": "Treat the FAQ as non-binding companion guidance that helps explain Regulation 213, not as a stand-alone regulation.",
+    "stateRegulation": "Treat the source as New York regulatory guidance tied to Regulation 213.",
+    "jurisdictionSpecificRequirement": "Treat New York-specific filing, reporting, or implementation language as jurisdiction-specific when it appears.",
+    "regulatoryRequirement": "Treat direct references to regulatory duties as mapped regulatory context, but do not promote the FAQ itself into binding text.",
+    "reportingRequirement": "Treat filing, reporting, and submission language as reporting requirements if they appear.",
+    "documentationExpectation": "Treat memorandum, supplement, certification, and recordkeeping language as documentation expectations if they appear.",
+    "crossReferenceMapping": "Treat references to VM-20, VM-21, Regulation 126, and the Valuation Manual as mapped context unless the text operationalizes the reference.",
+    "backgroundContent": "Treat the title and introductory text as background unless the text imposes a duty.",
+    "boundaryControlWindow": "Treat each page window as review-only and do not widen it unless later cleanup explicitly needs that split.",
+    "requiresHumanInterpretation": "Treat dense or ambiguous FAQ wording as requiring human review unless the page image confirms the wording."
+  },
+  "promotionGates": {
+    "defaultState": "review_only",
+    "learnerFacing": {
+      "sourceCitationExists": true,
+      "sourceSupportIsClear": true,
+      "wordingIsNotMisleading": true,
+      "confidenceIsHigh": true,
+      "noUnresolvedReviewFlagsExist": true
+    },
+    "appReady": {
+      "learnerFacingCriteriaAreSatisfied": true,
+      "exportIsSanitizedStableAndVersioned": true,
+      "noUnresolvedReviewIssuesRemain": true
+    },
+    "ragReady": {
+      "approvedIndexedMaterialOnly": true,
+      "stableId": true,
+      "sourceReferenceAndLocatorPresent": true,
+      "reviewStatusNoLongerRequiresHumanDisposition": true
+    }
+  },
+  "validationImplications": {
+    "currentChecksNeeded": [
+      "Plan file exists and parses as JSON.",
+      "The Reg-213 Amendment No. 1 FAQ plan markdown must exist and carry the expected headings.",
+      "The dedicated batch-definition file must exist and stay synchronized with the plan.",
+      "Every planned batch must stay review-only by default.",
+      "The source posture must stay explicitly companion-only, not promoted.",
+      "The FAQ should remain page-image-backed for exact wording where needed, even though the text layer is readable.",
+      "The FAQ must stay separate from the core Regulation 213 wave and from the other amendment-history PDFs in the folder."
+    ],
+    "futureChecksSuggested": [
+      "After the wave completes, add review-index and self-review checks plus a proof-of-concept summary reference.",
+      "Keep the plan portable if a later amendment-history wave is approved."
+    ]
+  },
+  "operatingNote": {
+    "reviewOnly": true,
+    "sourceType": "text-based PDF guidance note with short Q&A entries",
+    "citationGuidance": "Page locators are the primary anchor; line references are not expected to be stable for this FAQ.",
+    "boundaryGuidance": "The FAQ should remain visible as companion guidance rather than a promotion signal.",
+    "appendixGuidance": "No separate appendix was identified; the FAQ format is the source structure.",
+    "pageImageWordingBackstop": "Keep the page-image wording backstop visible for exact question and answer wording if later review needs it."
+  }
+}
+
