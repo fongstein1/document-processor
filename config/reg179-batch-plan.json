@@ -1,0 +1,135 @@
+{
+  "planId": "reg179-mortality-table-recognition-plan",
+  "planVersion": "1.0",
+  "status": "planned",
+  "sourceScope": {
+    "sourceFamilyId": "ny_regulations",
+    "primarySourceFile": "NY Regulations/2021 VLM Report_DRAFT-(1-27-2020) with academy Updates V1-Reg-179-11-NYCRR-S100.pdf",
+    "sourceFolder": "NY Regulations",
+    "sourceTitle": "Recognition of the 2001 CSO Mortality Table and the 2017 CSO Mortality Table for Use in Determining Minimum Reserve Liabilities and Nonforfeiture Benefits and Recognition and Application of Preferred Mortality Tables for Use in Determining Minimum Reserve Liabilities",
+    "sourceReference": "New York Regulation 179 / 11 CRR-NY Part 100",
+    "sourceStatus": "active",
+    "sourceStatusNote": "Current through March 15, 2020; the page-image wording backstop remains required because the text layer is noisy / OCR-like.",
+    "domainId": "naic_regulatory",
+    "rawSourceRoot": "C:\\Dev\\NAIC Valuation Manual Course",
+    "confirmedPageRange": [1, 22],
+    "observedSectionWindows": [
+      {
+        "sectionId": "reg179-opening-purpose-mortality-tables-and-severability",
+        "pageRange": [1, 22],
+        "note": "Title page, purposes, mortality table recognition and application, adjusted qx table, and severability."
+      }
+    ],
+    "boundaries": [
+      "Keep planning focused on this single Regulation 179 PDF.",
+      "Do not widen into AG files, practice notes, or other NY regulation files in the same wave.",
+      "Keep the purpose / mortality-table / severability language review-only until a human confirms the indexing decision.",
+      "Keep the page-image wording backstop visible because the text layer is noisy / OCR-like.",
+      "Keep the batch source-bound and review-only."
+    ],
+    "exclusions": [
+      "No learner-facing content.",
+      "No app-ready export.",
+      "No RAG-ready export.",
+      "No approved/promoted export.",
+      "No eLearning scripts, slides, quizzes, or app exports.",
+      "No raw source files in Git.",
+      "No other guideline files in the same wave."
+    ]
+  },
+  "topicMap": [
+    {
+      "topicId": "reg179-opening-purpose-mortality-tables-and-severability",
+      "label": "Purpose, mortality table recognition and application, adjusted qx table, and severability",
+      "pageRange": [1, 22],
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "state_regulation",
+        "jurisdiction_specific_requirement",
+        "regulatory_requirement",
+        "definition_or_terminology",
+        "calculation_structure",
+        "reporting_requirement",
+        "documentation_expectation",
+        "governance_or_control_expectation",
+        "cross_reference_mapping",
+        "background_content",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": [
+        "Insurance Law sections 201, 301, 1304, 1308, 4217, 4221, 4224, 4240",
+        "2001 CSO mortality table",
+        "2017 CSO mortality table",
+        "preferred mortality tables",
+        "severability"
+      ],
+      "boundaryNote": "Keep this slice within pages 1-22 and do not absorb other NY regulation files."
+    }
+  ],
+  "proposedBatches": [
+    {
+      "plannedBatchId": "batch-270",
+      "topicIds": [
+        "reg179-opening-purpose-mortality-tables-and-severability"
+      ],
+      "title": "Regulation 179 purpose, mortality table recognition and application, adjusted qx table, and severability",
+      "pageTarget": {
+        "knownWindow": [1, 22],
+        "notes": "Capture the full 22-page regulation as a single review-only slice and stop at the page 22 boundary."
+      },
+      "rationale": "Capture the full 22-page regulation as a single review-only slice and stop at the page 22 boundary.",
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "state_regulation",
+        "jurisdiction_specific_requirement",
+        "regulatory_requirement",
+        "definition_or_terminology",
+        "calculation_structure",
+        "reporting_requirement",
+        "documentation_expectation",
+        "governance_or_control_expectation",
+        "cross_reference_mapping",
+        "background_content",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    }
+  ],
+  "reviewStandards": {
+    "regulatoryRequirement": "Treat the purpose, mortality-table, and severability language as regulatory text when it directs what the company must do.",
+    "definitionOrTerminology": "Treat the mortality table names, preferred mortality table references, and adjusted qx terminology as terminology when the text explains rather than directs.",
+    "crossReferenceMapping": "Treat references to Insurance Law and mortality-table labels as cross-reference context unless operationalized.",
+    "backgroundContent": "Treat the title page and section labels as background unless they impose a requirement.",
+    "boundaryControlWindow": "Treat the 22-page slice as a review-only window that should not be merged forward.",
+    "requiresHumanInterpretation": "Treat the indexing choice and the noisy OCR-like text layer as requiring human actuarial interpretation unless the text is explicit.",
+    "sourceQualityCaveat": "Treat text-layer noise or encoding issues as review-only caveats and do not widen the batch because of them."
+  },
+  "promotionGates": {
+    "defaultState": "review_only",
+    "learnerFacing": [
+      "source citation exists",
+      "source support is clear",
+      "wording is not misleading",
+      "confidence is high",
+      "no unresolved review flags exist"
+    ],
+    "appReady": [
+      "learner-facing criteria are already satisfied",
+      "export is sanitized, stable, and versioned",
+      "no unresolved review issues remain"
+    ],
+    "ragReady": [
+      "approved indexed material only",
+      "stable support exists",
+      "no unresolved review flags remain"
+    ],
+    "approvedPromotedExport": [
+      "explicit human approval only"
+    ]
+  },
+  "notes": "Controlled Regulation 179 planning artifact. Planned batch 270 remains review-only by default and is not an extraction run."
+}
