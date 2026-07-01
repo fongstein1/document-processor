@@ -985,3 +985,15 @@ review-only and final-adoption aware, and the page-image wording backstop
 remains visible because exact wording should not be overclaimed from the
 two-page regulatory text. The broader proof-of-concept handoff now spans 80
 review indexes.
+
+## Reg 213 Fourth Amendment addendum
+
+The Regulation 213 Fourth Amendment wave is complete as batches `batch-255`
+and `batch-256` in
+ignored working storage. The tracked review index and self-review note are
+`docs/review/reg213_amendment4_review_index.md` and
+`docs/review/reg213_amendment4_self_review.md`, the source stays review-only
+and certified-amendment aware, and the page-image wording backstop remains
+visible because exact wording should not be overclaimed from the
+three-page regulatory text. The broader proof-of-concept handoff now spans
+81 review indexes.
