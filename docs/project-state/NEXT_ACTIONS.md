@@ -75,6 +75,10 @@ The Regulation 213 Second Amendment wave is now complete as batches 257-259 in
 ignored working storage. Its tracked review index and self-review note are in
 place, and the repository handoff now spans 82 review indexes.
 
+The Regulation 213 First Amendment text wave is now complete as batches
+260-265 in ignored working storage. Its tracked review index and self-review
+note are in place, and the repository handoff now spans 83 review indexes.
+
 AG 40 is now complete as batches 135-136 in ignored working storage. Its
 tracked review index and self-review note now form part of the handoff set.
 AG 41 is now complete as batch-137 in ignored working storage. Its tracked

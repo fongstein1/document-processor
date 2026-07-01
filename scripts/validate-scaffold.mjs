@@ -12418,6 +12418,9 @@ const validatePocStatusSummaryMarkdown = async (filePath, label) => {
     (await exists(paths.ag45ReviewIndexMd)) && (await exists(paths.ag45SelfReviewMd))
   const ag46ReviewArtifactsPresent =
     (await exists(paths.ag46ReviewIndexMd)) && (await exists(paths.ag46SelfReviewMd))
+  const reg213Amendment1TextReviewArtifactsPresent =
+    (await exists(paths.reg213Amendment1TextReviewIndexMd)) &&
+    (await exists(paths.reg213Amendment1TextSelfReviewMd))
   const reg213Amendment2ReviewArtifactsPresent =
     (await exists(paths.reg213Amendment2ReviewIndexMd)) && (await exists(paths.reg213Amendment2SelfReviewMd))
   const reg213Amendment4ReviewArtifactsPresent =
@@ -12457,6 +12460,19 @@ const validatePocStatusSummaryMarkdown = async (filePath, label) => {
     'docs/review/vm21_review_index.md',
     'docs/review/vm22_review_index.md',
     'docs/review/vm20_practice_note_review_index.md',
+    ...(reg213Amendment1TextReviewArtifactsPresent
+      ? [
+          'docs/review/reg213_amendment1_text_review_index.md',
+          'docs/review/reg213_amendment1_text_self_review.md',
+          'Regulation 213 First Amendment',
+          'batch-260',
+          'batch-261',
+          'batch-262',
+          'batch-263',
+          'batch-264',
+          'batch-265',
+        ]
+      : []),
     ...(reg213Amendment2ReviewArtifactsPresent
       ? [
           'docs/review/reg213_amendment2_review_index.md',
@@ -12600,6 +12616,8 @@ const validatePocStatusSummaryMarkdown = async (filePath, label) => {
         ? '49 review indexes'
       : ag43ReviewArtifactsPresent
         ? '48 review indexes'
+        : reg213Amendment1TextReviewArtifactsPresent
+          ? '83 review indexes'
         : reg213Amendment2ReviewArtifactsPresent
           ? '82 review indexes'
         : reg213Amendment4ReviewArtifactsPresent
