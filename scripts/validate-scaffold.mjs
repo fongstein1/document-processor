@@ -388,6 +388,8 @@ const paths = {
     'review',
     'reg213_amendment5_self_review.md',
   ),
+  lhmanual26BatchPlanJson: path.join(repoRoot, 'config', 'lhmanual26-batch-plan.json'),
+  lhmanual26ExtractionPlanMd: path.join(repoRoot, 'docs', 'processor', 'lhmanual26_extraction_plan.md'),
   reg213Amendment1FaqReviewIndexMd: path.join(
     repoRoot,
     'docs',
@@ -902,6 +904,9 @@ const requiredFiles = [
   'docs/review/reg213_amendment5_self_review.md',
   'docs/review/reg213_amendment6_review_index.md',
   'docs/review/reg213_amendment6_self_review.md',
+  'docs/processor/lhmanual26_extraction_plan.md',
+  'config/lhmanual26-batch-plan.json',
+  'scripts/lhmanual26-batch-definitions.mjs',
   'docs/processor/reg213_amendment1_faq_extraction_plan.md',
   'docs/processor/reg213_amendment6_extraction_plan.md',
   'docs/processor/reg213_amendment5_extraction_plan.md',
@@ -3430,6 +3435,49 @@ const validateReg213Amendment5PlanMarkdown = async (filePath, label) => {
     'batch-250',
     'page-image wording backstop',
     'line references are not expected',
+  ].forEach((phrase) => {
+    if (!text.includes(phrase)) {
+      problems.push(`${label}: must mention ${phrase}`)
+    }
+  })
+}
+
+const validateLhmanual26PlanMarkdown = async (filePath, label) => {
+  const text = await readText(filePath)
+  const requiredHeadings = [
+    '## Source Scope',
+    '## Section / Topic Map',
+    '## Proposed Batch Sequence',
+    '## Review Standards',
+    '## Risk Notes',
+    '## Cross-Reference Handling',
+    '## Promotion Gates',
+    '## Validation Implications',
+    '## Operating Note',
+  ]
+  requiredHeadings.forEach((heading) => {
+    if (!text.includes(heading)) {
+      problems.push(`${label}: missing heading ${heading}`)
+    }
+  })
+  ;[
+    'review-only',
+    'not learner-facing',
+    'not app-ready',
+    'not RAG-ready',
+    'not promoted',
+    'lhmanual26.pdf',
+    'Life & Health Valuation Law Manual',
+    'American Academy of Actuaries',
+    'reference manual',
+    'non-binding compilation',
+    'pages 1-30',
+    'batch-251',
+    'batch-252',
+    'batch-253',
+    'page-image wording backstop',
+    'line references are not expected',
+    'Section 3 begins on page 31',
   ].forEach((phrase) => {
     if (!text.includes(phrase)) {
       problems.push(`${label}: must mention ${phrase}`)
@@ -13331,6 +13379,7 @@ await validateAg21PlanMarkdown(paths.ag21ExtractionPlanMd, 'docs/processor/ag21_
 await validateAg22PlanMarkdown(paths.ag22ExtractionPlanMd, 'docs/processor/ag22_extraction_plan.md')
 await validateAg23PlanMarkdown(paths.ag23ExtractionPlanMd, 'docs/processor/ag23_extraction_plan.md')
 await validateAg24PlanMarkdown(paths.ag24ExtractionPlanMd, 'docs/processor/ag24_extraction_plan.md')
+await validateLhmanual26PlanMarkdown(paths.lhmanual26ExtractionPlanMd, 'docs/processor/lhmanual26_extraction_plan.md')
 await validateAg02PlanMarkdown(paths.ag02ExtractionPlanMd, 'docs/processor/ag02_extraction_plan.md')
 await validatePocStatusSummaryMarkdown(
   paths.pocStatusSummaryMd,
@@ -13905,6 +13954,45 @@ if (problems.length > 0) {
       `- Reg 213 Fifth Amendment self-review verified: ${reg213Amendment5BatchPlan.proposedBatches.length} batches`,
     )
   }
+  await validateLhmanual26PlanMarkdown(
+    paths.lhmanual26ExtractionPlanMd,
+    'docs/processor/lhmanual26_extraction_plan.md',
+  )
+  const lhmanual26BatchPlan = await readJson(paths.lhmanual26BatchPlanJson)
+  if (lhmanual26BatchPlan.status !== 'planned') {
+    problems.push('config/lhmanual26-batch-plan.json: status must be planned')
+  }
+  if (!Array.isArray(lhmanual26BatchPlan.proposedBatches) || lhmanual26BatchPlan.proposedBatches.length !== 3) {
+    problems.push('config/lhmanual26-batch-plan.json: expected exactly three proposed batches')
+  }
+  if (
+    lhmanual26BatchPlan.sourceScope?.confirmedPageRange?.[0] !== 1 ||
+    lhmanual26BatchPlan.sourceScope?.confirmedPageRange?.[1] !== 30
+  ) {
+    problems.push('config/lhmanual26-batch-plan.json: confirmedPageRange must be [1, 30]')
+  }
+  const lhmanual26BatchIds = Array.isArray(lhmanual26BatchPlan.proposedBatches)
+    ? lhmanual26BatchPlan.proposedBatches
+        .map((batch) => batch?.plannedBatchId)
+        .filter((batchId) => typeof batchId === 'string' && batchId.length > 0)
+    : []
+  for (const plannedBatchId of lhmanual26BatchIds) {
+    if (!batchDefinitions[plannedBatchId]) {
+      problems.push(`scripts/batch-definitions.mjs: missing batch definition for ${plannedBatchId}`)
+    }
+  }
+  if (!lhmanual26BatchIds.includes('batch-251')) {
+    problems.push('config/lhmanual26-batch-plan.json: expected batch-251 to be planned')
+  }
+  if (!lhmanual26BatchIds.includes('batch-252')) {
+    problems.push('config/lhmanual26-batch-plan.json: expected batch-252 to be planned')
+  }
+  if (!lhmanual26BatchIds.includes('batch-253')) {
+    problems.push('config/lhmanual26-batch-plan.json: expected batch-253 to be planned')
+  }
+  console.log(
+    `- Life & Health Valuation Law Manual plan verified: ${lhmanual26BatchPlan.proposedBatches.length} batches`,
+  )
   const modelGovernanceBatchIds = modelGovernancePracticeNoteBatchPlan.proposedBatches.map((batch) => batch.plannedBatchId)
   const modelGovernanceReviewIndexText = (await exists(paths.modelGovernancePracticeNoteReviewIndexMd))
     ? await readText(paths.modelGovernancePracticeNoteReviewIndexMd)

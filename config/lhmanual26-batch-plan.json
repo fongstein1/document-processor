@@ -1,0 +1,233 @@
+{
+  "planId": "lhmanual26-manual-opening-plan",
+  "planVersion": "1.0",
+  "status": "planned",
+  "sourceScope": {
+    "sourceFamilyId": "valuation_manual_pdfs",
+    "primarySourceFile": "lhmanual26.pdf",
+    "sourceFolder": "",
+    "sourceTitle": "Life & Health Valuation Law Manual",
+    "sourceReference": "American Academy of Actuaries Life & Health Valuation Law Manual, Thirty-second Edition 2026",
+    "sourceStatus": "reference manual / non-binding compilation",
+    "sourceStatusNote": "Compiled reference material; keep the copyright and permission language visible as context.",
+    "issuingBody": "American Academy of Actuaries",
+    "domainId": "naic_regulatory",
+    "rawSourceRoot": "C:\\Dev\\NAIC Valuation Manual Course\\NAIC Valuation Regulation",
+    "confirmedPageRange": [1, 30],
+    "observedSectionWindows": [
+      {
+        "sectionId": "lhmanual26-front-matter",
+        "pageRange": [1, 8],
+        "note": "Title page, copyright notice, table of contents, and preface heading."
+      },
+      {
+        "sectionId": "lhmanual26-annual-filings",
+        "pageRange": [9, 20],
+        "note": "Section 2 annual filings and the opening state-contact list."
+      },
+      {
+        "sectionId": "lhmanual26-valuation-letters",
+        "pageRange": [21, 30],
+        "note": "Remaining state-contact entries and valuation-related letters."
+      }
+    ],
+    "boundaries": [
+      "Keep planning focused on this single manual file.",
+      "Do not widen into Section 3 or later manual sections in this wave.",
+      "Treat the manual as a reference compilation, not as binding regulatory text.",
+      "Preserve page locators and line references where available, but expect the text layer to remain page-image-backed for exact wording."
+    ],
+    "exclusions": [
+      "No learner-facing content.",
+      "No app-ready export.",
+      "No RAG-ready export.",
+      "No approved/promoted export.",
+      "No eLearning scripts, slides, quizzes, or app exports.",
+      "No raw source files in Git.",
+      "No Section 3 pages in this wave.",
+      "No later manual sections in this wave."
+    ]
+  },
+  "topicMap": [
+    {
+      "topicId": "lhmanual26-front-matter",
+      "label": "Title page, copyright notice, table of contents, and preface heading",
+      "pageRange": [1, 8],
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "background_content",
+        "documentation_expectation",
+        "boundary_control_window",
+        "cross_reference_mapping"
+      ],
+      "crossReferenceWatchlist": [
+        "Academy copyright notice",
+        "NAIC permission language",
+        "Section 1",
+        "Section 2"
+      ],
+      "boundaryNote": "Keep the front matter, TOC, and preface heading together as the opening manual slice."
+    },
+    {
+      "topicId": "lhmanual26-preface",
+      "label": "Section 1 preface and copyright / permissions text",
+      "pageRange": [4, 8],
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "background_content",
+        "documentation_expectation",
+        "cross_reference_mapping",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": [
+        "1.1 Background",
+        "1.2 NAIC Activities",
+        "1.3 Authors and Peer Reviewers",
+        "1.4 Disclaimer",
+        "1.5 Copyrights and Permissions"
+      ],
+      "boundaryNote": "Keep the preface text and copyright / permissions language together."
+    },
+    {
+      "topicId": "lhmanual26-annual-filings",
+      "label": "Section 2 annual filings and state contact information",
+      "pageRange": [9, 20],
+      "reviewComplexity": "medium-high",
+      "expectedIssueTypes": [
+        "documentation_expectation",
+        "jurisdiction_specific_requirement",
+        "cross_reference_mapping",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": [
+        "RAAIS Filing Guide",
+        "State Contact Information",
+        "NAIC filing webpage"
+      ],
+      "boundaryNote": "Keep the annual-filings guidance and the first half of the state-contact list together."
+    },
+    {
+      "topicId": "lhmanual26-valuation-letters",
+      "label": "Section 2 valuation-related letters issued by various states",
+      "pageRange": [21, 30],
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "jurisdiction_specific_requirement",
+        "documentation_expectation",
+        "cross_reference_mapping",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": [
+        "California",
+        "New York",
+        "Rhode Island",
+        "valuation-related letters"
+      ],
+      "boundaryNote": "Keep the remaining state contacts and valuation-related letters together before Section 3 begins."
+    }
+  ],
+  "proposedBatches": [
+    {
+      "plannedBatchId": "batch-251",
+      "topicIds": ["lhmanual26-front-matter"],
+      "title": "Life & Health Valuation Law Manual front matter and preface heading",
+      "paragraphTarget": {
+        "knownWindow": [1, 8],
+        "notes": "Capture the title page, copyright notice, TOC, and preface heading as one narrow review-only slice."
+      },
+      "rationale": "Capture the front matter and preface heading as one narrow review-only slice.",
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "background_content",
+        "documentation_expectation",
+        "boundary_control_window",
+        "cross_reference_mapping"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    },
+    {
+      "plannedBatchId": "batch-252",
+      "topicIds": ["lhmanual26-annual-filings"],
+      "title": "Life & Health Valuation Law Manual annual filings and state contact information",
+      "paragraphTarget": {
+        "knownWindow": [9, 20],
+        "notes": "Capture the annual-filings guidance and the opening state-contact list as one review-only slice."
+      },
+      "rationale": "Capture the annual-filings guidance and the opening state-contact list as one review-only slice.",
+      "reviewComplexity": "medium-high",
+      "expectedIssueTypes": [
+        "documentation_expectation",
+        "jurisdiction_specific_requirement",
+        "cross_reference_mapping",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    },
+    {
+      "plannedBatchId": "batch-253",
+      "topicIds": ["lhmanual26-valuation-letters"],
+      "title": "Life & Health Valuation Law Manual valuation-related letters",
+      "paragraphTarget": {
+        "knownWindow": [21, 30],
+        "notes": "Capture the remaining state contacts and valuation-related letters as one review-only slice."
+      },
+      "rationale": "Capture the remaining state contacts and valuation-related letters as one review-only slice.",
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "jurisdiction_specific_requirement",
+        "documentation_expectation",
+        "cross_reference_mapping",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    }
+  ],
+  "reviewStandards": {
+    "referenceManualText": "Treat the source as a compiled reference manual and not as learner-facing or promoted material.",
+    "manualCompilation": "Treat the front matter and TOC as reference context unless the text itself imposes a duty.",
+    "documentationExpectation": "Treat annual-filings references and state-letter references as documentation context if they appear.",
+    "crossReferenceMapping": "Treat references to the Valuation Manual, regulations, and state guidance as mapped context unless the text operationalizes them.",
+    "backgroundContent": "Treat the title and introductory text as background unless the text imposes a duty.",
+    "boundaryControlWindow": "Treat each page window as review-only and do not widen it unless later cleanup explicitly needs that split.",
+    "requiresHumanInterpretation": "Treat dense or ambiguous manual wording as requiring human review unless the page image confirms the wording."
+  },
+  "promotionGates": {
+    "defaultState": "review_only",
+    "learnerFacing": {
+      "sourceCitationExists": true,
+      "sourceSupportIsClear": true,
+      "wordingIsNotMisleading": true,
+      "confidenceIsHigh": true,
+      "noUnresolvedReviewFlagsExist": true
+    },
+    "appReady": {
+      "learnerFacingCriteriaAreSatisfied": true,
+      "exportIsSanitizedStableAndVersioned": true,
+      "noUnresolvedReviewIssuesRemain": true
+    },
+    "ragReady": {
+      "approvedIndexedMaterialExists": true,
+      "noHumanReviewNeededForDisposition": true,
+      "sourceCitationsAreStable": true
+    }
+  },
+  "validationRequirements": [
+    "The plan JSON must exist and parse cleanly.",
+    "The plan markdown must exist and carry the expected headings.",
+    "The dedicated batch-definition file must exist and stay synchronized with the plan.",
+    "The planned batches must stay review-only by default.",
+    "The source must remain a reference compilation and not promoted.",
+    "The source should remain page-image-backed for exact wording where needed."
+  ]
+}
