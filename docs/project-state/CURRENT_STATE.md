@@ -48,6 +48,7 @@ The Regulation 213 Fourth Amendment wave (`NY Regulations/Reg-213-amend4_text.pd
 The Regulation 213 Second Amendment wave (`NY Regulations/Reg-213-11-NYCRR-S103-Amendment-2-nstext-reg213.pdf`) is now complete as batches 257-259 in ignored working storage. Its tracked review index and self-review note are in place, and the wave remains review-only, certified-amendment aware, and separate from the FAQ and other amendment-history addenda.
 The Regulation 213 First Amendment text wave (`NY Regulations/Reg-213-11-NYCRR-S103-Amendment-1-rf213a1text.pdf`) is now complete as batches 260-265 in ignored working storage. Its tracked review index and self-review note are in place, and the wave remains review-only, certified-amendment aware, and separate from the FAQ and later amendment addenda.
 The Regulation 102 wave (`NY Regulations/2021 VLM Report_DRAFT-(1-27-2020) with academy Updates V1-Reg-102-11-NYCRR-S127.pdf`) is now complete as batch-267 in ignored working storage. Its tracked review index and self-review note are in place, and the wave remains review-only, active, and page-image backed for exact wording.
+The Regulation 128 wave (`NY Regulations/2021 VLM Report_DRAFT-(1-27-2020) with academy Updates V1-Reg-128-11-NYCRR-S097.pdf`) is now complete as batch-268 in ignored working storage. Its tracked review index and self-review note are in place, and the wave remains review-only, active, and page-image backed for exact wording.
 
 ## Inventory intake gate
 
@@ -663,3 +664,12 @@ review-only and active, and the page-image wording backstop remains visible
 because the text layer is noisy / OCR-like. The next safe continuation step
 is to inspect the remaining inventory again before selecting another source
 unit.
+
+## Reg 128 addendum
+
+Regulation 128 is now complete as batch-268 in ignored working storage. The
+tracked review index and self-review note are in place, the source remains
+review-only and active, and the page-image wording backstop remains visible
+because the text layer is noisy / OCR-like. The next safe continuation step
+is to inspect the remaining inventory again before selecting the next safe
+source unit.
