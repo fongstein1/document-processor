@@ -43,6 +43,10 @@
   self-review note. The wave stays review-only, certified-amendment aware,
   and separate from the FAQ, Fifth Amendment, Sixth Amendment, and other
   amendment-history addenda.
+- 2026-07-01: Completed the Regulation 213 Second Amendment wave as batches
+  257-259 in ignored working storage and added the tracked review index and
+  self-review note. The wave stays review-only, certified-amendment aware,
+  and separate from the FAQ and other amendment-history addenda.
 - 2026-06-26: Hardened the pilot review layer after the first real batch by
   adding line-level locator support to the extraction/review contracts,
   requiring source references in the chunk manifest, expanding the pilot

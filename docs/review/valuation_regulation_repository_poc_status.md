@@ -945,6 +945,17 @@ review-only and companion-only, and the page-image wording backstop remains
 visible for exact question / answer wording. The broader proof-of-concept
 handoff now spans 76 review indexes.
 
+## Reg 213 Second Amendment addendum
+
+The Regulation 213 Second Amendment wave is complete as batches `batch-257`,
+`batch-258`, and `batch-259` in ignored working storage. The tracked review
+index and self-review note are `docs/review/reg213_amendment2_review_index.md`
+and `docs/review/reg213_amendment2_self_review.md`, the source stays
+review-only and certified-amendment aware, and the page-image wording
+backstop remains visible because exact wording should not be overclaimed from
+the six-page regulatory text. The broader proof-of-concept handoff now spans
+82 review indexes.
+
 ## Reg 213 Fifth Amendment addendum
 
 The Regulation 213 Fifth Amendment wave is complete as batches 249-250 in

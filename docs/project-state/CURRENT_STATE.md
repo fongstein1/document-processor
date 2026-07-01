@@ -45,6 +45,7 @@ reference-manual aware, and separate from the larger sectioned manual that
 follows on page 31.
 The Regulation 213 Third Amendment wave (`NY Regulations/Reg-213-amend3_txt.pdf`) is now complete as batch-254 in ignored working storage. Its tracked review index and self-review note are in place, and the wave remains review-only, final-adoption aware, and separate from the FAQ and other amendment-history addenda.
 The Regulation 213 Fourth Amendment wave (`NY Regulations/Reg-213-amend4_text.pdf`) is now complete as batches 255-256 in ignored working storage. Its tracked review index and self-review note are in place, and the wave remains review-only, certified-amendment aware, and separate from the FAQ, Fifth Amendment, Sixth Amendment, and other amendment-history addenda.
+The Regulation 213 Second Amendment wave (`NY Regulations/Reg-213-11-NYCRR-S103-Amendment-2-nstext-reg213.pdf`) is now complete as batches 257-259 in ignored working storage. Its tracked review index and self-review note are in place, and the wave remains review-only, certified-amendment aware, and separate from the FAQ and other amendment-history addenda.
 
 ## Inventory intake gate
 
