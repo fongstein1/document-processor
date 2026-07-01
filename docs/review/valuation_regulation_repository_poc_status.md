@@ -12,7 +12,7 @@ regulation repository. It consolidates the completed review-only extraction
 waves without changing the status of the underlying batch outputs or review
 indexes.
 
-The handoff now spans 80 review indexes, up from 79 review indexes. The
+The handoff now spans 85 review indexes, up from 80 review indexes. The
 earlier 51 review indexes checkpoint remains part of the handoff history, the
 earlier 50 review indexes checkpoint remains part of the handoff history, the
 earlier 49 review indexes checkpoint remains part of the handoff history, the
@@ -68,6 +68,8 @@ review indexes:
 - `docs/review/reg141_self_review.md`
 - `docs/review/reg192_review_index.md`
 - `docs/review/reg192_self_review.md`
+- `docs/review/reg102_review_index.md`
+- `docs/review/reg102_self_review.md`
 - `docs/review/reg210_review_index.md`
 - `docs/review/reg210_self_review.md`
 - `docs/review/reg213_review_index.md`
@@ -178,6 +180,9 @@ What has been built:
 - tracked Regulation 192 review index and self-review note for the NY
   preneed life-insurance unit in `docs/review/reg192_review_index.md` and
   `docs/review/reg192_self_review.md`
+- tracked Regulation 102 review index and self-review note for the NY
+  reinsurance-transactions unit in `docs/review/reg102_review_index.md` and
+  `docs/review/reg102_self_review.md`
 - tracked model-governance practice-note review index and self-review note
   for the companion-guidance unit in
   `docs/review/model_governance_practice_note_review_index.md` and
@@ -237,6 +242,7 @@ What source families / chapters have been processed:
   `batch-182`
 - NY Regulation 210 non-guaranteed-elements source, batches `batch-186`
   through `batch-188`
+- NY Regulation 102 reinsurance-transactions source, batch-267
 - AG 03 single-page guideline, `batch-076`
 - AG 01 single-page guideline, `batch-077`
 - AG 02 two-page guideline, `batch-078`
@@ -1025,3 +1031,12 @@ and certified-amendment aware, and the page-image wording backstop remains
 visible because exact wording should not be overclaimed from the
 three-page regulatory text. The broader proof-of-concept handoff now spans
 81 review indexes.
+
+## Reg 102 addendum
+
+Regulation 102 is now complete as batch-267 in ignored working storage. The
+tracked review index and self-review note are
+`docs/review/reg102_review_index.md` and `docs/review/reg102_self_review.md`,
+the source stays review-only and active, and the page-image wording backstop
+remains visible because the text layer is noisy / OCR-like. The broader
+proof-of-concept handoff now spans 85 review indexes.

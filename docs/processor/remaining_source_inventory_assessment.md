@@ -4,12 +4,15 @@
 
 - Recently completed source unit: Regulation 192.
 - The Regulation 192 wave was a small, bounded NY-regulation slice and now has tracked review handoff artifacts.
+- Recently completed source unit: Regulation 102.
+- The Regulation 102 wave was a small, bounded NY-regulation slice and now has tracked review handoff artifacts.
 - The received inventory still contains broader manual-style and report-style items that should stay deferred until their page boundaries are confirmed.
 
 ## Safe Coverage Notes
 
 - Processed source units in this run stayed review-only and source-bound.
 - The Regulation 192 slice used the page-image backstop because the text layer was noisy / OCR-like.
+- The Regulation 102 slice also used the page-image backstop because the text layer was noisy / OCR-like.
 - No raw source files, package-manager artifacts, or ignored working batches were committed.
 
 ## Deferred Items
@@ -19,7 +22,8 @@
 
 ## Next Safe Candidate
 
-- Likely next candidate: `Reg-102-11-NYCRR-S127.pdf`, subject to confirming page count, title-page identity, and section boundaries in the next inspection pass.
+- Next candidate should be selected by fresh inspection of the remaining inventory rather than memory.
+- Prefer the next smallest clearly bounded NY-regulation or practice-note source if one is still safe.
 
 ## Coverage Note
 
