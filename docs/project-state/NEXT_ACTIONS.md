@@ -57,6 +57,10 @@ as `Practice Notes/AAA - C3 Phase 2 - Sep 2006 - life_c3.8.pdf`. The
 inspection and planning step should stay review-only until the page boundary
 is confirmed.
 
+The Regulation 213 Fifth Amendment wave is now complete as batches 249-250
+in ignored working storage. Its tracked review index and self-review note are
+in place, and the repository handoff now spans 78 review indexes.
+
 AG 40 is now complete as batches 135-136 in ignored working storage. Its
 tracked review index and self-review note now form part of the handoff set.
 AG 41 is now complete as batch-137 in ignored working storage. Its tracked

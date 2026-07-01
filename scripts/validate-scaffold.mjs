@@ -376,6 +376,18 @@ const paths = {
     'review',
     'reg213_amendment6_self_review.md',
   ),
+  reg213Amendment5ReviewIndexMd: path.join(
+    repoRoot,
+    'docs',
+    'review',
+    'reg213_amendment5_review_index.md',
+  ),
+  reg213Amendment5SelfReviewMd: path.join(
+    repoRoot,
+    'docs',
+    'review',
+    'reg213_amendment5_self_review.md',
+  ),
   reg213Amendment1FaqReviewIndexMd: path.join(
     repoRoot,
     'docs',
@@ -886,6 +898,8 @@ const requiredFiles = [
   'docs/review/reg213_self_review.md',
   'docs/review/reg213_amendment1_faq_review_index.md',
   'docs/review/reg213_amendment1_faq_self_review.md',
+  'docs/review/reg213_amendment5_review_index.md',
+  'docs/review/reg213_amendment5_self_review.md',
   'docs/review/reg213_amendment6_review_index.md',
   'docs/review/reg213_amendment6_self_review.md',
   'docs/processor/reg213_amendment1_faq_extraction_plan.md',
@@ -13867,6 +13881,30 @@ if (problems.length > 0) {
   console.log(
     `- Reg 213 Fifth Amendment plan verified: ${reg213Amendment5BatchPlan.proposedBatches.length} batches`,
   )
+  const reg213Amendment5ReviewIndexText = (await exists(paths.reg213Amendment5ReviewIndexMd))
+    ? await readText(paths.reg213Amendment5ReviewIndexMd)
+    : ''
+  const reg213Amendment5SelfReviewText = (await exists(paths.reg213Amendment5SelfReviewMd))
+    ? await readText(paths.reg213Amendment5SelfReviewMd)
+    : ''
+  const reg213Amendment5ReviewIndexReady =
+    reg213Amendment5ReviewIndexText.length > 0 &&
+    reg213Amendment5BatchIds.every((batchId) => reg213Amendment5ReviewIndexText.includes(batchId))
+  const reg213Amendment5SelfReviewReady =
+    reg213Amendment5SelfReviewText.length > 0 &&
+    reg213Amendment5BatchIds.every((batchId) => reg213Amendment5SelfReviewText.includes(batchId))
+  const reg213Amendment5ReviewArtifactsPresent =
+    reg213Amendment5ReviewIndexReady && reg213Amendment5SelfReviewReady
+  if (reg213Amendment5ReviewIndexReady) {
+    console.log(
+      `- Reg 213 Fifth Amendment review index verified: ${reg213Amendment5BatchPlan.proposedBatches.length} batches`,
+    )
+  }
+  if (reg213Amendment5SelfReviewReady) {
+    console.log(
+      `- Reg 213 Fifth Amendment self-review verified: ${reg213Amendment5BatchPlan.proposedBatches.length} batches`,
+    )
+  }
   const modelGovernanceBatchIds = modelGovernancePracticeNoteBatchPlan.proposedBatches.map((batch) => batch.plannedBatchId)
   const modelGovernanceReviewIndexText = (await exists(paths.modelGovernancePracticeNoteReviewIndexMd))
     ? await readText(paths.modelGovernancePracticeNoteReviewIndexMd)
@@ -14302,7 +14340,7 @@ if (problems.length > 0) {
   }
   console.log(`- Model Regulation XXX plan verified: ${modelRegulationXXXBatchPlan.proposedBatches.length} batches`)
   console.log(
-    `- POC status summary verified: ${reg213Amendment6ReviewArtifactsPresent ? 77 : reg213Amendment1FaqReviewArtifactsPresent ? 76 : c3Phase2Ag43March2011PracticeNoteReviewArtifactsPresent ? 75 : c3Phase2PracticeNoteReviewArtifactsPresent ? 74 : assetAdequacyAnalysisPracticeNoteReviewArtifactsPresent ? 73 : cia2023FinancialConditionTestingEducationalNoteReviewArtifactsPresent ? 72 : cia2022CapitalFCTEducationalNoteReviewArtifactsPresent ? 71 : actuarialMemorandumPracticeNoteReviewArtifactsPresent ? 70 : lifeReinsuranceReserveCreditPracticeNoteReviewArtifactsPresent ? 69 : modelRegulationXXXReviewArtifactsPresent ? 68 : reg213ReviewArtifactsPresent ? 66 : reg210ReviewArtifactsPresent ? 65 : modelGovernanceReviewArtifactsPresent ? 64 : reg141ReviewArtifactsPresent ? 63 : ag55ReviewArtifactsPresent ? 62 : ag54ReviewArtifactsPresent ? 61 : ag53ReviewArtifactsPresent ? 58 : ag52ReviewArtifactsPresent ? 57 : ag51ReviewArtifactsPresent ? 56 : ag50ReviewArtifactsPresent ? 55 : ag49ReviewArtifactsPresent ? 54 : ag48ReviewArtifactsPresent ? 53 : ag47ReviewArtifactsPresent ? 52 : ag46ReviewArtifactsPresent ? 51 : ag45ReviewArtifactsPresent ? 50 : ag44ReviewArtifactsPresent ? 49 : ag43ReviewArtifactsPresent ? 48 : ag42ReviewArtifactsPresent ? 47 : ag41ReviewArtifactsPresent ? 46 : ag40ReviewArtifactsPresent ? 45 : ag39ReviewArtifactsPresent ? 44 : ag38ReviewArtifactsPresent ? 43 : ag37ReviewArtifactsPresent ? 42 : ag36ReviewArtifactsPresent ? 41 : ag35ReviewArtifactsPresent ? 40 : ag34ReviewArtifactsPresent ? 39 : 38} review indexes`,
+    `- POC status summary verified: ${reg213Amendment5ReviewArtifactsPresent ? 78 : reg213Amendment6ReviewArtifactsPresent ? 77 : reg213Amendment1FaqReviewArtifactsPresent ? 76 : c3Phase2Ag43March2011PracticeNoteReviewArtifactsPresent ? 75 : c3Phase2PracticeNoteReviewArtifactsPresent ? 74 : assetAdequacyAnalysisPracticeNoteReviewArtifactsPresent ? 73 : cia2023FinancialConditionTestingEducationalNoteReviewArtifactsPresent ? 72 : cia2022CapitalFCTEducationalNoteReviewArtifactsPresent ? 71 : actuarialMemorandumPracticeNoteReviewArtifactsPresent ? 70 : lifeReinsuranceReserveCreditPracticeNoteReviewArtifactsPresent ? 69 : modelRegulationXXXReviewArtifactsPresent ? 68 : reg213ReviewArtifactsPresent ? 66 : reg210ReviewArtifactsPresent ? 65 : modelGovernanceReviewArtifactsPresent ? 64 : reg141ReviewArtifactsPresent ? 63 : ag55ReviewArtifactsPresent ? 62 : ag54ReviewArtifactsPresent ? 61 : ag53ReviewArtifactsPresent ? 58 : ag52ReviewArtifactsPresent ? 57 : ag51ReviewArtifactsPresent ? 56 : ag50ReviewArtifactsPresent ? 55 : ag49ReviewArtifactsPresent ? 54 : ag48ReviewArtifactsPresent ? 53 : ag47ReviewArtifactsPresent ? 52 : ag46ReviewArtifactsPresent ? 51 : ag45ReviewArtifactsPresent ? 50 : ag44ReviewArtifactsPresent ? 49 : ag43ReviewArtifactsPresent ? 48 : ag42ReviewArtifactsPresent ? 47 : ag41ReviewArtifactsPresent ? 46 : ag40ReviewArtifactsPresent ? 45 : ag39ReviewArtifactsPresent ? 44 : ag38ReviewArtifactsPresent ? 43 : ag37ReviewArtifactsPresent ? 42 : ag36ReviewArtifactsPresent ? 41 : ag35ReviewArtifactsPresent ? 40 : ag34ReviewArtifactsPresent ? 39 : 38} review indexes`,
   )
   if (validatedPilotBatchCount > 0) {
     console.log(`- Pilot batches validated: ${validatedPilotBatchCount}`)

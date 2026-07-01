@@ -2,7 +2,7 @@
 
 ## Repo path
 
-`C:\Users\David\OneDrive\Documents\Document Processor`
+`C:\Dev\Document Processor`
 
 ## Current branch
 
@@ -33,6 +33,11 @@ The Asset Adequacy Analysis practice note
 batches 216-221 in ignored working storage. Its planning layer, review index,
 and self-review note are in place, and the wave remains review-only,
 non-binding, and companion-guidance aware.
+The Regulation 213 Fifth Amendment wave
+(`NY Regulations/Reg-213-amend5_text.pdf`) is now complete as batches 249-250
+in ignored working storage. Its tracked review index and self-review note are
+in place, and the wave remains review-only, certified-text aware, and separate
+from the FAQ and Sixth Amendment addenda.
 
 ## Inventory intake gate
 
@@ -83,9 +88,8 @@ companion-guidance aware.
 The CIA 2022 capital/FCT educational-note wave is complete as batches
 206-209 in ignored working storage. Its tracked review index and self-review
 note are in place, and the wave remains review-only, non-binding, and
-companion-guidance aware. The next safe source unit selected from the
-received inventory is `Practice Notes/AAA - C3 Phase 2 - Sep 2006 - life_c3.8.pdf`,
-and its page boundary should be confirmed before any new wave begins.
+companion-guidance aware. The next safe source unit should be selected from
+the remaining inventory after the current handoff is reviewed and confirmed.
 
 - `npm run pilot:course-core`: passed; created the core VM course pilot batch
   outputs in `data/work/batches/batch-002/`
