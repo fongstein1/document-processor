@@ -1,0 +1,133 @@
+{
+  "planId": "reg102-reinsurance-transactions-plan",
+  "planVersion": "1.0",
+  "status": "planned",
+  "sourceScope": {
+    "sourceFamilyId": "ny_regulations",
+    "primarySourceFile": "NY Regulations/2021 VLM Report_DRAFT-(1-27-2020) with academy Updates V1-Reg-102-11-NYCRR-S127.pdf",
+    "sourceFolder": "NY Regulations",
+    "sourceTitle": "Reinsurance Transactions by Authorized Life Insurers and Certain Other Authorized Insurers",
+    "sourceReference": "New York Regulation 102 / 11 CRR-NY Part 127",
+    "sourceStatus": "active",
+    "sourceStatusNote": "Current through March 15, 2020; section 127.5 is repealed and should remain boundary context only; page-image wording backstop remains required because the text layer is noisy / OCR-like.",
+    "domainId": "naic_regulatory",
+    "rawSourceRoot": "C:\\Dev\\NAIC Valuation Manual Course",
+    "confirmedPageRange": [1, 8],
+    "observedSectionWindows": [
+      {
+        "sectionId": "reg102-opening-preamble-scope-reinsurance-credit-repealed-closeout",
+        "pageRange": [1, 8],
+        "note": "Title page, preamble, scope, reinsurance-credit rules, and repealed closeout."
+      }
+    ],
+    "boundaries": [
+      "Keep planning focused on this single Regulation 102 PDF.",
+      "Do not widen into AG files, practice notes, or other NY regulation files in the same wave.",
+      "Keep the opening preamble / scope / reinsurance-credit / repealed closeout language review-only until a human confirms the indexing decision.",
+      "Keep the page-image wording backstop visible because the text layer is noisy / OCR-like.",
+      "Keep the batch source-bound and review-only."
+    ],
+    "exclusions": [
+      "No learner-facing content.",
+      "No app-ready export.",
+      "No RAG-ready export.",
+      "No approved/promoted export.",
+      "No eLearning scripts, slides, quizzes, or app exports.",
+      "No raw source files in Git.",
+      "No other guideline files in the same wave."
+    ]
+  },
+  "topicMap": [
+    {
+      "topicId": "reg102-opening-preamble-scope-reinsurance-credit-repealed-closeout",
+      "label": "Opening preamble, scope, reinsurance-credit rules, and repealed closeout",
+      "pageRange": [1, 8],
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "state_regulation",
+        "jurisdiction_specific_requirement",
+        "regulatory_requirement",
+        "reporting_requirement",
+        "documentation_expectation",
+        "governance_or_control_expectation",
+        "cross_reference_mapping",
+        "background_content",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": [
+        "Insurance Law",
+        "reinsurance credit",
+        "ceding insurers",
+        "reserve credit",
+        "section 127.2",
+        "section 127.3",
+        "repealed section 127.5"
+      ],
+      "boundaryNote": "Keep this slice within pages 1-8 and do not absorb other NY regulation files."
+    }
+  ],
+  "proposedBatches": [
+    {
+      "plannedBatchId": "batch-267",
+      "topicIds": [
+        "reg102-opening-preamble-scope-reinsurance-credit-repealed-closeout"
+      ],
+      "title": "Regulation 102 opening preamble, scope, reinsurance-credit rules, and repealed closeout",
+      "pageTarget": {
+        "knownWindow": [1, 8],
+        "notes": "Capture the full eight-page regulation as a single review-only slice and stop at the page 8 boundary."
+      },
+      "rationale": "Capture the full eight-page regulation as a single review-only slice and stop at the page 8 boundary.",
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "state_regulation",
+        "jurisdiction_specific_requirement",
+        "regulatory_requirement",
+        "reporting_requirement",
+        "documentation_expectation",
+        "governance_or_control_expectation",
+        "cross_reference_mapping",
+        "background_content",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    }
+  ],
+  "reviewStandards": {
+    "regulatoryRequirement": "Treat the preamble, scope, reserve-credit, and repealed closeout language as regulatory text when it directs what the company must do.",
+    "definitionOrTerminology": "Treat reinsurance, reserve credit, ceding insurer, and related terms as terminology when the text explains rather than directs.",
+    "crossReferenceMapping": "Treat references to Insurance Law, section 127.2, section 127.3, and related statutory material as cross-reference context unless operationalized.",
+    "backgroundContent": "Treat the title page and section labels as background unless they impose a requirement.",
+    "boundaryControlWindow": "Treat the eight-page slice as a review-only window that should not be merged forward.",
+    "requiresHumanInterpretation": "Treat the indexing choice and the noisy OCR-like text layer as requiring human actuarial interpretation unless the text is explicit.",
+    "sourceQualityCaveat": "Treat text-layer noise or encoding issues as review-only caveats and do not widen the batch because of them."
+  },
+  "promotionGates": {
+    "defaultState": "review_only",
+    "learnerFacing": [
+      "source citation exists",
+      "source support is clear",
+      "wording is not misleading",
+      "confidence is high",
+      "no unresolved review flags exist"
+    ],
+    "appReady": [
+      "learner-facing criteria are already satisfied",
+      "export is sanitized, stable, and versioned",
+      "no unresolved review issues remain"
+    ],
+    "ragReady": [
+      "approved indexed material only",
+      "stable support exists",
+      "no unresolved review flags remain"
+    ],
+    "approvedPromotedExport": [
+      "explicit human approval only"
+    ]
+  },
+  "notes": "Controlled Regulation 102 planning artifact. Planned batch 267 remains review-only by default and is not an extraction run."
+}
