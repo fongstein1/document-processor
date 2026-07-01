@@ -602,3 +602,13 @@ The CIA 2023 financial-condition-testing educational-note wave is complete as ba
 ## C3 Phase 2 practice note addendum
 
 The C3 Phase 2 practice note wave is now complete as batches 222-230 in ignored working storage. The tracked review index and self-review note are in place, the source stays review-only and non-binding, and the page-image wording backstop remains visible because the text layer is noisy in places. The next safe continuation step is to inspect the remaining inventory again before selecting another source unit.
+
+## C3 Phase 2 / AG 43 March 2011 practice note addendum
+
+The March 2011 C3 Phase II / AG 43 practice-note wave is now complete as
+batches 231-244 in ignored working storage. The tracked review index and
+self-review note are `docs/review/c3_phase_2_ag43_2011_practice_note_review_index.md`
+and `docs/review/c3_phase_2_ag43_2011_practice_note_self_review.md`, the
+source stays review-only and non-binding, and the companion-guidance caveat
+remains explicit. The broader proof-of-concept handoff now spans 75 review
+indexes.

@@ -9,9 +9,14 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 const repoRoot = path.resolve(__dirname, '..')
 
-const rawRoot = 'D:\\Work\\AI Projects\\NAIC Valuation Manual Course'
+const rawRoot = path.resolve(
+  repoRoot,
+  '..',
+  'NAIC Valuation Manual Course',
+  'NAIC Valuation Regulation',
+)
 const bundledPythonPath =
-  'C:\\Users\\David\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe'
+  'C:\\Users\\fongs\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe'
 const getCliArg = (flag, fallback) => {
   const index = process.argv.indexOf(`--${flag}`)
   if (index >= 0 && index + 1 < process.argv.length) {

@@ -400,6 +400,29 @@ const paths = {
     'review',
     'c3_phase_2_practice_note_self_review.md',
   ),
+  c3Phase2Ag43March2011PracticeNoteBatchPlanJson: path.join(
+    repoRoot,
+    'config',
+    'c3-phase-2-ag43-2011-practice-note-batch-plan.json',
+  ),
+  c3Phase2Ag43March2011PracticeNoteExtractionPlanMd: path.join(
+    repoRoot,
+    'docs',
+    'processor',
+    'c3_phase_2_ag43_2011_practice_note_extraction_plan.md',
+  ),
+  c3Phase2Ag43March2011PracticeNoteReviewIndexMd: path.join(
+    repoRoot,
+    'docs',
+    'review',
+    'c3_phase_2_ag43_2011_practice_note_review_index.md',
+  ),
+  c3Phase2Ag43March2011PracticeNoteSelfReviewMd: path.join(
+    repoRoot,
+    'docs',
+    'review',
+    'c3_phase_2_ag43_2011_practice_note_self_review.md',
+  ),
   modelRegulationXXXPracticeNoteBatchPlanJson: path.join(
     repoRoot,
     'config',
@@ -13727,6 +13750,65 @@ if (problems.length > 0) {
   console.log(
     `- C3 Phase 2 practice-note plan verified: ${c3Phase2PracticeNoteBatchPlan.proposedBatches.length} batches`,
   )
+  await validatePracticeNotePlanMarkdown(
+    paths.c3Phase2Ag43March2011PracticeNoteExtractionPlanMd,
+    'docs/processor/c3_phase_2_ag43_2011_practice_note_extraction_plan.md',
+  )
+  const c3Phase2Ag43March2011PracticeNoteBatchPlan = await readJson(
+    paths.c3Phase2Ag43March2011PracticeNoteBatchPlanJson,
+  )
+  const c3Phase2Ag43March2011PracticeNoteBatchIds =
+    c3Phase2Ag43March2011PracticeNoteBatchPlan.proposedBatches.map((batch) => batch.plannedBatchId)
+  const c3Phase2Ag43March2011PracticeNoteRegistryReady =
+    c3Phase2Ag43March2011PracticeNoteBatchIds.every((batchId) =>
+      Object.prototype.hasOwnProperty.call(batchDefinitions, batchId),
+    )
+  if (!c3Phase2Ag43March2011PracticeNoteRegistryReady) {
+    problems.push(
+      'scripts/c3-phase-2-ag43-2011-practice-note-batch-definitions.mjs: missing C3 Phase 2 / AG 43 March 2011 practice-note batch registry entries',
+    )
+  }
+  if (c3Phase2Ag43March2011PracticeNoteRegistryReady) {
+    console.log(
+      `- C3 Phase 2 / AG 43 March 2011 practice-note registry verified: ${c3Phase2Ag43March2011PracticeNoteBatchPlan.proposedBatches.length} batches`,
+    )
+  }
+  const c3Phase2Ag43March2011PracticeNoteReviewIndexText = (await exists(
+    paths.c3Phase2Ag43March2011PracticeNoteReviewIndexMd,
+  ))
+    ? await readText(paths.c3Phase2Ag43March2011PracticeNoteReviewIndexMd)
+    : ''
+  const c3Phase2Ag43March2011PracticeNoteSelfReviewText = (await exists(
+    paths.c3Phase2Ag43March2011PracticeNoteSelfReviewMd,
+  ))
+    ? await readText(paths.c3Phase2Ag43March2011PracticeNoteSelfReviewMd)
+    : ''
+  const c3Phase2Ag43March2011PracticeNoteReviewIndexReady =
+    c3Phase2Ag43March2011PracticeNoteReviewIndexText.length > 0 &&
+    c3Phase2Ag43March2011PracticeNoteBatchIds.every((batchId) =>
+      c3Phase2Ag43March2011PracticeNoteReviewIndexText.includes(batchId),
+    )
+  const c3Phase2Ag43March2011PracticeNoteSelfReviewReady =
+    c3Phase2Ag43March2011PracticeNoteSelfReviewText.length > 0 &&
+    c3Phase2Ag43March2011PracticeNoteBatchIds.every((batchId) =>
+      c3Phase2Ag43March2011PracticeNoteSelfReviewText.includes(batchId),
+    )
+  const c3Phase2Ag43March2011PracticeNoteReviewArtifactsPresent =
+    c3Phase2Ag43March2011PracticeNoteReviewIndexReady &&
+    c3Phase2Ag43March2011PracticeNoteSelfReviewReady
+  if (c3Phase2Ag43March2011PracticeNoteReviewIndexReady) {
+    console.log(
+      `- C3 Phase 2 / AG 43 March 2011 practice-note review index verified: ${c3Phase2Ag43March2011PracticeNoteBatchPlan.proposedBatches.length} batches`,
+    )
+  }
+  if (c3Phase2Ag43March2011PracticeNoteSelfReviewReady) {
+    console.log(
+      `- C3 Phase 2 / AG 43 March 2011 practice-note self-review verified: ${c3Phase2Ag43March2011PracticeNoteBatchPlan.proposedBatches.length} batches`,
+    )
+  }
+  console.log(
+    `- C3 Phase 2 / AG 43 March 2011 practice-note plan verified: ${c3Phase2Ag43March2011PracticeNoteBatchPlan.proposedBatches.length} batches`,
+  )
   await validateCia2022CapitalFCTEducationalNotePlanMarkdown(
     paths.cia2022CapitalFCTEducationalNoteExtractionPlanMd,
     'docs/processor/cia_2022_capital_fct_educational_note_extraction_plan.md',
@@ -13865,7 +13947,7 @@ if (problems.length > 0) {
   }
   console.log(`- Model Regulation XXX plan verified: ${modelRegulationXXXBatchPlan.proposedBatches.length} batches`)
   console.log(
-    `- POC status summary verified: ${c3Phase2PracticeNoteReviewArtifactsPresent ? 74 : assetAdequacyAnalysisPracticeNoteReviewArtifactsPresent ? 73 : cia2023FinancialConditionTestingEducationalNoteReviewArtifactsPresent ? 72 : cia2022CapitalFCTEducationalNoteReviewArtifactsPresent ? 71 : actuarialMemorandumPracticeNoteReviewArtifactsPresent ? 70 : lifeReinsuranceReserveCreditPracticeNoteReviewArtifactsPresent ? 69 : modelRegulationXXXReviewArtifactsPresent ? 68 : reg213ReviewArtifactsPresent ? 66 : reg210ReviewArtifactsPresent ? 65 : modelGovernanceReviewArtifactsPresent ? 64 : reg141ReviewArtifactsPresent ? 63 : ag55ReviewArtifactsPresent ? 62 : ag54ReviewArtifactsPresent ? 61 : ag53ReviewArtifactsPresent ? 58 : ag52ReviewArtifactsPresent ? 57 : ag51ReviewArtifactsPresent ? 56 : ag50ReviewArtifactsPresent ? 55 : ag49ReviewArtifactsPresent ? 54 : ag48ReviewArtifactsPresent ? 53 : ag47ReviewArtifactsPresent ? 52 : ag46ReviewArtifactsPresent ? 51 : ag45ReviewArtifactsPresent ? 50 : ag44ReviewArtifactsPresent ? 49 : ag43ReviewArtifactsPresent ? 48 : ag42ReviewArtifactsPresent ? 47 : ag41ReviewArtifactsPresent ? 46 : ag40ReviewArtifactsPresent ? 45 : ag39ReviewArtifactsPresent ? 44 : ag38ReviewArtifactsPresent ? 43 : ag37ReviewArtifactsPresent ? 42 : ag36ReviewArtifactsPresent ? 41 : ag35ReviewArtifactsPresent ? 40 : ag34ReviewArtifactsPresent ? 39 : 38} review indexes`,
+    `- POC status summary verified: ${c3Phase2Ag43March2011PracticeNoteReviewArtifactsPresent ? 75 : c3Phase2PracticeNoteReviewArtifactsPresent ? 74 : assetAdequacyAnalysisPracticeNoteReviewArtifactsPresent ? 73 : cia2023FinancialConditionTestingEducationalNoteReviewArtifactsPresent ? 72 : cia2022CapitalFCTEducationalNoteReviewArtifactsPresent ? 71 : actuarialMemorandumPracticeNoteReviewArtifactsPresent ? 70 : lifeReinsuranceReserveCreditPracticeNoteReviewArtifactsPresent ? 69 : modelRegulationXXXReviewArtifactsPresent ? 68 : reg213ReviewArtifactsPresent ? 66 : reg210ReviewArtifactsPresent ? 65 : modelGovernanceReviewArtifactsPresent ? 64 : reg141ReviewArtifactsPresent ? 63 : ag55ReviewArtifactsPresent ? 62 : ag54ReviewArtifactsPresent ? 61 : ag53ReviewArtifactsPresent ? 58 : ag52ReviewArtifactsPresent ? 57 : ag51ReviewArtifactsPresent ? 56 : ag50ReviewArtifactsPresent ? 55 : ag49ReviewArtifactsPresent ? 54 : ag48ReviewArtifactsPresent ? 53 : ag47ReviewArtifactsPresent ? 52 : ag46ReviewArtifactsPresent ? 51 : ag45ReviewArtifactsPresent ? 50 : ag44ReviewArtifactsPresent ? 49 : ag43ReviewArtifactsPresent ? 48 : ag42ReviewArtifactsPresent ? 47 : ag41ReviewArtifactsPresent ? 46 : ag40ReviewArtifactsPresent ? 45 : ag39ReviewArtifactsPresent ? 44 : ag38ReviewArtifactsPresent ? 43 : ag37ReviewArtifactsPresent ? 42 : ag36ReviewArtifactsPresent ? 41 : ag35ReviewArtifactsPresent ? 40 : ag34ReviewArtifactsPresent ? 39 : 38} review indexes`,
   )
   if (validatedPilotBatchCount > 0) {
     console.log(`- Pilot batches validated: ${validatedPilotBatchCount}`)

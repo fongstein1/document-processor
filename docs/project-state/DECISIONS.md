@@ -273,9 +273,9 @@ later page is difficult to read.
 ## Repository proof-of-concept summary
 
 The tracked valuation-regulation repository proof-of-concept summary is a
-summary-only handoff artifact. It should stay aligned with the thirty-eight
-review indexes and must not be treated as promoted content, learner-facing
-content, app-ready output, or RAG-ready material.
+summary-only handoff artifact. It should stay aligned with the current review
+indexes and must not be treated as promoted content, learner-facing content,
+app-ready output, or RAG-ready material.
 
 ## Dedicated NY regulation waves
 
@@ -335,3 +335,12 @@ the attachment tables remained separate from the opening guidance.
 - 2026-06-29: The received source inventory file remains a local manual input
   artifact and should stay ignored/untracked; only the narrow ignore rule for
   that received file is intended to persist.
+
+## March 2011 C3 Phase II / AG 43 wave boundary
+
+The March 2011 C3 Phase II / AG 43 practice note is treated as one integrated
+review-only source wave with contiguous page windows and a single tracked
+review index / self-review pair. The July 2009 practice note and the December
+2009 addendum remain part of the same March 2011 update, not separate waves.
+This keeps the batch plan aligned with the source text and avoids splitting the
+update into artificial sub-sources.

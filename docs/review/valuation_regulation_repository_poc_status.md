@@ -12,7 +12,7 @@ regulation repository. It consolidates the completed review-only extraction
 waves without changing the status of the underlying batch outputs or review
 indexes.
 
-The handoff now spans 73 review indexes, up from 72 review indexes. The
+The handoff now spans 75 review indexes, up from 74 review indexes. The
 earlier 51 review indexes checkpoint remains part of the handoff history, the
 earlier 50 review indexes checkpoint remains part of the handoff history, the
 earlier 49 review indexes checkpoint remains part of the handoff history, the
@@ -917,4 +917,14 @@ working storage. The tracked review index and self-review note are
 `docs/review/c3_phase_2_practice_note_review_index.md` and
 `docs/review/c3_phase_2_practice_note_self_review.md`, the wave stays
 review-only, and the non-binding companion-guidance caveat remains explicit.
-The broader proof-of-concept handoff now spans 74 review indexes.
+The broader proof-of-concept handoff now spans 75 review indexes.
+
+## C3 Phase 2 / AG 43 March 2011 addendum
+
+The March 2011 C3 Phase II / AG 43 practice-note wave is complete as batches
+231-244 in ignored working storage. The tracked review index and self-review
+note are `docs/review/c3_phase_2_ag43_2011_practice_note_review_index.md`
+and `docs/review/c3_phase_2_ag43_2011_practice_note_self_review.md`, the
+wave stays review-only and non-binding, and the companion-guidance caveat
+remains explicit. The broader proof-of-concept handoff now spans 75 review
+indexes.

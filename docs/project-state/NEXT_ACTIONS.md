@@ -603,3 +603,13 @@ unit.
 candidate after the portability checkpoint. It should be treated as a larger
 wave and should not start until the clean-tree / inventory / validation
 requirements in the portability handoff are satisfied.
+
+## March 2011 practice note complete
+
+The March 2011 C3 Phase II / AG 43 practice-note wave is now complete as
+batches 231-244 in ignored working storage. The tracked review index and
+self-review note are in place, the source stays review-only and non-binding,
+and the companion-guidance caveat remains explicit.
+
+The next safe continuation step is to inspect the remaining inventory again
+before selecting another source unit, rather than guessing from memory.
