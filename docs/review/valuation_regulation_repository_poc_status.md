@@ -12,7 +12,7 @@ regulation repository. It consolidates the completed review-only extraction
 waves without changing the status of the underlying batch outputs or review
 indexes.
 
-The handoff now spans 88 review indexes, up from 87 review indexes. The
+The handoff now spans 89 review indexes, up from 88 review indexes. The
 earlier 51 review indexes checkpoint remains part of the handoff history, the
 earlier 50 review indexes checkpoint remains part of the handoff history, the
 earlier 49 review indexes checkpoint remains part of the handoff history, the
@@ -194,6 +194,9 @@ What has been built:
 - tracked Regulation 179 review index and self-review note for the NY
   mortality-table-recognition unit in `docs/review/reg179_review_index.md`
   and `docs/review/reg179_self_review.md`
+- tracked Regulation 136 review index and self-review note for the NY
+  market-value-adjustment unit in `docs/review/reg136_review_index.md` and
+  `docs/review/reg136_self_review.md`
 - tracked model-governance practice-note review index and self-review note
   for the companion-guidance unit in
   `docs/review/model_governance_practice_note_review_index.md` and
@@ -257,6 +260,7 @@ What source families / chapters have been processed:
 - NY Regulation 128 market-value-separate-accounts source, batch-268
 - NY Regulation 127 market-value-adjustments source, batch-269
 - NY Regulation 179 mortality-table-recognition source, batch-270
+- NY Regulation 136 market-value-adjustment source, batch-271
 - AG 03 single-page guideline, `batch-076`
 - AG 01 single-page guideline, `batch-077`
 - AG 02 two-page guideline, `batch-078`
@@ -1081,3 +1085,12 @@ tracked review index and self-review note are
 the source stays review-only and active, and the page-image wording backstop
 remains visible because the text layer is noisy / OCR-like. The broader
 proof-of-concept handoff now spans 88 review indexes.
+
+## Reg 136 addendum
+
+Regulation 136 is now complete as batch-271 in ignored working storage. The
+tracked review index and self-review note are
+`docs/review/reg136_review_index.md` and `docs/review/reg136_self_review.md`,
+the source stays review-only and active, and the page-image wording backstop
+remains visible because the text layer is noisy / OCR-like. The broader
+proof-of-concept handoff now spans 89 review indexes.

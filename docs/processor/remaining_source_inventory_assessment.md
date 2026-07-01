@@ -12,6 +12,8 @@
 - The Regulation 127 wave was a small, bounded NY-regulation slice and now has tracked review handoff artifacts.
 - Recently completed source unit: Regulation 179.
 - The Regulation 179 wave was a small, bounded NY-regulation slice and now has tracked review handoff artifacts.
+- Recently completed source unit: Regulation 136.
+- The Regulation 136 wave was a small, bounded NY-regulation slice and now has tracked review handoff artifacts.
 - The received inventory still contains broader manual-style and report-style items that should stay deferred until their page boundaries are confirmed.
 
 ## Safe Coverage Notes
@@ -22,6 +24,7 @@
 - The Regulation 128 slice also used the page-image backstop because the text layer was noisy / OCR-like.
 - The Regulation 127 slice also used the page-image backstop because the text layer was noisy / OCR-like.
 - The Regulation 179 slice also used the page-image backstop because the text layer was noisy / OCR-like.
+- The Regulation 136 slice also used the page-image backstop because the text layer was noisy / OCR-like.
 - No raw source files, package-manager artifacts, or ignored working batches were committed.
 
 ## Deferred Items
