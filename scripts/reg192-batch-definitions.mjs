@@ -173,6 +173,7 @@ const reg192BatchSpecs = [
       'The extracted text is garbled while the page image identifies the NY Regulation 192 / Part 102 title page clearly.',
     validationCheckId: 'reg192-three-page-coverage',
     validationCheckDetails: 'The selected page window captures the full three-page Regulation 192 slice.',
+    pageWindow: [1, 3],
     sectionReference: 'Opening sections through transition rules',
     citationText: 'New York Regulation 192 / 11 CRR-NY Part 102, pages 1-3',
     reviewFlags: [
