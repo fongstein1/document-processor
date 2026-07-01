@@ -336,11 +336,22 @@ const paths = {
     'config',
     'reg213-amendment1-faq-batch-plan.json',
   ),
+  reg213Amendment6BatchPlanJson: path.join(
+    repoRoot,
+    'config',
+    'reg213-amendment6-batch-plan.json',
+  ),
   reg213Amendment1FaqExtractionPlanMd: path.join(
     repoRoot,
     'docs',
     'processor',
     'reg213_amendment1_faq_extraction_plan.md',
+  ),
+  reg213Amendment6ExtractionPlanMd: path.join(
+    repoRoot,
+    'docs',
+    'processor',
+    'reg213_amendment6_extraction_plan.md',
   ),
   reg213Amendment1FaqReviewIndexMd: path.join(
     repoRoot,
@@ -853,8 +864,11 @@ const requiredFiles = [
   'docs/review/reg213_amendment1_faq_review_index.md',
   'docs/review/reg213_amendment1_faq_self_review.md',
   'docs/processor/reg213_amendment1_faq_extraction_plan.md',
+  'docs/processor/reg213_amendment6_extraction_plan.md',
   'config/reg213-amendment1-faq-batch-plan.json',
+  'config/reg213-amendment6-batch-plan.json',
   'scripts/reg213-amendment1-faq-batch-definitions.mjs',
+  'scripts/reg213-amendment6-batch-definitions.mjs',
   'config/supporting-vm-batch-plan.json',
   'config/vm21-batch-plan.json',
   'config/vm20-batch-plan.json',
@@ -3294,6 +3308,44 @@ const validateReg213Amendment1FaqPlanMarkdown = async (filePath, label) => {
     'batch-245',
     'batch-246',
     'batch-247',
+    'page-image wording backstop',
+    'line references are not expected',
+  ].forEach((phrase) => {
+    if (!text.includes(phrase)) {
+      problems.push(`${label}: must mention ${phrase}`)
+    }
+  })
+}
+
+const validateReg213Amendment6PlanMarkdown = async (filePath, label) => {
+  const text = await readText(filePath)
+  const requiredHeadings = [
+    '## Source Scope',
+    '## Topic Map',
+    '## Proposed Batch Sequence',
+    '## Review Standards',
+    '## Promotion Gates',
+    '## Validation Implications',
+    '## Operating Note',
+  ]
+  requiredHeadings.forEach((heading) => {
+    if (!text.includes(heading)) {
+      problems.push(`${label}: missing heading ${heading}`)
+    }
+  })
+  ;[
+    'review-only',
+    'not learner-facing',
+    'not app-ready',
+    'not RAG-ready',
+    'not promoted',
+    'NY Regulations/Reg-213-amend6_text.pdf',
+    'NY Regulations',
+    'Regulation 213 Sixth Amendment',
+    'New York State Department of Financial Services',
+    'proposed',
+    'footnote revision',
+    'batch-248',
     'page-image wording backstop',
     'line references are not expected',
   ].forEach((phrase) => {
@@ -13647,6 +13699,42 @@ if (problems.length > 0) {
   }
   console.log(
     `- Reg 213 Amendment No. 1 FAQ plan verified: ${reg213Amendment1FaqBatchPlan.proposedBatches.length} batches`,
+  )
+  await validateReg213Amendment6PlanMarkdown(
+    paths.reg213Amendment6ExtractionPlanMd,
+    'docs/processor/reg213_amendment6_extraction_plan.md',
+  )
+  const reg213Amendment6BatchPlan = await readJson(paths.reg213Amendment6BatchPlanJson)
+  if (reg213Amendment6BatchPlan.status !== 'planned') {
+    problems.push('config/reg213-amendment6-batch-plan.json: status must be planned')
+  }
+  if (
+    !Array.isArray(reg213Amendment6BatchPlan.proposedBatches) ||
+    reg213Amendment6BatchPlan.proposedBatches.length !== 1
+  ) {
+    problems.push('config/reg213-amendment6-batch-plan.json: expected exactly one proposed batch')
+  }
+  if (
+    reg213Amendment6BatchPlan.sourceScope?.confirmedPageRange?.[0] !== 1 ||
+    reg213Amendment6BatchPlan.sourceScope?.confirmedPageRange?.[1] !== 1
+  ) {
+    problems.push('config/reg213-amendment6-batch-plan.json: confirmedPageRange must be [1, 1]')
+  }
+  const reg213Amendment6BatchIds = Array.isArray(reg213Amendment6BatchPlan.proposedBatches)
+    ? reg213Amendment6BatchPlan.proposedBatches
+        .map((batch) => batch?.plannedBatchId)
+        .filter((batchId) => typeof batchId === 'string' && batchId.length > 0)
+    : []
+  for (const plannedBatchId of reg213Amendment6BatchIds) {
+    if (!batchDefinitions[plannedBatchId]) {
+      problems.push(`scripts/batch-definitions.mjs: missing batch definition for ${plannedBatchId}`)
+    }
+  }
+  if (!reg213Amendment6BatchIds.includes('batch-248')) {
+    problems.push('config/reg213-amendment6-batch-plan.json: expected batch-248 to be planned')
+  }
+  console.log(
+    `- Reg 213 Sixth Amendment plan verified: ${reg213Amendment6BatchPlan.proposedBatches.length} batches`,
   )
   const modelGovernanceBatchIds = modelGovernancePracticeNoteBatchPlan.proposedBatches.map((batch) => batch.plannedBatchId)
   const modelGovernanceReviewIndexText = (await exists(paths.modelGovernancePracticeNoteReviewIndexMd))

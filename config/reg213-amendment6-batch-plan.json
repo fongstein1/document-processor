@@ -1,0 +1,130 @@
+{
+  "planId": "reg213-amendment6-plan",
+  "planVersion": "1.0",
+  "status": "planned",
+  "sourceScope": {
+    "sourceFamilyId": "ny_regulations",
+    "primarySourceFile": "NY Regulations/Reg-213-amend6_text.pdf",
+    "sourceFolder": "NY Regulations",
+    "sourceTitle": "Regulation 213 Sixth Amendment",
+    "sourceReference": "New York State Department of Financial Services proposed Sixth Amendment to 11 NYCRR 103 (Insurance Regulation 213)",
+    "sourceStatus": "proposed",
+    "sourceStatusNote": "The file is a proposed amendment text, not final adopted rule text.",
+    "jurisdiction": "New York",
+    "domainId": "naic_regulatory",
+    "rawSourceRoot": "C:\\Dev\\NAIC Valuation Manual Course\\NAIC Valuation Regulation",
+    "confirmedPageRange": [1, 1],
+    "observedSectionWindows": [
+      {
+        "sectionId": "reg213-amendment6-proposed-amendment",
+        "pageRange": [1, 1],
+        "note": "Proposed Sixth Amendment text and footnote revision."
+      }
+    ],
+    "boundaries": [
+      "Keep the proposed amendment separate from the core Regulation 213 wave.",
+      "Keep the FAQ addendum and the other amendment-history PDFs in the same folder out of this wave unless a later amendment-history plan explicitly opens them.",
+      "Preserve page locators and line references where available, but expect the text layer to remain page-image-backed for exact wording.",
+      "Keep the one-page window narrow so the boundary logic stays easy to review."
+    ],
+    "exclusions": [
+      "No learner-facing content.",
+      "No app-ready export.",
+      "No RAG-ready export.",
+      "No approved/promoted export.",
+      "No eLearning scripts, slides, quizzes, or app exports.",
+      "No raw source files in Git.",
+      "No Regulation 213 core-wave extraction in this batch.",
+      "No FAQ addendum pages in this wave.",
+      "No other amendment-history PDFs in the same wave."
+    ]
+  },
+  "topicMap": [
+    {
+      "topicId": "reg213-amendment6-proposed-amendment",
+      "label": "Proposed Sixth Amendment text and footnote revision",
+      "pageRange": [1, 1],
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "state_regulation",
+        "regulatory_requirement",
+        "documentation_expectation",
+        "cross_reference_mapping",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": [
+        "Sixth Amendment",
+        "Insurance Regulation 213",
+        "2024 Valuation Manual",
+        "footnote 1",
+        "new matter",
+        "Notice of Adoption"
+      ],
+      "boundaryNote": "Keep the proposed amendment title and footnote revision together and stop at the end of the page."
+    }
+  ],
+  "proposedBatches": [
+    {
+      "plannedBatchId": "batch-248",
+      "topicIds": ["reg213-amendment6-proposed-amendment"],
+      "title": "Regulation 213 Sixth Amendment proposed text and footnote revision",
+      "paragraphTarget": {
+        "knownWindow": [1, 1],
+        "notes": "Capture the proposed amendment title, adoption framing, and the footnote revision as one narrow review-only slice."
+      },
+      "rationale": "Capture the proposed amendment title, adoption framing, and the footnote revision as one narrow review-only slice.",
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "state_regulation",
+        "regulatory_requirement",
+        "documentation_expectation",
+        "cross_reference_mapping",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    }
+  ],
+  "reviewStandards": {
+    "proposedAmendment": "Treat the source as proposed regulatory text and not as final adopted rule text unless later confirmation says otherwise.",
+    "stateRegulation": "Treat the source as New York regulatory material tied to Regulation 213.",
+    "regulatoryRequirement": "Treat direct references to regulatory duties as mapped regulatory context, but do not promote the proposed amendment itself into binding text.",
+    "documentationExpectation": "Treat incorporated-manual and footnote language as documentation context if it appears.",
+    "crossReferenceMapping": "Treat references to the Valuation Manual and the amended footnote as mapped context unless the text operationalizes them.",
+    "backgroundContent": "Treat the title and introductory text as background unless the text imposes a duty.",
+    "boundaryControlWindow": "Treat the page window as review-only and do not widen it unless later cleanup explicitly needs that split.",
+    "requiresHumanInterpretation": "Treat dense or ambiguous amendment wording as requiring human review unless the page image confirms the wording."
+  },
+  "promotionGates": {
+    "defaultState": "review_only",
+    "learnerFacing": {
+      "sourceCitationExists": true,
+      "sourceSupportIsClear": true,
+      "wordingIsNotMisleading": true,
+      "confidenceIsHigh": true,
+      "noUnresolvedReviewFlagsExist": true
+    },
+    "appReady": {
+      "learnerFacingCriteriaAreSatisfied": true,
+      "exportIsSanitizedStableAndVersioned": true,
+      "noUnresolvedReviewIssuesRemain": true
+    },
+    "ragReady": {
+      "approvedIndexedMaterialExists": true,
+      "noHumanReviewNeededForDisposition": true,
+      "sourceCitationsAreStable": true
+    }
+  },
+  "validationRequirements": [
+    "The plan JSON must exist and parse cleanly.",
+    "The plan markdown must exist and carry the expected headings.",
+    "The dedicated batch-definition file must exist and stay synchronized with the plan.",
+    "The batch must stay review-only by default.",
+    "The source must remain proposed and not promoted.",
+    "The source must stay separate from the core Regulation 213 wave and the FAQ addendum.",
+    "The source should remain page-image-backed for exact wording where needed."
+  ]
+}
