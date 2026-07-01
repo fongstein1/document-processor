@@ -1,0 +1,175 @@
+{
+  "planId": "reg213-amendment5-plan",
+  "planVersion": "1.0",
+  "status": "planned",
+  "sourceScope": {
+    "sourceFamilyId": "ny_regulations",
+    "primarySourceFile": "NY Regulations/Reg-213-amend5_text.pdf",
+    "sourceFolder": "NY Regulations",
+    "sourceTitle": "Regulation 213 Fifth Amendment",
+    "sourceReference": "New York State Department of Financial Services Fifth Amendment to 11 NYCRR 103 (Insurance Regulation 213)",
+    "sourceStatus": "certified",
+    "sourceStatusNote": "The file contains the Fifth Amendment text and a certification page; keep the two pages separate.",
+    "jurisdiction": "New York",
+    "domainId": "naic_regulatory",
+    "rawSourceRoot": "C:\\Dev\\NAIC Valuation Manual Course\\NAIC Valuation Regulation",
+    "confirmedPageRange": [1, 2],
+    "observedSectionWindows": [
+      {
+        "sectionId": "reg213-amendment5-footnote-revision",
+        "pageRange": [1, 1],
+        "note": "Fifth Amendment title, adoption framing, and footnote revision."
+      },
+      {
+        "sectionId": "reg213-amendment5-certification",
+        "pageRange": [2, 2],
+        "note": "Certification and publication notice."
+      }
+    ],
+    "boundaries": [
+      "Keep the Fifth Amendment separate from the core Regulation 213 wave.",
+      "Keep the FAQ addendum, the Sixth Amendment addendum, and the other amendment-history PDFs in the same folder out of this wave unless a later amendment-history plan explicitly opens them.",
+      "Preserve page locators and line references where available, but expect the text layer to remain page-image-backed for exact wording.",
+      "Keep the amendment text and certification page separate so the boundary logic stays easy to review."
+    ],
+    "exclusions": [
+      "No learner-facing content.",
+      "No app-ready export.",
+      "No RAG-ready export.",
+      "No approved/promoted export.",
+      "No eLearning scripts, slides, quizzes, or app exports.",
+      "No raw source files in Git.",
+      "No Regulation 213 core-wave extraction in this batch.",
+      "No FAQ addendum pages in this wave.",
+      "No Sixth Amendment pages in this wave.",
+      "No other amendment-history PDFs in the same wave."
+    ]
+  },
+  "topicMap": [
+    {
+      "topicId": "reg213-amendment5-footnote-revision",
+      "label": "Footnote revision and amendment text",
+      "pageRange": [1, 1],
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "state_regulation",
+        "regulatory_requirement",
+        "documentation_expectation",
+        "cross_reference_mapping",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": [
+        "Fifth Amendment",
+        "Insurance Regulation 213",
+        "2023 Valuation Manual",
+        "footnote 1",
+        "new matter",
+        "Notice of Adoption"
+      ],
+      "boundaryNote": "Keep the amendment title and footnote revision together and stop before the certification page begins."
+    },
+    {
+      "topicId": "reg213-amendment5-certification",
+      "label": "Certification and publication notice",
+      "pageRange": [2, 2],
+      "reviewComplexity": "low",
+      "expectedIssueTypes": [
+        "state_regulation",
+        "documentation_expectation",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": [
+        "certification",
+        "publication of the Notice of Adoption",
+        "November 21, 2023",
+        "State Register"
+      ],
+      "boundaryNote": "Keep the certification language together and stop at the end of the page."
+    }
+  ],
+  "proposedBatches": [
+    {
+      "plannedBatchId": "batch-249",
+      "topicIds": ["reg213-amendment5-footnote-revision"],
+      "title": "Regulation 213 Fifth Amendment footnote revision and amendment text",
+      "paragraphTarget": {
+        "knownWindow": [1, 1],
+        "notes": "Capture the Fifth Amendment title and the footnote revision as one narrow review-only slice."
+      },
+      "rationale": "Capture the Fifth Amendment title and the footnote revision as one narrow review-only slice.",
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "state_regulation",
+        "regulatory_requirement",
+        "documentation_expectation",
+        "cross_reference_mapping",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    },
+    {
+      "plannedBatchId": "batch-250",
+      "topicIds": ["reg213-amendment5-certification"],
+      "title": "Regulation 213 Fifth Amendment certification and publication notice",
+      "paragraphTarget": {
+        "knownWindow": [2, 2],
+        "notes": "Capture the certification language as one review-only slice."
+      },
+      "rationale": "Capture the certification language as one review-only slice.",
+      "reviewComplexity": "low",
+      "expectedIssueTypes": [
+        "state_regulation",
+        "documentation_expectation",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    }
+  ],
+  "reviewStandards": {
+    "certifiedAmendmentText": "Treat the source as certified regulatory text and not as a learner-facing explanation or a promoted artifact.",
+    "stateRegulation": "Treat the source as New York regulatory material tied to Regulation 213.",
+    "regulatoryRequirement": "Treat direct references to regulatory duties as mapped regulatory context, but do not promote the amendment itself into binding text.",
+    "documentationExpectation": "Treat incorporated-manual and certification language as documentation context if it appears.",
+    "crossReferenceMapping": "Treat references to the Valuation Manual and the amended footnote as mapped context unless the text operationalizes them.",
+    "backgroundContent": "Treat the title and introductory text as background unless the text imposes a duty.",
+    "boundaryControlWindow": "Treat each page window as review-only and do not widen it unless later cleanup explicitly needs that split.",
+    "requiresHumanInterpretation": "Treat dense or ambiguous amendment wording as requiring human review unless the page image confirms the wording."
+  },
+  "promotionGates": {
+    "defaultState": "review_only",
+    "learnerFacing": {
+      "sourceCitationExists": true,
+      "sourceSupportIsClear": true,
+      "wordingIsNotMisleading": true,
+      "confidenceIsHigh": true,
+      "noUnresolvedReviewFlagsExist": true
+    },
+    "appReady": {
+      "learnerFacingCriteriaAreSatisfied": true,
+      "exportIsSanitizedStableAndVersioned": true,
+      "noUnresolvedReviewIssuesRemain": true
+    },
+    "ragReady": {
+      "approvedIndexedMaterialExists": true,
+      "noHumanReviewNeededForDisposition": true,
+      "sourceCitationsAreStable": true
+    }
+  },
+  "validationRequirements": [
+    "The plan JSON must exist and parse cleanly.",
+    "The plan markdown must exist and carry the expected headings.",
+    "The dedicated batch-definition file must exist and stay synchronized with the plan.",
+    "The planned batches must stay review-only by default.",
+    "The source must remain certified and not promoted.",
+    "The source must stay separate from the core Regulation 213 wave and the amendment addenda.",
+    "The source should remain page-image-backed for exact wording where needed."
+  ]
+}

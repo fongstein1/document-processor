@@ -222,6 +222,7 @@ const reg213Amendment6BatchSpecs = [
     citationText: 'PROPOSED SIXTH AMENDMENT TO 11 NYCRR 103 (INSURANCE REGULATION 213)',
     summary:
       'The one-page proposed amendment frames the Sixth Amendment, adopts the updated valuation-manual footnote, and keeps the revised language review-only.',
+    summaryLead: 'The proposed amendment text and footnote revision',
     keywords: [
       'Reg 213',
       'Sixth Amendment',
