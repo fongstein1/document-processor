@@ -1,0 +1,177 @@
+{
+  "planId": "reg213-amendment4-plan",
+  "planVersion": "1.0",
+  "status": "planned",
+  "sourceScope": {
+    "sourceFamilyId": "ny_regulations",
+    "primarySourceFile": "NY Regulations/Reg-213-amend4_text.pdf",
+    "sourceFolder": "NY Regulations",
+    "sourceTitle": "Regulation 213 Fourth Amendment",
+    "sourceReference": "New York State Department of Financial Services Fourth Amendment to 11 NYCRR 103 (Insurance Regulation 213)",
+    "sourceStatus": "certified",
+    "sourceStatusNote": "The file contains the Fourth Amendment text and a certification page; keep the pages separate.",
+    "jurisdiction": "New York",
+    "domainId": "naic_regulatory",
+    "rawSourceRoot": "C:\\Dev\\NAIC Valuation Manual Course\\NAIC Valuation Regulation",
+    "confirmedPageRange": [1, 3],
+    "observedSectionWindows": [
+      {
+        "sectionId": "reg213-amendment4-amendment-text",
+        "pageRange": [1, 2],
+        "note": "Fourth Amendment title, footnote revision, and section updates."
+      },
+      {
+        "sectionId": "reg213-amendment4-certification",
+        "pageRange": [3, 3],
+        "note": "Certification and publication notice."
+      }
+    ],
+    "boundaries": [
+      "Keep the Fourth Amendment separate from the core Regulation 213 wave.",
+      "Keep the FAQ addendum, the Fifth Amendment addendum, the Sixth Amendment addendum, and the other amendment-history PDFs in the same folder out of this wave unless a later amendment-history plan explicitly opens them.",
+      "Preserve page locators and line references where available, but expect the text layer to remain page-image-backed for exact wording.",
+      "Keep the amendment text and certification page separate so the boundary logic stays easy to review."
+    ],
+    "exclusions": [
+      "No learner-facing content.",
+      "No app-ready export.",
+      "No RAG-ready export.",
+      "No approved/promoted export.",
+      "No eLearning scripts, slides, quizzes, or app exports.",
+      "No raw source files in Git.",
+      "No Regulation 213 core-wave extraction in this batch.",
+      "No FAQ addendum pages in this wave.",
+      "No Fifth Amendment pages in this wave.",
+      "No Sixth Amendment pages in this wave.",
+      "No other amendment-history PDFs in the same wave."
+    ]
+  },
+  "topicMap": [
+    {
+      "topicId": "reg213-amendment4-amendment-text",
+      "label": "Fourth Amendment text and section updates",
+      "pageRange": [1, 2],
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "state_regulation",
+        "regulatory_requirement",
+        "documentation_expectation",
+        "cross_reference_mapping",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": [
+        "Fourth Amendment",
+        "Insurance Regulation 213",
+        "2022 Valuation Manual",
+        "footnote 1",
+        "section 103.4",
+        "section 103.8",
+        "Notice of Adoption"
+      ],
+      "boundaryNote": "Keep the amendment title, footnote revision, and section updates together and stop before the certification page begins."
+    },
+    {
+      "topicId": "reg213-amendment4-certification",
+      "label": "Certification and publication notice",
+      "pageRange": [3, 3],
+      "reviewComplexity": "low",
+      "expectedIssueTypes": [
+        "state_regulation",
+        "documentation_expectation",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": [
+        "certification",
+        "publication of the Notice of Adoption",
+        "February 10, 2023",
+        "State Register"
+      ],
+      "boundaryNote": "Keep the certification language together and stop at the end of the page."
+    }
+  ],
+  "proposedBatches": [
+    {
+      "plannedBatchId": "batch-255",
+      "topicIds": ["reg213-amendment4-amendment-text"],
+      "title": "Regulation 213 Fourth Amendment amendment text and section updates",
+      "paragraphTarget": {
+        "knownWindow": [1, 2],
+        "notes": "Capture the Fourth Amendment title, footnote revision, and section updates as one narrow review-only slice."
+      },
+      "rationale": "Capture the Fourth Amendment title, footnote revision, and section updates as one narrow review-only slice.",
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "state_regulation",
+        "regulatory_requirement",
+        "documentation_expectation",
+        "cross_reference_mapping",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    },
+    {
+      "plannedBatchId": "batch-256",
+      "topicIds": ["reg213-amendment4-certification"],
+      "title": "Regulation 213 Fourth Amendment certification and publication notice",
+      "paragraphTarget": {
+        "knownWindow": [3, 3],
+        "notes": "Capture the certification language as one review-only slice."
+      },
+      "rationale": "Capture the certification language as one review-only slice.",
+      "reviewComplexity": "low",
+      "expectedIssueTypes": [
+        "state_regulation",
+        "documentation_expectation",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    }
+  ],
+  "reviewStandards": {
+    "certifiedAmendmentText": "Treat the source as certified regulatory text and not as a learner-facing explanation or a promoted artifact.",
+    "stateRegulation": "Treat the source as New York regulatory material tied to Regulation 213.",
+    "regulatoryRequirement": "Treat direct references to regulatory duties as mapped regulatory context, but do not promote the amendment itself into binding text.",
+    "documentationExpectation": "Treat incorporated-manual and certification language as documentation context if it appears.",
+    "crossReferenceMapping": "Treat references to the Valuation Manual and the amended footnote as mapped context unless the text operationalizes them.",
+    "backgroundContent": "Treat the title and introductory text as background unless the text imposes a duty.",
+    "boundaryControlWindow": "Treat each page window as review-only and do not widen it unless later cleanup explicitly needs that split.",
+    "requiresHumanInterpretation": "Treat dense or ambiguous amendment wording as requiring human review unless the page image confirms the wording."
+  },
+  "promotionGates": {
+    "defaultState": "review_only",
+    "learnerFacing": {
+      "sourceCitationExists": true,
+      "sourceSupportIsClear": true,
+      "wordingIsNotMisleading": true,
+      "confidenceIsHigh": true,
+      "noUnresolvedReviewFlagsExist": true
+    },
+    "appReady": {
+      "learnerFacingCriteriaAreSatisfied": true,
+      "exportIsSanitizedStableAndVersioned": true,
+      "noUnresolvedReviewIssuesRemain": true
+    },
+    "ragReady": {
+      "approvedIndexedMaterialExists": true,
+      "noHumanReviewNeededForDisposition": true,
+      "sourceCitationsAreStable": true
+    }
+  },
+  "validationRequirements": [
+    "The plan JSON must exist and parse cleanly.",
+    "The plan markdown must exist and carry the expected headings.",
+    "The dedicated batch-definition file must exist and stay synchronized with the plan.",
+    "The planned batches must stay review-only by default.",
+    "The source must remain certified and not promoted.",
+    "The source must stay separate from the core Regulation 213 wave and the amendment addenda.",
+    "The source should remain page-image-backed for exact wording where needed."
+  ]
+}
