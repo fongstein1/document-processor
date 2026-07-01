@@ -331,10 +331,27 @@ const paths = {
   reg213ExtractionPlanMd: path.join(repoRoot, 'docs', 'processor', 'reg213_extraction_plan.md'),
   reg213ReviewIndexMd: path.join(repoRoot, 'docs', 'review', 'reg213_review_index.md'),
   reg213SelfReviewMd: path.join(repoRoot, 'docs', 'review', 'reg213_self_review.md'),
+  reg213Amendment2ReviewIndexMd: path.join(
+    repoRoot,
+    'docs',
+    'review',
+    'reg213_amendment2_review_index.md',
+  ),
+  reg213Amendment2SelfReviewMd: path.join(
+    repoRoot,
+    'docs',
+    'review',
+    'reg213_amendment2_self_review.md',
+  ),
   reg213Amendment1FaqBatchPlanJson: path.join(
     repoRoot,
     'config',
     'reg213-amendment1-faq-batch-plan.json',
+  ),
+  reg213Amendment2BatchPlanJson: path.join(
+    repoRoot,
+    'config',
+    'reg213-amendment2-batch-plan.json',
   ),
   reg213Amendment3BatchPlanJson: path.join(
     repoRoot,
@@ -361,6 +378,12 @@ const paths = {
     'docs',
     'processor',
     'reg213_amendment1_faq_extraction_plan.md',
+  ),
+  reg213Amendment2ExtractionPlanMd: path.join(
+    repoRoot,
+    'docs',
+    'processor',
+    'reg213_amendment2_extraction_plan.md',
   ),
   reg213Amendment3ExtractionPlanMd: path.join(
     repoRoot,
@@ -946,6 +969,9 @@ const requiredFiles = [
   'docs/review/valuation_regulation_repository_poc_status.md',
   'docs/review/reg213_review_index.md',
   'docs/review/reg213_self_review.md',
+  'config/reg213-amendment2-batch-plan.json',
+  'docs/processor/reg213_amendment2_extraction_plan.md',
+  'scripts/reg213-amendment2-batch-definitions.mjs',
   'docs/review/reg213_amendment1_faq_review_index.md',
   'docs/review/reg213_amendment1_faq_self_review.md',
   'docs/review/reg213_amendment3_review_index.md',
@@ -3410,6 +3436,46 @@ const validateReg213Amendment1FaqPlanMarkdown = async (filePath, label) => {
     'batch-245',
     'batch-246',
     'batch-247',
+    'page-image wording backstop',
+    'line references are not expected',
+  ].forEach((phrase) => {
+    if (!text.includes(phrase)) {
+      problems.push(`${label}: must mention ${phrase}`)
+    }
+  })
+}
+
+const validateReg213Amendment2PlanMarkdown = async (filePath, label) => {
+  const text = await readText(filePath)
+  const requiredHeadings = [
+    '## Source Scope',
+    '## Topic Map',
+    '## Proposed Batch Sequence',
+    '## Review Standards',
+    '## Promotion Gates',
+    '## Validation Implications',
+    '## Operating Note',
+  ]
+  requiredHeadings.forEach((heading) => {
+    if (!text.includes(heading)) {
+      problems.push(`${label}: missing heading ${heading}`)
+    }
+  })
+  ;[
+    'review-only',
+    'not learner-facing',
+    'not app-ready',
+    'not RAG-ready',
+    'not promoted',
+    'NY Regulations/Reg-213-11-NYCRR-S103-Amendment-2-nstext-reg213.pdf',
+    'NY Regulations',
+    'Regulation 213 Second Amendment',
+    'New York State Department of Financial Services',
+    'certified',
+    'section 103.6',
+    'batch-257',
+    'batch-258',
+    'batch-259',
     'page-image wording backstop',
     'line references are not expected',
   ].forEach((phrase) => {
@@ -12280,6 +12346,8 @@ const validatePocStatusSummaryMarkdown = async (filePath, label) => {
     (await exists(paths.ag45ReviewIndexMd)) && (await exists(paths.ag45SelfReviewMd))
   const ag46ReviewArtifactsPresent =
     (await exists(paths.ag46ReviewIndexMd)) && (await exists(paths.ag46SelfReviewMd))
+  const reg213Amendment2ReviewArtifactsPresent =
+    (await exists(paths.reg213Amendment2ReviewIndexMd)) && (await exists(paths.reg213Amendment2SelfReviewMd))
   const reg213Amendment4ReviewArtifactsPresent =
     (await exists(paths.reg213Amendment4ReviewIndexMd)) && (await exists(paths.reg213Amendment4SelfReviewMd))
   const requiredHeadings = [
@@ -12317,6 +12385,16 @@ const validatePocStatusSummaryMarkdown = async (filePath, label) => {
     'docs/review/vm21_review_index.md',
     'docs/review/vm22_review_index.md',
     'docs/review/vm20_practice_note_review_index.md',
+    ...(reg213Amendment2ReviewArtifactsPresent
+      ? [
+          'docs/review/reg213_amendment2_review_index.md',
+          'docs/review/reg213_amendment2_self_review.md',
+          'Regulation 213 Second Amendment',
+          'batch-257',
+          'batch-258',
+          'batch-259',
+        ]
+      : []),
     ...(reg213Amendment4ReviewArtifactsPresent
       ? [
           'docs/review/reg213_amendment4_review_index.md',
@@ -12450,6 +12528,8 @@ const validatePocStatusSummaryMarkdown = async (filePath, label) => {
         ? '49 review indexes'
       : ag43ReviewArtifactsPresent
         ? '48 review indexes'
+        : reg213Amendment2ReviewArtifactsPresent
+          ? '82 review indexes'
         : reg213Amendment4ReviewArtifactsPresent
           ? '81 review indexes'
         : ag40ReviewArtifactsPresent
@@ -13976,6 +14056,72 @@ if (problems.length > 0) {
   console.log(
     `- Reg 213 Amendment No. 1 FAQ plan verified: ${reg213Amendment1FaqBatchPlan.proposedBatches.length} batches`,
   )
+  await validateReg213Amendment2PlanMarkdown(
+    paths.reg213Amendment2ExtractionPlanMd,
+    'docs/processor/reg213_amendment2_extraction_plan.md',
+  )
+  const reg213Amendment2BatchPlan = await readJson(paths.reg213Amendment2BatchPlanJson)
+  if (reg213Amendment2BatchPlan.status !== 'planned') {
+    problems.push('config/reg213-amendment2-batch-plan.json: status must be planned')
+  }
+  if (
+    !Array.isArray(reg213Amendment2BatchPlan.proposedBatches) ||
+    reg213Amendment2BatchPlan.proposedBatches.length !== 3
+  ) {
+    problems.push('config/reg213-amendment2-batch-plan.json: expected exactly three proposed batches')
+  }
+  if (
+    reg213Amendment2BatchPlan.sourceScope?.confirmedPageRange?.[0] !== 1 ||
+    reg213Amendment2BatchPlan.sourceScope?.confirmedPageRange?.[1] !== 6
+  ) {
+    problems.push('config/reg213-amendment2-batch-plan.json: confirmedPageRange must be [1, 6]')
+  }
+  const reg213Amendment2BatchIds = Array.isArray(reg213Amendment2BatchPlan.proposedBatches)
+    ? reg213Amendment2BatchPlan.proposedBatches
+        .map((batch) => batch?.plannedBatchId)
+        .filter((batchId) => typeof batchId === 'string' && batchId.length > 0)
+    : []
+  for (const plannedBatchId of reg213Amendment2BatchIds) {
+    if (!batchDefinitions[plannedBatchId]) {
+      problems.push(`scripts/batch-definitions.mjs: missing batch definition for ${plannedBatchId}`)
+    }
+  }
+  if (!reg213Amendment2BatchIds.includes('batch-257')) {
+    problems.push('config/reg213-amendment2-batch-plan.json: expected batch-257 to be planned')
+  }
+  if (!reg213Amendment2BatchIds.includes('batch-258')) {
+    problems.push('config/reg213-amendment2-batch-plan.json: expected batch-258 to be planned')
+  }
+  if (!reg213Amendment2BatchIds.includes('batch-259')) {
+    problems.push('config/reg213-amendment2-batch-plan.json: expected batch-259 to be planned')
+  }
+  console.log(
+    `- Reg 213 Second Amendment plan verified: ${reg213Amendment2BatchPlan.proposedBatches.length} batches`,
+  )
+  const reg213Amendment2ReviewIndexText = (await exists(paths.reg213Amendment2ReviewIndexMd))
+    ? await readText(paths.reg213Amendment2ReviewIndexMd)
+    : ''
+  const reg213Amendment2SelfReviewText = (await exists(paths.reg213Amendment2SelfReviewMd))
+    ? await readText(paths.reg213Amendment2SelfReviewMd)
+    : ''
+  const reg213Amendment2ReviewIndexReady =
+    reg213Amendment2ReviewIndexText.length > 0 &&
+    reg213Amendment2BatchIds.every((batchId) => reg213Amendment2ReviewIndexText.includes(batchId))
+  const reg213Amendment2SelfReviewReady =
+    reg213Amendment2SelfReviewText.length > 0 &&
+    reg213Amendment2BatchIds.every((batchId) => reg213Amendment2SelfReviewText.includes(batchId))
+  const reg213Amendment2ReviewArtifactsPresent =
+    reg213Amendment2ReviewIndexReady && reg213Amendment2SelfReviewReady
+  if (reg213Amendment2ReviewIndexReady) {
+    console.log(
+      `- Reg 213 Second Amendment review index verified: ${reg213Amendment2BatchPlan.proposedBatches.length} batches`,
+    )
+  }
+  if (reg213Amendment2SelfReviewReady) {
+    console.log(
+      `- Reg 213 Second Amendment self-review verified: ${reg213Amendment2BatchPlan.proposedBatches.length} batches`,
+    )
+  }
   await validateReg213Amendment3PlanMarkdown(
     paths.reg213Amendment3ExtractionPlanMd,
     'docs/processor/reg213_amendment3_extraction_plan.md',

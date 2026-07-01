@@ -1,0 +1,229 @@
+{
+  "planId": "reg213-amendment2-plan",
+  "planVersion": "1.0",
+  "status": "planned",
+  "sourceScope": {
+    "sourceFamilyId": "ny_regulations",
+    "primarySourceFile": "NY Regulations/Reg-213-11-NYCRR-S103-Amendment-2-nstext-reg213.pdf",
+    "sourceFolder": "NY Regulations",
+    "sourceTitle": "Regulation 213 Second Amendment",
+    "sourceReference": "New York State Department of Financial Services Second Amendment to 11 NYCRR 103 (Insurance Regulation 213)",
+    "sourceStatus": "certified",
+    "sourceStatusNote": "The file contains the Second Amendment text across pages 1-5 and a separate certification page on page 6; keep the pages separate.",
+    "jurisdiction": "New York",
+    "domainId": "naic_regulatory",
+    "rawSourceRoot": "C:\\Dev\\NAIC Valuation Manual Course\\NAIC Valuation Regulation",
+    "confirmedPageRange": [1, 6],
+    "observedSectionWindows": [
+      {
+        "sectionId": "reg213-amendment2-opening-text",
+        "pageRange": [1, 2],
+        "note": "Second Amendment title, authority text, section 103.3 changes, and the opening section 103.5 / 103.6 amendments."
+      },
+      {
+        "sectionId": "reg213-amendment2-reserve-updates",
+        "pageRange": [3, 5],
+        "note": "Section 103.6 reserve-method updates, phase-in changes, and related actuarial-guideline cross-references."
+      },
+      {
+        "sectionId": "reg213-amendment2-certification",
+        "pageRange": [6, 6],
+        "note": "Certification and publication notice."
+      }
+    ],
+    "boundaries": [
+      "Keep the Second Amendment separate from the core Regulation 213 wave.",
+      "Keep the Amendment No. 1 FAQ, the Third Amendment, the Fourth Amendment, the Fifth Amendment, the Sixth Amendment, and the other amendment-history PDFs in the same folder out of this wave unless a later amendment-history plan explicitly opens them.",
+      "Preserve page locators and line references where available, but expect the text layer to remain page-image-backed for exact wording.",
+      "Keep the opening text, reserve-method updates, and certification page separate so the boundary logic stays easy to review."
+    ],
+    "exclusions": [
+      "No learner-facing content.",
+      "No app-ready export.",
+      "No RAG-ready export.",
+      "No approved/promoted export.",
+      "No eLearning scripts, slides, quizzes, or app exports.",
+      "No raw source files in Git.",
+      "No Regulation 213 core-wave extraction in this batch.",
+      "No FAQ addendum pages in this wave.",
+      "No Third Amendment pages in this wave.",
+      "No Fourth Amendment pages in this wave.",
+      "No Fifth Amendment pages in this wave.",
+      "No Sixth Amendment pages in this wave.",
+      "No other amendment-history PDFs in the same wave."
+    ]
+  },
+  "topicMap": [
+    {
+      "topicId": "reg213-amendment2-opening-text",
+      "label": "Second Amendment opening text and section updates",
+      "pageRange": [1, 2],
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "state_regulation",
+        "regulatory_requirement",
+        "documentation_expectation",
+        "cross_reference_mapping",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": [
+        "Second Amendment",
+        "Insurance Regulation 213",
+        "2020 Valuation Manual",
+        "section 103.3",
+        "section 103.5",
+        "section 103.6",
+        "Notice of Adoption"
+      ],
+      "boundaryNote": "Keep the amendment title, section 103.3 changes, and the opening 103.5 / 103.6 amendments together and stop before the deeper reserve-method changes begin."
+    },
+    {
+      "topicId": "reg213-amendment2-reserve-updates",
+      "label": "Section 103.6 reserve-method updates",
+      "pageRange": [3, 5],
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "state_regulation",
+        "regulatory_requirement",
+        "documentation_expectation",
+        "cross_reference_mapping",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": [
+        "section 103.6(b)",
+        "section 103.6(e)",
+        "phase-in",
+        "2017 Actuarial Guideline XLIII",
+        "Part 99",
+        "Actuarial Guideline XXXV"
+      ],
+      "boundaryNote": "Keep the reserve-method and phase-in updates together and stop before the certification page begins."
+    },
+    {
+      "topicId": "reg213-amendment2-certification",
+      "label": "Certification and publication notice",
+      "pageRange": [6, 6],
+      "reviewComplexity": "low",
+      "expectedIssueTypes": [
+        "state_regulation",
+        "documentation_expectation",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": [
+        "certification",
+        "March 11, 2021",
+        "December 30, 2020",
+        "State Register"
+      ],
+      "boundaryNote": "Keep the certification language together and stop at the end of the page."
+    }
+  ],
+  "proposedBatches": [
+    {
+      "plannedBatchId": "batch-257",
+      "topicIds": ["reg213-amendment2-opening-text"],
+      "title": "Regulation 213 Second Amendment opening text and section updates",
+      "paragraphTarget": {
+        "knownWindow": [1, 2],
+        "notes": "Capture the Second Amendment title, authority text, section 103.3 changes, and the opening 103.5 / 103.6 amendments as one review-only slice."
+      },
+      "rationale": "Capture the Second Amendment title, authority text, section 103.3 changes, and the opening 103.5 / 103.6 amendments as one review-only slice.",
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "state_regulation",
+        "regulatory_requirement",
+        "documentation_expectation",
+        "cross_reference_mapping",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    },
+    {
+      "plannedBatchId": "batch-258",
+      "topicIds": ["reg213-amendment2-reserve-updates"],
+      "title": "Regulation 213 Second Amendment reserve-method updates",
+      "paragraphTarget": {
+        "knownWindow": [3, 5],
+        "notes": "Capture the section 103.6 reserve-method updates, phase-in changes, and linked actuarial-guideline references as one review-only slice."
+      },
+      "rationale": "Capture the section 103.6 reserve-method updates, phase-in changes, and linked actuarial-guideline references as one review-only slice.",
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "state_regulation",
+        "regulatory_requirement",
+        "documentation_expectation",
+        "cross_reference_mapping",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    },
+    {
+      "plannedBatchId": "batch-259",
+      "topicIds": ["reg213-amendment2-certification"],
+      "title": "Regulation 213 Second Amendment certification and publication notice",
+      "paragraphTarget": {
+        "knownWindow": [6, 6],
+        "notes": "Capture the certification language as one review-only slice."
+      },
+      "rationale": "Capture the certification language as one review-only slice.",
+      "reviewComplexity": "low",
+      "expectedIssueTypes": [
+        "state_regulation",
+        "documentation_expectation",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    }
+  ],
+  "reviewStandards": {
+    "certifiedAmendmentText": "Treat the source as certified regulatory text and not as a learner-facing explanation or a promoted artifact.",
+    "stateRegulation": "Treat the source as New York regulatory material tied to Regulation 213.",
+    "regulatoryRequirement": "Treat direct references to regulatory duties as mapped regulatory context, but do not promote the amendment itself into binding text.",
+    "documentationExpectation": "Treat incorporated-manual and certification language as documentation context if it appears.",
+    "crossReferenceMapping": "Treat references to the Valuation Manual and the amended sections as mapped context unless the text operationalizes them.",
+    "backgroundContent": "Treat the title and introductory text as background unless the text imposes a duty.",
+    "boundaryControlWindow": "Treat each page window as review-only and do not widen it unless later cleanup explicitly needs that split.",
+    "requiresHumanInterpretation": "Treat dense or ambiguous amendment wording as requiring human review unless the page image confirms the wording."
+  },
+  "promotionGates": {
+    "defaultState": "review_only",
+    "learnerFacing": {
+      "sourceCitationExists": true,
+      "sourceSupportIsClear": true,
+      "wordingIsNotMisleading": true,
+      "confidenceIsHigh": true,
+      "noUnresolvedReviewFlagsExist": true
+    },
+    "appReady": {
+      "learnerFacingCriteriaAreSatisfied": true,
+      "exportIsSanitizedStableAndVersioned": true,
+      "noUnresolvedReviewIssuesRemain": true
+    },
+    "ragReady": {
+      "approvedIndexedMaterialExists": true,
+      "noHumanReviewNeededForDisposition": true,
+      "sourceCitationsAreStable": true
+    }
+  },
+  "validationRequirements": [
+    "The plan JSON must exist and parse cleanly.",
+    "The plan markdown must exist and carry the expected headings.",
+    "The dedicated batch-definition file must exist and stay synchronized with the plan.",
+    "The planned batches must stay review-only by default.",
+    "The source must remain certified and not promoted.",
+    "The source must stay separate from the core Regulation 213 wave and the amendment addenda.",
+    "The source should remain page-image-backed for exact wording where needed."
+  ]
+}
