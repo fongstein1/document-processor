@@ -644,3 +644,12 @@ place, the source stays review-only and proposed, and the page-image wording
 backstop remains visible because exact wording should not be overclaimed from
 the one-page regulatory text. The next safe continuation step is to inspect
 the remaining inventory again before selecting another source unit.
+
+## Reg 192 addendum
+
+Regulation 192 is now complete as batch-266 in ignored working storage. The
+tracked review index and self-review note are in place, the source stays
+review-only and active, and the page-image wording backstop remains visible
+because the text layer is noisy / OCR-like. The next safe continuation step
+is to inspect the remaining inventory again before selecting another source
+unit.

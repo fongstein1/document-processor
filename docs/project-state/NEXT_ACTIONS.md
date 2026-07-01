@@ -653,3 +653,15 @@ place, the source stays review-only and proposed, and the page-image wording
 backstop remains visible because exact wording should not be overclaimed from
 the one-page regulatory text. The next safe continuation step is to inspect
 the remaining inventory again before selecting another source unit.
+
+## Reg 192 complete
+
+- Treat `docs/processor/reg192_extraction_plan.md` and `config/reg192-batch-plan.json`
+  as the completed planning set for batch-266.
+- Treat `docs/review/reg192_review_index.md` and
+  `docs/review/reg192_self_review.md` as the current Regulation 192 handoff
+  set.
+- Keep Regulation 192 review-only, active, and page-image backed for exact
+  wording.
+- Inspect the remaining inventory again before selecting the next safe source
+  unit.

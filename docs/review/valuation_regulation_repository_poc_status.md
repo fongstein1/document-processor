@@ -66,6 +66,8 @@ review indexes:
 - `docs/review/ltci_practice_note_self_review.md`
 - `docs/review/reg141_review_index.md`
 - `docs/review/reg141_self_review.md`
+- `docs/review/reg192_review_index.md`
+- `docs/review/reg192_self_review.md`
 - `docs/review/reg210_review_index.md`
 - `docs/review/reg210_self_review.md`
 - `docs/review/reg213_review_index.md`
@@ -173,6 +175,9 @@ What has been built:
 - tracked Regulation 210 review index and self-review note for the NY
   non-guaranteed-elements unit in `docs/review/reg210_review_index.md` and
   `docs/review/reg210_self_review.md`
+- tracked Regulation 192 review index and self-review note for the NY
+  preneed life-insurance unit in `docs/review/reg192_review_index.md` and
+  `docs/review/reg192_self_review.md`
 - tracked model-governance practice-note review index and self-review note
   for the companion-guidance unit in
   `docs/review/model_governance_practice_note_review_index.md` and
@@ -955,7 +960,7 @@ and `docs/review/reg213_amendment1_text_self_review.md`, the source stays
 review-only and certified-amendment aware, and the page-image wording
 backstop remains visible because exact wording should not be overclaimed from
 the 24-page regulatory text and its scanned certification page. The broader
-proof-of-concept handoff now spans 83 review indexes.
+proof-of-concept handoff now spans 84 review indexes.
 
 ## Reg 213 Second Amendment addendum
 

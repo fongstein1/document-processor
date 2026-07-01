@@ -12657,10 +12657,10 @@ const validatePocStatusSummaryMarkdown = async (filePath, label) => {
         ? '50 review indexes'
       : ag44ReviewArtifactsPresent
         ? '49 review indexes'
-      : ag43ReviewArtifactsPresent
-        ? '48 review indexes'
-        : reg213Amendment1TextReviewArtifactsPresent
-          ? '83 review indexes'
+        : ag43ReviewArtifactsPresent
+          ? '48 review indexes'
+          : reg213Amendment1TextReviewArtifactsPresent
+          ? '84 review indexes'
         : reg213Amendment2ReviewArtifactsPresent
           ? '82 review indexes'
         : reg213Amendment4ReviewArtifactsPresent
@@ -15104,7 +15104,7 @@ if (problems.length > 0) {
   }
   console.log(`- Model Regulation XXX plan verified: ${modelRegulationXXXBatchPlan.proposedBatches.length} batches`)
   console.log(
-    `- POC status summary verified: ${reg213Amendment1TextReviewArtifactsPresent ? 83 : reg213Amendment2ReviewArtifactsPresent ? 82 : reg213Amendment4ReviewArtifactsPresent ? 81 : reg213Amendment3ReviewArtifactsPresent ? 80 : lhmanual26ReviewArtifactsPresent ? 79 : reg213Amendment5ReviewArtifactsPresent ? 78 : reg213Amendment6ReviewArtifactsPresent ? 77 : reg213Amendment1FaqReviewArtifactsPresent ? 76 : c3Phase2Ag43March2011PracticeNoteReviewArtifactsPresent ? 75 : c3Phase2PracticeNoteReviewArtifactsPresent ? 74 : assetAdequacyAnalysisPracticeNoteReviewArtifactsPresent ? 73 : cia2023FinancialConditionTestingEducationalNoteReviewArtifactsPresent ? 72 : cia2022CapitalFCTEducationalNoteReviewArtifactsPresent ? 71 : actuarialMemorandumPracticeNoteReviewArtifactsPresent ? 70 : lifeReinsuranceReserveCreditPracticeNoteReviewArtifactsPresent ? 69 : modelRegulationXXXReviewArtifactsPresent ? 68 : reg213ReviewArtifactsPresent ? 66 : reg210ReviewArtifactsPresent ? 65 : modelGovernanceReviewArtifactsPresent ? 64 : reg141ReviewArtifactsPresent ? 63 : ag55ReviewArtifactsPresent ? 62 : ag54ReviewArtifactsPresent ? 61 : ag53ReviewArtifactsPresent ? 58 : ag52ReviewArtifactsPresent ? 57 : ag51ReviewArtifactsPresent ? 56 : ag50ReviewArtifactsPresent ? 55 : ag49ReviewArtifactsPresent ? 54 : ag48ReviewArtifactsPresent ? 53 : ag47ReviewArtifactsPresent ? 52 : ag46ReviewArtifactsPresent ? 51 : ag45ReviewArtifactsPresent ? 50 : ag44ReviewArtifactsPresent ? 49 : ag43ReviewArtifactsPresent ? 48 : ag42ReviewArtifactsPresent ? 47 : ag41ReviewArtifactsPresent ? 46 : ag40ReviewArtifactsPresent ? 45 : ag39ReviewArtifactsPresent ? 44 : ag38ReviewArtifactsPresent ? 43 : ag37ReviewArtifactsPresent ? 42 : ag36ReviewArtifactsPresent ? 41 : ag35ReviewArtifactsPresent ? 40 : ag34ReviewArtifactsPresent ? 39 : 38} review indexes`,
+    `- POC status summary verified: ${reg213Amendment1TextReviewArtifactsPresent ? 84 : reg213Amendment2ReviewArtifactsPresent ? 82 : reg213Amendment4ReviewArtifactsPresent ? 81 : reg213Amendment3ReviewArtifactsPresent ? 80 : lhmanual26ReviewArtifactsPresent ? 79 : reg213Amendment5ReviewArtifactsPresent ? 78 : reg213Amendment6ReviewArtifactsPresent ? 77 : reg213Amendment1FaqReviewArtifactsPresent ? 76 : c3Phase2Ag43March2011PracticeNoteReviewArtifactsPresent ? 75 : c3Phase2PracticeNoteReviewArtifactsPresent ? 74 : assetAdequacyAnalysisPracticeNoteReviewArtifactsPresent ? 73 : cia2023FinancialConditionTestingEducationalNoteReviewArtifactsPresent ? 72 : cia2022CapitalFCTEducationalNoteReviewArtifactsPresent ? 71 : actuarialMemorandumPracticeNoteReviewArtifactsPresent ? 70 : lifeReinsuranceReserveCreditPracticeNoteReviewArtifactsPresent ? 69 : modelRegulationXXXReviewArtifactsPresent ? 68 : reg213ReviewArtifactsPresent ? 66 : reg210ReviewArtifactsPresent ? 65 : modelGovernanceReviewArtifactsPresent ? 64 : reg141ReviewArtifactsPresent ? 63 : ag55ReviewArtifactsPresent ? 62 : ag54ReviewArtifactsPresent ? 61 : ag53ReviewArtifactsPresent ? 58 : ag52ReviewArtifactsPresent ? 57 : ag51ReviewArtifactsPresent ? 56 : ag50ReviewArtifactsPresent ? 55 : ag49ReviewArtifactsPresent ? 54 : ag48ReviewArtifactsPresent ? 53 : ag47ReviewArtifactsPresent ? 52 : ag46ReviewArtifactsPresent ? 51 : ag45ReviewArtifactsPresent ? 50 : ag44ReviewArtifactsPresent ? 49 : ag43ReviewArtifactsPresent ? 48 : ag42ReviewArtifactsPresent ? 47 : ag41ReviewArtifactsPresent ? 46 : ag40ReviewArtifactsPresent ? 45 : ag39ReviewArtifactsPresent ? 44 : ag38ReviewArtifactsPresent ? 43 : ag37ReviewArtifactsPresent ? 42 : ag36ReviewArtifactsPresent ? 41 : ag35ReviewArtifactsPresent ? 40 : ag34ReviewArtifactsPresent ? 39 : 38} review indexes`,
   )
   if (validatedPilotBatchCount > 0) {
     console.log(`- Pilot batches validated: ${validatedPilotBatchCount}`)
