@@ -1,0 +1,135 @@
+{
+  "planId": "reg136-market-value-adjustment-plan",
+  "planVersion": "1.0",
+  "status": "planned",
+  "sourceScope": {
+    "sourceFamilyId": "ny_regulations",
+    "primarySourceFile": "NY Regulations/2021 VLM Report_DRAFT-(1-27-2020) with academy Updates V1-Reg-136-11-NYCRR-S043.pdf",
+    "sourceFolder": "NY Regulations",
+    "sourceTitle": "Individual Life Insurance Market-Value Adjustment",
+    "sourceReference": "New York Regulation 136 / 11 CRR-NY Part 43",
+    "sourceStatus": "active",
+    "sourceStatusNote": "Current through March 15, 2020; the page-image wording backstop remains required because the text layer is noisy / OCR-like.",
+    "domainId": "naic_regulatory",
+    "rawSourceRoot": "C:\\Dev\\NAIC Valuation Manual Course",
+    "confirmedPageRange": [1, 23],
+    "observedSectionWindows": [
+      {
+        "sectionId": "reg136-opening-purpose-market-value-adjustment-formula-and-severability",
+        "pageRange": [1, 23],
+        "note": "Title page, market-value adjustment formula, noncompliance, and severability."
+      }
+    ],
+    "boundaries": [
+      "Keep planning focused on this single Regulation 136 PDF.",
+      "Do not widen into AG files, practice notes, or other NY regulation files in the same wave.",
+      "Keep the purpose / formula / noncompliance / severability language review-only until a human confirms the indexing decision.",
+      "Keep the page-image wording backstop visible because the text layer is noisy / OCR-like.",
+      "Keep the batch source-bound and review-only."
+    ],
+    "exclusions": [
+      "No learner-facing content.",
+      "No app-ready export.",
+      "No RAG-ready export.",
+      "No approved/promoted export.",
+      "No eLearning scripts, slides, quizzes, or app exports.",
+      "No raw source files in Git.",
+      "No other guideline files in the same wave."
+    ]
+  },
+  "topicMap": [
+    {
+      "topicId": "reg136-opening-purpose-market-value-adjustment-formula-and-severability",
+      "label": "Purpose, market-value adjustment formula, noncompliance, and severability",
+      "pageRange": [1, 23],
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "state_regulation",
+        "jurisdiction_specific_requirement",
+        "regulatory_requirement",
+        "reporting_requirement",
+        "documentation_expectation",
+        "governance_or_control_expectation",
+        "calculation_structure",
+        "definition_or_terminology",
+        "cross_reference_mapping",
+        "background_content",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": [
+        "Insurance Law sections 4217, 4221, 4222, 4510, 4511, 4517, 4518",
+        "market-value adjustment formula",
+        "cash surrender value",
+        "nonforfeiture",
+        "severability"
+      ],
+      "boundaryNote": "Keep this slice within pages 1-23 and do not absorb other NY regulation files."
+    }
+  ],
+  "proposedBatches": [
+    {
+      "plannedBatchId": "batch-271",
+      "topicIds": [
+        "reg136-opening-purpose-market-value-adjustment-formula-and-severability"
+      ],
+      "title": "Regulation 136 purpose, market-value adjustment formula, noncompliance, and severability",
+      "pageTarget": {
+        "knownWindow": [1, 23],
+        "notes": "Capture the full 23-page regulation as a single review-only slice and stop at the page 23 boundary."
+      },
+      "rationale": "Capture the full 23-page regulation as a single review-only slice and stop at the page 23 boundary.",
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "state_regulation",
+        "jurisdiction_specific_requirement",
+        "regulatory_requirement",
+        "reporting_requirement",
+        "documentation_expectation",
+        "governance_or_control_expectation",
+        "calculation_structure",
+        "definition_or_terminology",
+        "cross_reference_mapping",
+        "background_content",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    }
+  ],
+  "reviewStandards": {
+    "regulatoryRequirement": "Treat the purpose, market-value adjustment, noncompliance, and severability language as regulatory text when it directs what the company must do.",
+    "definitionOrTerminology": "Treat the market-value adjustment, cash surrender value, and nonforfeiture references as terminology when the text explains rather than directs.",
+    "crossReferenceMapping": "Treat references to Insurance Law and market-value adjustment concepts as cross-reference context unless operationalized.",
+    "backgroundContent": "Treat the title page and section labels as background unless they impose a requirement.",
+    "boundaryControlWindow": "Treat the 23-page slice as a review-only window that should not be merged forward.",
+    "requiresHumanInterpretation": "Treat the indexing choice and the noisy OCR-like text layer as requiring human actuarial interpretation unless the text is explicit.",
+    "sourceQualityCaveat": "Treat text-layer noise or encoding issues as review-only caveats and do not widen the batch because of them."
+  },
+  "promotionGates": {
+    "defaultState": "review_only",
+    "learnerFacing": [
+      "source citation exists",
+      "source support is clear",
+      "wording is not misleading",
+      "confidence is high",
+      "no unresolved review flags exist"
+    ],
+    "appReady": [
+      "learner-facing criteria are already satisfied",
+      "export is sanitized, stable, and versioned",
+      "no unresolved review issues remain"
+    ],
+    "ragReady": [
+      "approved indexed material only",
+      "stable support exists",
+      "no unresolved review flags remain"
+    ],
+    "approvedPromotedExport": [
+      "explicit human approval only"
+    ]
+  },
+  "notes": "Controlled Regulation 136 planning artifact. Planned batch 271 remains review-only by default and is not an extraction run."
+}
