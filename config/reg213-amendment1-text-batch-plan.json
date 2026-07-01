@@ -1,0 +1,381 @@
+{
+  "planId": "reg213-amendment1-text-plan",
+  "planVersion": "1.0",
+  "status": "planned",
+  "sourceScope": {
+    "sourceFamilyId": "ny_regulations",
+    "primarySourceFile": "NY Regulations/Reg-213-11-NYCRR-S103-Amendment-1-rf213a1text.pdf",
+    "sourceFolder": "NY Regulations",
+    "sourceTitle": "Regulation 213 First Amendment",
+    "sourceReference": "New York State Department of Financial Services First Amendment to 11 NYCRR 103 (Insurance Regulation 213)",
+    "sourceStatus": "certified",
+    "sourceStatusNote": "The file contains the First Amendment text across pages 1-23, and page 24 is the scanned certification and publication page; keep them separate and review-only.",
+    "jurisdiction": "New York",
+    "domainId": "naic_regulatory",
+    "rawSourceRoot": "C:\\Dev\\NAIC Valuation Manual Course\\NAIC Valuation Regulation",
+    "confirmedPageRange": [1, 24],
+    "observedSectionWindows": [
+      {
+        "sectionId": "reg213-amendment1-text-opening-text",
+        "pageRange": [1, 5],
+        "note": "First Amendment title, authority text, and the early sections 103.1 through 103.5 openers."
+      },
+      {
+        "sectionId": "reg213-amendment1-text-reserve-updates",
+        "pageRange": [6, 11],
+        "note": "Section 103.6 reserve-method updates, phase-in changes, and related cross-references."
+      },
+      {
+        "sectionId": "reg213-amendment1-text-assumption-mechanics",
+        "pageRange": [12, 16],
+        "note": "Section 103.6 account-value mechanics, assumption mechanics, and related projection rules."
+      },
+      {
+        "sectionId": "reg213-amendment1-text-withdrawal-option-floor",
+        "pageRange": [17, 19],
+        "note": "Section 103.6 withdrawal mechanics, index assumptions, and option-value floor."
+      },
+      {
+        "sectionId": "reg213-amendment1-text-factor-tables-closeout",
+        "pageRange": [20, 23],
+        "note": "Factor tables and the section 103.7 / 103.8 closeout text."
+      },
+      {
+        "sectionId": "reg213-amendment1-text-certification",
+        "pageRange": [24, 24],
+        "note": "Scanned certification and publication notice page."
+      }
+    ],
+    "boundaries": [
+      "Keep the First Amendment text separate from the core Regulation 213 wave.",
+      "Keep the Amendment No. 1 FAQ, the Second Amendment, the Third Amendment, the Fourth Amendment, the Fifth Amendment, the Sixth Amendment, and the other amendment-history PDFs in the same folder out of this wave unless a later amendment-history plan explicitly opens them.",
+      "Preserve page locators and line references where available, but expect the text layer to remain page-image-backed for exact wording.",
+      "Keep the opening text, reserve-method updates, assumption mechanics, withdrawal / option floor text, factor-table closeout, and certification page separate so the boundary logic stays easy to review."
+    ],
+    "exclusions": [
+      "No learner-facing content.",
+      "No app-ready export.",
+      "No RAG-ready export.",
+      "No approved/promoted export.",
+      "No eLearning scripts, slides, quizzes, or app exports.",
+      "No raw source files in Git.",
+      "No Regulation 213 core-wave extraction in this batch.",
+      "No FAQ addendum pages in this wave.",
+      "No Second Amendment pages in this wave.",
+      "No Third Amendment pages in this wave.",
+      "No Fourth Amendment pages in this wave.",
+      "No Fifth Amendment pages in this wave.",
+      "No Sixth Amendment pages in this wave.",
+      "No other amendment-history PDFs in the same wave."
+    ]
+  },
+  "topicMap": [
+    {
+      "topicId": "reg213-amendment1-text-opening-text",
+      "label": "First Amendment opening text and early section updates",
+      "pageRange": [1, 5],
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "state_regulation",
+        "regulatory_requirement",
+        "documentation_expectation",
+        "cross_reference_mapping",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": [
+        "First Amendment",
+        "Insurance Regulation 213",
+        "section 103.1",
+        "section 103.4",
+        "section 103.5",
+        "Notice of Adoption"
+      ],
+      "boundaryNote": "Keep the title, authority text, and early section updates together and stop before the reserve-method pages begin."
+    },
+    {
+      "topicId": "reg213-amendment1-text-reserve-updates",
+      "label": "Section 103.6 reserve-method updates",
+      "pageRange": [6, 11],
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "state_regulation",
+        "regulatory_requirement",
+        "documentation_expectation",
+        "cross_reference_mapping",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": [
+        "section 103.6",
+        "phase-in",
+        "reserve methodology",
+        "effective date",
+        "Valuation Manual",
+        "Actuarial Guideline XLIII"
+      ],
+      "boundaryNote": "Keep the reserve-method updates, phase-in changes, and related cross-references together and stop before the assumption mechanics begin."
+    },
+    {
+      "topicId": "reg213-amendment1-text-assumption-mechanics",
+      "label": "Section 103.6 account-value and assumption mechanics",
+      "pageRange": [12, 16],
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "state_regulation",
+        "regulatory_requirement",
+        "documentation_expectation",
+        "cross_reference_mapping",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": [
+        "account value",
+        "margins",
+        "assumptions",
+        "projection intervals",
+        "guaranteed living benefits",
+        "discount rate"
+      ],
+      "boundaryNote": "Keep the account-value mechanics and the assumption mechanics together and stop before the withdrawal mechanics begin."
+    },
+    {
+      "topicId": "reg213-amendment1-text-withdrawal-option-floor",
+      "label": "Section 103.6 withdrawal and option-value mechanics",
+      "pageRange": [17, 19],
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "state_regulation",
+        "regulatory_requirement",
+        "documentation_expectation",
+        "cross_reference_mapping",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": [
+        "withdrawals",
+        "partial withdrawals",
+        "index assumptions",
+        "option value floor",
+        "efficiency",
+        "contract holder behavior"
+      ],
+      "boundaryNote": "Keep the withdrawal mechanics, index assumptions, and option-value floor together and stop before the factor tables and closeout begin."
+    },
+    {
+      "topicId": "reg213-amendment1-text-factor-tables-closeout",
+      "label": "Factor tables and sections 103.7 / 103.8 closeout",
+      "pageRange": [20, 23],
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "state_regulation",
+        "regulatory_requirement",
+        "documentation_expectation",
+        "cross_reference_mapping",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": [
+        "Factor Table F",
+        "attained age",
+        "section 103.7",
+        "section 103.8",
+        "reinsurance",
+        "valuation manual"
+      ],
+      "boundaryNote": "Keep the factor tables and the closing sections together and stop before the certification page begins."
+    },
+    {
+      "topicId": "reg213-amendment1-text-certification",
+      "label": "Certification and publication notice",
+      "pageRange": [24, 24],
+      "reviewComplexity": "low",
+      "expectedIssueTypes": [
+        "state_regulation",
+        "documentation_expectation",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": [
+        "certification",
+        "February 11, 2020",
+        "publication",
+        "State Register",
+        "Linda A. Lacewell"
+      ],
+      "boundaryNote": "Keep the scanned certification and publication notice together and stop at the end of the page."
+    }
+  ],
+  "proposedBatches": [
+    {
+      "plannedBatchId": "batch-260",
+      "topicIds": ["reg213-amendment1-text-opening-text"],
+      "title": "Regulation 213 First Amendment opening text and early section updates",
+      "paragraphTarget": {
+        "knownWindow": [1, 5],
+        "notes": "Capture the First Amendment title, authority text, and the early section 103.1 through 103.5 updates as one review-only slice."
+      },
+      "rationale": "Capture the First Amendment title, authority text, and the early section 103.1 through 103.5 updates as one review-only slice.",
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "state_regulation",
+        "regulatory_requirement",
+        "documentation_expectation",
+        "cross_reference_mapping",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    },
+    {
+      "plannedBatchId": "batch-261",
+      "topicIds": ["reg213-amendment1-text-reserve-updates"],
+      "title": "Regulation 213 First Amendment reserve-method updates",
+      "paragraphTarget": {
+        "knownWindow": [6, 11],
+        "notes": "Capture the section 103.6 reserve-method updates, phase-in changes, and related cross-references as one review-only slice."
+      },
+      "rationale": "Capture the section 103.6 reserve-method updates, phase-in changes, and related cross-references as one review-only slice.",
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "state_regulation",
+        "regulatory_requirement",
+        "documentation_expectation",
+        "cross_reference_mapping",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    },
+    {
+      "plannedBatchId": "batch-262",
+      "topicIds": ["reg213-amendment1-text-assumption-mechanics"],
+      "title": "Regulation 213 First Amendment assumption mechanics",
+      "paragraphTarget": {
+        "knownWindow": [12, 16],
+        "notes": "Capture the section 103.6 account-value mechanics, assumption mechanics, and related projection rules as one review-only slice."
+      },
+      "rationale": "Capture the section 103.6 account-value mechanics, assumption mechanics, and related projection rules as one review-only slice.",
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "state_regulation",
+        "regulatory_requirement",
+        "documentation_expectation",
+        "cross_reference_mapping",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    },
+    {
+      "plannedBatchId": "batch-263",
+      "topicIds": ["reg213-amendment1-text-withdrawal-option-floor"],
+      "title": "Regulation 213 First Amendment withdrawal and option-value mechanics",
+      "paragraphTarget": {
+        "knownWindow": [17, 19],
+        "notes": "Capture the section 103.6 withdrawal mechanics, index assumptions, and option-value floor as one review-only slice."
+      },
+      "rationale": "Capture the section 103.6 withdrawal mechanics, index assumptions, and option-value floor as one review-only slice.",
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "state_regulation",
+        "regulatory_requirement",
+        "documentation_expectation",
+        "cross_reference_mapping",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    },
+    {
+      "plannedBatchId": "batch-264",
+      "topicIds": ["reg213-amendment1-text-factor-tables-closeout"],
+      "title": "Regulation 213 First Amendment factor tables and closeout",
+      "paragraphTarget": {
+        "knownWindow": [20, 23],
+        "notes": "Capture the factor tables and the section 103.7 / 103.8 closeout text as one review-only slice."
+      },
+      "rationale": "Capture the factor tables and the section 103.7 / 103.8 closeout text as one review-only slice.",
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "state_regulation",
+        "regulatory_requirement",
+        "documentation_expectation",
+        "cross_reference_mapping",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    },
+    {
+      "plannedBatchId": "batch-265",
+      "topicIds": ["reg213-amendment1-text-certification"],
+      "title": "Regulation 213 First Amendment certification and publication notice",
+      "paragraphTarget": {
+        "knownWindow": [24, 24],
+        "notes": "Capture the scanned certification and publication notice as one review-only slice."
+      },
+      "rationale": "Capture the scanned certification and publication notice as one review-only slice.",
+      "reviewComplexity": "low",
+      "expectedIssueTypes": [
+        "state_regulation",
+        "documentation_expectation",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    }
+  ],
+  "reviewStandards": {
+    "certifiedAmendmentText": "Treat the source as certified regulatory text and not as a learner-facing explanation or a promoted artifact.",
+    "stateRegulation": "Treat the source as New York regulatory material tied to Regulation 213.",
+    "regulatoryRequirement": "Treat direct references to regulatory duties as mapped regulatory context, but do not promote the amendment itself into binding text.",
+    "documentationExpectation": "Treat incorporated-manual and certification language as documentation context if it appears.",
+    "crossReferenceMapping": "Treat references to the Valuation Manual and the amended sections as mapped context unless the text operationalizes them.",
+    "backgroundContent": "Treat the title and introductory text as background unless the text imposes a duty.",
+    "boundaryControlWindow": "Treat each page window as review-only and do not widen it unless later cleanup explicitly needs that split.",
+    "requiresHumanInterpretation": "Treat dense or ambiguous amendment wording as requiring human review unless the page image confirms the wording."
+  },
+  "promotionGates": {
+    "defaultState": "review_only",
+    "learnerFacing": {
+      "sourceCitationExists": true,
+      "sourceSupportIsClear": true,
+      "wordingIsNotMisleading": true,
+      "confidenceIsHigh": true,
+      "noUnresolvedReviewFlagsExist": true
+    },
+    "appReady": {
+      "learnerFacingCriteriaAreSatisfied": true,
+      "exportIsSanitizedStableAndVersioned": true,
+      "noUnresolvedReviewIssuesRemain": true
+    },
+    "ragReady": {
+      "approvedIndexedMaterialExists": true,
+      "noHumanReviewNeededForDisposition": true,
+      "sourceCitationsAreStable": true
+    }
+  },
+  "validationRequirements": [
+    "The plan JSON must exist and parse cleanly.",
+    "The plan markdown must exist and include the expected headings.",
+    "The dedicated batch-definition file must exist and stay synchronized with the plan.",
+    "The planned batches must stay review-only by default.",
+    "The source must remain certified and not promoted.",
+    "The source must stay separate from the core Regulation 213 wave and the amendment addenda.",
+    "The source should remain page-image-backed for exact wording where needed.",
+    "The scanned certification page on page 24 must remain separate from the closeout pages."
+  ]
+}

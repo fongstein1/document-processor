@@ -348,6 +348,11 @@ const paths = {
     'config',
     'reg213-amendment1-faq-batch-plan.json',
   ),
+  reg213Amendment1TextBatchPlanJson: path.join(
+    repoRoot,
+    'config',
+    'reg213-amendment1-text-batch-plan.json',
+  ),
   reg213Amendment2BatchPlanJson: path.join(
     repoRoot,
     'config',
@@ -378,6 +383,12 @@ const paths = {
     'docs',
     'processor',
     'reg213_amendment1_faq_extraction_plan.md',
+  ),
+  reg213Amendment1TextExtractionPlanMd: path.join(
+    repoRoot,
+    'docs',
+    'processor',
+    'reg213_amendment1_text_extraction_plan.md',
   ),
   reg213Amendment2ExtractionPlanMd: path.join(
     repoRoot,
@@ -472,6 +483,18 @@ const paths = {
     'docs',
     'review',
     'reg213_amendment1_faq_self_review.md',
+  ),
+  reg213Amendment1TextReviewIndexMd: path.join(
+    repoRoot,
+    'docs',
+    'review',
+    'reg213_amendment1_text_review_index.md',
+  ),
+  reg213Amendment1TextSelfReviewMd: path.join(
+    repoRoot,
+    'docs',
+    'review',
+    'reg213_amendment1_text_self_review.md',
   ),
   modelGovernancePracticeNoteBatchPlanJson: path.join(
     repoRoot,
@@ -969,6 +992,9 @@ const requiredFiles = [
   'docs/review/valuation_regulation_repository_poc_status.md',
   'docs/review/reg213_review_index.md',
   'docs/review/reg213_self_review.md',
+  'config/reg213-amendment1-text-batch-plan.json',
+  'docs/processor/reg213_amendment1_text_extraction_plan.md',
+  'scripts/reg213-amendment1-text-batch-definitions.mjs',
   'config/reg213-amendment2-batch-plan.json',
   'docs/processor/reg213_amendment2_extraction_plan.md',
   'scripts/reg213-amendment2-batch-definitions.mjs',
@@ -3476,6 +3502,52 @@ const validateReg213Amendment2PlanMarkdown = async (filePath, label) => {
     'batch-257',
     'batch-258',
     'batch-259',
+    'page-image wording backstop',
+    'line references are not expected',
+  ].forEach((phrase) => {
+    if (!text.includes(phrase)) {
+      problems.push(`${label}: must mention ${phrase}`)
+    }
+  })
+}
+
+const validateReg213Amendment1TextPlanMarkdown = async (filePath, label) => {
+  const text = await readText(filePath)
+  const requiredHeadings = [
+    '## Source Scope',
+    '## Topic Map',
+    '## Proposed Batch Sequence',
+    '## Review Standards',
+    '## Promotion Gates',
+    '## Validation Implications',
+    '## Operating Note',
+  ]
+  requiredHeadings.forEach((heading) => {
+    if (!text.includes(heading)) {
+      problems.push(`${label}: missing heading ${heading}`)
+    }
+  })
+  ;[
+    'review-only',
+    'not learner-facing',
+    'not app-ready',
+    'not RAG-ready',
+    'not promoted',
+    'NY Regulations/Reg-213-11-NYCRR-S103-Amendment-1-rf213a1text.pdf',
+    'NY Regulations',
+    'Regulation 213 First Amendment',
+    'New York State Department of Financial Services',
+    'certified',
+    'section 103.6',
+    'section 103.7',
+    'section 103.8',
+    'batch-260',
+    'batch-261',
+    'batch-262',
+    'batch-263',
+    'batch-264',
+    'batch-265',
+    'certification page',
     'page-image wording backstop',
     'line references are not expected',
   ].forEach((phrase) => {
@@ -14056,6 +14128,81 @@ if (problems.length > 0) {
   console.log(
     `- Reg 213 Amendment No. 1 FAQ plan verified: ${reg213Amendment1FaqBatchPlan.proposedBatches.length} batches`,
   )
+  await validateReg213Amendment1TextPlanMarkdown(
+    paths.reg213Amendment1TextExtractionPlanMd,
+    'docs/processor/reg213_amendment1_text_extraction_plan.md',
+  )
+  const reg213Amendment1TextBatchPlan = await readJson(paths.reg213Amendment1TextBatchPlanJson)
+  if (reg213Amendment1TextBatchPlan.status !== 'planned') {
+    problems.push('config/reg213-amendment1-text-batch-plan.json: status must be planned')
+  }
+  if (
+    !Array.isArray(reg213Amendment1TextBatchPlan.proposedBatches) ||
+    reg213Amendment1TextBatchPlan.proposedBatches.length !== 6
+  ) {
+    problems.push('config/reg213-amendment1-text-batch-plan.json: expected exactly six proposed batches')
+  }
+  if (
+    reg213Amendment1TextBatchPlan.sourceScope?.confirmedPageRange?.[0] !== 1 ||
+    reg213Amendment1TextBatchPlan.sourceScope?.confirmedPageRange?.[1] !== 24
+  ) {
+    problems.push('config/reg213-amendment1-text-batch-plan.json: confirmedPageRange must be [1, 24]')
+  }
+  const reg213Amendment1TextBatchIds = Array.isArray(reg213Amendment1TextBatchPlan.proposedBatches)
+    ? reg213Amendment1TextBatchPlan.proposedBatches
+        .map((batch) => batch?.plannedBatchId)
+        .filter((batchId) => typeof batchId === 'string' && batchId.length > 0)
+    : []
+  for (const plannedBatchId of reg213Amendment1TextBatchIds) {
+    if (!batchDefinitions[plannedBatchId]) {
+      problems.push(`scripts/batch-definitions.mjs: missing batch definition for ${plannedBatchId}`)
+    }
+  }
+  if (!reg213Amendment1TextBatchIds.includes('batch-260')) {
+    problems.push('config/reg213-amendment1-text-batch-plan.json: expected batch-260 to be planned')
+  }
+  if (!reg213Amendment1TextBatchIds.includes('batch-261')) {
+    problems.push('config/reg213-amendment1-text-batch-plan.json: expected batch-261 to be planned')
+  }
+  if (!reg213Amendment1TextBatchIds.includes('batch-262')) {
+    problems.push('config/reg213-amendment1-text-batch-plan.json: expected batch-262 to be planned')
+  }
+  if (!reg213Amendment1TextBatchIds.includes('batch-263')) {
+    problems.push('config/reg213-amendment1-text-batch-plan.json: expected batch-263 to be planned')
+  }
+  if (!reg213Amendment1TextBatchIds.includes('batch-264')) {
+    problems.push('config/reg213-amendment1-text-batch-plan.json: expected batch-264 to be planned')
+  }
+  if (!reg213Amendment1TextBatchIds.includes('batch-265')) {
+    problems.push('config/reg213-amendment1-text-batch-plan.json: expected batch-265 to be planned')
+  }
+  console.log(
+    `- Reg 213 First Amendment plan verified: ${reg213Amendment1TextBatchPlan.proposedBatches.length} batches`,
+  )
+  const reg213Amendment1TextReviewIndexText = (await exists(paths.reg213Amendment1TextReviewIndexMd))
+    ? await readText(paths.reg213Amendment1TextReviewIndexMd)
+    : ''
+  const reg213Amendment1TextSelfReviewText = (await exists(paths.reg213Amendment1TextSelfReviewMd))
+    ? await readText(paths.reg213Amendment1TextSelfReviewMd)
+    : ''
+  const reg213Amendment1TextReviewIndexReady =
+    reg213Amendment1TextReviewIndexText.length > 0 &&
+    reg213Amendment1TextBatchIds.every((batchId) => reg213Amendment1TextReviewIndexText.includes(batchId))
+  const reg213Amendment1TextSelfReviewReady =
+    reg213Amendment1TextSelfReviewText.length > 0 &&
+    reg213Amendment1TextBatchIds.every((batchId) => reg213Amendment1TextSelfReviewText.includes(batchId))
+  const reg213Amendment1TextReviewArtifactsPresent =
+    reg213Amendment1TextReviewIndexReady && reg213Amendment1TextSelfReviewReady
+  if (reg213Amendment1TextReviewIndexReady) {
+    console.log(
+      `- Reg 213 First Amendment review index verified: ${reg213Amendment1TextBatchPlan.proposedBatches.length} batches`,
+    )
+  }
+  if (reg213Amendment1TextSelfReviewReady) {
+    console.log(
+      `- Reg 213 First Amendment self-review verified: ${reg213Amendment1TextBatchPlan.proposedBatches.length} batches`,
+    )
+  }
   await validateReg213Amendment2PlanMarkdown(
     paths.reg213Amendment2ExtractionPlanMd,
     'docs/processor/reg213_amendment2_extraction_plan.md',
@@ -14865,7 +15012,7 @@ if (problems.length > 0) {
   }
   console.log(`- Model Regulation XXX plan verified: ${modelRegulationXXXBatchPlan.proposedBatches.length} batches`)
   console.log(
-    `- POC status summary verified: ${reg213Amendment2ReviewArtifactsPresent ? 82 : reg213Amendment4ReviewArtifactsPresent ? 81 : reg213Amendment3ReviewArtifactsPresent ? 80 : lhmanual26ReviewArtifactsPresent ? 79 : reg213Amendment5ReviewArtifactsPresent ? 78 : reg213Amendment6ReviewArtifactsPresent ? 77 : reg213Amendment1FaqReviewArtifactsPresent ? 76 : c3Phase2Ag43March2011PracticeNoteReviewArtifactsPresent ? 75 : c3Phase2PracticeNoteReviewArtifactsPresent ? 74 : assetAdequacyAnalysisPracticeNoteReviewArtifactsPresent ? 73 : cia2023FinancialConditionTestingEducationalNoteReviewArtifactsPresent ? 72 : cia2022CapitalFCTEducationalNoteReviewArtifactsPresent ? 71 : actuarialMemorandumPracticeNoteReviewArtifactsPresent ? 70 : lifeReinsuranceReserveCreditPracticeNoteReviewArtifactsPresent ? 69 : modelRegulationXXXReviewArtifactsPresent ? 68 : reg213ReviewArtifactsPresent ? 66 : reg210ReviewArtifactsPresent ? 65 : modelGovernanceReviewArtifactsPresent ? 64 : reg141ReviewArtifactsPresent ? 63 : ag55ReviewArtifactsPresent ? 62 : ag54ReviewArtifactsPresent ? 61 : ag53ReviewArtifactsPresent ? 58 : ag52ReviewArtifactsPresent ? 57 : ag51ReviewArtifactsPresent ? 56 : ag50ReviewArtifactsPresent ? 55 : ag49ReviewArtifactsPresent ? 54 : ag48ReviewArtifactsPresent ? 53 : ag47ReviewArtifactsPresent ? 52 : ag46ReviewArtifactsPresent ? 51 : ag45ReviewArtifactsPresent ? 50 : ag44ReviewArtifactsPresent ? 49 : ag43ReviewArtifactsPresent ? 48 : ag42ReviewArtifactsPresent ? 47 : ag41ReviewArtifactsPresent ? 46 : ag40ReviewArtifactsPresent ? 45 : ag39ReviewArtifactsPresent ? 44 : ag38ReviewArtifactsPresent ? 43 : ag37ReviewArtifactsPresent ? 42 : ag36ReviewArtifactsPresent ? 41 : ag35ReviewArtifactsPresent ? 40 : ag34ReviewArtifactsPresent ? 39 : 38} review indexes`,
+    `- POC status summary verified: ${reg213Amendment1TextReviewArtifactsPresent ? 83 : reg213Amendment2ReviewArtifactsPresent ? 82 : reg213Amendment4ReviewArtifactsPresent ? 81 : reg213Amendment3ReviewArtifactsPresent ? 80 : lhmanual26ReviewArtifactsPresent ? 79 : reg213Amendment5ReviewArtifactsPresent ? 78 : reg213Amendment6ReviewArtifactsPresent ? 77 : reg213Amendment1FaqReviewArtifactsPresent ? 76 : c3Phase2Ag43March2011PracticeNoteReviewArtifactsPresent ? 75 : c3Phase2PracticeNoteReviewArtifactsPresent ? 74 : assetAdequacyAnalysisPracticeNoteReviewArtifactsPresent ? 73 : cia2023FinancialConditionTestingEducationalNoteReviewArtifactsPresent ? 72 : cia2022CapitalFCTEducationalNoteReviewArtifactsPresent ? 71 : actuarialMemorandumPracticeNoteReviewArtifactsPresent ? 70 : lifeReinsuranceReserveCreditPracticeNoteReviewArtifactsPresent ? 69 : modelRegulationXXXReviewArtifactsPresent ? 68 : reg213ReviewArtifactsPresent ? 66 : reg210ReviewArtifactsPresent ? 65 : modelGovernanceReviewArtifactsPresent ? 64 : reg141ReviewArtifactsPresent ? 63 : ag55ReviewArtifactsPresent ? 62 : ag54ReviewArtifactsPresent ? 61 : ag53ReviewArtifactsPresent ? 58 : ag52ReviewArtifactsPresent ? 57 : ag51ReviewArtifactsPresent ? 56 : ag50ReviewArtifactsPresent ? 55 : ag49ReviewArtifactsPresent ? 54 : ag48ReviewArtifactsPresent ? 53 : ag47ReviewArtifactsPresent ? 52 : ag46ReviewArtifactsPresent ? 51 : ag45ReviewArtifactsPresent ? 50 : ag44ReviewArtifactsPresent ? 49 : ag43ReviewArtifactsPresent ? 48 : ag42ReviewArtifactsPresent ? 47 : ag41ReviewArtifactsPresent ? 46 : ag40ReviewArtifactsPresent ? 45 : ag39ReviewArtifactsPresent ? 44 : ag38ReviewArtifactsPresent ? 43 : ag37ReviewArtifactsPresent ? 42 : ag36ReviewArtifactsPresent ? 41 : ag35ReviewArtifactsPresent ? 40 : ag34ReviewArtifactsPresent ? 39 : 38} review indexes`,
   )
   if (validatedPilotBatchCount > 0) {
     console.log(`- Pilot batches validated: ${validatedPilotBatchCount}`)
