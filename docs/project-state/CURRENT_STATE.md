@@ -622,3 +622,12 @@ page-image wording backstop remains visible because exact wording should not
 be overclaimed from the wrapped FAQ text. The next safe continuation step is
 to inspect the remaining inventory again before selecting another source
 unit.
+
+## Reg 213 Sixth Amendment addendum
+
+The Regulation 213 Sixth Amendment wave is now complete as batch-248 in
+ignored working storage. The tracked review index and self-review note are in
+place, the source stays review-only and proposed, and the page-image wording
+backstop remains visible because exact wording should not be overclaimed from
+the one-page regulatory text. The next safe continuation step is to inspect
+the remaining inventory again before selecting another source unit.
