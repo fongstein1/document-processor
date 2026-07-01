@@ -12,7 +12,7 @@ regulation repository. It consolidates the completed review-only extraction
 waves without changing the status of the underlying batch outputs or review
 indexes.
 
-The handoff now spans 79 review indexes, up from 78 review indexes. The
+The handoff now spans 80 review indexes, up from 79 review indexes. The
 earlier 51 review indexes checkpoint remains part of the handoff history, the
 earlier 50 review indexes checkpoint remains part of the handoff history, the
 earlier 49 review indexes checkpoint remains part of the handoff history, the
@@ -974,3 +974,14 @@ working storage. The tracked review index and self-review note are
 and proposed, and the page-image wording backstop remains visible because
 exact wording should not be overclaimed from the one-page regulatory text.
 The broader proof-of-concept handoff now spans 79 review indexes.
+
+## Reg 213 Third Amendment addendum
+
+The Regulation 213 Third Amendment wave is complete as batch-254 in ignored
+working storage. The tracked review index and self-review note are
+`docs/review/reg213_amendment3_review_index.md` and
+`docs/review/reg213_amendment3_self_review.md`, the source stays
+review-only and final-adoption aware, and the page-image wording backstop
+remains visible because exact wording should not be overclaimed from the
+two-page regulatory text. The broader proof-of-concept handoff now spans 80
+review indexes.

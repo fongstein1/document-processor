@@ -65,6 +65,9 @@ The Life & Health Valuation Law Manual opening wave is now complete as
 batches 251-253 in ignored working storage. Its tracked review index and
 self-review note are in place, and the repository handoff now spans 79 review
 indexes.
+The Regulation 213 Third Amendment wave is now complete as batch-254 in
+ignored working storage. Its tracked review index and self-review note are in
+place, and the repository handoff now spans 80 review indexes.
 
 AG 40 is now complete as batches 135-136 in ignored working storage. Its
 tracked review index and self-review note now form part of the handoff set.

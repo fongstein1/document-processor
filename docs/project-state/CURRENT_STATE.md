@@ -43,6 +43,7 @@ complete as batches 251-253 in ignored working storage. Its tracked review
 index and self-review note are in place, and the wave remains review-only,
 reference-manual aware, and separate from the larger sectioned manual that
 follows on page 31.
+The Regulation 213 Third Amendment wave (`NY Regulations/Reg-213-amend3_txt.pdf`) is now complete as batch-254 in ignored working storage. Its tracked review index and self-review note are in place, and the wave remains review-only, final-adoption aware, and separate from the FAQ and other amendment-history addenda.
 
 ## Inventory intake gate
 
