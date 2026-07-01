@@ -1,0 +1,128 @@
+{
+  "planId": "reg192-preneed-life-insurance-plan",
+  "planVersion": "1.0",
+  "status": "planned",
+  "sourceScope": {
+    "sourceFamilyId": "ny_regulations",
+    "primarySourceFile": "NY Regulations/2021 VLM Report_DRAFT-(1-27-2020) with academy Updates V1-Reg-192-11-NYCRR-S102.pdf",
+    "sourceFolder": "NY Regulations",
+    "sourceTitle": "Minimum Standards for Determining Reserve Liabilities and Non-Forfeiture Values for Preneed Life Insurance",
+    "sourceReference": "New York Regulation 192 / 11 CRR-NY Part 102",
+    "sourceStatus": "active",
+    "sourceStatusNote": "Current through March 15, 2020; page-image wording backstop remains required because the text layer is noisy / OCR-like.",
+    "domainId": "naic_regulatory",
+    "rawSourceRoot": "C:\\Dev\\NAIC Valuation Manual Course",
+    "confirmedPageRange": [1, 3],
+    "observedSectionWindows": [
+      {
+        "sectionId": "reg192-opening-purpose-applicability-definitions-transition-rules",
+        "pageRange": [1, 3],
+        "note": "Title page, purpose, applicability, definitions, and transition-rule window."
+      }
+    ],
+    "boundaries": [
+      "Keep planning focused on this single Regulation 192 PDF.",
+      "Do not widen into AG files, practice notes, or other NY regulation files in the same wave.",
+      "Keep the opening title / purpose / applicability / definitions / transition-rule language review-only until a human confirms the indexing decision.",
+      "Keep the page-image wording backstop visible because the text layer is noisy / OCR-like.",
+      "Keep the batch source-bound and review-only."
+    ],
+    "exclusions": [
+      "No learner-facing content.",
+      "No app-ready export.",
+      "No RAG-ready export.",
+      "No approved/promoted export.",
+      "No eLearning scripts, slides, quizzes, or app exports.",
+      "No raw source files in Git.",
+      "No other guideline files in the same wave."
+    ]
+  },
+  "topicMap": [
+    {
+      "topicId": "reg192-opening-purpose-applicability-definitions-transition-rules",
+      "label": "Opening title, purpose, applicability, definitions, and transition rules",
+      "pageRange": [1, 3],
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "state_regulation",
+        "jurisdiction_specific_requirement",
+        "regulatory_requirement",
+        "definition_or_terminology",
+        "cross_reference_mapping",
+        "background_content",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": [
+        "Regulation 179",
+        "Regulation 126",
+        "preneed life insurance",
+        "reserve liabilities",
+        "non-forfeiture values",
+        "transition rules"
+      ],
+      "boundaryNote": "Keep this slice within pages 1-3 and do not absorb other NY regulation files."
+    }
+  ],
+  "proposedBatches": [
+    {
+      "plannedBatchId": "batch-266",
+      "topicIds": [
+        "reg192-opening-purpose-applicability-definitions-transition-rules"
+      ],
+      "title": "Regulation 192 opening title, purpose, applicability, definitions, and transition-rule window",
+      "pageTarget": {
+        "knownWindow": [1, 3],
+        "notes": "Capture the full three-page regulation as a single review-only slice and stop at the page 3 boundary."
+      },
+      "rationale": "Capture the full three-page regulation as a single review-only slice and stop at the page 3 boundary.",
+      "reviewComplexity": "medium",
+      "expectedIssueTypes": [
+        "state_regulation",
+        "jurisdiction_specific_requirement",
+        "regulatory_requirement",
+        "definition_or_terminology",
+        "cross_reference_mapping",
+        "background_content",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    }
+  ],
+  "reviewStandards": {
+    "regulatoryRequirement": "Treat the purpose, applicability, reserve-liability, and transition-rule language as regulatory text when it directs what the company must do.",
+    "definitionOrTerminology": "Treat preneed life insurance, reserve liabilities, non-forfeiture values, and related terms as terminology when the text explains rather than directs.",
+    "crossReferenceMapping": "Treat references to Regulation 179, Regulation 126, and related statutory material as cross-reference context unless operationalized.",
+    "backgroundContent": "Treat the title page and section labels as background unless they impose a requirement.",
+    "boundaryControlWindow": "Treat the three-page slice as a review-only window that should not be merged forward.",
+    "requiresHumanInterpretation": "Treat the indexing choice and the noisy OCR-like text layer as requiring human actuarial interpretation unless the text is explicit.",
+    "sourceQualityCaveat": "Treat text-layer noise or encoding issues as review-only caveats and do not widen the batch because of them."
+  },
+  "promotionGates": {
+    "defaultState": "review_only",
+    "learnerFacing": [
+      "source citation exists",
+      "source support is clear",
+      "wording is not misleading",
+      "confidence is high",
+      "no unresolved review flags exist"
+    ],
+    "appReady": [
+      "learner-facing criteria are already satisfied",
+      "export is sanitized, stable, and versioned",
+      "no unresolved review issues remain"
+    ],
+    "ragReady": [
+      "approved indexed material only",
+      "stable support exists",
+      "no unresolved review flags remain"
+    ],
+    "approvedPromotedExport": [
+      "explicit human approval only"
+    ]
+  },
+  "notes": "Controlled Regulation 192 planning artifact. Planned batch 266 remains review-only by default and is not an extraction run."
+}

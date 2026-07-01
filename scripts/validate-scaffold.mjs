@@ -323,6 +323,10 @@ const paths = {
   reg141ExtractionPlanMd: path.join(repoRoot, 'docs', 'processor', 'reg141_extraction_plan.md'),
   reg141ReviewIndexMd: path.join(repoRoot, 'docs', 'review', 'reg141_review_index.md'),
   reg141SelfReviewMd: path.join(repoRoot, 'docs', 'review', 'reg141_self_review.md'),
+  reg192BatchPlanJson: path.join(repoRoot, 'config', 'reg192-batch-plan.json'),
+  reg192ExtractionPlanMd: path.join(repoRoot, 'docs', 'processor', 'reg192_extraction_plan.md'),
+  reg192ReviewIndexMd: path.join(repoRoot, 'docs', 'review', 'reg192_review_index.md'),
+  reg192SelfReviewMd: path.join(repoRoot, 'docs', 'review', 'reg192_self_review.md'),
   reg210BatchPlanJson: path.join(repoRoot, 'config', 'reg210-batch-plan.json'),
   reg210ExtractionPlanMd: path.join(repoRoot, 'docs', 'processor', 'reg210_extraction_plan.md'),
   reg210ReviewIndexMd: path.join(repoRoot, 'docs', 'review', 'reg210_review_index.md'),
@@ -3462,6 +3466,45 @@ const validateReg213Amendment1FaqPlanMarkdown = async (filePath, label) => {
     'batch-245',
     'batch-246',
     'batch-247',
+    'page-image wording backstop',
+    'line references are not expected',
+  ].forEach((phrase) => {
+    if (!text.includes(phrase)) {
+      problems.push(`${label}: must mention ${phrase}`)
+    }
+  })
+}
+
+const validateReg192PlanMarkdown = async (filePath, label) => {
+  const text = await readText(filePath)
+  const requiredHeadings = [
+    '## Source Scope',
+    '## Topic Map',
+    '## Proposed Batch Sequence',
+    '## Review Standards',
+    '## Promotion Gates',
+    '## Validation Implications',
+    '## Operating Note',
+  ]
+  requiredHeadings.forEach((heading) => {
+    if (!text.includes(heading)) {
+      problems.push(`${label}: missing heading ${heading}`)
+    }
+  })
+  ;[
+    'review-only',
+    'not learner-facing',
+    'not app-ready',
+    'not RAG-ready',
+    'not promoted',
+    'NY Regulations/2021 VLM Report_DRAFT-(1-27-2020) with academy Updates V1-Reg-192-11-NYCRR-S102.pdf',
+    'NY Regulations',
+    'New York Regulation 192',
+    '11 CRR-NY Part 102',
+    'state regulation',
+    'New York',
+    'pages 1-3',
+    'batch-266',
     'page-image wording backstop',
     'line references are not expected',
   ].forEach((phrase) => {
@@ -14021,6 +14064,37 @@ if (problems.length > 0) {
     console.log(`- Reg 141 self-review verified: ${reg141BatchPlan.proposedBatches.length} batches`)
   }
   console.log(`- Reg 141 plan verified: ${reg141BatchPlan.proposedBatches.length} batches`)
+  await validateReg192PlanMarkdown(paths.reg192ExtractionPlanMd, 'docs/processor/reg192_extraction_plan.md')
+  const reg192BatchPlan = await readJson(paths.reg192BatchPlanJson)
+  const reg192BatchIds = reg192BatchPlan.proposedBatches.map((batch) => batch.plannedBatchId)
+  const reg192ReviewIndexText = (await exists(paths.reg192ReviewIndexMd))
+    ? await readText(paths.reg192ReviewIndexMd)
+    : ''
+  const reg192SelfReviewText = (await exists(paths.reg192SelfReviewMd))
+    ? await readText(paths.reg192SelfReviewMd)
+    : ''
+  const reg192PocSummaryText = (await exists(paths.pocStatusSummaryMd))
+    ? await readText(paths.pocStatusSummaryMd)
+    : ''
+  const reg192ReviewIndexReady =
+    reg192ReviewIndexText.length > 0 && reg192BatchIds.every((batchId) => reg192ReviewIndexText.includes(batchId))
+  const reg192SelfReviewReady =
+    reg192SelfReviewText.length > 0 && reg192BatchIds.every((batchId) => reg192SelfReviewText.includes(batchId))
+  const reg192ReviewArtifactsPresent = reg192ReviewIndexReady && reg192SelfReviewReady
+  const reg192PocSummaryReady =
+    reg192PocSummaryText.includes('docs/review/reg192_review_index.md') &&
+    reg192PocSummaryText.includes('docs/review/reg192_self_review.md') &&
+    reg192PocSummaryText.includes('84 review indexes')
+  if (reg192ReviewArtifactsPresent && !reg192PocSummaryReady) {
+    problems.push('docs/review/valuation_regulation_repository_poc_status.md: missing Reg 192 review index reference')
+  }
+  if (reg192ReviewIndexReady) {
+    console.log(`- Reg 192 review index verified: ${reg192BatchPlan.proposedBatches.length} batches`)
+  }
+  if (reg192SelfReviewReady) {
+    console.log(`- Reg 192 self-review verified: ${reg192BatchPlan.proposedBatches.length} batches`)
+  }
+  console.log(`- Reg 192 plan verified: ${reg192BatchPlan.proposedBatches.length} batches`)
   const reg210BatchPlan = await readJson(paths.reg210BatchPlanJson)
   const reg210BatchIds = reg210BatchPlan.proposedBatches.map((batch) => batch.plannedBatchId)
   const reg210ReviewIndexText = (await exists(paths.reg210ReviewIndexMd))
