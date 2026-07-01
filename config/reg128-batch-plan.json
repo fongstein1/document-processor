@@ -1,0 +1,134 @@
+{
+  "planId": "reg128-market-value-separate-accounts-plan",
+  "planVersion": "1.0",
+  "status": "planned",
+  "sourceScope": {
+    "sourceFamilyId": "ny_regulations",
+    "primarySourceFile": "NY Regulations/2021 VLM Report_DRAFT-(1-27-2020) with academy Updates V1-Reg-128-11-NYCRR-S097.pdf",
+    "sourceFolder": "NY Regulations",
+    "sourceTitle": "Market Value Separate Accounts Funding Guaranteed Benefits; Separate Accounts Operations and Reserve Requirements",
+    "sourceReference": "New York Regulation 128 / 11 CRR-NY Part 97",
+    "sourceStatus": "active",
+    "sourceStatusNote": "Current through March 15, 2020; page-image wording backstop remains required because the text layer is noisy / OCR-like.",
+    "domainId": "naic_regulatory",
+    "rawSourceRoot": "C:\\Dev\\NAIC Valuation Manual Course",
+    "confirmedPageRange": [1, 19],
+    "observedSectionWindows": [
+      {
+        "sectionId": "reg128-purpose-plan-of-operations-asset-maintenance-reserve-valuation-severability",
+        "pageRange": [1, 19],
+        "note": "Title page, purpose, legislative background, plan of operations, asset maintenance requirements, reserve valuation, and severability."
+      }
+    ],
+    "boundaries": [
+      "Keep planning focused on this single Regulation 128 PDF.",
+      "Do not widen into AG files, practice notes, or other NY regulation files in the same wave.",
+      "Keep the purpose / plan of operations / asset-maintenance / reserve-valuation / severability language review-only until a human confirms the indexing decision.",
+      "Keep the page-image wording backstop visible because the text layer is noisy / OCR-like.",
+      "Keep the batch source-bound and review-only."
+    ],
+    "exclusions": [
+      "No learner-facing content.",
+      "No app-ready export.",
+      "No RAG-ready export.",
+      "No approved/promoted export.",
+      "No eLearning scripts, slides, quizzes, or app exports.",
+      "No raw source files in Git.",
+      "No other guideline files in the same wave."
+    ]
+  },
+  "topicMap": [
+    {
+      "topicId": "reg128-purpose-plan-of-operations-asset-maintenance-reserve-valuation-severability",
+      "label": "Purpose, legislative background, plan of operations, asset maintenance requirements, reserve valuation, and severability",
+      "pageRange": [1, 19],
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "state_regulation",
+        "jurisdiction_specific_requirement",
+        "regulatory_requirement",
+        "reporting_requirement",
+        "documentation_expectation",
+        "governance_or_control_expectation",
+        "asset_modeling_judgment",
+        "calculation_structure",
+        "cross_reference_mapping",
+        "background_content",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": [
+        "Insurance Law sections 1405, 4217, 4223, 4240",
+        "separate account asset classes",
+        "valuation and asset-maintenance percentages",
+        "severability"
+      ],
+      "boundaryNote": "Keep this slice within pages 1-19 and do not absorb other NY regulation files."
+    }
+  ],
+  "proposedBatches": [
+    {
+      "plannedBatchId": "batch-268",
+      "topicIds": [
+        "reg128-purpose-plan-of-operations-asset-maintenance-reserve-valuation-severability"
+      ],
+      "title": "Regulation 128 purpose, plan of operations, asset maintenance requirements, reserve valuation, and severability",
+      "pageTarget": {
+        "knownWindow": [1, 19],
+        "notes": "Capture the full 19-page regulation as a single review-only slice and stop at the page 19 boundary."
+      },
+      "rationale": "Capture the full 19-page regulation as a single review-only slice and stop at the page 19 boundary.",
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "state_regulation",
+        "jurisdiction_specific_requirement",
+        "regulatory_requirement",
+        "reporting_requirement",
+        "documentation_expectation",
+        "governance_or_control_expectation",
+        "asset_modeling_judgment",
+        "calculation_structure",
+        "cross_reference_mapping",
+        "background_content",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    }
+  ],
+  "reviewStandards": {
+    "regulatoryRequirement": "Treat the purpose, plan-of-operations, asset-maintenance, reserve-valuation, and severability language as regulatory text when it directs what the company must do.",
+    "definitionOrTerminology": "Treat separate account, market value, guaranteed benefits, asset maintenance, and reserve valuation as terminology when the text explains rather than directs.",
+    "crossReferenceMapping": "Treat references to Insurance Law and asset classes as cross-reference context unless operationalized.",
+    "backgroundContent": "Treat the title page and section labels as background unless they impose a requirement.",
+    "boundaryControlWindow": "Treat the 19-page slice as a review-only window that should not be merged forward.",
+    "requiresHumanInterpretation": "Treat the indexing choice and the noisy OCR-like text layer as requiring human actuarial interpretation unless the text is explicit.",
+    "sourceQualityCaveat": "Treat text-layer noise or encoding issues as review-only caveats and do not widen the batch because of them."
+  },
+  "promotionGates": {
+    "defaultState": "review_only",
+    "learnerFacing": [
+      "source citation exists",
+      "source support is clear",
+      "wording is not misleading",
+      "confidence is high",
+      "no unresolved review flags exist"
+    ],
+    "appReady": [
+      "learner-facing criteria are already satisfied",
+      "export is sanitized, stable, and versioned",
+      "no unresolved review issues remain"
+    ],
+    "ragReady": [
+      "approved indexed material only",
+      "stable support exists",
+      "no unresolved review flags remain"
+    ],
+    "approvedPromotedExport": [
+      "explicit human approval only"
+    ]
+  },
+  "notes": "Controlled Regulation 128 planning artifact. Planned batch 268 remains review-only by default and is not an extraction run."
+}

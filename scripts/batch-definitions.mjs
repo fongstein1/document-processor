@@ -55,6 +55,7 @@ import { ag54BatchDefinitions } from './ag54-batch-definitions.mjs'
 import { ag55BatchDefinitions } from './ag55-batch-definitions.mjs'
 import { reg141BatchDefinitions } from './reg141-batch-definitions.mjs'
 import { reg102BatchDefinitions } from './reg102-batch-definitions.mjs'
+import { reg128BatchDefinitions } from './reg128-batch-definitions.mjs'
 import { reg192BatchDefinitions } from './reg192-batch-definitions.mjs'
 import { reg210BatchDefinitions } from './reg210-batch-definitions.mjs'
 import { reg213BatchDefinitions } from './reg213-batch-definitions.mjs'
@@ -2265,6 +2266,7 @@ export const batchDefinitions = {
   ...ag55BatchDefinitions,
   ...reg141BatchDefinitions,
   ...reg102BatchDefinitions,
+  ...reg128BatchDefinitions,
   ...reg192BatchDefinitions,
   ...reg210BatchDefinitions,
   ...reg213BatchDefinitions,
