@@ -1,0 +1,134 @@
+{
+  "planId": "reg056-accident-and-health-reserve-plan",
+  "planVersion": "1.0",
+  "status": "planned",
+  "sourceScope": {
+    "sourceFamilyId": "ny_regulations",
+    "primarySourceFile": "NY Regulations/2021 VLM Report_DRAFT-(1-27-2020) with academy Updates V1-Reg-056-11-NYCRR-S094.pdf",
+    "sourceFolder": "NY Regulations",
+    "sourceTitle": "Valuation of Individual and Group Accident and Health Insurance Reserves",
+    "sourceReference": "New York Regulation 56 / 11 CRR-NY Part 94",
+    "sourceStatus": "active",
+    "sourceStatusNote": "Current through March 15, 2020; section 94.12 is repealed and should remain boundary context only; the page-image wording backstop remains required because the text layer is noisy / OCR-like.",
+    "domainId": "naic_regulatory",
+    "rawSourceRoot": "C:\\Dev\\NAIC Valuation Manual Course",
+    "confirmedPageRange": [1, 27],
+    "observedSectionWindows": [
+      {
+        "sectionId": "reg056-opening-purpose-application-reserve-guidance-and-repealed-closeout",
+        "pageRange": [1, 27],
+        "note": "Title page, purposes, applicability, reserve guidance, tables / incorporated material, and severability with a repealed subsection closeout."
+      }
+    ],
+    "boundaries": [
+      "Keep planning focused on this single Regulation 56 PDF.",
+      "Do not widen into AG files, practice notes, or other NY regulation files in the same wave.",
+      "Keep the purpose / applicability / reserve-guidance / repealed-closeout language review-only until a human confirms the indexing decision.",
+      "Keep the page-image wording backstop visible because the text layer is noisy / OCR-like.",
+      "Keep the batch source-bound and review-only."
+    ],
+    "exclusions": [
+      "No learner-facing content.",
+      "No app-ready export.",
+      "No RAG-ready export.",
+      "No approved/promoted export.",
+      "No eLearning scripts, slides, quizzes, or app exports.",
+      "No raw source files in Git.",
+      "No other guideline files in the same wave."
+    ]
+  },
+  "topicMap": [
+    {
+      "topicId": "reg056-opening-purpose-application-reserve-guidance-and-repealed-closeout",
+      "label": "Purpose, applicability, reserve guidance, tables / incorporated material, and severability with a repealed subsection closeout",
+      "pageRange": [1, 27],
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "state_regulation",
+        "jurisdiction_specific_requirement",
+        "regulatory_requirement",
+        "reporting_requirement",
+        "documentation_expectation",
+        "governance_or_control_expectation",
+        "calculation_structure",
+        "definition_or_terminology",
+        "cross_reference_mapping",
+        "background_content",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": [
+        "Insurance Law sections 201, 301, 1303, 1304, 1305, 1308, 4117, 4217, 4310, 4517",
+        "accident and health reserve methods",
+        "incorporated valuation tables",
+        "repealed subsection 94.12"
+      ],
+      "boundaryNote": "Keep this slice within pages 1-27 and do not absorb other NY regulation files."
+    }
+  ],
+  "proposedBatches": [
+    {
+      "plannedBatchId": "batch-273",
+      "topicIds": [
+        "reg056-opening-purpose-application-reserve-guidance-and-repealed-closeout"
+      ],
+      "title": "Regulation 56 purpose, applicability, reserve guidance, tables / incorporated material, and repealed closeout",
+      "pageTarget": {
+        "knownWindow": [1, 27],
+        "notes": "Capture the full 27-page regulation as a single review-only slice and stop at the page 27 boundary."
+      },
+      "rationale": "Capture the full 27-page regulation as a single review-only slice and stop at the page 27 boundary.",
+      "reviewComplexity": "high",
+      "expectedIssueTypes": [
+        "state_regulation",
+        "jurisdiction_specific_requirement",
+        "regulatory_requirement",
+        "reporting_requirement",
+        "documentation_expectation",
+        "governance_or_control_expectation",
+        "calculation_structure",
+        "definition_or_terminology",
+        "cross_reference_mapping",
+        "background_content",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    }
+  ],
+  "reviewStandards": {
+    "regulatoryRequirement": "Treat the purpose, applicability, reserve-guidance, and severability language as regulatory text when it directs what the company must do.",
+    "definitionOrTerminology": "Treat the reserve-method labels, incorporated-material references, and grading language as terminology when the text explains rather than directs.",
+    "crossReferenceMapping": "Treat references to Insurance Law and incorporated table material as cross-reference context unless operationalized.",
+    "backgroundContent": "Treat the title page and section labels as background unless they impose a requirement.",
+    "boundaryControlWindow": "Treat the 27-page slice as a review-only window that should not be merged forward.",
+    "requiresHumanInterpretation": "Treat the indexing choice and the noisy OCR-like text layer as requiring human actuarial interpretation unless the text is explicit.",
+    "sourceQualityCaveat": "Treat text-layer noise or encoding issues as review-only caveats and do not widen the batch because of them."
+  },
+  "promotionGates": {
+    "defaultState": "review_only",
+    "learnerFacing": [
+      "source citation exists",
+      "source support is clear",
+      "wording is not misleading",
+      "confidence is high",
+      "no unresolved review flags exist"
+    ],
+    "appReady": [
+      "learner-facing criteria are already satisfied",
+      "export is sanitized, stable, and versioned",
+      "no unresolved review issues remain"
+    ],
+    "ragReady": [
+      "approved indexed material only",
+      "stable support exists",
+      "no unresolved review flags remain"
+    ],
+    "approvedPromotedExport": [
+      "explicit human approval only"
+    ]
+  },
+  "notes": "Controlled Regulation 56 planning artifact. Planned batch 273 remains review-only by default and is not an extraction run."
+}
