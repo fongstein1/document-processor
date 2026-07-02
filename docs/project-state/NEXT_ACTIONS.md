@@ -96,6 +96,9 @@ repository handoff now spans 89 review indexes.
 The Regulation 143 wave is now complete as batch-272 in ignored working
 storage. Its tracked review index and self-review note are in place, and the
 repository handoff now spans 90 review indexes.
+The Regulation 56 wave is now complete as batch-273 in ignored working
+storage. Its tracked review index and self-review note are in place, and the
+repository handoff now spans 91 review indexes.
 
 AG 40 is now complete as batches 135-136 in ignored working storage. Its
 tracked review index and self-review note now form part of the handoff set.
