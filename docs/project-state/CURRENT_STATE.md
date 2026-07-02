@@ -58,6 +58,7 @@ The Regulation 126 wave (`NY Regulations/2021 VLM Report_DRAFT-(1-27-2020) with 
 The Regulation 147 wave (`NY Regulations/2021 VLM Report_DRAFT-(1-27-2020) with academy Updates V1-Reg-147-11-NYCRR-S098.pdf`) is now complete as batch-275 in ignored working storage. Its tracked review index and self-review note are in place, and the wave remains review-only, active, and page-image backed for exact wording.
 The Regulation 151 wave (`NY Regulations/2021 VLM Report_DRAFT-(1-27-2020) with academy Updates V1-Reg-151-11-NYCRR-S099.pdf`) is now complete as batch-276 in ignored working storage. Its tracked review index and self-review note are in place, and the wave remains review-only, active, and page-image backed for exact wording.
 The AG 37 Law Manual reprint wave (`Actuarial Guidelines/AG 37 - CRVM for VUL-from 2021 Law Manual.pdf`) is now complete as batch-277 in ignored working storage. Its tracked review index and self-review note are in place, and the wave remains review-only, companion-only, duplicate-source aware, and page-image backed for exact comparison against active AG 37.
+The AG 48 Law Manual reprint wave (`Actuarial Guidelines/AG 48 - AOMR for Reinsurers-from 2021 Law Manual.pdf`) is now complete as batch-278 in ignored working storage. Its tracked review index and self-review note are in place, and the wave remains review-only, companion-only, duplicate-source aware, and page-image backed for exact comparison against active AG 48.
 
 ## Inventory intake gate
 
@@ -689,5 +690,14 @@ The AG 37 Law Manual reprint wave is now complete as batch-277 in ignored
 working storage. The tracked review index and self-review note are
 `docs/review/ag37_law_manual_reprint_review_index.md` and
 `docs/review/ag37_law_manual_reprint_self_review.md`, the source remains
+review-only and companion-only, and the duplicate-source disposition remains
+open for human review before any later merge or reuse.
+
+## AG 48 Law Manual reprint addendum
+
+The AG 48 Law Manual reprint wave is now complete as batch-278 in ignored
+working storage. The tracked review index and self-review note are
+`docs/review/ag48_law_manual_reprint_review_index.md` and
+`docs/review/ag48_law_manual_reprint_self_review.md`, the source remains
 review-only and companion-only, and the duplicate-source disposition remains
 open for human review before any later merge or reuse.
