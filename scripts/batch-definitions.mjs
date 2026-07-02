@@ -48,6 +48,7 @@ import { ag45BatchDefinitions } from './ag45-batch-definitions.mjs'
 import { ag46BatchDefinitions } from './ag46-batch-definitions.mjs'
 import { ag47BatchDefinitions } from './ag47-batch-definitions.mjs'
 import { ag48BatchDefinitions } from './ag48-batch-definitions.mjs'
+import { ag48LawManualReprintBatchDefinitions } from './ag48-law-manual-reprint-batch-definitions.mjs'
 import { ag49BatchDefinitions } from './ag49-batch-definitions.mjs'
 import { ag50BatchDefinitions } from './ag50-batch-definitions.mjs'
 import { ag51BatchDefinitions } from './ag51-batch-definitions.mjs'
@@ -2268,6 +2269,7 @@ export const batchDefinitions = {
   ...ag46BatchDefinitions,
   ...ag47BatchDefinitions,
   ...ag48BatchDefinitions,
+  ...ag48LawManualReprintBatchDefinitions,
   ...ag49BatchDefinitions,
   ...ag50BatchDefinitions,
   ...ag51BatchDefinitions,

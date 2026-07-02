@@ -297,6 +297,10 @@ const paths = {
   ag48ExtractionPlanMd: path.join(repoRoot, 'docs', 'processor', 'ag48_extraction_plan.md'),
   ag48ReviewIndexMd: path.join(repoRoot, 'docs', 'review', 'ag48_review_index.md'),
   ag48SelfReviewMd: path.join(repoRoot, 'docs', 'review', 'ag48_self_review.md'),
+  ag48LawManualReprintBatchPlanJson: path.join(repoRoot, 'config', 'ag48-law-manual-reprint-batch-plan.json'),
+  ag48LawManualReprintExtractionPlanMd: path.join(repoRoot, 'docs', 'processor', 'ag48_law_manual_reprint_extraction_plan.md'),
+  ag48LawManualReprintReviewIndexMd: path.join(repoRoot, 'docs', 'review', 'ag48_law_manual_reprint_review_index.md'),
+  ag48LawManualReprintSelfReviewMd: path.join(repoRoot, 'docs', 'review', 'ag48_law_manual_reprint_self_review.md'),
   ag49BatchPlanJson: path.join(repoRoot, 'config', 'ag49-batch-plan.json'),
   ag49ExtractionPlanMd: path.join(repoRoot, 'docs', 'processor', 'ag49_extraction_plan.md'),
   ag49ReviewIndexMd: path.join(repoRoot, 'docs', 'review', 'ag49_review_index.md'),
@@ -14115,6 +14119,64 @@ if (problems.length > 0) {
       console.log(`- AG 38 self-review verified: ${ag38BatchPlan.proposedBatches.length} batches`)
     }
     console.log(`- AG 38 plan verified: ${ag38BatchPlan.proposedBatches.length} batches`)
+    if (ag48ReviewArtifactsPresent) {
+      console.log(`- AG 48 review index verified: ${ag48BatchPlan.proposedBatches.length} batches`)
+      console.log(`- AG 48 self-review verified: ${ag48BatchPlan.proposedBatches.length} batches`)
+    }
+    console.log(`- AG 48 plan verified: ${ag48BatchPlan.proposedBatches.length} batches`)
+    await validateAg18PlanMarkdown(
+      paths.ag48LawManualReprintExtractionPlanMd,
+      'docs/processor/ag48_law_manual_reprint_extraction_plan.md',
+    )
+    const ag48LawManualReprintBatchPlan = await readJson(paths.ag48LawManualReprintBatchPlanJson)
+    const ag48LawManualReprintBatchIds = ag48LawManualReprintBatchPlan.proposedBatches.map(
+      (batch) => batch.plannedBatchId,
+    )
+    const ag48LawManualReprintReviewIndexText = (await exists(paths.ag48LawManualReprintReviewIndexMd))
+      ? await readText(paths.ag48LawManualReprintReviewIndexMd)
+      : ''
+    const ag48LawManualReprintSelfReviewText = (await exists(paths.ag48LawManualReprintSelfReviewMd))
+      ? await readText(paths.ag48LawManualReprintSelfReviewMd)
+      : ''
+    const ag48LawManualReprintPocSummaryText = (await exists(paths.pocStatusSummaryMd))
+      ? await readText(paths.pocStatusSummaryMd)
+      : ''
+    const ag48LawManualReprintReviewIndexReady =
+      ag48LawManualReprintReviewIndexText.length > 0 &&
+      ag48LawManualReprintBatchIds.every((batchId) =>
+        ag48LawManualReprintReviewIndexText.includes(batchId),
+      )
+    const ag48LawManualReprintSelfReviewReady =
+      ag48LawManualReprintSelfReviewText.length > 0 &&
+      ag48LawManualReprintBatchIds.every((batchId) =>
+        ag48LawManualReprintSelfReviewText.includes(batchId),
+      )
+    const ag48LawManualReprintReviewArtifactsPresent =
+      ag48LawManualReprintReviewIndexReady && ag48LawManualReprintSelfReviewReady
+    const ag48LawManualReprintPocSummaryReady =
+      ag48LawManualReprintPocSummaryText.includes(
+        'docs/review/ag48_law_manual_reprint_review_index.md',
+      ) &&
+      ag48LawManualReprintPocSummaryText.includes(
+        'docs/review/ag48_law_manual_reprint_self_review.md',
+      ) &&
+      ag48LawManualReprintPocSummaryText.includes('96 review indexes')
+    if (ag48LawManualReprintReviewArtifactsPresent && !ag48LawManualReprintPocSummaryReady) {
+      problems.push('docs/review/valuation_regulation_repository_poc_status.md: missing AG 48 Law Manual reprint review index reference')
+    }
+    if (ag48LawManualReprintReviewIndexReady) {
+      console.log(
+        `- AG 48 Law Manual reprint review index verified: ${ag48LawManualReprintBatchPlan.proposedBatches.length} batches`,
+      )
+    }
+    if (ag48LawManualReprintSelfReviewReady) {
+      console.log(
+        `- AG 48 Law Manual reprint self-review verified: ${ag48LawManualReprintBatchPlan.proposedBatches.length} batches`,
+      )
+    }
+    console.log(
+      `- AG 48 Law Manual reprint plan verified: ${ag48LawManualReprintBatchPlan.proposedBatches.length} batches`,
+    )
     if (ag39ReviewArtifactsPresent) {
       console.log(`- AG 39 review index verified: ${ag39BatchPlan.proposedBatches.length} batches`)
       console.log(`- AG 39 self-review verified: ${ag39BatchPlan.proposedBatches.length} batches`)
@@ -14156,11 +14218,6 @@ if (problems.length > 0) {
       console.log(`- AG 47 self-review verified: ${ag47BatchPlan.proposedBatches.length} batches`)
     }
     console.log(`- AG 47 plan verified: ${ag47BatchPlan.proposedBatches.length} batches`)
-    if (ag48ReviewArtifactsPresent) {
-      console.log(`- AG 48 review index verified: ${ag48BatchPlan.proposedBatches.length} batches`)
-      console.log(`- AG 48 self-review verified: ${ag48BatchPlan.proposedBatches.length} batches`)
-    }
-    console.log(`- AG 48 plan verified: ${ag48BatchPlan.proposedBatches.length} batches`)
     if (ag51ReviewArtifactsPresent) {
       console.log(`- AG 51 review index verified: ${ag51BatchPlan.proposedBatches.length} batches`)
       console.log(`- AG 51 self-review verified: ${ag51BatchPlan.proposedBatches.length} batches`)
@@ -15550,7 +15607,7 @@ if (problems.length > 0) {
   }
   console.log(`- Model Regulation XXX plan verified: ${modelRegulationXXXBatchPlan.proposedBatches.length} batches`)
   console.log(
-    `- POC status summary verified: ${ag37LawManualReprintReviewArtifactsPresent ? 95 : reg151ReviewArtifactsPresent ? 94 : reg147ReviewArtifactsPresent ? 93 : reg126ReviewArtifactsPresent ? 92 : reg056ReviewArtifactsPresent ? 91 : reg143ReviewArtifactsPresent ? 90 : reg136ReviewArtifactsPresent ? 89 : reg179ReviewArtifactsPresent ? 88 : reg127ReviewArtifactsPresent ? 87 : reg128ReviewArtifactsPresent ? 86 : reg102ReviewArtifactsPresent ? 85 : reg213Amendment1TextReviewArtifactsPresent ? 84 : reg213Amendment2ReviewArtifactsPresent ? 82 : reg213Amendment4ReviewArtifactsPresent ? 81 : reg213Amendment3ReviewArtifactsPresent ? 80 : lhmanual26ReviewArtifactsPresent ? 79 : reg213Amendment5ReviewArtifactsPresent ? 78 : reg213Amendment6ReviewArtifactsPresent ? 77 : reg213Amendment1FaqReviewArtifactsPresent ? 76 : c3Phase2Ag43March2011PracticeNoteReviewArtifactsPresent ? 75 : c3Phase2PracticeNoteReviewArtifactsPresent ? 74 : assetAdequacyAnalysisPracticeNoteReviewArtifactsPresent ? 73 : cia2023FinancialConditionTestingEducationalNoteReviewArtifactsPresent ? 72 : cia2022CapitalFCTEducationalNoteReviewArtifactsPresent ? 71 : actuarialMemorandumPracticeNoteReviewArtifactsPresent ? 70 : lifeReinsuranceReserveCreditPracticeNoteReviewArtifactsPresent ? 69 : modelRegulationXXXReviewArtifactsPresent ? 68 : reg213ReviewArtifactsPresent ? 66 : reg210ReviewArtifactsPresent ? 65 : modelGovernanceReviewArtifactsPresent ? 64 : reg141ReviewArtifactsPresent ? 63 : ag55ReviewArtifactsPresent ? 62 : ag54ReviewArtifactsPresent ? 61 : ag53ReviewArtifactsPresent ? 58 : ag52ReviewArtifactsPresent ? 57 : ag51ReviewArtifactsPresent ? 56 : ag50ReviewArtifactsPresent ? 55 : ag49ReviewArtifactsPresent ? 54 : ag48ReviewArtifactsPresent ? 53 : ag47ReviewArtifactsPresent ? 52 : ag46ReviewArtifactsPresent ? 51 : ag45ReviewArtifactsPresent ? 50 : ag44ReviewArtifactsPresent ? 49 : ag43ReviewArtifactsPresent ? 48 : ag42ReviewArtifactsPresent ? 47 : ag41ReviewArtifactsPresent ? 46 : ag40ReviewArtifactsPresent ? 45 : ag39ReviewArtifactsPresent ? 44 : ag38ReviewArtifactsPresent ? 43 : ag37ReviewArtifactsPresent ? 42 : ag36ReviewArtifactsPresent ? 41 : ag35ReviewArtifactsPresent ? 40 : ag34ReviewArtifactsPresent ? 39 : 38} review indexes`,
+    `- POC status summary verified: ${ag48LawManualReprintReviewArtifactsPresent ? 96 : ag37LawManualReprintReviewArtifactsPresent ? 95 : reg151ReviewArtifactsPresent ? 94 : reg147ReviewArtifactsPresent ? 93 : reg126ReviewArtifactsPresent ? 92 : reg056ReviewArtifactsPresent ? 91 : reg143ReviewArtifactsPresent ? 90 : reg136ReviewArtifactsPresent ? 89 : reg179ReviewArtifactsPresent ? 88 : reg127ReviewArtifactsPresent ? 87 : reg128ReviewArtifactsPresent ? 86 : reg102ReviewArtifactsPresent ? 85 : reg213Amendment1TextReviewArtifactsPresent ? 84 : reg213Amendment2ReviewArtifactsPresent ? 82 : reg213Amendment4ReviewArtifactsPresent ? 81 : reg213Amendment3ReviewArtifactsPresent ? 80 : lhmanual26ReviewArtifactsPresent ? 79 : reg213Amendment5ReviewArtifactsPresent ? 78 : reg213Amendment6ReviewArtifactsPresent ? 77 : reg213Amendment1FaqReviewArtifactsPresent ? 76 : c3Phase2Ag43March2011PracticeNoteReviewArtifactsPresent ? 75 : c3Phase2PracticeNoteReviewArtifactsPresent ? 74 : assetAdequacyAnalysisPracticeNoteReviewArtifactsPresent ? 73 : cia2023FinancialConditionTestingEducationalNoteReviewArtifactsPresent ? 72 : cia2022CapitalFCTEducationalNoteReviewArtifactsPresent ? 71 : actuarialMemorandumPracticeNoteReviewArtifactsPresent ? 70 : lifeReinsuranceReserveCreditPracticeNoteReviewArtifactsPresent ? 69 : modelRegulationXXXReviewArtifactsPresent ? 68 : reg213ReviewArtifactsPresent ? 66 : reg210ReviewArtifactsPresent ? 65 : modelGovernanceReviewArtifactsPresent ? 64 : reg141ReviewArtifactsPresent ? 63 : ag55ReviewArtifactsPresent ? 62 : ag54ReviewArtifactsPresent ? 61 : ag53ReviewArtifactsPresent ? 58 : ag52ReviewArtifactsPresent ? 57 : ag51ReviewArtifactsPresent ? 56 : ag50ReviewArtifactsPresent ? 55 : ag49ReviewArtifactsPresent ? 54 : ag48ReviewArtifactsPresent ? 53 : ag47ReviewArtifactsPresent ? 52 : ag46ReviewArtifactsPresent ? 51 : ag45ReviewArtifactsPresent ? 50 : ag44ReviewArtifactsPresent ? 49 : ag43ReviewArtifactsPresent ? 48 : ag42ReviewArtifactsPresent ? 47 : ag41ReviewArtifactsPresent ? 46 : ag40ReviewArtifactsPresent ? 45 : ag39ReviewArtifactsPresent ? 44 : ag38ReviewArtifactsPresent ? 43 : ag37ReviewArtifactsPresent ? 42 : ag36ReviewArtifactsPresent ? 41 : ag35ReviewArtifactsPresent ? 40 : ag34ReviewArtifactsPresent ? 39 : 38} review indexes`,
   )
   if (validatedPilotBatchCount > 0) {
     console.log(`- Pilot batches validated: ${validatedPilotBatchCount}`)

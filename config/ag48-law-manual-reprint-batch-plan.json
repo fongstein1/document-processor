@@ -1,0 +1,107 @@
+{
+  "planId": "ag48-law-manual-reprint-plan",
+  "planVersion": "1.0",
+  "status": "planned",
+  "sourceScope": {
+    "sourceFamilyId": "actuarial_guidelines",
+    "primarySourceFile": "AG 48 - AOMR for Reinsurers-from 2021 Law Manual.pdf",
+    "sourceFolder": "Actuarial Guidelines",
+    "sourceTitle": "AG 48 - AOMR for Reinsurers from 2021 Law Manual",
+    "sourceReference": "Actuarial Guideline XLVIII / 2021 Law Manual reprint",
+    "sourceStatus": "active companion reprint",
+    "sourceStatusNote": "Companion-only Law Manual reprint of AG 48 material; the active AG 48 source was already processed separately; this wave is a duplicate/reprint cross-check and must remain review-only.",
+    "domainId": "naic_regulatory",
+    "rawSourceRoot": "C:\\Dev\\NAIC Valuation Manual Course",
+    "confirmedPageRange": [1, 16],
+    "observedSectionWindows": [
+      {
+        "sectionId": "ag48-law-manual-reprint-background-scope-method-opinion-and-sunset",
+        "pageRange": [1, 16],
+        "note": "Law Manual reprint header, background, authority and scope, exempt policy treatment, primary security, actuarial method, opinion / memorandum material, effective date, and sunset provision."
+      }
+    ],
+    "boundaries": [
+      "Keep planning focused on this single 2021 Law Manual reprint PDF.",
+      "Do not merge this companion reprint into the already-completed active AG 48 wave.",
+      "Do not widen into AG 36, AG 37, AG 38, or other Law Manual reprint files.",
+      "Keep the duplicate/reprint caveat visible because the active AG 48 PDF already has tracked review handoff artifacts.",
+      "Keep the batch source-bound and review-only."
+    ],
+    "exclusions": [
+      "No learner-facing content.",
+      "No app-ready export.",
+      "No RAG-ready export.",
+      "No approved/promoted export.",
+      "No eLearning scripts, slides, quizzes, or app exports.",
+      "No raw source files in Git.",
+      "No other guideline files in the same wave."
+    ]
+  },
+  "topicMap": [
+    {
+      "topicId": "ag48-law-manual-reprint-background-scope-method-opinion-and-sunset",
+      "label": "Background, authority and scope, exempt policy treatment, primary security, actuarial method, opinion / memorandum material, effective date, and sunset provision",
+      "pageRange": [1, 16],
+      "reviewComplexity": "medium-high",
+      "expectedIssueTypes": [
+        "actuarial_guideline",
+        "companion_reprint",
+        "duplicate_source_check",
+        "regulatory_requirement",
+        "reserve_method_structure",
+        "reinsurance",
+        "calculation_structure",
+        "definition_or_terminology",
+        "cross_reference_mapping",
+        "background_content",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": [
+        "Existing AG 48 review index",
+        "Model 830",
+        "Model 785",
+        "Model 787",
+        "VM-20",
+        "VM-21",
+        "VM-22",
+        "VM-30",
+        "AG 38"
+      ],
+      "boundaryNote": "Keep this slice within pages 1-16 and do not absorb other Law Manual reprint files."
+    }
+  ],
+  "proposedBatches": [
+    {
+      "plannedBatchId": "batch-278",
+      "topicIds": [
+        "ag48-law-manual-reprint-background-scope-method-opinion-and-sunset"
+      ],
+      "title": "AG 48 Law Manual reprint background, authority/scope, reinsurance/security method, opinion/memorandum material, effective date, and sunset provision",
+      "pageTarget": {
+        "knownWindow": [1, 16],
+        "notes": "Capture the complete 16-page Law Manual reprint as a single companion review-only slice and stop at the page 16 boundary."
+      },
+      "rationale": "Capture the complete 16-page Law Manual reprint as a single companion review-only slice and stop at the page 16 boundary.",
+      "reviewComplexity": "medium-high",
+      "expectedIssueTypes": [
+        "actuarial_guideline",
+        "companion_reprint",
+        "duplicate_source_check",
+        "regulatory_requirement",
+        "reserve_method_structure",
+        "reinsurance",
+        "calculation_structure",
+        "definition_or_terminology",
+        "cross_reference_mapping",
+        "background_content",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    }
+  ],
+  "notes": "Controlled AG 48 Law Manual reprint planning artifact. Planned batch 278 remains review-only by default and is not an extraction run."
+}
