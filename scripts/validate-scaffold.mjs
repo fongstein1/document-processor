@@ -323,6 +323,10 @@ const paths = {
   reg141ExtractionPlanMd: path.join(repoRoot, 'docs', 'processor', 'reg141_extraction_plan.md'),
   reg141ReviewIndexMd: path.join(repoRoot, 'docs', 'review', 'reg141_review_index.md'),
   reg141SelfReviewMd: path.join(repoRoot, 'docs', 'review', 'reg141_self_review.md'),
+  reg147BatchPlanJson: path.join(repoRoot, 'config', 'reg147-batch-plan.json'),
+  reg147ExtractionPlanMd: path.join(repoRoot, 'docs', 'processor', 'reg147_extraction_plan.md'),
+  reg147ReviewIndexMd: path.join(repoRoot, 'docs', 'review', 'reg147_review_index.md'),
+  reg147SelfReviewMd: path.join(repoRoot, 'docs', 'review', 'reg147_self_review.md'),
   reg126BatchPlanJson: path.join(repoRoot, 'config', 'reg126-batch-plan.json'),
   reg126ExtractionPlanMd: path.join(repoRoot, 'docs', 'processor', 'reg126_extraction_plan.md'),
   reg126ReviewIndexMd: path.join(repoRoot, 'docs', 'review', 'reg126_review_index.md'),
@@ -14135,6 +14139,37 @@ if (problems.length > 0) {
     console.log(`- Reg 141 self-review verified: ${reg141BatchPlan.proposedBatches.length} batches`)
   }
   console.log(`- Reg 141 plan verified: ${reg141BatchPlan.proposedBatches.length} batches`)
+  await validateReg102PlanMarkdown(paths.reg147ExtractionPlanMd, 'docs/processor/reg147_extraction_plan.md')
+  const reg147BatchPlan = await readJson(paths.reg147BatchPlanJson)
+  const reg147BatchIds = reg147BatchPlan.proposedBatches.map((batch) => batch.plannedBatchId)
+  const reg147ReviewIndexText = (await exists(paths.reg147ReviewIndexMd))
+    ? await readText(paths.reg147ReviewIndexMd)
+    : ''
+  const reg147SelfReviewText = (await exists(paths.reg147SelfReviewMd))
+    ? await readText(paths.reg147SelfReviewMd)
+    : ''
+  const reg147PocSummaryText = (await exists(paths.pocStatusSummaryMd))
+    ? await readText(paths.pocStatusSummaryMd)
+    : ''
+  const reg147ReviewIndexReady =
+    reg147ReviewIndexText.length > 0 && reg147BatchIds.every((batchId) => reg147ReviewIndexText.includes(batchId))
+  const reg147SelfReviewReady =
+    reg147SelfReviewText.length > 0 && reg147BatchIds.every((batchId) => reg147SelfReviewText.includes(batchId))
+  const reg147ReviewArtifactsPresent = reg147ReviewIndexReady && reg147SelfReviewReady
+  const reg147PocSummaryReady =
+    reg147PocSummaryText.includes('docs/review/reg147_review_index.md') &&
+    reg147PocSummaryText.includes('docs/review/reg147_self_review.md') &&
+    reg147PocSummaryText.includes('93 review indexes')
+  if (reg147ReviewArtifactsPresent && !reg147PocSummaryReady) {
+    problems.push('docs/review/valuation_regulation_repository_poc_status.md: missing Reg 147 review index reference')
+  }
+  if (reg147ReviewIndexReady) {
+    console.log(`- Reg 147 review index verified: ${reg147BatchPlan.proposedBatches.length} batches`)
+  }
+  if (reg147SelfReviewReady) {
+    console.log(`- Reg 147 self-review verified: ${reg147BatchPlan.proposedBatches.length} batches`)
+  }
+  console.log(`- Reg 147 plan verified: ${reg147BatchPlan.proposedBatches.length} batches`)
   await validateReg102PlanMarkdown(paths.reg126ExtractionPlanMd, 'docs/processor/reg126_extraction_plan.md')
   const reg126BatchPlan = await readJson(paths.reg126BatchPlanJson)
   const reg126BatchIds = reg126BatchPlan.proposedBatches.map((batch) => batch.plannedBatchId)
@@ -15423,7 +15458,7 @@ if (problems.length > 0) {
   }
   console.log(`- Model Regulation XXX plan verified: ${modelRegulationXXXBatchPlan.proposedBatches.length} batches`)
   console.log(
-    `- POC status summary verified: ${reg126ReviewArtifactsPresent ? 92 : reg056ReviewArtifactsPresent ? 91 : reg143ReviewArtifactsPresent ? 90 : reg136ReviewArtifactsPresent ? 89 : reg179ReviewArtifactsPresent ? 88 : reg127ReviewArtifactsPresent ? 87 : reg128ReviewArtifactsPresent ? 86 : reg102ReviewArtifactsPresent ? 85 : reg213Amendment1TextReviewArtifactsPresent ? 84 : reg213Amendment2ReviewArtifactsPresent ? 82 : reg213Amendment4ReviewArtifactsPresent ? 81 : reg213Amendment3ReviewArtifactsPresent ? 80 : lhmanual26ReviewArtifactsPresent ? 79 : reg213Amendment5ReviewArtifactsPresent ? 78 : reg213Amendment6ReviewArtifactsPresent ? 77 : reg213Amendment1FaqReviewArtifactsPresent ? 76 : c3Phase2Ag43March2011PracticeNoteReviewArtifactsPresent ? 75 : c3Phase2PracticeNoteReviewArtifactsPresent ? 74 : assetAdequacyAnalysisPracticeNoteReviewArtifactsPresent ? 73 : cia2023FinancialConditionTestingEducationalNoteReviewArtifactsPresent ? 72 : cia2022CapitalFCTEducationalNoteReviewArtifactsPresent ? 71 : actuarialMemorandumPracticeNoteReviewArtifactsPresent ? 70 : lifeReinsuranceReserveCreditPracticeNoteReviewArtifactsPresent ? 69 : modelRegulationXXXReviewArtifactsPresent ? 68 : reg213ReviewArtifactsPresent ? 66 : reg210ReviewArtifactsPresent ? 65 : modelGovernanceReviewArtifactsPresent ? 64 : reg141ReviewArtifactsPresent ? 63 : ag55ReviewArtifactsPresent ? 62 : ag54ReviewArtifactsPresent ? 61 : ag53ReviewArtifactsPresent ? 58 : ag52ReviewArtifactsPresent ? 57 : ag51ReviewArtifactsPresent ? 56 : ag50ReviewArtifactsPresent ? 55 : ag49ReviewArtifactsPresent ? 54 : ag48ReviewArtifactsPresent ? 53 : ag47ReviewArtifactsPresent ? 52 : ag46ReviewArtifactsPresent ? 51 : ag45ReviewArtifactsPresent ? 50 : ag44ReviewArtifactsPresent ? 49 : ag43ReviewArtifactsPresent ? 48 : ag42ReviewArtifactsPresent ? 47 : ag41ReviewArtifactsPresent ? 46 : ag40ReviewArtifactsPresent ? 45 : ag39ReviewArtifactsPresent ? 44 : ag38ReviewArtifactsPresent ? 43 : ag37ReviewArtifactsPresent ? 42 : ag36ReviewArtifactsPresent ? 41 : ag35ReviewArtifactsPresent ? 40 : ag34ReviewArtifactsPresent ? 39 : 38} review indexes`,
+    `- POC status summary verified: ${reg147ReviewArtifactsPresent ? 93 : reg126ReviewArtifactsPresent ? 92 : reg056ReviewArtifactsPresent ? 91 : reg143ReviewArtifactsPresent ? 90 : reg136ReviewArtifactsPresent ? 89 : reg179ReviewArtifactsPresent ? 88 : reg127ReviewArtifactsPresent ? 87 : reg128ReviewArtifactsPresent ? 86 : reg102ReviewArtifactsPresent ? 85 : reg213Amendment1TextReviewArtifactsPresent ? 84 : reg213Amendment2ReviewArtifactsPresent ? 82 : reg213Amendment4ReviewArtifactsPresent ? 81 : reg213Amendment3ReviewArtifactsPresent ? 80 : lhmanual26ReviewArtifactsPresent ? 79 : reg213Amendment5ReviewArtifactsPresent ? 78 : reg213Amendment6ReviewArtifactsPresent ? 77 : reg213Amendment1FaqReviewArtifactsPresent ? 76 : c3Phase2Ag43March2011PracticeNoteReviewArtifactsPresent ? 75 : c3Phase2PracticeNoteReviewArtifactsPresent ? 74 : assetAdequacyAnalysisPracticeNoteReviewArtifactsPresent ? 73 : cia2023FinancialConditionTestingEducationalNoteReviewArtifactsPresent ? 72 : cia2022CapitalFCTEducationalNoteReviewArtifactsPresent ? 71 : actuarialMemorandumPracticeNoteReviewArtifactsPresent ? 70 : lifeReinsuranceReserveCreditPracticeNoteReviewArtifactsPresent ? 69 : modelRegulationXXXReviewArtifactsPresent ? 68 : reg213ReviewArtifactsPresent ? 66 : reg210ReviewArtifactsPresent ? 65 : modelGovernanceReviewArtifactsPresent ? 64 : reg141ReviewArtifactsPresent ? 63 : ag55ReviewArtifactsPresent ? 62 : ag54ReviewArtifactsPresent ? 61 : ag53ReviewArtifactsPresent ? 58 : ag52ReviewArtifactsPresent ? 57 : ag51ReviewArtifactsPresent ? 56 : ag50ReviewArtifactsPresent ? 55 : ag49ReviewArtifactsPresent ? 54 : ag48ReviewArtifactsPresent ? 53 : ag47ReviewArtifactsPresent ? 52 : ag46ReviewArtifactsPresent ? 51 : ag45ReviewArtifactsPresent ? 50 : ag44ReviewArtifactsPresent ? 49 : ag43ReviewArtifactsPresent ? 48 : ag42ReviewArtifactsPresent ? 47 : ag41ReviewArtifactsPresent ? 46 : ag40ReviewArtifactsPresent ? 45 : ag39ReviewArtifactsPresent ? 44 : ag38ReviewArtifactsPresent ? 43 : ag37ReviewArtifactsPresent ? 42 : ag36ReviewArtifactsPresent ? 41 : ag35ReviewArtifactsPresent ? 40 : ag34ReviewArtifactsPresent ? 39 : 38} review indexes`,
   )
   if (validatedPilotBatchCount > 0) {
     console.log(`- Pilot batches validated: ${validatedPilotBatchCount}`)
