@@ -12,7 +12,8 @@ regulation repository. It consolidates the completed review-only extraction
 waves without changing the status of the underlying batch outputs or review
 indexes.
 
-The handoff now spans 96 review indexes, up from 95 review indexes. The
+The handoff now spans 97 review indexes, up from 96 review indexes. The
+earlier 95 review indexes checkpoint remains part of the handoff history, the
 earlier 94 review indexes checkpoint remains part of the handoff history, the
 earlier 93 review indexes checkpoint remains part of the handoff history, the
 earlier 51 review indexes checkpoint remains part of the handoff history, the
@@ -460,6 +461,9 @@ The repository now includes the core processor asset set:
   self-review note at `docs/review/ag35_self_review.md`
 - the tracked AG 36 review index at `docs/review/ag36_review_index.md` and
   self-review note at `docs/review/ag36_self_review.md`
+- the tracked AG 36 Law Manual reprint review index at
+  `docs/review/ag36_law_manual_reprint_review_index.md` and self-review note
+  at `docs/review/ag36_law_manual_reprint_self_review.md`
 - the tracked AG 37 review index at `docs/review/ag37_review_index.md` and
   self-review note at `docs/review/ag37_self_review.md`
 - the tracked AG 37 Law Manual reprint review index at
@@ -1186,3 +1190,13 @@ storage. The tracked review index and self-review note are
 review-only and companion-only, and the duplicate / reprint caveat remains
 visible because active AG 48 already has tracked review artifacts. The broader
 proof-of-concept handoff now spans 96 review indexes.
+
+## AG 36 Law Manual reprint addendum
+
+The AG 36 Law Manual reprint is now complete as batch-279 in ignored working
+storage. The tracked review index and self-review note are
+`docs/review/ag36_law_manual_reprint_review_index.md` and
+`docs/review/ag36_law_manual_reprint_self_review.md`, the source stays
+review-only and companion-only, and the duplicate / reprint caveat remains
+visible because active AG 36 already has tracked review artifacts. The broader
+proof-of-concept handoff now spans 97 review indexes.

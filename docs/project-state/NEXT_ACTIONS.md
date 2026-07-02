@@ -114,6 +114,9 @@ and the repository handoff now spans 95 review indexes.
 The AG 48 Law Manual reprint wave is now complete as batch-278 in ignored
 working storage. Its tracked review index and self-review note are in place,
 and the repository handoff now spans 96 review indexes.
+The AG 36 Law Manual reprint wave is now complete as batch-279 in ignored
+working storage. Its tracked review index and self-review note are in place,
+and the repository handoff now spans 97 review indexes.
 
 AG 40 is now complete as batches 135-136 in ignored working storage. Its
 tracked review index and self-review note now form part of the handoff set.
@@ -798,5 +801,14 @@ The AG 48 Law Manual reprint wave is now complete as batch-278 in ignored
 working storage. Its tracked review index and self-review note are in place,
 the source stays review-only and companion-only, and the duplicate / reprint
 relationship to active AG 48 remains a human-review decision. The next safe
+continuation step is to inspect the remaining inventory again and prefer the
+next smallest clearly bounded companion reprint or source unit.
+
+## AG 36 Law Manual reprint complete
+
+The AG 36 Law Manual reprint wave is now complete as batch-279 in ignored
+working storage. Its tracked review index and self-review note are in place,
+the source stays review-only and companion-only, and the duplicate / reprint
+relationship to active AG 36 remains a human-review decision. The next safe
 continuation step is to inspect the remaining inventory again and prefer the
 next smallest clearly bounded companion reprint or source unit.
