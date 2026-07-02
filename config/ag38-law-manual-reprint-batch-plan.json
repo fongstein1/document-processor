@@ -1,0 +1,113 @@
+{
+  "planId": "ag38-law-manual-reprint-plan",
+  "planVersion": "1.0",
+  "status": "planned",
+  "sourceScope": {
+    "sourceFamilyId": "actuarial_guidelines",
+    "primarySourceFile": "AG 38 - CRVM for UL-from 2021 Law Manual.pdf",
+    "sourceFolder": "Actuarial Guidelines",
+    "sourceTitle": "AG 38 - CRVM for UL from 2021 Law Manual",
+    "sourceReference": "Actuarial Guideline XXXVIII / 2021 Law Manual reprint",
+    "sourceStatus": "active companion reprint",
+    "sourceStatusNote": "Companion-only Law Manual reprint of AG 38 material; the active AG 38 source was already processed separately; this wave is a duplicate/reprint cross-check and must remain review-only.",
+    "domainId": "naic_regulatory",
+    "rawSourceRoot": "C:\\Dev\\NAIC Valuation Manual Course",
+    "confirmedPageRange": [1, 23],
+    "observedSectionWindows": [
+      {
+        "sectionId": "ag38-law-manual-reprint-background-examples-deterministic-reserve-and-closeout",
+        "pageRange": [1, 23],
+        "note": "Law Manual reprint header, Model 830 application background, guarantee examples, deterministic reserve mechanics, opinion / company-representation material, and closeout."
+      }
+    ],
+    "boundaries": [
+      "Keep planning focused on this single 2021 Law Manual reprint PDF.",
+      "Do not merge this companion reprint into the already-completed active AG 38 wave.",
+      "Do not widen into AG 39 or other Law Manual reprint files.",
+      "Keep the duplicate/reprint caveat visible because the active AG 38 PDF already has tracked review handoff artifacts.",
+      "Keep the batch source-bound and review-only."
+    ],
+    "exclusions": [
+      "No learner-facing content.",
+      "No app-ready export.",
+      "No RAG-ready export.",
+      "No approved/promoted export.",
+      "No eLearning scripts, slides, quizzes, or app exports.",
+      "No raw source files in Git.",
+      "No other guideline files in the same wave."
+    ]
+  },
+  "topicMap": [
+    {
+      "topicId": "ag38-law-manual-reprint-background-examples-deterministic-reserve-and-closeout",
+      "label": "Model 830 application background, guarantee examples, deterministic reserve mechanics, opinion / company-representation material, and closeout",
+      "pageRange": [1, 23],
+      "reviewComplexity": "medium-high",
+      "expectedIssueTypes": [
+        "actuarial_guideline",
+        "companion_reprint",
+        "duplicate_source_check",
+        "regulatory_requirement",
+        "reserve_method_structure",
+        "calculation_structure",
+        "formula_context",
+        "prescribed_assumption",
+        "company_or_prudent_estimate_assumption",
+        "reporting_requirement",
+        "documentation_expectation",
+        "governance_or_control_expectation",
+        "definition_or_terminology",
+        "cross_reference_mapping",
+        "background_content",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": [
+        "Existing AG 38 review index",
+        "Model 830",
+        "Standard Valuation Law",
+        "Universal life product design",
+        "AG 39 boundary"
+      ],
+      "boundaryNote": "Keep this slice within pages 1-23 and do not absorb other Law Manual reprint files."
+    }
+  ],
+  "proposedBatches": [
+    {
+      "plannedBatchId": "batch-280",
+      "topicIds": [
+        "ag38-law-manual-reprint-background-examples-deterministic-reserve-and-closeout"
+      ],
+      "title": "AG 38 Law Manual reprint background, examples, deterministic reserve mechanics, opinion / representation material, and closeout",
+      "pageTarget": {
+        "knownWindow": [1, 23],
+        "notes": "Capture the complete 23-page Law Manual reprint as a single companion review-only slice and stop at the page 23 boundary."
+      },
+      "rationale": "Capture the complete 23-page Law Manual reprint as a single companion review-only slice and stop at the page 23 boundary.",
+      "reviewComplexity": "medium-high",
+      "expectedIssueTypes": [
+        "actuarial_guideline",
+        "companion_reprint",
+        "duplicate_source_check",
+        "regulatory_requirement",
+        "reserve_method_structure",
+        "calculation_structure",
+        "formula_context",
+        "prescribed_assumption",
+        "company_or_prudent_estimate_assumption",
+        "reporting_requirement",
+        "documentation_expectation",
+        "governance_or_control_expectation",
+        "definition_or_terminology",
+        "cross_reference_mapping",
+        "background_content",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    }
+  ],
+  "notes": "Controlled AG 38 Law Manual reprint planning artifact. Planned batch 280 remains review-only by default and is not an extraction run."
+}

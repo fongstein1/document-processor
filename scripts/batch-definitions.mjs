@@ -39,6 +39,7 @@ import { ag36LawManualReprintBatchDefinitions } from './ag36-law-manual-reprint-
 import { ag37BatchDefinitions } from './ag37-batch-definitions.mjs'
 import { ag37LawManualReprintBatchDefinitions } from './ag37-law-manual-reprint-batch-definitions.mjs'
 import { ag38BatchDefinitions } from './ag38-batch-definitions.mjs'
+import { ag38LawManualReprintBatchDefinitions } from './ag38-law-manual-reprint-batch-definitions.mjs'
 import { ag39BatchDefinitions } from './ag39-batch-definitions.mjs'
 import { ag40BatchDefinitions } from './ag40-batch-definitions.mjs'
 import { ag41BatchDefinitions } from './ag41-batch-definitions.mjs'
@@ -2261,6 +2262,7 @@ export const batchDefinitions = {
   ...ag37BatchDefinitions,
   ...ag37LawManualReprintBatchDefinitions,
   ...ag38BatchDefinitions,
+  ...ag38LawManualReprintBatchDefinitions,
   ...ag39BatchDefinitions,
   ...ag40BatchDefinitions,
   ...ag41BatchDefinitions,
