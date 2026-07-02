@@ -16,6 +16,8 @@
 - The AG 48 Law Manual reprint wave was a 16-page companion-only actuarial-guideline reprint and now has tracked review handoff artifacts.
 - Recently completed source unit: AG 36 Law Manual reprint.
 - The AG 36 Law Manual reprint wave was an 18-page companion-only actuarial-guideline reprint and now has tracked review handoff artifacts.
+- Recently completed source unit: AG 38 Law Manual reprint.
+- The AG 38 Law Manual reprint wave was a 23-page companion-only actuarial-guideline reprint and now has tracked review handoff artifacts.
 - Recently completed source unit: Regulation 192.
 - The Regulation 192 wave was a small, bounded NY-regulation slice and now has tracked review handoff artifacts.
 - Recently completed source unit: Regulation 102.
@@ -49,6 +51,7 @@
 - The AG 37 Law Manual reprint used the page-image backstop because it needs exact comparison support against the already-indexed active AG 37 source.
 - The AG 48 Law Manual reprint used the page-image backstop because it needs exact comparison support against the already-indexed active AG 48 source.
 - The AG 36 Law Manual reprint used the page-image backstop because it needs exact comparison support against the already-indexed active AG 36 source.
+- The AG 38 Law Manual reprint used the page-image backstop because it needs exact comparison support against the already-indexed active AG 38 source.
 - No raw source files, package-manager artifacts, or ignored working batches were committed.
 
 ## Deferred Items
@@ -60,7 +63,8 @@
 
 - Next candidate should be selected by fresh inspection of the remaining inventory rather than memory.
 - Prefer the next smallest clearly bounded companion reprint, NY-regulation, or practice-note source if one is still safe.
-- Current likely companion-reprint candidate from the received inventory is AG 38 Law Manual reprint, but the next unit should still be confirmed by fresh inventory inspection before planning.
+- The preferred AG 36 and AG 38 Law Manual reprint candidates are now processed.
+- Before selecting any further source unit, run a 100-index consistency audit against the POC summary, validator count, tracked review files, and remaining inventory.
 
 ## Coverage Note
 
