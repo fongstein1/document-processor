@@ -36,6 +36,7 @@ import { ag34BatchDefinitions } from './ag34-batch-definitions.mjs'
 import { ag35BatchDefinitions } from './ag35-batch-definitions.mjs'
 import { ag36BatchDefinitions } from './ag36-batch-definitions.mjs'
 import { ag37BatchDefinitions } from './ag37-batch-definitions.mjs'
+import { ag37LawManualReprintBatchDefinitions } from './ag37-law-manual-reprint-batch-definitions.mjs'
 import { ag38BatchDefinitions } from './ag38-batch-definitions.mjs'
 import { ag39BatchDefinitions } from './ag39-batch-definitions.mjs'
 import { ag40BatchDefinitions } from './ag40-batch-definitions.mjs'
@@ -2255,6 +2256,7 @@ export const batchDefinitions = {
   ...ag35BatchDefinitions,
   ...ag36BatchDefinitions,
   ...ag37BatchDefinitions,
+  ...ag37LawManualReprintBatchDefinitions,
   ...ag38BatchDefinitions,
   ...ag39BatchDefinitions,
   ...ag40BatchDefinitions,
