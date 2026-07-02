@@ -12,7 +12,7 @@ regulation repository. It consolidates the completed review-only extraction
 waves without changing the status of the underlying batch outputs or review
 indexes.
 
-The handoff now spans 91 review indexes, up from 90 review indexes. The
+The handoff now spans 92 review indexes, up from 91 review indexes. The
 earlier 51 review indexes checkpoint remains part of the handoff history, the
 earlier 50 review indexes checkpoint remains part of the handoff history, the
 earlier 49 review indexes checkpoint remains part of the handoff history, the
@@ -203,6 +203,10 @@ What has been built:
 - tracked Regulation 56 review index and self-review note for the NY
   accident-and-health-reserve unit in `docs/review/reg056_review_index.md`
   and `docs/review/reg056_self_review.md`
+- tracked Regulation 126 review index and self-review note for the NY
+  actuarial-opinion-and-memorandum unit in
+  `docs/review/reg126_review_index.md` and
+  `docs/review/reg126_self_review.md`
 - tracked model-governance practice-note review index and self-review note
   for the companion-guidance unit in
   `docs/review/model_governance_practice_note_review_index.md` and
@@ -1119,3 +1123,12 @@ tracked review index and self-review note are
 the source stays review-only and active, and the page-image wording backstop
 remains visible because the text layer is noisy / OCR-like. The broader
 proof-of-concept handoff now spans 91 review indexes.
+
+## Reg 126 addendum
+
+Regulation 126 is now complete as batch-274 in ignored working storage. The
+tracked review index and self-review note are
+`docs/review/reg126_review_index.md` and `docs/review/reg126_self_review.md`,
+the source stays review-only and active, and the page-image wording backstop
+remains visible because the text layer is noisy / OCR-like. The broader
+proof-of-concept handoff now spans 92 review indexes.
