@@ -55,6 +55,7 @@ The Regulation 136 wave (`NY Regulations/2021 VLM Report_DRAFT-(1-27-2020) with 
 The Regulation 143 wave (`NY Regulations/2021 VLM Report_DRAFT-(1-27-2020) with academy Updates V1-Reg-143-11-NYCRR-S041.pdf`) is now complete as batch-272 in ignored working storage. Its tracked review index and self-review note are in place, and the wave remains review-only, active, and page-image backed for exact wording.
 The Regulation 56 wave (`NY Regulations/2021 VLM Report_DRAFT-(1-27-2020) with academy Updates V1-Reg-056-11-NYCRR-S094.pdf`) is now complete as batch-273 in ignored working storage. Its tracked review index and self-review note are in place, and the wave remains review-only, active, and page-image backed for exact wording.
 The Regulation 126 wave (`NY Regulations/2021 VLM Report_DRAFT-(1-27-2020) with academy Updates V1-Reg-126-11-NYCRR-S095.pdf`) is now complete as batch-274 in ignored working storage. Its tracked review index and self-review note are in place, and the wave remains review-only, active, and page-image backed for exact wording.
+The Regulation 147 wave (`NY Regulations/2021 VLM Report_DRAFT-(1-27-2020) with academy Updates V1-Reg-147-11-NYCRR-S098.pdf`) is now complete as batch-275 in ignored working storage. Its tracked review index and self-review note are in place, and the wave remains review-only, active, and page-image backed for exact wording.
 
 ## Inventory intake gate
 

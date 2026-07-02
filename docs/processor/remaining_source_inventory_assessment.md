@@ -6,6 +6,8 @@
 - The Regulation 56 wave was a small, bounded NY-regulation slice and now has tracked review handoff artifacts.
 - Recently completed source unit: Regulation 126.
 - The Regulation 126 wave was a small, bounded NY-regulation slice and now has tracked review handoff artifacts.
+- Recently completed source unit: Regulation 147.
+- The Regulation 147 wave was a bounded NY-regulation slice and now has tracked review handoff artifacts.
 - Recently completed source unit: Regulation 192.
 - The Regulation 192 wave was a small, bounded NY-regulation slice and now has tracked review handoff artifacts.
 - Recently completed source unit: Regulation 102.
@@ -34,6 +36,7 @@
 - The Regulation 143 slice also used the page-image backstop because the text layer was noisy / OCR-like.
 - The Regulation 56 slice also used the page-image backstop because the text layer was noisy / OCR-like.
 - The Regulation 126 slice also used the page-image backstop because the text layer was noisy / OCR-like.
+- The Regulation 147 slice also used the page-image backstop because the text layer was noisy / OCR-like.
 - No raw source files, package-manager artifacts, or ignored working batches were committed.
 
 ## Deferred Items

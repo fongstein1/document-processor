@@ -55,6 +55,10 @@
   working storage and added the tracked review index and self-review note.
   The wave stays review-only, active, and page-image backed for exact
   wording.
+- 2026-07-02: Inspected Regulation 147, confirmed the 40-page Part 98 source
+  boundary from the page images, added and committed the planning layer, then
+  completed batch-275 in ignored working storage with tracked review index
+  and self-review handoff artifacts.
 - 2026-06-26: Hardened the pilot review layer after the first real batch by
   adding line-level locator support to the extraction/review contracts,
   requiring source references in the chunk manifest, expanding the pilot
