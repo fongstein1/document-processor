@@ -1,0 +1,113 @@
+{
+  "planId": "ag36-law-manual-reprint-plan",
+  "planVersion": "1.0",
+  "status": "planned",
+  "sourceScope": {
+    "sourceFamilyId": "actuarial_guidelines",
+    "primarySourceFile": "AG 36 - CRVM for EIUL-from 2021 Law Manual.pdf",
+    "sourceFolder": "Actuarial Guidelines",
+    "sourceTitle": "AG 36 - CRVM for EIUL from 2021 Law Manual",
+    "sourceReference": "Actuarial Guideline XXXVI / 2021 Law Manual reprint",
+    "sourceStatus": "active companion reprint",
+    "sourceStatusNote": "Companion-only Law Manual reprint of AG 36 material; the active AG 36 source was already processed separately; this wave is a duplicate/reprint cross-check and must remain review-only.",
+    "domainId": "naic_regulatory",
+    "rawSourceRoot": "C:\\Dev\\NAIC Valuation Manual Course",
+    "confirmedPageRange": [1, 18],
+    "observedSectionWindows": [
+      {
+        "sectionId": "ag36-law-manual-reprint-background-method-attachments-and-certification",
+        "pageRange": [1, 18],
+        "note": "Law Manual reprint header, background, EIUL/CRVM method discussion, attachment mechanics, hedged-as-required criteria, notification material, and certification closeout."
+      }
+    ],
+    "boundaries": [
+      "Keep planning focused on this single 2021 Law Manual reprint PDF.",
+      "Do not merge this companion reprint into the already-completed active AG 36 wave.",
+      "Do not widen into AG 37, AG 38, or other Law Manual reprint files.",
+      "Keep the duplicate/reprint caveat visible because the active AG 36 PDF already has tracked review handoff artifacts.",
+      "Keep the batch source-bound and review-only."
+    ],
+    "exclusions": [
+      "No learner-facing content.",
+      "No app-ready export.",
+      "No RAG-ready export.",
+      "No approved/promoted export.",
+      "No eLearning scripts, slides, quizzes, or app exports.",
+      "No raw source files in Git.",
+      "No other guideline files in the same wave."
+    ]
+  },
+  "topicMap": [
+    {
+      "topicId": "ag36-law-manual-reprint-background-method-attachments-and-certification",
+      "label": "Background, EIUL/CRVM method discussion, attachment mechanics, hedged-as-required criteria, notification material, and certification closeout",
+      "pageRange": [1, 18],
+      "reviewComplexity": "medium-high",
+      "expectedIssueTypes": [
+        "actuarial_guideline",
+        "companion_reprint",
+        "duplicate_source_check",
+        "regulatory_requirement",
+        "reserve_method_structure",
+        "calculation_structure",
+        "formula_context",
+        "prescribed_assumption",
+        "hedging_or_risk_mitigation",
+        "reporting_requirement",
+        "documentation_expectation",
+        "definition_or_terminology",
+        "cross_reference_mapping",
+        "background_content",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "crossReferenceWatchlist": [
+        "Existing AG 36 review index",
+        "Standard Valuation Law",
+        "Universal Life Insurance Model Regulation",
+        "CARVM",
+        "MVRM",
+        "AG 33",
+        "AG 37 boundary"
+      ],
+      "boundaryNote": "Keep this slice within pages 1-18 and do not absorb other Law Manual reprint files."
+    }
+  ],
+  "proposedBatches": [
+    {
+      "plannedBatchId": "batch-279",
+      "topicIds": [
+        "ag36-law-manual-reprint-background-method-attachments-and-certification"
+      ],
+      "title": "AG 36 Law Manual reprint background, EIUL/CRVM method discussion, attachment mechanics, hedged-as-required criteria, notification material, and certification closeout",
+      "pageTarget": {
+        "knownWindow": [1, 18],
+        "notes": "Capture the complete 18-page Law Manual reprint as a single companion review-only slice and stop at the page 18 boundary."
+      },
+      "rationale": "Capture the complete 18-page Law Manual reprint as a single companion review-only slice and stop at the page 18 boundary.",
+      "reviewComplexity": "medium-high",
+      "expectedIssueTypes": [
+        "actuarial_guideline",
+        "companion_reprint",
+        "duplicate_source_check",
+        "regulatory_requirement",
+        "reserve_method_structure",
+        "calculation_structure",
+        "formula_context",
+        "prescribed_assumption",
+        "hedging_or_risk_mitigation",
+        "reporting_requirement",
+        "documentation_expectation",
+        "definition_or_terminology",
+        "cross_reference_mapping",
+        "background_content",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "reviewOnlyByDefault": true,
+      "sameStopConditionsAsVm20": true,
+      "automationFit": "same-stop-conditions"
+    }
+  ],
+  "notes": "Controlled AG 36 Law Manual reprint planning artifact. Planned batch 279 remains review-only by default and is not an extraction run."
+}
