@@ -12,7 +12,8 @@ regulation repository. It consolidates the completed review-only extraction
 waves without changing the status of the underlying batch outputs or review
 indexes.
 
-The handoff now spans 94 review indexes, up from 93 review indexes. The
+The handoff now spans 95 review indexes, up from 94 review indexes. The
+earlier 93 review indexes checkpoint remains part of the handoff history, the
 earlier 51 review indexes checkpoint remains part of the handoff history, the
 earlier 50 review indexes checkpoint remains part of the handoff history, the
 earlier 49 review indexes checkpoint remains part of the handoff history, the
@@ -460,6 +461,9 @@ The repository now includes the core processor asset set:
   self-review note at `docs/review/ag36_self_review.md`
 - the tracked AG 37 review index at `docs/review/ag37_review_index.md` and
   self-review note at `docs/review/ag37_self_review.md`
+- the tracked AG 37 Law Manual reprint review index at
+  `docs/review/ag37_law_manual_reprint_review_index.md` and self-review note
+  at `docs/review/ag37_law_manual_reprint_self_review.md`
 - the tracked AG 38 review index at `docs/review/ag38_review_index.md` and
   self-review note at `docs/review/ag38_self_review.md`
 - the tracked AG 39 review index at `docs/review/ag39_review_index.md` and
@@ -1158,3 +1162,13 @@ tracked review index and self-review note are
 the source stays review-only and active, and the page-image wording backstop
 remains visible because the text layer is noisy / OCR-like and table-heavy.
 The broader proof-of-concept handoff now spans 94 review indexes.
+
+## AG 37 Law Manual reprint addendum
+
+The AG 37 Law Manual reprint is now complete as batch-277 in ignored working
+storage. The tracked review index and self-review note are
+`docs/review/ag37_law_manual_reprint_review_index.md` and
+`docs/review/ag37_law_manual_reprint_self_review.md`, the source stays
+review-only and companion-only, and the duplicate / reprint caveat remains
+visible because active AG 37 already has tracked review artifacts. The broader
+proof-of-concept handoff now spans 95 review indexes.

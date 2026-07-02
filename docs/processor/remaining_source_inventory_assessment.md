@@ -10,6 +10,8 @@
 - The Regulation 147 wave was a bounded NY-regulation slice and now has tracked review handoff artifacts.
 - Recently completed source unit: Regulation 151.
 - The Regulation 151 wave was a bounded NY-regulation slice and now has tracked review handoff artifacts.
+- Recently completed source unit: AG 37 Law Manual reprint.
+- The AG 37 Law Manual reprint wave was a 10-page companion-only actuarial-guideline reprint and now has tracked review handoff artifacts.
 - Recently completed source unit: Regulation 192.
 - The Regulation 192 wave was a small, bounded NY-regulation slice and now has tracked review handoff artifacts.
 - Recently completed source unit: Regulation 102.
@@ -40,6 +42,7 @@
 - The Regulation 126 slice also used the page-image backstop because the text layer was noisy / OCR-like.
 - The Regulation 147 slice also used the page-image backstop because the text layer was noisy / OCR-like.
 - The Regulation 151 slice also used the page-image backstop because the text layer was noisy / OCR-like and table-heavy.
+- The AG 37 Law Manual reprint used the page-image backstop because it needs exact comparison support against the already-indexed active AG 37 source.
 - No raw source files, package-manager artifacts, or ignored working batches were committed.
 
 ## Deferred Items
@@ -50,7 +53,8 @@
 ## Next Safe Candidate
 
 - Next candidate should be selected by fresh inspection of the remaining inventory rather than memory.
-- Prefer the next smallest clearly bounded NY-regulation or practice-note source if one is still safe.
+- Prefer the next smallest clearly bounded companion reprint, NY-regulation, or practice-note source if one is still safe.
+- Current likely companion-reprint candidates from the received inventory are AG 48, AG 36, and AG 38 Law Manual reprints, but the next unit should still be confirmed by fresh inventory inspection before planning.
 
 ## Coverage Note
 
