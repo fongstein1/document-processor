@@ -4,6 +4,23 @@ Dedicated workspace for a repeatable, auditable document-processing pipeline for
 NAIC valuation, regulatory, pricing, liability-modeling, and governance source
 material.
 
+## Canonical source-index POC
+
+The repository now includes a small backend-neutral canonical source-index
+proof of concept under `data/processed/source_indexes/`. It demonstrates how
+review-only batch outputs can be converted into reusable JSON, Markdown, JSONL,
+CSV, and retrieval-evaluation artifacts without replacing the underlying
+review packets or handoff notes.
+
+The first POC package covers:
+
+- AG 01 net-premium interpretation;
+- AG 03 maturity-value interpretation;
+- a narrow VM-20 framework overview and mechanics-boundary slice.
+
+The canonical layer stays review-only, not learner-facing, not app-ready, and
+not RAG-ready by default.
+
 ## What lives here
 
 - scripts for inventory, extraction, chunking, labeling, review, export, and
@@ -12,6 +29,7 @@ material.
 - source-family config and batch templates
 - formal JSON schemas for batch manifests, inventories, extraction outputs,
   and review packets
+- canonical source-index schemas and repository-manifest schemas
 - lightweight contract fixtures under `data/samples/contract-demo/`
 - lightweight manifests, sanitized exports, and review packets
 

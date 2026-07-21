@@ -1,5 +1,16 @@
 # Valuation Regulation Repository Proof-of-Concept Status
 
+## Canonical source-index addendum
+
+The repository now also includes a backend-neutral canonical source-index
+proof of concept under `data/processed/source_indexes/`. It packages
+representative AG 01, AG 03, and narrow VM-20 slices into source-index JSON,
+Markdown, JSONL, CSV, and retrieval-evaluation artifacts without replacing the
+batch review packets or review indexes.
+
+This addendum remains review-only, not learner-facing, not app-ready, and not
+RAG-ready.
+
 Status:
 - Review-only
 - Not learner-facing

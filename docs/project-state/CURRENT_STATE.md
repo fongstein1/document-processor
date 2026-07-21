@@ -1,5 +1,21 @@
 # Current Project State
 
+## Canonical source-index POC
+
+The repository now includes a tracked canonical source-index proof of
+concept under `data/processed/source_indexes/`. The POC packages AG 01, AG 03,
+and a narrow VM-20 excerpt into backend-neutral JSON, Markdown, JSONL, CSV,
+and retrieval-evaluation artifacts while keeping the underlying review packets
+and review indexes intact.
+
+The new layer is still review-only, not learner-facing, not app-ready, and
+not RAG-ready. It is a companion to the existing batch/review workflow, not a
+replacement for it.
+
+The canonical source-index schemas, repository manifest schema, prompt files,
+and domain profiles are now committed alongside the existing review-first
+artifacts.
+
 ## Repo path
 
 `C:\Dev\Document Processor`

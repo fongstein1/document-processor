@@ -1,0 +1,117 @@
+{
+  "schemaVersion": "1.0",
+  "sourceIndexId": "source-index-ag03-maturity-value-interpretation",
+  "repositoryManifestId": "source-index-poc-2026-07-21",
+  "source": {
+    "sourceId": "ag03-maturity-value-interpretation",
+    "filename": "AG 03 - Definition of the Term Maturity Value in the Standard Nonforfeiture Law of Individual Deferred Annuities.pdf",
+    "filePath": "D:\\Work\\AI Projects\\NAIC Valuation Manual Course\\Actuarial Guidelines\\AG 03 - Definition of the Term Maturity Value in the Standard Nonforfeiture Law of Individual Deferred Annuities.pdf",
+    "sourceFamilyId": "actuarial_guidelines",
+    "domainId": "naic_regulatory",
+    "documentType": "actuarial_guideline",
+    "sourceTitle": "Definition of the Term Maturity Value in the Standard Nonforfeiture Law of Individual Deferred Annuities",
+    "sourceReference": "Actuarial Guideline III",
+    "jurisdiction": "NAIC",
+    "authorityLevel": "guideline",
+    "sourceStatus": "active",
+    "versionDate": null,
+    "pageCount": 1,
+    "pageRange": {
+      "start": 1,
+      "end": 1
+    },
+    "reviewBatchIds": [
+      "batch-076"
+    ],
+    "reviewIndexPath": "docs/review/ag03_review_index.md",
+    "selfReviewPath": "docs/review/ag03_self_review.md",
+    "pageImageBackstop": true,
+    "lineReferencesAvailable": false,
+    "textLayerQuality": "noisy",
+    "notes": "Single-page guideline slice retained as a review-only interpretive POC."
+  },
+  "processing": {
+    "createdAt": "2026-07-21T04:05:02.088Z",
+    "createdBy": "scripts/build-source-index-poc.mjs",
+    "processingMode": "canonical_index_poc",
+    "canonicality": "poc",
+    "reviewOnly": true,
+    "learnerFacingAllowed": false,
+    "appReadyAllowed": false,
+    "ragReadyAllowed": false,
+    "promotionStatus": "not_promoted",
+    "notes": "Single-page guideline slice retained as a review-only interpretive POC."
+  },
+  "chunks": [
+    {
+      "chunkId": "chunk-ag03-maturity-value-interpretation-001",
+      "chunkOrdinal": 1,
+      "chunkKind": "guideline_interpretation",
+      "sourceTextType": "review_artifact_derived_text",
+      "pageStart": 1,
+      "pageEnd": 1,
+      "sectionReference": "AG 03: maturity value interpretation",
+      "lineReference": null,
+      "sourceTextExcerpt": "Interpretive guidance for maturity value in the nonforfeiture-law context.",
+      "normalizedTextExcerpt": "Maturity-value interpretation guidance.",
+      "summary": "AG 03 explains the maturity-value treatment and keeps the underlying nonforfeiture-law cross-reference review-only.",
+      "controlledTags": [
+        "regulatory_requirement",
+        "definition_or_terminology",
+        "cross_reference_mapping",
+        "requires_human_interpretation",
+        "boundary_control_window"
+      ],
+      "keywords": [
+        "maturity value",
+        "cash surrender value",
+        "nonforfeiture",
+        "interpretation"
+      ],
+      "citations": [
+        {
+          "citationText": "AG 03 - Definition of the Term Maturity Value in the Standard Nonforfeiture Law of Individual Deferred Annuities.pdf",
+          "pageReference": "pp. 1-1",
+          "sectionReference": "AG 03: maturity value interpretation",
+          "sourceReference": "Actuarial Guideline III",
+          "lineReference": null
+        }
+      ],
+      "relationships": [],
+      "fidelity": "curated",
+      "confidence": "high",
+      "reviewFlags": [
+        "noisy_text_layer",
+        "page_image_backstop"
+      ],
+      "qualityNotes": [
+        "Single-page guideline slice.",
+        "Keep exact wording review-only until a page-image backstop confirms any quoted phrasing."
+      ],
+      "evidenceNotes": "Derived from the ignored AG 03 review packet and review index.",
+      "retrievalEligible": true,
+      "promotionEligible": false
+    }
+  ],
+  "relationships": [],
+  "quality": {
+    "textLayerQuality": "noisy",
+    "citationCompleteness": "partial",
+    "pageImageBackstop": true,
+    "lineReferencesAvailable": false,
+    "notes": "Single-page guideline slice retained as a review-only interpretive POC."
+  },
+  "exportHints": {
+    "jsonlEligible": true,
+    "csvEligible": true,
+    "vectorEligible": true,
+    "notes": "Backend-neutral POC exports generated from review-only batch artifacts."
+  },
+  "notes": "Single-page guideline slice retained as a review-only interpretive POC.",
+  "extensions": {
+    "batchIds": [
+      "batch-076"
+    ],
+    "sourceIndexGeneratedBy": "build-source-index-poc"
+  }
+}

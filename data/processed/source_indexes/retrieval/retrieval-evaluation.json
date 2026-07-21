@@ -1,0 +1,105 @@
+{
+  "schemaVersion": "1.0",
+  "evaluationId": "source-index-poc-2026-07-21-retrieval",
+  "repositoryManifestId": "source-index-poc-2026-07-21",
+  "method": "keyword_overlap_baseline",
+  "queryCount": 3,
+  "top1HitCount": 3,
+  "top3HitCount": 3,
+  "top3Coverage": 1,
+  "queries": [
+    {
+      "queryId": "q-ag01-net-premium",
+      "query": "How does AG 01 treat policies when net premium exceeds gross premium?",
+      "expectedChunkIds": [
+        "chunk-ag01-net-premium-interpretation-001"
+      ],
+      "expectedSourceIds": [
+        "ag01-net-premium-interpretation"
+      ],
+      "rationale": "Tests a compact guideline interpretation with a single authoritative chunk.",
+      "rankedMatches": [
+        {
+          "chunkId": "chunk-ag01-net-premium-interpretation-001",
+          "sourceId": "ag01-net-premium-interpretation",
+          "score": 7
+        },
+        {
+          "chunkId": "chunk-ag03-maturity-value-interpretation-001",
+          "sourceId": "ag03-maturity-value-interpretation",
+          "score": 1
+        },
+        {
+          "chunkId": "chunk-vm20-framework-boundary-001",
+          "sourceId": "vm20-framework-boundary",
+          "score": 0
+        }
+      ],
+      "top1Hit": true,
+      "top3Hit": true
+    },
+    {
+      "queryId": "q-ag03-maturity-value",
+      "query": "What does AG 03 say maturity value means for cash surrender benefit interpretation?",
+      "expectedChunkIds": [
+        "chunk-ag03-maturity-value-interpretation-001"
+      ],
+      "expectedSourceIds": [
+        "ag03-maturity-value-interpretation"
+      ],
+      "rationale": "Tests a one-page interpretive note with a cross-reference question.",
+      "rankedMatches": [
+        {
+          "chunkId": "chunk-ag03-maturity-value-interpretation-001",
+          "sourceId": "ag03-maturity-value-interpretation",
+          "score": 7
+        },
+        {
+          "chunkId": "chunk-ag01-net-premium-interpretation-001",
+          "sourceId": "ag01-net-premium-interpretation",
+          "score": 2
+        },
+        {
+          "chunkId": "chunk-vm20-framework-boundary-001",
+          "sourceId": "vm20-framework-boundary",
+          "score": 1
+        }
+      ],
+      "top1Hit": true,
+      "top3Hit": true
+    },
+    {
+      "queryId": "q-vm20-framework",
+      "query": "What does VM-20 say about the minimum reserve valuation standard and the start of reserve mechanics?",
+      "expectedChunkIds": [
+        "chunk-vm20-framework-overview-001",
+        "chunk-vm20-framework-boundary-001"
+      ],
+      "expectedSourceIds": [
+        "vm20-framework-overview",
+        "vm20-framework-boundary"
+      ],
+      "rationale": "Tests retrieval across a framework overview slice and a mechanics boundary slice.",
+      "rankedMatches": [
+        {
+          "chunkId": "chunk-vm20-framework-overview-001",
+          "sourceId": "vm20-framework-overview",
+          "score": 6
+        },
+        {
+          "chunkId": "chunk-vm20-framework-boundary-001",
+          "sourceId": "vm20-framework-boundary",
+          "score": 5
+        },
+        {
+          "chunkId": "chunk-ag01-net-premium-interpretation-001",
+          "sourceId": "ag01-net-premium-interpretation",
+          "score": 1
+        }
+      ],
+      "top1Hit": true,
+      "top3Hit": true
+    }
+  ],
+  "notes": "POC retrieval evaluation generated from the canonical source-index layer."
+}

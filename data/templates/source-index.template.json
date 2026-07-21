@@ -1,0 +1,105 @@
+{
+  "schemaVersion": "1.0",
+  "sourceIndexId": "source-index-example",
+  "repositoryManifestId": "repository-manifest-example",
+  "source": {
+    "sourceId": "example-source-id",
+    "filename": "example.pdf",
+    "filePath": "D:\\Path\\To\\example.pdf",
+    "sourceFamilyId": "example_family",
+    "domainId": "example_domain",
+    "documentType": "example_document_type",
+    "sourceTitle": "Example Source Title",
+    "sourceReference": "Example Reference",
+    "jurisdiction": null,
+    "authorityLevel": "example_authority",
+    "sourceStatus": "unclear",
+    "versionDate": null,
+    "pageCount": null,
+    "pageRange": {
+      "start": 1,
+      "end": 1
+    },
+    "reviewBatchIds": [
+      "batch-000"
+    ],
+    "reviewIndexPath": "docs/review/example_review_index.md",
+    "selfReviewPath": "docs/review/example_self_review.md",
+    "pageImageBackstop": true,
+    "lineReferencesAvailable": false,
+    "textLayerQuality": "unknown",
+    "notes": "Template only."
+  },
+  "processing": {
+    "createdAt": "2026-07-21T00:00:00.000Z",
+    "createdBy": "template",
+    "processingMode": "canonical_index_poc",
+    "canonicality": "poc",
+    "reviewOnly": true,
+    "learnerFacingAllowed": false,
+    "appReadyAllowed": false,
+    "ragReadyAllowed": false,
+    "promotionStatus": "not_promoted",
+    "notes": "Template only."
+  },
+  "chunks": [
+    {
+      "chunkId": "chunk-example-001",
+      "chunkOrdinal": 1,
+      "chunkKind": "source_excerpt",
+      "sourceTextType": "placeholder_pending_source_text",
+      "pageStart": 1,
+      "pageEnd": 1,
+      "sectionReference": "Example section",
+      "lineReference": null,
+      "sourceTextExcerpt": "Placeholder source text.",
+      "normalizedTextExcerpt": "Placeholder normalized text.",
+      "summary": "Template chunk.",
+      "controlledTags": [
+        "example"
+      ],
+      "keywords": [
+        "example"
+      ],
+      "citations": [
+        {
+          "citationText": "Example citation",
+          "pageReference": "pp. 1-1",
+          "sectionReference": "Example section",
+          "sourceReference": "Example Reference",
+          "lineReference": null
+        }
+      ],
+      "relationships": [],
+      "fidelity": "summary",
+      "confidence": "low",
+      "reviewFlags": [
+        "example"
+      ],
+      "qualityNotes": [
+        "Template only."
+      ],
+      "evidenceNotes": "Template only.",
+      "retrievalEligible": false,
+      "promotionEligible": false
+    }
+  ],
+  "relationships": [],
+  "quality": {
+    "textLayerQuality": "unknown",
+    "citationCompleteness": "needs_human_review",
+    "pageImageBackstop": true,
+    "lineReferencesAvailable": false,
+    "notes": "Template only."
+  },
+  "exportHints": {
+    "jsonlEligible": false,
+    "csvEligible": false,
+    "vectorEligible": false,
+    "notes": "Template only."
+  },
+  "notes": "Template only.",
+  "extensions": {
+    "template": true
+  }
+}

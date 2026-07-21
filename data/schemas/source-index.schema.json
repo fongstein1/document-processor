@@ -1,0 +1,548 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://codex.local/schemas/source-index.schema.json",
+  "title": "Document Processor Canonical Source Index",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "sourceIndexId",
+    "repositoryManifestId",
+    "source",
+    "processing",
+    "chunks",
+    "quality",
+    "exportHints"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "const": "1.0"
+    },
+    "sourceIndexId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "repositoryManifestId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source": {
+      "$ref": "#/$defs/source"
+    },
+    "processing": {
+      "$ref": "#/$defs/processing"
+    },
+    "chunks": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/chunk"
+      }
+    },
+    "relationships": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/relationship"
+      }
+    },
+    "quality": {
+      "$ref": "#/$defs/quality"
+    },
+    "exportHints": {
+      "$ref": "#/$defs/exportHints"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "extensions": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  },
+  "$defs": {
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "sourceId",
+        "filename",
+        "filePath",
+        "sourceFamilyId",
+        "domainId",
+        "documentType",
+        "sourceTitle",
+        "sourceReference",
+        "sourceStatus",
+        "authorityLevel",
+        "reviewBatchIds",
+        "reviewIndexPath",
+        "selfReviewPath",
+        "pageImageBackstop",
+        "lineReferencesAvailable",
+        "textLayerQuality"
+      ],
+      "properties": {
+        "sourceId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "filename": {
+          "type": "string",
+          "minLength": 1
+        },
+        "filePath": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sourceFamilyId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "domainId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "documentType": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sourceTitle": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sourceReference": {
+          "type": "string",
+          "minLength": 1
+        },
+        "jurisdiction": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "authorityLevel": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sourceStatus": {
+          "type": "string",
+          "enum": [
+            "active",
+            "historical",
+            "withdrawn",
+            "repealed",
+            "superseded",
+            "companion-only",
+            "non-binding practice note",
+            "educational note",
+            "regulation",
+            "unclear"
+          ]
+        },
+        "versionDate": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date"
+        },
+        "pageCount": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "pageRange": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "start",
+            "end"
+          ],
+          "properties": {
+            "start": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "end": {
+              "type": "integer",
+              "minimum": 1
+            }
+          }
+        },
+        "reviewBatchIds": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "reviewIndexPath": {
+          "type": "string",
+          "minLength": 1
+        },
+        "selfReviewPath": {
+          "type": "string",
+          "minLength": 1
+        },
+        "pageImageBackstop": {
+          "type": "boolean"
+        },
+        "lineReferencesAvailable": {
+          "type": "boolean"
+        },
+        "textLayerQuality": {
+          "type": "string",
+          "enum": [
+            "clean",
+            "mixed",
+            "noisy",
+            "unknown"
+          ]
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "processing": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "createdAt",
+        "createdBy",
+        "processingMode",
+        "canonicality",
+        "reviewOnly",
+        "learnerFacingAllowed",
+        "appReadyAllowed",
+        "ragReadyAllowed",
+        "promotionStatus"
+      ],
+      "properties": {
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "createdBy": {
+          "type": "string",
+          "minLength": 1
+        },
+        "processingMode": {
+          "type": "string",
+          "enum": [
+            "canonical_index_poc",
+            "review_only_poc",
+            "canonical_index"
+          ]
+        },
+        "canonicality": {
+          "type": "string",
+          "enum": [
+            "poc",
+            "draft",
+            "canonical"
+          ]
+        },
+        "reviewOnly": {
+          "type": "boolean"
+        },
+        "learnerFacingAllowed": {
+          "type": "boolean"
+        },
+        "appReadyAllowed": {
+          "type": "boolean"
+        },
+        "ragReadyAllowed": {
+          "type": "boolean"
+        },
+        "promotionStatus": {
+          "type": "string",
+          "enum": [
+            "not_promoted",
+            "review_candidate",
+            "promoted"
+          ]
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "chunk": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "chunkId",
+        "chunkOrdinal",
+        "chunkKind",
+        "sourceTextType",
+        "pageStart",
+        "pageEnd",
+        "sourceTextExcerpt",
+        "normalizedTextExcerpt",
+        "summary",
+        "controlledTags",
+        "keywords",
+        "citations",
+        "fidelity",
+        "confidence",
+        "retrievalEligible",
+        "promotionEligible"
+      ],
+      "properties": {
+        "chunkId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "chunkOrdinal": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "chunkKind": {
+          "type": "string",
+          "enum": [
+            "guideline_interpretation",
+            "framework_overview",
+            "boundary_slice",
+            "source_excerpt",
+            "summary_only",
+            "note"
+          ]
+        },
+        "sourceTextType": {
+          "type": "string",
+          "enum": [
+            "actual_extracted_source_text",
+            "manually_curated_source_text",
+            "review_artifact_derived_text",
+            "placeholder_pending_source_text"
+          ]
+        },
+        "pageStart": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "pageEnd": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "sectionReference": {
+          "type": "string"
+        },
+        "lineReference": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "sourceTextExcerpt": {
+          "type": "string",
+          "minLength": 1
+        },
+        "normalizedTextExcerpt": {
+          "type": "string",
+          "minLength": 1
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "controlledTags": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "keywords": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "citations": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/citation"
+          }
+        },
+        "relationships": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/chunkRelationship"
+          }
+        },
+        "fidelity": {
+          "type": "string",
+          "enum": [
+            "exact",
+            "near_exact",
+            "curated",
+            "summary"
+          ]
+        },
+        "confidence": {
+          "type": "string",
+          "enum": [
+            "low",
+            "medium",
+            "high"
+          ]
+        },
+        "reviewFlags": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "qualityNotes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "evidenceNotes": {
+          "type": "string"
+        },
+        "retrievalEligible": {
+          "type": "boolean"
+        },
+        "promotionEligible": {
+          "type": "boolean"
+        }
+      }
+    },
+    "citation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "citationText",
+        "pageReference",
+        "sectionReference",
+        "sourceReference"
+      ],
+      "properties": {
+        "citationText": {
+          "type": "string",
+          "minLength": 1
+        },
+        "pageReference": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sectionReference": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sourceReference": {
+          "type": "string",
+          "minLength": 1
+        },
+        "lineReference": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "chunkRelationship": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "relationType",
+        "targetChunkId"
+      ],
+      "properties": {
+        "relationType": {
+          "type": "string",
+          "enum": [
+            "follows",
+            "precedes",
+            "supports",
+            "boundary_of",
+            "cross_references",
+            "same_source"
+          ]
+        },
+        "targetChunkId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "quality": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "textLayerQuality",
+        "citationCompleteness",
+        "pageImageBackstop",
+        "lineReferencesAvailable"
+      ],
+      "properties": {
+        "textLayerQuality": {
+          "type": "string",
+          "enum": [
+            "clean",
+            "mixed",
+            "noisy",
+            "unknown"
+          ]
+        },
+        "citationCompleteness": {
+          "type": "string",
+          "enum": [
+            "complete",
+            "mostly_complete",
+            "partial",
+            "needs_human_review"
+          ]
+        },
+        "pageImageBackstop": {
+          "type": "boolean"
+        },
+        "lineReferencesAvailable": {
+          "type": "boolean"
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "exportHints": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "jsonlEligible",
+        "csvEligible",
+        "vectorEligible"
+      ],
+      "properties": {
+        "jsonlEligible": {
+          "type": "boolean"
+        },
+        "csvEligible": {
+          "type": "boolean"
+        },
+        "vectorEligible": {
+          "type": "boolean"
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

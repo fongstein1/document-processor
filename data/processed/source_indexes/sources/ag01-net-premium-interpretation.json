@@ -1,0 +1,117 @@
+{
+  "schemaVersion": "1.0",
+  "sourceIndexId": "source-index-ag01-net-premium-interpretation",
+  "repositoryManifestId": "source-index-poc-2026-07-21",
+  "source": {
+    "sourceId": "ag01-net-premium-interpretation",
+    "filename": "AG 01 - Valuation of Policies in Which the Net Premium Exceeds the Gross Premium.pdf",
+    "filePath": "D:\\Work\\AI Projects\\NAIC Valuation Manual Course\\Actuarial Guidelines\\AG 01 - Valuation of Policies in Which the Net Premium Exceeds the Gross Premium.pdf",
+    "sourceFamilyId": "actuarial_guidelines",
+    "domainId": "naic_regulatory",
+    "documentType": "actuarial_guideline",
+    "sourceTitle": "Valuation of Policies in Which the Net Premium Exceeds the Gross Premium",
+    "sourceReference": "Actuarial Guideline I",
+    "jurisdiction": "NAIC",
+    "authorityLevel": "guideline",
+    "sourceStatus": "active",
+    "versionDate": null,
+    "pageCount": 1,
+    "pageRange": {
+      "start": 1,
+      "end": 1
+    },
+    "reviewBatchIds": [
+      "batch-077"
+    ],
+    "reviewIndexPath": "docs/review/ag01_review_index.md",
+    "selfReviewPath": "docs/review/ag01_self_review.md",
+    "pageImageBackstop": true,
+    "lineReferencesAvailable": false,
+    "textLayerQuality": "noisy",
+    "notes": "Single-page guideline slice retained as a review-only interpretive POC."
+  },
+  "processing": {
+    "createdAt": "2026-07-21T04:05:02.085Z",
+    "createdBy": "scripts/build-source-index-poc.mjs",
+    "processingMode": "canonical_index_poc",
+    "canonicality": "poc",
+    "reviewOnly": true,
+    "learnerFacingAllowed": false,
+    "appReadyAllowed": false,
+    "ragReadyAllowed": false,
+    "promotionStatus": "not_promoted",
+    "notes": "Single-page guideline slice retained as a review-only interpretive POC."
+  },
+  "chunks": [
+    {
+      "chunkId": "chunk-ag01-net-premium-interpretation-001",
+      "chunkOrdinal": 1,
+      "chunkKind": "guideline_interpretation",
+      "sourceTextType": "review_artifact_derived_text",
+      "pageStart": 1,
+      "pageEnd": 1,
+      "sectionReference": "AG 01: net premium exceeds gross premium interpretation",
+      "lineReference": null,
+      "sourceTextExcerpt": "Interpretive guidance for policies where net premium exceeds gross premium.",
+      "normalizedTextExcerpt": "Net-premium-exceeds-gross-premium guidance.",
+      "summary": "AG 01 clarifies the valuation treatment when net premium exceeds gross premium and keeps the cross-reference review-only.",
+      "controlledTags": [
+        "regulatory_requirement",
+        "definition_or_terminology",
+        "cross_reference_mapping",
+        "requires_human_interpretation",
+        "boundary_control_window"
+      ],
+      "keywords": [
+        "net premium",
+        "gross premium",
+        "valuation",
+        "interpretation"
+      ],
+      "citations": [
+        {
+          "citationText": "AG 01 - Valuation of Policies in Which the Net Premium Exceeds the Gross Premium.pdf",
+          "pageReference": "pp. 1-1",
+          "sectionReference": "AG 01: net premium exceeds gross premium interpretation",
+          "sourceReference": "Actuarial Guideline I",
+          "lineReference": null
+        }
+      ],
+      "relationships": [],
+      "fidelity": "curated",
+      "confidence": "high",
+      "reviewFlags": [
+        "noisy_text_layer",
+        "page_image_backstop"
+      ],
+      "qualityNotes": [
+        "Single-page guideline slice.",
+        "Keep exact wording review-only until a page-image backstop confirms any quoted phrasing."
+      ],
+      "evidenceNotes": "Derived from the ignored AG 01 review packet and review index.",
+      "retrievalEligible": true,
+      "promotionEligible": false
+    }
+  ],
+  "relationships": [],
+  "quality": {
+    "textLayerQuality": "noisy",
+    "citationCompleteness": "partial",
+    "pageImageBackstop": true,
+    "lineReferencesAvailable": false,
+    "notes": "Single-page guideline slice retained as a review-only interpretive POC."
+  },
+  "exportHints": {
+    "jsonlEligible": true,
+    "csvEligible": true,
+    "vectorEligible": true,
+    "notes": "Backend-neutral POC exports generated from review-only batch artifacts."
+  },
+  "notes": "Single-page guideline slice retained as a review-only interpretive POC.",
+  "extensions": {
+    "batchIds": [
+      "batch-077"
+    ],
+    "sourceIndexGeneratedBy": "build-source-index-poc"
+  }
+}

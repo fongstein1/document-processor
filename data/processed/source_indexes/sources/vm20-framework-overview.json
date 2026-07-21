@@ -1,0 +1,123 @@
+{
+  "schemaVersion": "1.0",
+  "sourceIndexId": "source-index-vm20-framework-overview",
+  "repositoryManifestId": "source-index-poc-2026-07-21",
+  "source": {
+    "sourceId": "vm20-framework-overview",
+    "filename": "pbr_data_valuation_manual_2026.pdf",
+    "filePath": "D:\\Work\\AI Projects\\NAIC Valuation Manual Course\\pbr_data_valuation_manual_2026.pdf",
+    "sourceFamilyId": "valuation_manual_pdfs",
+    "domainId": "naic_regulatory",
+    "documentType": "valuation_manual_section",
+    "sourceTitle": "Valuation Manual",
+    "sourceReference": "2026 NAIC Valuation Manual",
+    "jurisdiction": "NAIC",
+    "authorityLevel": "manual_section",
+    "sourceStatus": "active",
+    "versionDate": null,
+    "pageCount": 457,
+    "pageRange": {
+      "start": 45,
+      "end": 46
+    },
+    "reviewBatchIds": [
+      "batch-003"
+    ],
+    "reviewIndexPath": "docs/review/vm20_review_index.md",
+    "selfReviewPath": "docs/review/vm20_self_review.md",
+    "pageImageBackstop": false,
+    "lineReferencesAvailable": false,
+    "textLayerQuality": "clean",
+    "notes": "High-level framework overview slice from the controlled VM-20 wave."
+  },
+  "processing": {
+    "createdAt": "2026-07-21T04:05:02.090Z",
+    "createdBy": "scripts/build-source-index-poc.mjs",
+    "processingMode": "canonical_index_poc",
+    "canonicality": "poc",
+    "reviewOnly": true,
+    "learnerFacingAllowed": false,
+    "appReadyAllowed": false,
+    "ragReadyAllowed": false,
+    "promotionStatus": "not_promoted",
+    "notes": "High-level framework overview slice from the controlled VM-20 wave."
+  },
+  "chunks": [
+    {
+      "chunkId": "chunk-vm20-framework-overview-001",
+      "chunkOrdinal": 1,
+      "chunkKind": "framework_overview",
+      "sourceTextType": "actual_extracted_source_text",
+      "pageStart": 45,
+      "pageEnd": 46,
+      "sectionReference": "Section 1: Purpose; Section 2: Minimum Reserve (overview)",
+      "lineReference": null,
+      "sourceTextExcerpt": "These requirements establish the minimum reserve valuation standard.",
+      "normalizedTextExcerpt": "Minimum reserve valuation standard and reserving structure overview.",
+      "summary": "VM-20 establishes the minimum reserve valuation standard and introduces the reserving structure at a high level.",
+      "controlledTags": [
+        "core_vm_course",
+        "framework_overview",
+        "regulatory_requirement",
+        "background_content",
+        "cross_reference_mapping"
+      ],
+      "keywords": [
+        "VM-20",
+        "minimum reserve",
+        "valuation standard",
+        "overview"
+      ],
+      "citations": [
+        {
+          "citationText": "These requirements establish the minimum reserve valuation standard",
+          "pageReference": "pp. 45-46",
+          "sectionReference": "Section 1: Purpose; Section 2: Minimum Reserve (overview)",
+          "sourceReference": "2026 NAIC Valuation Manual",
+          "lineReference": null
+        }
+      ],
+      "relationships": [
+        {
+          "relationType": "supports",
+          "targetChunkId": "chunk-vm20-framework-boundary-001",
+          "notes": "Precedes the mechanics boundary slice."
+        }
+      ],
+      "fidelity": "exact",
+      "confidence": "high",
+      "reviewFlags": [
+        "framework_overview",
+        "review_only"
+      ],
+      "qualityNotes": [
+        "Clean text layer.",
+        "No line references were preserved in the pilot slice."
+      ],
+      "evidenceNotes": "Derived from the ignored batch-003 review packet and review index.",
+      "retrievalEligible": true,
+      "promotionEligible": false
+    }
+  ],
+  "relationships": [],
+  "quality": {
+    "textLayerQuality": "clean",
+    "citationCompleteness": "partial",
+    "pageImageBackstop": false,
+    "lineReferencesAvailable": false,
+    "notes": "High-level framework overview slice from the controlled VM-20 wave."
+  },
+  "exportHints": {
+    "jsonlEligible": true,
+    "csvEligible": true,
+    "vectorEligible": true,
+    "notes": "Backend-neutral POC exports generated from review-only batch artifacts."
+  },
+  "notes": "High-level framework overview slice from the controlled VM-20 wave.",
+  "extensions": {
+    "batchIds": [
+      "batch-003"
+    ],
+    "sourceIndexGeneratedBy": "build-source-index-poc"
+  }
+}

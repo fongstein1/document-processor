@@ -1,5 +1,20 @@
 # Next Actions
 
+## Canonical source-index next steps
+
+The new canonical source-index POC should be treated as the next architecture
+checkpoint. The immediate follow-up work is to review the package in
+`data/processed/source_indexes/`, confirm the review-only separation still
+looks clean, and decide whether the same contract should be expanded to the
+next small source set.
+
+Likely next choices are:
+
+- add another AG or practice-note source package to the POC;
+- add a richer retrieval benchmark or a second backend-neutral export;
+- or pause the POC here and keep the current package as the architecture
+  reference point.
+
 ## Next immediate task
 
 The laptop portability and project-context handoff package now lives at

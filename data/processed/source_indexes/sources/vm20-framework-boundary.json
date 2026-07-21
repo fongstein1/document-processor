@@ -1,0 +1,123 @@
+{
+  "schemaVersion": "1.0",
+  "sourceIndexId": "source-index-vm20-framework-boundary",
+  "repositoryManifestId": "source-index-poc-2026-07-21",
+  "source": {
+    "sourceId": "vm20-framework-boundary",
+    "filename": "pbr_data_valuation_manual_2026.pdf",
+    "filePath": "D:\\Work\\AI Projects\\NAIC Valuation Manual Course\\pbr_data_valuation_manual_2026.pdf",
+    "sourceFamilyId": "valuation_manual_pdfs",
+    "domainId": "naic_regulatory",
+    "documentType": "valuation_manual_section",
+    "sourceTitle": "Valuation Manual",
+    "sourceReference": "2026 NAIC Valuation Manual",
+    "jurisdiction": "NAIC",
+    "authorityLevel": "manual_section",
+    "sourceStatus": "active",
+    "versionDate": null,
+    "pageCount": 457,
+    "pageRange": {
+      "start": 47,
+      "end": 47
+    },
+    "reviewBatchIds": [
+      "batch-003"
+    ],
+    "reviewIndexPath": "docs/review/vm20_review_index.md",
+    "selfReviewPath": "docs/review/vm20_self_review.md",
+    "pageImageBackstop": false,
+    "lineReferencesAvailable": false,
+    "textLayerQuality": "clean",
+    "notes": "Boundary-control slice retained only to keep the mechanics transition review-only."
+  },
+  "processing": {
+    "createdAt": "2026-07-21T04:05:02.091Z",
+    "createdBy": "scripts/build-source-index-poc.mjs",
+    "processingMode": "canonical_index_poc",
+    "canonicality": "poc",
+    "reviewOnly": true,
+    "learnerFacingAllowed": false,
+    "appReadyAllowed": false,
+    "ragReadyAllowed": false,
+    "promotionStatus": "not_promoted",
+    "notes": "Boundary-control slice retained only to keep the mechanics transition review-only."
+  },
+  "chunks": [
+    {
+      "chunkId": "chunk-vm20-framework-boundary-001",
+      "chunkOrdinal": 1,
+      "chunkKind": "boundary_slice",
+      "sourceTextType": "actual_extracted_source_text",
+      "pageStart": 47,
+      "pageEnd": 47,
+      "sectionReference": "Section 2: Minimum Reserve (category continuation)",
+      "lineReference": null,
+      "sourceTextExcerpt": "The minimum reserve for each VM-20 reserving category equals the sum of the Section 2 results.",
+      "normalizedTextExcerpt": "Boundary slice from overview into reserve-category mechanics.",
+      "summary": "This slice marks the transition from framework overview into reserve-category mechanics and is retained as a boundary-control checkpoint only.",
+      "controlledTags": [
+        "core_vm_course",
+        "mechanics_boundary",
+        "requires_human_interpretation",
+        "formula_context",
+        "boundary_control_window"
+      ],
+      "keywords": [
+        "VM-20",
+        "boundary",
+        "reserve category",
+        "mechanics"
+      ],
+      "citations": [
+        {
+          "citationText": "The minimum reserve for each VM-20 reserving category equals the sum of the Section 2 results",
+          "pageReference": "pp. 47-47",
+          "sectionReference": "Section 2: Minimum Reserve (category continuation)",
+          "sourceReference": "2026 NAIC Valuation Manual",
+          "lineReference": null
+        }
+      ],
+      "relationships": [
+        {
+          "relationType": "follows",
+          "targetChunkId": "chunk-vm20-framework-overview-001",
+          "notes": "Boundary-control checkpoint after the overview slice."
+        }
+      ],
+      "fidelity": "exact",
+      "confidence": "high",
+      "reviewFlags": [
+        "mechanics_boundary",
+        "review_only"
+      ],
+      "qualityNotes": [
+        "Boundary-control slice only.",
+        "No line references were preserved in the pilot slice."
+      ],
+      "evidenceNotes": "Derived from the ignored batch-003 review packet and review index.",
+      "retrievalEligible": true,
+      "promotionEligible": false
+    }
+  ],
+  "relationships": [],
+  "quality": {
+    "textLayerQuality": "clean",
+    "citationCompleteness": "partial",
+    "pageImageBackstop": false,
+    "lineReferencesAvailable": false,
+    "notes": "Boundary-control slice retained only to keep the mechanics transition review-only."
+  },
+  "exportHints": {
+    "jsonlEligible": true,
+    "csvEligible": true,
+    "vectorEligible": true,
+    "notes": "Backend-neutral POC exports generated from review-only batch artifacts."
+  },
+  "notes": "Boundary-control slice retained only to keep the mechanics transition review-only.",
+  "extensions": {
+    "batchIds": [
+      "batch-003"
+    ],
+    "sourceIndexGeneratedBy": "build-source-index-poc"
+  }
+}

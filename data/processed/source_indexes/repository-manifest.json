@@ -1,0 +1,154 @@
+{
+  "schemaVersion": "1.0",
+  "repositoryManifestId": "source-index-poc-2026-07-21",
+  "repositoryName": "Document Processor",
+  "repositoryPurpose": "Canonical source-index proof of concept for backend-neutral retrieval",
+  "generatedAt": "2026-07-21T04:05:02.094Z",
+  "canonicalLayer": "source-index",
+  "modelVersion": "1.0",
+  "domainProfiles": [
+    {
+      "domainId": "naic_regulatory",
+      "profileName": "regulatory_profile",
+      "profilePath": "docs/domain_profiles/regulatory_profile.md",
+      "notes": "Binding and quasi-binding valuation-regulation material."
+    },
+    {
+      "domainId": "naic_regulatory",
+      "profileName": "governance_profile",
+      "profilePath": "docs/domain_profiles/governance_profile.md",
+      "notes": "Review, governance, and exception-handling metadata."
+    }
+  ],
+  "sourcePackageCount": 4,
+  "sourcePackages": [
+    {
+      "sourceIndexId": "source-index-ag01-net-premium-interpretation",
+      "sourceId": "ag01-net-premium-interpretation",
+      "sourceTitle": "Valuation of Policies in Which the Net Premium Exceeds the Gross Premium",
+      "sourceFamilyId": "actuarial_guidelines",
+      "documentType": "actuarial_guideline",
+      "sourceStatus": "active",
+      "sourceReference": "Actuarial Guideline I",
+      "jurisdiction": "NAIC",
+      "authorityLevel": "guideline",
+      "pageRange": {
+        "start": 1,
+        "end": 1
+      },
+      "chunkCount": 1,
+      "reviewBatchIds": [
+        "batch-077"
+      ],
+      "sourceIndexPath": "data/processed/source_indexes/sources/ag01-net-premium-interpretation.json",
+      "markdownPath": "data/processed/source_indexes/sources/ag01-net-premium-interpretation.md",
+      "reviewIndexPath": "docs/review/ag01_review_index.md",
+      "selfReviewPath": "docs/review/ag01_self_review.md",
+      "textLayerQuality": "noisy",
+      "pageImageBackstop": true,
+      "lineReferencesAvailable": false,
+      "notes": "Single-page guideline slice retained as a review-only interpretive POC."
+    },
+    {
+      "sourceIndexId": "source-index-ag03-maturity-value-interpretation",
+      "sourceId": "ag03-maturity-value-interpretation",
+      "sourceTitle": "Definition of the Term Maturity Value in the Standard Nonforfeiture Law of Individual Deferred Annuities",
+      "sourceFamilyId": "actuarial_guidelines",
+      "documentType": "actuarial_guideline",
+      "sourceStatus": "active",
+      "sourceReference": "Actuarial Guideline III",
+      "jurisdiction": "NAIC",
+      "authorityLevel": "guideline",
+      "pageRange": {
+        "start": 1,
+        "end": 1
+      },
+      "chunkCount": 1,
+      "reviewBatchIds": [
+        "batch-076"
+      ],
+      "sourceIndexPath": "data/processed/source_indexes/sources/ag03-maturity-value-interpretation.json",
+      "markdownPath": "data/processed/source_indexes/sources/ag03-maturity-value-interpretation.md",
+      "reviewIndexPath": "docs/review/ag03_review_index.md",
+      "selfReviewPath": "docs/review/ag03_self_review.md",
+      "textLayerQuality": "noisy",
+      "pageImageBackstop": true,
+      "lineReferencesAvailable": false,
+      "notes": "Single-page guideline slice retained as a review-only interpretive POC."
+    },
+    {
+      "sourceIndexId": "source-index-vm20-framework-overview",
+      "sourceId": "vm20-framework-overview",
+      "sourceTitle": "Valuation Manual",
+      "sourceFamilyId": "valuation_manual_pdfs",
+      "documentType": "valuation_manual_section",
+      "sourceStatus": "active",
+      "sourceReference": "2026 NAIC Valuation Manual",
+      "jurisdiction": "NAIC",
+      "authorityLevel": "manual_section",
+      "pageRange": {
+        "start": 45,
+        "end": 46
+      },
+      "chunkCount": 1,
+      "reviewBatchIds": [
+        "batch-003"
+      ],
+      "sourceIndexPath": "data/processed/source_indexes/sources/vm20-framework-overview.json",
+      "markdownPath": "data/processed/source_indexes/sources/vm20-framework-overview.md",
+      "reviewIndexPath": "docs/review/vm20_review_index.md",
+      "selfReviewPath": "docs/review/vm20_self_review.md",
+      "textLayerQuality": "clean",
+      "pageImageBackstop": false,
+      "lineReferencesAvailable": false,
+      "notes": "High-level framework overview slice from the controlled VM-20 wave."
+    },
+    {
+      "sourceIndexId": "source-index-vm20-framework-boundary",
+      "sourceId": "vm20-framework-boundary",
+      "sourceTitle": "Valuation Manual",
+      "sourceFamilyId": "valuation_manual_pdfs",
+      "documentType": "valuation_manual_section",
+      "sourceStatus": "active",
+      "sourceReference": "2026 NAIC Valuation Manual",
+      "jurisdiction": "NAIC",
+      "authorityLevel": "manual_section",
+      "pageRange": {
+        "start": 47,
+        "end": 47
+      },
+      "chunkCount": 1,
+      "reviewBatchIds": [
+        "batch-003"
+      ],
+      "sourceIndexPath": "data/processed/source_indexes/sources/vm20-framework-boundary.json",
+      "markdownPath": "data/processed/source_indexes/sources/vm20-framework-boundary.md",
+      "reviewIndexPath": "docs/review/vm20_review_index.md",
+      "selfReviewPath": "docs/review/vm20_self_review.md",
+      "textLayerQuality": "clean",
+      "pageImageBackstop": false,
+      "lineReferencesAvailable": false,
+      "notes": "Boundary-control slice retained only to keep the mechanics transition review-only."
+    }
+  ],
+  "chunkCount": 4,
+  "exports": {
+    "repositoryManifestPath": "data/processed/source_indexes/repository-manifest.json",
+    "jsonlPath": "data/processed/source_indexes/exports/source-indexes.jsonl",
+    "csvPath": "data/processed/source_indexes/exports/source-indexes.csv",
+    "retrievalEvaluationPath": "data/processed/source_indexes/retrieval/retrieval-evaluation.json",
+    "notes": "Canonical source-index POC exports."
+  },
+  "retrievalEvaluation": {
+    "evaluationId": "source-index-poc-2026-07-21-retrieval",
+    "method": "keyword_overlap_baseline",
+    "queryCount": 3,
+    "top1HitCount": 3,
+    "top3Coverage": 1,
+    "notes": "Keyword baseline retrieved 3 top-1 hits and 3 top-3 hits across 3 queries."
+  },
+  "notes": "Canonical source-index proof of concept.",
+  "extensions": {
+    "sourceIndexPoc": true
+  }
+}

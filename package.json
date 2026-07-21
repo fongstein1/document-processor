@@ -5,8 +5,11 @@
   "type": "module",
   "scripts": {
     "bootstrap": "node scripts/bootstrap-small-batch.mjs",
-    "check": "node scripts/validate-scaffold.mjs",
+    "check": "node scripts/validate-scaffold.mjs && node scripts/validate-source-index-poc.mjs",
     "pilot": "node scripts/run-pilot-batch.mjs",
+    "source-index:build": "node scripts/build-source-index-poc.mjs",
+    "source-index:validate": "node scripts/validate-source-index-poc.mjs",
+    "source-index:poc": "node scripts/build-source-index-poc.mjs && node scripts/validate-source-index-poc.mjs",
     "pilot:course-core": "node scripts/run-pilot-batch.mjs --batch batch-002",
     "practice-notes:batch": "node scripts/run-pilot-batch.mjs",
     "c3-phase-2:batch": "node scripts/run-pilot-batch.mjs",

@@ -1,5 +1,20 @@
 # Session Log
 
+## 2026-07-21 Canonical source-index POC
+
+- Added backend-neutral source-index schemas for the canonical package and
+  repository manifest.
+- Added reusable guidance files for generic document processing and the
+  regulatory, pricing, liability-modeling, and governance domain profiles.
+- Built a tracked canonical source-index POC under
+  `data/processed/source_indexes/` for AG 01, AG 03, and a narrow VM-20
+  excerpt.
+- Added a lightweight retrieval evaluation that proves the package can be
+  consumed as JSON, Markdown, JSONL, and CSV without replacing the review
+  packets.
+- Kept the review-first batch workflow intact and left the POC review-only,
+  not learner-facing, not app-ready, and not RAG-ready.
+
 - 2026-06-26: Inspected the empty workspace, the reference app docs and seed
   files, and the raw source folder structure. Initialized a new Git repository
   and added the first processor scaffold: project brief, source-family config,

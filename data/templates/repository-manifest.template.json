@@ -1,0 +1,67 @@
+{
+  "schemaVersion": "1.0",
+  "repositoryManifestId": "repository-manifest-example",
+  "repositoryName": "Example Repository Name",
+  "repositoryPurpose": "Template only.",
+  "generatedAt": "2026-07-21T00:00:00.000Z",
+  "canonicalLayer": "source-index",
+  "modelVersion": "1.0",
+  "domainProfiles": [
+    {
+      "domainId": "example_domain",
+      "profileName": "example_profile",
+      "profilePath": "docs/domain_profiles/example_profile.md",
+      "notes": "Template only."
+    }
+  ],
+  "sourcePackageCount": 1,
+  "sourcePackages": [
+    {
+      "sourceIndexId": "source-index-example",
+      "sourceId": "example-source-id",
+      "sourceTitle": "Example Source Title",
+      "sourceFamilyId": "example_family",
+      "documentType": "example_document_type",
+      "sourceStatus": "unclear",
+      "sourceReference": "Example Reference",
+      "jurisdiction": null,
+      "authorityLevel": "example_authority",
+      "pageRange": {
+        "start": 1,
+        "end": 1
+      },
+      "chunkCount": 1,
+      "reviewBatchIds": [
+        "batch-000"
+      ],
+      "sourceIndexPath": "data/processed/source_indexes/sources/example-source-id.json",
+      "markdownPath": "data/processed/source_indexes/sources/example-source-id.md",
+      "reviewIndexPath": "docs/review/example_review_index.md",
+      "selfReviewPath": "docs/review/example_self_review.md",
+      "textLayerQuality": "unknown",
+      "pageImageBackstop": true,
+      "lineReferencesAvailable": false,
+      "notes": "Template only."
+    }
+  ],
+  "chunkCount": 1,
+  "exports": {
+    "repositoryManifestPath": "data/processed/source_indexes/repository-manifest.json",
+    "jsonlPath": "data/processed/source_indexes/exports/source-indexes.jsonl",
+    "csvPath": "data/processed/source_indexes/exports/source-indexes.csv",
+    "retrievalEvaluationPath": "data/processed/source_indexes/retrieval/retrieval-evaluation.json",
+    "notes": "Template only."
+  },
+  "retrievalEvaluation": {
+    "evaluationId": "retrieval-evaluation-example",
+    "method": "keyword_overlap_baseline",
+    "queryCount": 1,
+    "top1HitCount": 0,
+    "top3Coverage": 0,
+    "notes": "Template only."
+  },
+  "notes": "Template only.",
+  "extensions": {
+    "template": true
+  }
+}

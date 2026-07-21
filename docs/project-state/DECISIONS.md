@@ -11,6 +11,18 @@ Raw source documents remain in the external raw folder and out of Git. The repo
 stores only scripts, docs, templates, configs, and lightweight sanitized
 artifacts.
 
+## Canonical source-index layer stays separate
+
+The canonical source-index layer is now a first-class tracked POC, but it must
+remain separate from the review-first batch workflow. Review packets, self-
+reviews, and project-state handoffs stay in place as governance artifacts, and
+the source-index JSON/Markdown/JSONL/CSV layer becomes the reusable retrieval
+layer that sits alongside them.
+
+The source-index POC should stay backend-neutral, portable, and review-only
+until a later human decision explicitly promotes part of it into a downstream
+retrieval or application workflow.
+
 ## Reference app stays read-only
 
 The existing app repo is reference material and export target context only. It
