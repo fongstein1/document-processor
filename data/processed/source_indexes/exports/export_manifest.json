@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "1.0",
+  "exportManifestId": "source-index-poc-2026-07-21-exports",
+  "repositoryManifestId": "source-index-poc-2026-07-21",
+  "repositoryName": "Document Processor",
+  "generatedAt": "2026-07-21T05:26:54.277Z",
+  "sourcePackageCount": 12,
+  "chunkCount": 31,
+  "exportFiles": {
+    "repositoryManifestPath": "data/processed/source_indexes/repository-manifest.json",
+    "exportManifestPath": "data/processed/source_indexes/exports/export_manifest.json",
+    "jsonlPath": "data/processed/source_indexes/exports/source_chunks.jsonl",
+    "csvPath": "data/processed/source_indexes/exports/source_chunks.csv",
+    "retrievalQuestionsPath": "data/processed/source_indexes/evaluation/retrieval_questions.json",
+    "retrievalResultsPath": "data/processed/source_indexes/evaluation/retrieval_results.json",
+    "legacyJsonlPath": "data/processed/source_indexes/exports/source-indexes.jsonl",
+    "legacyCsvPath": "data/processed/source_indexes/exports/source-indexes.csv",
+    "legacyRetrievalJsonPath": "data/processed/source_indexes/retrieval/retrieval-evaluation.json",
+    "legacyRetrievalMarkdownPath": "data/processed/source_indexes/retrieval/retrieval-evaluation.md"
+  },
+  "notes": "Canonical source-index export manifest for the POC.",
+  "extensions": {
+    "sourceIndexPoc": true
+  }
+}

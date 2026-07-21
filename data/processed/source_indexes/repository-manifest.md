@@ -4,16 +4,18 @@
 - Manifest ID: `source-index-poc-2026-07-21`
 - Canonical layer: source-index
 - Model version: 1.0
-- Generated at: 2026-07-21T04:05:02.094Z
-- Source package count: 4
-- Chunk count: 4
+- Generated at: 2026-07-21T05:26:54.277Z
+- Source package count: 12
+- Chunk count: 31
 
 ## Export files
 
-- JSONL: `data/processed/source_indexes/exports/source-indexes.jsonl`
-- CSV: `data/processed/source_indexes/exports/source-indexes.csv`
+- Export manifest: `data/processed/source_indexes/exports/export_manifest.json`
+- JSONL: `data/processed/source_indexes/exports/source_chunks.jsonl`
+- CSV: `data/processed/source_indexes/exports/source_chunks.csv`
+- Retrieval questions: `data/processed/source_indexes/evaluation/retrieval_questions.json`
+- Retrieval results: `data/processed/source_indexes/evaluation/retrieval_results.json`
 - Repository manifest: `data/processed/source_indexes/repository-manifest.json`
-- Retrieval evaluation: `data/processed/source_indexes/retrieval/retrieval-evaluation.json`
 
 ## Source packages
 
@@ -23,10 +25,22 @@
 | Definition of the Term Maturity Value in the Standard Nonforfeiture Law of Individual Deferred Annuities | pp. 1-1 | `data/processed/source_indexes/sources/ag03-maturity-value-interpretation.json` | review-only |
 | Valuation Manual | pp. 45-46 | `data/processed/source_indexes/sources/vm20-framework-overview.json` | review-only |
 | Valuation Manual | pp. 47-47 | `data/processed/source_indexes/sources/vm20-framework-boundary.json` | review-only |
+| VM-20 Section 3.C Assumptions | pp. 58-65 | `data/processed/source_indexes/sources/vm20-assumptions-section-3c.json` | review-only |
+| VM-21 Stochastic Reserve Projection Entry | pp. 153-159 | `data/processed/source_indexes/sources/vm21-sr-projection-entry.json` | review-only |
+| The Application of the Commissioners Reserve Valuation Method to Equity Indexed Life Insurance Policies | pp. 1-11 | `data/processed/source_indexes/sources/ag36-eiul-crvm-guidance.json` | review-only |
+| The Application of the Commissioners Reserve Valuation Method to Equity Indexed Life Insurance Policies | pp. 1-18 | `data/processed/source_indexes/sources/ag36-eiul-crvm-law-manual-reprint.json` | review-only |
+| Model Governance: Some Considerations for Practicing Life Actuaries | pp. 1-18 | `data/processed/source_indexes/sources/model-governance-practice-note.json` | review-only |
+| Actuarial Memorandum Practice Note | pp. 1-37 | `data/processed/source_indexes/sources/actuarial-memorandum-practice-note.json` | review-only |
+| Life Insurance and Annuity Non-Guaranteed Elements | pp. 1-9 | `data/processed/source_indexes/sources/reg210-non-guaranteed-elements.json` | review-only |
+| CIA 2022 Capital and FCT Educational Note | pp. 1-20 | `data/processed/source_indexes/sources/cia-2022-capital-fct-educational-note.json` | review-only |
 
 ## Retrieval summary
 
-- Queries evaluated: 3
-- Top-1 hits: 3
-- Top-3 coverage: 100%
+- Queries evaluated: 16
+- Supported queries: 14
+- Unsupported queries: 2
+- Top-1 accuracy: 86%
+- Top-3 accuracy: 100%
+- Top-5 accuracy: 100%
+- Mean reciprocal rank: 0.929
 - Method: keyword_overlap_baseline

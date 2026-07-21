@@ -1,6 +1,7 @@
 # Valuation Manual
 
 - Source ID: `vm20-framework-boundary`
+- Source version ID: `source-index-vm20-framework-boundary`
 - Source reference: 2026 NAIC Valuation Manual
 - Source family: valuation_manual_pdfs
 - Domain: naic_regulatory
@@ -25,9 +26,9 @@
 
 ## Chunks
 
-| Chunk | Pages | Kind | Fidelity | Summary |
-| --- | --- | --- | --- | --- |
-| `chunk-vm20-framework-boundary-001` | pp. 47-47 | boundary_slice | exact | This slice marks the transition from framework overview into reserve-category mechanics and is retained as a boundary-control checkpoint only. |
+| Chunk | Pages | Topic | Kind | Fidelity | Summary |
+| --- | --- | --- | --- | --- | --- |
+| `chunk-vm20-framework-boundary-001` | pp. 47-47 | This slice marks the transition from framework overview into reserve-category mechanics and is retained as a boundary-control checkpoint only. | boundary_slice | exact | This slice marks the transition from framework overview into reserve-category mechanics and is retained as a boundary-control checkpoint only. |
 
 ## Quality Notes
 

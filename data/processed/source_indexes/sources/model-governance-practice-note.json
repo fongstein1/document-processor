@@ -1,0 +1,301 @@
+{
+  "schemaVersion": "1.0",
+  "sourceIndexId": "source-index-model-governance-practice-note",
+  "repositoryManifestId": "source-index-poc-2026-07-21",
+  "sourceVersionId": "source-index-model-governance-practice-note",
+  "source": {
+    "sourceId": "model-governance-practice-note",
+    "sourceVersionId": "source-index-model-governance-practice-note",
+    "filename": "AAA - Model_Governance_PN_042017.pdf",
+    "filePath": "D:\\Work\\AI Projects\\NAIC Valuation Manual Course\\Practice Notes\\AAA - Model_Governance_PN_042017.pdf",
+    "sourceFamilyId": "practice_notes",
+    "domainId": "naic_regulatory",
+    "documentType": "practice_note",
+    "sourceTitle": "Model Governance: Some Considerations for Practicing Life Actuaries",
+    "sourceReference": "American Academy of Actuaries practice note, April 2017",
+    "jurisdiction": "AAA",
+    "authorityLevel": "practice_note",
+    "sourceStatus": "non-binding practice note",
+    "versionDate": null,
+    "pageCount": 18,
+    "pageRange": {
+      "start": 1,
+      "end": 18
+    },
+    "reviewBatchIds": [
+      "batch-183",
+      "batch-184",
+      "batch-185"
+    ],
+    "reviewIndexPath": "docs/review/model_governance_practice_note_review_index.md",
+    "selfReviewPath": "docs/review/model_governance_practice_note_self_review.md",
+    "pageImageBackstop": false,
+    "lineReferencesAvailable": false,
+    "textLayerQuality": "clean",
+    "notes": "Model governance companion guidance retained as a non-binding practice note."
+  },
+  "processing": {
+    "createdAt": "2026-07-21T05:26:54.270Z",
+    "createdBy": "scripts/build-source-index-poc.mjs",
+    "processingMode": "canonical_index_poc",
+    "canonicality": "poc",
+    "reviewOnly": true,
+    "learnerFacingAllowed": false,
+    "appReadyAllowed": false,
+    "ragReadyAllowed": false,
+    "promotionStatus": "not_promoted",
+    "notes": "Model governance companion guidance retained as a non-binding practice note."
+  },
+  "chunks": [
+    {
+      "chunkId": "chunk-model-governance-practice-note-001",
+      "chunkOrdinal": 1,
+      "chunkKind": "source_excerpt",
+      "sourceTextType": "review_artifact_derived_text",
+      "pageStart": 1,
+      "pageEnd": 7,
+      "sectionReference": "Opening companion guidance",
+      "lineReference": null,
+      "sourceTextExcerpt": "Model governance opening companion guidance",
+      "normalizedTextExcerpt": "model governance opening companion guidance",
+      "summary": "The practice note opens with disclaimer, introduction, and model-development context.",
+      "topic": "Opening companion guidance",
+      "headingPath": "Opening companion guidance",
+      "keyPoints": [
+        "The practice note opens with disclaimer, introduction, and model-development context."
+      ],
+      "concepts": [
+        "background_content",
+        "caveat_or_companion_guidance",
+        "non_binding_practice_note",
+        "cross_reference_mapping",
+        "boundary_control_window"
+      ],
+      "definedTerms": [
+        "model governance",
+        "practice note",
+        "opening"
+      ],
+      "acronyms": [],
+      "requirements": [],
+      "citationDisplay": "Model governance opening companion guidance",
+      "normalizedSearchText": "model governance opening companion guidance model governance opening companion guidance the practice note opens with disclaimer, introduction, and model-development context. opening companion guidance opening companion guidance opening companion guidance model governance: some considerations for practicing life actuaries american academy of actuaries practice note, april 2017 the practice note opens with disclaimer, introduction, and model-development context. background_content caveat_or_companion_guidance non_binding_practice_note cross_reference_mapping boundary_control_window model governance practice note opening model governance opening companion guidance background_content caveat_or_companion_guidance non_binding_practice_note cross_reference_mapping boundary_control_window model governance practice note opening",
+      "canonicalSourceIndexPath": "data/processed/source_indexes/sources/model-governance-practice-note.json",
+      "sourceVersionId": "source-index-model-governance-practice-note",
+      "controlledTags": [
+        "background_content",
+        "caveat_or_companion_guidance",
+        "non_binding_practice_note",
+        "cross_reference_mapping",
+        "boundary_control_window"
+      ],
+      "keywords": [
+        "model governance",
+        "practice note",
+        "opening"
+      ],
+      "citations": [
+        {
+          "citationText": "Model governance opening companion guidance",
+          "pageReference": "pp. 1-7",
+          "sectionReference": "Opening companion guidance",
+          "sourceReference": "American Academy of Actuaries practice note, April 2017",
+          "lineReference": null
+        }
+      ],
+      "relationships": [],
+      "relationshipIds": [],
+      "fidelity": "curated",
+      "confidence": "high",
+      "reviewFlags": [
+        "companion_guidance",
+        "page_locator_anchor"
+      ],
+      "qualityNotes": [
+        "Non-binding practice note; page locators are the primary anchor.",
+        "Keep the companion-guidance caveat visible."
+      ],
+      "evidenceNotes": "Derived from the ignored model-governance practice-note review packet and review index.",
+      "retrievalEligible": true,
+      "promotionEligible": false
+    },
+    {
+      "chunkId": "chunk-model-governance-practice-note-002",
+      "chunkOrdinal": 2,
+      "chunkKind": "source_excerpt",
+      "sourceTextType": "review_artifact_derived_text",
+      "pageStart": 8,
+      "pageEnd": 14,
+      "sectionReference": "Governance and validation",
+      "lineReference": null,
+      "sourceTextExcerpt": "Model governance policy risk controls validation",
+      "normalizedTextExcerpt": "model governance policy risk controls validation",
+      "summary": "The practice note covers model governance policy, risk, controls, and validation.",
+      "topic": "Governance and validation",
+      "headingPath": "Governance and validation",
+      "keyPoints": [
+        "The practice note covers model governance policy, risk, controls, and validation."
+      ],
+      "concepts": [
+        "governance_or_control_expectation",
+        "documentation_expectation",
+        "non_binding_practice_note",
+        "cross_reference_mapping",
+        "requires_human_interpretation"
+      ],
+      "definedTerms": [
+        "governance",
+        "controls",
+        "validation",
+        "practice note"
+      ],
+      "acronyms": [],
+      "requirements": [
+        "governance_or_control_expectation",
+        "documentation_expectation"
+      ],
+      "citationDisplay": "Model governance policy risk controls validation",
+      "normalizedSearchText": "model governance policy risk controls validation model governance policy risk controls validation the practice note covers model governance policy, risk, controls, and validation. governance and validation governance and validation governance and validation model governance: some considerations for practicing life actuaries american academy of actuaries practice note, april 2017 the practice note covers model governance policy, risk, controls, and validation. governance_or_control_expectation documentation_expectation non_binding_practice_note cross_reference_mapping requires_human_interpretation governance controls validation practice note governance_or_control_expectation documentation_expectation model governance policy risk controls validation governance_or_control_expectation documentation_expectation non_binding_practice_note cross_reference_mapping requires_human_interpretation governance controls validation practice note",
+      "canonicalSourceIndexPath": "data/processed/source_indexes/sources/model-governance-practice-note.json",
+      "sourceVersionId": "source-index-model-governance-practice-note",
+      "controlledTags": [
+        "governance_or_control_expectation",
+        "documentation_expectation",
+        "non_binding_practice_note",
+        "cross_reference_mapping",
+        "requires_human_interpretation"
+      ],
+      "keywords": [
+        "governance",
+        "controls",
+        "validation",
+        "practice note"
+      ],
+      "citations": [
+        {
+          "citationText": "Model governance policy risk controls validation",
+          "pageReference": "pp. 8-14",
+          "sectionReference": "Governance and validation",
+          "sourceReference": "American Academy of Actuaries practice note, April 2017",
+          "lineReference": null
+        }
+      ],
+      "relationships": [],
+      "relationshipIds": [],
+      "fidelity": "curated",
+      "confidence": "high",
+      "reviewFlags": [
+        "companion_guidance",
+        "page_locator_anchor"
+      ],
+      "qualityNotes": [
+        "Non-binding practice note; page locators are the primary anchor.",
+        "Keep the companion-guidance caveat visible."
+      ],
+      "evidenceNotes": "Derived from the ignored model-governance practice-note review packet and review index.",
+      "retrievalEligible": true,
+      "promotionEligible": false
+    },
+    {
+      "chunkId": "chunk-model-governance-practice-note-003",
+      "chunkOrdinal": 3,
+      "chunkKind": "source_excerpt",
+      "sourceTextType": "review_artifact_derived_text",
+      "pageStart": 15,
+      "pageEnd": 18,
+      "sectionReference": "Validation and documentation closeout",
+      "lineReference": null,
+      "sourceTextExcerpt": "Model governance validation documentation closeout",
+      "normalizedTextExcerpt": "model governance validation documentation closeout",
+      "summary": "The practice note closes with validation, documentation, references, and definitions.",
+      "topic": "Validation and documentation closeout",
+      "headingPath": "Validation and documentation closeout",
+      "keyPoints": [
+        "The practice note closes with validation, documentation, references, and definitions."
+      ],
+      "concepts": [
+        "documentation_expectation",
+        "definition_or_terminology",
+        "non_binding_practice_note",
+        "cross_reference_mapping",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "definedTerms": [
+        "validation",
+        "documentation",
+        "closeout",
+        "practice note"
+      ],
+      "acronyms": [],
+      "requirements": [
+        "documentation_expectation"
+      ],
+      "citationDisplay": "Model governance validation documentation closeout",
+      "normalizedSearchText": "model governance validation documentation closeout model governance validation documentation closeout the practice note closes with validation, documentation, references, and definitions. validation and documentation closeout validation and documentation closeout validation and documentation closeout model governance: some considerations for practicing life actuaries american academy of actuaries practice note, april 2017 the practice note closes with validation, documentation, references, and definitions. documentation_expectation definition_or_terminology non_binding_practice_note cross_reference_mapping boundary_control_window requires_human_interpretation validation documentation closeout practice note documentation_expectation model governance validation documentation closeout documentation_expectation definition_or_terminology non_binding_practice_note cross_reference_mapping boundary_control_window requires_human_interpretation validation documentation closeout practice note",
+      "canonicalSourceIndexPath": "data/processed/source_indexes/sources/model-governance-practice-note.json",
+      "sourceVersionId": "source-index-model-governance-practice-note",
+      "controlledTags": [
+        "documentation_expectation",
+        "definition_or_terminology",
+        "non_binding_practice_note",
+        "cross_reference_mapping",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "keywords": [
+        "validation",
+        "documentation",
+        "closeout",
+        "practice note"
+      ],
+      "citations": [
+        {
+          "citationText": "Model governance validation documentation closeout",
+          "pageReference": "pp. 15-18",
+          "sectionReference": "Validation and documentation closeout",
+          "sourceReference": "American Academy of Actuaries practice note, April 2017",
+          "lineReference": null
+        }
+      ],
+      "relationships": [],
+      "relationshipIds": [],
+      "fidelity": "curated",
+      "confidence": "high",
+      "reviewFlags": [
+        "companion_guidance",
+        "page_locator_anchor"
+      ],
+      "qualityNotes": [
+        "Non-binding practice note; page locators are the primary anchor.",
+        "Keep the companion-guidance caveat visible."
+      ],
+      "evidenceNotes": "Derived from the ignored model-governance practice-note review packet and review index.",
+      "retrievalEligible": true,
+      "promotionEligible": false
+    }
+  ],
+  "relationships": [],
+  "quality": {
+    "textLayerQuality": "clean",
+    "citationCompleteness": "partial",
+    "pageImageBackstop": false,
+    "lineReferencesAvailable": false,
+    "notes": "Model governance companion guidance retained as a non-binding practice note."
+  },
+  "exportHints": {
+    "jsonlEligible": true,
+    "csvEligible": true,
+    "vectorEligible": true,
+    "notes": "Backend-neutral POC exports generated from review-only batch artifacts."
+  },
+  "notes": "Model governance companion guidance retained as a non-binding practice note.",
+  "extensions": {
+    "batchIds": [
+      "batch-183",
+      "batch-184",
+      "batch-185"
+    ],
+    "sourceIndexGeneratedBy": "build-source-index-poc"
+  }
+}

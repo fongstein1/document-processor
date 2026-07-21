@@ -2,8 +2,10 @@
   "schemaVersion": "1.0",
   "sourceIndexId": "source-index-ag03-maturity-value-interpretation",
   "repositoryManifestId": "source-index-poc-2026-07-21",
+  "sourceVersionId": "source-index-ag03-maturity-value-interpretation",
   "source": {
     "sourceId": "ag03-maturity-value-interpretation",
+    "sourceVersionId": "source-index-ag03-maturity-value-interpretation",
     "filename": "AG 03 - Definition of the Term Maturity Value in the Standard Nonforfeiture Law of Individual Deferred Annuities.pdf",
     "filePath": "D:\\Work\\AI Projects\\NAIC Valuation Manual Course\\Actuarial Guidelines\\AG 03 - Definition of the Term Maturity Value in the Standard Nonforfeiture Law of Individual Deferred Annuities.pdf",
     "sourceFamilyId": "actuarial_guidelines",
@@ -31,7 +33,7 @@
     "notes": "Single-page guideline slice retained as a review-only interpretive POC."
   },
   "processing": {
-    "createdAt": "2026-07-21T04:05:02.088Z",
+    "createdAt": "2026-07-21T05:26:54.221Z",
     "createdBy": "scripts/build-source-index-poc.mjs",
     "processingMode": "canonical_index_poc",
     "canonicality": "poc",
@@ -55,6 +57,32 @@
       "sourceTextExcerpt": "Interpretive guidance for maturity value in the nonforfeiture-law context.",
       "normalizedTextExcerpt": "Maturity-value interpretation guidance.",
       "summary": "AG 03 explains the maturity-value treatment and keeps the underlying nonforfeiture-law cross-reference review-only.",
+      "topic": "AG 03 explains the maturity-value treatment and keeps the underlying nonforfeiture-law cross-reference review-only.",
+      "headingPath": "AG 03: maturity value interpretation",
+      "keyPoints": [
+        "AG 03 explains the maturity-value treatment and keeps the underlying nonforfeiture-law cross-reference review-only."
+      ],
+      "concepts": [
+        "regulatory_requirement",
+        "definition_or_terminology",
+        "cross_reference_mapping",
+        "requires_human_interpretation",
+        "boundary_control_window"
+      ],
+      "definedTerms": [
+        "maturity value",
+        "cash surrender value",
+        "nonforfeiture",
+        "interpretation"
+      ],
+      "acronyms": [],
+      "requirements": [
+        "regulatory_requirement"
+      ],
+      "citationDisplay": "AG 03 - Definition of the Term Maturity Value in the Standard Nonforfeiture Law of Individual Deferred Annuities.pdf",
+      "normalizedSearchText": "interpretive guidance for maturity value in the nonforfeiture-law context. maturity-value interpretation guidance. ag 03 explains the maturity-value treatment and keeps the underlying nonforfeiture-law cross-reference review-only. ag 03 explains the maturity-value treatment and keeps the underlying nonforfeiture-law cross-reference review-only. ag 03: maturity value interpretation ag 03: maturity value interpretation definition of the term maturity value in the standard nonforfeiture law of individual deferred annuities actuarial guideline iii ag 03 explains the maturity-value treatment and keeps the underlying nonforfeiture-law cross-reference review-only. regulatory_requirement definition_or_terminology cross_reference_mapping requires_human_interpretation boundary_control_window maturity value cash surrender value nonforfeiture interpretation regulatory_requirement ag 03 - definition of the term maturity value in the standard nonforfeiture law of individual deferred annuities.pdf regulatory_requirement definition_or_terminology cross_reference_mapping requires_human_interpretation boundary_control_window maturity value cash surrender value nonforfeiture interpretation",
+      "canonicalSourceIndexPath": "data/processed/source_indexes/sources/ag03-maturity-value-interpretation.json",
+      "sourceVersionId": "source-index-ag03-maturity-value-interpretation",
       "controlledTags": [
         "regulatory_requirement",
         "definition_or_terminology",
@@ -78,6 +106,7 @@
         }
       ],
       "relationships": [],
+      "relationshipIds": [],
       "fidelity": "curated",
       "confidence": "high",
       "reviewFlags": [

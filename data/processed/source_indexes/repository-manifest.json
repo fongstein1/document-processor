@@ -3,7 +3,7 @@
   "repositoryManifestId": "source-index-poc-2026-07-21",
   "repositoryName": "Document Processor",
   "repositoryPurpose": "Canonical source-index proof of concept for backend-neutral retrieval",
-  "generatedAt": "2026-07-21T04:05:02.094Z",
+  "generatedAt": "2026-07-21T05:26:54.277Z",
   "canonicalLayer": "source-index",
   "modelVersion": "1.0",
   "domainProfiles": [
@@ -20,11 +20,12 @@
       "notes": "Review, governance, and exception-handling metadata."
     }
   ],
-  "sourcePackageCount": 4,
+  "sourcePackageCount": 12,
   "sourcePackages": [
     {
       "sourceIndexId": "source-index-ag01-net-premium-interpretation",
       "sourceId": "ag01-net-premium-interpretation",
+      "sourceVersionId": "source-index-ag01-net-premium-interpretation",
       "sourceTitle": "Valuation of Policies in Which the Net Premium Exceeds the Gross Premium",
       "sourceFamilyId": "actuarial_guidelines",
       "documentType": "actuarial_guideline",
@@ -44,6 +45,7 @@
       "markdownPath": "data/processed/source_indexes/sources/ag01-net-premium-interpretation.md",
       "reviewIndexPath": "docs/review/ag01_review_index.md",
       "selfReviewPath": "docs/review/ag01_self_review.md",
+      "relationships": [],
       "textLayerQuality": "noisy",
       "pageImageBackstop": true,
       "lineReferencesAvailable": false,
@@ -52,6 +54,7 @@
     {
       "sourceIndexId": "source-index-ag03-maturity-value-interpretation",
       "sourceId": "ag03-maturity-value-interpretation",
+      "sourceVersionId": "source-index-ag03-maturity-value-interpretation",
       "sourceTitle": "Definition of the Term Maturity Value in the Standard Nonforfeiture Law of Individual Deferred Annuities",
       "sourceFamilyId": "actuarial_guidelines",
       "documentType": "actuarial_guideline",
@@ -71,6 +74,7 @@
       "markdownPath": "data/processed/source_indexes/sources/ag03-maturity-value-interpretation.md",
       "reviewIndexPath": "docs/review/ag03_review_index.md",
       "selfReviewPath": "docs/review/ag03_self_review.md",
+      "relationships": [],
       "textLayerQuality": "noisy",
       "pageImageBackstop": true,
       "lineReferencesAvailable": false,
@@ -79,6 +83,7 @@
     {
       "sourceIndexId": "source-index-vm20-framework-overview",
       "sourceId": "vm20-framework-overview",
+      "sourceVersionId": "source-index-vm20-framework-overview",
       "sourceTitle": "Valuation Manual",
       "sourceFamilyId": "valuation_manual_pdfs",
       "documentType": "valuation_manual_section",
@@ -98,6 +103,7 @@
       "markdownPath": "data/processed/source_indexes/sources/vm20-framework-overview.md",
       "reviewIndexPath": "docs/review/vm20_review_index.md",
       "selfReviewPath": "docs/review/vm20_self_review.md",
+      "relationships": [],
       "textLayerQuality": "clean",
       "pageImageBackstop": false,
       "lineReferencesAvailable": false,
@@ -106,6 +112,7 @@
     {
       "sourceIndexId": "source-index-vm20-framework-boundary",
       "sourceId": "vm20-framework-boundary",
+      "sourceVersionId": "source-index-vm20-framework-boundary",
       "sourceTitle": "Valuation Manual",
       "sourceFamilyId": "valuation_manual_pdfs",
       "documentType": "valuation_manual_section",
@@ -125,27 +132,313 @@
       "markdownPath": "data/processed/source_indexes/sources/vm20-framework-boundary.md",
       "reviewIndexPath": "docs/review/vm20_review_index.md",
       "selfReviewPath": "docs/review/vm20_self_review.md",
+      "relationships": [],
       "textLayerQuality": "clean",
       "pageImageBackstop": false,
       "lineReferencesAvailable": false,
       "notes": "Boundary-control slice retained only to keep the mechanics transition review-only."
+    },
+    {
+      "sourceIndexId": "source-index-vm20-assumptions-section-3c",
+      "sourceId": "vm20-assumptions-section-3c",
+      "sourceVersionId": "source-index-vm20-assumptions-section-3c",
+      "sourceTitle": "VM-20 Section 3.C Assumptions",
+      "sourceFamilyId": "valuation_manual_pdfs",
+      "documentType": "valuation_manual_section",
+      "sourceStatus": "active",
+      "sourceReference": "2026 NAIC Valuation Manual",
+      "jurisdiction": "NAIC",
+      "authorityLevel": "manual_section",
+      "pageRange": {
+        "start": 58,
+        "end": 65
+      },
+      "chunkCount": 4,
+      "reviewBatchIds": [
+        "batch-006"
+      ],
+      "sourceIndexPath": "data/processed/source_indexes/sources/vm20-assumptions-section-3c.json",
+      "markdownPath": "data/processed/source_indexes/sources/vm20-assumptions-section-3c.md",
+      "reviewIndexPath": "docs/review/vm20_review_index.md",
+      "selfReviewPath": "docs/review/vm20_self_review.md",
+      "relationships": [
+        {
+          "relationType": "follows",
+          "targetSourceId": "vm20-framework-boundary",
+          "notes": "Assumptions slice follows the reserve-framework boundary slice."
+        }
+      ],
+      "textLayerQuality": "clean",
+      "pageImageBackstop": false,
+      "lineReferencesAvailable": false,
+      "notes": "Assumption-layer slice from the controlled VM-20 wave."
+    },
+    {
+      "sourceIndexId": "source-index-vm21-sr-projection-entry",
+      "sourceId": "vm21-sr-projection-entry",
+      "sourceVersionId": "source-index-vm21-sr-projection-entry",
+      "sourceTitle": "VM-21 Stochastic Reserve Projection Entry",
+      "sourceFamilyId": "valuation_manual_pdfs",
+      "documentType": "valuation_manual_section",
+      "sourceStatus": "active",
+      "sourceReference": "2026 NAIC Valuation Manual",
+      "jurisdiction": "NAIC",
+      "authorityLevel": "manual_section",
+      "pageRange": {
+        "start": 153,
+        "end": 159
+      },
+      "chunkCount": 4,
+      "reviewBatchIds": [
+        "batch-025"
+      ],
+      "sourceIndexPath": "data/processed/source_indexes/sources/vm21-sr-projection-entry.json",
+      "markdownPath": "data/processed/source_indexes/sources/vm21-sr-projection-entry.md",
+      "reviewIndexPath": "docs/review/vm21_review_index.md",
+      "selfReviewPath": "docs/review/vm21_self_review.md",
+      "relationships": [
+        {
+          "relationType": "related_methodology",
+          "targetSourceId": "vm20-assumptions-section-3c",
+          "notes": "VM-21 projection entry follows the VM-20 assumption layer."
+        }
+      ],
+      "textLayerQuality": "clean",
+      "pageImageBackstop": false,
+      "lineReferencesAvailable": false,
+      "notes": "Projection-entry slice from the controlled VM-21 wave."
+    },
+    {
+      "sourceIndexId": "source-index-ag36-eiul-crvm-guidance",
+      "sourceId": "ag36-eiul-crvm-guidance",
+      "sourceVersionId": "source-index-ag36-eiul-crvm-guidance",
+      "sourceTitle": "The Application of the Commissioners Reserve Valuation Method to Equity Indexed Life Insurance Policies",
+      "sourceFamilyId": "actuarial_guidelines",
+      "documentType": "actuarial_guideline",
+      "sourceStatus": "active",
+      "sourceReference": "Actuarial Guideline XXXVI",
+      "jurisdiction": "NAIC",
+      "authorityLevel": "guideline",
+      "pageRange": {
+        "start": 1,
+        "end": 11
+      },
+      "chunkCount": 4,
+      "reviewBatchIds": [
+        "batch-123",
+        "batch-124",
+        "batch-125",
+        "batch-126"
+      ],
+      "sourceIndexPath": "data/processed/source_indexes/sources/ag36-eiul-crvm-guidance.json",
+      "markdownPath": "data/processed/source_indexes/sources/ag36-eiul-crvm-guidance.md",
+      "reviewIndexPath": "docs/review/ag36_review_index.md",
+      "selfReviewPath": "docs/review/ag36_self_review.md",
+      "relationships": [
+        {
+          "relationType": "duplicate_or_reprint",
+          "targetSourceId": "ag36-eiul-crvm-law-manual-reprint",
+          "notes": "Active AG 36 source counterpart to the Law Manual reprint."
+        }
+      ],
+      "textLayerQuality": "noisy",
+      "pageImageBackstop": true,
+      "lineReferencesAvailable": false,
+      "notes": "Active AG 36 source package retained as a review-only guideline slice."
+    },
+    {
+      "sourceIndexId": "source-index-ag36-eiul-crvm-law-manual-reprint",
+      "sourceId": "ag36-eiul-crvm-law-manual-reprint",
+      "sourceVersionId": "source-index-ag36-eiul-crvm-law-manual-reprint",
+      "sourceTitle": "The Application of the Commissioners Reserve Valuation Method to Equity Indexed Life Insurance Policies",
+      "sourceFamilyId": "actuarial_guidelines",
+      "documentType": "actuarial_guideline",
+      "sourceStatus": "companion-only",
+      "sourceReference": "Actuarial Guideline XXXVI / 2021 Law Manual reprint",
+      "jurisdiction": "NAIC",
+      "authorityLevel": "companion_reprint",
+      "pageRange": {
+        "start": 1,
+        "end": 18
+      },
+      "chunkCount": 1,
+      "reviewBatchIds": [
+        "batch-279"
+      ],
+      "sourceIndexPath": "data/processed/source_indexes/sources/ag36-eiul-crvm-law-manual-reprint.json",
+      "markdownPath": "data/processed/source_indexes/sources/ag36-eiul-crvm-law-manual-reprint.md",
+      "reviewIndexPath": "docs/review/ag36_law_manual_reprint_review_index.md",
+      "selfReviewPath": "docs/review/ag36_law_manual_reprint_self_review.md",
+      "relationships": [
+        {
+          "relationType": "duplicate_or_reprint",
+          "targetSourceId": "ag36-eiul-crvm-guidance",
+          "notes": "Companion reprint counterpart to the active AG 36 source."
+        }
+      ],
+      "textLayerQuality": "noisy",
+      "pageImageBackstop": true,
+      "lineReferencesAvailable": false,
+      "notes": "Companion-only AG 36 Law Manual reprint retained as separate evidence."
+    },
+    {
+      "sourceIndexId": "source-index-model-governance-practice-note",
+      "sourceId": "model-governance-practice-note",
+      "sourceVersionId": "source-index-model-governance-practice-note",
+      "sourceTitle": "Model Governance: Some Considerations for Practicing Life Actuaries",
+      "sourceFamilyId": "practice_notes",
+      "documentType": "practice_note",
+      "sourceStatus": "non-binding practice note",
+      "sourceReference": "American Academy of Actuaries practice note, April 2017",
+      "jurisdiction": "AAA",
+      "authorityLevel": "practice_note",
+      "pageRange": {
+        "start": 1,
+        "end": 18
+      },
+      "chunkCount": 3,
+      "reviewBatchIds": [
+        "batch-183",
+        "batch-184",
+        "batch-185"
+      ],
+      "sourceIndexPath": "data/processed/source_indexes/sources/model-governance-practice-note.json",
+      "markdownPath": "data/processed/source_indexes/sources/model-governance-practice-note.md",
+      "reviewIndexPath": "docs/review/model_governance_practice_note_review_index.md",
+      "selfReviewPath": "docs/review/model_governance_practice_note_self_review.md",
+      "relationships": [],
+      "textLayerQuality": "clean",
+      "pageImageBackstop": false,
+      "lineReferencesAvailable": false,
+      "notes": "Model governance companion guidance retained as a non-binding practice note."
+    },
+    {
+      "sourceIndexId": "source-index-actuarial-memorandum-practice-note",
+      "sourceId": "actuarial-memorandum-practice-note",
+      "sourceVersionId": "source-index-actuarial-memorandum-practice-note",
+      "sourceTitle": "Actuarial Memorandum Practice Note",
+      "sourceFamilyId": "practice_notes",
+      "documentType": "practice_note",
+      "sourceStatus": "non-binding practice note",
+      "sourceReference": "American Academy of Actuaries exposure draft, January 2020",
+      "jurisdiction": "AAA",
+      "authorityLevel": "practice_note",
+      "pageRange": {
+        "start": 1,
+        "end": 37
+      },
+      "chunkCount": 4,
+      "reviewBatchIds": [
+        "batch-202",
+        "batch-203",
+        "batch-204",
+        "batch-205"
+      ],
+      "sourceIndexPath": "data/processed/source_indexes/sources/actuarial-memorandum-practice-note.json",
+      "markdownPath": "data/processed/source_indexes/sources/actuarial-memorandum-practice-note.md",
+      "reviewIndexPath": "docs/review/actuarial_memorandum_practice_note_review_index.md",
+      "selfReviewPath": "docs/review/actuarial_memorandum_practice_note_self_review.md",
+      "relationships": [],
+      "textLayerQuality": "clean",
+      "pageImageBackstop": false,
+      "lineReferencesAvailable": false,
+      "notes": "Actuarial memorandum companion guidance retained as a non-binding practice note."
+    },
+    {
+      "sourceIndexId": "source-index-reg210-non-guaranteed-elements",
+      "sourceId": "reg210-non-guaranteed-elements",
+      "sourceVersionId": "source-index-reg210-non-guaranteed-elements",
+      "sourceTitle": "Life Insurance and Annuity Non-Guaranteed Elements",
+      "sourceFamilyId": "ny_regulations",
+      "documentType": "regulation",
+      "sourceStatus": "active",
+      "sourceReference": "11 NYCRR Part 48 (Insurance Regulation 210)",
+      "jurisdiction": "NY",
+      "authorityLevel": "regulation",
+      "pageRange": {
+        "start": 1,
+        "end": 9
+      },
+      "chunkCount": 3,
+      "reviewBatchIds": [
+        "batch-186",
+        "batch-187",
+        "batch-188"
+      ],
+      "sourceIndexPath": "data/processed/source_indexes/sources/reg210-non-guaranteed-elements.json",
+      "markdownPath": "data/processed/source_indexes/sources/reg210-non-guaranteed-elements.md",
+      "reviewIndexPath": "docs/review/reg210_review_index.md",
+      "selfReviewPath": "docs/review/reg210_self_review.md",
+      "relationships": [],
+      "textLayerQuality": "clean",
+      "pageImageBackstop": false,
+      "lineReferencesAvailable": false,
+      "notes": "Active NY regulation for non-guaranteed elements."
+    },
+    {
+      "sourceIndexId": "source-index-cia-2022-capital-fct-educational-note",
+      "sourceId": "cia-2022-capital-fct-educational-note",
+      "sourceVersionId": "source-index-cia-2022-capital-fct-educational-note",
+      "sourceTitle": "CIA 2022 Capital and FCT Educational Note",
+      "sourceFamilyId": "educational_notes",
+      "documentType": "educational_note",
+      "sourceStatus": "educational note",
+      "sourceReference": "Canadian Institute of Actuaries educational note, February 2022",
+      "jurisdiction": "Canada",
+      "authorityLevel": "educational_note",
+      "pageRange": {
+        "start": 1,
+        "end": 20
+      },
+      "chunkCount": 4,
+      "reviewBatchIds": [
+        "batch-206",
+        "batch-207",
+        "batch-208",
+        "batch-209"
+      ],
+      "sourceIndexPath": "data/processed/source_indexes/sources/cia-2022-capital-fct-educational-note.json",
+      "markdownPath": "data/processed/source_indexes/sources/cia-2022-capital-fct-educational-note.md",
+      "reviewIndexPath": "docs/review/cia_2022_capital_fct_educational_note_review_index.md",
+      "selfReviewPath": "docs/review/cia_2022_capital_fct_educational_note_self_review.md",
+      "relationships": [],
+      "textLayerQuality": "clean",
+      "pageImageBackstop": false,
+      "lineReferencesAvailable": false,
+      "notes": "Canadian Institute of Actuaries educational note retained as review-only companion guidance."
     }
   ],
-  "chunkCount": 4,
+  "chunkCount": 31,
   "exports": {
     "repositoryManifestPath": "data/processed/source_indexes/repository-manifest.json",
-    "jsonlPath": "data/processed/source_indexes/exports/source-indexes.jsonl",
-    "csvPath": "data/processed/source_indexes/exports/source-indexes.csv",
+    "exportManifestPath": "data/processed/source_indexes/exports/export_manifest.json",
+    "jsonlPath": "data/processed/source_indexes/exports/source_chunks.jsonl",
+    "csvPath": "data/processed/source_indexes/exports/source_chunks.csv",
+    "retrievalQuestionsPath": "data/processed/source_indexes/evaluation/retrieval_questions.json",
+    "retrievalResultsPath": "data/processed/source_indexes/evaluation/retrieval_results.json",
     "retrievalEvaluationPath": "data/processed/source_indexes/retrieval/retrieval-evaluation.json",
     "notes": "Canonical source-index POC exports."
   },
   "retrievalEvaluation": {
     "evaluationId": "source-index-poc-2026-07-21-retrieval",
     "method": "keyword_overlap_baseline",
-    "queryCount": 3,
-    "top1HitCount": 3,
-    "top3Coverage": 1,
-    "notes": "Keyword baseline retrieved 3 top-1 hits and 3 top-3 hits across 3 queries."
+    "queryCount": 16,
+    "supportedQueryCount": 14,
+    "unsupportedQueryCount": 2,
+    "top1HitCount": 12,
+    "top3HitCount": 14,
+    "top5HitCount": 14,
+    "top1Accuracy": 0.8571428571428571,
+    "top3Accuracy": 1,
+    "top5Accuracy": 1,
+    "meanReciprocalRank": 0.9285714285714286,
+    "sourceFamilyAccuracy": 1,
+    "authorityLevelAccuracy": 0.9285714285714286,
+    "citationAvailability": 0,
+    "multiChunkEvidenceRecall": 1,
+    "unsupportedQueryPrecision": 1,
+    "top3Coverage": 0.875,
+    "notes": "Keyword baseline retrieved 12 top-1 hits and 14 top-3 hits across 16 queries."
   },
   "notes": "Canonical source-index proof of concept.",
   "extensions": {

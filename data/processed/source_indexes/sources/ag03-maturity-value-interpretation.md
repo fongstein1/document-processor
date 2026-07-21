@@ -1,6 +1,7 @@
 # Definition of the Term Maturity Value in the Standard Nonforfeiture Law of Individual Deferred Annuities
 
 - Source ID: `ag03-maturity-value-interpretation`
+- Source version ID: `source-index-ag03-maturity-value-interpretation`
 - Source reference: Actuarial Guideline III
 - Source family: actuarial_guidelines
 - Domain: naic_regulatory
@@ -25,9 +26,9 @@
 
 ## Chunks
 
-| Chunk | Pages | Kind | Fidelity | Summary |
-| --- | --- | --- | --- | --- |
-| `chunk-ag03-maturity-value-interpretation-001` | pp. 1-1 | guideline_interpretation | curated | AG 03 explains the maturity-value treatment and keeps the underlying nonforfeiture-law cross-reference review-only. |
+| Chunk | Pages | Topic | Kind | Fidelity | Summary |
+| --- | --- | --- | --- | --- | --- |
+| `chunk-ag03-maturity-value-interpretation-001` | pp. 1-1 | AG 03 explains the maturity-value treatment and keeps the underlying nonforfeiture-law cross-reference review-only. | guideline_interpretation | curated | AG 03 explains the maturity-value treatment and keeps the underlying nonforfeiture-law cross-reference review-only. |
 
 ## Quality Notes
 

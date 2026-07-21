@@ -1,0 +1,370 @@
+{
+  "schemaVersion": "1.0",
+  "sourceIndexId": "source-index-vm21-sr-projection-entry",
+  "repositoryManifestId": "source-index-poc-2026-07-21",
+  "sourceVersionId": "source-index-vm21-sr-projection-entry",
+  "source": {
+    "sourceId": "vm21-sr-projection-entry",
+    "sourceVersionId": "source-index-vm21-sr-projection-entry",
+    "filename": "pbr_data_valuation_manual_2026.pdf",
+    "filePath": "D:\\Work\\AI Projects\\NAIC Valuation Manual Course\\pbr_data_valuation_manual_2026.pdf",
+    "sourceFamilyId": "valuation_manual_pdfs",
+    "domainId": "naic_regulatory",
+    "documentType": "valuation_manual_section",
+    "sourceTitle": "VM-21 Stochastic Reserve Projection Entry",
+    "sourceReference": "2026 NAIC Valuation Manual",
+    "jurisdiction": "NAIC",
+    "authorityLevel": "manual_section",
+    "sourceStatus": "active",
+    "versionDate": null,
+    "pageCount": 457,
+    "pageRange": {
+      "start": 153,
+      "end": 159
+    },
+    "reviewBatchIds": [
+      "batch-025"
+    ],
+    "reviewIndexPath": "docs/review/vm21_review_index.md",
+    "selfReviewPath": "docs/review/vm21_self_review.md",
+    "pageImageBackstop": false,
+    "lineReferencesAvailable": false,
+    "textLayerQuality": "clean",
+    "notes": "Projection-entry slice from the controlled VM-21 wave."
+  },
+  "processing": {
+    "createdAt": "2026-07-21T05:26:54.265Z",
+    "createdBy": "scripts/build-source-index-poc.mjs",
+    "processingMode": "canonical_index_poc",
+    "canonicality": "poc",
+    "reviewOnly": true,
+    "learnerFacingAllowed": false,
+    "appReadyAllowed": false,
+    "ragReadyAllowed": false,
+    "promotionStatus": "not_promoted",
+    "notes": "Projection-entry slice from the controlled VM-21 wave."
+  },
+  "chunks": [
+    {
+      "chunkId": "chunk-vm21-sr-projection-entry-001",
+      "chunkOrdinal": 1,
+      "chunkKind": "source_excerpt",
+      "sourceTextType": "actual_extracted_source_text",
+      "pageStart": 153,
+      "pageEnd": 154,
+      "sectionReference": "VM-21: Stochastic reserve projection setup",
+      "lineReference": null,
+      "sourceTextExcerpt": "VM-21 stochastic reserve projection setup",
+      "normalizedTextExcerpt": "vm-21 stochastic reserve projection setup",
+      "summary": "VM-21 opens the stochastic reserve projection with setup and context.",
+      "topic": "Stochastic reserve projection setup",
+      "headingPath": "VM-21: Stochastic reserve projection setup",
+      "keyPoints": [
+        "VM-21 opens the stochastic reserve projection with setup and context."
+      ],
+      "concepts": [
+        "core_vm_course",
+        "reserve_method_structure",
+        "scenario_or_stochastic_requirement",
+        "cross_reference_mapping"
+      ],
+      "definedTerms": [
+        "VM-21",
+        "stochastic reserve",
+        "projection",
+        "setup"
+      ],
+      "acronyms": [],
+      "requirements": [],
+      "citationDisplay": "VM-21 stochastic reserve projection setup",
+      "normalizedSearchText": "vm-21 stochastic reserve projection setup vm-21 stochastic reserve projection setup vm-21 opens the stochastic reserve projection with setup and context. stochastic reserve projection setup vm-21: stochastic reserve projection setup vm-21: stochastic reserve projection setup vm-21 stochastic reserve projection entry 2026 naic valuation manual vm-21 opens the stochastic reserve projection with setup and context. core_vm_course reserve_method_structure scenario_or_stochastic_requirement cross_reference_mapping vm-21 stochastic reserve projection setup vm-21 stochastic reserve projection setup core_vm_course reserve_method_structure scenario_or_stochastic_requirement cross_reference_mapping vm-21 stochastic reserve projection setup",
+      "canonicalSourceIndexPath": "data/processed/source_indexes/sources/vm21-sr-projection-entry.json",
+      "sourceVersionId": "source-index-vm21-sr-projection-entry",
+      "controlledTags": [
+        "core_vm_course",
+        "reserve_method_structure",
+        "scenario_or_stochastic_requirement",
+        "cross_reference_mapping"
+      ],
+      "keywords": [
+        "VM-21",
+        "stochastic reserve",
+        "projection",
+        "setup"
+      ],
+      "citations": [
+        {
+          "citationText": "VM-21 stochastic reserve projection setup",
+          "pageReference": "pp. 153-154",
+          "sectionReference": "VM-21: Stochastic reserve projection setup",
+          "sourceReference": "2026 NAIC Valuation Manual",
+          "lineReference": null
+        }
+      ],
+      "relationships": [],
+      "relationshipIds": [
+        "vm20-assumptions-section-3c"
+      ],
+      "fidelity": "exact",
+      "confidence": "high",
+      "reviewFlags": [
+        "review_only"
+      ],
+      "qualityNotes": [
+        "Actual source text from the controlled VM-21 slice.",
+        "No line references were preserved in the pilot slice."
+      ],
+      "evidenceNotes": "Derived from the ignored batch-025 review packet and review index.",
+      "retrievalEligible": true,
+      "promotionEligible": false
+    },
+    {
+      "chunkId": "chunk-vm21-sr-projection-entry-002",
+      "chunkOrdinal": 2,
+      "chunkKind": "source_excerpt",
+      "sourceTextType": "actual_extracted_source_text",
+      "pageStart": 155,
+      "pageEnd": 156,
+      "sectionReference": "VM-21: Cash-flow mechanics",
+      "lineReference": null,
+      "sourceTextExcerpt": "VM-21 cash-flow mechanics",
+      "normalizedTextExcerpt": "vm-21 cash-flow mechanics",
+      "summary": "VM-21 continues with the cash-flow mechanics that feed the stochastic reserve projection.",
+      "topic": "Cash-flow mechanics",
+      "headingPath": "VM-21: Cash-flow mechanics",
+      "keyPoints": [
+        "VM-21 continues with the cash-flow mechanics that feed the stochastic reserve projection."
+      ],
+      "concepts": [
+        "core_vm_course",
+        "reserve_method_structure",
+        "calculation_structure",
+        "formula_context",
+        "requires_human_interpretation"
+      ],
+      "definedTerms": [
+        "VM-21",
+        "cash flow",
+        "mechanics",
+        "projection"
+      ],
+      "acronyms": [],
+      "requirements": [],
+      "citationDisplay": "VM-21 cash-flow mechanics",
+      "normalizedSearchText": "vm-21 cash-flow mechanics vm-21 cash-flow mechanics vm-21 continues with the cash-flow mechanics that feed the stochastic reserve projection. cash-flow mechanics vm-21: cash-flow mechanics vm-21: cash-flow mechanics vm-21 stochastic reserve projection entry 2026 naic valuation manual vm-21 continues with the cash-flow mechanics that feed the stochastic reserve projection. core_vm_course reserve_method_structure calculation_structure formula_context requires_human_interpretation vm-21 cash flow mechanics projection vm-21 cash-flow mechanics core_vm_course reserve_method_structure calculation_structure formula_context requires_human_interpretation vm-21 cash flow mechanics projection",
+      "canonicalSourceIndexPath": "data/processed/source_indexes/sources/vm21-sr-projection-entry.json",
+      "sourceVersionId": "source-index-vm21-sr-projection-entry",
+      "controlledTags": [
+        "core_vm_course",
+        "reserve_method_structure",
+        "calculation_structure",
+        "formula_context",
+        "requires_human_interpretation"
+      ],
+      "keywords": [
+        "VM-21",
+        "cash flow",
+        "mechanics",
+        "projection"
+      ],
+      "citations": [
+        {
+          "citationText": "VM-21 cash-flow mechanics",
+          "pageReference": "pp. 155-156",
+          "sectionReference": "VM-21: Cash-flow mechanics",
+          "sourceReference": "2026 NAIC Valuation Manual",
+          "lineReference": null
+        }
+      ],
+      "relationships": [],
+      "relationshipIds": [
+        "vm20-assumptions-section-3c"
+      ],
+      "fidelity": "exact",
+      "confidence": "high",
+      "reviewFlags": [
+        "review_only"
+      ],
+      "qualityNotes": [
+        "Actual source text from the controlled VM-21 slice.",
+        "No line references were preserved in the pilot slice."
+      ],
+      "evidenceNotes": "Derived from the ignored batch-025 review packet and review index.",
+      "retrievalEligible": true,
+      "promotionEligible": false
+    },
+    {
+      "chunkId": "chunk-vm21-sr-projection-entry-003",
+      "chunkOrdinal": 3,
+      "chunkKind": "source_excerpt",
+      "sourceTextType": "actual_extracted_source_text",
+      "pageStart": 157,
+      "pageEnd": 158,
+      "sectionReference": "VM-21: NAER and direct iteration",
+      "lineReference": null,
+      "sourceTextExcerpt": "VM-21 NAER and direct iteration",
+      "normalizedTextExcerpt": "vm-21 naer and direct iteration",
+      "summary": "VM-21 introduces NAER and direct iteration in the stochastic reserve path.",
+      "topic": "NAER and direct iteration",
+      "headingPath": "VM-21: NAER and direct iteration",
+      "keyPoints": [
+        "VM-21 introduces NAER and direct iteration in the stochastic reserve path."
+      ],
+      "concepts": [
+        "core_vm_course",
+        "reserve_method_structure",
+        "scenario_or_stochastic_requirement",
+        "formula_context",
+        "requires_human_interpretation"
+      ],
+      "definedTerms": [
+        "VM-21",
+        "NAER",
+        "direct iteration",
+        "stochastic"
+      ],
+      "acronyms": [],
+      "requirements": [],
+      "citationDisplay": "VM-21 NAER and direct iteration",
+      "normalizedSearchText": "vm-21 naer and direct iteration vm-21 naer and direct iteration vm-21 introduces naer and direct iteration in the stochastic reserve path. naer and direct iteration vm-21: naer and direct iteration vm-21: naer and direct iteration vm-21 stochastic reserve projection entry 2026 naic valuation manual vm-21 introduces naer and direct iteration in the stochastic reserve path. core_vm_course reserve_method_structure scenario_or_stochastic_requirement formula_context requires_human_interpretation vm-21 naer direct iteration stochastic vm-21 naer and direct iteration core_vm_course reserve_method_structure scenario_or_stochastic_requirement formula_context requires_human_interpretation vm-21 naer direct iteration stochastic",
+      "canonicalSourceIndexPath": "data/processed/source_indexes/sources/vm21-sr-projection-entry.json",
+      "sourceVersionId": "source-index-vm21-sr-projection-entry",
+      "controlledTags": [
+        "core_vm_course",
+        "reserve_method_structure",
+        "scenario_or_stochastic_requirement",
+        "formula_context",
+        "requires_human_interpretation"
+      ],
+      "keywords": [
+        "VM-21",
+        "NAER",
+        "direct iteration",
+        "stochastic"
+      ],
+      "citations": [
+        {
+          "citationText": "VM-21 NAER and direct iteration",
+          "pageReference": "pp. 157-158",
+          "sectionReference": "VM-21: NAER and direct iteration",
+          "sourceReference": "2026 NAIC Valuation Manual",
+          "lineReference": null
+        }
+      ],
+      "relationships": [],
+      "relationshipIds": [
+        "vm20-assumptions-section-3c"
+      ],
+      "fidelity": "exact",
+      "confidence": "high",
+      "reviewFlags": [
+        "review_only"
+      ],
+      "qualityNotes": [
+        "Actual source text from the controlled VM-21 slice.",
+        "No line references were preserved in the pilot slice."
+      ],
+      "evidenceNotes": "Derived from the ignored batch-025 review packet and review index.",
+      "retrievalEligible": true,
+      "promotionEligible": false
+    },
+    {
+      "chunkId": "chunk-vm21-sr-projection-entry-004",
+      "chunkOrdinal": 4,
+      "chunkKind": "source_excerpt",
+      "sourceTextType": "actual_extracted_source_text",
+      "pageStart": 159,
+      "pageEnd": 159,
+      "sectionReference": "VM-21: Closeout boundary",
+      "lineReference": null,
+      "sourceTextExcerpt": "VM-21 closeout boundary",
+      "normalizedTextExcerpt": "vm-21 closeout boundary",
+      "summary": "VM-21 closes the projection-entry slice with a boundary checkpoint.",
+      "topic": "Closeout boundary",
+      "headingPath": "VM-21: Closeout boundary",
+      "keyPoints": [
+        "VM-21 closes the projection-entry slice with a boundary checkpoint."
+      ],
+      "concepts": [
+        "core_vm_course",
+        "cross_reference_mapping",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "definedTerms": [
+        "VM-21",
+        "closeout",
+        "boundary"
+      ],
+      "acronyms": [],
+      "requirements": [],
+      "citationDisplay": "VM-21 closeout boundary",
+      "normalizedSearchText": "vm-21 closeout boundary vm-21 closeout boundary vm-21 closes the projection-entry slice with a boundary checkpoint. closeout boundary vm-21: closeout boundary vm-21: closeout boundary vm-21 stochastic reserve projection entry 2026 naic valuation manual vm-21 closes the projection-entry slice with a boundary checkpoint. core_vm_course cross_reference_mapping boundary_control_window requires_human_interpretation vm-21 closeout boundary vm-21 closeout boundary core_vm_course cross_reference_mapping boundary_control_window requires_human_interpretation vm-21 closeout boundary",
+      "canonicalSourceIndexPath": "data/processed/source_indexes/sources/vm21-sr-projection-entry.json",
+      "sourceVersionId": "source-index-vm21-sr-projection-entry",
+      "controlledTags": [
+        "core_vm_course",
+        "cross_reference_mapping",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "keywords": [
+        "VM-21",
+        "closeout",
+        "boundary"
+      ],
+      "citations": [
+        {
+          "citationText": "VM-21 closeout boundary",
+          "pageReference": "pp. 159-159",
+          "sectionReference": "VM-21: Closeout boundary",
+          "sourceReference": "2026 NAIC Valuation Manual",
+          "lineReference": null
+        }
+      ],
+      "relationships": [],
+      "relationshipIds": [
+        "vm20-assumptions-section-3c"
+      ],
+      "fidelity": "exact",
+      "confidence": "high",
+      "reviewFlags": [
+        "review_only"
+      ],
+      "qualityNotes": [
+        "Actual source text from the controlled VM-21 slice.",
+        "No line references were preserved in the pilot slice."
+      ],
+      "evidenceNotes": "Derived from the ignored batch-025 review packet and review index.",
+      "retrievalEligible": true,
+      "promotionEligible": false
+    }
+  ],
+  "relationships": [
+    {
+      "relationType": "related_methodology",
+      "targetSourceId": "vm20-assumptions-section-3c",
+      "notes": "VM-21 projection entry follows the VM-20 assumption layer."
+    }
+  ],
+  "quality": {
+    "textLayerQuality": "clean",
+    "citationCompleteness": "partial",
+    "pageImageBackstop": false,
+    "lineReferencesAvailable": false,
+    "notes": "Projection-entry slice from the controlled VM-21 wave."
+  },
+  "exportHints": {
+    "jsonlEligible": true,
+    "csvEligible": true,
+    "vectorEligible": true,
+    "notes": "Backend-neutral POC exports generated from review-only batch artifacts."
+  },
+  "notes": "Projection-entry slice from the controlled VM-21 wave.",
+  "extensions": {
+    "batchIds": [
+      "batch-025"
+    ],
+    "sourceIndexGeneratedBy": "build-source-index-poc"
+  }
+}

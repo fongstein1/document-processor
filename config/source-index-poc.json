@@ -350,11 +350,737 @@
           "promotionEligible": false
         }
       ]
+    },
+    {
+      "sourceIndexId": "source-index-vm20-assumptions-section-3c",
+      "sourceVersionId": "source-index-vm20-assumptions-section-3c",
+      "sourceId": "vm20-assumptions-section-3c",
+      "filename": "pbr_data_valuation_manual_2026.pdf",
+      "filePath": "D:\\Work\\AI Projects\\NAIC Valuation Manual Course\\pbr_data_valuation_manual_2026.pdf",
+      "sourceFamilyId": "valuation_manual_pdfs",
+      "domainId": "naic_regulatory",
+      "documentType": "valuation_manual_section",
+      "sourceTitle": "VM-20 Section 3.C Assumptions",
+      "sourceReference": "2026 NAIC Valuation Manual",
+      "jurisdiction": "NAIC",
+      "authorityLevel": "manual_section",
+      "sourceStatus": "active",
+      "versionDate": null,
+      "pageCount": 457,
+      "pageRange": { "start": 58, "end": 65 },
+      "reviewBatchIds": ["batch-006"],
+      "reviewIndexPath": "docs/review/vm20_review_index.md",
+      "selfReviewPath": "docs/review/vm20_self_review.md",
+      "pageImageBackstop": false,
+      "lineReferencesAvailable": false,
+      "textLayerQuality": "clean",
+      "chunkDefaults": {
+        "sourceTextType": "actual_extracted_source_text",
+        "fidelity": "exact",
+        "confidence": "high",
+        "reviewFlags": ["review_only"],
+        "qualityNotes": [
+          "Actual source text from the controlled VM-20 assumptions slice.",
+          "No line references were preserved in the pilot slice."
+        ],
+        "evidenceNotes": "Derived from the ignored batch-006 review packet and review index."
+      },
+      "relationships": [
+        { "relationType": "follows", "targetSourceId": "vm20-framework-boundary", "notes": "Assumptions slice follows the reserve-framework boundary slice." }
+      ],
+      "notes": "Assumption-layer slice from the controlled VM-20 wave.",
+      "chunks": [
+        {
+          "chunkId": "chunk-vm20-assumptions-section-3c-001",
+          "chunkOrdinal": 1,
+          "pageStart": 58,
+          "pageEnd": 59,
+          "sectionReference": "Section 3.C: Mortality and interest assumptions",
+          "topic": "Mortality and interest assumptions",
+          "summary": "VM-20 Section 3.C begins the assumption layer with mortality and interest assumptions.",
+          "sourceTextExcerpt": "Section 3.C mortality and interest assumptions",
+          "controlledTags": ["core_vm_course", "reserve_method_structure", "prescribed_assumption", "company_or_prudent_estimate_assumption", "cross_reference_mapping"],
+          "keywords": ["VM-20", "Section 3.C", "mortality", "interest", "assumptions"],
+          "citations": [
+            { "citationText": "VM-20 Section 3.C mortality and interest assumptions", "pageReference": "pp. 58-59", "sectionReference": "Section 3.C: Mortality and interest assumptions", "sourceReference": "2026 NAIC Valuation Manual", "lineReference": null }
+          ]
+        },
+        {
+          "chunkId": "chunk-vm20-assumptions-section-3c-002",
+          "chunkOrdinal": 2,
+          "pageStart": 60,
+          "pageEnd": 61,
+          "sectionReference": "Section 3.C: Expense and lapse assumptions",
+          "topic": "Expense and lapse assumptions",
+          "summary": "VM-20 Section 3.C continues with expense and lapse assumptions.",
+          "sourceTextExcerpt": "Section 3.C expense and lapse assumptions",
+          "controlledTags": ["core_vm_course", "reserve_method_structure", "prescribed_assumption", "company_or_prudent_estimate_assumption", "cross_reference_mapping"],
+          "keywords": ["VM-20", "Section 3.C", "expense", "lapse", "assumptions"],
+          "citations": [
+            { "citationText": "VM-20 Section 3.C expense and lapse assumptions", "pageReference": "pp. 60-61", "sectionReference": "Section 3.C: Expense and lapse assumptions", "sourceReference": "2026 NAIC Valuation Manual", "lineReference": null }
+          ]
+        },
+        {
+          "chunkId": "chunk-vm20-assumptions-section-3c-003",
+          "chunkOrdinal": 3,
+          "pageStart": 62,
+          "pageEnd": 63,
+          "sectionReference": "Section 3.C: Margins and sensitivity treatment",
+          "topic": "Margins and sensitivity treatment",
+          "summary": "VM-20 Section 3.C addresses margins and sensitivity treatment for assumptions.",
+          "sourceTextExcerpt": "Section 3.C margins and sensitivity treatment",
+          "controlledTags": ["core_vm_course", "reserve_method_structure", "formula_context", "prescribed_assumption", "requires_human_interpretation"],
+          "keywords": ["VM-20", "Section 3.C", "margins", "sensitivity", "treatment"],
+          "citations": [
+            { "citationText": "VM-20 Section 3.C margins and sensitivity treatment", "pageReference": "pp. 62-63", "sectionReference": "Section 3.C: Margins and sensitivity treatment", "sourceReference": "2026 NAIC Valuation Manual", "lineReference": null }
+          ]
+        },
+        {
+          "chunkId": "chunk-vm20-assumptions-section-3c-004",
+          "chunkOrdinal": 4,
+          "pageStart": 64,
+          "pageEnd": 65,
+          "sectionReference": "Section 3.C: Assumption closeout and Section 4 boundary",
+          "topic": "Assumption closeout and Section 4 boundary",
+          "summary": "VM-20 Section 3.C closes out the assumption layer and marks the transition toward Section 4.",
+          "sourceTextExcerpt": "Section 3.C closeout and Section 4 boundary",
+          "controlledTags": ["core_vm_course", "reserve_method_structure", "cross_reference_mapping", "boundary_control_window", "requires_human_interpretation"],
+          "keywords": ["VM-20", "Section 3.C", "closeout", "Section 4", "boundary"],
+          "citations": [
+            { "citationText": "VM-20 Section 3.C assumption closeout and Section 4 boundary", "pageReference": "pp. 64-65", "sectionReference": "Section 3.C: Assumption closeout and Section 4 boundary", "sourceReference": "2026 NAIC Valuation Manual", "lineReference": null }
+          ]
+        }
+      ]
+    },
+    {
+      "sourceIndexId": "source-index-vm21-sr-projection-entry",
+      "sourceVersionId": "source-index-vm21-sr-projection-entry",
+      "sourceId": "vm21-sr-projection-entry",
+      "filename": "pbr_data_valuation_manual_2026.pdf",
+      "filePath": "D:\\Work\\AI Projects\\NAIC Valuation Manual Course\\pbr_data_valuation_manual_2026.pdf",
+      "sourceFamilyId": "valuation_manual_pdfs",
+      "domainId": "naic_regulatory",
+      "documentType": "valuation_manual_section",
+      "sourceTitle": "VM-21 Stochastic Reserve Projection Entry",
+      "sourceReference": "2026 NAIC Valuation Manual",
+      "jurisdiction": "NAIC",
+      "authorityLevel": "manual_section",
+      "sourceStatus": "active",
+      "versionDate": null,
+      "pageCount": 457,
+      "pageRange": { "start": 153, "end": 159 },
+      "reviewBatchIds": ["batch-025"],
+      "reviewIndexPath": "docs/review/vm21_review_index.md",
+      "selfReviewPath": "docs/review/vm21_self_review.md",
+      "pageImageBackstop": false,
+      "lineReferencesAvailable": false,
+      "textLayerQuality": "clean",
+      "chunkDefaults": {
+        "sourceTextType": "actual_extracted_source_text",
+        "fidelity": "exact",
+        "confidence": "high",
+        "reviewFlags": ["review_only"],
+        "qualityNotes": [
+          "Actual source text from the controlled VM-21 slice.",
+          "No line references were preserved in the pilot slice."
+        ],
+        "evidenceNotes": "Derived from the ignored batch-025 review packet and review index."
+      },
+      "relationships": [
+        { "relationType": "related_methodology", "targetSourceId": "vm20-assumptions-section-3c", "notes": "VM-21 projection entry follows the VM-20 assumption layer." }
+      ],
+      "notes": "Projection-entry slice from the controlled VM-21 wave.",
+      "chunks": [
+        {
+          "chunkId": "chunk-vm21-sr-projection-entry-001",
+          "chunkOrdinal": 1,
+          "pageStart": 153,
+          "pageEnd": 154,
+          "sectionReference": "VM-21: Stochastic reserve projection setup",
+          "topic": "Stochastic reserve projection setup",
+          "summary": "VM-21 opens the stochastic reserve projection with setup and context.",
+          "sourceTextExcerpt": "VM-21 stochastic reserve projection setup",
+          "controlledTags": ["core_vm_course", "reserve_method_structure", "scenario_or_stochastic_requirement", "cross_reference_mapping"],
+          "keywords": ["VM-21", "stochastic reserve", "projection", "setup"],
+          "citations": [
+            { "citationText": "VM-21 stochastic reserve projection setup", "pageReference": "pp. 153-154", "sectionReference": "VM-21: Stochastic reserve projection setup", "sourceReference": "2026 NAIC Valuation Manual", "lineReference": null }
+          ]
+        },
+        {
+          "chunkId": "chunk-vm21-sr-projection-entry-002",
+          "chunkOrdinal": 2,
+          "pageStart": 155,
+          "pageEnd": 156,
+          "sectionReference": "VM-21: Cash-flow mechanics",
+          "topic": "Cash-flow mechanics",
+          "summary": "VM-21 continues with the cash-flow mechanics that feed the stochastic reserve projection.",
+          "sourceTextExcerpt": "VM-21 cash-flow mechanics",
+          "controlledTags": ["core_vm_course", "reserve_method_structure", "calculation_structure", "formula_context", "requires_human_interpretation"],
+          "keywords": ["VM-21", "cash flow", "mechanics", "projection"],
+          "citations": [
+            { "citationText": "VM-21 cash-flow mechanics", "pageReference": "pp. 155-156", "sectionReference": "VM-21: Cash-flow mechanics", "sourceReference": "2026 NAIC Valuation Manual", "lineReference": null }
+          ]
+        },
+        {
+          "chunkId": "chunk-vm21-sr-projection-entry-003",
+          "chunkOrdinal": 3,
+          "pageStart": 157,
+          "pageEnd": 158,
+          "sectionReference": "VM-21: NAER and direct iteration",
+          "topic": "NAER and direct iteration",
+          "summary": "VM-21 introduces NAER and direct iteration in the stochastic reserve path.",
+          "sourceTextExcerpt": "VM-21 NAER and direct iteration",
+          "controlledTags": ["core_vm_course", "reserve_method_structure", "scenario_or_stochastic_requirement", "formula_context", "requires_human_interpretation"],
+          "keywords": ["VM-21", "NAER", "direct iteration", "stochastic"],
+          "citations": [
+            { "citationText": "VM-21 NAER and direct iteration", "pageReference": "pp. 157-158", "sectionReference": "VM-21: NAER and direct iteration", "sourceReference": "2026 NAIC Valuation Manual", "lineReference": null }
+          ]
+        },
+        {
+          "chunkId": "chunk-vm21-sr-projection-entry-004",
+          "chunkOrdinal": 4,
+          "pageStart": 159,
+          "pageEnd": 159,
+          "sectionReference": "VM-21: Closeout boundary",
+          "topic": "Closeout boundary",
+          "summary": "VM-21 closes the projection-entry slice with a boundary checkpoint.",
+          "sourceTextExcerpt": "VM-21 closeout boundary",
+          "controlledTags": ["core_vm_course", "cross_reference_mapping", "boundary_control_window", "requires_human_interpretation"],
+          "keywords": ["VM-21", "closeout", "boundary"],
+          "citations": [
+            { "citationText": "VM-21 closeout boundary", "pageReference": "pp. 159-159", "sectionReference": "VM-21: Closeout boundary", "sourceReference": "2026 NAIC Valuation Manual", "lineReference": null }
+          ]
+        }
+      ]
+    },
+    {
+      "sourceIndexId": "source-index-ag36-eiul-crvm-guidance",
+      "sourceVersionId": "source-index-ag36-eiul-crvm-guidance",
+      "sourceId": "ag36-eiul-crvm-guidance",
+      "filename": "AG 36 - The Application of the Commissioners Reserve Valuation Method to Equity Indexed Life Insurance Policies.pdf",
+      "filePath": "D:\\Work\\AI Projects\\NAIC Valuation Manual Course\\Actuarial Guidelines\\AG 36 - The Application of the Commissioners Reserve Valuation Method to Equity Indexed Life Insurance Policies.pdf",
+      "sourceFamilyId": "actuarial_guidelines",
+      "domainId": "naic_regulatory",
+      "documentType": "actuarial_guideline",
+      "sourceTitle": "The Application of the Commissioners Reserve Valuation Method to Equity Indexed Life Insurance Policies",
+      "sourceReference": "Actuarial Guideline XXXVI",
+      "jurisdiction": "NAIC",
+      "authorityLevel": "guideline",
+      "sourceStatus": "active",
+      "versionDate": null,
+      "pageCount": 11,
+      "pageRange": { "start": 1, "end": 11 },
+      "reviewBatchIds": ["batch-123", "batch-124", "batch-125", "batch-126"],
+      "reviewIndexPath": "docs/review/ag36_review_index.md",
+      "selfReviewPath": "docs/review/ag36_self_review.md",
+      "pageImageBackstop": true,
+      "lineReferencesAvailable": false,
+      "textLayerQuality": "noisy",
+      "chunkDefaults": {
+        "sourceTextType": "actual_extracted_source_text",
+        "fidelity": "exact",
+        "confidence": "medium",
+        "reviewFlags": ["noisy_text_layer", "page_image_backstop"],
+        "qualityNotes": [
+          "Encoding-noisy OCR layer; page-image wording backstop remains required.",
+          "No line references were preserved in the source package."
+        ],
+        "evidenceNotes": "Derived from the ignored AG 36 review packets and review index."
+      },
+      "relationships": [
+        { "relationType": "duplicate_or_reprint", "targetSourceId": "ag36-eiul-crvm-law-manual-reprint", "notes": "Active AG 36 source counterpart to the Law Manual reprint." }
+      ],
+      "notes": "Active AG 36 source package retained as a review-only guideline slice.",
+      "chunks": [
+        {
+          "chunkId": "chunk-ag36-eiul-crvm-guidance-001",
+          "chunkOrdinal": 1,
+          "pageStart": 1,
+          "pageEnd": 3,
+          "sectionReference": "AG 36: Foundation and method overview",
+          "topic": "Foundation and method overview",
+          "summary": "AG 36 introduces the CRVM framework for equity-indexed life insurance policies.",
+          "sourceTextExcerpt": "AG 36 foundation and method overview",
+          "controlledTags": ["regulatory_requirement", "reserve_method_structure", "definition_or_terminology", "cross_reference_mapping", "background_content"],
+          "keywords": ["AG 36", "CRVM", "equity indexed life insurance", "overview"],
+          "citations": [
+            { "citationText": "AG 36 foundation and method overview", "pageReference": "pp. 1-3", "sectionReference": "AG 36: Foundation and method overview", "sourceReference": "Actuarial Guideline XXXVI", "lineReference": null }
+          ]
+        },
+        {
+          "chunkId": "chunk-ag36-eiul-crvm-guidance-002",
+          "chunkOrdinal": 2,
+          "pageStart": 4,
+          "pageEnd": 6,
+          "sectionReference": "AG 36: Attachments and method mechanics",
+          "topic": "Attachments and method mechanics",
+          "summary": "AG 36 describes the attachment-driven mechanics and rate framework.",
+          "sourceTextExcerpt": "AG 36 attachments and method mechanics",
+          "controlledTags": ["regulatory_requirement", "reserve_method_structure", "calculation_structure", "formula_context", "prescribed_assumption"],
+          "keywords": ["AG 36", "attachments", "mechanics", "rates"],
+          "citations": [
+            { "citationText": "AG 36 attachments and method mechanics", "pageReference": "pp. 4-6", "sectionReference": "AG 36: Attachments and method mechanics", "sourceReference": "Actuarial Guideline XXXVI", "lineReference": null }
+          ]
+        },
+        {
+          "chunkId": "chunk-ag36-eiul-crvm-guidance-003",
+          "chunkOrdinal": 3,
+          "pageStart": 7,
+          "pageEnd": 8,
+          "sectionReference": "AG 36: Hedged as required and notification",
+          "topic": "Hedged as required and notification",
+          "summary": "AG 36 adds the hedged-as-required criteria and the notification threshold.",
+          "sourceTextExcerpt": "AG 36 hedged as required and notification",
+          "controlledTags": ["regulatory_requirement", "hedging_or_risk_mitigation", "reporting_requirement", "governance_or_control_expectation", "cross_reference_mapping"],
+          "keywords": ["AG 36", "hedged as required", "notification"],
+          "citations": [
+            { "citationText": "AG 36 hedged as required and notification", "pageReference": "pp. 7-8", "sectionReference": "AG 36: Hedged as required and notification", "sourceReference": "Actuarial Guideline XXXVI", "lineReference": null }
+          ]
+        },
+        {
+          "chunkId": "chunk-ag36-eiul-crvm-guidance-004",
+          "chunkOrdinal": 4,
+          "pageStart": 9,
+          "pageEnd": 11,
+          "sectionReference": "AG 36: Certification and closeout",
+          "topic": "Certification and closeout",
+          "summary": "AG 36 closes with reasonableness and consistency certifications.",
+          "sourceTextExcerpt": "AG 36 certification and closeout",
+          "controlledTags": ["regulatory_requirement", "reporting_requirement", "documentation_expectation", "governance_or_control_expectation", "cross_reference_mapping", "boundary_control_window"],
+          "keywords": ["AG 36", "certification", "closeout"],
+          "citations": [
+            { "citationText": "AG 36 certification and closeout", "pageReference": "pp. 9-11", "sectionReference": "AG 36: Certification and closeout", "sourceReference": "Actuarial Guideline XXXVI", "lineReference": null }
+          ]
+        }
+      ]
+    },
+    {
+      "sourceIndexId": "source-index-ag36-eiul-crvm-law-manual-reprint",
+      "sourceVersionId": "source-index-ag36-eiul-crvm-law-manual-reprint",
+      "sourceId": "ag36-eiul-crvm-law-manual-reprint",
+      "filename": "AG 36 - CRVM for EIUL-from 2021 Law Manual.pdf",
+      "filePath": "D:\\Work\\AI Projects\\NAIC Valuation Manual Course\\Actuarial Guidelines\\AG 36 - CRVM for EIUL-from 2021 Law Manual.pdf",
+      "sourceFamilyId": "actuarial_guidelines",
+      "domainId": "naic_regulatory",
+      "documentType": "actuarial_guideline",
+      "sourceTitle": "The Application of the Commissioners Reserve Valuation Method to Equity Indexed Life Insurance Policies",
+      "sourceReference": "Actuarial Guideline XXXVI / 2021 Law Manual reprint",
+      "jurisdiction": "NAIC",
+      "authorityLevel": "companion_reprint",
+      "sourceStatus": "companion-only",
+      "versionDate": null,
+      "pageCount": 18,
+      "pageRange": { "start": 1, "end": 18 },
+      "reviewBatchIds": ["batch-279"],
+      "reviewIndexPath": "docs/review/ag36_law_manual_reprint_review_index.md",
+      "selfReviewPath": "docs/review/ag36_law_manual_reprint_self_review.md",
+      "pageImageBackstop": true,
+      "lineReferencesAvailable": false,
+      "textLayerQuality": "noisy",
+      "chunkDefaults": {
+        "sourceTextType": "review_artifact_derived_text",
+        "fidelity": "curated",
+        "confidence": "high",
+        "reviewFlags": ["companion_guidance", "page_image_backstop"],
+        "qualityNotes": [
+          "Companion-only reprint slice; do not merge with the active AG 36 package automatically.",
+          "Page-image wording backstop remains required."
+        ],
+        "evidenceNotes": "Derived from the ignored AG 36 Law Manual reprint review packet and review index."
+      },
+      "relationships": [
+        { "relationType": "duplicate_or_reprint", "targetSourceId": "ag36-eiul-crvm-guidance", "notes": "Companion reprint counterpart to the active AG 36 source." }
+      ],
+      "notes": "Companion-only AG 36 Law Manual reprint retained as separate evidence.",
+      "chunks": [
+        {
+          "chunkId": "chunk-ag36-eiul-crvm-law-manual-reprint-001",
+          "chunkOrdinal": 1,
+          "pageStart": 1,
+          "pageEnd": 18,
+          "sectionReference": "AG 36 reprint: background through certification closeout",
+          "topic": "Reprint background through certification closeout",
+          "summary": "The 2021 Law Manual reprint keeps the companion background, mechanics, hedged-as-required criteria, notification material, and certification closeout together.",
+          "sourceTextExcerpt": "AG 36 reprint companion slice",
+          "controlledTags": ["companion_guidance", "duplicate_or_reprint", "regulatory_requirement", "reserve_method_structure", "calculation_structure", "formula_context", "prescribed_assumption", "hedging_or_risk_mitigation", "reporting_requirement", "documentation_expectation", "definition_or_terminology", "cross_reference_mapping", "boundary_control_window", "requires_human_interpretation"],
+          "keywords": ["AG 36", "reprint", "EIUL", "CRVM", "companion"],
+          "citations": [
+            { "citationText": "AG 36 reprint companion slice", "pageReference": "pp. 1-18", "sectionReference": "AG 36 reprint: background through certification closeout", "sourceReference": "Actuarial Guideline XXXVI / 2021 Law Manual reprint", "lineReference": null }
+          ]
+        }
+      ]
+    },
+    {
+      "sourceIndexId": "source-index-model-governance-practice-note",
+      "sourceVersionId": "source-index-model-governance-practice-note",
+      "sourceId": "model-governance-practice-note",
+      "filename": "AAA - Model_Governance_PN_042017.pdf",
+      "filePath": "D:\\Work\\AI Projects\\NAIC Valuation Manual Course\\Practice Notes\\AAA - Model_Governance_PN_042017.pdf",
+      "sourceFamilyId": "practice_notes",
+      "domainId": "naic_regulatory",
+      "documentType": "practice_note",
+      "sourceTitle": "Model Governance: Some Considerations for Practicing Life Actuaries",
+      "sourceReference": "American Academy of Actuaries practice note, April 2017",
+      "jurisdiction": "AAA",
+      "authorityLevel": "practice_note",
+      "sourceStatus": "non-binding practice note",
+      "versionDate": null,
+      "pageCount": 18,
+      "pageRange": { "start": 1, "end": 18 },
+      "reviewBatchIds": ["batch-183", "batch-184", "batch-185"],
+      "reviewIndexPath": "docs/review/model_governance_practice_note_review_index.md",
+      "selfReviewPath": "docs/review/model_governance_practice_note_self_review.md",
+      "pageImageBackstop": false,
+      "lineReferencesAvailable": false,
+      "textLayerQuality": "clean",
+      "chunkDefaults": {
+        "sourceTextType": "review_artifact_derived_text",
+        "fidelity": "curated",
+        "confidence": "high",
+        "reviewFlags": ["companion_guidance", "page_locator_anchor"],
+        "qualityNotes": [
+          "Non-binding practice note; page locators are the primary anchor.",
+          "Keep the companion-guidance caveat visible."
+        ],
+        "evidenceNotes": "Derived from the ignored model-governance practice-note review packet and review index."
+      },
+      "notes": "Model governance companion guidance retained as a non-binding practice note.",
+      "chunks": [
+        {
+          "chunkId": "chunk-model-governance-practice-note-001",
+          "chunkOrdinal": 1,
+          "pageStart": 1,
+          "pageEnd": 7,
+          "sectionReference": "Opening companion guidance",
+          "topic": "Opening companion guidance",
+          "summary": "The practice note opens with disclaimer, introduction, and model-development context.",
+          "sourceTextExcerpt": "Model governance opening companion guidance",
+          "controlledTags": ["background_content", "caveat_or_companion_guidance", "non_binding_practice_note", "cross_reference_mapping", "boundary_control_window"],
+          "keywords": ["model governance", "practice note", "opening"],
+          "citations": [
+            { "citationText": "Model governance opening companion guidance", "pageReference": "pp. 1-7", "sectionReference": "Opening companion guidance", "sourceReference": "American Academy of Actuaries practice note, April 2017", "lineReference": null }
+          ]
+        },
+        {
+          "chunkId": "chunk-model-governance-practice-note-002",
+          "chunkOrdinal": 2,
+          "pageStart": 8,
+          "pageEnd": 14,
+          "sectionReference": "Governance and validation",
+          "topic": "Governance and validation",
+          "summary": "The practice note covers model governance policy, risk, controls, and validation.",
+          "sourceTextExcerpt": "Model governance policy risk controls validation",
+          "controlledTags": ["governance_or_control_expectation", "documentation_expectation", "non_binding_practice_note", "cross_reference_mapping", "requires_human_interpretation"],
+          "keywords": ["governance", "controls", "validation", "practice note"],
+          "citations": [
+            { "citationText": "Model governance policy risk controls validation", "pageReference": "pp. 8-14", "sectionReference": "Governance and validation", "sourceReference": "American Academy of Actuaries practice note, April 2017", "lineReference": null }
+          ]
+        },
+        {
+          "chunkId": "chunk-model-governance-practice-note-003",
+          "chunkOrdinal": 3,
+          "pageStart": 15,
+          "pageEnd": 18,
+          "sectionReference": "Validation and documentation closeout",
+          "topic": "Validation and documentation closeout",
+          "summary": "The practice note closes with validation, documentation, references, and definitions.",
+          "sourceTextExcerpt": "Model governance validation documentation closeout",
+          "controlledTags": ["documentation_expectation", "definition_or_terminology", "non_binding_practice_note", "cross_reference_mapping", "boundary_control_window", "requires_human_interpretation"],
+          "keywords": ["validation", "documentation", "closeout", "practice note"],
+          "citations": [
+            { "citationText": "Model governance validation documentation closeout", "pageReference": "pp. 15-18", "sectionReference": "Validation and documentation closeout", "sourceReference": "American Academy of Actuaries practice note, April 2017", "lineReference": null }
+          ]
+        }
+      ]
+    },
+    {
+      "sourceIndexId": "source-index-actuarial-memorandum-practice-note",
+      "sourceVersionId": "source-index-actuarial-memorandum-practice-note",
+      "sourceId": "actuarial-memorandum-practice-note",
+      "filename": "Actuarial Memorandum Practice Note 01142020.pdf",
+      "filePath": "D:\\Work\\AI Projects\\NAIC Valuation Manual Course\\Practice Notes\\Actuarial Memorandum Practice Note 01142020.pdf",
+      "sourceFamilyId": "practice_notes",
+      "domainId": "naic_regulatory",
+      "documentType": "practice_note",
+      "sourceTitle": "Actuarial Memorandum Practice Note",
+      "sourceReference": "American Academy of Actuaries exposure draft, January 2020",
+      "jurisdiction": "AAA",
+      "authorityLevel": "practice_note",
+      "sourceStatus": "non-binding practice note",
+      "versionDate": null,
+      "pageCount": 37,
+      "pageRange": { "start": 1, "end": 37 },
+      "reviewBatchIds": ["batch-202", "batch-203", "batch-204", "batch-205"],
+      "reviewIndexPath": "docs/review/actuarial_memorandum_practice_note_review_index.md",
+      "selfReviewPath": "docs/review/actuarial_memorandum_practice_note_self_review.md",
+      "pageImageBackstop": false,
+      "lineReferencesAvailable": false,
+      "textLayerQuality": "clean",
+      "chunkDefaults": {
+        "sourceTextType": "review_artifact_derived_text",
+        "fidelity": "curated",
+        "confidence": "high",
+        "reviewFlags": ["companion_guidance", "page_locator_anchor"],
+        "qualityNotes": [
+          "Non-binding practice note; page locators are the primary anchor.",
+          "Keep the companion-guidance caveat visible."
+        ],
+        "evidenceNotes": "Derived from the ignored actuarial-memorandum practice-note review packet and review index."
+      },
+      "notes": "Actuarial memorandum companion guidance retained as a non-binding practice note.",
+      "chunks": [
+        {
+          "chunkId": "chunk-actuarial-memorandum-practice-note-001",
+          "chunkOrdinal": 1,
+          "pageStart": 1,
+          "pageEnd": 8,
+          "sectionReference": "Opening and background guidance",
+          "topic": "Opening and background guidance",
+          "summary": "The note opens with exposure-draft framing and background guidance.",
+          "sourceTextExcerpt": "Actuarial memorandum opening background guidance",
+          "controlledTags": ["background_content", "caveat_or_companion_guidance", "non_binding_practice_note", "cross_reference_mapping", "boundary_control_window"],
+          "keywords": ["actuarial memorandum", "practice note", "opening"],
+          "citations": [
+            { "citationText": "Actuarial memorandum opening background guidance", "pageReference": "pp. 1-8", "sectionReference": "Opening and background guidance", "sourceReference": "American Academy of Actuaries exposure draft, January 2020", "lineReference": null }
+          ]
+        },
+        {
+          "chunkId": "chunk-actuarial-memorandum-practice-note-002",
+          "chunkOrdinal": 2,
+          "pageStart": 9,
+          "pageEnd": 18,
+          "sectionReference": "Drafting and content considerations",
+          "topic": "Drafting and content considerations",
+          "summary": "The note covers drafting and content considerations for the memorandum.",
+          "sourceTextExcerpt": "Actuarial memorandum drafting content considerations",
+          "controlledTags": ["reporting_requirement", "documentation_expectation", "definition_or_terminology", "non_binding_practice_note", "cross_reference_mapping"],
+          "keywords": ["memorandum", "drafting", "content", "practice note"],
+          "citations": [
+            { "citationText": "Actuarial memorandum drafting content considerations", "pageReference": "pp. 9-18", "sectionReference": "Drafting and content considerations", "sourceReference": "American Academy of Actuaries exposure draft, January 2020", "lineReference": null }
+          ]
+        },
+        {
+          "chunkId": "chunk-actuarial-memorandum-practice-note-003",
+          "chunkOrdinal": 3,
+          "pageStart": 19,
+          "pageEnd": 27,
+          "sectionReference": "Judgment and reserve-items slice",
+          "topic": "Judgment and reserve-items slice",
+          "summary": "The note addresses judgment-heavy reserve-item considerations.",
+          "sourceTextExcerpt": "Actuarial memorandum judgment reserve items",
+          "controlledTags": ["calculation_structure", "formula_context", "reporting_requirement", "documentation_expectation", "non_binding_practice_note", "requires_human_interpretation"],
+          "keywords": ["judgment", "reserve items", "memorandum", "practice note"],
+          "citations": [
+            { "citationText": "Actuarial memorandum judgment reserve items", "pageReference": "pp. 19-27", "sectionReference": "Judgment and reserve-items slice", "sourceReference": "American Academy of Actuaries exposure draft, January 2020", "lineReference": null }
+          ]
+        },
+        {
+          "chunkId": "chunk-actuarial-memorandum-practice-note-004",
+          "chunkOrdinal": 4,
+          "pageStart": 28,
+          "pageEnd": 37,
+          "sectionReference": "Appendices and checklist",
+          "topic": "Appendices and checklist",
+          "summary": "The note closes with appendices and checklist material.",
+          "sourceTextExcerpt": "Actuarial memorandum appendices checklist",
+          "controlledTags": ["background_content", "caveat_or_companion_guidance", "non_binding_practice_note", "cross_reference_mapping", "boundary_control_window"],
+          "keywords": ["appendices", "checklist", "memorandum", "practice note"],
+          "citations": [
+            { "citationText": "Actuarial memorandum appendices checklist", "pageReference": "pp. 28-37", "sectionReference": "Appendices and checklist", "sourceReference": "American Academy of Actuaries exposure draft, January 2020", "lineReference": null }
+          ]
+        }
+      ]
+    },
+    {
+      "sourceIndexId": "source-index-reg210-non-guaranteed-elements",
+      "sourceVersionId": "source-index-reg210-non-guaranteed-elements",
+      "sourceId": "reg210-non-guaranteed-elements",
+      "filename": "Reg-210-11-NYCRR-S048.pdf",
+      "filePath": "D:\\Work\\AI Projects\\NAIC Valuation Manual Course\\Reg-210-11-NYCRR-S048.pdf",
+      "sourceFamilyId": "ny_regulations",
+      "domainId": "naic_regulatory",
+      "documentType": "regulation",
+      "sourceTitle": "Life Insurance and Annuity Non-Guaranteed Elements",
+      "sourceReference": "11 NYCRR Part 48 (Insurance Regulation 210)",
+      "jurisdiction": "NY",
+      "authorityLevel": "regulation",
+      "sourceStatus": "active",
+      "versionDate": "2018-03-19",
+      "pageCount": 10,
+      "pageRange": { "start": 1, "end": 9 },
+      "reviewBatchIds": ["batch-186", "batch-187", "batch-188"],
+      "reviewIndexPath": "docs/review/reg210_review_index.md",
+      "selfReviewPath": "docs/review/reg210_self_review.md",
+      "pageImageBackstop": false,
+      "lineReferencesAvailable": false,
+      "textLayerQuality": "clean",
+      "chunkDefaults": {
+        "sourceTextType": "actual_extracted_source_text",
+        "fidelity": "exact",
+        "confidence": "high",
+        "reviewFlags": ["page_locator_anchor"],
+        "qualityNotes": [
+          "Page locators are the primary anchor for this regulation.",
+          "No stable line references were preserved in the handoff layer."
+        ],
+        "evidenceNotes": "Derived from the ignored Reg-210 review packets and review index."
+      },
+      "notes": "Active NY regulation for non-guaranteed elements.",
+      "chunks": [
+        {
+          "chunkId": "chunk-reg210-non-guaranteed-elements-001",
+          "chunkOrdinal": 1,
+          "pageStart": 1,
+          "pageEnd": 3,
+          "sectionReference": "Opening title, purpose, scope, and definitions",
+          "topic": "Opening title, purpose, scope, and definitions",
+          "summary": "The regulation opens with title, purpose, scope, and definitions.",
+          "sourceTextExcerpt": "Regulation 210 opening title purpose scope definitions",
+          "controlledTags": ["regulatory_requirement", "state_regulation", "jurisdiction_specific_requirement", "definition_or_terminology", "cross_reference_mapping", "background_content"],
+          "keywords": ["Regulation 210", "non-guaranteed elements", "definitions", "purpose"],
+          "citations": [
+            { "citationText": "Regulation 210 opening title purpose scope definitions", "pageReference": "pp. 1-3", "sectionReference": "Opening title, purpose, scope, and definitions", "sourceReference": "11 NYCRR Part 48 (Insurance Regulation 210)", "lineReference": null }
+          ]
+        },
+        {
+          "chunkId": "chunk-reg210-non-guaranteed-elements-002",
+          "chunkOrdinal": 2,
+          "pageStart": 4,
+          "pageEnd": 6,
+          "sectionReference": "Qualified actuary, board-approved criteria, and non-guaranteed elements",
+          "topic": "Qualified actuary, board-approved criteria, and non-guaranteed elements",
+          "summary": "The regulation sets out qualified actuary and board-approved criteria alongside the non-guaranteed element framework.",
+          "sourceTextExcerpt": "Regulation 210 qualified actuary board approved criteria",
+          "controlledTags": ["regulatory_requirement", "state_regulation", "jurisdiction_specific_requirement", "governance_or_control_expectation", "company_or_prudent_estimate_assumption", "cross_reference_mapping"],
+          "keywords": ["Regulation 210", "qualified actuary", "board approved", "non-guaranteed elements"],
+          "citations": [
+            { "citationText": "Regulation 210 qualified actuary board approved criteria", "pageReference": "pp. 4-6", "sectionReference": "Qualified actuary, board-approved criteria, and non-guaranteed elements", "sourceReference": "11 NYCRR Part 48 (Insurance Regulation 210)", "lineReference": null }
+          ]
+        },
+        {
+          "chunkId": "chunk-reg210-non-guaranteed-elements-003",
+          "chunkOrdinal": 3,
+          "pageStart": 7,
+          "pageEnd": 9,
+          "sectionReference": "Filing and records closeout",
+          "topic": "Filing and records closeout",
+          "summary": "The regulation closes with filing and records requirements.",
+          "sourceTextExcerpt": "Regulation 210 filing and records closeout",
+          "controlledTags": ["regulatory_requirement", "state_regulation", "jurisdiction_specific_requirement", "reporting_requirement", "documentation_expectation", "governance_or_control_expectation", "boundary_control_window"],
+          "keywords": ["Regulation 210", "filing", "records", "closeout"],
+          "citations": [
+            { "citationText": "Regulation 210 filing and records closeout", "pageReference": "pp. 7-9", "sectionReference": "Filing and records closeout", "sourceReference": "11 NYCRR Part 48 (Insurance Regulation 210)", "lineReference": null }
+          ]
+        }
+      ]
+    },
+    {
+      "sourceIndexId": "source-index-cia-2022-capital-fct-educational-note",
+      "sourceVersionId": "source-index-cia-2022-capital-fct-educational-note",
+      "sourceId": "cia-2022-capital-fct-educational-note",
+      "filename": "222030e.pdf",
+      "filePath": "D:\\Work\\AI Projects\\NAIC Valuation Manual Course\\Practice Notes\\222030e.pdf",
+      "sourceFamilyId": "educational_notes",
+      "domainId": "naic_regulatory",
+      "documentType": "educational_note",
+      "sourceTitle": "CIA 2022 Capital and FCT Educational Note",
+      "sourceReference": "Canadian Institute of Actuaries educational note, February 2022",
+      "jurisdiction": "Canada",
+      "authorityLevel": "educational_note",
+      "sourceStatus": "educational note",
+      "versionDate": null,
+      "pageCount": 20,
+      "pageRange": { "start": 1, "end": 20 },
+      "reviewBatchIds": ["batch-206", "batch-207", "batch-208", "batch-209"],
+      "reviewIndexPath": "docs/review/cia_2022_capital_fct_educational_note_review_index.md",
+      "selfReviewPath": "docs/review/cia_2022_capital_fct_educational_note_self_review.md",
+      "pageImageBackstop": false,
+      "lineReferencesAvailable": false,
+      "textLayerQuality": "clean",
+      "chunkDefaults": {
+        "sourceTextType": "actual_extracted_source_text",
+        "fidelity": "exact",
+        "confidence": "high",
+        "reviewFlags": ["page_locator_anchor"],
+        "qualityNotes": [
+          "Educational note and companion guidance; page locators are the primary anchor.",
+          "No stable line references were available in the source package."
+        ],
+        "evidenceNotes": "Derived from the ignored CIA educational-note review packets and review index."
+      },
+      "notes": "Canadian Institute of Actuaries educational note retained as review-only companion guidance.",
+      "chunks": [
+        {
+          "chunkId": "chunk-cia-2022-capital-fct-educational-note-001",
+          "chunkOrdinal": 1,
+          "pageStart": 1,
+          "pageEnd": 6,
+          "sectionReference": "Opening and background guidance",
+          "topic": "Opening and background guidance",
+          "summary": "The note opens with educational-note framing and background guidance.",
+          "sourceTextExcerpt": "CIA educational note opening background guidance",
+          "controlledTags": ["background_content", "caveat_or_companion_guidance", "non_binding_practice_note", "educational_note", "cross_reference_mapping"],
+          "keywords": ["CIA", "educational note", "capital", "FCT"],
+          "citations": [
+            { "citationText": "CIA educational note opening background guidance", "pageReference": "pp. 1-6", "sectionReference": "Opening and background guidance", "sourceReference": "Canadian Institute of Actuaries educational note, February 2022", "lineReference": null }
+          ]
+        },
+        {
+          "chunkId": "chunk-cia-2022-capital-fct-educational-note-002",
+          "chunkOrdinal": 2,
+          "pageStart": 7,
+          "pageEnd": 11,
+          "sectionReference": "Capital and FCT overview",
+          "topic": "Capital and FCT overview",
+          "summary": "The note covers the capital and FCT overview.",
+          "sourceTextExcerpt": "CIA educational note capital and FCT overview",
+          "controlledTags": ["regulatory_requirement", "reporting_requirement", "documentation_expectation", "educational_note", "cross_reference_mapping"],
+          "keywords": ["capital", "FCT", "overview", "CIA"],
+          "citations": [
+            { "citationText": "CIA educational note capital and FCT overview", "pageReference": "pp. 7-11", "sectionReference": "Capital and FCT overview", "sourceReference": "Canadian Institute of Actuaries educational note, February 2022", "lineReference": null }
+          ]
+        },
+        {
+          "chunkId": "chunk-cia-2022-capital-fct-educational-note-003",
+          "chunkOrdinal": 3,
+          "pageStart": 12,
+          "pageEnd": 16,
+          "sectionReference": "Additional guidance",
+          "topic": "Additional guidance",
+          "summary": "The note adds caution-heavy guidance on climate, COVID-19, ORSA, reinsurance, and model use.",
+          "sourceTextExcerpt": "CIA educational note additional guidance",
+          "controlledTags": ["scenario_or_stochastic_requirement", "reinsurance", "asset_modeling_judgment", "educational_note", "requires_human_interpretation"],
+          "keywords": ["CIA", "climate", "COVID-19", "ORSA", "reinsurance"],
+          "citations": [
+            { "citationText": "CIA educational note additional guidance", "pageReference": "pp. 12-16", "sectionReference": "Additional guidance", "sourceReference": "Canadian Institute of Actuaries educational note, February 2022", "lineReference": null }
+          ]
+        },
+        {
+          "chunkId": "chunk-cia-2022-capital-fct-educational-note-004",
+          "chunkOrdinal": 4,
+          "pageStart": 17,
+          "pageEnd": 20,
+          "sectionReference": "Appendices and closeout",
+          "topic": "Appendices and closeout",
+          "summary": "The note closes with appendix material and a clear boundary checkpoint.",
+          "sourceTextExcerpt": "CIA educational note appendices closeout",
+          "controlledTags": ["background_content", "caveat_or_companion_guidance", "educational_note", "boundary_control_window", "cross_reference_mapping"],
+          "keywords": ["appendix", "closeout", "CIA", "educational note"],
+          "citations": [
+            { "citationText": "CIA educational note appendices closeout", "pageReference": "pp. 17-20", "sectionReference": "Appendices and closeout", "sourceReference": "Canadian Institute of Actuaries educational note, February 2022", "lineReference": null }
+          ]
+        }
+      ]
     }
   ],
+  "retrievalSettings": {
+    "topN": 5,
+    "unsupportedThreshold": 3
+  },
   "retrievalQueries": [
     {
       "queryId": "q-ag01-net-premium",
+      "queryCategory": "exact_title",
       "query": "How does AG 01 treat policies when net premium exceeds gross premium?",
       "expectedChunkIds": [
         "chunk-ag01-net-premium-interpretation-001"
@@ -366,6 +1092,7 @@
     },
     {
       "queryId": "q-ag03-maturity-value",
+      "queryCategory": "exact_title",
       "query": "What does AG 03 say maturity value means for cash surrender benefit interpretation?",
       "expectedChunkIds": [
         "chunk-ag03-maturity-value-interpretation-001"
@@ -376,17 +1103,183 @@
       "rationale": "Tests a one-page interpretive note with a cross-reference question."
     },
     {
-      "queryId": "q-vm20-framework",
+      "queryId": "q-vm20-framework-overview",
+      "queryCategory": "framework_overview",
       "query": "What does VM-20 say about the minimum reserve valuation standard and the start of reserve mechanics?",
       "expectedChunkIds": [
-        "chunk-vm20-framework-overview-001",
+        "chunk-vm20-framework-overview-001"
+      ],
+      "expectedSourceIds": [
+        "vm20-framework-overview"
+      ],
+      "rationale": "Tests retrieval of the framework overview slice."
+    },
+    {
+      "queryId": "q-vm20-boundary",
+      "queryCategory": "mechanics_boundary",
+      "query": "Where does VM-20 transition from the framework overview into reserve-category mechanics?",
+      "expectedChunkIds": [
         "chunk-vm20-framework-boundary-001"
       ],
       "expectedSourceIds": [
-        "vm20-framework-overview",
         "vm20-framework-boundary"
       ],
-      "rationale": "Tests retrieval across a framework overview slice and a mechanics boundary slice."
+      "rationale": "Tests retrieval of the mechanics boundary checkpoint."
+    },
+    {
+      "queryId": "q-vm20-assumptions-section-3c",
+      "queryCategory": "multi_chunk",
+      "query": "How does VM-20 Section 3.C progress from mortality and interest assumptions through the Section 4 boundary?",
+      "expectedChunkIds": [
+        "chunk-vm20-assumptions-section-3c-001",
+        "chunk-vm20-assumptions-section-3c-002",
+        "chunk-vm20-assumptions-section-3c-003",
+        "chunk-vm20-assumptions-section-3c-004"
+      ],
+      "expectedSourceIds": [
+        "vm20-assumptions-section-3c"
+      ],
+      "rationale": "Tests a four-chunk assumption-layer slice."
+    },
+    {
+      "queryId": "q-vm21-sr-projection-entry",
+      "queryCategory": "multi_chunk",
+      "query": "How does VM-21 progress from the stochastic reserve projection setup through the closeout boundary?",
+      "expectedChunkIds": [
+        "chunk-vm21-sr-projection-entry-001",
+        "chunk-vm21-sr-projection-entry-002",
+        "chunk-vm21-sr-projection-entry-003",
+        "chunk-vm21-sr-projection-entry-004"
+      ],
+      "expectedSourceIds": [
+        "vm21-sr-projection-entry"
+      ],
+      "rationale": "Tests the neighboring VM chapter and its stochastic projection structure."
+    },
+    {
+      "queryId": "q-ag36-active-overview",
+      "queryCategory": "multi_chunk",
+      "query": "How does active AG 36 move from the CRVM overview through attachments, hedged-as-required guidance, and certification closeout?",
+      "expectedChunkIds": [
+        "chunk-ag36-eiul-crvm-guidance-001",
+        "chunk-ag36-eiul-crvm-guidance-002",
+        "chunk-ag36-eiul-crvm-guidance-003",
+        "chunk-ag36-eiul-crvm-guidance-004"
+      ],
+      "expectedSourceIds": [
+        "ag36-eiul-crvm-guidance"
+      ],
+      "rationale": "Tests a longer noisy-guideline slice with method, hedging, and closeout pressure."
+    },
+    {
+      "queryId": "q-ag36-reprint-duplicate",
+      "queryCategory": "relationship",
+      "query": "Which source is the companion reprint for AG 36 and how should it be treated?",
+      "expectedChunkIds": [
+        "chunk-ag36-eiul-crvm-law-manual-reprint-001"
+      ],
+      "expectedSourceIds": [
+        "ag36-eiul-crvm-law-manual-reprint"
+      ],
+      "rationale": "Tests the duplicate/reprint companion relationship."
+    },
+    {
+      "queryId": "q-model-governance-controls",
+      "queryCategory": "multi_chunk",
+      "query": "How does the model governance practice note separate opening guidance, governance and validation, and documentation closeout?",
+      "expectedChunkIds": [
+        "chunk-model-governance-practice-note-001",
+        "chunk-model-governance-practice-note-002",
+        "chunk-model-governance-practice-note-003"
+      ],
+      "expectedSourceIds": [
+        "model-governance-practice-note"
+      ],
+      "rationale": "Tests companion guidance and governance/control wording in one practice note."
+    },
+    {
+      "queryId": "q-actuarial-memorandum-drafting",
+      "queryCategory": "multi_chunk",
+      "query": "How does the actuarial memorandum practice note move from background guidance through drafting, judgment, and appendices?",
+      "expectedChunkIds": [
+        "chunk-actuarial-memorandum-practice-note-001",
+        "chunk-actuarial-memorandum-practice-note-002",
+        "chunk-actuarial-memorandum-practice-note-003",
+        "chunk-actuarial-memorandum-practice-note-004"
+      ],
+      "expectedSourceIds": [
+        "actuarial-memorandum-practice-note"
+      ],
+      "rationale": "Tests a longer practice-note slice with drafting and reserve-item pressure."
+    },
+    {
+      "queryId": "q-reg210-opening-title",
+      "queryCategory": "exact_title",
+      "query": "What are the opening title, purpose, scope, and definitions in Regulation 210?",
+      "expectedChunkIds": [
+        "chunk-reg210-non-guaranteed-elements-001"
+      ],
+      "expectedSourceIds": [
+        "reg210-non-guaranteed-elements"
+      ],
+      "rationale": "Tests exact retrieval of the opening regulatory slice."
+    },
+    {
+      "queryId": "q-reg210-qualified-actuary",
+      "queryCategory": "exact_title",
+      "query": "What does Regulation 210 require of the qualified actuary and board-approved criteria?",
+      "expectedChunkIds": [
+        "chunk-reg210-non-guaranteed-elements-002"
+      ],
+      "expectedSourceIds": [
+        "reg210-non-guaranteed-elements"
+      ],
+      "rationale": "Tests a governance-heavy regulation slice."
+    },
+    {
+      "queryId": "q-reg210-filing-records",
+      "queryCategory": "exact_title",
+      "query": "What filing and records requirements appear in Regulation 210?",
+      "expectedChunkIds": [
+        "chunk-reg210-non-guaranteed-elements-003"
+      ],
+      "expectedSourceIds": [
+        "reg210-non-guaranteed-elements"
+      ],
+      "rationale": "Tests the regulation closeout slice."
+    },
+    {
+      "queryId": "q-cia-educational-note-overview",
+      "queryCategory": "multi_chunk",
+      "query": "How does the CIA educational note move from opening guidance through the capital and FCT overview, additional guidance, and appendices?",
+      "expectedChunkIds": [
+        "chunk-cia-2022-capital-fct-educational-note-001",
+        "chunk-cia-2022-capital-fct-educational-note-002",
+        "chunk-cia-2022-capital-fct-educational-note-003",
+        "chunk-cia-2022-capital-fct-educational-note-004"
+      ],
+      "expectedSourceIds": [
+        "cia-2022-capital-fct-educational-note"
+      ],
+      "rationale": "Tests a companion educational note with guidance, caution, and closeout pressure."
+    },
+    {
+      "queryId": "q-unsupported-pricing-support",
+      "queryCategory": "unsupported",
+      "query": "What does this corpus say about pricing support?",
+      "expectedOutcome": "unsupported",
+      "expectedChunkIds": [],
+      "expectedSourceIds": [],
+      "rationale": "Checks unsupported-query handling for adjacent pricing content."
+    },
+    {
+      "queryId": "q-unsupported-liability-modeling",
+      "queryCategory": "unsupported",
+      "query": "What does this corpus say about liability modeling support?",
+      "expectedOutcome": "unsupported",
+      "expectedChunkIds": [],
+      "expectedSourceIds": [],
+      "rationale": "Checks unsupported-query handling for adjacent liability-modeling content."
     }
   ]
 }

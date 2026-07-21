@@ -1,0 +1,314 @@
+{
+  "schemaVersion": "1.0",
+  "sourceIndexId": "source-index-reg210-non-guaranteed-elements",
+  "repositoryManifestId": "source-index-poc-2026-07-21",
+  "sourceVersionId": "source-index-reg210-non-guaranteed-elements",
+  "source": {
+    "sourceId": "reg210-non-guaranteed-elements",
+    "sourceVersionId": "source-index-reg210-non-guaranteed-elements",
+    "filename": "Reg-210-11-NYCRR-S048.pdf",
+    "filePath": "D:\\Work\\AI Projects\\NAIC Valuation Manual Course\\Reg-210-11-NYCRR-S048.pdf",
+    "sourceFamilyId": "ny_regulations",
+    "domainId": "naic_regulatory",
+    "documentType": "regulation",
+    "sourceTitle": "Life Insurance and Annuity Non-Guaranteed Elements",
+    "sourceReference": "11 NYCRR Part 48 (Insurance Regulation 210)",
+    "jurisdiction": "NY",
+    "authorityLevel": "regulation",
+    "sourceStatus": "active",
+    "versionDate": "2018-03-19",
+    "pageCount": 10,
+    "pageRange": {
+      "start": 1,
+      "end": 9
+    },
+    "reviewBatchIds": [
+      "batch-186",
+      "batch-187",
+      "batch-188"
+    ],
+    "reviewIndexPath": "docs/review/reg210_review_index.md",
+    "selfReviewPath": "docs/review/reg210_self_review.md",
+    "pageImageBackstop": false,
+    "lineReferencesAvailable": false,
+    "textLayerQuality": "clean",
+    "notes": "Active NY regulation for non-guaranteed elements."
+  },
+  "processing": {
+    "createdAt": "2026-07-21T05:26:54.274Z",
+    "createdBy": "scripts/build-source-index-poc.mjs",
+    "processingMode": "canonical_index_poc",
+    "canonicality": "poc",
+    "reviewOnly": true,
+    "learnerFacingAllowed": false,
+    "appReadyAllowed": false,
+    "ragReadyAllowed": false,
+    "promotionStatus": "not_promoted",
+    "notes": "Active NY regulation for non-guaranteed elements."
+  },
+  "chunks": [
+    {
+      "chunkId": "chunk-reg210-non-guaranteed-elements-001",
+      "chunkOrdinal": 1,
+      "chunkKind": "source_excerpt",
+      "sourceTextType": "actual_extracted_source_text",
+      "pageStart": 1,
+      "pageEnd": 3,
+      "sectionReference": "Opening title, purpose, scope, and definitions",
+      "lineReference": null,
+      "sourceTextExcerpt": "Regulation 210 opening title purpose scope definitions",
+      "normalizedTextExcerpt": "regulation 210 opening title purpose scope definitions",
+      "summary": "The regulation opens with title, purpose, scope, and definitions.",
+      "topic": "Opening title, purpose, scope, and definitions",
+      "headingPath": "Opening title, purpose, scope, and definitions",
+      "keyPoints": [
+        "The regulation opens with title, purpose, scope, and definitions."
+      ],
+      "concepts": [
+        "regulatory_requirement",
+        "state_regulation",
+        "jurisdiction_specific_requirement",
+        "definition_or_terminology",
+        "cross_reference_mapping",
+        "background_content"
+      ],
+      "definedTerms": [
+        "Regulation 210",
+        "non-guaranteed elements",
+        "definitions",
+        "purpose"
+      ],
+      "acronyms": [],
+      "requirements": [
+        "regulatory_requirement",
+        "jurisdiction_specific_requirement"
+      ],
+      "citationDisplay": "Regulation 210 opening title purpose scope definitions",
+      "normalizedSearchText": "regulation 210 opening title purpose scope definitions regulation 210 opening title purpose scope definitions the regulation opens with title, purpose, scope, and definitions. opening title, purpose, scope, and definitions opening title, purpose, scope, and definitions opening title, purpose, scope, and definitions life insurance and annuity non-guaranteed elements 11 nycrr part 48 (insurance regulation 210) the regulation opens with title, purpose, scope, and definitions. regulatory_requirement state_regulation jurisdiction_specific_requirement definition_or_terminology cross_reference_mapping background_content regulation 210 non-guaranteed elements definitions purpose regulatory_requirement jurisdiction_specific_requirement regulation 210 opening title purpose scope definitions regulatory_requirement state_regulation jurisdiction_specific_requirement definition_or_terminology cross_reference_mapping background_content regulation 210 non-guaranteed elements definitions purpose",
+      "canonicalSourceIndexPath": "data/processed/source_indexes/sources/reg210-non-guaranteed-elements.json",
+      "sourceVersionId": "source-index-reg210-non-guaranteed-elements",
+      "controlledTags": [
+        "regulatory_requirement",
+        "state_regulation",
+        "jurisdiction_specific_requirement",
+        "definition_or_terminology",
+        "cross_reference_mapping",
+        "background_content"
+      ],
+      "keywords": [
+        "Regulation 210",
+        "non-guaranteed elements",
+        "definitions",
+        "purpose"
+      ],
+      "citations": [
+        {
+          "citationText": "Regulation 210 opening title purpose scope definitions",
+          "pageReference": "pp. 1-3",
+          "sectionReference": "Opening title, purpose, scope, and definitions",
+          "sourceReference": "11 NYCRR Part 48 (Insurance Regulation 210)",
+          "lineReference": null
+        }
+      ],
+      "relationships": [],
+      "relationshipIds": [],
+      "fidelity": "exact",
+      "confidence": "high",
+      "reviewFlags": [
+        "page_locator_anchor"
+      ],
+      "qualityNotes": [
+        "Page locators are the primary anchor for this regulation.",
+        "No stable line references were preserved in the handoff layer."
+      ],
+      "evidenceNotes": "Derived from the ignored Reg-210 review packets and review index.",
+      "retrievalEligible": true,
+      "promotionEligible": false
+    },
+    {
+      "chunkId": "chunk-reg210-non-guaranteed-elements-002",
+      "chunkOrdinal": 2,
+      "chunkKind": "source_excerpt",
+      "sourceTextType": "actual_extracted_source_text",
+      "pageStart": 4,
+      "pageEnd": 6,
+      "sectionReference": "Qualified actuary, board-approved criteria, and non-guaranteed elements",
+      "lineReference": null,
+      "sourceTextExcerpt": "Regulation 210 qualified actuary board approved criteria",
+      "normalizedTextExcerpt": "regulation 210 qualified actuary board approved criteria",
+      "summary": "The regulation sets out qualified actuary and board-approved criteria alongside the non-guaranteed element framework.",
+      "topic": "Qualified actuary, board-approved criteria, and non-guaranteed elements",
+      "headingPath": "Qualified actuary, board-approved criteria, and non-guaranteed elements",
+      "keyPoints": [
+        "The regulation sets out qualified actuary and board-approved criteria alongside the non-guaranteed element framework."
+      ],
+      "concepts": [
+        "regulatory_requirement",
+        "state_regulation",
+        "jurisdiction_specific_requirement",
+        "governance_or_control_expectation",
+        "company_or_prudent_estimate_assumption",
+        "cross_reference_mapping"
+      ],
+      "definedTerms": [
+        "Regulation 210",
+        "qualified actuary",
+        "board approved",
+        "non-guaranteed elements"
+      ],
+      "acronyms": [],
+      "requirements": [
+        "regulatory_requirement",
+        "jurisdiction_specific_requirement",
+        "governance_or_control_expectation"
+      ],
+      "citationDisplay": "Regulation 210 qualified actuary board approved criteria",
+      "normalizedSearchText": "regulation 210 qualified actuary board approved criteria regulation 210 qualified actuary board approved criteria the regulation sets out qualified actuary and board-approved criteria alongside the non-guaranteed element framework. qualified actuary, board-approved criteria, and non-guaranteed elements qualified actuary, board-approved criteria, and non-guaranteed elements qualified actuary, board-approved criteria, and non-guaranteed elements life insurance and annuity non-guaranteed elements 11 nycrr part 48 (insurance regulation 210) the regulation sets out qualified actuary and board-approved criteria alongside the non-guaranteed element framework. regulatory_requirement state_regulation jurisdiction_specific_requirement governance_or_control_expectation company_or_prudent_estimate_assumption cross_reference_mapping regulation 210 qualified actuary board approved non-guaranteed elements regulatory_requirement jurisdiction_specific_requirement governance_or_control_expectation regulation 210 qualified actuary board approved criteria regulatory_requirement state_regulation jurisdiction_specific_requirement governance_or_control_expectation company_or_prudent_estimate_assumption cross_reference_mapping regulation 210 qualified actuary board approved non-guaranteed elements",
+      "canonicalSourceIndexPath": "data/processed/source_indexes/sources/reg210-non-guaranteed-elements.json",
+      "sourceVersionId": "source-index-reg210-non-guaranteed-elements",
+      "controlledTags": [
+        "regulatory_requirement",
+        "state_regulation",
+        "jurisdiction_specific_requirement",
+        "governance_or_control_expectation",
+        "company_or_prudent_estimate_assumption",
+        "cross_reference_mapping"
+      ],
+      "keywords": [
+        "Regulation 210",
+        "qualified actuary",
+        "board approved",
+        "non-guaranteed elements"
+      ],
+      "citations": [
+        {
+          "citationText": "Regulation 210 qualified actuary board approved criteria",
+          "pageReference": "pp. 4-6",
+          "sectionReference": "Qualified actuary, board-approved criteria, and non-guaranteed elements",
+          "sourceReference": "11 NYCRR Part 48 (Insurance Regulation 210)",
+          "lineReference": null
+        }
+      ],
+      "relationships": [],
+      "relationshipIds": [],
+      "fidelity": "exact",
+      "confidence": "high",
+      "reviewFlags": [
+        "page_locator_anchor"
+      ],
+      "qualityNotes": [
+        "Page locators are the primary anchor for this regulation.",
+        "No stable line references were preserved in the handoff layer."
+      ],
+      "evidenceNotes": "Derived from the ignored Reg-210 review packets and review index.",
+      "retrievalEligible": true,
+      "promotionEligible": false
+    },
+    {
+      "chunkId": "chunk-reg210-non-guaranteed-elements-003",
+      "chunkOrdinal": 3,
+      "chunkKind": "source_excerpt",
+      "sourceTextType": "actual_extracted_source_text",
+      "pageStart": 7,
+      "pageEnd": 9,
+      "sectionReference": "Filing and records closeout",
+      "lineReference": null,
+      "sourceTextExcerpt": "Regulation 210 filing and records closeout",
+      "normalizedTextExcerpt": "regulation 210 filing and records closeout",
+      "summary": "The regulation closes with filing and records requirements.",
+      "topic": "Filing and records closeout",
+      "headingPath": "Filing and records closeout",
+      "keyPoints": [
+        "The regulation closes with filing and records requirements."
+      ],
+      "concepts": [
+        "regulatory_requirement",
+        "state_regulation",
+        "jurisdiction_specific_requirement",
+        "reporting_requirement",
+        "documentation_expectation",
+        "governance_or_control_expectation",
+        "boundary_control_window"
+      ],
+      "definedTerms": [
+        "Regulation 210",
+        "filing",
+        "records",
+        "closeout"
+      ],
+      "acronyms": [],
+      "requirements": [
+        "regulatory_requirement",
+        "jurisdiction_specific_requirement",
+        "reporting_requirement",
+        "documentation_expectation",
+        "governance_or_control_expectation"
+      ],
+      "citationDisplay": "Regulation 210 filing and records closeout",
+      "normalizedSearchText": "regulation 210 filing and records closeout regulation 210 filing and records closeout the regulation closes with filing and records requirements. filing and records closeout filing and records closeout filing and records closeout life insurance and annuity non-guaranteed elements 11 nycrr part 48 (insurance regulation 210) the regulation closes with filing and records requirements. regulatory_requirement state_regulation jurisdiction_specific_requirement reporting_requirement documentation_expectation governance_or_control_expectation boundary_control_window regulation 210 filing records closeout regulatory_requirement jurisdiction_specific_requirement reporting_requirement documentation_expectation governance_or_control_expectation regulation 210 filing and records closeout regulatory_requirement state_regulation jurisdiction_specific_requirement reporting_requirement documentation_expectation governance_or_control_expectation boundary_control_window regulation 210 filing records closeout",
+      "canonicalSourceIndexPath": "data/processed/source_indexes/sources/reg210-non-guaranteed-elements.json",
+      "sourceVersionId": "source-index-reg210-non-guaranteed-elements",
+      "controlledTags": [
+        "regulatory_requirement",
+        "state_regulation",
+        "jurisdiction_specific_requirement",
+        "reporting_requirement",
+        "documentation_expectation",
+        "governance_or_control_expectation",
+        "boundary_control_window"
+      ],
+      "keywords": [
+        "Regulation 210",
+        "filing",
+        "records",
+        "closeout"
+      ],
+      "citations": [
+        {
+          "citationText": "Regulation 210 filing and records closeout",
+          "pageReference": "pp. 7-9",
+          "sectionReference": "Filing and records closeout",
+          "sourceReference": "11 NYCRR Part 48 (Insurance Regulation 210)",
+          "lineReference": null
+        }
+      ],
+      "relationships": [],
+      "relationshipIds": [],
+      "fidelity": "exact",
+      "confidence": "high",
+      "reviewFlags": [
+        "page_locator_anchor"
+      ],
+      "qualityNotes": [
+        "Page locators are the primary anchor for this regulation.",
+        "No stable line references were preserved in the handoff layer."
+      ],
+      "evidenceNotes": "Derived from the ignored Reg-210 review packets and review index.",
+      "retrievalEligible": true,
+      "promotionEligible": false
+    }
+  ],
+  "relationships": [],
+  "quality": {
+    "textLayerQuality": "clean",
+    "citationCompleteness": "partial",
+    "pageImageBackstop": false,
+    "lineReferencesAvailable": false,
+    "notes": "Active NY regulation for non-guaranteed elements."
+  },
+  "exportHints": {
+    "jsonlEligible": true,
+    "csvEligible": true,
+    "vectorEligible": true,
+    "notes": "Backend-neutral POC exports generated from review-only batch artifacts."
+  },
+  "notes": "Active NY regulation for non-guaranteed elements.",
+  "extensions": {
+    "batchIds": [
+      "batch-186",
+      "batch-187",
+      "batch-188"
+    ],
+    "sourceIndexGeneratedBy": "build-source-index-poc"
+  }
+}

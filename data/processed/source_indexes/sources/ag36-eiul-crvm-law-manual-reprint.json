@@ -1,0 +1,176 @@
+{
+  "schemaVersion": "1.0",
+  "sourceIndexId": "source-index-ag36-eiul-crvm-law-manual-reprint",
+  "repositoryManifestId": "source-index-poc-2026-07-21",
+  "sourceVersionId": "source-index-ag36-eiul-crvm-law-manual-reprint",
+  "source": {
+    "sourceId": "ag36-eiul-crvm-law-manual-reprint",
+    "sourceVersionId": "source-index-ag36-eiul-crvm-law-manual-reprint",
+    "filename": "AG 36 - CRVM for EIUL-from 2021 Law Manual.pdf",
+    "filePath": "D:\\Work\\AI Projects\\NAIC Valuation Manual Course\\Actuarial Guidelines\\AG 36 - CRVM for EIUL-from 2021 Law Manual.pdf",
+    "sourceFamilyId": "actuarial_guidelines",
+    "domainId": "naic_regulatory",
+    "documentType": "actuarial_guideline",
+    "sourceTitle": "The Application of the Commissioners Reserve Valuation Method to Equity Indexed Life Insurance Policies",
+    "sourceReference": "Actuarial Guideline XXXVI / 2021 Law Manual reprint",
+    "jurisdiction": "NAIC",
+    "authorityLevel": "companion_reprint",
+    "sourceStatus": "companion-only",
+    "versionDate": null,
+    "pageCount": 18,
+    "pageRange": {
+      "start": 1,
+      "end": 18
+    },
+    "reviewBatchIds": [
+      "batch-279"
+    ],
+    "reviewIndexPath": "docs/review/ag36_law_manual_reprint_review_index.md",
+    "selfReviewPath": "docs/review/ag36_law_manual_reprint_self_review.md",
+    "pageImageBackstop": true,
+    "lineReferencesAvailable": false,
+    "textLayerQuality": "noisy",
+    "notes": "Companion-only AG 36 Law Manual reprint retained as separate evidence."
+  },
+  "processing": {
+    "createdAt": "2026-07-21T05:26:54.269Z",
+    "createdBy": "scripts/build-source-index-poc.mjs",
+    "processingMode": "canonical_index_poc",
+    "canonicality": "poc",
+    "reviewOnly": true,
+    "learnerFacingAllowed": false,
+    "appReadyAllowed": false,
+    "ragReadyAllowed": false,
+    "promotionStatus": "not_promoted",
+    "notes": "Companion-only AG 36 Law Manual reprint retained as separate evidence."
+  },
+  "chunks": [
+    {
+      "chunkId": "chunk-ag36-eiul-crvm-law-manual-reprint-001",
+      "chunkOrdinal": 1,
+      "chunkKind": "source_excerpt",
+      "sourceTextType": "review_artifact_derived_text",
+      "pageStart": 1,
+      "pageEnd": 18,
+      "sectionReference": "AG 36 reprint: background through certification closeout",
+      "lineReference": null,
+      "sourceTextExcerpt": "AG 36 reprint companion slice",
+      "normalizedTextExcerpt": "ag 36 reprint companion slice",
+      "summary": "The 2021 Law Manual reprint keeps the companion background, mechanics, hedged-as-required criteria, notification material, and certification closeout together.",
+      "topic": "Reprint background through certification closeout",
+      "headingPath": "AG 36 reprint: background through certification closeout",
+      "keyPoints": [
+        "The 2021 Law Manual reprint keeps the companion background, mechanics, hedged-as-required criteria, notification material, and certification closeout together."
+      ],
+      "concepts": [
+        "companion_guidance",
+        "duplicate_or_reprint",
+        "regulatory_requirement",
+        "reserve_method_structure",
+        "calculation_structure",
+        "formula_context",
+        "prescribed_assumption",
+        "hedging_or_risk_mitigation",
+        "reporting_requirement",
+        "documentation_expectation",
+        "definition_or_terminology",
+        "cross_reference_mapping",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "definedTerms": [
+        "AG 36",
+        "reprint",
+        "EIUL",
+        "CRVM",
+        "companion"
+      ],
+      "acronyms": [],
+      "requirements": [
+        "regulatory_requirement",
+        "reporting_requirement",
+        "documentation_expectation"
+      ],
+      "citationDisplay": "AG 36 reprint companion slice",
+      "normalizedSearchText": "ag 36 reprint companion slice ag 36 reprint companion slice the 2021 law manual reprint keeps the companion background, mechanics, hedged-as-required criteria, notification material, and certification closeout together. reprint background through certification closeout ag 36 reprint: background through certification closeout ag 36 reprint: background through certification closeout the application of the commissioners reserve valuation method to equity indexed life insurance policies actuarial guideline xxxvi / 2021 law manual reprint the 2021 law manual reprint keeps the companion background, mechanics, hedged-as-required criteria, notification material, and certification closeout together. companion_guidance duplicate_or_reprint regulatory_requirement reserve_method_structure calculation_structure formula_context prescribed_assumption hedging_or_risk_mitigation reporting_requirement documentation_expectation definition_or_terminology cross_reference_mapping boundary_control_window requires_human_interpretation ag 36 reprint eiul crvm companion regulatory_requirement reporting_requirement documentation_expectation ag 36 reprint companion slice companion_guidance duplicate_or_reprint regulatory_requirement reserve_method_structure calculation_structure formula_context prescribed_assumption hedging_or_risk_mitigation reporting_requirement documentation_expectation definition_or_terminology cross_reference_mapping boundary_control_window requires_human_interpretation ag 36 reprint eiul crvm companion",
+      "canonicalSourceIndexPath": "data/processed/source_indexes/sources/ag36-eiul-crvm-law-manual-reprint.json",
+      "sourceVersionId": "source-index-ag36-eiul-crvm-law-manual-reprint",
+      "controlledTags": [
+        "companion_guidance",
+        "duplicate_or_reprint",
+        "regulatory_requirement",
+        "reserve_method_structure",
+        "calculation_structure",
+        "formula_context",
+        "prescribed_assumption",
+        "hedging_or_risk_mitigation",
+        "reporting_requirement",
+        "documentation_expectation",
+        "definition_or_terminology",
+        "cross_reference_mapping",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "keywords": [
+        "AG 36",
+        "reprint",
+        "EIUL",
+        "CRVM",
+        "companion"
+      ],
+      "citations": [
+        {
+          "citationText": "AG 36 reprint companion slice",
+          "pageReference": "pp. 1-18",
+          "sectionReference": "AG 36 reprint: background through certification closeout",
+          "sourceReference": "Actuarial Guideline XXXVI / 2021 Law Manual reprint",
+          "lineReference": null
+        }
+      ],
+      "relationships": [],
+      "relationshipIds": [
+        "ag36-eiul-crvm-guidance"
+      ],
+      "fidelity": "curated",
+      "confidence": "high",
+      "reviewFlags": [
+        "companion_guidance",
+        "page_image_backstop"
+      ],
+      "qualityNotes": [
+        "Companion-only reprint slice; do not merge with the active AG 36 package automatically.",
+        "Page-image wording backstop remains required."
+      ],
+      "evidenceNotes": "Derived from the ignored AG 36 Law Manual reprint review packet and review index.",
+      "retrievalEligible": true,
+      "promotionEligible": false
+    }
+  ],
+  "relationships": [
+    {
+      "relationType": "duplicate_or_reprint",
+      "targetSourceId": "ag36-eiul-crvm-guidance",
+      "notes": "Companion reprint counterpart to the active AG 36 source."
+    }
+  ],
+  "quality": {
+    "textLayerQuality": "noisy",
+    "citationCompleteness": "partial",
+    "pageImageBackstop": true,
+    "lineReferencesAvailable": false,
+    "notes": "Companion-only AG 36 Law Manual reprint retained as separate evidence."
+  },
+  "exportHints": {
+    "jsonlEligible": true,
+    "csvEligible": true,
+    "vectorEligible": true,
+    "notes": "Backend-neutral POC exports generated from review-only batch artifacts."
+  },
+  "notes": "Companion-only AG 36 Law Manual reprint retained as separate evidence.",
+  "extensions": {
+    "batchIds": [
+      "batch-279"
+    ],
+    "sourceIndexGeneratedBy": "build-source-index-poc"
+  }
+}

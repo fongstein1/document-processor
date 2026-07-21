@@ -1,0 +1,397 @@
+{
+  "schemaVersion": "1.0",
+  "sourceIndexId": "source-index-ag36-eiul-crvm-guidance",
+  "repositoryManifestId": "source-index-poc-2026-07-21",
+  "sourceVersionId": "source-index-ag36-eiul-crvm-guidance",
+  "source": {
+    "sourceId": "ag36-eiul-crvm-guidance",
+    "sourceVersionId": "source-index-ag36-eiul-crvm-guidance",
+    "filename": "AG 36 - The Application of the Commissioners Reserve Valuation Method to Equity Indexed Life Insurance Policies.pdf",
+    "filePath": "D:\\Work\\AI Projects\\NAIC Valuation Manual Course\\Actuarial Guidelines\\AG 36 - The Application of the Commissioners Reserve Valuation Method to Equity Indexed Life Insurance Policies.pdf",
+    "sourceFamilyId": "actuarial_guidelines",
+    "domainId": "naic_regulatory",
+    "documentType": "actuarial_guideline",
+    "sourceTitle": "The Application of the Commissioners Reserve Valuation Method to Equity Indexed Life Insurance Policies",
+    "sourceReference": "Actuarial Guideline XXXVI",
+    "jurisdiction": "NAIC",
+    "authorityLevel": "guideline",
+    "sourceStatus": "active",
+    "versionDate": null,
+    "pageCount": 11,
+    "pageRange": {
+      "start": 1,
+      "end": 11
+    },
+    "reviewBatchIds": [
+      "batch-123",
+      "batch-124",
+      "batch-125",
+      "batch-126"
+    ],
+    "reviewIndexPath": "docs/review/ag36_review_index.md",
+    "selfReviewPath": "docs/review/ag36_self_review.md",
+    "pageImageBackstop": true,
+    "lineReferencesAvailable": false,
+    "textLayerQuality": "noisy",
+    "notes": "Active AG 36 source package retained as a review-only guideline slice."
+  },
+  "processing": {
+    "createdAt": "2026-07-21T05:26:54.267Z",
+    "createdBy": "scripts/build-source-index-poc.mjs",
+    "processingMode": "canonical_index_poc",
+    "canonicality": "poc",
+    "reviewOnly": true,
+    "learnerFacingAllowed": false,
+    "appReadyAllowed": false,
+    "ragReadyAllowed": false,
+    "promotionStatus": "not_promoted",
+    "notes": "Active AG 36 source package retained as a review-only guideline slice."
+  },
+  "chunks": [
+    {
+      "chunkId": "chunk-ag36-eiul-crvm-guidance-001",
+      "chunkOrdinal": 1,
+      "chunkKind": "source_excerpt",
+      "sourceTextType": "actual_extracted_source_text",
+      "pageStart": 1,
+      "pageEnd": 3,
+      "sectionReference": "AG 36: Foundation and method overview",
+      "lineReference": null,
+      "sourceTextExcerpt": "AG 36 foundation and method overview",
+      "normalizedTextExcerpt": "ag 36 foundation and method overview",
+      "summary": "AG 36 introduces the CRVM framework for equity-indexed life insurance policies.",
+      "topic": "Foundation and method overview",
+      "headingPath": "AG 36: Foundation and method overview",
+      "keyPoints": [
+        "AG 36 introduces the CRVM framework for equity-indexed life insurance policies."
+      ],
+      "concepts": [
+        "regulatory_requirement",
+        "reserve_method_structure",
+        "definition_or_terminology",
+        "cross_reference_mapping",
+        "background_content"
+      ],
+      "definedTerms": [
+        "AG 36",
+        "CRVM",
+        "equity indexed life insurance",
+        "overview"
+      ],
+      "acronyms": [],
+      "requirements": [
+        "regulatory_requirement"
+      ],
+      "citationDisplay": "AG 36 foundation and method overview",
+      "normalizedSearchText": "ag 36 foundation and method overview ag 36 foundation and method overview ag 36 introduces the crvm framework for equity-indexed life insurance policies. foundation and method overview ag 36: foundation and method overview ag 36: foundation and method overview the application of the commissioners reserve valuation method to equity indexed life insurance policies actuarial guideline xxxvi ag 36 introduces the crvm framework for equity-indexed life insurance policies. regulatory_requirement reserve_method_structure definition_or_terminology cross_reference_mapping background_content ag 36 crvm equity indexed life insurance overview regulatory_requirement ag 36 foundation and method overview regulatory_requirement reserve_method_structure definition_or_terminology cross_reference_mapping background_content ag 36 crvm equity indexed life insurance overview",
+      "canonicalSourceIndexPath": "data/processed/source_indexes/sources/ag36-eiul-crvm-guidance.json",
+      "sourceVersionId": "source-index-ag36-eiul-crvm-guidance",
+      "controlledTags": [
+        "regulatory_requirement",
+        "reserve_method_structure",
+        "definition_or_terminology",
+        "cross_reference_mapping",
+        "background_content"
+      ],
+      "keywords": [
+        "AG 36",
+        "CRVM",
+        "equity indexed life insurance",
+        "overview"
+      ],
+      "citations": [
+        {
+          "citationText": "AG 36 foundation and method overview",
+          "pageReference": "pp. 1-3",
+          "sectionReference": "AG 36: Foundation and method overview",
+          "sourceReference": "Actuarial Guideline XXXVI",
+          "lineReference": null
+        }
+      ],
+      "relationships": [],
+      "relationshipIds": [
+        "ag36-eiul-crvm-law-manual-reprint"
+      ],
+      "fidelity": "exact",
+      "confidence": "medium",
+      "reviewFlags": [
+        "noisy_text_layer",
+        "page_image_backstop"
+      ],
+      "qualityNotes": [
+        "Encoding-noisy OCR layer; page-image wording backstop remains required.",
+        "No line references were preserved in the source package."
+      ],
+      "evidenceNotes": "Derived from the ignored AG 36 review packets and review index.",
+      "retrievalEligible": true,
+      "promotionEligible": false
+    },
+    {
+      "chunkId": "chunk-ag36-eiul-crvm-guidance-002",
+      "chunkOrdinal": 2,
+      "chunkKind": "source_excerpt",
+      "sourceTextType": "actual_extracted_source_text",
+      "pageStart": 4,
+      "pageEnd": 6,
+      "sectionReference": "AG 36: Attachments and method mechanics",
+      "lineReference": null,
+      "sourceTextExcerpt": "AG 36 attachments and method mechanics",
+      "normalizedTextExcerpt": "ag 36 attachments and method mechanics",
+      "summary": "AG 36 describes the attachment-driven mechanics and rate framework.",
+      "topic": "Attachments and method mechanics",
+      "headingPath": "AG 36: Attachments and method mechanics",
+      "keyPoints": [
+        "AG 36 describes the attachment-driven mechanics and rate framework."
+      ],
+      "concepts": [
+        "regulatory_requirement",
+        "reserve_method_structure",
+        "calculation_structure",
+        "formula_context",
+        "prescribed_assumption"
+      ],
+      "definedTerms": [
+        "AG 36",
+        "attachments",
+        "mechanics",
+        "rates"
+      ],
+      "acronyms": [],
+      "requirements": [
+        "regulatory_requirement"
+      ],
+      "citationDisplay": "AG 36 attachments and method mechanics",
+      "normalizedSearchText": "ag 36 attachments and method mechanics ag 36 attachments and method mechanics ag 36 describes the attachment-driven mechanics and rate framework. attachments and method mechanics ag 36: attachments and method mechanics ag 36: attachments and method mechanics the application of the commissioners reserve valuation method to equity indexed life insurance policies actuarial guideline xxxvi ag 36 describes the attachment-driven mechanics and rate framework. regulatory_requirement reserve_method_structure calculation_structure formula_context prescribed_assumption ag 36 attachments mechanics rates regulatory_requirement ag 36 attachments and method mechanics regulatory_requirement reserve_method_structure calculation_structure formula_context prescribed_assumption ag 36 attachments mechanics rates",
+      "canonicalSourceIndexPath": "data/processed/source_indexes/sources/ag36-eiul-crvm-guidance.json",
+      "sourceVersionId": "source-index-ag36-eiul-crvm-guidance",
+      "controlledTags": [
+        "regulatory_requirement",
+        "reserve_method_structure",
+        "calculation_structure",
+        "formula_context",
+        "prescribed_assumption"
+      ],
+      "keywords": [
+        "AG 36",
+        "attachments",
+        "mechanics",
+        "rates"
+      ],
+      "citations": [
+        {
+          "citationText": "AG 36 attachments and method mechanics",
+          "pageReference": "pp. 4-6",
+          "sectionReference": "AG 36: Attachments and method mechanics",
+          "sourceReference": "Actuarial Guideline XXXVI",
+          "lineReference": null
+        }
+      ],
+      "relationships": [],
+      "relationshipIds": [
+        "ag36-eiul-crvm-law-manual-reprint"
+      ],
+      "fidelity": "exact",
+      "confidence": "medium",
+      "reviewFlags": [
+        "noisy_text_layer",
+        "page_image_backstop"
+      ],
+      "qualityNotes": [
+        "Encoding-noisy OCR layer; page-image wording backstop remains required.",
+        "No line references were preserved in the source package."
+      ],
+      "evidenceNotes": "Derived from the ignored AG 36 review packets and review index.",
+      "retrievalEligible": true,
+      "promotionEligible": false
+    },
+    {
+      "chunkId": "chunk-ag36-eiul-crvm-guidance-003",
+      "chunkOrdinal": 3,
+      "chunkKind": "source_excerpt",
+      "sourceTextType": "actual_extracted_source_text",
+      "pageStart": 7,
+      "pageEnd": 8,
+      "sectionReference": "AG 36: Hedged as required and notification",
+      "lineReference": null,
+      "sourceTextExcerpt": "AG 36 hedged as required and notification",
+      "normalizedTextExcerpt": "ag 36 hedged as required and notification",
+      "summary": "AG 36 adds the hedged-as-required criteria and the notification threshold.",
+      "topic": "Hedged as required and notification",
+      "headingPath": "AG 36: Hedged as required and notification",
+      "keyPoints": [
+        "AG 36 adds the hedged-as-required criteria and the notification threshold."
+      ],
+      "concepts": [
+        "regulatory_requirement",
+        "hedging_or_risk_mitigation",
+        "reporting_requirement",
+        "governance_or_control_expectation",
+        "cross_reference_mapping"
+      ],
+      "definedTerms": [
+        "AG 36",
+        "hedged as required",
+        "notification"
+      ],
+      "acronyms": [],
+      "requirements": [
+        "regulatory_requirement",
+        "reporting_requirement",
+        "governance_or_control_expectation"
+      ],
+      "citationDisplay": "AG 36 hedged as required and notification",
+      "normalizedSearchText": "ag 36 hedged as required and notification ag 36 hedged as required and notification ag 36 adds the hedged-as-required criteria and the notification threshold. hedged as required and notification ag 36: hedged as required and notification ag 36: hedged as required and notification the application of the commissioners reserve valuation method to equity indexed life insurance policies actuarial guideline xxxvi ag 36 adds the hedged-as-required criteria and the notification threshold. regulatory_requirement hedging_or_risk_mitigation reporting_requirement governance_or_control_expectation cross_reference_mapping ag 36 hedged as required notification regulatory_requirement reporting_requirement governance_or_control_expectation ag 36 hedged as required and notification regulatory_requirement hedging_or_risk_mitigation reporting_requirement governance_or_control_expectation cross_reference_mapping ag 36 hedged as required notification",
+      "canonicalSourceIndexPath": "data/processed/source_indexes/sources/ag36-eiul-crvm-guidance.json",
+      "sourceVersionId": "source-index-ag36-eiul-crvm-guidance",
+      "controlledTags": [
+        "regulatory_requirement",
+        "hedging_or_risk_mitigation",
+        "reporting_requirement",
+        "governance_or_control_expectation",
+        "cross_reference_mapping"
+      ],
+      "keywords": [
+        "AG 36",
+        "hedged as required",
+        "notification"
+      ],
+      "citations": [
+        {
+          "citationText": "AG 36 hedged as required and notification",
+          "pageReference": "pp. 7-8",
+          "sectionReference": "AG 36: Hedged as required and notification",
+          "sourceReference": "Actuarial Guideline XXXVI",
+          "lineReference": null
+        }
+      ],
+      "relationships": [],
+      "relationshipIds": [
+        "ag36-eiul-crvm-law-manual-reprint"
+      ],
+      "fidelity": "exact",
+      "confidence": "medium",
+      "reviewFlags": [
+        "noisy_text_layer",
+        "page_image_backstop"
+      ],
+      "qualityNotes": [
+        "Encoding-noisy OCR layer; page-image wording backstop remains required.",
+        "No line references were preserved in the source package."
+      ],
+      "evidenceNotes": "Derived from the ignored AG 36 review packets and review index.",
+      "retrievalEligible": true,
+      "promotionEligible": false
+    },
+    {
+      "chunkId": "chunk-ag36-eiul-crvm-guidance-004",
+      "chunkOrdinal": 4,
+      "chunkKind": "source_excerpt",
+      "sourceTextType": "actual_extracted_source_text",
+      "pageStart": 9,
+      "pageEnd": 11,
+      "sectionReference": "AG 36: Certification and closeout",
+      "lineReference": null,
+      "sourceTextExcerpt": "AG 36 certification and closeout",
+      "normalizedTextExcerpt": "ag 36 certification and closeout",
+      "summary": "AG 36 closes with reasonableness and consistency certifications.",
+      "topic": "Certification and closeout",
+      "headingPath": "AG 36: Certification and closeout",
+      "keyPoints": [
+        "AG 36 closes with reasonableness and consistency certifications."
+      ],
+      "concepts": [
+        "regulatory_requirement",
+        "reporting_requirement",
+        "documentation_expectation",
+        "governance_or_control_expectation",
+        "cross_reference_mapping",
+        "boundary_control_window"
+      ],
+      "definedTerms": [
+        "AG 36",
+        "certification",
+        "closeout"
+      ],
+      "acronyms": [],
+      "requirements": [
+        "regulatory_requirement",
+        "reporting_requirement",
+        "documentation_expectation",
+        "governance_or_control_expectation"
+      ],
+      "citationDisplay": "AG 36 certification and closeout",
+      "normalizedSearchText": "ag 36 certification and closeout ag 36 certification and closeout ag 36 closes with reasonableness and consistency certifications. certification and closeout ag 36: certification and closeout ag 36: certification and closeout the application of the commissioners reserve valuation method to equity indexed life insurance policies actuarial guideline xxxvi ag 36 closes with reasonableness and consistency certifications. regulatory_requirement reporting_requirement documentation_expectation governance_or_control_expectation cross_reference_mapping boundary_control_window ag 36 certification closeout regulatory_requirement reporting_requirement documentation_expectation governance_or_control_expectation ag 36 certification and closeout regulatory_requirement reporting_requirement documentation_expectation governance_or_control_expectation cross_reference_mapping boundary_control_window ag 36 certification closeout",
+      "canonicalSourceIndexPath": "data/processed/source_indexes/sources/ag36-eiul-crvm-guidance.json",
+      "sourceVersionId": "source-index-ag36-eiul-crvm-guidance",
+      "controlledTags": [
+        "regulatory_requirement",
+        "reporting_requirement",
+        "documentation_expectation",
+        "governance_or_control_expectation",
+        "cross_reference_mapping",
+        "boundary_control_window"
+      ],
+      "keywords": [
+        "AG 36",
+        "certification",
+        "closeout"
+      ],
+      "citations": [
+        {
+          "citationText": "AG 36 certification and closeout",
+          "pageReference": "pp. 9-11",
+          "sectionReference": "AG 36: Certification and closeout",
+          "sourceReference": "Actuarial Guideline XXXVI",
+          "lineReference": null
+        }
+      ],
+      "relationships": [],
+      "relationshipIds": [
+        "ag36-eiul-crvm-law-manual-reprint"
+      ],
+      "fidelity": "exact",
+      "confidence": "medium",
+      "reviewFlags": [
+        "noisy_text_layer",
+        "page_image_backstop"
+      ],
+      "qualityNotes": [
+        "Encoding-noisy OCR layer; page-image wording backstop remains required.",
+        "No line references were preserved in the source package."
+      ],
+      "evidenceNotes": "Derived from the ignored AG 36 review packets and review index.",
+      "retrievalEligible": true,
+      "promotionEligible": false
+    }
+  ],
+  "relationships": [
+    {
+      "relationType": "duplicate_or_reprint",
+      "targetSourceId": "ag36-eiul-crvm-law-manual-reprint",
+      "notes": "Active AG 36 source counterpart to the Law Manual reprint."
+    }
+  ],
+  "quality": {
+    "textLayerQuality": "noisy",
+    "citationCompleteness": "partial",
+    "pageImageBackstop": true,
+    "lineReferencesAvailable": false,
+    "notes": "Active AG 36 source package retained as a review-only guideline slice."
+  },
+  "exportHints": {
+    "jsonlEligible": true,
+    "csvEligible": true,
+    "vectorEligible": true,
+    "notes": "Backend-neutral POC exports generated from review-only batch artifacts."
+  },
+  "notes": "Active AG 36 source package retained as a review-only guideline slice.",
+  "extensions": {
+    "batchIds": [
+      "batch-123",
+      "batch-124",
+      "batch-125",
+      "batch-126"
+    ],
+    "sourceIndexGeneratedBy": "build-source-index-poc"
+  }
+}

@@ -43,7 +43,7 @@
     "relationships": {
       "type": "array",
       "items": {
-        "$ref": "#/$defs/relationship"
+        "$ref": "#/$defs/chunkRelationship"
       }
     },
     "quality": {
@@ -146,6 +146,9 @@
             "null"
           ],
           "format": "date"
+        },
+        "sourceVersionId": {
+          "type": "string"
         },
         "pageCount": {
           "type": [
@@ -412,6 +415,59 @@
         "evidenceNotes": {
           "type": "string"
         },
+        "sourceVersionId": {
+          "type": "string"
+        },
+        "headingPath": {
+          "type": "string"
+        },
+        "topic": {
+          "type": "string"
+        },
+        "keyPoints": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "concepts": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "definedTerms": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "acronyms": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "requirements": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "citationDisplay": {
+          "type": "string"
+        },
+        "normalizedSearchText": {
+          "type": "string"
+        },
+        "canonicalSourceIndexPath": {
+          "type": "string"
+        },
         "retrievalEligible": {
           "type": "boolean"
         },
@@ -458,13 +514,22 @@
       "type": "object",
       "additionalProperties": false,
       "required": [
-        "relationType",
-        "targetChunkId"
+        "relationType"
       ],
       "properties": {
         "relationType": {
           "type": "string",
           "enum": [
+            "references",
+            "implements",
+            "interprets",
+            "amends",
+            "supersedes",
+            "reprints",
+            "companion_guidance",
+            "duplicate_or_reprint",
+            "jurisdictional_modification",
+            "related_methodology",
             "follows",
             "precedes",
             "supports",
@@ -477,10 +542,26 @@
           "type": "string",
           "minLength": 1
         },
+        "targetSourceId": {
+          "type": "string",
+          "minLength": 1
+        },
         "notes": {
           "type": "string"
         }
-      }
+      },
+      "anyOf": [
+        {
+          "required": [
+            "targetChunkId"
+          ]
+        },
+        {
+          "required": [
+            "targetSourceId"
+          ]
+        }
+      ]
     },
     "quality": {
       "type": "object",

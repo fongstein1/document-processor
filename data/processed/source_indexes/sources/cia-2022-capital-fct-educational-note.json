@@ -1,0 +1,374 @@
+{
+  "schemaVersion": "1.0",
+  "sourceIndexId": "source-index-cia-2022-capital-fct-educational-note",
+  "repositoryManifestId": "source-index-poc-2026-07-21",
+  "sourceVersionId": "source-index-cia-2022-capital-fct-educational-note",
+  "source": {
+    "sourceId": "cia-2022-capital-fct-educational-note",
+    "sourceVersionId": "source-index-cia-2022-capital-fct-educational-note",
+    "filename": "222030e.pdf",
+    "filePath": "D:\\Work\\AI Projects\\NAIC Valuation Manual Course\\Practice Notes\\222030e.pdf",
+    "sourceFamilyId": "educational_notes",
+    "domainId": "naic_regulatory",
+    "documentType": "educational_note",
+    "sourceTitle": "CIA 2022 Capital and FCT Educational Note",
+    "sourceReference": "Canadian Institute of Actuaries educational note, February 2022",
+    "jurisdiction": "Canada",
+    "authorityLevel": "educational_note",
+    "sourceStatus": "educational note",
+    "versionDate": null,
+    "pageCount": 20,
+    "pageRange": {
+      "start": 1,
+      "end": 20
+    },
+    "reviewBatchIds": [
+      "batch-206",
+      "batch-207",
+      "batch-208",
+      "batch-209"
+    ],
+    "reviewIndexPath": "docs/review/cia_2022_capital_fct_educational_note_review_index.md",
+    "selfReviewPath": "docs/review/cia_2022_capital_fct_educational_note_self_review.md",
+    "pageImageBackstop": false,
+    "lineReferencesAvailable": false,
+    "textLayerQuality": "clean",
+    "notes": "Canadian Institute of Actuaries educational note retained as review-only companion guidance."
+  },
+  "processing": {
+    "createdAt": "2026-07-21T05:26:54.275Z",
+    "createdBy": "scripts/build-source-index-poc.mjs",
+    "processingMode": "canonical_index_poc",
+    "canonicality": "poc",
+    "reviewOnly": true,
+    "learnerFacingAllowed": false,
+    "appReadyAllowed": false,
+    "ragReadyAllowed": false,
+    "promotionStatus": "not_promoted",
+    "notes": "Canadian Institute of Actuaries educational note retained as review-only companion guidance."
+  },
+  "chunks": [
+    {
+      "chunkId": "chunk-cia-2022-capital-fct-educational-note-001",
+      "chunkOrdinal": 1,
+      "chunkKind": "source_excerpt",
+      "sourceTextType": "actual_extracted_source_text",
+      "pageStart": 1,
+      "pageEnd": 6,
+      "sectionReference": "Opening and background guidance",
+      "lineReference": null,
+      "sourceTextExcerpt": "CIA educational note opening background guidance",
+      "normalizedTextExcerpt": "cia educational note opening background guidance",
+      "summary": "The note opens with educational-note framing and background guidance.",
+      "topic": "Opening and background guidance",
+      "headingPath": "Opening and background guidance",
+      "keyPoints": [
+        "The note opens with educational-note framing and background guidance."
+      ],
+      "concepts": [
+        "background_content",
+        "caveat_or_companion_guidance",
+        "non_binding_practice_note",
+        "educational_note",
+        "cross_reference_mapping"
+      ],
+      "definedTerms": [
+        "CIA",
+        "educational note",
+        "capital",
+        "FCT"
+      ],
+      "acronyms": [],
+      "requirements": [],
+      "citationDisplay": "CIA educational note opening background guidance",
+      "normalizedSearchText": "cia educational note opening background guidance cia educational note opening background guidance the note opens with educational-note framing and background guidance. opening and background guidance opening and background guidance opening and background guidance cia 2022 capital and fct educational note canadian institute of actuaries educational note, february 2022 the note opens with educational-note framing and background guidance. background_content caveat_or_companion_guidance non_binding_practice_note educational_note cross_reference_mapping cia educational note capital fct cia educational note opening background guidance background_content caveat_or_companion_guidance non_binding_practice_note educational_note cross_reference_mapping cia educational note capital fct",
+      "canonicalSourceIndexPath": "data/processed/source_indexes/sources/cia-2022-capital-fct-educational-note.json",
+      "sourceVersionId": "source-index-cia-2022-capital-fct-educational-note",
+      "controlledTags": [
+        "background_content",
+        "caveat_or_companion_guidance",
+        "non_binding_practice_note",
+        "educational_note",
+        "cross_reference_mapping"
+      ],
+      "keywords": [
+        "CIA",
+        "educational note",
+        "capital",
+        "FCT"
+      ],
+      "citations": [
+        {
+          "citationText": "CIA educational note opening background guidance",
+          "pageReference": "pp. 1-6",
+          "sectionReference": "Opening and background guidance",
+          "sourceReference": "Canadian Institute of Actuaries educational note, February 2022",
+          "lineReference": null
+        }
+      ],
+      "relationships": [],
+      "relationshipIds": [],
+      "fidelity": "exact",
+      "confidence": "high",
+      "reviewFlags": [
+        "page_locator_anchor"
+      ],
+      "qualityNotes": [
+        "Educational note and companion guidance; page locators are the primary anchor.",
+        "No stable line references were available in the source package."
+      ],
+      "evidenceNotes": "Derived from the ignored CIA educational-note review packets and review index.",
+      "retrievalEligible": true,
+      "promotionEligible": false
+    },
+    {
+      "chunkId": "chunk-cia-2022-capital-fct-educational-note-002",
+      "chunkOrdinal": 2,
+      "chunkKind": "source_excerpt",
+      "sourceTextType": "actual_extracted_source_text",
+      "pageStart": 7,
+      "pageEnd": 11,
+      "sectionReference": "Capital and FCT overview",
+      "lineReference": null,
+      "sourceTextExcerpt": "CIA educational note capital and FCT overview",
+      "normalizedTextExcerpt": "cia educational note capital and fct overview",
+      "summary": "The note covers the capital and FCT overview.",
+      "topic": "Capital and FCT overview",
+      "headingPath": "Capital and FCT overview",
+      "keyPoints": [
+        "The note covers the capital and FCT overview."
+      ],
+      "concepts": [
+        "regulatory_requirement",
+        "reporting_requirement",
+        "documentation_expectation",
+        "educational_note",
+        "cross_reference_mapping"
+      ],
+      "definedTerms": [
+        "capital",
+        "FCT",
+        "overview",
+        "CIA"
+      ],
+      "acronyms": [],
+      "requirements": [
+        "regulatory_requirement",
+        "reporting_requirement",
+        "documentation_expectation"
+      ],
+      "citationDisplay": "CIA educational note capital and FCT overview",
+      "normalizedSearchText": "cia educational note capital and fct overview cia educational note capital and fct overview the note covers the capital and fct overview. capital and fct overview capital and fct overview capital and fct overview cia 2022 capital and fct educational note canadian institute of actuaries educational note, february 2022 the note covers the capital and fct overview. regulatory_requirement reporting_requirement documentation_expectation educational_note cross_reference_mapping capital fct overview cia regulatory_requirement reporting_requirement documentation_expectation cia educational note capital and fct overview regulatory_requirement reporting_requirement documentation_expectation educational_note cross_reference_mapping capital fct overview cia",
+      "canonicalSourceIndexPath": "data/processed/source_indexes/sources/cia-2022-capital-fct-educational-note.json",
+      "sourceVersionId": "source-index-cia-2022-capital-fct-educational-note",
+      "controlledTags": [
+        "regulatory_requirement",
+        "reporting_requirement",
+        "documentation_expectation",
+        "educational_note",
+        "cross_reference_mapping"
+      ],
+      "keywords": [
+        "capital",
+        "FCT",
+        "overview",
+        "CIA"
+      ],
+      "citations": [
+        {
+          "citationText": "CIA educational note capital and FCT overview",
+          "pageReference": "pp. 7-11",
+          "sectionReference": "Capital and FCT overview",
+          "sourceReference": "Canadian Institute of Actuaries educational note, February 2022",
+          "lineReference": null
+        }
+      ],
+      "relationships": [],
+      "relationshipIds": [],
+      "fidelity": "exact",
+      "confidence": "high",
+      "reviewFlags": [
+        "page_locator_anchor"
+      ],
+      "qualityNotes": [
+        "Educational note and companion guidance; page locators are the primary anchor.",
+        "No stable line references were available in the source package."
+      ],
+      "evidenceNotes": "Derived from the ignored CIA educational-note review packets and review index.",
+      "retrievalEligible": true,
+      "promotionEligible": false
+    },
+    {
+      "chunkId": "chunk-cia-2022-capital-fct-educational-note-003",
+      "chunkOrdinal": 3,
+      "chunkKind": "source_excerpt",
+      "sourceTextType": "actual_extracted_source_text",
+      "pageStart": 12,
+      "pageEnd": 16,
+      "sectionReference": "Additional guidance",
+      "lineReference": null,
+      "sourceTextExcerpt": "CIA educational note additional guidance",
+      "normalizedTextExcerpt": "cia educational note additional guidance",
+      "summary": "The note adds caution-heavy guidance on climate, COVID-19, ORSA, reinsurance, and model use.",
+      "topic": "Additional guidance",
+      "headingPath": "Additional guidance",
+      "keyPoints": [
+        "The note adds caution-heavy guidance on climate, COVID-19, ORSA, reinsurance, and model use."
+      ],
+      "concepts": [
+        "scenario_or_stochastic_requirement",
+        "reinsurance",
+        "asset_modeling_judgment",
+        "educational_note",
+        "requires_human_interpretation"
+      ],
+      "definedTerms": [
+        "CIA",
+        "climate",
+        "COVID-19",
+        "ORSA",
+        "reinsurance"
+      ],
+      "acronyms": [],
+      "requirements": [],
+      "citationDisplay": "CIA educational note additional guidance",
+      "normalizedSearchText": "cia educational note additional guidance cia educational note additional guidance the note adds caution-heavy guidance on climate, covid-19, orsa, reinsurance, and model use. additional guidance additional guidance additional guidance cia 2022 capital and fct educational note canadian institute of actuaries educational note, february 2022 the note adds caution-heavy guidance on climate, covid-19, orsa, reinsurance, and model use. scenario_or_stochastic_requirement reinsurance asset_modeling_judgment educational_note requires_human_interpretation cia climate covid-19 orsa reinsurance cia educational note additional guidance scenario_or_stochastic_requirement reinsurance asset_modeling_judgment educational_note requires_human_interpretation cia climate covid-19 orsa reinsurance",
+      "canonicalSourceIndexPath": "data/processed/source_indexes/sources/cia-2022-capital-fct-educational-note.json",
+      "sourceVersionId": "source-index-cia-2022-capital-fct-educational-note",
+      "controlledTags": [
+        "scenario_or_stochastic_requirement",
+        "reinsurance",
+        "asset_modeling_judgment",
+        "educational_note",
+        "requires_human_interpretation"
+      ],
+      "keywords": [
+        "CIA",
+        "climate",
+        "COVID-19",
+        "ORSA",
+        "reinsurance"
+      ],
+      "citations": [
+        {
+          "citationText": "CIA educational note additional guidance",
+          "pageReference": "pp. 12-16",
+          "sectionReference": "Additional guidance",
+          "sourceReference": "Canadian Institute of Actuaries educational note, February 2022",
+          "lineReference": null
+        }
+      ],
+      "relationships": [],
+      "relationshipIds": [],
+      "fidelity": "exact",
+      "confidence": "high",
+      "reviewFlags": [
+        "page_locator_anchor"
+      ],
+      "qualityNotes": [
+        "Educational note and companion guidance; page locators are the primary anchor.",
+        "No stable line references were available in the source package."
+      ],
+      "evidenceNotes": "Derived from the ignored CIA educational-note review packets and review index.",
+      "retrievalEligible": true,
+      "promotionEligible": false
+    },
+    {
+      "chunkId": "chunk-cia-2022-capital-fct-educational-note-004",
+      "chunkOrdinal": 4,
+      "chunkKind": "source_excerpt",
+      "sourceTextType": "actual_extracted_source_text",
+      "pageStart": 17,
+      "pageEnd": 20,
+      "sectionReference": "Appendices and closeout",
+      "lineReference": null,
+      "sourceTextExcerpt": "CIA educational note appendices closeout",
+      "normalizedTextExcerpt": "cia educational note appendices closeout",
+      "summary": "The note closes with appendix material and a clear boundary checkpoint.",
+      "topic": "Appendices and closeout",
+      "headingPath": "Appendices and closeout",
+      "keyPoints": [
+        "The note closes with appendix material and a clear boundary checkpoint."
+      ],
+      "concepts": [
+        "background_content",
+        "caveat_or_companion_guidance",
+        "educational_note",
+        "boundary_control_window",
+        "cross_reference_mapping"
+      ],
+      "definedTerms": [
+        "appendix",
+        "closeout",
+        "CIA",
+        "educational note"
+      ],
+      "acronyms": [],
+      "requirements": [],
+      "citationDisplay": "CIA educational note appendices closeout",
+      "normalizedSearchText": "cia educational note appendices closeout cia educational note appendices closeout the note closes with appendix material and a clear boundary checkpoint. appendices and closeout appendices and closeout appendices and closeout cia 2022 capital and fct educational note canadian institute of actuaries educational note, february 2022 the note closes with appendix material and a clear boundary checkpoint. background_content caveat_or_companion_guidance educational_note boundary_control_window cross_reference_mapping appendix closeout cia educational note cia educational note appendices closeout background_content caveat_or_companion_guidance educational_note boundary_control_window cross_reference_mapping appendix closeout cia educational note",
+      "canonicalSourceIndexPath": "data/processed/source_indexes/sources/cia-2022-capital-fct-educational-note.json",
+      "sourceVersionId": "source-index-cia-2022-capital-fct-educational-note",
+      "controlledTags": [
+        "background_content",
+        "caveat_or_companion_guidance",
+        "educational_note",
+        "boundary_control_window",
+        "cross_reference_mapping"
+      ],
+      "keywords": [
+        "appendix",
+        "closeout",
+        "CIA",
+        "educational note"
+      ],
+      "citations": [
+        {
+          "citationText": "CIA educational note appendices closeout",
+          "pageReference": "pp. 17-20",
+          "sectionReference": "Appendices and closeout",
+          "sourceReference": "Canadian Institute of Actuaries educational note, February 2022",
+          "lineReference": null
+        }
+      ],
+      "relationships": [],
+      "relationshipIds": [],
+      "fidelity": "exact",
+      "confidence": "high",
+      "reviewFlags": [
+        "page_locator_anchor"
+      ],
+      "qualityNotes": [
+        "Educational note and companion guidance; page locators are the primary anchor.",
+        "No stable line references were available in the source package."
+      ],
+      "evidenceNotes": "Derived from the ignored CIA educational-note review packets and review index.",
+      "retrievalEligible": true,
+      "promotionEligible": false
+    }
+  ],
+  "relationships": [],
+  "quality": {
+    "textLayerQuality": "clean",
+    "citationCompleteness": "partial",
+    "pageImageBackstop": false,
+    "lineReferencesAvailable": false,
+    "notes": "Canadian Institute of Actuaries educational note retained as review-only companion guidance."
+  },
+  "exportHints": {
+    "jsonlEligible": true,
+    "csvEligible": true,
+    "vectorEligible": true,
+    "notes": "Backend-neutral POC exports generated from review-only batch artifacts."
+  },
+  "notes": "Canadian Institute of Actuaries educational note retained as review-only companion guidance.",
+  "extensions": {
+    "batchIds": [
+      "batch-206",
+      "batch-207",
+      "batch-208",
+      "batch-209"
+    ],
+    "sourceIndexGeneratedBy": "build-source-index-poc"
+  }
+}

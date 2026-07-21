@@ -2,8 +2,10 @@
   "schemaVersion": "1.0",
   "sourceIndexId": "source-index-vm20-framework-overview",
   "repositoryManifestId": "source-index-poc-2026-07-21",
+  "sourceVersionId": "source-index-vm20-framework-overview",
   "source": {
     "sourceId": "vm20-framework-overview",
+    "sourceVersionId": "source-index-vm20-framework-overview",
     "filename": "pbr_data_valuation_manual_2026.pdf",
     "filePath": "D:\\Work\\AI Projects\\NAIC Valuation Manual Course\\pbr_data_valuation_manual_2026.pdf",
     "sourceFamilyId": "valuation_manual_pdfs",
@@ -31,7 +33,7 @@
     "notes": "High-level framework overview slice from the controlled VM-20 wave."
   },
   "processing": {
-    "createdAt": "2026-07-21T04:05:02.090Z",
+    "createdAt": "2026-07-21T05:26:54.256Z",
     "createdBy": "scripts/build-source-index-poc.mjs",
     "processingMode": "canonical_index_poc",
     "canonicality": "poc",
@@ -55,6 +57,32 @@
       "sourceTextExcerpt": "These requirements establish the minimum reserve valuation standard.",
       "normalizedTextExcerpt": "Minimum reserve valuation standard and reserving structure overview.",
       "summary": "VM-20 establishes the minimum reserve valuation standard and introduces the reserving structure at a high level.",
+      "topic": "VM-20 establishes the minimum reserve valuation standard and introduces the reserving structure at a high level.",
+      "headingPath": "Section 1: Purpose; Section 2: Minimum Reserve (overview)",
+      "keyPoints": [
+        "VM-20 establishes the minimum reserve valuation standard and introduces the reserving structure at a high level."
+      ],
+      "concepts": [
+        "core_vm_course",
+        "framework_overview",
+        "regulatory_requirement",
+        "background_content",
+        "cross_reference_mapping"
+      ],
+      "definedTerms": [
+        "VM-20",
+        "minimum reserve",
+        "valuation standard",
+        "overview"
+      ],
+      "acronyms": [],
+      "requirements": [
+        "regulatory_requirement"
+      ],
+      "citationDisplay": "These requirements establish the minimum reserve valuation standard",
+      "normalizedSearchText": "these requirements establish the minimum reserve valuation standard. minimum reserve valuation standard and reserving structure overview. vm-20 establishes the minimum reserve valuation standard and introduces the reserving structure at a high level. vm-20 establishes the minimum reserve valuation standard and introduces the reserving structure at a high level. section 1: purpose; section 2: minimum reserve (overview) section 1: purpose; section 2: minimum reserve (overview) valuation manual 2026 naic valuation manual vm-20 establishes the minimum reserve valuation standard and introduces the reserving structure at a high level. core_vm_course framework_overview regulatory_requirement background_content cross_reference_mapping vm-20 minimum reserve valuation standard overview regulatory_requirement these requirements establish the minimum reserve valuation standard core_vm_course framework_overview regulatory_requirement background_content cross_reference_mapping vm-20 minimum reserve valuation standard overview",
+      "canonicalSourceIndexPath": "data/processed/source_indexes/sources/vm20-framework-overview.json",
+      "sourceVersionId": "source-index-vm20-framework-overview",
       "controlledTags": [
         "core_vm_course",
         "framework_overview",
@@ -83,6 +111,9 @@
           "targetChunkId": "chunk-vm20-framework-boundary-001",
           "notes": "Precedes the mechanics boundary slice."
         }
+      ],
+      "relationshipIds": [
+        "chunk-vm20-framework-boundary-001"
       ],
       "fidelity": "exact",
       "confidence": "high",

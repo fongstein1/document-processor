@@ -157,6 +157,9 @@
         "sourceReference": {
           "type": "string"
         },
+        "sourceVersionId": {
+          "type": "string"
+        },
         "jurisdiction": {
           "type": [
             "string",
@@ -227,6 +230,12 @@
         "lineReferencesAvailable": {
           "type": "boolean"
         },
+        "relationships": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/relationship"
+          }
+        },
         "notes": {
           "type": "string"
         }
@@ -245,11 +254,23 @@
           "type": "string",
           "minLength": 1
         },
+        "exportManifestPath": {
+          "type": "string",
+          "minLength": 1
+        },
         "jsonlPath": {
           "type": "string",
           "minLength": 1
         },
         "csvPath": {
+          "type": "string",
+          "minLength": 1
+        },
+        "retrievalQuestionsPath": {
+          "type": "string",
+          "minLength": 1
+        },
+        "retrievalResultsPath": {
           "type": "string",
           "minLength": 1
         },
@@ -298,6 +319,59 @@
           "type": "string"
         }
       }
+    },
+    "relationship": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "relationType"
+      ],
+      "properties": {
+        "relationType": {
+          "type": "string",
+          "enum": [
+            "references",
+            "implements",
+            "interprets",
+            "amends",
+            "supersedes",
+            "reprints",
+            "companion_guidance",
+            "duplicate_or_reprint",
+            "jurisdictional_modification",
+            "related_methodology",
+            "follows",
+            "precedes",
+            "supports",
+            "boundary_of",
+            "cross_references",
+            "same_source"
+          ]
+        },
+        "targetSourceId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "targetChunkId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "notes": {
+          "type": "string"
+        }
+      },
+      "anyOf": [
+        {
+          "required": [
+            "targetSourceId"
+          ]
+        },
+        {
+          "required": [
+            "targetChunkId"
+          ]
+        }
+      ]
     }
   }
 }

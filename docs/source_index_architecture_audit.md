@@ -226,12 +226,17 @@ review artifacts intact.
 
 ## POC Implementation Result
 
-The initial POC package is now tracked under `data/processed/source_indexes/`
-and covers three representative source windows:
+The expanded POC package is now tracked under `data/processed/source_indexes/`
+and covers 12 representative source packages / 31 canonical chunks:
 
-- AG 01, as a single-page guideline interpretation;
-- AG 03, as a single-page maturity-value interpretation;
-- VM-20, as a narrow framework overview plus boundary slice.
+- AG 01 and AG 03 as single-page interpretive guideline slices;
+- VM-20 overview, boundary, and assumption windows;
+- VM-21 stochastic reserve projection entry;
+- AG 36 active guideline material and the 2021 Law Manual reprint;
+- model governance practice-note material;
+- actuarial memorandum practice-note material;
+- Regulation 210;
+- the CIA 2022 capital/FCT educational note.
 
 The generated package includes:
 
@@ -239,6 +244,9 @@ The generated package includes:
 - Markdown companions for each source;
 - a repository manifest;
 - JSONL and CSV exports;
+- an export manifest;
+- retrieval questions and results;
+- a retrieval readiness report;
 - a lightweight retrieval evaluation.
 
 ## Output-Quality Review
@@ -246,16 +254,21 @@ The generated package includes:
 The POC demonstrates the following quality decisions:
 
 - source text remains separated from summaries and normalized excerpts;
-- noisy guideline text uses a review-artifact-derived or curated source text
-  type instead of pretending to be exact verbatim text;
-- VM-20 preserves an actual extracted source-text type for the overview and
-  boundary slices;
+- noisy guideline and companion text uses review-artifact-derived or curated
+  source-text types instead of pretending to be exact verbatim text;
+- VM-20 and VM-21 preserve actual extracted source-text types for the manual
+  slices;
+- AG 36 keeps the active source separate from the Law Manual reprint via
+  explicit relationship metadata;
+- practice-note and educational-note material stays clearly labeled as
+  companion guidance;
 - page locators remain visible even when line references are unavailable;
 - review-only and promotion states stay metadata, not the primary evidence
   layer;
 - the Markdown companions remain human-readable rather than authoritative.
 
 The POC retrieval baseline is intentionally lightweight. It proves that the
-canonical layer can support a simple keyword-overlap retrieval check while
-remaining backend-neutral for later SQL, Dataverse, SharePoint Lists, Azure AI
-Search, or PostgreSQL implementations.
+canonical layer can support a simple keyword-overlap retrieval check across
+supported and unsupported queries while remaining backend-neutral for later
+SQL, Dataverse, SharePoint Lists, Azure AI Search, or PostgreSQL
+implementations.

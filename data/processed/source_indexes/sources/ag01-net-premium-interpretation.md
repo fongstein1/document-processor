@@ -1,6 +1,7 @@
 # Valuation of Policies in Which the Net Premium Exceeds the Gross Premium
 
 - Source ID: `ag01-net-premium-interpretation`
+- Source version ID: `source-index-ag01-net-premium-interpretation`
 - Source reference: Actuarial Guideline I
 - Source family: actuarial_guidelines
 - Domain: naic_regulatory
@@ -25,9 +26,9 @@
 
 ## Chunks
 
-| Chunk | Pages | Kind | Fidelity | Summary |
-| --- | --- | --- | --- | --- |
-| `chunk-ag01-net-premium-interpretation-001` | pp. 1-1 | guideline_interpretation | curated | AG 01 clarifies the valuation treatment when net premium exceeds gross premium and keeps the cross-reference review-only. |
+| Chunk | Pages | Topic | Kind | Fidelity | Summary |
+| --- | --- | --- | --- | --- | --- |
+| `chunk-ag01-net-premium-interpretation-001` | pp. 1-1 | AG 01 clarifies the valuation treatment when net premium exceeds gross premium and keeps the cross-reference review-only. | guideline_interpretation | curated | AG 01 clarifies the valuation treatment when net premium exceeds gross premium and keeps the cross-reference review-only. |
 
 ## Quality Notes
 

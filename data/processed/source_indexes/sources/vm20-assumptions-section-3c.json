@@ -1,0 +1,384 @@
+{
+  "schemaVersion": "1.0",
+  "sourceIndexId": "source-index-vm20-assumptions-section-3c",
+  "repositoryManifestId": "source-index-poc-2026-07-21",
+  "sourceVersionId": "source-index-vm20-assumptions-section-3c",
+  "source": {
+    "sourceId": "vm20-assumptions-section-3c",
+    "sourceVersionId": "source-index-vm20-assumptions-section-3c",
+    "filename": "pbr_data_valuation_manual_2026.pdf",
+    "filePath": "D:\\Work\\AI Projects\\NAIC Valuation Manual Course\\pbr_data_valuation_manual_2026.pdf",
+    "sourceFamilyId": "valuation_manual_pdfs",
+    "domainId": "naic_regulatory",
+    "documentType": "valuation_manual_section",
+    "sourceTitle": "VM-20 Section 3.C Assumptions",
+    "sourceReference": "2026 NAIC Valuation Manual",
+    "jurisdiction": "NAIC",
+    "authorityLevel": "manual_section",
+    "sourceStatus": "active",
+    "versionDate": null,
+    "pageCount": 457,
+    "pageRange": {
+      "start": 58,
+      "end": 65
+    },
+    "reviewBatchIds": [
+      "batch-006"
+    ],
+    "reviewIndexPath": "docs/review/vm20_review_index.md",
+    "selfReviewPath": "docs/review/vm20_self_review.md",
+    "pageImageBackstop": false,
+    "lineReferencesAvailable": false,
+    "textLayerQuality": "clean",
+    "notes": "Assumption-layer slice from the controlled VM-20 wave."
+  },
+  "processing": {
+    "createdAt": "2026-07-21T05:26:54.263Z",
+    "createdBy": "scripts/build-source-index-poc.mjs",
+    "processingMode": "canonical_index_poc",
+    "canonicality": "poc",
+    "reviewOnly": true,
+    "learnerFacingAllowed": false,
+    "appReadyAllowed": false,
+    "ragReadyAllowed": false,
+    "promotionStatus": "not_promoted",
+    "notes": "Assumption-layer slice from the controlled VM-20 wave."
+  },
+  "chunks": [
+    {
+      "chunkId": "chunk-vm20-assumptions-section-3c-001",
+      "chunkOrdinal": 1,
+      "chunkKind": "source_excerpt",
+      "sourceTextType": "actual_extracted_source_text",
+      "pageStart": 58,
+      "pageEnd": 59,
+      "sectionReference": "Section 3.C: Mortality and interest assumptions",
+      "lineReference": null,
+      "sourceTextExcerpt": "Section 3.C mortality and interest assumptions",
+      "normalizedTextExcerpt": "section 3.c mortality and interest assumptions",
+      "summary": "VM-20 Section 3.C begins the assumption layer with mortality and interest assumptions.",
+      "topic": "Mortality and interest assumptions",
+      "headingPath": "Section 3.C: Mortality and interest assumptions",
+      "keyPoints": [
+        "VM-20 Section 3.C begins the assumption layer with mortality and interest assumptions."
+      ],
+      "concepts": [
+        "core_vm_course",
+        "reserve_method_structure",
+        "prescribed_assumption",
+        "company_or_prudent_estimate_assumption",
+        "cross_reference_mapping"
+      ],
+      "definedTerms": [
+        "VM-20",
+        "Section 3.C",
+        "mortality",
+        "interest",
+        "assumptions"
+      ],
+      "acronyms": [],
+      "requirements": [],
+      "citationDisplay": "VM-20 Section 3.C mortality and interest assumptions",
+      "normalizedSearchText": "section 3.c mortality and interest assumptions section 3.c mortality and interest assumptions vm-20 section 3.c begins the assumption layer with mortality and interest assumptions. mortality and interest assumptions section 3.c: mortality and interest assumptions section 3.c: mortality and interest assumptions vm-20 section 3.c assumptions 2026 naic valuation manual vm-20 section 3.c begins the assumption layer with mortality and interest assumptions. core_vm_course reserve_method_structure prescribed_assumption company_or_prudent_estimate_assumption cross_reference_mapping vm-20 section 3.c mortality interest assumptions vm-20 section 3.c mortality and interest assumptions core_vm_course reserve_method_structure prescribed_assumption company_or_prudent_estimate_assumption cross_reference_mapping vm-20 section 3.c mortality interest assumptions",
+      "canonicalSourceIndexPath": "data/processed/source_indexes/sources/vm20-assumptions-section-3c.json",
+      "sourceVersionId": "source-index-vm20-assumptions-section-3c",
+      "controlledTags": [
+        "core_vm_course",
+        "reserve_method_structure",
+        "prescribed_assumption",
+        "company_or_prudent_estimate_assumption",
+        "cross_reference_mapping"
+      ],
+      "keywords": [
+        "VM-20",
+        "Section 3.C",
+        "mortality",
+        "interest",
+        "assumptions"
+      ],
+      "citations": [
+        {
+          "citationText": "VM-20 Section 3.C mortality and interest assumptions",
+          "pageReference": "pp. 58-59",
+          "sectionReference": "Section 3.C: Mortality and interest assumptions",
+          "sourceReference": "2026 NAIC Valuation Manual",
+          "lineReference": null
+        }
+      ],
+      "relationships": [],
+      "relationshipIds": [
+        "vm20-framework-boundary"
+      ],
+      "fidelity": "exact",
+      "confidence": "high",
+      "reviewFlags": [
+        "review_only"
+      ],
+      "qualityNotes": [
+        "Actual source text from the controlled VM-20 assumptions slice.",
+        "No line references were preserved in the pilot slice."
+      ],
+      "evidenceNotes": "Derived from the ignored batch-006 review packet and review index.",
+      "retrievalEligible": true,
+      "promotionEligible": false
+    },
+    {
+      "chunkId": "chunk-vm20-assumptions-section-3c-002",
+      "chunkOrdinal": 2,
+      "chunkKind": "source_excerpt",
+      "sourceTextType": "actual_extracted_source_text",
+      "pageStart": 60,
+      "pageEnd": 61,
+      "sectionReference": "Section 3.C: Expense and lapse assumptions",
+      "lineReference": null,
+      "sourceTextExcerpt": "Section 3.C expense and lapse assumptions",
+      "normalizedTextExcerpt": "section 3.c expense and lapse assumptions",
+      "summary": "VM-20 Section 3.C continues with expense and lapse assumptions.",
+      "topic": "Expense and lapse assumptions",
+      "headingPath": "Section 3.C: Expense and lapse assumptions",
+      "keyPoints": [
+        "VM-20 Section 3.C continues with expense and lapse assumptions."
+      ],
+      "concepts": [
+        "core_vm_course",
+        "reserve_method_structure",
+        "prescribed_assumption",
+        "company_or_prudent_estimate_assumption",
+        "cross_reference_mapping"
+      ],
+      "definedTerms": [
+        "VM-20",
+        "Section 3.C",
+        "expense",
+        "lapse",
+        "assumptions"
+      ],
+      "acronyms": [],
+      "requirements": [],
+      "citationDisplay": "VM-20 Section 3.C expense and lapse assumptions",
+      "normalizedSearchText": "section 3.c expense and lapse assumptions section 3.c expense and lapse assumptions vm-20 section 3.c continues with expense and lapse assumptions. expense and lapse assumptions section 3.c: expense and lapse assumptions section 3.c: expense and lapse assumptions vm-20 section 3.c assumptions 2026 naic valuation manual vm-20 section 3.c continues with expense and lapse assumptions. core_vm_course reserve_method_structure prescribed_assumption company_or_prudent_estimate_assumption cross_reference_mapping vm-20 section 3.c expense lapse assumptions vm-20 section 3.c expense and lapse assumptions core_vm_course reserve_method_structure prescribed_assumption company_or_prudent_estimate_assumption cross_reference_mapping vm-20 section 3.c expense lapse assumptions",
+      "canonicalSourceIndexPath": "data/processed/source_indexes/sources/vm20-assumptions-section-3c.json",
+      "sourceVersionId": "source-index-vm20-assumptions-section-3c",
+      "controlledTags": [
+        "core_vm_course",
+        "reserve_method_structure",
+        "prescribed_assumption",
+        "company_or_prudent_estimate_assumption",
+        "cross_reference_mapping"
+      ],
+      "keywords": [
+        "VM-20",
+        "Section 3.C",
+        "expense",
+        "lapse",
+        "assumptions"
+      ],
+      "citations": [
+        {
+          "citationText": "VM-20 Section 3.C expense and lapse assumptions",
+          "pageReference": "pp. 60-61",
+          "sectionReference": "Section 3.C: Expense and lapse assumptions",
+          "sourceReference": "2026 NAIC Valuation Manual",
+          "lineReference": null
+        }
+      ],
+      "relationships": [],
+      "relationshipIds": [
+        "vm20-framework-boundary"
+      ],
+      "fidelity": "exact",
+      "confidence": "high",
+      "reviewFlags": [
+        "review_only"
+      ],
+      "qualityNotes": [
+        "Actual source text from the controlled VM-20 assumptions slice.",
+        "No line references were preserved in the pilot slice."
+      ],
+      "evidenceNotes": "Derived from the ignored batch-006 review packet and review index.",
+      "retrievalEligible": true,
+      "promotionEligible": false
+    },
+    {
+      "chunkId": "chunk-vm20-assumptions-section-3c-003",
+      "chunkOrdinal": 3,
+      "chunkKind": "source_excerpt",
+      "sourceTextType": "actual_extracted_source_text",
+      "pageStart": 62,
+      "pageEnd": 63,
+      "sectionReference": "Section 3.C: Margins and sensitivity treatment",
+      "lineReference": null,
+      "sourceTextExcerpt": "Section 3.C margins and sensitivity treatment",
+      "normalizedTextExcerpt": "section 3.c margins and sensitivity treatment",
+      "summary": "VM-20 Section 3.C addresses margins and sensitivity treatment for assumptions.",
+      "topic": "Margins and sensitivity treatment",
+      "headingPath": "Section 3.C: Margins and sensitivity treatment",
+      "keyPoints": [
+        "VM-20 Section 3.C addresses margins and sensitivity treatment for assumptions."
+      ],
+      "concepts": [
+        "core_vm_course",
+        "reserve_method_structure",
+        "formula_context",
+        "prescribed_assumption",
+        "requires_human_interpretation"
+      ],
+      "definedTerms": [
+        "VM-20",
+        "Section 3.C",
+        "margins",
+        "sensitivity",
+        "treatment"
+      ],
+      "acronyms": [],
+      "requirements": [],
+      "citationDisplay": "VM-20 Section 3.C margins and sensitivity treatment",
+      "normalizedSearchText": "section 3.c margins and sensitivity treatment section 3.c margins and sensitivity treatment vm-20 section 3.c addresses margins and sensitivity treatment for assumptions. margins and sensitivity treatment section 3.c: margins and sensitivity treatment section 3.c: margins and sensitivity treatment vm-20 section 3.c assumptions 2026 naic valuation manual vm-20 section 3.c addresses margins and sensitivity treatment for assumptions. core_vm_course reserve_method_structure formula_context prescribed_assumption requires_human_interpretation vm-20 section 3.c margins sensitivity treatment vm-20 section 3.c margins and sensitivity treatment core_vm_course reserve_method_structure formula_context prescribed_assumption requires_human_interpretation vm-20 section 3.c margins sensitivity treatment",
+      "canonicalSourceIndexPath": "data/processed/source_indexes/sources/vm20-assumptions-section-3c.json",
+      "sourceVersionId": "source-index-vm20-assumptions-section-3c",
+      "controlledTags": [
+        "core_vm_course",
+        "reserve_method_structure",
+        "formula_context",
+        "prescribed_assumption",
+        "requires_human_interpretation"
+      ],
+      "keywords": [
+        "VM-20",
+        "Section 3.C",
+        "margins",
+        "sensitivity",
+        "treatment"
+      ],
+      "citations": [
+        {
+          "citationText": "VM-20 Section 3.C margins and sensitivity treatment",
+          "pageReference": "pp. 62-63",
+          "sectionReference": "Section 3.C: Margins and sensitivity treatment",
+          "sourceReference": "2026 NAIC Valuation Manual",
+          "lineReference": null
+        }
+      ],
+      "relationships": [],
+      "relationshipIds": [
+        "vm20-framework-boundary"
+      ],
+      "fidelity": "exact",
+      "confidence": "high",
+      "reviewFlags": [
+        "review_only"
+      ],
+      "qualityNotes": [
+        "Actual source text from the controlled VM-20 assumptions slice.",
+        "No line references were preserved in the pilot slice."
+      ],
+      "evidenceNotes": "Derived from the ignored batch-006 review packet and review index.",
+      "retrievalEligible": true,
+      "promotionEligible": false
+    },
+    {
+      "chunkId": "chunk-vm20-assumptions-section-3c-004",
+      "chunkOrdinal": 4,
+      "chunkKind": "source_excerpt",
+      "sourceTextType": "actual_extracted_source_text",
+      "pageStart": 64,
+      "pageEnd": 65,
+      "sectionReference": "Section 3.C: Assumption closeout and Section 4 boundary",
+      "lineReference": null,
+      "sourceTextExcerpt": "Section 3.C closeout and Section 4 boundary",
+      "normalizedTextExcerpt": "section 3.c closeout and section 4 boundary",
+      "summary": "VM-20 Section 3.C closes out the assumption layer and marks the transition toward Section 4.",
+      "topic": "Assumption closeout and Section 4 boundary",
+      "headingPath": "Section 3.C: Assumption closeout and Section 4 boundary",
+      "keyPoints": [
+        "VM-20 Section 3.C closes out the assumption layer and marks the transition toward Section 4."
+      ],
+      "concepts": [
+        "core_vm_course",
+        "reserve_method_structure",
+        "cross_reference_mapping",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "definedTerms": [
+        "VM-20",
+        "Section 3.C",
+        "closeout",
+        "Section 4",
+        "boundary"
+      ],
+      "acronyms": [],
+      "requirements": [],
+      "citationDisplay": "VM-20 Section 3.C assumption closeout and Section 4 boundary",
+      "normalizedSearchText": "section 3.c closeout and section 4 boundary section 3.c closeout and section 4 boundary vm-20 section 3.c closes out the assumption layer and marks the transition toward section 4. assumption closeout and section 4 boundary section 3.c: assumption closeout and section 4 boundary section 3.c: assumption closeout and section 4 boundary vm-20 section 3.c assumptions 2026 naic valuation manual vm-20 section 3.c closes out the assumption layer and marks the transition toward section 4. core_vm_course reserve_method_structure cross_reference_mapping boundary_control_window requires_human_interpretation vm-20 section 3.c closeout section 4 boundary vm-20 section 3.c assumption closeout and section 4 boundary core_vm_course reserve_method_structure cross_reference_mapping boundary_control_window requires_human_interpretation vm-20 section 3.c closeout section 4 boundary",
+      "canonicalSourceIndexPath": "data/processed/source_indexes/sources/vm20-assumptions-section-3c.json",
+      "sourceVersionId": "source-index-vm20-assumptions-section-3c",
+      "controlledTags": [
+        "core_vm_course",
+        "reserve_method_structure",
+        "cross_reference_mapping",
+        "boundary_control_window",
+        "requires_human_interpretation"
+      ],
+      "keywords": [
+        "VM-20",
+        "Section 3.C",
+        "closeout",
+        "Section 4",
+        "boundary"
+      ],
+      "citations": [
+        {
+          "citationText": "VM-20 Section 3.C assumption closeout and Section 4 boundary",
+          "pageReference": "pp. 64-65",
+          "sectionReference": "Section 3.C: Assumption closeout and Section 4 boundary",
+          "sourceReference": "2026 NAIC Valuation Manual",
+          "lineReference": null
+        }
+      ],
+      "relationships": [],
+      "relationshipIds": [
+        "vm20-framework-boundary"
+      ],
+      "fidelity": "exact",
+      "confidence": "high",
+      "reviewFlags": [
+        "review_only"
+      ],
+      "qualityNotes": [
+        "Actual source text from the controlled VM-20 assumptions slice.",
+        "No line references were preserved in the pilot slice."
+      ],
+      "evidenceNotes": "Derived from the ignored batch-006 review packet and review index.",
+      "retrievalEligible": true,
+      "promotionEligible": false
+    }
+  ],
+  "relationships": [
+    {
+      "relationType": "follows",
+      "targetSourceId": "vm20-framework-boundary",
+      "notes": "Assumptions slice follows the reserve-framework boundary slice."
+    }
+  ],
+  "quality": {
+    "textLayerQuality": "clean",
+    "citationCompleteness": "partial",
+    "pageImageBackstop": false,
+    "lineReferencesAvailable": false,
+    "notes": "Assumption-layer slice from the controlled VM-20 wave."
+  },
+  "exportHints": {
+    "jsonlEligible": true,
+    "csvEligible": true,
+    "vectorEligible": true,
+    "notes": "Backend-neutral POC exports generated from review-only batch artifacts."
+  },
+  "notes": "Assumption-layer slice from the controlled VM-20 wave.",
+  "extensions": {
+    "batchIds": [
+      "batch-006"
+    ],
+    "sourceIndexGeneratedBy": "build-source-index-poc"
+  }
+}

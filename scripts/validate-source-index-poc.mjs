@@ -8,20 +8,30 @@ const repoRoot = path.resolve(__dirname, '..')
 const configPath = path.join(repoRoot, 'config', 'source-index-poc.json')
 const outputRoot = path.join(repoRoot, 'data', 'processed', 'source_indexes')
 
-  const requiredFiles = [
+const requiredFiles = [
     path.join(repoRoot, 'AGENTS.md'),
     path.join(repoRoot, 'docs', 'source_index_architecture_audit.md'),
-  path.join(repoRoot, 'data', 'schemas', 'source-index.schema.json'),
-  path.join(repoRoot, 'data', 'schemas', 'repository-manifest.schema.json'),
-  path.join(repoRoot, 'docs', 'prompts', 'generic_document_processing_prompt.md'),
-  path.join(repoRoot, 'docs', 'prompts', 'pricing_document_processing_prompt.md'),
-  path.join(repoRoot, 'docs', 'domain_profiles', 'regulatory_profile.md'),
-  path.join(repoRoot, 'docs', 'domain_profiles', 'pricing_profile.md'),
-  path.join(repoRoot, 'docs', 'domain_profiles', 'liability_modeling_profile.md'),
-  path.join(repoRoot, 'docs', 'domain_profiles', 'governance_profile.md'),
+    path.join(repoRoot, 'docs', 'retrieval_poc_corpus_plan.md'),
+    path.join(repoRoot, 'docs', 'antigravity_source_index_ui_contract.md'),
+    path.join(repoRoot, 'docs', 'retrieval_readiness_report.md'),
+    path.join(repoRoot, 'data', 'schemas', 'source-index.schema.json'),
+    path.join(repoRoot, 'data', 'schemas', 'repository-manifest.schema.json'),
+    path.join(repoRoot, 'docs', 'prompts', 'generic_document_processing_prompt.md'),
+    path.join(repoRoot, 'docs', 'prompts', 'pricing_document_processing_prompt.md'),
+    path.join(repoRoot, 'docs', 'domain_profiles', 'regulatory_profile.md'),
+    path.join(repoRoot, 'docs', 'domain_profiles', 'pricing_profile.md'),
+    path.join(repoRoot, 'docs', 'domain_profiles', 'liability_modeling_profile.md'),
+    path.join(repoRoot, 'docs', 'domain_profiles', 'governance_profile.md'),
     path.join(repoRoot, 'data', 'templates', 'source-index.template.json'),
     path.join(repoRoot, 'data', 'templates', 'repository-manifest.template.json'),
     path.join(repoRoot, 'data', 'processed', 'source_indexes', 'README.md'),
+    path.join(repoRoot, 'data', 'processed', 'source_indexes', 'exports', 'export_manifest.json'),
+    path.join(repoRoot, 'data', 'processed', 'source_indexes', 'exports', 'source_chunks.jsonl'),
+    path.join(repoRoot, 'data', 'processed', 'source_indexes', 'exports', 'source_chunks.csv'),
+    path.join(repoRoot, 'data', 'processed', 'source_indexes', 'evaluation', 'retrieval_questions.json'),
+    path.join(repoRoot, 'data', 'processed', 'source_indexes', 'evaluation', 'retrieval_results.json'),
+    path.join(repoRoot, 'data', 'processed', 'source_indexes', 'retrieval', 'retrieval-evaluation.json'),
+    path.join(repoRoot, 'data', 'processed', 'source_indexes', 'retrieval', 'retrieval-evaluation.md'),
   ]
 
 const readJson = async (filePath) => JSON.parse(await fs.readFile(filePath, 'utf8'))
@@ -48,6 +58,8 @@ const main = async () => {
   const config = await readJson(configPath)
   const repositoryManifestPath = path.join(outputRoot, 'repository-manifest.json')
   const repositoryManifest = await readJson(repositoryManifestPath)
+  const exportManifestPath = path.join(outputRoot, 'exports', 'export_manifest.json')
+  const exportManifest = await readJson(exportManifestPath)
 
   if (repositoryManifest.repositoryManifestId !== config.pocId) {
     fail('Repository manifest ID does not match source-index POC config.')
@@ -55,8 +67,18 @@ const main = async () => {
   if (repositoryManifest.sourcePackageCount !== config.sources.length) {
     fail('Repository manifest source-package count does not match config.')
   }
-  if (repositoryManifest.chunkCount < config.sources.length) {
-    fail('Repository manifest chunk count is unexpectedly low.')
+  const expectedChunkCount = config.sources.reduce((sum, source) => sum + source.chunks.length, 0)
+  if (repositoryManifest.chunkCount !== expectedChunkCount) {
+    fail(`Repository manifest chunk count does not match config. Expected ${expectedChunkCount}, found ${repositoryManifest.chunkCount}.`)
+  }
+  if (expectedChunkCount !== 31) {
+    fail(`Unexpected canonical chunk count. Expected 31, found ${expectedChunkCount}.`)
+  }
+  if (exportManifest.repositoryManifestId !== config.pocId) {
+    fail('Export manifest repository ID does not match source-index POC config.')
+  }
+  if (exportManifest.chunkCount !== expectedChunkCount) {
+    fail('Export manifest chunk count does not match config.')
   }
 
   const expectedSourceIds = config.sources.map((source) => source.sourceId)
@@ -112,21 +134,31 @@ const main = async () => {
   }
 
   const jsonlLines = (await fs.readFile(jsonlPath, 'utf8')).trim().split(/\r?\n/).filter(Boolean)
-  const expectedChunkCount = config.sources.reduce((sum, source) => sum + source.chunks.length, 0)
-  if (jsonlLines.length !== expectedChunkCount) {
-    fail(`JSONL export chunk count mismatch. Expected ${expectedChunkCount}, found ${jsonlLines.length}.`)
+  const jsonlChunkCount = config.sources.reduce((sum, source) => sum + source.chunks.length, 0)
+  if (jsonlLines.length !== jsonlChunkCount) {
+    fail(`JSONL export chunk count mismatch. Expected ${jsonlChunkCount}, found ${jsonlLines.length}.`)
   }
 
   const csvLines = (await fs.readFile(csvPath, 'utf8')).trim().split(/\r?\n/)
-  if (csvLines.length !== expectedChunkCount + 1) {
-    fail(`CSV export row count mismatch. Expected ${expectedChunkCount + 1}, found ${csvLines.length}.`)
+  if (csvLines.length !== jsonlChunkCount + 1) {
+    fail(`CSV export row count mismatch. Expected ${jsonlChunkCount + 1}, found ${csvLines.length}.`)
   }
 
   const evaluation = await readJson(evaluationPath)
-  if (evaluation.queryCount !== config.retrievalQueries.length) {
+  const evaluationQueryCount =
+    evaluation.queryCount ?? evaluation.queries?.length ?? (evaluation.supportedQueryCount ?? 0) + (evaluation.unsupportedQueryCount ?? 0)
+  if (evaluationQueryCount !== config.retrievalQueries.length) {
     fail('Retrieval evaluation query count mismatch.')
   }
-  if (typeof evaluation.top3Coverage !== 'number' || evaluation.top3Coverage < 0 || evaluation.top3Coverage > 1) {
+  if (config.retrievalQueries.length < 15) {
+    fail('Retrieval evaluation query set is too small for the expanded POC corpus.')
+  }
+  const evaluationTop3Coverage =
+    evaluation.top3Coverage ?? (evaluationQueryCount === 0 ? 0 : (evaluation.top3HitCount ?? 0) / evaluationQueryCount)
+  if (evaluationTop3Coverage < 0.2) {
+    fail('Retrieval evaluation top-3 coverage is unexpectedly low for the expanded POC corpus.')
+  }
+  if (typeof evaluationTop3Coverage !== 'number' || evaluationTop3Coverage < 0 || evaluationTop3Coverage > 1) {
     fail('Retrieval evaluation coverage ratio must be a normalized number between 0 and 1.')
   }
   if (typeof evaluation.top3HitCount !== 'number' || evaluation.top3HitCount < 0) {
@@ -138,6 +170,12 @@ const main = async () => {
   for (const query of evaluation.queries) {
     if (!Array.isArray(query.rankedMatches) || query.rankedMatches.length === 0) {
       fail(`Retrieval evaluation query ${query.queryId} has no ranked matches.`)
+    }
+    if ((query.expectedOutcome ?? 'supported') === 'unsupported') {
+      if (query.resultLabel !== 'unsupported') {
+        fail(`Retrieval evaluation query ${query.queryId} was expected to be unsupported but was labeled ${query.resultLabel}.`)
+      }
+      continue
     }
     if (!query.expectedChunkIds.some((chunkId) => query.rankedMatches.some((match) => match.chunkId === chunkId))) {
       fail(`Retrieval evaluation query ${query.queryId} did not surface any expected chunk in the top ranks.`)

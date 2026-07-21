@@ -2,8 +2,10 @@
   "schemaVersion": "1.0",
   "sourceIndexId": "source-index-ag01-net-premium-interpretation",
   "repositoryManifestId": "source-index-poc-2026-07-21",
+  "sourceVersionId": "source-index-ag01-net-premium-interpretation",
   "source": {
     "sourceId": "ag01-net-premium-interpretation",
+    "sourceVersionId": "source-index-ag01-net-premium-interpretation",
     "filename": "AG 01 - Valuation of Policies in Which the Net Premium Exceeds the Gross Premium.pdf",
     "filePath": "D:\\Work\\AI Projects\\NAIC Valuation Manual Course\\Actuarial Guidelines\\AG 01 - Valuation of Policies in Which the Net Premium Exceeds the Gross Premium.pdf",
     "sourceFamilyId": "actuarial_guidelines",
@@ -31,7 +33,7 @@
     "notes": "Single-page guideline slice retained as a review-only interpretive POC."
   },
   "processing": {
-    "createdAt": "2026-07-21T04:05:02.085Z",
+    "createdAt": "2026-07-21T05:26:54.201Z",
     "createdBy": "scripts/build-source-index-poc.mjs",
     "processingMode": "canonical_index_poc",
     "canonicality": "poc",
@@ -55,6 +57,32 @@
       "sourceTextExcerpt": "Interpretive guidance for policies where net premium exceeds gross premium.",
       "normalizedTextExcerpt": "Net-premium-exceeds-gross-premium guidance.",
       "summary": "AG 01 clarifies the valuation treatment when net premium exceeds gross premium and keeps the cross-reference review-only.",
+      "topic": "AG 01 clarifies the valuation treatment when net premium exceeds gross premium and keeps the cross-reference review-only.",
+      "headingPath": "AG 01: net premium exceeds gross premium interpretation",
+      "keyPoints": [
+        "AG 01 clarifies the valuation treatment when net premium exceeds gross premium and keeps the cross-reference review-only."
+      ],
+      "concepts": [
+        "regulatory_requirement",
+        "definition_or_terminology",
+        "cross_reference_mapping",
+        "requires_human_interpretation",
+        "boundary_control_window"
+      ],
+      "definedTerms": [
+        "net premium",
+        "gross premium",
+        "valuation",
+        "interpretation"
+      ],
+      "acronyms": [],
+      "requirements": [
+        "regulatory_requirement"
+      ],
+      "citationDisplay": "AG 01 - Valuation of Policies in Which the Net Premium Exceeds the Gross Premium.pdf",
+      "normalizedSearchText": "interpretive guidance for policies where net premium exceeds gross premium. net-premium-exceeds-gross-premium guidance. ag 01 clarifies the valuation treatment when net premium exceeds gross premium and keeps the cross-reference review-only. ag 01 clarifies the valuation treatment when net premium exceeds gross premium and keeps the cross-reference review-only. ag 01: net premium exceeds gross premium interpretation ag 01: net premium exceeds gross premium interpretation valuation of policies in which the net premium exceeds the gross premium actuarial guideline i ag 01 clarifies the valuation treatment when net premium exceeds gross premium and keeps the cross-reference review-only. regulatory_requirement definition_or_terminology cross_reference_mapping requires_human_interpretation boundary_control_window net premium gross premium valuation interpretation regulatory_requirement ag 01 - valuation of policies in which the net premium exceeds the gross premium.pdf regulatory_requirement definition_or_terminology cross_reference_mapping requires_human_interpretation boundary_control_window net premium gross premium valuation interpretation",
+      "canonicalSourceIndexPath": "data/processed/source_indexes/sources/ag01-net-premium-interpretation.json",
+      "sourceVersionId": "source-index-ag01-net-premium-interpretation",
       "controlledTags": [
         "regulatory_requirement",
         "definition_or_terminology",
@@ -78,6 +106,7 @@
         }
       ],
       "relationships": [],
+      "relationshipIds": [],
       "fidelity": "curated",
       "confidence": "high",
       "reviewFlags": [

@@ -1,6 +1,7 @@
 import fs from 'node:fs/promises'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { buildRetrievalMarkdown, evaluateQueries, normalizeText } from './evaluate-source-index-retrieval.mjs'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -9,19 +10,14 @@ const configPath = path.join(repoRoot, 'config', 'source-index-poc.json')
 const outputRoot = path.join(repoRoot, 'data', 'processed', 'source_indexes')
 const sourcesRoot = path.join(outputRoot, 'sources')
 const exportsRoot = path.join(outputRoot, 'exports')
-const retrievalRoot = path.join(outputRoot, 'retrieval')
+const evaluationRoot = path.join(outputRoot, 'evaluation')
+const legacyRetrievalRoot = path.join(outputRoot, 'retrieval')
 
 const readJson = async (filePath) => JSON.parse(await fs.readFile(filePath, 'utf8'))
 
 const ensureDir = async (dirPath) => {
   await fs.mkdir(dirPath, { recursive: true })
 }
-
-const toSlug = (value) =>
-  value
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^-+|-+$/g, '')
 
 const toBooleanText = (value) => (value ? 'Yes' : 'No')
 
@@ -33,12 +29,126 @@ const csvEscape = (value) => {
   return text
 }
 
+const asArray = (value) => (Array.isArray(value) ? value : [])
+
+const toRelativePosix = (value) => value.replace(/\\/g, '/')
+
+const buildCitationDisplay = (citations) =>
+  asArray(citations)
+    .map((citation) => citation.citationText)
+    .filter(Boolean)
+    .join(' | ')
+
+const deriveRequirements = (controlledTags) =>
+  asArray(controlledTags).filter((tag) =>
+    [
+      'regulatory_requirement',
+      'reporting_requirement',
+      'documentation_expectation',
+      'governance_or_control_expectation',
+      'jurisdiction_specific_requirement',
+    ].includes(tag),
+  )
+
+const deriveChunk = (source, chunk, index, sourceIndexPath) => {
+  const sourceVersionId = source.sourceVersionId ?? source.sourceIndexId
+  const summary = chunk.summary ?? chunk.topic ?? `Chunk ${index + 1}`
+  const sourceTextExcerpt = chunk.sourceTextExcerpt ?? summary
+  const normalizedTextExcerpt =
+    chunk.normalizedTextExcerpt ?? normalizeText(sourceTextExcerpt).toLowerCase()
+  const topic = chunk.topic ?? summary
+  const headingPath = chunk.headingPath ?? chunk.sectionReference
+  const controlledTags = asArray(chunk.controlledTags)
+  const keywords = asArray(chunk.keywords)
+  const citations = asArray(chunk.citations)
+  const chunkRelationships = asArray(chunk.relationships)
+  const topLevelRelationships = asArray(source.relationships)
+  const relationshipIds = [
+    ...topLevelRelationships
+      .map((relationship) => relationship.targetSourceId ?? relationship.targetChunkId)
+      .filter(Boolean),
+    ...chunkRelationships
+      .map((relationship) => relationship.targetSourceId ?? relationship.targetChunkId)
+      .filter(Boolean),
+  ]
+  const keyPoints = asArray(chunk.keyPoints).length > 0 ? asArray(chunk.keyPoints) : [summary]
+  const concepts = asArray(chunk.concepts).length > 0 ? asArray(chunk.concepts) : controlledTags
+  const definedTerms = asArray(chunk.definedTerms).length > 0 ? asArray(chunk.definedTerms) : keywords
+  const acronyms = asArray(chunk.acronyms)
+  const requirements = asArray(chunk.requirements).length > 0 ? asArray(chunk.requirements) : deriveRequirements(controlledTags)
+  const citationDisplay = chunk.citationDisplay ?? buildCitationDisplay(citations)
+  const normalizedSearchText = chunk.normalizedSearchText ??
+    normalizeText(
+      [
+        sourceTextExcerpt,
+        normalizedTextExcerpt,
+        summary,
+        topic,
+        headingPath,
+        chunk.sectionReference,
+        source.sourceTitle,
+        source.sourceReference,
+        keyPoints.join(' '),
+        concepts.join(' '),
+        definedTerms.join(' '),
+        acronyms.join(' '),
+        requirements.join(' '),
+        citationDisplay,
+        controlledTags.join(' '),
+        keywords.join(' '),
+      ].join(' '),
+    ).toLowerCase()
+
+  const derivedChunk = {
+    chunkId: chunk.chunkId,
+    chunkOrdinal: chunk.chunkOrdinal ?? index + 1,
+    chunkKind: chunk.chunkKind ?? 'source_excerpt',
+    sourceTextType:
+      chunk.sourceTextType ??
+      source.chunkDefaults?.sourceTextType ??
+      'review_artifact_derived_text',
+    pageStart: chunk.pageStart,
+    pageEnd: chunk.pageEnd,
+    sectionReference: chunk.sectionReference,
+    lineReference: chunk.lineReference ?? null,
+    sourceTextExcerpt,
+    normalizedTextExcerpt,
+    summary,
+    topic,
+    headingPath,
+    keyPoints,
+    concepts,
+    definedTerms,
+    acronyms,
+    requirements,
+    citationDisplay,
+    normalizedSearchText,
+    canonicalSourceIndexPath: sourceIndexPath,
+    sourceVersionId,
+    controlledTags,
+    keywords,
+    citations,
+    relationships: chunkRelationships,
+    relationshipIds,
+    fidelity: chunk.fidelity ?? source.chunkDefaults?.fidelity ?? 'curated',
+    confidence: chunk.confidence ?? source.chunkDefaults?.confidence ?? 'high',
+    reviewFlags: chunk.reviewFlags ?? source.chunkDefaults?.reviewFlags ?? [],
+    qualityNotes: chunk.qualityNotes ?? source.chunkDefaults?.qualityNotes ?? [],
+    evidenceNotes: chunk.evidenceNotes ?? source.chunkDefaults?.evidenceNotes ?? '',
+    retrievalEligible: chunk.retrievalEligible ?? true,
+    promotionEligible: chunk.promotionEligible ?? false,
+  }
+
+  return derivedChunk
+}
+
 const buildSourceMarkdown = (sourceIndex) => {
   const { source, processing, chunks, quality } = sourceIndex
   const lines = []
   lines.push(`# ${source.sourceTitle}`)
   lines.push('')
   lines.push(`- Source ID: \`${source.sourceId}\``)
+  lines.push(`- Source version ID: \`${source.sourceVersionId}\``)
   lines.push(`- Source reference: ${source.sourceReference}`)
   lines.push(`- Source family: ${source.sourceFamilyId}`)
   lines.push(`- Domain: ${source.domainId}`)
@@ -63,11 +173,11 @@ const buildSourceMarkdown = (sourceIndex) => {
   lines.push('')
   lines.push('## Chunks')
   lines.push('')
-  lines.push('| Chunk | Pages | Kind | Fidelity | Summary |')
-  lines.push('| --- | --- | --- | --- | --- |')
+  lines.push('| Chunk | Pages | Topic | Kind | Fidelity | Summary |')
+  lines.push('| --- | --- | --- | --- | --- | --- |')
   for (const chunk of chunks) {
     lines.push(
-      `| \`${chunk.chunkId}\` | pp. ${chunk.pageStart}-${chunk.pageEnd} | ${chunk.chunkKind} | ${chunk.fidelity} | ${chunk.summary.replace(/\|/g, '\\|')} |`,
+      `| \`${chunk.chunkId}\` | pp. ${chunk.pageStart}-${chunk.pageEnd} | ${chunk.topic.replace(/\|/g, '\\|')} | ${chunk.chunkKind} | ${chunk.fidelity} | ${chunk.summary.replace(/\|/g, '\\|')} |`,
     )
   }
   lines.push('')
@@ -94,10 +204,12 @@ const buildRepositoryMarkdown = (manifest) => {
   lines.push('')
   lines.push('## Export files')
   lines.push('')
+  lines.push(`- Export manifest: \`${manifest.exports.exportManifestPath}\``)
   lines.push(`- JSONL: \`${manifest.exports.jsonlPath}\``)
   lines.push(`- CSV: \`${manifest.exports.csvPath}\``)
+  lines.push(`- Retrieval questions: \`${manifest.exports.retrievalQuestionsPath}\``)
+  lines.push(`- Retrieval results: \`${manifest.exports.retrievalResultsPath}\``)
   lines.push(`- Repository manifest: \`${manifest.exports.repositoryManifestPath}\``)
-  lines.push(`- Retrieval evaluation: \`${manifest.exports.retrievalEvaluationPath}\``)
   lines.push('')
   lines.push('## Source packages')
   lines.push('')
@@ -112,70 +224,101 @@ const buildRepositoryMarkdown = (manifest) => {
   lines.push('## Retrieval summary')
   lines.push('')
   lines.push(`- Queries evaluated: ${manifest.retrievalEvaluation.queryCount}`)
-  lines.push(`- Top-1 hits: ${manifest.retrievalEvaluation.top1HitCount}`)
-  lines.push(`- Top-3 coverage: ${(manifest.retrievalEvaluation.top3Coverage * 100).toFixed(0)}%`)
+  lines.push(`- Supported queries: ${manifest.retrievalEvaluation.supportedQueryCount}`)
+  lines.push(`- Unsupported queries: ${manifest.retrievalEvaluation.unsupportedQueryCount}`)
+  lines.push(`- Top-1 accuracy: ${(manifest.retrievalEvaluation.top1Accuracy * 100).toFixed(0)}%`)
+  lines.push(`- Top-3 accuracy: ${(manifest.retrievalEvaluation.top3Accuracy * 100).toFixed(0)}%`)
+  lines.push(`- Top-5 accuracy: ${(manifest.retrievalEvaluation.top5Accuracy * 100).toFixed(0)}%`)
+  lines.push(`- Mean reciprocal rank: ${manifest.retrievalEvaluation.meanReciprocalRank.toFixed(3)}`)
   lines.push(`- Method: ${manifest.retrievalEvaluation.method}`)
   return `${lines.join('\n')}\n`
 }
 
-const scoreChunk = (query, chunk) => {
-  const stopWords = new Set([
-    'the',
-    'and',
-    'or',
-    'of',
-    'to',
-    'a',
-    'an',
-    'in',
-    'for',
-    'what',
-    'how',
-    'does',
-    'say',
-    'about',
-    'when',
-    'is',
-    'are',
-    'with',
-    'where',
-    'that',
-    'this',
-    'it',
-    'as',
-    'by',
-    'be',
-    'on',
-  ])
-  const tokenize = (text) =>
-    String(text)
-      .toLowerCase()
-      .replace(/[^a-z0-9]+/g, ' ')
-      .split(/\s+/)
-      .filter((token) => token && !stopWords.has(token))
-  const queryTokens = new Set(tokenize(query))
-  const haystackTokens = new Set(
-    tokenize(
-      [
-        chunk.sourceTextExcerpt,
-        chunk.normalizedTextExcerpt,
-        chunk.summary,
-        chunk.keywords.join(' '),
-        chunk.controlledTags.join(' '),
-        chunk.sectionReference,
-      ].join(' '),
-    ),
-  )
-  let score = 0
-  for (const token of queryTokens) {
-    if (haystackTokens.has(token)) {
-      score += 1
+const buildExportManifest = (manifest) => ({
+  schemaVersion: manifest.schemaVersion,
+  exportManifestId: `${manifest.repositoryManifestId}-exports`,
+  repositoryManifestId: manifest.repositoryManifestId,
+  repositoryName: manifest.repositoryName,
+  generatedAt: manifest.generatedAt,
+  sourcePackageCount: manifest.sourcePackageCount,
+  chunkCount: manifest.chunkCount,
+  exportFiles: {
+    repositoryManifestPath: manifest.exports.repositoryManifestPath,
+    exportManifestPath: manifest.exports.exportManifestPath,
+    jsonlPath: manifest.exports.jsonlPath,
+    csvPath: manifest.exports.csvPath,
+    retrievalQuestionsPath: manifest.exports.retrievalQuestionsPath,
+    retrievalResultsPath: manifest.exports.retrievalResultsPath,
+    legacyJsonlPath: 'data/processed/source_indexes/exports/source-indexes.jsonl',
+    legacyCsvPath: 'data/processed/source_indexes/exports/source-indexes.csv',
+    legacyRetrievalJsonPath: 'data/processed/source_indexes/retrieval/retrieval-evaluation.json',
+    legacyRetrievalMarkdownPath: 'data/processed/source_indexes/retrieval/retrieval-evaluation.md',
+  },
+  notes: 'Canonical source-index export manifest for the POC.',
+  extensions: {
+    sourceIndexPoc: true,
+  },
+})
+
+const buildRetrievalReadinessReport = (manifest, evaluation, config) => {
+  const lines = []
+  lines.push('# Retrieval readiness report')
+  lines.push('')
+  lines.push('## Corpus summary')
+  lines.push('')
+  lines.push(`- Source packages: ${manifest.sourcePackageCount}`)
+  lines.push(`- Canonical chunks: ${manifest.chunkCount}`)
+  lines.push(`- Retrieval questions: ${evaluation.queries.length}`)
+  lines.push(`- Supported questions: ${evaluation.supportedQueryCount}`)
+  lines.push(`- Unsupported questions: ${evaluation.unsupportedQueryCount}`)
+  lines.push('')
+  lines.push('## Metrics')
+  lines.push('')
+  lines.push(`- Top-1 accuracy: ${(evaluation.top1Accuracy * 100).toFixed(0)}%`)
+  lines.push(`- Top-3 accuracy: ${(evaluation.top3Accuracy * 100).toFixed(0)}%`)
+  lines.push(`- Top-5 accuracy: ${(evaluation.top5Accuracy * 100).toFixed(0)}%`)
+  lines.push(`- Mean reciprocal rank: ${evaluation.meanReciprocalRank.toFixed(3)}`)
+  lines.push(`- Source-family accuracy: ${(evaluation.sourceFamilyAccuracy * 100).toFixed(0)}%`)
+  lines.push(`- Authority-level accuracy: ${(evaluation.authorityLevelAccuracy * 100).toFixed(0)}%`)
+  lines.push(`- Citation availability: ${(evaluation.citationAvailability * 100).toFixed(0)}%`)
+  lines.push(`- Multi-chunk evidence recall: ${(evaluation.multiChunkEvidenceRecall * 100).toFixed(0)}%`)
+  lines.push(`- Unsupported-query precision: ${(evaluation.unsupportedQueryPrecision * 100).toFixed(0)}%`)
+  lines.push('')
+  lines.push('## Category breakdown')
+  lines.push('')
+  lines.push('| Category | Count | Top-1 | Top-3 | Top-5 | MRR | Unsupported precision |')
+  lines.push('| --- | --- | --- | --- | --- | --- | --- |')
+  for (const [category, stats] of Object.entries(evaluation.categoryStats)) {
+    lines.push(
+      `| ${category} | ${stats.queryCount} | ${(stats.top1Accuracy * 100).toFixed(0)}% | ${(stats.top3Accuracy * 100).toFixed(0)}% | ${(stats.top5Accuracy * 100).toFixed(0)}% | ${stats.meanReciprocalRank.toFixed(3)} | ${(stats.unsupportedPrecision * 100).toFixed(0)}% |`,
+    )
+  }
+  lines.push('')
+  lines.push('## Strong signals')
+  lines.push('')
+  lines.push('- Exact-title questions for AG 01, AG 03, VM-20, and the companion/regulation sources are expected to rank cleanly.')
+  lines.push('- Relationship-aware questions should distinguish the AG 36 active source from the 2021 Law Manual reprint.')
+  lines.push('- Companion guidance and non-binding educational material should remain visible as lower-authority evidence.')
+  lines.push('')
+  lines.push('## Weak spots and failure analysis')
+  lines.push('')
+  const weakQueries = evaluation.queries.filter((query) => query.resultLabel === 'miss' || query.resultLabel === 'false_positive')
+  if (weakQueries.length === 0) {
+    lines.push('- No weak queries were observed in the current POC run.')
+  } else {
+    for (const query of weakQueries) {
+      lines.push(
+        `- ${query.queryCategory}: ${query.query} -> ${query.resultLabel}; top result ${query.rankedMatches[0]?.chunkId ?? 'n/a'} (${query.rankedMatches[0]?.score ?? 0})`,
+      )
     }
   }
-  if (chunk.sourceId && query.toLowerCase().includes(chunk.sourceId.split('-')[0])) {
-    score += 0.25
-  }
-  return score
+  lines.push('')
+  lines.push('## Next improvement opportunities')
+  lines.push('')
+  lines.push('- Add more ambiguous cross-source queries if the current corpus becomes too easy.')
+  lines.push('- Increase the share of relationship-heavy questions if reprint and companion-source handling needs more pressure.')
+  lines.push('- Add a small synthetic pricing or liability-modeling sample later only if the generic profiles need an empirical corpus test.')
+  return `${lines.join('\n')}\n`
 }
 
 const main = async () => {
@@ -183,40 +326,39 @@ const main = async () => {
   await ensureDir(outputRoot)
   await ensureDir(sourcesRoot)
   await ensureDir(exportsRoot)
-  await ensureDir(retrievalRoot)
+  await ensureDir(evaluationRoot)
+  await ensureDir(legacyRetrievalRoot)
 
   const chunkRecords = []
   const sourcePackages = []
 
   for (const source of config.sources) {
-    const chunks = source.chunks.map((chunk, index) => ({
-      ...chunk,
-      chunkOrdinal: chunk.chunkOrdinal ?? index + 1,
-      sourceId: source.sourceId,
-      sourceIndexId: source.sourceIndexId,
-      sourceFamilyId: source.sourceFamilyId,
-      domainId: source.domainId,
-      documentType: source.documentType,
-      sourceTitle: source.sourceTitle,
-      sourceReference: source.sourceReference,
-      jurisdiction: source.jurisdiction,
-      sourceStatus: source.sourceStatus,
-      authorityLevel: source.authorityLevel,
-      pageRange: source.pageRange,
-      reviewBatchIds: source.reviewBatchIds,
-      reviewIndexPath: source.reviewIndexPath,
-      selfReviewPath: source.selfReviewPath,
-      pageImageBackstop: source.pageImageBackstop,
-      lineReferencesAvailable: source.lineReferencesAvailable,
-      textLayerQuality: source.textLayerQuality,
-    }))
+    const sourceVersionId = source.sourceVersionId ?? source.sourceIndexId
+    const sourceIndexPath = path.join(sourcesRoot, `${source.sourceId}.json`)
+    const markdownPath = path.join(sourcesRoot, `${source.sourceId}.md`)
+    const sourceRelationships = asArray(source.relationships)
+    const sourceChunks = asArray(source.chunks).map((chunk, index) =>
+      deriveChunk(
+        {
+          ...source,
+          sourceVersionId,
+          chunkDefaults: source.chunkDefaults ?? {},
+          relationships: sourceRelationships,
+        },
+        chunk,
+        index,
+        toRelativePosix(path.relative(repoRoot, sourceIndexPath)),
+      ),
+    )
 
     const sourceIndex = {
       schemaVersion: config.schemaVersion,
       sourceIndexId: source.sourceIndexId,
       repositoryManifestId: config.pocId,
+      sourceVersionId,
       source: {
         sourceId: source.sourceId,
+        sourceVersionId,
         filename: source.filename,
         filePath: source.filePath,
         sourceFamilyId: source.sourceFamilyId,
@@ -227,7 +369,7 @@ const main = async () => {
         jurisdiction: source.jurisdiction,
         authorityLevel: source.authorityLevel,
         sourceStatus: source.sourceStatus,
-        versionDate: source.versionDate,
+        versionDate: source.versionDate ?? null,
         pageCount: source.pageCount,
         pageRange: source.pageRange,
         reviewBatchIds: source.reviewBatchIds,
@@ -250,31 +392,8 @@ const main = async () => {
         promotionStatus: 'not_promoted',
         notes: source.notes,
       },
-      chunks: chunks.map((chunk) => ({
-        chunkId: chunk.chunkId,
-        chunkOrdinal: chunk.chunkOrdinal,
-        chunkKind: chunk.chunkKind,
-        sourceTextType: chunk.sourceTextType,
-        pageStart: chunk.pageStart,
-        pageEnd: chunk.pageEnd,
-        sectionReference: chunk.sectionReference,
-        lineReference: chunk.lineReference ?? null,
-        sourceTextExcerpt: chunk.sourceTextExcerpt,
-        normalizedTextExcerpt: chunk.normalizedTextExcerpt,
-        summary: chunk.summary,
-        controlledTags: chunk.controlledTags,
-        keywords: chunk.keywords,
-        citations: chunk.citations,
-        relationships: chunk.relationships ?? [],
-        fidelity: chunk.fidelity,
-        confidence: chunk.confidence,
-        reviewFlags: chunk.reviewFlags ?? chunk.controlledTags,
-        qualityNotes: chunk.qualityNotes ?? [],
-        evidenceNotes: chunk.evidenceNotes ?? '',
-        retrievalEligible: chunk.retrievalEligible,
-        promotionEligible: chunk.promotionEligible,
-      })),
-      relationships: source.relationships ?? [],
+      chunks: sourceChunks,
+      relationships: sourceRelationships,
       quality: {
         textLayerQuality: source.textLayerQuality,
         citationCompleteness: source.lineReferencesAvailable ? 'mostly_complete' : 'partial',
@@ -295,14 +414,13 @@ const main = async () => {
       },
     }
 
-    const sourcePath = path.join(sourcesRoot, `${source.sourceId}.json`)
-    const markdownPath = path.join(sourcesRoot, `${source.sourceId}.md`)
-    await fs.writeFile(sourcePath, `${JSON.stringify(sourceIndex, null, 2)}\n`, 'utf8')
+    await fs.writeFile(sourceIndexPath, `${JSON.stringify(sourceIndex, null, 2)}\n`, 'utf8')
     await fs.writeFile(markdownPath, buildSourceMarkdown(sourceIndex), 'utf8')
 
     sourcePackages.push({
       sourceIndexId: source.sourceIndexId,
       sourceId: source.sourceId,
+      sourceVersionId,
       sourceTitle: source.sourceTitle,
       sourceFamilyId: source.sourceFamilyId,
       documentType: source.documentType,
@@ -311,22 +429,24 @@ const main = async () => {
       jurisdiction: source.jurisdiction,
       authorityLevel: source.authorityLevel,
       pageRange: source.pageRange,
-      chunkCount: chunks.length,
+      chunkCount: sourceChunks.length,
       reviewBatchIds: source.reviewBatchIds,
-      sourceIndexPath: path.relative(repoRoot, sourcePath).replace(/\\/g, '/'),
-      markdownPath: path.relative(repoRoot, markdownPath).replace(/\\/g, '/'),
+      sourceIndexPath: toRelativePosix(path.relative(repoRoot, sourceIndexPath)),
+      markdownPath: toRelativePosix(path.relative(repoRoot, markdownPath)),
       reviewIndexPath: source.reviewIndexPath,
       selfReviewPath: source.selfReviewPath,
+      relationships: sourceRelationships,
       textLayerQuality: source.textLayerQuality,
       pageImageBackstop: source.pageImageBackstop,
       lineReferencesAvailable: source.lineReferencesAvailable,
       notes: source.notes,
     })
 
-    for (const chunk of chunks) {
+    for (const chunk of sourceChunks) {
       chunkRecords.push({
         repositoryManifestId: config.pocId,
         sourceIndexId: source.sourceIndexId,
+        sourceVersionId,
         sourceId: source.sourceId,
         sourceTitle: source.sourceTitle,
         sourceFamilyId: source.sourceFamilyId,
@@ -339,7 +459,9 @@ const main = async () => {
         pageStart: chunk.pageStart,
         pageEnd: chunk.pageEnd,
         pageReference: `pp. ${chunk.pageStart}-${chunk.pageEnd}`,
+        headingPath: chunk.headingPath,
         sectionReference: chunk.sectionReference,
+        topic: chunk.topic,
         lineReference: chunk.lineReference ?? null,
         chunkId: chunk.chunkId,
         chunkOrdinal: chunk.chunkOrdinal,
@@ -347,14 +469,24 @@ const main = async () => {
         sourceTextType: chunk.sourceTextType,
         sourceTextExcerpt: chunk.sourceTextExcerpt,
         normalizedTextExcerpt: chunk.normalizedTextExcerpt,
+        normalizedSearchText: chunk.normalizedSearchText,
         summary: chunk.summary,
+        keyPoints: chunk.keyPoints,
+        concepts: chunk.concepts,
+        definedTerms: chunk.definedTerms,
+        acronyms: chunk.acronyms,
+        requirements: chunk.requirements,
+        citationDisplay: chunk.citationDisplay,
         controlledTags: chunk.controlledTags,
         keywords: chunk.keywords,
-        reviewFlags: chunk.reviewFlags ?? chunk.controlledTags,
+        reviewFlags: chunk.reviewFlags,
         fidelity: chunk.fidelity,
         confidence: chunk.confidence,
         retrievalEligible: chunk.retrievalEligible,
         promotionEligible: chunk.promotionEligible,
+        canonicalSourceIndexPath: chunk.canonicalSourceIndexPath,
+        relationshipIds: chunk.relationshipIds,
+        relationships: chunk.relationships,
         reviewIndexPath: source.reviewIndexPath,
         selfReviewPath: source.selfReviewPath,
         batchIds: source.reviewBatchIds,
@@ -364,6 +496,23 @@ const main = async () => {
       })
     }
   }
+
+  const exportManifest = buildExportManifest({
+    schemaVersion: config.schemaVersion,
+    repositoryManifestId: config.pocId,
+    repositoryName: config.repositoryName,
+    generatedAt: new Date().toISOString(),
+    sourcePackageCount: sourcePackages.length,
+    chunkCount: chunkRecords.length,
+    exports: {
+      repositoryManifestPath: 'data/processed/source_indexes/repository-manifest.json',
+      exportManifestPath: 'data/processed/source_indexes/exports/export_manifest.json',
+      jsonlPath: 'data/processed/source_indexes/exports/source_chunks.jsonl',
+      csvPath: 'data/processed/source_indexes/exports/source_chunks.csv',
+      retrievalQuestionsPath: 'data/processed/source_indexes/evaluation/retrieval_questions.json',
+      retrievalResultsPath: 'data/processed/source_indexes/evaluation/retrieval_results.json',
+    },
+  })
 
   const repositoryManifest = {
     schemaVersion: config.schemaVersion,
@@ -379,14 +528,17 @@ const main = async () => {
     chunkCount: chunkRecords.length,
     exports: {
       repositoryManifestPath: 'data/processed/source_indexes/repository-manifest.json',
-      jsonlPath: 'data/processed/source_indexes/exports/source-indexes.jsonl',
-      csvPath: 'data/processed/source_indexes/exports/source-indexes.csv',
+      exportManifestPath: 'data/processed/source_indexes/exports/export_manifest.json',
+      jsonlPath: 'data/processed/source_indexes/exports/source_chunks.jsonl',
+      csvPath: 'data/processed/source_indexes/exports/source_chunks.csv',
+      retrievalQuestionsPath: 'data/processed/source_indexes/evaluation/retrieval_questions.json',
+      retrievalResultsPath: 'data/processed/source_indexes/evaluation/retrieval_results.json',
       retrievalEvaluationPath: 'data/processed/source_indexes/retrieval/retrieval-evaluation.json',
       notes: 'Canonical source-index POC exports.',
     },
     retrievalEvaluation: {
       evaluationId: `${config.pocId}-retrieval`,
-      method: 'keyword_overlap_baseline',
+      method: 'keyword_phrase_overlap_baseline',
       queryCount: config.retrievalQueries.length,
       top1HitCount: 0,
       top3Coverage: 0,
@@ -398,85 +550,99 @@ const main = async () => {
     },
   }
 
-  const evaluationResults = []
-  let top1HitCount = 0
-  let top3HitCount = 0
-  const normalizedChunks = chunkRecords.map((chunk) => ({
-    ...chunk,
-    searchableText: [
-      chunk.sourceTextExcerpt,
-      chunk.normalizedTextExcerpt,
-      chunk.summary,
-      chunk.keywords.join(' '),
-      chunk.controlledTags.join(' '),
-      chunk.sectionReference,
-      chunk.sourceTitle,
-    ]
-      .join(' ')
-      .toLowerCase(),
-  }))
+  const evaluation = evaluateQueries({
+    queries: config.retrievalQueries,
+    chunkRecords,
+    sourcePackages,
+    unsupportedThreshold: config.retrievalSettings?.unsupportedThreshold ?? 3,
+    topN: config.retrievalSettings?.topN ?? 5,
+  })
 
-  for (const query of config.retrievalQueries) {
-    const ranked = normalizedChunks
-      .map((chunk) => ({
-        chunkId: chunk.chunkId,
-        sourceId: chunk.sourceId,
-        score: scoreChunk(query.query, chunk),
-      }))
-      .sort((left, right) => right.score - left.score || left.chunkId.localeCompare(right.chunkId))
-    const topMatches = ranked.slice(0, 3)
-    const top1Hit = topMatches[0] && query.expectedChunkIds.includes(topMatches[0].chunkId)
-    const top3Hit = topMatches.some((match) => query.expectedChunkIds.includes(match.chunkId))
-    if (top1Hit) {
-      top1HitCount += 1
-    }
-    if (top3Hit) {
-      top3HitCount += 1
-    }
-    evaluationResults.push({
-      ...query,
-      rankedMatches: topMatches,
-      top1Hit,
-      top3Hit
-    })
+  repositoryManifest.retrievalEvaluation = {
+    evaluationId: `${config.pocId}-retrieval`,
+    method: evaluation.method,
+    queryCount: config.retrievalQueries.length,
+    supportedQueryCount: evaluation.supportedQueryCount,
+    unsupportedQueryCount: evaluation.unsupportedQueryCount,
+    top1HitCount: evaluation.top1HitCount,
+    top3HitCount: evaluation.top3HitCount,
+    top5HitCount: evaluation.top5HitCount,
+    top1Accuracy: evaluation.top1Accuracy,
+    top3Accuracy: evaluation.top3Accuracy,
+    top5Accuracy: evaluation.top5Accuracy,
+    meanReciprocalRank: evaluation.meanReciprocalRank,
+    sourceFamilyAccuracy: evaluation.sourceFamilyAccuracy,
+    authorityLevelAccuracy: evaluation.authorityLevelAccuracy,
+    citationAvailability: evaluation.citationAvailability,
+    multiChunkEvidenceRecall: evaluation.multiChunkEvidenceRecall,
+    unsupportedQueryPrecision: evaluation.unsupportedQueryPrecision,
+    top3Coverage: config.retrievalQueries.length === 0 ? 0 : evaluation.top3HitCount / config.retrievalQueries.length,
+    notes: `Keyword baseline retrieved ${evaluation.top1HitCount} top-1 hits and ${evaluation.top3HitCount} top-3 hits across ${config.retrievalQueries.length} queries.`,
   }
 
-  repositoryManifest.retrievalEvaluation.top1HitCount = top1HitCount
-  repositoryManifest.retrievalEvaluation.top3Coverage =
-    config.retrievalQueries.length === 0 ? 0 : top3HitCount / config.retrievalQueries.length
-  repositoryManifest.retrievalEvaluation.notes = `Keyword baseline retrieved ${top1HitCount} top-1 hits and ${top3HitCount} top-3 hits across ${config.retrievalQueries.length} queries.`
-
   const repositoryManifestPath = path.join(outputRoot, 'repository-manifest.json')
-  const repositoryManifestMd = path.join(outputRoot, 'repository-manifest.md')
+  const repositoryManifestMdPath = path.join(outputRoot, 'repository-manifest.md')
   await fs.writeFile(repositoryManifestPath, `${JSON.stringify(repositoryManifest, null, 2)}\n`, 'utf8')
-  await fs.writeFile(repositoryManifestMd, buildRepositoryMarkdown(repositoryManifest), 'utf8')
+  await fs.writeFile(repositoryManifestMdPath, buildRepositoryMarkdown(repositoryManifest), 'utf8')
 
-  const jsonlPath = path.join(exportsRoot, 'source-indexes.jsonl')
-  const csvPath = path.join(exportsRoot, 'source-indexes.csv')
+  const exportManifestPath = path.join(exportsRoot, 'export_manifest.json')
+  await fs.writeFile(exportManifestPath, `${JSON.stringify(exportManifest, null, 2)}\n`, 'utf8')
+
+  const jsonlPath = path.join(exportsRoot, 'source_chunks.jsonl')
+  const csvPath = path.join(exportsRoot, 'source_chunks.csv')
+  const legacyJsonlPath = path.join(exportsRoot, 'source-indexes.jsonl')
+  const legacyCsvPath = path.join(exportsRoot, 'source-indexes.csv')
   const jsonlContent = `${chunkRecords.map((record) => JSON.stringify(record)).join('\n')}\n`
   await fs.writeFile(jsonlPath, jsonlContent, 'utf8')
+  await fs.writeFile(legacyJsonlPath, jsonlContent, 'utf8')
 
   const csvHeaders = [
     'repositoryManifestId',
     'sourceIndexId',
+    'sourceVersionId',
     'sourceId',
+    'sourceTitle',
+    'sourceFamilyId',
+    'domainId',
+    'documentType',
+    'sourceReference',
+    'jurisdiction',
+    'authorityLevel',
+    'sourceStatus',
     'chunkId',
     'chunkOrdinal',
-    'sourceFamilyId',
-    'documentType',
-    'sourceStatus',
+    'chunkKind',
+    'sourceTextType',
     'pageStart',
     'pageEnd',
+    'pageReference',
+    'headingPath',
     'sectionReference',
+    'topic',
+    'sourceTextExcerpt',
+    'normalizedTextExcerpt',
+    'normalizedSearchText',
     'summary',
+    'keyPoints',
+    'concepts',
+    'definedTerms',
+    'acronyms',
+    'requirements',
+    'citationDisplay',
     'controlledTags',
     'keywords',
+    'fidelity',
+    'confidence',
+    'retrievalEligible',
+    'promotionEligible',
+    'relationshipIds',
     'reviewIndexPath',
     'selfReviewPath',
     'batchIds',
     'textLayerQuality',
     'pageImageBackstop',
     'lineReferencesAvailable',
+    'canonicalSourceIndexPath',
   ]
   const csvLines = [csvHeaders.join(',')]
   for (const record of chunkRecords) {
@@ -497,48 +663,52 @@ const main = async () => {
   }
   csvLines.push('')
   await fs.writeFile(csvPath, `${csvLines.join('\n')}`, 'utf8')
+  await fs.writeFile(legacyCsvPath, `${csvLines.join('\n')}`, 'utf8')
 
-  const evaluationPath = path.join(retrievalRoot, 'retrieval-evaluation.json')
-  const evaluationMdPath = path.join(retrievalRoot, 'retrieval-evaluation.md')
-  const evaluationDocument = {
+  const questionsPath = path.join(evaluationRoot, 'retrieval_questions.json')
+  const resultsPath = path.join(evaluationRoot, 'retrieval_results.json')
+  const legacyResultsPath = path.join(legacyRetrievalRoot, 'retrieval-evaluation.json')
+  const legacyMarkdownPath = path.join(legacyRetrievalRoot, 'retrieval-evaluation.md')
+
+  const questionsDocument = {
+    schemaVersion: config.schemaVersion,
+    repositoryManifestId: config.pocId,
+    method: evaluation.method,
+    queryCount: config.retrievalQueries.length,
+    queries: config.retrievalQueries,
+    notes: 'Canonical retrieval questions for the source-index POC.',
+  }
+  await fs.writeFile(questionsPath, `${JSON.stringify(questionsDocument, null, 2)}\n`, 'utf8')
+
+  const resultsDocument = {
     schemaVersion: config.schemaVersion,
     evaluationId: `${config.pocId}-retrieval`,
     repositoryManifestId: config.pocId,
-    method: 'keyword_overlap_baseline',
-    queryCount: config.retrievalQueries.length,
-    top1HitCount,
-    top3HitCount,
-    top3Coverage:
-      config.retrievalQueries.length === 0 ? 0 : top3HitCount / config.retrievalQueries.length,
-    queries: evaluationResults,
-    notes: 'POC retrieval evaluation generated from the canonical source-index layer.',
+    method: evaluation.method,
+    supportedQueryCount: evaluation.supportedQueryCount,
+    unsupportedQueryCount: evaluation.unsupportedQueryCount,
+    top1HitCount: evaluation.top1HitCount,
+    top3HitCount: evaluation.top3HitCount,
+    top5HitCount: evaluation.top5HitCount,
+    top1Accuracy: evaluation.top1Accuracy,
+    top3Accuracy: evaluation.top3Accuracy,
+    top5Accuracy: evaluation.top5Accuracy,
+    meanReciprocalRank: evaluation.meanReciprocalRank,
+    sourceFamilyAccuracy: evaluation.sourceFamilyAccuracy,
+    authorityLevelAccuracy: evaluation.authorityLevelAccuracy,
+    citationAvailability: evaluation.citationAvailability,
+    multiChunkEvidenceRecall: evaluation.multiChunkEvidenceRecall,
+    unsupportedQueryPrecision: evaluation.unsupportedQueryPrecision,
+    categoryStats: evaluation.categoryStats,
+    queries: evaluation.queries,
+    notes: 'Canonical retrieval evaluation generated from the source-index POC.',
   }
-  await fs.writeFile(evaluationPath, `${JSON.stringify(evaluationDocument, null, 2)}\n`, 'utf8')
+  await fs.writeFile(resultsPath, `${JSON.stringify(resultsDocument, null, 2)}\n`, 'utf8')
+  await fs.writeFile(legacyResultsPath, `${JSON.stringify(resultsDocument, null, 2)}\n`, 'utf8')
+  await fs.writeFile(legacyMarkdownPath, buildRetrievalMarkdown(evaluation), 'utf8')
 
-  const evaluationMdLines = [
-    '# Retrieval evaluation',
-    '',
-    `- Evaluation ID: \`${evaluationDocument.evaluationId}\``,
-    `- Method: ${evaluationDocument.method}`,
-    `- Queries: ${evaluationDocument.queryCount}`,
-    `- Top-1 hits: ${evaluationDocument.top1HitCount}`,
-    `- Top-3 coverage: ${(evaluationDocument.top3Coverage * 100).toFixed(0)}%`,
-    '',
-    '| Query | Expected chunk(s) | Top ranked chunk(s) | Top-1 hit | Top-3 hit |',
-    '| --- | --- | --- | --- | --- |',
-  ]
-  for (const query of evaluationDocument.queries) {
-    evaluationMdLines.push(
-      `| ${query.query.replace(/\|/g, '\\|')} | ${query.expectedChunkIds.join('<br>')} | ${query.rankedMatches
-        .map((match) => `${match.chunkId} (${match.score})`)
-        .join('<br>')} | ${query.top1Hit ? 'Yes' : 'No'} | ${query.top3Hit ? 'Yes' : 'No'} |`,
-    )
-  }
-  evaluationMdLines.push('')
-  evaluationMdLines.push('## Notes')
-  evaluationMdLines.push('')
-  evaluationMdLines.push('This baseline is intentionally lightweight and offline. It exists to prove the POC contract, not to replace a production search backend.')
-  await fs.writeFile(evaluationMdPath, `${evaluationMdLines.join('\n')}\n`, 'utf8')
+  const retrievalReportPath = path.join(repoRoot, 'docs', 'retrieval_readiness_report.md')
+  await fs.writeFile(retrievalReportPath, buildRetrievalReadinessReport(repositoryManifest, evaluation, config), 'utf8')
 
   const sourceIndexReadmePath = path.join(outputRoot, 'README.md')
   const sourceIndexReadme = [
@@ -547,8 +717,9 @@ const main = async () => {
     'This directory contains the backend-neutral canonical source-index proof of concept.',
     '',
     '- `sources/` contains one JSON + Markdown pair per source.',
-    '- `exports/` contains flat JSONL and CSV exports for downstream backends.',
-    '- `retrieval/` contains a lightweight retrieval baseline and its human-readable summary.',
+    '- `exports/` contains the canonical JSONL and CSV exports plus the export manifest.',
+    '- `evaluation/` contains the retrieval questions and evaluation results.',
+    '- `retrieval/` contains a legacy compatibility summary for earlier handoff notes.',
     '- `repository-manifest.json` ties the package together.',
     '',
     'All files are review-only in the repository context and do not replace the underlying review packets.',
@@ -558,7 +729,8 @@ const main = async () => {
 
   console.log(`Built ${sourcePackages.length} canonical source packages and ${chunkRecords.length} chunks.`)
   console.log(`Repository manifest: ${path.relative(repoRoot, repositoryManifestPath)}`)
-  console.log(`Retrieval evaluation top-1 hits: ${top1HitCount}/${config.retrievalQueries.length}`)
+  console.log(`Export manifest: ${path.relative(repoRoot, exportManifestPath)}`)
+  console.log(`Retrieval evaluation top-1 hits: ${evaluation.top1HitCount}/${config.retrievalQueries.length}`)
 }
 
 main().catch((error) => {

@@ -1,0 +1,378 @@
+{
+  "schemaVersion": "1.0",
+  "sourceIndexId": "source-index-actuarial-memorandum-practice-note",
+  "repositoryManifestId": "source-index-poc-2026-07-21",
+  "sourceVersionId": "source-index-actuarial-memorandum-practice-note",
+  "source": {
+    "sourceId": "actuarial-memorandum-practice-note",
+    "sourceVersionId": "source-index-actuarial-memorandum-practice-note",
+    "filename": "Actuarial Memorandum Practice Note 01142020.pdf",
+    "filePath": "D:\\Work\\AI Projects\\NAIC Valuation Manual Course\\Practice Notes\\Actuarial Memorandum Practice Note 01142020.pdf",
+    "sourceFamilyId": "practice_notes",
+    "domainId": "naic_regulatory",
+    "documentType": "practice_note",
+    "sourceTitle": "Actuarial Memorandum Practice Note",
+    "sourceReference": "American Academy of Actuaries exposure draft, January 2020",
+    "jurisdiction": "AAA",
+    "authorityLevel": "practice_note",
+    "sourceStatus": "non-binding practice note",
+    "versionDate": null,
+    "pageCount": 37,
+    "pageRange": {
+      "start": 1,
+      "end": 37
+    },
+    "reviewBatchIds": [
+      "batch-202",
+      "batch-203",
+      "batch-204",
+      "batch-205"
+    ],
+    "reviewIndexPath": "docs/review/actuarial_memorandum_practice_note_review_index.md",
+    "selfReviewPath": "docs/review/actuarial_memorandum_practice_note_self_review.md",
+    "pageImageBackstop": false,
+    "lineReferencesAvailable": false,
+    "textLayerQuality": "clean",
+    "notes": "Actuarial memorandum companion guidance retained as a non-binding practice note."
+  },
+  "processing": {
+    "createdAt": "2026-07-21T05:26:54.272Z",
+    "createdBy": "scripts/build-source-index-poc.mjs",
+    "processingMode": "canonical_index_poc",
+    "canonicality": "poc",
+    "reviewOnly": true,
+    "learnerFacingAllowed": false,
+    "appReadyAllowed": false,
+    "ragReadyAllowed": false,
+    "promotionStatus": "not_promoted",
+    "notes": "Actuarial memorandum companion guidance retained as a non-binding practice note."
+  },
+  "chunks": [
+    {
+      "chunkId": "chunk-actuarial-memorandum-practice-note-001",
+      "chunkOrdinal": 1,
+      "chunkKind": "source_excerpt",
+      "sourceTextType": "review_artifact_derived_text",
+      "pageStart": 1,
+      "pageEnd": 8,
+      "sectionReference": "Opening and background guidance",
+      "lineReference": null,
+      "sourceTextExcerpt": "Actuarial memorandum opening background guidance",
+      "normalizedTextExcerpt": "actuarial memorandum opening background guidance",
+      "summary": "The note opens with exposure-draft framing and background guidance.",
+      "topic": "Opening and background guidance",
+      "headingPath": "Opening and background guidance",
+      "keyPoints": [
+        "The note opens with exposure-draft framing and background guidance."
+      ],
+      "concepts": [
+        "background_content",
+        "caveat_or_companion_guidance",
+        "non_binding_practice_note",
+        "cross_reference_mapping",
+        "boundary_control_window"
+      ],
+      "definedTerms": [
+        "actuarial memorandum",
+        "practice note",
+        "opening"
+      ],
+      "acronyms": [],
+      "requirements": [],
+      "citationDisplay": "Actuarial memorandum opening background guidance",
+      "normalizedSearchText": "actuarial memorandum opening background guidance actuarial memorandum opening background guidance the note opens with exposure-draft framing and background guidance. opening and background guidance opening and background guidance opening and background guidance actuarial memorandum practice note american academy of actuaries exposure draft, january 2020 the note opens with exposure-draft framing and background guidance. background_content caveat_or_companion_guidance non_binding_practice_note cross_reference_mapping boundary_control_window actuarial memorandum practice note opening actuarial memorandum opening background guidance background_content caveat_or_companion_guidance non_binding_practice_note cross_reference_mapping boundary_control_window actuarial memorandum practice note opening",
+      "canonicalSourceIndexPath": "data/processed/source_indexes/sources/actuarial-memorandum-practice-note.json",
+      "sourceVersionId": "source-index-actuarial-memorandum-practice-note",
+      "controlledTags": [
+        "background_content",
+        "caveat_or_companion_guidance",
+        "non_binding_practice_note",
+        "cross_reference_mapping",
+        "boundary_control_window"
+      ],
+      "keywords": [
+        "actuarial memorandum",
+        "practice note",
+        "opening"
+      ],
+      "citations": [
+        {
+          "citationText": "Actuarial memorandum opening background guidance",
+          "pageReference": "pp. 1-8",
+          "sectionReference": "Opening and background guidance",
+          "sourceReference": "American Academy of Actuaries exposure draft, January 2020",
+          "lineReference": null
+        }
+      ],
+      "relationships": [],
+      "relationshipIds": [],
+      "fidelity": "curated",
+      "confidence": "high",
+      "reviewFlags": [
+        "companion_guidance",
+        "page_locator_anchor"
+      ],
+      "qualityNotes": [
+        "Non-binding practice note; page locators are the primary anchor.",
+        "Keep the companion-guidance caveat visible."
+      ],
+      "evidenceNotes": "Derived from the ignored actuarial-memorandum practice-note review packet and review index.",
+      "retrievalEligible": true,
+      "promotionEligible": false
+    },
+    {
+      "chunkId": "chunk-actuarial-memorandum-practice-note-002",
+      "chunkOrdinal": 2,
+      "chunkKind": "source_excerpt",
+      "sourceTextType": "review_artifact_derived_text",
+      "pageStart": 9,
+      "pageEnd": 18,
+      "sectionReference": "Drafting and content considerations",
+      "lineReference": null,
+      "sourceTextExcerpt": "Actuarial memorandum drafting content considerations",
+      "normalizedTextExcerpt": "actuarial memorandum drafting content considerations",
+      "summary": "The note covers drafting and content considerations for the memorandum.",
+      "topic": "Drafting and content considerations",
+      "headingPath": "Drafting and content considerations",
+      "keyPoints": [
+        "The note covers drafting and content considerations for the memorandum."
+      ],
+      "concepts": [
+        "reporting_requirement",
+        "documentation_expectation",
+        "definition_or_terminology",
+        "non_binding_practice_note",
+        "cross_reference_mapping"
+      ],
+      "definedTerms": [
+        "memorandum",
+        "drafting",
+        "content",
+        "practice note"
+      ],
+      "acronyms": [],
+      "requirements": [
+        "reporting_requirement",
+        "documentation_expectation"
+      ],
+      "citationDisplay": "Actuarial memorandum drafting content considerations",
+      "normalizedSearchText": "actuarial memorandum drafting content considerations actuarial memorandum drafting content considerations the note covers drafting and content considerations for the memorandum. drafting and content considerations drafting and content considerations drafting and content considerations actuarial memorandum practice note american academy of actuaries exposure draft, january 2020 the note covers drafting and content considerations for the memorandum. reporting_requirement documentation_expectation definition_or_terminology non_binding_practice_note cross_reference_mapping memorandum drafting content practice note reporting_requirement documentation_expectation actuarial memorandum drafting content considerations reporting_requirement documentation_expectation definition_or_terminology non_binding_practice_note cross_reference_mapping memorandum drafting content practice note",
+      "canonicalSourceIndexPath": "data/processed/source_indexes/sources/actuarial-memorandum-practice-note.json",
+      "sourceVersionId": "source-index-actuarial-memorandum-practice-note",
+      "controlledTags": [
+        "reporting_requirement",
+        "documentation_expectation",
+        "definition_or_terminology",
+        "non_binding_practice_note",
+        "cross_reference_mapping"
+      ],
+      "keywords": [
+        "memorandum",
+        "drafting",
+        "content",
+        "practice note"
+      ],
+      "citations": [
+        {
+          "citationText": "Actuarial memorandum drafting content considerations",
+          "pageReference": "pp. 9-18",
+          "sectionReference": "Drafting and content considerations",
+          "sourceReference": "American Academy of Actuaries exposure draft, January 2020",
+          "lineReference": null
+        }
+      ],
+      "relationships": [],
+      "relationshipIds": [],
+      "fidelity": "curated",
+      "confidence": "high",
+      "reviewFlags": [
+        "companion_guidance",
+        "page_locator_anchor"
+      ],
+      "qualityNotes": [
+        "Non-binding practice note; page locators are the primary anchor.",
+        "Keep the companion-guidance caveat visible."
+      ],
+      "evidenceNotes": "Derived from the ignored actuarial-memorandum practice-note review packet and review index.",
+      "retrievalEligible": true,
+      "promotionEligible": false
+    },
+    {
+      "chunkId": "chunk-actuarial-memorandum-practice-note-003",
+      "chunkOrdinal": 3,
+      "chunkKind": "source_excerpt",
+      "sourceTextType": "review_artifact_derived_text",
+      "pageStart": 19,
+      "pageEnd": 27,
+      "sectionReference": "Judgment and reserve-items slice",
+      "lineReference": null,
+      "sourceTextExcerpt": "Actuarial memorandum judgment reserve items",
+      "normalizedTextExcerpt": "actuarial memorandum judgment reserve items",
+      "summary": "The note addresses judgment-heavy reserve-item considerations.",
+      "topic": "Judgment and reserve-items slice",
+      "headingPath": "Judgment and reserve-items slice",
+      "keyPoints": [
+        "The note addresses judgment-heavy reserve-item considerations."
+      ],
+      "concepts": [
+        "calculation_structure",
+        "formula_context",
+        "reporting_requirement",
+        "documentation_expectation",
+        "non_binding_practice_note",
+        "requires_human_interpretation"
+      ],
+      "definedTerms": [
+        "judgment",
+        "reserve items",
+        "memorandum",
+        "practice note"
+      ],
+      "acronyms": [],
+      "requirements": [
+        "reporting_requirement",
+        "documentation_expectation"
+      ],
+      "citationDisplay": "Actuarial memorandum judgment reserve items",
+      "normalizedSearchText": "actuarial memorandum judgment reserve items actuarial memorandum judgment reserve items the note addresses judgment-heavy reserve-item considerations. judgment and reserve-items slice judgment and reserve-items slice judgment and reserve-items slice actuarial memorandum practice note american academy of actuaries exposure draft, january 2020 the note addresses judgment-heavy reserve-item considerations. calculation_structure formula_context reporting_requirement documentation_expectation non_binding_practice_note requires_human_interpretation judgment reserve items memorandum practice note reporting_requirement documentation_expectation actuarial memorandum judgment reserve items calculation_structure formula_context reporting_requirement documentation_expectation non_binding_practice_note requires_human_interpretation judgment reserve items memorandum practice note",
+      "canonicalSourceIndexPath": "data/processed/source_indexes/sources/actuarial-memorandum-practice-note.json",
+      "sourceVersionId": "source-index-actuarial-memorandum-practice-note",
+      "controlledTags": [
+        "calculation_structure",
+        "formula_context",
+        "reporting_requirement",
+        "documentation_expectation",
+        "non_binding_practice_note",
+        "requires_human_interpretation"
+      ],
+      "keywords": [
+        "judgment",
+        "reserve items",
+        "memorandum",
+        "practice note"
+      ],
+      "citations": [
+        {
+          "citationText": "Actuarial memorandum judgment reserve items",
+          "pageReference": "pp. 19-27",
+          "sectionReference": "Judgment and reserve-items slice",
+          "sourceReference": "American Academy of Actuaries exposure draft, January 2020",
+          "lineReference": null
+        }
+      ],
+      "relationships": [],
+      "relationshipIds": [],
+      "fidelity": "curated",
+      "confidence": "high",
+      "reviewFlags": [
+        "companion_guidance",
+        "page_locator_anchor"
+      ],
+      "qualityNotes": [
+        "Non-binding practice note; page locators are the primary anchor.",
+        "Keep the companion-guidance caveat visible."
+      ],
+      "evidenceNotes": "Derived from the ignored actuarial-memorandum practice-note review packet and review index.",
+      "retrievalEligible": true,
+      "promotionEligible": false
+    },
+    {
+      "chunkId": "chunk-actuarial-memorandum-practice-note-004",
+      "chunkOrdinal": 4,
+      "chunkKind": "source_excerpt",
+      "sourceTextType": "review_artifact_derived_text",
+      "pageStart": 28,
+      "pageEnd": 37,
+      "sectionReference": "Appendices and checklist",
+      "lineReference": null,
+      "sourceTextExcerpt": "Actuarial memorandum appendices checklist",
+      "normalizedTextExcerpt": "actuarial memorandum appendices checklist",
+      "summary": "The note closes with appendices and checklist material.",
+      "topic": "Appendices and checklist",
+      "headingPath": "Appendices and checklist",
+      "keyPoints": [
+        "The note closes with appendices and checklist material."
+      ],
+      "concepts": [
+        "background_content",
+        "caveat_or_companion_guidance",
+        "non_binding_practice_note",
+        "cross_reference_mapping",
+        "boundary_control_window"
+      ],
+      "definedTerms": [
+        "appendices",
+        "checklist",
+        "memorandum",
+        "practice note"
+      ],
+      "acronyms": [],
+      "requirements": [],
+      "citationDisplay": "Actuarial memorandum appendices checklist",
+      "normalizedSearchText": "actuarial memorandum appendices checklist actuarial memorandum appendices checklist the note closes with appendices and checklist material. appendices and checklist appendices and checklist appendices and checklist actuarial memorandum practice note american academy of actuaries exposure draft, january 2020 the note closes with appendices and checklist material. background_content caveat_or_companion_guidance non_binding_practice_note cross_reference_mapping boundary_control_window appendices checklist memorandum practice note actuarial memorandum appendices checklist background_content caveat_or_companion_guidance non_binding_practice_note cross_reference_mapping boundary_control_window appendices checklist memorandum practice note",
+      "canonicalSourceIndexPath": "data/processed/source_indexes/sources/actuarial-memorandum-practice-note.json",
+      "sourceVersionId": "source-index-actuarial-memorandum-practice-note",
+      "controlledTags": [
+        "background_content",
+        "caveat_or_companion_guidance",
+        "non_binding_practice_note",
+        "cross_reference_mapping",
+        "boundary_control_window"
+      ],
+      "keywords": [
+        "appendices",
+        "checklist",
+        "memorandum",
+        "practice note"
+      ],
+      "citations": [
+        {
+          "citationText": "Actuarial memorandum appendices checklist",
+          "pageReference": "pp. 28-37",
+          "sectionReference": "Appendices and checklist",
+          "sourceReference": "American Academy of Actuaries exposure draft, January 2020",
+          "lineReference": null
+        }
+      ],
+      "relationships": [],
+      "relationshipIds": [],
+      "fidelity": "curated",
+      "confidence": "high",
+      "reviewFlags": [
+        "companion_guidance",
+        "page_locator_anchor"
+      ],
+      "qualityNotes": [
+        "Non-binding practice note; page locators are the primary anchor.",
+        "Keep the companion-guidance caveat visible."
+      ],
+      "evidenceNotes": "Derived from the ignored actuarial-memorandum practice-note review packet and review index.",
+      "retrievalEligible": true,
+      "promotionEligible": false
+    }
+  ],
+  "relationships": [],
+  "quality": {
+    "textLayerQuality": "clean",
+    "citationCompleteness": "partial",
+    "pageImageBackstop": false,
+    "lineReferencesAvailable": false,
+    "notes": "Actuarial memorandum companion guidance retained as a non-binding practice note."
+  },
+  "exportHints": {
+    "jsonlEligible": true,
+    "csvEligible": true,
+    "vectorEligible": true,
+    "notes": "Backend-neutral POC exports generated from review-only batch artifacts."
+  },
+  "notes": "Actuarial memorandum companion guidance retained as a non-binding practice note.",
+  "extensions": {
+    "batchIds": [
+      "batch-202",
+      "batch-203",
+      "batch-204",
+      "batch-205"
+    ],
+    "sourceIndexGeneratedBy": "build-source-index-poc"
+  }
+}

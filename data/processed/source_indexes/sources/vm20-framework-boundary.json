@@ -2,8 +2,10 @@
   "schemaVersion": "1.0",
   "sourceIndexId": "source-index-vm20-framework-boundary",
   "repositoryManifestId": "source-index-poc-2026-07-21",
+  "sourceVersionId": "source-index-vm20-framework-boundary",
   "source": {
     "sourceId": "vm20-framework-boundary",
+    "sourceVersionId": "source-index-vm20-framework-boundary",
     "filename": "pbr_data_valuation_manual_2026.pdf",
     "filePath": "D:\\Work\\AI Projects\\NAIC Valuation Manual Course\\pbr_data_valuation_manual_2026.pdf",
     "sourceFamilyId": "valuation_manual_pdfs",
@@ -31,7 +33,7 @@
     "notes": "Boundary-control slice retained only to keep the mechanics transition review-only."
   },
   "processing": {
-    "createdAt": "2026-07-21T04:05:02.091Z",
+    "createdAt": "2026-07-21T05:26:54.259Z",
     "createdBy": "scripts/build-source-index-poc.mjs",
     "processingMode": "canonical_index_poc",
     "canonicality": "poc",
@@ -55,6 +57,30 @@
       "sourceTextExcerpt": "The minimum reserve for each VM-20 reserving category equals the sum of the Section 2 results.",
       "normalizedTextExcerpt": "Boundary slice from overview into reserve-category mechanics.",
       "summary": "This slice marks the transition from framework overview into reserve-category mechanics and is retained as a boundary-control checkpoint only.",
+      "topic": "This slice marks the transition from framework overview into reserve-category mechanics and is retained as a boundary-control checkpoint only.",
+      "headingPath": "Section 2: Minimum Reserve (category continuation)",
+      "keyPoints": [
+        "This slice marks the transition from framework overview into reserve-category mechanics and is retained as a boundary-control checkpoint only."
+      ],
+      "concepts": [
+        "core_vm_course",
+        "mechanics_boundary",
+        "requires_human_interpretation",
+        "formula_context",
+        "boundary_control_window"
+      ],
+      "definedTerms": [
+        "VM-20",
+        "boundary",
+        "reserve category",
+        "mechanics"
+      ],
+      "acronyms": [],
+      "requirements": [],
+      "citationDisplay": "The minimum reserve for each VM-20 reserving category equals the sum of the Section 2 results",
+      "normalizedSearchText": "the minimum reserve for each vm-20 reserving category equals the sum of the section 2 results. boundary slice from overview into reserve-category mechanics. this slice marks the transition from framework overview into reserve-category mechanics and is retained as a boundary-control checkpoint only. this slice marks the transition from framework overview into reserve-category mechanics and is retained as a boundary-control checkpoint only. section 2: minimum reserve (category continuation) section 2: minimum reserve (category continuation) valuation manual 2026 naic valuation manual this slice marks the transition from framework overview into reserve-category mechanics and is retained as a boundary-control checkpoint only. core_vm_course mechanics_boundary requires_human_interpretation formula_context boundary_control_window vm-20 boundary reserve category mechanics the minimum reserve for each vm-20 reserving category equals the sum of the section 2 results core_vm_course mechanics_boundary requires_human_interpretation formula_context boundary_control_window vm-20 boundary reserve category mechanics",
+      "canonicalSourceIndexPath": "data/processed/source_indexes/sources/vm20-framework-boundary.json",
+      "sourceVersionId": "source-index-vm20-framework-boundary",
       "controlledTags": [
         "core_vm_course",
         "mechanics_boundary",
@@ -83,6 +109,9 @@
           "targetChunkId": "chunk-vm20-framework-overview-001",
           "notes": "Boundary-control checkpoint after the overview slice."
         }
+      ],
+      "relationshipIds": [
+        "chunk-vm20-framework-overview-001"
       ],
       "fidelity": "exact",
       "confidence": "high",

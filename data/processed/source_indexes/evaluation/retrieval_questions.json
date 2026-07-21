@@ -1,0 +1,212 @@
+{
+  "schemaVersion": "1.0",
+  "repositoryManifestId": "source-index-poc-2026-07-21",
+  "method": "keyword_overlap_baseline",
+  "queryCount": 16,
+  "queries": [
+    {
+      "queryId": "q-ag01-net-premium",
+      "queryCategory": "exact_title",
+      "query": "How does AG 01 treat policies when net premium exceeds gross premium?",
+      "expectedChunkIds": [
+        "chunk-ag01-net-premium-interpretation-001"
+      ],
+      "expectedSourceIds": [
+        "ag01-net-premium-interpretation"
+      ],
+      "rationale": "Tests a compact guideline interpretation with a single authoritative chunk."
+    },
+    {
+      "queryId": "q-ag03-maturity-value",
+      "queryCategory": "exact_title",
+      "query": "What does AG 03 say maturity value means for cash surrender benefit interpretation?",
+      "expectedChunkIds": [
+        "chunk-ag03-maturity-value-interpretation-001"
+      ],
+      "expectedSourceIds": [
+        "ag03-maturity-value-interpretation"
+      ],
+      "rationale": "Tests a one-page interpretive note with a cross-reference question."
+    },
+    {
+      "queryId": "q-vm20-framework-overview",
+      "queryCategory": "framework_overview",
+      "query": "What does VM-20 say about the minimum reserve valuation standard and the start of reserve mechanics?",
+      "expectedChunkIds": [
+        "chunk-vm20-framework-overview-001"
+      ],
+      "expectedSourceIds": [
+        "vm20-framework-overview"
+      ],
+      "rationale": "Tests retrieval of the framework overview slice."
+    },
+    {
+      "queryId": "q-vm20-boundary",
+      "queryCategory": "mechanics_boundary",
+      "query": "Where does VM-20 transition from the framework overview into reserve-category mechanics?",
+      "expectedChunkIds": [
+        "chunk-vm20-framework-boundary-001"
+      ],
+      "expectedSourceIds": [
+        "vm20-framework-boundary"
+      ],
+      "rationale": "Tests retrieval of the mechanics boundary checkpoint."
+    },
+    {
+      "queryId": "q-vm20-assumptions-section-3c",
+      "queryCategory": "multi_chunk",
+      "query": "How does VM-20 Section 3.C progress from mortality and interest assumptions through the Section 4 boundary?",
+      "expectedChunkIds": [
+        "chunk-vm20-assumptions-section-3c-001",
+        "chunk-vm20-assumptions-section-3c-002",
+        "chunk-vm20-assumptions-section-3c-003",
+        "chunk-vm20-assumptions-section-3c-004"
+      ],
+      "expectedSourceIds": [
+        "vm20-assumptions-section-3c"
+      ],
+      "rationale": "Tests a four-chunk assumption-layer slice."
+    },
+    {
+      "queryId": "q-vm21-sr-projection-entry",
+      "queryCategory": "multi_chunk",
+      "query": "How does VM-21 progress from the stochastic reserve projection setup through the closeout boundary?",
+      "expectedChunkIds": [
+        "chunk-vm21-sr-projection-entry-001",
+        "chunk-vm21-sr-projection-entry-002",
+        "chunk-vm21-sr-projection-entry-003",
+        "chunk-vm21-sr-projection-entry-004"
+      ],
+      "expectedSourceIds": [
+        "vm21-sr-projection-entry"
+      ],
+      "rationale": "Tests the neighboring VM chapter and its stochastic projection structure."
+    },
+    {
+      "queryId": "q-ag36-active-overview",
+      "queryCategory": "multi_chunk",
+      "query": "How does active AG 36 move from the CRVM overview through attachments, hedged-as-required guidance, and certification closeout?",
+      "expectedChunkIds": [
+        "chunk-ag36-eiul-crvm-guidance-001",
+        "chunk-ag36-eiul-crvm-guidance-002",
+        "chunk-ag36-eiul-crvm-guidance-003",
+        "chunk-ag36-eiul-crvm-guidance-004"
+      ],
+      "expectedSourceIds": [
+        "ag36-eiul-crvm-guidance"
+      ],
+      "rationale": "Tests a longer noisy-guideline slice with method, hedging, and closeout pressure."
+    },
+    {
+      "queryId": "q-ag36-reprint-duplicate",
+      "queryCategory": "relationship",
+      "query": "Which source is the companion reprint for AG 36 and how should it be treated?",
+      "expectedChunkIds": [
+        "chunk-ag36-eiul-crvm-law-manual-reprint-001"
+      ],
+      "expectedSourceIds": [
+        "ag36-eiul-crvm-law-manual-reprint"
+      ],
+      "rationale": "Tests the duplicate/reprint companion relationship."
+    },
+    {
+      "queryId": "q-model-governance-controls",
+      "queryCategory": "multi_chunk",
+      "query": "How does the model governance practice note separate opening guidance, governance and validation, and documentation closeout?",
+      "expectedChunkIds": [
+        "chunk-model-governance-practice-note-001",
+        "chunk-model-governance-practice-note-002",
+        "chunk-model-governance-practice-note-003"
+      ],
+      "expectedSourceIds": [
+        "model-governance-practice-note"
+      ],
+      "rationale": "Tests companion guidance and governance/control wording in one practice note."
+    },
+    {
+      "queryId": "q-actuarial-memorandum-drafting",
+      "queryCategory": "multi_chunk",
+      "query": "How does the actuarial memorandum practice note move from background guidance through drafting, judgment, and appendices?",
+      "expectedChunkIds": [
+        "chunk-actuarial-memorandum-practice-note-001",
+        "chunk-actuarial-memorandum-practice-note-002",
+        "chunk-actuarial-memorandum-practice-note-003",
+        "chunk-actuarial-memorandum-practice-note-004"
+      ],
+      "expectedSourceIds": [
+        "actuarial-memorandum-practice-note"
+      ],
+      "rationale": "Tests a longer practice-note slice with drafting and reserve-item pressure."
+    },
+    {
+      "queryId": "q-reg210-opening-title",
+      "queryCategory": "exact_title",
+      "query": "What are the opening title, purpose, scope, and definitions in Regulation 210?",
+      "expectedChunkIds": [
+        "chunk-reg210-non-guaranteed-elements-001"
+      ],
+      "expectedSourceIds": [
+        "reg210-non-guaranteed-elements"
+      ],
+      "rationale": "Tests exact retrieval of the opening regulatory slice."
+    },
+    {
+      "queryId": "q-reg210-qualified-actuary",
+      "queryCategory": "exact_title",
+      "query": "What does Regulation 210 require of the qualified actuary and board-approved criteria?",
+      "expectedChunkIds": [
+        "chunk-reg210-non-guaranteed-elements-002"
+      ],
+      "expectedSourceIds": [
+        "reg210-non-guaranteed-elements"
+      ],
+      "rationale": "Tests a governance-heavy regulation slice."
+    },
+    {
+      "queryId": "q-reg210-filing-records",
+      "queryCategory": "exact_title",
+      "query": "What filing and records requirements appear in Regulation 210?",
+      "expectedChunkIds": [
+        "chunk-reg210-non-guaranteed-elements-003"
+      ],
+      "expectedSourceIds": [
+        "reg210-non-guaranteed-elements"
+      ],
+      "rationale": "Tests the regulation closeout slice."
+    },
+    {
+      "queryId": "q-cia-educational-note-overview",
+      "queryCategory": "multi_chunk",
+      "query": "How does the CIA educational note move from opening guidance through the capital and FCT overview, additional guidance, and appendices?",
+      "expectedChunkIds": [
+        "chunk-cia-2022-capital-fct-educational-note-001",
+        "chunk-cia-2022-capital-fct-educational-note-002",
+        "chunk-cia-2022-capital-fct-educational-note-003",
+        "chunk-cia-2022-capital-fct-educational-note-004"
+      ],
+      "expectedSourceIds": [
+        "cia-2022-capital-fct-educational-note"
+      ],
+      "rationale": "Tests a companion educational note with guidance, caution, and closeout pressure."
+    },
+    {
+      "queryId": "q-unsupported-pricing-support",
+      "queryCategory": "unsupported",
+      "query": "What does this corpus say about pricing support?",
+      "expectedOutcome": "unsupported",
+      "expectedChunkIds": [],
+      "expectedSourceIds": [],
+      "rationale": "Checks unsupported-query handling for adjacent pricing content."
+    },
+    {
+      "queryId": "q-unsupported-liability-modeling",
+      "queryCategory": "unsupported",
+      "query": "What does this corpus say about liability modeling support?",
+      "expectedOutcome": "unsupported",
+      "expectedChunkIds": [],
+      "expectedSourceIds": [],
+      "rationale": "Checks unsupported-query handling for adjacent liability-modeling content."
+    }
+  ],
+  "notes": "Canonical retrieval questions for the source-index POC."
+}

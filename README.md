@@ -12,14 +12,24 @@ review-only batch outputs can be converted into reusable JSON, Markdown, JSONL,
 CSV, and retrieval-evaluation artifacts without replacing the underlying
 review packets or handoff notes.
 
-The first POC package covers:
+The expanded POC corpus now covers 12 source packages and 31 canonical chunks.
+It includes:
 
 - AG 01 net-premium interpretation;
 - AG 03 maturity-value interpretation;
-- a narrow VM-20 framework overview and mechanics-boundary slice.
+- a narrow VM-20 framework overview and mechanics-boundary slice;
+- a VM-20 Section 3.C assumptions slice;
+- a VM-21 stochastic reserve projection entry;
+- AG 36 active guideline material;
+- the AG 36 2021 Law Manual reprint as companion-only evidence;
+- model governance practice-note material;
+- actuarial memorandum practice-note material;
+- Regulation 210;
+- the CIA 2022 capital/FCT educational note.
 
 The canonical layer stays review-only, not learner-facing, not app-ready, and
-not RAG-ready by default.
+not RAG-ready by default. The repository also includes a retrieval readiness
+report and a compact evaluation harness for the expanded corpus.
 
 ## What lives here
 
