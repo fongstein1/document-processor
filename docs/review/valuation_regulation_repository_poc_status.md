@@ -4,9 +4,10 @@
 
 The repository now also includes a backend-neutral canonical source-index
 proof of concept under `data/processed/source_indexes/`. It packages
-representative AG 01, AG 03, and narrow VM-20 slices into source-index JSON,
-Markdown, JSONL, CSV, and retrieval-evaluation artifacts without replacing the
-batch review packets or review indexes.
+representative AG 01, AG 03, narrow VM-20 slices, companion guidance,
+Regulation 210, and a synthetic pricing corpus into source-index JSON,
+Markdown, JSONL, CSV, classification, and retrieval-evaluation artifacts
+without replacing the batch review packets or review indexes.
 
 This addendum remains review-only, not learner-facing, not app-ready, and not
 RAG-ready.

@@ -3,9 +3,9 @@
   "exportManifestId": "source-index-poc-2026-07-21-exports",
   "repositoryManifestId": "source-index-poc-2026-07-21",
   "repositoryName": "Document Processor",
-  "generatedAt": "2026-07-21T05:26:54.277Z",
-  "sourcePackageCount": 12,
-  "chunkCount": 31,
+  "generatedAt": "2026-07-22T22:52:46.811Z",
+  "sourcePackageCount": 17,
+  "chunkCount": 41,
   "exportFiles": {
     "repositoryManifestPath": "data/processed/source_indexes/repository-manifest.json",
     "exportManifestPath": "data/processed/source_indexes/exports/export_manifest.json",

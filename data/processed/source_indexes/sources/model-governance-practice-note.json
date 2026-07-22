@@ -4,6 +4,28 @@
   "repositoryManifestId": "source-index-poc-2026-07-21",
   "sourceVersionId": "source-index-model-governance-practice-note",
   "source": {
+    "classification": {
+      "domainId": "naic_regulatory",
+      "subdomainId": null,
+      "documentType": "practice_note",
+      "purpose": "Model governance companion guidance retained as a non-binding practice note.",
+      "intendedAudience": "Valuation, regulatory, and governance reviewers",
+      "authoritySourceType": "companion",
+      "confidentiality": "internal",
+      "publicationDate": null,
+      "effectiveDate": null,
+      "version": null,
+      "approvalStatus": "non-binding practice note",
+      "language": "en",
+      "recommendedProfile": "regulatory",
+      "recommendedChunkingStrategy": "heading_first",
+      "confidence": "high",
+      "unresolvedQuestions": [
+        "Line references are unavailable and page locators are primary."
+      ],
+      "notes": "Model governance companion guidance retained as a non-binding practice note."
+    },
+    "profileData": null,
     "sourceId": "model-governance-practice-note",
     "sourceVersionId": "source-index-model-governance-practice-note",
     "filename": "AAA - Model_Governance_PN_042017.pdf",
@@ -35,7 +57,7 @@
     "notes": "Model governance companion guidance retained as a non-binding practice note."
   },
   "processing": {
-    "createdAt": "2026-07-21T05:26:54.270Z",
+    "createdAt": "2026-07-22T22:52:46.774Z",
     "createdBy": "scripts/build-source-index-poc.mjs",
     "processingMode": "canonical_index_poc",
     "canonicality": "poc",

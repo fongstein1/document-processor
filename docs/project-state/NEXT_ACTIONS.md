@@ -6,7 +6,8 @@ The new canonical source-index POC should be treated as the next architecture
 checkpoint. The immediate follow-up work is to review the package in
 `data/processed/source_indexes/`, confirm the review-only separation still
 looks clean, and decide whether the same contract should be expanded to the
-next small source set.
+next small source set or left as the current 17-package / 41-chunk
+proof-of-concept with its synthetic pricing classifier.
 
 Likely next choices are:
 

@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "repositoryManifestId": "source-index-poc-2026-07-21",
   "method": "keyword_overlap_baseline",
-  "queryCount": 16,
+  "queryCount": 21,
   "queries": [
     {
       "queryId": "q-ag01-net-premium",
@@ -188,6 +188,66 @@
         "cia-2022-capital-fct-educational-note"
       ],
       "rationale": "Tests a companion educational note with guidance, caution, and closeout pressure."
+    },
+    {
+      "queryId": "q-synth-product-spec",
+      "queryCategory": "pricing_domain",
+      "query": "What product features and policyholder options are described in the synthetic pricing product specification?",
+      "expectedChunkIds": [
+        "chunk-synthetic-pricing-product-specification-001"
+      ],
+      "expectedSourceIds": [
+        "synthetic-pricing-product-specification"
+      ],
+      "rationale": "Tests product-profile retrieval for the synthetic pricing corpus."
+    },
+    {
+      "queryId": "q-synth-assumption-memo",
+      "queryCategory": "pricing_domain",
+      "query": "What assumptions, bases, and sensitivity drivers appear in the synthetic pricing assumption memo?",
+      "expectedChunkIds": [
+        "chunk-synthetic-pricing-assumption-memo-001"
+      ],
+      "expectedSourceIds": [
+        "synthetic-pricing-assumption-memo"
+      ],
+      "rationale": "Tests assumption-memo retrieval and classification."
+    },
+    {
+      "queryId": "q-synth-pricing-methodology",
+      "queryCategory": "pricing_domain",
+      "query": "How does the synthetic pricing methodology describe pricing stages, methods, and decision status?",
+      "expectedChunkIds": [
+        "chunk-synthetic-pricing-pricing-methodology-001"
+      ],
+      "expectedSourceIds": [
+        "synthetic-pricing-pricing-methodology"
+      ],
+      "rationale": "Tests methodology retrieval and generic pricing profile coverage."
+    },
+    {
+      "queryId": "q-synth-profitability-study",
+      "queryCategory": "pricing_domain",
+      "query": "What profitability metrics, sensitivities, and conclusion language appear in the synthetic pricing profitability study?",
+      "expectedChunkIds": [
+        "chunk-synthetic-pricing-profitability-study-001"
+      ],
+      "expectedSourceIds": [
+        "synthetic-pricing-profitability-study"
+      ],
+      "rationale": "Tests retrieval of study-style pricing evidence."
+    },
+    {
+      "queryId": "q-synth-approval-memo",
+      "queryCategory": "pricing_domain",
+      "query": "What approval body, decision status, and implementation notes appear in the synthetic pricing approval memo?",
+      "expectedChunkIds": [
+        "chunk-synthetic-pricing-approval-memo-001"
+      ],
+      "expectedSourceIds": [
+        "synthetic-pricing-approval-memo"
+      ],
+      "rationale": "Tests approval-memo retrieval and governance context."
     },
     {
       "queryId": "q-unsupported-pricing-support",

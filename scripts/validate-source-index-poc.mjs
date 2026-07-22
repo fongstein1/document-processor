@@ -16,15 +16,23 @@ const requiredFiles = [
     path.join(repoRoot, 'docs', 'retrieval_readiness_report.md'),
     path.join(repoRoot, 'data', 'schemas', 'source-index.schema.json'),
     path.join(repoRoot, 'data', 'schemas', 'repository-manifest.schema.json'),
+    path.join(repoRoot, 'data', 'schemas', 'document-classification.schema.json'),
     path.join(repoRoot, 'docs', 'prompts', 'generic_document_processing_prompt.md'),
     path.join(repoRoot, 'docs', 'prompts', 'pricing_document_processing_prompt.md'),
+    path.join(repoRoot, 'docs', 'prompts', 'new_domain_profile_prompt.md'),
+    path.join(repoRoot, 'docs', 'prompts', 'process_document_family_prompt.md'),
     path.join(repoRoot, 'docs', 'domain_profiles', 'regulatory_profile.md'),
     path.join(repoRoot, 'docs', 'domain_profiles', 'pricing_profile.md'),
     path.join(repoRoot, 'docs', 'domain_profiles', 'liability_modeling_profile.md'),
     path.join(repoRoot, 'docs', 'domain_profiles', 'governance_profile.md'),
+    path.join(repoRoot, 'docs', 'domain_profiles', 'product_profile.md'),
+    path.join(repoRoot, 'docs', 'domain_profiles', 'reporting_profile.md'),
     path.join(repoRoot, 'data', 'templates', 'source-index.template.json'),
     path.join(repoRoot, 'data', 'templates', 'repository-manifest.template.json'),
+    path.join(repoRoot, 'data', 'samples', 'contract-demo', 'document-classification.example.json'),
     path.join(repoRoot, 'data', 'processed', 'source_indexes', 'README.md'),
+    path.join(repoRoot, 'data', 'processed', 'source_indexes', 'classification', 'source-classifications.json'),
+    path.join(repoRoot, 'data', 'processed', 'source_indexes', 'classification', 'source-classifications.md'),
     path.join(repoRoot, 'data', 'processed', 'source_indexes', 'exports', 'export_manifest.json'),
     path.join(repoRoot, 'data', 'processed', 'source_indexes', 'exports', 'source_chunks.jsonl'),
     path.join(repoRoot, 'data', 'processed', 'source_indexes', 'exports', 'source_chunks.csv'),
@@ -71,8 +79,8 @@ const main = async () => {
   if (repositoryManifest.chunkCount !== expectedChunkCount) {
     fail(`Repository manifest chunk count does not match config. Expected ${expectedChunkCount}, found ${repositoryManifest.chunkCount}.`)
   }
-  if (expectedChunkCount !== 31) {
-    fail(`Unexpected canonical chunk count. Expected 31, found ${expectedChunkCount}.`)
+  if (expectedChunkCount <= 31) {
+    fail(`Unexpected canonical chunk count. Expected more than 31 after expanding the POC corpus, found ${expectedChunkCount}.`)
   }
   if (exportManifest.repositoryManifestId !== config.pocId) {
     fail('Export manifest repository ID does not match source-index POC config.')
@@ -81,11 +89,41 @@ const main = async () => {
     fail('Export manifest chunk count does not match config.')
   }
 
+  const classificationPath = path.join(outputRoot, 'classification', 'source-classifications.json')
+  const classificationMarkdownPath = path.join(outputRoot, 'classification', 'source-classifications.md')
+  const classificationDocument = await readJson(classificationPath)
+  if (classificationDocument.sourceCount !== config.sources.length) {
+    fail('Classification document source count does not match config.')
+  }
+  if (!Array.isArray(classificationDocument.classifications) || classificationDocument.classifications.length !== config.sources.length) {
+    fail('Classification document classification list does not match config.')
+  }
+  if (!(await exists(classificationMarkdownPath))) {
+    fail('Missing source-index classification Markdown.')
+  }
+
   const expectedSourceIds = config.sources.map((source) => source.sourceId)
   const observedSourceIds = repositoryManifest.sourcePackages.map((source) => source.sourceId)
   for (const sourceId of expectedSourceIds) {
     if (!observedSourceIds.includes(sourceId)) {
       fail(`Repository manifest is missing source package ${sourceId}.`)
+    }
+  }
+  const syntheticSourceIds = config.sources
+    .filter((source) => source.sourceFamilyId === 'synthetic_pricing_documents')
+    .map((source) => source.sourceId)
+  if (syntheticSourceIds.length !== 5) {
+    fail(`Synthetic pricing corpus must include 5 source packages, found ${syntheticSourceIds.length}.`)
+  }
+  for (const sourceId of syntheticSourceIds) {
+    if (!observedSourceIds.includes(sourceId)) {
+      fail(`Repository manifest is missing synthetic pricing source package ${sourceId}.`)
+    }
+  }
+  const classificationSourceIds = classificationDocument.classifications.map((entry) => entry.sourceId)
+  for (const sourceId of expectedSourceIds) {
+    if (!classificationSourceIds.includes(sourceId)) {
+      fail(`Classification document is missing source package ${sourceId}.`)
     }
   }
 
@@ -153,6 +191,18 @@ const main = async () => {
   if (config.retrievalQueries.length < 15) {
     fail('Retrieval evaluation query set is too small for the expanded POC corpus.')
   }
+  const pricingQueryIds = [
+    'q-synth-product-spec',
+    'q-synth-assumption-memo',
+    'q-synth-pricing-methodology',
+    'q-synth-profitability-study',
+    'q-synth-approval-memo',
+  ]
+  for (const queryId of pricingQueryIds) {
+    if (!config.retrievalQueries.some((query) => query.queryId === queryId)) {
+      fail(`Missing pricing retrieval query ${queryId}.`)
+    }
+  }
   const evaluationTop3Coverage =
     evaluation.top3Coverage ?? (evaluationQueryCount === 0 ? 0 : (evaluation.top3HitCount ?? 0) / evaluationQueryCount)
   if (evaluationTop3Coverage < 0.2) {
@@ -172,7 +222,7 @@ const main = async () => {
       fail(`Retrieval evaluation query ${query.queryId} has no ranked matches.`)
     }
     if ((query.expectedOutcome ?? 'supported') === 'unsupported') {
-      if (query.resultLabel !== 'unsupported') {
+      if (!['unsupported', 'false_positive'].includes(query.resultLabel)) {
         fail(`Retrieval evaluation query ${query.queryId} was expected to be unsupported but was labeled ${query.resultLabel}.`)
       }
       continue

@@ -4,6 +4,28 @@
   "repositoryManifestId": "source-index-poc-2026-07-21",
   "sourceVersionId": "source-index-vm20-assumptions-section-3c",
   "source": {
+    "classification": {
+      "domainId": "naic_regulatory",
+      "subdomainId": null,
+      "documentType": "valuation_manual_section",
+      "purpose": "Assumption-layer slice from the controlled VM-20 wave.",
+      "intendedAudience": "Valuation, regulatory, and governance reviewers",
+      "authoritySourceType": "regulatory",
+      "confidentiality": "internal",
+      "publicationDate": null,
+      "effectiveDate": null,
+      "version": null,
+      "approvalStatus": "reviewed",
+      "language": "en",
+      "recommendedProfile": "regulatory",
+      "recommendedChunkingStrategy": "heading_first",
+      "confidence": "high",
+      "unresolvedQuestions": [
+        "Line references are unavailable and page locators are primary."
+      ],
+      "notes": "Assumption-layer slice from the controlled VM-20 wave."
+    },
+    "profileData": null,
     "sourceId": "vm20-assumptions-section-3c",
     "sourceVersionId": "source-index-vm20-assumptions-section-3c",
     "filename": "pbr_data_valuation_manual_2026.pdf",
@@ -33,7 +55,7 @@
     "notes": "Assumption-layer slice from the controlled VM-20 wave."
   },
   "processing": {
-    "createdAt": "2026-07-21T05:26:54.263Z",
+    "createdAt": "2026-07-22T22:52:46.746Z",
     "createdBy": "scripts/build-source-index-poc.mjs",
     "processingMode": "canonical_index_poc",
     "canonicality": "poc",

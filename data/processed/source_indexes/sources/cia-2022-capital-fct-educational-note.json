@@ -4,6 +4,28 @@
   "repositoryManifestId": "source-index-poc-2026-07-21",
   "sourceVersionId": "source-index-cia-2022-capital-fct-educational-note",
   "source": {
+    "classification": {
+      "domainId": "naic_regulatory",
+      "subdomainId": null,
+      "documentType": "educational_note",
+      "purpose": "Canadian Institute of Actuaries educational note retained as review-only companion guidance.",
+      "intendedAudience": "Valuation, regulatory, and governance reviewers",
+      "authoritySourceType": "companion",
+      "confidentiality": "internal",
+      "publicationDate": null,
+      "effectiveDate": null,
+      "version": null,
+      "approvalStatus": "educational note",
+      "language": "en",
+      "recommendedProfile": "regulatory",
+      "recommendedChunkingStrategy": "heading_first",
+      "confidence": "high",
+      "unresolvedQuestions": [
+        "Line references are unavailable and page locators are primary."
+      ],
+      "notes": "Canadian Institute of Actuaries educational note retained as review-only companion guidance."
+    },
+    "profileData": null,
     "sourceId": "cia-2022-capital-fct-educational-note",
     "sourceVersionId": "source-index-cia-2022-capital-fct-educational-note",
     "filename": "222030e.pdf",
@@ -36,7 +58,7 @@
     "notes": "Canadian Institute of Actuaries educational note retained as review-only companion guidance."
   },
   "processing": {
-    "createdAt": "2026-07-21T05:26:54.275Z",
+    "createdAt": "2026-07-22T22:52:46.794Z",
     "createdBy": "scripts/build-source-index-poc.mjs",
     "processingMode": "canonical_index_poc",
     "canonicality": "poc",

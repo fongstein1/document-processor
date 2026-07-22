@@ -2,23 +2,23 @@
 
 ## Corpus summary
 
-- Source packages: 12
-- Canonical chunks: 31
-- Retrieval questions: 16
-- Supported questions: 14
+- Source packages: 17
+- Canonical chunks: 41
+- Retrieval questions: 21
+- Supported questions: 19
 - Unsupported questions: 2
 
 ## Metrics
 
-- Top-1 accuracy: 86%
+- Top-1 accuracy: 74%
 - Top-3 accuracy: 100%
 - Top-5 accuracy: 100%
-- Mean reciprocal rank: 0.929
+- Mean reciprocal rank: 0.821
 - Source-family accuracy: 100%
-- Authority-level accuracy: 93%
+- Authority-level accuracy: 95%
 - Citation availability: 0%
 - Multi-chunk evidence recall: 100%
-- Unsupported-query precision: 100%
+- Unsupported-query precision: 50%
 
 ## Category breakdown
 
@@ -29,7 +29,8 @@
 | mechanics_boundary | 1 | 100% | 100% | 100% | 1.000 | 0% |
 | multi_chunk | 6 | 83% | 100% | 100% | 0.917 | 0% |
 | relationship | 1 | 100% | 100% | 100% | 1.000 | 0% |
-| unsupported | 2 | 0% | 0% | 0% | 0.000 | 100% |
+| pricing_domain | 5 | 40% | 100% | 100% | 0.520 | 0% |
+| unsupported | 2 | 0% | 0% | 0% | 0.000 | 50% |
 
 ## Strong signals
 
@@ -39,7 +40,7 @@
 
 ## Weak spots and failure analysis
 
-- No weak queries were observed in the current POC run.
+- unsupported: What does this corpus say about pricing support? -> false_positive; top result chunk-synthetic-pricing-assumption-memo-002 (3)
 
 ## Next improvement opportunities
 

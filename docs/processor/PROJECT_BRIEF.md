@@ -1,7 +1,8 @@
 # Project Brief
 
 This repository is the document-processing factory for the NAIC valuation
-manual / eLearning regulatory knowledge project.
+manual / eLearning regulatory knowledge project and the reusable actuarial
+document-structurizer proof of concept.
 
 The learner-facing app is owned by the separate app/product thread. This repo
 owns source inventory, text extraction, chunking, metadata, summaries, review
@@ -17,6 +18,7 @@ The pipeline should support:
 - pricing documents
 - liability modeling documents
 - future actuarial governance and process documents
+- synthetic corpora used to prove profile portability
 
 ## Non-negotiables
 
@@ -40,6 +42,7 @@ Contract files:
 - `data/schemas/source-inventory.schema.json`
 - `data/schemas/extraction-output.schema.json`
 - `data/schemas/review-packet.schema.json`
+- `data/schemas/document-classification.schema.json`
 - `data/templates/batch-manifest.template.json`
 - `data/templates/review-packet.template.json`
 - `data/templates/review-packet.template.md`
@@ -47,7 +50,8 @@ Contract files:
 
 These contracts are intentionally generic. NAIC-specific assumptions stay in
 `config/source-families.json`, while the schemas remain portable enough for
-pricing, liability modeling, experience studies, and internal model documents.
+pricing, liability modeling, experience studies, internal model documents,
+and synthetic corpus validation.
 
 Raw source root:
 
@@ -150,8 +154,9 @@ app/product thread to import.
 5. Prepare for a future research assistant that can answer from approved,
    indexed material with citations.
 6. Keep raw material separate from Git.
-7. Preserve a clean handoff to the app with inventory, manifest, review packet,
-   approved export, app-ready export, validation report, and unresolved issues.
+7. Preserve a clean handoff to downstream consumers with inventory, manifest,
+   classification, review packet, retrieval evaluation, validation report,
+   and unresolved issues.
 
 ## Proposed folder structure
 
@@ -191,9 +196,10 @@ Every batch should end with:
 
 - source inventory
 - chunk manifest
+- classification record, when a profile-aware classifier is in use
 - review packet
 - approved/promoted content export
-- app-ready export
+- backend-neutral export
 - validation report
 - unresolved-issues summary
 

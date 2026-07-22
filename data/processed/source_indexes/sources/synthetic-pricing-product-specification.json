@@ -1,0 +1,264 @@
+{
+  "schemaVersion": "1.0",
+  "sourceIndexId": "source-index-synthetic-pricing-product-specification",
+  "repositoryManifestId": "source-index-poc-2026-07-21",
+  "sourceVersionId": "source-index-synthetic-pricing-product-specification",
+  "source": {
+    "classification": {
+      "domainId": "pricing_documents",
+      "subdomainId": null,
+      "documentType": "product_specification",
+      "purpose": "Synthetic product specification for pricing-core portability testing",
+      "intendedAudience": "Pricing, product, and actuarial governance reviewers",
+      "authoritySourceType": "synthetic",
+      "confidentiality": "internal",
+      "publicationDate": "2026-01-15",
+      "effectiveDate": "2026-01-15",
+      "version": "1.0",
+      "approvalStatus": "synthetic_approved",
+      "language": "en",
+      "recommendedProfile": "pricing",
+      "recommendedChunkingStrategy": "structure_first",
+      "confidence": "high",
+      "unresolvedQuestions": [],
+      "notes": "Synthetic corpus entry."
+    },
+    "profileData": {
+      "productFamily": "individual deferred annuity",
+      "pricingStage": "product design",
+      "pricingMethod": "feature specification",
+      "approvalBody": "Pricing Governance Committee",
+      "decisionStatus": "draft"
+    },
+    "sourceId": "synthetic-pricing-product-specification",
+    "sourceVersionId": "source-index-synthetic-pricing-product-specification",
+    "filename": "Orion Term Accumulator - Product Specification.md",
+    "filePath": "data/samples/synthetic-pricing/orion-term-accumulator-product-specification.md",
+    "sourceFamilyId": "synthetic_pricing_documents",
+    "domainId": "pricing_documents",
+    "documentType": "product_specification",
+    "sourceTitle": "Orion Term Accumulator Product Specification",
+    "sourceReference": "Synthetic Pricing Corpus",
+    "jurisdiction": null,
+    "authorityLevel": "internal",
+    "sourceStatus": "active",
+    "versionDate": "2026-01-15",
+    "pageCount": 2,
+    "pageRange": {
+      "start": 1,
+      "end": 2
+    },
+    "reviewBatchIds": [
+      "batch-synthetic-pricing"
+    ],
+    "reviewIndexPath": "docs/review/synthetic_pricing_review_index.md",
+    "selfReviewPath": "docs/review/synthetic_pricing_self_review.md",
+    "pageImageBackstop": false,
+    "lineReferencesAvailable": false,
+    "textLayerQuality": "clean",
+    "notes": "Synthetic non-sensitive product specification used to exercise the generic pricing profile."
+  },
+  "processing": {
+    "createdAt": "2026-07-22T22:52:46.797Z",
+    "createdBy": "scripts/build-source-index-poc.mjs",
+    "processingMode": "canonical_index_poc",
+    "canonicality": "poc",
+    "reviewOnly": true,
+    "learnerFacingAllowed": false,
+    "appReadyAllowed": false,
+    "ragReadyAllowed": false,
+    "promotionStatus": "not_promoted",
+    "notes": "Synthetic non-sensitive product specification used to exercise the generic pricing profile."
+  },
+  "chunks": [
+    {
+      "chunkId": "chunk-synthetic-pricing-product-specification-001",
+      "chunkOrdinal": 1,
+      "chunkKind": "product_specification",
+      "sourceTextType": "synthetic_source_text",
+      "pageStart": 1,
+      "pageEnd": 1,
+      "sectionReference": "Product specification: control and purpose",
+      "lineReference": null,
+      "sourceTextExcerpt": "This synthetic product specification defines the Orion Term Accumulator test product for pricing portability testing.",
+      "normalizedTextExcerpt": "Synthetic product specification and purpose statement.",
+      "summary": "The product specification establishes the fictional Orion Term Accumulator corpus and the pricing portability test purpose.",
+      "topic": "The product specification establishes the fictional Orion Term Accumulator corpus and the pricing portability test purpose.",
+      "headingPath": "Product specification: control and purpose",
+      "keyPoints": [
+        "The product specification establishes the fictional Orion Term Accumulator corpus and the pricing portability test purpose."
+      ],
+      "concepts": [
+        "product_family",
+        "pricing_stage",
+        "background_content",
+        "boundary_control_window"
+      ],
+      "definedTerms": [
+        "Orion Term Accumulator",
+        "product specification",
+        "synthetic",
+        "pricing"
+      ],
+      "acronyms": [],
+      "requirements": [],
+      "citationDisplay": "Orion Term Accumulator - Product Specification.md",
+      "normalizedSearchText": "this synthetic product specification defines the orion term accumulator test product for pricing portability testing. synthetic product specification and purpose statement. the product specification establishes the fictional orion term accumulator corpus and the pricing portability test purpose. the product specification establishes the fictional orion term accumulator corpus and the pricing portability test purpose. product specification: control and purpose product specification: control and purpose orion term accumulator product specification synthetic pricing corpus the product specification establishes the fictional orion term accumulator corpus and the pricing portability test purpose. product_family pricing_stage background_content boundary_control_window orion term accumulator product specification synthetic pricing orion term accumulator - product specification.md product_family pricing_stage background_content boundary_control_window orion term accumulator product specification synthetic pricing",
+      "canonicalSourceIndexPath": "data/processed/source_indexes/sources/synthetic-pricing-product-specification.json",
+      "sourceVersionId": "source-index-synthetic-pricing-product-specification",
+      "controlledTags": [
+        "product_family",
+        "pricing_stage",
+        "background_content",
+        "boundary_control_window"
+      ],
+      "keywords": [
+        "Orion Term Accumulator",
+        "product specification",
+        "synthetic",
+        "pricing"
+      ],
+      "citations": [
+        {
+          "citationText": "Orion Term Accumulator - Product Specification.md",
+          "pageReference": "pp. 1-1",
+          "sectionReference": "Product specification: control and purpose",
+          "sourceReference": "Synthetic Pricing Corpus",
+          "lineReference": null
+        }
+      ],
+      "relationships": [
+        {
+          "relationType": "supports",
+          "targetSourceId": "synthetic-pricing-assumption-memo",
+          "notes": "Product features drive the assumption memo."
+        }
+      ],
+      "relationshipIds": [
+        "synthetic-pricing-assumption-memo",
+        "synthetic-pricing-assumption-memo"
+      ],
+      "fidelity": "curated",
+      "confidence": "high",
+      "reviewFlags": [
+        "synthetic_source"
+      ],
+      "qualityNotes": [
+        "Synthetic source document.",
+        "Use the profile metadata to keep product features separate from pricing assumptions."
+      ],
+      "evidenceNotes": "Synthetic source prepared for the generic-core portability test.",
+      "retrievalEligible": true,
+      "promotionEligible": false
+    },
+    {
+      "chunkId": "chunk-synthetic-pricing-product-specification-002",
+      "chunkOrdinal": 2,
+      "chunkKind": "product_specification",
+      "sourceTextType": "synthetic_source_text",
+      "pageStart": 2,
+      "pageEnd": 2,
+      "sectionReference": "Product specification: features and limits",
+      "lineReference": null,
+      "sourceTextExcerpt": "The product has flexible premiums, a guaranteed minimum accumulation rate, optional withdrawals, and age-limited issue rules.",
+      "normalizedTextExcerpt": "Synthetic product features and eligibility limits.",
+      "summary": "The product features define the pricing target: flexible premiums, guaranteed accumulation, optional withdrawals, and issue-age limits.",
+      "topic": "The product features define the pricing target: flexible premiums, guaranteed accumulation, optional withdrawals, and issue-age limits.",
+      "headingPath": "Product specification: features and limits",
+      "keyPoints": [
+        "The product features define the pricing target: flexible premiums, guaranteed accumulation, optional withdrawals, and issue-age limits."
+      ],
+      "concepts": [
+        "product_family",
+        "benefit",
+        "eligibility",
+        "pricing_impact",
+        "implementation_dependency"
+      ],
+      "definedTerms": [
+        "guaranteed minimum accumulation rate",
+        "optional withdrawal",
+        "issue age",
+        "charges"
+      ],
+      "acronyms": [],
+      "requirements": [],
+      "citationDisplay": "Orion Term Accumulator - Product Specification.md",
+      "normalizedSearchText": "the product has flexible premiums, a guaranteed minimum accumulation rate, optional withdrawals, and age-limited issue rules. synthetic product features and eligibility limits. the product features define the pricing target: flexible premiums, guaranteed accumulation, optional withdrawals, and issue-age limits. the product features define the pricing target: flexible premiums, guaranteed accumulation, optional withdrawals, and issue-age limits. product specification: features and limits product specification: features and limits orion term accumulator product specification synthetic pricing corpus the product features define the pricing target: flexible premiums, guaranteed accumulation, optional withdrawals, and issue-age limits. product_family benefit eligibility pricing_impact implementation_dependency guaranteed minimum accumulation rate optional withdrawal issue age charges orion term accumulator - product specification.md product_family benefit eligibility pricing_impact implementation_dependency guaranteed minimum accumulation rate optional withdrawal issue age charges",
+      "canonicalSourceIndexPath": "data/processed/source_indexes/sources/synthetic-pricing-product-specification.json",
+      "sourceVersionId": "source-index-synthetic-pricing-product-specification",
+      "controlledTags": [
+        "product_family",
+        "benefit",
+        "eligibility",
+        "pricing_impact",
+        "implementation_dependency"
+      ],
+      "keywords": [
+        "guaranteed minimum accumulation rate",
+        "optional withdrawal",
+        "issue age",
+        "charges"
+      ],
+      "citations": [
+        {
+          "citationText": "Orion Term Accumulator - Product Specification.md",
+          "pageReference": "pp. 2-2",
+          "sectionReference": "Product specification: features and limits",
+          "sourceReference": "Synthetic Pricing Corpus",
+          "lineReference": null
+        }
+      ],
+      "relationships": [
+        {
+          "relationType": "applies_to_product",
+          "targetSourceId": "synthetic-pricing-pricing-methodology",
+          "notes": "The methodology applies the product structure."
+        }
+      ],
+      "relationshipIds": [
+        "synthetic-pricing-assumption-memo",
+        "synthetic-pricing-pricing-methodology"
+      ],
+      "fidelity": "curated",
+      "confidence": "high",
+      "reviewFlags": [
+        "synthetic_source"
+      ],
+      "qualityNotes": [
+        "Synthetic source document.",
+        "The product profile should stay separate from the assumption and profitability records."
+      ],
+      "evidenceNotes": "Synthetic source prepared for the generic-core portability test.",
+      "retrievalEligible": true,
+      "promotionEligible": false
+    }
+  ],
+  "relationships": [
+    {
+      "relationType": "supports",
+      "targetSourceId": "synthetic-pricing-assumption-memo",
+      "notes": "Product features drive the assumption memo."
+    }
+  ],
+  "quality": {
+    "textLayerQuality": "clean",
+    "citationCompleteness": "partial",
+    "pageImageBackstop": false,
+    "lineReferencesAvailable": false,
+    "notes": "Synthetic non-sensitive product specification used to exercise the generic pricing profile."
+  },
+  "exportHints": {
+    "jsonlEligible": true,
+    "csvEligible": true,
+    "vectorEligible": true,
+    "notes": "Backend-neutral POC exports generated from review-only batch artifacts."
+  },
+  "notes": "Synthetic non-sensitive product specification used to exercise the generic pricing profile.",
+  "extensions": {
+    "batchIds": [
+      "batch-synthetic-pricing"
+    ],
+    "sourceIndexGeneratedBy": "build-source-index-poc"
+  }
+}

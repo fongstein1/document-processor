@@ -1,0 +1,263 @@
+{
+  "schemaVersion": "1.0",
+  "sourceIndexId": "source-index-synthetic-pricing-profitability-study",
+  "repositoryManifestId": "source-index-poc-2026-07-21",
+  "sourceVersionId": "source-index-synthetic-pricing-profitability-study",
+  "source": {
+    "classification": {
+      "domainId": "pricing_documents",
+      "subdomainId": null,
+      "documentType": "profitability_study",
+      "purpose": "Synthetic profitability evidence for portability testing",
+      "intendedAudience": "Pricing reviewers and governance reviewers",
+      "authoritySourceType": "synthetic",
+      "confidentiality": "internal",
+      "publicationDate": "2026-01-30",
+      "effectiveDate": "2026-01-30",
+      "version": "1.0",
+      "approvalStatus": "synthetic_approved",
+      "language": "en",
+      "recommendedProfile": "pricing",
+      "recommendedChunkingStrategy": "structure_first",
+      "confidence": "high",
+      "unresolvedQuestions": [],
+      "notes": "Synthetic corpus entry."
+    },
+    "profileData": {
+      "productFamily": "individual deferred annuity",
+      "pricingStage": "profitability analysis",
+      "profitabilityMetric": "target margin",
+      "targetMetric": "base case margin",
+      "sensitivityDriver": "lapse"
+    },
+    "sourceId": "synthetic-pricing-profitability-study",
+    "sourceVersionId": "source-index-synthetic-pricing-profitability-study",
+    "filename": "Orion Term Accumulator - Profitability Study.md",
+    "filePath": "data/samples/synthetic-pricing/orion-term-accumulator-profitability-study.md",
+    "sourceFamilyId": "synthetic_pricing_documents",
+    "domainId": "pricing_documents",
+    "documentType": "profitability_study",
+    "sourceTitle": "Orion Term Accumulator Profitability Study",
+    "sourceReference": "Synthetic Pricing Corpus",
+    "jurisdiction": null,
+    "authorityLevel": "internal",
+    "sourceStatus": "active",
+    "versionDate": "2026-01-30",
+    "pageCount": 2,
+    "pageRange": {
+      "start": 1,
+      "end": 2
+    },
+    "reviewBatchIds": [
+      "batch-synthetic-pricing"
+    ],
+    "reviewIndexPath": "docs/review/synthetic_pricing_review_index.md",
+    "selfReviewPath": "docs/review/synthetic_pricing_self_review.md",
+    "pageImageBackstop": false,
+    "lineReferencesAvailable": false,
+    "textLayerQuality": "clean",
+    "notes": "Synthetic non-sensitive profitability study used to exercise the generic pricing profile."
+  },
+  "processing": {
+    "createdAt": "2026-07-22T22:52:46.807Z",
+    "createdBy": "scripts/build-source-index-poc.mjs",
+    "processingMode": "canonical_index_poc",
+    "canonicality": "poc",
+    "reviewOnly": true,
+    "learnerFacingAllowed": false,
+    "appReadyAllowed": false,
+    "ragReadyAllowed": false,
+    "promotionStatus": "not_promoted",
+    "notes": "Synthetic non-sensitive profitability study used to exercise the generic pricing profile."
+  },
+  "chunks": [
+    {
+      "chunkId": "chunk-synthetic-pricing-profitability-study-001",
+      "chunkOrdinal": 1,
+      "chunkKind": "profitability_study",
+      "sourceTextType": "synthetic_source_text",
+      "pageStart": 1,
+      "pageEnd": 1,
+      "sectionReference": "Profitability study: findings",
+      "lineReference": null,
+      "sourceTextExcerpt": "The base scenario meets the target margin and lapse downside is the most material sensitivity.",
+      "normalizedTextExcerpt": "Synthetic profitability findings and sensitivity ranking.",
+      "summary": "The study reports that the base scenario meets target margin and lapse is the most material sensitivity.",
+      "topic": "The study reports that the base scenario meets target margin and lapse is the most material sensitivity.",
+      "headingPath": "Profitability study: findings",
+      "keyPoints": [
+        "The study reports that the base scenario meets target margin and lapse is the most material sensitivity."
+      ],
+      "concepts": [
+        "profitability_metric",
+        "target_metric",
+        "sensitivity_driver",
+        "pricing_risk"
+      ],
+      "definedTerms": [
+        "target margin",
+        "base scenario",
+        "lapse downside"
+      ],
+      "acronyms": [],
+      "requirements": [],
+      "citationDisplay": "Orion Term Accumulator - Profitability Study.md",
+      "normalizedSearchText": "the base scenario meets the target margin and lapse downside is the most material sensitivity. synthetic profitability findings and sensitivity ranking. the study reports that the base scenario meets target margin and lapse is the most material sensitivity. the study reports that the base scenario meets target margin and lapse is the most material sensitivity. profitability study: findings profitability study: findings orion term accumulator profitability study synthetic pricing corpus the study reports that the base scenario meets target margin and lapse is the most material sensitivity. profitability_metric target_metric sensitivity_driver pricing_risk target margin base scenario lapse downside orion term accumulator - profitability study.md profitability_metric target_metric sensitivity_driver pricing_risk target margin base scenario lapse downside",
+      "canonicalSourceIndexPath": "data/processed/source_indexes/sources/synthetic-pricing-profitability-study.json",
+      "sourceVersionId": "source-index-synthetic-pricing-profitability-study",
+      "controlledTags": [
+        "profitability_metric",
+        "target_metric",
+        "sensitivity_driver",
+        "pricing_risk"
+      ],
+      "keywords": [
+        "target margin",
+        "base scenario",
+        "lapse downside"
+      ],
+      "citations": [
+        {
+          "citationText": "Orion Term Accumulator - Profitability Study.md",
+          "pageReference": "pp. 1-1",
+          "sectionReference": "Profitability study: findings",
+          "sourceReference": "Synthetic Pricing Corpus",
+          "lineReference": null
+        }
+      ],
+      "relationships": [
+        {
+          "relationType": "derived_from",
+          "targetSourceId": "synthetic-pricing-pricing-methodology",
+          "notes": "The results are derived from the methodology."
+        }
+      ],
+      "relationshipIds": [
+        "synthetic-pricing-pricing-methodology",
+        "synthetic-pricing-approval-memo",
+        "synthetic-pricing-pricing-methodology"
+      ],
+      "fidelity": "curated",
+      "confidence": "high",
+      "reviewFlags": [
+        "synthetic_source"
+      ],
+      "qualityNotes": [
+        "Synthetic source document.",
+        "Keep findings separate from method mechanics and approval control."
+      ],
+      "evidenceNotes": "Synthetic source prepared for the generic-core portability test.",
+      "retrievalEligible": true,
+      "promotionEligible": false
+    },
+    {
+      "chunkId": "chunk-synthetic-pricing-profitability-study-002",
+      "chunkOrdinal": 2,
+      "chunkKind": "profitability_study",
+      "sourceTextType": "synthetic_source_text",
+      "pageStart": 2,
+      "pageEnd": 2,
+      "sectionReference": "Profitability study: scenario interpretation",
+      "lineReference": null,
+      "sourceTextExcerpt": "Yield downside reduces profitability but remains within the modeled tolerance window.",
+      "normalizedTextExcerpt": "Synthetic scenario interpretation and tolerance window.",
+      "summary": "The study shows that yield downside remains tolerable even though it reduces profitability.",
+      "topic": "The study shows that yield downside remains tolerable even though it reduces profitability.",
+      "headingPath": "Profitability study: scenario interpretation",
+      "keyPoints": [
+        "The study shows that yield downside remains tolerable even though it reduces profitability."
+      ],
+      "concepts": [
+        "scenario_or_stochastic_requirement",
+        "pricing_risk",
+        "implementation_dependency"
+      ],
+      "definedTerms": [
+        "yield downside",
+        "tolerance window",
+        "profitability"
+      ],
+      "acronyms": [],
+      "requirements": [],
+      "citationDisplay": "Orion Term Accumulator - Profitability Study.md",
+      "normalizedSearchText": "yield downside reduces profitability but remains within the modeled tolerance window. synthetic scenario interpretation and tolerance window. the study shows that yield downside remains tolerable even though it reduces profitability. the study shows that yield downside remains tolerable even though it reduces profitability. profitability study: scenario interpretation profitability study: scenario interpretation orion term accumulator profitability study synthetic pricing corpus the study shows that yield downside remains tolerable even though it reduces profitability. scenario_or_stochastic_requirement pricing_risk implementation_dependency yield downside tolerance window profitability orion term accumulator - profitability study.md scenario_or_stochastic_requirement pricing_risk implementation_dependency yield downside tolerance window profitability",
+      "canonicalSourceIndexPath": "data/processed/source_indexes/sources/synthetic-pricing-profitability-study.json",
+      "sourceVersionId": "source-index-synthetic-pricing-profitability-study",
+      "controlledTags": [
+        "scenario_or_stochastic_requirement",
+        "pricing_risk",
+        "implementation_dependency"
+      ],
+      "keywords": [
+        "yield downside",
+        "tolerance window",
+        "profitability"
+      ],
+      "citations": [
+        {
+          "citationText": "Orion Term Accumulator - Profitability Study.md",
+          "pageReference": "pp. 2-2",
+          "sectionReference": "Profitability study: scenario interpretation",
+          "sourceReference": "Synthetic Pricing Corpus",
+          "lineReference": null
+        }
+      ],
+      "relationships": [
+        {
+          "relationType": "supports",
+          "targetSourceId": "synthetic-pricing-approval-memo",
+          "notes": "The results support approval."
+        }
+      ],
+      "relationshipIds": [
+        "synthetic-pricing-pricing-methodology",
+        "synthetic-pricing-approval-memo",
+        "synthetic-pricing-approval-memo"
+      ],
+      "fidelity": "curated",
+      "confidence": "high",
+      "reviewFlags": [
+        "synthetic_source"
+      ],
+      "qualityNotes": [
+        "Synthetic source document.",
+        "Keep scenario interpretation separate from the approval memo."
+      ],
+      "evidenceNotes": "Synthetic source prepared for the generic-core portability test.",
+      "retrievalEligible": true,
+      "promotionEligible": false
+    }
+  ],
+  "relationships": [
+    {
+      "relationType": "derived_from",
+      "targetSourceId": "synthetic-pricing-pricing-methodology",
+      "notes": "The study is derived from the methodology."
+    },
+    {
+      "relationType": "supports",
+      "targetSourceId": "synthetic-pricing-approval-memo",
+      "notes": "The study supports approval."
+    }
+  ],
+  "quality": {
+    "textLayerQuality": "clean",
+    "citationCompleteness": "partial",
+    "pageImageBackstop": false,
+    "lineReferencesAvailable": false,
+    "notes": "Synthetic non-sensitive profitability study used to exercise the generic pricing profile."
+  },
+  "exportHints": {
+    "jsonlEligible": true,
+    "csvEligible": true,
+    "vectorEligible": true,
+    "notes": "Backend-neutral POC exports generated from review-only batch artifacts."
+  },
+  "notes": "Synthetic non-sensitive profitability study used to exercise the generic pricing profile.",
+  "extensions": {
+    "batchIds": [
+      "batch-synthetic-pricing"
+    ],
+    "sourceIndexGeneratedBy": "build-source-index-poc"
+  }
+}

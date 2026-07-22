@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "1.0",
+  "documentClassificationId": "document-classification-synthetic-pricing-product-specification",
+  "sourceId": "synthetic-pricing-product-specification",
+  "sourceFamilyId": "synthetic_pricing_documents",
+  "domainId": "pricing_documents",
+  "documentType": "product_specification",
+  "subdomainId": "product-development",
+  "purpose": "Synthetic product specification for pricing-core portability testing",
+  "intendedAudience": "Pricing, product, and actuarial governance reviewers",
+  "authoritySourceType": "synthetic",
+  "confidentiality": "internal",
+  "publicationDate": "2026-07-22",
+  "effectiveDate": "2026-07-22",
+  "version": "1.0",
+  "approvalStatus": "synthetic_approved",
+  "language": "en",
+  "recommendedProfile": "pricing",
+  "recommendedChunkingStrategy": "structure_first",
+  "confidence": "high",
+  "unresolvedQuestions": [],
+  "notes": "Example classification output for the synthetic pricing corpus."
+}

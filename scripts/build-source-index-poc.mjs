@@ -11,6 +11,7 @@ const outputRoot = path.join(repoRoot, 'data', 'processed', 'source_indexes')
 const sourcesRoot = path.join(outputRoot, 'sources')
 const exportsRoot = path.join(outputRoot, 'exports')
 const evaluationRoot = path.join(outputRoot, 'evaluation')
+const classificationRoot = path.join(outputRoot, 'classification')
 const legacyRetrievalRoot = path.join(outputRoot, 'retrieval')
 
 const readJson = async (filePath) => JSON.parse(await fs.readFile(filePath, 'utf8'))
@@ -20,6 +21,116 @@ const ensureDir = async (dirPath) => {
 }
 
 const toBooleanText = (value) => (value ? 'Yes' : 'No')
+
+const inferProfileName = (source) => {
+  switch (source.domainId) {
+    case 'pricing_documents':
+      return 'pricing'
+    case 'liability_modeling':
+      return 'liability_modeling'
+    case 'actuarial_governance':
+      return 'governance'
+    case 'reporting_documents':
+      return 'reporting'
+    case 'product_documents':
+      return 'product'
+    default:
+      return 'regulatory'
+  }
+}
+
+const inferAuthoritySourceType = (source) => {
+  if (source.classification?.authoritySourceType) {
+    return source.classification.authoritySourceType
+  }
+  if (source.domainId === 'pricing_documents') return 'synthetic'
+  if (['practice_notes', 'educational_notes'].includes(source.sourceFamilyId)) return 'companion'
+  if (source.domainId === 'naic_regulatory') return 'regulatory'
+  return 'internal'
+}
+
+const inferIntendedAudience = (source) => {
+  if (source.classification?.intendedAudience) {
+    return source.classification.intendedAudience
+  }
+  switch (source.domainId) {
+    case 'pricing_documents':
+      return 'Pricing, product, and actuarial governance reviewers'
+    case 'liability_modeling':
+      return 'Reserve and model reviewers'
+    case 'actuarial_governance':
+      return 'Control and evidence reviewers'
+    case 'reporting_documents':
+      return 'Reporting and filing reviewers'
+    case 'product_documents':
+      return 'Pricing and product reviewers'
+    default:
+      return 'Valuation, regulatory, and governance reviewers'
+  }
+}
+
+const inferChunkingStrategy = (source) => {
+  if (source.classification?.recommendedChunkingStrategy) {
+    return source.classification.recommendedChunkingStrategy
+  }
+  if (['approval_memo', 'assumption_memo'].includes(source.documentType)) {
+    return 'structure_first'
+  }
+  if (['product_specification', 'profitability_study'].includes(source.documentType)) {
+    return 'section_window'
+  }
+  if (source.domainId === 'naic_regulatory') {
+    return 'heading_first'
+  }
+  return 'structure_first'
+}
+
+const buildClassification = (source) => {
+  const classification = source.classification ?? {}
+  const publicationDate = classification.publicationDate ?? source.versionDate ?? null
+  const effectiveDate = classification.effectiveDate ?? source.versionDate ?? null
+  return {
+    domainId: classification.domainId ?? source.domainId,
+    subdomainId: classification.subdomainId ?? null,
+    documentType: classification.documentType ?? source.documentType,
+    purpose: classification.purpose ?? source.notes ?? source.sourceTitle,
+    intendedAudience: inferIntendedAudience(source),
+    authoritySourceType: inferAuthoritySourceType(source),
+    confidentiality: classification.confidentiality ?? (source.domainId === 'pricing_documents' ? 'internal' : 'internal'),
+    publicationDate,
+    effectiveDate,
+    version: classification.version ?? (source.versionDate ? '1.0' : null),
+    approvalStatus: classification.approvalStatus ?? (source.sourceStatus === 'active' ? 'reviewed' : source.sourceStatus),
+    language: classification.language ?? 'en',
+    recommendedProfile: classification.recommendedProfile ?? inferProfileName(source),
+    recommendedChunkingStrategy: inferChunkingStrategy(source),
+    confidence: classification.confidence ?? (source.textLayerQuality === 'clean' ? 'high' : 'medium'),
+    unresolvedQuestions: classification.unresolvedQuestions ?? (source.lineReferencesAvailable ? [] : ['Line references are unavailable and page locators are primary.']),
+    notes: classification.notes ?? source.notes ?? '',
+  }
+}
+
+const buildClassificationMarkdown = (manifest, classificationRecords) => {
+  const lines = []
+  lines.push(`# ${manifest.repositoryName} classification summary`)
+  lines.push('')
+  lines.push(`- Manifest ID: \`${manifest.repositoryManifestId}\``)
+  lines.push(`- Source packages classified: ${classificationRecords.length}`)
+  lines.push('')
+  lines.push('| Source | Domain | Document type | Recommended profile | Chunking strategy | Authority type | Confidence |')
+  lines.push('| --- | --- | --- | --- | --- | --- | --- |')
+  for (const record of classificationRecords) {
+    lines.push(
+      `| ${record.sourceTitle.replace(/\|/g, '\\|')} | ${record.classification.domainId} | ${record.classification.documentType} | ${record.classification.recommendedProfile} | ${record.classification.recommendedChunkingStrategy} | ${record.classification.authoritySourceType} | ${record.classification.confidence} |`,
+    )
+  }
+  lines.push('')
+  lines.push('## Notes')
+  lines.push('')
+  lines.push('- The synthetic pricing corpus is explicitly labeled as synthetic in the classification stage.')
+  lines.push('- Regulatory, pricing, liability-modeling, governance, product, and reporting concepts stay in optional profile metadata.')
+  return `${lines.join('\n')}\n`
+}
 
 const csvEscape = (value) => {
   const text = value === null || value === undefined ? '' : String(value)
@@ -161,6 +272,25 @@ const buildSourceMarkdown = (sourceIndex) => {
   lines.push(`- Page-image backstop: ${toBooleanText(source.pageImageBackstop)}`)
   lines.push(`- Line references available: ${toBooleanText(source.lineReferencesAvailable)}`)
   lines.push('')
+  lines.push('## Classification')
+  lines.push('')
+  lines.push(`- Domain: ${source.classification?.domainId ?? source.domainId}`)
+  lines.push(`- Document type: ${source.classification?.documentType ?? source.documentType}`)
+  lines.push(`- Purpose: ${source.classification?.purpose ?? source.notes}`)
+  lines.push(`- Intended audience: ${source.classification?.intendedAudience ?? 'n/a'}`)
+  lines.push(`- Authority/source type: ${source.classification?.authoritySourceType ?? inferAuthoritySourceType(source)}`)
+  lines.push(`- Recommended profile: ${source.classification?.recommendedProfile ?? inferProfileName(source)}`)
+  lines.push(`- Recommended chunking strategy: ${source.classification?.recommendedChunkingStrategy ?? inferChunkingStrategy(source)}`)
+  lines.push(`- Confidence: ${source.classification?.confidence ?? (source.textLayerQuality === 'clean' ? 'high' : 'medium')}`)
+  lines.push('')
+  if (source.profileData && Object.keys(source.profileData).length > 0) {
+    lines.push('## Profile Data')
+    lines.push('')
+    for (const [key, value] of Object.entries(source.profileData)) {
+      lines.push(`- ${key}: ${Array.isArray(value) ? value.join(', ') : value}`)
+    }
+    lines.push('')
+  }
   lines.push('## Processing')
   lines.push('')
   lines.push(`- Processing mode: ${processing.processingMode}`)
@@ -327,10 +457,12 @@ const main = async () => {
   await ensureDir(sourcesRoot)
   await ensureDir(exportsRoot)
   await ensureDir(evaluationRoot)
+  await ensureDir(classificationRoot)
   await ensureDir(legacyRetrievalRoot)
 
   const chunkRecords = []
   const sourcePackages = []
+  const classificationRecords = []
 
   for (const source of config.sources) {
     const sourceVersionId = source.sourceVersionId ?? source.sourceIndexId
@@ -357,6 +489,8 @@ const main = async () => {
       repositoryManifestId: config.pocId,
       sourceVersionId,
       source: {
+        classification: buildClassification(source),
+        profileData: source.profileData ?? null,
         sourceId: source.sourceId,
         sourceVersionId,
         filename: source.filename,
@@ -419,6 +553,7 @@ const main = async () => {
 
     sourcePackages.push({
       sourceIndexId: source.sourceIndexId,
+      classification: buildClassification(source),
       sourceId: source.sourceId,
       sourceVersionId,
       sourceTitle: source.sourceTitle,
@@ -440,6 +575,19 @@ const main = async () => {
       pageImageBackstop: source.pageImageBackstop,
       lineReferencesAvailable: source.lineReferencesAvailable,
       notes: source.notes,
+    })
+
+    classificationRecords.push({
+      repositoryManifestId: config.pocId,
+      sourceIndexId: source.sourceIndexId,
+      sourceId: source.sourceId,
+      sourceTitle: source.sourceTitle,
+      sourceFamilyId: source.sourceFamilyId,
+      domainId: source.domainId,
+      documentType: source.documentType,
+      classification: buildClassification(source),
+      reviewIndexPath: source.reviewIndexPath,
+      selfReviewPath: source.selfReviewPath,
     })
 
     for (const chunk of sourceChunks) {
@@ -511,6 +659,7 @@ const main = async () => {
       csvPath: 'data/processed/source_indexes/exports/source_chunks.csv',
       retrievalQuestionsPath: 'data/processed/source_indexes/evaluation/retrieval_questions.json',
       retrievalResultsPath: 'data/processed/source_indexes/evaluation/retrieval_results.json',
+      classificationPath: 'data/processed/source_indexes/classification/source-classifications.json',
     },
   })
 
@@ -706,6 +855,28 @@ const main = async () => {
   await fs.writeFile(resultsPath, `${JSON.stringify(resultsDocument, null, 2)}\n`, 'utf8')
   await fs.writeFile(legacyResultsPath, `${JSON.stringify(resultsDocument, null, 2)}\n`, 'utf8')
   await fs.writeFile(legacyMarkdownPath, buildRetrievalMarkdown(evaluation), 'utf8')
+
+  const classificationPath = path.join(classificationRoot, 'source-classifications.json')
+  const classificationMarkdownPath = path.join(classificationRoot, 'source-classifications.md')
+  const classificationDocument = {
+    schemaVersion: config.schemaVersion,
+    repositoryManifestId: config.pocId,
+    sourceCount: classificationRecords.length,
+    classifications: classificationRecords,
+    notes: 'Canonical classification stage for the source-index POC.',
+  }
+  await fs.writeFile(classificationPath, `${JSON.stringify(classificationDocument, null, 2)}\n`, 'utf8')
+  await fs.writeFile(
+    classificationMarkdownPath,
+    buildClassificationMarkdown(
+      {
+        repositoryName: config.repositoryName,
+        repositoryManifestId: config.pocId,
+      },
+      classificationRecords,
+    ),
+    'utf8',
+  )
 
   const retrievalReportPath = path.join(repoRoot, 'docs', 'retrieval_readiness_report.md')
   await fs.writeFile(retrievalReportPath, buildRetrievalReadinessReport(repositoryManifest, evaluation, config), 'utf8')

@@ -14,6 +14,17 @@
 - Page-image backstop: Yes
 - Line references available: No
 
+## Classification
+
+- Domain: naic_regulatory
+- Document type: actuarial_guideline
+- Purpose: Companion-only AG 36 Law Manual reprint retained as separate evidence.
+- Intended audience: Valuation, regulatory, and governance reviewers
+- Authority/source type: regulatory
+- Recommended profile: regulatory
+- Recommended chunking strategy: heading_first
+- Confidence: medium
+
 ## Processing
 
 - Processing mode: canonical_index_poc

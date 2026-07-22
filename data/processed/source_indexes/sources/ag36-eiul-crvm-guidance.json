@@ -4,6 +4,28 @@
   "repositoryManifestId": "source-index-poc-2026-07-21",
   "sourceVersionId": "source-index-ag36-eiul-crvm-guidance",
   "source": {
+    "classification": {
+      "domainId": "naic_regulatory",
+      "subdomainId": null,
+      "documentType": "actuarial_guideline",
+      "purpose": "Active AG 36 source package retained as a review-only guideline slice.",
+      "intendedAudience": "Valuation, regulatory, and governance reviewers",
+      "authoritySourceType": "regulatory",
+      "confidentiality": "internal",
+      "publicationDate": null,
+      "effectiveDate": null,
+      "version": null,
+      "approvalStatus": "reviewed",
+      "language": "en",
+      "recommendedProfile": "regulatory",
+      "recommendedChunkingStrategy": "heading_first",
+      "confidence": "medium",
+      "unresolvedQuestions": [
+        "Line references are unavailable and page locators are primary."
+      ],
+      "notes": "Active AG 36 source package retained as a review-only guideline slice."
+    },
+    "profileData": null,
     "sourceId": "ag36-eiul-crvm-guidance",
     "sourceVersionId": "source-index-ag36-eiul-crvm-guidance",
     "filename": "AG 36 - The Application of the Commissioners Reserve Valuation Method to Equity Indexed Life Insurance Policies.pdf",
@@ -36,7 +58,7 @@
     "notes": "Active AG 36 source package retained as a review-only guideline slice."
   },
   "processing": {
-    "createdAt": "2026-07-21T05:26:54.267Z",
+    "createdAt": "2026-07-22T22:52:46.750Z",
     "createdBy": "scripts/build-source-index-poc.mjs",
     "processingMode": "canonical_index_poc",
     "canonicality": "poc",

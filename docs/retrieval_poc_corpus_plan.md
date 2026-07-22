@@ -18,7 +18,7 @@ failures that matter:
 
 ## Selected corpus
 
-The current corpus targets 12 representative source packages and 31 canonical
+The current corpus targets 17 representative source packages and 41 canonical
 chunks.
 
 | Source package | Why it is included | Retrieval challenge | Authority level | Expected chunk count | Fidelity limitation | Full source or excerpt |
@@ -35,6 +35,7 @@ chunks.
 | Actuarial memorandum practice note | Secondary guidance with drafting and appendix pressure | Multi-section retrieval and judgment-heavy content | Non-binding practice note | 4 | Review-derived wording; page locators are the primary anchor | Full source |
 | Reg 210 | Active NY regulation with jurisdiction-specific requirements | Regulation versus guidance and page-boundary handling | Regulation | 3 | Page locators are primary; line references were not preserved in the canonical package | Full source |
 | CIA 2022 educational note | Companion/educational guidance with a different jurisdiction and authority posture | Educational note versus binding regulation | Educational note | 4 | Review-derived wording; page locators are the primary anchor | Full source |
+| Synthetic pricing corpus | Synthetic product, assumptions, methodology, profitability, and approval materials | Portable pricing-profile retrieval and classification | Synthetic pricing documents | 5 | Synthetic source text with profile-aware metadata | Synthetic |
 
 ## Why these sources
 
@@ -54,6 +55,9 @@ The corpus is intentionally mixed:
 - Reg 210 adds a current state regulation with jurisdiction-specific posture.
 - The CIA 2022 educational note adds a non-NAIC companion source with a
   different jurisdiction and authority level.
+- The synthetic pricing corpus adds a portable pricing-profile corpus and
+  exercises classification without forcing pricing-specific assumptions into
+  the generic core.
 
 ## Corpus design notes
 
@@ -76,6 +80,7 @@ The corpus is designed to support questions that test:
 - cross-source and relationship-aware retrieval;
 - companion-guidance versus binding-text separation;
 - jurisdiction-aware filtering;
+- profile-aware classification;
 - unsupported-query handling.
 
 ## Corpus boundaries

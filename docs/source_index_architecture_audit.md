@@ -227,7 +227,7 @@ review artifacts intact.
 ## POC Implementation Result
 
 The expanded POC package is now tracked under `data/processed/source_indexes/`
-and covers 12 representative source packages / 31 canonical chunks:
+and covers 17 representative source packages / 41 canonical chunks:
 
 - AG 01 and AG 03 as single-page interpretive guideline slices;
 - VM-20 overview, boundary, and assumption windows;
@@ -236,11 +236,14 @@ and covers 12 representative source packages / 31 canonical chunks:
 - model governance practice-note material;
 - actuarial memorandum practice-note material;
 - Regulation 210;
-- the CIA 2022 capital/FCT educational note.
+- the CIA 2022 capital/FCT educational note;
+- a synthetic pricing corpus that exercises the pricing profile and
+  classification layer.
 
 The generated package includes:
 
 - canonical source-index JSON records;
+- deterministic classification records and Markdown companions;
 - Markdown companions for each source;
 - a repository manifest;
 - JSONL and CSV exports;

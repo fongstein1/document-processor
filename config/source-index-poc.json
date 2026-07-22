@@ -16,6 +16,36 @@
       "profileName": "governance_profile",
       "profilePath": "docs/domain_profiles/governance_profile.md",
       "notes": "Review, governance, and exception-handling metadata."
+    },
+    {
+      "domainId": "pricing_documents",
+      "profileName": "pricing_profile",
+      "profilePath": "docs/domain_profiles/pricing_profile.md",
+      "notes": "Pricing assumptions, methods, and profitability evidence."
+    },
+    {
+      "domainId": "liability_modeling",
+      "profileName": "liability_modeling_profile",
+      "profilePath": "docs/domain_profiles/liability_modeling_profile.md",
+      "notes": "Reserve and projection-model evidence."
+    },
+    {
+      "domainId": "actuarial_governance",
+      "profileName": "governance_profile",
+      "profilePath": "docs/domain_profiles/governance_profile.md",
+      "notes": "Governance and control evidence."
+    },
+    {
+      "domainId": "reporting_documents",
+      "profileName": "reporting_profile",
+      "profilePath": "docs/domain_profiles/reporting_profile.md",
+      "notes": "Reporting, filing, and reconciliation evidence."
+    },
+    {
+      "domainId": "product_documents",
+      "profileName": "product_profile",
+      "profilePath": "docs/domain_profiles/product_profile.md",
+      "notes": "Product features, options, and valuation impact."
     }
   ],
   "sources": [
@@ -1071,6 +1101,726 @@
           ]
         }
       ]
+    },
+    {
+      "sourceIndexId": "source-index-synthetic-pricing-product-specification",
+      "sourceId": "synthetic-pricing-product-specification",
+      "filename": "Orion Term Accumulator - Product Specification.md",
+      "filePath": "data/samples/synthetic-pricing/orion-term-accumulator-product-specification.md",
+      "sourceFamilyId": "synthetic_pricing_documents",
+      "domainId": "pricing_documents",
+      "documentType": "product_specification",
+      "sourceTitle": "Orion Term Accumulator Product Specification",
+      "sourceReference": "Synthetic Pricing Corpus",
+      "jurisdiction": null,
+      "authorityLevel": "internal",
+      "sourceStatus": "active",
+      "versionDate": "2026-01-15",
+      "pageCount": 2,
+      "pageRange": { "start": 1, "end": 2 },
+      "reviewBatchIds": ["batch-synthetic-pricing"],
+      "reviewIndexPath": "docs/review/synthetic_pricing_review_index.md",
+      "selfReviewPath": "docs/review/synthetic_pricing_self_review.md",
+      "pageImageBackstop": false,
+      "lineReferencesAvailable": false,
+      "textLayerQuality": "clean",
+      "classification": {
+        "domainId": "pricing_documents",
+        "documentType": "product_specification",
+        "purpose": "Synthetic product specification for pricing-core portability testing",
+        "intendedAudience": "Pricing, product, and actuarial governance reviewers",
+        "authoritySourceType": "synthetic",
+        "confidentiality": "internal",
+        "publicationDate": "2026-01-15",
+        "effectiveDate": "2026-01-15",
+        "version": "1.0",
+        "approvalStatus": "synthetic_approved",
+        "language": "en",
+        "recommendedProfile": "pricing",
+        "recommendedChunkingStrategy": "structure_first",
+        "confidence": "high",
+        "unresolvedQuestions": [],
+        "notes": "Synthetic corpus entry."
+      },
+      "profileData": {
+        "productFamily": "individual deferred annuity",
+        "pricingStage": "product design",
+        "pricingMethod": "feature specification",
+        "approvalBody": "Pricing Governance Committee",
+        "decisionStatus": "draft"
+      },
+      "relationships": [
+        {
+          "relationType": "supports",
+          "targetSourceId": "synthetic-pricing-assumption-memo",
+          "notes": "Product features drive the assumption memo."
+        }
+      ],
+      "notes": "Synthetic non-sensitive product specification used to exercise the generic pricing profile.",
+      "chunks": [
+        {
+          "chunkId": "chunk-synthetic-pricing-product-specification-001",
+          "chunkOrdinal": 1,
+          "chunkKind": "product_specification",
+          "sourceTextType": "synthetic_source_text",
+          "pageStart": 1,
+          "pageEnd": 1,
+          "sectionReference": "Product specification: control and purpose",
+          "lineReference": null,
+          "sourceTextExcerpt": "This synthetic product specification defines the Orion Term Accumulator test product for pricing portability testing.",
+          "normalizedTextExcerpt": "Synthetic product specification and purpose statement.",
+          "summary": "The product specification establishes the fictional Orion Term Accumulator corpus and the pricing portability test purpose.",
+          "controlledTags": ["product_family", "pricing_stage", "background_content", "boundary_control_window"],
+          "keywords": ["Orion Term Accumulator", "product specification", "synthetic", "pricing"],
+          "citations": [
+            {
+              "citationText": "Orion Term Accumulator - Product Specification.md",
+              "pageReference": "pp. 1-1",
+              "sectionReference": "Product specification: control and purpose",
+              "sourceReference": "Synthetic Pricing Corpus",
+              "lineReference": null
+            }
+          ],
+          "relationships": [
+            {
+              "relationType": "supports",
+              "targetSourceId": "synthetic-pricing-assumption-memo",
+              "notes": "Product features drive the assumption memo."
+            }
+          ],
+          "fidelity": "curated",
+          "confidence": "high",
+          "reviewFlags": ["synthetic_source"],
+          "qualityNotes": [
+            "Synthetic source document.",
+            "Use the profile metadata to keep product features separate from pricing assumptions."
+          ],
+          "evidenceNotes": "Synthetic source prepared for the generic-core portability test.",
+          "retrievalEligible": true,
+          "promotionEligible": false
+        },
+        {
+          "chunkId": "chunk-synthetic-pricing-product-specification-002",
+          "chunkOrdinal": 2,
+          "chunkKind": "product_specification",
+          "sourceTextType": "synthetic_source_text",
+          "pageStart": 2,
+          "pageEnd": 2,
+          "sectionReference": "Product specification: features and limits",
+          "lineReference": null,
+          "sourceTextExcerpt": "The product has flexible premiums, a guaranteed minimum accumulation rate, optional withdrawals, and age-limited issue rules.",
+          "normalizedTextExcerpt": "Synthetic product features and eligibility limits.",
+          "summary": "The product features define the pricing target: flexible premiums, guaranteed accumulation, optional withdrawals, and issue-age limits.",
+          "controlledTags": ["product_family", "benefit", "eligibility", "pricing_impact", "implementation_dependency"],
+          "keywords": ["guaranteed minimum accumulation rate", "optional withdrawal", "issue age", "charges"],
+          "citations": [
+            {
+              "citationText": "Orion Term Accumulator - Product Specification.md",
+              "pageReference": "pp. 2-2",
+              "sectionReference": "Product specification: features and limits",
+              "sourceReference": "Synthetic Pricing Corpus",
+              "lineReference": null
+            }
+          ],
+          "relationships": [
+            {
+              "relationType": "applies_to_product",
+              "targetSourceId": "synthetic-pricing-pricing-methodology",
+              "notes": "The methodology applies the product structure."
+            }
+          ],
+          "fidelity": "curated",
+          "confidence": "high",
+          "reviewFlags": ["synthetic_source"],
+          "qualityNotes": [
+            "Synthetic source document.",
+            "The product profile should stay separate from the assumption and profitability records."
+          ],
+          "evidenceNotes": "Synthetic source prepared for the generic-core portability test.",
+          "retrievalEligible": true,
+          "promotionEligible": false
+        }
+      ]
+    },
+    {
+      "sourceIndexId": "source-index-synthetic-pricing-assumption-memo",
+      "sourceId": "synthetic-pricing-assumption-memo",
+      "filename": "Orion Term Accumulator - Assumption Memo.md",
+      "filePath": "data/samples/synthetic-pricing/orion-term-accumulator-assumption-memo.md",
+      "sourceFamilyId": "synthetic_pricing_documents",
+      "domainId": "pricing_documents",
+      "documentType": "assumption_memo",
+      "sourceTitle": "Orion Term Accumulator Assumption Memo",
+      "sourceReference": "Synthetic Pricing Corpus",
+      "jurisdiction": null,
+      "authorityLevel": "internal",
+      "sourceStatus": "active",
+      "versionDate": "2026-01-20",
+      "pageCount": 2,
+      "pageRange": { "start": 1, "end": 2 },
+      "reviewBatchIds": ["batch-synthetic-pricing"],
+      "reviewIndexPath": "docs/review/synthetic_pricing_review_index.md",
+      "selfReviewPath": "docs/review/synthetic_pricing_self_review.md",
+      "pageImageBackstop": false,
+      "lineReferencesAvailable": false,
+      "textLayerQuality": "clean",
+      "classification": {
+        "domainId": "pricing_documents",
+        "documentType": "assumption_memo",
+        "purpose": "Synthetic assumption memo for pricing portability testing",
+        "intendedAudience": "Pricing and actuarial reviewers",
+        "authoritySourceType": "synthetic",
+        "confidentiality": "internal",
+        "publicationDate": "2026-01-20",
+        "effectiveDate": "2026-01-20",
+        "version": "1.0",
+        "approvalStatus": "synthetic_approved",
+        "language": "en",
+        "recommendedProfile": "pricing",
+        "recommendedChunkingStrategy": "structure_first",
+        "confidence": "high",
+        "unresolvedQuestions": [],
+        "notes": "Synthetic corpus entry."
+      },
+      "profileData": {
+        "productFamily": "individual deferred annuity",
+        "pricingStage": "assumption setting",
+        "pricingMethod": "assumption memo",
+        "assumptionBasis": "fictional competitor benchmark",
+        "experienceSource": "internal synthetic benchmark",
+        "approvalBody": "Pricing Governance Committee"
+      },
+      "relationships": [
+        {
+          "relationType": "uses_assumption_from",
+          "targetSourceId": "synthetic-pricing-product-specification",
+          "notes": "Assumptions depend on the product features."
+        },
+        {
+          "relationType": "supports",
+          "targetSourceId": "synthetic-pricing-pricing-methodology",
+          "notes": "The memo feeds the pricing method."
+        }
+      ],
+      "notes": "Synthetic non-sensitive assumption memo used to exercise the generic pricing profile.",
+      "chunks": [
+        {
+          "chunkId": "chunk-synthetic-pricing-assumption-memo-001",
+          "chunkOrdinal": 1,
+          "chunkKind": "assumption_memo",
+          "sourceTextType": "synthetic_source_text",
+          "pageStart": 1,
+          "pageEnd": 1,
+          "sectionReference": "Assumption memo: assumptions",
+          "lineReference": null,
+          "sourceTextExcerpt": "Lapse, mortality, expense, and investment return assumptions are set on a fictional competitor benchmark.",
+          "normalizedTextExcerpt": "Synthetic pricing assumptions and basis.",
+          "summary": "The assumption memo defines lapse, mortality, expense, and investment return assumptions for the fictional product.",
+          "controlledTags": ["pricing_assumption_type", "assumption_basis", "pricing_stage", "background_content"],
+          "keywords": ["lapse", "mortality", "expenses", "investment return"],
+          "citations": [
+            {
+              "citationText": "Orion Term Accumulator - Assumption Memo.md",
+              "pageReference": "pp. 1-1",
+              "sectionReference": "Assumption memo: assumptions",
+              "sourceReference": "Synthetic Pricing Corpus",
+              "lineReference": null
+            }
+          ],
+          "relationships": [
+            {
+              "relationType": "supports",
+              "targetSourceId": "synthetic-pricing-pricing-methodology",
+              "notes": "Assumptions feed the pricing method."
+            }
+          ],
+          "fidelity": "curated",
+          "confidence": "high",
+          "reviewFlags": ["synthetic_source"],
+          "qualityNotes": [
+            "Synthetic source document.",
+            "Keep assumption basis separate from methodology mechanics."
+          ],
+          "evidenceNotes": "Synthetic source prepared for the generic-core portability test.",
+          "retrievalEligible": true,
+          "promotionEligible": false
+        },
+        {
+          "chunkId": "chunk-synthetic-pricing-assumption-memo-002",
+          "chunkOrdinal": 2,
+          "chunkKind": "assumption_memo",
+          "sourceTextType": "synthetic_source_text",
+          "pageStart": 2,
+          "pageEnd": 2,
+          "sectionReference": "Assumption memo: experience basis",
+          "lineReference": null,
+          "sourceTextExcerpt": "The memo records the fictional experience basis and the internal target margin.",
+          "normalizedTextExcerpt": "Synthetic experience basis and target margin.",
+          "summary": "The memo records the experience basis and the target margin that support the pricing design.",
+          "controlledTags": ["pricing_assumption_type", "target_metric", "decision_status", "implementation_dependency"],
+          "keywords": ["experience basis", "target margin", "approval"],
+          "citations": [
+            {
+              "citationText": "Orion Term Accumulator - Assumption Memo.md",
+              "pageReference": "pp. 2-2",
+              "sectionReference": "Assumption memo: experience basis",
+              "sourceReference": "Synthetic Pricing Corpus",
+              "lineReference": null
+            }
+          ],
+          "relationships": [
+            {
+              "relationType": "uses_assumption_from",
+              "targetSourceId": "synthetic-pricing-product-specification",
+              "notes": "Experience basis depends on the product structure."
+            }
+          ],
+          "fidelity": "curated",
+          "confidence": "high",
+          "reviewFlags": ["synthetic_source"],
+          "qualityNotes": [
+            "Synthetic source document.",
+            "Keep the target margin separate from approval control."
+          ],
+          "evidenceNotes": "Synthetic source prepared for the generic-core portability test.",
+          "retrievalEligible": true,
+          "promotionEligible": false
+        }
+      ]
+    },
+    {
+      "sourceIndexId": "source-index-synthetic-pricing-pricing-methodology",
+      "sourceId": "synthetic-pricing-pricing-methodology",
+      "filename": "Orion Term Accumulator - Pricing Methodology.md",
+      "filePath": "data/samples/synthetic-pricing/orion-term-accumulator-pricing-methodology.md",
+      "sourceFamilyId": "synthetic_pricing_documents",
+      "domainId": "pricing_documents",
+      "documentType": "pricing_methodology",
+      "sourceTitle": "Orion Term Accumulator Pricing Methodology",
+      "sourceReference": "Synthetic Pricing Corpus",
+      "jurisdiction": null,
+      "authorityLevel": "internal",
+      "sourceStatus": "active",
+      "versionDate": "2026-01-25",
+      "pageCount": 2,
+      "pageRange": { "start": 1, "end": 2 },
+      "reviewBatchIds": ["batch-synthetic-pricing"],
+      "reviewIndexPath": "docs/review/synthetic_pricing_review_index.md",
+      "selfReviewPath": "docs/review/synthetic_pricing_self_review.md",
+      "pageImageBackstop": false,
+      "lineReferencesAvailable": false,
+      "textLayerQuality": "clean",
+      "classification": {
+        "domainId": "pricing_documents",
+        "documentType": "pricing_methodology",
+        "purpose": "Synthetic pricing methodology for portability testing",
+        "intendedAudience": "Pricing modelers and governance reviewers",
+        "authoritySourceType": "synthetic",
+        "confidentiality": "internal",
+        "publicationDate": "2026-01-25",
+        "effectiveDate": "2026-01-25",
+        "version": "1.0",
+        "approvalStatus": "synthetic_approved",
+        "language": "en",
+        "recommendedProfile": "pricing",
+        "recommendedChunkingStrategy": "structure_first",
+        "confidence": "high",
+        "unresolvedQuestions": [],
+        "notes": "Synthetic corpus entry."
+      },
+      "profileData": {
+        "productFamily": "individual deferred annuity",
+        "pricingStage": "method development",
+        "pricingMethod": "discounted cash flow",
+        "profitabilityMetric": "target margin",
+        "sensitivityDriver": "lapse"
+      },
+      "relationships": [
+        {
+          "relationType": "uses_assumption_from",
+          "targetSourceId": "synthetic-pricing-assumption-memo",
+          "notes": "The method uses the assumption memo."
+        },
+        {
+          "relationType": "supports",
+          "targetSourceId": "synthetic-pricing-profitability-study",
+          "notes": "The method supports the profitability study."
+        }
+      ],
+      "notes": "Synthetic non-sensitive pricing methodology used to exercise the generic pricing profile.",
+      "chunks": [
+        {
+          "chunkId": "chunk-synthetic-pricing-pricing-methodology-001",
+          "chunkOrdinal": 1,
+          "chunkKind": "pricing_methodology",
+          "sourceTextType": "synthetic_source_text",
+          "pageStart": 1,
+          "pageEnd": 1,
+          "sectionReference": "Pricing methodology: model approach",
+          "lineReference": null,
+          "sourceTextExcerpt": "Project premium streams, account value, claims, expenses, and charges on a monthly basis.",
+          "normalizedTextExcerpt": "Synthetic pricing method and monthly projection basis.",
+          "summary": "The pricing method projects monthly cash flows and applies the assumption memo inputs.",
+          "controlledTags": ["pricing_method", "model_component", "implementation_dependency", "calculation_structure"],
+          "keywords": ["discounted cash flow", "monthly projection", "charges"],
+          "citations": [
+            {
+              "citationText": "Orion Term Accumulator - Pricing Methodology.md",
+              "pageReference": "pp. 1-1",
+              "sectionReference": "Pricing methodology: model approach",
+              "sourceReference": "Synthetic Pricing Corpus",
+              "lineReference": null
+            }
+          ],
+          "relationships": [
+            {
+              "relationType": "uses_assumption_from",
+              "targetSourceId": "synthetic-pricing-assumption-memo",
+              "notes": "Method depends on the assumption memo."
+            }
+          ],
+          "fidelity": "curated",
+          "confidence": "high",
+          "reviewFlags": ["synthetic_source"],
+          "qualityNotes": [
+            "Synthetic source document.",
+            "Keep the model mechanics separate from the profitability result."
+          ],
+          "evidenceNotes": "Synthetic source prepared for the generic-core portability test.",
+          "retrievalEligible": true,
+          "promotionEligible": false
+        },
+        {
+          "chunkId": "chunk-synthetic-pricing-pricing-methodology-002",
+          "chunkOrdinal": 2,
+          "chunkKind": "pricing_methodology",
+          "sourceTextType": "synthetic_source_text",
+          "pageStart": 2,
+          "pageEnd": 2,
+          "sectionReference": "Pricing methodology: sensitivities and dependencies",
+          "lineReference": null,
+          "sourceTextExcerpt": "The method uses lapse, yield, and expense sensitivities and feeds the profitability study.",
+          "normalizedTextExcerpt": "Synthetic sensitivities and study dependency.",
+          "summary": "The methodology lists sensitivities and supports the downstream profitability study.",
+          "controlledTags": ["sensitivity_driver", "pricing_risk", "model_component", "analysis_dependency"],
+          "keywords": ["lapse sensitivity", "yield sensitivity", "expense sensitivity"],
+          "citations": [
+            {
+              "citationText": "Orion Term Accumulator - Pricing Methodology.md",
+              "pageReference": "pp. 2-2",
+              "sectionReference": "Pricing methodology: sensitivities and dependencies",
+              "sourceReference": "Synthetic Pricing Corpus",
+              "lineReference": null
+            }
+          ],
+          "relationships": [
+            {
+              "relationType": "supports",
+              "targetSourceId": "synthetic-pricing-profitability-study",
+              "notes": "Methodology feeds the profitability study."
+            }
+          ],
+          "fidelity": "curated",
+          "confidence": "high",
+          "reviewFlags": ["synthetic_source"],
+          "qualityNotes": [
+            "Synthetic source document.",
+            "Sensitivity details should remain profile metadata, not generic-core obligations."
+          ],
+          "evidenceNotes": "Synthetic source prepared for the generic-core portability test.",
+          "retrievalEligible": true,
+          "promotionEligible": false
+        }
+      ]
+    },
+    {
+      "sourceIndexId": "source-index-synthetic-pricing-profitability-study",
+      "sourceId": "synthetic-pricing-profitability-study",
+      "filename": "Orion Term Accumulator - Profitability Study.md",
+      "filePath": "data/samples/synthetic-pricing/orion-term-accumulator-profitability-study.md",
+      "sourceFamilyId": "synthetic_pricing_documents",
+      "domainId": "pricing_documents",
+      "documentType": "profitability_study",
+      "sourceTitle": "Orion Term Accumulator Profitability Study",
+      "sourceReference": "Synthetic Pricing Corpus",
+      "jurisdiction": null,
+      "authorityLevel": "internal",
+      "sourceStatus": "active",
+      "versionDate": "2026-01-30",
+      "pageCount": 2,
+      "pageRange": { "start": 1, "end": 2 },
+      "reviewBatchIds": ["batch-synthetic-pricing"],
+      "reviewIndexPath": "docs/review/synthetic_pricing_review_index.md",
+      "selfReviewPath": "docs/review/synthetic_pricing_self_review.md",
+      "pageImageBackstop": false,
+      "lineReferencesAvailable": false,
+      "textLayerQuality": "clean",
+      "classification": {
+        "domainId": "pricing_documents",
+        "documentType": "profitability_study",
+        "purpose": "Synthetic profitability evidence for portability testing",
+        "intendedAudience": "Pricing reviewers and governance reviewers",
+        "authoritySourceType": "synthetic",
+        "confidentiality": "internal",
+        "publicationDate": "2026-01-30",
+        "effectiveDate": "2026-01-30",
+        "version": "1.0",
+        "approvalStatus": "synthetic_approved",
+        "language": "en",
+        "recommendedProfile": "pricing",
+        "recommendedChunkingStrategy": "structure_first",
+        "confidence": "high",
+        "unresolvedQuestions": [],
+        "notes": "Synthetic corpus entry."
+      },
+      "profileData": {
+        "productFamily": "individual deferred annuity",
+        "pricingStage": "profitability analysis",
+        "profitabilityMetric": "target margin",
+        "targetMetric": "base case margin",
+        "sensitivityDriver": "lapse"
+      },
+      "relationships": [
+        {
+          "relationType": "derived_from",
+          "targetSourceId": "synthetic-pricing-pricing-methodology",
+          "notes": "The study is derived from the methodology."
+        },
+        {
+          "relationType": "supports",
+          "targetSourceId": "synthetic-pricing-approval-memo",
+          "notes": "The study supports approval."
+        }
+      ],
+      "notes": "Synthetic non-sensitive profitability study used to exercise the generic pricing profile.",
+      "chunks": [
+        {
+          "chunkId": "chunk-synthetic-pricing-profitability-study-001",
+          "chunkOrdinal": 1,
+          "chunkKind": "profitability_study",
+          "sourceTextType": "synthetic_source_text",
+          "pageStart": 1,
+          "pageEnd": 1,
+          "sectionReference": "Profitability study: findings",
+          "lineReference": null,
+          "sourceTextExcerpt": "The base scenario meets the target margin and lapse downside is the most material sensitivity.",
+          "normalizedTextExcerpt": "Synthetic profitability findings and sensitivity ranking.",
+          "summary": "The study reports that the base scenario meets target margin and lapse is the most material sensitivity.",
+          "controlledTags": ["profitability_metric", "target_metric", "sensitivity_driver", "pricing_risk"],
+          "keywords": ["target margin", "base scenario", "lapse downside"],
+          "citations": [
+            {
+              "citationText": "Orion Term Accumulator - Profitability Study.md",
+              "pageReference": "pp. 1-1",
+              "sectionReference": "Profitability study: findings",
+              "sourceReference": "Synthetic Pricing Corpus",
+              "lineReference": null
+            }
+          ],
+          "relationships": [
+            {
+              "relationType": "derived_from",
+              "targetSourceId": "synthetic-pricing-pricing-methodology",
+              "notes": "The results are derived from the methodology."
+            }
+          ],
+          "fidelity": "curated",
+          "confidence": "high",
+          "reviewFlags": ["synthetic_source"],
+          "qualityNotes": [
+            "Synthetic source document.",
+            "Keep findings separate from method mechanics and approval control."
+          ],
+          "evidenceNotes": "Synthetic source prepared for the generic-core portability test.",
+          "retrievalEligible": true,
+          "promotionEligible": false
+        },
+        {
+          "chunkId": "chunk-synthetic-pricing-profitability-study-002",
+          "chunkOrdinal": 2,
+          "chunkKind": "profitability_study",
+          "sourceTextType": "synthetic_source_text",
+          "pageStart": 2,
+          "pageEnd": 2,
+          "sectionReference": "Profitability study: scenario interpretation",
+          "lineReference": null,
+          "sourceTextExcerpt": "Yield downside reduces profitability but remains within the modeled tolerance window.",
+          "normalizedTextExcerpt": "Synthetic scenario interpretation and tolerance window.",
+          "summary": "The study shows that yield downside remains tolerable even though it reduces profitability.",
+          "controlledTags": ["scenario_or_stochastic_requirement", "pricing_risk", "implementation_dependency"],
+          "keywords": ["yield downside", "tolerance window", "profitability"],
+          "citations": [
+            {
+              "citationText": "Orion Term Accumulator - Profitability Study.md",
+              "pageReference": "pp. 2-2",
+              "sectionReference": "Profitability study: scenario interpretation",
+              "sourceReference": "Synthetic Pricing Corpus",
+              "lineReference": null
+            }
+          ],
+          "relationships": [
+            {
+              "relationType": "supports",
+              "targetSourceId": "synthetic-pricing-approval-memo",
+              "notes": "The results support approval."
+            }
+          ],
+          "fidelity": "curated",
+          "confidence": "high",
+          "reviewFlags": ["synthetic_source"],
+          "qualityNotes": [
+            "Synthetic source document.",
+            "Keep scenario interpretation separate from the approval memo."
+          ],
+          "evidenceNotes": "Synthetic source prepared for the generic-core portability test.",
+          "retrievalEligible": true,
+          "promotionEligible": false
+        }
+      ]
+    },
+    {
+      "sourceIndexId": "source-index-synthetic-pricing-approval-memo",
+      "sourceId": "synthetic-pricing-approval-memo",
+      "filename": "Orion Term Accumulator - Approval Memo.md",
+      "filePath": "data/samples/synthetic-pricing/orion-term-accumulator-approval-memo.md",
+      "sourceFamilyId": "synthetic_pricing_documents",
+      "domainId": "pricing_documents",
+      "documentType": "approval_memo",
+      "sourceTitle": "Orion Term Accumulator Approval Memo",
+      "sourceReference": "Synthetic Pricing Corpus",
+      "jurisdiction": null,
+      "authorityLevel": "internal",
+      "sourceStatus": "active",
+      "versionDate": "2026-02-05",
+      "pageCount": 2,
+      "pageRange": { "start": 1, "end": 2 },
+      "reviewBatchIds": ["batch-synthetic-pricing"],
+      "reviewIndexPath": "docs/review/synthetic_pricing_review_index.md",
+      "selfReviewPath": "docs/review/synthetic_pricing_self_review.md",
+      "pageImageBackstop": false,
+      "lineReferencesAvailable": false,
+      "textLayerQuality": "clean",
+      "classification": {
+        "domainId": "pricing_documents",
+        "documentType": "approval_memo",
+        "purpose": "Synthetic approval memo for governance portability testing",
+        "intendedAudience": "Pricing governance reviewers",
+        "authoritySourceType": "synthetic",
+        "confidentiality": "internal",
+        "publicationDate": "2026-02-05",
+        "effectiveDate": "2026-02-05",
+        "version": "1.0",
+        "approvalStatus": "synthetic_approved",
+        "language": "en",
+        "recommendedProfile": "pricing",
+        "recommendedChunkingStrategy": "structure_first",
+        "confidence": "high",
+        "unresolvedQuestions": [],
+        "notes": "Synthetic corpus entry."
+      },
+      "profileData": {
+        "pricingStage": "approval",
+        "approvalBody": "Pricing Governance Committee",
+        "decisionStatus": "approved",
+        "implementationDependency": "pricing method version 1.0"
+      },
+      "relationships": [
+        {
+          "relationType": "approves",
+          "targetSourceId": "synthetic-pricing-pricing-methodology",
+          "notes": "The committee approves the pricing method."
+        },
+        {
+          "relationType": "supports",
+          "targetSourceId": "synthetic-pricing-profitability-study",
+          "notes": "The memo relies on the study."
+        }
+      ],
+      "notes": "Synthetic non-sensitive approval memo used to exercise the generic governance and pricing profiles.",
+      "chunks": [
+        {
+          "chunkId": "chunk-synthetic-pricing-approval-memo-001",
+          "chunkOrdinal": 1,
+          "chunkKind": "approval_memo",
+          "sourceTextType": "synthetic_source_text",
+          "pageStart": 1,
+          "pageEnd": 1,
+          "sectionReference": "Approval memo: approval",
+          "lineReference": null,
+          "sourceTextExcerpt": "The Pricing Governance Committee approves the methodology subject to implementation controls.",
+          "normalizedTextExcerpt": "Synthetic approval and control condition.",
+          "summary": "The memo records approval of the pricing methodology subject to implementation controls.",
+          "controlledTags": ["approval_body", "decision_status", "governance_or_control_expectation"],
+          "keywords": ["approval", "pricing governance committee", "implementation controls"],
+          "citations": [
+            {
+              "citationText": "Orion Term Accumulator - Approval Memo.md",
+              "pageReference": "pp. 1-1",
+              "sectionReference": "Approval memo: approval",
+              "sourceReference": "Synthetic Pricing Corpus",
+              "lineReference": null
+            }
+          ],
+          "relationships": [
+            {
+              "relationType": "approves",
+              "targetSourceId": "synthetic-pricing-pricing-methodology",
+              "notes": "The memo approves the pricing method."
+            }
+          ],
+          "fidelity": "curated",
+          "confidence": "high",
+          "reviewFlags": ["synthetic_source"],
+          "qualityNotes": [
+            "Synthetic source document.",
+            "Keep approval control separate from product and assumption evidence."
+          ],
+          "evidenceNotes": "Synthetic source prepared for the generic-core portability test.",
+          "retrievalEligible": true,
+          "promotionEligible": false
+        },
+        {
+          "chunkId": "chunk-synthetic-pricing-approval-memo-002",
+          "chunkOrdinal": 2,
+          "chunkKind": "approval_memo",
+          "sourceTextType": "synthetic_source_text",
+          "pageStart": 2,
+          "pageEnd": 2,
+          "sectionReference": "Approval memo: change summary",
+          "lineReference": null,
+          "sourceTextExcerpt": "The memo confirms version 1.0 of the product spec, assumption memo, and pricing method.",
+          "normalizedTextExcerpt": "Synthetic change summary and version confirmation.",
+          "summary": "The memo confirms the controlled versions and documents the change summary.",
+          "controlledTags": ["version", "change_summary", "implementation_dependency"],
+          "keywords": ["version 1.0", "change summary", "approval date"],
+          "citations": [
+            {
+              "citationText": "Orion Term Accumulator - Approval Memo.md",
+              "pageReference": "pp. 2-2",
+              "sectionReference": "Approval memo: change summary",
+              "sourceReference": "Synthetic Pricing Corpus",
+              "lineReference": null
+            }
+          ],
+          "relationships": [
+            {
+              "relationType": "supports",
+              "targetSourceId": "synthetic-pricing-product-specification",
+              "notes": "The memo confirms the product spec version."
+            }
+          ],
+          "fidelity": "curated",
+          "confidence": "high",
+          "reviewFlags": ["synthetic_source"],
+          "qualityNotes": [
+            "Synthetic source document.",
+            "The version summary should remain profile metadata, not generic-core law."
+          ],
+          "evidenceNotes": "Synthetic source prepared for the generic-core portability test.",
+          "retrievalEligible": true,
+          "promotionEligible": false
+        }
+      ]
     }
   ],
   "retrievalSettings": {
@@ -1262,6 +2012,66 @@
         "cia-2022-capital-fct-educational-note"
       ],
       "rationale": "Tests a companion educational note with guidance, caution, and closeout pressure."
+    },
+    {
+      "queryId": "q-synth-product-spec",
+      "queryCategory": "pricing_domain",
+      "query": "What product features and policyholder options are described in the synthetic pricing product specification?",
+      "expectedChunkIds": [
+        "chunk-synthetic-pricing-product-specification-001"
+      ],
+      "expectedSourceIds": [
+        "synthetic-pricing-product-specification"
+      ],
+      "rationale": "Tests product-profile retrieval for the synthetic pricing corpus."
+    },
+    {
+      "queryId": "q-synth-assumption-memo",
+      "queryCategory": "pricing_domain",
+      "query": "What assumptions, bases, and sensitivity drivers appear in the synthetic pricing assumption memo?",
+      "expectedChunkIds": [
+        "chunk-synthetic-pricing-assumption-memo-001"
+      ],
+      "expectedSourceIds": [
+        "synthetic-pricing-assumption-memo"
+      ],
+      "rationale": "Tests assumption-memo retrieval and classification."
+    },
+    {
+      "queryId": "q-synth-pricing-methodology",
+      "queryCategory": "pricing_domain",
+      "query": "How does the synthetic pricing methodology describe pricing stages, methods, and decision status?",
+      "expectedChunkIds": [
+        "chunk-synthetic-pricing-pricing-methodology-001"
+      ],
+      "expectedSourceIds": [
+        "synthetic-pricing-pricing-methodology"
+      ],
+      "rationale": "Tests methodology retrieval and generic pricing profile coverage."
+    },
+    {
+      "queryId": "q-synth-profitability-study",
+      "queryCategory": "pricing_domain",
+      "query": "What profitability metrics, sensitivities, and conclusion language appear in the synthetic pricing profitability study?",
+      "expectedChunkIds": [
+        "chunk-synthetic-pricing-profitability-study-001"
+      ],
+      "expectedSourceIds": [
+        "synthetic-pricing-profitability-study"
+      ],
+      "rationale": "Tests retrieval of study-style pricing evidence."
+    },
+    {
+      "queryId": "q-synth-approval-memo",
+      "queryCategory": "pricing_domain",
+      "query": "What approval body, decision status, and implementation notes appear in the synthetic pricing approval memo?",
+      "expectedChunkIds": [
+        "chunk-synthetic-pricing-approval-memo-001"
+      ],
+      "expectedSourceIds": [
+        "synthetic-pricing-approval-memo"
+      ],
+      "rationale": "Tests approval-memo retrieval and governance context."
     },
     {
       "queryId": "q-unsupported-pricing-support",

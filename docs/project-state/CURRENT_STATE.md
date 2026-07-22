@@ -4,9 +4,10 @@
 
 The repository now includes a tracked canonical source-index proof of
 concept under `data/processed/source_indexes/`. The POC packages AG 01, AG 03,
-and a narrow VM-20 excerpt into backend-neutral JSON, Markdown, JSONL, CSV,
-and retrieval-evaluation artifacts while keeping the underlying review packets
-and review indexes intact.
+narrow VM-20 excerpts, companion guidance, Regulation 210, and a synthetic
+pricing corpus into backend-neutral JSON, Markdown, JSONL, CSV,
+classification, and retrieval-evaluation artifacts while keeping the
+underlying review packets and review indexes intact.
 
 The new layer is still review-only, not learner-facing, not app-ready, and
 not RAG-ready. It is a companion to the existing batch/review workflow, not a
@@ -18,7 +19,7 @@ artifacts.
 
 ## Repo path
 
-`C:\Dev\Document Processor`
+`C:\Users\David\OneDrive\Documents\Document Processor`
 
 ## Current branch
 
@@ -26,14 +27,16 @@ artifacts.
 
 ## Latest known commit before this batch
 
-`37bfeaa`
+`858b900`
 
 ## Current focus
 
-The laptop portability and project-context handoff package has now been added
-as `docs/project-state/LAPTOP_PORTABILITY_HANDOFF.md`. The repo is clean on
-`main`, the received inventory remains local and ignored, and the project is
-ready to be reopened on another laptop without guessing source units.
+The canonical source-index POC has been expanded into a reusable actuarial
+document-structurizer proof of concept. The repo now keeps a generic core,
+optional domain profiles, a deterministic classifier, and a synthetic pricing
+corpus alongside the existing review-only workflow. The working tree is dirty
+only because those intentional changes are still unstaged in this sandbox; no
+new source unit should be started until the commit path can be restored.
 
 The Model Regulation XXX practice note
 (`Practice Notes/AAA - Model Regulation XXX - Dec 2006.pdf`) is now complete as

@@ -3,20 +3,20 @@
   "evaluationId": "source-index-poc-2026-07-21-retrieval",
   "repositoryManifestId": "source-index-poc-2026-07-21",
   "method": "keyword_overlap_baseline",
-  "supportedQueryCount": 14,
+  "supportedQueryCount": 19,
   "unsupportedQueryCount": 2,
-  "top1HitCount": 12,
-  "top3HitCount": 14,
-  "top5HitCount": 14,
-  "top1Accuracy": 0.8571428571428571,
+  "top1HitCount": 14,
+  "top3HitCount": 19,
+  "top5HitCount": 19,
+  "top1Accuracy": 0.7368421052631579,
   "top3Accuracy": 1,
   "top5Accuracy": 1,
-  "meanReciprocalRank": 0.9285714285714286,
+  "meanReciprocalRank": 0.8210526315789473,
   "sourceFamilyAccuracy": 1,
-  "authorityLevelAccuracy": 0.9285714285714286,
+  "authorityLevelAccuracy": 0.9473684210526315,
   "citationAvailability": 0,
   "multiChunkEvidenceRecall": 1,
-  "unsupportedQueryPrecision": 1,
+  "unsupportedQueryPrecision": 0.5,
   "categoryStats": {
     "exact_title": {
       "queryCount": 5,
@@ -63,6 +63,15 @@
       "unsupportedCount": 0,
       "unsupportedPrecision": 0
     },
+    "pricing_domain": {
+      "queryCount": 5,
+      "top1Accuracy": 0.4,
+      "top3Accuracy": 1,
+      "top5Accuracy": 1,
+      "meanReciprocalRank": 0.5199999999999999,
+      "unsupportedCount": 0,
+      "unsupportedPrecision": 0
+    },
     "unsupported": {
       "queryCount": 2,
       "top1Accuracy": 0,
@@ -70,7 +79,7 @@
       "top5Accuracy": 0,
       "meanReciprocalRank": 0,
       "unsupportedCount": 2,
-      "unsupportedPrecision": 1
+      "unsupportedPrecision": 0.5
     }
   },
   "queries": [
@@ -186,19 +195,19 @@
           "citationCount": 0
         },
         {
+          "chunkId": "chunk-synthetic-pricing-pricing-methodology-001",
+          "sourceId": "synthetic-pricing-pricing-methodology",
+          "sourceFamilyId": "synthetic_pricing_documents",
+          "authorityLevel": "internal",
+          "score": 2,
+          "citationCount": 0
+        },
+        {
           "chunkId": "chunk-vm21-sr-projection-entry-002",
           "sourceId": "vm21-sr-projection-entry",
           "sourceFamilyId": "valuation_manual_pdfs",
           "authorityLevel": "manual_section",
           "score": 2,
-          "citationCount": 0
-        },
-        {
-          "chunkId": "chunk-actuarial-memorandum-practice-note-003",
-          "sourceId": "actuarial-memorandum-practice-note",
-          "sourceFamilyId": "practice_notes",
-          "authorityLevel": "practice_note",
-          "score": 1,
           "citationCount": 0
         }
       ],
@@ -959,19 +968,19 @@
           "citationCount": 0
         },
         {
-          "chunkId": "chunk-vm20-framework-overview-001",
-          "sourceId": "vm20-framework-overview",
-          "sourceFamilyId": "valuation_manual_pdfs",
-          "authorityLevel": "manual_section",
+          "chunkId": "chunk-synthetic-pricing-approval-memo-001",
+          "sourceId": "synthetic-pricing-approval-memo",
+          "sourceFamilyId": "synthetic_pricing_documents",
+          "authorityLevel": "internal",
           "score": 1,
           "citationCount": 0
         },
         {
-          "chunkId": "chunk-actuarial-memorandum-practice-note-001",
-          "sourceId": "actuarial-memorandum-practice-note",
-          "sourceFamilyId": "practice_notes",
-          "authorityLevel": "practice_note",
-          "score": 0,
+          "chunkId": "chunk-synthetic-pricing-assumption-memo-002",
+          "sourceId": "synthetic-pricing-assumption-memo",
+          "sourceFamilyId": "synthetic_pricing_documents",
+          "authorityLevel": "internal",
+          "score": 1,
           "citationCount": 0
         }
       ],
@@ -1058,6 +1067,351 @@
       "resultLabel": "supported_top1"
     },
     {
+      "queryId": "q-synth-product-spec",
+      "queryCategory": "pricing_domain",
+      "query": "What product features and policyholder options are described in the synthetic pricing product specification?",
+      "expectedChunkIds": [
+        "chunk-synthetic-pricing-product-specification-001"
+      ],
+      "expectedSourceIds": [
+        "synthetic-pricing-product-specification"
+      ],
+      "rationale": "Tests product-profile retrieval for the synthetic pricing corpus.",
+      "expectedSourceFamilyIds": [
+        "synthetic_pricing_documents"
+      ],
+      "expectedAuthorityLevels": [
+        "internal"
+      ],
+      "rankedMatches": [
+        {
+          "chunkId": "chunk-synthetic-pricing-product-specification-002",
+          "sourceId": "synthetic-pricing-product-specification",
+          "sourceFamilyId": "synthetic_pricing_documents",
+          "authorityLevel": "internal",
+          "score": 5,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "chunk-synthetic-pricing-approval-memo-002",
+          "sourceId": "synthetic-pricing-approval-memo",
+          "sourceFamilyId": "synthetic_pricing_documents",
+          "authorityLevel": "internal",
+          "score": 4,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "chunk-synthetic-pricing-assumption-memo-001",
+          "sourceId": "synthetic-pricing-assumption-memo",
+          "sourceFamilyId": "synthetic_pricing_documents",
+          "authorityLevel": "internal",
+          "score": 4,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "chunk-synthetic-pricing-assumption-memo-002",
+          "sourceId": "synthetic-pricing-assumption-memo",
+          "sourceFamilyId": "synthetic_pricing_documents",
+          "authorityLevel": "internal",
+          "score": 4,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "chunk-synthetic-pricing-product-specification-001",
+          "sourceId": "synthetic-pricing-product-specification",
+          "sourceFamilyId": "synthetic_pricing_documents",
+          "authorityLevel": "internal",
+          "score": 4,
+          "citationCount": 0
+        }
+      ],
+      "top1Hit": false,
+      "top3Hit": true,
+      "top5Hit": true,
+      "reciprocalRank": 0.2,
+      "predictedSourceFamilyId": "synthetic_pricing_documents",
+      "predictedAuthorityLevel": "internal",
+      "citationAvailable": false,
+      "insufficientSupportDetected": false,
+      "resultLabel": "supported_top3"
+    },
+    {
+      "queryId": "q-synth-assumption-memo",
+      "queryCategory": "pricing_domain",
+      "query": "What assumptions, bases, and sensitivity drivers appear in the synthetic pricing assumption memo?",
+      "expectedChunkIds": [
+        "chunk-synthetic-pricing-assumption-memo-001"
+      ],
+      "expectedSourceIds": [
+        "synthetic-pricing-assumption-memo"
+      ],
+      "rationale": "Tests assumption-memo retrieval and classification.",
+      "expectedSourceFamilyIds": [
+        "synthetic_pricing_documents"
+      ],
+      "expectedAuthorityLevels": [
+        "internal"
+      ],
+      "rankedMatches": [
+        {
+          "chunkId": "chunk-synthetic-pricing-assumption-memo-001",
+          "sourceId": "synthetic-pricing-assumption-memo",
+          "sourceFamilyId": "synthetic_pricing_documents",
+          "authorityLevel": "internal",
+          "score": 5,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "chunk-synthetic-pricing-pricing-methodology-002",
+          "sourceId": "synthetic-pricing-pricing-methodology",
+          "sourceFamilyId": "synthetic_pricing_documents",
+          "authorityLevel": "internal",
+          "score": 5,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "chunk-synthetic-pricing-approval-memo-002",
+          "sourceId": "synthetic-pricing-approval-memo",
+          "sourceFamilyId": "synthetic_pricing_documents",
+          "authorityLevel": "internal",
+          "score": 4,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "chunk-synthetic-pricing-assumption-memo-002",
+          "sourceId": "synthetic-pricing-assumption-memo",
+          "sourceFamilyId": "synthetic_pricing_documents",
+          "authorityLevel": "internal",
+          "score": 4,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "chunk-synthetic-pricing-pricing-methodology-001",
+          "sourceId": "synthetic-pricing-pricing-methodology",
+          "sourceFamilyId": "synthetic_pricing_documents",
+          "authorityLevel": "internal",
+          "score": 4,
+          "citationCount": 0
+        }
+      ],
+      "top1Hit": true,
+      "top3Hit": true,
+      "top5Hit": true,
+      "reciprocalRank": 1,
+      "predictedSourceFamilyId": "synthetic_pricing_documents",
+      "predictedAuthorityLevel": "internal",
+      "citationAvailable": false,
+      "insufficientSupportDetected": false,
+      "resultLabel": "supported_top1"
+    },
+    {
+      "queryId": "q-synth-pricing-methodology",
+      "queryCategory": "pricing_domain",
+      "query": "How does the synthetic pricing methodology describe pricing stages, methods, and decision status?",
+      "expectedChunkIds": [
+        "chunk-synthetic-pricing-pricing-methodology-001"
+      ],
+      "expectedSourceIds": [
+        "synthetic-pricing-pricing-methodology"
+      ],
+      "rationale": "Tests methodology retrieval and generic pricing profile coverage.",
+      "expectedSourceFamilyIds": [
+        "synthetic_pricing_documents"
+      ],
+      "expectedAuthorityLevels": [
+        "internal"
+      ],
+      "rankedMatches": [
+        {
+          "chunkId": "chunk-synthetic-pricing-approval-memo-001",
+          "sourceId": "synthetic-pricing-approval-memo",
+          "sourceFamilyId": "synthetic_pricing_documents",
+          "authorityLevel": "internal",
+          "score": 5,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "chunk-synthetic-pricing-assumption-memo-002",
+          "sourceId": "synthetic-pricing-assumption-memo",
+          "sourceFamilyId": "synthetic_pricing_documents",
+          "authorityLevel": "internal",
+          "score": 5,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "chunk-synthetic-pricing-approval-memo-002",
+          "sourceId": "synthetic-pricing-approval-memo",
+          "sourceFamilyId": "synthetic_pricing_documents",
+          "authorityLevel": "internal",
+          "score": 3,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "chunk-synthetic-pricing-assumption-memo-001",
+          "sourceId": "synthetic-pricing-assumption-memo",
+          "sourceFamilyId": "synthetic_pricing_documents",
+          "authorityLevel": "internal",
+          "score": 3,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "chunk-synthetic-pricing-pricing-methodology-001",
+          "sourceId": "synthetic-pricing-pricing-methodology",
+          "sourceFamilyId": "synthetic_pricing_documents",
+          "authorityLevel": "internal",
+          "score": 3,
+          "citationCount": 0
+        }
+      ],
+      "top1Hit": false,
+      "top3Hit": true,
+      "top5Hit": true,
+      "reciprocalRank": 0.2,
+      "predictedSourceFamilyId": "synthetic_pricing_documents",
+      "predictedAuthorityLevel": "internal",
+      "citationAvailable": false,
+      "insufficientSupportDetected": false,
+      "resultLabel": "supported_top3"
+    },
+    {
+      "queryId": "q-synth-profitability-study",
+      "queryCategory": "pricing_domain",
+      "query": "What profitability metrics, sensitivities, and conclusion language appear in the synthetic pricing profitability study?",
+      "expectedChunkIds": [
+        "chunk-synthetic-pricing-profitability-study-001"
+      ],
+      "expectedSourceIds": [
+        "synthetic-pricing-profitability-study"
+      ],
+      "rationale": "Tests retrieval of study-style pricing evidence.",
+      "expectedSourceFamilyIds": [
+        "synthetic_pricing_documents"
+      ],
+      "expectedAuthorityLevels": [
+        "internal"
+      ],
+      "rankedMatches": [
+        {
+          "chunkId": "chunk-synthetic-pricing-pricing-methodology-002",
+          "sourceId": "synthetic-pricing-pricing-methodology",
+          "sourceFamilyId": "synthetic_pricing_documents",
+          "authorityLevel": "internal",
+          "score": 5,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "chunk-synthetic-pricing-approval-memo-001",
+          "sourceId": "synthetic-pricing-approval-memo",
+          "sourceFamilyId": "synthetic_pricing_documents",
+          "authorityLevel": "internal",
+          "score": 4,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "chunk-synthetic-pricing-approval-memo-002",
+          "sourceId": "synthetic-pricing-approval-memo",
+          "sourceFamilyId": "synthetic_pricing_documents",
+          "authorityLevel": "internal",
+          "score": 4,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "chunk-synthetic-pricing-pricing-methodology-001",
+          "sourceId": "synthetic-pricing-pricing-methodology",
+          "sourceFamilyId": "synthetic_pricing_documents",
+          "authorityLevel": "internal",
+          "score": 4,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "chunk-synthetic-pricing-profitability-study-001",
+          "sourceId": "synthetic-pricing-profitability-study",
+          "sourceFamilyId": "synthetic_pricing_documents",
+          "authorityLevel": "internal",
+          "score": 4,
+          "citationCount": 0
+        }
+      ],
+      "top1Hit": false,
+      "top3Hit": true,
+      "top5Hit": true,
+      "reciprocalRank": 0.2,
+      "predictedSourceFamilyId": "synthetic_pricing_documents",
+      "predictedAuthorityLevel": "internal",
+      "citationAvailable": false,
+      "insufficientSupportDetected": false,
+      "resultLabel": "supported_top3"
+    },
+    {
+      "queryId": "q-synth-approval-memo",
+      "queryCategory": "pricing_domain",
+      "query": "What approval body, decision status, and implementation notes appear in the synthetic pricing approval memo?",
+      "expectedChunkIds": [
+        "chunk-synthetic-pricing-approval-memo-001"
+      ],
+      "expectedSourceIds": [
+        "synthetic-pricing-approval-memo"
+      ],
+      "rationale": "Tests approval-memo retrieval and governance context.",
+      "expectedSourceFamilyIds": [
+        "synthetic_pricing_documents"
+      ],
+      "expectedAuthorityLevels": [
+        "internal"
+      ],
+      "rankedMatches": [
+        {
+          "chunkId": "chunk-synthetic-pricing-approval-memo-001",
+          "sourceId": "synthetic-pricing-approval-memo",
+          "sourceFamilyId": "synthetic_pricing_documents",
+          "authorityLevel": "internal",
+          "score": 8,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "chunk-synthetic-pricing-assumption-memo-002",
+          "sourceId": "synthetic-pricing-assumption-memo",
+          "sourceFamilyId": "synthetic_pricing_documents",
+          "authorityLevel": "internal",
+          "score": 7,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "chunk-synthetic-pricing-approval-memo-002",
+          "sourceId": "synthetic-pricing-approval-memo",
+          "sourceFamilyId": "synthetic_pricing_documents",
+          "authorityLevel": "internal",
+          "score": 5,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "chunk-synthetic-pricing-profitability-study-002",
+          "sourceId": "synthetic-pricing-profitability-study",
+          "sourceFamilyId": "synthetic_pricing_documents",
+          "authorityLevel": "internal",
+          "score": 5,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "chunk-synthetic-pricing-pricing-methodology-001",
+          "sourceId": "synthetic-pricing-pricing-methodology",
+          "sourceFamilyId": "synthetic_pricing_documents",
+          "authorityLevel": "internal",
+          "score": 4,
+          "citationCount": 0
+        }
+      ],
+      "top1Hit": true,
+      "top3Hit": true,
+      "top5Hit": true,
+      "reciprocalRank": 1,
+      "predictedSourceFamilyId": "synthetic_pricing_documents",
+      "predictedAuthorityLevel": "internal",
+      "citationAvailable": false,
+      "insufficientSupportDetected": false,
+      "resultLabel": "supported_top1"
+    },
+    {
       "queryId": "q-unsupported-pricing-support",
       "queryCategory": "unsupported",
       "query": "What does this corpus say about pricing support?",
@@ -1069,43 +1423,43 @@
       "expectedAuthorityLevels": [],
       "rankedMatches": [
         {
-          "chunkId": "chunk-actuarial-memorandum-practice-note-001",
-          "sourceId": "actuarial-memorandum-practice-note",
-          "sourceFamilyId": "practice_notes",
-          "authorityLevel": "practice_note",
-          "score": 0,
+          "chunkId": "chunk-synthetic-pricing-assumption-memo-002",
+          "sourceId": "synthetic-pricing-assumption-memo",
+          "sourceFamilyId": "synthetic_pricing_documents",
+          "authorityLevel": "internal",
+          "score": 3,
           "citationCount": 0
         },
         {
-          "chunkId": "chunk-actuarial-memorandum-practice-note-002",
-          "sourceId": "actuarial-memorandum-practice-note",
-          "sourceFamilyId": "practice_notes",
-          "authorityLevel": "practice_note",
-          "score": 0,
+          "chunkId": "chunk-synthetic-pricing-approval-memo-001",
+          "sourceId": "synthetic-pricing-approval-memo",
+          "sourceFamilyId": "synthetic_pricing_documents",
+          "authorityLevel": "internal",
+          "score": 2,
           "citationCount": 0
         },
         {
-          "chunkId": "chunk-actuarial-memorandum-practice-note-003",
-          "sourceId": "actuarial-memorandum-practice-note",
-          "sourceFamilyId": "practice_notes",
-          "authorityLevel": "practice_note",
-          "score": 0,
+          "chunkId": "chunk-synthetic-pricing-approval-memo-002",
+          "sourceId": "synthetic-pricing-approval-memo",
+          "sourceFamilyId": "synthetic_pricing_documents",
+          "authorityLevel": "internal",
+          "score": 2,
           "citationCount": 0
         },
         {
-          "chunkId": "chunk-actuarial-memorandum-practice-note-004",
-          "sourceId": "actuarial-memorandum-practice-note",
-          "sourceFamilyId": "practice_notes",
-          "authorityLevel": "practice_note",
-          "score": 0,
+          "chunkId": "chunk-synthetic-pricing-assumption-memo-001",
+          "sourceId": "synthetic-pricing-assumption-memo",
+          "sourceFamilyId": "synthetic_pricing_documents",
+          "authorityLevel": "internal",
+          "score": 2,
           "citationCount": 0
         },
         {
-          "chunkId": "chunk-ag01-net-premium-interpretation-001",
-          "sourceId": "ag01-net-premium-interpretation",
-          "sourceFamilyId": "actuarial_guidelines",
-          "authorityLevel": "guideline",
-          "score": 0,
+          "chunkId": "chunk-synthetic-pricing-pricing-methodology-001",
+          "sourceId": "synthetic-pricing-pricing-methodology",
+          "sourceFamilyId": "synthetic_pricing_documents",
+          "authorityLevel": "internal",
+          "score": 2,
           "citationCount": 0
         }
       ],
@@ -1113,11 +1467,11 @@
       "top3Hit": false,
       "top5Hit": false,
       "reciprocalRank": 0,
-      "predictedSourceFamilyId": "practice_notes",
-      "predictedAuthorityLevel": "practice_note",
+      "predictedSourceFamilyId": "synthetic_pricing_documents",
+      "predictedAuthorityLevel": "internal",
       "citationAvailable": false,
-      "insufficientSupportDetected": true,
-      "resultLabel": "unsupported"
+      "insufficientSupportDetected": false,
+      "resultLabel": "false_positive"
     },
     {
       "queryId": "q-unsupported-liability-modeling",
@@ -1131,6 +1485,14 @@
       "expectedAuthorityLevels": [],
       "rankedMatches": [
         {
+          "chunkId": "chunk-synthetic-pricing-assumption-memo-002",
+          "sourceId": "synthetic-pricing-assumption-memo",
+          "sourceFamilyId": "synthetic_pricing_documents",
+          "authorityLevel": "internal",
+          "score": 2,
+          "citationCount": 0
+        },
+        {
           "chunkId": "chunk-cia-2022-capital-fct-educational-note-003",
           "sourceId": "cia-2022-capital-fct-educational-note",
           "sourceFamilyId": "educational_notes",
@@ -1139,35 +1501,27 @@
           "citationCount": 0
         },
         {
-          "chunkId": "chunk-actuarial-memorandum-practice-note-001",
-          "sourceId": "actuarial-memorandum-practice-note",
-          "sourceFamilyId": "practice_notes",
-          "authorityLevel": "practice_note",
-          "score": 0,
+          "chunkId": "chunk-synthetic-pricing-approval-memo-001",
+          "sourceId": "synthetic-pricing-approval-memo",
+          "sourceFamilyId": "synthetic_pricing_documents",
+          "authorityLevel": "internal",
+          "score": 1,
           "citationCount": 0
         },
         {
-          "chunkId": "chunk-actuarial-memorandum-practice-note-002",
-          "sourceId": "actuarial-memorandum-practice-note",
-          "sourceFamilyId": "practice_notes",
-          "authorityLevel": "practice_note",
-          "score": 0,
+          "chunkId": "chunk-synthetic-pricing-approval-memo-002",
+          "sourceId": "synthetic-pricing-approval-memo",
+          "sourceFamilyId": "synthetic_pricing_documents",
+          "authorityLevel": "internal",
+          "score": 1,
           "citationCount": 0
         },
         {
-          "chunkId": "chunk-actuarial-memorandum-practice-note-003",
-          "sourceId": "actuarial-memorandum-practice-note",
-          "sourceFamilyId": "practice_notes",
-          "authorityLevel": "practice_note",
-          "score": 0,
-          "citationCount": 0
-        },
-        {
-          "chunkId": "chunk-actuarial-memorandum-practice-note-004",
-          "sourceId": "actuarial-memorandum-practice-note",
-          "sourceFamilyId": "practice_notes",
-          "authorityLevel": "practice_note",
-          "score": 0,
+          "chunkId": "chunk-synthetic-pricing-assumption-memo-001",
+          "sourceId": "synthetic-pricing-assumption-memo",
+          "sourceFamilyId": "synthetic_pricing_documents",
+          "authorityLevel": "internal",
+          "score": 1,
           "citationCount": 0
         }
       ],
@@ -1175,8 +1529,8 @@
       "top3Hit": false,
       "top5Hit": false,
       "reciprocalRank": 0,
-      "predictedSourceFamilyId": "educational_notes",
-      "predictedAuthorityLevel": "educational_note",
+      "predictedSourceFamilyId": "synthetic_pricing_documents",
+      "predictedAuthorityLevel": "internal",
       "citationAvailable": false,
       "insufficientSupportDetected": true,
       "resultLabel": "unsupported"

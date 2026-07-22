@@ -14,6 +14,17 @@
 - Page-image backstop: No
 - Line references available: No
 
+## Classification
+
+- Domain: naic_regulatory
+- Document type: valuation_manual_section
+- Purpose: Boundary-control slice retained only to keep the mechanics transition review-only.
+- Intended audience: Valuation, regulatory, and governance reviewers
+- Authority/source type: regulatory
+- Recommended profile: regulatory
+- Recommended chunking strategy: heading_first
+- Confidence: high
+
 ## Processing
 
 - Processing mode: canonical_index_poc

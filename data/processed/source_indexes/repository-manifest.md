@@ -4,9 +4,9 @@
 - Manifest ID: `source-index-poc-2026-07-21`
 - Canonical layer: source-index
 - Model version: 1.0
-- Generated at: 2026-07-21T05:26:54.277Z
-- Source package count: 12
-- Chunk count: 31
+- Generated at: 2026-07-22T22:52:46.811Z
+- Source package count: 17
+- Chunk count: 41
 
 ## Export files
 
@@ -33,14 +33,19 @@
 | Actuarial Memorandum Practice Note | pp. 1-37 | `data/processed/source_indexes/sources/actuarial-memorandum-practice-note.json` | review-only |
 | Life Insurance and Annuity Non-Guaranteed Elements | pp. 1-9 | `data/processed/source_indexes/sources/reg210-non-guaranteed-elements.json` | review-only |
 | CIA 2022 Capital and FCT Educational Note | pp. 1-20 | `data/processed/source_indexes/sources/cia-2022-capital-fct-educational-note.json` | review-only |
+| Orion Term Accumulator Product Specification | pp. 1-2 | `data/processed/source_indexes/sources/synthetic-pricing-product-specification.json` | review-only |
+| Orion Term Accumulator Assumption Memo | pp. 1-2 | `data/processed/source_indexes/sources/synthetic-pricing-assumption-memo.json` | review-only |
+| Orion Term Accumulator Pricing Methodology | pp. 1-2 | `data/processed/source_indexes/sources/synthetic-pricing-pricing-methodology.json` | review-only |
+| Orion Term Accumulator Profitability Study | pp. 1-2 | `data/processed/source_indexes/sources/synthetic-pricing-profitability-study.json` | review-only |
+| Orion Term Accumulator Approval Memo | pp. 1-2 | `data/processed/source_indexes/sources/synthetic-pricing-approval-memo.json` | review-only |
 
 ## Retrieval summary
 
-- Queries evaluated: 16
-- Supported queries: 14
+- Queries evaluated: 21
+- Supported queries: 19
 - Unsupported queries: 2
-- Top-1 accuracy: 86%
+- Top-1 accuracy: 74%
 - Top-3 accuracy: 100%
 - Top-5 accuracy: 100%
-- Mean reciprocal rank: 0.929
+- Mean reciprocal rank: 0.821
 - Method: keyword_overlap_baseline

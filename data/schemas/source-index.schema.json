@@ -83,6 +83,116 @@
         "textLayerQuality"
       ],
       "properties": {
+        "classification": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "domainId",
+            "documentType",
+            "purpose",
+            "intendedAudience",
+            "authoritySourceType",
+            "confidentiality",
+            "recommendedProfile",
+            "recommendedChunkingStrategy",
+            "confidence",
+            "unresolvedQuestions"
+          ],
+          "properties": {
+            "domainId": {
+              "type": "string",
+              "minLength": 1
+            },
+            "subdomainId": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "documentType": {
+              "type": "string",
+              "minLength": 1
+            },
+            "purpose": {
+              "type": "string",
+              "minLength": 1
+            },
+            "intendedAudience": {
+              "type": "string",
+              "minLength": 1
+            },
+            "authoritySourceType": {
+              "type": "string",
+              "minLength": 1
+            },
+            "confidentiality": {
+              "type": "string",
+              "minLength": 1
+            },
+            "publicationDate": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date"
+            },
+            "effectiveDate": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date"
+            },
+            "version": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "approvalStatus": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "language": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "recommendedProfile": {
+              "type": "string",
+              "minLength": 1
+            },
+            "recommendedChunkingStrategy": {
+              "type": "string",
+              "minLength": 1
+            },
+            "confidence": {
+              "type": "string",
+              "enum": [
+                "low",
+                "medium",
+                "high"
+              ]
+            },
+            "unresolvedQuestions": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "notes": {
+              "type": "string"
+            }
+          }
+        },
+        "profileData": {
+          "type": "object",
+          "additionalProperties": true
+        },
         "sourceId": {
           "type": "string",
           "minLength": 1
@@ -313,7 +423,12 @@
             "boundary_slice",
             "source_excerpt",
             "summary_only",
-            "note"
+            "note",
+            "product_specification",
+            "assumption_memo",
+            "pricing_methodology",
+            "profitability_study",
+            "approval_memo"
           ]
         },
         "sourceTextType": {
@@ -322,7 +437,8 @@
             "actual_extracted_source_text",
             "manually_curated_source_text",
             "review_artifact_derived_text",
-            "placeholder_pending_source_text"
+            "placeholder_pending_source_text",
+            "synthetic_source_text"
           ]
         },
         "pageStart": {

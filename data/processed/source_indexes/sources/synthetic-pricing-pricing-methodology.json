@@ -1,0 +1,265 @@
+{
+  "schemaVersion": "1.0",
+  "sourceIndexId": "source-index-synthetic-pricing-pricing-methodology",
+  "repositoryManifestId": "source-index-poc-2026-07-21",
+  "sourceVersionId": "source-index-synthetic-pricing-pricing-methodology",
+  "source": {
+    "classification": {
+      "domainId": "pricing_documents",
+      "subdomainId": null,
+      "documentType": "pricing_methodology",
+      "purpose": "Synthetic pricing methodology for portability testing",
+      "intendedAudience": "Pricing modelers and governance reviewers",
+      "authoritySourceType": "synthetic",
+      "confidentiality": "internal",
+      "publicationDate": "2026-01-25",
+      "effectiveDate": "2026-01-25",
+      "version": "1.0",
+      "approvalStatus": "synthetic_approved",
+      "language": "en",
+      "recommendedProfile": "pricing",
+      "recommendedChunkingStrategy": "structure_first",
+      "confidence": "high",
+      "unresolvedQuestions": [],
+      "notes": "Synthetic corpus entry."
+    },
+    "profileData": {
+      "productFamily": "individual deferred annuity",
+      "pricingStage": "method development",
+      "pricingMethod": "discounted cash flow",
+      "profitabilityMetric": "target margin",
+      "sensitivityDriver": "lapse"
+    },
+    "sourceId": "synthetic-pricing-pricing-methodology",
+    "sourceVersionId": "source-index-synthetic-pricing-pricing-methodology",
+    "filename": "Orion Term Accumulator - Pricing Methodology.md",
+    "filePath": "data/samples/synthetic-pricing/orion-term-accumulator-pricing-methodology.md",
+    "sourceFamilyId": "synthetic_pricing_documents",
+    "domainId": "pricing_documents",
+    "documentType": "pricing_methodology",
+    "sourceTitle": "Orion Term Accumulator Pricing Methodology",
+    "sourceReference": "Synthetic Pricing Corpus",
+    "jurisdiction": null,
+    "authorityLevel": "internal",
+    "sourceStatus": "active",
+    "versionDate": "2026-01-25",
+    "pageCount": 2,
+    "pageRange": {
+      "start": 1,
+      "end": 2
+    },
+    "reviewBatchIds": [
+      "batch-synthetic-pricing"
+    ],
+    "reviewIndexPath": "docs/review/synthetic_pricing_review_index.md",
+    "selfReviewPath": "docs/review/synthetic_pricing_self_review.md",
+    "pageImageBackstop": false,
+    "lineReferencesAvailable": false,
+    "textLayerQuality": "clean",
+    "notes": "Synthetic non-sensitive pricing methodology used to exercise the generic pricing profile."
+  },
+  "processing": {
+    "createdAt": "2026-07-22T22:52:46.805Z",
+    "createdBy": "scripts/build-source-index-poc.mjs",
+    "processingMode": "canonical_index_poc",
+    "canonicality": "poc",
+    "reviewOnly": true,
+    "learnerFacingAllowed": false,
+    "appReadyAllowed": false,
+    "ragReadyAllowed": false,
+    "promotionStatus": "not_promoted",
+    "notes": "Synthetic non-sensitive pricing methodology used to exercise the generic pricing profile."
+  },
+  "chunks": [
+    {
+      "chunkId": "chunk-synthetic-pricing-pricing-methodology-001",
+      "chunkOrdinal": 1,
+      "chunkKind": "pricing_methodology",
+      "sourceTextType": "synthetic_source_text",
+      "pageStart": 1,
+      "pageEnd": 1,
+      "sectionReference": "Pricing methodology: model approach",
+      "lineReference": null,
+      "sourceTextExcerpt": "Project premium streams, account value, claims, expenses, and charges on a monthly basis.",
+      "normalizedTextExcerpt": "Synthetic pricing method and monthly projection basis.",
+      "summary": "The pricing method projects monthly cash flows and applies the assumption memo inputs.",
+      "topic": "The pricing method projects monthly cash flows and applies the assumption memo inputs.",
+      "headingPath": "Pricing methodology: model approach",
+      "keyPoints": [
+        "The pricing method projects monthly cash flows and applies the assumption memo inputs."
+      ],
+      "concepts": [
+        "pricing_method",
+        "model_component",
+        "implementation_dependency",
+        "calculation_structure"
+      ],
+      "definedTerms": [
+        "discounted cash flow",
+        "monthly projection",
+        "charges"
+      ],
+      "acronyms": [],
+      "requirements": [],
+      "citationDisplay": "Orion Term Accumulator - Pricing Methodology.md",
+      "normalizedSearchText": "project premium streams, account value, claims, expenses, and charges on a monthly basis. synthetic pricing method and monthly projection basis. the pricing method projects monthly cash flows and applies the assumption memo inputs. the pricing method projects monthly cash flows and applies the assumption memo inputs. pricing methodology: model approach pricing methodology: model approach orion term accumulator pricing methodology synthetic pricing corpus the pricing method projects monthly cash flows and applies the assumption memo inputs. pricing_method model_component implementation_dependency calculation_structure discounted cash flow monthly projection charges orion term accumulator - pricing methodology.md pricing_method model_component implementation_dependency calculation_structure discounted cash flow monthly projection charges",
+      "canonicalSourceIndexPath": "data/processed/source_indexes/sources/synthetic-pricing-pricing-methodology.json",
+      "sourceVersionId": "source-index-synthetic-pricing-pricing-methodology",
+      "controlledTags": [
+        "pricing_method",
+        "model_component",
+        "implementation_dependency",
+        "calculation_structure"
+      ],
+      "keywords": [
+        "discounted cash flow",
+        "monthly projection",
+        "charges"
+      ],
+      "citations": [
+        {
+          "citationText": "Orion Term Accumulator - Pricing Methodology.md",
+          "pageReference": "pp. 1-1",
+          "sectionReference": "Pricing methodology: model approach",
+          "sourceReference": "Synthetic Pricing Corpus",
+          "lineReference": null
+        }
+      ],
+      "relationships": [
+        {
+          "relationType": "uses_assumption_from",
+          "targetSourceId": "synthetic-pricing-assumption-memo",
+          "notes": "Method depends on the assumption memo."
+        }
+      ],
+      "relationshipIds": [
+        "synthetic-pricing-assumption-memo",
+        "synthetic-pricing-profitability-study",
+        "synthetic-pricing-assumption-memo"
+      ],
+      "fidelity": "curated",
+      "confidence": "high",
+      "reviewFlags": [
+        "synthetic_source"
+      ],
+      "qualityNotes": [
+        "Synthetic source document.",
+        "Keep the model mechanics separate from the profitability result."
+      ],
+      "evidenceNotes": "Synthetic source prepared for the generic-core portability test.",
+      "retrievalEligible": true,
+      "promotionEligible": false
+    },
+    {
+      "chunkId": "chunk-synthetic-pricing-pricing-methodology-002",
+      "chunkOrdinal": 2,
+      "chunkKind": "pricing_methodology",
+      "sourceTextType": "synthetic_source_text",
+      "pageStart": 2,
+      "pageEnd": 2,
+      "sectionReference": "Pricing methodology: sensitivities and dependencies",
+      "lineReference": null,
+      "sourceTextExcerpt": "The method uses lapse, yield, and expense sensitivities and feeds the profitability study.",
+      "normalizedTextExcerpt": "Synthetic sensitivities and study dependency.",
+      "summary": "The methodology lists sensitivities and supports the downstream profitability study.",
+      "topic": "The methodology lists sensitivities and supports the downstream profitability study.",
+      "headingPath": "Pricing methodology: sensitivities and dependencies",
+      "keyPoints": [
+        "The methodology lists sensitivities and supports the downstream profitability study."
+      ],
+      "concepts": [
+        "sensitivity_driver",
+        "pricing_risk",
+        "model_component",
+        "analysis_dependency"
+      ],
+      "definedTerms": [
+        "lapse sensitivity",
+        "yield sensitivity",
+        "expense sensitivity"
+      ],
+      "acronyms": [],
+      "requirements": [],
+      "citationDisplay": "Orion Term Accumulator - Pricing Methodology.md",
+      "normalizedSearchText": "the method uses lapse, yield, and expense sensitivities and feeds the profitability study. synthetic sensitivities and study dependency. the methodology lists sensitivities and supports the downstream profitability study. the methodology lists sensitivities and supports the downstream profitability study. pricing methodology: sensitivities and dependencies pricing methodology: sensitivities and dependencies orion term accumulator pricing methodology synthetic pricing corpus the methodology lists sensitivities and supports the downstream profitability study. sensitivity_driver pricing_risk model_component analysis_dependency lapse sensitivity yield sensitivity expense sensitivity orion term accumulator - pricing methodology.md sensitivity_driver pricing_risk model_component analysis_dependency lapse sensitivity yield sensitivity expense sensitivity",
+      "canonicalSourceIndexPath": "data/processed/source_indexes/sources/synthetic-pricing-pricing-methodology.json",
+      "sourceVersionId": "source-index-synthetic-pricing-pricing-methodology",
+      "controlledTags": [
+        "sensitivity_driver",
+        "pricing_risk",
+        "model_component",
+        "analysis_dependency"
+      ],
+      "keywords": [
+        "lapse sensitivity",
+        "yield sensitivity",
+        "expense sensitivity"
+      ],
+      "citations": [
+        {
+          "citationText": "Orion Term Accumulator - Pricing Methodology.md",
+          "pageReference": "pp. 2-2",
+          "sectionReference": "Pricing methodology: sensitivities and dependencies",
+          "sourceReference": "Synthetic Pricing Corpus",
+          "lineReference": null
+        }
+      ],
+      "relationships": [
+        {
+          "relationType": "supports",
+          "targetSourceId": "synthetic-pricing-profitability-study",
+          "notes": "Methodology feeds the profitability study."
+        }
+      ],
+      "relationshipIds": [
+        "synthetic-pricing-assumption-memo",
+        "synthetic-pricing-profitability-study",
+        "synthetic-pricing-profitability-study"
+      ],
+      "fidelity": "curated",
+      "confidence": "high",
+      "reviewFlags": [
+        "synthetic_source"
+      ],
+      "qualityNotes": [
+        "Synthetic source document.",
+        "Sensitivity details should remain profile metadata, not generic-core obligations."
+      ],
+      "evidenceNotes": "Synthetic source prepared for the generic-core portability test.",
+      "retrievalEligible": true,
+      "promotionEligible": false
+    }
+  ],
+  "relationships": [
+    {
+      "relationType": "uses_assumption_from",
+      "targetSourceId": "synthetic-pricing-assumption-memo",
+      "notes": "The method uses the assumption memo."
+    },
+    {
+      "relationType": "supports",
+      "targetSourceId": "synthetic-pricing-profitability-study",
+      "notes": "The method supports the profitability study."
+    }
+  ],
+  "quality": {
+    "textLayerQuality": "clean",
+    "citationCompleteness": "partial",
+    "pageImageBackstop": false,
+    "lineReferencesAvailable": false,
+    "notes": "Synthetic non-sensitive pricing methodology used to exercise the generic pricing profile."
+  },
+  "exportHints": {
+    "jsonlEligible": true,
+    "csvEligible": true,
+    "vectorEligible": true,
+    "notes": "Backend-neutral POC exports generated from review-only batch artifacts."
+  },
+  "notes": "Synthetic non-sensitive pricing methodology used to exercise the generic pricing profile.",
+  "extensions": {
+    "batchIds": [
+      "batch-synthetic-pricing"
+    ],
+    "sourceIndexGeneratedBy": "build-source-index-poc"
+  }
+}

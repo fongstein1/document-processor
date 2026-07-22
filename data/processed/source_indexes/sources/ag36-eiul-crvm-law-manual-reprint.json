@@ -4,6 +4,28 @@
   "repositoryManifestId": "source-index-poc-2026-07-21",
   "sourceVersionId": "source-index-ag36-eiul-crvm-law-manual-reprint",
   "source": {
+    "classification": {
+      "domainId": "naic_regulatory",
+      "subdomainId": null,
+      "documentType": "actuarial_guideline",
+      "purpose": "Companion-only AG 36 Law Manual reprint retained as separate evidence.",
+      "intendedAudience": "Valuation, regulatory, and governance reviewers",
+      "authoritySourceType": "regulatory",
+      "confidentiality": "internal",
+      "publicationDate": null,
+      "effectiveDate": null,
+      "version": null,
+      "approvalStatus": "companion-only",
+      "language": "en",
+      "recommendedProfile": "regulatory",
+      "recommendedChunkingStrategy": "heading_first",
+      "confidence": "medium",
+      "unresolvedQuestions": [
+        "Line references are unavailable and page locators are primary."
+      ],
+      "notes": "Companion-only AG 36 Law Manual reprint retained as separate evidence."
+    },
+    "profileData": null,
     "sourceId": "ag36-eiul-crvm-law-manual-reprint",
     "sourceVersionId": "source-index-ag36-eiul-crvm-law-manual-reprint",
     "filename": "AG 36 - CRVM for EIUL-from 2021 Law Manual.pdf",
@@ -33,7 +55,7 @@
     "notes": "Companion-only AG 36 Law Manual reprint retained as separate evidence."
   },
   "processing": {
-    "createdAt": "2026-07-21T05:26:54.269Z",
+    "createdAt": "2026-07-22T22:52:46.764Z",
     "createdBy": "scripts/build-source-index-poc.mjs",
     "processingMode": "canonical_index_poc",
     "canonicality": "poc",

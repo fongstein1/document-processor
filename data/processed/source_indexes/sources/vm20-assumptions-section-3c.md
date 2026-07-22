@@ -14,6 +14,17 @@
 - Page-image backstop: No
 - Line references available: No
 
+## Classification
+
+- Domain: naic_regulatory
+- Document type: valuation_manual_section
+- Purpose: Assumption-layer slice from the controlled VM-20 wave.
+- Intended audience: Valuation, regulatory, and governance reviewers
+- Authority/source type: regulatory
+- Recommended profile: regulatory
+- Recommended chunking strategy: heading_first
+- Confidence: high
+
 ## Processing
 
 - Processing mode: canonical_index_poc

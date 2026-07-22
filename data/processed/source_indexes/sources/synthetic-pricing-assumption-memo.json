@@ -1,0 +1,268 @@
+{
+  "schemaVersion": "1.0",
+  "sourceIndexId": "source-index-synthetic-pricing-assumption-memo",
+  "repositoryManifestId": "source-index-poc-2026-07-21",
+  "sourceVersionId": "source-index-synthetic-pricing-assumption-memo",
+  "source": {
+    "classification": {
+      "domainId": "pricing_documents",
+      "subdomainId": null,
+      "documentType": "assumption_memo",
+      "purpose": "Synthetic assumption memo for pricing portability testing",
+      "intendedAudience": "Pricing and actuarial reviewers",
+      "authoritySourceType": "synthetic",
+      "confidentiality": "internal",
+      "publicationDate": "2026-01-20",
+      "effectiveDate": "2026-01-20",
+      "version": "1.0",
+      "approvalStatus": "synthetic_approved",
+      "language": "en",
+      "recommendedProfile": "pricing",
+      "recommendedChunkingStrategy": "structure_first",
+      "confidence": "high",
+      "unresolvedQuestions": [],
+      "notes": "Synthetic corpus entry."
+    },
+    "profileData": {
+      "productFamily": "individual deferred annuity",
+      "pricingStage": "assumption setting",
+      "pricingMethod": "assumption memo",
+      "assumptionBasis": "fictional competitor benchmark",
+      "experienceSource": "internal synthetic benchmark",
+      "approvalBody": "Pricing Governance Committee"
+    },
+    "sourceId": "synthetic-pricing-assumption-memo",
+    "sourceVersionId": "source-index-synthetic-pricing-assumption-memo",
+    "filename": "Orion Term Accumulator - Assumption Memo.md",
+    "filePath": "data/samples/synthetic-pricing/orion-term-accumulator-assumption-memo.md",
+    "sourceFamilyId": "synthetic_pricing_documents",
+    "domainId": "pricing_documents",
+    "documentType": "assumption_memo",
+    "sourceTitle": "Orion Term Accumulator Assumption Memo",
+    "sourceReference": "Synthetic Pricing Corpus",
+    "jurisdiction": null,
+    "authorityLevel": "internal",
+    "sourceStatus": "active",
+    "versionDate": "2026-01-20",
+    "pageCount": 2,
+    "pageRange": {
+      "start": 1,
+      "end": 2
+    },
+    "reviewBatchIds": [
+      "batch-synthetic-pricing"
+    ],
+    "reviewIndexPath": "docs/review/synthetic_pricing_review_index.md",
+    "selfReviewPath": "docs/review/synthetic_pricing_self_review.md",
+    "pageImageBackstop": false,
+    "lineReferencesAvailable": false,
+    "textLayerQuality": "clean",
+    "notes": "Synthetic non-sensitive assumption memo used to exercise the generic pricing profile."
+  },
+  "processing": {
+    "createdAt": "2026-07-22T22:52:46.799Z",
+    "createdBy": "scripts/build-source-index-poc.mjs",
+    "processingMode": "canonical_index_poc",
+    "canonicality": "poc",
+    "reviewOnly": true,
+    "learnerFacingAllowed": false,
+    "appReadyAllowed": false,
+    "ragReadyAllowed": false,
+    "promotionStatus": "not_promoted",
+    "notes": "Synthetic non-sensitive assumption memo used to exercise the generic pricing profile."
+  },
+  "chunks": [
+    {
+      "chunkId": "chunk-synthetic-pricing-assumption-memo-001",
+      "chunkOrdinal": 1,
+      "chunkKind": "assumption_memo",
+      "sourceTextType": "synthetic_source_text",
+      "pageStart": 1,
+      "pageEnd": 1,
+      "sectionReference": "Assumption memo: assumptions",
+      "lineReference": null,
+      "sourceTextExcerpt": "Lapse, mortality, expense, and investment return assumptions are set on a fictional competitor benchmark.",
+      "normalizedTextExcerpt": "Synthetic pricing assumptions and basis.",
+      "summary": "The assumption memo defines lapse, mortality, expense, and investment return assumptions for the fictional product.",
+      "topic": "The assumption memo defines lapse, mortality, expense, and investment return assumptions for the fictional product.",
+      "headingPath": "Assumption memo: assumptions",
+      "keyPoints": [
+        "The assumption memo defines lapse, mortality, expense, and investment return assumptions for the fictional product."
+      ],
+      "concepts": [
+        "pricing_assumption_type",
+        "assumption_basis",
+        "pricing_stage",
+        "background_content"
+      ],
+      "definedTerms": [
+        "lapse",
+        "mortality",
+        "expenses",
+        "investment return"
+      ],
+      "acronyms": [],
+      "requirements": [],
+      "citationDisplay": "Orion Term Accumulator - Assumption Memo.md",
+      "normalizedSearchText": "lapse, mortality, expense, and investment return assumptions are set on a fictional competitor benchmark. synthetic pricing assumptions and basis. the assumption memo defines lapse, mortality, expense, and investment return assumptions for the fictional product. the assumption memo defines lapse, mortality, expense, and investment return assumptions for the fictional product. assumption memo: assumptions assumption memo: assumptions orion term accumulator assumption memo synthetic pricing corpus the assumption memo defines lapse, mortality, expense, and investment return assumptions for the fictional product. pricing_assumption_type assumption_basis pricing_stage background_content lapse mortality expenses investment return orion term accumulator - assumption memo.md pricing_assumption_type assumption_basis pricing_stage background_content lapse mortality expenses investment return",
+      "canonicalSourceIndexPath": "data/processed/source_indexes/sources/synthetic-pricing-assumption-memo.json",
+      "sourceVersionId": "source-index-synthetic-pricing-assumption-memo",
+      "controlledTags": [
+        "pricing_assumption_type",
+        "assumption_basis",
+        "pricing_stage",
+        "background_content"
+      ],
+      "keywords": [
+        "lapse",
+        "mortality",
+        "expenses",
+        "investment return"
+      ],
+      "citations": [
+        {
+          "citationText": "Orion Term Accumulator - Assumption Memo.md",
+          "pageReference": "pp. 1-1",
+          "sectionReference": "Assumption memo: assumptions",
+          "sourceReference": "Synthetic Pricing Corpus",
+          "lineReference": null
+        }
+      ],
+      "relationships": [
+        {
+          "relationType": "supports",
+          "targetSourceId": "synthetic-pricing-pricing-methodology",
+          "notes": "Assumptions feed the pricing method."
+        }
+      ],
+      "relationshipIds": [
+        "synthetic-pricing-product-specification",
+        "synthetic-pricing-pricing-methodology",
+        "synthetic-pricing-pricing-methodology"
+      ],
+      "fidelity": "curated",
+      "confidence": "high",
+      "reviewFlags": [
+        "synthetic_source"
+      ],
+      "qualityNotes": [
+        "Synthetic source document.",
+        "Keep assumption basis separate from methodology mechanics."
+      ],
+      "evidenceNotes": "Synthetic source prepared for the generic-core portability test.",
+      "retrievalEligible": true,
+      "promotionEligible": false
+    },
+    {
+      "chunkId": "chunk-synthetic-pricing-assumption-memo-002",
+      "chunkOrdinal": 2,
+      "chunkKind": "assumption_memo",
+      "sourceTextType": "synthetic_source_text",
+      "pageStart": 2,
+      "pageEnd": 2,
+      "sectionReference": "Assumption memo: experience basis",
+      "lineReference": null,
+      "sourceTextExcerpt": "The memo records the fictional experience basis and the internal target margin.",
+      "normalizedTextExcerpt": "Synthetic experience basis and target margin.",
+      "summary": "The memo records the experience basis and the target margin that support the pricing design.",
+      "topic": "The memo records the experience basis and the target margin that support the pricing design.",
+      "headingPath": "Assumption memo: experience basis",
+      "keyPoints": [
+        "The memo records the experience basis and the target margin that support the pricing design."
+      ],
+      "concepts": [
+        "pricing_assumption_type",
+        "target_metric",
+        "decision_status",
+        "implementation_dependency"
+      ],
+      "definedTerms": [
+        "experience basis",
+        "target margin",
+        "approval"
+      ],
+      "acronyms": [],
+      "requirements": [],
+      "citationDisplay": "Orion Term Accumulator - Assumption Memo.md",
+      "normalizedSearchText": "the memo records the fictional experience basis and the internal target margin. synthetic experience basis and target margin. the memo records the experience basis and the target margin that support the pricing design. the memo records the experience basis and the target margin that support the pricing design. assumption memo: experience basis assumption memo: experience basis orion term accumulator assumption memo synthetic pricing corpus the memo records the experience basis and the target margin that support the pricing design. pricing_assumption_type target_metric decision_status implementation_dependency experience basis target margin approval orion term accumulator - assumption memo.md pricing_assumption_type target_metric decision_status implementation_dependency experience basis target margin approval",
+      "canonicalSourceIndexPath": "data/processed/source_indexes/sources/synthetic-pricing-assumption-memo.json",
+      "sourceVersionId": "source-index-synthetic-pricing-assumption-memo",
+      "controlledTags": [
+        "pricing_assumption_type",
+        "target_metric",
+        "decision_status",
+        "implementation_dependency"
+      ],
+      "keywords": [
+        "experience basis",
+        "target margin",
+        "approval"
+      ],
+      "citations": [
+        {
+          "citationText": "Orion Term Accumulator - Assumption Memo.md",
+          "pageReference": "pp. 2-2",
+          "sectionReference": "Assumption memo: experience basis",
+          "sourceReference": "Synthetic Pricing Corpus",
+          "lineReference": null
+        }
+      ],
+      "relationships": [
+        {
+          "relationType": "uses_assumption_from",
+          "targetSourceId": "synthetic-pricing-product-specification",
+          "notes": "Experience basis depends on the product structure."
+        }
+      ],
+      "relationshipIds": [
+        "synthetic-pricing-product-specification",
+        "synthetic-pricing-pricing-methodology",
+        "synthetic-pricing-product-specification"
+      ],
+      "fidelity": "curated",
+      "confidence": "high",
+      "reviewFlags": [
+        "synthetic_source"
+      ],
+      "qualityNotes": [
+        "Synthetic source document.",
+        "Keep the target margin separate from approval control."
+      ],
+      "evidenceNotes": "Synthetic source prepared for the generic-core portability test.",
+      "retrievalEligible": true,
+      "promotionEligible": false
+    }
+  ],
+  "relationships": [
+    {
+      "relationType": "uses_assumption_from",
+      "targetSourceId": "synthetic-pricing-product-specification",
+      "notes": "Assumptions depend on the product features."
+    },
+    {
+      "relationType": "supports",
+      "targetSourceId": "synthetic-pricing-pricing-methodology",
+      "notes": "The memo feeds the pricing method."
+    }
+  ],
+  "quality": {
+    "textLayerQuality": "clean",
+    "citationCompleteness": "partial",
+    "pageImageBackstop": false,
+    "lineReferencesAvailable": false,
+    "notes": "Synthetic non-sensitive assumption memo used to exercise the generic pricing profile."
+  },
+  "exportHints": {
+    "jsonlEligible": true,
+    "csvEligible": true,
+    "vectorEligible": true,
+    "notes": "Backend-neutral POC exports generated from review-only batch artifacts."
+  },
+  "notes": "Synthetic non-sensitive assumption memo used to exercise the generic pricing profile.",
+  "extensions": {
+    "batchIds": [
+      "batch-synthetic-pricing"
+    ],
+    "sourceIndexGeneratedBy": "build-source-index-poc"
+  }
+}

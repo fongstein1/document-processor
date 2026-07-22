@@ -14,6 +14,17 @@
 - Page-image backstop: Yes
 - Line references available: No
 
+## Classification
+
+- Domain: naic_regulatory
+- Document type: actuarial_guideline
+- Purpose: Active AG 36 source package retained as a review-only guideline slice.
+- Intended audience: Valuation, regulatory, and governance reviewers
+- Authority/source type: regulatory
+- Recommended profile: regulatory
+- Recommended chunking strategy: heading_first
+- Confidence: medium
+
 ## Processing
 
 - Processing mode: canonical_index_poc

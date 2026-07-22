@@ -13,6 +13,29 @@
     "sourceReference": "Example Reference",
     "jurisdiction": null,
     "authorityLevel": "example_authority",
+    "classification": {
+      "domainId": "example_domain",
+      "documentType": "example_document_type",
+      "purpose": "Template only.",
+      "intendedAudience": "Template only.",
+      "authoritySourceType": "example_authority",
+      "confidentiality": "public",
+      "publicationDate": null,
+      "effectiveDate": null,
+      "version": null,
+      "approvalStatus": null,
+      "language": null,
+      "recommendedProfile": "example_profile",
+      "recommendedChunkingStrategy": "example_chunking_strategy",
+      "confidence": "low",
+      "unresolvedQuestions": [
+        "Template only."
+      ],
+      "notes": "Template only."
+    },
+    "profileData": {
+      "example": true
+    },
     "sourceStatus": "unclear",
     "versionDate": null,
     "pageCount": null,

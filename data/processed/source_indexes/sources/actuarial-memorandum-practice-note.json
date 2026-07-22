@@ -4,6 +4,28 @@
   "repositoryManifestId": "source-index-poc-2026-07-21",
   "sourceVersionId": "source-index-actuarial-memorandum-practice-note",
   "source": {
+    "classification": {
+      "domainId": "naic_regulatory",
+      "subdomainId": null,
+      "documentType": "practice_note",
+      "purpose": "Actuarial memorandum companion guidance retained as a non-binding practice note.",
+      "intendedAudience": "Valuation, regulatory, and governance reviewers",
+      "authoritySourceType": "companion",
+      "confidentiality": "internal",
+      "publicationDate": null,
+      "effectiveDate": null,
+      "version": null,
+      "approvalStatus": "non-binding practice note",
+      "language": "en",
+      "recommendedProfile": "regulatory",
+      "recommendedChunkingStrategy": "heading_first",
+      "confidence": "high",
+      "unresolvedQuestions": [
+        "Line references are unavailable and page locators are primary."
+      ],
+      "notes": "Actuarial memorandum companion guidance retained as a non-binding practice note."
+    },
+    "profileData": null,
     "sourceId": "actuarial-memorandum-practice-note",
     "sourceVersionId": "source-index-actuarial-memorandum-practice-note",
     "filename": "Actuarial Memorandum Practice Note 01142020.pdf",
@@ -36,7 +58,7 @@
     "notes": "Actuarial memorandum companion guidance retained as a non-binding practice note."
   },
   "processing": {
-    "createdAt": "2026-07-21T05:26:54.272Z",
+    "createdAt": "2026-07-22T22:52:46.791Z",
     "createdBy": "scripts/build-source-index-poc.mjs",
     "processingMode": "canonical_index_poc",
     "canonicality": "poc",

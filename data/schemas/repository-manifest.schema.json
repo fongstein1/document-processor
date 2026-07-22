@@ -134,6 +134,10 @@
           "type": "string",
           "minLength": 1
         },
+        "classification": {
+          "type": "object",
+          "additionalProperties": true
+        },
         "sourceId": {
           "type": "string",
           "minLength": 1

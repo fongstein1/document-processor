@@ -20,8 +20,10 @@
     {
       "domainId": "pricing_documents",
       "label": "Pricing Documents",
-      "description": "Future portability target for pricing and rate-setting source material.",
-      "sourceFamilyIds": []
+      "description": "Portability target for pricing and rate-setting source material.",
+      "sourceFamilyIds": [
+        "synthetic_pricing_documents"
+      ]
     },
     {
       "domainId": "liability_modeling",
@@ -76,6 +78,15 @@
         "D:\\Work\\AI Projects\\NAIC Valuation Manual Course\\NY Regulations"
       ],
       "notes": "State-regulation source family for portability testing."
+    },
+    {
+      "familyId": "synthetic_pricing_documents",
+      "label": "Synthetic Pricing Documents",
+      "domainId": "pricing_documents",
+      "sourceRoots": [
+        "data\\samples\\synthetic-pricing"
+      ],
+      "notes": "Synthetic, non-sensitive pricing corpus for generic core portability testing."
     }
   ],
   "batchDefaults": {

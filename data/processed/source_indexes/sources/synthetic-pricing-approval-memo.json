@@ -1,0 +1,262 @@
+{
+  "schemaVersion": "1.0",
+  "sourceIndexId": "source-index-synthetic-pricing-approval-memo",
+  "repositoryManifestId": "source-index-poc-2026-07-21",
+  "sourceVersionId": "source-index-synthetic-pricing-approval-memo",
+  "source": {
+    "classification": {
+      "domainId": "pricing_documents",
+      "subdomainId": null,
+      "documentType": "approval_memo",
+      "purpose": "Synthetic approval memo for governance portability testing",
+      "intendedAudience": "Pricing governance reviewers",
+      "authoritySourceType": "synthetic",
+      "confidentiality": "internal",
+      "publicationDate": "2026-02-05",
+      "effectiveDate": "2026-02-05",
+      "version": "1.0",
+      "approvalStatus": "synthetic_approved",
+      "language": "en",
+      "recommendedProfile": "pricing",
+      "recommendedChunkingStrategy": "structure_first",
+      "confidence": "high",
+      "unresolvedQuestions": [],
+      "notes": "Synthetic corpus entry."
+    },
+    "profileData": {
+      "pricingStage": "approval",
+      "approvalBody": "Pricing Governance Committee",
+      "decisionStatus": "approved",
+      "implementationDependency": "pricing method version 1.0"
+    },
+    "sourceId": "synthetic-pricing-approval-memo",
+    "sourceVersionId": "source-index-synthetic-pricing-approval-memo",
+    "filename": "Orion Term Accumulator - Approval Memo.md",
+    "filePath": "data/samples/synthetic-pricing/orion-term-accumulator-approval-memo.md",
+    "sourceFamilyId": "synthetic_pricing_documents",
+    "domainId": "pricing_documents",
+    "documentType": "approval_memo",
+    "sourceTitle": "Orion Term Accumulator Approval Memo",
+    "sourceReference": "Synthetic Pricing Corpus",
+    "jurisdiction": null,
+    "authorityLevel": "internal",
+    "sourceStatus": "active",
+    "versionDate": "2026-02-05",
+    "pageCount": 2,
+    "pageRange": {
+      "start": 1,
+      "end": 2
+    },
+    "reviewBatchIds": [
+      "batch-synthetic-pricing"
+    ],
+    "reviewIndexPath": "docs/review/synthetic_pricing_review_index.md",
+    "selfReviewPath": "docs/review/synthetic_pricing_self_review.md",
+    "pageImageBackstop": false,
+    "lineReferencesAvailable": false,
+    "textLayerQuality": "clean",
+    "notes": "Synthetic non-sensitive approval memo used to exercise the generic governance and pricing profiles."
+  },
+  "processing": {
+    "createdAt": "2026-07-22T22:52:46.809Z",
+    "createdBy": "scripts/build-source-index-poc.mjs",
+    "processingMode": "canonical_index_poc",
+    "canonicality": "poc",
+    "reviewOnly": true,
+    "learnerFacingAllowed": false,
+    "appReadyAllowed": false,
+    "ragReadyAllowed": false,
+    "promotionStatus": "not_promoted",
+    "notes": "Synthetic non-sensitive approval memo used to exercise the generic governance and pricing profiles."
+  },
+  "chunks": [
+    {
+      "chunkId": "chunk-synthetic-pricing-approval-memo-001",
+      "chunkOrdinal": 1,
+      "chunkKind": "approval_memo",
+      "sourceTextType": "synthetic_source_text",
+      "pageStart": 1,
+      "pageEnd": 1,
+      "sectionReference": "Approval memo: approval",
+      "lineReference": null,
+      "sourceTextExcerpt": "The Pricing Governance Committee approves the methodology subject to implementation controls.",
+      "normalizedTextExcerpt": "Synthetic approval and control condition.",
+      "summary": "The memo records approval of the pricing methodology subject to implementation controls.",
+      "topic": "The memo records approval of the pricing methodology subject to implementation controls.",
+      "headingPath": "Approval memo: approval",
+      "keyPoints": [
+        "The memo records approval of the pricing methodology subject to implementation controls."
+      ],
+      "concepts": [
+        "approval_body",
+        "decision_status",
+        "governance_or_control_expectation"
+      ],
+      "definedTerms": [
+        "approval",
+        "pricing governance committee",
+        "implementation controls"
+      ],
+      "acronyms": [],
+      "requirements": [
+        "governance_or_control_expectation"
+      ],
+      "citationDisplay": "Orion Term Accumulator - Approval Memo.md",
+      "normalizedSearchText": "the pricing governance committee approves the methodology subject to implementation controls. synthetic approval and control condition. the memo records approval of the pricing methodology subject to implementation controls. the memo records approval of the pricing methodology subject to implementation controls. approval memo: approval approval memo: approval orion term accumulator approval memo synthetic pricing corpus the memo records approval of the pricing methodology subject to implementation controls. approval_body decision_status governance_or_control_expectation approval pricing governance committee implementation controls governance_or_control_expectation orion term accumulator - approval memo.md approval_body decision_status governance_or_control_expectation approval pricing governance committee implementation controls",
+      "canonicalSourceIndexPath": "data/processed/source_indexes/sources/synthetic-pricing-approval-memo.json",
+      "sourceVersionId": "source-index-synthetic-pricing-approval-memo",
+      "controlledTags": [
+        "approval_body",
+        "decision_status",
+        "governance_or_control_expectation"
+      ],
+      "keywords": [
+        "approval",
+        "pricing governance committee",
+        "implementation controls"
+      ],
+      "citations": [
+        {
+          "citationText": "Orion Term Accumulator - Approval Memo.md",
+          "pageReference": "pp. 1-1",
+          "sectionReference": "Approval memo: approval",
+          "sourceReference": "Synthetic Pricing Corpus",
+          "lineReference": null
+        }
+      ],
+      "relationships": [
+        {
+          "relationType": "approves",
+          "targetSourceId": "synthetic-pricing-pricing-methodology",
+          "notes": "The memo approves the pricing method."
+        }
+      ],
+      "relationshipIds": [
+        "synthetic-pricing-pricing-methodology",
+        "synthetic-pricing-profitability-study",
+        "synthetic-pricing-pricing-methodology"
+      ],
+      "fidelity": "curated",
+      "confidence": "high",
+      "reviewFlags": [
+        "synthetic_source"
+      ],
+      "qualityNotes": [
+        "Synthetic source document.",
+        "Keep approval control separate from product and assumption evidence."
+      ],
+      "evidenceNotes": "Synthetic source prepared for the generic-core portability test.",
+      "retrievalEligible": true,
+      "promotionEligible": false
+    },
+    {
+      "chunkId": "chunk-synthetic-pricing-approval-memo-002",
+      "chunkOrdinal": 2,
+      "chunkKind": "approval_memo",
+      "sourceTextType": "synthetic_source_text",
+      "pageStart": 2,
+      "pageEnd": 2,
+      "sectionReference": "Approval memo: change summary",
+      "lineReference": null,
+      "sourceTextExcerpt": "The memo confirms version 1.0 of the product spec, assumption memo, and pricing method.",
+      "normalizedTextExcerpt": "Synthetic change summary and version confirmation.",
+      "summary": "The memo confirms the controlled versions and documents the change summary.",
+      "topic": "The memo confirms the controlled versions and documents the change summary.",
+      "headingPath": "Approval memo: change summary",
+      "keyPoints": [
+        "The memo confirms the controlled versions and documents the change summary."
+      ],
+      "concepts": [
+        "version",
+        "change_summary",
+        "implementation_dependency"
+      ],
+      "definedTerms": [
+        "version 1.0",
+        "change summary",
+        "approval date"
+      ],
+      "acronyms": [],
+      "requirements": [],
+      "citationDisplay": "Orion Term Accumulator - Approval Memo.md",
+      "normalizedSearchText": "the memo confirms version 1.0 of the product spec, assumption memo, and pricing method. synthetic change summary and version confirmation. the memo confirms the controlled versions and documents the change summary. the memo confirms the controlled versions and documents the change summary. approval memo: change summary approval memo: change summary orion term accumulator approval memo synthetic pricing corpus the memo confirms the controlled versions and documents the change summary. version change_summary implementation_dependency version 1.0 change summary approval date orion term accumulator - approval memo.md version change_summary implementation_dependency version 1.0 change summary approval date",
+      "canonicalSourceIndexPath": "data/processed/source_indexes/sources/synthetic-pricing-approval-memo.json",
+      "sourceVersionId": "source-index-synthetic-pricing-approval-memo",
+      "controlledTags": [
+        "version",
+        "change_summary",
+        "implementation_dependency"
+      ],
+      "keywords": [
+        "version 1.0",
+        "change summary",
+        "approval date"
+      ],
+      "citations": [
+        {
+          "citationText": "Orion Term Accumulator - Approval Memo.md",
+          "pageReference": "pp. 2-2",
+          "sectionReference": "Approval memo: change summary",
+          "sourceReference": "Synthetic Pricing Corpus",
+          "lineReference": null
+        }
+      ],
+      "relationships": [
+        {
+          "relationType": "supports",
+          "targetSourceId": "synthetic-pricing-product-specification",
+          "notes": "The memo confirms the product spec version."
+        }
+      ],
+      "relationshipIds": [
+        "synthetic-pricing-pricing-methodology",
+        "synthetic-pricing-profitability-study",
+        "synthetic-pricing-product-specification"
+      ],
+      "fidelity": "curated",
+      "confidence": "high",
+      "reviewFlags": [
+        "synthetic_source"
+      ],
+      "qualityNotes": [
+        "Synthetic source document.",
+        "The version summary should remain profile metadata, not generic-core law."
+      ],
+      "evidenceNotes": "Synthetic source prepared for the generic-core portability test.",
+      "retrievalEligible": true,
+      "promotionEligible": false
+    }
+  ],
+  "relationships": [
+    {
+      "relationType": "approves",
+      "targetSourceId": "synthetic-pricing-pricing-methodology",
+      "notes": "The committee approves the pricing method."
+    },
+    {
+      "relationType": "supports",
+      "targetSourceId": "synthetic-pricing-profitability-study",
+      "notes": "The memo relies on the study."
+    }
+  ],
+  "quality": {
+    "textLayerQuality": "clean",
+    "citationCompleteness": "partial",
+    "pageImageBackstop": false,
+    "lineReferencesAvailable": false,
+    "notes": "Synthetic non-sensitive approval memo used to exercise the generic governance and pricing profiles."
+  },
+  "exportHints": {
+    "jsonlEligible": true,
+    "csvEligible": true,
+    "vectorEligible": true,
+    "notes": "Backend-neutral POC exports generated from review-only batch artifacts."
+  },
+  "notes": "Synthetic non-sensitive approval memo used to exercise the generic governance and pricing profiles.",
+  "extensions": {
+    "batchIds": [
+      "batch-synthetic-pricing"
+    ],
+    "sourceIndexGeneratedBy": "build-source-index-poc"
+  }
+}

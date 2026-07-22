@@ -12,7 +12,7 @@ review-only batch outputs can be converted into reusable JSON, Markdown, JSONL,
 CSV, and retrieval-evaluation artifacts without replacing the underlying
 review packets or handoff notes.
 
-The expanded POC corpus now covers 12 source packages and 31 canonical chunks.
+The expanded POC corpus now covers 17 source packages and 41 canonical chunks.
 It includes:
 
 - AG 01 net-premium interpretation;
@@ -25,11 +25,14 @@ It includes:
 - model governance practice-note material;
 - actuarial memorandum practice-note material;
 - Regulation 210;
-- the CIA 2022 capital/FCT educational note.
+- the CIA 2022 capital/FCT educational note;
+- a synthetic pricing corpus that proves the canonical layer can extend
+  beyond the regulatory family without hard-coding NAIC-only assumptions.
 
 The canonical layer stays review-only, not learner-facing, not app-ready, and
 not RAG-ready by default. The repository also includes a retrieval readiness
-report and a compact evaluation harness for the expanded corpus.
+report, a deterministic classification layer, and a compact evaluation
+harness for the expanded corpus.
 
 ## What lives here
 

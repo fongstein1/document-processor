@@ -3,7 +3,7 @@
   "repositoryManifestId": "source-index-poc-2026-07-21",
   "repositoryName": "Document Processor",
   "repositoryPurpose": "Canonical source-index proof of concept for backend-neutral retrieval",
-  "generatedAt": "2026-07-21T05:26:54.277Z",
+  "generatedAt": "2026-07-22T22:52:46.811Z",
   "canonicalLayer": "source-index",
   "modelVersion": "1.0",
   "domainProfiles": [
@@ -18,12 +18,63 @@
       "profileName": "governance_profile",
       "profilePath": "docs/domain_profiles/governance_profile.md",
       "notes": "Review, governance, and exception-handling metadata."
+    },
+    {
+      "domainId": "pricing_documents",
+      "profileName": "pricing_profile",
+      "profilePath": "docs/domain_profiles/pricing_profile.md",
+      "notes": "Pricing assumptions, methods, and profitability evidence."
+    },
+    {
+      "domainId": "liability_modeling",
+      "profileName": "liability_modeling_profile",
+      "profilePath": "docs/domain_profiles/liability_modeling_profile.md",
+      "notes": "Reserve and projection-model evidence."
+    },
+    {
+      "domainId": "actuarial_governance",
+      "profileName": "governance_profile",
+      "profilePath": "docs/domain_profiles/governance_profile.md",
+      "notes": "Governance and control evidence."
+    },
+    {
+      "domainId": "reporting_documents",
+      "profileName": "reporting_profile",
+      "profilePath": "docs/domain_profiles/reporting_profile.md",
+      "notes": "Reporting, filing, and reconciliation evidence."
+    },
+    {
+      "domainId": "product_documents",
+      "profileName": "product_profile",
+      "profilePath": "docs/domain_profiles/product_profile.md",
+      "notes": "Product features, options, and valuation impact."
     }
   ],
-  "sourcePackageCount": 12,
+  "sourcePackageCount": 17,
   "sourcePackages": [
     {
       "sourceIndexId": "source-index-ag01-net-premium-interpretation",
+      "classification": {
+        "domainId": "naic_regulatory",
+        "subdomainId": null,
+        "documentType": "actuarial_guideline",
+        "purpose": "Single-page guideline slice retained as a review-only interpretive POC.",
+        "intendedAudience": "Valuation, regulatory, and governance reviewers",
+        "authoritySourceType": "regulatory",
+        "confidentiality": "internal",
+        "publicationDate": null,
+        "effectiveDate": null,
+        "version": null,
+        "approvalStatus": "reviewed",
+        "language": "en",
+        "recommendedProfile": "regulatory",
+        "recommendedChunkingStrategy": "heading_first",
+        "confidence": "medium",
+        "unresolvedQuestions": [
+          "Line references are unavailable and page locators are primary."
+        ],
+        "notes": "Single-page guideline slice retained as a review-only interpretive POC."
+      },
       "sourceId": "ag01-net-premium-interpretation",
       "sourceVersionId": "source-index-ag01-net-premium-interpretation",
       "sourceTitle": "Valuation of Policies in Which the Net Premium Exceeds the Gross Premium",
@@ -53,6 +104,27 @@
     },
     {
       "sourceIndexId": "source-index-ag03-maturity-value-interpretation",
+      "classification": {
+        "domainId": "naic_regulatory",
+        "subdomainId": null,
+        "documentType": "actuarial_guideline",
+        "purpose": "Single-page guideline slice retained as a review-only interpretive POC.",
+        "intendedAudience": "Valuation, regulatory, and governance reviewers",
+        "authoritySourceType": "regulatory",
+        "confidentiality": "internal",
+        "publicationDate": null,
+        "effectiveDate": null,
+        "version": null,
+        "approvalStatus": "reviewed",
+        "language": "en",
+        "recommendedProfile": "regulatory",
+        "recommendedChunkingStrategy": "heading_first",
+        "confidence": "medium",
+        "unresolvedQuestions": [
+          "Line references are unavailable and page locators are primary."
+        ],
+        "notes": "Single-page guideline slice retained as a review-only interpretive POC."
+      },
       "sourceId": "ag03-maturity-value-interpretation",
       "sourceVersionId": "source-index-ag03-maturity-value-interpretation",
       "sourceTitle": "Definition of the Term Maturity Value in the Standard Nonforfeiture Law of Individual Deferred Annuities",
@@ -82,6 +154,27 @@
     },
     {
       "sourceIndexId": "source-index-vm20-framework-overview",
+      "classification": {
+        "domainId": "naic_regulatory",
+        "subdomainId": null,
+        "documentType": "valuation_manual_section",
+        "purpose": "High-level framework overview slice from the controlled VM-20 wave.",
+        "intendedAudience": "Valuation, regulatory, and governance reviewers",
+        "authoritySourceType": "regulatory",
+        "confidentiality": "internal",
+        "publicationDate": null,
+        "effectiveDate": null,
+        "version": null,
+        "approvalStatus": "reviewed",
+        "language": "en",
+        "recommendedProfile": "regulatory",
+        "recommendedChunkingStrategy": "heading_first",
+        "confidence": "high",
+        "unresolvedQuestions": [
+          "Line references are unavailable and page locators are primary."
+        ],
+        "notes": "High-level framework overview slice from the controlled VM-20 wave."
+      },
       "sourceId": "vm20-framework-overview",
       "sourceVersionId": "source-index-vm20-framework-overview",
       "sourceTitle": "Valuation Manual",
@@ -111,6 +204,27 @@
     },
     {
       "sourceIndexId": "source-index-vm20-framework-boundary",
+      "classification": {
+        "domainId": "naic_regulatory",
+        "subdomainId": null,
+        "documentType": "valuation_manual_section",
+        "purpose": "Boundary-control slice retained only to keep the mechanics transition review-only.",
+        "intendedAudience": "Valuation, regulatory, and governance reviewers",
+        "authoritySourceType": "regulatory",
+        "confidentiality": "internal",
+        "publicationDate": null,
+        "effectiveDate": null,
+        "version": null,
+        "approvalStatus": "reviewed",
+        "language": "en",
+        "recommendedProfile": "regulatory",
+        "recommendedChunkingStrategy": "heading_first",
+        "confidence": "high",
+        "unresolvedQuestions": [
+          "Line references are unavailable and page locators are primary."
+        ],
+        "notes": "Boundary-control slice retained only to keep the mechanics transition review-only."
+      },
       "sourceId": "vm20-framework-boundary",
       "sourceVersionId": "source-index-vm20-framework-boundary",
       "sourceTitle": "Valuation Manual",
@@ -140,6 +254,27 @@
     },
     {
       "sourceIndexId": "source-index-vm20-assumptions-section-3c",
+      "classification": {
+        "domainId": "naic_regulatory",
+        "subdomainId": null,
+        "documentType": "valuation_manual_section",
+        "purpose": "Assumption-layer slice from the controlled VM-20 wave.",
+        "intendedAudience": "Valuation, regulatory, and governance reviewers",
+        "authoritySourceType": "regulatory",
+        "confidentiality": "internal",
+        "publicationDate": null,
+        "effectiveDate": null,
+        "version": null,
+        "approvalStatus": "reviewed",
+        "language": "en",
+        "recommendedProfile": "regulatory",
+        "recommendedChunkingStrategy": "heading_first",
+        "confidence": "high",
+        "unresolvedQuestions": [
+          "Line references are unavailable and page locators are primary."
+        ],
+        "notes": "Assumption-layer slice from the controlled VM-20 wave."
+      },
       "sourceId": "vm20-assumptions-section-3c",
       "sourceVersionId": "source-index-vm20-assumptions-section-3c",
       "sourceTitle": "VM-20 Section 3.C Assumptions",
@@ -175,6 +310,27 @@
     },
     {
       "sourceIndexId": "source-index-vm21-sr-projection-entry",
+      "classification": {
+        "domainId": "naic_regulatory",
+        "subdomainId": null,
+        "documentType": "valuation_manual_section",
+        "purpose": "Projection-entry slice from the controlled VM-21 wave.",
+        "intendedAudience": "Valuation, regulatory, and governance reviewers",
+        "authoritySourceType": "regulatory",
+        "confidentiality": "internal",
+        "publicationDate": null,
+        "effectiveDate": null,
+        "version": null,
+        "approvalStatus": "reviewed",
+        "language": "en",
+        "recommendedProfile": "regulatory",
+        "recommendedChunkingStrategy": "heading_first",
+        "confidence": "high",
+        "unresolvedQuestions": [
+          "Line references are unavailable and page locators are primary."
+        ],
+        "notes": "Projection-entry slice from the controlled VM-21 wave."
+      },
       "sourceId": "vm21-sr-projection-entry",
       "sourceVersionId": "source-index-vm21-sr-projection-entry",
       "sourceTitle": "VM-21 Stochastic Reserve Projection Entry",
@@ -210,6 +366,27 @@
     },
     {
       "sourceIndexId": "source-index-ag36-eiul-crvm-guidance",
+      "classification": {
+        "domainId": "naic_regulatory",
+        "subdomainId": null,
+        "documentType": "actuarial_guideline",
+        "purpose": "Active AG 36 source package retained as a review-only guideline slice.",
+        "intendedAudience": "Valuation, regulatory, and governance reviewers",
+        "authoritySourceType": "regulatory",
+        "confidentiality": "internal",
+        "publicationDate": null,
+        "effectiveDate": null,
+        "version": null,
+        "approvalStatus": "reviewed",
+        "language": "en",
+        "recommendedProfile": "regulatory",
+        "recommendedChunkingStrategy": "heading_first",
+        "confidence": "medium",
+        "unresolvedQuestions": [
+          "Line references are unavailable and page locators are primary."
+        ],
+        "notes": "Active AG 36 source package retained as a review-only guideline slice."
+      },
       "sourceId": "ag36-eiul-crvm-guidance",
       "sourceVersionId": "source-index-ag36-eiul-crvm-guidance",
       "sourceTitle": "The Application of the Commissioners Reserve Valuation Method to Equity Indexed Life Insurance Policies",
@@ -248,6 +425,27 @@
     },
     {
       "sourceIndexId": "source-index-ag36-eiul-crvm-law-manual-reprint",
+      "classification": {
+        "domainId": "naic_regulatory",
+        "subdomainId": null,
+        "documentType": "actuarial_guideline",
+        "purpose": "Companion-only AG 36 Law Manual reprint retained as separate evidence.",
+        "intendedAudience": "Valuation, regulatory, and governance reviewers",
+        "authoritySourceType": "regulatory",
+        "confidentiality": "internal",
+        "publicationDate": null,
+        "effectiveDate": null,
+        "version": null,
+        "approvalStatus": "companion-only",
+        "language": "en",
+        "recommendedProfile": "regulatory",
+        "recommendedChunkingStrategy": "heading_first",
+        "confidence": "medium",
+        "unresolvedQuestions": [
+          "Line references are unavailable and page locators are primary."
+        ],
+        "notes": "Companion-only AG 36 Law Manual reprint retained as separate evidence."
+      },
       "sourceId": "ag36-eiul-crvm-law-manual-reprint",
       "sourceVersionId": "source-index-ag36-eiul-crvm-law-manual-reprint",
       "sourceTitle": "The Application of the Commissioners Reserve Valuation Method to Equity Indexed Life Insurance Policies",
@@ -283,6 +481,27 @@
     },
     {
       "sourceIndexId": "source-index-model-governance-practice-note",
+      "classification": {
+        "domainId": "naic_regulatory",
+        "subdomainId": null,
+        "documentType": "practice_note",
+        "purpose": "Model governance companion guidance retained as a non-binding practice note.",
+        "intendedAudience": "Valuation, regulatory, and governance reviewers",
+        "authoritySourceType": "companion",
+        "confidentiality": "internal",
+        "publicationDate": null,
+        "effectiveDate": null,
+        "version": null,
+        "approvalStatus": "non-binding practice note",
+        "language": "en",
+        "recommendedProfile": "regulatory",
+        "recommendedChunkingStrategy": "heading_first",
+        "confidence": "high",
+        "unresolvedQuestions": [
+          "Line references are unavailable and page locators are primary."
+        ],
+        "notes": "Model governance companion guidance retained as a non-binding practice note."
+      },
       "sourceId": "model-governance-practice-note",
       "sourceVersionId": "source-index-model-governance-practice-note",
       "sourceTitle": "Model Governance: Some Considerations for Practicing Life Actuaries",
@@ -314,6 +533,27 @@
     },
     {
       "sourceIndexId": "source-index-actuarial-memorandum-practice-note",
+      "classification": {
+        "domainId": "naic_regulatory",
+        "subdomainId": null,
+        "documentType": "practice_note",
+        "purpose": "Actuarial memorandum companion guidance retained as a non-binding practice note.",
+        "intendedAudience": "Valuation, regulatory, and governance reviewers",
+        "authoritySourceType": "companion",
+        "confidentiality": "internal",
+        "publicationDate": null,
+        "effectiveDate": null,
+        "version": null,
+        "approvalStatus": "non-binding practice note",
+        "language": "en",
+        "recommendedProfile": "regulatory",
+        "recommendedChunkingStrategy": "heading_first",
+        "confidence": "high",
+        "unresolvedQuestions": [
+          "Line references are unavailable and page locators are primary."
+        ],
+        "notes": "Actuarial memorandum companion guidance retained as a non-binding practice note."
+      },
       "sourceId": "actuarial-memorandum-practice-note",
       "sourceVersionId": "source-index-actuarial-memorandum-practice-note",
       "sourceTitle": "Actuarial Memorandum Practice Note",
@@ -346,6 +586,27 @@
     },
     {
       "sourceIndexId": "source-index-reg210-non-guaranteed-elements",
+      "classification": {
+        "domainId": "naic_regulatory",
+        "subdomainId": null,
+        "documentType": "regulation",
+        "purpose": "Active NY regulation for non-guaranteed elements.",
+        "intendedAudience": "Valuation, regulatory, and governance reviewers",
+        "authoritySourceType": "regulatory",
+        "confidentiality": "internal",
+        "publicationDate": "2018-03-19",
+        "effectiveDate": "2018-03-19",
+        "version": "1.0",
+        "approvalStatus": "reviewed",
+        "language": "en",
+        "recommendedProfile": "regulatory",
+        "recommendedChunkingStrategy": "heading_first",
+        "confidence": "high",
+        "unresolvedQuestions": [
+          "Line references are unavailable and page locators are primary."
+        ],
+        "notes": "Active NY regulation for non-guaranteed elements."
+      },
       "sourceId": "reg210-non-guaranteed-elements",
       "sourceVersionId": "source-index-reg210-non-guaranteed-elements",
       "sourceTitle": "Life Insurance and Annuity Non-Guaranteed Elements",
@@ -377,6 +638,27 @@
     },
     {
       "sourceIndexId": "source-index-cia-2022-capital-fct-educational-note",
+      "classification": {
+        "domainId": "naic_regulatory",
+        "subdomainId": null,
+        "documentType": "educational_note",
+        "purpose": "Canadian Institute of Actuaries educational note retained as review-only companion guidance.",
+        "intendedAudience": "Valuation, regulatory, and governance reviewers",
+        "authoritySourceType": "companion",
+        "confidentiality": "internal",
+        "publicationDate": null,
+        "effectiveDate": null,
+        "version": null,
+        "approvalStatus": "educational note",
+        "language": "en",
+        "recommendedProfile": "regulatory",
+        "recommendedChunkingStrategy": "heading_first",
+        "confidence": "high",
+        "unresolvedQuestions": [
+          "Line references are unavailable and page locators are primary."
+        ],
+        "notes": "Canadian Institute of Actuaries educational note retained as review-only companion guidance."
+      },
       "sourceId": "cia-2022-capital-fct-educational-note",
       "sourceVersionId": "source-index-cia-2022-capital-fct-educational-note",
       "sourceTitle": "CIA 2022 Capital and FCT Educational Note",
@@ -406,9 +688,299 @@
       "pageImageBackstop": false,
       "lineReferencesAvailable": false,
       "notes": "Canadian Institute of Actuaries educational note retained as review-only companion guidance."
+    },
+    {
+      "sourceIndexId": "source-index-synthetic-pricing-product-specification",
+      "classification": {
+        "domainId": "pricing_documents",
+        "subdomainId": null,
+        "documentType": "product_specification",
+        "purpose": "Synthetic product specification for pricing-core portability testing",
+        "intendedAudience": "Pricing, product, and actuarial governance reviewers",
+        "authoritySourceType": "synthetic",
+        "confidentiality": "internal",
+        "publicationDate": "2026-01-15",
+        "effectiveDate": "2026-01-15",
+        "version": "1.0",
+        "approvalStatus": "synthetic_approved",
+        "language": "en",
+        "recommendedProfile": "pricing",
+        "recommendedChunkingStrategy": "structure_first",
+        "confidence": "high",
+        "unresolvedQuestions": [],
+        "notes": "Synthetic corpus entry."
+      },
+      "sourceId": "synthetic-pricing-product-specification",
+      "sourceVersionId": "source-index-synthetic-pricing-product-specification",
+      "sourceTitle": "Orion Term Accumulator Product Specification",
+      "sourceFamilyId": "synthetic_pricing_documents",
+      "documentType": "product_specification",
+      "sourceStatus": "active",
+      "sourceReference": "Synthetic Pricing Corpus",
+      "jurisdiction": null,
+      "authorityLevel": "internal",
+      "pageRange": {
+        "start": 1,
+        "end": 2
+      },
+      "chunkCount": 2,
+      "reviewBatchIds": [
+        "batch-synthetic-pricing"
+      ],
+      "sourceIndexPath": "data/processed/source_indexes/sources/synthetic-pricing-product-specification.json",
+      "markdownPath": "data/processed/source_indexes/sources/synthetic-pricing-product-specification.md",
+      "reviewIndexPath": "docs/review/synthetic_pricing_review_index.md",
+      "selfReviewPath": "docs/review/synthetic_pricing_self_review.md",
+      "relationships": [
+        {
+          "relationType": "supports",
+          "targetSourceId": "synthetic-pricing-assumption-memo",
+          "notes": "Product features drive the assumption memo."
+        }
+      ],
+      "textLayerQuality": "clean",
+      "pageImageBackstop": false,
+      "lineReferencesAvailable": false,
+      "notes": "Synthetic non-sensitive product specification used to exercise the generic pricing profile."
+    },
+    {
+      "sourceIndexId": "source-index-synthetic-pricing-assumption-memo",
+      "classification": {
+        "domainId": "pricing_documents",
+        "subdomainId": null,
+        "documentType": "assumption_memo",
+        "purpose": "Synthetic assumption memo for pricing portability testing",
+        "intendedAudience": "Pricing and actuarial reviewers",
+        "authoritySourceType": "synthetic",
+        "confidentiality": "internal",
+        "publicationDate": "2026-01-20",
+        "effectiveDate": "2026-01-20",
+        "version": "1.0",
+        "approvalStatus": "synthetic_approved",
+        "language": "en",
+        "recommendedProfile": "pricing",
+        "recommendedChunkingStrategy": "structure_first",
+        "confidence": "high",
+        "unresolvedQuestions": [],
+        "notes": "Synthetic corpus entry."
+      },
+      "sourceId": "synthetic-pricing-assumption-memo",
+      "sourceVersionId": "source-index-synthetic-pricing-assumption-memo",
+      "sourceTitle": "Orion Term Accumulator Assumption Memo",
+      "sourceFamilyId": "synthetic_pricing_documents",
+      "documentType": "assumption_memo",
+      "sourceStatus": "active",
+      "sourceReference": "Synthetic Pricing Corpus",
+      "jurisdiction": null,
+      "authorityLevel": "internal",
+      "pageRange": {
+        "start": 1,
+        "end": 2
+      },
+      "chunkCount": 2,
+      "reviewBatchIds": [
+        "batch-synthetic-pricing"
+      ],
+      "sourceIndexPath": "data/processed/source_indexes/sources/synthetic-pricing-assumption-memo.json",
+      "markdownPath": "data/processed/source_indexes/sources/synthetic-pricing-assumption-memo.md",
+      "reviewIndexPath": "docs/review/synthetic_pricing_review_index.md",
+      "selfReviewPath": "docs/review/synthetic_pricing_self_review.md",
+      "relationships": [
+        {
+          "relationType": "uses_assumption_from",
+          "targetSourceId": "synthetic-pricing-product-specification",
+          "notes": "Assumptions depend on the product features."
+        },
+        {
+          "relationType": "supports",
+          "targetSourceId": "synthetic-pricing-pricing-methodology",
+          "notes": "The memo feeds the pricing method."
+        }
+      ],
+      "textLayerQuality": "clean",
+      "pageImageBackstop": false,
+      "lineReferencesAvailable": false,
+      "notes": "Synthetic non-sensitive assumption memo used to exercise the generic pricing profile."
+    },
+    {
+      "sourceIndexId": "source-index-synthetic-pricing-pricing-methodology",
+      "classification": {
+        "domainId": "pricing_documents",
+        "subdomainId": null,
+        "documentType": "pricing_methodology",
+        "purpose": "Synthetic pricing methodology for portability testing",
+        "intendedAudience": "Pricing modelers and governance reviewers",
+        "authoritySourceType": "synthetic",
+        "confidentiality": "internal",
+        "publicationDate": "2026-01-25",
+        "effectiveDate": "2026-01-25",
+        "version": "1.0",
+        "approvalStatus": "synthetic_approved",
+        "language": "en",
+        "recommendedProfile": "pricing",
+        "recommendedChunkingStrategy": "structure_first",
+        "confidence": "high",
+        "unresolvedQuestions": [],
+        "notes": "Synthetic corpus entry."
+      },
+      "sourceId": "synthetic-pricing-pricing-methodology",
+      "sourceVersionId": "source-index-synthetic-pricing-pricing-methodology",
+      "sourceTitle": "Orion Term Accumulator Pricing Methodology",
+      "sourceFamilyId": "synthetic_pricing_documents",
+      "documentType": "pricing_methodology",
+      "sourceStatus": "active",
+      "sourceReference": "Synthetic Pricing Corpus",
+      "jurisdiction": null,
+      "authorityLevel": "internal",
+      "pageRange": {
+        "start": 1,
+        "end": 2
+      },
+      "chunkCount": 2,
+      "reviewBatchIds": [
+        "batch-synthetic-pricing"
+      ],
+      "sourceIndexPath": "data/processed/source_indexes/sources/synthetic-pricing-pricing-methodology.json",
+      "markdownPath": "data/processed/source_indexes/sources/synthetic-pricing-pricing-methodology.md",
+      "reviewIndexPath": "docs/review/synthetic_pricing_review_index.md",
+      "selfReviewPath": "docs/review/synthetic_pricing_self_review.md",
+      "relationships": [
+        {
+          "relationType": "uses_assumption_from",
+          "targetSourceId": "synthetic-pricing-assumption-memo",
+          "notes": "The method uses the assumption memo."
+        },
+        {
+          "relationType": "supports",
+          "targetSourceId": "synthetic-pricing-profitability-study",
+          "notes": "The method supports the profitability study."
+        }
+      ],
+      "textLayerQuality": "clean",
+      "pageImageBackstop": false,
+      "lineReferencesAvailable": false,
+      "notes": "Synthetic non-sensitive pricing methodology used to exercise the generic pricing profile."
+    },
+    {
+      "sourceIndexId": "source-index-synthetic-pricing-profitability-study",
+      "classification": {
+        "domainId": "pricing_documents",
+        "subdomainId": null,
+        "documentType": "profitability_study",
+        "purpose": "Synthetic profitability evidence for portability testing",
+        "intendedAudience": "Pricing reviewers and governance reviewers",
+        "authoritySourceType": "synthetic",
+        "confidentiality": "internal",
+        "publicationDate": "2026-01-30",
+        "effectiveDate": "2026-01-30",
+        "version": "1.0",
+        "approvalStatus": "synthetic_approved",
+        "language": "en",
+        "recommendedProfile": "pricing",
+        "recommendedChunkingStrategy": "structure_first",
+        "confidence": "high",
+        "unresolvedQuestions": [],
+        "notes": "Synthetic corpus entry."
+      },
+      "sourceId": "synthetic-pricing-profitability-study",
+      "sourceVersionId": "source-index-synthetic-pricing-profitability-study",
+      "sourceTitle": "Orion Term Accumulator Profitability Study",
+      "sourceFamilyId": "synthetic_pricing_documents",
+      "documentType": "profitability_study",
+      "sourceStatus": "active",
+      "sourceReference": "Synthetic Pricing Corpus",
+      "jurisdiction": null,
+      "authorityLevel": "internal",
+      "pageRange": {
+        "start": 1,
+        "end": 2
+      },
+      "chunkCount": 2,
+      "reviewBatchIds": [
+        "batch-synthetic-pricing"
+      ],
+      "sourceIndexPath": "data/processed/source_indexes/sources/synthetic-pricing-profitability-study.json",
+      "markdownPath": "data/processed/source_indexes/sources/synthetic-pricing-profitability-study.md",
+      "reviewIndexPath": "docs/review/synthetic_pricing_review_index.md",
+      "selfReviewPath": "docs/review/synthetic_pricing_self_review.md",
+      "relationships": [
+        {
+          "relationType": "derived_from",
+          "targetSourceId": "synthetic-pricing-pricing-methodology",
+          "notes": "The study is derived from the methodology."
+        },
+        {
+          "relationType": "supports",
+          "targetSourceId": "synthetic-pricing-approval-memo",
+          "notes": "The study supports approval."
+        }
+      ],
+      "textLayerQuality": "clean",
+      "pageImageBackstop": false,
+      "lineReferencesAvailable": false,
+      "notes": "Synthetic non-sensitive profitability study used to exercise the generic pricing profile."
+    },
+    {
+      "sourceIndexId": "source-index-synthetic-pricing-approval-memo",
+      "classification": {
+        "domainId": "pricing_documents",
+        "subdomainId": null,
+        "documentType": "approval_memo",
+        "purpose": "Synthetic approval memo for governance portability testing",
+        "intendedAudience": "Pricing governance reviewers",
+        "authoritySourceType": "synthetic",
+        "confidentiality": "internal",
+        "publicationDate": "2026-02-05",
+        "effectiveDate": "2026-02-05",
+        "version": "1.0",
+        "approvalStatus": "synthetic_approved",
+        "language": "en",
+        "recommendedProfile": "pricing",
+        "recommendedChunkingStrategy": "structure_first",
+        "confidence": "high",
+        "unresolvedQuestions": [],
+        "notes": "Synthetic corpus entry."
+      },
+      "sourceId": "synthetic-pricing-approval-memo",
+      "sourceVersionId": "source-index-synthetic-pricing-approval-memo",
+      "sourceTitle": "Orion Term Accumulator Approval Memo",
+      "sourceFamilyId": "synthetic_pricing_documents",
+      "documentType": "approval_memo",
+      "sourceStatus": "active",
+      "sourceReference": "Synthetic Pricing Corpus",
+      "jurisdiction": null,
+      "authorityLevel": "internal",
+      "pageRange": {
+        "start": 1,
+        "end": 2
+      },
+      "chunkCount": 2,
+      "reviewBatchIds": [
+        "batch-synthetic-pricing"
+      ],
+      "sourceIndexPath": "data/processed/source_indexes/sources/synthetic-pricing-approval-memo.json",
+      "markdownPath": "data/processed/source_indexes/sources/synthetic-pricing-approval-memo.md",
+      "reviewIndexPath": "docs/review/synthetic_pricing_review_index.md",
+      "selfReviewPath": "docs/review/synthetic_pricing_self_review.md",
+      "relationships": [
+        {
+          "relationType": "approves",
+          "targetSourceId": "synthetic-pricing-pricing-methodology",
+          "notes": "The committee approves the pricing method."
+        },
+        {
+          "relationType": "supports",
+          "targetSourceId": "synthetic-pricing-profitability-study",
+          "notes": "The memo relies on the study."
+        }
+      ],
+      "textLayerQuality": "clean",
+      "pageImageBackstop": false,
+      "lineReferencesAvailable": false,
+      "notes": "Synthetic non-sensitive approval memo used to exercise the generic governance and pricing profiles."
     }
   ],
-  "chunkCount": 31,
+  "chunkCount": 41,
   "exports": {
     "repositoryManifestPath": "data/processed/source_indexes/repository-manifest.json",
     "exportManifestPath": "data/processed/source_indexes/exports/export_manifest.json",
@@ -422,23 +994,23 @@
   "retrievalEvaluation": {
     "evaluationId": "source-index-poc-2026-07-21-retrieval",
     "method": "keyword_overlap_baseline",
-    "queryCount": 16,
-    "supportedQueryCount": 14,
+    "queryCount": 21,
+    "supportedQueryCount": 19,
     "unsupportedQueryCount": 2,
-    "top1HitCount": 12,
-    "top3HitCount": 14,
-    "top5HitCount": 14,
-    "top1Accuracy": 0.8571428571428571,
+    "top1HitCount": 14,
+    "top3HitCount": 19,
+    "top5HitCount": 19,
+    "top1Accuracy": 0.7368421052631579,
     "top3Accuracy": 1,
     "top5Accuracy": 1,
-    "meanReciprocalRank": 0.9285714285714286,
+    "meanReciprocalRank": 0.8210526315789473,
     "sourceFamilyAccuracy": 1,
-    "authorityLevelAccuracy": 0.9285714285714286,
+    "authorityLevelAccuracy": 0.9473684210526315,
     "citationAvailability": 0,
     "multiChunkEvidenceRecall": 1,
-    "unsupportedQueryPrecision": 1,
-    "top3Coverage": 0.875,
-    "notes": "Keyword baseline retrieved 12 top-1 hits and 14 top-3 hits across 16 queries."
+    "unsupportedQueryPrecision": 0.5,
+    "top3Coverage": 0.9047619047619048,
+    "notes": "Keyword baseline retrieved 14 top-1 hits and 19 top-3 hits across 21 queries."
   },
   "notes": "Canonical source-index proof of concept.",
   "extensions": {

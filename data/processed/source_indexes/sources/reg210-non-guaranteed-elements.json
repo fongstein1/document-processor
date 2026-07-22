@@ -4,6 +4,28 @@
   "repositoryManifestId": "source-index-poc-2026-07-21",
   "sourceVersionId": "source-index-reg210-non-guaranteed-elements",
   "source": {
+    "classification": {
+      "domainId": "naic_regulatory",
+      "subdomainId": null,
+      "documentType": "regulation",
+      "purpose": "Active NY regulation for non-guaranteed elements.",
+      "intendedAudience": "Valuation, regulatory, and governance reviewers",
+      "authoritySourceType": "regulatory",
+      "confidentiality": "internal",
+      "publicationDate": "2018-03-19",
+      "effectiveDate": "2018-03-19",
+      "version": "1.0",
+      "approvalStatus": "reviewed",
+      "language": "en",
+      "recommendedProfile": "regulatory",
+      "recommendedChunkingStrategy": "heading_first",
+      "confidence": "high",
+      "unresolvedQuestions": [
+        "Line references are unavailable and page locators are primary."
+      ],
+      "notes": "Active NY regulation for non-guaranteed elements."
+    },
+    "profileData": null,
     "sourceId": "reg210-non-guaranteed-elements",
     "sourceVersionId": "source-index-reg210-non-guaranteed-elements",
     "filename": "Reg-210-11-NYCRR-S048.pdf",
@@ -35,7 +57,7 @@
     "notes": "Active NY regulation for non-guaranteed elements."
   },
   "processing": {
-    "createdAt": "2026-07-21T05:26:54.274Z",
+    "createdAt": "2026-07-22T22:52:46.793Z",
     "createdBy": "scripts/build-source-index-poc.mjs",
     "processingMode": "canonical_index_poc",
     "canonicality": "poc",

@@ -23,6 +23,12 @@ The source-index POC should stay backend-neutral, portable, and review-only
 until a later human decision explicitly promotes part of it into a downstream
 retrieval or application workflow.
 
+The POC may use a synthetic corpus to prove a new profile-aware capability as
+long as the synthetic inputs remain explicitly labeled, non-sensitive, and
+review-only. That keeps the generic structurizer portable while allowing the
+pricing profile and classification layer to be exercised without hard-coding
+domain-specific assumptions into the core.
+
 ## Reference app stays read-only
 
 The existing app repo is reference material and export target context only. It

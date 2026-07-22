@@ -4,6 +4,28 @@
   "repositoryManifestId": "source-index-poc-2026-07-21",
   "sourceVersionId": "source-index-ag01-net-premium-interpretation",
   "source": {
+    "classification": {
+      "domainId": "naic_regulatory",
+      "subdomainId": null,
+      "documentType": "actuarial_guideline",
+      "purpose": "Single-page guideline slice retained as a review-only interpretive POC.",
+      "intendedAudience": "Valuation, regulatory, and governance reviewers",
+      "authoritySourceType": "regulatory",
+      "confidentiality": "internal",
+      "publicationDate": null,
+      "effectiveDate": null,
+      "version": null,
+      "approvalStatus": "reviewed",
+      "language": "en",
+      "recommendedProfile": "regulatory",
+      "recommendedChunkingStrategy": "heading_first",
+      "confidence": "medium",
+      "unresolvedQuestions": [
+        "Line references are unavailable and page locators are primary."
+      ],
+      "notes": "Single-page guideline slice retained as a review-only interpretive POC."
+    },
+    "profileData": null,
     "sourceId": "ag01-net-premium-interpretation",
     "sourceVersionId": "source-index-ag01-net-premium-interpretation",
     "filename": "AG 01 - Valuation of Policies in Which the Net Premium Exceeds the Gross Premium.pdf",
@@ -33,7 +55,7 @@
     "notes": "Single-page guideline slice retained as a review-only interpretive POC."
   },
   "processing": {
-    "createdAt": "2026-07-21T05:26:54.201Z",
+    "createdAt": "2026-07-22T22:52:46.730Z",
     "createdBy": "scripts/build-source-index-poc.mjs",
     "processingMode": "canonical_index_poc",
     "canonicality": "poc",

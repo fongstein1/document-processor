@@ -4,6 +4,28 @@
   "repositoryManifestId": "source-index-poc-2026-07-21",
   "sourceVersionId": "source-index-vm20-framework-boundary",
   "source": {
+    "classification": {
+      "domainId": "naic_regulatory",
+      "subdomainId": null,
+      "documentType": "valuation_manual_section",
+      "purpose": "Boundary-control slice retained only to keep the mechanics transition review-only.",
+      "intendedAudience": "Valuation, regulatory, and governance reviewers",
+      "authoritySourceType": "regulatory",
+      "confidentiality": "internal",
+      "publicationDate": null,
+      "effectiveDate": null,
+      "version": null,
+      "approvalStatus": "reviewed",
+      "language": "en",
+      "recommendedProfile": "regulatory",
+      "recommendedChunkingStrategy": "heading_first",
+      "confidence": "high",
+      "unresolvedQuestions": [
+        "Line references are unavailable and page locators are primary."
+      ],
+      "notes": "Boundary-control slice retained only to keep the mechanics transition review-only."
+    },
+    "profileData": null,
     "sourceId": "vm20-framework-boundary",
     "sourceVersionId": "source-index-vm20-framework-boundary",
     "filename": "pbr_data_valuation_manual_2026.pdf",
@@ -33,7 +55,7 @@
     "notes": "Boundary-control slice retained only to keep the mechanics transition review-only."
   },
   "processing": {
-    "createdAt": "2026-07-21T05:26:54.259Z",
+    "createdAt": "2026-07-22T22:52:46.744Z",
     "createdBy": "scripts/build-source-index-poc.mjs",
     "processingMode": "canonical_index_poc",
     "canonicality": "poc",
