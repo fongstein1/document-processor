@@ -1,0 +1,212 @@
+{
+  "evaluationId": "reg213-relationship-registry-evaluation",
+  "generatedAt": "2026-07-22T00:00:00.000Z",
+  "familyId": "reg213-new-york-insurance-regulation-213",
+  "evaluationSet": {
+    "expectedPositiveCount": 23,
+    "expectedPositiveFound": 23,
+    "expectedPositiveMissing": [],
+    "negativeCaseCount": 3,
+    "negativeCasesIncorrectlyGenerated": [],
+    "deterministicRecall": 1,
+    "deterministicPrecisionEstimate": 1,
+    "productionGrade": false
+  },
+  "qualityChecks": {
+    "wrongRelationshipType": 0,
+    "wrongDirection": 0,
+    "unsupportedCandidate": 0,
+    "duplicateCandidate": 0,
+    "missingEvidence": 0,
+    "unresolvedTarget": 0,
+    "reviewOnlyStatusPreserved": true
+  },
+  "expectedResults": [
+    {
+      "sourceId": "reg213-amendment-1",
+      "targetId": "reg213-base",
+      "relationType": "amends",
+      "rationale": "Each amendment is formally named as an amendment to 11 NYCRR 103.",
+      "key": "reg213-amendment-1|reg213-base|amends",
+      "found": true
+    },
+    {
+      "sourceId": "reg213-amendment-2",
+      "targetId": "reg213-base",
+      "relationType": "amends",
+      "rationale": "Each amendment is formally named as an amendment to 11 NYCRR 103.",
+      "key": "reg213-amendment-2|reg213-base|amends",
+      "found": true
+    },
+    {
+      "sourceId": "reg213-amendment-3",
+      "targetId": "reg213-base",
+      "relationType": "amends",
+      "rationale": "Each amendment is formally named as an amendment to 11 NYCRR 103.",
+      "key": "reg213-amendment-3|reg213-base|amends",
+      "found": true
+    },
+    {
+      "sourceId": "reg213-amendment-4",
+      "targetId": "reg213-base",
+      "relationType": "amends",
+      "rationale": "Each amendment is formally named as an amendment to 11 NYCRR 103.",
+      "key": "reg213-amendment-4|reg213-base|amends",
+      "found": true
+    },
+    {
+      "sourceId": "reg213-amendment-5",
+      "targetId": "reg213-base",
+      "relationType": "amends",
+      "rationale": "Each amendment is formally named as an amendment to 11 NYCRR 103.",
+      "key": "reg213-amendment-5|reg213-base|amends",
+      "found": true
+    },
+    {
+      "sourceId": "reg213-amendment-6",
+      "targetId": "reg213-base",
+      "relationType": "amends",
+      "rationale": "Each amendment is formally named as an amendment to 11 NYCRR 103.",
+      "key": "reg213-amendment-6|reg213-base|amends",
+      "found": true
+    },
+    {
+      "sourceId": "reg213-amendment-1-faq",
+      "targetId": "reg213-amendment-1",
+      "relationType": "companion_to",
+      "rationale": "The FAQ is identified as a guidance note on Amendment No. 1 and is labeled companion-only.",
+      "key": "reg213-amendment-1-faq|reg213-amendment-1|companion_to",
+      "found": true
+    },
+    {
+      "sourceId": "reg213-review-index",
+      "targetId": "reg213-base",
+      "relationType": "derived_from",
+      "rationale": "The tracked artifact manifest explicitly links the artifact to its source document.",
+      "key": "reg213-review-index|reg213-base|derived_from",
+      "found": true
+    },
+    {
+      "sourceId": "reg213-self-review",
+      "targetId": "reg213-base",
+      "relationType": "supports_review_of",
+      "rationale": "The tracked artifact manifest explicitly links the artifact to its source document.",
+      "key": "reg213-self-review|reg213-base|supports_review_of",
+      "found": true
+    },
+    {
+      "sourceId": "reg213-amendment-1-review-index",
+      "targetId": "reg213-amendment-1",
+      "relationType": "derived_from",
+      "rationale": "The tracked artifact manifest explicitly links the artifact to its source document.",
+      "key": "reg213-amendment-1-review-index|reg213-amendment-1|derived_from",
+      "found": true
+    },
+    {
+      "sourceId": "reg213-amendment-1-self-review",
+      "targetId": "reg213-amendment-1",
+      "relationType": "supports_review_of",
+      "rationale": "The tracked artifact manifest explicitly links the artifact to its source document.",
+      "key": "reg213-amendment-1-self-review|reg213-amendment-1|supports_review_of",
+      "found": true
+    },
+    {
+      "sourceId": "reg213-amendment-1-faq-review-index",
+      "targetId": "reg213-amendment-1-faq",
+      "relationType": "derived_from",
+      "rationale": "The tracked artifact manifest explicitly links the artifact to its source document.",
+      "key": "reg213-amendment-1-faq-review-index|reg213-amendment-1-faq|derived_from",
+      "found": true
+    },
+    {
+      "sourceId": "reg213-amendment-1-faq-self-review",
+      "targetId": "reg213-amendment-1-faq",
+      "relationType": "supports_review_of",
+      "rationale": "The tracked artifact manifest explicitly links the artifact to its source document.",
+      "key": "reg213-amendment-1-faq-self-review|reg213-amendment-1-faq|supports_review_of",
+      "found": true
+    },
+    {
+      "sourceId": "reg213-amendment-2-review-index",
+      "targetId": "reg213-amendment-2",
+      "relationType": "derived_from",
+      "rationale": "The tracked artifact manifest explicitly links the artifact to its source document.",
+      "key": "reg213-amendment-2-review-index|reg213-amendment-2|derived_from",
+      "found": true
+    },
+    {
+      "sourceId": "reg213-amendment-2-self-review",
+      "targetId": "reg213-amendment-2",
+      "relationType": "supports_review_of",
+      "rationale": "The tracked artifact manifest explicitly links the artifact to its source document.",
+      "key": "reg213-amendment-2-self-review|reg213-amendment-2|supports_review_of",
+      "found": true
+    },
+    {
+      "sourceId": "reg213-amendment-3-review-index",
+      "targetId": "reg213-amendment-3",
+      "relationType": "derived_from",
+      "rationale": "The tracked artifact manifest explicitly links the artifact to its source document.",
+      "key": "reg213-amendment-3-review-index|reg213-amendment-3|derived_from",
+      "found": true
+    },
+    {
+      "sourceId": "reg213-amendment-3-self-review",
+      "targetId": "reg213-amendment-3",
+      "relationType": "supports_review_of",
+      "rationale": "The tracked artifact manifest explicitly links the artifact to its source document.",
+      "key": "reg213-amendment-3-self-review|reg213-amendment-3|supports_review_of",
+      "found": true
+    },
+    {
+      "sourceId": "reg213-amendment-4-review-index",
+      "targetId": "reg213-amendment-4",
+      "relationType": "derived_from",
+      "rationale": "The tracked artifact manifest explicitly links the artifact to its source document.",
+      "key": "reg213-amendment-4-review-index|reg213-amendment-4|derived_from",
+      "found": true
+    },
+    {
+      "sourceId": "reg213-amendment-4-self-review",
+      "targetId": "reg213-amendment-4",
+      "relationType": "supports_review_of",
+      "rationale": "The tracked artifact manifest explicitly links the artifact to its source document.",
+      "key": "reg213-amendment-4-self-review|reg213-amendment-4|supports_review_of",
+      "found": true
+    },
+    {
+      "sourceId": "reg213-amendment-5-review-index",
+      "targetId": "reg213-amendment-5",
+      "relationType": "derived_from",
+      "rationale": "The tracked artifact manifest explicitly links the artifact to its source document.",
+      "key": "reg213-amendment-5-review-index|reg213-amendment-5|derived_from",
+      "found": true
+    },
+    {
+      "sourceId": "reg213-amendment-5-self-review",
+      "targetId": "reg213-amendment-5",
+      "relationType": "supports_review_of",
+      "rationale": "The tracked artifact manifest explicitly links the artifact to its source document.",
+      "key": "reg213-amendment-5-self-review|reg213-amendment-5|supports_review_of",
+      "found": true
+    },
+    {
+      "sourceId": "reg213-amendment-6-review-index",
+      "targetId": "reg213-amendment-6",
+      "relationType": "derived_from",
+      "rationale": "The tracked artifact manifest explicitly links the artifact to its source document.",
+      "key": "reg213-amendment-6-review-index|reg213-amendment-6|derived_from",
+      "found": true
+    },
+    {
+      "sourceId": "reg213-amendment-6-self-review",
+      "targetId": "reg213-amendment-6",
+      "relationType": "supports_review_of",
+      "rationale": "The tracked artifact manifest explicitly links the artifact to its source document.",
+      "key": "reg213-amendment-6-self-review|reg213-amendment-6|supports_review_of",
+      "found": true
+    }
+  ],
+  "comparisonPath": "docs/review/reg213_relationship_registry_comparison.json",
+  "notes": "This is a deterministic proof-of-concept evaluation set, not a production precision or recall benchmark."
+}

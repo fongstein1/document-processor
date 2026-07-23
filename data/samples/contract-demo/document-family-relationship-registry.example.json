@@ -18,11 +18,29 @@
       "targetDocumentId": "synthetic-pricing-assumption-memo",
       "targetScope": "family",
       "relationType": "supports",
+      "direction": "source_to_target",
       "relationshipStatus": "candidate",
       "origin": "intake_manifest",
       "reviewRequired": true,
+      "promotionStatus": "not_promoted",
+      "promotionEligible": false,
+      "reviewDecision": "pending",
+      "reviewer": null,
+      "reviewDate": null,
+      "reviewRationale": "",
+      "finalRelationType": null,
+      "finalConfidence": null,
+      "confidence": 0.5,
+      "evidenceStrength": "source_inventory_metadata",
+      "generationRule": "synthetic-fixture-relationship-hint",
+      "caveat": "Documentary relationship only; confirm during human review before downstream use.",
       "notes": "Synthetic relationship fixture; confirm before promotion.",
-      "evidence": []
+      "evidence": [
+        {
+          "sourcePath": "data/samples/contract-demo/document-family-intake.example.json",
+          "notes": "Synthetic fixture metadata; not a real source citation."
+        }
+      ]
     }
   ],
   "notes": "Synthetic candidate relationship registry fixture."

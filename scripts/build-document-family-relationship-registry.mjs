@@ -49,6 +49,9 @@ const ensureReviewOnly = (value, label) => {
   if (value?.reviewOnly !== true || value?.learnerFacingAllowed !== false || value?.appReadyAllowed !== false || value?.ragReadyAllowed !== false) {
     fail(`${label} must remain review-only and block downstream promotion.`)
   }
+  if (value?.promotionStatus && value.promotionStatus !== 'not_promoted') {
+    fail(`${label} must remain not_promoted.`)
+  }
 }
 
 const buildMarkdown = (registry) => {
@@ -62,13 +65,13 @@ const buildMarkdown = (registry) => {
     '',
     '## Relationships',
     '',
-    '| Relationship | Source | Relation | Target | Scope | Status | Origin |',
-    '| --- | --- | --- | --- | --- | --- | --- |',
+    '| Relationship | Source | Relation | Target | Scope | Confidence | Evidence | Status |',
+    '| --- | --- | --- | --- | --- | ---: | --- | --- |',
   ]
   for (const relationship of registry.relationships) {
-    lines.push(`| \`${relationship.relationshipId}\` | ${relationship.sourceId} | ${relationship.relationType} | ${relationship.targetId} | ${relationship.targetScope} | ${relationship.relationshipStatus} | ${relationship.origin} |`)
+    lines.push(`| \`${relationship.relationshipId}\` | ${relationship.sourceId} | ${relationship.relationType} | ${relationship.targetId} | ${relationship.targetScope} | ${relationship.confidence.toFixed(2)} | ${relationship.evidenceStrength} | ${relationship.relationshipStatus} |`)
   }
-  lines.push('', '## Review posture', '', '- Relationship edges are candidates, not confirmed facts.', '- Confirm companion, duplicate, amendment, supersession, and cross-reference semantics before promotion.', '')
+  lines.push('', '## Review posture', '', '- Relationship edges are candidates, not confirmed facts.', '- Every edge is source-to-target, review-required, pending, and not promoted.', '- Legal effect is not determined by this registry.', '- Confirm companion, duplicate, amendment, supersession, and cross-reference semantics before promotion.', '')
   return lines.join('\n')
 }
 
@@ -90,9 +93,11 @@ const main = async () => {
   if (reviewedPack) ensureReviewOnly(reviewedPack, 'Reviewed source pack')
 
   const recordsByReference = new Map()
+  const recordsBySourceId = new Map()
   for (const record of intake.sourceRecords) {
     recordsByReference.set(record.sourceId, record.sourceId)
     recordsByReference.set(record.documentId, record.sourceId)
+    recordsBySourceId.set(record.sourceId, record)
   }
 
   const resolveReference = (reference) => {
@@ -102,12 +107,17 @@ const main = async () => {
   }
 
   const entries = []
-  const addEntry = ({ sourceDocumentId, targetDocumentId, relationType, notes, origin, evidence = [] }) => {
+  const addEntry = ({ sourceDocumentId, targetDocumentId, relationType, notes, origin, evidence = [], confidence = 0.5, evidenceStrength = 'source_inventory_metadata', generationRule = 'generic-intake-or-reviewed-pack-candidate', caveat = 'Documentary relationship only; legal effect and promotion eligibility require human review.' }) => {
     const source = resolveReference(sourceDocumentId)
     const target = resolveReference(targetDocumentId)
     const relationshipStatus = source.known && target.known ? 'candidate' : 'needs_review'
     const relationshipKey = [source.id, target.id, relationType].join('|')
     if (entries.some((entry) => entry.relationshipKey === relationshipKey)) return
+    const sourceRecord = recordsBySourceId.get(source.id)
+    const normalizedEvidence = evidence.length > 0 ? evidence : [{
+      sourcePath: sourceRecord?.relativePath ?? sourceRecord?.sourcePath ?? '',
+      notes: 'Source locator was not supplied in the intake hint; confirm the relationship against the source review packet.'
+    }]
     entries.push({
       relationshipKey,
       relationshipId: hashId(relationshipKey),
@@ -117,11 +127,24 @@ const main = async () => {
       targetDocumentId: target.documentId,
       targetScope: target.scope,
       relationType,
+      direction: 'source_to_target',
       relationshipStatus,
       origin,
       reviewRequired: true,
+      promotionStatus: 'not_promoted',
+      promotionEligible: false,
+      reviewDecision: 'pending',
+      reviewer: null,
+      reviewDate: null,
+      reviewRationale: '',
+      finalRelationType: null,
+      finalConfidence: null,
+      confidence,
+      evidenceStrength,
+      generationRule,
+      caveat,
       notes: notes ?? '',
-      evidence,
+      evidence: normalizedEvidence,
     })
   }
 

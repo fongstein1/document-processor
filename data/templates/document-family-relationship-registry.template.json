@@ -18,11 +18,31 @@
       "targetDocumentId": "{{targetDocumentId}}",
       "targetScope": "family",
       "relationType": "companion_guidance",
+      "direction": "source_to_target",
       "relationshipStatus": "candidate",
       "origin": "intake_manifest",
       "reviewRequired": true,
+      "promotionStatus": "not_promoted",
+      "promotionEligible": false,
+      "reviewDecision": "pending",
+      "reviewer": null,
+      "reviewDate": null,
+      "reviewRationale": "",
+      "finalRelationType": null,
+      "finalConfidence": null,
+      "evidenceStrength": "source_inventory_metadata",
+      "generationRule": "describe-the-deterministic-rule",
+      "caveat": "Documentary relationship only; legal effect and promotion eligibility require human review.",
       "notes": "Confirm relationship semantics and evidence before promotion.",
-      "evidence": []
+      "evidence": [
+        {
+          "sourcePath": "{{sourcePath}}",
+          "pageReference": "{{pageReference}}",
+          "sectionReference": "{{sectionReference}}",
+          "lineReference": null,
+          "notes": ""
+        }
+      ]
     }
   ],
   "notes": "Candidate relationship registry; no edge is confirmed by intake alone."

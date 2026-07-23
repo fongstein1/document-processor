@@ -78,9 +78,18 @@
         "targetId",
         "targetScope",
         "relationType",
+        "direction",
         "relationshipStatus",
         "origin",
-        "reviewRequired"
+        "reviewRequired",
+        "promotionStatus",
+        "promotionEligible",
+        "reviewDecision",
+        "confidence",
+        "evidenceStrength",
+        "generationRule",
+        "caveat",
+        "evidence"
       ],
       "properties": {
         "relationshipId": {
@@ -125,6 +134,12 @@
             "amends",
             "supersedes",
             "reprints",
+            "clarifies",
+            "companion_to",
+            "duplicate_of",
+            "applies_to",
+            "derived_from",
+            "supports_review_of",
             "related_methodology",
             "companion_guidance",
             "duplicate_or_reprint",
@@ -133,6 +148,10 @@
             "boundary_of",
             "same_source"
           ]
+        },
+        "direction": {
+          "type": "string",
+          "const": "source_to_target"
         },
         "relationshipStatus": {
           "type": "string",
@@ -155,11 +174,90 @@
           "type": "boolean",
           "const": true
         },
+        "promotionStatus": {
+          "type": "string",
+          "const": "not_promoted"
+        },
+        "promotionEligible": {
+          "type": "boolean",
+          "const": false
+        },
+        "reviewDecision": {
+          "type": "string",
+          "enum": [
+            "pending",
+            "approve",
+            "reject",
+            "revise_type",
+            "reverse_direction",
+            "merge_duplicate",
+            "defer",
+            "escalate"
+          ],
+          "const": "pending"
+        },
+        "reviewer": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "reviewDate": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "reviewRationale": {
+          "type": "string"
+        },
+        "finalRelationType": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "finalConfidence": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 1
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "evidenceStrength": {
+          "type": "string",
+          "enum": [
+            "explicit_textual_statement",
+            "formal_title_or_amendment_numbering",
+            "version_metadata",
+            "source_inventory_metadata",
+            "exact_cross_reference",
+            "review_artifact_link",
+            "filename_inference",
+            "semantic_similarity"
+          ]
+        },
+        "generationRule": {
+          "type": "string",
+          "minLength": 1
+        },
+        "caveat": {
+          "type": "string",
+          "minLength": 1
+        },
         "notes": {
           "type": "string"
         },
         "evidence": {
           "type": "array",
+          "minItems": 1,
           "items": {
             "$ref": "#/$defs/evidence"
           }

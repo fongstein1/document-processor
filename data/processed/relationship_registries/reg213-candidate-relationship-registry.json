@@ -1,0 +1,889 @@
+{
+  "schemaVersion": "1.0",
+  "registryId": "reg213-candidate-relationship-registry",
+  "familyId": "reg213-new-york-insurance-regulation-213",
+  "generatedAt": "2026-07-22T00:00:00.000Z",
+  "reviewOnly": true,
+  "learnerFacingAllowed": false,
+  "appReadyAllowed": false,
+  "ragReadyAllowed": false,
+  "promotionStatus": "not_promoted",
+  "relationshipCount": 23,
+  "relationships": [
+    {
+      "relationshipId": "relationship-87a7b1e195925efd",
+      "sourceId": "reg213-amendment-1",
+      "targetId": "reg213-base",
+      "sourceDocumentId": "reg213-amendment-1-text",
+      "targetDocumentId": "reg213-11-nycrr-s103",
+      "targetScope": "family",
+      "relationType": "amends",
+      "direction": "source_to_target",
+      "relationshipStatus": "candidate",
+      "origin": "manual_review",
+      "reviewRequired": true,
+      "promotionStatus": "not_promoted",
+      "promotionEligible": false,
+      "reviewDecision": "pending",
+      "reviewer": null,
+      "reviewDate": null,
+      "reviewRationale": "",
+      "finalRelationType": null,
+      "finalConfidence": null,
+      "confidence": 0.88,
+      "evidenceStrength": "formal_title_or_amendment_numbering",
+      "generationRule": "formal-amendment-title-to-base-regulation",
+      "caveat": "Documentary amendment relationship only; legal scope, effective date, controlling version, and supersession are not determined.",
+      "notes": "Amendment No. 1 is identified as an amendment to 11 NYCRR 103 in the tracked review metadata.",
+      "evidence": [
+        {
+          "sourcePath": "NY Regulations/Reg-213-11-NYCRR-S103-Amendment-1-rf213a1text.pdf",
+          "sectionReference": "title and amendment designation",
+          "notes": "Tracked review index identifies a First Amendment to 11 NYCRR 103 and separates amendment text from certification."
+        },
+        {
+          "sourcePath": "NY Regulations/2021 VLM Report_DRAFT-(1-27-2020) with academy Updates V1-Reg-213-11-NYCRR-S103.pdf",
+          "sectionReference": "11 NYCRR Part 103 / Regulation 213 identification",
+          "notes": "Target is the tracked base-regulation record."
+        }
+      ]
+    },
+    {
+      "relationshipId": "relationship-e013f9bae73c0288",
+      "sourceId": "reg213-amendment-2",
+      "targetId": "reg213-base",
+      "sourceDocumentId": "reg213-amendment-2-text",
+      "targetDocumentId": "reg213-11-nycrr-s103",
+      "targetScope": "family",
+      "relationType": "amends",
+      "direction": "source_to_target",
+      "relationshipStatus": "candidate",
+      "origin": "manual_review",
+      "reviewRequired": true,
+      "promotionStatus": "not_promoted",
+      "promotionEligible": false,
+      "reviewDecision": "pending",
+      "reviewer": null,
+      "reviewDate": null,
+      "reviewRationale": "",
+      "finalRelationType": null,
+      "finalConfidence": null,
+      "confidence": 0.88,
+      "evidenceStrength": "formal_title_or_amendment_numbering",
+      "generationRule": "formal-amendment-title-to-base-regulation",
+      "caveat": "Documentary amendment relationship only; legal scope, effective date, controlling version, and supersession are not determined.",
+      "notes": "Amendment No. 2 is identified as an amendment to 11 NYCRR 103 in the tracked review metadata.",
+      "evidence": [
+        {
+          "sourcePath": "NY Regulations/Reg-213-11-NYCRR-S103-Amendment-2-nstext-reg213.pdf",
+          "sectionReference": "title and amendment designation",
+          "notes": "Tracked review index identifies a Second Amendment to 11 NYCRR 103 and separates amendment text from certification."
+        },
+        {
+          "sourcePath": "NY Regulations/2021 VLM Report_DRAFT-(1-27-2020) with academy Updates V1-Reg-213-11-NYCRR-S103.pdf",
+          "sectionReference": "11 NYCRR Part 103 / Regulation 213 identification",
+          "notes": "Target is the tracked base-regulation record."
+        }
+      ]
+    },
+    {
+      "relationshipId": "relationship-25ef21bb2513b545",
+      "sourceId": "reg213-amendment-3",
+      "targetId": "reg213-base",
+      "sourceDocumentId": "reg213-amendment-3-text",
+      "targetDocumentId": "reg213-11-nycrr-s103",
+      "targetScope": "family",
+      "relationType": "amends",
+      "direction": "source_to_target",
+      "relationshipStatus": "candidate",
+      "origin": "manual_review",
+      "reviewRequired": true,
+      "promotionStatus": "not_promoted",
+      "promotionEligible": false,
+      "reviewDecision": "pending",
+      "reviewer": null,
+      "reviewDate": null,
+      "reviewRationale": "",
+      "finalRelationType": null,
+      "finalConfidence": null,
+      "confidence": 0.88,
+      "evidenceStrength": "formal_title_or_amendment_numbering",
+      "generationRule": "formal-amendment-title-to-base-regulation",
+      "caveat": "Documentary amendment relationship only; legal scope, effective date, controlling version, and supersession are not determined.",
+      "notes": "Amendment No. 3 is identified as an amendment to 11 NYCRR 103 in the tracked review metadata.",
+      "evidence": [
+        {
+          "sourcePath": "NY Regulations/Reg-213-amend3_txt.pdf",
+          "sectionReference": "title and amendment designation",
+          "notes": "Tracked review index identifies final adoption text for the Third Amendment to 11 NYCRR 103."
+        },
+        {
+          "sourcePath": "NY Regulations/2021 VLM Report_DRAFT-(1-27-2020) with academy Updates V1-Reg-213-11-NYCRR-S103.pdf",
+          "sectionReference": "11 NYCRR Part 103 / Regulation 213 identification",
+          "notes": "Target is the tracked base-regulation record."
+        }
+      ]
+    },
+    {
+      "relationshipId": "relationship-51667389ed720f17",
+      "sourceId": "reg213-amendment-4",
+      "targetId": "reg213-base",
+      "sourceDocumentId": "reg213-amendment-4-text",
+      "targetDocumentId": "reg213-11-nycrr-s103",
+      "targetScope": "family",
+      "relationType": "amends",
+      "direction": "source_to_target",
+      "relationshipStatus": "candidate",
+      "origin": "manual_review",
+      "reviewRequired": true,
+      "promotionStatus": "not_promoted",
+      "promotionEligible": false,
+      "reviewDecision": "pending",
+      "reviewer": null,
+      "reviewDate": null,
+      "reviewRationale": "",
+      "finalRelationType": null,
+      "finalConfidence": null,
+      "confidence": 0.88,
+      "evidenceStrength": "formal_title_or_amendment_numbering",
+      "generationRule": "formal-amendment-title-to-base-regulation",
+      "caveat": "Documentary amendment relationship only; legal scope, effective date, controlling version, and supersession are not determined.",
+      "notes": "Amendment No. 4 is identified as an amendment to 11 NYCRR 103 in the tracked review metadata.",
+      "evidence": [
+        {
+          "sourcePath": "NY Regulations/Reg-213-amend4_text.pdf",
+          "sectionReference": "title and amendment designation",
+          "notes": "Tracked review index identifies a Fourth Amendment to 11 NYCRR 103 and separates amendment text from certification."
+        },
+        {
+          "sourcePath": "NY Regulations/2021 VLM Report_DRAFT-(1-27-2020) with academy Updates V1-Reg-213-11-NYCRR-S103.pdf",
+          "sectionReference": "11 NYCRR Part 103 / Regulation 213 identification",
+          "notes": "Target is the tracked base-regulation record."
+        }
+      ]
+    },
+    {
+      "relationshipId": "relationship-6d3beada4aa000f2",
+      "sourceId": "reg213-amendment-5",
+      "targetId": "reg213-base",
+      "sourceDocumentId": "reg213-amendment-5-text",
+      "targetDocumentId": "reg213-11-nycrr-s103",
+      "targetScope": "family",
+      "relationType": "amends",
+      "direction": "source_to_target",
+      "relationshipStatus": "candidate",
+      "origin": "manual_review",
+      "reviewRequired": true,
+      "promotionStatus": "not_promoted",
+      "promotionEligible": false,
+      "reviewDecision": "pending",
+      "reviewer": null,
+      "reviewDate": null,
+      "reviewRationale": "",
+      "finalRelationType": null,
+      "finalConfidence": null,
+      "confidence": 0.88,
+      "evidenceStrength": "formal_title_or_amendment_numbering",
+      "generationRule": "formal-amendment-title-to-base-regulation",
+      "caveat": "Documentary amendment relationship only; legal scope, effective date, controlling version, and supersession are not determined.",
+      "notes": "Amendment No. 5 is identified as an amendment to 11 NYCRR 103 in the tracked review metadata.",
+      "evidence": [
+        {
+          "sourcePath": "NY Regulations/Reg-213-amend5_text.pdf",
+          "sectionReference": "title and amendment designation",
+          "notes": "Tracked review index identifies a Fifth Amendment to 11 NYCRR 103 and separates amendment text from certification."
+        },
+        {
+          "sourcePath": "NY Regulations/2021 VLM Report_DRAFT-(1-27-2020) with academy Updates V1-Reg-213-11-NYCRR-S103.pdf",
+          "sectionReference": "11 NYCRR Part 103 / Regulation 213 identification",
+          "notes": "Target is the tracked base-regulation record."
+        }
+      ]
+    },
+    {
+      "relationshipId": "relationship-cf3d2f23c9eac22e",
+      "sourceId": "reg213-amendment-6",
+      "targetId": "reg213-base",
+      "sourceDocumentId": "reg213-amendment-6-text",
+      "targetDocumentId": "reg213-11-nycrr-s103",
+      "targetScope": "family",
+      "relationType": "amends",
+      "direction": "source_to_target",
+      "relationshipStatus": "candidate",
+      "origin": "manual_review",
+      "reviewRequired": true,
+      "promotionStatus": "not_promoted",
+      "promotionEligible": false,
+      "reviewDecision": "pending",
+      "reviewer": null,
+      "reviewDate": null,
+      "reviewRationale": "",
+      "finalRelationType": null,
+      "finalConfidence": null,
+      "confidence": 0.88,
+      "evidenceStrength": "formal_title_or_amendment_numbering",
+      "generationRule": "formal-amendment-title-to-base-regulation",
+      "caveat": "Documentary amendment relationship only; legal scope, effective date, controlling version, and supersession are not determined.",
+      "notes": "Amendment No. 6 is identified as an amendment to 11 NYCRR 103 in the tracked review metadata.",
+      "evidence": [
+        {
+          "sourcePath": "NY Regulations/Reg-213-amend6_text.pdf",
+          "sectionReference": "title and amendment designation",
+          "notes": "Tracked review index identifies a proposed Sixth Amendment and explicitly keeps it separate from final adopted rule text."
+        },
+        {
+          "sourcePath": "NY Regulations/2021 VLM Report_DRAFT-(1-27-2020) with academy Updates V1-Reg-213-11-NYCRR-S103.pdf",
+          "sectionReference": "11 NYCRR Part 103 / Regulation 213 identification",
+          "notes": "Target is the tracked base-regulation record."
+        }
+      ]
+    },
+    {
+      "relationshipId": "relationship-580f41a8fb661e39",
+      "sourceId": "reg213-amendment-1-faq",
+      "targetId": "reg213-amendment-1",
+      "sourceDocumentId": "reg213-amendment-1-faq",
+      "targetDocumentId": "reg213-amendment-1-text",
+      "targetScope": "family",
+      "relationType": "companion_to",
+      "direction": "source_to_target",
+      "relationshipStatus": "candidate",
+      "origin": "manual_review",
+      "reviewRequired": true,
+      "promotionStatus": "not_promoted",
+      "promotionEligible": false,
+      "reviewDecision": "pending",
+      "reviewer": null,
+      "reviewDate": null,
+      "reviewRationale": "",
+      "finalRelationType": null,
+      "finalConfidence": null,
+      "confidence": 0.94,
+      "evidenceStrength": "formal_title_or_amendment_numbering",
+      "generationRule": "faq-guidance-note-to-amendment-metadata",
+      "caveat": "FAQ may be explanatory or non-binding; this candidate does not determine authority, compliance effect, or legal interpretation.",
+      "notes": "The tracked review index identifies the FAQ as a Life Bureau guidance note on Amendment No. 1 and labels it companion-only.",
+      "evidence": [
+        {
+          "sourcePath": "NY Regulations/Reg-213-11-NYCRR-S103-Amendment-1-FAQ.pdf",
+          "pageReference": "pages 1-3",
+          "notes": "FAQ source title and guidance-note framing."
+        },
+        {
+          "sourcePath": "docs/review/reg213_amendment1_faq_review_index.md",
+          "sectionReference": "Source status and source reference",
+          "notes": "Tracked review metadata labels the FAQ companion-only."
+        }
+      ]
+    },
+    {
+      "relationshipId": "relationship-3da1a6e6cc60075c",
+      "sourceId": "reg213-review-index",
+      "targetId": "reg213-base",
+      "sourceDocumentId": "reg213-review-index",
+      "targetDocumentId": "reg213-11-nycrr-s103",
+      "targetScope": "family",
+      "relationType": "derived_from",
+      "direction": "source_to_target",
+      "relationshipStatus": "candidate",
+      "origin": "manual_review",
+      "reviewRequired": true,
+      "promotionStatus": "not_promoted",
+      "promotionEligible": false,
+      "reviewDecision": "pending",
+      "reviewer": null,
+      "reviewDate": null,
+      "reviewRationale": "",
+      "finalRelationType": null,
+      "finalConfidence": null,
+      "confidence": 0.99,
+      "evidenceStrength": "review_artifact_link",
+      "generationRule": "tracked-review-artifact-source-link",
+      "caveat": "Review artifact supports review only and does not confer regulatory authority or controlling-source status.",
+      "notes": "review_index is a tracked review artifact for the source document.",
+      "evidence": [
+        {
+          "sourcePath": "docs/review/reg213_review_index.md",
+          "sectionReference": "review_index",
+          "notes": "Tracked artifact path and sourceDocumentId are explicit in the Reg-213 family manifest."
+        },
+        {
+          "sourcePath": "NY Regulations/2021 VLM Report_DRAFT-(1-27-2020) with academy Updates V1-Reg-213-11-NYCRR-S103.pdf",
+          "sectionReference": "source record",
+          "notes": "Target source is explicitly named in the family manifest."
+        }
+      ]
+    },
+    {
+      "relationshipId": "relationship-1b04a6c154339666",
+      "sourceId": "reg213-self-review",
+      "targetId": "reg213-base",
+      "sourceDocumentId": "reg213-self-review",
+      "targetDocumentId": "reg213-11-nycrr-s103",
+      "targetScope": "family",
+      "relationType": "supports_review_of",
+      "direction": "source_to_target",
+      "relationshipStatus": "candidate",
+      "origin": "manual_review",
+      "reviewRequired": true,
+      "promotionStatus": "not_promoted",
+      "promotionEligible": false,
+      "reviewDecision": "pending",
+      "reviewer": null,
+      "reviewDate": null,
+      "reviewRationale": "",
+      "finalRelationType": null,
+      "finalConfidence": null,
+      "confidence": 0.99,
+      "evidenceStrength": "review_artifact_link",
+      "generationRule": "tracked-review-artifact-source-link",
+      "caveat": "Review artifact supports review only and does not confer regulatory authority or controlling-source status.",
+      "notes": "self_review is a tracked review artifact for the source document.",
+      "evidence": [
+        {
+          "sourcePath": "docs/review/reg213_self_review.md",
+          "sectionReference": "self_review",
+          "notes": "Tracked artifact path and sourceDocumentId are explicit in the Reg-213 family manifest."
+        },
+        {
+          "sourcePath": "NY Regulations/2021 VLM Report_DRAFT-(1-27-2020) with academy Updates V1-Reg-213-11-NYCRR-S103.pdf",
+          "sectionReference": "source record",
+          "notes": "Target source is explicitly named in the family manifest."
+        }
+      ]
+    },
+    {
+      "relationshipId": "relationship-d4d4d682d08b69b5",
+      "sourceId": "reg213-amendment-1-review-index",
+      "targetId": "reg213-amendment-1",
+      "sourceDocumentId": "reg213-amendment-1-review-index",
+      "targetDocumentId": "reg213-amendment-1-text",
+      "targetScope": "family",
+      "relationType": "derived_from",
+      "direction": "source_to_target",
+      "relationshipStatus": "candidate",
+      "origin": "manual_review",
+      "reviewRequired": true,
+      "promotionStatus": "not_promoted",
+      "promotionEligible": false,
+      "reviewDecision": "pending",
+      "reviewer": null,
+      "reviewDate": null,
+      "reviewRationale": "",
+      "finalRelationType": null,
+      "finalConfidence": null,
+      "confidence": 0.99,
+      "evidenceStrength": "review_artifact_link",
+      "generationRule": "tracked-review-artifact-source-link",
+      "caveat": "Review artifact supports review only and does not confer regulatory authority or controlling-source status.",
+      "notes": "review_index is a tracked review artifact for the source document.",
+      "evidence": [
+        {
+          "sourcePath": "docs/review/reg213_amendment1_text_review_index.md",
+          "sectionReference": "review_index",
+          "notes": "Tracked artifact path and sourceDocumentId are explicit in the Reg-213 family manifest."
+        },
+        {
+          "sourcePath": "NY Regulations/Reg-213-11-NYCRR-S103-Amendment-1-rf213a1text.pdf",
+          "sectionReference": "source record",
+          "notes": "Target source is explicitly named in the family manifest."
+        }
+      ]
+    },
+    {
+      "relationshipId": "relationship-3a8bc339a3001f3b",
+      "sourceId": "reg213-amendment-1-self-review",
+      "targetId": "reg213-amendment-1",
+      "sourceDocumentId": "reg213-amendment-1-self-review",
+      "targetDocumentId": "reg213-amendment-1-text",
+      "targetScope": "family",
+      "relationType": "supports_review_of",
+      "direction": "source_to_target",
+      "relationshipStatus": "candidate",
+      "origin": "manual_review",
+      "reviewRequired": true,
+      "promotionStatus": "not_promoted",
+      "promotionEligible": false,
+      "reviewDecision": "pending",
+      "reviewer": null,
+      "reviewDate": null,
+      "reviewRationale": "",
+      "finalRelationType": null,
+      "finalConfidence": null,
+      "confidence": 0.99,
+      "evidenceStrength": "review_artifact_link",
+      "generationRule": "tracked-review-artifact-source-link",
+      "caveat": "Review artifact supports review only and does not confer regulatory authority or controlling-source status.",
+      "notes": "self_review is a tracked review artifact for the source document.",
+      "evidence": [
+        {
+          "sourcePath": "docs/review/reg213_amendment1_text_self_review.md",
+          "sectionReference": "self_review",
+          "notes": "Tracked artifact path and sourceDocumentId are explicit in the Reg-213 family manifest."
+        },
+        {
+          "sourcePath": "NY Regulations/Reg-213-11-NYCRR-S103-Amendment-1-rf213a1text.pdf",
+          "sectionReference": "source record",
+          "notes": "Target source is explicitly named in the family manifest."
+        }
+      ]
+    },
+    {
+      "relationshipId": "relationship-26ea0456adf64b3b",
+      "sourceId": "reg213-amendment-1-faq-review-index",
+      "targetId": "reg213-amendment-1-faq",
+      "sourceDocumentId": "reg213-amendment-1-faq-review-index",
+      "targetDocumentId": "reg213-amendment-1-faq",
+      "targetScope": "family",
+      "relationType": "derived_from",
+      "direction": "source_to_target",
+      "relationshipStatus": "candidate",
+      "origin": "manual_review",
+      "reviewRequired": true,
+      "promotionStatus": "not_promoted",
+      "promotionEligible": false,
+      "reviewDecision": "pending",
+      "reviewer": null,
+      "reviewDate": null,
+      "reviewRationale": "",
+      "finalRelationType": null,
+      "finalConfidence": null,
+      "confidence": 0.99,
+      "evidenceStrength": "review_artifact_link",
+      "generationRule": "tracked-review-artifact-source-link",
+      "caveat": "Review artifact supports review only and does not confer regulatory authority or controlling-source status.",
+      "notes": "review_index is a tracked review artifact for the source document.",
+      "evidence": [
+        {
+          "sourcePath": "docs/review/reg213_amendment1_faq_review_index.md",
+          "sectionReference": "review_index",
+          "notes": "Tracked artifact path and sourceDocumentId are explicit in the Reg-213 family manifest."
+        },
+        {
+          "sourcePath": "NY Regulations/Reg-213-11-NYCRR-S103-Amendment-1-FAQ.pdf",
+          "sectionReference": "source record",
+          "notes": "Target source is explicitly named in the family manifest."
+        }
+      ]
+    },
+    {
+      "relationshipId": "relationship-da1f54006e3b6fa4",
+      "sourceId": "reg213-amendment-1-faq-self-review",
+      "targetId": "reg213-amendment-1-faq",
+      "sourceDocumentId": "reg213-amendment-1-faq-self-review",
+      "targetDocumentId": "reg213-amendment-1-faq",
+      "targetScope": "family",
+      "relationType": "supports_review_of",
+      "direction": "source_to_target",
+      "relationshipStatus": "candidate",
+      "origin": "manual_review",
+      "reviewRequired": true,
+      "promotionStatus": "not_promoted",
+      "promotionEligible": false,
+      "reviewDecision": "pending",
+      "reviewer": null,
+      "reviewDate": null,
+      "reviewRationale": "",
+      "finalRelationType": null,
+      "finalConfidence": null,
+      "confidence": 0.99,
+      "evidenceStrength": "review_artifact_link",
+      "generationRule": "tracked-review-artifact-source-link",
+      "caveat": "Review artifact supports review only and does not confer regulatory authority or controlling-source status.",
+      "notes": "self_review is a tracked review artifact for the source document.",
+      "evidence": [
+        {
+          "sourcePath": "docs/review/reg213_amendment1_faq_self_review.md",
+          "sectionReference": "self_review",
+          "notes": "Tracked artifact path and sourceDocumentId are explicit in the Reg-213 family manifest."
+        },
+        {
+          "sourcePath": "NY Regulations/Reg-213-11-NYCRR-S103-Amendment-1-FAQ.pdf",
+          "sectionReference": "source record",
+          "notes": "Target source is explicitly named in the family manifest."
+        }
+      ]
+    },
+    {
+      "relationshipId": "relationship-8f12f342af27d91f",
+      "sourceId": "reg213-amendment-2-review-index",
+      "targetId": "reg213-amendment-2",
+      "sourceDocumentId": "reg213-amendment-2-review-index",
+      "targetDocumentId": "reg213-amendment-2-text",
+      "targetScope": "family",
+      "relationType": "derived_from",
+      "direction": "source_to_target",
+      "relationshipStatus": "candidate",
+      "origin": "manual_review",
+      "reviewRequired": true,
+      "promotionStatus": "not_promoted",
+      "promotionEligible": false,
+      "reviewDecision": "pending",
+      "reviewer": null,
+      "reviewDate": null,
+      "reviewRationale": "",
+      "finalRelationType": null,
+      "finalConfidence": null,
+      "confidence": 0.99,
+      "evidenceStrength": "review_artifact_link",
+      "generationRule": "tracked-review-artifact-source-link",
+      "caveat": "Review artifact supports review only and does not confer regulatory authority or controlling-source status.",
+      "notes": "review_index is a tracked review artifact for the source document.",
+      "evidence": [
+        {
+          "sourcePath": "docs/review/reg213_amendment2_review_index.md",
+          "sectionReference": "review_index",
+          "notes": "Tracked artifact path and sourceDocumentId are explicit in the Reg-213 family manifest."
+        },
+        {
+          "sourcePath": "NY Regulations/Reg-213-11-NYCRR-S103-Amendment-2-nstext-reg213.pdf",
+          "sectionReference": "source record",
+          "notes": "Target source is explicitly named in the family manifest."
+        }
+      ]
+    },
+    {
+      "relationshipId": "relationship-00e325c35eb77b35",
+      "sourceId": "reg213-amendment-2-self-review",
+      "targetId": "reg213-amendment-2",
+      "sourceDocumentId": "reg213-amendment-2-self-review",
+      "targetDocumentId": "reg213-amendment-2-text",
+      "targetScope": "family",
+      "relationType": "supports_review_of",
+      "direction": "source_to_target",
+      "relationshipStatus": "candidate",
+      "origin": "manual_review",
+      "reviewRequired": true,
+      "promotionStatus": "not_promoted",
+      "promotionEligible": false,
+      "reviewDecision": "pending",
+      "reviewer": null,
+      "reviewDate": null,
+      "reviewRationale": "",
+      "finalRelationType": null,
+      "finalConfidence": null,
+      "confidence": 0.99,
+      "evidenceStrength": "review_artifact_link",
+      "generationRule": "tracked-review-artifact-source-link",
+      "caveat": "Review artifact supports review only and does not confer regulatory authority or controlling-source status.",
+      "notes": "self_review is a tracked review artifact for the source document.",
+      "evidence": [
+        {
+          "sourcePath": "docs/review/reg213_amendment2_self_review.md",
+          "sectionReference": "self_review",
+          "notes": "Tracked artifact path and sourceDocumentId are explicit in the Reg-213 family manifest."
+        },
+        {
+          "sourcePath": "NY Regulations/Reg-213-11-NYCRR-S103-Amendment-2-nstext-reg213.pdf",
+          "sectionReference": "source record",
+          "notes": "Target source is explicitly named in the family manifest."
+        }
+      ]
+    },
+    {
+      "relationshipId": "relationship-ce88af5c776137ca",
+      "sourceId": "reg213-amendment-3-review-index",
+      "targetId": "reg213-amendment-3",
+      "sourceDocumentId": "reg213-amendment-3-review-index",
+      "targetDocumentId": "reg213-amendment-3-text",
+      "targetScope": "family",
+      "relationType": "derived_from",
+      "direction": "source_to_target",
+      "relationshipStatus": "candidate",
+      "origin": "manual_review",
+      "reviewRequired": true,
+      "promotionStatus": "not_promoted",
+      "promotionEligible": false,
+      "reviewDecision": "pending",
+      "reviewer": null,
+      "reviewDate": null,
+      "reviewRationale": "",
+      "finalRelationType": null,
+      "finalConfidence": null,
+      "confidence": 0.99,
+      "evidenceStrength": "review_artifact_link",
+      "generationRule": "tracked-review-artifact-source-link",
+      "caveat": "Review artifact supports review only and does not confer regulatory authority or controlling-source status.",
+      "notes": "review_index is a tracked review artifact for the source document.",
+      "evidence": [
+        {
+          "sourcePath": "docs/review/reg213_amendment3_review_index.md",
+          "sectionReference": "review_index",
+          "notes": "Tracked artifact path and sourceDocumentId are explicit in the Reg-213 family manifest."
+        },
+        {
+          "sourcePath": "NY Regulations/Reg-213-amend3_txt.pdf",
+          "sectionReference": "source record",
+          "notes": "Target source is explicitly named in the family manifest."
+        }
+      ]
+    },
+    {
+      "relationshipId": "relationship-f2f244245233a424",
+      "sourceId": "reg213-amendment-3-self-review",
+      "targetId": "reg213-amendment-3",
+      "sourceDocumentId": "reg213-amendment-3-self-review",
+      "targetDocumentId": "reg213-amendment-3-text",
+      "targetScope": "family",
+      "relationType": "supports_review_of",
+      "direction": "source_to_target",
+      "relationshipStatus": "candidate",
+      "origin": "manual_review",
+      "reviewRequired": true,
+      "promotionStatus": "not_promoted",
+      "promotionEligible": false,
+      "reviewDecision": "pending",
+      "reviewer": null,
+      "reviewDate": null,
+      "reviewRationale": "",
+      "finalRelationType": null,
+      "finalConfidence": null,
+      "confidence": 0.99,
+      "evidenceStrength": "review_artifact_link",
+      "generationRule": "tracked-review-artifact-source-link",
+      "caveat": "Review artifact supports review only and does not confer regulatory authority or controlling-source status.",
+      "notes": "self_review is a tracked review artifact for the source document.",
+      "evidence": [
+        {
+          "sourcePath": "docs/review/reg213_amendment3_self_review.md",
+          "sectionReference": "self_review",
+          "notes": "Tracked artifact path and sourceDocumentId are explicit in the Reg-213 family manifest."
+        },
+        {
+          "sourcePath": "NY Regulations/Reg-213-amend3_txt.pdf",
+          "sectionReference": "source record",
+          "notes": "Target source is explicitly named in the family manifest."
+        }
+      ]
+    },
+    {
+      "relationshipId": "relationship-5bb646770f384a58",
+      "sourceId": "reg213-amendment-4-review-index",
+      "targetId": "reg213-amendment-4",
+      "sourceDocumentId": "reg213-amendment-4-review-index",
+      "targetDocumentId": "reg213-amendment-4-text",
+      "targetScope": "family",
+      "relationType": "derived_from",
+      "direction": "source_to_target",
+      "relationshipStatus": "candidate",
+      "origin": "manual_review",
+      "reviewRequired": true,
+      "promotionStatus": "not_promoted",
+      "promotionEligible": false,
+      "reviewDecision": "pending",
+      "reviewer": null,
+      "reviewDate": null,
+      "reviewRationale": "",
+      "finalRelationType": null,
+      "finalConfidence": null,
+      "confidence": 0.99,
+      "evidenceStrength": "review_artifact_link",
+      "generationRule": "tracked-review-artifact-source-link",
+      "caveat": "Review artifact supports review only and does not confer regulatory authority or controlling-source status.",
+      "notes": "review_index is a tracked review artifact for the source document.",
+      "evidence": [
+        {
+          "sourcePath": "docs/review/reg213_amendment4_review_index.md",
+          "sectionReference": "review_index",
+          "notes": "Tracked artifact path and sourceDocumentId are explicit in the Reg-213 family manifest."
+        },
+        {
+          "sourcePath": "NY Regulations/Reg-213-amend4_text.pdf",
+          "sectionReference": "source record",
+          "notes": "Target source is explicitly named in the family manifest."
+        }
+      ]
+    },
+    {
+      "relationshipId": "relationship-f676d5d47a0ba677",
+      "sourceId": "reg213-amendment-4-self-review",
+      "targetId": "reg213-amendment-4",
+      "sourceDocumentId": "reg213-amendment-4-self-review",
+      "targetDocumentId": "reg213-amendment-4-text",
+      "targetScope": "family",
+      "relationType": "supports_review_of",
+      "direction": "source_to_target",
+      "relationshipStatus": "candidate",
+      "origin": "manual_review",
+      "reviewRequired": true,
+      "promotionStatus": "not_promoted",
+      "promotionEligible": false,
+      "reviewDecision": "pending",
+      "reviewer": null,
+      "reviewDate": null,
+      "reviewRationale": "",
+      "finalRelationType": null,
+      "finalConfidence": null,
+      "confidence": 0.99,
+      "evidenceStrength": "review_artifact_link",
+      "generationRule": "tracked-review-artifact-source-link",
+      "caveat": "Review artifact supports review only and does not confer regulatory authority or controlling-source status.",
+      "notes": "self_review is a tracked review artifact for the source document.",
+      "evidence": [
+        {
+          "sourcePath": "docs/review/reg213_amendment4_self_review.md",
+          "sectionReference": "self_review",
+          "notes": "Tracked artifact path and sourceDocumentId are explicit in the Reg-213 family manifest."
+        },
+        {
+          "sourcePath": "NY Regulations/Reg-213-amend4_text.pdf",
+          "sectionReference": "source record",
+          "notes": "Target source is explicitly named in the family manifest."
+        }
+      ]
+    },
+    {
+      "relationshipId": "relationship-b390d64ba58fcadf",
+      "sourceId": "reg213-amendment-5-review-index",
+      "targetId": "reg213-amendment-5",
+      "sourceDocumentId": "reg213-amendment-5-review-index",
+      "targetDocumentId": "reg213-amendment-5-text",
+      "targetScope": "family",
+      "relationType": "derived_from",
+      "direction": "source_to_target",
+      "relationshipStatus": "candidate",
+      "origin": "manual_review",
+      "reviewRequired": true,
+      "promotionStatus": "not_promoted",
+      "promotionEligible": false,
+      "reviewDecision": "pending",
+      "reviewer": null,
+      "reviewDate": null,
+      "reviewRationale": "",
+      "finalRelationType": null,
+      "finalConfidence": null,
+      "confidence": 0.99,
+      "evidenceStrength": "review_artifact_link",
+      "generationRule": "tracked-review-artifact-source-link",
+      "caveat": "Review artifact supports review only and does not confer regulatory authority or controlling-source status.",
+      "notes": "review_index is a tracked review artifact for the source document.",
+      "evidence": [
+        {
+          "sourcePath": "docs/review/reg213_amendment5_review_index.md",
+          "sectionReference": "review_index",
+          "notes": "Tracked artifact path and sourceDocumentId are explicit in the Reg-213 family manifest."
+        },
+        {
+          "sourcePath": "NY Regulations/Reg-213-amend5_text.pdf",
+          "sectionReference": "source record",
+          "notes": "Target source is explicitly named in the family manifest."
+        }
+      ]
+    },
+    {
+      "relationshipId": "relationship-202c7ea4fd21259f",
+      "sourceId": "reg213-amendment-5-self-review",
+      "targetId": "reg213-amendment-5",
+      "sourceDocumentId": "reg213-amendment-5-self-review",
+      "targetDocumentId": "reg213-amendment-5-text",
+      "targetScope": "family",
+      "relationType": "supports_review_of",
+      "direction": "source_to_target",
+      "relationshipStatus": "candidate",
+      "origin": "manual_review",
+      "reviewRequired": true,
+      "promotionStatus": "not_promoted",
+      "promotionEligible": false,
+      "reviewDecision": "pending",
+      "reviewer": null,
+      "reviewDate": null,
+      "reviewRationale": "",
+      "finalRelationType": null,
+      "finalConfidence": null,
+      "confidence": 0.99,
+      "evidenceStrength": "review_artifact_link",
+      "generationRule": "tracked-review-artifact-source-link",
+      "caveat": "Review artifact supports review only and does not confer regulatory authority or controlling-source status.",
+      "notes": "self_review is a tracked review artifact for the source document.",
+      "evidence": [
+        {
+          "sourcePath": "docs/review/reg213_amendment5_self_review.md",
+          "sectionReference": "self_review",
+          "notes": "Tracked artifact path and sourceDocumentId are explicit in the Reg-213 family manifest."
+        },
+        {
+          "sourcePath": "NY Regulations/Reg-213-amend5_text.pdf",
+          "sectionReference": "source record",
+          "notes": "Target source is explicitly named in the family manifest."
+        }
+      ]
+    },
+    {
+      "relationshipId": "relationship-e21f3e04aa63143a",
+      "sourceId": "reg213-amendment-6-review-index",
+      "targetId": "reg213-amendment-6",
+      "sourceDocumentId": "reg213-amendment-6-review-index",
+      "targetDocumentId": "reg213-amendment-6-text",
+      "targetScope": "family",
+      "relationType": "derived_from",
+      "direction": "source_to_target",
+      "relationshipStatus": "candidate",
+      "origin": "manual_review",
+      "reviewRequired": true,
+      "promotionStatus": "not_promoted",
+      "promotionEligible": false,
+      "reviewDecision": "pending",
+      "reviewer": null,
+      "reviewDate": null,
+      "reviewRationale": "",
+      "finalRelationType": null,
+      "finalConfidence": null,
+      "confidence": 0.99,
+      "evidenceStrength": "review_artifact_link",
+      "generationRule": "tracked-review-artifact-source-link",
+      "caveat": "Review artifact supports review only and does not confer regulatory authority or controlling-source status.",
+      "notes": "review_index is a tracked review artifact for the source document.",
+      "evidence": [
+        {
+          "sourcePath": "docs/review/reg213_amendment6_review_index.md",
+          "sectionReference": "review_index",
+          "notes": "Tracked artifact path and sourceDocumentId are explicit in the Reg-213 family manifest."
+        },
+        {
+          "sourcePath": "NY Regulations/Reg-213-amend6_text.pdf",
+          "sectionReference": "source record",
+          "notes": "Target source is explicitly named in the family manifest."
+        }
+      ]
+    },
+    {
+      "relationshipId": "relationship-f584757d63065371",
+      "sourceId": "reg213-amendment-6-self-review",
+      "targetId": "reg213-amendment-6",
+      "sourceDocumentId": "reg213-amendment-6-self-review",
+      "targetDocumentId": "reg213-amendment-6-text",
+      "targetScope": "family",
+      "relationType": "supports_review_of",
+      "direction": "source_to_target",
+      "relationshipStatus": "candidate",
+      "origin": "manual_review",
+      "reviewRequired": true,
+      "promotionStatus": "not_promoted",
+      "promotionEligible": false,
+      "reviewDecision": "pending",
+      "reviewer": null,
+      "reviewDate": null,
+      "reviewRationale": "",
+      "finalRelationType": null,
+      "finalConfidence": null,
+      "confidence": 0.99,
+      "evidenceStrength": "review_artifact_link",
+      "generationRule": "tracked-review-artifact-source-link",
+      "caveat": "Review artifact supports review only and does not confer regulatory authority or controlling-source status.",
+      "notes": "self_review is a tracked review artifact for the source document.",
+      "evidence": [
+        {
+          "sourcePath": "docs/review/reg213_amendment6_self_review.md",
+          "sectionReference": "self_review",
+          "notes": "Tracked artifact path and sourceDocumentId are explicit in the Reg-213 family manifest."
+        },
+        {
+          "sourcePath": "NY Regulations/Reg-213-amend6_text.pdf",
+          "sectionReference": "source record",
+          "notes": "Target source is explicitly named in the family manifest."
+        }
+      ]
+    }
+  ],
+  "notes": "Regulation 213 documentary relationship candidates. No legal effect, authority, supersession, or controlling-source conclusion is asserted."
+}
