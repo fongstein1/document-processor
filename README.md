@@ -79,6 +79,9 @@ The reference app repo is read-only context only:
 5. Select a small source batch and build the inventory, chunk, review, and
    export artifacts. When reviewed source-bound chunks exist, run the family
    source-index adapter to prepare canonical POC packages.
+6. For companion, amendment, reprint, or supersession questions, build a
+   separate candidate relationship registry and complete human review before
+   any relationship is used downstream.
 
 ## Output contract
 

@@ -103,6 +103,12 @@ The registry keeps every edge as `candidate` or `needs_review` with
 `reviewRequired: true`; it does not confirm companion, duplicate, amendment,
 supersession, or cross-reference semantics.
 
+For a real family evaluation, use the dedicated relationship workflow in
+`docs/processor/document_family_relationship_review_workflow.md`. The
+Regulation 213 proof of concept adds evidence strength, confidence, generation
+rule, caveat, direction, and pending review-decision fields while keeping all
+relationships `not_promoted`.
+
 ## What not to do
 
 - Do not commit raw source documents.

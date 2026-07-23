@@ -1226,3 +1226,20 @@ storage. The tracked review index and self-review note are
 review-only and companion-only, and the duplicate / reprint caveat remains
 visible because active AG 38 already has tracked review artifacts. The broader
 proof-of-concept handoff now spans 98 review indexes.
+
+## Regulation 213 relationship registry proof of concept
+
+The Regulation 213 family relationship layer is now a separate, tracked
+review artifact rather than a canonical relationship assertion. The family
+inventory covers eight source documents and sixteen review artifacts. The
+candidate registry contains twenty-three documentary edges: six formal
+amendment-to-base candidates, one FAQ companion candidate, and sixteen
+review-artifact links.
+
+Each edge includes source-to-target direction, evidence, evidence strength,
+confidence, generation rule, caveat, pending review decision, and explicit
+`not_promoted` status. No supersession, reprint, duplicate, controlling-source,
+or binding-authority conclusion was inferred. See
+`docs/review/reg213_relationship_registry_evaluation.md` and
+`docs/review/reg213_relationship_registry_unresolved.md` before any human
+review disposition.

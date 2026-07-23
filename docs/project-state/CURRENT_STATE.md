@@ -744,3 +744,21 @@ open for human review before any later merge or reuse.
 2026-07-22: Hardened the family-intake handoff so the scanner also emits explicit source-index input, repository-manifest preparation, and retrieval-test preparation artifacts. These remain pending downstream builds and preserve review-only, no-promotion status.
 2026-07-22: Added the reviewed source-pack contract and deterministic family-intake-to-source-index adapter. The adapter requires reviewed chunks and citations, emits review-only canonical POC packages and pending retrieval artifacts, and does not infer source text from intake metadata.
 2026-07-22: Added a candidate relationship registry and deterministic builder for companion, duplicate/reprint, amendment, supersession, jurisdictional-modification, and cross-reference edges. Registry entries remain candidate or needs-review with human review required.
+
+## Regulation 213 relationship registry proof of concept
+
+The Reg-213 family is now inventoried in
+`data/processed/relationship_registries/reg213-family-inventory.json` with
+eight source documents and sixteen tracked review artifacts. The candidate
+registry in the same directory contains twenty-three documentary edges:
+formal amendment-to-base candidates, the Amendment No. 1 FAQ companion edge,
+and review-artifact links. Every edge carries evidence, confidence, a
+generation rule, a caveat, source-to-target direction, pending review status,
+and `promotionStatus: not_promoted`.
+
+No supersession, reprint, duplicate, controlling-source, or legal-authority
+conclusion was inferred. Evaluation and unresolved-candidate reports are in
+`docs/review/reg213_relationship_registry_evaluation.md` and
+`docs/review/reg213_relationship_registry_unresolved.md`. The received local
+inventory remains an ignored selection input and is not copied into tracked
+artifacts.

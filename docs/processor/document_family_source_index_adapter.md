@@ -51,3 +51,7 @@ exists. The adapter does not commit raw source files or ignored working data.
 - Relationship edges belong in
   `data/schemas/document-family-relationship-registry.schema.json` and stay
   candidate/needs-review until a human confirms them.
+- Legal-effect-sensitive edges must include evidence, confidence, a generation
+  rule, a caveat, and a pending review decision. The registry does not infer
+  supersession, authority, controlling-source status, or duplicate/reprint
+  force from chronology or filenames.

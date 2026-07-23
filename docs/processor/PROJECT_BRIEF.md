@@ -59,6 +59,10 @@ Contract files:
 - `data/intake/README.md`
 - `docs/processor/document_family_source_index_adapter.md`
 - `scripts/build-document-family-relationship-registry.mjs`
+- `docs/processor/document_family_relationship_review_workflow.md`
+- `config/reg213-relationship-family.json`
+- `scripts/build-reg213-relationship-registry.mjs`
+- `scripts/validate-reg213-relationship-registry.mjs`
 
 These contracts are intentionally generic. NAIC-specific assumptions stay in
 `config/source-families.json`, while the schemas remain portable enough for
