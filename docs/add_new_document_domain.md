@@ -3,6 +3,9 @@
 Use this workflow when introducing a new actuarial document family into the
 canonical document-structurizer layer.
 
+Start with the family intake manifest and the deterministic intake scanner so
+the new family can be profiled before any source-index build runs.
+
 ## Required steps
 
 1. Define the domain profile.
@@ -36,4 +39,3 @@ Before indexing a new domain, capture:
 - Do not make one domain's fields globally mandatory.
 - Keep source text distinct from summaries and interpretations.
 - Treat synthetic corpora as synthetic in the metadata and docs.
-

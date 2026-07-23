@@ -1,0 +1,84 @@
+{
+  "schemaVersion": "1.0",
+  "familyId": "{{familyId}}",
+  "familyName": "{{familyName}}",
+  "familyDescription": "{{familyDescription}}",
+  "createdAt": "{{createdAt}}",
+  "createdBy": "{{createdBy}}",
+  "intakeRoot": "{{intakeRoot}}",
+  "sourceRoot": "source",
+  "metadataRoot": "metadata",
+  "overridesRoot": "overrides",
+  "defaultProfile": "{{defaultProfile}}",
+  "defaultJurisdiction": "{{defaultJurisdiction}}",
+  "documentInventory": [
+    {
+      "documentId": "{{documentId}}",
+      "filename": "{{filename}}",
+      "sourcePath": "{{sourcePath}}",
+      "documentType": "{{documentType}}",
+      "title": "{{title}}",
+      "organization": "{{organization}}",
+      "jurisdiction": "{{jurisdiction}}",
+      "confidentiality": "{{confidentiality}}",
+      "version": "{{version}}",
+      "effectiveDate": "{{effectiveDate}}",
+      "draftFinalStatus": "{{draftFinalStatus}}",
+      "approvalStatus": "{{approvalStatus}}",
+      "sourceStatus": "{{sourceStatus}}",
+      "pageCount": null,
+      "fileSizeBytes": null,
+      "expectedProfile": "{{expectedProfile}}",
+      "processingNotes": "{{processingNotes}}",
+      "notes": "{{documentNotes}}"
+    }
+  ],
+  "perDocumentOverrides": [
+    {
+      "documentId": "{{documentId}}",
+      "overrides": {
+        "expectedProfile": "{{expectedProfile}}"
+      },
+      "notes": "{{overrideNotes}}"
+    }
+  ],
+  "confidentialityDefaults": {
+    "classification": "{{confidentialityClassification}}",
+    "handlingNotes": "{{confidentialityHandlingNotes}}",
+    "reviewOnly": true
+  },
+  "relationshipHints": [
+    {
+      "sourceDocumentId": "{{sourceDocumentId}}",
+      "targetDocumentId": "{{targetDocumentId}}",
+      "relationType": "related_methodology",
+      "notes": "{{relationshipNotes}}"
+    }
+  ],
+  "expectedValidationRules": [
+    {
+      "ruleId": "document-inventory-completeness",
+      "description": "Every manifest document must resolve to an actual source file in the source folder.",
+      "severity": "high",
+      "required": true,
+      "appliesTo": [
+        "documentInventory",
+        "sourceRoot"
+      ]
+    }
+  ],
+  "outputDestination": {
+    "inventoryJsonPath": "data/work/intake/{{familyId}}/intake-inventory.json",
+    "inventoryMarkdownPath": "data/work/intake/{{familyId}}/intake-inventory.md",
+    "handoffJsonPath": "data/work/intake/{{familyId}}/intake-handoff.json",
+    "sourceIndexConfigPath": "data/work/intake/{{familyId}}/source-index-input.json",
+    "repositoryManifestPath": "data/work/intake/{{familyId}}/repository-manifest-handoff.json",
+    "retrievalTestHandoffPath": "data/work/intake/{{familyId}}/retrieval-test-handoff.json",
+    "notes": "Review-only handoff; keep raw source files out of Git."
+  },
+  "processingStatus": "draft",
+  "notes": "{{notes}}",
+  "extensions": {
+    "demo": false
+  }
+}

@@ -1,0 +1,203 @@
+{
+  "schemaVersion": "1.0",
+  "familyId": "synthetic-pricing-intake-demo",
+  "familyName": "Synthetic Pricing Intake Demo",
+  "familyDescription": "Demo family intake manifest used to prove deterministic folder scanning and profile-aware classification for a pricing corpus.",
+  "createdAt": "2026-07-22T00:00:00Z",
+  "createdBy": "codex",
+  "intakeRoot": "data/samples/synthetic-pricing",
+  "sourceRoot": "../synthetic-pricing",
+  "metadataRoot": "data/samples/contract-demo",
+  "overridesRoot": "data/samples/contract-demo",
+  "defaultProfile": "pricing_profile",
+  "defaultJurisdiction": "Company internal",
+  "documentInventory": [
+    {
+      "documentId": "synthetic-pricing-product-specification",
+      "filename": "orion-term-accumulator-product-specification.md",
+      "sourcePath": "orion-term-accumulator-product-specification.md",
+      "documentType": "product_specification",
+      "title": "Orion Term Accumulator - Product Specification",
+      "organization": "Synthetic Pricing Corpus",
+      "jurisdiction": "Company internal",
+      "confidentiality": "internal",
+      "version": "1.0",
+      "effectiveDate": "2026-07-22",
+      "draftFinalStatus": "final",
+      "approvalStatus": "reviewed",
+      "sourceStatus": "active",
+      "pageCount": null,
+      "fileSizeBytes": null,
+      "expectedProfile": "product_profile",
+      "processingNotes": "Synthetic product specification used to validate intake classification.",
+      "notes": "Defines the pricing target and policyholder feature set."
+    },
+    {
+      "documentId": "synthetic-pricing-assumption-memo",
+      "filename": "orion-term-accumulator-assumption-memo.md",
+      "sourcePath": "orion-term-accumulator-assumption-memo.md",
+      "documentType": "assumption_memo",
+      "title": "Orion Term Accumulator - Assumption Memo",
+      "organization": "Synthetic Pricing Corpus",
+      "jurisdiction": "Company internal",
+      "confidentiality": "internal",
+      "version": "1.0",
+      "effectiveDate": "2026-07-22",
+      "draftFinalStatus": "final",
+      "approvalStatus": "reviewed",
+      "sourceStatus": "active",
+      "pageCount": null,
+      "fileSizeBytes": null,
+      "expectedProfile": "pricing_profile",
+      "processingNotes": "Synthetic assumption memo used to validate intake classification.",
+      "notes": "Contains assumptions, bases, and sensitivity drivers."
+    },
+    {
+      "documentId": "synthetic-pricing-pricing-methodology",
+      "filename": "orion-term-accumulator-pricing-methodology.md",
+      "sourcePath": "orion-term-accumulator-pricing-methodology.md",
+      "documentType": "pricing_methodology",
+      "title": "Orion Term Accumulator - Pricing Methodology",
+      "organization": "Synthetic Pricing Corpus",
+      "jurisdiction": "Company internal",
+      "confidentiality": "internal",
+      "version": "1.0",
+      "effectiveDate": "2026-07-22",
+      "draftFinalStatus": "final",
+      "approvalStatus": "reviewed",
+      "sourceStatus": "active",
+      "pageCount": null,
+      "fileSizeBytes": null,
+      "expectedProfile": "pricing_profile",
+      "processingNotes": "Synthetic methodology memo used to validate intake classification.",
+      "notes": "Describes pricing stage, method, and decision status."
+    },
+    {
+      "documentId": "synthetic-pricing-profitability-study",
+      "filename": "orion-term-accumulator-profitability-study.md",
+      "sourcePath": "orion-term-accumulator-profitability-study.md",
+      "documentType": "profitability_study",
+      "title": "Orion Term Accumulator - Profitability Study",
+      "organization": "Synthetic Pricing Corpus",
+      "jurisdiction": "Company internal",
+      "confidentiality": "internal",
+      "version": "1.0",
+      "effectiveDate": "2026-07-22",
+      "draftFinalStatus": "final",
+      "approvalStatus": "reviewed",
+      "sourceStatus": "active",
+      "pageCount": null,
+      "fileSizeBytes": null,
+      "expectedProfile": "pricing_profile",
+      "processingNotes": "Synthetic profitability study used to validate intake classification.",
+      "notes": "Contains profitability metrics and sensitivity results."
+    },
+    {
+      "documentId": "synthetic-pricing-approval-memo",
+      "filename": "orion-term-accumulator-approval-memo.md",
+      "sourcePath": "orion-term-accumulator-approval-memo.md",
+      "documentType": "approval_memo",
+      "title": "Orion Term Accumulator - Approval Memo",
+      "organization": "Synthetic Pricing Corpus",
+      "jurisdiction": "Company internal",
+      "confidentiality": "internal",
+      "version": "1.0",
+      "effectiveDate": "2026-07-22",
+      "draftFinalStatus": "final",
+      "approvalStatus": "reviewed",
+      "sourceStatus": "active",
+      "pageCount": null,
+      "fileSizeBytes": null,
+      "expectedProfile": "governance_profile",
+      "processingNotes": "Synthetic approval memo used to validate intake classification and governance handling.",
+      "notes": "Captures approval body, decision status, and implementation notes."
+    }
+  ],
+  "perDocumentOverrides": [
+    {
+      "documentId": "synthetic-pricing-approval-memo",
+      "overrides": {
+        "expectedProfile": "governance_profile",
+        "approvalStatus": "reviewed"
+      },
+      "notes": "Approval memo is governance-heavy and intentionally profile-shifted."
+    }
+  ],
+  "confidentialityDefaults": {
+    "classification": "internal",
+    "handlingNotes": "Synthetic and non-sensitive demo corpus; keep review-only.",
+    "reviewOnly": true
+  },
+  "relationshipHints": [
+    {
+      "sourceDocumentId": "synthetic-pricing-product-specification",
+      "targetDocumentId": "synthetic-pricing-assumption-memo",
+      "relationType": "supports",
+      "notes": "Product structure informs assumption memo inputs."
+    },
+    {
+      "sourceDocumentId": "synthetic-pricing-assumption-memo",
+      "targetDocumentId": "synthetic-pricing-pricing-methodology",
+      "relationType": "related_methodology",
+      "notes": "Assumptions feed pricing methodology decisions."
+    },
+    {
+      "sourceDocumentId": "synthetic-pricing-pricing-methodology",
+      "targetDocumentId": "synthetic-pricing-profitability-study",
+      "relationType": "follows",
+      "notes": "Methodology evidence should precede profitability conclusions."
+    },
+    {
+      "sourceDocumentId": "synthetic-pricing-profitability-study",
+      "targetDocumentId": "synthetic-pricing-approval-memo",
+      "relationType": "supports",
+      "notes": "Profitability study supports the approval memo."
+    }
+  ],
+  "expectedValidationRules": [
+    {
+      "ruleId": "inventory-deterministic-order",
+      "description": "The inventory scan must sort documents deterministically by relative path.",
+      "severity": "medium",
+      "required": true,
+      "appliesTo": [
+        "documentInventory",
+        "inventoryOutput"
+      ]
+    },
+    {
+      "ruleId": "manifest-coverage",
+      "description": "Every manifest entry should resolve to a file in the source root, and the validation report should show no missing files for the demo corpus.",
+      "severity": "high",
+      "required": true,
+      "appliesTo": [
+        "documentInventory",
+        "validationResults"
+      ]
+    },
+    {
+      "ruleId": "profile-selection",
+      "description": "Each inventory row should include a selected profile derived from the default profile or a per-document override.",
+      "severity": "medium",
+      "required": true,
+      "appliesTo": [
+        "classification",
+        "outputDestination"
+      ]
+    }
+  ],
+  "outputDestination": {
+    "inventoryJsonPath": "data/work/intake/synthetic-pricing-demo/intake-inventory.json",
+    "inventoryMarkdownPath": "data/work/intake/synthetic-pricing-demo/intake-inventory.md",
+    "handoffJsonPath": "data/work/intake/synthetic-pricing-demo/intake-handoff.json",
+    "sourceIndexConfigPath": "data/work/intake/synthetic-pricing-demo/source-index-input.json",
+    "repositoryManifestPath": "data/work/intake/synthetic-pricing-demo/repository-manifest-handoff.json",
+    "retrievalTestHandoffPath": "data/work/intake/synthetic-pricing-demo/retrieval-test-handoff.json",
+    "notes": "Demo output paths for the review-only intake scanner."
+  },
+  "processingStatus": "ready",
+  "notes": "Example manifest used to validate deterministic intake scanning against the synthetic pricing sample corpus.",
+  "extensions": {
+    "demo": true
+  }
+}

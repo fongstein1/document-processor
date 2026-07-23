@@ -1,0 +1,91 @@
+{
+  "schemaVersion": "1.0",
+  "handoffType": "family_intake_reviewed_source_pack",
+  "familyId": "synthetic-pricing-intake-demo",
+  "reviewOnly": true,
+  "learnerFacingAllowed": false,
+  "appReadyAllowed": false,
+  "ragReadyAllowed": false,
+  "sourcePackages": [
+    {
+      "sourceId": "synthetic-pricing-intake-demo:synthetic-pricing-product-specification",
+      "sourceIndexId": "source-index-synthetic-pricing-intake-demo-product-specification",
+      "sourceVersionId": "source-version-synthetic-pricing-product-specification-1",
+      "filename": "orion-term-accumulator-product-specification.md",
+      "sourceReference": "synthetic-pricing-intake-demo/source/orion-term-accumulator-product-specification.md",
+      "sourceStatus": "active",
+      "jurisdiction": "synthetic",
+      "authorityLevel": "internal_product_source",
+      "documentType": "product_specification",
+      "sourceTitle": "Orion Term Accumulator Product Specification",
+      "pageRange": {
+        "start": 1,
+        "end": 1
+      },
+      "reviewBatchIds": [
+        "batch-synthetic-pricing-intake-demo"
+      ],
+      "reviewIndexPath": "docs/review/synthetic_pricing_review_index.md",
+      "selfReviewPath": "docs/review/synthetic_pricing_self_review.md",
+      "pageImageBackstop": false,
+      "lineReferencesAvailable": true,
+      "textLayerQuality": "clean",
+      "classification": {
+        "domainId": "pricing_documents",
+        "documentType": "product_specification",
+        "purpose": "Synthetic product structure for intake-to-source-index adapter validation.",
+        "intendedAudience": "pricing and product reviewers",
+        "authoritySourceType": "product_specification",
+        "confidentiality": "synthetic",
+        "recommendedProfile": "pricing",
+        "recommendedChunkingStrategy": "product_feature_slices",
+        "confidence": "high",
+        "unresolvedQuestions": []
+      },
+      "chunks": [
+        {
+          "chunkId": "chunk-synthetic-intake-product-001",
+          "chunkOrdinal": 1,
+          "chunkKind": "product_specification",
+          "sourceTextType": "synthetic_source_text",
+          "pageStart": 1,
+          "pageEnd": 1,
+          "sectionReference": "Product structure",
+          "lineReference": "1-8",
+          "sourceTextExcerpt": "The Orion term accumulator provides a synthetic product structure for the adapter proof of concept.",
+          "normalizedTextExcerpt": "orion term accumulator synthetic product structure",
+          "summary": "Synthetic product structure used to verify family intake conversion into a canonical source package.",
+          "controlledTags": [
+            "product_structure",
+            "background_content"
+          ],
+          "keywords": [
+            "Orion",
+            "term accumulator",
+            "product structure"
+          ],
+          "citations": [
+            {
+              "citationText": "Orion Term Accumulator Product Specification",
+              "pageReference": "pp. 1-1",
+              "sectionReference": "Product structure",
+              "sourceReference": "synthetic-pricing-intake-demo/source/orion-term-accumulator-product-specification.md",
+              "lineReference": "1-8"
+            }
+          ],
+          "fidelity": "exact",
+          "confidence": "high",
+          "reviewFlags": [
+            "synthetic_demo",
+            "review_only"
+          ],
+          "qualityNotes": [],
+          "evidenceNotes": "Synthetic fixture only; do not infer production product facts.",
+          "retrievalEligible": true,
+          "promotionEligible": false
+        }
+      ]
+    }
+  ],
+  "notes": "Synthetic contract fixture for the family-intake source-index adapter."
+}

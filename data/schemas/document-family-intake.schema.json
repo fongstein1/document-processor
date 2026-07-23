@@ -1,0 +1,413 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://codex.local/schemas/document-family-intake.schema.json",
+  "title": "Document Family Intake Manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "familyId",
+    "familyName",
+    "familyDescription",
+    "createdAt",
+    "createdBy",
+    "defaultProfile",
+    "documentInventory",
+    "confidentialityDefaults",
+    "relationshipHints",
+    "expectedValidationRules",
+    "outputDestination",
+    "processingStatus"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "const": "1.0"
+    },
+    "familyId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "familyName": {
+      "type": "string",
+      "minLength": 1
+    },
+    "familyDescription": {
+      "type": "string",
+      "minLength": 1
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "createdBy": {
+      "type": "string",
+      "minLength": 1
+    },
+    "intakeRoot": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "sourceRoot": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "metadataRoot": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "overridesRoot": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "defaultProfile": {
+      "type": "string",
+      "minLength": 1
+    },
+    "defaultJurisdiction": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "documentInventory": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/documentInventoryEntry"
+      }
+    },
+    "perDocumentOverrides": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/documentOverride"
+      }
+    },
+    "confidentialityDefaults": {
+      "$ref": "#/$defs/confidentialityDefaults"
+    },
+    "relationshipHints": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/relationshipHint"
+      }
+    },
+    "expectedValidationRules": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/validationRule"
+      }
+    },
+    "outputDestination": {
+      "$ref": "#/$defs/outputDestination"
+    },
+    "processingStatus": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "ready",
+        "processing",
+        "blocked",
+        "complete"
+      ]
+    },
+    "notes": {
+      "type": "string"
+    },
+    "extensions": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  },
+  "$defs": {
+    "documentInventoryEntry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "documentId",
+        "filename",
+        "sourcePath",
+        "documentType",
+        "title",
+        "expectedProfile"
+      ],
+      "properties": {
+        "documentId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "filename": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sourcePath": {
+          "type": "string",
+          "minLength": 1
+        },
+        "documentType": {
+          "type": "string",
+          "minLength": 1
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "organization": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "jurisdiction": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "confidentiality": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "version": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "effectiveDate": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date"
+        },
+        "draftFinalStatus": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "draft",
+            "final",
+            "archived",
+            "unclear",
+            null
+          ]
+        },
+        "approvalStatus": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "approved",
+            "reviewed",
+            "blocked",
+            "unclear",
+            null
+          ]
+        },
+        "sourceStatus": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "pageCount": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "fileSizeBytes": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "expectedProfile": {
+          "type": "string",
+          "minLength": 1
+        },
+        "processingNotes": {
+          "type": "string"
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "documentOverride": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "documentId",
+        "overrides"
+      ],
+      "properties": {
+        "documentId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "overrides": {
+          "type": "object",
+          "additionalProperties": true
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "confidentialityDefaults": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "classification"
+      ],
+      "properties": {
+        "classification": {
+          "type": "string",
+          "minLength": 1
+        },
+        "handlingNotes": {
+          "type": "string"
+        },
+        "reviewOnly": {
+          "type": "boolean"
+        }
+      }
+    },
+    "relationshipHint": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "sourceDocumentId",
+        "relationType"
+      ],
+      "properties": {
+        "sourceDocumentId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "targetDocumentId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "relationType": {
+          "type": "string",
+          "enum": [
+            "references",
+            "supports",
+            "follows",
+            "precedes",
+            "implements",
+            "interprets",
+            "amends",
+            "supersedes",
+            "reprints",
+            "jurisdictional_modification",
+            "related_methodology",
+            "companion_guidance",
+            "duplicate_or_reprint",
+            "cross_references",
+            "boundary_of",
+            "same_source"
+          ]
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "validationRule": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "ruleId",
+        "description",
+        "severity",
+        "required"
+      ],
+      "properties": {
+        "ruleId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "severity": {
+          "type": "string",
+          "enum": [
+            "low",
+            "medium",
+            "high"
+          ]
+        },
+        "required": {
+          "type": "boolean"
+        },
+        "appliesTo": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "outputDestination": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "inventoryJsonPath",
+        "inventoryMarkdownPath",
+        "handoffJsonPath"
+      ],
+      "properties": {
+        "inventoryJsonPath": {
+          "type": "string",
+          "minLength": 1
+        },
+        "inventoryMarkdownPath": {
+          "type": "string",
+          "minLength": 1
+        },
+        "handoffJsonPath": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sourceIndexConfigPath": {
+          "type": "string",
+          "minLength": 1
+        },
+        "repositoryManifestPath": {
+          "type": "string",
+          "minLength": 1
+        },
+        "retrievalTestHandoffPath": {
+          "type": "string",
+          "minLength": 1
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

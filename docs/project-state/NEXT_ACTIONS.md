@@ -840,3 +840,7 @@ the source stays review-only and companion-only, and the duplicate / reprint
 relationship to active AG 38 remains a human-review decision. The next safe
 continuation step is a 100-index consistency audit before selecting any
 additional source units.
+2026-07-22: Validate the new document-family intake manifest, template, example, scanner, and handoff artifacts with `npm run check`, then keep the intake workflow ready for the next real family that needs onboarding.
+2026-07-22: When onboarding the next real family, review the generated source-index input and downstream handoff artifacts before beginning source-bound extraction; do not treat the preparation records as canonical or retrieval-ready output.
+2026-07-22: Exercise the family source-index adapter against a small reviewed real-family package after the current intake changes are manually committed; then add reviewed retrieval queries before considering retrieval evaluation.
+2026-07-22: Exercise the relationship registry against a real companion/reprint or amendment family after the current intake changes are manually committed; confirm candidate edges before adding them to canonical package relationships.

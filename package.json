@@ -5,8 +5,12 @@
   "type": "module",
   "scripts": {
     "bootstrap": "node scripts/bootstrap-small-batch.mjs",
-    "check": "node scripts/validate-scaffold.mjs && node scripts/validate-source-index-poc.mjs",
+    "check": "node scripts/validate-scaffold.mjs && node scripts/validate-document-family-intake.mjs && node scripts/validate-source-index-poc.mjs",
     "pilot": "node scripts/run-pilot-batch.mjs",
+    "intake:scan": "node scripts/scan-document-family-intake.mjs",
+    "intake:build-source-index": "node scripts/build-family-source-index-poc.mjs",
+    "intake:build-relationships": "node scripts/build-document-family-relationship-registry.mjs",
+    "intake:validate": "node scripts/validate-document-family-intake.mjs",
     "source-index:build": "node scripts/build-source-index-poc.mjs",
     "source-index:evaluate": "node scripts/evaluate-source-index-retrieval.mjs",
     "source-index:validate": "node scripts/validate-source-index-poc.mjs",

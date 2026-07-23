@@ -1,0 +1,194 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://codex.local/schemas/document-family-relationship-registry.schema.json",
+  "title": "Document Family Relationship Registry",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "registryId",
+    "familyId",
+    "generatedAt",
+    "reviewOnly",
+    "learnerFacingAllowed",
+    "appReadyAllowed",
+    "ragReadyAllowed",
+    "promotionStatus",
+    "relationshipCount",
+    "relationships"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "const": "1.0"
+    },
+    "registryId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "familyId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "generatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "reviewOnly": {
+      "type": "boolean",
+      "const": true
+    },
+    "learnerFacingAllowed": {
+      "type": "boolean",
+      "const": false
+    },
+    "appReadyAllowed": {
+      "type": "boolean",
+      "const": false
+    },
+    "ragReadyAllowed": {
+      "type": "boolean",
+      "const": false
+    },
+    "promotionStatus": {
+      "type": "string",
+      "const": "not_promoted"
+    },
+    "relationshipCount": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "relationships": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/relationship"
+      }
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "$defs": {
+    "relationship": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "relationshipId",
+        "sourceId",
+        "targetId",
+        "targetScope",
+        "relationType",
+        "relationshipStatus",
+        "origin",
+        "reviewRequired"
+      ],
+      "properties": {
+        "relationshipId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sourceId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "targetId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sourceDocumentId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "targetDocumentId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "targetScope": {
+          "type": "string",
+          "enum": [
+            "family",
+            "external",
+            "unknown"
+          ]
+        },
+        "relationType": {
+          "type": "string",
+          "enum": [
+            "references",
+            "supports",
+            "follows",
+            "precedes",
+            "implements",
+            "interprets",
+            "amends",
+            "supersedes",
+            "reprints",
+            "related_methodology",
+            "companion_guidance",
+            "duplicate_or_reprint",
+            "jurisdictional_modification",
+            "cross_references",
+            "boundary_of",
+            "same_source"
+          ]
+        },
+        "relationshipStatus": {
+          "type": "string",
+          "enum": [
+            "candidate",
+            "needs_review",
+            "confirmed",
+            "rejected"
+          ]
+        },
+        "origin": {
+          "type": "string",
+          "enum": [
+            "intake_manifest",
+            "reviewed_source_pack",
+            "manual_review"
+          ]
+        },
+        "reviewRequired": {
+          "type": "boolean",
+          "const": true
+        },
+        "notes": {
+          "type": "string"
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evidence"
+          }
+        }
+      }
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "sourcePath": {
+          "type": "string"
+        },
+        "pageReference": {
+          "type": "string"
+        },
+        "sectionReference": {
+          "type": "string"
+        },
+        "lineReference": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

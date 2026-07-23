@@ -369,3 +369,7 @@ review index / self-review pair. The July 2009 practice note and the December
 2009 addendum remain part of the same March 2011 update, not separate waves.
 This keeps the batch plan aligned with the source text and avoids splitting the
 update into artificial sub-sources.
+2026-07-22: New actuarial document families should enter through a review-only family intake manifest and deterministic scanner. The intake layer may use synthetic corpora for portability tests, but raw source files remain out of Git and the intake outputs stay review-only until a later promotion decision.
+2026-07-22: Family-intake scanner outputs must distinguish preparation from completion. Source-index input, repository-manifest, and retrieval-test handoffs may be generated for the next stage, but must explicitly remain pending, review-only, and non-promotable until canonical source packages and reviewed evidence exist.
+2026-07-22: The intake-to-source-index adapter must require a reviewed source pack with source-bound chunks and citations. Intake metadata alone is insufficient to create canonical source packages; generated packages remain POC, review-only, and not retrieval-ready.
+2026-07-22: Relationship hints should be normalized into a separate review-only registry rather than embedded as confirmed canonical relationships. Unknown targets remain external or unknown and require human review; amendment, reprint, and supersession semantics are never inferred from filenames alone.

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "registryId": "{{familyId}}-relationship-registry",
+  "familyId": "{{familyId}}",
+  "generatedAt": "{{generatedAt}}",
+  "reviewOnly": true,
+  "learnerFacingAllowed": false,
+  "appReadyAllowed": false,
+  "ragReadyAllowed": false,
+  "promotionStatus": "not_promoted",
+  "relationshipCount": 1,
+  "relationships": [
+    {
+      "relationshipId": "{{relationshipId}}",
+      "sourceId": "{{familyId}}:{{sourceDocumentId}}",
+      "targetId": "{{familyId}}:{{targetDocumentId}}",
+      "sourceDocumentId": "{{sourceDocumentId}}",
+      "targetDocumentId": "{{targetDocumentId}}",
+      "targetScope": "family",
+      "relationType": "companion_guidance",
+      "relationshipStatus": "candidate",
+      "origin": "intake_manifest",
+      "reviewRequired": true,
+      "notes": "Confirm relationship semantics and evidence before promotion.",
+      "evidence": []
+    }
+  ],
+  "notes": "Candidate relationship registry; no edge is confirmed by intake alone."
+}

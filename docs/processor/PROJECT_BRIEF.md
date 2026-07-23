@@ -6,7 +6,9 @@ document-structurizer proof of concept.
 
 The learner-facing app is owned by the separate app/product thread. This repo
 owns source inventory, text extraction, chunking, metadata, summaries, review
-packets, app-ready exports, and validation.
+packets, app-ready exports, and validation. New document families enter
+through a document-family intake manifest and scanner before they flow into
+the canonical source-index layer.
 
 ## Mission
 
@@ -43,10 +45,20 @@ Contract files:
 - `data/schemas/extraction-output.schema.json`
 - `data/schemas/review-packet.schema.json`
 - `data/schemas/document-classification.schema.json`
+- `data/schemas/document-family-intake.schema.json`
+- `data/schemas/document-family-reviewed-source-pack.schema.json`
+- `data/schemas/document-family-relationship-registry.schema.json`
 - `data/templates/batch-manifest.template.json`
 - `data/templates/review-packet.template.json`
 - `data/templates/review-packet.template.md`
+- `data/templates/document-family-intake.template.json`
+- `data/templates/document-family-reviewed-source-pack.template.json`
+- `data/templates/document-family-relationship-registry.template.json`
 - `data/samples/contract-demo/`
+- `data/samples/contract-demo/document-family-intake.example.json`
+- `data/intake/README.md`
+- `docs/processor/document_family_source_index_adapter.md`
+- `scripts/build-document-family-relationship-registry.mjs`
 
 These contracts are intentionally generic. NAIC-specific assumptions stay in
 `config/source-families.json`, while the schemas remain portable enough for
@@ -180,20 +192,27 @@ app/product thread to import.
 ## Processing workflow
 
 1. Inventory the selected raw source folder or batch.
-2. Record file metadata, sensitivity flags, and extraction feasibility.
-3. Extract text and preserve page or section locators.
-4. Chunk by source structure, not arbitrary token size.
-5. Label chunks with summary, keywords, confidence, and review flags.
-6. Build concise review packets that only show exceptions and promotions.
-7. Promote approved items into sanitized exports.
-8. Produce app-ready exports without changing the app UI.
-9. Validate IDs, citations, learner-facing eligibility, and unresolved issues.
-10. Update project-state docs and hand off the batch.
+2. Record file metadata, sensitivity flags, intake overrides, and extraction
+   feasibility.
+3. Use the family intake manifest and scanner to select the profile and build a
+   deterministic inventory.
+4. Extract text and preserve page or section locators.
+5. Chunk by source structure, not arbitrary token size.
+6. Label chunks with summary, keywords, confidence, and review flags.
+7. Build concise review packets that only show exceptions and promotions.
+8. Promote approved items into sanitized exports.
+9. Produce app-ready exports without changing the app UI.
+10. Validate IDs, citations, learner-facing eligibility, and unresolved
+    issues.
+11. Update project-state docs and hand off the batch.
 
 ## Output contract
 
 Every batch should end with:
 
+- intake inventory, when a family-intake manifest is in play
+- reviewed source-bound package, when the family source-index adapter is in
+  play
 - source inventory
 - chunk manifest
 - classification record, when a profile-aware classifier is in use

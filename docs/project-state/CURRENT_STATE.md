@@ -740,3 +740,7 @@ working storage. The tracked review index and self-review note are
 `docs/review/ag38_law_manual_reprint_self_review.md`, the source remains
 review-only and companion-only, and the duplicate-source disposition remains
 open for human review before any later merge or reuse.
+2026-07-22: Added a first-class document-family intake manifest schema, intake scanner, intake workflow documentation, and an intake contract example so new actuarial document families can be onboarded deterministically before they reach the canonical source-index layer. The repo is clean at the start of this turn and the current HEAD is `45ddcc9`.
+2026-07-22: Hardened the family-intake handoff so the scanner also emits explicit source-index input, repository-manifest preparation, and retrieval-test preparation artifacts. These remain pending downstream builds and preserve review-only, no-promotion status.
+2026-07-22: Added the reviewed source-pack contract and deterministic family-intake-to-source-index adapter. The adapter requires reviewed chunks and citations, emits review-only canonical POC packages and pending retrieval artifacts, and does not infer source text from intake metadata.
+2026-07-22: Added a candidate relationship registry and deterministic builder for companion, duplicate/reprint, amendment, supersession, jurisdictional-modification, and cross-reference edges. Registry entries remain candidate or needs-review with human review required.

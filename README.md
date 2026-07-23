@@ -32,16 +32,25 @@ It includes:
 The canonical layer stays review-only, not learner-facing, not app-ready, and
 not RAG-ready by default. The repository also includes a retrieval readiness
 report, a deterministic classification layer, and a compact evaluation
-harness for the expanded corpus.
+harness for the expanded corpus. New document families can now enter through a
+document-family intake manifest and scanner before they are turned into the
+canonical source-index layer.
 
 ## What lives here
 
 - scripts for inventory, extraction, chunking, labeling, review, export, and
   validation
+- intake contracts and a deterministic family-intake scanner for new document
+  families
 - durable project-state docs for handoff and auditability
 - source-family config and batch templates
 - formal JSON schemas for batch manifests, inventories, extraction outputs,
   and review packets
+- formal JSON schemas for family intake manifests and document classification
+- a reviewed-source-pack contract and intake-to-source-index adapter for
+  canonical POC package generation
+- a candidate relationship registry for companion, reprint, amendment,
+  supersession, and cross-reference edges
 - canonical source-index schemas and repository-manifest schemas
 - lightweight contract fixtures under `data/samples/contract-demo/`
 - lightweight manifests, sanitized exports, and review packets
@@ -65,8 +74,11 @@ The reference app repo is read-only context only:
 1. Inspect the current state docs in `docs/project-state/`.
 2. Run `npm run check` to validate the scaffold.
 3. Run `npm run bootstrap` to create the first batch workspace.
-4. Select a small source batch and build the inventory, chunk, review, and
-   export artifacts.
+4. For a new document family, create or review the intake manifest and run the
+   family-intake scanner first.
+5. Select a small source batch and build the inventory, chunk, review, and
+   export artifacts. When reviewed source-bound chunks exist, run the family
+   source-index adapter to prepare canonical POC packages.
 
 ## Output contract
 

@@ -1,0 +1,89 @@
+{
+  "schemaVersion": "1.0",
+  "handoffType": "family_intake_reviewed_source_pack",
+  "familyId": "{{familyId}}",
+  "reviewOnly": true,
+  "learnerFacingAllowed": false,
+  "appReadyAllowed": false,
+  "ragReadyAllowed": false,
+  "sourcePackages": [
+    {
+      "sourceId": "{{familyId}}:{{documentId}}",
+      "sourceIndexId": "source-index-{{familyId}}-{{documentId}}",
+      "sourceVersionId": "source-version-{{familyId}}-{{documentId}}",
+      "filename": "{{filename}}",
+      "sourceReference": "{{sourceReference}}",
+      "sourceStatus": "unclear",
+      "jurisdiction": null,
+      "authorityLevel": "source_document",
+      "documentType": "{{documentType}}",
+      "sourceTitle": "{{sourceTitle}}",
+      "pageRange": {
+        "start": 1,
+        "end": 1
+      },
+      "reviewBatchIds": [
+        "{{reviewBatchId}}"
+      ],
+      "reviewIndexPath": "docs/review/{{reviewIndexPath}}",
+      "selfReviewPath": "docs/review/{{selfReviewPath}}",
+      "pageImageBackstop": true,
+      "lineReferencesAvailable": false,
+      "textLayerQuality": "unknown",
+      "classification": {
+        "domainId": "{{domainId}}",
+        "documentType": "{{documentType}}",
+        "purpose": "{{purpose}}",
+        "intendedAudience": "document reviewers",
+        "authoritySourceType": "source_document",
+        "confidentiality": "internal",
+        "recommendedProfile": "{{profile}}",
+        "recommendedChunkingStrategy": "deterministic_topic_slices",
+        "confidence": "medium",
+        "unresolvedQuestions": [
+          "Confirm source status and exact wording during human review."
+        ]
+      },
+      "chunks": [
+        {
+          "chunkId": "{{chunkId}}",
+          "chunkOrdinal": 1,
+          "chunkKind": "source_excerpt",
+          "sourceTextType": "review_artifact_derived_text",
+          "pageStart": 1,
+          "pageEnd": 1,
+          "sectionReference": "{{sectionReference}}",
+          "lineReference": null,
+          "sourceTextExcerpt": "{{sourceTextExcerpt}}",
+          "normalizedTextExcerpt": "{{normalizedTextExcerpt}}",
+          "summary": "{{summary}}",
+          "controlledTags": [
+            "background_content"
+          ],
+          "keywords": [
+            "{{keyword}}"
+          ],
+          "citations": [
+            {
+              "citationText": "{{citationText}}",
+              "pageReference": "pp. 1-1",
+              "sectionReference": "{{sectionReference}}",
+              "sourceReference": "{{sourceReference}}",
+              "lineReference": null
+            }
+          ],
+          "fidelity": "curated",
+          "confidence": "medium",
+          "reviewFlags": [
+            "review_only"
+          ],
+          "qualityNotes": [],
+          "evidenceNotes": "Keep this chunk source-bound and review-only.",
+          "retrievalEligible": true,
+          "promotionEligible": false
+        }
+      ]
+    }
+  ],
+  "notes": "Populate only from reviewed, source-bound extraction artifacts."
+}

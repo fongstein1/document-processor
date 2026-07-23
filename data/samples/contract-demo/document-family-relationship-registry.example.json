@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "registryId": "synthetic-pricing-intake-demo-relationship-registry",
+  "familyId": "synthetic-pricing-intake-demo",
+  "generatedAt": "2026-07-22T00:00:00Z",
+  "reviewOnly": true,
+  "learnerFacingAllowed": false,
+  "appReadyAllowed": false,
+  "ragReadyAllowed": false,
+  "promotionStatus": "not_promoted",
+  "relationshipCount": 1,
+  "relationships": [
+    {
+      "relationshipId": "relationship-synthetic-pricing-product-to-assumption-supports",
+      "sourceId": "synthetic-pricing-intake-demo:synthetic-pricing-product-specification",
+      "targetId": "synthetic-pricing-intake-demo:synthetic-pricing-assumption-memo",
+      "sourceDocumentId": "synthetic-pricing-product-specification",
+      "targetDocumentId": "synthetic-pricing-assumption-memo",
+      "targetScope": "family",
+      "relationType": "supports",
+      "relationshipStatus": "candidate",
+      "origin": "intake_manifest",
+      "reviewRequired": true,
+      "notes": "Synthetic relationship fixture; confirm before promotion.",
+      "evidence": []
+    }
+  ],
+  "notes": "Synthetic candidate relationship registry fixture."
+}
