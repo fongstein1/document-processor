@@ -527,6 +527,166 @@
       ]
     },
     {
+      "sourceIndexId": "source-index-vm20-canonical-coverage",
+      "sourceVersionId": "source-index-vm20-canonical-coverage",
+      "sourceId": "vm20-canonical-coverage",
+      "filename": "pbr_data_valuation_manual_2026.pdf",
+      "filePath": "D:\\Work\\AI Projects\\NAIC Valuation Manual Course\\pbr_data_valuation_manual_2026.pdf",
+      "sourceFamilyId": "valuation_manual_pdfs",
+      "domainId": "naic_regulatory",
+      "documentType": "valuation_manual_section",
+      "sourceTitle": "VM-20 Current Manual Canonical Coverage (Reviewed Wave)",
+      "sourceReference": "2026 NAIC Valuation Manual",
+      "jurisdiction": "NAIC",
+      "authorityLevel": "manual_section",
+      "sourceStatus": "active",
+      "versionDate": null,
+      "pageCount": 457,
+      "pageRange": { "start": 48, "end": 95 },
+      "expectedChunkCount": 52,
+      "reviewBatchIds": ["batch-004", "batch-005", "batch-007", "batch-008", "batch-009", "batch-010", "batch-011", "batch-012"],
+      "reviewIndexPath": "docs/review/vm20_review_index.md",
+      "selfReviewPath": "docs/review/vm20_self_review.md",
+      "pageImageBackstop": false,
+      "lineReferencesAvailable": false,
+      "textLayerQuality": "clean",
+      "chunkDefaults": {
+        "sourceTextType": "actual_extracted_source_text",
+        "fidelity": "exact",
+        "confidence": "high",
+        "reviewFlags": ["review_only"],
+        "controlledTags": ["core_vm_course"],
+        "qualityNotes": [
+          "Actual source text from the controlled current VM-20 review wave.",
+          "Page locators are preserved; line references were not available in the source extraction."
+        ],
+        "evidenceNotes": "Derived from ignored VM-20 batches 004, 005, and 007-012; review-only and not promoted."
+      },
+      "batchCoverageInput": {
+        "extractionPaths": [
+          "data/work/batches/batch-004/extraction-output.json",
+          "data/work/batches/batch-005/extraction-output.json",
+          "data/work/batches/batch-007/extraction-output.json",
+          "data/work/batches/batch-008/extraction-output.json",
+          "data/work/batches/batch-009/extraction-output.json",
+          "data/work/batches/batch-010/extraction-output.json",
+          "data/work/batches/batch-011/extraction-output.json",
+          "data/work/batches/batch-012/extraction-output.json"
+        ],
+        "sourceIds": [
+          "vm20-role-map-sections-3-4-5",
+          "vm20-section3-opener",
+          "vm20-npr-entry-setup",
+          "vm20-npr-entry-formula",
+          "vm20-section4-entry",
+          "vm20-section5-entry",
+          "vm20-section6-exclusion-tests",
+          "vm20-section7-model-structure",
+          "vm20-section7-asset-mechanics",
+          "vm20-section8-reinsurance"
+        ],
+        "includeKinds": ["chunk", "review_note"],
+        "childTargetWords": 360
+      },
+      "classification": {
+        "domainId": "naic_regulatory",
+        "documentType": "valuation_manual_section",
+        "purpose": "Hierarchical source-bound canonical coverage of the available current VM-20 manual review wave.",
+        "intendedAudience": "Valuation, regulatory, and governance reviewers",
+        "authoritySourceType": "regulatory",
+        "confidentiality": "internal",
+        "approvalStatus": "reviewed",
+        "recommendedProfile": "regulatory",
+        "recommendedChunkingStrategy": "hierarchical_structure",
+        "confidence": "high",
+        "unresolvedQuestions": ["The current manual source is only available in reviewed slices; independent review is required before promotion."],
+        "notes": "Current manual evidence only; summaries and review commentary remain distinct from source text."
+      },
+      "notes": "Expanded current-manual VM-20 coverage for the reviewed 2026 source slices. This is review-only, not learner-facing, not app-ready, not RAG-ready, and not promoted."
+    },
+    {
+      "sourceIndexId": "source-index-vm20-practice-note-companion",
+      "sourceVersionId": "source-index-vm20-practice-note-companion",
+      "sourceId": "vm20-practice-note-companion",
+      "filename": "AAA - VM-20_PN_2020_Version.pdf",
+      "filePath": "D:\\Work\\AI Projects\\NAIC Valuation Manual Course\\Practice Notes\\AAA - VM-20_PN_2020_Version.pdf",
+      "sourceFamilyId": "practice_notes",
+      "domainId": "naic_regulatory",
+      "documentType": "practice_note",
+      "sourceTitle": "VM-20 Practice Note Companion Coverage",
+      "sourceReference": "American Academy of Actuaries practice note, April 2020",
+      "jurisdiction": "NAIC",
+      "authorityLevel": "companion_guidance",
+      "sourceStatus": "historical_companion",
+      "versionDate": "2020-04-01",
+      "pageCount": 115,
+      "pageRange": { "start": 1, "end": 115 },
+      "expectedChunkCount": 175,
+      "reviewBatchIds": ["batch-055", "batch-056", "batch-057", "batch-058", "batch-059", "batch-060", "batch-061", "batch-062", "batch-063", "batch-064", "batch-065", "batch-066", "batch-067", "batch-068", "batch-069", "batch-070", "batch-071", "batch-072", "batch-073", "batch-074", "batch-075"],
+      "reviewIndexPath": "docs/review/vm20_practice_note_review_index.md",
+      "selfReviewPath": "docs/review/vm20_practice_note_self_review.md",
+      "pageImageBackstop": false,
+      "lineReferencesAvailable": false,
+      "textLayerQuality": "clean",
+      "chunkDefaults": {
+        "sourceTextType": "actual_extracted_source_text",
+        "fidelity": "exact",
+        "confidence": "high",
+        "reviewFlags": ["review_only", "companion_guidance", "non_binding_guidance"],
+        "controlledTags": ["supporting_guidance", "companion_guidance", "non_binding_guidance"],
+        "qualityNotes": [
+          "Actual extracted practice-note text is retained as companion evidence.",
+          "The practice note is non-binding and based on a historical VM-20 edition; current-manual confirmation is required."
+        ],
+        "evidenceNotes": "Derived from ignored VM-20 practice-note batches 055-075; companion guidance remains non-binding, review-only, and not promoted."
+      },
+      "batchCoverageInput": {
+        "extractionPaths": [
+          "data/work/batches/batch-055/extraction-output.json",
+          "data/work/batches/batch-056/extraction-output.json",
+          "data/work/batches/batch-057/extraction-output.json",
+          "data/work/batches/batch-058/extraction-output.json",
+          "data/work/batches/batch-059/extraction-output.json",
+          "data/work/batches/batch-060/extraction-output.json",
+          "data/work/batches/batch-061/extraction-output.json",
+          "data/work/batches/batch-062/extraction-output.json",
+          "data/work/batches/batch-063/extraction-output.json",
+          "data/work/batches/batch-064/extraction-output.json",
+          "data/work/batches/batch-065/extraction-output.json",
+          "data/work/batches/batch-066/extraction-output.json",
+          "data/work/batches/batch-067/extraction-output.json",
+          "data/work/batches/batch-068/extraction-output.json",
+          "data/work/batches/batch-069/extraction-output.json",
+          "data/work/batches/batch-070/extraction-output.json",
+          "data/work/batches/batch-071/extraction-output.json",
+          "data/work/batches/batch-072/extraction-output.json",
+          "data/work/batches/batch-073/extraction-output.json",
+          "data/work/batches/batch-074/extraction-output.json",
+          "data/work/batches/batch-075/extraction-output.json"
+        ],
+        "sourceIds": [
+          "vm20-pn-front-matter", "vm20-pn-common-practice", "vm20-pn-calculation-overview", "vm20-pn-npr-overview", "vm20-pn-dr-overview", "vm20-pn-sr-overview", "vm20-pn-stochastic-exclusion", "vm20-pn-deterministic-exclusion", "vm20-pn-scenario-reserve", "vm20-pn-valuation-date", "vm20-pn-starting-assets", "vm20-pn-scenarios-econ", "vm20-pn-prudent-estimate", "vm20-pn-margins", "vm20-pn-mortality", "vm20-pn-premium", "vm20-pn-behavior", "vm20-pn-expense", "vm20-pn-nge", "vm20-pn-reinsurance", "vm20-pn-hedging"
+        ],
+        "includeKinds": ["chunk", "review_note"],
+        "childTargetWords": 360
+      },
+      "classification": {
+        "domainId": "naic_regulatory",
+        "documentType": "practice_note",
+        "purpose": "Hierarchical companion-guidance coverage for implementation questions that accompany VM-20 review.",
+        "intendedAudience": "Actuarial implementation and review teams",
+        "authoritySourceType": "companion",
+        "confidentiality": "internal",
+        "approvalStatus": "reviewed",
+        "recommendedProfile": "regulatory",
+        "recommendedChunkingStrategy": "hierarchical_structure",
+        "confidence": "high",
+        "unresolvedQuestions": ["The practice note is non-binding, dated 2020, and must not substitute for the current Valuation Manual."],
+        "notes": "Companion guidance is indexed separately from current manual authority."
+      },
+      "notes": "Expanded hierarchical companion coverage for the reviewed VM-20 practice-note wave. Non-binding, historical, review-only, and not promoted."
+    },
+    {
       "sourceIndexId": "source-index-vm21-sr-projection-entry",
       "sourceVersionId": "source-index-vm21-sr-projection-entry",
       "sourceId": "vm21-sr-projection-entry",
@@ -1946,6 +2106,160 @@
       ],
       "expectedSourceIds": ["vm20-section3c-hierarchical"],
       "rationale": "Demonstrates child retrieval with parent context and stable adjacency for an existing reviewed source slice."
+    },
+    {
+      "queryId": "q-vm20-npr-formula-uls-g",
+      "queryCategory": "vm20_npr",
+      "query": "What does the current VM-20 manual say about the NPR formula and the ULSG branch?",
+      "expectedChunkIds": [
+        "vm20-canonical-coverage-vm20-npr-entry-formula",
+        "vm20-canonical-coverage-vm20-npr-entry-formula-child-001"
+      ],
+      "expectedSourceIds": ["vm20-canonical-coverage"],
+      "rationale": "Tests current-manual NPR formula retrieval while preserving the formula/setup boundary."
+    },
+    {
+      "queryId": "q-vm20-deterministic-reserve-entry",
+      "queryCategory": "vm20_dr",
+      "query": "Where does VM-20 introduce the Deterministic Reserve and its cash surrender value floor?",
+      "expectedChunkIds": [
+        "vm20-canonical-coverage-vm20-section4-entry",
+        "vm20-canonical-coverage-vm20-section4-entry-child-001",
+        "vm20-section3c-hierarchical-section-3-d-npr-calculation-and-cash-surrender-value-floor",
+        "vm20-section3c-hierarchical-section-3-d-npr-calculation-and-cash-surrender-value-floor-child-001"
+      ],
+      "expectedSourceIds": ["vm20-canonical-coverage"],
+      "rationale": "Tests the current-manual DR entry point without claiming complete Section 4 coverage."
+    },
+    {
+      "queryId": "q-vm20-stochastic-reserve-aggregation",
+      "queryCategory": "vm20_sr",
+      "query": "How does the current VM-20 slice introduce the Stochastic Reserve and subgroup aggregation?",
+      "expectedChunkIds": [
+        "vm20-canonical-coverage-vm20-section5-entry",
+        "vm20-canonical-coverage-vm20-section5-entry-child-001"
+      ],
+      "expectedSourceIds": ["vm20-canonical-coverage"],
+      "rationale": "Tests the reviewed SR entry and aggregation boundary."
+    },
+    {
+      "queryId": "q-vm20-exclusion-tests",
+      "queryCategory": "vm20_exclusions",
+      "query": "What requirements and scope limits appear in the VM-20 stochastic and deterministic exclusion tests?",
+      "expectedChunkIds": [
+        "vm20-canonical-coverage-vm20-section6-exclusion-tests",
+        "vm20-canonical-coverage-vm20-section6-exclusion-tests-child-001"
+      ],
+      "expectedSourceIds": ["vm20-canonical-coverage"],
+      "rationale": "Tests direct retrieval of SET, SERT, and DET material."
+    },
+    {
+      "queryId": "q-vm20-cash-flow-model-structure",
+      "queryCategory": "vm20_cash_flow_models",
+      "query": "What does VM-20 require for cash-flow model structure, model segments, projected cash flows, and starting assets?",
+      "expectedChunkIds": [
+        "vm20-canonical-coverage-vm20-section7-model-structure",
+        "vm20-canonical-coverage-vm20-section7-model-structure-child-001"
+      ],
+      "expectedSourceIds": ["vm20-canonical-coverage"],
+      "rationale": "Tests model-structure and starting-asset retrieval from the current manual."
+    },
+    {
+      "queryId": "q-vm20-asset-treatment",
+      "queryCategory": "vm20_assets",
+      "query": "How does the VM-20 cash-flow model treat invested assets, policy loans, economic scenarios, and proxy-fund mapping?",
+      "expectedChunkIds": [
+        "vm20-canonical-coverage-vm20-section7-asset-mechanics",
+        "vm20-canonical-coverage-vm20-section7-asset-mechanics-child-001",
+        "vm20-canonical-coverage-vm20-section7-model-structure",
+        "vm20-canonical-coverage-vm20-section7-model-structure-child-002"
+      ],
+      "expectedSourceIds": ["vm20-canonical-coverage"],
+      "rationale": "Tests asset-treatment, scenario, and proxy-mapping coverage."
+    },
+    {
+      "queryId": "q-vm20-reinsurance-credit-and-cash-flows",
+      "queryCategory": "vm20_reinsurance",
+      "query": "What does the current VM-20 slice say about credit for ceded reinsurance and reinsurance cash flows in DR or SR?",
+      "expectedChunkIds": [
+        "vm20-canonical-coverage-vm20-section8-reinsurance",
+        "vm20-canonical-coverage-vm20-section8-reinsurance-child-001"
+      ],
+      "expectedSourceIds": ["vm20-canonical-coverage"],
+      "rationale": "Tests reinsurance credit and cash-flow treatment while keeping Section 9 as an explicit gap."
+    },
+    {
+      "queryId": "q-vm20-prescribed-company-assumptions",
+      "queryCategory": "vm20_assumptions_comparison",
+      "query": "How should a reviewer distinguish prescribed VM-20 assumptions from company or prudent-estimate assumptions?",
+      "expectedChunkIds": [
+        "vm20-section3c-hierarchical-section-3-c-1-mortality-rates-child-001",
+        "vm20-canonical-coverage-vm20-npr-entry-setup-child-001",
+        "vm20-practice-note-companion-vm20-pn-prudent-estimate-child-005",
+        "vm20-practice-note-companion-vm20-pn-prudent-estimate-child-002",
+        "vm20-practice-note-companion-vm20-pn-prudent-estimate-child-003"
+      ],
+      "expectedSourceIds": ["vm20-section3c-hierarchical", "vm20-canonical-coverage"],
+      "rationale": "Tests a cross-section comparison without collapsing source text and interpretation."
+    },
+    {
+      "queryId": "q-vm20-practice-note-expense-guidance",
+      "queryCategory": "vm20_companion_expense",
+      "query": "What implementation guidance does the VM-20 practice note provide about expense assumptions?",
+      "expectedChunkIds": [
+        "vm20-practice-note-companion-vm20-pn-expense",
+        "vm20-practice-note-companion-vm20-pn-expense-child-001"
+      ],
+      "expectedSourceIds": ["vm20-practice-note-companion"],
+      "rationale": "Tests expense guidance as companion evidence, not current binding manual text."
+    },
+    {
+      "queryId": "q-vm20-practice-note-mortality-behavior",
+      "queryCategory": "vm20_companion_assumptions",
+      "query": "How does the VM-20 practice note discuss mortality assumptions and policyholder behavior assumptions?",
+      "expectedChunkIds": [
+        "vm20-practice-note-companion-vm20-pn-mortality-child-001",
+        "vm20-practice-note-companion-vm20-pn-behavior-child-001"
+      ],
+      "expectedSourceIds": ["vm20-practice-note-companion"],
+      "rationale": "Tests comparison across two companion sections while preserving the non-binding label."
+    },
+    {
+      "queryId": "q-vm20-practice-note-margins",
+      "queryCategory": "vm20_companion_margins",
+      "query": "What topics does the VM-20 practice note cover when setting margins?",
+      "expectedChunkIds": [
+        "vm20-practice-note-companion-vm20-pn-margins",
+        "vm20-practice-note-companion-vm20-pn-margins-child-001",
+        "vm20-practice-note-companion-vm20-pn-margins-child-004",
+        "vm20-practice-note-companion-vm20-pn-margins-child-002",
+        "vm20-practice-note-companion-vm20-pn-margins-child-006"
+      ],
+      "expectedSourceIds": ["vm20-practice-note-companion"],
+      "rationale": "Tests margin retrieval from the separate companion package."
+    },
+    {
+      "queryId": "q-vm20-current-table-gap",
+      "queryCategory": "unsupported",
+      "query": "What are the exact current 2026 VM-20 Appendix 2 prescribed asset-default table rows and version metadata?",
+      "expectedOutcome": "unsupported",
+      "expectedChunkIds": [],
+      "expectedSourceIds": [],
+      "rationale": "The reviewed VM-20 wave does not contain a structured current-table package; the gap must remain explicit."
+    },
+    {
+      "queryId": "q-vm20-cross-document-reporting",
+      "queryCategory": "vm20_cross_document",
+      "query": "Which VM-20 sections and related documents are referenced for reserve categories, cash-flow models, and reporting support?",
+      "expectedChunkIds": [
+        "vm20-canonical-coverage-vm20-role-map-sections-3-4-5",
+        "vm20-canonical-coverage-vm20-section7-model-structure-child-001",
+        "vm20-canonical-coverage-vm20-section7-asset-mechanics-child-007",
+        "vm20-canonical-coverage-vm20-section7-asset-mechanics-child-008",
+        "vm20-canonical-coverage-vm20-section7-model-structure"
+      ],
+      "expectedSourceIds": ["vm20-canonical-coverage"],
+      "rationale": "Tests cross-reference retrieval for VM-31 and related valuation-manual sections without inferring legal effect."
     },
     {
       "queryId": "q-vm21-sr-projection-entry",

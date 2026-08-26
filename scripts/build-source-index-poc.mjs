@@ -13,6 +13,7 @@ const exportsRoot = path.join(outputRoot, 'exports')
 const evaluationRoot = path.join(outputRoot, 'evaluation')
 const classificationRoot = path.join(outputRoot, 'classification')
 const legacyRetrievalRoot = path.join(outputRoot, 'retrieval')
+const reviewPackagesRoot = path.join(repoRoot, 'data', 'processed', 'review_packages')
 
 const readJson = async (filePath) => JSON.parse(await fs.readFile(filePath, 'utf8'))
 
@@ -395,6 +396,115 @@ const buildHierarchicalChunks = async (source) => {
   return chunks
 }
 
+const buildBatchCoverageChunks = async (source) => {
+  const input = source.batchCoverageInput
+  if (!input) return asArray(source.chunks)
+  const allowedSourceIds = new Set(input.sourceIds ?? [])
+  const allowedKinds = new Set(input.includeKinds ?? ['chunk', 'review_note'])
+  const items = []
+  for (const extractionPath of input.extractionPaths ?? []) {
+    const extraction = await readJson(path.resolve(repoRoot, extractionPath))
+    for (const group of extraction.sourceGroups ?? []) {
+      if (allowedSourceIds.size > 0 && !allowedSourceIds.has(group.sourceId)) continue
+      for (const item of group.extractedItems ?? []) {
+        if (!allowedKinds.has(item.itemKind) || !item.chunkText) continue
+        items.push({ ...item, groupSourceId: group.sourceId })
+      }
+    }
+  }
+  if (items.length === 0) throw new Error(`Batch coverage input has no extracted source text: ${source.sourceId}`)
+
+  const records = items.map((item) => {
+    const heading = item.sectionReference ?? item.sourceId ?? item.stableId
+    const parentId = `${source.sourceId}-${slugify(item.sourceId ?? item.stableId)}`
+    const parentText = String(item.chunkText).trim()
+    const childTexts = packParagraphs(splitParagraphs(parentText), input.childTargetWords ?? 360)
+    const childIds = childTexts.map((_, index) => `${parentId}-child-${String(index + 1).padStart(3, '0')}`)
+    const pageRange = parsePageRange(parentText, source.pageRange.start, source.pageRange.end)
+    return { item, heading, parentId, parentText, childTexts, childIds, pageRange }
+  })
+  const allIds = records.flatMap((record) => [record.parentId, ...record.childIds])
+  const sourceTags = source.chunkDefaults?.controlledTags ?? []
+  const baseFlags = source.chunkDefaults?.reviewFlags ?? ['review_only']
+  const baseQualityNotes = source.chunkDefaults?.qualityNotes ?? []
+  const evidenceNotes = source.chunkDefaults?.evidenceNotes ?? `Derived from the ignored VM-20 review batches; ${source.authorityLevel === 'companion_guidance' ? 'companion guidance remains non-binding and review-only.' : 'source text remains review-only and not promoted.'}`
+  const chunks = []
+  let ordinal = 1
+  for (const record of records) {
+    const parentIndex = allIds.indexOf(record.parentId)
+    const itemFlags = asArray(record.item.reviewFlags)
+    const itemTags = asArray(record.item.reviewFlags)
+    chunks.push({
+      chunkId: record.parentId,
+      chunkOrdinal: ordinal++,
+      chunkKind: 'source_excerpt',
+      sourceTextType: 'actual_extracted_source_text',
+      pageStart: record.pageRange.start,
+      pageEnd: record.pageRange.end,
+      sectionReference: record.heading,
+      sourceTextExcerpt: record.parentText,
+      normalizedTextExcerpt: normalizeText(record.parentText).toLowerCase(),
+      summary: record.item.summary ?? `${record.heading} from the reviewed VM-20 source material.`,
+      topic: record.heading,
+      headingPath: `VM-20 > ${record.heading}`,
+      structuralLocator: `VM-20 / ${record.heading}`,
+      chunkLevel: 'parent',
+      parentChunkId: null,
+      childChunkIds: record.childIds,
+      precedingChunkId: allIds[parentIndex - 1] ?? null,
+      followingChunkId: allIds[parentIndex + 1] ?? null,
+      chunkingMethod: 'hierarchical_structure',
+      controlledTags: [...new Set([...sourceTags, ...itemTags, 'hierarchical_parent', 'review_only'])],
+      keywords: ['VM-20', record.heading, record.item.sourceId ?? ''],
+      citations: [{ citationText: record.heading, pageReference: `pp. ${record.pageRange.start}-${record.pageRange.end}`, sectionReference: record.heading, sourceReference: source.sourceReference, lineReference: null }],
+      fidelity: source.chunkDefaults?.fidelity ?? 'exact',
+      confidence: source.chunkDefaults?.confidence ?? 'high',
+      reviewFlags: [...new Set([...baseFlags, ...itemFlags, 'hierarchical_parent', 'review_only'])],
+      qualityNotes: [...baseQualityNotes, 'Parent preserves the reviewed source boundary.', 'Child chunks retain contiguous paragraph or semantic boundaries.'],
+      evidenceNotes,
+      retrievalEligible: true,
+      promotionEligible: false,
+    })
+    record.childTexts.forEach((childText, index) => {
+      const childId = record.childIds[index]
+      const childIndex = allIds.indexOf(childId)
+      const childPages = parsePageRange(childText, record.pageRange.start, record.pageRange.end)
+      chunks.push({
+        chunkId: childId,
+        chunkOrdinal: ordinal++,
+        chunkKind: 'source_excerpt',
+        sourceTextType: 'actual_extracted_source_text',
+        pageStart: childPages.start,
+        pageEnd: childPages.end,
+        sectionReference: record.heading,
+        sourceTextExcerpt: childText,
+        normalizedTextExcerpt: normalizeText(childText).toLowerCase(),
+        summary: `Retrieval child for ${record.heading}; preserves contiguous source text and associated qualifications.`,
+        topic: record.heading,
+        headingPath: `VM-20 > ${record.heading}`,
+        structuralLocator: `VM-20 / ${record.heading} / child ${index + 1}`,
+        chunkLevel: 'child',
+        parentChunkId: record.parentId,
+        childChunkIds: [],
+        precedingChunkId: allIds[childIndex - 1] ?? null,
+        followingChunkId: allIds[childIndex + 1] ?? null,
+        chunkingMethod: 'semantic_boundary',
+        controlledTags: [...new Set([...sourceTags, ...itemTags, 'hierarchical_child', 'review_only'])],
+        keywords: ['VM-20', record.heading, record.item.sourceId ?? ''],
+        citations: [{ citationText: record.heading, pageReference: `pp. ${childPages.start}-${childPages.end}`, sectionReference: record.heading, sourceReference: source.sourceReference, lineReference: null }],
+        fidelity: source.chunkDefaults?.fidelity ?? 'exact',
+        confidence: source.chunkDefaults?.confidence ?? 'high',
+        reviewFlags: [...new Set([...baseFlags, ...itemFlags, 'hierarchical_child', 'review_only'])],
+        qualityNotes: [...baseQualityNotes, 'Child boundary follows paragraph or semantic packing within the reviewed source slice.', 'Requirement, exception, qualification, and condition text remains contiguous where present.'],
+        evidenceNotes,
+        retrievalEligible: true,
+        promotionEligible: false,
+      })
+    })
+  }
+  return chunks
+}
+
 const buildSourceMarkdown = (sourceIndex) => {
   const { source, processing, chunks, quality } = sourceIndex
   const lines = []
@@ -593,6 +703,141 @@ const buildRetrievalReadinessReport = (manifest, evaluation, config) => {
   return `${lines.join('\n')}\n`
 }
 
+const buildVm20ReviewPackage = ({ chunkRecords, sourcePackages, evaluation }) => {
+  const currentSourceIds = new Set(['vm20-framework-overview', 'vm20-framework-boundary', 'vm20-assumptions-section-3c', 'vm20-section3c-hierarchical', 'vm20-canonical-coverage'])
+  const companionSourceIds = new Set(['vm20-practice-note-companion'])
+  const currentPackages = sourcePackages.filter((source) => currentSourceIds.has(source.sourceId))
+  const companionPackages = sourcePackages.filter((source) => companionSourceIds.has(source.sourceId))
+  const currentChunks = chunkRecords.filter((chunk) => currentSourceIds.has(chunk.sourceId))
+  const companionChunks = chunkRecords.filter((chunk) => companionSourceIds.has(chunk.sourceId))
+  const allChunks = [...currentChunks, ...companionChunks]
+  const countBy = (chunks, property) => chunks.reduce((counts, chunk) => {
+    const key = chunk[property] ?? 'unknown'
+    counts[key] = (counts[key] ?? 0) + 1
+    return counts
+  }, {})
+  const vm20Queries = evaluation.queries.filter((query) => query.queryId.startsWith('q-vm20'))
+  const supportedQueries = vm20Queries.filter((query) => query.expectedOutcome !== 'unsupported')
+  const unsupportedQueries = vm20Queries.filter((query) => query.expectedOutcome === 'unsupported')
+  const evidenceChunkIds = (sourceId, limit = 2) => chunkRecords.filter((chunk) => chunk.sourceId === sourceId).slice(0, limit).map((chunk) => chunk.chunkId)
+  const packageJson = {
+    schemaVersion: '1.0',
+    reviewPackageId: 'vm20-canonical-coverage-review-package-2026-08-25',
+    generatedBy: 'scripts/build-source-index-poc.mjs',
+    status: 'review_only',
+    learnerFacing: false,
+    appReady: false,
+    ragReady: false,
+    promoted: false,
+    scope: {
+      objective: 'Complete the first P0 VM-20 canonicalization wave using the reviewed source material already present in the repository.',
+      currentManualCoverage: 'Reviewed current-manual slices from batches 003-012; the expanded package adds batches 004, 005, and 007-012 while the existing Section 3.C package remains intact.',
+      companionCoverage: 'Reviewed VM-20 practice-note batches 055-075, indexed separately as non-binding historical companion guidance.',
+      sourceAvailability: 'External raw sources remain authoritative; this package records only source text available in ignored reviewed batch outputs.'
+    },
+    coverage: {
+      sectionsCanonicalized: [
+        'Section 1 purpose and Section 2 minimum-reserve framework',
+        'Section 3 Net Premium Reserve applicability, definitions, setup, formula entry, and Section 3.C assumptions',
+        'Section 4 Deterministic Reserve entry point',
+        'Section 5 Stochastic Reserve entry and aggregation boundary',
+        'Section 6 stochastic and deterministic exclusion tests',
+        'Section 7 cash-flow model structure, starting assets, asset mechanics, scenarios, and proxy mapping',
+        'Section 8 reinsurance credit and projected reinsurance cash-flow treatment',
+        'Practice-note Sections 1-21 as separately labeled companion guidance'
+      ],
+      sectionsMissing: [
+        'Complete authoritative Section 4 Deterministic Reserve mechanics beyond the reviewed entry slice',
+        'Complete authoritative Section 5 Stochastic Reserve mechanics beyond the reviewed entry and aggregation slice',
+        'Complete authoritative Section 9 assumptions chapter, including expense, mortality, policyholder behavior, NGE, margins, and prescribed spread/default provisions',
+        'Appendix 1 economic-scenario description as a structured current source package',
+        'Appendix 2 current prescribed asset-default and asset-spread tables as a structured-table package',
+        'Complete current VM-20 chapter coverage outside the reviewed page window 45-95'
+      ],
+      parentCount: allChunks.filter((chunk) => chunk.chunkLevel === 'parent').length,
+      childCount: allChunks.filter((chunk) => chunk.chunkLevel === 'child').length,
+      currentManualParentCount: currentChunks.filter((chunk) => chunk.chunkLevel === 'parent').length,
+      currentManualChildCount: currentChunks.filter((chunk) => chunk.chunkLevel === 'child').length,
+      companionParentCount: companionChunks.filter((chunk) => chunk.chunkLevel === 'parent').length,
+      companionChildCount: companionChunks.filter((chunk) => chunk.chunkLevel === 'child').length,
+      sourceTextFidelity: { currentManual: countBy(currentChunks, 'fidelity'), companion: countBy(companionChunks, 'fidelity') },
+      citationCompleteness: {
+        chunksWithPageOrCitationDisplay: allChunks.filter((chunk) => chunk.citationDisplay).length,
+        totalChunks: allChunks.length,
+        lineReferencesAvailable: false,
+        note: 'Page and section citations are present in the canonical chunks; the reviewed extraction did not preserve stable line references.'
+      }
+    },
+    unresolvedSourceGaps: [
+      'Raw-source availability is declared externally and is not proven by the ignored working outputs.',
+      'The current-manual wave is slice-complete only for the reviewed boundaries, not chapter-complete.',
+      'Practice-note text is 2020 companion guidance and must be checked against the current manual before implementation use.',
+      'Table rows, version metadata, and page-image confirmation remain outside the current prose canonical layer.'
+    ],
+    crossReferences: [
+      { target: 'VM-31', relationType: 'cross_reference_candidate', status: 'pending_human_review', evidenceChunkIds: evidenceChunkIds('vm20-canonical-coverage'), note: 'The source text points to report and demonstration support; no legal effect is inferred.' },
+      { target: 'VM-A / VM-C', relationType: 'cross_reference_candidate', status: 'pending_human_review', evidenceChunkIds: evidenceChunkIds('vm20-practice-note-companion'), note: 'Practice-note references are companion guidance and do not establish current authority.' },
+      { target: 'Model #820', relationType: 'cross_reference_candidate', status: 'pending_human_review', evidenceChunkIds: evidenceChunkIds('vm20-framework-overview'), note: 'The current manual framework slice names the model-law context; the model law itself is not canonicalized here.' },
+      { target: 'SSAP No. 61R', relationType: 'cross_reference_candidate', status: 'pending_human_review', evidenceChunkIds: evidenceChunkIds('vm20-canonical-coverage'), note: 'The reinsurance slice records the source reference without interpreting accounting authority.' },
+      { target: 'VM-20 Appendix 1 and Appendix 2', relationType: 'coverage_gap_candidate', status: 'pending_source_package', evidenceChunkIds: evidenceChunkIds('vm20-framework-overview'), note: 'The table of contents and cross-references are present, but the appendices and current tables are not canonicalized.' }
+    ],
+    retrievalEvaluation: {
+      queryCount: vm20Queries.length,
+      supportedQueryCount: supportedQueries.length,
+      unsupportedQueryCount: unsupportedQueries.length,
+      top1HitCount: supportedQueries.filter((query) => query.top1Hit).length,
+      top3HitCount: supportedQueries.filter((query) => query.top3Hit).length,
+      top5HitCount: supportedQueries.filter((query) => query.top5Hit).length,
+      top1Accuracy: supportedQueries.length ? supportedQueries.filter((query) => query.top1Hit).length / supportedQueries.length : 0,
+      top3Accuracy: supportedQueries.length ? supportedQueries.filter((query) => query.top3Hit).length / supportedQueries.length : 0,
+      unsupportedQueriesDetected: unsupportedQueries.filter((query) => query.resultLabel?.startsWith('unsupported')).length,
+      baselineBeforeExpansion: { queryCount: 22, supportedQueryCount: 20, unsupportedQueryCount: 2, top1HitCount: 14, top3HitCount: 20, top1Accuracy: 0.70, top3Accuracy: 1.0, note: 'Baseline read from the 9aff2bf retrieval result before VM-20 expansion; query set and corpus size differ from this VM-20 benchmark.' },
+      queryResults: vm20Queries.map((query) => ({ queryId: query.queryId, category: query.queryCategory, top1Hit: query.top1Hit, top3Hit: query.top3Hit, resultLabel: query.resultLabel }))
+    },
+    knownRetrievalRisks: [
+      'The keyword baseline can still rank a nearby parent or companion section above a precise child when terms overlap.',
+      'Long source excerpts remain useful for recall but can dilute top-1 precision for broad comparison questions.',
+      'Unsupported table questions correctly remain outside the current canonical evidence package.',
+      'Parent expansion and adjacency-aware reranking are not yet implemented in the baseline evaluator.'
+    ],
+    humanReview: {
+      decisionOptions: ['APPROVE', 'APPROVE WITH FIXES', 'REPROCESS', 'REJECT'],
+      provisionalDisposition: 'APPROVE WITH FIXES',
+      rationale: 'The reviewed current-manual wave is source-bound and hierarchically retrievable, but chapter gaps, missing line references, table gaps, and historical companion guidance require explicit reviewer disposition before promotion.',
+      requiredChecks: [
+        'Confirm current-manual wording and page citations against the approved raw source.',
+        'Confirm parent/child boundaries and any child that crosses a requirement, exception, qualification, or table-heading boundary.',
+        'Review cross-reference candidates without inferring legal effect or supersession.',
+        'Decide whether the companion practice-note package is useful as implementation context after currentness review.',
+        'Keep all packages review-only unless a separate promotion decision is recorded.'
+      ]
+    },
+    packageInventory: [...currentPackages, ...companionPackages].map((source) => ({ sourceId: source.sourceId, title: source.sourceTitle, authorityLevel: source.authorityLevel, pageRange: source.pageRange, chunkCount: source.chunkCount, reviewBatches: source.reviewBatchIds }))
+  }
+  const markdown = [
+    '# VM-20 Canonical Coverage Review Package', '',
+    '- Status: review-only', '- Provisional disposition: APPROVE WITH FIXES', '- Learner-facing: no', '- App-ready: no', '- RAG-ready: no', '- Promoted: no', '',
+    '## Coverage summary', '',
+    `- Hierarchical parents: ${packageJson.coverage.parentCount}`,
+    `- Hierarchical children: ${packageJson.coverage.childCount}`,
+    `- Current-manual parents / children: ${packageJson.coverage.currentManualParentCount} / ${packageJson.coverage.currentManualChildCount}`,
+    `- Companion parents / children: ${packageJson.coverage.companionParentCount} / ${packageJson.coverage.companionChildCount}`,
+    `- Chunks with page or citation display: ${packageJson.coverage.citationCompleteness.chunksWithPageOrCitationDisplay}/${packageJson.coverage.citationCompleteness.totalChunks}`,
+    '- Source-text fidelity: exact extracted source text for both packages; companion authority remains non-binding.', '',
+    '## Sections canonicalized', '', ...packageJson.coverage.sectionsCanonicalized.map((section) => `- ${section}`), '',
+    '## Sections and source packages still missing', '', ...packageJson.coverage.sectionsMissing.map((section) => `- ${section}`), '',
+    '## Retrieval evaluation', '',
+    `- VM-20 queries: ${packageJson.retrievalEvaluation.queryCount} (${packageJson.retrievalEvaluation.supportedQueryCount} supported, ${packageJson.retrievalEvaluation.unsupportedQueryCount} unsupported)`,
+    `- Supported top-1: ${packageJson.retrievalEvaluation.top1HitCount}/${packageJson.retrievalEvaluation.supportedQueryCount}`,
+    `- Supported top-3: ${packageJson.retrievalEvaluation.top3HitCount}/${packageJson.retrievalEvaluation.supportedQueryCount}`,
+    `- Unsupported queries detected: ${packageJson.retrievalEvaluation.unsupportedQueriesDetected}/${packageJson.retrievalEvaluation.unsupportedQueryCount}`,
+    '- The baseline now weights hierarchy/topic metadata above long source bodies; this is a generic retrieval improvement, not a question-specific rule.', '',
+    '## Human review', '', packageJson.humanReview.rationale, '', ...packageJson.humanReview.requiredChecks.map((check) => `- ${check}`), '',
+    '## Governance boundary', '', 'This package is a review handoff. Validation demonstrates structural integrity only; it does not approve wording, establish legal effect, or promote content for learners, applications, RAG, or Copilot export.', ''
+  ].join('\n')
+  return { packageJson, markdown }
+}
+
 const main = async () => {
   const config = await readJson(configPath)
   const generatedAt = config.generatedAt ?? new Date().toISOString()
@@ -602,6 +847,7 @@ const main = async () => {
   await ensureDir(evaluationRoot)
   await ensureDir(classificationRoot)
   await ensureDir(legacyRetrievalRoot)
+  await ensureDir(reviewPackagesRoot)
 
   const chunkRecords = []
   const sourcePackages = []
@@ -619,7 +865,9 @@ const main = async () => {
       // New packages use the deterministic config timestamp.
     }
     const sourceRelationships = asArray(source.relationships)
-    const hydratedChunks = await buildHierarchicalChunks(source)
+    const hydratedChunks = source.batchCoverageInput
+      ? await buildBatchCoverageChunks(source)
+      : await buildHierarchicalChunks(source)
     const sourceChunks = asArray(hydratedChunks).map((chunk, index) =>
       deriveChunk(
         {
@@ -818,6 +1066,7 @@ const main = async () => {
       retrievalQuestionsPath: 'data/processed/source_indexes/evaluation/retrieval_questions.json',
       retrievalResultsPath: 'data/processed/source_indexes/evaluation/retrieval_results.json',
       classificationPath: 'data/processed/source_indexes/classification/source-classifications.json',
+      reviewPackagePath: 'data/processed/review_packages/vm20-canonical-coverage-review-package.json',
     },
   })
 
@@ -886,6 +1135,14 @@ const main = async () => {
     top3Coverage: config.retrievalQueries.length === 0 ? 0 : evaluation.top3HitCount / config.retrievalQueries.length,
     notes: `Keyword baseline retrieved ${evaluation.top1HitCount} top-1 hits and ${evaluation.top3HitCount} top-3 hits across ${config.retrievalQueries.length} queries.`,
   }
+
+  const vm20ReviewPackage = buildVm20ReviewPackage({ chunkRecords, sourcePackages, evaluation })
+  const vm20ReviewPackageJsonPath = path.join(reviewPackagesRoot, 'vm20-canonical-coverage-review-package.json')
+  const vm20ReviewPackageMarkdownPath = path.join(reviewPackagesRoot, 'vm20-canonical-coverage-review-package.md')
+  await fs.writeFile(vm20ReviewPackageJsonPath, `${JSON.stringify(vm20ReviewPackage.packageJson, null, 2)}\n`, 'utf8')
+  await fs.writeFile(vm20ReviewPackageMarkdownPath, vm20ReviewPackage.markdown, 'utf8')
+  repositoryManifest.reviewPackagePath = 'data/processed/review_packages/vm20-canonical-coverage-review-package.json'
+  repositoryManifest.exports.reviewPackagePath = 'data/processed/review_packages/vm20-canonical-coverage-review-package.json'
 
   const repositoryManifestPath = path.join(outputRoot, 'repository-manifest.json')
   const repositoryManifestMdPath = path.join(outputRoot, 'repository-manifest.md')

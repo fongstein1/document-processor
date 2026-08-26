@@ -50,7 +50,7 @@
       "notes": "Product features, options, and valuation impact."
     }
   ],
-  "sourcePackageCount": 18,
+  "sourcePackageCount": 20,
   "sourcePackages": [
     {
       "sourceIndexId": "source-index-vm20-section3c-hierarchical",
@@ -357,6 +357,133 @@
       "pageImageBackstop": false,
       "lineReferencesAvailable": false,
       "notes": "Assumption-layer slice from the controlled VM-20 wave."
+    },
+    {
+      "sourceIndexId": "source-index-vm20-canonical-coverage",
+      "classification": {
+        "domainId": "naic_regulatory",
+        "subdomainId": null,
+        "documentType": "valuation_manual_section",
+        "purpose": "Hierarchical source-bound canonical coverage of the available current VM-20 manual review wave.",
+        "intendedAudience": "Valuation, regulatory, and governance reviewers",
+        "authoritySourceType": "regulatory",
+        "confidentiality": "internal",
+        "publicationDate": null,
+        "effectiveDate": null,
+        "version": null,
+        "approvalStatus": "reviewed",
+        "language": "en",
+        "recommendedProfile": "regulatory",
+        "recommendedChunkingStrategy": "hierarchical_structure",
+        "confidence": "high",
+        "unresolvedQuestions": [
+          "The current manual source is only available in reviewed slices; independent review is required before promotion."
+        ],
+        "notes": "Current manual evidence only; summaries and review commentary remain distinct from source text."
+      },
+      "sourceId": "vm20-canonical-coverage",
+      "sourceVersionId": "source-index-vm20-canonical-coverage",
+      "sourceTitle": "VM-20 Current Manual Canonical Coverage (Reviewed Wave)",
+      "sourceFamilyId": "valuation_manual_pdfs",
+      "documentType": "valuation_manual_section",
+      "sourceStatus": "active",
+      "sourceReference": "2026 NAIC Valuation Manual",
+      "jurisdiction": "NAIC",
+      "authorityLevel": "manual_section",
+      "pageRange": {
+        "start": 48,
+        "end": 95
+      },
+      "chunkCount": 52,
+      "reviewBatchIds": [
+        "batch-004",
+        "batch-005",
+        "batch-007",
+        "batch-008",
+        "batch-009",
+        "batch-010",
+        "batch-011",
+        "batch-012"
+      ],
+      "sourceIndexPath": "data/processed/source_indexes/sources/vm20-canonical-coverage.json",
+      "markdownPath": "data/processed/source_indexes/sources/vm20-canonical-coverage.md",
+      "reviewIndexPath": "docs/review/vm20_review_index.md",
+      "selfReviewPath": "docs/review/vm20_self_review.md",
+      "relationships": [],
+      "textLayerQuality": "clean",
+      "pageImageBackstop": false,
+      "lineReferencesAvailable": false,
+      "notes": "Expanded current-manual VM-20 coverage for the reviewed 2026 source slices. This is review-only, not learner-facing, not app-ready, not RAG-ready, and not promoted."
+    },
+    {
+      "sourceIndexId": "source-index-vm20-practice-note-companion",
+      "classification": {
+        "domainId": "naic_regulatory",
+        "subdomainId": null,
+        "documentType": "practice_note",
+        "purpose": "Hierarchical companion-guidance coverage for implementation questions that accompany VM-20 review.",
+        "intendedAudience": "Actuarial implementation and review teams",
+        "authoritySourceType": "companion",
+        "confidentiality": "internal",
+        "publicationDate": "2020-04-01",
+        "effectiveDate": "2020-04-01",
+        "version": "1.0",
+        "approvalStatus": "reviewed",
+        "language": "en",
+        "recommendedProfile": "regulatory",
+        "recommendedChunkingStrategy": "hierarchical_structure",
+        "confidence": "high",
+        "unresolvedQuestions": [
+          "The practice note is non-binding, dated 2020, and must not substitute for the current Valuation Manual."
+        ],
+        "notes": "Companion guidance is indexed separately from current manual authority."
+      },
+      "sourceId": "vm20-practice-note-companion",
+      "sourceVersionId": "source-index-vm20-practice-note-companion",
+      "sourceTitle": "VM-20 Practice Note Companion Coverage",
+      "sourceFamilyId": "practice_notes",
+      "documentType": "practice_note",
+      "sourceStatus": "historical_companion",
+      "sourceReference": "American Academy of Actuaries practice note, April 2020",
+      "jurisdiction": "NAIC",
+      "authorityLevel": "companion_guidance",
+      "pageRange": {
+        "start": 1,
+        "end": 115
+      },
+      "chunkCount": 175,
+      "reviewBatchIds": [
+        "batch-055",
+        "batch-056",
+        "batch-057",
+        "batch-058",
+        "batch-059",
+        "batch-060",
+        "batch-061",
+        "batch-062",
+        "batch-063",
+        "batch-064",
+        "batch-065",
+        "batch-066",
+        "batch-067",
+        "batch-068",
+        "batch-069",
+        "batch-070",
+        "batch-071",
+        "batch-072",
+        "batch-073",
+        "batch-074",
+        "batch-075"
+      ],
+      "sourceIndexPath": "data/processed/source_indexes/sources/vm20-practice-note-companion.json",
+      "markdownPath": "data/processed/source_indexes/sources/vm20-practice-note-companion.md",
+      "reviewIndexPath": "docs/review/vm20_practice_note_review_index.md",
+      "selfReviewPath": "docs/review/vm20_practice_note_self_review.md",
+      "relationships": [],
+      "textLayerQuality": "clean",
+      "pageImageBackstop": false,
+      "lineReferencesAvailable": false,
+      "notes": "Expanded hierarchical companion coverage for the reviewed VM-20 practice-note wave. Non-binding, historical, review-only, and not promoted."
     },
     {
       "sourceIndexId": "source-index-vm21-sr-projection-entry",
@@ -1030,7 +1157,7 @@
       "notes": "Synthetic non-sensitive approval memo used to exercise the generic governance and pricing profiles."
     }
   ],
-  "chunkCount": 55,
+  "chunkCount": 282,
   "exports": {
     "repositoryManifestPath": "data/processed/source_indexes/repository-manifest.json",
     "exportManifestPath": "data/processed/source_indexes/exports/export_manifest.json",
@@ -1039,31 +1166,33 @@
     "retrievalQuestionsPath": "data/processed/source_indexes/evaluation/retrieval_questions.json",
     "retrievalResultsPath": "data/processed/source_indexes/evaluation/retrieval_results.json",
     "retrievalEvaluationPath": "data/processed/source_indexes/retrieval/retrieval-evaluation.json",
-    "notes": "Canonical source-index POC exports."
+    "notes": "Canonical source-index POC exports.",
+    "reviewPackagePath": "data/processed/review_packages/vm20-canonical-coverage-review-package.json"
   },
   "retrievalEvaluation": {
     "evaluationId": "source-index-poc-2026-07-21-retrieval",
     "method": "keyword_overlap_baseline",
-    "queryCount": 22,
-    "supportedQueryCount": 20,
-    "unsupportedQueryCount": 2,
-    "top1HitCount": 14,
-    "top3HitCount": 20,
-    "top5HitCount": 20,
-    "top1Accuracy": 0.7,
+    "queryCount": 35,
+    "supportedQueryCount": 32,
+    "unsupportedQueryCount": 3,
+    "top1HitCount": 29,
+    "top3HitCount": 32,
+    "top5HitCount": 32,
+    "top1Accuracy": 0.90625,
     "top3Accuracy": 1,
     "top5Accuracy": 1,
-    "meanReciprocalRank": 0.8049999999999999,
-    "sourceFamilyAccuracy": 1,
-    "authorityLevelAccuracy": 0.95,
+    "meanReciprocalRank": 0.9385416666666666,
+    "sourceFamilyAccuracy": 0.96875,
+    "authorityLevelAccuracy": 0.9375,
     "citationAvailability": 0,
-    "multiChunkEvidenceRecall": 0.5714285714285714,
-    "unsupportedQueryPrecision": 0.5,
-    "top3Coverage": 0.9090909090909091,
-    "notes": "Keyword baseline retrieved 14 top-1 hits and 20 top-3 hits across 22 queries."
+    "multiChunkEvidenceRecall": 0.42105263157894735,
+    "unsupportedQueryPrecision": 0,
+    "top3Coverage": 0.9142857142857143,
+    "notes": "Keyword baseline retrieved 29 top-1 hits and 32 top-3 hits across 35 queries."
   },
   "notes": "Canonical source-index proof of concept.",
   "extensions": {
     "sourceIndexPoc": true
-  }
+  },
+  "reviewPackagePath": "data/processed/review_packages/vm20-canonical-coverage-review-package.json"
 }

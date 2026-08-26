@@ -7,7 +7,7 @@ All items remain review-only until independent human review and explicit promoti
 | 1 | P0 | Current prescribed valuation, mortality, spread, and default tables | reviewed_not_canonical | Create a table-specific profile with row/column citations and version metadata; do not prose-chunk tables. |
 | 2 | P0 | Complete current 2026 Valuation Manual representation | canonical_partial | Canonicalize the complete manual by chapter with source-bound hierarchy and a separate table profile. |
 | 3 | P0 | VM-01 Definitions | reviewed_not_canonical | Canonicalize definitions first because downstream VM answers depend on stable terms. |
-| 4 | P0 | VM-20 Requirements for Principle-Based Reserves for Life Products | canonical_partial | Expand the existing reviewed VM-20 slices into a hierarchical chapter package. |
+| 4 | P0 | VM-20 Requirements for Principle-Based Reserves for Life Products | canonical_partial | Review the dedicated VM-20 package, then complete authoritative Sections 4, 5, and 9 plus Appendices 1-2 and structured current tables. |
 | 5 | P0 | VM-21 Requirements for Principle-Based Reserves for Variable Annuities | canonical_partial | Canonicalize the reviewed VM-21 wave with parent-child structure and table separation. |
 | 6 | P0 | VM-22 Requirements for Principle-Based Reserves for Non-Variable Annuities | reviewed_not_canonical | Canonicalize reviewed VM-22 sections after table and hedging boundaries are confirmed. |
 | 7 | P0 | VM-30 Actuarial Opinion and Memorandum Requirements | reviewed_not_canonical | Canonicalize the reporting requirements and preserve cross-references to VM-31. |

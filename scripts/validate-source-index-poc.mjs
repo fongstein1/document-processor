@@ -205,6 +205,8 @@ const main = async () => {
   const csvPath = path.join(outputRoot, 'exports', 'source-indexes.csv')
   const evaluationPath = path.join(outputRoot, 'retrieval', 'retrieval-evaluation.json')
   const evaluationMdPath = path.join(outputRoot, 'retrieval', 'retrieval-evaluation.md')
+  const vm20ReviewPackagePath = path.join(repoRoot, 'data', 'processed', 'review_packages', 'vm20-canonical-coverage-review-package.json')
+  const vm20ReviewPackageMarkdownPath = path.join(repoRoot, 'data', 'processed', 'review_packages', 'vm20-canonical-coverage-review-package.md')
   if (!(await exists(jsonlPath))) {
     fail('Missing source-index JSONL export.')
   }
@@ -216,6 +218,19 @@ const main = async () => {
   }
   if (!(await exists(evaluationMdPath))) {
     fail('Missing source-index retrieval evaluation Markdown.')
+  }
+  if (!(await exists(vm20ReviewPackagePath)) || !(await exists(vm20ReviewPackageMarkdownPath))) {
+    fail('Missing dedicated VM-20 review package.')
+  }
+  const vm20ReviewPackage = await readJson(vm20ReviewPackagePath)
+  if (vm20ReviewPackage.status !== 'review_only' || vm20ReviewPackage.promoted !== false) {
+    fail('VM-20 review package must remain review-only and unpromoted.')
+  }
+  if ((vm20ReviewPackage.coverage?.parentCount ?? 0) < 10 || (vm20ReviewPackage.coverage?.childCount ?? 0) < 20) {
+    fail('VM-20 review package does not contain the expected hierarchical coverage.')
+  }
+  if (vm20ReviewPackage.retrievalEvaluation?.queryCount < 10 || !Array.isArray(vm20ReviewPackage.humanReview?.decisionOptions)) {
+    fail('VM-20 review package is missing retrieval or human-review handoff data.')
   }
 
   const jsonlLines = (await fs.readFile(jsonlPath, 'utf8')).trim().split(/\r?\n/).filter(Boolean)

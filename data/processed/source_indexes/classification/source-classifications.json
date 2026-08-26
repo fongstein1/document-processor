@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "repositoryManifestId": "source-index-poc-2026-07-21",
-  "sourceCount": 18,
+  "sourceCount": 20,
   "classifications": [
     {
       "repositoryManifestId": "source-index-poc-2026-07-21",
@@ -194,6 +194,70 @@
       },
       "reviewIndexPath": "docs/review/vm20_review_index.md",
       "selfReviewPath": "docs/review/vm20_self_review.md"
+    },
+    {
+      "repositoryManifestId": "source-index-poc-2026-07-21",
+      "sourceIndexId": "source-index-vm20-canonical-coverage",
+      "sourceId": "vm20-canonical-coverage",
+      "sourceTitle": "VM-20 Current Manual Canonical Coverage (Reviewed Wave)",
+      "sourceFamilyId": "valuation_manual_pdfs",
+      "domainId": "naic_regulatory",
+      "documentType": "valuation_manual_section",
+      "classification": {
+        "domainId": "naic_regulatory",
+        "subdomainId": null,
+        "documentType": "valuation_manual_section",
+        "purpose": "Hierarchical source-bound canonical coverage of the available current VM-20 manual review wave.",
+        "intendedAudience": "Valuation, regulatory, and governance reviewers",
+        "authoritySourceType": "regulatory",
+        "confidentiality": "internal",
+        "publicationDate": null,
+        "effectiveDate": null,
+        "version": null,
+        "approvalStatus": "reviewed",
+        "language": "en",
+        "recommendedProfile": "regulatory",
+        "recommendedChunkingStrategy": "hierarchical_structure",
+        "confidence": "high",
+        "unresolvedQuestions": [
+          "The current manual source is only available in reviewed slices; independent review is required before promotion."
+        ],
+        "notes": "Current manual evidence only; summaries and review commentary remain distinct from source text."
+      },
+      "reviewIndexPath": "docs/review/vm20_review_index.md",
+      "selfReviewPath": "docs/review/vm20_self_review.md"
+    },
+    {
+      "repositoryManifestId": "source-index-poc-2026-07-21",
+      "sourceIndexId": "source-index-vm20-practice-note-companion",
+      "sourceId": "vm20-practice-note-companion",
+      "sourceTitle": "VM-20 Practice Note Companion Coverage",
+      "sourceFamilyId": "practice_notes",
+      "domainId": "naic_regulatory",
+      "documentType": "practice_note",
+      "classification": {
+        "domainId": "naic_regulatory",
+        "subdomainId": null,
+        "documentType": "practice_note",
+        "purpose": "Hierarchical companion-guidance coverage for implementation questions that accompany VM-20 review.",
+        "intendedAudience": "Actuarial implementation and review teams",
+        "authoritySourceType": "companion",
+        "confidentiality": "internal",
+        "publicationDate": "2020-04-01",
+        "effectiveDate": "2020-04-01",
+        "version": "1.0",
+        "approvalStatus": "reviewed",
+        "language": "en",
+        "recommendedProfile": "regulatory",
+        "recommendedChunkingStrategy": "hierarchical_structure",
+        "confidence": "high",
+        "unresolvedQuestions": [
+          "The practice note is non-binding, dated 2020, and must not substitute for the current Valuation Manual."
+        ],
+        "notes": "Companion guidance is indexed separately from current manual authority."
+      },
+      "reviewIndexPath": "docs/review/vm20_practice_note_review_index.md",
+      "selfReviewPath": "docs/review/vm20_practice_note_self_review.md"
     },
     {
       "repositoryManifestId": "source-index-poc-2026-07-21",

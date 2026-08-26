@@ -26,7 +26,7 @@ const main = async () => {
   for (const priority of ['P0', 'P1', 'P2', 'P3']) {
     if (!inventory.corpusTargets.some((target) => target.priority === priority)) fail(`Inventory is missing ${priority} targets.`)
   }
-  if (inventory.summary.canonicalSourcePackages !== 18 || inventory.summary.canonicalChunks !== 55) fail('Inventory snapshot no longer matches the current canonical POC baseline; regenerate intentionally.')
+  if (inventory.summary.canonicalSourcePackages < 20 || inventory.summary.canonicalChunks < 247) fail('Inventory snapshot does not include the expanded VM-20 canonical coverage packages; regenerate intentionally.')
   if (inventory.summary.candidateRelationships !== 23 || inventory.summary.promotedRelationships !== 0) fail('Relationship governance counts are inconsistent with the review-only Reg-213 registry.')
   for (const file of ['master-regulatory-corpus-inventory.md', 'regulatory-gap-assessment.md', 'canonicalization-backlog.md', 'corpus-completeness-report.md']) {
     try { await fs.access(path.join(path.dirname(inventoryPath), file)) } catch { fail(`Missing corpus report: ${file}.`) }

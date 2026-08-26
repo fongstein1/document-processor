@@ -1,5 +1,30 @@
 # Current Project State
 
+## 2026-08-26 VM-20 canonical coverage wave
+
+The first P0 VM-20 canonicalization wave is now substantially expanded from
+the reviewed source material already present in ignored working storage. The
+source-index POC contains 20 packages and 282 chunks overall. VM-20 coverage
+includes 72 current-manual chunks across the existing framework/Section 3.C
+packages and new hierarchical coverage for reviewed batches 004, 005, and
+007-012. A separate package contains 175 exact-text chunks from the reviewed
+2020 VM-20 practice note and is labeled historical, non-binding companion
+guidance.
+
+The dedicated review handoff is
+`data/processed/review_packages/vm20-canonical-coverage-review-package.json`
+and its Markdown companion. It records 14 current/manual-or-existing
+hierarchical parents, 52 current/manual-or-existing hierarchical children,
+21 companion parents, and 154 companion children within the expanded VM-20
+review set. All chunks remain review-only, not learner-facing, not app-ready,
+not RAG-ready, and not promoted.
+
+The remaining VM-20 gaps are complete authoritative Section 4 and Section 5
+mechanics, the full authoritative Section 9 assumptions chapter, Appendices 1
+and 2, and structured current prescribed tables. Line references remain
+unavailable; page and section citations are preserved. The review package
+provisionally recommends APPROVE WITH FIXES pending independent human review.
+
 ## 2026-08-25 Regulatory corpus completion audit
 
 The repository now has a deterministic master regulatory corpus inventory and

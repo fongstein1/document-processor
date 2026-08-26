@@ -1,5 +1,18 @@
 # Next Actions
 
+## VM-20 review handoff
+
+The first P0 VM-20 canonicalization wave is complete as a review-only source
+package set. Review
+`data/processed/review_packages/vm20-canonical-coverage-review-package.md`
+and the JSON contract, confirm current-manual wording against the approved raw
+source, and decide APPROVE, APPROVE WITH FIXES, REPROCESS, or REJECT.
+
+Do not promote the current-manual or practice-note packages. The next VM-20
+source work should target the remaining authoritative Section 4 and Section 5
+mechanics, Section 9 assumptions, Appendices 1-2, and structured prescribed
+tables only after source availability and boundaries are confirmed.
+
 ## Regulatory corpus completion phase
 
 The master inventory, gap assessment, completeness report, and

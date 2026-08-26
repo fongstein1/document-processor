@@ -2,36 +2,48 @@
 
 ## Corpus summary
 
-- Source packages: 18
-- Canonical chunks: 55
-- Retrieval questions: 22
-- Supported questions: 20
-- Unsupported questions: 2
+- Source packages: 20
+- Canonical chunks: 282
+- Retrieval questions: 35
+- Supported questions: 32
+- Unsupported questions: 3
 
 ## Metrics
 
-- Top-1 accuracy: 70%
+- Top-1 accuracy: 91%
 - Top-3 accuracy: 100%
 - Top-5 accuracy: 100%
-- Mean reciprocal rank: 0.805
-- Source-family accuracy: 100%
-- Authority-level accuracy: 95%
+- Mean reciprocal rank: 0.939
+- Source-family accuracy: 97%
+- Authority-level accuracy: 94%
 - Citation availability: 0%
-- Multi-chunk evidence recall: 57%
-- Unsupported-query precision: 50%
+- Multi-chunk evidence recall: 42%
+- Unsupported-query precision: 0%
 
 ## Category breakdown
 
 | Category | Count | Top-1 | Top-3 | Top-5 | MRR | Unsupported precision |
 | --- | --- | --- | --- | --- | --- | --- |
 | exact_title | 5 | 100% | 100% | 100% | 1.000 | 0% |
-| framework_overview | 1 | 0% | 100% | 100% | 0.500 | 0% |
+| framework_overview | 1 | 100% | 100% | 100% | 1.000 | 0% |
 | mechanics_boundary | 1 | 100% | 100% | 100% | 1.000 | 0% |
 | multi_chunk | 6 | 83% | 100% | 100% | 0.917 | 0% |
-| hierarchical_parent_child | 1 | 0% | 100% | 100% | 0.500 | 0% |
+| hierarchical_parent_child | 1 | 0% | 100% | 100% | 0.200 | 0% |
+| vm20_npr | 1 | 100% | 100% | 100% | 1.000 | 0% |
+| vm20_dr | 1 | 100% | 100% | 100% | 1.000 | 0% |
+| vm20_sr | 1 | 100% | 100% | 100% | 1.000 | 0% |
+| vm20_exclusions | 1 | 100% | 100% | 100% | 1.000 | 0% |
+| vm20_cash_flow_models | 1 | 100% | 100% | 100% | 1.000 | 0% |
+| vm20_assets | 1 | 100% | 100% | 100% | 1.000 | 0% |
+| vm20_reinsurance | 1 | 100% | 100% | 100% | 1.000 | 0% |
+| vm20_assumptions_comparison | 1 | 100% | 100% | 100% | 1.000 | 0% |
+| vm20_companion_expense | 1 | 100% | 100% | 100% | 1.000 | 0% |
+| vm20_companion_assumptions | 1 | 100% | 100% | 100% | 1.000 | 0% |
+| vm20_companion_margins | 1 | 100% | 100% | 100% | 1.000 | 0% |
+| unsupported | 3 | 0% | 0% | 0% | 0.000 | 0% |
+| vm20_cross_document | 1 | 100% | 100% | 100% | 1.000 | 0% |
 | relationship | 1 | 100% | 100% | 100% | 1.000 | 0% |
-| pricing_domain | 5 | 40% | 100% | 100% | 0.520 | 0% |
-| unsupported | 2 | 0% | 0% | 0% | 0.000 | 50% |
+| pricing_domain | 5 | 80% | 100% | 100% | 0.867 | 0% |
 
 ## Strong signals
 
@@ -41,7 +53,9 @@
 
 ## Weak spots and failure analysis
 
-- unsupported: What does this corpus say about pricing support? -> false_positive; top result chunk-synthetic-pricing-assumption-memo-002 (3)
+- unsupported: What are the exact current 2026 VM-20 Appendix 2 prescribed asset-default table rows and version metadata? -> false_positive; top result vm20-practice-note-companion-vm20-pn-dr-overview-child-006 (21.749999999999993)
+- unsupported: What does this corpus say about pricing support? -> false_positive; top result chunk-synthetic-pricing-product-specification-001 (9.6)
+- unsupported: What does this corpus say about liability modeling support? -> false_positive; top result vm20-practice-note-companion-vm20-pn-starting-assets (10.4)
 
 ## Next improvement opportunities
 

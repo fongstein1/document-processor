@@ -7,13 +7,20 @@ As of 2026-08-25T00:00:00.000Z, the repository contains a substantial review-onl
 - Source documents inventoried: **105**
 - Documents with declared external raw source: **71**
 - Documents reviewed / review artifacts matched: **97 review indexes**
-- Canonical source packages: **18**
-- Canonical chunks: **55**
-- Sources awaiting canonicalization: **97**
+- Canonical source packages: **20**
+- Canonical chunks: **282**
+- Sources awaiting canonicalization: **96**
 - Sources awaiting human review: **1**
 - Review-artifact-only sources: **34**
 - Candidate relationships: **23**
 - Promoted relationships: **0**
+
+## VM-20 coverage checkpoint
+
+- Current-manual VM-20 coverage: 72 chunks across the existing framework/Section 3.C packages and the expanded reviewed batches 004, 005, and 007-012.
+- VM-20 companion coverage: 175 exact-text chunks from the reviewed 2020 practice-note wave, separately labeled non-binding and historical.
+- Dedicated review package: `data/processed/review_packages/vm20-canonical-coverage-review-package.json` and `.md`.
+- Remaining VM-20 gaps: complete authoritative Sections 4, 5, and 9; Appendices 1-2; and structured current prescribed tables.
 
 ## Interpretation
 

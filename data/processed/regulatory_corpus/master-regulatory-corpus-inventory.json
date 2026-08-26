@@ -12,9 +12,9 @@
     "sourceRecordsWithExternalManifest": 71,
     "reviewIndexes": 97,
     "selfReviews": 93,
-    "canonicalSourcePackages": 18,
-    "canonicalChunks": 55,
-    "sourcesAwaitingCanonicalization": 97,
+    "canonicalSourcePackages": 20,
+    "canonicalChunks": 282,
+    "sourcesAwaitingCanonicalization": 96,
     "sourcesAwaitingHumanReview": 1,
     "reviewArtifactOnlySources": 34,
     "p0Gaps": [
@@ -46,7 +46,7 @@
     "historicalProposedDeferred": 9,
     "currentSourceTextFidelityDistribution": {
       "curated": 20,
-      "exact": 35
+      "exact": 262
     }
   },
   "sources": [
@@ -616,11 +616,15 @@
         "selfReviews": [
           "docs/review/vm20_practice_note_self_review.md"
         ],
-        "canonicalPackages": [],
+        "canonicalPackages": [
+          "data/processed/source_indexes/sources/vm20-practice-note-companion.json"
+        ],
         "classification": "not_in_canonical_classification",
         "relationshipRegistry": "none identified",
-        "chunkCount": 0,
-        "sourceTextFidelity": []
+        "chunkCount": 175,
+        "sourceTextFidelity": [
+          "exact"
+        ]
       },
       "review": {
         "reviewRequired": true,
@@ -628,18 +632,16 @@
         "blockingFindings": [
           "Source remains review-only; promotion decision is not recorded in this inventory."
         ],
-        "promotionState": "not_canonical",
-        "canonical": false,
+        "promotionState": "not_promoted",
+        "canonical": true,
         "copilotExportEligible": false,
         "exclusionReason": "Human promotion and export approval are intentionally separate from processing validation."
       },
       "retrieval": {
         "associatedQuestions": [],
-        "expectedCoverage": "not_evaluated",
-        "evaluationCoverage": "none",
-        "knownGaps": [
-          "No canonical retrieval package or query coverage."
-        ]
+        "expectedCoverage": "included_in_POC",
+        "evaluationCoverage": "see_source-index retrieval evaluation",
+        "knownGaps": []
       },
       "priority": {
         "level": "P0",
@@ -5010,6 +5012,7 @@
         "selfReviews": [],
         "canonicalPackages": [
           "data/processed/source_indexes/sources/vm20-assumptions-section-3c.json",
+          "data/processed/source_indexes/sources/vm20-canonical-coverage.json",
           "data/processed/source_indexes/sources/vm20-framework-boundary.json",
           "data/processed/source_indexes/sources/vm20-framework-overview.json",
           "data/processed/source_indexes/sources/vm20-section3c-hierarchical.json",
@@ -5017,7 +5020,7 @@
         ],
         "classification": "not_in_canonical_classification",
         "relationshipRegistry": "none identified",
-        "chunkCount": 24,
+        "chunkCount": 76,
         "sourceTextFidelity": [
           "exact"
         ]
@@ -6488,6 +6491,7 @@
         "supporting-vm31-detail",
         "supporting-vm31-purpose",
         "vm20-assumptions-section-3c",
+        "vm20-canonical-coverage",
         "vm20-core-reserve-mechanics",
         "vm20-framework-boundary",
         "vm20-framework-overview",
@@ -6618,7 +6622,7 @@
       "priority": "P0",
       "intendedStatus": "current",
       "assessment": "canonical_partial",
-      "reason": "VM-20 has extensive reviewed slices and four canonical POC packages, but not a complete chapter package.",
+      "reason": "VM-20 now has a 247-chunk review-only coverage set: 72 current-manual chunks across the existing slices and expanded batches, plus 175 separately labeled companion-guidance chunks; it is still not a complete current chapter package.",
       "evidenceSourceIds": [
         "supporting-vm01-definitions",
         "supporting-vm02-nonforfeiture",
@@ -6631,6 +6635,7 @@
         "supporting-vm31-purpose",
         "vm20",
         "vm20-assumptions-section-3c",
+        "vm20-canonical-coverage",
         "vm20-core-reserve-mechanics",
         "vm20-framework-boundary",
         "vm20-framework-overview",
@@ -6658,6 +6663,7 @@
         "vm20-pn-stochastic-exclusion",
         "vm20-pn-valuation-date",
         "vm20-practice-note-2020",
+        "vm20-practice-note-companion",
         "vm20-role-map-sections-3-4-5",
         "vm20-section3-opener",
         "vm20-section3c-assumptions",
@@ -6705,7 +6711,7 @@
         "vm31-reporting-crossref",
         "vm31-reporting-definition"
       ],
-      "nextAction": "Expand the existing reviewed VM-20 slices into a hierarchical chapter package."
+      "nextAction": "Review the dedicated VM-20 package, then complete authoritative Sections 4, 5, and 9 plus Appendices 1-2 and structured current tables."
     },
     {
       "targetId": "vm-21",
@@ -7423,6 +7429,7 @@
         "vm20-pn-stochastic-exclusion",
         "vm20-pn-valuation-date",
         "vm20-practice-note-2020",
+        "vm20-practice-note-companion",
         "vm20_practice_note"
       ],
       "nextAction": "Canonicalize selectively when it answers likely implementation questions without replacing authority."

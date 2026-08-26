@@ -1,0 +1,384 @@
+{
+  "schemaVersion": "1.0",
+  "reviewPackageId": "vm20-canonical-coverage-review-package-2026-08-25",
+  "generatedBy": "scripts/build-source-index-poc.mjs",
+  "status": "review_only",
+  "learnerFacing": false,
+  "appReady": false,
+  "ragReady": false,
+  "promoted": false,
+  "scope": {
+    "objective": "Complete the first P0 VM-20 canonicalization wave using the reviewed source material already present in the repository.",
+    "currentManualCoverage": "Reviewed current-manual slices from batches 003-012; the expanded package adds batches 004, 005, and 007-012 while the existing Section 3.C package remains intact.",
+    "companionCoverage": "Reviewed VM-20 practice-note batches 055-075, indexed separately as non-binding historical companion guidance.",
+    "sourceAvailability": "External raw sources remain authoritative; this package records only source text available in ignored reviewed batch outputs."
+  },
+  "coverage": {
+    "sectionsCanonicalized": [
+      "Section 1 purpose and Section 2 minimum-reserve framework",
+      "Section 3 Net Premium Reserve applicability, definitions, setup, formula entry, and Section 3.C assumptions",
+      "Section 4 Deterministic Reserve entry point",
+      "Section 5 Stochastic Reserve entry and aggregation boundary",
+      "Section 6 stochastic and deterministic exclusion tests",
+      "Section 7 cash-flow model structure, starting assets, asset mechanics, scenarios, and proxy mapping",
+      "Section 8 reinsurance credit and projected reinsurance cash-flow treatment",
+      "Practice-note Sections 1-21 as separately labeled companion guidance"
+    ],
+    "sectionsMissing": [
+      "Complete authoritative Section 4 Deterministic Reserve mechanics beyond the reviewed entry slice",
+      "Complete authoritative Section 5 Stochastic Reserve mechanics beyond the reviewed entry and aggregation slice",
+      "Complete authoritative Section 9 assumptions chapter, including expense, mortality, policyholder behavior, NGE, margins, and prescribed spread/default provisions",
+      "Appendix 1 economic-scenario description as a structured current source package",
+      "Appendix 2 current prescribed asset-default and asset-spread tables as a structured-table package",
+      "Complete current VM-20 chapter coverage outside the reviewed page window 45-95"
+    ],
+    "parentCount": 35,
+    "childCount": 206,
+    "currentManualParentCount": 14,
+    "currentManualChildCount": 52,
+    "companionParentCount": 21,
+    "companionChildCount": 154,
+    "sourceTextFidelity": {
+      "currentManual": {
+        "exact": 72
+      },
+      "companion": {
+        "exact": 175
+      }
+    },
+    "citationCompleteness": {
+      "chunksWithPageOrCitationDisplay": 247,
+      "totalChunks": 247,
+      "lineReferencesAvailable": false,
+      "note": "Page and section citations are present in the canonical chunks; the reviewed extraction did not preserve stable line references."
+    }
+  },
+  "unresolvedSourceGaps": [
+    "Raw-source availability is declared externally and is not proven by the ignored working outputs.",
+    "The current-manual wave is slice-complete only for the reviewed boundaries, not chapter-complete.",
+    "Practice-note text is 2020 companion guidance and must be checked against the current manual before implementation use.",
+    "Table rows, version metadata, and page-image confirmation remain outside the current prose canonical layer."
+  ],
+  "crossReferences": [
+    {
+      "target": "VM-31",
+      "relationType": "cross_reference_candidate",
+      "status": "pending_human_review",
+      "evidenceChunkIds": [
+        "vm20-canonical-coverage-vm20-role-map-sections-3-4-5",
+        "vm20-canonical-coverage-vm20-role-map-sections-3-4-5-child-001"
+      ],
+      "note": "The source text points to report and demonstration support; no legal effect is inferred."
+    },
+    {
+      "target": "VM-A / VM-C",
+      "relationType": "cross_reference_candidate",
+      "status": "pending_human_review",
+      "evidenceChunkIds": [
+        "vm20-practice-note-companion-vm20-pn-front-matter",
+        "vm20-practice-note-companion-vm20-pn-front-matter-child-001"
+      ],
+      "note": "Practice-note references are companion guidance and do not establish current authority."
+    },
+    {
+      "target": "Model #820",
+      "relationType": "cross_reference_candidate",
+      "status": "pending_human_review",
+      "evidenceChunkIds": [
+        "chunk-vm20-framework-overview-001"
+      ],
+      "note": "The current manual framework slice names the model-law context; the model law itself is not canonicalized here."
+    },
+    {
+      "target": "SSAP No. 61R",
+      "relationType": "cross_reference_candidate",
+      "status": "pending_human_review",
+      "evidenceChunkIds": [
+        "vm20-canonical-coverage-vm20-role-map-sections-3-4-5",
+        "vm20-canonical-coverage-vm20-role-map-sections-3-4-5-child-001"
+      ],
+      "note": "The reinsurance slice records the source reference without interpreting accounting authority."
+    },
+    {
+      "target": "VM-20 Appendix 1 and Appendix 2",
+      "relationType": "coverage_gap_candidate",
+      "status": "pending_source_package",
+      "evidenceChunkIds": [
+        "chunk-vm20-framework-overview-001"
+      ],
+      "note": "The table of contents and cross-references are present, but the appendices and current tables are not canonicalized."
+    }
+  ],
+  "retrievalEvaluation": {
+    "queryCount": 17,
+    "supportedQueryCount": 16,
+    "unsupportedQueryCount": 1,
+    "top1HitCount": 15,
+    "top3HitCount": 16,
+    "top5HitCount": 16,
+    "top1Accuracy": 0.9375,
+    "top3Accuracy": 1,
+    "unsupportedQueriesDetected": 0,
+    "baselineBeforeExpansion": {
+      "queryCount": 22,
+      "supportedQueryCount": 20,
+      "unsupportedQueryCount": 2,
+      "top1HitCount": 14,
+      "top3HitCount": 20,
+      "top1Accuracy": 0.7,
+      "top3Accuracy": 1,
+      "note": "Baseline read from the 9aff2bf retrieval result before VM-20 expansion; query set and corpus size differ from this VM-20 benchmark."
+    },
+    "queryResults": [
+      {
+        "queryId": "q-vm20-framework-overview",
+        "category": "framework_overview",
+        "top1Hit": true,
+        "top3Hit": true,
+        "resultLabel": "supported_top1"
+      },
+      {
+        "queryId": "q-vm20-boundary",
+        "category": "mechanics_boundary",
+        "top1Hit": true,
+        "top3Hit": true,
+        "resultLabel": "supported_top1"
+      },
+      {
+        "queryId": "q-vm20-assumptions-section-3c",
+        "category": "multi_chunk",
+        "top1Hit": true,
+        "top3Hit": true,
+        "resultLabel": "supported_top1"
+      },
+      {
+        "queryId": "q-vm20-hierarchical-section-3c",
+        "category": "hierarchical_parent_child",
+        "top1Hit": false,
+        "top3Hit": true,
+        "resultLabel": "supported_top3"
+      },
+      {
+        "queryId": "q-vm20-npr-formula-uls-g",
+        "category": "vm20_npr",
+        "top1Hit": true,
+        "top3Hit": true,
+        "resultLabel": "supported_top1"
+      },
+      {
+        "queryId": "q-vm20-deterministic-reserve-entry",
+        "category": "vm20_dr",
+        "top1Hit": true,
+        "top3Hit": true,
+        "resultLabel": "supported_top1"
+      },
+      {
+        "queryId": "q-vm20-stochastic-reserve-aggregation",
+        "category": "vm20_sr",
+        "top1Hit": true,
+        "top3Hit": true,
+        "resultLabel": "supported_top1"
+      },
+      {
+        "queryId": "q-vm20-exclusion-tests",
+        "category": "vm20_exclusions",
+        "top1Hit": true,
+        "top3Hit": true,
+        "resultLabel": "supported_top1"
+      },
+      {
+        "queryId": "q-vm20-cash-flow-model-structure",
+        "category": "vm20_cash_flow_models",
+        "top1Hit": true,
+        "top3Hit": true,
+        "resultLabel": "supported_top1"
+      },
+      {
+        "queryId": "q-vm20-asset-treatment",
+        "category": "vm20_assets",
+        "top1Hit": true,
+        "top3Hit": true,
+        "resultLabel": "supported_top1"
+      },
+      {
+        "queryId": "q-vm20-reinsurance-credit-and-cash-flows",
+        "category": "vm20_reinsurance",
+        "top1Hit": true,
+        "top3Hit": true,
+        "resultLabel": "supported_top1"
+      },
+      {
+        "queryId": "q-vm20-prescribed-company-assumptions",
+        "category": "vm20_assumptions_comparison",
+        "top1Hit": true,
+        "top3Hit": true,
+        "resultLabel": "supported_top1"
+      },
+      {
+        "queryId": "q-vm20-practice-note-expense-guidance",
+        "category": "vm20_companion_expense",
+        "top1Hit": true,
+        "top3Hit": true,
+        "resultLabel": "supported_top1"
+      },
+      {
+        "queryId": "q-vm20-practice-note-mortality-behavior",
+        "category": "vm20_companion_assumptions",
+        "top1Hit": true,
+        "top3Hit": true,
+        "resultLabel": "supported_top1"
+      },
+      {
+        "queryId": "q-vm20-practice-note-margins",
+        "category": "vm20_companion_margins",
+        "top1Hit": true,
+        "top3Hit": true,
+        "resultLabel": "supported_top1"
+      },
+      {
+        "queryId": "q-vm20-current-table-gap",
+        "category": "unsupported",
+        "top1Hit": false,
+        "top3Hit": false,
+        "resultLabel": "false_positive"
+      },
+      {
+        "queryId": "q-vm20-cross-document-reporting",
+        "category": "vm20_cross_document",
+        "top1Hit": true,
+        "top3Hit": true,
+        "resultLabel": "supported_top1"
+      }
+    ]
+  },
+  "knownRetrievalRisks": [
+    "The keyword baseline can still rank a nearby parent or companion section above a precise child when terms overlap.",
+    "Long source excerpts remain useful for recall but can dilute top-1 precision for broad comparison questions.",
+    "Unsupported table questions correctly remain outside the current canonical evidence package.",
+    "Parent expansion and adjacency-aware reranking are not yet implemented in the baseline evaluator."
+  ],
+  "humanReview": {
+    "decisionOptions": [
+      "APPROVE",
+      "APPROVE WITH FIXES",
+      "REPROCESS",
+      "REJECT"
+    ],
+    "provisionalDisposition": "APPROVE WITH FIXES",
+    "rationale": "The reviewed current-manual wave is source-bound and hierarchically retrievable, but chapter gaps, missing line references, table gaps, and historical companion guidance require explicit reviewer disposition before promotion.",
+    "requiredChecks": [
+      "Confirm current-manual wording and page citations against the approved raw source.",
+      "Confirm parent/child boundaries and any child that crosses a requirement, exception, qualification, or table-heading boundary.",
+      "Review cross-reference candidates without inferring legal effect or supersession.",
+      "Decide whether the companion practice-note package is useful as implementation context after currentness review.",
+      "Keep all packages review-only unless a separate promotion decision is recorded."
+    ]
+  },
+  "packageInventory": [
+    {
+      "sourceId": "vm20-section3c-hierarchical",
+      "title": "VM-20 Section 3.C Assumptions (Hierarchical Canonical Slice)",
+      "authorityLevel": "manual_section",
+      "pageRange": {
+        "start": 58,
+        "end": 65
+      },
+      "chunkCount": 14,
+      "reviewBatches": [
+        "batch-006"
+      ]
+    },
+    {
+      "sourceId": "vm20-framework-overview",
+      "title": "Valuation Manual",
+      "authorityLevel": "manual_section",
+      "pageRange": {
+        "start": 45,
+        "end": 46
+      },
+      "chunkCount": 1,
+      "reviewBatches": [
+        "batch-003"
+      ]
+    },
+    {
+      "sourceId": "vm20-framework-boundary",
+      "title": "Valuation Manual",
+      "authorityLevel": "manual_section",
+      "pageRange": {
+        "start": 47,
+        "end": 47
+      },
+      "chunkCount": 1,
+      "reviewBatches": [
+        "batch-003"
+      ]
+    },
+    {
+      "sourceId": "vm20-assumptions-section-3c",
+      "title": "VM-20 Section 3.C Assumptions",
+      "authorityLevel": "manual_section",
+      "pageRange": {
+        "start": 58,
+        "end": 65
+      },
+      "chunkCount": 4,
+      "reviewBatches": [
+        "batch-006"
+      ]
+    },
+    {
+      "sourceId": "vm20-canonical-coverage",
+      "title": "VM-20 Current Manual Canonical Coverage (Reviewed Wave)",
+      "authorityLevel": "manual_section",
+      "pageRange": {
+        "start": 48,
+        "end": 95
+      },
+      "chunkCount": 52,
+      "reviewBatches": [
+        "batch-004",
+        "batch-005",
+        "batch-007",
+        "batch-008",
+        "batch-009",
+        "batch-010",
+        "batch-011",
+        "batch-012"
+      ]
+    },
+    {
+      "sourceId": "vm20-practice-note-companion",
+      "title": "VM-20 Practice Note Companion Coverage",
+      "authorityLevel": "companion_guidance",
+      "pageRange": {
+        "start": 1,
+        "end": 115
+      },
+      "chunkCount": 175,
+      "reviewBatches": [
+        "batch-055",
+        "batch-056",
+        "batch-057",
+        "batch-058",
+        "batch-059",
+        "batch-060",
+        "batch-061",
+        "batch-062",
+        "batch-063",
+        "batch-064",
+        "batch-065",
+        "batch-066",
+        "batch-067",
+        "batch-068",
+        "batch-069",
+        "batch-070",
+        "batch-071",
+        "batch-072",
+        "batch-073",
+        "batch-074",
+        "batch-075"
+      ]
+    }
+  ]
+}

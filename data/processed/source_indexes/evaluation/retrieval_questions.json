@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "repositoryManifestId": "source-index-poc-2026-07-21",
   "method": "keyword_overlap_baseline",
-  "queryCount": 22,
+  "queryCount": 35,
   "queries": [
     {
       "queryId": "q-ag01-net-premium",
@@ -80,6 +80,185 @@
         "vm20-section3c-hierarchical"
       ],
       "rationale": "Demonstrates child retrieval with parent context and stable adjacency for an existing reviewed source slice."
+    },
+    {
+      "queryId": "q-vm20-npr-formula-uls-g",
+      "queryCategory": "vm20_npr",
+      "query": "What does the current VM-20 manual say about the NPR formula and the ULSG branch?",
+      "expectedChunkIds": [
+        "vm20-canonical-coverage-vm20-npr-entry-formula",
+        "vm20-canonical-coverage-vm20-npr-entry-formula-child-001"
+      ],
+      "expectedSourceIds": [
+        "vm20-canonical-coverage"
+      ],
+      "rationale": "Tests current-manual NPR formula retrieval while preserving the formula/setup boundary."
+    },
+    {
+      "queryId": "q-vm20-deterministic-reserve-entry",
+      "queryCategory": "vm20_dr",
+      "query": "Where does VM-20 introduce the Deterministic Reserve and its cash surrender value floor?",
+      "expectedChunkIds": [
+        "vm20-canonical-coverage-vm20-section4-entry",
+        "vm20-canonical-coverage-vm20-section4-entry-child-001",
+        "vm20-section3c-hierarchical-section-3-d-npr-calculation-and-cash-surrender-value-floor",
+        "vm20-section3c-hierarchical-section-3-d-npr-calculation-and-cash-surrender-value-floor-child-001"
+      ],
+      "expectedSourceIds": [
+        "vm20-canonical-coverage"
+      ],
+      "rationale": "Tests the current-manual DR entry point without claiming complete Section 4 coverage."
+    },
+    {
+      "queryId": "q-vm20-stochastic-reserve-aggregation",
+      "queryCategory": "vm20_sr",
+      "query": "How does the current VM-20 slice introduce the Stochastic Reserve and subgroup aggregation?",
+      "expectedChunkIds": [
+        "vm20-canonical-coverage-vm20-section5-entry",
+        "vm20-canonical-coverage-vm20-section5-entry-child-001"
+      ],
+      "expectedSourceIds": [
+        "vm20-canonical-coverage"
+      ],
+      "rationale": "Tests the reviewed SR entry and aggregation boundary."
+    },
+    {
+      "queryId": "q-vm20-exclusion-tests",
+      "queryCategory": "vm20_exclusions",
+      "query": "What requirements and scope limits appear in the VM-20 stochastic and deterministic exclusion tests?",
+      "expectedChunkIds": [
+        "vm20-canonical-coverage-vm20-section6-exclusion-tests",
+        "vm20-canonical-coverage-vm20-section6-exclusion-tests-child-001"
+      ],
+      "expectedSourceIds": [
+        "vm20-canonical-coverage"
+      ],
+      "rationale": "Tests direct retrieval of SET, SERT, and DET material."
+    },
+    {
+      "queryId": "q-vm20-cash-flow-model-structure",
+      "queryCategory": "vm20_cash_flow_models",
+      "query": "What does VM-20 require for cash-flow model structure, model segments, projected cash flows, and starting assets?",
+      "expectedChunkIds": [
+        "vm20-canonical-coverage-vm20-section7-model-structure",
+        "vm20-canonical-coverage-vm20-section7-model-structure-child-001"
+      ],
+      "expectedSourceIds": [
+        "vm20-canonical-coverage"
+      ],
+      "rationale": "Tests model-structure and starting-asset retrieval from the current manual."
+    },
+    {
+      "queryId": "q-vm20-asset-treatment",
+      "queryCategory": "vm20_assets",
+      "query": "How does the VM-20 cash-flow model treat invested assets, policy loans, economic scenarios, and proxy-fund mapping?",
+      "expectedChunkIds": [
+        "vm20-canonical-coverage-vm20-section7-asset-mechanics",
+        "vm20-canonical-coverage-vm20-section7-asset-mechanics-child-001",
+        "vm20-canonical-coverage-vm20-section7-model-structure",
+        "vm20-canonical-coverage-vm20-section7-model-structure-child-002"
+      ],
+      "expectedSourceIds": [
+        "vm20-canonical-coverage"
+      ],
+      "rationale": "Tests asset-treatment, scenario, and proxy-mapping coverage."
+    },
+    {
+      "queryId": "q-vm20-reinsurance-credit-and-cash-flows",
+      "queryCategory": "vm20_reinsurance",
+      "query": "What does the current VM-20 slice say about credit for ceded reinsurance and reinsurance cash flows in DR or SR?",
+      "expectedChunkIds": [
+        "vm20-canonical-coverage-vm20-section8-reinsurance",
+        "vm20-canonical-coverage-vm20-section8-reinsurance-child-001"
+      ],
+      "expectedSourceIds": [
+        "vm20-canonical-coverage"
+      ],
+      "rationale": "Tests reinsurance credit and cash-flow treatment while keeping Section 9 as an explicit gap."
+    },
+    {
+      "queryId": "q-vm20-prescribed-company-assumptions",
+      "queryCategory": "vm20_assumptions_comparison",
+      "query": "How should a reviewer distinguish prescribed VM-20 assumptions from company or prudent-estimate assumptions?",
+      "expectedChunkIds": [
+        "vm20-section3c-hierarchical-section-3-c-1-mortality-rates-child-001",
+        "vm20-canonical-coverage-vm20-npr-entry-setup-child-001",
+        "vm20-practice-note-companion-vm20-pn-prudent-estimate-child-005",
+        "vm20-practice-note-companion-vm20-pn-prudent-estimate-child-002",
+        "vm20-practice-note-companion-vm20-pn-prudent-estimate-child-003"
+      ],
+      "expectedSourceIds": [
+        "vm20-section3c-hierarchical",
+        "vm20-canonical-coverage"
+      ],
+      "rationale": "Tests a cross-section comparison without collapsing source text and interpretation."
+    },
+    {
+      "queryId": "q-vm20-practice-note-expense-guidance",
+      "queryCategory": "vm20_companion_expense",
+      "query": "What implementation guidance does the VM-20 practice note provide about expense assumptions?",
+      "expectedChunkIds": [
+        "vm20-practice-note-companion-vm20-pn-expense",
+        "vm20-practice-note-companion-vm20-pn-expense-child-001"
+      ],
+      "expectedSourceIds": [
+        "vm20-practice-note-companion"
+      ],
+      "rationale": "Tests expense guidance as companion evidence, not current binding manual text."
+    },
+    {
+      "queryId": "q-vm20-practice-note-mortality-behavior",
+      "queryCategory": "vm20_companion_assumptions",
+      "query": "How does the VM-20 practice note discuss mortality assumptions and policyholder behavior assumptions?",
+      "expectedChunkIds": [
+        "vm20-practice-note-companion-vm20-pn-mortality-child-001",
+        "vm20-practice-note-companion-vm20-pn-behavior-child-001"
+      ],
+      "expectedSourceIds": [
+        "vm20-practice-note-companion"
+      ],
+      "rationale": "Tests comparison across two companion sections while preserving the non-binding label."
+    },
+    {
+      "queryId": "q-vm20-practice-note-margins",
+      "queryCategory": "vm20_companion_margins",
+      "query": "What topics does the VM-20 practice note cover when setting margins?",
+      "expectedChunkIds": [
+        "vm20-practice-note-companion-vm20-pn-margins",
+        "vm20-practice-note-companion-vm20-pn-margins-child-001",
+        "vm20-practice-note-companion-vm20-pn-margins-child-004",
+        "vm20-practice-note-companion-vm20-pn-margins-child-002",
+        "vm20-practice-note-companion-vm20-pn-margins-child-006"
+      ],
+      "expectedSourceIds": [
+        "vm20-practice-note-companion"
+      ],
+      "rationale": "Tests margin retrieval from the separate companion package."
+    },
+    {
+      "queryId": "q-vm20-current-table-gap",
+      "queryCategory": "unsupported",
+      "query": "What are the exact current 2026 VM-20 Appendix 2 prescribed asset-default table rows and version metadata?",
+      "expectedOutcome": "unsupported",
+      "expectedChunkIds": [],
+      "expectedSourceIds": [],
+      "rationale": "The reviewed VM-20 wave does not contain a structured current-table package; the gap must remain explicit."
+    },
+    {
+      "queryId": "q-vm20-cross-document-reporting",
+      "queryCategory": "vm20_cross_document",
+      "query": "Which VM-20 sections and related documents are referenced for reserve categories, cash-flow models, and reporting support?",
+      "expectedChunkIds": [
+        "vm20-canonical-coverage-vm20-role-map-sections-3-4-5",
+        "vm20-canonical-coverage-vm20-section7-model-structure-child-001",
+        "vm20-canonical-coverage-vm20-section7-asset-mechanics-child-007",
+        "vm20-canonical-coverage-vm20-section7-asset-mechanics-child-008",
+        "vm20-canonical-coverage-vm20-section7-model-structure"
+      ],
+      "expectedSourceIds": [
+        "vm20-canonical-coverage"
+      ],
+      "rationale": "Tests cross-reference retrieval for VM-31 and related valuation-manual sections without inferring legal effect."
     },
     {
       "queryId": "q-vm21-sr-projection-entry",

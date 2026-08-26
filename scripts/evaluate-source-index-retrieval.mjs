@@ -98,12 +98,30 @@ const phraseBoost = (query, candidate, weight) => {
 
 export const scoreChunk = (query, chunk) => {
   const queryTokens = new Set(tokenize(query))
-  const haystackTokens = new Set(tokenize(buildSearchText(chunk)))
   let score = 0
 
-  for (const token of queryTokens) {
-    if (haystackTokens.has(token)) {
-      score += 1
+  // Keep source text in the search surface for recall, but weight structured
+  // hierarchy and topic metadata more heavily than a large parent/child body.
+  // This prevents long source excerpts from winning every query merely by
+  // containing more words, while retaining source-text evidence as a fallback.
+  const weightedFields = [
+    [chunk.sectionReference, 2],
+    [chunk.topic, 2],
+    [chunk.headingPath, 1.5],
+    [chunk.summary, 1.5],
+    [(chunk.keywords ?? []).join(' '), 1],
+    [(chunk.definedTerms ?? []).join(' '), 0.75],
+    [(chunk.requirements ?? []).join(' '), 0.75],
+    [chunk.sourceTitle, 0.75],
+    [(chunk.concepts ?? []).join(' '), 0.35],
+    [(chunk.controlledTags ?? []).join(' '), 0.35],
+    [chunk.citationDisplay, 0.5],
+    [chunk.sourceTextExcerpt, 0.15],
+  ]
+  for (const [field, weight] of weightedFields) {
+    const fieldTokens = new Set(tokenize(field))
+    for (const token of queryTokens) {
+      if (fieldTokens.has(token)) score += weight
     }
   }
 

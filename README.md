@@ -12,13 +12,16 @@ review-only batch outputs can be converted into reusable JSON, Markdown, JSONL,
 CSV, and retrieval-evaluation artifacts without replacing the underlying
 review packets or handoff notes.
 
-The expanded POC corpus now covers 18 source packages and 55 canonical chunks.
+The expanded POC corpus now covers 20 source packages and 282 canonical chunks.
 It includes:
 
 - AG 01 net-premium interpretation;
 - AG 03 maturity-value interpretation;
-- a narrow VM-20 framework overview and mechanics-boundary slice;
-- a VM-20 Section 3.C assumptions slice;
+- a hierarchical VM-20 current-manual coverage package for the reviewed
+  framework, NPR, DR, SR, exclusion-test, cash-flow, asset, and reinsurance
+  slices;
+- a separate hierarchical VM-20 practice-note companion package covering the
+  reviewed 2020 implementation-guidance wave;
 - a VM-21 stochastic reserve projection entry;
 - AG 36 active guideline material;
 - the AG 36 2021 Law Manual reprint as companion-only evidence;
@@ -37,6 +40,12 @@ report, a deterministic classification layer, and a compact evaluation
 harness for the expanded corpus. New document families can now enter through a
 document-family intake manifest and scanner before they are turned into the
 canonical source-index layer.
+
+The VM-20 expansion has a dedicated review handoff under
+`data/processed/review_packages/`. It records canonicalized sections, explicit
+current-manual gaps, parent/child counts, citations, cross-reference
+candidates, retrieval results, and human-review decisions without promoting
+the content.
 
 The current regulatory completion phase is tracked separately under
 `data/processed/regulatory_corpus/`, including the master inventory, gap

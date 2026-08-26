@@ -1,5 +1,20 @@
 # Decisions
 
+## VM-20 canonical coverage wave
+
+Keep the current-manual VM-20 expansion source-bound and hierarchical. The
+expanded package uses the reviewed batch text from batches 004, 005, and
+007-012 while preserving the existing framework and Section 3.C package IDs.
+Keep the 2020 VM-20 practice note in a separate companion-guidance package;
+its exact extracted text may support implementation questions, but it is
+non-binding, historical, and never substitutes for current manual authority.
+
+The dedicated review package is a governance handoff, not a promotion record.
+Validation proves citation, hierarchy, adjacency, and contract integrity; it
+does not approve wording, infer legal effect, or make the package learner-
+facing, app-ready, RAG-ready, or Copilot eligible. Current-manual gaps for
+Sections 4, 5, and 9, Appendices 1-2, and structured tables remain explicit.
+
 ## Regulatory corpus inventory is the planning view
 
 The master regulatory corpus inventory under
