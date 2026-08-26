@@ -860,3 +860,10 @@
 - Verified all 7,022 values against source workbook cells and passed 15/15
   table-aware retrieval cases, while retaining Tables B-E2 as explicit gaps
   and keeping the table dataset review-only and unpromoted.
+- Applied the independent review's two Appendix 2 table corrections without
+  re-ingestion: marked 27 Average rows as explicit-only source summaries and
+  separated Table J Manual table identity from official-workbook association.
+- Added focused Table F/G/H/I/J Average-row, Table J authority/note-scope, and
+  Table A effective-date regressions. The expanded retrieval evaluation passes
+  31/31 cases and the narrow blocker suite passes 18/18 while all 7,022 value
+  records and five source hashes remain unchanged.

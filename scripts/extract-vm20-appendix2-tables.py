@@ -104,6 +104,15 @@ def display_value(value: Any, number_format: str) -> str | None:
     return str(value)
 
 
+def row_semantics(source_dimension_value: Any) -> dict[str, Any]:
+    """Classify source summary rows without changing their source-bound values."""
+    is_source_summary = isinstance(source_dimension_value, str) and source_dimension_value.strip().lower() == "average"
+    return {
+        "rowRole": "source_summary_statistic" if is_source_summary else "prescribed_dimension_row",
+        "regulatoryValueEligible": not is_source_summary,
+    }
+
+
 def parse_title_date(title: str) -> str:
     match = re.search(r"\((\d{1,2})/(\d{1,2})/(\d{4})\)", title)
     if not match:
@@ -225,6 +234,7 @@ def extract_a() -> dict[str, Any]:
         rows.append({
             "rowId": f"vm20-table-a-rating-{rating}",
             "ordinal": row_num - 5,
+            **row_semantics(rating),
             "dimensions": [
                 {"dimensionId": "pbr_numeric_rating", "label": "PBR Numeric Rating", "value": rating, "sourceCell": f"A{row_num}"},
                 {"dimensionId": "moodys_rating", "label": "Moody's Rating", "value": moodys, "sourceCell": f"B{row_num}"},
@@ -264,7 +274,7 @@ def extract_spread_pair(source_id: str, left_label: str, right_label: str, left_
                     rating = (1 if side == "left" else 11) + offset
                     rating_label = ws.cell(4, col_num).value
                     values.append(value_record(ws, cell_address, f"pbr-rating-{rating}", f"PBR Rating {rating} ({rating_label})", "basis_points"))
-                rows.append({"rowId": f"{table['tableId']}-{as_of}-wal-{wal}", "ordinal": row_num - 4, "dimensions": [{"dimensionId": "weighted_average_life_years", "label": "Weighted Average Life (years)", "value": wal, "sourceCell": f"{wal_col}{row_num}"}], "values": values})
+                rows.append({"rowId": f"{table['tableId']}-{as_of}-wal-{wal}", "ordinal": row_num - 4, **row_semantics(wal), "dimensions": [{"dimensionId": "weighted_average_life_years", "label": "Weighted Average Life (years)", "value": wal, "sourceCell": f"{wal_col}{row_num}"}], "values": values})
             source_range = f"A1:K35" if side == "left" else "M1:W35"
             version(table, f"{table['tableId']}-{as_of}", as_of, None, "current_as_of_retrieval" if as_of == latest_date else "historical_snapshot", "Latest dated sheet in the official workbook on the retrieval date." if as_of == latest_date else "An earlier dated sheet retained in the same official workbook.", sheet, source_range, title_cell, rows)
     return [item[0] for item in definitions]
@@ -275,12 +285,28 @@ def extract_j() -> dict[str, Any]:
     wb = load_workbook(SOURCE_ROOT / SOURCE_DEFINITIONS[source_id]["filename"], data_only=True)
     sheets = [name for name in wb.sheetnames if "2026" in name]
     columns = [
-        {"columnId": "current-swap-spread", "label": "Current Swap Spread", "sourceHeaderCell": "B2:B3"},
-        {"columnId": "long-term-swap-spread", "label": "Long-Term Swap Spread", "sourceHeaderCell": "C2:C3"},
+        {
+            "columnId": "current-swap-spread",
+            "label": "Current Swap Spread",
+            "sourceHeaderCell": "B2:B3",
+            "regulatoryMeasureId": "current_benchmark_swap_spread",
+            "workbookTableAssociation": "Table J",
+            "manualTableIdentity": None,
+            "authorityDisclosure": "This is the Current Swap Spread column in the official Table J workbook. The Manual separately discusses Current Benchmark Swap Spreads but does not assign this current column the Manual table identity Table J.",
+        },
+        {
+            "columnId": "long-term-swap-spread",
+            "label": "Long-Term Swap Spread",
+            "sourceHeaderCell": "C2:C3",
+            "regulatoryMeasureId": "long_term_benchmark_swap_spread",
+            "workbookTableAssociation": "Table J",
+            "manualTableIdentity": "Table J",
+            "authorityDisclosure": "This is the Long-Term Swap Spread column in the official Table J workbook, and the Manual identifies Table J as the long-term benchmark swap spread table.",
+        },
     ]
     notes = [
-        {"noteId": "libor-to-sofr-disclosure-reference", "scope": "workbook_context", "summary": "The January sheet directs users to the LIBOR-to-SOFR disclosure sheet for calculation information; applicability beyond that source reference requires reviewer confirmation.", "sourceSheet": "January_2026", "sourceCell": "A38", "relatedSheet": "LIBOR to SOFR Disclosure"},
-        {"noteId": "short-tenor-current-sofr-source", "scope": "current-swap-spread at 3M and 6M", "summary": "The January source note identifies a contracted Term SOFR data source and reserves the source provider's market-data rights.", "sourceSheet": "January_2026", "sourceCell": "A39"},
+        {"noteId": "libor-to-sofr-disclosure-reference", "scope": "January workbook context", "summary": "The January sheet directs users to the LIBOR-to-SOFR disclosure sheet for calculation information; applicability beyond that source reference requires reviewer confirmation.", "sourceSheet": "January_2026", "sourceCell": "A38", "relatedSheet": "LIBOR to SOFR Disclosure", "appliesTo": {"versionIds": ["vm20-table-j-2026-01-30"]}},
+        {"noteId": "short-tenor-current-sofr-source", "scope": "January current-swap-spread values at 3M and 6M only", "summary": "The January source note identifies a contracted Term SOFR data source and reserves the source provider's market-data rights.", "sourceSheet": "January_2026", "sourceCell": "A39", "appliesTo": {"versionIds": ["vm20-table-j-2026-01-30"], "columnIds": ["current-swap-spread"], "dimensionValues": ["3M", "6M"]}},
     ]
     table = base_table("vm20-table-j", "J", INVENTORY_TITLES["J"], "Current and long-term swap benchmark spreads by weighted average life or short tenor.", "basis_points", source_id, [{"dimensionId": "weighted_average_life_or_tenor", "label": "Weighted Average Life or Tenor", "lookupRequired": True}], columns, notes)
     latest_date = max(parse_title_date(str(wb[s]["A1"].value)) for s in sheets)
@@ -293,6 +319,7 @@ def extract_j() -> dict[str, Any]:
             rows.append({
                 "rowId": f"vm20-table-j-{as_of}-tenor-{str(tenor).lower()}",
                 "ordinal": row_num - 3,
+                **row_semantics(tenor),
                 "dimensions": [{"dimensionId": "weighted_average_life_or_tenor", "label": "Weighted Average Life or Tenor", "value": tenor, "sourceCell": f"A{row_num}"}],
                 "values": [value_record(ws, f"B{row_num}", "current-swap-spread", "Current Swap Spread", "basis_points"), value_record(ws, f"C{row_num}", "long-term-swap-spread", "Long-Term Swap Spread", "basis_points")],
             })
@@ -328,6 +355,7 @@ def extract_k() -> dict[str, Any]:
         rows.append({
             "rowId": f"vm20-table-k-rating-{numeric_rating}",
             "ordinal": numeric_rating,
+            **row_semantics(numeric_rating),
             "dimensions": [
                 {"dimensionId": "pbr_numeric_rating", "label": "PBR Numeric Rating", "value": numeric_rating, "sourceCell": f"{col_letter}{numeric_row}"},
                 {"dimensionId": "grade_band", "label": "Grade Band", "value": "investment_grade" if investment_grade else "below_investment_grade", "sourceCell": "B2" if investment_grade else "B13"},
@@ -353,8 +381,11 @@ def retrieval_units(tables: list[dict[str, Any]]) -> list[dict[str, Any]]:
                     "tableTitle": table["title"],
                     "currentness": table_version["currentness"],
                     "asOfDate": table_version["asOfDate"],
+                    "rowRole": row["rowRole"],
+                    "regulatoryValueEligible": row["regulatoryValueEligible"],
+                    "retrievalMode": "normal_regulatory_value" if row["regulatoryValueEligible"] else "explicit_source_summary_only",
                     "dimensionText": dimensions,
-                    "retrievalText": f"VM-20 Table {table['tableLabel']} {table['title']}; {dimensions}; as of {table_version['asOfDate'] or 'undated current source'}; units {table['units'] or 'mapping'}.",
+                    "retrievalText": f"VM-20 Table {table['tableLabel']} {table['title']}; {dimensions}; row role {row['rowRole']}; as of {table_version['asOfDate'] or 'undated current source'}; units {table['units'] or 'mapping'}.",
                     "citation": table_version["citation"],
                     "reviewOnly": True,
                 })
@@ -384,7 +415,7 @@ def build() -> dict[str, Any]:
     rows = [row for version_item in versions for row in version_item["rows"]]
     values = [value for row in rows for value in row["values"]]
     return {
-        "schemaVersion": "1.0",
+        "schemaVersion": "1.1",
         "datasetId": "vm20-appendix2-structured-tables-2026-08-26",
         "title": "VM-20 Appendix 2 Structured Regulatory Tables Proof of Concept",
         "generatedAt": RETRIEVED_AT,
@@ -407,7 +438,7 @@ def build() -> dict[str, Any]:
             "appendix": "VM-20 Appendix 2",
             "printedPageRange": "20-91–20-96",
             "physicalPageRange": "135–140",
-            "authorityBoundary": "The manual supplies methodology and directs users to NAIC-published Tables A–K; workbook cells, not prose, are the value authority for ingested tables.",
+            "authorityBoundary": "The Manual supplies methodology and Manual table identity; official workbooks supply published values, source column labels, and workbook associations. These authority layers remain distinct, including the current versus long-term columns in the official Table J workbook.",
         },
         "officialIndex": {"url": OFFICIAL_PAGE, "retrievedAt": RETRIEVED_AT, "scope": "Life PBR Data: VM-20 and VM-21"},
         "sourceArtifacts": source_artifacts(),
@@ -420,6 +451,8 @@ def build() -> dict[str, Any]:
             "currentVersionCount": sum(item["currentness"] == "current_as_of_retrieval" for item in versions),
             "historicalSnapshotCount": sum(item["currentness"] == "historical_snapshot" for item in versions),
             "rowCount": len(rows),
+            "regulatoryEligibleRowCount": sum(row["regulatoryValueEligible"] for row in rows),
+            "sourceSummaryRowCount": sum(row["rowRole"] == "source_summary_statistic" for row in rows),
             "valueCount": len(values),
             "retrievalUnitCount": len(units),
         },

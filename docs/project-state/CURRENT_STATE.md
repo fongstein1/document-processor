@@ -850,3 +850,12 @@ availability gaps. Every ingested value retains workbook, sheet, cell, raw
 value, displayed precision, and methodology citations. The dataset is not
 promoted and has zero learner/app/RAG/Copilot production eligibility pending
 independent review and a separate promotion decision.
+
+The first independent review returned `APPROVE WITH FIXES` after confirming
+all five source hashes and all 7,022 source-cell values. Its two narrow
+blockers are now closed: 27 workbook Average rows are explicitly ineligible
+source summary statistics, and Table J distinguishes Manual table identity
+from official-workbook association for its current and long-term columns.
+Focused retrieval, note-scope, and Table A effective-date regressions pass.
+The corrected dataset remains review-only and not promoted pending a narrow
+final promotion-gate review.

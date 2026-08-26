@@ -2,8 +2,17 @@
 
 - Status: review-only
 - Promoted: no
-- Independent review: pending
+- Independent review: APPROVE WITH FIXES; corrections applied; narrow final review pending
 - Learner/app/RAG/Copilot eligible: no
+
+## Promotion blocker corrections
+
+- **Closed - source-average-row-regulatory-eligibility:** All 27 source Average rows are labeled source_summary_statistic, regulatoryValueEligible false, and explicit_source_summary_only in retrieval units.
+- **Closed - table-j-manual-workbook-authority-boundary:** Table J columns now carry separate regulatory measure, official workbook association, Manual table identity, and authority disclosure metadata.
+
+- Remaining blockers from the independent review: 0
+- Ready for narrow final review: yes
+- Promotion decision included: no
 
 ## Scope
 
@@ -15,7 +24,8 @@ Excluded: Tables B, C, D, E1, and E2 values; other VM tables; prose redesign; em
 
 - Logical tables ingested: 7
 - Table versions: 29 (7 current-as-of-retrieval; 22 historical)
-- Rows / values / retrieval units: 891 / 7022 / 891
+- Rows: 891 (864 prescribed-dimension; 27 source-summary)
+- Values / retrieval units: 7022 / 891
 
 ## Current-as-of-retrieval versions
 
@@ -40,32 +50,30 @@ Excluded: Tables B, C, D, E1, and E2 values; other VM tables; prose redesign; em
 ## Fidelity and citations
 
 - Source workbooks verified by SHA-256: 5/5
-- Exact workbook cells checked: 7022
+- Exact workbook cells checked in the accepted independent review and deterministic QA: 7022
 - Formula-backed structured values: 0
 - Legal-disclaimer sheets retained: 5
-- Value citations retain workbook URL, sheet, range, row/column source cells, raw value, display value, and number format.
-- Methodology citations retain 2026 Manual printed and physical PDF page ranges.
+- Values retain workbook URL, sheet, range, source cell, raw typed value, display value, number format, unit, and exact-source fidelity.
+- Manual methodology and table identity remain distinct from official-workbook values, column labels, and workbook associations.
 
 ## Retrieval evaluation
 
 - Status: passed
-- Cases passed: 15/15
-- Supported review-only / unsupported / ambiguous: 11 / 2 / 2
+- Cases passed: 31/31
+- Supported review-only / unsupported / ambiguous: 21 / 8 / 2
 - Production-answer eligible: 0
-- The generic resolver uses table identity, version, dimensions, columns, notes, and governance; it does not treat review-only evidence as promoted production evidence.
+- Focused regression: `data/processed/review_packages/vm20-appendix2-promotion-blocker-regression.md`
 
 ## Known limitations
 
 - Currentness is bounded to the NAIC current-data page and workbooks retrieved on 2026-08-26; later publications may supersede these versions.
 - Table K is undated; it is labeled current-as-of-retrieval based on the official page rather than an inferred workbook date.
-- Table A is a workbook labeled with December 2025 data and an explicit June 30, 2026 effective date; currentness is based on the official current-data page plus that effective-date note.
-- The official Table J workbook contains both current and long-term swap-spread columns, while Appendix 2 Subsection H describes Table J as long-term; the proof of concept preserves the workbook columns and flags the identity boundary for reviewer confirmation.
+- Table A has no invented as-of or publication date; it retains its explicit June 30, 2026 effective date and current-as-of-retrieval status.
 - Dedicated legal-disclaimer sheets do not expose disclaimer text as ordinary cells; preservation is by source workbook, hash, and sheet locator.
-- Tables B, C, D, E1, and E2 are described in the manual but were not available as current workbooks on the official page and are not reconstructed.
-- Table J disclosure applicability beyond the explicit workbook note locations requires independent reviewer confirmation.
+- Tables B, C, D, E1, and E2 are described in the Manual but were not available as current workbooks on the official page and are not reconstructed.
 
-## Independent review
+## Narrow final review
 
-Use `data/processed/review_packages/vm20-appendix2-independent-review-prompt.md`.
+Use `data/processed/review_packages/vm20-appendix2-independent-review-prompt.md`. The prior full audit is accepted; repeat the 7,022-cell comparison only if a source hash or recorded value changed.
 
-A reviewer must return APPROVE, APPROVE WITH FIXES, REPROCESS, or REJECT with source-cell evidence. Approval of this review package does not itself promote the dataset; promotion requires a separate recorded decision.
+The narrow review does not itself promote the dataset. Promotion remains a separate recorded decision.
