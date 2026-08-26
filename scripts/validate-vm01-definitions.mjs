@@ -65,7 +65,54 @@ const main = async () => {
     assert(!chunk.chunkLevel && !chunk.parentChunkId && !chunk.childChunkIds, `VM-01 short-definition model unexpectedly introduced hierarchy: ${chunk.chunkId}.`)
     assert(indexEntry.exactDefinedTerm === definition.exactDefinedTerm && indexEntry.extractedDefinedTerm === definition.extractedDefinedTerm && indexEntry.normalizedLookupTerm === definition.normalizedLookupTerm, `VM-01 defined-term metadata mismatch: ${chunk.chunkId}.`)
     assert(JSON.stringify(indexEntry.aliases) === JSON.stringify(definition.aliases) && JSON.stringify(indexEntry.acronymExpansions) === JSON.stringify(definition.acronymExpansions), `VM-01 alias/acronym integrity mismatch: ${chunk.chunkId}.`)
+
+    // Blocker 1 Regression: definedTerms must be strictly source-explicit
+    const expectedDefinedTerms = [...new Set([definition.exactDefinedTerm, ...definition.aliases])]
+    assert(
+      JSON.stringify(chunk.definedTerms) === JSON.stringify(expectedDefinedTerms),
+      `VM-01 definedTerms must contain only formal source term and source-explicit aliases: ${chunk.chunkId}. Found ${JSON.stringify(chunk.definedTerms)}, expected ${JSON.stringify(expectedDefinedTerms)}.`,
+    )
+    assert(chunk.definedTerms[0] === definition.exactDefinedTerm, `VM-01 chunk.definedTerms[0] must equal exactDefinedTerm: ${chunk.chunkId}.`)
+    for (const term of chunk.definedTerms) {
+      assert(term === definition.exactDefinedTerm || definition.aliases.includes(term), `Non-authoritative or generated term found in definedTerms: ${term} in ${chunk.chunkId}.`)
+    }
+    // Verify normalized lookup forms reside only in non-authoritative metadata (keywords / index)
+    if (definition.normalizedLookupTerm !== definition.exactDefinedTerm && !definition.aliases.includes(definition.normalizedLookupTerm)) {
+      assert(!chunk.definedTerms.includes(definition.normalizedLookupTerm), `Generated normalizedLookupTerm leaked into definedTerms: ${definition.normalizedLookupTerm} in ${chunk.chunkId}.`)
+      assert(chunk.keywords.includes(definition.normalizedLookupTerm), `Normalized lookup term missing from non-authoritative keywords metadata: ${chunk.chunkId}.`)
+    }
   }
+
+  // Explicit regression checks for representative examples identified by review
+  const representativeChecks = [
+    { id: 'vm01-definition-008-asset-associated-derivative', exact: 'asset-associated derivative', forbidden: 'asset associated derivative' },
+    { id: 'vm01-definition-010-cash-flow-model', exact: 'cash-flow model', forbidden: 'cash flow model' },
+    { id: 'vm01-definition-019-deposit-type-contract', exact: 'deposit-type contract', forbidden: 'deposit type contract' },
+    { id: 'vm01-definition-026-equity-like-instruments', exact: 'equity-like instruments', forbidden: 'equity like instruments' },
+    { id: 'vm01-definition-030-guaranteed-investment-contract', exact: 'guaranteed investment contract (GIC)', aliases: ['GIC'], forbidden: 'guaranteed investment contract' },
+    { id: 'vm01-definition-031-guaranteed-issue-gi-life-insurance-policy', exact: 'guaranteed issue (GI) life insurance policy', aliases: ['GI'], forbidden: 'guaranteed issue life insurance policy' },
+    { id: 'vm01-definition-041-index-linked-variable-annuity', exact: 'index-linked variable annuity', aliases: ['ILVA'], forbidden: 'index linked variable annuity' },
+    { id: 'vm01-definition-042-indexed-universal-life-iul-insurance-policy', exact: 'indexed universal life (IUL) insurance policy', aliases: ['IUL'], forbidden: 'indexed universal life insurance policy' },
+    { id: 'vm01-definition-057-non-guaranteed-elements', exact: 'non-guaranteed elements', aliases: ['NGE'], forbidden: 'non guaranteed elements' },
+    { id: 'vm01-definition-058-non-material-secondary-guarantee', exact: 'non-material secondary guarantee', forbidden: 'non material secondary guarantee' },
+    { id: 'vm01-definition-067-principle-based-reserve-actuarial-report', exact: 'Principle-Based Reserve Actuarial Report', aliases: ['PBR Actuarial Report'], forbidden: 'principle based reserve actuarial report' },
+    { id: 'vm01-definition-068-principle-based-valuation', exact: 'principle-based valuation', forbidden: 'principle based valuation' },
+    { id: 'vm01-definition-098-vm-20-reserving-category', exact: 'VM-20 reserving category', forbidden: 'vm 20 reserving category' },
+  ]
+  for (const check of representativeChecks) {
+    const chunk = sourcePackage.chunks.find((c) => c.chunkId === check.id)
+    assert(chunk, `Representative check chunk not found: ${check.id}`)
+    assert(chunk.definedTerms.includes(check.exact), `chunk.definedTerms missing exact term ${check.exact} for ${check.id}`)
+    assert(!chunk.definedTerms.includes(check.forbidden), `chunk.definedTerms contains forbidden generated form ${check.forbidden} for ${check.id}`)
+    if (check.aliases) {
+      for (const alias of check.aliases) {
+        assert(chunk.definedTerms.includes(alias), `chunk.definedTerms missing explicit alias ${alias} for ${check.id}`)
+      }
+    }
+  }
+
+  const totalDefinedTermsCount = sourcePackage.chunks.reduce((sum, chunk) => sum + chunk.definedTerms.length, 0)
+  assert(totalDefinedTermsCount === 125, `Total definedTerms count across 98 chunks must be exactly 125 (98 formal exact terms + 27 explicit aliases). Found ${totalDefinedTermsCount}.`)
 
   const aggregateHash = sha256(definitionIndex.definitions.map((entry) => entry.formalDefinitionSourceText).join('\n\n'))
   assert(sourceQa.status === 'pass' && sourceQa.checks.definitionsWithSourceEvidence === 98 && sourceQa.checks.definitionsWithValidCitations === 98, 'VM-01 source QA did not pass all evidence/citation checks.')

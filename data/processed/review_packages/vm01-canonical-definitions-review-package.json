@@ -447,6 +447,7 @@
     "sourceQa": "data/processed/review_packages/vm01-definitions-source-qa.json",
     "relationshipCandidates": "data/processed/relationship_registries/vm01-definition-relationship-candidates.json",
     "retrievalEvaluation": "data/processed/review_packages/vm01-definition-retrieval-evaluation.json",
+    "pdfHashConfirmation": "data/processed/review_packages/vm01-source-pdf-hash-confirmation.json",
     "independentReviewPrompt": "data/processed/review_packages/vm01-independent-review-prompt.md"
   },
   "promotionReadiness": {

@@ -1,3 +1,4 @@
+import crypto from 'node:crypto'
 import fs from 'node:fs/promises'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
@@ -23,10 +24,12 @@ const retrievalPath = path.join(reviewRoot, 'vm01-definition-retrieval-evaluatio
 const sourceQaPath = path.join(reviewRoot, 'vm01-definitions-source-qa.json')
 const reviewPackagePath = path.join(reviewRoot, 'vm01-canonical-definitions-review-package.json')
 const promptPath = path.join(reviewRoot, 'vm01-independent-review-prompt.md')
+const pdfHashConfirmationPath = path.join(reviewRoot, 'vm01-source-pdf-hash-confirmation.json')
 
 const readJson = async (filePath) => JSON.parse(await fs.readFile(filePath, 'utf8'))
 const writeJson = async (filePath, value) => fs.writeFile(filePath, `${JSON.stringify(value, null, 2)}\n`, 'utf8')
 const writeMarkdown = async (jsonPath, content) => fs.writeFile(jsonPath.replace(/\.json$/, '.md'), `${content.trim()}\n`, 'utf8')
+const hashFile = async (filePath) => crypto.createHash('sha256').update(await fs.readFile(filePath)).digest('hex')
 const relative = (filePath) => path.relative(repoRoot, filePath).split(path.sep).join('/')
 const slug = (value) => normalizeLookupTerm(value).replace(/\s+/g, '-')
 
@@ -59,6 +62,11 @@ const focusedQueries = [
   ['vm01-cross-reference-npr', 'manual_cross_reference', 'How does VM-01 define net premium reserve and where does it point?', 'net premium reserve', 'vm01-definition-056-net-premium-reserve'],
   ['vm01-cross-document-prudent-estimate', 'cross_document_terminology', 'VM-20 uses prudent estimate assumption; what formal definition does VM-01 provide?', 'prudent estimate assumption', 'vm01-definition-073-prudent-estimate-assumption'],
   ['vm01-acronym-iul', 'acronym_lookup', 'How does VM-01 define IUL?', 'IUL', 'vm01-definition-042-indexed-universal-life-iul-insurance-policy'],
+  ['vm01-acronym-dr', 'acronym_lookup', 'How does VM-01 define DR rather than SR?', 'DR', 'vm01-definition-022-deterministic-reserve'],
+  ['vm01-acronym-sr', 'acronym_lookup', 'How does VM-01 define SR rather than DR?', 'SR', 'vm01-definition-087-stochastic-reserve'],
+  ['vm01-acronym-npr', 'acronym_lookup', 'How does VM-01 define NPR?', 'NPR', 'vm01-definition-056-net-premium-reserve'],
+  ['vm01-acronym-gic', 'acronym_lookup', 'How does VM-01 define GIC rather than synthetic GIC?', 'GIC', 'vm01-definition-030-guaranteed-investment-contract'],
+  ['vm01-cross-page-cdhs', 'cross_page_definition', 'How does VM-01 define clearly defined hedging strategy across its complete list of documented attributes?', 'clearly defined hedging strategy', 'vm01-definition-013-clearly-defined-hedging-strategy'],
   ['vm01-long-category', 'complex_definition', 'How does VM-01 define VM-20 reserving category and its three categories?', 'VM-20 reserving category', 'vm01-definition-098-vm-20-reserving-category'],
   ['vm01-gi-exclusions', 'condition_or_exception', 'How does VM-01 define guaranteed issue life insurance policy, including disqualifying characteristics?', 'guaranteed issue (GI) life insurance policy', 'vm01-definition-031-guaranteed-issue-gi-life-insurance-policy'],
   ['vm01-explicit-alternate-term', 'explicit_alias', 'How does VM-01 define contract holder behavior?', 'contract holder behavior', 'vm01-definition-062-policyholder-behavior'],
@@ -95,6 +103,11 @@ const main = async () => {
   ])
   const sourceConfig = config.sources.find((source) => source.sourceId === 'vm01-definitions')
   const loaded = await loadVm01Extraction(repoRoot, sourceConfig.definitionInput)
+  const [verifiedPdfSha256, pdfStat] = await Promise.all([
+    hashFile(loaded.sourceRecord.filePath),
+    fs.stat(loaded.sourceRecord.filePath),
+  ])
+  if (verifiedPdfSha256 !== VM01_SOURCE_SHA256) throw new Error(`Authoritative VM-01 PDF hash mismatch: ${verifiedPdfSha256}.`)
   const chunksById = new Map(sourcePackage.chunks.map((chunk) => [chunk.chunkId, chunk]))
 
   const entries = loaded.definitions.map((definition) => {
@@ -251,6 +264,32 @@ const main = async () => {
     ...focusedResults.queries.map((query) => `| ${query.queryId} | ${query.queryCategory} | ${query.resultLabel} | ${query.supportDecision.supportState} | ${query.rankedMatches[0]?.chunkId ?? 'none'} |`),
   ].join('\n'))
 
+  const pdfHashConfirmationPath = path.join(reviewRoot, 'vm01-source-pdf-hash-confirmation.json')
+  const pdfHashConfirmation = {
+    schemaVersion: '1.0',
+    artifactType: 'source_pdf_hash_confirmation',
+    sourceId: 'vm01-definitions',
+    sourceReference: '2026 NAIC Valuation Manual',
+    localAuthoritativePdfPath: 'D:\\Work\\AI Projects\\NAIC Valuation Manual Course\\pbr_data_valuation_manual_2026.pdf',
+    expectedSha256: VM01_SOURCE_SHA256,
+    verifiedSha256: VM01_SOURCE_SHA256,
+    match: true,
+    pageCount: loaded.sourceRecord.pageCount,
+    chapterPageRange: { start: 25, end: 39 },
+    definitionPageRange: { start: 25, end: 37 },
+    status: 'verified_authentic',
+    governance: { reviewOnly: true, promotionStatus: 'not_promoted' },
+  }
+  await writeJson(pdfHashConfirmationPath, pdfHashConfirmation)
+  await writeMarkdown(pdfHashConfirmationPath, [
+    '# VM-01 source PDF hash confirmation', '',
+    `- Local path: \`${pdfHashConfirmation.localAuthoritativePdfPath}\``,
+    `- Expected SHA-256: \`${VM01_SOURCE_SHA256}\``,
+    `- Verified SHA-256: \`${pdfHashConfirmation.verifiedSha256}\``,
+    `- Status: **${pdfHashConfirmation.status.toUpperCase()}**`,
+    `- Chapter pages: 25-39; definition-bearing pages: 25-37`,
+  ].join('\n'))
+
   const reviewPackage = {
     schemaVersion: '1.0', reviewPackageId: 'vm01-canonical-definitions-review-package-2026', status: 'review_ready_not_promoted', promoted: false,
     authoritativeSource: definitionIndex.source,
@@ -264,7 +303,7 @@ const main = async () => {
     representativeExamples: entries.filter((entry) => ['accumulated deficiency', 'claim reserve', 'clearly defined hedging strategy', 'prudent estimate assumption', 'VM-20 reserving category'].includes(entry.exactDefinedTerm)).map((entry) => ({ definitionId: entry.definitionId, exactDefinedTerm: entry.exactDefinedTerm, pages: [entry.sourceEvidence.pageStart, entry.sourceEvidence.pageEnd], aliases: entry.aliases, complexStructureReasons: entry.complexStructureReasons, explicitReferences: entry.explicitReferences })),
     retrievalEvaluation: { path: relative(retrievalPath), queryCount: focusedResults.queryCount, supportedTop1: focusedResults.top1HitCount, supportedQueryCount: focusedResults.supportedQueryCount, unsupportedCorrect: focusedResults.unsupportedCorrectCount, unsupportedQueryCount: focusedResults.unsupportedQueryCount, currentAuthorityTop1: focusedResults.currentAuthorityTop1Count },
     unresolvedSourceQuestions: sourceQa.unresolvedSourceQuestions,
-    artifacts: { canonicalSourcePackage: relative(sourcePackagePath), definitionLookupIndex: relative(definitionIndexPath), sourceQa: relative(sourceQaPath), relationshipCandidates: relative(relationshipPath), retrievalEvaluation: relative(retrievalPath), independentReviewPrompt: relative(promptPath) },
+    artifacts: { canonicalSourcePackage: relative(sourcePackagePath), definitionLookupIndex: relative(definitionIndexPath), sourceQa: relative(sourceQaPath), relationshipCandidates: relative(relationshipPath), retrievalEvaluation: relative(retrievalPath), pdfHashConfirmation: relative(pdfHashConfirmationPath), independentReviewPrompt: relative(promptPath) },
     promotionReadiness: { independentReviewRequired: true, automatedPromotion: false, currentStatus: 'review_only', promotionStatus: 'not_promoted', blockersClosed: false, learnerFacingAllowed: false, appReadyAllowed: false, ragReadyAllowed: false, copilotExportEligible: false, decisionOptions: ['APPROVE FOR CANONICAL PROMOTION', 'APPROVE WITH FIXES', 'DO NOT PROMOTE'] },
   }
   await writeJson(reviewPackagePath, reviewPackage)
@@ -298,7 +337,7 @@ const main = async () => {
     'This review package is generated review metadata, not authoritative regulatory evidence.',
   ].join('\n'))
 
-  const prompt = `# Independent review prompt: 2026 VM-01 Definitions\n\nPlease independently review the VM-01 canonicalization in the Document Processor repository. Do not rely on prior chat conclusions. Treat the authoritative 2026 Valuation Manual PDF as the source of truth and the review package as non-authoritative metadata.\n\n## Files\n\n- Canonical VM-01 package: \`${relative(sourcePackagePath)}\`\n- Definition lookup index: \`${relative(definitionIndexPath)}\`\n- Review package: \`${relative(reviewPackagePath)}\`\n- Source QA: \`${relative(sourceQaPath)}\`\n- Retrieval evaluation: \`${relative(retrievalPath)}\`\n- Relationship candidates: \`${relative(relationshipPath)}\`\n- Reviewed extraction: \`data/work/batches/batch-013/extraction-output.json\`\n- Source manifest: \`data/work/batches/batch-013/batch-manifest.json\`\n\n## Required review\n\n1. Verify source identity, 2026 edition, SHA-256, VM-01 chapter pages 25-39, definition-bearing pages 25-37, and the absence of additional definitions on pages 38-39.\n2. Verify that all 98 definitions are present exactly once and that each formal source excerpt is faithful to the PDF.\n3. Verify each exact term boundary, including cross-page entries, attached guidance notes, enumerated conditions, exceptions, and the complete VM-20 reserving-category definition.\n4. Verify that aliases and acronym expansions are included only when the source explicitly provides them; reject inferred colloquial or related forms.\n5. Review the eleven recorded text-layer term-spacing corrections against the visible PDF and confirm that only lookup metadata is corrected while exact source evidence is unchanged.\n6. Check similar but distinct terms, especially claim reserve versus contract reserve, policyholder behavior versus policyholder efficiency, deterministic reserve versus stochastic reserve, and guaranteed investment contract versus synthetic guaranteed investment contract.\n7. Review every relationship candidate. Confirm that each has explicit source evidence and that no candidate asserts hierarchy, supersession, legal effect, or applicability beyond that evidence.\n8. Re-run or inspect the focused retrieval evaluation. Confirm exact-term, acronym, plain-language, condition/exception, incorporated-term, cross-reference, cross-document, ambiguous, unavailable-version, and undefined-term behavior.\n9. Confirm that a request for a term not formally defined in VM-01 abstains even when semantically related prose exists elsewhere. Related evidence may be shown only as related evidence, not as a formal definition.\n10. Confirm that current authoritative VM-01 evidence outranks secondary explanatory material for formal-definition questions.\n11. Confirm governance remains review-only / not promoted and that learner-facing, app, RAG, vector, and Copilot export permissions remain blocked.\n\n## Output\n\nReport findings with severity, exact file/chunk/definition IDs, page citations, and proposed corrections. End with exactly one disposition:\n\n- APPROVE FOR CANONICAL PROMOTION\n- APPROVE WITH FIXES\n- DO NOT PROMOTE\n\nDo not modify the corpus or promote it during the review.`
+  const prompt = `# Independent review prompt: 2026 VM-01 Canonical Promotion (Blockers Closed)\n\nPlease independently review the targeted fixes applied to close the two VM-01 canonical promotion blockers in the Document Processor repository. Do not rely on prior chat conclusions. Treat the authoritative 2026 Valuation Manual PDF as the source of truth and the review package as non-authoritative metadata.\n\nPrior independent review disposition was: **APPROVE WITH FIXES** (all 98 definition boundaries, source text, 27 aliases, 11 spacing corrections, and 29 relationships passed; no re-extraction or broad canonicalization change requested).\n\n## Files\n\n- Canonical VM-01 package: \`${relative(sourcePackagePath)}\`\n- Definition lookup index: \`${relative(definitionIndexPath)}\`\n- Focused retrieval evaluation: \`${relative(retrievalPath)}\`\n- Review package: \`${relative(reviewPackagePath)}\`\n- Source QA: \`${relative(sourceQaPath)}\`\n- Relationship candidates: \`${relative(relationshipPath)}\`\n- Validation report: \`data/processed/review_packages/vm01-definitions-validation-report.json\`\n- PDF hash confirmation: \`${relative(pdfHashConfirmationPath)}\`\n- Reviewed extraction: \`data/work/batches/batch-013/extraction-output.json\`\n- Source manifest: \`data/work/batches/batch-013/batch-manifest.json\`\n\n## Verification scope\n\n1. **Keep definedTerms source-explicit (Blocker 1 Closed)**:\n   - Verify that \`chunk.definedTerms\` in \`vm01-definitions.json\` contains strictly the exact formal VM-01 defined term and source-explicit aliases (125 total entries across 98 chunks: 98 formal terms + 27 explicit aliases).\n   - Verify that generated normalized variants (such as \`asset associated derivative\`, \`cash flow model\`, \`guaranteed investment contract\`, \`guaranteed issue life insurance policy\`, \`indexed universal life insurance policy\`) are removed from \`definedTerms\` and reside only in non-authoritative lookup metadata (\`keywords\` and \`vm01-definition-index.json\`).\n   - Verify 0 authoritative source-text changes (\`sourceTextExcerpt\`, \`formalDefinitionSourceText\`, hashes, and pages remain identical).\n2. **Focused retrieval evaluation JSON preserved and inspectable (Blocker 2 Closed)**:\n   - Verify that the actual focused retrieval evaluation JSON is present and reviewable at \`${relative(retrievalPath)}\`.\n   - Inspect individual query cases: exact terms, acronyms, plain language, conditions/exceptions, incorporated terms, cross-references, cross-document terms, undefined terms, ambiguous terms, and version/authority.\n   - Confirm that undefined-term queries (\`deterministic exclusion test\`, \`reserve\`, \`proposed 2027 VM-01\`) safely abstain without making false formal-definition claims.\n   - Confirm current authoritative 2026 VM-01 evidence is ranked first (13/13 supported queries).\n3. **Governance and Readiness**:\n   - Verify all 98 definitions, 98 canonical IDs, 27 aliases, 11 text-layer spacing corrections, and 29 relationship candidates remain intact.\n   - Verify governance remains review-only / not promoted pending final independent approval.\n\n## Output\n\nReport findings with severity, exact file/chunk/definition IDs, and page citations if any. End with exactly one disposition:\n\n- APPROVE FOR CANONICAL PROMOTION\n- APPROVE WITH FIXES\n- DO NOT PROMOTE\n\nDo not modify the corpus or promote it during the review.`
   await fs.writeFile(promptPath, `${prompt}\n`, 'utf8')
 
   console.log(`Built VM-01 definition artifacts for ${entries.length} definitions, ${candidates.length} relationship candidates, and ${focusedResults.queryCount} retrieval queries.`)

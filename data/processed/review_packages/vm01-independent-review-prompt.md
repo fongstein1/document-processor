@@ -1,35 +1,40 @@
-# Independent review prompt: 2026 VM-01 Definitions
+# Independent review prompt: 2026 VM-01 Canonical Promotion (Blockers Closed)
 
-Please independently review the VM-01 canonicalization in the Document Processor repository. Do not rely on prior chat conclusions. Treat the authoritative 2026 Valuation Manual PDF as the source of truth and the review package as non-authoritative metadata.
+Please independently review the targeted fixes applied to close the two VM-01 canonical promotion blockers in the Document Processor repository. Do not rely on prior chat conclusions. Treat the authoritative 2026 Valuation Manual PDF as the source of truth and the review package as non-authoritative metadata.
+
+Prior independent review disposition was: **APPROVE WITH FIXES** (all 98 definition boundaries, source text, 27 aliases, 11 spacing corrections, and 29 relationships passed; no re-extraction or broad canonicalization change requested).
 
 ## Files
 
 - Canonical VM-01 package: `data/processed/source_indexes/sources/vm01-definitions.json`
 - Definition lookup index: `data/processed/source_indexes/definitions/vm01-definition-index.json`
+- Focused retrieval evaluation: `data/processed/review_packages/vm01-definition-retrieval-evaluation.json`
 - Review package: `data/processed/review_packages/vm01-canonical-definitions-review-package.json`
 - Source QA: `data/processed/review_packages/vm01-definitions-source-qa.json`
-- Retrieval evaluation: `data/processed/review_packages/vm01-definition-retrieval-evaluation.json`
 - Relationship candidates: `data/processed/relationship_registries/vm01-definition-relationship-candidates.json`
+- Validation report: `data/processed/review_packages/vm01-definitions-validation-report.json`
+- PDF hash confirmation: `data/processed/review_packages/vm01-source-pdf-hash-confirmation.json`
 - Reviewed extraction: `data/work/batches/batch-013/extraction-output.json`
 - Source manifest: `data/work/batches/batch-013/batch-manifest.json`
 
-## Required review
+## Verification scope
 
-1. Verify source identity, 2026 edition, SHA-256, VM-01 chapter pages 25-39, definition-bearing pages 25-37, and the absence of additional definitions on pages 38-39.
-2. Verify that all 98 definitions are present exactly once and that each formal source excerpt is faithful to the PDF.
-3. Verify each exact term boundary, including cross-page entries, attached guidance notes, enumerated conditions, exceptions, and the complete VM-20 reserving-category definition.
-4. Verify that aliases and acronym expansions are included only when the source explicitly provides them; reject inferred colloquial or related forms.
-5. Review the eleven recorded text-layer term-spacing corrections against the visible PDF and confirm that only lookup metadata is corrected while exact source evidence is unchanged.
-6. Check similar but distinct terms, especially claim reserve versus contract reserve, policyholder behavior versus policyholder efficiency, deterministic reserve versus stochastic reserve, and guaranteed investment contract versus synthetic guaranteed investment contract.
-7. Review every relationship candidate. Confirm that each has explicit source evidence and that no candidate asserts hierarchy, supersession, legal effect, or applicability beyond that evidence.
-8. Re-run or inspect the focused retrieval evaluation. Confirm exact-term, acronym, plain-language, condition/exception, incorporated-term, cross-reference, cross-document, ambiguous, unavailable-version, and undefined-term behavior.
-9. Confirm that a request for a term not formally defined in VM-01 abstains even when semantically related prose exists elsewhere. Related evidence may be shown only as related evidence, not as a formal definition.
-10. Confirm that current authoritative VM-01 evidence outranks secondary explanatory material for formal-definition questions.
-11. Confirm governance remains review-only / not promoted and that learner-facing, app, RAG, vector, and Copilot export permissions remain blocked.
+1. **Keep definedTerms source-explicit (Blocker 1 Closed)**:
+   - Verify that `chunk.definedTerms` in `vm01-definitions.json` contains strictly the exact formal VM-01 defined term and source-explicit aliases (125 total entries across 98 chunks: 98 formal terms + 27 explicit aliases).
+   - Verify that generated normalized variants (such as `asset associated derivative`, `cash flow model`, `guaranteed investment contract`, `guaranteed issue life insurance policy`, `indexed universal life insurance policy`) are removed from `definedTerms` and reside only in non-authoritative lookup metadata (`keywords` and `vm01-definition-index.json`).
+   - Verify 0 authoritative source-text changes (`sourceTextExcerpt`, `formalDefinitionSourceText`, hashes, and pages remain identical).
+2. **Focused retrieval evaluation JSON preserved and inspectable (Blocker 2 Closed)**:
+   - Verify that the actual focused retrieval evaluation JSON is present and reviewable at `data/processed/review_packages/vm01-definition-retrieval-evaluation.json`.
+   - Inspect individual query cases: exact terms, acronyms, plain language, conditions/exceptions, incorporated terms, cross-references, cross-document terms, undefined terms, ambiguous terms, and version/authority.
+   - Confirm that undefined-term queries (`deterministic exclusion test`, `reserve`, `proposed 2027 VM-01`) safely abstain without making false formal-definition claims.
+   - Confirm current authoritative 2026 VM-01 evidence is ranked first (13/13 supported queries).
+3. **Governance and Readiness**:
+   - Verify all 98 definitions, 98 canonical IDs, 27 aliases, 11 text-layer spacing corrections, and 29 relationship candidates remain intact.
+   - Verify governance remains review-only / not promoted pending final independent approval.
 
 ## Output
 
-Report findings with severity, exact file/chunk/definition IDs, page citations, and proposed corrections. End with exactly one disposition:
+Report findings with severity, exact file/chunk/definition IDs, and page citations if any. End with exactly one disposition:
 
 - APPROVE FOR CANONICAL PROMOTION
 - APPROVE WITH FIXES

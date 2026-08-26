@@ -1,0 +1,24 @@
+{
+  "schemaVersion": "1.0",
+  "artifactType": "source_pdf_hash_confirmation",
+  "sourceId": "vm01-definitions",
+  "sourceReference": "2026 NAIC Valuation Manual",
+  "localAuthoritativePdfPath": "D:\\Work\\AI Projects\\NAIC Valuation Manual Course\\pbr_data_valuation_manual_2026.pdf",
+  "expectedSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+  "verifiedSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+  "match": true,
+  "pageCount": 457,
+  "chapterPageRange": {
+    "start": 25,
+    "end": 39
+  },
+  "definitionPageRange": {
+    "start": 25,
+    "end": 37
+  },
+  "status": "verified_authentic",
+  "governance": {
+    "reviewOnly": true,
+    "promotionStatus": "not_promoted"
+  }
+}

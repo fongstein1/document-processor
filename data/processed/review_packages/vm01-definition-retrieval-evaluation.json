@@ -1625,7 +1625,7 @@
           "sourceId": "vm01-definitions",
           "sourceFamilyId": "valuation_manual_pdfs",
           "authorityLevel": "manual_section",
-          "score": 129.85,
+          "score": 123.85,
           "citationCount": 0
         },
         {
@@ -1681,7 +1681,7 @@
           {
             "chunkId": "vm01-definition-031-guaranteed-issue-gi-life-insurance-policy",
             "sourceId": "vm01-definitions",
-            "score": 129.85,
+            "score": 123.85,
             "authorityLevel": "manual_section"
           },
           {
@@ -1700,11 +1700,11 @@
         "corpusGap": null,
         "structuredEvidenceAvailable": false,
         "semanticAlignment": {
-          "topScore": 129.85,
+          "topScore": 123.85,
           "matches": [
             {
               "chunkId": "vm01-definition-031-guaranteed-issue-gi-life-insurance-policy",
-              "score": 129.85,
+              "score": 123.85,
               "tokenOverlap": 8
             },
             {

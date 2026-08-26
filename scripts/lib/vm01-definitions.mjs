@@ -227,7 +227,7 @@ export const buildVm01DefinitionChunks = async (repoRoot, source) => {
       keywords: [...new Set(['VM-01', definition.exactDefinedTerm, definition.normalizedLookupTerm, ...aliasTerms, ...references])],
       keyPoints: [`Formal VM-01 definition of ${definition.exactDefinedTerm}; do not substitute generated metadata for the source text.`],
       concepts: ['definition_or_terminology', ...references],
-      definedTerms: [...new Set([definition.exactDefinedTerm, definition.normalizedLookupTerm, ...aliasTerms])],
+      definedTerms: [...new Set([definition.exactDefinedTerm, ...aliasTerms])],
       acronyms: acronymTerms,
       requirements: [],
       citations: [{
@@ -244,6 +244,7 @@ export const buildVm01DefinitionChunks = async (repoRoot, source) => {
       qualityNotes: [
         'One coherent VM-01 definition is retained as one retrieval unit.',
         'Aliases and acronym forms are included only when explicit in the source opening.',
+        'Generated lookup normalization is non-authoritative retrieval metadata in keywords and normalizedSearchText, not a source-defined term.',
         ...(definition.complexStructureReasons.length > 0 ? [`Complexity flags: ${definition.complexStructureReasons.join(', ')}.`] : []),
       ],
       evidenceNotes: `Exact retained source evidence from ${source.definitionInput.extractionPath}; SHA-256 ${definition.sourceTextSha256}.`,
