@@ -854,3 +854,9 @@
   note, relationship candidates, and downstream exports outside the promotion.
 - Updated the source-index governance metadata, review package, corpus
   inventory, backlog, completeness report, and project-state handoff.
+- Downloaded the five workbooks linked on the official NAIC current-data page
+  into ignored working storage and built the separate VM-20 Appendix 2 table
+  proof of concept for Tables A, F, G, H, I, J, and K.
+- Verified all 7,022 values against source workbook cells and passed 15/15
+  table-aware retrieval cases, while retaining Tables B-E2 as explicit gaps
+  and keeping the table dataset review-only and unpromoted.

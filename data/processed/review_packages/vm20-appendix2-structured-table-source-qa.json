@@ -1,0 +1,122 @@
+{
+  "schemaVersion": "1.0",
+  "qaId": "vm20-appendix2-structured-table-source-qa-2026-08-26",
+  "status": "passed",
+  "datasetPath": "data/processed/structured_tables/vm20-appendix2-tables.json",
+  "sourceArtifactCount": 5,
+  "sourceChecks": [
+    {
+      "sourceArtifactId": "table-a-workbook",
+      "filename": "pbr-2025-vm20-table-a-baseline-annual-default-costs.xlsx",
+      "sha256": "d7364b3d08824cda3b5e285db9daebd2f175c0587752c82d92044e4f995cd847",
+      "hashMatched": true,
+      "legalDisclaimerSheetPresent": true
+    },
+    {
+      "sourceArtifactId": "table-f-g-workbook",
+      "filename": "pbr-2026-vm20-table-f-g-current-spreads.xlsx",
+      "sha256": "e1cf4ab5e98777390865559bd0df6d22f6b35d9dcc25ee24e738859218f8fdd7",
+      "hashMatched": true,
+      "legalDisclaimerSheetPresent": true
+    },
+    {
+      "sourceArtifactId": "table-h-i-workbook",
+      "filename": "pbr-2026-vm20-table-h-i-long-term-spreads.xlsx",
+      "sha256": "5e2a1946b9d381b2e2c93f1e773e205a412093c4eb3cdfcbbafebc4ba63c1597",
+      "hashMatched": true,
+      "legalDisclaimerSheetPresent": true
+    },
+    {
+      "sourceArtifactId": "table-j-workbook",
+      "filename": "pbr-2026-vm20-table-j-swaps.xlsx",
+      "sha256": "fd51a9397ed8369a96ade1ffd32ae523683a1cdcc1ba38e02c948e4d2685bb3d",
+      "hashMatched": true,
+      "legalDisclaimerSheetPresent": true
+    },
+    {
+      "sourceArtifactId": "table-k-workbook",
+      "filename": "pbr_data_table_k_conversion.xlsx",
+      "sha256": "19a8628714606410c29c6573a8f8aba7139d88bea1ba883e64bcf13c60653758",
+      "hashMatched": true,
+      "legalDisclaimerSheetPresent": true
+    }
+  ],
+  "valueCellsChecked": 7022,
+  "formulaValueCellCount": 0,
+  "displayValuesChecked": 7022,
+  "numberFormatsChecked": 7022,
+  "representativeSpotChecks": [
+    {
+      "tableId": "vm20-table-a",
+      "versionId": "vm20-table-a-effective-2026-06-30",
+      "rowId": "vm20-table-a-rating-1",
+      "columnId": "wal-1",
+      "sheetName": "2025 Table A ",
+      "sourceCell": "C6",
+      "displayValue": "0.02",
+      "matched": true
+    },
+    {
+      "tableId": "vm20-table-f",
+      "versionId": "vm20-table-f-2026-07-31",
+      "rowId": "vm20-table-f-2026-07-31-wal-1",
+      "columnId": "pbr-rating-1",
+      "sheetName": "July_2026",
+      "sourceCell": "B5",
+      "displayValue": "2.90",
+      "matched": true
+    },
+    {
+      "tableId": "vm20-table-g",
+      "versionId": "vm20-table-g-2026-07-31",
+      "rowId": "vm20-table-g-2026-07-31-wal-30",
+      "columnId": "pbr-rating-20",
+      "sheetName": "July_2026",
+      "sourceCell": "W34",
+      "displayValue": "1506.00",
+      "matched": true
+    },
+    {
+      "tableId": "vm20-table-h",
+      "versionId": "vm20-table-h-2026-06-30",
+      "rowId": "vm20-table-h-2026-06-30-wal-1",
+      "columnId": "pbr-rating-1",
+      "sheetName": "June_2026",
+      "sourceCell": "B5",
+      "displayValue": "19.41",
+      "matched": true
+    },
+    {
+      "tableId": "vm20-table-i",
+      "versionId": "vm20-table-i-2026-06-30",
+      "rowId": "vm20-table-i-2026-06-30-wal-30",
+      "columnId": "pbr-rating-20",
+      "sheetName": "June_2026",
+      "sourceCell": "W34",
+      "displayValue": "1287.21",
+      "matched": true
+    },
+    {
+      "tableId": "vm20-table-j",
+      "versionId": "vm20-table-j-2026-07-31",
+      "rowId": "vm20-table-j-2026-07-31-tenor-3m",
+      "columnId": "current-swap-spread",
+      "sheetName": "July_2026",
+      "sourceCell": "B4",
+      "displayValue": "-0.63",
+      "matched": true
+    },
+    {
+      "tableId": "vm20-table-k",
+      "versionId": "vm20-table-k-current-undated",
+      "rowId": "vm20-table-k-rating-9",
+      "columnId": "moodys-rating",
+      "sheetName": "Table K",
+      "sourceCell": "J3",
+      "displayValue": "Baa2",
+      "matched": true
+    }
+  ],
+  "legalDisclaimerSheetsRetained": 5,
+  "note": "Every structured value was compared with its workbook cell using the recorded source artifact, sheet, cell address, raw value, display value, and number format. Disclaimer text was not inferred from non-cell workbook content."
+}

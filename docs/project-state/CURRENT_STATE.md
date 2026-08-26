@@ -840,3 +840,13 @@ metadata only. It does not include the 2020 practice note, structured Appendix
 2 rows or values, relationship candidates, or learner/app/RAG/Copilot export.
 The next VM-20 milestone is the separately modeled, independently reviewed
 Appendix 2 structured-table proof of concept.
+
+## VM-20 Appendix 2 structured-table proof of concept
+
+The review-only table layer now represents official current-page workbooks for
+Tables A, F, G, H, I, J, and K as 29 versions, 891 row retrieval units, and
+7,022 exact source-cell values. Tables B, C, D, E1, and E2 remain explicit
+availability gaps. Every ingested value retains workbook, sheet, cell, raw
+value, displayed precision, and methodology citations. The dataset is not
+promoted and has zero learner/app/RAG/Copilot production eligibility pending
+independent review and a separate promotion decision.

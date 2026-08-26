@@ -4,7 +4,7 @@ The VM-20 current-manual prose scope is promoted. All other items remain review-
 
 | Order | Priority | Target | Current state | Safe next step |
 | ---: | --- | --- | --- | --- |
-| 1 | P0 | Current prescribed valuation, mortality, spread, and default tables | reviewed_not_canonical | Create a table-specific profile with row/column citations and version metadata; do not prose-chunk tables. |
+| 1 | P0 | Current prescribed valuation, mortality, spread, and default tables | review_candidate_partial_vm20_appendix2 | Complete independent review of the Appendix 2 proof of concept, then record a separate table promotion decision or fixes; continue other table families separately. |
 | 2 | P0 | Complete current 2026 Valuation Manual representation | canonical_partial | Canonicalize the complete manual by chapter with source-bound hierarchy and a separate table profile. |
 | 3 | P0 | VM-01 Definitions | reviewed_not_canonical | Canonicalize definitions first because downstream VM answers depend on stable terms. |
 | 4 | P0 | VM-20 Requirements for Principle-Based Reserves for Life Products | canonical_promoted_prose | Build and independently review the structured Appendix 2 table proof of concept without altering the promoted prose corpus. |

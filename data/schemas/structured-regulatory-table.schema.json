@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://codex.local/schemas/structured-regulatory-table.schema.json",
+  "title": "Structured Regulatory Table Dataset",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "datasetId", "title", "generatedAt", "generatedBy", "governance", "manualAuthority", "officialIndex", "sourceArtifacts", "tableInventory", "summary", "tables", "retrievalUnits"],
+  "properties": {
+    "schemaVersion": { "const": "1.0" },
+    "datasetId": { "type": "string", "minLength": 1 },
+    "title": { "type": "string", "minLength": 1 },
+    "generatedAt": { "type": "string", "format": "date-time" },
+    "generatedBy": { "type": "string", "minLength": 1 },
+    "governance": { "$ref": "#/$defs/governance" },
+    "manualAuthority": { "$ref": "#/$defs/manualAuthority" },
+    "officialIndex": { "$ref": "#/$defs/officialIndex" },
+    "sourceArtifacts": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/sourceArtifact" } },
+    "tableInventory": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/tableInventoryItem" } },
+    "summary": { "type": "object", "additionalProperties": false, "required": ["tableInventoryCount", "ingestedLogicalTableCount", "unavailableLogicalTableCount", "tableVersionCount", "currentVersionCount", "historicalSnapshotCount", "rowCount", "valueCount", "retrievalUnitCount"], "properties": { "tableInventoryCount": { "type": "integer", "minimum": 1 }, "ingestedLogicalTableCount": { "type": "integer", "minimum": 1 }, "unavailableLogicalTableCount": { "type": "integer", "minimum": 0 }, "tableVersionCount": { "type": "integer", "minimum": 1 }, "currentVersionCount": { "type": "integer", "minimum": 1 }, "historicalSnapshotCount": { "type": "integer", "minimum": 0 }, "rowCount": { "type": "integer", "minimum": 1 }, "valueCount": { "type": "integer", "minimum": 1 }, "retrievalUnitCount": { "type": "integer", "minimum": 1 } } },
+    "tables": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/table" } },
+    "retrievalUnits": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/retrievalUnit" } }
+  },
+  "$defs": {
+    "governance": {
+      "type": "object", "additionalProperties": false,
+      "required": ["reviewOnly", "promotionStatus", "learnerFacingAllowed", "appReadyAllowed", "ragReadyAllowed", "copilotExportEligible", "separateFromProseCorpus", "note"],
+      "properties": { "reviewOnly": { "const": true }, "promotionStatus": { "const": "not_promoted" }, "learnerFacingAllowed": { "const": false }, "appReadyAllowed": { "const": false }, "ragReadyAllowed": { "const": false }, "copilotExportEligible": { "const": false }, "separateFromProseCorpus": { "const": true }, "note": { "type": "string", "minLength": 1 } }
+    },
+    "manualAuthority": {
+      "type": "object", "additionalProperties": false,
+      "required": ["sourceEditionId", "sourceVersionIdentifier", "officialUrl", "sha256", "appendix", "printedPageRange", "physicalPageRange", "authorityBoundary"],
+      "properties": { "sourceEditionId": { "type": "string" }, "sourceVersionIdentifier": { "type": "string" }, "officialUrl": { "type": "string", "format": "uri" }, "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" }, "appendix": { "type": "string" }, "printedPageRange": { "type": "string" }, "physicalPageRange": { "type": "string" }, "authorityBoundary": { "type": "string" } }
+    },
+    "officialIndex": {
+      "type": "object", "additionalProperties": false, "required": ["url", "retrievedAt", "scope"],
+      "properties": { "url": { "type": "string", "format": "uri" }, "retrievedAt": { "type": "string", "format": "date-time" }, "scope": { "type": "string" } }
+    },
+    "sourceArtifact": {
+      "type": "object", "additionalProperties": false,
+      "required": ["sourceArtifactId", "filename", "repositoryWorkPath", "officialUrl", "officialIndexUrl", "retrievedAt", "sha256", "fileSizeBytes", "workbookScope", "legalDisclaimer"],
+      "properties": { "sourceArtifactId": { "type": "string" }, "filename": { "type": "string" }, "repositoryWorkPath": { "type": "string" }, "officialUrl": { "type": "string", "format": "uri" }, "officialIndexUrl": { "type": "string", "format": "uri" }, "retrievedAt": { "type": "string", "format": "date-time" }, "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" }, "fileSizeBytes": { "type": "integer", "minimum": 1 }, "workbookScope": { "type": "string" }, "legalDisclaimer": { "type": "object", "additionalProperties": false, "required": ["sheetName", "retention", "extractedText", "note"], "properties": { "sheetName": { "type": "string" }, "retention": { "type": "string" }, "extractedText": { "type": ["string", "null"] }, "note": { "type": "string" } } } }
+    },
+    "tableInventoryItem": {
+      "type": "object", "additionalProperties": false, "required": ["tableLabel", "title", "status", "tableId", "reason", "manualPrintedPageRange", "manualPhysicalPageRange"],
+      "properties": { "tableLabel": { "type": "string" }, "title": { "type": "string" }, "status": { "enum": ["ingested_review_only", "unavailable_on_current_official_page"] }, "tableId": { "type": ["string", "null"] }, "reason": { "type": "string" }, "manualPrintedPageRange": { "type": "string" }, "manualPhysicalPageRange": { "type": "string" } }
+    },
+    "methodologyCitation": {
+      "type": "object", "additionalProperties": false, "required": ["manualUrl", "manualSha256", "printedPageRange", "physicalPageRange"],
+      "properties": { "manualUrl": { "type": "string", "format": "uri" }, "manualSha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" }, "printedPageRange": { "type": "string" }, "physicalPageRange": { "type": "string" } }
+    },
+    "definition": { "type": "object", "additionalProperties": false, "required": ["dimensionId", "label", "lookupRequired"], "properties": { "dimensionId": { "type": "string" }, "label": { "type": "string" }, "lookupRequired": { "type": "boolean" } } },
+    "columnDefinition": { "type": "object", "additionalProperties": false, "required": ["columnId", "label", "sourceHeaderCell"], "properties": { "columnId": { "type": "string" }, "label": { "type": "string" }, "dimensionValue": { "type": ["string", "number", "integer"] }, "sourceHeaderCell": { "type": "string" } } },
+    "note": { "type": "object", "additionalProperties": true, "required": ["noteId", "scope", "summary"], "properties": { "noteId": { "type": "string" }, "scope": { "type": "string" }, "summary": { "type": "string" } } },
+    "table": {
+      "type": "object", "additionalProperties": false,
+      "required": ["tableId", "tableLabel", "title", "description", "units", "sourceArtifactId", "methodologyCitation", "dimensionDefinitions", "columnDefinitions", "notes", "versions"],
+      "properties": { "tableId": { "type": "string" }, "tableLabel": { "type": "string" }, "title": { "type": "string" }, "description": { "type": "string" }, "units": { "type": ["string", "null"] }, "sourceArtifactId": { "type": "string" }, "methodologyCitation": { "$ref": "#/$defs/methodologyCitation" }, "dimensionDefinitions": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/definition" } }, "columnDefinitions": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/columnDefinition" } }, "notes": { "type": "array", "items": { "$ref": "#/$defs/note" } }, "versions": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/version" } } }
+    },
+    "version": {
+      "type": "object", "additionalProperties": false,
+      "required": ["versionId", "asOfDate", "effectiveDate", "currentness", "currentnessBasis", "sheetName", "sourceRange", "titleCell", "rowCount", "rows", "citation"],
+      "properties": { "versionId": { "type": "string" }, "asOfDate": { "type": ["string", "null"], "format": "date" }, "effectiveDate": { "type": ["string", "null"], "format": "date" }, "currentness": { "enum": ["current_as_of_retrieval", "historical_snapshot"] }, "currentnessBasis": { "type": "string" }, "sheetName": { "type": "string" }, "sourceRange": { "type": "string" }, "titleCell": { "type": "string" }, "rowCount": { "type": "integer", "minimum": 1 }, "rows": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/row" } }, "citation": { "$ref": "#/$defs/citation" } }
+    },
+    "dimensionValue": { "type": "object", "additionalProperties": false, "required": ["dimensionId", "label", "value", "sourceCell"], "properties": { "dimensionId": { "type": "string" }, "label": { "type": "string" }, "value": { "type": ["string", "number", "integer"] }, "sourceCell": { "type": "string" } } },
+    "cellValue": {
+      "type": "object", "additionalProperties": false,
+      "required": ["columnId", "columnLabel", "valueType", "displayValue", "sourceCell", "numberFormat", "fidelity"],
+      "properties": { "columnId": { "type": "string" }, "columnLabel": { "type": "string" }, "valueType": { "enum": ["number", "string", "null"] }, "displayValue": { "type": ["string", "null"] }, "sourceCell": { "type": "string" }, "numberFormat": { "type": "string" }, "fidelity": { "const": "exact_source_cell_value" }, "unit": { "type": "string" }, "numericValue": { "type": "number" }, "textValue": { "type": "string" }, "nullReason": { "type": "string" } }
+    },
+    "row": { "type": "object", "additionalProperties": false, "required": ["rowId", "ordinal", "dimensions", "values"], "properties": { "rowId": { "type": "string" }, "ordinal": { "type": "integer", "minimum": 1 }, "dimensions": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/dimensionValue" } }, "values": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/cellValue" } } } },
+    "citation": {
+      "type": "object", "additionalProperties": false, "required": ["sourceArtifactId", "workbookUrl", "sheetName", "cellRange", "manualPrintedPageRange", "manualPhysicalPageRange"],
+      "properties": { "sourceArtifactId": { "type": "string" }, "workbookUrl": { "type": "string", "format": "uri" }, "sheetName": { "type": "string" }, "cellRange": { "type": "string" }, "manualPrintedPageRange": { "type": "string" }, "manualPhysicalPageRange": { "type": "string" } }
+    },
+    "retrievalUnit": {
+      "type": "object", "additionalProperties": false, "required": ["retrievalUnitId", "tableId", "versionId", "rowId", "tableLabel", "tableTitle", "currentness", "asOfDate", "dimensionText", "retrievalText", "citation", "reviewOnly"],
+      "properties": { "retrievalUnitId": { "type": "string" }, "tableId": { "type": "string" }, "versionId": { "type": "string" }, "rowId": { "type": "string" }, "tableLabel": { "type": "string" }, "tableTitle": { "type": "string" }, "currentness": { "enum": ["current_as_of_retrieval", "historical_snapshot"] }, "asOfDate": { "type": ["string", "null"], "format": "date" }, "dimensionText": { "type": "string" }, "retrievalText": { "type": "string" }, "citation": { "$ref": "#/$defs/citation" }, "reviewOnly": { "const": true } }
+    }
+  }
+}

@@ -1,0 +1,282 @@
+{
+  "schemaVersion": "1.0",
+  "reviewPackageId": "vm20-appendix2-structured-table-review-package-2026-08-26",
+  "status": "review_only",
+  "promoted": false,
+  "learnerFacing": false,
+  "appReady": false,
+  "ragReady": false,
+  "copilotExportEligible": false,
+  "datasetPath": "data/processed/structured_tables/vm20-appendix2-tables.json",
+  "schemaPath": "data/schemas/structured-regulatory-table.schema.json",
+  "sourceQaPath": "data/processed/review_packages/vm20-appendix2-structured-table-source-qa.json",
+  "retrievalEvaluationPath": "data/processed/structured_tables/vm20-appendix2-retrieval-evaluation.json",
+  "independentReviewPromptPath": "data/processed/review_packages/vm20-appendix2-independent-review-prompt.md",
+  "scope": {
+    "included": "Official workbooks currently linked by the NAIC for VM-20 Tables A, F, G, H, I, J, and K, including all dated sheets carried by those workbooks.",
+    "excluded": "Tables B, C, D, E1, and E2 values; other VM tables; prose redesign; embeddings; databases; Copilot implementation; and any table promotion.",
+    "authorityBoundary": "The manual supplies methodology and directs users to NAIC-published Tables A–K; workbook cells, not prose, are the value authority for ingested tables."
+  },
+  "summary": {
+    "tableInventoryCount": 12,
+    "ingestedLogicalTableCount": 7,
+    "unavailableLogicalTableCount": 5,
+    "tableVersionCount": 29,
+    "currentVersionCount": 7,
+    "historicalSnapshotCount": 22,
+    "rowCount": 891,
+    "valueCount": 7022,
+    "retrievalUnitCount": 891
+  },
+  "sourceArtifacts": [
+    {
+      "sourceArtifactId": "table-a-workbook",
+      "filename": "pbr-2025-vm20-table-a-baseline-annual-default-costs.xlsx",
+      "officialUrl": "https://content.naic.org/sites/default/files/pbr-2025-vm20-table-a-baseline-annual-default-costs.xlsx",
+      "officialIndexUrl": "https://content.naic.org/pbr_data.htm",
+      "retrievedAt": "2026-08-26T00:00:00.000Z",
+      "sha256": "d7364b3d08824cda3b5e285db9daebd2f175c0587752c82d92044e4f995cd847",
+      "fileSizeBytes": 39395,
+      "workbookScope": "Table A",
+      "legalDisclaimer": {
+        "sheetName": "LEGAL DISCLAIMER",
+        "retention": "retained_by_original_workbook_hash_and_sheet_locator",
+        "extractedText": null,
+        "note": "The dedicated sheet exists but does not expose disclaimer text as ordinary worksheet cell values; no text was inferred or transcribed."
+      },
+      "repositoryWorkPath": "data/work/structured-table-sources/vm20-appendix2-2026/pbr-2025-vm20-table-a-baseline-annual-default-costs.xlsx"
+    },
+    {
+      "sourceArtifactId": "table-f-g-workbook",
+      "filename": "pbr-2026-vm20-table-f-g-current-spreads.xlsx",
+      "officialUrl": "https://content.naic.org/sites/default/files/pbr-2026-vm20-table-f-g-current-spreads.xlsx",
+      "officialIndexUrl": "https://content.naic.org/pbr_data.htm",
+      "retrievedAt": "2026-08-26T00:00:00.000Z",
+      "sha256": "e1cf4ab5e98777390865559bd0df6d22f6b35d9dcc25ee24e738859218f8fdd7",
+      "fileSizeBytes": 69509,
+      "workbookScope": "Tables F and G",
+      "legalDisclaimer": {
+        "sheetName": "LEGAL DISCLAIMER",
+        "retention": "retained_by_original_workbook_hash_and_sheet_locator",
+        "extractedText": null,
+        "note": "The dedicated sheet exists but does not expose disclaimer text as ordinary worksheet cell values; no text was inferred or transcribed."
+      },
+      "repositoryWorkPath": "data/work/structured-table-sources/vm20-appendix2-2026/pbr-2026-vm20-table-f-g-current-spreads.xlsx"
+    },
+    {
+      "sourceArtifactId": "table-h-i-workbook",
+      "filename": "pbr-2026-vm20-table-h-i-long-term-spreads.xlsx",
+      "officialUrl": "https://content.naic.org/sites/default/files/pbr-2026-vm20-table-h-i-long-term-spreads.xlsx",
+      "officialIndexUrl": "https://content.naic.org/pbr_data.htm",
+      "retrievedAt": "2026-08-26T00:00:00.000Z",
+      "sha256": "5e2a1946b9d381b2e2c93f1e773e205a412093c4eb3cdfcbbafebc4ba63c1597",
+      "fileSizeBytes": 47722,
+      "workbookScope": "Tables H and I",
+      "legalDisclaimer": {
+        "sheetName": "LEGAL DISCLAIMER",
+        "retention": "retained_by_original_workbook_hash_and_sheet_locator",
+        "extractedText": null,
+        "note": "The dedicated sheet exists but does not expose disclaimer text as ordinary worksheet cell values; no text was inferred or transcribed."
+      },
+      "repositoryWorkPath": "data/work/structured-table-sources/vm20-appendix2-2026/pbr-2026-vm20-table-h-i-long-term-spreads.xlsx"
+    },
+    {
+      "sourceArtifactId": "table-j-workbook",
+      "filename": "pbr-2026-vm20-table-j-swaps.xlsx",
+      "officialUrl": "https://content.naic.org/sites/default/files/pbr-2026-vm20-table-j-swaps.xlsx",
+      "officialIndexUrl": "https://content.naic.org/pbr_data.htm",
+      "retrievedAt": "2026-08-26T00:00:00.000Z",
+      "sha256": "fd51a9397ed8369a96ade1ffd32ae523683a1cdcc1ba38e02c948e4d2685bb3d",
+      "fileSizeBytes": 51312,
+      "workbookScope": "Table J",
+      "legalDisclaimer": {
+        "sheetName": "LEGAL DISCLAIMER",
+        "retention": "retained_by_original_workbook_hash_and_sheet_locator",
+        "extractedText": null,
+        "note": "The dedicated sheet exists but does not expose disclaimer text as ordinary worksheet cell values; no text was inferred or transcribed."
+      },
+      "repositoryWorkPath": "data/work/structured-table-sources/vm20-appendix2-2026/pbr-2026-vm20-table-j-swaps.xlsx"
+    },
+    {
+      "sourceArtifactId": "table-k-workbook",
+      "filename": "pbr_data_table_k_conversion.xlsx",
+      "officialUrl": "https://content.naic.org/sites/default/files/inline-files/pbr_data_table_k_conversion.xlsx",
+      "officialIndexUrl": "https://content.naic.org/pbr_data.htm",
+      "retrievedAt": "2026-08-26T00:00:00.000Z",
+      "sha256": "19a8628714606410c29c6573a8f8aba7139d88bea1ba883e64bcf13c60653758",
+      "fileSizeBytes": 33166,
+      "workbookScope": "Table K",
+      "legalDisclaimer": {
+        "sheetName": "LEGAL DISCLAIMER",
+        "retention": "retained_by_original_workbook_hash_and_sheet_locator",
+        "extractedText": null,
+        "note": "The dedicated sheet exists but does not expose disclaimer text as ordinary worksheet cell values; no text was inferred or transcribed."
+      },
+      "repositoryWorkPath": "data/work/structured-table-sources/vm20-appendix2-2026/pbr_data_table_k_conversion.xlsx"
+    }
+  ],
+  "currentVersions": [
+    {
+      "tableLabel": "A",
+      "tableId": "vm20-table-a",
+      "versionId": "vm20-table-a-effective-2026-06-30",
+      "asOfDate": null,
+      "effectiveDate": "2026-06-30",
+      "currentnessBasis": "The official current-data page linked this workbook on the retrieval date; the workbook states the effective date in A28."
+    },
+    {
+      "tableLabel": "F",
+      "tableId": "vm20-table-f",
+      "versionId": "vm20-table-f-2026-07-31",
+      "asOfDate": "2026-07-31",
+      "effectiveDate": null,
+      "currentnessBasis": "Latest dated sheet in the official workbook on the retrieval date."
+    },
+    {
+      "tableLabel": "G",
+      "tableId": "vm20-table-g",
+      "versionId": "vm20-table-g-2026-07-31",
+      "asOfDate": "2026-07-31",
+      "effectiveDate": null,
+      "currentnessBasis": "Latest dated sheet in the official workbook on the retrieval date."
+    },
+    {
+      "tableLabel": "H",
+      "tableId": "vm20-table-h",
+      "versionId": "vm20-table-h-2026-06-30",
+      "asOfDate": "2026-06-30",
+      "effectiveDate": null,
+      "currentnessBasis": "Latest dated sheet in the official workbook on the retrieval date."
+    },
+    {
+      "tableLabel": "I",
+      "tableId": "vm20-table-i",
+      "versionId": "vm20-table-i-2026-06-30",
+      "asOfDate": "2026-06-30",
+      "effectiveDate": null,
+      "currentnessBasis": "Latest dated sheet in the official workbook on the retrieval date."
+    },
+    {
+      "tableLabel": "J",
+      "tableId": "vm20-table-j",
+      "versionId": "vm20-table-j-2026-07-31",
+      "asOfDate": "2026-07-31",
+      "effectiveDate": null,
+      "currentnessBasis": "Latest dated sheet in the official workbook on the retrieval date."
+    },
+    {
+      "tableLabel": "K",
+      "tableId": "vm20-table-k",
+      "versionId": "vm20-table-k-current-undated",
+      "asOfDate": null,
+      "effectiveDate": null,
+      "currentnessBasis": "The undated workbook was linked as current Table K on the official current-data page on the retrieval date; no workbook version date was inferred."
+    }
+  ],
+  "unavailableTables": [
+    {
+      "tableLabel": "B",
+      "title": "Baseline Default Cost Margin",
+      "status": "unavailable_on_current_official_page",
+      "tableId": null,
+      "reason": "The 2026 Valuation Manual describes this table, but the NAIC current-data page did not link a current workbook on the retrieval date; no values were inferred from methodology prose or historical files.",
+      "manualPrintedPageRange": "20-92",
+      "manualPhysicalPageRange": "136"
+    },
+    {
+      "tableLabel": "C",
+      "title": "Empirical CTE 70 Default Rates",
+      "status": "unavailable_on_current_official_page",
+      "tableId": null,
+      "reason": "The 2026 Valuation Manual describes this table, but the NAIC current-data page did not link a current workbook on the retrieval date; no values were inferred from methodology prose or historical files.",
+      "manualPrintedPageRange": "20-92",
+      "manualPhysicalPageRange": "136"
+    },
+    {
+      "tableLabel": "D",
+      "title": "Prescribed Cumulative Default Rates",
+      "status": "unavailable_on_current_official_page",
+      "tableId": null,
+      "reason": "The 2026 Valuation Manual describes this table, but the NAIC current-data page did not link a current workbook on the retrieval date; no values were inferred from methodology prose or historical files.",
+      "manualPrintedPageRange": "20-92",
+      "manualPhysicalPageRange": "136"
+    },
+    {
+      "tableLabel": "E1",
+      "title": "Sorted Recovery Data, CTE 70 Recovery Rates, and Implied Margin",
+      "status": "unavailable_on_current_official_page",
+      "tableId": null,
+      "reason": "The 2026 Valuation Manual describes this table, but the NAIC current-data page did not link a current workbook on the retrieval date; no values were inferred from methodology prose or historical files.",
+      "manualPrintedPageRange": "20-93",
+      "manualPhysicalPageRange": "137"
+    },
+    {
+      "tableLabel": "E2",
+      "title": "Final Recovery Rates by PBR Credit Rating",
+      "status": "unavailable_on_current_official_page",
+      "tableId": null,
+      "reason": "The 2026 Valuation Manual describes this table, but the NAIC current-data page did not link a current workbook on the retrieval date; no values were inferred from methodology prose or historical files.",
+      "manualPrintedPageRange": "20-93",
+      "manualPhysicalPageRange": "137"
+    }
+  ],
+  "fidelity": {
+    "sourceQaStatus": "passed",
+    "sourceWorkbooksHashMatched": true,
+    "exactValueCellsChecked": 7022,
+    "formulaValueCellCount": 0,
+    "legalDisclaimerSheetsRetained": 5,
+    "citationGranularity": "workbook + sheet + cell for values; printed and physical manual page ranges for methodology"
+  },
+  "retrievalEvaluation": {
+    "status": "passed",
+    "queryCount": 15,
+    "passedQueryCount": 15,
+    "supportedReviewOnlyCount": 11,
+    "unsupportedCount": 2,
+    "ambiguousCount": 2,
+    "productionAnswerEligibleCount": 0,
+    "coveredBehaviors": [
+      "exact row/value retrieval",
+      "historical version selection",
+      "column interpretation",
+      "table identity/currentness",
+      "applicability",
+      "footnote routing",
+      "methodology-versus-value routing",
+      "unavailable table handling",
+      "ambiguous missing dimensions",
+      "out-of-range dimensions",
+      "explicit source nulls"
+    ]
+  },
+  "knownLimitations": [
+    "Currentness is bounded to the NAIC current-data page and workbooks retrieved on 2026-08-26; later publications may supersede these versions.",
+    "Table K is undated; it is labeled current-as-of-retrieval based on the official page rather than an inferred workbook date.",
+    "Table A is a workbook labeled with December 2025 data and an explicit June 30, 2026 effective date; currentness is based on the official current-data page plus that effective-date note.",
+    "The official Table J workbook contains both current and long-term swap-spread columns, while Appendix 2 Subsection H describes Table J as long-term; the proof of concept preserves the workbook columns and flags the identity boundary for reviewer confirmation.",
+    "Dedicated legal-disclaimer sheets do not expose disclaimer text as ordinary cells; preservation is by source workbook, hash, and sheet locator.",
+    "Tables B, C, D, E1, and E2 are described in the manual but were not available as current workbooks on the official page and are not reconstructed.",
+    "Table J disclosure applicability beyond the explicit workbook note locations requires independent reviewer confirmation."
+  ],
+  "humanReview": {
+    "required": true,
+    "decisionOptions": [
+      "APPROVE",
+      "APPROVE WITH FIXES",
+      "REPROCESS",
+      "REJECT"
+    ],
+    "provisionalDisposition": "PENDING INDEPENDENT REVIEW",
+    "promotionDecisionIncluded": false,
+    "requiredChecks": [
+      "source identity and currentness",
+      "table/column/row semantics",
+      "units and displayed precision",
+      "exact representative values and nulls",
+      "citation fidelity",
+      "footnote and disclaimer scope",
+      "retrieval behavior and governance boundary"
+    ]
+  }
+}

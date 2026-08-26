@@ -1,0 +1,510 @@
+{
+  "schemaVersion": "1.0",
+  "evaluationId": "vm20-appendix2-structured-table-retrieval-2026-08-26",
+  "datasetId": "vm20-appendix2-structured-tables-2026-08-26",
+  "method": "typed_structured_table_request_with_generic_dimension_version_and_governance_resolution",
+  "queryCount": 15,
+  "passedQueryCount": 15,
+  "failedQueryCount": 0,
+  "supportedReviewOnlyCount": 11,
+  "unsupportedCount": 2,
+  "ambiguousCount": 2,
+  "productionAnswerEligibleCount": 0,
+  "status": "passed",
+  "results": [
+    {
+      "queryId": "table-a-exact-value",
+      "queryText": "What is current Table A for PBR numeric rating 1 at WAL 1?",
+      "intent": "row_value",
+      "datasetPromotionStatus": "not_promoted",
+      "productionAnswerEligible": false,
+      "supportState": "supported_review_only",
+      "reasonCode": "exact_structured_value_found",
+      "evidenceClass": "structured_table_cell",
+      "tableId": "vm20-table-a",
+      "versionId": "vm20-table-a-effective-2026-06-30",
+      "rowId": "vm20-table-a-rating-1",
+      "columnId": "wal-1",
+      "displayValue": "0.02",
+      "citation": {
+        "sourceArtifactId": "table-a-workbook",
+        "workbookUrl": "https://content.naic.org/sites/default/files/pbr-2025-vm20-table-a-baseline-annual-default-costs.xlsx",
+        "sheetName": "2025 Table A ",
+        "cellRange": "A1:L28",
+        "manualPrintedPageRange": "20-91–20-92",
+        "manualPhysicalPageRange": "135–136"
+      },
+      "noteId": null,
+      "valueType": "number",
+      "unit": "basis_points",
+      "sourceCell": "C6",
+      "expected": {
+        "supportState": "supported_review_only",
+        "reasonCode": "exact_structured_value_found",
+        "displayValue": "0.02",
+        "sourceCell": "C6"
+      },
+      "passed": true
+    },
+    {
+      "queryId": "table-f-current-exact-value",
+      "queryText": "What is the current Table F spread for PBR rating 1 at WAL 1?",
+      "intent": "row_value",
+      "datasetPromotionStatus": "not_promoted",
+      "productionAnswerEligible": false,
+      "supportState": "supported_review_only",
+      "reasonCode": "exact_structured_value_found",
+      "evidenceClass": "structured_table_cell",
+      "tableId": "vm20-table-f",
+      "versionId": "vm20-table-f-2026-07-31",
+      "rowId": "vm20-table-f-2026-07-31-wal-1",
+      "columnId": "pbr-rating-1",
+      "displayValue": "2.90",
+      "citation": {
+        "sourceArtifactId": "table-f-g-workbook",
+        "workbookUrl": "https://content.naic.org/sites/default/files/pbr-2026-vm20-table-f-g-current-spreads.xlsx",
+        "sheetName": "July_2026",
+        "cellRange": "A1:K35",
+        "manualPrintedPageRange": "20-93–20-94",
+        "manualPhysicalPageRange": "137–138"
+      },
+      "noteId": null,
+      "valueType": "number",
+      "unit": "basis_points",
+      "sourceCell": "B5",
+      "expected": {
+        "supportState": "supported_review_only",
+        "versionId": "vm20-table-f-2026-07-31",
+        "displayValue": "2.90",
+        "sourceCell": "B5"
+      },
+      "passed": true
+    },
+    {
+      "queryId": "table-f-historical-version",
+      "queryText": "What was Table F for PBR rating 1 at WAL 1 on May 29, 2026?",
+      "intent": "row_value",
+      "datasetPromotionStatus": "not_promoted",
+      "productionAnswerEligible": false,
+      "supportState": "supported_review_only",
+      "reasonCode": "exact_structured_value_found",
+      "evidenceClass": "structured_table_cell",
+      "tableId": "vm20-table-f",
+      "versionId": "vm20-table-f-2026-05-29",
+      "rowId": "vm20-table-f-2026-05-29-wal-1",
+      "columnId": "pbr-rating-1",
+      "displayValue": "13.93",
+      "citation": {
+        "sourceArtifactId": "table-f-g-workbook",
+        "workbookUrl": "https://content.naic.org/sites/default/files/pbr-2026-vm20-table-f-g-current-spreads.xlsx",
+        "sheetName": "May_2026",
+        "cellRange": "A1:K35",
+        "manualPrintedPageRange": "20-93–20-94",
+        "manualPhysicalPageRange": "137–138"
+      },
+      "noteId": null,
+      "valueType": "number",
+      "unit": "basis_points",
+      "sourceCell": "B5",
+      "expected": {
+        "supportState": "supported_review_only",
+        "versionId": "vm20-table-f-2026-05-29",
+        "displayValue": "13.93"
+      },
+      "passed": true
+    },
+    {
+      "queryId": "table-j-current-short-tenor",
+      "queryText": "What is the current three-month Table J current swap spread?",
+      "intent": "row_value",
+      "datasetPromotionStatus": "not_promoted",
+      "productionAnswerEligible": false,
+      "supportState": "supported_review_only",
+      "reasonCode": "exact_structured_value_found",
+      "evidenceClass": "structured_table_cell",
+      "tableId": "vm20-table-j",
+      "versionId": "vm20-table-j-2026-07-31",
+      "rowId": "vm20-table-j-2026-07-31-tenor-3m",
+      "columnId": "current-swap-spread",
+      "displayValue": "-0.63",
+      "citation": {
+        "sourceArtifactId": "table-j-workbook",
+        "workbookUrl": "https://content.naic.org/sites/default/files/pbr-2026-vm20-table-j-swaps.xlsx",
+        "sheetName": "July_2026",
+        "cellRange": "A1:C36",
+        "manualPrintedPageRange": "20-95–20-96",
+        "manualPhysicalPageRange": "139–140"
+      },
+      "noteId": null,
+      "valueType": "number",
+      "unit": "basis_points",
+      "sourceCell": "B4",
+      "expected": {
+        "supportState": "supported_review_only",
+        "versionId": "vm20-table-j-2026-07-31",
+        "displayValue": "-0.63",
+        "sourceCell": "B4"
+      },
+      "passed": true
+    },
+    {
+      "queryId": "table-k-rating-mapping",
+      "queryText": "What PBR numeric rating maps to Moody's Baa2?",
+      "intent": "mapping_lookup",
+      "datasetPromotionStatus": "not_promoted",
+      "productionAnswerEligible": false,
+      "supportState": "supported_review_only",
+      "reasonCode": "mapping_row_found",
+      "evidenceClass": "structured_table_row",
+      "tableId": "vm20-table-k",
+      "versionId": "vm20-table-k-current-undated",
+      "rowId": "vm20-table-k-rating-9",
+      "columnId": "moodys-rating",
+      "displayValue": null,
+      "citation": {
+        "sourceArtifactId": "table-k-workbook",
+        "workbookUrl": "https://content.naic.org/sites/default/files/inline-files/pbr_data_table_k_conversion.xlsx",
+        "sheetName": "Table K",
+        "cellRange": "A1:K22",
+        "manualPrintedPageRange": "20-91, 20-96",
+        "manualPhysicalPageRange": "135, 140"
+      },
+      "noteId": null,
+      "mappedDimensions": [
+        {
+          "dimensionId": "pbr_numeric_rating",
+          "label": "PBR Numeric Rating",
+          "value": 9,
+          "sourceCell": "J11"
+        },
+        {
+          "dimensionId": "grade_band",
+          "label": "Grade Band",
+          "value": "investment_grade",
+          "sourceCell": "B2"
+        }
+      ],
+      "expected": {
+        "supportState": "supported_review_only",
+        "reasonCode": "mapping_row_found",
+        "rowId": "vm20-table-k-rating-9"
+      },
+      "passed": true
+    },
+    {
+      "queryId": "table-g-column-meaning",
+      "queryText": "What does the PBR rating 11 column mean in current Table G?",
+      "intent": "column_interpretation",
+      "datasetPromotionStatus": "not_promoted",
+      "productionAnswerEligible": false,
+      "supportState": "supported_review_only",
+      "reasonCode": "column_definition_found",
+      "evidenceClass": "structured_table_column",
+      "tableId": "vm20-table-g",
+      "versionId": "vm20-table-g-2026-07-31",
+      "rowId": null,
+      "columnId": "pbr-rating-11",
+      "displayValue": null,
+      "citation": {
+        "sourceArtifactId": "table-f-g-workbook",
+        "workbookUrl": "https://content.naic.org/sites/default/files/pbr-2026-vm20-table-f-g-current-spreads.xlsx",
+        "sheetName": "July_2026",
+        "cellRange": "M1:W35",
+        "manualPrintedPageRange": "20-93–20-94",
+        "manualPhysicalPageRange": "137–138"
+      },
+      "noteId": null,
+      "columnLabel": "PBR Rating 11 (Ba1/BB+)",
+      "expected": {
+        "supportState": "supported_review_only",
+        "columnLabel": "PBR Rating 11 (Ba1/BB+)"
+      },
+      "passed": true
+    },
+    {
+      "queryId": "table-h-currentness",
+      "queryText": "Which Table H version is current in this retrieved corpus?",
+      "intent": "table_identity",
+      "datasetPromotionStatus": "not_promoted",
+      "productionAnswerEligible": false,
+      "supportState": "supported_review_only",
+      "reasonCode": "table_version_found",
+      "evidenceClass": "structured_table_identity",
+      "tableId": "vm20-table-h",
+      "versionId": "vm20-table-h-2026-06-30",
+      "rowId": null,
+      "columnId": null,
+      "displayValue": null,
+      "citation": {
+        "sourceArtifactId": "table-h-i-workbook",
+        "workbookUrl": "https://content.naic.org/sites/default/files/pbr-2026-vm20-table-h-i-long-term-spreads.xlsx",
+        "sheetName": "June_2026",
+        "cellRange": "A1:K35",
+        "manualPrintedPageRange": "20-94–20-95",
+        "manualPhysicalPageRange": "138–139"
+      },
+      "noteId": null,
+      "asOfDate": "2026-06-30",
+      "currentness": "current_as_of_retrieval",
+      "expected": {
+        "supportState": "supported_review_only",
+        "versionId": "vm20-table-h-2026-06-30",
+        "asOfDate": "2026-06-30",
+        "currentness": "current_as_of_retrieval"
+      },
+      "passed": true
+    },
+    {
+      "queryId": "table-applicability-below-investment-grade-current",
+      "queryText": "Which table applies to below-investment-grade current benchmark bond spreads?",
+      "intent": "applicability",
+      "datasetPromotionStatus": "not_promoted",
+      "productionAnswerEligible": false,
+      "supportState": "supported_review_only",
+      "reasonCode": "table_identity_matched",
+      "evidenceClass": "structured_table_identity",
+      "tableId": "vm20-table-g",
+      "versionId": null,
+      "rowId": null,
+      "columnId": null,
+      "displayValue": null,
+      "citation": {
+        "manualUrl": "https://content.naic.org/sites/default/files/pbr_data_valuation_manual_current_edition.pdf",
+        "manualSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+        "printedPageRange": "20-93–20-94",
+        "physicalPageRange": "137–138"
+      },
+      "noteId": null,
+      "tableTitle": "Below Investment Grade Current Benchmark Spreads",
+      "expected": {
+        "supportState": "supported_review_only",
+        "tableId": "vm20-table-g"
+      },
+      "passed": true
+    },
+    {
+      "queryId": "table-j-footnote",
+      "queryText": "What source note applies to current 3M and 6M Table J values?",
+      "intent": "footnote",
+      "datasetPromotionStatus": "not_promoted",
+      "productionAnswerEligible": false,
+      "supportState": "supported_review_only",
+      "reasonCode": "table_note_found",
+      "evidenceClass": "structured_table_note",
+      "tableId": "vm20-table-j",
+      "versionId": null,
+      "rowId": null,
+      "columnId": null,
+      "displayValue": null,
+      "citation": {
+        "manualUrl": "https://content.naic.org/sites/default/files/pbr_data_valuation_manual_current_edition.pdf",
+        "manualSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+        "printedPageRange": "20-95–20-96",
+        "physicalPageRange": "139–140"
+      },
+      "noteId": "short-tenor-current-sofr-source",
+      "note": {
+        "noteId": "short-tenor-current-sofr-source",
+        "scope": "current-swap-spread at 3M and 6M",
+        "summary": "The January source note identifies a contracted Term SOFR data source and reserves the source provider's market-data rights.",
+        "sourceSheet": "January_2026",
+        "sourceCell": "A39"
+      },
+      "expected": {
+        "supportState": "supported_review_only",
+        "noteId": "short-tenor-current-sofr-source",
+        "evidenceClass": "structured_table_note"
+      },
+      "passed": true
+    },
+    {
+      "queryId": "table-f-methodology-routing",
+      "queryText": "How is Table F methodology developed?",
+      "intent": "methodology",
+      "datasetPromotionStatus": "not_promoted",
+      "productionAnswerEligible": false,
+      "supportState": "supported_review_only",
+      "reasonCode": "methodology_routed_to_manual_prose",
+      "evidenceClass": "methodology_prose",
+      "tableId": "vm20-table-f",
+      "versionId": null,
+      "rowId": null,
+      "columnId": null,
+      "displayValue": null,
+      "citation": {
+        "manualUrl": "https://content.naic.org/sites/default/files/pbr_data_valuation_manual_current_edition.pdf",
+        "manualSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+        "printedPageRange": "20-93–20-94",
+        "physicalPageRange": "137–138"
+      },
+      "noteId": null,
+      "expected": {
+        "supportState": "supported_review_only",
+        "reasonCode": "methodology_routed_to_manual_prose",
+        "evidenceClass": "methodology_prose"
+      },
+      "passed": true
+    },
+    {
+      "queryId": "table-b-current-value-unavailable",
+      "queryText": "What is the current Table B value?",
+      "intent": "row_value",
+      "datasetPromotionStatus": "not_promoted",
+      "productionAnswerEligible": false,
+      "supportState": "unsupported",
+      "reasonCode": "current_table_not_available",
+      "evidenceClass": null,
+      "tableId": null,
+      "versionId": null,
+      "rowId": null,
+      "columnId": null,
+      "displayValue": null,
+      "citation": null,
+      "noteId": null,
+      "corpusGap": "The 2026 Valuation Manual describes this table, but the NAIC current-data page did not link a current workbook on the retrieval date; no values were inferred from methodology prose or historical files.",
+      "expected": {
+        "supportState": "unsupported",
+        "reasonCode": "current_table_not_available"
+      },
+      "passed": true
+    },
+    {
+      "queryId": "table-f-missing-rating",
+      "queryText": "What is the current Table F spread at WAL 10?",
+      "intent": "row_value",
+      "datasetPromotionStatus": "not_promoted",
+      "productionAnswerEligible": false,
+      "supportState": "ambiguous",
+      "reasonCode": "value_column_missing",
+      "evidenceClass": null,
+      "tableId": "vm20-table-f",
+      "versionId": "vm20-table-f-2026-07-31",
+      "rowId": "vm20-table-f-2026-07-31-wal-10",
+      "columnId": null,
+      "displayValue": null,
+      "citation": {
+        "sourceArtifactId": "table-f-g-workbook",
+        "workbookUrl": "https://content.naic.org/sites/default/files/pbr-2026-vm20-table-f-g-current-spreads.xlsx",
+        "sheetName": "July_2026",
+        "cellRange": "A1:K35",
+        "manualPrintedPageRange": "20-93–20-94",
+        "manualPhysicalPageRange": "137–138"
+      },
+      "noteId": null,
+      "candidateColumnIds": [
+        "pbr-rating-1",
+        "pbr-rating-2",
+        "pbr-rating-3",
+        "pbr-rating-4",
+        "pbr-rating-5",
+        "pbr-rating-6",
+        "pbr-rating-7",
+        "pbr-rating-8",
+        "pbr-rating-9",
+        "pbr-rating-10"
+      ],
+      "expected": {
+        "supportState": "ambiguous",
+        "reasonCode": "value_column_missing"
+      },
+      "passed": true
+    },
+    {
+      "queryId": "table-f-wal-out-of-range",
+      "queryText": "What is current Table F for PBR rating 1 at WAL 31?",
+      "intent": "row_value",
+      "datasetPromotionStatus": "not_promoted",
+      "productionAnswerEligible": false,
+      "supportState": "unsupported",
+      "reasonCode": "dimension_value_outside_table",
+      "evidenceClass": null,
+      "tableId": "vm20-table-f",
+      "versionId": "vm20-table-f-2026-07-31",
+      "rowId": null,
+      "columnId": "pbr-rating-1",
+      "displayValue": null,
+      "citation": {
+        "sourceArtifactId": "table-f-g-workbook",
+        "workbookUrl": "https://content.naic.org/sites/default/files/pbr-2026-vm20-table-f-g-current-spreads.xlsx",
+        "sheetName": "July_2026",
+        "cellRange": "A1:K35",
+        "manualPrintedPageRange": "20-93–20-94",
+        "manualPhysicalPageRange": "137–138"
+      },
+      "noteId": null,
+      "expected": {
+        "supportState": "unsupported",
+        "reasonCode": "dimension_value_outside_table"
+      },
+      "passed": true
+    },
+    {
+      "queryId": "table-j-missing-measure",
+      "queryText": "What is the current Table J value at 3M?",
+      "intent": "row_value",
+      "datasetPromotionStatus": "not_promoted",
+      "productionAnswerEligible": false,
+      "supportState": "ambiguous",
+      "reasonCode": "value_column_missing",
+      "evidenceClass": null,
+      "tableId": "vm20-table-j",
+      "versionId": "vm20-table-j-2026-07-31",
+      "rowId": "vm20-table-j-2026-07-31-tenor-3m",
+      "columnId": null,
+      "displayValue": null,
+      "citation": {
+        "sourceArtifactId": "table-j-workbook",
+        "workbookUrl": "https://content.naic.org/sites/default/files/pbr-2026-vm20-table-j-swaps.xlsx",
+        "sheetName": "July_2026",
+        "cellRange": "A1:C36",
+        "manualPrintedPageRange": "20-95–20-96",
+        "manualPhysicalPageRange": "139–140"
+      },
+      "noteId": null,
+      "candidateColumnIds": [
+        "current-swap-spread",
+        "long-term-swap-spread"
+      ],
+      "expected": {
+        "supportState": "ambiguous",
+        "reasonCode": "value_column_missing"
+      },
+      "passed": true
+    },
+    {
+      "queryId": "table-k-explicit-null",
+      "queryText": "What NAIC commercial mortgage designation is shown for PBR numeric rating 4?",
+      "intent": "row_value",
+      "datasetPromotionStatus": "not_promoted",
+      "productionAnswerEligible": false,
+      "supportState": "supported_review_only",
+      "reasonCode": "explicit_source_null",
+      "evidenceClass": "structured_table_cell",
+      "tableId": "vm20-table-k",
+      "versionId": "vm20-table-k-current-undated",
+      "rowId": "vm20-table-k-rating-4",
+      "columnId": "naic-commercial-mortgage-designation",
+      "displayValue": null,
+      "citation": {
+        "sourceArtifactId": "table-k-workbook",
+        "workbookUrl": "https://content.naic.org/sites/default/files/inline-files/pbr_data_table_k_conversion.xlsx",
+        "sheetName": "Table K",
+        "cellRange": "A1:K22",
+        "manualPrintedPageRange": "20-91, 20-96",
+        "manualPhysicalPageRange": "135, 140"
+      },
+      "noteId": null,
+      "valueType": "null",
+      "unit": null,
+      "sourceCell": "E10",
+      "expected": {
+        "supportState": "supported_review_only",
+        "reasonCode": "explicit_source_null",
+        "displayValue": null,
+        "valueType": "null"
+      },
+      "passed": true
+    }
+  ],
+  "governanceNote": "The resolver recognizes structured evidence and precise citations, but production-answer eligibility remains false until a separate table promotion changes dataset governance."
+}

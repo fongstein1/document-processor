@@ -13,6 +13,7 @@ This is the planning inventory for the US life and annuity valuation-regulation 
 - Canonical source packages: 21
 - Canonical chunks: 359
 - Promoted canonical packages / chunks: 6 / 149
+- Review-only structured tables / versions / values: 7 / 29 / 7022
 - Awaiting canonicalization: 96
 - Awaiting human review: 1
 - Review-artifact-only sources: 34
@@ -31,7 +32,7 @@ This is the planning inventory for the US life and annuity valuation-regulation 
 | P0 | VM-31 PBR Actuarial Report Requirements | reviewed_not_canonical | supporting-vm01-definitions, supporting-vm02-nonforfeiture, supporting-vm25-health-reserves, supporting-vm26-credit-disability, supporting-vm30-detail | Canonicalize the report requirements with reporting-obligation chunk types. |
 | P0 | VM-G Corporate Governance Requirements for PBR | canonical_partial | ag13-historical-carvm-guidance, ag36-eiul-crvm-guidance | Confirm the authorized 2026 source and process it as a governance-specific chapter. |
 | P0 | VM-C current Actuarial Guidelines appendix and AG mapping | reviewed_not_canonical | ag18-crvm-continuous-basis | Obtain/confirm the authorized appendix and map individually processed AGs without inferring legal effect. |
-| P0 | Current prescribed valuation, mortality, spread, and default tables | reviewed_not_canonical | ag06-single-joint-life-tables, ag09-substandard-immediate-annuities, ag09-substandard-structured-settlements, ag12-withdrawn-interest-rates, ag19-1980-cso-select-mortality-factors | Create a table-specific profile with row/column citations and version metadata; do not prose-chunk tables. |
+| P0 | Current prescribed valuation, mortality, spread, and default tables | review_candidate_partial_vm20_appendix2 | vm20-table-a, vm20-table-f, vm20-table-g, vm20-table-h, vm20-table-i | Complete independent review of the Appendix 2 proof of concept, then record a separate table promotion decision or fixes; continue other table families separately. |
 | P1 | VM-02 Nonforfeiture Requirements | reviewed_not_canonical | supporting-vm01-definitions, supporting-vm02-nonforfeiture, supporting-vm25-health-reserves, supporting-vm26-credit-disability, supporting-vm30-detail | Canonicalize after the P0 manual chapters. |
 | P1 | VM-50 PBR Experience Reporting | missing | none confirmed | Confirm current source and add as reporting support. |
 | P1 | VM-51 PBR Experience Reporting Tables | missing | none confirmed | Treat as structured reporting/table material. |
