@@ -31,13 +31,13 @@
 
 ## Processing
 
-- Processing mode: canonical_index_poc
-- Canonicality: poc
-- Review only: Yes
+- Processing mode: canonical_index
+- Canonicality: canonical
+- Review only: No
 - Learner facing allowed: No
 - App ready allowed: No
 - RAG ready allowed: No
-- Promotion status: not_promoted
+- Promotion status: promoted
 
 ## Chunks
 

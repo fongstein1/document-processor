@@ -5,6 +5,7 @@
   "repositoryPurpose": "Canonical source-index proof of concept for backend-neutral retrieval",
   "modelVersion": "1.0",
   "generatedAt": "2026-07-22T22:52:46.811Z",
+  "promotionDecisionPath": "data/manual-input/promotion-decisions/vm20-2026-prose-promotion.json",
   "domainProfiles": [
     {
       "domainId": "naic_regulatory",

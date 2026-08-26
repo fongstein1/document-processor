@@ -57,14 +57,14 @@
   "processing": {
     "createdAt": "2026-08-26T03:36:26.677Z",
     "createdBy": "scripts/build-source-index-poc.mjs",
-    "processingMode": "canonical_index_poc",
-    "canonicality": "poc",
-    "reviewOnly": true,
+    "processingMode": "canonical_index",
+    "canonicality": "canonical",
+    "reviewOnly": false,
     "learnerFacingAllowed": false,
     "appReadyAllowed": false,
     "ragReadyAllowed": false,
-    "promotionStatus": "not_promoted",
-    "notes": "Hierarchical parent-child canonicalization of the existing reviewed VM-20 Section 3.C slice. Remains review-only and not promoted."
+    "promotionStatus": "promoted",
+    "notes": "Promoted for the recorded current-manual prose scope; downstream export remains blocked. Decision: data/manual-input/promotion-decisions/vm20-2026-prose-promotion.json"
   },
   "chunks": [
     {
@@ -146,7 +146,7 @@
       "structuralLocator": "VM-20 / Section 3.C.1 Mortality Rates",
       "chunkingMethod": "hierarchical_structure",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm20-section3c-hierarchical-section-3-c-1-mortality-rates-child-001",
@@ -221,7 +221,7 @@
       "structuralLocator": "VM-20 / Section 3.C.1 Mortality Rates / child 1",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm20-section3c-hierarchical-section-3-c-1-mortality-rates-child-002",
@@ -296,7 +296,7 @@
       "structuralLocator": "VM-20 / Section 3.C.1 Mortality Rates / child 2",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm20-section3c-hierarchical-section-3-c-1-mortality-rates-child-003",
@@ -371,7 +371,7 @@
       "structuralLocator": "VM-20 / Section 3.C.1 Mortality Rates / child 3",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm20-section3c-hierarchical-section-3-c-1-mortality-rates-child-004",
@@ -446,7 +446,7 @@
       "structuralLocator": "VM-20 / Section 3.C.1 Mortality Rates / child 4",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm20-section3c-hierarchical-section-3-c-1-mortality-rates-child-005",
@@ -521,7 +521,7 @@
       "structuralLocator": "VM-20 / Section 3.C.1 Mortality Rates / child 5",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm20-section3c-hierarchical-section-3-c-2-interest-rates",
@@ -599,7 +599,7 @@
       "structuralLocator": "VM-20 / Section 3.C.2 Interest Rates",
       "chunkingMethod": "hierarchical_structure",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm20-section3c-hierarchical-section-3-c-2-interest-rates-child-001",
@@ -674,7 +674,7 @@
       "structuralLocator": "VM-20 / Section 3.C.2 Interest Rates / child 1",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm20-section3c-hierarchical-section-3-c-2-interest-rates-child-002",
@@ -749,7 +749,7 @@
       "structuralLocator": "VM-20 / Section 3.C.2 Interest Rates / child 2",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm20-section3c-hierarchical-section-3-c-3-lapse-rates",
@@ -827,7 +827,7 @@
       "structuralLocator": "VM-20 / Section 3.C.3 Lapse Rates",
       "chunkingMethod": "hierarchical_structure",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm20-section3c-hierarchical-section-3-c-3-lapse-rates-child-001",
@@ -902,7 +902,7 @@
       "structuralLocator": "VM-20 / Section 3.C.3 Lapse Rates / child 1",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm20-section3c-hierarchical-section-3-c-3-lapse-rates-child-002",
@@ -977,7 +977,7 @@
       "structuralLocator": "VM-20 / Section 3.C.3 Lapse Rates / child 2",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm20-section3c-hierarchical-section-3-d-npr-calculation-and-cash-surrender-value-floor",
@@ -1054,7 +1054,7 @@
       "structuralLocator": "VM-20 / Section 3.D NPR Calculation and Cash Surrender Value Floor",
       "chunkingMethod": "hierarchical_structure",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm20-section3c-hierarchical-section-3-d-npr-calculation-and-cash-surrender-value-floor-child-001",
@@ -1129,7 +1129,7 @@
       "structuralLocator": "VM-20 / Section 3.D NPR Calculation and Cash Surrender Value Floor / child 1",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     }
   ],
   "relationships": [],
@@ -1143,14 +1143,16 @@
   "exportHints": {
     "jsonlEligible": true,
     "csvEligible": true,
-    "vectorEligible": true,
-    "notes": "Backend-neutral POC exports generated from review-only batch artifacts."
+    "vectorEligible": false,
+    "notes": "Canonical JSONL/CSV serialization is available for review and audit; vector, learner, app, RAG, and Copilot export remain blocked pending a separate decision."
   },
   "notes": "Hierarchical parent-child canonicalization of the existing reviewed VM-20 Section 3.C slice. Remains review-only and not promoted.",
   "extensions": {
     "batchIds": [
       "batch-006"
     ],
-    "sourceIndexGeneratedBy": "build-source-index-poc"
+    "sourceIndexGeneratedBy": "build-source-index-poc",
+    "promotionDecisionId": "vm20-2026-prose-promotion-2026-08-26",
+    "promotionDecisionPath": "data/manual-input/promotion-decisions/vm20-2026-prose-promotion.json"
   }
 }

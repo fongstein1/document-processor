@@ -64,14 +64,14 @@
   "processing": {
     "createdAt": "2026-07-22T22:52:46.811Z",
     "createdBy": "scripts/build-source-index-poc.mjs",
-    "processingMode": "canonical_index_poc",
-    "canonicality": "poc",
-    "reviewOnly": true,
+    "processingMode": "canonical_index",
+    "canonicality": "canonical",
+    "reviewOnly": false,
     "learnerFacingAllowed": false,
     "appReadyAllowed": false,
     "ragReadyAllowed": false,
-    "promotionStatus": "not_promoted",
-    "notes": "Expanded current-manual VM-20 coverage for the reviewed 2026 source slices. This is review-only, not learner-facing, not app-ready, not RAG-ready, and not promoted."
+    "promotionStatus": "promoted",
+    "notes": "Promoted for the recorded current-manual prose scope; downstream export remains blocked. Decision: data/manual-input/promotion-decisions/vm20-2026-prose-promotion.json"
   },
   "chunks": [
     {
@@ -167,7 +167,7 @@
       "structuralLocator": "VM-20 / Section 2: Minimum Reserve (role map statement)",
       "chunkingMethod": "hierarchical_structure",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm20-canonical-coverage-vm20-role-map-sections-3-4-5-child-001",
@@ -259,7 +259,7 @@
       "structuralLocator": "VM-20 / Section 2: Minimum Reserve (role map statement) / child 1",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm20-canonical-coverage-vm20-role-map-sections-3-4-5-child-002",
@@ -351,7 +351,7 @@
       "structuralLocator": "VM-20 / Section 2: Minimum Reserve (role map statement) / child 2",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm20-canonical-coverage-vm20-section3-opener",
@@ -450,7 +450,7 @@
       "structuralLocator": "VM-20 / Section 3: Net Premium Reserve (applicability and opener)",
       "chunkingMethod": "hierarchical_structure",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm20-canonical-coverage-vm20-section3-opener-child-001",
@@ -545,7 +545,7 @@
       "structuralLocator": "VM-20 / Section 3: Net Premium Reserve (applicability and opener) / child 1",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm20-canonical-coverage-vm20-section3-opener-child-002",
@@ -640,7 +640,7 @@
       "structuralLocator": "VM-20 / Section 3: Net Premium Reserve (applicability and opener) / child 2",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm20-canonical-coverage-vm20-section3-opener-child-003",
@@ -735,7 +735,7 @@
       "structuralLocator": "VM-20 / Section 3: Net Premium Reserve (applicability and opener) / child 3",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm20-canonical-coverage-vm20-npr-entry-setup",
@@ -835,7 +835,7 @@
       "structuralLocator": "VM-20 / Section 3.B.1-3.B.5.c.i.3 (definitions and NPR setup)",
       "chunkingMethod": "hierarchical_structure",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm20-canonical-coverage-vm20-npr-entry-setup-child-001",
@@ -930,7 +930,7 @@
       "structuralLocator": "VM-20 / Section 3.B.1-3.B.5.c.i.3 (definitions and NPR setup) / child 1",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm20-canonical-coverage-vm20-npr-entry-setup-child-002",
@@ -1025,7 +1025,7 @@
       "structuralLocator": "VM-20 / Section 3.B.1-3.B.5.c.i.3 (definitions and NPR setup) / child 2",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm20-canonical-coverage-vm20-npr-entry-setup-child-003",
@@ -1120,7 +1120,7 @@
       "structuralLocator": "VM-20 / Section 3.B.1-3.B.5.c.i.3 (definitions and NPR setup) / child 3",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm20-canonical-coverage-vm20-npr-entry-setup-child-004",
@@ -1215,7 +1215,7 @@
       "structuralLocator": "VM-20 / Section 3.B.1-3.B.5.c.i.3 (definitions and NPR setup) / child 4",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm20-canonical-coverage-vm20-npr-entry-formula",
@@ -1311,7 +1311,7 @@
       "structuralLocator": "VM-20 / Section 3.B.5.c.i.4 through Section 3.B.5.d (NPR formula and ULSG branch)",
       "chunkingMethod": "hierarchical_structure",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm20-canonical-coverage-vm20-npr-entry-formula-child-001",
@@ -1404,7 +1404,7 @@
       "structuralLocator": "VM-20 / Section 3.B.5.c.i.4 through Section 3.B.5.d (NPR formula and ULSG branch) / child 1",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm20-canonical-coverage-vm20-npr-entry-formula-child-002",
@@ -1497,7 +1497,7 @@
       "structuralLocator": "VM-20 / Section 3.B.5.c.i.4 through Section 3.B.5.d (NPR formula and ULSG branch) / child 2",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm20-canonical-coverage-vm20-section4-entry",
@@ -1591,7 +1591,7 @@
       "structuralLocator": "VM-20 / Section 4: Deterministic Reserve (entry point)",
       "chunkingMethod": "hierarchical_structure",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm20-canonical-coverage-vm20-section4-entry-child-001",
@@ -1683,7 +1683,7 @@
       "structuralLocator": "VM-20 / Section 4: Deterministic Reserve (entry point) / child 1",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm20-canonical-coverage-vm20-section5-entry",
@@ -1778,7 +1778,7 @@
       "structuralLocator": "VM-20 / Section 5: Stochastic Reserve (entry point and aggregation)",
       "chunkingMethod": "hierarchical_structure",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm20-canonical-coverage-vm20-section5-entry-child-001",
@@ -1870,7 +1870,7 @@
       "structuralLocator": "VM-20 / Section 5: Stochastic Reserve (entry point and aggregation) / child 1",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm20-canonical-coverage-vm20-section5-entry-child-002",
@@ -1962,7 +1962,7 @@
       "structuralLocator": "VM-20 / Section 5: Stochastic Reserve (entry point and aggregation) / child 2",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm20-canonical-coverage-vm20-section6-exclusion-tests",
@@ -2062,7 +2062,7 @@
       "structuralLocator": "VM-20 / Section 6: Stochastic and Deterministic Exclusion Tests",
       "chunkingMethod": "hierarchical_structure",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm20-canonical-coverage-vm20-section6-exclusion-tests-child-001",
@@ -2154,7 +2154,7 @@
       "structuralLocator": "VM-20 / Section 6: Stochastic and Deterministic Exclusion Tests / child 1",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm20-canonical-coverage-vm20-section6-exclusion-tests-child-002",
@@ -2246,7 +2246,7 @@
       "structuralLocator": "VM-20 / Section 6: Stochastic and Deterministic Exclusion Tests / child 2",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm20-canonical-coverage-vm20-section6-exclusion-tests-child-003",
@@ -2338,7 +2338,7 @@
       "structuralLocator": "VM-20 / Section 6: Stochastic and Deterministic Exclusion Tests / child 3",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm20-canonical-coverage-vm20-section6-exclusion-tests-child-004",
@@ -2430,7 +2430,7 @@
       "structuralLocator": "VM-20 / Section 6: Stochastic and Deterministic Exclusion Tests / child 4",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm20-canonical-coverage-vm20-section6-exclusion-tests-child-005",
@@ -2522,7 +2522,7 @@
       "structuralLocator": "VM-20 / Section 6: Stochastic and Deterministic Exclusion Tests / child 5",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm20-canonical-coverage-vm20-section6-exclusion-tests-child-006",
@@ -2614,7 +2614,7 @@
       "structuralLocator": "VM-20 / Section 6: Stochastic and Deterministic Exclusion Tests / child 6",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm20-canonical-coverage-vm20-section6-exclusion-tests-child-007",
@@ -2706,7 +2706,7 @@
       "structuralLocator": "VM-20 / Section 6: Stochastic and Deterministic Exclusion Tests / child 7",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm20-canonical-coverage-vm20-section7-model-structure",
@@ -2804,7 +2804,7 @@
       "structuralLocator": "VM-20 / Section 7: Cash-Flow Models (model structure and starting assets)",
       "chunkingMethod": "hierarchical_structure",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-001",
@@ -2896,7 +2896,7 @@
       "structuralLocator": "VM-20 / Section 7: Cash-Flow Models (model structure and starting assets) / child 1",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-002",
@@ -2988,7 +2988,7 @@
       "structuralLocator": "VM-20 / Section 7: Cash-Flow Models (model structure and starting assets) / child 2",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-003",
@@ -3080,7 +3080,7 @@
       "structuralLocator": "VM-20 / Section 7: Cash-Flow Models (model structure and starting assets) / child 3",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-004",
@@ -3172,7 +3172,7 @@
       "structuralLocator": "VM-20 / Section 7: Cash-Flow Models (model structure and starting assets) / child 4",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-005",
@@ -3264,7 +3264,7 @@
       "structuralLocator": "VM-20 / Section 7: Cash-Flow Models (model structure and starting assets) / child 5",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm20-canonical-coverage-vm20-section7-asset-mechanics",
@@ -3366,7 +3366,7 @@
       "structuralLocator": "VM-20 / Section 7: Cash-Flow Models (asset mechanics)",
       "chunkingMethod": "hierarchical_structure",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm20-canonical-coverage-vm20-section7-asset-mechanics-child-001",
@@ -3459,7 +3459,7 @@
       "structuralLocator": "VM-20 / Section 7: Cash-Flow Models (asset mechanics) / child 1",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm20-canonical-coverage-vm20-section7-asset-mechanics-child-002",
@@ -3552,7 +3552,7 @@
       "structuralLocator": "VM-20 / Section 7: Cash-Flow Models (asset mechanics) / child 2",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm20-canonical-coverage-vm20-section7-asset-mechanics-child-003",
@@ -3645,7 +3645,7 @@
       "structuralLocator": "VM-20 / Section 7: Cash-Flow Models (asset mechanics) / child 3",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm20-canonical-coverage-vm20-section7-asset-mechanics-child-004",
@@ -3738,7 +3738,7 @@
       "structuralLocator": "VM-20 / Section 7: Cash-Flow Models (asset mechanics) / child 4",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm20-canonical-coverage-vm20-section7-asset-mechanics-child-005",
@@ -3831,7 +3831,7 @@
       "structuralLocator": "VM-20 / Section 7: Cash-Flow Models (asset mechanics) / child 5",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm20-canonical-coverage-vm20-section7-asset-mechanics-child-006",
@@ -3924,7 +3924,7 @@
       "structuralLocator": "VM-20 / Section 7: Cash-Flow Models (asset mechanics) / child 6",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm20-canonical-coverage-vm20-section7-asset-mechanics-child-007",
@@ -4017,7 +4017,7 @@
       "structuralLocator": "VM-20 / Section 7: Cash-Flow Models (asset mechanics) / child 7",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm20-canonical-coverage-vm20-section7-asset-mechanics-child-008",
@@ -4110,7 +4110,7 @@
       "structuralLocator": "VM-20 / Section 7: Cash-Flow Models (asset mechanics) / child 8",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm20-canonical-coverage-vm20-section8-reinsurance",
@@ -4211,7 +4211,7 @@
       "structuralLocator": "VM-20 / Section 8: Reinsurance and Section 9 assumptions boundary",
       "chunkingMethod": "hierarchical_structure",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm20-canonical-coverage-vm20-section8-reinsurance-child-001",
@@ -4303,7 +4303,7 @@
       "structuralLocator": "VM-20 / Section 8: Reinsurance and Section 9 assumptions boundary / child 1",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm20-canonical-coverage-vm20-section8-reinsurance-child-002",
@@ -4395,7 +4395,7 @@
       "structuralLocator": "VM-20 / Section 8: Reinsurance and Section 9 assumptions boundary / child 2",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm20-canonical-coverage-vm20-section8-reinsurance-child-003",
@@ -4487,7 +4487,7 @@
       "structuralLocator": "VM-20 / Section 8: Reinsurance and Section 9 assumptions boundary / child 3",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm20-canonical-coverage-vm20-section8-reinsurance-child-004",
@@ -4579,7 +4579,7 @@
       "structuralLocator": "VM-20 / Section 8: Reinsurance and Section 9 assumptions boundary / child 4",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm20-canonical-coverage-vm20-section8-reinsurance-child-005",
@@ -4671,7 +4671,7 @@
       "structuralLocator": "VM-20 / Section 8: Reinsurance and Section 9 assumptions boundary / child 5",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm20-canonical-coverage-vm20-section8-reinsurance-child-006",
@@ -4763,7 +4763,7 @@
       "structuralLocator": "VM-20 / Section 8: Reinsurance and Section 9 assumptions boundary / child 6",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm20-canonical-coverage-vm20-section8-reinsurance-child-007",
@@ -4855,7 +4855,7 @@
       "structuralLocator": "VM-20 / Section 8: Reinsurance and Section 9 assumptions boundary / child 7",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm20-canonical-coverage-vm20-section8-reinsurance-child-008",
@@ -4947,7 +4947,7 @@
       "structuralLocator": "VM-20 / Section 8: Reinsurance and Section 9 assumptions boundary / child 8",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     }
   ],
   "relationships": [],
@@ -4961,8 +4961,8 @@
   "exportHints": {
     "jsonlEligible": true,
     "csvEligible": true,
-    "vectorEligible": true,
-    "notes": "Backend-neutral POC exports generated from review-only batch artifacts."
+    "vectorEligible": false,
+    "notes": "Canonical JSONL/CSV serialization is available for review and audit; vector, learner, app, RAG, and Copilot export remain blocked pending a separate decision."
   },
   "notes": "Expanded current-manual VM-20 coverage for the reviewed 2026 source slices. This is review-only, not learner-facing, not app-ready, not RAG-ready, and not promoted.",
   "extensions": {
@@ -4976,6 +4976,8 @@
       "batch-011",
       "batch-012"
     ],
-    "sourceIndexGeneratedBy": "build-source-index-poc"
+    "sourceIndexGeneratedBy": "build-source-index-poc",
+    "promotionDecisionId": "vm20-2026-prose-promotion-2026-08-26",
+    "promotionDecisionPath": "data/manual-input/promotion-decisions/vm20-2026-prose-promotion.json"
   }
 }

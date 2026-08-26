@@ -2,14 +2,49 @@
   "schemaVersion": "1.0",
   "reviewPackageId": "vm20-canonical-coverage-review-package-2026-08-26",
   "generatedBy": "scripts/build-source-index-poc.mjs",
-  "status": "review_only",
+  "status": "canonical_promoted",
   "learnerFacing": false,
   "appReady": false,
   "ragReady": false,
-  "promoted": false,
+  "promoted": true,
+  "promotionDecision": {
+    "promotionDecisionId": "vm20-2026-prose-promotion-2026-08-26",
+    "decision": "approved_for_canonical_promotion",
+    "decisionDate": "2026-08-26",
+    "scopeId": "vm20-2026-current-manual-prose",
+    "sourceIds": [
+      "vm20-framework-overview",
+      "vm20-framework-boundary",
+      "vm20-assumptions-section-3c",
+      "vm20-section3c-hierarchical",
+      "vm20-canonical-coverage",
+      "vm20-remaining-prose-appendix-coverage"
+    ],
+    "expectedChunkCount": 149,
+    "decisionRecordPath": "data/manual-input/promotion-decisions/vm20-2026-prose-promotion.json",
+    "downstreamEligibility": {
+      "learnerFacingAllowed": false,
+      "appReadyAllowed": false,
+      "ragReadyAllowed": false,
+      "copilotExportEligible": false,
+      "reason": "Canonical source promotion and downstream publication/export approval are separate governance decisions."
+    },
+    "reviewerRecord": {
+      "identityRecorded": false,
+      "identity": null,
+      "note": "The supplied independent-review correction records the decision but does not provide a reviewer identity; no identity is inferred."
+    },
+    "exclusions": [
+      "Appendix 2 structured table rows, cells, numerical values, workbook versions, effective dates, and footnotes not yet ingested",
+      "The April 2020 VM-20 practice note companion and all other companion guidance",
+      "Review-only relationship and cross-reference candidates",
+      "Any source or chunk outside the six listed current-manual source packages",
+      "Learner-facing, application, RAG, and Copilot export approval"
+    ]
+  },
   "promotionReadiness": {
     "blockersClosed": true,
-    "status": "ready_for_promotion_decision",
+    "status": "promoted_after_independent_review",
     "automatedPromotion": false,
     "findings": [
       {
@@ -23,12 +58,12 @@
         "evidence": "Structural and equivalent parent-child overlaps are suppressed from first-stage top-k while hierarchy remains intact."
       }
     ],
-    "note": "This is a readiness result only. A human promotion decision remains required; the package remains review-only and unpromoted."
+    "note": "The readiness result was followed by the recorded independent-review decision. Promotion is limited to the six current-manual prose packages; downstream export remains separately blocked."
   },
   "scope": {
     "objective": "Complete the remaining VM-20 prose and appendix coverage while preserving the frozen source-index architecture and deferring structured current-table ingestion.",
     "currentManualCoverage": "Reviewed current-manual slices from batches 003-012 plus authoritative remaining prose and appendix extraction batches 231-234; Section 4, Section 5, Section 9, Appendix 1, and Appendix 2 prose are now represented hierarchically.",
-    "companionCoverage": "Reviewed VM-20 practice-note batches 055-075, indexed separately as non-binding historical companion guidance.",
+    "companionCoverage": "Reviewed VM-20 practice-note batches 055-075 remain separately indexed non-binding historical companion guidance and are excluded from this promotion.",
     "sourceAvailability": "External raw sources remain authoritative; this package records only source text available in ignored reviewed batch outputs."
   },
   "coverage": {
@@ -1564,14 +1599,29 @@
       "REJECT"
     ],
     "provisionalDisposition": "APPROVE WITH FIXES",
-    "rationale": "The targeted current-manual prose and appendix wave is source-bound and hierarchically retrievable. Structured current tables, page-image backstop, line references, and historical companion guidance still require explicit reviewer disposition before promotion.",
+    "finalDisposition": "APPROVE",
+    "rationale": "Independent review approved the source-bound current-manual prose scope after the targeted blockers were closed. Structured tables, downstream export, historical companion guidance, and review-only relationship candidates remain outside the decision.",
+    "reviewHistory": [
+      {
+        "stage": "pre_promotion_review_handoff",
+        "disposition": "APPROVE WITH FIXES",
+        "status": "completed",
+        "note": "The prior review package required evidence-sufficiency and retrieval-deduplication corrections before a final decision."
+      },
+      {
+        "stage": "final_independent_review",
+        "disposition": "APPROVE",
+        "status": "recorded",
+        "decisionDate": "2026-08-26",
+        "note": "Approval applies only to the six current-manual prose packages named in the promotion decision."
+      }
+    ],
     "requiredChecks": [
-      "Confirm current-manual wording and page citations against the approved raw source.",
-      "Confirm parent/child boundaries and any child that crosses a requirement, exception, qualification, or table-heading boundary.",
-      "Review cross-reference candidates without inferring legal effect or supersession.",
-      "Confirm that Sections 4, 5, 9 and Appendices 1-2 are complete for the stated prose boundaries and that Appendix 2 tables remain deferred.",
-      "Decide whether the companion practice-note package is useful as implementation context after currentness review.",
-      "Keep all packages review-only unless a separate promotion decision is recorded."
+      "Preserve the approved current-manual source text, hierarchy, citations, and retrieval behavior.",
+      "Keep Appendix 2 structured values review-only until their own independent table review and promotion decision.",
+      "Keep the 2020 practice note non-binding, historical, review-only, and excluded from canonical authority.",
+      "Keep relationship candidates pending and do not infer legal effect or supersession.",
+      "Require a separate decision before learner-facing, app, RAG, or Copilot export use."
     ]
   },
   "packageInventory": [

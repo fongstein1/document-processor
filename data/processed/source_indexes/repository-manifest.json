@@ -100,6 +100,9 @@
       "textLayerQuality": "clean",
       "pageImageBackstop": false,
       "lineReferencesAvailable": false,
+      "reviewOnly": false,
+      "promotionStatus": "promoted",
+      "promotionDecisionPath": "data/manual-input/promotion-decisions/vm20-2026-prose-promotion.json",
       "notes": "Hierarchical parent-child canonicalization of the existing reviewed VM-20 Section 3.C slice. Remains review-only and not promoted."
     },
     {
@@ -150,6 +153,8 @@
       "textLayerQuality": "noisy",
       "pageImageBackstop": true,
       "lineReferencesAvailable": false,
+      "reviewOnly": true,
+      "promotionStatus": "not_promoted",
       "notes": "Single-page guideline slice retained as a review-only interpretive POC."
     },
     {
@@ -200,6 +205,8 @@
       "textLayerQuality": "noisy",
       "pageImageBackstop": true,
       "lineReferencesAvailable": false,
+      "reviewOnly": true,
+      "promotionStatus": "not_promoted",
       "notes": "Single-page guideline slice retained as a review-only interpretive POC."
     },
     {
@@ -250,6 +257,9 @@
       "textLayerQuality": "clean",
       "pageImageBackstop": false,
       "lineReferencesAvailable": false,
+      "reviewOnly": false,
+      "promotionStatus": "promoted",
+      "promotionDecisionPath": "data/manual-input/promotion-decisions/vm20-2026-prose-promotion.json",
       "notes": "High-level framework overview slice from the controlled VM-20 wave."
     },
     {
@@ -300,6 +310,9 @@
       "textLayerQuality": "clean",
       "pageImageBackstop": false,
       "lineReferencesAvailable": false,
+      "reviewOnly": false,
+      "promotionStatus": "promoted",
+      "promotionDecisionPath": "data/manual-input/promotion-decisions/vm20-2026-prose-promotion.json",
       "notes": "Boundary-control slice retained only to keep the mechanics transition review-only."
     },
     {
@@ -356,6 +369,9 @@
       "textLayerQuality": "clean",
       "pageImageBackstop": false,
       "lineReferencesAvailable": false,
+      "reviewOnly": false,
+      "promotionStatus": "promoted",
+      "promotionDecisionPath": "data/manual-input/promotion-decisions/vm20-2026-prose-promotion.json",
       "notes": "Assumption-layer slice from the controlled VM-20 wave."
     },
     {
@@ -413,6 +429,9 @@
       "textLayerQuality": "clean",
       "pageImageBackstop": false,
       "lineReferencesAvailable": false,
+      "reviewOnly": false,
+      "promotionStatus": "promoted",
+      "promotionDecisionPath": "data/manual-input/promotion-decisions/vm20-2026-prose-promotion.json",
       "notes": "Expanded current-manual VM-20 coverage for the reviewed 2026 source slices. This is review-only, not learner-facing, not app-ready, not RAG-ready, and not promoted."
     },
     {
@@ -496,6 +515,9 @@
       "textLayerQuality": "clean",
       "pageImageBackstop": false,
       "lineReferencesAvailable": false,
+      "reviewOnly": false,
+      "promotionStatus": "promoted",
+      "promotionDecisionPath": "data/manual-input/promotion-decisions/vm20-2026-prose-promotion.json",
       "notes": "Review-only VM-20 Sections 4, 5, 9 and Appendices 1-2 coverage. Structured current regulatory tables remain a separate later milestone."
     },
     {
@@ -566,6 +588,8 @@
       "textLayerQuality": "clean",
       "pageImageBackstop": false,
       "lineReferencesAvailable": false,
+      "reviewOnly": true,
+      "promotionStatus": "not_promoted",
       "notes": "Expanded hierarchical companion coverage for the reviewed VM-20 practice-note wave. Non-binding, historical, review-only, and not promoted."
     },
     {
@@ -622,6 +646,8 @@
       "textLayerQuality": "clean",
       "pageImageBackstop": false,
       "lineReferencesAvailable": false,
+      "reviewOnly": true,
+      "promotionStatus": "not_promoted",
       "notes": "Projection-entry slice from the controlled VM-21 wave."
     },
     {
@@ -681,6 +707,8 @@
       "textLayerQuality": "noisy",
       "pageImageBackstop": true,
       "lineReferencesAvailable": false,
+      "reviewOnly": true,
+      "promotionStatus": "not_promoted",
       "notes": "Active AG 36 source package retained as a review-only guideline slice."
     },
     {
@@ -737,6 +765,8 @@
       "textLayerQuality": "noisy",
       "pageImageBackstop": true,
       "lineReferencesAvailable": false,
+      "reviewOnly": true,
+      "promotionStatus": "not_promoted",
       "notes": "Companion-only AG 36 Law Manual reprint retained as separate evidence."
     },
     {
@@ -789,6 +819,8 @@
       "textLayerQuality": "clean",
       "pageImageBackstop": false,
       "lineReferencesAvailable": false,
+      "reviewOnly": true,
+      "promotionStatus": "not_promoted",
       "notes": "Model governance companion guidance retained as a non-binding practice note."
     },
     {
@@ -842,6 +874,8 @@
       "textLayerQuality": "clean",
       "pageImageBackstop": false,
       "lineReferencesAvailable": false,
+      "reviewOnly": true,
+      "promotionStatus": "not_promoted",
       "notes": "Actuarial memorandum companion guidance retained as a non-binding practice note."
     },
     {
@@ -894,6 +928,8 @@
       "textLayerQuality": "clean",
       "pageImageBackstop": false,
       "lineReferencesAvailable": false,
+      "reviewOnly": true,
+      "promotionStatus": "not_promoted",
       "notes": "Active NY regulation for non-guaranteed elements."
     },
     {
@@ -947,6 +983,8 @@
       "textLayerQuality": "clean",
       "pageImageBackstop": false,
       "lineReferencesAvailable": false,
+      "reviewOnly": true,
+      "promotionStatus": "not_promoted",
       "notes": "Canadian Institute of Actuaries educational note retained as review-only companion guidance."
     },
     {
@@ -1001,6 +1039,8 @@
       "textLayerQuality": "clean",
       "pageImageBackstop": false,
       "lineReferencesAvailable": false,
+      "reviewOnly": true,
+      "promotionStatus": "not_promoted",
       "notes": "Synthetic non-sensitive product specification used to exercise the generic pricing profile."
     },
     {
@@ -1060,6 +1100,8 @@
       "textLayerQuality": "clean",
       "pageImageBackstop": false,
       "lineReferencesAvailable": false,
+      "reviewOnly": true,
+      "promotionStatus": "not_promoted",
       "notes": "Synthetic non-sensitive assumption memo used to exercise the generic pricing profile."
     },
     {
@@ -1119,6 +1161,8 @@
       "textLayerQuality": "clean",
       "pageImageBackstop": false,
       "lineReferencesAvailable": false,
+      "reviewOnly": true,
+      "promotionStatus": "not_promoted",
       "notes": "Synthetic non-sensitive pricing methodology used to exercise the generic pricing profile."
     },
     {
@@ -1178,6 +1222,8 @@
       "textLayerQuality": "clean",
       "pageImageBackstop": false,
       "lineReferencesAvailable": false,
+      "reviewOnly": true,
+      "promotionStatus": "not_promoted",
       "notes": "Synthetic non-sensitive profitability study used to exercise the generic pricing profile."
     },
     {
@@ -1237,6 +1283,8 @@
       "textLayerQuality": "clean",
       "pageImageBackstop": false,
       "lineReferencesAvailable": false,
+      "reviewOnly": true,
+      "promotionStatus": "not_promoted",
       "notes": "Synthetic non-sensitive approval memo used to exercise the generic governance and pricing profiles."
     }
   ],
@@ -1275,7 +1323,11 @@
   },
   "notes": "Canonical source-index proof of concept.",
   "extensions": {
-    "sourceIndexPoc": true
+    "sourceIndexPoc": true,
+    "promotionDecisionId": "vm20-2026-prose-promotion-2026-08-26",
+    "promotionDecisionPath": "data/manual-input/promotion-decisions/vm20-2026-prose-promotion.json",
+    "promotedSourcePackageCount": 6,
+    "promotedChunkCount": 149
   },
   "reviewPackagePath": "data/processed/review_packages/vm20-canonical-coverage-review-package.json"
 }

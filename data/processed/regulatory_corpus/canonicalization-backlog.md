@@ -1,13 +1,13 @@
 # Regulatory Canonicalization Backlog
 
-All items remain review-only until independent human review and explicit promotion. The sequence favors reviewed high-value material, then partial core packages, then genuinely absent P0 sources, then tables and supporting sources.
+The VM-20 current-manual prose scope is promoted. All other items remain review-only until independent human review and explicit promotion. The sequence favors current tables and other incomplete core packages before supporting sources.
 
 | Order | Priority | Target | Current state | Safe next step |
 | ---: | --- | --- | --- | --- |
 | 1 | P0 | Current prescribed valuation, mortality, spread, and default tables | reviewed_not_canonical | Create a table-specific profile with row/column citations and version metadata; do not prose-chunk tables. |
 | 2 | P0 | Complete current 2026 Valuation Manual representation | canonical_partial | Canonicalize the complete manual by chapter with source-bound hierarchy and a separate table profile. |
 | 3 | P0 | VM-01 Definitions | reviewed_not_canonical | Canonicalize definitions first because downstream VM answers depend on stable terms. |
-| 4 | P0 | VM-20 Requirements for Principle-Based Reserves for Life Products | canonical_partial | Review the dedicated VM-20 package, then process the separate structured current-table milestone while preserving the prose/appendix coverage as review-only. |
+| 4 | P0 | VM-20 Requirements for Principle-Based Reserves for Life Products | canonical_promoted_prose | Build and independently review the structured Appendix 2 table proof of concept without altering the promoted prose corpus. |
 | 5 | P0 | VM-21 Requirements for Principle-Based Reserves for Variable Annuities | canonical_partial | Canonicalize the reviewed VM-21 wave with parent-child structure and table separation. |
 | 6 | P0 | VM-22 Requirements for Principle-Based Reserves for Non-Variable Annuities | reviewed_not_canonical | Canonicalize reviewed VM-22 sections after table and hedging boundaries are confirmed. |
 | 7 | P0 | VM-30 Actuarial Opinion and Memorandum Requirements | reviewed_not_canonical | Canonicalize the reporting requirements and preserve cross-references to VM-31. |

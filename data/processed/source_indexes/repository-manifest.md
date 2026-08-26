@@ -21,14 +21,14 @@
 
 | Source | Pages | Source index | Review posture |
 | --- | --- | --- | --- |
-| VM-20 Section 3.C Assumptions (Hierarchical Canonical Slice) | pp. 58-65 | `data/processed/source_indexes/sources/vm20-section3c-hierarchical.json` | review-only |
+| VM-20 Section 3.C Assumptions (Hierarchical Canonical Slice) | pp. 58-65 | `data/processed/source_indexes/sources/vm20-section3c-hierarchical.json` | canonical promoted; downstream export blocked |
 | Valuation of Policies in Which the Net Premium Exceeds the Gross Premium | pp. 1-1 | `data/processed/source_indexes/sources/ag01-net-premium-interpretation.json` | review-only |
 | Definition of the Term Maturity Value in the Standard Nonforfeiture Law of Individual Deferred Annuities | pp. 1-1 | `data/processed/source_indexes/sources/ag03-maturity-value-interpretation.json` | review-only |
-| Valuation Manual | pp. 45-46 | `data/processed/source_indexes/sources/vm20-framework-overview.json` | review-only |
-| Valuation Manual | pp. 47-47 | `data/processed/source_indexes/sources/vm20-framework-boundary.json` | review-only |
-| VM-20 Section 3.C Assumptions | pp. 58-65 | `data/processed/source_indexes/sources/vm20-assumptions-section-3c.json` | review-only |
-| VM-20 Current Manual Canonical Coverage (Reviewed Wave) | pp. 48-95 | `data/processed/source_indexes/sources/vm20-canonical-coverage.json` | review-only |
-| VM-20 Remaining Prose and Appendix Coverage | pp. 66-140 | `data/processed/source_indexes/sources/vm20-remaining-prose-appendix-coverage.json` | review-only |
+| Valuation Manual | pp. 45-46 | `data/processed/source_indexes/sources/vm20-framework-overview.json` | canonical promoted; downstream export blocked |
+| Valuation Manual | pp. 47-47 | `data/processed/source_indexes/sources/vm20-framework-boundary.json` | canonical promoted; downstream export blocked |
+| VM-20 Section 3.C Assumptions | pp. 58-65 | `data/processed/source_indexes/sources/vm20-assumptions-section-3c.json` | canonical promoted; downstream export blocked |
+| VM-20 Current Manual Canonical Coverage (Reviewed Wave) | pp. 48-95 | `data/processed/source_indexes/sources/vm20-canonical-coverage.json` | canonical promoted; downstream export blocked |
+| VM-20 Remaining Prose and Appendix Coverage | pp. 66-140 | `data/processed/source_indexes/sources/vm20-remaining-prose-appendix-coverage.json` | canonical promoted; downstream export blocked |
 | VM-20 Practice Note Companion Coverage | pp. 1-115 | `data/processed/source_indexes/sources/vm20-practice-note-companion.json` | review-only |
 | VM-21 Stochastic Reserve Projection Entry | pp. 153-159 | `data/processed/source_indexes/sources/vm21-sr-projection-entry.json` | review-only |
 | The Application of the Commissioners Reserve Valuation Method to Equity Indexed Life Insurance Policies | pp. 1-11 | `data/processed/source_indexes/sources/ag36-eiul-crvm-guidance.json` | review-only |

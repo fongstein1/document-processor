@@ -234,6 +234,17 @@
         "lineReferencesAvailable": {
           "type": "boolean"
         },
+        "reviewOnly": {
+          "type": "boolean"
+        },
+        "promotionStatus": {
+          "type": "string",
+          "enum": ["not_promoted", "review_candidate", "promoted"]
+        },
+        "promotionDecisionPath": {
+          "type": "string",
+          "minLength": 1
+        },
         "relationships": {
           "type": "array",
           "items": {

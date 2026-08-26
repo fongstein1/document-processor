@@ -1,6 +1,6 @@
 # Master Regulatory Corpus Inventory
 
-Generated: 2026-08-25T00:00:00.000Z
+Generated: 2026-08-26T00:00:00.000Z
 
 This is the planning inventory for the US life and annuity valuation-regulation corpus. It reconciles external-source declarations in processing manifests, tracked review artifacts, and the review-only canonical source-index POC. A review artifact or batch manifest does not prove that a current raw source is available or canonical.
 
@@ -12,6 +12,7 @@ This is the planning inventory for the US life and annuity valuation-regulation 
 - Self-reviews: 94
 - Canonical source packages: 21
 - Canonical chunks: 359
+- Promoted canonical packages / chunks: 6 / 149
 - Awaiting canonicalization: 96
 - Awaiting human review: 1
 - Review-artifact-only sources: 34
@@ -23,7 +24,7 @@ This is the planning inventory for the US life and annuity valuation-regulation 
 | --- | --- | --- | --- | --- |
 | P0 | Complete current 2026 Valuation Manual representation | canonical_partial | ag55-appendix-new-york-7-scenarios, ag55-attribution-aggregation, ag55-cash-flow-testing-details, ag55-definitions-core-terms, ag55-opening-effective-date | Canonicalize the complete manual by chapter with source-bound hierarchy and a separate table profile. |
 | P0 | VM-01 Definitions | reviewed_not_canonical | supporting-vm01-definitions, supporting-vm02-nonforfeiture, supporting-vm25-health-reserves, supporting-vm26-credit-disability, supporting-vm30-detail | Canonicalize definitions first because downstream VM answers depend on stable terms. |
-| P0 | VM-20 Requirements for Principle-Based Reserves for Life Products | canonical_partial | supporting-vm01-definitions, supporting-vm02-nonforfeiture, supporting-vm25-health-reserves, supporting-vm26-credit-disability, supporting-vm30-detail | Review the dedicated VM-20 package, then process the separate structured current-table milestone while preserving the prose/appendix coverage as review-only. |
+| P0 | VM-20 Requirements for Principle-Based Reserves for Life Products | canonical_promoted_prose | supporting-vm01-definitions, supporting-vm02-nonforfeiture, supporting-vm25-health-reserves, supporting-vm26-credit-disability, supporting-vm30-detail | Build and independently review the structured Appendix 2 table proof of concept without altering the promoted prose corpus. |
 | P0 | VM-21 Requirements for Principle-Based Reserves for Variable Annuities | canonical_partial | ag52-early-adoption-text, supporting-vm01-definitions, supporting-vm02-nonforfeiture, supporting-vm25-health-reserves, supporting-vm26-credit-disability | Canonicalize the reviewed VM-21 wave with parent-child structure and table separation. |
 | P0 | VM-22 Requirements for Principle-Based Reserves for Non-Variable Annuities | reviewed_not_canonical | supporting-vm01-definitions, supporting-vm02-nonforfeiture, supporting-vm25-health-reserves, supporting-vm26-credit-disability, supporting-vm30-detail | Canonicalize reviewed VM-22 sections after table and hedging boundaries are confirmed. |
 | P0 | VM-30 Actuarial Opinion and Memorandum Requirements | reviewed_not_canonical | supporting-vm01-definitions, supporting-vm02-nonforfeiture, supporting-vm25-health-reserves, supporting-vm26-credit-disability, supporting-vm30-detail | Canonicalize the reporting requirements and preserve cross-references to VM-31. |
@@ -162,8 +163,8 @@ This is the planning inventory for the US life and annuity valuation-regulation 
 
 ## Governance notes
 
-- All records remain review-only and not Copilot-export eligible.
-- Canonical package status means a package exists in the source-index POC; it does not mean the source is promoted or production-complete.
+- The six VM-20 current-manual prose packages are canonically promoted; other records remain review-only unless a decision record says otherwise.
+- No inventory record is Copilot-export eligible; canonical promotion and downstream export are separate decisions.
 - Candidate relationship edges remain documentary, source-bound, pending human review, and not promoted.
 - Review summaries and self-review commentary are not verbatim source text.
 

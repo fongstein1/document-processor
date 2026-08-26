@@ -90,14 +90,14 @@
   "processing": {
     "createdAt": "2026-07-22T22:52:46.811Z",
     "createdBy": "scripts/build-source-index-poc.mjs",
-    "processingMode": "canonical_index_poc",
-    "canonicality": "poc",
-    "reviewOnly": true,
+    "processingMode": "canonical_index",
+    "canonicality": "canonical",
+    "reviewOnly": false,
     "learnerFacingAllowed": false,
     "appReadyAllowed": false,
     "ragReadyAllowed": false,
-    "promotionStatus": "not_promoted",
-    "notes": "Review-only VM-20 Sections 4, 5, 9 and Appendices 1-2 coverage. Structured current regulatory tables remain a separate later milestone."
+    "promotionStatus": "promoted",
+    "notes": "Promoted for the recorded current-manual prose scope; downstream export remains blocked. Decision: data/manual-input/promotion-decisions/vm20-2026-prose-promotion.json"
   },
   "chunks": [
     {
@@ -212,7 +212,7 @@
       "structuralLocator": "VM-20 / Section 4: Deterministic Reserve",
       "chunkingMethod": "hierarchical_structure",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -326,7 +326,7 @@
       "structuralLocator": "VM-20 / Section 4: Deterministic Reserve / child 1",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -425,7 +425,7 @@
       "structuralLocator": "VM-20 / Section 4: Deterministic Reserve / child 2",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -542,7 +542,7 @@
       "structuralLocator": "VM-20 / Section 5: Stochastic Reserve",
       "chunkingMethod": "hierarchical_structure",
       "retrievalEligible": false,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "context_only_parent"
     },
     {
@@ -659,7 +659,7 @@
       "structuralLocator": "VM-20 / Section 5: Stochastic Reserve / child 1",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -786,7 +786,7 @@
       "structuralLocator": "VM-20 / Section 9 A. General Assumption Requirements",
       "chunkingMethod": "hierarchical_structure",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -910,7 +910,7 @@
       "structuralLocator": "VM-20 / Section 9 A. General Assumption Requirements / child 1",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -1028,7 +1028,7 @@
       "structuralLocator": "VM-20 / Section 9 A. General Assumption Requirements / child 2",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -1149,7 +1149,7 @@
       "structuralLocator": "VM-20 / Section 9 B. Assumption Margins",
       "chunkingMethod": "hierarchical_structure",
       "retrievalEligible": false,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "context_only_parent"
     },
     {
@@ -1270,7 +1270,7 @@
       "structuralLocator": "VM-20 / Section 9 B. Assumption Margins / child 1",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -1426,7 +1426,7 @@
       "structuralLocator": "VM-20 / Section 9 C. Mortality Assumptions",
       "chunkingMethod": "hierarchical_structure",
       "retrievalEligible": false,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "context_only_parent"
     },
     {
@@ -1555,7 +1555,7 @@
       "structuralLocator": "VM-20 / Section 9 C. Mortality Assumptions / child 1",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -1673,7 +1673,7 @@
       "structuralLocator": "VM-20 / Section 9 C. Mortality Assumptions / child 2",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -1795,7 +1795,7 @@
       "structuralLocator": "VM-20 / Section 9 C. Mortality Assumptions / child 3",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -1921,7 +1921,7 @@
       "structuralLocator": "VM-20 / Section 9 C. Mortality Assumptions / child 4",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -2048,7 +2048,7 @@
       "structuralLocator": "VM-20 / Section 9 C. Mortality Assumptions / child 5",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -2176,7 +2176,7 @@
       "structuralLocator": "VM-20 / Section 9 C. Mortality Assumptions / child 6",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -2300,7 +2300,7 @@
       "structuralLocator": "VM-20 / Section 9 C. Mortality Assumptions / child 7",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -2424,7 +2424,7 @@
       "structuralLocator": "VM-20 / Section 9 C. Mortality Assumptions / child 8",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -2552,7 +2552,7 @@
       "structuralLocator": "VM-20 / Section 9 C. Mortality Assumptions / child 9",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -2669,7 +2669,7 @@
       "structuralLocator": "VM-20 / Section 9 C. Mortality Assumptions / child 10",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -2784,7 +2784,7 @@
       "structuralLocator": "VM-20 / Section 9 C. Mortality Assumptions / child 11",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -2901,7 +2901,7 @@
       "structuralLocator": "VM-20 / Section 9 C. Mortality Assumptions / child 12",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -3029,7 +3029,7 @@
       "structuralLocator": "VM-20 / Section 9 C. Mortality Assumptions / child 13",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -3152,7 +3152,7 @@
       "structuralLocator": "VM-20 / Section 9 C. Mortality Assumptions / child 14",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -3280,7 +3280,7 @@
       "structuralLocator": "VM-20 / Section 9 C. Mortality Assumptions / child 15",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -3406,7 +3406,7 @@
       "structuralLocator": "VM-20 / Section 9 C. Mortality Assumptions / child 16",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -3529,7 +3529,7 @@
       "structuralLocator": "VM-20 / Section 9 C. Mortality Assumptions / child 17",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -3670,7 +3670,7 @@
       "structuralLocator": "VM-20 / Section 9 D. Policyholder Behavior Assumptions",
       "chunkingMethod": "hierarchical_structure",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -3785,7 +3785,7 @@
       "structuralLocator": "VM-20 / Section 9 D. Policyholder Behavior Assumptions / child 1",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -3902,7 +3902,7 @@
       "structuralLocator": "VM-20 / Section 9 D. Policyholder Behavior Assumptions / child 2",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -4016,7 +4016,7 @@
       "structuralLocator": "VM-20 / Section 9 D. Policyholder Behavior Assumptions / child 3",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -4150,7 +4150,7 @@
       "structuralLocator": "VM-20 / Section 9 D. Policyholder Behavior Assumptions / child 4",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -4264,7 +4264,7 @@
       "structuralLocator": "VM-20 / Section 9 E. Expense Assumptions",
       "chunkingMethod": "hierarchical_structure",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -4377,7 +4377,7 @@
       "structuralLocator": "VM-20 / Section 9 E. Expense Assumptions / child 1",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -4486,7 +4486,7 @@
       "structuralLocator": "VM-20 / Section 9 E. Expense Assumptions / child 2",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -4612,7 +4612,7 @@
       "structuralLocator": "VM-20 / Section 9 F. Asset Assumptions",
       "chunkingMethod": "hierarchical_structure",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -4730,7 +4730,7 @@
       "structuralLocator": "VM-20 / Section 9 F. Asset Assumptions / child 1",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -4848,7 +4848,7 @@
       "structuralLocator": "VM-20 / Section 9 F. Asset Assumptions / child 2",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -4967,7 +4967,7 @@
       "structuralLocator": "VM-20 / Section 9 F. Asset Assumptions / child 3",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -5079,7 +5079,7 @@
       "structuralLocator": "VM-20 / Section 9 F. Asset Assumptions / child 4",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -5190,7 +5190,7 @@
       "structuralLocator": "VM-20 / Section 9 F. Asset Assumptions / child 5",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -5302,7 +5302,7 @@
       "structuralLocator": "VM-20 / Section 9 F. Asset Assumptions / child 6",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -5414,7 +5414,7 @@
       "structuralLocator": "VM-20 / Section 9 G. Revenue-Sharing Assumptions",
       "chunkingMethod": "hierarchical_structure",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -5524,7 +5524,7 @@
       "structuralLocator": "VM-20 / Section 9 G. Revenue-Sharing Assumptions / child 1",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -5635,7 +5635,7 @@
       "structuralLocator": "VM-20 / Section 9 G. Revenue-Sharing Assumptions / child 2",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -5741,7 +5741,7 @@
       "structuralLocator": "VM-20 / Appendix 1 A. Interest Rates",
       "chunkingMethod": "hierarchical_structure",
       "retrievalEligible": false,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "context_only_parent"
     },
     {
@@ -5847,7 +5847,7 @@
       "structuralLocator": "VM-20 / Appendix 1 A. Interest Rates / child 1",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -5953,7 +5953,7 @@
       "structuralLocator": "VM-20 / Appendix 1 B. Generating Equity Returns",
       "chunkingMethod": "hierarchical_structure",
       "retrievalEligible": false,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "context_only_parent"
     },
     {
@@ -6059,7 +6059,7 @@
       "structuralLocator": "VM-20 / Appendix 1 B. Generating Equity Returns / child 1",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -6165,7 +6165,7 @@
       "structuralLocator": "VM-20 / Appendix 1 C. Generating Bond Fund Returns",
       "chunkingMethod": "hierarchical_structure",
       "retrievalEligible": false,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "context_only_parent"
     },
     {
@@ -6271,7 +6271,7 @@
       "structuralLocator": "VM-20 / Appendix 1 C. Generating Bond Fund Returns / child 1",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -6376,7 +6376,7 @@
       "structuralLocator": "VM-20 / Appendix 1 D. Source of U.S. Treasury Interest Rates and Mean Reversion Benchmarks",
       "chunkingMethod": "hierarchical_structure",
       "retrievalEligible": false,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "context_only_parent"
     },
     {
@@ -6481,7 +6481,7 @@
       "structuralLocator": "VM-20 / Appendix 1 D. Source of U.S. Treasury Interest Rates and Mean Reversion Benchmarks / child 1",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -6588,7 +6588,7 @@
       "structuralLocator": "VM-20 / Appendix 1 E. Use of Non-Prescribed Scenario Generators",
       "chunkingMethod": "hierarchical_structure",
       "retrievalEligible": false,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "context_only_parent"
     },
     {
@@ -6695,7 +6695,7 @@
       "structuralLocator": "VM-20 / Appendix 1 E. Use of Non-Prescribed Scenario Generators / child 1",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -6802,7 +6802,7 @@
       "structuralLocator": "VM-20 / Appendix 1 F. SERT scenario set",
       "chunkingMethod": "hierarchical_structure",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -6908,7 +6908,7 @@
       "structuralLocator": "VM-20 / Appendix 1 F. SERT scenario set / child 1",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -7011,7 +7011,7 @@
       "structuralLocator": "VM-20 / Appendix 1 F. SERT scenario set / child 2",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -7116,7 +7116,7 @@
       "structuralLocator": "VM-20 / Appendix 1 G. Governance",
       "chunkingMethod": "hierarchical_structure",
       "retrievalEligible": false,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "context_only_parent"
     },
     {
@@ -7221,7 +7221,7 @@
       "structuralLocator": "VM-20 / Appendix 1 G. Governance / child 1",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -7328,7 +7328,7 @@
       "structuralLocator": "VM-20 / Appendix 2 A. Baseline Annual Default Cost Factors",
       "chunkingMethod": "hierarchical_structure",
       "retrievalEligible": false,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "context_only_parent"
     },
     {
@@ -7435,7 +7435,7 @@
       "structuralLocator": "VM-20 / Appendix 2 A. Baseline Annual Default Cost Factors / child 1",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -7545,7 +7545,7 @@
       "structuralLocator": "VM-20 / Appendix 2 B. Cumulative Default Rates Used in Baseline Annual Default Cost Factors",
       "chunkingMethod": "hierarchical_structure",
       "retrievalEligible": false,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "context_only_parent"
     },
     {
@@ -7655,7 +7655,7 @@
       "structuralLocator": "VM-20 / Appendix 2 B. Cumulative Default Rates Used in Baseline Annual Default Cost Factors / child 1",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -7765,7 +7765,7 @@
       "structuralLocator": "VM-20 / Appendix 2 C. Recovery Rate Used in Baseline Annual Default Cost Factors",
       "chunkingMethod": "hierarchical_structure",
       "retrievalEligible": false,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "context_only_parent"
     },
     {
@@ -7875,7 +7875,7 @@
       "structuralLocator": "VM-20 / Appendix 2 C. Recovery Rate Used in Baseline Annual Default Cost Factors / child 1",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -7984,7 +7984,7 @@
       "structuralLocator": "VM-20 / Appendix 2 D. Current Market Benchmark Spreads",
       "chunkingMethod": "hierarchical_structure",
       "retrievalEligible": false,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "context_only_parent"
     },
     {
@@ -8093,7 +8093,7 @@
       "structuralLocator": "VM-20 / Appendix 2 D. Current Market Benchmark Spreads / child 1",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -8202,7 +8202,7 @@
       "structuralLocator": "VM-20 / Appendix 2 E. Long-Term Benchmark Spreads",
       "chunkingMethod": "hierarchical_structure",
       "retrievalEligible": false,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "context_only_parent"
     },
     {
@@ -8311,7 +8311,7 @@
       "structuralLocator": "VM-20 / Appendix 2 E. Long-Term Benchmark Spreads / child 1",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -8413,7 +8413,7 @@
       "structuralLocator": "VM-20 / Appendix 2 F. Current Benchmark Swap Spreads",
       "chunkingMethod": "hierarchical_structure",
       "retrievalEligible": false,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "context_only_parent"
     },
     {
@@ -8515,7 +8515,7 @@
       "structuralLocator": "VM-20 / Appendix 2 F. Current Benchmark Swap Spreads / child 1",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -8624,7 +8624,7 @@
       "structuralLocator": "VM-20 / Appendix 2 G. Long-Term Benchmark Swap Spreads",
       "chunkingMethod": "hierarchical_structure",
       "retrievalEligible": false,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "context_only_parent"
     },
     {
@@ -8733,7 +8733,7 @@
       "structuralLocator": "VM-20 / Appendix 2 G. Long-Term Benchmark Swap Spreads / child 1",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -8840,7 +8840,7 @@
       "structuralLocator": "VM-20 / Appendix 2 H. Tables",
       "chunkingMethod": "hierarchical_structure",
       "retrievalEligible": false,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "context_only_parent"
     },
     {
@@ -8947,7 +8947,7 @@
       "structuralLocator": "VM-20 / Appendix 2 H. Tables / child 1",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     }
   ],
@@ -8962,8 +8962,8 @@
   "exportHints": {
     "jsonlEligible": true,
     "csvEligible": true,
-    "vectorEligible": true,
-    "notes": "Backend-neutral POC exports generated from review-only batch artifacts."
+    "vectorEligible": false,
+    "notes": "Canonical JSONL/CSV serialization is available for review and audit; vector, learner, app, RAG, and Copilot export remain blocked pending a separate decision."
   },
   "notes": "Review-only VM-20 Sections 4, 5, 9 and Appendices 1-2 coverage. Structured current regulatory tables remain a separate later milestone.",
   "extensions": {
@@ -8973,6 +8973,8 @@
       "batch-233",
       "batch-234"
     ],
-    "sourceIndexGeneratedBy": "build-source-index-poc"
+    "sourceIndexGeneratedBy": "build-source-index-poc",
+    "promotionDecisionId": "vm20-2026-prose-promotion-2026-08-26",
+    "promotionDecisionPath": "data/manual-input/promotion-decisions/vm20-2026-prose-promotion.json"
   }
 }

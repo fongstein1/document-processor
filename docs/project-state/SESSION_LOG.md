@@ -845,3 +845,12 @@
   review-only and not export eligible.
 - Added deterministic inventory and hierarchy validation checks; current
   source-index and inventory validators pass.
+
+## 2026-08-26
+
+- Recorded and applied the final independent-review decision for the six
+  current-manual VM-20 prose packages (149 chunks).
+- Preserved prior review history and kept structured tables, the 2020 practice
+  note, relationship candidates, and downstream exports outside the promotion.
+- Updated the source-index governance metadata, review package, corpus
+  inventory, backlog, completeness report, and project-state handoff.

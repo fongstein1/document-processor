@@ -3,11 +3,20 @@
   "evaluationId": "source-index-poc-2026-07-21-retrieval",
   "repositoryManifestId": "source-index-poc-2026-07-21",
   "method": "keyword_overlap_baseline",
-  "queryCount": 44,
+  "supportedQueryCount": 41,
+  "unsupportedQueryCount": 3,
   "top1HitCount": 34,
   "top3HitCount": 41,
-  "top3Coverage": 0.9318181818181818,
+  "top5HitCount": 41,
+  "top1Accuracy": 0.8292682926829268,
+  "top3Accuracy": 1,
+  "top5Accuracy": 1,
   "meanReciprocalRank": 0.9024390243902439,
+  "sourceFamilyAccuracy": 0.9512195121951219,
+  "authorityLevelAccuracy": 0.926829268292683,
+  "citationAvailability": 0,
+  "multiChunkEvidenceRecall": 0.14285714285714285,
+  "unsupportedQueryPrecision": 0.3333333333333333,
   "deduplication": {
     "topN": 5,
     "rawTopKCollisionCount": 46,
@@ -294,6 +303,269 @@
         ]
       }
     ]
+  },
+  "categoryStats": {
+    "exact_title": {
+      "queryCount": 5,
+      "top1Accuracy": 1,
+      "top3Accuracy": 1,
+      "top5Accuracy": 1,
+      "meanReciprocalRank": 1,
+      "unsupportedCount": 0,
+      "unsupportedPrecision": 0
+    },
+    "framework_overview": {
+      "queryCount": 1,
+      "top1Accuracy": 1,
+      "top3Accuracy": 1,
+      "top5Accuracy": 1,
+      "meanReciprocalRank": 1,
+      "unsupportedCount": 0,
+      "unsupportedPrecision": 0
+    },
+    "mechanics_boundary": {
+      "queryCount": 1,
+      "top1Accuracy": 1,
+      "top3Accuracy": 1,
+      "top5Accuracy": 1,
+      "meanReciprocalRank": 1,
+      "unsupportedCount": 0,
+      "unsupportedPrecision": 0
+    },
+    "multi_chunk": {
+      "queryCount": 6,
+      "top1Accuracy": 0.8333333333333334,
+      "top3Accuracy": 1,
+      "top5Accuracy": 1,
+      "meanReciprocalRank": 0.9166666666666666,
+      "unsupportedCount": 0,
+      "unsupportedPrecision": 0
+    },
+    "hierarchical_parent_child": {
+      "queryCount": 1,
+      "top1Accuracy": 0,
+      "top3Accuracy": 1,
+      "top5Accuracy": 1,
+      "meanReciprocalRank": 0.3333333333333333,
+      "unsupportedCount": 0,
+      "unsupportedPrecision": 0
+    },
+    "vm20_npr": {
+      "queryCount": 1,
+      "top1Accuracy": 1,
+      "top3Accuracy": 1,
+      "top5Accuracy": 1,
+      "meanReciprocalRank": 1,
+      "unsupportedCount": 0,
+      "unsupportedPrecision": 0
+    },
+    "vm20_dr": {
+      "queryCount": 1,
+      "top1Accuracy": 1,
+      "top3Accuracy": 1,
+      "top5Accuracy": 1,
+      "meanReciprocalRank": 1,
+      "unsupportedCount": 0,
+      "unsupportedPrecision": 0
+    },
+    "vm20_sr": {
+      "queryCount": 1,
+      "top1Accuracy": 1,
+      "top3Accuracy": 1,
+      "top5Accuracy": 1,
+      "meanReciprocalRank": 1,
+      "unsupportedCount": 0,
+      "unsupportedPrecision": 0
+    },
+    "vm20_exclusions": {
+      "queryCount": 1,
+      "top1Accuracy": 1,
+      "top3Accuracy": 1,
+      "top5Accuracy": 1,
+      "meanReciprocalRank": 1,
+      "unsupportedCount": 0,
+      "unsupportedPrecision": 0
+    },
+    "vm20_cash_flow_models": {
+      "queryCount": 1,
+      "top1Accuracy": 1,
+      "top3Accuracy": 1,
+      "top5Accuracy": 1,
+      "meanReciprocalRank": 1,
+      "unsupportedCount": 0,
+      "unsupportedPrecision": 0
+    },
+    "vm20_assets": {
+      "queryCount": 1,
+      "top1Accuracy": 1,
+      "top3Accuracy": 1,
+      "top5Accuracy": 1,
+      "meanReciprocalRank": 1,
+      "unsupportedCount": 0,
+      "unsupportedPrecision": 0
+    },
+    "vm20_reinsurance": {
+      "queryCount": 1,
+      "top1Accuracy": 1,
+      "top3Accuracy": 1,
+      "top5Accuracy": 1,
+      "meanReciprocalRank": 1,
+      "unsupportedCount": 0,
+      "unsupportedPrecision": 0
+    },
+    "vm20_assumptions_comparison": {
+      "queryCount": 1,
+      "top1Accuracy": 1,
+      "top3Accuracy": 1,
+      "top5Accuracy": 1,
+      "meanReciprocalRank": 1,
+      "unsupportedCount": 0,
+      "unsupportedPrecision": 0
+    },
+    "vm20_companion_expense": {
+      "queryCount": 1,
+      "top1Accuracy": 1,
+      "top3Accuracy": 1,
+      "top5Accuracy": 1,
+      "meanReciprocalRank": 1,
+      "unsupportedCount": 0,
+      "unsupportedPrecision": 0
+    },
+    "vm20_companion_assumptions": {
+      "queryCount": 1,
+      "top1Accuracy": 0,
+      "top3Accuracy": 1,
+      "top5Accuracy": 1,
+      "meanReciprocalRank": 0.5,
+      "unsupportedCount": 0,
+      "unsupportedPrecision": 0
+    },
+    "vm20_companion_margins": {
+      "queryCount": 1,
+      "top1Accuracy": 1,
+      "top3Accuracy": 1,
+      "top5Accuracy": 1,
+      "meanReciprocalRank": 1,
+      "unsupportedCount": 0,
+      "unsupportedPrecision": 0
+    },
+    "vm20_section4_direct": {
+      "queryCount": 1,
+      "top1Accuracy": 1,
+      "top3Accuracy": 1,
+      "top5Accuracy": 1,
+      "meanReciprocalRank": 1,
+      "unsupportedCount": 0,
+      "unsupportedPrecision": 0
+    },
+    "vm20_section5_methodology": {
+      "queryCount": 1,
+      "top1Accuracy": 1,
+      "top3Accuracy": 1,
+      "top5Accuracy": 1,
+      "meanReciprocalRank": 1,
+      "unsupportedCount": 0,
+      "unsupportedPrecision": 0
+    },
+    "vm20_cross_section_comparison": {
+      "queryCount": 1,
+      "top1Accuracy": 1,
+      "top3Accuracy": 1,
+      "top5Accuracy": 1,
+      "meanReciprocalRank": 1,
+      "unsupportedCount": 0,
+      "unsupportedPrecision": 0
+    },
+    "vm20_section9_applicability": {
+      "queryCount": 1,
+      "top1Accuracy": 1,
+      "top3Accuracy": 1,
+      "top5Accuracy": 1,
+      "meanReciprocalRank": 1,
+      "unsupportedCount": 0,
+      "unsupportedPrecision": 0
+    },
+    "vm20_parent_context": {
+      "queryCount": 1,
+      "top1Accuracy": 1,
+      "top3Accuracy": 1,
+      "top5Accuracy": 1,
+      "meanReciprocalRank": 1,
+      "unsupportedCount": 0,
+      "unsupportedPrecision": 0
+    },
+    "vm20_section9_exceptions": {
+      "queryCount": 1,
+      "top1Accuracy": 0,
+      "top3Accuracy": 1,
+      "top5Accuracy": 1,
+      "meanReciprocalRank": 0.5,
+      "unsupportedCount": 0,
+      "unsupportedPrecision": 0
+    },
+    "vm20_cross_section": {
+      "queryCount": 1,
+      "top1Accuracy": 0,
+      "top3Accuracy": 1,
+      "top5Accuracy": 1,
+      "meanReciprocalRank": 0.5,
+      "unsupportedCount": 0,
+      "unsupportedPrecision": 0
+    },
+    "vm20_appendix1_direct": {
+      "queryCount": 1,
+      "top1Accuracy": 1,
+      "top3Accuracy": 1,
+      "top5Accuracy": 1,
+      "meanReciprocalRank": 1,
+      "unsupportedCount": 0,
+      "unsupportedPrecision": 0
+    },
+    "vm20_appendix2_methodology": {
+      "queryCount": 1,
+      "top1Accuracy": 0,
+      "top3Accuracy": 1,
+      "top5Accuracy": 1,
+      "meanReciprocalRank": 0.3333333333333333,
+      "unsupportedCount": 0,
+      "unsupportedPrecision": 0
+    },
+    "unsupported": {
+      "queryCount": 3,
+      "top1Accuracy": 0,
+      "top3Accuracy": 0,
+      "top5Accuracy": 0,
+      "meanReciprocalRank": 0,
+      "unsupportedCount": 3,
+      "unsupportedPrecision": 0.3333333333333333
+    },
+    "vm20_cross_document": {
+      "queryCount": 1,
+      "top1Accuracy": 1,
+      "top3Accuracy": 1,
+      "top5Accuracy": 1,
+      "meanReciprocalRank": 1,
+      "unsupportedCount": 0,
+      "unsupportedPrecision": 0
+    },
+    "relationship": {
+      "queryCount": 1,
+      "top1Accuracy": 1,
+      "top3Accuracy": 1,
+      "top5Accuracy": 1,
+      "meanReciprocalRank": 1,
+      "unsupportedCount": 0,
+      "unsupportedPrecision": 0
+    },
+    "pricing_domain": {
+      "queryCount": 5,
+      "top1Accuracy": 0.8,
+      "top3Accuracy": 1,
+      "top5Accuracy": 1,
+      "meanReciprocalRank": 0.8666666666666668,
+      "unsupportedCount": 0,
+      "unsupportedPrecision": 0
+    }
   },
   "queries": [
     {
@@ -6572,5 +6844,5 @@
       "resultLabel": "false_positive"
     }
   ],
-  "notes": "Legacy compatibility retrieval evaluation output."
+  "notes": "Canonical retrieval evaluation generated from the source-index POC."
 }

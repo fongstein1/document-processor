@@ -1,11 +1,13 @@
 # VM-20 Canonical Coverage Review Package
 
-- Status: review-only
-- Provisional disposition: APPROVE WITH FIXES
+- Status: canonical promoted (current-manual prose scope only)
+- Final disposition: APPROVE
+- Prior provisional disposition retained: APPROVE WITH FIXES
 - Learner-facing: no
 - App-ready: no
 - RAG-ready: no
-- Promoted: no
+- Promoted: yes
+- Promotion decision: `data/manual-input/promotion-decisions/vm20-2026-prose-promotion.json`
 
 ## Coverage summary
 
@@ -50,19 +52,18 @@
 ## Promotion readiness
 
 - Blocking findings closed: Yes
-- Automated promotion: no; human promotion decision remains required.
+- Automated promotion: no; the final independent-review decision is recorded.
 
 ## Human review
 
-The targeted current-manual prose and appendix wave is source-bound and hierarchically retrievable. Structured current tables, page-image backstop, line references, and historical companion guidance still require explicit reviewer disposition before promotion.
+Independent review approved the source-bound current-manual prose scope after the targeted blockers were closed. Structured tables, downstream export, historical companion guidance, and review-only relationship candidates remain outside the decision.
 
-- Confirm current-manual wording and page citations against the approved raw source.
-- Confirm parent/child boundaries and any child that crosses a requirement, exception, qualification, or table-heading boundary.
-- Review cross-reference candidates without inferring legal effect or supersession.
-- Confirm that Sections 4, 5, 9 and Appendices 1-2 are complete for the stated prose boundaries and that Appendix 2 tables remain deferred.
-- Decide whether the companion practice-note package is useful as implementation context after currentness review.
-- Keep all packages review-only unless a separate promotion decision is recorded.
+- Preserve the approved current-manual source text, hierarchy, citations, and retrieval behavior.
+- Keep Appendix 2 structured values review-only until their own independent table review and promotion decision.
+- Keep the 2020 practice note non-binding, historical, review-only, and excluded from canonical authority.
+- Keep relationship candidates pending and do not infer legal effect or supersession.
+- Require a separate decision before learner-facing, app, RAG, or Copilot export use.
 
 ## Governance boundary
 
-This package is a review handoff. Validation demonstrates structural integrity only; it does not approve wording, establish legal effect, or promote content for learners, applications, RAG, or Copilot export.
+Promotion applies only to the six reviewed current-manual prose packages. It does not promote structured tables, the 2020 practice note, relationship candidates, or any learner-facing, application, RAG, or Copilot export use.

@@ -16,6 +16,8 @@ const requiredFiles = [
     path.join(repoRoot, 'docs', 'retrieval_readiness_report.md'),
     path.join(repoRoot, 'data', 'schemas', 'source-index.schema.json'),
     path.join(repoRoot, 'data', 'schemas', 'repository-manifest.schema.json'),
+    path.join(repoRoot, 'data', 'schemas', 'canonical-promotion-decision.schema.json'),
+    path.join(repoRoot, 'data', 'manual-input', 'promotion-decisions', 'vm20-2026-prose-promotion.json'),
     path.join(repoRoot, 'data', 'schemas', 'document-classification.schema.json'),
     path.join(repoRoot, 'docs', 'prompts', 'generic_document_processing_prompt.md'),
     path.join(repoRoot, 'docs', 'prompts', 'pricing_document_processing_prompt.md'),
@@ -109,6 +111,11 @@ const main = async () => {
   }
 
   const config = await readJson(configPath)
+  const promotionDecision = await readJson(path.resolve(repoRoot, config.promotionDecisionPath))
+  const promotedSourceIds = new Set(promotionDecision.scope?.sourceIds ?? [])
+  if (promotionDecision.decision !== 'approved_for_canonical_promotion' || promotionDecision.reviewEvidence?.blockersClosed !== true) {
+    fail('VM-20 promotion decision is not approved with closed blockers.')
+  }
   const repositoryManifestPath = path.join(outputRoot, 'repository-manifest.json')
   const repositoryManifest = await readJson(repositoryManifestPath)
   const exportManifestPath = path.join(outputRoot, 'exports', 'export_manifest.json')
@@ -195,6 +202,15 @@ const main = async () => {
       }
     }
     validateHierarchy(sourceIndex)
+    const promoted = promotedSourceIds.has(source.sourceId)
+    if (promoted) {
+      if (sourceIndex.processing?.processingMode !== 'canonical_index' || sourceIndex.processing?.canonicality !== 'canonical' || sourceIndex.processing?.reviewOnly !== false || sourceIndex.processing?.promotionStatus !== 'promoted') {
+        fail(`Promoted source package has incorrect governance metadata: ${source.sourceId}.`)
+      }
+      if (sourceIndex.chunks.some((chunk) => chunk.promotionEligible !== true)) fail(`Promoted source contains a non-promotable chunk: ${source.sourceId}.`)
+    } else if (sourceIndex.processing?.promotionStatus !== 'not_promoted' || sourceIndex.processing?.reviewOnly !== true || sourceIndex.chunks.some((chunk) => chunk.promotionEligible !== false)) {
+      fail(`Unpromoted source package lost its review-only guardrail: ${source.sourceId}.`)
+    }
     const markdown = await fs.readFile(sourceMdPath, 'utf8')
     if (!markdown.includes(source.sourceTitle) || !markdown.includes(source.sourceId)) {
       fail(`Markdown companion for ${source.sourceId} does not include the source title and ID.`)
@@ -223,12 +239,15 @@ const main = async () => {
     fail('Missing dedicated VM-20 review package.')
   }
   const vm20ReviewPackage = await readJson(vm20ReviewPackagePath)
-  if (vm20ReviewPackage.status !== 'review_only' || vm20ReviewPackage.promoted !== false) {
-    fail('VM-20 review package must remain review-only and unpromoted.')
+  if (vm20ReviewPackage.status !== 'canonical_promoted' || vm20ReviewPackage.promoted !== true) {
+    fail('VM-20 review package must record the approved canonical promotion.')
   }
-  if (vm20ReviewPackage.promotionReadiness?.automatedPromotion !== false || vm20ReviewPackage.promotionReadiness?.blockersClosed !== true) {
-    fail('VM-20 promotion readiness must close the targeted blockers without automatically promoting the package.')
+  if (vm20ReviewPackage.promotionReadiness?.automatedPromotion !== false || vm20ReviewPackage.promotionReadiness?.blockersClosed !== true || vm20ReviewPackage.humanReview?.finalDisposition !== 'APPROVE') {
+    fail('VM-20 promotion must retain closed blockers and the final independent-review decision.')
   }
+  if (vm20ReviewPackage.promotionDecision?.decisionRecordPath !== config.promotionDecisionPath || vm20ReviewPackage.promotionDecision?.downstreamEligibility?.copilotExportEligible !== false) fail('VM-20 promotion boundary or downstream export guardrail is missing.')
+  const promotedChunkCount = [...promotedSourceIds].reduce((sum, sourceId) => sum + (config.sources.find((source) => source.sourceId === sourceId)?.expectedChunkCount ?? config.sources.find((source) => source.sourceId === sourceId)?.chunks?.length ?? 0), 0)
+  if (promotedChunkCount !== promotionDecision.scope.expectedChunkCount || promotedChunkCount !== 149) fail(`VM-20 promotion chunk count mismatch: ${promotedChunkCount}.`)
   if ((vm20ReviewPackage.coverage?.parentCount ?? 0) < 10 || (vm20ReviewPackage.coverage?.childCount ?? 0) < 20) {
     fail('VM-20 review package does not contain the expected hierarchical coverage.')
   }

@@ -830,3 +830,13 @@ conclusion was inferred. Evaluation and unresolved-candidate reports are in
 `docs/review/reg213_relationship_registry_unresolved.md`. The received local
 inventory remains an ignored selection input and is not copied into tracked
 artifacts.
+
+## VM-20 2026 prose promotion
+
+The six reviewed current-manual VM-20 prose packages are canonically promoted
+under `data/manual-input/promotion-decisions/vm20-2026-prose-promotion.json`.
+The decision covers 149 existing source-bound chunks and changes governance
+metadata only. It does not include the 2020 practice note, structured Appendix
+2 rows or values, relationship candidates, or learner/app/RAG/Copilot export.
+The next VM-20 milestone is the separately modeled, independently reviewed
+Appendix 2 structured-table proof of concept.

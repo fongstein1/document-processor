@@ -124,7 +124,9 @@
             "promotionState": { "type": "string" },
             "canonical": { "type": "boolean" },
             "copilotExportEligible": { "type": "boolean" },
-            "exclusionReason": { "type": ["string", "null"] }
+            "exclusionReason": { "type": ["string", "null"] },
+            "promotionRecordPaths": { "type": "array", "items": { "type": "string" } },
+            "promotedSourcePackageIds": { "type": "array", "items": { "type": "string" } }
           }
         },
         "retrieval": {

@@ -27,6 +27,11 @@ const main = async () => {
     if (!inventory.corpusTargets.some((target) => target.priority === priority)) fail(`Inventory is missing ${priority} targets.`)
   }
   if (inventory.summary.canonicalSourcePackages < 20 || inventory.summary.canonicalChunks < 247) fail('Inventory snapshot does not include the expanded VM-20 canonical coverage packages; regenerate intentionally.')
+  if (inventory.summary.promotedCanonicalPackages !== 6 || inventory.summary.promotedCanonicalChunks !== 149) fail('Inventory does not reflect the scope-specific VM-20 prose promotion.')
+  const vm20Target = inventory.corpusTargets.find((target) => target.targetId === 'vm-20')
+  if (vm20Target?.assessment !== 'canonical_promoted_prose') fail('VM-20 target does not record promoted prose with structured tables still separate.')
+  const vm20ManualRecord = inventory.sources.find((source) => source.filename === 'pbr_data_valuation_manual_2026.pdf')
+  if (!vm20ManualRecord?.review?.promotionRecordPaths?.includes('data/manual-input/promotion-decisions/vm20-2026-prose-promotion.json') || vm20ManualRecord.review.copilotExportEligible !== false) fail('VM-20 inventory promotion record or export boundary is missing.')
   if (inventory.summary.candidateRelationships !== 23 || inventory.summary.promotedRelationships !== 0) fail('Relationship governance counts are inconsistent with the review-only Reg-213 registry.')
   for (const file of ['master-regulatory-corpus-inventory.md', 'regulatory-gap-assessment.md', 'canonicalization-backlog.md', 'corpus-completeness-report.md']) {
     try { await fs.access(path.join(path.dirname(inventoryPath), file)) } catch { fail(`Missing corpus report: ${file}.`) }

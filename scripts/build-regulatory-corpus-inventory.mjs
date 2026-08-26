@@ -9,6 +9,7 @@ const outputRoot = path.join(repoRoot, 'data', 'processed', 'regulatory_corpus')
 const batchesRoot = path.join(repoRoot, 'data', 'work', 'batches')
 const reviewRoot = path.join(repoRoot, 'docs', 'review')
 const canonicalRoot = path.join(repoRoot, 'data', 'processed', 'source_indexes')
+const vm20PromotionDecisionPath = 'data/manual-input/promotion-decisions/vm20-2026-prose-promotion.json'
 
 const readJson = async (filePath) => JSON.parse(await fs.readFile(filePath, 'utf8'))
 const exists = async (filePath) => fs.access(filePath).then(() => true).catch(() => false)
@@ -30,7 +31,7 @@ const compactPath = (filePath) => {
 const targetDefinitions = [
   ['valuation-manual-2026-complete', 'Complete current 2026 Valuation Manual representation', 'valuation_manual_pdfs', 'P0', 'current', 'The source PDF is declared in existing batch manifests, but the canonical layer is slice-based rather than complete.', 'Canonicalize the complete manual by chapter with source-bound hierarchy and a separate table profile.'],
   ['vm-01', 'VM-01 Definitions', 'valuation_manual_pdfs', 'P0', 'current', 'The 2026 manual is present and VM-01 is named in the supporting-wave plan, but no canonical VM-01 package is present.', 'Canonicalize definitions first because downstream VM answers depend on stable terms.'],
-  ['vm-20', 'VM-20 Requirements for Principle-Based Reserves for Life Products', 'valuation_manual_pdfs', 'P0', 'current', 'VM-20 now has a 324-chunk review-only coverage set: 149 current-manual chunks across the existing slices and new authoritative prose/appendix batches, plus 175 separately labeled companion-guidance chunks. Structured current Appendix 2 tables remain deferred.', 'Review the dedicated VM-20 package, then process the separate structured current-table milestone while preserving the prose/appendix coverage as review-only.'],
+  ['vm-20', 'VM-20 Requirements for Principle-Based Reserves for Life Products', 'valuation_manual_pdfs', 'P0', 'current', 'VM-20 has 149 canonically promoted current-manual prose chunks plus 175 separately labeled review-only companion-guidance chunks. Structured current Appendix 2 tables remain a separate review milestone.', 'Build and independently review the structured Appendix 2 table proof of concept without altering the promoted prose corpus.'],
   ['vm-21', 'VM-21 Requirements for Principle-Based Reserves for Variable Annuities', 'valuation_manual_pdfs', 'P0', 'current', 'VM-21 has a reviewed controlled wave and one canonical projection-entry package, but not a complete chapter package.', 'Canonicalize the reviewed VM-21 wave with parent-child structure and table separation.'],
   ['vm-22', 'VM-22 Requirements for Principle-Based Reserves for Non-Variable Annuities', 'valuation_manual_pdfs', 'P0', 'current', 'VM-22 is represented in reviewed ignored batches but has no current canonical source package.', 'Canonicalize reviewed VM-22 sections after table and hedging boundaries are confirmed.'],
   ['vm-30', 'VM-30 Actuarial Opinion and Memorandum Requirements', 'valuation_manual_pdfs', 'P0', 'current', 'VM-30 appears in the supporting-wave plan and reviewed slices, but no canonical package is present.', 'Canonicalize the reporting requirements and preserve cross-references to VM-31.'],
@@ -175,6 +176,10 @@ const targetAssessment = (target, canonical, batchEvidence, reviewArtifacts) => 
   else if (evidenceMatches.length > 0) assessment = 'reviewed_not_canonical'
   else if (reviewMatches.length > 0) assessment = 'review_artifact_only'
   if (id === 'valuation-manual-2026-complete' && canonicalMatches.length > 0) assessment = 'canonical_partial'
+  if (id === 'vm-20') {
+    const promotedVm20 = canonical.filter((pkg) => pkg.source.authorityLevel === 'manual_section' && pkg.source.sourceId.startsWith('vm20-') && pkg.processing?.promotionStatus === 'promoted')
+    if (promotedVm20.length === 6) assessment = 'canonical_promoted_prose'
+  }
   return { assessment, evidenceSourceIds: unique([...canonicalMatches.map((pkg) => pkg.source.sourceId), ...evidenceMatches.flatMap((source) => source.sourceIds), ...reviewMatches.map((artifact) => artifact.id)]) }
 }
 
@@ -190,6 +195,7 @@ const buildInventory = async () => {
     seenDocumentKeys.add(key)
     const matchedReviews = matchReviewArtifacts(document, reviewArtifacts)
     const canonicalMatches = canonical.filter((pkg) => norm(pkg.source.filename) === norm(document.filename))
+    const promotedMatches = canonicalMatches.filter((pkg) => pkg.processing?.promotionStatus === 'promoted')
     const chunks = canonicalMatches.flatMap((pkg) => pkg.chunks ?? [])
     const [priority, priorityReason] = priorityForSource(document)
     const sourceIds = unique(document.sourceIds)
@@ -227,11 +233,12 @@ const buildInventory = async () => {
       review: {
         reviewRequired: true,
         reviewCompleted,
-        blockingFindings: reviewCompleted ? ['Source remains review-only; promotion decision is not recorded in this inventory.'] : ['No tracked review index matched this source record.'],
-        promotionState: canonicalMatches.length ? 'not_promoted' : 'not_canonical',
+        blockingFindings: promotedMatches.length > 0 ? ['Promotion is scope-specific; unlisted manual chapters, structured tables, companion guidance, and downstream exports remain outside the decision.'] : reviewCompleted ? ['Source remains review-only; promotion decision is not recorded in this inventory.'] : ['No tracked review index matched this source record.'],
+        promotionState: promotedMatches.length > 0 ? 'partially_promoted_scopes' : canonicalMatches.length ? 'not_promoted' : 'not_canonical',
         canonical: canonicalMatches.length > 0,
         copilotExportEligible: false,
-        exclusionReason: 'Human promotion and export approval are intentionally separate from processing validation.'
+        exclusionReason: promotedMatches.length > 0 ? 'The VM-20 prose scope is canonical, but Copilot export requires a separate explicit approval.' : 'Human promotion and export approval are intentionally separate from processing validation.',
+        ...(promotedMatches.length > 0 ? { promotionRecordPaths: [vm20PromotionDecisionPath], promotedSourcePackageIds: unique(promotedMatches.map((pkg) => pkg.source.sourceId)) } : {})
       },
       retrieval: {
         associatedQuestions: [],
@@ -287,6 +294,8 @@ const buildInventory = async () => {
     canonicalChunks: canonical.reduce((sum, pkg) => sum + (pkg.chunks?.length ?? 0), 0),
     vm20CurrentManualChunks: canonical.filter((pkg) => pkg.source.authorityLevel === 'manual_section' && pkg.source.sourceId.startsWith('vm20-')).reduce((sum, pkg) => sum + (pkg.chunks?.length ?? 0), 0),
     vm20CompanionChunks: canonical.filter((pkg) => pkg.source.sourceId === 'vm20-practice-note-companion').reduce((sum, pkg) => sum + (pkg.chunks?.length ?? 0), 0),
+    promotedCanonicalPackages: canonical.filter((pkg) => pkg.processing?.promotionStatus === 'promoted').length,
+    promotedCanonicalChunks: canonical.filter((pkg) => pkg.processing?.promotionStatus === 'promoted').reduce((sum, pkg) => sum + (pkg.chunks?.length ?? 0), 0),
     sourcesAwaitingCanonicalization: sources.filter((source) => source.review.canonical === false && source.review.reviewCompleted).length,
     sourcesAwaitingHumanReview: sources.filter((source) => source.review.reviewCompleted === false).length,
     reviewArtifactOnlySources: sources.filter((source) => source.availability.status === 'represented_only_by_review_artifact').length,
@@ -297,7 +306,7 @@ const buildInventory = async () => {
     historicalProposedDeferred: sources.filter((source) => source.currentness.includes('historical') || source.currentness.includes('proposed')).length + corpusTargets.filter((target) => ['historical', 'proposed'].includes(target.intendedStatus)).length,
     currentSourceTextFidelityDistribution: fidelityCounts
   }
-  return { schemaVersion: '1.0', inventoryId: 'regulatory-corpus-inventory-2026-08-25', generatedAt: '2026-08-25T00:00:00.000Z', scope: { domain: 'US life and annuity valuation regulation', rawSourcePolicy: 'Raw source remains external; repository paths are not authoritative proof of current file availability.', canonicalLayer: 'data/processed/source_indexes' }, summary, sources, corpusTargets }
+  return { schemaVersion: '1.0', inventoryId: 'regulatory-corpus-inventory-2026-08-26', generatedAt: '2026-08-26T00:00:00.000Z', scope: { domain: 'US life and annuity valuation regulation', rawSourcePolicy: 'Raw source remains external; repository paths are not authoritative proof of current file availability.', canonicalLayer: 'data/processed/source_indexes' }, summary, sources, corpusTargets }
 }
 
 const buildMarkdown = (inventory) => {
@@ -313,6 +322,7 @@ const buildMarkdown = (inventory) => {
     `- Self-reviews: ${s.selfReviews}`,
     `- Canonical source packages: ${s.canonicalSourcePackages}`,
     `- Canonical chunks: ${s.canonicalChunks}`,
+    `- Promoted canonical packages / chunks: ${s.promotedCanonicalPackages} / ${s.promotedCanonicalChunks}`,
     `- Awaiting canonicalization: ${s.sourcesAwaitingCanonicalization}`,
     `- Awaiting human review: ${s.sourcesAwaitingHumanReview}`,
     `- Review-artifact-only sources: ${s.reviewArtifactOnlySources}`,
@@ -323,7 +333,7 @@ const buildMarkdown = (inventory) => {
   for (const target of inventory.corpusTargets) lines.push(`| ${target.priority} | ${target.title} | ${target.assessment} | ${target.evidenceSourceIds.slice(0, 5).join(', ') || 'none confirmed'} | ${target.nextAction} |`)
   lines.push('', '## Source records', '', '| Priority | Source ID | Title | Family | Currentness | Raw/source text | Review | Canonical | Chunks | Fidelity |', '| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |')
   for (const source of inventory.sources) lines.push(`| ${source.priority.level} | ${source.sourceId} | ${source.title.replace(/\|/g, '\\|')} | ${source.sourceFamily} | ${source.currentness} | ${source.availability.rawSource} / ${source.availability.sourceText} | ${source.review.reviewCompleted ? 'completed artifact' : 'not matched'} | ${source.review.canonical ? 'yes' : 'no'} | ${source.processing.chunkCount} | ${source.processing.sourceTextFidelity.join(', ') || 'not available'} |`)
-  lines.push('', '## Governance notes', '', '- All records remain review-only and not Copilot-export eligible.', '- Canonical package status means a package exists in the source-index POC; it does not mean the source is promoted or production-complete.', '- Candidate relationship edges remain documentary, source-bound, pending human review, and not promoted.', '- Review summaries and self-review commentary are not verbatim source text.', '')
+  lines.push('', '## Governance notes', '', '- The six VM-20 current-manual prose packages are canonically promoted; other records remain review-only unless a decision record says otherwise.', '- No inventory record is Copilot-export eligible; canonical promotion and downstream export are separate decisions.', '- Candidate relationship edges remain documentary, source-bound, pending human review, and not promoted.', '- Review summaries and self-review commentary are not verbatim source text.', '')
   return lines.join('\n')
 }
 
@@ -338,7 +348,7 @@ const buildGapReport = (inventory) => {
 
 const buildBacklog = (inventory) => {
   const ordered = inventory.corpusTargets.filter((target) => target.assessment !== 'canonical_complete').sort((a, b) => `${a.priority}-${a.targetId}`.localeCompare(`${b.priority}-${b.targetId}`))
-  const lines = ['# Regulatory Canonicalization Backlog', '', 'All items remain review-only until independent human review and explicit promotion. The sequence favors reviewed high-value material, then partial core packages, then genuinely absent P0 sources, then tables and supporting sources.', '', '| Order | Priority | Target | Current state | Safe next step |', '| ---: | --- | --- | --- | --- |']
+  const lines = ['# Regulatory Canonicalization Backlog', '', 'The VM-20 current-manual prose scope is promoted. All other items remain review-only until independent human review and explicit promotion. The sequence favors current tables and other incomplete core packages before supporting sources.', '', '| Order | Priority | Target | Current state | Safe next step |', '| ---: | --- | --- | --- | --- |']
   ordered.forEach((target, index) => lines.push(`| ${index + 1} | ${target.priority} | ${target.title} | ${target.assessment} | ${target.nextAction} |`))
   lines.push('', '## Chunking acceptance criteria', '', '- Use document → chapter → section → subsection → paragraph/requirement hierarchy.', '- Use parent chunks for coherent structural units and child chunks for precise retrieval; preserve `parentChunkId`, `precedingChunkId`, `followingChunkId`, `headingPath`, and a structural locator.', '- Keep requirement, exception, qualification, condition, definition, and table headings together when they are directly associated.', '- Use token splitting only as a fallback within an unusually large structural unit.', '- Keep tables in a structured-table profile, separate from prose chunking.', '- Retrieval should support child retrieval, reranking, parent/adjacent expansion, and an evidence package.', '')
   return lines.join('\n')
@@ -346,7 +356,7 @@ const buildBacklog = (inventory) => {
 
 const buildCompleteness = (inventory) => {
   const s = inventory.summary
-  return [`# Corpus Completeness Report`, '', `As of ${inventory.generatedAt}, the repository contains a substantial review-only regulatory evidence base but is not production-complete and is not Copilot-export ready.`, '', '## Counts', '', `- Source documents inventoried: **${s.sourceDocumentsInventoried}**`, `- Documents with declared external raw source: **${s.sourceRecordsWithExternalManifest}**`, `- Documents reviewed / review artifacts matched: **${s.reviewIndexes} review indexes**`, `- Canonical source packages: **${s.canonicalSourcePackages}**`, `- Canonical chunks: **${s.canonicalChunks}**`, `- Sources awaiting canonicalization: **${s.sourcesAwaitingCanonicalization}**`, `- Sources awaiting human review: **${s.sourcesAwaitingHumanReview}**`, `- Review-artifact-only sources: **${s.reviewArtifactOnlySources}**`, `- Candidate relationships: **${s.candidateRelationships}**`, `- Promoted relationships: **${s.promotedRelationships}**`, '', '## VM-20 coverage checkpoint', '', `- Current-manual VM-20 coverage: ${s.vm20CurrentManualChunks} exact-text chunks across the existing framework, Section 3.C, and the new Sections 4, 5, 9 and Appendix 1-2 prose packages.`, `- VM-20 companion coverage: ${s.vm20CompanionChunks} exact-text chunks from the reviewed 2020 practice-note wave, separately labeled non-binding and historical.`, '- Dedicated review package: `data/processed/review_packages/vm20-canonical-coverage-review-package.json` and `.md`.', '- Remaining VM-20 gap: structured current Appendix 2 asset-default, asset-spread, and swap-spread tables with version metadata; this remains a separate milestone.', '', '## Interpretation', '', '- “Canonical” means a review-only package exists in the tracked source-index POC, not that it is approved for downstream use.', '- “Reviewed” means a tracked review index or self-review exists; it does not prove that all source text was canonicalized.', '- “Missing” in a target assessment means no supporting batch, canonical package, or tracked review evidence was found in the current repository snapshot.', '- Source-text fidelity is explicit at package/chunk level; summary-only or review-derived material must not be labeled verbatim source text.', '', '## Copilot handoff posture', '', '- Export eligibility is false for every inventory record.', '- Approved export version and exclusion reason are reserved for a later explicit promotion decision.', '- Copilot should consume a generated export from the canonical corpus, never become the canonical source.', ''].join('\n')
+  return [`# Corpus Completeness Report`, '', `As of ${inventory.generatedAt}, the repository contains a substantial regulatory evidence base with one scope-specific canonical promotion, but it is not production-complete and is not Copilot-export ready.`, '', '## Counts', '', `- Source documents inventoried: **${s.sourceDocumentsInventoried}**`, `- Documents with declared external raw source: **${s.sourceRecordsWithExternalManifest}**`, `- Documents reviewed / review artifacts matched: **${s.reviewIndexes} review indexes**`, `- Canonical source packages: **${s.canonicalSourcePackages}**`, `- Canonical chunks: **${s.canonicalChunks}**`, `- Promoted canonical packages: **${s.promotedCanonicalPackages}**`, `- Promoted canonical chunks: **${s.promotedCanonicalChunks}**`, `- Sources awaiting canonicalization: **${s.sourcesAwaitingCanonicalization}**`, `- Sources awaiting human review: **${s.sourcesAwaitingHumanReview}**`, `- Review-artifact-only sources: **${s.reviewArtifactOnlySources}**`, `- Candidate relationships: **${s.candidateRelationships}**`, `- Promoted relationships: **${s.promotedRelationships}**`, '', '## VM-20 coverage checkpoint', '', `- Current-manual VM-20 coverage: ${s.vm20CurrentManualChunks} exact-text chunks; all ${s.promotedCanonicalChunks} chunks in the six listed current-manual prose packages are canonically promoted.`, `- VM-20 companion coverage: ${s.vm20CompanionChunks} exact-text chunks from the reviewed 2020 practice-note wave remain separately labeled non-binding, historical, review-only, and unpromoted.`, '- Promotion decision: `data/manual-input/promotion-decisions/vm20-2026-prose-promotion.json`.', '- Dedicated review package: `data/processed/review_packages/vm20-canonical-coverage-review-package.json` and `.md`.', '- Remaining VM-20 gap: structured current Appendix 2 table data and version metadata require their own review and promotion decision.', '', '## Interpretation', '', '- “Canonical promoted” applies only where an explicit promotion decision names the source package.', '- A canonical package can still be review-only when it is outside an approved promotion scope.', '- “Reviewed” means a tracked review index or self-review exists; it does not prove that all source text was canonicalized.', '- Source-text fidelity is explicit at package/chunk level; summary-only or review-derived material must not be labeled verbatim source text.', '', '## Copilot handoff posture', '', '- Export eligibility is false for every inventory record, including the promoted VM-20 prose scope.', '- Canonical promotion does not itself authorize learner, app, RAG, or Copilot use.', '- Copilot should consume a separately approved generated export from the canonical corpus, never become the canonical source.', ''].join('\n')
 }
 
 const main = async () => {

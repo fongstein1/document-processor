@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
-  "inventoryId": "regulatory-corpus-inventory-2026-08-25",
-  "generatedAt": "2026-08-25T00:00:00.000Z",
+  "inventoryId": "regulatory-corpus-inventory-2026-08-26",
+  "generatedAt": "2026-08-26T00:00:00.000Z",
   "scope": {
     "domain": "US life and annuity valuation regulation",
     "rawSourcePolicy": "Raw source remains external; repository paths are not authoritative proof of current file availability.",
@@ -16,6 +16,8 @@
     "canonicalChunks": 359,
     "vm20CurrentManualChunks": 149,
     "vm20CompanionChunks": 175,
+    "promotedCanonicalPackages": 6,
+    "promotedCanonicalChunks": 149,
     "sourcesAwaitingCanonicalization": 96,
     "sourcesAwaitingHumanReview": 1,
     "reviewArtifactOnlySources": 34,
@@ -5033,12 +5035,23 @@
         "reviewRequired": true,
         "reviewCompleted": false,
         "blockingFindings": [
-          "No tracked review index matched this source record."
+          "Promotion is scope-specific; unlisted manual chapters, structured tables, companion guidance, and downstream exports remain outside the decision."
         ],
-        "promotionState": "not_promoted",
+        "promotionState": "partially_promoted_scopes",
         "canonical": true,
         "copilotExportEligible": false,
-        "exclusionReason": "Human promotion and export approval are intentionally separate from processing validation."
+        "exclusionReason": "The VM-20 prose scope is canonical, but Copilot export requires a separate explicit approval.",
+        "promotionRecordPaths": [
+          "data/manual-input/promotion-decisions/vm20-2026-prose-promotion.json"
+        ],
+        "promotedSourcePackageIds": [
+          "vm20-assumptions-section-3c",
+          "vm20-canonical-coverage",
+          "vm20-framework-boundary",
+          "vm20-framework-overview",
+          "vm20-remaining-prose-appendix-coverage",
+          "vm20-section3c-hierarchical"
+        ]
       },
       "retrieval": {
         "associatedQuestions": [],
@@ -6626,8 +6639,8 @@
       "sourceFamily": "valuation_manual_pdfs",
       "priority": "P0",
       "intendedStatus": "current",
-      "assessment": "canonical_partial",
-      "reason": "VM-20 now has a 324-chunk review-only coverage set: 149 current-manual chunks across the existing slices and new authoritative prose/appendix batches, plus 175 separately labeled companion-guidance chunks. Structured current Appendix 2 tables remain deferred.",
+      "assessment": "canonical_promoted_prose",
+      "reason": "VM-20 has 149 canonically promoted current-manual prose chunks plus 175 separately labeled review-only companion-guidance chunks. Structured current Appendix 2 tables remain a separate review milestone.",
       "evidenceSourceIds": [
         "supporting-vm01-definitions",
         "supporting-vm02-nonforfeiture",
@@ -6717,7 +6730,7 @@
         "vm31-reporting-crossref",
         "vm31-reporting-definition"
       ],
-      "nextAction": "Review the dedicated VM-20 package, then process the separate structured current-table milestone while preserving the prose/appendix coverage as review-only."
+      "nextAction": "Build and independently review the structured Appendix 2 table proof of concept without altering the promoted prose corpus."
     },
     {
       "targetId": "vm-21",

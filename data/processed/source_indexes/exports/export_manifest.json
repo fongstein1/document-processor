@@ -20,6 +20,9 @@
   },
   "notes": "Canonical source-index export manifest for the POC.",
   "extensions": {
-    "sourceIndexPoc": true
+    "sourceIndexPoc": true,
+    "canonicalPromotionDecisionId": "vm20-2026-prose-promotion-2026-08-26",
+    "copilotExportEligible": false,
+    "downstreamExportDecisionRequired": true
   }
 }

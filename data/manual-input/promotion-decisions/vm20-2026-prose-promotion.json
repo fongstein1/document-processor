@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "1.0",
+  "promotionDecisionId": "vm20-2026-prose-promotion-2026-08-26",
+  "decisionDate": "2026-08-26",
+  "decision": "approved_for_canonical_promotion",
+  "scope": {
+    "scopeId": "vm20-2026-current-manual-prose",
+    "sourceEditionId": "NAIC-VALUATION-MANUAL-2026",
+    "sourceVersionIdentifier": "2026 NAIC Valuation Manual",
+    "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+    "sourceIds": [
+      "vm20-framework-overview",
+      "vm20-framework-boundary",
+      "vm20-assumptions-section-3c",
+      "vm20-section3c-hierarchical",
+      "vm20-canonical-coverage",
+      "vm20-remaining-prose-appendix-coverage"
+    ],
+    "expectedChunkCount": 149,
+    "includedInformationTypes": [
+      "current_manual_prose",
+      "current_manual_methodology",
+      "section_requirements",
+      "appendix_1_prose",
+      "appendix_2_methodology_and_table_references"
+    ]
+  },
+  "reviewEvidence": {
+    "reviewPackagePath": "data/processed/review_packages/vm20-canonical-coverage-review-package.json",
+    "sourceQaPath": "data/processed/review_packages/vm20-qa-source-spotcheck.json",
+    "retrievalQaPath": "data/processed/review_packages/vm20-retrieval-qa-report.json",
+    "blockersClosed": true,
+    "independentReviewRecorded": true,
+    "notes": "The final independent review approved the reviewed 2026 VM-20 prose/current-manual scope after the evidence-sufficiency and equivalent parent-child retrieval blockers were closed."
+  },
+  "exclusions": [
+    "Appendix 2 structured table rows, cells, numerical values, workbook versions, effective dates, and footnotes not yet ingested",
+    "The April 2020 VM-20 practice note companion and all other companion guidance",
+    "Review-only relationship and cross-reference candidates",
+    "Any source or chunk outside the six listed current-manual source packages",
+    "Learner-facing, application, RAG, and Copilot export approval"
+  ],
+  "downstreamEligibility": {
+    "learnerFacingAllowed": false,
+    "appReadyAllowed": false,
+    "ragReadyAllowed": false,
+    "copilotExportEligible": false,
+    "reason": "Canonical source promotion and downstream publication/export approval are separate governance decisions."
+  },
+  "reviewerRecord": {
+    "identityRecorded": false,
+    "identity": null,
+    "note": "The supplied independent-review correction records the decision but does not provide a reviewer identity; no identity is inferred."
+  },
+  "preservation": {
+    "sourceTextChanged": false,
+    "chunkContentChanged": false,
+    "reviewHistoryPreserved": true,
+    "note": "Promotion changes governance metadata only. Existing source excerpts, normalized excerpts, summaries, hierarchy, citations, and review evidence remain unchanged."
+  }
+}

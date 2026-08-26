@@ -722,7 +722,7 @@ const buildRepositoryMarkdown = (manifest) => {
   lines.push('| --- | --- | --- | --- |')
   for (const pkg of manifest.sourcePackages) {
     lines.push(
-      `| ${pkg.sourceTitle.replace(/\|/g, '\\|')} | pp. ${pkg.pageRange.start}-${pkg.pageRange.end} | \`${pkg.sourceIndexPath}\` | review-only |`,
+      `| ${pkg.sourceTitle.replace(/\|/g, '\\|')} | pp. ${pkg.pageRange.start}-${pkg.pageRange.end} | \`${pkg.sourceIndexPath}\` | ${pkg.promotionStatus === 'promoted' ? 'canonical promoted; downstream export blocked' : 'review-only'} |`,
     )
   }
   lines.push('')
@@ -739,7 +739,7 @@ const buildRepositoryMarkdown = (manifest) => {
   return `${lines.join('\n')}\n`
 }
 
-const buildExportManifest = (manifest) => ({
+const buildExportManifest = (manifest, promotionDecision = null) => ({
   schemaVersion: manifest.schemaVersion,
   exportManifestId: `${manifest.repositoryManifestId}-exports`,
   repositoryManifestId: manifest.repositoryManifestId,
@@ -762,6 +762,11 @@ const buildExportManifest = (manifest) => ({
   notes: 'Canonical source-index export manifest for the POC.',
   extensions: {
     sourceIndexPoc: true,
+    ...(promotionDecision ? {
+      canonicalPromotionDecisionId: promotionDecision.promotionDecisionId,
+      copilotExportEligible: promotionDecision.downstreamEligibility.copilotExportEligible,
+      downstreamExportDecisionRequired: true,
+    } : {}),
   },
 })
 
@@ -826,7 +831,7 @@ const buildRetrievalReadinessReport = (manifest, evaluation, config) => {
   return `${lines.join('\n')}\n`
 }
 
-const buildVm20ReviewPackage = ({ chunkRecords, sourcePackages, evaluation }) => {
+const buildVm20ReviewPackage = ({ chunkRecords, sourcePackages, evaluation, promotionDecision, promotionDecisionPath }) => {
   const currentSourceIds = new Set(['vm20-framework-overview', 'vm20-framework-boundary', 'vm20-assumptions-section-3c', 'vm20-section3c-hierarchical', 'vm20-canonical-coverage', 'vm20-remaining-prose-appendix-coverage'])
   const companionSourceIds = new Set(['vm20-practice-note-companion'])
   const currentPackages = sourcePackages.filter((source) => currentSourceIds.has(source.sourceId))
@@ -862,25 +867,37 @@ const buildVm20ReviewPackage = ({ chunkRecords, sourcePackages, evaluation }) =>
     schemaVersion: '1.0',
     reviewPackageId: 'vm20-canonical-coverage-review-package-2026-08-26',
     generatedBy: 'scripts/build-source-index-poc.mjs',
-    status: 'review_only',
+    status: 'canonical_promoted',
     learnerFacing: false,
     appReady: false,
     ragReady: false,
-    promoted: false,
+    promoted: true,
+    promotionDecision: {
+      promotionDecisionId: promotionDecision.promotionDecisionId,
+      decision: promotionDecision.decision,
+      decisionDate: promotionDecision.decisionDate,
+      scopeId: promotionDecision.scope.scopeId,
+      sourceIds: promotionDecision.scope.sourceIds,
+      expectedChunkCount: promotionDecision.scope.expectedChunkCount,
+      decisionRecordPath: promotionDecisionPath,
+      downstreamEligibility: promotionDecision.downstreamEligibility,
+      reviewerRecord: promotionDecision.reviewerRecord,
+      exclusions: promotionDecision.exclusions,
+    },
     promotionReadiness: {
       blockersClosed: unsupportedQueries.every((query) => query.supportDecision?.supportState === 'unsupported') && (evaluation.deduplication?.postDeduplicationCollisionCount ?? 0) === 0,
-      status: 'ready_for_promotion_decision',
+      status: 'promoted_after_independent_review',
       automatedPromotion: false,
       findings: [
         { blocker: 'evidence_sufficiency', status: unsupportedQueries.every((query) => query.supportDecision?.supportState === 'unsupported') ? 'closed' : 'open', evidence: 'Generic post-retrieval support decisions classify insufficient structured/current/jurisdiction/product evidence.' },
         { blocker: 'equivalent_parent_child_top_k_duplication', status: (evaluation.deduplication?.postDeduplicationCollisionCount ?? 0) === 0 ? 'closed' : 'open', evidence: 'Structural and equivalent parent-child overlaps are suppressed from first-stage top-k while hierarchy remains intact.' },
       ],
-      note: 'This is a readiness result only. A human promotion decision remains required; the package remains review-only and unpromoted.',
+      note: 'The readiness result was followed by the recorded independent-review decision. Promotion is limited to the six current-manual prose packages; downstream export remains separately blocked.',
     },
     scope: {
       objective: 'Complete the remaining VM-20 prose and appendix coverage while preserving the frozen source-index architecture and deferring structured current-table ingestion.',
       currentManualCoverage: 'Reviewed current-manual slices from batches 003-012 plus authoritative remaining prose and appendix extraction batches 231-234; Section 4, Section 5, Section 9, Appendix 1, and Appendix 2 prose are now represented hierarchically.',
-      companionCoverage: 'Reviewed VM-20 practice-note batches 055-075, indexed separately as non-binding historical companion guidance.',
+      companionCoverage: 'Reviewed VM-20 practice-note batches 055-075 remain separately indexed non-binding historical companion guidance and are excluded from this promotion.',
       sourceAvailability: 'External raw sources remain authoritative; this package records only source text available in ignored reviewed batch outputs.'
     },
     coverage: {
@@ -968,21 +985,25 @@ const buildVm20ReviewPackage = ({ chunkRecords, sourcePackages, evaluation }) =>
     humanReview: {
       decisionOptions: ['APPROVE', 'APPROVE WITH FIXES', 'REPROCESS', 'REJECT'],
       provisionalDisposition: 'APPROVE WITH FIXES',
-      rationale: 'The targeted current-manual prose and appendix wave is source-bound and hierarchically retrievable. Structured current tables, page-image backstop, line references, and historical companion guidance still require explicit reviewer disposition before promotion.',
+      finalDisposition: 'APPROVE',
+      rationale: 'Independent review approved the source-bound current-manual prose scope after the targeted blockers were closed. Structured tables, downstream export, historical companion guidance, and review-only relationship candidates remain outside the decision.',
+      reviewHistory: [
+        { stage: 'pre_promotion_review_handoff', disposition: 'APPROVE WITH FIXES', status: 'completed', note: 'The prior review package required evidence-sufficiency and retrieval-deduplication corrections before a final decision.' },
+        { stage: 'final_independent_review', disposition: 'APPROVE', status: 'recorded', decisionDate: promotionDecision.decisionDate, note: 'Approval applies only to the six current-manual prose packages named in the promotion decision.' }
+      ],
       requiredChecks: [
-        'Confirm current-manual wording and page citations against the approved raw source.',
-        'Confirm parent/child boundaries and any child that crosses a requirement, exception, qualification, or table-heading boundary.',
-        'Review cross-reference candidates without inferring legal effect or supersession.',
-        'Confirm that Sections 4, 5, 9 and Appendices 1-2 are complete for the stated prose boundaries and that Appendix 2 tables remain deferred.',
-        'Decide whether the companion practice-note package is useful as implementation context after currentness review.',
-        'Keep all packages review-only unless a separate promotion decision is recorded.'
+        'Preserve the approved current-manual source text, hierarchy, citations, and retrieval behavior.',
+        'Keep Appendix 2 structured values review-only until their own independent table review and promotion decision.',
+        'Keep the 2020 practice note non-binding, historical, review-only, and excluded from canonical authority.',
+        'Keep relationship candidates pending and do not infer legal effect or supersession.',
+        'Require a separate decision before learner-facing, app, RAG, or Copilot export use.'
       ]
     },
     packageInventory: [...currentPackages, ...companionPackages].map((source) => ({ sourceId: source.sourceId, title: source.sourceTitle, authorityLevel: source.authorityLevel, pageRange: source.pageRange, chunkCount: source.chunkCount, reviewBatches: source.reviewBatchIds }))
   }
   const markdown = [
     '# VM-20 Canonical Coverage Review Package', '',
-    '- Status: review-only', '- Provisional disposition: APPROVE WITH FIXES', '- Learner-facing: no', '- App-ready: no', '- RAG-ready: no', '- Promoted: no', '',
+    '- Status: canonical promoted (current-manual prose scope only)', '- Final disposition: APPROVE', '- Prior provisional disposition retained: APPROVE WITH FIXES', '- Learner-facing: no', '- App-ready: no', '- RAG-ready: no', '- Promoted: yes', `- Promotion decision: \`${promotionDecisionPath}\``, '',
     '## Coverage summary', '',
     `- Hierarchical parents: ${packageJson.coverage.parentCount}`,
     `- Hierarchical children: ${packageJson.coverage.childCount}`,
@@ -1004,15 +1025,20 @@ const buildVm20ReviewPackage = ({ chunkRecords, sourcePackages, evaluation }) =>
     '- Full 26-query report: `data/processed/review_packages/vm20-retrieval-qa-report.json`.', '',
     '## Promotion readiness', '',
     `- Blocking findings closed: ${packageJson.promotionReadiness.blockersClosed ? 'Yes' : 'No'}`,
-    '- Automated promotion: no; human promotion decision remains required.', '',
+    '- Automated promotion: no; the final independent-review decision is recorded.', '',
     '## Human review', '', packageJson.humanReview.rationale, '', ...packageJson.humanReview.requiredChecks.map((check) => `- ${check}`), '',
-    '## Governance boundary', '', 'This package is a review handoff. Validation demonstrates structural integrity only; it does not approve wording, establish legal effect, or promote content for learners, applications, RAG, or Copilot export.', ''
+    '## Governance boundary', '', 'Promotion applies only to the six reviewed current-manual prose packages. It does not promote structured tables, the 2020 practice note, relationship candidates, or any learner-facing, application, RAG, or Copilot export use.', ''
   ].join('\n')
   return { packageJson, markdown }
 }
 
 const main = async () => {
   const config = await readJson(configPath)
+  if (!config.promotionDecisionPath) throw new Error('Missing promotionDecisionPath in source-index config.')
+  const promotionDecisionPath = toRelativePosix(config.promotionDecisionPath)
+  const promotionDecision = await readJson(path.resolve(repoRoot, config.promotionDecisionPath))
+  if (promotionDecision.decision !== 'approved_for_canonical_promotion') throw new Error('Promotion decision is not approved.')
+  const promotedSourceIds = new Set(promotionDecision.scope?.sourceIds ?? [])
   const generatedAt = config.generatedAt ?? new Date().toISOString()
   await ensureDir(outputRoot)
   await ensureDir(sourcesRoot)
@@ -1041,6 +1067,7 @@ const main = async () => {
     const hydratedChunks = source.batchCoverageInput
       ? await buildBatchCoverageChunks(source)
       : await buildHierarchicalChunks(source)
+    const promoted = promotedSourceIds.has(source.sourceId)
     const sourceChunks = asArray(hydratedChunks).map((chunk, index) =>
       deriveChunk(
         {
@@ -1053,7 +1080,7 @@ const main = async () => {
         index,
         toRelativePosix(path.relative(repoRoot, sourceIndexPath)),
       ),
-    )
+    ).map((chunk) => promoted ? { ...chunk, promotionEligible: true } : chunk)
 
     const sourceIndex = {
       schemaVersion: config.schemaVersion,
@@ -1094,14 +1121,14 @@ const main = async () => {
       processing: {
         createdAt: processingCreatedAt,
         createdBy: 'scripts/build-source-index-poc.mjs',
-        processingMode: 'canonical_index_poc',
-        canonicality: 'poc',
-        reviewOnly: true,
+        processingMode: promoted ? 'canonical_index' : 'canonical_index_poc',
+        canonicality: promoted ? 'canonical' : 'poc',
+        reviewOnly: !promoted,
         learnerFacingAllowed: false,
         appReadyAllowed: false,
         ragReadyAllowed: false,
-        promotionStatus: 'not_promoted',
-        notes: source.notes,
+        promotionStatus: promoted ? 'promoted' : 'not_promoted',
+        notes: promoted ? `Promoted for the recorded current-manual prose scope; downstream export remains blocked. Decision: ${promotionDecisionPath}` : source.notes,
       },
       chunks: sourceChunks,
       relationships: sourceRelationships,
@@ -1115,13 +1142,14 @@ const main = async () => {
       exportHints: {
         jsonlEligible: true,
         csvEligible: true,
-        vectorEligible: true,
-        notes: 'Backend-neutral POC exports generated from review-only batch artifacts.',
+        vectorEligible: promoted ? false : true,
+        notes: promoted ? 'Canonical JSONL/CSV serialization is available for review and audit; vector, learner, app, RAG, and Copilot export remain blocked pending a separate decision.' : 'Backend-neutral POC exports generated from review-only batch artifacts.',
       },
       notes: source.notes,
       extensions: {
         batchIds: source.reviewBatchIds,
         sourceIndexGeneratedBy: 'build-source-index-poc',
+        ...(promoted ? { promotionDecisionId: promotionDecision.promotionDecisionId, promotionDecisionPath } : {}),
       },
     }
 
@@ -1156,6 +1184,9 @@ const main = async () => {
       textLayerQuality: source.textLayerQuality,
       pageImageBackstop: source.pageImageBackstop,
       lineReferencesAvailable: source.lineReferencesAvailable,
+      reviewOnly: !promoted,
+      promotionStatus: promoted ? 'promoted' : 'not_promoted',
+      ...(promoted ? { promotionDecisionPath } : {}),
       notes: source.notes,
     })
 
@@ -1264,7 +1295,7 @@ const main = async () => {
       classificationPath: 'data/processed/source_indexes/classification/source-classifications.json',
       reviewPackagePath: 'data/processed/review_packages/vm20-canonical-coverage-review-package.json',
     },
-  })
+  }, promotionDecision)
 
   const repositoryManifest = {
     schemaVersion: config.schemaVersion,
@@ -1299,6 +1330,10 @@ const main = async () => {
     notes: 'Canonical source-index proof of concept.',
     extensions: {
       sourceIndexPoc: true,
+      promotionDecisionId: promotionDecision.promotionDecisionId,
+      promotionDecisionPath,
+      promotedSourcePackageCount: sourcePackages.filter((source) => source.promotionStatus === 'promoted').length,
+      promotedChunkCount: chunkRecords.filter((chunk) => chunk.promotionEligible).length,
     },
   }
 
@@ -1332,7 +1367,7 @@ const main = async () => {
     notes: `Keyword baseline retrieved ${evaluation.top1HitCount} top-1 hits and ${evaluation.top3HitCount} top-3 hits across ${config.retrievalQueries.length} queries.`,
   }
 
-  const vm20ReviewPackage = buildVm20ReviewPackage({ chunkRecords, sourcePackages, evaluation })
+  const vm20ReviewPackage = buildVm20ReviewPackage({ chunkRecords, sourcePackages, evaluation, promotionDecision, promotionDecisionPath })
   const vm20ReviewPackageJsonPath = path.join(reviewPackagesRoot, 'vm20-canonical-coverage-review-package.json')
   const vm20ReviewPackageMarkdownPath = path.join(reviewPackagesRoot, 'vm20-canonical-coverage-review-package.md')
   await fs.writeFile(vm20ReviewPackageJsonPath, `${JSON.stringify(vm20ReviewPackage.packageJson, null, 2)}\n`, 'utf8')
@@ -1466,6 +1501,7 @@ const main = async () => {
     citationAvailability: evaluation.citationAvailability,
     multiChunkEvidenceRecall: evaluation.multiChunkEvidenceRecall,
     unsupportedQueryPrecision: evaluation.unsupportedQueryPrecision,
+    deduplication: evaluation.deduplication,
     categoryStats: evaluation.categoryStats,
     queries: evaluation.queries,
     notes: 'Canonical retrieval evaluation generated from the source-index POC.',
