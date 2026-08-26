@@ -38,10 +38,19 @@
 ## Retrieval evaluation
 
 - VM-20 queries: 26 (25 supported, 1 unsupported)
-- Supported top-1: 21/25
+- Supported top-1: 20/25
 - Supported top-3: 25/25
-- Unsupported queries detected: 0/1
-- The baseline now weights hierarchy/topic metadata above long source bodies; this is a generic retrieval improvement, not a question-specific rule.
+- Unsupported queries detected: 1/1
+- Mean reciprocal rank: 0.887
+- Raw equivalent parent-child top-k collision slots: 33; post-deduplication: 0
+- Retrieval uses generic local-topic metadata, equivalent parent/child deduplication, and context-only handling for very large parents; no question-specific rule was added.
+- Raw PDF spot-check: `data/processed/review_packages/vm20-qa-source-spotcheck.json`.
+- Full 26-query report: `data/processed/review_packages/vm20-retrieval-qa-report.json`.
+
+## Promotion readiness
+
+- Blocking findings closed: Yes
+- Automated promotion: no; human promotion decision remains required.
 
 ## Human review
 

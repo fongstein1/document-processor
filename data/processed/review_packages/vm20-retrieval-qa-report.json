@@ -1,0 +1,2002 @@
+{
+  "schemaVersion": "1.0",
+  "reportId": "vm20-retrieval-qa-report-2026-08-26",
+  "baselineCommit": "d8c7523",
+  "evaluationMethod": "keyword_overlap_baseline",
+  "queryCount": 26,
+  "supportedQueryCount": 25,
+  "unsupportedQueryCount": 1,
+  "before": {
+    "supportedTop1": 21,
+    "supportedTop3": 25,
+    "unsupportedDetected": 0,
+    "meanReciprocalRank": 0.8959999999999999,
+    "rawStructuralCollisionCount": 34
+  },
+  "after": {
+    "supportedTop1": 20,
+    "supportedTop3": 25,
+    "unsupportedDetected": 1,
+    "meanReciprocalRank": 0.8866666666666667,
+    "rawStructuralCollisionCount": 33,
+    "postDeduplicationCollisionCount": 0
+  },
+  "priorTop1Misses": [
+    {
+      "queryId": "q-vm20-hierarchical-section-3c",
+      "category": "hierarchical_parent_child",
+      "query": "What mortality, interest-rate, and lapse-rate requirements are in VM-20 Section 3.C, and how do the precise evidence children expand the section context?",
+      "expectedEvidence": [
+        "vm20-section3c-hierarchical-section-3-c-1-mortality-rates-child-001",
+        "vm20-section3c-hierarchical-section-3-c-2-interest-rates-child-001",
+        "vm20-section3c-hierarchical-section-3-c-3-lapse-rates-child-001"
+      ],
+      "before": {
+        "top1": {
+          "chunkId": "chunk-vm20-assumptions-section-3c-001",
+          "sourceId": "vm20-assumptions-section-3c",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 52.949999999999996,
+          "citationCount": 0
+        },
+        "top3": [
+          {
+            "chunkId": "chunk-vm20-assumptions-section-3c-001",
+            "score": 52.949999999999996
+          },
+          {
+            "chunkId": "vm20-section3c-hierarchical-section-3-c-2-interest-rates",
+            "score": 52.44999999999999
+          },
+          {
+            "chunkId": "vm20-section3c-hierarchical-section-3-c-1-mortality-rates",
+            "score": 52.29999999999999
+          }
+        ],
+        "top1Hit": false,
+        "top3Hit": true,
+        "structuralCollisionCount": 1
+      },
+      "after": {
+        "top1": {
+          "chunkId": "chunk-vm20-assumptions-section-3c-001",
+          "sourceId": "vm20-assumptions-section-3c",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 52.949999999999996,
+          "citationCount": 0
+        },
+        "top3": [
+          {
+            "chunkId": "chunk-vm20-assumptions-section-3c-001",
+            "score": 52.949999999999996
+          },
+          {
+            "chunkId": "vm20-section3c-hierarchical-section-3-c-3-lapse-rates",
+            "score": 52.14999999999999
+          },
+          {
+            "chunkId": "vm20-section3c-hierarchical-section-3-c-2-interest-rates-child-001",
+            "score": 49.44999999999999
+          }
+        ],
+        "top1Hit": false,
+        "top3Hit": true,
+        "structuralCollisionCount": 0
+      },
+      "priorTop1MissCause": "broad Section 3.C source outranked the more precise hierarchical children; the prior metadata surface did not distinguish the child concepts strongly enough."
+    },
+    {
+      "queryId": "q-vm20-practice-note-expense-guidance",
+      "category": "vm20_companion_expense",
+      "query": "What implementation guidance does the VM-20 practice note provide about expense assumptions?",
+      "expectedEvidence": [
+        "vm20-practice-note-companion-vm20-pn-expense",
+        "vm20-practice-note-companion-vm20-pn-expense-child-001"
+      ],
+      "before": {
+        "top1": {
+          "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-e-expense-assumptions",
+          "sourceId": "vm20-remaining-prose-appendix-coverage",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 31.39999999999999,
+          "citationCount": 0
+        },
+        "top3": [
+          {
+            "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-e-expense-assumptions",
+            "score": 31.39999999999999
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-expense",
+            "score": 30.15
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-expense-child-001",
+            "score": 30.15
+          }
+        ],
+        "top1Hit": false,
+        "top3Hit": true,
+        "structuralCollisionCount": 3
+      },
+      "after": {
+        "top1": {
+          "chunkId": "vm20-practice-note-companion-vm20-pn-expense-child-001",
+          "sourceId": "vm20-practice-note-companion",
+          "sourceFamilyId": "practice_notes",
+          "authorityLevel": "companion_guidance",
+          "score": 36.15,
+          "citationCount": 0
+        },
+        "top3": [
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-expense-child-001",
+            "score": 36.15
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-expense-child-002",
+            "score": 35.85
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-expense-child-003",
+            "score": 35.550000000000004
+          }
+        ],
+        "top1Hit": true,
+        "top3Hit": true,
+        "structuralCollisionCount": 0
+      },
+      "priorTop1MissCause": "Current Section 9.E source overlapped the practice-note query terms and outranked the expected historical companion evidence."
+    },
+    {
+      "queryId": "q-vm20-practice-note-mortality-behavior",
+      "category": "vm20_companion_assumptions",
+      "query": "How does the VM-20 practice note discuss mortality assumptions and policyholder behavior assumptions?",
+      "expectedEvidence": [
+        "vm20-practice-note-companion-vm20-pn-mortality-child-001",
+        "vm20-practice-note-companion-vm20-pn-behavior-child-001"
+      ],
+      "before": {
+        "top1": {
+          "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions",
+          "sourceId": "vm20-remaining-prose-appendix-coverage",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 40.49999999999999,
+          "citationCount": 0
+        },
+        "top3": [
+          {
+            "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions",
+            "score": 40.49999999999999
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-behavior-child-001",
+            "score": 38.99999999999999
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-behavior-child-005",
+            "score": 38.849999999999994
+          }
+        ],
+        "top1Hit": false,
+        "top3Hit": true,
+        "structuralCollisionCount": 0
+      },
+      "after": {
+        "top1": {
+          "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions-child-002",
+          "sourceId": "vm20-remaining-prose-appendix-coverage",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 45.599999999999994,
+          "citationCount": 0
+        },
+        "top3": [
+          {
+            "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions-child-002",
+            "score": 45.599999999999994
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-behavior-child-001",
+            "score": 44.99999999999999
+          },
+          {
+            "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions-child-004",
+            "score": 44.85
+          }
+        ],
+        "top1Hit": false,
+        "top3Hit": true,
+        "structuralCollisionCount": 0
+      },
+      "priorTop1MissCause": "Current Section 9.D policyholder-behavior source overlapped the mixed mortality/behavior query and outranked the expected companion children."
+    },
+    {
+      "queryId": "q-vm20-appendix2-prose-basis",
+      "category": "vm20_appendix2_methodology",
+      "query": "What is the current VM-20 Appendix 2 prose basis for baseline annual default cost factors, cumulative default rates, recovery rates, and benchmark spreads?",
+      "expectedEvidence": [
+        "vm20-remaining-prose-appendix-coverage-vm20-appendix2-a-baseline-annual-default-cost-factors",
+        "vm20-remaining-prose-appendix-coverage-vm20-appendix2-a-baseline-annual-default-cost-factors-child-001"
+      ],
+      "before": {
+        "top1": {
+          "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix2-b-cumulative-default-rates-used-in-baseline-annual-default-cost-factors",
+          "sourceId": "vm20-remaining-prose-appendix-coverage",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 100.95000000000005,
+          "citationCount": 0
+        },
+        "top3": [
+          {
+            "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix2-b-cumulative-default-rates-used-in-baseline-annual-default-cost-factors",
+            "score": 100.95000000000005
+          },
+          {
+            "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix2-b-cumulative-default-rates-used-in-baseline-annual-default-cost-factors-child-001",
+            "score": 94.95000000000005
+          },
+          {
+            "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix2-c-recovery-rate-used-in-baseline-annual-default-cost-factors",
+            "score": 92.00000000000006
+          }
+        ],
+        "top1Hit": false,
+        "top3Hit": true,
+        "structuralCollisionCount": 2
+      },
+      "after": {
+        "top1": {
+          "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix2-b-cumulative-default-rates-used-in-baseline-annual-default-cost-factors-child-001",
+          "sourceId": "vm20-remaining-prose-appendix-coverage",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 106.20000000000005,
+          "citationCount": 0
+        },
+        "top3": [
+          {
+            "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix2-b-cumulative-default-rates-used-in-baseline-annual-default-cost-factors-child-001",
+            "score": 106.20000000000005
+          },
+          {
+            "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix2-c-recovery-rate-used-in-baseline-annual-default-cost-factors-child-001",
+            "score": 97.25000000000006
+          },
+          {
+            "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix2-a-baseline-annual-default-cost-factors-child-001",
+            "score": 87.85000000000005
+          }
+        ],
+        "top1Hit": false,
+        "top3Hit": true,
+        "structuralCollisionCount": 0
+      },
+      "priorTop1MissCause": "Adjacent Appendix 2 subsection terms were too similar, so subsection B outranked the expected subsection A evidence."
+    }
+  ],
+  "supportedQueries": [
+    {
+      "queryId": "q-vm20-framework-overview",
+      "category": "framework_overview",
+      "query": "What does VM-20 say about the minimum reserve valuation standard and the start of reserve mechanics?",
+      "expectedEvidence": [
+        "chunk-vm20-framework-overview-001"
+      ],
+      "before": {
+        "top1": {
+          "chunkId": "chunk-vm20-framework-overview-001",
+          "sourceId": "vm20-framework-overview",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 42.55,
+          "citationCount": 0
+        },
+        "top3": [
+          {
+            "chunkId": "chunk-vm20-framework-overview-001",
+            "score": 42.55
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-dr-overview-child-003",
+            "score": 31.4
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-npr-overview-child-002",
+            "score": 31.4
+          }
+        ],
+        "top1Hit": true,
+        "top3Hit": true,
+        "structuralCollisionCount": 0
+      },
+      "after": {
+        "top1": {
+          "chunkId": "chunk-vm20-framework-overview-001",
+          "sourceId": "vm20-framework-overview",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 42.55,
+          "citationCount": 0
+        },
+        "top3": [
+          {
+            "chunkId": "chunk-vm20-framework-overview-001",
+            "score": 42.55
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-dr-overview-child-003",
+            "score": 31.4
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-npr-overview-child-002",
+            "score": 31.4
+          }
+        ],
+        "top1Hit": true,
+        "top3Hit": true,
+        "structuralCollisionCount": 0
+      },
+      "priorTop1MissCause": null
+    },
+    {
+      "queryId": "q-vm20-boundary",
+      "category": "mechanics_boundary",
+      "query": "Where does VM-20 transition from the framework overview into reserve-category mechanics?",
+      "expectedEvidence": [
+        "chunk-vm20-framework-boundary-001"
+      ],
+      "before": {
+        "top1": {
+          "chunkId": "chunk-vm20-framework-boundary-001",
+          "sourceId": "vm20-framework-boundary",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 47.75,
+          "citationCount": 0
+        },
+        "top3": [
+          {
+            "chunkId": "chunk-vm20-framework-boundary-001",
+            "score": 47.75
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-npr-overview-child-002",
+            "score": 40.8
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-dr-overview-child-005",
+            "score": 40.65
+          }
+        ],
+        "top1Hit": true,
+        "top3Hit": true,
+        "structuralCollisionCount": 0
+      },
+      "after": {
+        "top1": {
+          "chunkId": "chunk-vm20-framework-boundary-001",
+          "sourceId": "vm20-framework-boundary",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 47.75,
+          "citationCount": 0
+        },
+        "top3": [
+          {
+            "chunkId": "chunk-vm20-framework-boundary-001",
+            "score": 47.75
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-npr-overview-child-002",
+            "score": 40.8
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-dr-overview-child-005",
+            "score": 40.65
+          }
+        ],
+        "top1Hit": true,
+        "top3Hit": true,
+        "structuralCollisionCount": 0
+      },
+      "priorTop1MissCause": null
+    },
+    {
+      "queryId": "q-vm20-assumptions-section-3c",
+      "category": "multi_chunk",
+      "query": "How does VM-20 Section 3.C progress from mortality and interest assumptions through the Section 4 boundary?",
+      "expectedEvidence": [
+        "chunk-vm20-assumptions-section-3c-001",
+        "chunk-vm20-assumptions-section-3c-002",
+        "chunk-vm20-assumptions-section-3c-003",
+        "chunk-vm20-assumptions-section-3c-004"
+      ],
+      "before": {
+        "top1": {
+          "chunkId": "chunk-vm20-assumptions-section-3c-001",
+          "sourceId": "vm20-assumptions-section-3c",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 65.1,
+          "citationCount": 0
+        },
+        "top3": [
+          {
+            "chunkId": "chunk-vm20-assumptions-section-3c-001",
+            "score": 65.1
+          },
+          {
+            "chunkId": "vm20-canonical-coverage-vm20-npr-entry-formula",
+            "score": 57.29999999999999
+          },
+          {
+            "chunkId": "vm20-canonical-coverage-vm20-npr-entry-formula-child-001",
+            "score": 57.29999999999999
+          }
+        ],
+        "top1Hit": true,
+        "top3Hit": true,
+        "structuralCollisionCount": 2
+      },
+      "after": {
+        "top1": {
+          "chunkId": "chunk-vm20-assumptions-section-3c-001",
+          "sourceId": "vm20-assumptions-section-3c",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 65.1,
+          "citationCount": 0
+        },
+        "top3": [
+          {
+            "chunkId": "chunk-vm20-assumptions-section-3c-001",
+            "score": 65.1
+          },
+          {
+            "chunkId": "vm20-canonical-coverage-vm20-npr-entry-formula-child-001",
+            "score": 57.29999999999999
+          },
+          {
+            "chunkId": "vm20-canonical-coverage-vm20-npr-entry-formula-child-002",
+            "score": 56.849999999999994
+          }
+        ],
+        "top1Hit": true,
+        "top3Hit": true,
+        "structuralCollisionCount": 0
+      },
+      "priorTop1MissCause": null
+    },
+    {
+      "queryId": "q-vm20-hierarchical-section-3c",
+      "category": "hierarchical_parent_child",
+      "query": "What mortality, interest-rate, and lapse-rate requirements are in VM-20 Section 3.C, and how do the precise evidence children expand the section context?",
+      "expectedEvidence": [
+        "vm20-section3c-hierarchical-section-3-c-1-mortality-rates-child-001",
+        "vm20-section3c-hierarchical-section-3-c-2-interest-rates-child-001",
+        "vm20-section3c-hierarchical-section-3-c-3-lapse-rates-child-001"
+      ],
+      "before": {
+        "top1": {
+          "chunkId": "chunk-vm20-assumptions-section-3c-001",
+          "sourceId": "vm20-assumptions-section-3c",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 52.949999999999996,
+          "citationCount": 0
+        },
+        "top3": [
+          {
+            "chunkId": "chunk-vm20-assumptions-section-3c-001",
+            "score": 52.949999999999996
+          },
+          {
+            "chunkId": "vm20-section3c-hierarchical-section-3-c-2-interest-rates",
+            "score": 52.44999999999999
+          },
+          {
+            "chunkId": "vm20-section3c-hierarchical-section-3-c-1-mortality-rates",
+            "score": 52.29999999999999
+          }
+        ],
+        "top1Hit": false,
+        "top3Hit": true,
+        "structuralCollisionCount": 1
+      },
+      "after": {
+        "top1": {
+          "chunkId": "chunk-vm20-assumptions-section-3c-001",
+          "sourceId": "vm20-assumptions-section-3c",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 52.949999999999996,
+          "citationCount": 0
+        },
+        "top3": [
+          {
+            "chunkId": "chunk-vm20-assumptions-section-3c-001",
+            "score": 52.949999999999996
+          },
+          {
+            "chunkId": "vm20-section3c-hierarchical-section-3-c-3-lapse-rates",
+            "score": 52.14999999999999
+          },
+          {
+            "chunkId": "vm20-section3c-hierarchical-section-3-c-2-interest-rates-child-001",
+            "score": 49.44999999999999
+          }
+        ],
+        "top1Hit": false,
+        "top3Hit": true,
+        "structuralCollisionCount": 0
+      },
+      "priorTop1MissCause": "broad Section 3.C source outranked the more precise hierarchical children; the prior metadata surface did not distinguish the child concepts strongly enough."
+    },
+    {
+      "queryId": "q-vm20-npr-formula-uls-g",
+      "category": "vm20_npr",
+      "query": "What does the current VM-20 manual say about the NPR formula and the ULSG branch?",
+      "expectedEvidence": [
+        "vm20-canonical-coverage-vm20-npr-entry-formula",
+        "vm20-canonical-coverage-vm20-npr-entry-formula-child-001"
+      ],
+      "before": {
+        "top1": {
+          "chunkId": "vm20-canonical-coverage-vm20-npr-entry-formula-child-001",
+          "sourceId": "vm20-canonical-coverage",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 49.2,
+          "citationCount": 0
+        },
+        "top3": [
+          {
+            "chunkId": "vm20-canonical-coverage-vm20-npr-entry-formula-child-001",
+            "score": 49.2
+          },
+          {
+            "chunkId": "vm20-canonical-coverage-vm20-npr-entry-formula-child-002",
+            "score": 49.050000000000004
+          },
+          {
+            "chunkId": "vm20-canonical-coverage-vm20-npr-entry-formula",
+            "score": 47.7
+          }
+        ],
+        "top1Hit": true,
+        "top3Hit": true,
+        "structuralCollisionCount": 2
+      },
+      "after": {
+        "top1": {
+          "chunkId": "vm20-canonical-coverage-vm20-npr-entry-formula-child-001",
+          "sourceId": "vm20-canonical-coverage",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 49.2,
+          "citationCount": 0
+        },
+        "top3": [
+          {
+            "chunkId": "vm20-canonical-coverage-vm20-npr-entry-formula-child-001",
+            "score": 49.2
+          },
+          {
+            "chunkId": "vm20-canonical-coverage-vm20-npr-entry-formula-child-002",
+            "score": 49.050000000000004
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-npr-overview-child-008",
+            "score": 31.4
+          }
+        ],
+        "top1Hit": true,
+        "top3Hit": true,
+        "structuralCollisionCount": 0
+      },
+      "priorTop1MissCause": null
+    },
+    {
+      "queryId": "q-vm20-deterministic-reserve-entry",
+      "category": "vm20_dr",
+      "query": "Where does VM-20 introduce the Deterministic Reserve and its cash surrender value floor?",
+      "expectedEvidence": [
+        "vm20-canonical-coverage-vm20-section4-entry",
+        "vm20-canonical-coverage-vm20-section4-entry-child-001",
+        "vm20-section3c-hierarchical-section-3-d-npr-calculation-and-cash-surrender-value-floor",
+        "vm20-section3c-hierarchical-section-3-d-npr-calculation-and-cash-surrender-value-floor-child-001"
+      ],
+      "before": {
+        "top1": {
+          "chunkId": "vm20-section3c-hierarchical-section-3-d-npr-calculation-and-cash-surrender-value-floor",
+          "sourceId": "vm20-section3c-hierarchical",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 49.3,
+          "citationCount": 0
+        },
+        "top3": [
+          {
+            "chunkId": "vm20-section3c-hierarchical-section-3-d-npr-calculation-and-cash-surrender-value-floor",
+            "score": 49.3
+          },
+          {
+            "chunkId": "vm20-section3c-hierarchical-section-3-d-npr-calculation-and-cash-surrender-value-floor-child-001",
+            "score": 46.3
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-dr-overview-child-005",
+            "score": 40.65
+          }
+        ],
+        "top1Hit": true,
+        "top3Hit": true,
+        "structuralCollisionCount": 1
+      },
+      "after": {
+        "top1": {
+          "chunkId": "vm20-section3c-hierarchical-section-3-d-npr-calculation-and-cash-surrender-value-floor",
+          "sourceId": "vm20-section3c-hierarchical",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 49.3,
+          "citationCount": 0
+        },
+        "top3": [
+          {
+            "chunkId": "vm20-section3c-hierarchical-section-3-d-npr-calculation-and-cash-surrender-value-floor",
+            "score": 49.3
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-dr-overview-child-005",
+            "score": 40.65
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-dr-overview-child-006",
+            "score": 40.65
+          }
+        ],
+        "top1Hit": true,
+        "top3Hit": true,
+        "structuralCollisionCount": 0
+      },
+      "priorTop1MissCause": null
+    },
+    {
+      "queryId": "q-vm20-stochastic-reserve-aggregation",
+      "category": "vm20_sr",
+      "query": "How does the current VM-20 slice introduce the Stochastic Reserve and subgroup aggregation?",
+      "expectedEvidence": [
+        "vm20-canonical-coverage-vm20-section5-entry",
+        "vm20-canonical-coverage-vm20-section5-entry-child-001"
+      ],
+      "before": {
+        "top1": {
+          "chunkId": "vm20-canonical-coverage-vm20-section5-entry",
+          "sourceId": "vm20-canonical-coverage",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 41,
+          "citationCount": 0
+        },
+        "top3": [
+          {
+            "chunkId": "vm20-canonical-coverage-vm20-section5-entry",
+            "score": 41
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-sr-overview-child-001",
+            "score": 40.65
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-sr-overview-child-002",
+            "score": 40.5
+          }
+        ],
+        "top1Hit": true,
+        "top3Hit": true,
+        "structuralCollisionCount": 0
+      },
+      "after": {
+        "top1": {
+          "chunkId": "vm20-canonical-coverage-vm20-section5-entry",
+          "sourceId": "vm20-canonical-coverage",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 41,
+          "citationCount": 0
+        },
+        "top3": [
+          {
+            "chunkId": "vm20-canonical-coverage-vm20-section5-entry",
+            "score": 41
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-sr-overview-child-001",
+            "score": 40.65
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-sr-overview-child-002",
+            "score": 40.5
+          }
+        ],
+        "top1Hit": true,
+        "top3Hit": true,
+        "structuralCollisionCount": 0
+      },
+      "priorTop1MissCause": null
+    },
+    {
+      "queryId": "q-vm20-exclusion-tests",
+      "category": "vm20_exclusions",
+      "query": "What requirements and scope limits appear in the VM-20 stochastic and deterministic exclusion tests?",
+      "expectedEvidence": [
+        "vm20-canonical-coverage-vm20-section6-exclusion-tests",
+        "vm20-canonical-coverage-vm20-section6-exclusion-tests-child-001"
+      ],
+      "before": {
+        "top1": {
+          "chunkId": "vm20-canonical-coverage-vm20-section6-exclusion-tests",
+          "sourceId": "vm20-canonical-coverage",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 48.3,
+          "citationCount": 0
+        },
+        "top3": [
+          {
+            "chunkId": "vm20-canonical-coverage-vm20-section6-exclusion-tests",
+            "score": 48.3
+          },
+          {
+            "chunkId": "vm20-canonical-coverage-vm20-section6-exclusion-tests-child-001",
+            "score": 48.3
+          },
+          {
+            "chunkId": "vm20-canonical-coverage-vm20-section6-exclusion-tests-child-005",
+            "score": 48
+          }
+        ],
+        "top1Hit": true,
+        "top3Hit": true,
+        "structuralCollisionCount": 4
+      },
+      "after": {
+        "top1": {
+          "chunkId": "vm20-canonical-coverage-vm20-section6-exclusion-tests-child-001",
+          "sourceId": "vm20-canonical-coverage",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 48.3,
+          "citationCount": 0
+        },
+        "top3": [
+          {
+            "chunkId": "vm20-canonical-coverage-vm20-section6-exclusion-tests-child-001",
+            "score": 48.3
+          },
+          {
+            "chunkId": "vm20-canonical-coverage-vm20-section6-exclusion-tests-child-005",
+            "score": 48
+          },
+          {
+            "chunkId": "vm20-canonical-coverage-vm20-section6-exclusion-tests-child-002",
+            "score": 47.85
+          }
+        ],
+        "top1Hit": true,
+        "top3Hit": true,
+        "structuralCollisionCount": 0
+      },
+      "priorTop1MissCause": null
+    },
+    {
+      "queryId": "q-vm20-cash-flow-model-structure",
+      "category": "vm20_cash_flow_models",
+      "query": "What does VM-20 require for cash-flow model structure, model segments, projected cash flows, and starting assets?",
+      "expectedEvidence": [
+        "vm20-canonical-coverage-vm20-section7-model-structure",
+        "vm20-canonical-coverage-vm20-section7-model-structure-child-001"
+      ],
+      "before": {
+        "top1": {
+          "chunkId": "vm20-canonical-coverage-vm20-section7-model-structure",
+          "sourceId": "vm20-canonical-coverage",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 67.40000000000008,
+          "citationCount": 0
+        },
+        "top3": [
+          {
+            "chunkId": "vm20-canonical-coverage-vm20-section7-model-structure",
+            "score": 67.40000000000008
+          },
+          {
+            "chunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-001",
+            "score": 67.25000000000007
+          },
+          {
+            "chunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-005",
+            "score": 67.25000000000007
+          }
+        ],
+        "top1Hit": true,
+        "top3Hit": true,
+        "structuralCollisionCount": 4
+      },
+      "after": {
+        "top1": {
+          "chunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-001",
+          "sourceId": "vm20-canonical-coverage",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 67.25000000000007,
+          "citationCount": 0
+        },
+        "top3": [
+          {
+            "chunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-001",
+            "score": 67.25000000000007
+          },
+          {
+            "chunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-005",
+            "score": 67.25000000000007
+          },
+          {
+            "chunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-003",
+            "score": 66.80000000000005
+          }
+        ],
+        "top1Hit": true,
+        "top3Hit": true,
+        "structuralCollisionCount": 0
+      },
+      "priorTop1MissCause": null
+    },
+    {
+      "queryId": "q-vm20-asset-treatment",
+      "category": "vm20_assets",
+      "query": "How does the VM-20 cash-flow model treat invested assets, policy loans, economic scenarios, and proxy-fund mapping?",
+      "expectedEvidence": [
+        "vm20-canonical-coverage-vm20-section7-asset-mechanics",
+        "vm20-canonical-coverage-vm20-section7-asset-mechanics-child-001",
+        "vm20-canonical-coverage-vm20-section7-model-structure",
+        "vm20-canonical-coverage-vm20-section7-model-structure-child-002"
+      ],
+      "before": {
+        "top1": {
+          "chunkId": "vm20-canonical-coverage-vm20-section7-model-structure",
+          "sourceId": "vm20-canonical-coverage",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 48.74999999999999,
+          "citationCount": 0
+        },
+        "top3": [
+          {
+            "chunkId": "vm20-canonical-coverage-vm20-section7-model-structure",
+            "score": 48.74999999999999
+          },
+          {
+            "chunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-002",
+            "score": 48.449999999999996
+          },
+          {
+            "chunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-005",
+            "score": 48.3
+          }
+        ],
+        "top1Hit": true,
+        "top3Hit": true,
+        "structuralCollisionCount": 4
+      },
+      "after": {
+        "top1": {
+          "chunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-002",
+          "sourceId": "vm20-canonical-coverage",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 48.449999999999996,
+          "citationCount": 0
+        },
+        "top3": [
+          {
+            "chunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-002",
+            "score": 48.449999999999996
+          },
+          {
+            "chunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-005",
+            "score": 48.3
+          },
+          {
+            "chunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-001",
+            "score": 48.15
+          }
+        ],
+        "top1Hit": true,
+        "top3Hit": true,
+        "structuralCollisionCount": 0
+      },
+      "priorTop1MissCause": null
+    },
+    {
+      "queryId": "q-vm20-reinsurance-credit-and-cash-flows",
+      "category": "vm20_reinsurance",
+      "query": "What does the current VM-20 slice say about credit for ceded reinsurance and reinsurance cash flows in DR or SR?",
+      "expectedEvidence": [
+        "vm20-canonical-coverage-vm20-section8-reinsurance",
+        "vm20-canonical-coverage-vm20-section8-reinsurance-child-001"
+      ],
+      "before": {
+        "top1": {
+          "chunkId": "vm20-canonical-coverage-vm20-section8-reinsurance",
+          "sourceId": "vm20-canonical-coverage",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 28.39999999999999,
+          "citationCount": 0
+        },
+        "top3": [
+          {
+            "chunkId": "vm20-canonical-coverage-vm20-section8-reinsurance",
+            "score": 28.39999999999999
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-reinsurance",
+            "score": 25.849999999999994
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-reinsurance-child-002",
+            "score": 25.549999999999997
+          }
+        ],
+        "top1Hit": true,
+        "top3Hit": true,
+        "structuralCollisionCount": 3
+      },
+      "after": {
+        "top1": {
+          "chunkId": "vm20-canonical-coverage-vm20-section8-reinsurance",
+          "sourceId": "vm20-canonical-coverage",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 28.39999999999999,
+          "citationCount": 0
+        },
+        "top3": [
+          {
+            "chunkId": "vm20-canonical-coverage-vm20-section8-reinsurance",
+            "score": 28.39999999999999
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-reinsurance-child-002",
+            "score": 25.549999999999997
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-reinsurance-child-005",
+            "score": 25.549999999999997
+          }
+        ],
+        "top1Hit": true,
+        "top3Hit": true,
+        "structuralCollisionCount": 0
+      },
+      "priorTop1MissCause": null
+    },
+    {
+      "queryId": "q-vm20-prescribed-company-assumptions",
+      "category": "vm20_assumptions_comparison",
+      "query": "How should a reviewer distinguish prescribed VM-20 assumptions from company or prudent-estimate assumptions?",
+      "expectedEvidence": [
+        "vm20-section3c-hierarchical-section-3-c-1-mortality-rates-child-001",
+        "vm20-canonical-coverage-vm20-npr-entry-setup-child-001",
+        "vm20-practice-note-companion-vm20-pn-prudent-estimate-child-005",
+        "vm20-practice-note-companion-vm20-pn-prudent-estimate-child-002",
+        "vm20-practice-note-companion-vm20-pn-prudent-estimate-child-003"
+      ],
+      "before": {
+        "top1": {
+          "chunkId": "vm20-practice-note-companion-vm20-pn-prudent-estimate-child-005",
+          "sourceId": "vm20-practice-note-companion",
+          "sourceFamilyId": "practice_notes",
+          "authorityLevel": "companion_guidance",
+          "score": 39.6,
+          "citationCount": 0
+        },
+        "top3": [
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-prudent-estimate-child-005",
+            "score": 39.6
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-prudent-estimate-child-002",
+            "score": 39.300000000000004
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-prudent-estimate-child-003",
+            "score": 39.150000000000006
+          }
+        ],
+        "top1Hit": true,
+        "top3Hit": true,
+        "structuralCollisionCount": 0
+      },
+      "after": {
+        "top1": {
+          "chunkId": "vm20-practice-note-companion-vm20-pn-prudent-estimate-child-005",
+          "sourceId": "vm20-practice-note-companion",
+          "sourceFamilyId": "practice_notes",
+          "authorityLevel": "companion_guidance",
+          "score": 39.6,
+          "citationCount": 0
+        },
+        "top3": [
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-prudent-estimate-child-005",
+            "score": 39.6
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-prudent-estimate-child-002",
+            "score": 39.300000000000004
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-prudent-estimate-child-003",
+            "score": 39.150000000000006
+          }
+        ],
+        "top1Hit": true,
+        "top3Hit": true,
+        "structuralCollisionCount": 0
+      },
+      "priorTop1MissCause": null
+    },
+    {
+      "queryId": "q-vm20-practice-note-expense-guidance",
+      "category": "vm20_companion_expense",
+      "query": "What implementation guidance does the VM-20 practice note provide about expense assumptions?",
+      "expectedEvidence": [
+        "vm20-practice-note-companion-vm20-pn-expense",
+        "vm20-practice-note-companion-vm20-pn-expense-child-001"
+      ],
+      "before": {
+        "top1": {
+          "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-e-expense-assumptions",
+          "sourceId": "vm20-remaining-prose-appendix-coverage",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 31.39999999999999,
+          "citationCount": 0
+        },
+        "top3": [
+          {
+            "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-e-expense-assumptions",
+            "score": 31.39999999999999
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-expense",
+            "score": 30.15
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-expense-child-001",
+            "score": 30.15
+          }
+        ],
+        "top1Hit": false,
+        "top3Hit": true,
+        "structuralCollisionCount": 3
+      },
+      "after": {
+        "top1": {
+          "chunkId": "vm20-practice-note-companion-vm20-pn-expense-child-001",
+          "sourceId": "vm20-practice-note-companion",
+          "sourceFamilyId": "practice_notes",
+          "authorityLevel": "companion_guidance",
+          "score": 36.15,
+          "citationCount": 0
+        },
+        "top3": [
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-expense-child-001",
+            "score": 36.15
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-expense-child-002",
+            "score": 35.85
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-expense-child-003",
+            "score": 35.550000000000004
+          }
+        ],
+        "top1Hit": true,
+        "top3Hit": true,
+        "structuralCollisionCount": 0
+      },
+      "priorTop1MissCause": "Current Section 9.E source overlapped the practice-note query terms and outranked the expected historical companion evidence."
+    },
+    {
+      "queryId": "q-vm20-practice-note-mortality-behavior",
+      "category": "vm20_companion_assumptions",
+      "query": "How does the VM-20 practice note discuss mortality assumptions and policyholder behavior assumptions?",
+      "expectedEvidence": [
+        "vm20-practice-note-companion-vm20-pn-mortality-child-001",
+        "vm20-practice-note-companion-vm20-pn-behavior-child-001"
+      ],
+      "before": {
+        "top1": {
+          "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions",
+          "sourceId": "vm20-remaining-prose-appendix-coverage",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 40.49999999999999,
+          "citationCount": 0
+        },
+        "top3": [
+          {
+            "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions",
+            "score": 40.49999999999999
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-behavior-child-001",
+            "score": 38.99999999999999
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-behavior-child-005",
+            "score": 38.849999999999994
+          }
+        ],
+        "top1Hit": false,
+        "top3Hit": true,
+        "structuralCollisionCount": 0
+      },
+      "after": {
+        "top1": {
+          "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions-child-002",
+          "sourceId": "vm20-remaining-prose-appendix-coverage",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 45.599999999999994,
+          "citationCount": 0
+        },
+        "top3": [
+          {
+            "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions-child-002",
+            "score": 45.599999999999994
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-behavior-child-001",
+            "score": 44.99999999999999
+          },
+          {
+            "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions-child-004",
+            "score": 44.85
+          }
+        ],
+        "top1Hit": false,
+        "top3Hit": true,
+        "structuralCollisionCount": 0
+      },
+      "priorTop1MissCause": "Current Section 9.D policyholder-behavior source overlapped the mixed mortality/behavior query and outranked the expected companion children."
+    },
+    {
+      "queryId": "q-vm20-practice-note-margins",
+      "category": "vm20_companion_margins",
+      "query": "What topics does the VM-20 practice note cover when setting margins?",
+      "expectedEvidence": [
+        "vm20-practice-note-companion-vm20-pn-margins",
+        "vm20-practice-note-companion-vm20-pn-margins-child-001",
+        "vm20-practice-note-companion-vm20-pn-margins-child-004",
+        "vm20-practice-note-companion-vm20-pn-margins-child-002",
+        "vm20-practice-note-companion-vm20-pn-margins-child-006"
+      ],
+      "before": {
+        "top1": {
+          "chunkId": "vm20-practice-note-companion-vm20-pn-margins-child-004",
+          "sourceId": "vm20-practice-note-companion",
+          "sourceFamilyId": "practice_notes",
+          "authorityLevel": "companion_guidance",
+          "score": 29.949999999999996,
+          "citationCount": 0
+        },
+        "top3": [
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-margins-child-004",
+            "score": 29.949999999999996
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-margins-child-002",
+            "score": 29.299999999999997
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-margins-child-006",
+            "score": 29.299999999999997
+          }
+        ],
+        "top1Hit": true,
+        "top3Hit": true,
+        "structuralCollisionCount": 0
+      },
+      "after": {
+        "top1": {
+          "chunkId": "vm20-practice-note-companion-vm20-pn-margins-child-004",
+          "sourceId": "vm20-practice-note-companion",
+          "sourceFamilyId": "practice_notes",
+          "authorityLevel": "companion_guidance",
+          "score": 35.449999999999996,
+          "citationCount": 0
+        },
+        "top3": [
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-margins-child-004",
+            "score": 35.449999999999996
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-margins-child-002",
+            "score": 35.3
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-margins-child-006",
+            "score": 35.3
+          }
+        ],
+        "top1Hit": true,
+        "top3Hit": true,
+        "structuralCollisionCount": 0
+      },
+      "priorTop1MissCause": null
+    },
+    {
+      "queryId": "q-vm20-section4-methods",
+      "category": "vm20_section4_direct",
+      "query": "What methods does VM-20 Section 4 prescribe for calculating the Deterministic Reserve, and what cash flows must be included?",
+      "expectedEvidence": [
+        "vm20-remaining-prose-appendix-coverage-vm20-section4-complete",
+        "vm20-remaining-prose-appendix-coverage-vm20-section4-complete-child-001"
+      ],
+      "before": {
+        "top1": {
+          "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section4-complete",
+          "sourceId": "vm20-remaining-prose-appendix-coverage",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 51.39999999999999,
+          "citationCount": 0
+        },
+        "top3": [
+          {
+            "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section4-complete",
+            "score": 51.39999999999999
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-dr-overview-child-005",
+            "score": 50.64999999999999
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-npr-overview-child-012",
+            "score": 50.64999999999999
+          }
+        ],
+        "top1Hit": true,
+        "top3Hit": true,
+        "structuralCollisionCount": 0
+      },
+      "after": {
+        "top1": {
+          "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section4-complete-child-001",
+          "sourceId": "vm20-remaining-prose-appendix-coverage",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 51.39999999999999,
+          "citationCount": 0
+        },
+        "top3": [
+          {
+            "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section4-complete-child-001",
+            "score": 51.39999999999999
+          },
+          {
+            "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section4-complete-child-002",
+            "score": 50.8
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-dr-overview-child-005",
+            "score": 50.64999999999999
+          }
+        ],
+        "top1Hit": true,
+        "top3Hit": true,
+        "structuralCollisionCount": 0
+      },
+      "priorTop1MissCause": null
+    },
+    {
+      "queryId": "q-vm20-section5-scenario-reserve",
+      "category": "vm20_section5_methodology",
+      "query": "How does VM-20 Section 5 calculate the scenario reserve and move from stochastic scenarios to CTE 70 and the final Stochastic Reserve?",
+      "expectedEvidence": [
+        "vm20-remaining-prose-appendix-coverage-vm20-section5-complete",
+        "vm20-remaining-prose-appendix-coverage-vm20-section5-complete-child-001"
+      ],
+      "before": {
+        "top1": {
+          "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section5-complete",
+          "sourceId": "vm20-remaining-prose-appendix-coverage",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 51.999999999999986,
+          "citationCount": 0
+        },
+        "top3": [
+          {
+            "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section5-complete",
+            "score": 51.999999999999986
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-sr-overview-child-002",
+            "score": 50.64999999999999
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-dr-overview-child-005",
+            "score": 50.349999999999994
+          }
+        ],
+        "top1Hit": true,
+        "top3Hit": true,
+        "structuralCollisionCount": 0
+      },
+      "after": {
+        "top1": {
+          "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section5-complete-child-001",
+          "sourceId": "vm20-remaining-prose-appendix-coverage",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 53.499999999999986,
+          "citationCount": 0
+        },
+        "top3": [
+          {
+            "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section5-complete-child-001",
+            "score": 53.499999999999986
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-sr-overview-child-002",
+            "score": 50.64999999999999
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-dr-overview-child-005",
+            "score": 50.349999999999994
+          }
+        ],
+        "top1Hit": true,
+        "top3Hit": true,
+        "structuralCollisionCount": 0
+      },
+      "priorTop1MissCause": null
+    },
+    {
+      "queryId": "q-vm20-section4-section5-comparison",
+      "category": "vm20_cross_section_comparison",
+      "query": "In the current VM-20 manual, how do Section 4 actuarial present value and PIMR deterministic-reserve mechanics compare with Section 5 scenario reserve, CTE 70, and aggregation mechanics?",
+      "expectedEvidence": [
+        "vm20-remaining-prose-appendix-coverage-vm20-section4-complete",
+        "vm20-remaining-prose-appendix-coverage-vm20-section5-complete",
+        "vm20-practice-note-companion-vm20-pn-dr-overview-child-006",
+        "vm20-practice-note-companion-vm20-pn-sr-overview-child-003"
+      ],
+      "before": {
+        "top1": {
+          "chunkId": "vm20-practice-note-companion-vm20-pn-dr-overview-child-006",
+          "sourceId": "vm20-practice-note-companion",
+          "sourceFamilyId": "practice_notes",
+          "authorityLevel": "companion_guidance",
+          "score": 60.04999999999999,
+          "citationCount": 0
+        },
+        "top3": [
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-dr-overview-child-006",
+            "score": 60.04999999999999
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-dr-overview-child-002",
+            "score": 59.599999999999994
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-dr-overview-child-003",
+            "score": 59.599999999999994
+          }
+        ],
+        "top1Hit": true,
+        "top3Hit": true,
+        "structuralCollisionCount": 0
+      },
+      "after": {
+        "top1": {
+          "chunkId": "vm20-practice-note-companion-vm20-pn-dr-overview-child-006",
+          "sourceId": "vm20-practice-note-companion",
+          "sourceFamilyId": "practice_notes",
+          "authorityLevel": "companion_guidance",
+          "score": 60.04999999999999,
+          "citationCount": 0
+        },
+        "top3": [
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-dr-overview-child-006",
+            "score": 60.04999999999999
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-dr-overview-child-002",
+            "score": 59.599999999999994
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-dr-overview-child-003",
+            "score": 59.599999999999994
+          }
+        ],
+        "top1Hit": true,
+        "top3Hit": true,
+        "structuralCollisionCount": 0
+      },
+      "priorTop1MissCause": null
+    },
+    {
+      "queryId": "q-vm20-section9-general-assumptions",
+      "category": "vm20_section9_applicability",
+      "query": "What does the current VM-20 Section 9.A require for prudent estimate assumptions, anticipated experience, interest-rate and equity stochastic modeling, sensitivity testing, and scenario variation?",
+      "expectedEvidence": [
+        "vm20-remaining-prose-appendix-coverage-vm20-section9-a-general-assumption-requirements",
+        "vm20-remaining-prose-appendix-coverage-vm20-section9-a-general-assumption-requirements-child-001",
+        "vm20-practice-note-companion-vm20-pn-prudent-estimate-child-005"
+      ],
+      "before": {
+        "top1": {
+          "chunkId": "vm20-practice-note-companion-vm20-pn-prudent-estimate-child-005",
+          "sourceId": "vm20-practice-note-companion",
+          "sourceFamilyId": "practice_notes",
+          "authorityLevel": "companion_guidance",
+          "score": 67.40000000000008,
+          "citationCount": 0
+        },
+        "top3": [
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-prudent-estimate-child-005",
+            "score": 67.40000000000008
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-prudent-estimate-child-003",
+            "score": 66.80000000000005
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-prudent-estimate-child-001",
+            "score": 66.65000000000005
+          }
+        ],
+        "top1Hit": true,
+        "top3Hit": true,
+        "structuralCollisionCount": 0
+      },
+      "after": {
+        "top1": {
+          "chunkId": "vm20-practice-note-companion-vm20-pn-prudent-estimate-child-005",
+          "sourceId": "vm20-practice-note-companion",
+          "sourceFamilyId": "practice_notes",
+          "authorityLevel": "companion_guidance",
+          "score": 67.40000000000008,
+          "citationCount": 0
+        },
+        "top3": [
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-prudent-estimate-child-005",
+            "score": 67.40000000000008
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-prudent-estimate-child-003",
+            "score": 66.80000000000005
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-prudent-estimate-child-001",
+            "score": 66.65000000000005
+          }
+        ],
+        "top1Hit": true,
+        "top3Hit": true,
+        "structuralCollisionCount": 0
+      },
+      "priorTop1MissCause": null
+    },
+    {
+      "queryId": "q-vm20-section9-mortality-parent-context",
+      "category": "vm20_parent_context",
+      "query": "What does current VM-20 Section 9.C require for mortality segments, company experience mortality rates, credibility, prescribed mortality margins, and prudent-estimate mortality assumptions?",
+      "expectedEvidence": [
+        "vm20-remaining-prose-appendix-coverage-vm20-section9-c-mortality-assumptions",
+        "vm20-remaining-prose-appendix-coverage-vm20-section9-c-mortality-assumptions-child-001"
+      ],
+      "before": {
+        "top1": {
+          "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-c-mortality-assumptions",
+          "sourceId": "vm20-remaining-prose-appendix-coverage",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 60.49999999999998,
+          "citationCount": 0
+        },
+        "top3": [
+          {
+            "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-c-mortality-assumptions",
+            "score": 60.49999999999998
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-prudent-estimate-child-005",
+            "score": 58.4
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-prudent-estimate-child-002",
+            "score": 57.95
+          }
+        ],
+        "top1Hit": true,
+        "top3Hit": true,
+        "structuralCollisionCount": 0
+      },
+      "after": {
+        "top1": {
+          "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-c-mortality-assumptions-child-001",
+          "sourceId": "vm20-remaining-prose-appendix-coverage",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 81.35000000000008,
+          "citationCount": 0
+        },
+        "top3": [
+          {
+            "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-c-mortality-assumptions-child-001",
+            "score": 81.35000000000008
+          },
+          {
+            "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-c-mortality-assumptions-child-013",
+            "score": 81.20000000000007
+          },
+          {
+            "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-c-mortality-assumptions-child-015",
+            "score": 81.20000000000007
+          }
+        ],
+        "top1Hit": true,
+        "top3Hit": true,
+        "structuralCollisionCount": 0
+      },
+      "priorTop1MissCause": null
+    },
+    {
+      "queryId": "q-vm20-section9-policyholder-exceptions",
+      "category": "vm20_section9_exceptions",
+      "query": "What conditions and conservative adjustments does VM-20 Section 9 address for policyholder behavior assumptions, including lapse and anti-selection effects?",
+      "expectedEvidence": [
+        "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions",
+        "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions-child-001"
+      ],
+      "before": {
+        "top1": {
+          "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions",
+          "sourceId": "vm20-remaining-prose-appendix-coverage",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 61.249999999999986,
+          "citationCount": 0
+        },
+        "top3": [
+          {
+            "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions",
+            "score": 61.249999999999986
+          },
+          {
+            "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions-child-002",
+            "score": 56.59999999999999
+          },
+          {
+            "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions-child-001",
+            "score": 56.44999999999999
+          }
+        ],
+        "top1Hit": true,
+        "top3Hit": true,
+        "structuralCollisionCount": 4
+      },
+      "after": {
+        "top1": {
+          "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions-child-002",
+          "sourceId": "vm20-remaining-prose-appendix-coverage",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 61.09999999999999,
+          "citationCount": 0
+        },
+        "top3": [
+          {
+            "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions-child-002",
+            "score": 61.09999999999999
+          },
+          {
+            "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions-child-001",
+            "score": 60.94999999999999
+          },
+          {
+            "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions-child-003",
+            "score": 60.49999999999999
+          }
+        ],
+        "top1Hit": false,
+        "top3Hit": true,
+        "structuralCollisionCount": 0
+      },
+      "priorTop1MissCause": null
+    },
+    {
+      "queryId": "q-vm20-section9-cross_section",
+      "category": "vm20_cross_section",
+      "query": "What does current VM-20 Section 9.F say about prescribed asset default costs, prescribed asset spreads, Section 7 cash-flow modeling, and Appendix 2?",
+      "expectedEvidence": [
+        "vm20-remaining-prose-appendix-coverage-vm20-section9-f-asset-assumptions",
+        "vm20-remaining-prose-appendix-coverage-vm20-appendix2-a-baseline-annual-default-cost-factors",
+        "vm20-canonical-coverage-vm20-section7-asset-mechanics-child-001"
+      ],
+      "before": {
+        "top1": {
+          "chunkId": "vm20-canonical-coverage-vm20-section7-asset-mechanics-child-001",
+          "sourceId": "vm20-canonical-coverage",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 60.599999999999994,
+          "citationCount": 0
+        },
+        "top3": [
+          {
+            "chunkId": "vm20-canonical-coverage-vm20-section7-asset-mechanics-child-001",
+            "score": 60.599999999999994
+          },
+          {
+            "chunkId": "vm20-canonical-coverage-vm20-section7-asset-mechanics-child-006",
+            "score": 60.599999999999994
+          },
+          {
+            "chunkId": "vm20-canonical-coverage-vm20-section7-asset-mechanics-child-002",
+            "score": 60.3
+          }
+        ],
+        "top1Hit": true,
+        "top3Hit": true,
+        "structuralCollisionCount": 0
+      },
+      "after": {
+        "top1": {
+          "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix2-f-current-benchmark-swap-spreads-child-001",
+          "sourceId": "vm20-remaining-prose-appendix-coverage",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 64.55000000000003,
+          "citationCount": 0
+        },
+        "top3": [
+          {
+            "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix2-f-current-benchmark-swap-spreads-child-001",
+            "score": 64.55000000000003
+          },
+          {
+            "chunkId": "vm20-canonical-coverage-vm20-section7-asset-mechanics-child-001",
+            "score": 60.599999999999994
+          },
+          {
+            "chunkId": "vm20-canonical-coverage-vm20-section7-asset-mechanics-child-006",
+            "score": 60.599999999999994
+          }
+        ],
+        "top1Hit": false,
+        "top3Hit": true,
+        "structuralCollisionCount": 0
+      },
+      "priorTop1MissCause": null
+    },
+    {
+      "queryId": "q-vm20-appendix1-scenarios",
+      "category": "vm20_appendix1_direct",
+      "query": "What does VM-20 Appendix 1 say about the prescribed economic scenario models and the sixteen SERT scenarios?",
+      "expectedEvidence": [
+        "vm20-remaining-prose-appendix-coverage-vm20-appendix1-f-this-section-describes-the-set-of-16-scenarios-for-the-sert-in-vm-20-starting-with-the-yield-curve",
+        "vm20-remaining-prose-appendix-coverage-vm20-appendix1-f-this-section-describes-the-set-of-16-scenarios-for-the-sert-in-vm-20-starting-with-the-yield-curve-child-001"
+      ],
+      "before": {
+        "top1": {
+          "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix1-f-this-section-describes-the-set-of-16-scenarios-for-the-sert-in-vm-20-starting-with-the-yield-curve",
+          "sourceId": "vm20-remaining-prose-appendix-coverage",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 62.64999999999999,
+          "citationCount": 0
+        },
+        "top3": [
+          {
+            "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix1-f-this-section-describes-the-set-of-16-scenarios-for-the-sert-in-vm-20-starting-with-the-yield-curve",
+            "score": 62.64999999999999
+          },
+          {
+            "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix1-f-this-section-describes-the-set-of-16-scenarios-for-the-sert-in-vm-20-starting-with-the-yield-curve-child-001",
+            "score": 59.64999999999999
+          },
+          {
+            "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix1-f-this-section-describes-the-set-of-16-scenarios-for-the-sert-in-vm-20-starting-with-the-yield-curve-child-002",
+            "score": 59.05
+          }
+        ],
+        "top1Hit": true,
+        "top3Hit": true,
+        "structuralCollisionCount": 3
+      },
+      "after": {
+        "top1": {
+          "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix1-f-this-section-describes-the-set-of-16-scenarios-for-the-sert-in-vm-20-starting-with-the-yield-curve-child-001",
+          "sourceId": "vm20-remaining-prose-appendix-coverage",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 55.39999999999999,
+          "citationCount": 0
+        },
+        "top3": [
+          {
+            "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix1-f-this-section-describes-the-set-of-16-scenarios-for-the-sert-in-vm-20-starting-with-the-yield-curve-child-001",
+            "score": 55.39999999999999
+          },
+          {
+            "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix1-f-this-section-describes-the-set-of-16-scenarios-for-the-sert-in-vm-20-starting-with-the-yield-curve-child-002",
+            "score": 54.8
+          },
+          {
+            "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix1-e-use-of-non-prescribed-scenario-generators-child-001",
+            "score": 51.849999999999994
+          }
+        ],
+        "top1Hit": true,
+        "top3Hit": true,
+        "structuralCollisionCount": 0
+      },
+      "priorTop1MissCause": null
+    },
+    {
+      "queryId": "q-vm20-appendix2-prose-basis",
+      "category": "vm20_appendix2_methodology",
+      "query": "What is the current VM-20 Appendix 2 prose basis for baseline annual default cost factors, cumulative default rates, recovery rates, and benchmark spreads?",
+      "expectedEvidence": [
+        "vm20-remaining-prose-appendix-coverage-vm20-appendix2-a-baseline-annual-default-cost-factors",
+        "vm20-remaining-prose-appendix-coverage-vm20-appendix2-a-baseline-annual-default-cost-factors-child-001"
+      ],
+      "before": {
+        "top1": {
+          "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix2-b-cumulative-default-rates-used-in-baseline-annual-default-cost-factors",
+          "sourceId": "vm20-remaining-prose-appendix-coverage",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 100.95000000000005,
+          "citationCount": 0
+        },
+        "top3": [
+          {
+            "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix2-b-cumulative-default-rates-used-in-baseline-annual-default-cost-factors",
+            "score": 100.95000000000005
+          },
+          {
+            "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix2-b-cumulative-default-rates-used-in-baseline-annual-default-cost-factors-child-001",
+            "score": 94.95000000000005
+          },
+          {
+            "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix2-c-recovery-rate-used-in-baseline-annual-default-cost-factors",
+            "score": 92.00000000000006
+          }
+        ],
+        "top1Hit": false,
+        "top3Hit": true,
+        "structuralCollisionCount": 2
+      },
+      "after": {
+        "top1": {
+          "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix2-b-cumulative-default-rates-used-in-baseline-annual-default-cost-factors-child-001",
+          "sourceId": "vm20-remaining-prose-appendix-coverage",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 106.20000000000005,
+          "citationCount": 0
+        },
+        "top3": [
+          {
+            "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix2-b-cumulative-default-rates-used-in-baseline-annual-default-cost-factors-child-001",
+            "score": 106.20000000000005
+          },
+          {
+            "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix2-c-recovery-rate-used-in-baseline-annual-default-cost-factors-child-001",
+            "score": 97.25000000000006
+          },
+          {
+            "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix2-a-baseline-annual-default-cost-factors-child-001",
+            "score": 87.85000000000005
+          }
+        ],
+        "top1Hit": false,
+        "top3Hit": true,
+        "structuralCollisionCount": 0
+      },
+      "priorTop1MissCause": "Adjacent Appendix 2 subsection terms were too similar, so subsection B outranked the expected subsection A evidence."
+    },
+    {
+      "queryId": "q-vm20-cross-document-reporting",
+      "category": "vm20_cross_document",
+      "query": "Which VM-20 sections and related documents are referenced for reserve categories, cash-flow models, and reporting support?",
+      "expectedEvidence": [
+        "vm20-canonical-coverage-vm20-role-map-sections-3-4-5",
+        "vm20-canonical-coverage-vm20-section7-model-structure-child-001",
+        "vm20-canonical-coverage-vm20-section7-asset-mechanics-child-007",
+        "vm20-canonical-coverage-vm20-section7-asset-mechanics-child-008",
+        "vm20-canonical-coverage-vm20-section7-model-structure"
+      ],
+      "before": {
+        "top1": {
+          "chunkId": "vm20-canonical-coverage-vm20-section7-asset-mechanics-child-007",
+          "sourceId": "vm20-canonical-coverage",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 39.6,
+          "citationCount": 0
+        },
+        "top3": [
+          {
+            "chunkId": "vm20-canonical-coverage-vm20-section7-asset-mechanics-child-007",
+            "score": 39.6
+          },
+          {
+            "chunkId": "vm20-canonical-coverage-vm20-section7-asset-mechanics-child-008",
+            "score": 39.6
+          },
+          {
+            "chunkId": "vm20-canonical-coverage-vm20-section7-model-structure",
+            "score": 39.6
+          }
+        ],
+        "top1Hit": true,
+        "top3Hit": true,
+        "structuralCollisionCount": 1
+      },
+      "after": {
+        "top1": {
+          "chunkId": "vm20-canonical-coverage-vm20-section7-asset-mechanics-child-007",
+          "sourceId": "vm20-canonical-coverage",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 39.6,
+          "citationCount": 0
+        },
+        "top3": [
+          {
+            "chunkId": "vm20-canonical-coverage-vm20-section7-asset-mechanics-child-007",
+            "score": 39.6
+          },
+          {
+            "chunkId": "vm20-canonical-coverage-vm20-section7-asset-mechanics-child-008",
+            "score": 39.6
+          },
+          {
+            "chunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-002",
+            "score": 39.6
+          }
+        ],
+        "top1Hit": true,
+        "top3Hit": true,
+        "structuralCollisionCount": 0
+      },
+      "priorTop1MissCause": null
+    }
+  ],
+  "unsupportedQueries": [
+    {
+      "queryId": "q-vm20-current-table-gap",
+      "query": "What are the exact current 2026 VM-20 Appendix 2 prescribed asset-default table rows and version metadata?",
+      "expectedEvidence": [],
+      "top1": {
+        "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix2-c-recovery-rate-used-in-baseline-annual-default-cost-factors-child-001",
+        "sourceId": "vm20-remaining-prose-appendix-coverage",
+        "sourceFamilyId": "valuation_manual_pdfs",
+        "authorityLevel": "manual_section",
+        "score": 49.79999999999999,
+        "citationCount": 0
+      },
+      "top3": [
+        {
+          "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix2-c-recovery-rate-used-in-baseline-annual-default-cost-factors-child-001",
+          "score": 49.79999999999999
+        },
+        {
+          "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix2-d-current-market-benchmark-spreads-child-001",
+          "score": 49.64999999999999
+        },
+        {
+          "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix2-b-cumulative-default-rates-used-in-baseline-annual-default-cost-factors-child-001",
+          "score": 49.349999999999994
+        }
+      ],
+      "resultLabel": "unsupported",
+      "supportDecision": {
+        "supportState": "unsupported",
+        "evidenceSufficient": false,
+        "reasonCode": "missing_structured_data",
+        "reason": "The retrieved evidence is prose or methodology text, not structured table rows or equivalent structured data.",
+        "requestedInformationTypes": [
+          "structured_table_rows",
+          "current_version_metadata"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix2-c-recovery-rate-used-in-baseline-annual-default-cost-factors-child-001",
+            "sourceId": "vm20-remaining-prose-appendix-coverage",
+            "score": 49.79999999999999,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix2-d-current-market-benchmark-spreads-child-001",
+            "sourceId": "vm20-remaining-prose-appendix-coverage",
+            "score": 49.64999999999999,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix2-b-cumulative-default-rates-used-in-baseline-annual-default-cost-factors-child-001",
+            "sourceId": "vm20-remaining-prose-appendix-coverage",
+            "score": 49.349999999999994,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": "Appendix 2 current prescribed asset-default, asset-spread, and swap-spread table rows are not ingested as structured data. Appendix 2 current table version metadata is deferred to the structured-table milestone. structured_table_rows current_table_values table_version_metadata Review-only VM-20 Sections 4, 5, 9 and Appendices 1-2 coverage. Structured current regulatory tables remain a separate later milestone.",
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 49.79999999999999,
+          "matches": [
+            {
+              "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix2-c-recovery-rate-used-in-baseline-annual-default-cost-factors-child-001",
+              "score": 49.79999999999999,
+              "tokenOverlap": 14
+            },
+            {
+              "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix2-d-current-market-benchmark-spreads-child-001",
+              "score": 49.64999999999999,
+              "tokenOverlap": 14
+            },
+            {
+              "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix2-b-cumulative-default-rates-used-in-baseline-annual-default-cost-factors-child-001",
+              "score": 49.349999999999994,
+              "tokenOverlap": 14
+            },
+            {
+              "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix2-a-baseline-annual-default-cost-factors-child-001",
+              "score": 49.199999999999996,
+              "tokenOverlap": 11
+            },
+            {
+              "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix2-f-current-benchmark-swap-spreads-child-001",
+              "score": 48.9,
+              "tokenOverlap": 11
+            }
+          ]
+        },
+        "lowScore": false
+      }
+    }
+  ],
+  "duplicateParentChildTopKCollisions": {
+    "beforeRawCollisionCount": 34,
+    "afterRawCollisionCount": 33,
+    "afterPostDeduplicationCollisionCount": 0
+  },
+  "notes": "This report records all VM-20 query results. Retrieval changes are generic metadata, source-text deduplication, and context-only parent eligibility; no query-specific tuning rules were added."
+}

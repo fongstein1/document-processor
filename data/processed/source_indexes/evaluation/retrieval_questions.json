@@ -365,6 +365,14 @@
       "expectedOutcome": "unsupported",
       "expectedChunkIds": [],
       "expectedSourceIds": [],
+      "supportRequirements": {
+        "informationTypes": [
+          "structured_table_rows",
+          "current_version_metadata"
+        ],
+        "exact": true,
+        "current": true
+      },
       "rationale": "The reviewed VM-20 wave does not contain a structured current-table package; the gap must remain explicit."
     },
     {

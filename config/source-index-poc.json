@@ -615,10 +615,13 @@
       "documentType": "valuation_manual_section",
       "sourceTitle": "VM-20 Remaining Prose and Appendix Coverage",
       "sourceReference": "2026 NAIC Valuation Manual",
+      "sourceEditionId": "NAIC-VALUATION-MANUAL-2026",
+      "sourceVersionIdentifier": "2026 NAIC Valuation Manual",
       "jurisdiction": "NAIC",
       "authorityLevel": "manual_section",
       "sourceStatus": "active",
       "versionDate": null,
+      "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
       "pageCount": 457,
       "pageRange": { "start": 66, "end": 140 },
       "expectedChunkCount": 77,
@@ -628,6 +631,23 @@
       "pageImageBackstop": false,
       "lineReferencesAvailable": false,
       "textLayerQuality": "clean",
+      "sourceTextVerification": {
+        "sourceTextMode": "exact_extracted_source_text",
+        "extractionMethod": "pypdf_text_layer",
+        "visualTranscription": "not_used",
+        "pageRepresentationQA": "targeted_raw_pdf_spot_check",
+        "qaScript": "scripts/validate-vm20-qa.mjs"
+      },
+      "coverageDeclarations": {
+        "scopeType": "current_manual_prose_and_methodology",
+        "includedInformationTypes": ["prose", "methodology", "section_requirements", "cross_references"],
+        "structuredDataAvailable": false,
+        "deferredInformationTypes": ["structured_table_rows", "current_table_values", "table_version_metadata"],
+        "knownGaps": [
+          "Appendix 2 current prescribed asset-default, asset-spread, and swap-spread table rows are not ingested as structured data.",
+          "Appendix 2 current table version metadata is deferred to the structured-table milestone."
+        ]
+      },
       "chunkDefaults": {
         "sourceTextType": "actual_extracted_source_text",
         "fidelity": "exact",
@@ -635,7 +655,7 @@
         "reviewFlags": ["review_only", "requires_human_interpretation"],
         "controlledTags": ["core_vm_course", "vm20_remaining_coverage"],
         "qualityNotes": [
-          "Actual source text from the authoritative current VM-20 manual is retained.",
+          "Actual source text from the authoritative current VM-20 manual is retained without source-text normalization or rewriting.",
           "Structural parents follow Sections 4, 5, 9 and Appendix 1-2 headings; children retain contiguous paragraph boundaries.",
           "Appendix 2 prose and table references are retained; generalized structured table ingestion is deferred."
         ],
@@ -2440,6 +2460,11 @@
       "expectedOutcome": "unsupported",
       "expectedChunkIds": [],
       "expectedSourceIds": [],
+      "supportRequirements": {
+        "informationTypes": ["structured_table_rows", "current_version_metadata"],
+        "exact": true,
+        "current": true
+      },
       "rationale": "The reviewed VM-20 wave does not contain a structured current-table package; the gap must remain explicit."
     },
     {

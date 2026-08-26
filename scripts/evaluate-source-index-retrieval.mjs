@@ -1,6 +1,7 @@
 import fs from 'node:fs/promises'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { assessEvidenceSufficiency } from './evidence-sufficiency.mjs'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -80,12 +81,62 @@ export const buildSearchText = (chunk) =>
     (chunk.definedTerms ?? []).join(' '),
     (chunk.acronyms ?? []).join(' '),
     (chunk.requirements ?? []).join(' '),
+    (chunk.localTopics ?? []).join(' '),
+    (chunk.provisionTypes ?? []).join(' '),
+    chunk.structuralBreadcrumb,
     chunk.citationDisplay,
     (chunk.controlledTags ?? []).join(' '),
     (chunk.relationshipIds ?? []).join(' '),
   ]
     .filter(Boolean)
     .join(' ')
+
+const deduplicateEquivalentRankedMatches = (rankedMatches, chunkLookup, _structuralCandidateIds, topN = 5) => {
+  const bySourceText = new Map()
+  for (const match of rankedMatches) {
+    const chunk = chunkLookup.get(match.chunkId)
+    const sourceTextKey = normalizeText(chunk?.sourceTextExcerpt).toLowerCase() || `${match.chunkId}:empty`
+    const existing = bySourceText.get(sourceTextKey)
+    if (!existing || match.score > existing.score || (match.score === existing.score && chunk?.chunkLevel === 'child' && chunkLookup.get(existing.chunkId)?.chunkLevel !== 'child')) {
+      bySourceText.set(sourceTextKey, match)
+    }
+  }
+  const exactDeduplicated = [...bySourceText.values()].sort((left, right) => right.score - left.score || left.chunkId.localeCompare(right.chunkId))
+  let remaining = exactDeduplicated
+  const suppressedParentIds = new Set()
+  const structuralCollisionGroups = []
+  while (true) {
+    const windowSize = Math.min(topN, remaining.length)
+    const collisionGroups = countStructuralCollisions(remaining.slice(0, windowSize), chunkLookup)
+    if (collisionGroups.length === 0) break
+    const parentIds = new Set(collisionGroups.map((group) => group.parentChunkId))
+    for (const parentId of parentIds) suppressedParentIds.add(parentId)
+    structuralCollisionGroups.push(...collisionGroups)
+    remaining = remaining.filter((match) => !parentIds.has(match.chunkId))
+    if (remaining.length === 0) break
+  }
+  return {
+    rankedMatches: remaining,
+    suppressedParentIds: [...suppressedParentIds],
+    structuralCollisionGroups,
+  }
+}
+
+const countStructuralCollisions = (rankedMatches, chunkLookup) => {
+  const ids = new Set(rankedMatches.map((match) => match.chunkId))
+  const groups = []
+  for (const match of rankedMatches) {
+    const chunk = chunkLookup.get(match.chunkId)
+    if (!chunk?.parentChunkId || !ids.has(chunk.parentChunkId)) continue
+    const parent = chunkLookup.get(chunk.parentChunkId)
+    const parentText = normalizeText(parent?.sourceTextExcerpt).toLowerCase()
+    const childText = normalizeText(chunk.sourceTextExcerpt).toLowerCase()
+    if (parentText && childText && (parentText.includes(childText) || childText.includes(parentText))) {
+      groups.push({ parentChunkId: chunk.parentChunkId, childChunkId: chunk.chunkId })
+    }
+  }
+  return groups
+}
 
 const phraseBoost = (query, candidate, weight) => {
   const queryText = normalizeText(query).toLowerCase()
@@ -133,17 +184,17 @@ export const scoreChunk = (query, chunk) => {
 
   const lowerQuery = normalizeText(query).toLowerCase()
   const authorityHints = [
-    ['regulation', 'regulation'],
-    ['guideline', 'guideline'],
-    ['practice note', 'practice_note'],
-    ['practice-note', 'practice_note'],
-    ['educational note', 'educational_note'],
-    ['manual', 'manual_section'],
-    ['companion', 'companion'],
+    ['regulation', 'regulation', 0.5],
+    ['guideline', 'guideline', 0.5],
+    ['practice note', 'companion', 6],
+    ['practice-note', 'companion', 6],
+    ['educational note', 'educational_note', 1],
+    ['manual', 'manual_section', 0.5],
+    ['companion', 'companion', 2],
   ]
-  for (const [needle, tag] of authorityHints) {
+  for (const [needle, tag, weight] of authorityHints) {
     if (lowerQuery.includes(needle) && buildSearchText(chunk).toLowerCase().includes(tag)) {
-      score += 0.5
+      score += weight
     }
   }
 
@@ -186,10 +237,11 @@ export const evaluateQueries = ({
   topN = 5,
 }) => {
   const sourceLookup = buildLookup(sourcePackages)
-  const normalizedChunks = chunkRecords.map((chunk) => ({
+  const normalizedChunks = chunkRecords.filter((chunk) => chunk.retrievalEligible !== false).map((chunk) => ({
     ...chunk,
     searchableText: buildSearchText(chunk).toLowerCase(),
   }))
+  const chunkLookup = new Map(normalizedChunks.map((chunk) => [chunk.chunkId, chunk]))
 
   let top1HitCount = 0
   let top3HitCount = 0
@@ -203,6 +255,10 @@ export const evaluateQueries = ({
   let authorityLevelAccuracyCount = 0
   let multiChunkEvidenceRecallCount = 0
   const categoryStats = new Map()
+  let rawTopKCollisionCount = 0
+  let rawTopKCollisionGroupCount = 0
+  let postDeduplicationCollisionCount = 0
+  const affectedQueries = []
 
   const queryResults = queries.map((query) => {
     const rankedMatches = normalizedChunks
@@ -216,28 +272,44 @@ export const evaluateQueries = ({
       }))
       .sort((left, right) => right.score - left.score || left.chunkId.localeCompare(right.chunkId))
 
-    const topMatches = rankedMatches.slice(0, topN)
+    const rawTopMatches = rankedMatches.slice(0, topN)
+    const rawCollisionGroups = countStructuralCollisions(rawTopMatches, chunkLookup)
+    rawTopKCollisionCount += rawCollisionGroups.length
+    rawTopKCollisionGroupCount += new Set(rawCollisionGroups.map((group) => group.parentChunkId)).size
+    const deduplication = deduplicateEquivalentRankedMatches(rankedMatches, chunkLookup, new Set(rawTopMatches.map((match) => match.chunkId)), topN)
+    const deduplicatedRankedMatches = deduplication.rankedMatches
+    const topMatches = deduplicatedRankedMatches.slice(0, topN)
+    const postDeduplicationCollisions = countStructuralCollisions(topMatches, chunkLookup)
+    postDeduplicationCollisionCount += postDeduplicationCollisions.length
+    if (rawCollisionGroups.length > 0) affectedQueries.push({ queryId: query.queryId, collisionGroups: rawCollisionGroups })
     const top1 = topMatches[0] ?? null
     const expectedChunkIds = query.expectedChunkIds ?? []
     const expectedSourceIds = query.expectedSourceIds ?? []
     const expectedSupport = query.expectedOutcome ?? 'supported'
     const expectedFamilies = deriveExpectedFamilies(expectedSourceIds, sourceLookup)
+    const supportDecision = assessEvidenceSufficiency({
+      query,
+      topMatches,
+      chunkRecords,
+      sourcePackages,
+      unsupportedThreshold,
+    })
     const top1Hit = expectedSupport !== 'unsupported' && Boolean(top1 && expectedChunkIds.includes(top1.chunkId))
     const top3Hit =
       expectedSupport !== 'unsupported' &&
       topMatches.some((match) => expectedChunkIds.includes(match.chunkId))
     const top5Hit =
       expectedSupport !== 'unsupported' &&
-      rankedMatches.slice(0, 5).some((match) => expectedChunkIds.includes(match.chunkId))
+      deduplicatedRankedMatches.slice(0, 5).some((match) => expectedChunkIds.includes(match.chunkId))
 
     const firstExpectedRank = expectedSupport !== 'unsupported'
-      ? rankedMatches.findIndex((match) => expectedChunkIds.includes(match.chunkId))
+      ? deduplicatedRankedMatches.findIndex((match) => expectedChunkIds.includes(match.chunkId))
       : -1
     const reciprocalRank = firstExpectedRank >= 0 ? 1 / (firstExpectedRank + 1) : 0
 
-    const insufficientSupportDetected = Boolean(top1 && top1.score < unsupportedThreshold)
+    const insufficientSupportDetected = supportDecision.supportState !== 'supported'
     const unsupportedCorrect =
-      expectedSupport === 'unsupported' ? insufficientSupportDetected : false
+      expectedSupport === 'unsupported' ? supportDecision.supportState === 'unsupported' : false
 
     if (expectedSupport !== 'unsupported') {
       supportedQueryCount += 1
@@ -262,7 +334,7 @@ export const evaluateQueries = ({
       }
       if (
         expectedChunkIds.length > 1 &&
-        expectedChunkIds.every((chunkId) => rankedMatches.slice(0, 5).some((match) => match.chunkId === chunkId))
+        expectedChunkIds.every((chunkId) => deduplicatedRankedMatches.slice(0, 5).some((match) => match.chunkId === chunkId))
       ) {
         multiChunkEvidenceRecallCount += 1
       }
@@ -316,9 +388,15 @@ export const evaluateQueries = ({
       predictedAuthorityLevel: top1?.authorityLevel ?? null,
       citationAvailable: Boolean(top1 && top1.citationCount > 0),
       insufficientSupportDetected,
+      supportDecision,
+      deduplication: {
+        rawTopKCollisionGroups: rawCollisionGroups,
+        suppressedParentChunkIds: deduplication.suppressedParentIds,
+        postDeduplicationCollisionCount: postDeduplicationCollisions.length,
+      },
       resultLabel:
         expectedSupport === 'unsupported'
-          ? insufficientSupportDetected
+          ? supportDecision.supportState === 'unsupported'
             ? 'unsupported'
             : 'false_positive'
           : top1Hit
@@ -368,6 +446,13 @@ export const evaluateQueries = ({
     citationAvailability,
     multiChunkEvidenceRecall,
     unsupportedQueryPrecision,
+    deduplication: {
+      topN,
+      rawTopKCollisionCount,
+      rawTopKCollisionGroupCount,
+      postDeduplicationCollisionCount,
+      affectedQueries,
+    },
     categoryStats: Object.fromEntries(
       [...categoryStats.entries()].map(([category, stats]) => [
         category,
@@ -493,6 +578,7 @@ const main = async () => {
     citationAvailability: evaluation.citationAvailability,
     multiChunkEvidenceRecall: evaluation.multiChunkEvidenceRecall,
     unsupportedQueryPrecision: evaluation.unsupportedQueryPrecision,
+    deduplication: evaluation.deduplication,
     categoryStats: evaluation.categoryStats,
     queries: evaluation.queries,
     notes: 'Canonical retrieval evaluation generated from the source-index POC.',
@@ -510,6 +596,8 @@ const main = async () => {
       (config.retrievalQueries?.length ?? 0) === 0
         ? 0
         : evaluation.top3HitCount / (config.retrievalQueries?.length ?? 1),
+    meanReciprocalRank: evaluation.meanReciprocalRank,
+    deduplication: evaluation.deduplication,
     queries: evaluation.queries,
     notes: 'Legacy compatibility retrieval evaluation output.',
   })

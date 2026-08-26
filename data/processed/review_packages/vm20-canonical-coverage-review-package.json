@@ -1,12 +1,30 @@
 {
   "schemaVersion": "1.0",
-  "reviewPackageId": "vm20-canonical-coverage-review-package-2026-08-25",
+  "reviewPackageId": "vm20-canonical-coverage-review-package-2026-08-26",
   "generatedBy": "scripts/build-source-index-poc.mjs",
   "status": "review_only",
   "learnerFacing": false,
   "appReady": false,
   "ragReady": false,
   "promoted": false,
+  "promotionReadiness": {
+    "blockersClosed": true,
+    "status": "ready_for_promotion_decision",
+    "automatedPromotion": false,
+    "findings": [
+      {
+        "blocker": "evidence_sufficiency",
+        "status": "closed",
+        "evidence": "Generic post-retrieval support decisions classify insufficient structured/current/jurisdiction/product evidence."
+      },
+      {
+        "blocker": "equivalent_parent_child_top_k_duplication",
+        "status": "closed",
+        "evidence": "Structural and equivalent parent-child overlaps are suppressed from first-stage top-k while hierarchy remains intact."
+      }
+    ],
+    "note": "This is a readiness result only. A human promotion decision remains required; the package remains review-only and unpromoted."
+  },
   "scope": {
     "objective": "Complete the remaining VM-20 prose and appendix coverage while preserving the frozen source-index architecture and deferring structured current-table ingestion.",
     "currentManualCoverage": "Reviewed current-manual slices from batches 003-012 plus authoritative remaining prose and appendix extraction batches 231-234; Section 4, Section 5, Section 9, Appendix 1, and Appendix 2 prose are now represented hierarchically.",
@@ -117,26 +135,701 @@
         "vm20-remaining-prose-appendix-coverage-vm20-section4-complete-child-001"
       ],
       "note": "Appendix 2 prose explains the basis and publication locations, while generalized current table rows and version metadata remain deferred."
+    },
+    {
+      "target": "Appendix 1",
+      "relationType": "cross_reference_candidate",
+      "status": "pending_human_review",
+      "basis": "explicit_source_text_reference",
+      "evidenceChunkIds": [
+        "vm20-remaining-prose-appendix-coverage-vm20-section4-complete",
+        "vm20-remaining-prose-appendix-coverage-vm20-section4-complete-child-001",
+        "vm20-remaining-prose-appendix-coverage-vm20-section5-complete",
+        "vm20-remaining-prose-appendix-coverage-vm20-section5-complete-child-001",
+        "vm20-remaining-prose-appendix-coverage-vm20-appendix1-e-use-of-non-prescribed-scenario-generators",
+        "vm20-remaining-prose-appendix-coverage-vm20-appendix1-e-use-of-non-prescribed-scenario-generators-child-001"
+      ],
+      "note": "Review-only candidate derived from an explicit source-text reference; no applicability, supersession, or legal effect is inferred."
+    },
+    {
+      "target": "NAIC current table sources",
+      "relationType": "cross_reference_candidate",
+      "status": "pending_human_review",
+      "basis": "explicit_source_text_reference",
+      "evidenceChunkIds": [
+        "vm20-remaining-prose-appendix-coverage-vm20-section4-complete",
+        "vm20-remaining-prose-appendix-coverage-vm20-section4-complete-child-001",
+        "vm20-remaining-prose-appendix-coverage-vm20-section5-complete",
+        "vm20-remaining-prose-appendix-coverage-vm20-section5-complete-child-001",
+        "vm20-remaining-prose-appendix-coverage-vm20-section9-a-general-assumption-requirements",
+        "vm20-remaining-prose-appendix-coverage-vm20-section9-a-general-assumption-requirements-child-001",
+        "vm20-remaining-prose-appendix-coverage-vm20-section9-a-general-assumption-requirements-child-002",
+        "vm20-remaining-prose-appendix-coverage-vm20-section9-b-assumption-margins",
+        "vm20-remaining-prose-appendix-coverage-vm20-section9-b-assumption-margins-child-001",
+        "vm20-remaining-prose-appendix-coverage-vm20-section9-c-mortality-assumptions",
+        "vm20-remaining-prose-appendix-coverage-vm20-section9-c-mortality-assumptions-child-001",
+        "vm20-remaining-prose-appendix-coverage-vm20-section9-c-mortality-assumptions-child-002",
+        "vm20-remaining-prose-appendix-coverage-vm20-section9-c-mortality-assumptions-child-003",
+        "vm20-remaining-prose-appendix-coverage-vm20-section9-c-mortality-assumptions-child-004",
+        "vm20-remaining-prose-appendix-coverage-vm20-section9-c-mortality-assumptions-child-005",
+        "vm20-remaining-prose-appendix-coverage-vm20-section9-c-mortality-assumptions-child-006",
+        "vm20-remaining-prose-appendix-coverage-vm20-section9-c-mortality-assumptions-child-007",
+        "vm20-remaining-prose-appendix-coverage-vm20-section9-c-mortality-assumptions-child-008",
+        "vm20-remaining-prose-appendix-coverage-vm20-section9-c-mortality-assumptions-child-009",
+        "vm20-remaining-prose-appendix-coverage-vm20-section9-c-mortality-assumptions-child-010",
+        "vm20-remaining-prose-appendix-coverage-vm20-section9-c-mortality-assumptions-child-011",
+        "vm20-remaining-prose-appendix-coverage-vm20-section9-c-mortality-assumptions-child-012",
+        "vm20-remaining-prose-appendix-coverage-vm20-section9-c-mortality-assumptions-child-013",
+        "vm20-remaining-prose-appendix-coverage-vm20-section9-c-mortality-assumptions-child-014",
+        "vm20-remaining-prose-appendix-coverage-vm20-section9-c-mortality-assumptions-child-015",
+        "vm20-remaining-prose-appendix-coverage-vm20-section9-c-mortality-assumptions-child-016",
+        "vm20-remaining-prose-appendix-coverage-vm20-section9-c-mortality-assumptions-child-017",
+        "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions",
+        "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions-child-001",
+        "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions-child-002",
+        "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions-child-003",
+        "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions-child-004",
+        "vm20-remaining-prose-appendix-coverage-vm20-section9-e-expense-assumptions",
+        "vm20-remaining-prose-appendix-coverage-vm20-section9-e-expense-assumptions-child-001",
+        "vm20-remaining-prose-appendix-coverage-vm20-section9-e-expense-assumptions-child-002",
+        "vm20-remaining-prose-appendix-coverage-vm20-section9-f-asset-assumptions",
+        "vm20-remaining-prose-appendix-coverage-vm20-section9-f-asset-assumptions-child-001",
+        "vm20-remaining-prose-appendix-coverage-vm20-section9-f-asset-assumptions-child-002",
+        "vm20-remaining-prose-appendix-coverage-vm20-section9-f-asset-assumptions-child-003",
+        "vm20-remaining-prose-appendix-coverage-vm20-section9-f-asset-assumptions-child-004",
+        "vm20-remaining-prose-appendix-coverage-vm20-section9-f-asset-assumptions-child-005",
+        "vm20-remaining-prose-appendix-coverage-vm20-section9-f-asset-assumptions-child-006",
+        "vm20-remaining-prose-appendix-coverage-vm20-section9-g-revenue-sharing-assumptions",
+        "vm20-remaining-prose-appendix-coverage-vm20-section9-g-revenue-sharing-assumptions-child-001",
+        "vm20-remaining-prose-appendix-coverage-vm20-section9-g-revenue-sharing-assumptions-child-002",
+        "vm20-remaining-prose-appendix-coverage-vm20-appendix1-a-interest-rates",
+        "vm20-remaining-prose-appendix-coverage-vm20-appendix1-a-interest-rates-child-001",
+        "vm20-remaining-prose-appendix-coverage-vm20-appendix1-b-generating-equity-returns",
+        "vm20-remaining-prose-appendix-coverage-vm20-appendix1-b-generating-equity-returns-child-001",
+        "vm20-remaining-prose-appendix-coverage-vm20-appendix1-c-generating-bond-fund-returns",
+        "vm20-remaining-prose-appendix-coverage-vm20-appendix1-c-generating-bond-fund-returns-child-001",
+        "vm20-remaining-prose-appendix-coverage-vm20-appendix1-d-source-of-u-s-treasury-interest-rates-and-mean-reversion-benchmarks",
+        "vm20-remaining-prose-appendix-coverage-vm20-appendix1-d-source-of-u-s-treasury-interest-rates-and-mean-reversion-benchmarks-child-001",
+        "vm20-remaining-prose-appendix-coverage-vm20-appendix1-f-this-section-describes-the-set-of-16-scenarios-for-the-sert-in-vm-20-starting-with-the-yield-curve",
+        "vm20-remaining-prose-appendix-coverage-vm20-appendix1-f-this-section-describes-the-set-of-16-scenarios-for-the-sert-in-vm-20-starting-with-the-yield-curve-child-001",
+        "vm20-remaining-prose-appendix-coverage-vm20-appendix1-f-this-section-describes-the-set-of-16-scenarios-for-the-sert-in-vm-20-starting-with-the-yield-curve-child-002",
+        "vm20-remaining-prose-appendix-coverage-vm20-appendix1-g-governance",
+        "vm20-remaining-prose-appendix-coverage-vm20-appendix1-g-governance-child-001",
+        "vm20-remaining-prose-appendix-coverage-vm20-appendix2-a-baseline-annual-default-cost-factors",
+        "vm20-remaining-prose-appendix-coverage-vm20-appendix2-a-baseline-annual-default-cost-factors-child-001",
+        "vm20-remaining-prose-appendix-coverage-vm20-appendix2-b-cumulative-default-rates-used-in-baseline-annual-default-cost-factors",
+        "vm20-remaining-prose-appendix-coverage-vm20-appendix2-b-cumulative-default-rates-used-in-baseline-annual-default-cost-factors-child-001",
+        "vm20-remaining-prose-appendix-coverage-vm20-appendix2-c-recovery-rate-used-in-baseline-annual-default-cost-factors",
+        "vm20-remaining-prose-appendix-coverage-vm20-appendix2-c-recovery-rate-used-in-baseline-annual-default-cost-factors-child-001",
+        "vm20-remaining-prose-appendix-coverage-vm20-appendix2-d-current-market-benchmark-spreads",
+        "vm20-remaining-prose-appendix-coverage-vm20-appendix2-d-current-market-benchmark-spreads-child-001",
+        "vm20-remaining-prose-appendix-coverage-vm20-appendix2-e-long-term-benchmark-spreads",
+        "vm20-remaining-prose-appendix-coverage-vm20-appendix2-e-long-term-benchmark-spreads-child-001",
+        "vm20-remaining-prose-appendix-coverage-vm20-appendix2-g-long-term-benchmark-swap-spreads",
+        "vm20-remaining-prose-appendix-coverage-vm20-appendix2-g-long-term-benchmark-swap-spreads-child-001",
+        "vm20-remaining-prose-appendix-coverage-vm20-appendix2-h-tables",
+        "vm20-remaining-prose-appendix-coverage-vm20-appendix2-h-tables-child-001"
+      ],
+      "note": "Review-only candidate derived from an explicit source-text reference; no applicability, supersession, or legal effect is inferred."
+    },
+    {
+      "target": "Model #820",
+      "relationType": "cross_reference_candidate",
+      "status": "pending_human_review",
+      "basis": "explicit_source_text_reference",
+      "evidenceChunkIds": [
+        "vm20-remaining-prose-appendix-coverage-vm20-section9-a-general-assumption-requirements",
+        "vm20-remaining-prose-appendix-coverage-vm20-section9-a-general-assumption-requirements-child-001"
+      ],
+      "note": "Review-only candidate derived from an explicit source-text reference; no applicability, supersession, or legal effect is inferred."
+    },
+    {
+      "target": "AG 48",
+      "relationType": "cross_reference_candidate",
+      "status": "pending_human_review",
+      "basis": "explicit_source_text_reference",
+      "evidenceChunkIds": [
+        "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions",
+        "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions-child-004"
+      ],
+      "note": "Review-only candidate derived from an explicit source-text reference; no applicability, supersession, or legal effect is inferred."
+    },
+    {
+      "target": "Model #830",
+      "relationType": "cross_reference_candidate",
+      "status": "pending_human_review",
+      "basis": "explicit_source_text_reference",
+      "evidenceChunkIds": [
+        "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions",
+        "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions-child-004"
+      ],
+      "note": "Review-only candidate derived from an explicit source-text reference; no applicability, supersession, or legal effect is inferred."
+    },
+    {
+      "target": "Model #787",
+      "relationType": "cross_reference_candidate",
+      "status": "pending_human_review",
+      "basis": "explicit_source_text_reference",
+      "evidenceChunkIds": [
+        "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions",
+        "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions-child-004"
+      ],
+      "note": "Review-only candidate derived from an explicit source-text reference; no applicability, supersession, or legal effect is inferred."
+    },
+    {
+      "target": "Appendix 2",
+      "relationType": "cross_reference_candidate",
+      "status": "pending_human_review",
+      "basis": "explicit_source_text_reference",
+      "evidenceChunkIds": [
+        "vm20-remaining-prose-appendix-coverage-vm20-section9-f-asset-assumptions",
+        "vm20-remaining-prose-appendix-coverage-vm20-section9-f-asset-assumptions-child-001",
+        "vm20-remaining-prose-appendix-coverage-vm20-section9-f-asset-assumptions-child-002",
+        "vm20-remaining-prose-appendix-coverage-vm20-section9-f-asset-assumptions-child-003"
+      ],
+      "note": "Review-only candidate derived from an explicit source-text reference; no applicability, supersession, or legal effect is inferred."
     }
   ],
   "retrievalEvaluation": {
     "queryCount": 26,
     "supportedQueryCount": 25,
     "unsupportedQueryCount": 1,
-    "top1HitCount": 21,
+    "top1HitCount": 20,
     "top3HitCount": 25,
     "top5HitCount": 25,
-    "top1Accuracy": 0.84,
+    "top1Accuracy": 0.8,
     "top3Accuracy": 1,
-    "unsupportedQueriesDetected": 0,
+    "unsupportedQueriesDetected": 1,
+    "unsupportedSupportDecisions": [
+      {
+        "queryId": "q-vm20-current-table-gap",
+        "supportState": "unsupported",
+        "reasonCode": "missing_structured_data",
+        "reason": "The retrieved evidence is prose or methodology text, not structured table rows or equivalent structured data.",
+        "relatedEvidence": [
+          {
+            "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix2-c-recovery-rate-used-in-baseline-annual-default-cost-factors-child-001",
+            "sourceId": "vm20-remaining-prose-appendix-coverage",
+            "score": 49.79999999999999,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix2-d-current-market-benchmark-spreads-child-001",
+            "sourceId": "vm20-remaining-prose-appendix-coverage",
+            "score": 49.64999999999999,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix2-b-cumulative-default-rates-used-in-baseline-annual-default-cost-factors-child-001",
+            "sourceId": "vm20-remaining-prose-appendix-coverage",
+            "score": 49.349999999999994,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": "Appendix 2 current prescribed asset-default, asset-spread, and swap-spread table rows are not ingested as structured data. Appendix 2 current table version metadata is deferred to the structured-table milestone. structured_table_rows current_table_values table_version_metadata Review-only VM-20 Sections 4, 5, 9 and Appendices 1-2 coverage. Structured current regulatory tables remain a separate later milestone."
+      }
+    ],
+    "meanReciprocalRank": 0.8866666666666667,
+    "deduplication": {
+      "topN": 5,
+      "rawTopKCollisionCount": 33,
+      "rawTopKCollisionGroupCount": 10,
+      "postDeduplicationCollisionCount": 0,
+      "affectedQueries": [
+        {
+          "queryId": "q-vm20-assumptions-section-3c",
+          "collisionGroups": [
+            {
+              "parentChunkId": "vm20-canonical-coverage-vm20-npr-entry-formula",
+              "childChunkId": "vm20-canonical-coverage-vm20-npr-entry-formula-child-001"
+            },
+            {
+              "parentChunkId": "vm20-canonical-coverage-vm20-npr-entry-formula",
+              "childChunkId": "vm20-canonical-coverage-vm20-npr-entry-formula-child-002"
+            }
+          ]
+        },
+        {
+          "queryId": "q-vm20-hierarchical-section-3c",
+          "collisionGroups": [
+            {
+              "parentChunkId": "vm20-section3c-hierarchical-section-3-c-2-interest-rates",
+              "childChunkId": "vm20-section3c-hierarchical-section-3-c-2-interest-rates-child-001"
+            }
+          ]
+        },
+        {
+          "queryId": "q-vm20-npr-formula-uls-g",
+          "collisionGroups": [
+            {
+              "parentChunkId": "vm20-canonical-coverage-vm20-npr-entry-formula",
+              "childChunkId": "vm20-canonical-coverage-vm20-npr-entry-formula-child-001"
+            },
+            {
+              "parentChunkId": "vm20-canonical-coverage-vm20-npr-entry-formula",
+              "childChunkId": "vm20-canonical-coverage-vm20-npr-entry-formula-child-002"
+            }
+          ]
+        },
+        {
+          "queryId": "q-vm20-deterministic-reserve-entry",
+          "collisionGroups": [
+            {
+              "parentChunkId": "vm20-section3c-hierarchical-section-3-d-npr-calculation-and-cash-surrender-value-floor",
+              "childChunkId": "vm20-section3c-hierarchical-section-3-d-npr-calculation-and-cash-surrender-value-floor-child-001"
+            }
+          ]
+        },
+        {
+          "queryId": "q-vm20-exclusion-tests",
+          "collisionGroups": [
+            {
+              "parentChunkId": "vm20-canonical-coverage-vm20-section6-exclusion-tests",
+              "childChunkId": "vm20-canonical-coverage-vm20-section6-exclusion-tests-child-001"
+            },
+            {
+              "parentChunkId": "vm20-canonical-coverage-vm20-section6-exclusion-tests",
+              "childChunkId": "vm20-canonical-coverage-vm20-section6-exclusion-tests-child-005"
+            },
+            {
+              "parentChunkId": "vm20-canonical-coverage-vm20-section6-exclusion-tests",
+              "childChunkId": "vm20-canonical-coverage-vm20-section6-exclusion-tests-child-002"
+            },
+            {
+              "parentChunkId": "vm20-canonical-coverage-vm20-section6-exclusion-tests",
+              "childChunkId": "vm20-canonical-coverage-vm20-section6-exclusion-tests-child-004"
+            }
+          ]
+        },
+        {
+          "queryId": "q-vm20-cash-flow-model-structure",
+          "collisionGroups": [
+            {
+              "parentChunkId": "vm20-canonical-coverage-vm20-section7-model-structure",
+              "childChunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-001"
+            },
+            {
+              "parentChunkId": "vm20-canonical-coverage-vm20-section7-model-structure",
+              "childChunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-005"
+            },
+            {
+              "parentChunkId": "vm20-canonical-coverage-vm20-section7-model-structure",
+              "childChunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-003"
+            },
+            {
+              "parentChunkId": "vm20-canonical-coverage-vm20-section7-model-structure",
+              "childChunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-002"
+            }
+          ]
+        },
+        {
+          "queryId": "q-vm20-asset-treatment",
+          "collisionGroups": [
+            {
+              "parentChunkId": "vm20-canonical-coverage-vm20-section7-model-structure",
+              "childChunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-002"
+            },
+            {
+              "parentChunkId": "vm20-canonical-coverage-vm20-section7-model-structure",
+              "childChunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-005"
+            },
+            {
+              "parentChunkId": "vm20-canonical-coverage-vm20-section7-model-structure",
+              "childChunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-001"
+            },
+            {
+              "parentChunkId": "vm20-canonical-coverage-vm20-section7-model-structure",
+              "childChunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-003"
+            }
+          ]
+        },
+        {
+          "queryId": "q-vm20-reinsurance-credit-and-cash-flows",
+          "collisionGroups": [
+            {
+              "parentChunkId": "vm20-practice-note-companion-vm20-pn-reinsurance",
+              "childChunkId": "vm20-practice-note-companion-vm20-pn-reinsurance-child-002"
+            },
+            {
+              "parentChunkId": "vm20-practice-note-companion-vm20-pn-reinsurance",
+              "childChunkId": "vm20-practice-note-companion-vm20-pn-reinsurance-child-005"
+            },
+            {
+              "parentChunkId": "vm20-practice-note-companion-vm20-pn-reinsurance",
+              "childChunkId": "vm20-practice-note-companion-vm20-pn-reinsurance-child-004"
+            }
+          ]
+        },
+        {
+          "queryId": "q-vm20-practice-note-expense-guidance",
+          "collisionGroups": [
+            {
+              "parentChunkId": "vm20-practice-note-companion-vm20-pn-expense",
+              "childChunkId": "vm20-practice-note-companion-vm20-pn-expense-child-001"
+            },
+            {
+              "parentChunkId": "vm20-practice-note-companion-vm20-pn-expense",
+              "childChunkId": "vm20-practice-note-companion-vm20-pn-expense-child-002"
+            },
+            {
+              "parentChunkId": "vm20-practice-note-companion-vm20-pn-expense",
+              "childChunkId": "vm20-practice-note-companion-vm20-pn-expense-child-003"
+            }
+          ]
+        },
+        {
+          "queryId": "q-vm20-section4-methods",
+          "collisionGroups": [
+            {
+              "parentChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section4-complete",
+              "childChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section4-complete-child-001"
+            },
+            {
+              "parentChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section4-complete",
+              "childChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section4-complete-child-002"
+            }
+          ]
+        },
+        {
+          "queryId": "q-vm20-section9-policyholder-exceptions",
+          "collisionGroups": [
+            {
+              "parentChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions",
+              "childChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions-child-002"
+            },
+            {
+              "parentChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions",
+              "childChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions-child-001"
+            },
+            {
+              "parentChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions",
+              "childChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions-child-003"
+            },
+            {
+              "parentChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions",
+              "childChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions-child-004"
+            }
+          ]
+        },
+        {
+          "queryId": "q-vm20-appendix1-scenarios",
+          "collisionGroups": [
+            {
+              "parentChunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix1-f-this-section-describes-the-set-of-16-scenarios-for-the-sert-in-vm-20-starting-with-the-yield-curve",
+              "childChunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix1-f-this-section-describes-the-set-of-16-scenarios-for-the-sert-in-vm-20-starting-with-the-yield-curve-child-001"
+            },
+            {
+              "parentChunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix1-f-this-section-describes-the-set-of-16-scenarios-for-the-sert-in-vm-20-starting-with-the-yield-curve",
+              "childChunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix1-f-this-section-describes-the-set-of-16-scenarios-for-the-sert-in-vm-20-starting-with-the-yield-curve-child-002"
+            }
+          ]
+        },
+        {
+          "queryId": "q-vm20-cross-document-reporting",
+          "collisionGroups": [
+            {
+              "parentChunkId": "vm20-canonical-coverage-vm20-section7-model-structure",
+              "childChunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-002"
+            }
+          ]
+        }
+      ]
+    },
+    "corpusDeduplication": {
+      "topN": 5,
+      "rawTopKCollisionCount": 46,
+      "rawTopKCollisionGroupCount": 19,
+      "postDeduplicationCollisionCount": 0,
+      "affectedQueries": [
+        {
+          "queryId": "q-ag03-maturity-value",
+          "collisionGroups": [
+            {
+              "parentChunkId": "vm20-section3c-hierarchical-section-3-d-npr-calculation-and-cash-surrender-value-floor",
+              "childChunkId": "vm20-section3c-hierarchical-section-3-d-npr-calculation-and-cash-surrender-value-floor-child-001"
+            }
+          ]
+        },
+        {
+          "queryId": "q-vm20-assumptions-section-3c",
+          "collisionGroups": [
+            {
+              "parentChunkId": "vm20-canonical-coverage-vm20-npr-entry-formula",
+              "childChunkId": "vm20-canonical-coverage-vm20-npr-entry-formula-child-001"
+            },
+            {
+              "parentChunkId": "vm20-canonical-coverage-vm20-npr-entry-formula",
+              "childChunkId": "vm20-canonical-coverage-vm20-npr-entry-formula-child-002"
+            }
+          ]
+        },
+        {
+          "queryId": "q-vm20-hierarchical-section-3c",
+          "collisionGroups": [
+            {
+              "parentChunkId": "vm20-section3c-hierarchical-section-3-c-2-interest-rates",
+              "childChunkId": "vm20-section3c-hierarchical-section-3-c-2-interest-rates-child-001"
+            }
+          ]
+        },
+        {
+          "queryId": "q-vm20-npr-formula-uls-g",
+          "collisionGroups": [
+            {
+              "parentChunkId": "vm20-canonical-coverage-vm20-npr-entry-formula",
+              "childChunkId": "vm20-canonical-coverage-vm20-npr-entry-formula-child-001"
+            },
+            {
+              "parentChunkId": "vm20-canonical-coverage-vm20-npr-entry-formula",
+              "childChunkId": "vm20-canonical-coverage-vm20-npr-entry-formula-child-002"
+            }
+          ]
+        },
+        {
+          "queryId": "q-vm20-deterministic-reserve-entry",
+          "collisionGroups": [
+            {
+              "parentChunkId": "vm20-section3c-hierarchical-section-3-d-npr-calculation-and-cash-surrender-value-floor",
+              "childChunkId": "vm20-section3c-hierarchical-section-3-d-npr-calculation-and-cash-surrender-value-floor-child-001"
+            }
+          ]
+        },
+        {
+          "queryId": "q-vm20-exclusion-tests",
+          "collisionGroups": [
+            {
+              "parentChunkId": "vm20-canonical-coverage-vm20-section6-exclusion-tests",
+              "childChunkId": "vm20-canonical-coverage-vm20-section6-exclusion-tests-child-001"
+            },
+            {
+              "parentChunkId": "vm20-canonical-coverage-vm20-section6-exclusion-tests",
+              "childChunkId": "vm20-canonical-coverage-vm20-section6-exclusion-tests-child-005"
+            },
+            {
+              "parentChunkId": "vm20-canonical-coverage-vm20-section6-exclusion-tests",
+              "childChunkId": "vm20-canonical-coverage-vm20-section6-exclusion-tests-child-002"
+            },
+            {
+              "parentChunkId": "vm20-canonical-coverage-vm20-section6-exclusion-tests",
+              "childChunkId": "vm20-canonical-coverage-vm20-section6-exclusion-tests-child-004"
+            }
+          ]
+        },
+        {
+          "queryId": "q-vm20-cash-flow-model-structure",
+          "collisionGroups": [
+            {
+              "parentChunkId": "vm20-canonical-coverage-vm20-section7-model-structure",
+              "childChunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-001"
+            },
+            {
+              "parentChunkId": "vm20-canonical-coverage-vm20-section7-model-structure",
+              "childChunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-005"
+            },
+            {
+              "parentChunkId": "vm20-canonical-coverage-vm20-section7-model-structure",
+              "childChunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-003"
+            },
+            {
+              "parentChunkId": "vm20-canonical-coverage-vm20-section7-model-structure",
+              "childChunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-002"
+            }
+          ]
+        },
+        {
+          "queryId": "q-vm20-asset-treatment",
+          "collisionGroups": [
+            {
+              "parentChunkId": "vm20-canonical-coverage-vm20-section7-model-structure",
+              "childChunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-002"
+            },
+            {
+              "parentChunkId": "vm20-canonical-coverage-vm20-section7-model-structure",
+              "childChunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-005"
+            },
+            {
+              "parentChunkId": "vm20-canonical-coverage-vm20-section7-model-structure",
+              "childChunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-001"
+            },
+            {
+              "parentChunkId": "vm20-canonical-coverage-vm20-section7-model-structure",
+              "childChunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-003"
+            }
+          ]
+        },
+        {
+          "queryId": "q-vm20-reinsurance-credit-and-cash-flows",
+          "collisionGroups": [
+            {
+              "parentChunkId": "vm20-practice-note-companion-vm20-pn-reinsurance",
+              "childChunkId": "vm20-practice-note-companion-vm20-pn-reinsurance-child-002"
+            },
+            {
+              "parentChunkId": "vm20-practice-note-companion-vm20-pn-reinsurance",
+              "childChunkId": "vm20-practice-note-companion-vm20-pn-reinsurance-child-005"
+            },
+            {
+              "parentChunkId": "vm20-practice-note-companion-vm20-pn-reinsurance",
+              "childChunkId": "vm20-practice-note-companion-vm20-pn-reinsurance-child-004"
+            }
+          ]
+        },
+        {
+          "queryId": "q-vm20-practice-note-expense-guidance",
+          "collisionGroups": [
+            {
+              "parentChunkId": "vm20-practice-note-companion-vm20-pn-expense",
+              "childChunkId": "vm20-practice-note-companion-vm20-pn-expense-child-001"
+            },
+            {
+              "parentChunkId": "vm20-practice-note-companion-vm20-pn-expense",
+              "childChunkId": "vm20-practice-note-companion-vm20-pn-expense-child-002"
+            },
+            {
+              "parentChunkId": "vm20-practice-note-companion-vm20-pn-expense",
+              "childChunkId": "vm20-practice-note-companion-vm20-pn-expense-child-003"
+            }
+          ]
+        },
+        {
+          "queryId": "q-vm20-section4-methods",
+          "collisionGroups": [
+            {
+              "parentChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section4-complete",
+              "childChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section4-complete-child-001"
+            },
+            {
+              "parentChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section4-complete",
+              "childChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section4-complete-child-002"
+            }
+          ]
+        },
+        {
+          "queryId": "q-vm20-section9-policyholder-exceptions",
+          "collisionGroups": [
+            {
+              "parentChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions",
+              "childChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions-child-002"
+            },
+            {
+              "parentChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions",
+              "childChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions-child-001"
+            },
+            {
+              "parentChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions",
+              "childChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions-child-003"
+            },
+            {
+              "parentChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions",
+              "childChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions-child-004"
+            }
+          ]
+        },
+        {
+          "queryId": "q-vm20-appendix1-scenarios",
+          "collisionGroups": [
+            {
+              "parentChunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix1-f-this-section-describes-the-set-of-16-scenarios-for-the-sert-in-vm-20-starting-with-the-yield-curve",
+              "childChunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix1-f-this-section-describes-the-set-of-16-scenarios-for-the-sert-in-vm-20-starting-with-the-yield-curve-child-001"
+            },
+            {
+              "parentChunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix1-f-this-section-describes-the-set-of-16-scenarios-for-the-sert-in-vm-20-starting-with-the-yield-curve",
+              "childChunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix1-f-this-section-describes-the-set-of-16-scenarios-for-the-sert-in-vm-20-starting-with-the-yield-curve-child-002"
+            }
+          ]
+        },
+        {
+          "queryId": "q-vm20-cross-document-reporting",
+          "collisionGroups": [
+            {
+              "parentChunkId": "vm20-canonical-coverage-vm20-section7-model-structure",
+              "childChunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-002"
+            }
+          ]
+        },
+        {
+          "queryId": "q-vm21-sr-projection-entry",
+          "collisionGroups": [
+            {
+              "parentChunkId": "vm20-practice-note-companion-vm20-pn-sr-overview",
+              "childChunkId": "vm20-practice-note-companion-vm20-pn-sr-overview-child-002"
+            },
+            {
+              "parentChunkId": "vm20-practice-note-companion-vm20-pn-sr-overview",
+              "childChunkId": "vm20-practice-note-companion-vm20-pn-sr-overview-child-003"
+            }
+          ]
+        },
+        {
+          "queryId": "q-reg210-opening-title",
+          "collisionGroups": [
+            {
+              "parentChunkId": "vm20-canonical-coverage-vm20-npr-entry-setup",
+              "childChunkId": "vm20-canonical-coverage-vm20-npr-entry-setup-child-001"
+            },
+            {
+              "parentChunkId": "vm20-canonical-coverage-vm20-npr-entry-setup",
+              "childChunkId": "vm20-canonical-coverage-vm20-npr-entry-setup-child-002"
+            },
+            {
+              "parentChunkId": "vm20-canonical-coverage-vm20-npr-entry-setup",
+              "childChunkId": "vm20-canonical-coverage-vm20-npr-entry-setup-child-003"
+            }
+          ]
+        },
+        {
+          "queryId": "q-reg210-filing-records",
+          "collisionGroups": [
+            {
+              "parentChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-a-general-assumption-requirements",
+              "childChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-a-general-assumption-requirements-child-001"
+            },
+            {
+              "parentChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-a-general-assumption-requirements",
+              "childChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-a-general-assumption-requirements-child-002"
+            }
+          ]
+        },
+        {
+          "queryId": "q-synth-product-spec",
+          "collisionGroups": [
+            {
+              "parentChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions",
+              "childChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions-child-001"
+            }
+          ]
+        },
+        {
+          "queryId": "q-unsupported-liability-modeling",
+          "collisionGroups": [
+            {
+              "parentChunkId": "vm20-practice-note-companion-vm20-pn-starting-assets",
+              "childChunkId": "vm20-practice-note-companion-vm20-pn-starting-assets-child-021"
+            },
+            {
+              "parentChunkId": "vm20-practice-note-companion-vm20-pn-starting-assets",
+              "childChunkId": "vm20-practice-note-companion-vm20-pn-starting-assets-child-005"
+            },
+            {
+              "parentChunkId": "vm20-practice-note-companion-vm20-pn-starting-assets",
+              "childChunkId": "vm20-practice-note-companion-vm20-pn-starting-assets-child-013"
+            },
+            {
+              "parentChunkId": "vm20-practice-note-companion-vm20-pn-starting-assets",
+              "childChunkId": "vm20-practice-note-companion-vm20-pn-starting-assets-child-016"
+            }
+          ]
+        }
+      ]
+    },
     "parentExpansionChecks": [
       {
         "queryId": "q-vm20-section5-scenario-reserve",
         "childChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section5-complete-child-001",
         "parentChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section5-complete",
-        "childRetrieved": false,
+        "childRetrieved": true,
         "parentResolvable": true,
-        "parentRetrieved": true,
+        "parentRetrieved": false,
         "expandedEvidenceChunkCount": 2,
         "note": "Deterministic structural check only; the baseline evaluator does not rerank or synthesize parent-expanded answers."
       },
@@ -144,9 +837,9 @@
         "queryId": "q-vm20-section9-mortality-parent-context",
         "childChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-c-mortality-assumptions-child-001",
         "parentChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-c-mortality-assumptions",
-        "childRetrieved": false,
+        "childRetrieved": true,
         "parentResolvable": true,
-        "parentRetrieved": true,
+        "parentRetrieved": false,
         "expandedEvidenceChunkCount": 2,
         "note": "Deterministic structural check only; the baseline evaluator does not rerank or synthesize parent-expanded answers."
       },
@@ -156,11 +849,14 @@
         "parentChunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix1-f-this-section-describes-the-set-of-16-scenarios-for-the-sert-in-vm-20-starting-with-the-yield-curve",
         "childRetrieved": true,
         "parentResolvable": true,
-        "parentRetrieved": true,
+        "parentRetrieved": false,
         "expandedEvidenceChunkCount": 2,
         "note": "Deterministic structural check only; the baseline evaluator does not rerank or synthesize parent-expanded answers."
       }
     ],
+    "sourceQaPath": "data/processed/review_packages/vm20-qa-source-spotcheck.json",
+    "retrievalQaReportPath": "data/processed/review_packages/vm20-retrieval-qa-report.json",
+    "duplicateParentChildPolicy": "Equivalent parent/child source excerpts are deduplicated after scoring with the child preferred; very large parents can be context-only and are expanded after child retrieval.",
     "baselineBeforeExpansion": {
       "queryCount": 22,
       "supportedQueryCount": 20,
@@ -175,184 +871,682 @@
       {
         "queryId": "q-vm20-framework-overview",
         "category": "framework_overview",
+        "expectedChunkIds": [
+          "chunk-vm20-framework-overview-001"
+        ],
+        "top1ChunkId": "chunk-vm20-framework-overview-001",
+        "top3ChunkIds": [
+          "chunk-vm20-framework-overview-001",
+          "vm20-practice-note-companion-vm20-pn-dr-overview-child-003",
+          "vm20-practice-note-companion-vm20-pn-npr-overview-child-002"
+        ],
         "top1Hit": true,
         "top3Hit": true,
-        "resultLabel": "supported_top1"
+        "resultLabel": "supported_top1",
+        "supportState": "supported",
+        "supportReasonCode": "retrieved_evidence_matches_requested_information_type",
+        "rawTopKCollisionGroups": []
       },
       {
         "queryId": "q-vm20-boundary",
         "category": "mechanics_boundary",
+        "expectedChunkIds": [
+          "chunk-vm20-framework-boundary-001"
+        ],
+        "top1ChunkId": "chunk-vm20-framework-boundary-001",
+        "top3ChunkIds": [
+          "chunk-vm20-framework-boundary-001",
+          "vm20-practice-note-companion-vm20-pn-npr-overview-child-002",
+          "vm20-practice-note-companion-vm20-pn-dr-overview-child-005"
+        ],
         "top1Hit": true,
         "top3Hit": true,
-        "resultLabel": "supported_top1"
+        "resultLabel": "supported_top1",
+        "supportState": "supported",
+        "supportReasonCode": "retrieved_evidence_matches_requested_information_type",
+        "rawTopKCollisionGroups": []
       },
       {
         "queryId": "q-vm20-assumptions-section-3c",
         "category": "multi_chunk",
+        "expectedChunkIds": [
+          "chunk-vm20-assumptions-section-3c-001",
+          "chunk-vm20-assumptions-section-3c-002",
+          "chunk-vm20-assumptions-section-3c-003",
+          "chunk-vm20-assumptions-section-3c-004"
+        ],
+        "top1ChunkId": "chunk-vm20-assumptions-section-3c-001",
+        "top3ChunkIds": [
+          "chunk-vm20-assumptions-section-3c-001",
+          "vm20-canonical-coverage-vm20-npr-entry-formula-child-001",
+          "vm20-canonical-coverage-vm20-npr-entry-formula-child-002"
+        ],
         "top1Hit": true,
         "top3Hit": true,
-        "resultLabel": "supported_top1"
+        "resultLabel": "supported_top1",
+        "supportState": "supported",
+        "supportReasonCode": "retrieved_evidence_matches_requested_information_type",
+        "rawTopKCollisionGroups": [
+          {
+            "parentChunkId": "vm20-canonical-coverage-vm20-npr-entry-formula",
+            "childChunkId": "vm20-canonical-coverage-vm20-npr-entry-formula-child-001"
+          },
+          {
+            "parentChunkId": "vm20-canonical-coverage-vm20-npr-entry-formula",
+            "childChunkId": "vm20-canonical-coverage-vm20-npr-entry-formula-child-002"
+          }
+        ]
       },
       {
         "queryId": "q-vm20-hierarchical-section-3c",
         "category": "hierarchical_parent_child",
+        "expectedChunkIds": [
+          "vm20-section3c-hierarchical-section-3-c-1-mortality-rates-child-001",
+          "vm20-section3c-hierarchical-section-3-c-2-interest-rates-child-001",
+          "vm20-section3c-hierarchical-section-3-c-3-lapse-rates-child-001"
+        ],
+        "top1ChunkId": "chunk-vm20-assumptions-section-3c-001",
+        "top3ChunkIds": [
+          "chunk-vm20-assumptions-section-3c-001",
+          "vm20-section3c-hierarchical-section-3-c-3-lapse-rates",
+          "vm20-section3c-hierarchical-section-3-c-2-interest-rates-child-001"
+        ],
         "top1Hit": false,
         "top3Hit": true,
-        "resultLabel": "supported_top3"
+        "resultLabel": "supported_top3",
+        "supportState": "supported",
+        "supportReasonCode": "retrieved_evidence_matches_requested_information_type",
+        "rawTopKCollisionGroups": [
+          {
+            "parentChunkId": "vm20-section3c-hierarchical-section-3-c-2-interest-rates",
+            "childChunkId": "vm20-section3c-hierarchical-section-3-c-2-interest-rates-child-001"
+          }
+        ]
       },
       {
         "queryId": "q-vm20-npr-formula-uls-g",
         "category": "vm20_npr",
+        "expectedChunkIds": [
+          "vm20-canonical-coverage-vm20-npr-entry-formula",
+          "vm20-canonical-coverage-vm20-npr-entry-formula-child-001"
+        ],
+        "top1ChunkId": "vm20-canonical-coverage-vm20-npr-entry-formula-child-001",
+        "top3ChunkIds": [
+          "vm20-canonical-coverage-vm20-npr-entry-formula-child-001",
+          "vm20-canonical-coverage-vm20-npr-entry-formula-child-002",
+          "vm20-practice-note-companion-vm20-pn-npr-overview-child-008"
+        ],
         "top1Hit": true,
         "top3Hit": true,
-        "resultLabel": "supported_top1"
+        "resultLabel": "supported_top1",
+        "supportState": "supported",
+        "supportReasonCode": "retrieved_evidence_matches_requested_information_type",
+        "rawTopKCollisionGroups": [
+          {
+            "parentChunkId": "vm20-canonical-coverage-vm20-npr-entry-formula",
+            "childChunkId": "vm20-canonical-coverage-vm20-npr-entry-formula-child-001"
+          },
+          {
+            "parentChunkId": "vm20-canonical-coverage-vm20-npr-entry-formula",
+            "childChunkId": "vm20-canonical-coverage-vm20-npr-entry-formula-child-002"
+          }
+        ]
       },
       {
         "queryId": "q-vm20-deterministic-reserve-entry",
         "category": "vm20_dr",
+        "expectedChunkIds": [
+          "vm20-canonical-coverage-vm20-section4-entry",
+          "vm20-canonical-coverage-vm20-section4-entry-child-001",
+          "vm20-section3c-hierarchical-section-3-d-npr-calculation-and-cash-surrender-value-floor",
+          "vm20-section3c-hierarchical-section-3-d-npr-calculation-and-cash-surrender-value-floor-child-001"
+        ],
+        "top1ChunkId": "vm20-section3c-hierarchical-section-3-d-npr-calculation-and-cash-surrender-value-floor",
+        "top3ChunkIds": [
+          "vm20-section3c-hierarchical-section-3-d-npr-calculation-and-cash-surrender-value-floor",
+          "vm20-practice-note-companion-vm20-pn-dr-overview-child-005",
+          "vm20-practice-note-companion-vm20-pn-dr-overview-child-006"
+        ],
         "top1Hit": true,
         "top3Hit": true,
-        "resultLabel": "supported_top1"
+        "resultLabel": "supported_top1",
+        "supportState": "supported",
+        "supportReasonCode": "retrieved_evidence_matches_requested_information_type",
+        "rawTopKCollisionGroups": [
+          {
+            "parentChunkId": "vm20-section3c-hierarchical-section-3-d-npr-calculation-and-cash-surrender-value-floor",
+            "childChunkId": "vm20-section3c-hierarchical-section-3-d-npr-calculation-and-cash-surrender-value-floor-child-001"
+          }
+        ]
       },
       {
         "queryId": "q-vm20-stochastic-reserve-aggregation",
         "category": "vm20_sr",
+        "expectedChunkIds": [
+          "vm20-canonical-coverage-vm20-section5-entry",
+          "vm20-canonical-coverage-vm20-section5-entry-child-001"
+        ],
+        "top1ChunkId": "vm20-canonical-coverage-vm20-section5-entry",
+        "top3ChunkIds": [
+          "vm20-canonical-coverage-vm20-section5-entry",
+          "vm20-practice-note-companion-vm20-pn-sr-overview-child-001",
+          "vm20-practice-note-companion-vm20-pn-sr-overview-child-002"
+        ],
         "top1Hit": true,
         "top3Hit": true,
-        "resultLabel": "supported_top1"
+        "resultLabel": "supported_top1",
+        "supportState": "supported",
+        "supportReasonCode": "retrieved_evidence_matches_requested_information_type",
+        "rawTopKCollisionGroups": []
       },
       {
         "queryId": "q-vm20-exclusion-tests",
         "category": "vm20_exclusions",
+        "expectedChunkIds": [
+          "vm20-canonical-coverage-vm20-section6-exclusion-tests",
+          "vm20-canonical-coverage-vm20-section6-exclusion-tests-child-001"
+        ],
+        "top1ChunkId": "vm20-canonical-coverage-vm20-section6-exclusion-tests-child-001",
+        "top3ChunkIds": [
+          "vm20-canonical-coverage-vm20-section6-exclusion-tests-child-001",
+          "vm20-canonical-coverage-vm20-section6-exclusion-tests-child-005",
+          "vm20-canonical-coverage-vm20-section6-exclusion-tests-child-002"
+        ],
         "top1Hit": true,
         "top3Hit": true,
-        "resultLabel": "supported_top1"
+        "resultLabel": "supported_top1",
+        "supportState": "supported",
+        "supportReasonCode": "retrieved_evidence_matches_requested_information_type",
+        "rawTopKCollisionGroups": [
+          {
+            "parentChunkId": "vm20-canonical-coverage-vm20-section6-exclusion-tests",
+            "childChunkId": "vm20-canonical-coverage-vm20-section6-exclusion-tests-child-001"
+          },
+          {
+            "parentChunkId": "vm20-canonical-coverage-vm20-section6-exclusion-tests",
+            "childChunkId": "vm20-canonical-coverage-vm20-section6-exclusion-tests-child-005"
+          },
+          {
+            "parentChunkId": "vm20-canonical-coverage-vm20-section6-exclusion-tests",
+            "childChunkId": "vm20-canonical-coverage-vm20-section6-exclusion-tests-child-002"
+          },
+          {
+            "parentChunkId": "vm20-canonical-coverage-vm20-section6-exclusion-tests",
+            "childChunkId": "vm20-canonical-coverage-vm20-section6-exclusion-tests-child-004"
+          }
+        ]
       },
       {
         "queryId": "q-vm20-cash-flow-model-structure",
         "category": "vm20_cash_flow_models",
+        "expectedChunkIds": [
+          "vm20-canonical-coverage-vm20-section7-model-structure",
+          "vm20-canonical-coverage-vm20-section7-model-structure-child-001"
+        ],
+        "top1ChunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-001",
+        "top3ChunkIds": [
+          "vm20-canonical-coverage-vm20-section7-model-structure-child-001",
+          "vm20-canonical-coverage-vm20-section7-model-structure-child-005",
+          "vm20-canonical-coverage-vm20-section7-model-structure-child-003"
+        ],
         "top1Hit": true,
         "top3Hit": true,
-        "resultLabel": "supported_top1"
+        "resultLabel": "supported_top1",
+        "supportState": "supported",
+        "supportReasonCode": "retrieved_evidence_matches_requested_information_type",
+        "rawTopKCollisionGroups": [
+          {
+            "parentChunkId": "vm20-canonical-coverage-vm20-section7-model-structure",
+            "childChunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-001"
+          },
+          {
+            "parentChunkId": "vm20-canonical-coverage-vm20-section7-model-structure",
+            "childChunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-005"
+          },
+          {
+            "parentChunkId": "vm20-canonical-coverage-vm20-section7-model-structure",
+            "childChunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-003"
+          },
+          {
+            "parentChunkId": "vm20-canonical-coverage-vm20-section7-model-structure",
+            "childChunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-002"
+          }
+        ]
       },
       {
         "queryId": "q-vm20-asset-treatment",
         "category": "vm20_assets",
+        "expectedChunkIds": [
+          "vm20-canonical-coverage-vm20-section7-asset-mechanics",
+          "vm20-canonical-coverage-vm20-section7-asset-mechanics-child-001",
+          "vm20-canonical-coverage-vm20-section7-model-structure",
+          "vm20-canonical-coverage-vm20-section7-model-structure-child-002"
+        ],
+        "top1ChunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-002",
+        "top3ChunkIds": [
+          "vm20-canonical-coverage-vm20-section7-model-structure-child-002",
+          "vm20-canonical-coverage-vm20-section7-model-structure-child-005",
+          "vm20-canonical-coverage-vm20-section7-model-structure-child-001"
+        ],
         "top1Hit": true,
         "top3Hit": true,
-        "resultLabel": "supported_top1"
+        "resultLabel": "supported_top1",
+        "supportState": "supported",
+        "supportReasonCode": "retrieved_evidence_matches_requested_information_type",
+        "rawTopKCollisionGroups": [
+          {
+            "parentChunkId": "vm20-canonical-coverage-vm20-section7-model-structure",
+            "childChunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-002"
+          },
+          {
+            "parentChunkId": "vm20-canonical-coverage-vm20-section7-model-structure",
+            "childChunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-005"
+          },
+          {
+            "parentChunkId": "vm20-canonical-coverage-vm20-section7-model-structure",
+            "childChunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-001"
+          },
+          {
+            "parentChunkId": "vm20-canonical-coverage-vm20-section7-model-structure",
+            "childChunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-003"
+          }
+        ]
       },
       {
         "queryId": "q-vm20-reinsurance-credit-and-cash-flows",
         "category": "vm20_reinsurance",
+        "expectedChunkIds": [
+          "vm20-canonical-coverage-vm20-section8-reinsurance",
+          "vm20-canonical-coverage-vm20-section8-reinsurance-child-001"
+        ],
+        "top1ChunkId": "vm20-canonical-coverage-vm20-section8-reinsurance",
+        "top3ChunkIds": [
+          "vm20-canonical-coverage-vm20-section8-reinsurance",
+          "vm20-practice-note-companion-vm20-pn-reinsurance-child-002",
+          "vm20-practice-note-companion-vm20-pn-reinsurance-child-005"
+        ],
         "top1Hit": true,
         "top3Hit": true,
-        "resultLabel": "supported_top1"
+        "resultLabel": "supported_top1",
+        "supportState": "supported",
+        "supportReasonCode": "retrieved_evidence_matches_requested_information_type",
+        "rawTopKCollisionGroups": [
+          {
+            "parentChunkId": "vm20-practice-note-companion-vm20-pn-reinsurance",
+            "childChunkId": "vm20-practice-note-companion-vm20-pn-reinsurance-child-002"
+          },
+          {
+            "parentChunkId": "vm20-practice-note-companion-vm20-pn-reinsurance",
+            "childChunkId": "vm20-practice-note-companion-vm20-pn-reinsurance-child-005"
+          },
+          {
+            "parentChunkId": "vm20-practice-note-companion-vm20-pn-reinsurance",
+            "childChunkId": "vm20-practice-note-companion-vm20-pn-reinsurance-child-004"
+          }
+        ]
       },
       {
         "queryId": "q-vm20-prescribed-company-assumptions",
         "category": "vm20_assumptions_comparison",
+        "expectedChunkIds": [
+          "vm20-section3c-hierarchical-section-3-c-1-mortality-rates-child-001",
+          "vm20-canonical-coverage-vm20-npr-entry-setup-child-001",
+          "vm20-practice-note-companion-vm20-pn-prudent-estimate-child-005",
+          "vm20-practice-note-companion-vm20-pn-prudent-estimate-child-002",
+          "vm20-practice-note-companion-vm20-pn-prudent-estimate-child-003"
+        ],
+        "top1ChunkId": "vm20-practice-note-companion-vm20-pn-prudent-estimate-child-005",
+        "top3ChunkIds": [
+          "vm20-practice-note-companion-vm20-pn-prudent-estimate-child-005",
+          "vm20-practice-note-companion-vm20-pn-prudent-estimate-child-002",
+          "vm20-practice-note-companion-vm20-pn-prudent-estimate-child-003"
+        ],
         "top1Hit": true,
         "top3Hit": true,
-        "resultLabel": "supported_top1"
+        "resultLabel": "supported_top1",
+        "supportState": "supported",
+        "supportReasonCode": "retrieved_evidence_matches_requested_information_type",
+        "rawTopKCollisionGroups": []
       },
       {
         "queryId": "q-vm20-practice-note-expense-guidance",
         "category": "vm20_companion_expense",
-        "top1Hit": false,
+        "expectedChunkIds": [
+          "vm20-practice-note-companion-vm20-pn-expense",
+          "vm20-practice-note-companion-vm20-pn-expense-child-001"
+        ],
+        "top1ChunkId": "vm20-practice-note-companion-vm20-pn-expense-child-001",
+        "top3ChunkIds": [
+          "vm20-practice-note-companion-vm20-pn-expense-child-001",
+          "vm20-practice-note-companion-vm20-pn-expense-child-002",
+          "vm20-practice-note-companion-vm20-pn-expense-child-003"
+        ],
+        "top1Hit": true,
         "top3Hit": true,
-        "resultLabel": "supported_top3"
+        "resultLabel": "supported_top1",
+        "supportState": "supported",
+        "supportReasonCode": "retrieved_evidence_matches_requested_information_type",
+        "rawTopKCollisionGroups": [
+          {
+            "parentChunkId": "vm20-practice-note-companion-vm20-pn-expense",
+            "childChunkId": "vm20-practice-note-companion-vm20-pn-expense-child-001"
+          },
+          {
+            "parentChunkId": "vm20-practice-note-companion-vm20-pn-expense",
+            "childChunkId": "vm20-practice-note-companion-vm20-pn-expense-child-002"
+          },
+          {
+            "parentChunkId": "vm20-practice-note-companion-vm20-pn-expense",
+            "childChunkId": "vm20-practice-note-companion-vm20-pn-expense-child-003"
+          }
+        ]
       },
       {
         "queryId": "q-vm20-practice-note-mortality-behavior",
         "category": "vm20_companion_assumptions",
+        "expectedChunkIds": [
+          "vm20-practice-note-companion-vm20-pn-mortality-child-001",
+          "vm20-practice-note-companion-vm20-pn-behavior-child-001"
+        ],
+        "top1ChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions-child-002",
+        "top3ChunkIds": [
+          "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions-child-002",
+          "vm20-practice-note-companion-vm20-pn-behavior-child-001",
+          "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions-child-004"
+        ],
         "top1Hit": false,
         "top3Hit": true,
-        "resultLabel": "supported_top3"
+        "resultLabel": "supported_top3",
+        "supportState": "supported",
+        "supportReasonCode": "retrieved_evidence_matches_requested_information_type",
+        "rawTopKCollisionGroups": []
       },
       {
         "queryId": "q-vm20-practice-note-margins",
         "category": "vm20_companion_margins",
+        "expectedChunkIds": [
+          "vm20-practice-note-companion-vm20-pn-margins",
+          "vm20-practice-note-companion-vm20-pn-margins-child-001",
+          "vm20-practice-note-companion-vm20-pn-margins-child-004",
+          "vm20-practice-note-companion-vm20-pn-margins-child-002",
+          "vm20-practice-note-companion-vm20-pn-margins-child-006"
+        ],
+        "top1ChunkId": "vm20-practice-note-companion-vm20-pn-margins-child-004",
+        "top3ChunkIds": [
+          "vm20-practice-note-companion-vm20-pn-margins-child-004",
+          "vm20-practice-note-companion-vm20-pn-margins-child-002",
+          "vm20-practice-note-companion-vm20-pn-margins-child-006"
+        ],
         "top1Hit": true,
         "top3Hit": true,
-        "resultLabel": "supported_top1"
+        "resultLabel": "supported_top1",
+        "supportState": "supported",
+        "supportReasonCode": "retrieved_evidence_matches_requested_information_type",
+        "rawTopKCollisionGroups": []
       },
       {
         "queryId": "q-vm20-section4-methods",
         "category": "vm20_section4_direct",
+        "expectedChunkIds": [
+          "vm20-remaining-prose-appendix-coverage-vm20-section4-complete",
+          "vm20-remaining-prose-appendix-coverage-vm20-section4-complete-child-001"
+        ],
+        "top1ChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section4-complete-child-001",
+        "top3ChunkIds": [
+          "vm20-remaining-prose-appendix-coverage-vm20-section4-complete-child-001",
+          "vm20-remaining-prose-appendix-coverage-vm20-section4-complete-child-002",
+          "vm20-practice-note-companion-vm20-pn-dr-overview-child-005"
+        ],
         "top1Hit": true,
         "top3Hit": true,
-        "resultLabel": "supported_top1"
+        "resultLabel": "supported_top1",
+        "supportState": "supported",
+        "supportReasonCode": "retrieved_evidence_matches_requested_information_type",
+        "rawTopKCollisionGroups": [
+          {
+            "parentChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section4-complete",
+            "childChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section4-complete-child-001"
+          },
+          {
+            "parentChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section4-complete",
+            "childChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section4-complete-child-002"
+          }
+        ]
       },
       {
         "queryId": "q-vm20-section5-scenario-reserve",
         "category": "vm20_section5_methodology",
+        "expectedChunkIds": [
+          "vm20-remaining-prose-appendix-coverage-vm20-section5-complete",
+          "vm20-remaining-prose-appendix-coverage-vm20-section5-complete-child-001"
+        ],
+        "top1ChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section5-complete-child-001",
+        "top3ChunkIds": [
+          "vm20-remaining-prose-appendix-coverage-vm20-section5-complete-child-001",
+          "vm20-practice-note-companion-vm20-pn-sr-overview-child-002",
+          "vm20-practice-note-companion-vm20-pn-dr-overview-child-005"
+        ],
         "top1Hit": true,
         "top3Hit": true,
-        "resultLabel": "supported_top1"
+        "resultLabel": "supported_top1",
+        "supportState": "supported",
+        "supportReasonCode": "retrieved_evidence_matches_requested_information_type",
+        "rawTopKCollisionGroups": []
       },
       {
         "queryId": "q-vm20-section4-section5-comparison",
         "category": "vm20_cross_section_comparison",
+        "expectedChunkIds": [
+          "vm20-remaining-prose-appendix-coverage-vm20-section4-complete",
+          "vm20-remaining-prose-appendix-coverage-vm20-section5-complete",
+          "vm20-practice-note-companion-vm20-pn-dr-overview-child-006",
+          "vm20-practice-note-companion-vm20-pn-sr-overview-child-003"
+        ],
+        "top1ChunkId": "vm20-practice-note-companion-vm20-pn-dr-overview-child-006",
+        "top3ChunkIds": [
+          "vm20-practice-note-companion-vm20-pn-dr-overview-child-006",
+          "vm20-practice-note-companion-vm20-pn-dr-overview-child-002",
+          "vm20-practice-note-companion-vm20-pn-dr-overview-child-003"
+        ],
         "top1Hit": true,
         "top3Hit": true,
-        "resultLabel": "supported_top1"
+        "resultLabel": "supported_top1",
+        "supportState": "supported",
+        "supportReasonCode": "retrieved_evidence_matches_requested_information_type",
+        "rawTopKCollisionGroups": []
       },
       {
         "queryId": "q-vm20-section9-general-assumptions",
         "category": "vm20_section9_applicability",
+        "expectedChunkIds": [
+          "vm20-remaining-prose-appendix-coverage-vm20-section9-a-general-assumption-requirements",
+          "vm20-remaining-prose-appendix-coverage-vm20-section9-a-general-assumption-requirements-child-001",
+          "vm20-practice-note-companion-vm20-pn-prudent-estimate-child-005"
+        ],
+        "top1ChunkId": "vm20-practice-note-companion-vm20-pn-prudent-estimate-child-005",
+        "top3ChunkIds": [
+          "vm20-practice-note-companion-vm20-pn-prudent-estimate-child-005",
+          "vm20-practice-note-companion-vm20-pn-prudent-estimate-child-003",
+          "vm20-practice-note-companion-vm20-pn-prudent-estimate-child-001"
+        ],
         "top1Hit": true,
         "top3Hit": true,
-        "resultLabel": "supported_top1"
+        "resultLabel": "supported_top1",
+        "supportState": "supported",
+        "supportReasonCode": "retrieved_evidence_matches_requested_information_type",
+        "rawTopKCollisionGroups": []
       },
       {
         "queryId": "q-vm20-section9-mortality-parent-context",
         "category": "vm20_parent_context",
+        "expectedChunkIds": [
+          "vm20-remaining-prose-appendix-coverage-vm20-section9-c-mortality-assumptions",
+          "vm20-remaining-prose-appendix-coverage-vm20-section9-c-mortality-assumptions-child-001"
+        ],
+        "top1ChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-c-mortality-assumptions-child-001",
+        "top3ChunkIds": [
+          "vm20-remaining-prose-appendix-coverage-vm20-section9-c-mortality-assumptions-child-001",
+          "vm20-remaining-prose-appendix-coverage-vm20-section9-c-mortality-assumptions-child-013",
+          "vm20-remaining-prose-appendix-coverage-vm20-section9-c-mortality-assumptions-child-015"
+        ],
         "top1Hit": true,
         "top3Hit": true,
-        "resultLabel": "supported_top1"
+        "resultLabel": "supported_top1",
+        "supportState": "supported",
+        "supportReasonCode": "retrieved_evidence_matches_requested_information_type",
+        "rawTopKCollisionGroups": []
       },
       {
         "queryId": "q-vm20-section9-policyholder-exceptions",
         "category": "vm20_section9_exceptions",
-        "top1Hit": true,
+        "expectedChunkIds": [
+          "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions",
+          "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions-child-001"
+        ],
+        "top1ChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions-child-002",
+        "top3ChunkIds": [
+          "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions-child-002",
+          "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions-child-001",
+          "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions-child-003"
+        ],
+        "top1Hit": false,
         "top3Hit": true,
-        "resultLabel": "supported_top1"
+        "resultLabel": "supported_top3",
+        "supportState": "supported",
+        "supportReasonCode": "retrieved_evidence_matches_requested_information_type",
+        "rawTopKCollisionGroups": [
+          {
+            "parentChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions",
+            "childChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions-child-002"
+          },
+          {
+            "parentChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions",
+            "childChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions-child-001"
+          },
+          {
+            "parentChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions",
+            "childChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions-child-003"
+          },
+          {
+            "parentChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions",
+            "childChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions-child-004"
+          }
+        ]
       },
       {
         "queryId": "q-vm20-section9-cross_section",
         "category": "vm20_cross_section",
-        "top1Hit": true,
+        "expectedChunkIds": [
+          "vm20-remaining-prose-appendix-coverage-vm20-section9-f-asset-assumptions",
+          "vm20-remaining-prose-appendix-coverage-vm20-appendix2-a-baseline-annual-default-cost-factors",
+          "vm20-canonical-coverage-vm20-section7-asset-mechanics-child-001"
+        ],
+        "top1ChunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix2-f-current-benchmark-swap-spreads-child-001",
+        "top3ChunkIds": [
+          "vm20-remaining-prose-appendix-coverage-vm20-appendix2-f-current-benchmark-swap-spreads-child-001",
+          "vm20-canonical-coverage-vm20-section7-asset-mechanics-child-001",
+          "vm20-canonical-coverage-vm20-section7-asset-mechanics-child-006"
+        ],
+        "top1Hit": false,
         "top3Hit": true,
-        "resultLabel": "supported_top1"
+        "resultLabel": "supported_top3",
+        "supportState": "supported",
+        "supportReasonCode": "retrieved_evidence_matches_requested_information_type",
+        "rawTopKCollisionGroups": []
       },
       {
         "queryId": "q-vm20-appendix1-scenarios",
         "category": "vm20_appendix1_direct",
+        "expectedChunkIds": [
+          "vm20-remaining-prose-appendix-coverage-vm20-appendix1-f-this-section-describes-the-set-of-16-scenarios-for-the-sert-in-vm-20-starting-with-the-yield-curve",
+          "vm20-remaining-prose-appendix-coverage-vm20-appendix1-f-this-section-describes-the-set-of-16-scenarios-for-the-sert-in-vm-20-starting-with-the-yield-curve-child-001"
+        ],
+        "top1ChunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix1-f-this-section-describes-the-set-of-16-scenarios-for-the-sert-in-vm-20-starting-with-the-yield-curve-child-001",
+        "top3ChunkIds": [
+          "vm20-remaining-prose-appendix-coverage-vm20-appendix1-f-this-section-describes-the-set-of-16-scenarios-for-the-sert-in-vm-20-starting-with-the-yield-curve-child-001",
+          "vm20-remaining-prose-appendix-coverage-vm20-appendix1-f-this-section-describes-the-set-of-16-scenarios-for-the-sert-in-vm-20-starting-with-the-yield-curve-child-002",
+          "vm20-remaining-prose-appendix-coverage-vm20-appendix1-e-use-of-non-prescribed-scenario-generators-child-001"
+        ],
         "top1Hit": true,
         "top3Hit": true,
-        "resultLabel": "supported_top1"
+        "resultLabel": "supported_top1",
+        "supportState": "supported",
+        "supportReasonCode": "retrieved_evidence_matches_requested_information_type",
+        "rawTopKCollisionGroups": [
+          {
+            "parentChunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix1-f-this-section-describes-the-set-of-16-scenarios-for-the-sert-in-vm-20-starting-with-the-yield-curve",
+            "childChunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix1-f-this-section-describes-the-set-of-16-scenarios-for-the-sert-in-vm-20-starting-with-the-yield-curve-child-001"
+          },
+          {
+            "parentChunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix1-f-this-section-describes-the-set-of-16-scenarios-for-the-sert-in-vm-20-starting-with-the-yield-curve",
+            "childChunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix1-f-this-section-describes-the-set-of-16-scenarios-for-the-sert-in-vm-20-starting-with-the-yield-curve-child-002"
+          }
+        ]
       },
       {
         "queryId": "q-vm20-appendix2-prose-basis",
         "category": "vm20_appendix2_methodology",
+        "expectedChunkIds": [
+          "vm20-remaining-prose-appendix-coverage-vm20-appendix2-a-baseline-annual-default-cost-factors",
+          "vm20-remaining-prose-appendix-coverage-vm20-appendix2-a-baseline-annual-default-cost-factors-child-001"
+        ],
+        "top1ChunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix2-b-cumulative-default-rates-used-in-baseline-annual-default-cost-factors-child-001",
+        "top3ChunkIds": [
+          "vm20-remaining-prose-appendix-coverage-vm20-appendix2-b-cumulative-default-rates-used-in-baseline-annual-default-cost-factors-child-001",
+          "vm20-remaining-prose-appendix-coverage-vm20-appendix2-c-recovery-rate-used-in-baseline-annual-default-cost-factors-child-001",
+          "vm20-remaining-prose-appendix-coverage-vm20-appendix2-a-baseline-annual-default-cost-factors-child-001"
+        ],
         "top1Hit": false,
         "top3Hit": true,
-        "resultLabel": "supported_top3"
+        "resultLabel": "supported_top3",
+        "supportState": "supported",
+        "supportReasonCode": "retrieved_evidence_matches_requested_information_type",
+        "rawTopKCollisionGroups": []
       },
       {
         "queryId": "q-vm20-current-table-gap",
         "category": "unsupported",
+        "expectedChunkIds": [],
+        "top1ChunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix2-c-recovery-rate-used-in-baseline-annual-default-cost-factors-child-001",
+        "top3ChunkIds": [
+          "vm20-remaining-prose-appendix-coverage-vm20-appendix2-c-recovery-rate-used-in-baseline-annual-default-cost-factors-child-001",
+          "vm20-remaining-prose-appendix-coverage-vm20-appendix2-d-current-market-benchmark-spreads-child-001",
+          "vm20-remaining-prose-appendix-coverage-vm20-appendix2-b-cumulative-default-rates-used-in-baseline-annual-default-cost-factors-child-001"
+        ],
         "top1Hit": false,
         "top3Hit": false,
-        "resultLabel": "false_positive"
+        "resultLabel": "unsupported",
+        "supportState": "unsupported",
+        "supportReasonCode": "missing_structured_data",
+        "rawTopKCollisionGroups": []
       },
       {
         "queryId": "q-vm20-cross-document-reporting",
         "category": "vm20_cross_document",
+        "expectedChunkIds": [
+          "vm20-canonical-coverage-vm20-role-map-sections-3-4-5",
+          "vm20-canonical-coverage-vm20-section7-model-structure-child-001",
+          "vm20-canonical-coverage-vm20-section7-asset-mechanics-child-007",
+          "vm20-canonical-coverage-vm20-section7-asset-mechanics-child-008",
+          "vm20-canonical-coverage-vm20-section7-model-structure"
+        ],
+        "top1ChunkId": "vm20-canonical-coverage-vm20-section7-asset-mechanics-child-007",
+        "top3ChunkIds": [
+          "vm20-canonical-coverage-vm20-section7-asset-mechanics-child-007",
+          "vm20-canonical-coverage-vm20-section7-asset-mechanics-child-008",
+          "vm20-canonical-coverage-vm20-section7-model-structure-child-002"
+        ],
         "top1Hit": true,
         "top3Hit": true,
-        "resultLabel": "supported_top1"
+        "resultLabel": "supported_top1",
+        "supportState": "supported",
+        "supportReasonCode": "retrieved_evidence_matches_requested_information_type",
+        "rawTopKCollisionGroups": [
+          {
+            "parentChunkId": "vm20-canonical-coverage-vm20-section7-model-structure",
+            "childChunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-002"
+          }
+        ]
       }
     ]
   },
@@ -360,7 +1554,7 @@
     "The keyword baseline can still rank a nearby parent or companion section above a precise child when terms overlap.",
     "Long source excerpts remain useful for recall but can dilute top-1 precision for broad comparison questions.",
     "Unsupported table questions correctly remain outside the current canonical evidence package.",
-    "Parent expansion and adjacency-aware reranking are not yet implemented in the baseline evaluator."
+    "Parent expansion remains a deterministic evidence-package step; first-stage retrieval excludes only context-only parents and equivalent duplicate excerpts."
   ],
   "humanReview": {
     "decisionOptions": [

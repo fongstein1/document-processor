@@ -226,6 +226,9 @@ const main = async () => {
   if (vm20ReviewPackage.status !== 'review_only' || vm20ReviewPackage.promoted !== false) {
     fail('VM-20 review package must remain review-only and unpromoted.')
   }
+  if (vm20ReviewPackage.promotionReadiness?.automatedPromotion !== false || vm20ReviewPackage.promotionReadiness?.blockersClosed !== true) {
+    fail('VM-20 promotion readiness must close the targeted blockers without automatically promoting the package.')
+  }
   if ((vm20ReviewPackage.coverage?.parentCount ?? 0) < 10 || (vm20ReviewPackage.coverage?.childCount ?? 0) < 20) {
     fail('VM-20 review package does not contain the expected hierarchical coverage.')
   }
@@ -279,15 +282,24 @@ const main = async () => {
   if (evaluation.queries.length !== config.retrievalQueries.length) {
     fail('Retrieval evaluation query detail count mismatch.')
   }
+  if ((evaluation.deduplication?.postDeduplicationCollisionCount ?? 0) !== 0) {
+    fail('Retrieval evaluation contains equivalent parent-child collisions after deduplication.')
+  }
   for (const query of evaluation.queries) {
     if (!Array.isArray(query.rankedMatches) || query.rankedMatches.length === 0) {
       fail(`Retrieval evaluation query ${query.queryId} has no ranked matches.`)
     }
     if ((query.expectedOutcome ?? 'supported') === 'unsupported') {
+      if (query.queryId === 'q-vm20-current-table-gap' && (query.supportDecision?.supportState !== 'unsupported' || query.resultLabel !== 'unsupported')) {
+        fail(`VM-20 table-gap query must be labeled unsupported with an unsupported support state; found ${query.resultLabel}/${query.supportDecision?.supportState}.`)
+      }
       if (!['unsupported', 'false_positive'].includes(query.resultLabel)) {
         fail(`Retrieval evaluation query ${query.queryId} was expected to be unsupported but was labeled ${query.resultLabel}.`)
       }
       continue
+    }
+    if (!query.supportDecision || !query.deduplication) {
+      fail(`Retrieval evaluation query ${query.queryId} is missing support-decision or deduplication metadata.`)
     }
     if (!query.expectedChunkIds.some((chunkId) => query.rankedMatches.some((match) => match.chunkId === chunkId))) {
       fail(`Retrieval evaluation query ${query.queryId} did not surface any expected chunk in the top ranks.`)

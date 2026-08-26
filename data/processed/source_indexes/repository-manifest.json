@@ -427,7 +427,7 @@
         "confidentiality": "internal",
         "publicationDate": null,
         "effectiveDate": null,
-        "version": null,
+        "version": "NAIC-VALUATION-MANUAL-2026",
         "approvalStatus": "review_only",
         "language": "en",
         "recommendedProfile": "regulatory",
@@ -445,6 +445,35 @@
       "sourceFamilyId": "valuation_manual_pdfs",
       "documentType": "valuation_manual_section",
       "sourceStatus": "active",
+      "sourceEditionId": "NAIC-VALUATION-MANUAL-2026",
+      "sourceVersionIdentifier": "2026 NAIC Valuation Manual",
+      "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+      "sourceTextVerification": {
+        "sourceTextMode": "exact_extracted_source_text",
+        "extractionMethod": "pypdf_text_layer",
+        "visualTranscription": "not_used",
+        "pageRepresentationQA": "targeted_raw_pdf_spot_check",
+        "qaScript": "scripts/validate-vm20-qa.mjs"
+      },
+      "coverageDeclarations": {
+        "scopeType": "current_manual_prose_and_methodology",
+        "includedInformationTypes": [
+          "prose",
+          "methodology",
+          "section_requirements",
+          "cross_references"
+        ],
+        "structuredDataAvailable": false,
+        "deferredInformationTypes": [
+          "structured_table_rows",
+          "current_table_values",
+          "table_version_metadata"
+        ],
+        "knownGaps": [
+          "Appendix 2 current prescribed asset-default, asset-spread, and swap-spread table rows are not ingested as structured data.",
+          "Appendix 2 current table version metadata is deferred to the structured-table milestone."
+        ]
+      },
       "sourceReference": "2026 NAIC Valuation Manual",
       "jurisdiction": "NAIC",
       "authorityLevel": "manual_section",
@@ -1229,20 +1258,20 @@
     "queryCount": 44,
     "supportedQueryCount": 41,
     "unsupportedQueryCount": 3,
-    "top1HitCount": 35,
+    "top1HitCount": 34,
     "top3HitCount": 41,
     "top5HitCount": 41,
-    "top1Accuracy": 0.8536585365853658,
+    "top1Accuracy": 0.8292682926829268,
     "top3Accuracy": 1,
     "top5Accuracy": 1,
-    "meanReciprocalRank": 0.9081300813008131,
-    "sourceFamilyAccuracy": 0.926829268292683,
-    "authorityLevelAccuracy": 0.9024390243902439,
+    "meanReciprocalRank": 0.9024390243902439,
+    "sourceFamilyAccuracy": 0.9512195121951219,
+    "authorityLevelAccuracy": 0.926829268292683,
     "citationAvailability": 0,
-    "multiChunkEvidenceRecall": 0.35714285714285715,
-    "unsupportedQueryPrecision": 0,
+    "multiChunkEvidenceRecall": 0.14285714285714285,
+    "unsupportedQueryPrecision": 0.3333333333333333,
     "top3Coverage": 0.9318181818181818,
-    "notes": "Keyword baseline retrieved 35 top-1 hits and 41 top-3 hits across 44 queries."
+    "notes": "Keyword baseline retrieved 34 top-1 hits and 41 top-3 hits across 44 queries."
   },
   "notes": "Canonical source-index proof of concept.",
   "extensions": {

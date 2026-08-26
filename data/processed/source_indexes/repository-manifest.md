@@ -48,8 +48,8 @@
 - Queries evaluated: 44
 - Supported queries: 41
 - Unsupported queries: 3
-- Top-1 accuracy: 85%
+- Top-1 accuracy: 83%
 - Top-3 accuracy: 100%
 - Top-5 accuracy: 100%
-- Mean reciprocal rank: 0.908
+- Mean reciprocal rank: 0.902
 - Method: keyword_overlap_baseline

@@ -4,9 +4,297 @@
   "repositoryManifestId": "source-index-poc-2026-07-21",
   "method": "keyword_overlap_baseline",
   "queryCount": 44,
-  "top1HitCount": 35,
+  "top1HitCount": 34,
   "top3HitCount": 41,
   "top3Coverage": 0.9318181818181818,
+  "meanReciprocalRank": 0.9024390243902439,
+  "deduplication": {
+    "topN": 5,
+    "rawTopKCollisionCount": 46,
+    "rawTopKCollisionGroupCount": 19,
+    "postDeduplicationCollisionCount": 0,
+    "affectedQueries": [
+      {
+        "queryId": "q-ag03-maturity-value",
+        "collisionGroups": [
+          {
+            "parentChunkId": "vm20-section3c-hierarchical-section-3-d-npr-calculation-and-cash-surrender-value-floor",
+            "childChunkId": "vm20-section3c-hierarchical-section-3-d-npr-calculation-and-cash-surrender-value-floor-child-001"
+          }
+        ]
+      },
+      {
+        "queryId": "q-vm20-assumptions-section-3c",
+        "collisionGroups": [
+          {
+            "parentChunkId": "vm20-canonical-coverage-vm20-npr-entry-formula",
+            "childChunkId": "vm20-canonical-coverage-vm20-npr-entry-formula-child-001"
+          },
+          {
+            "parentChunkId": "vm20-canonical-coverage-vm20-npr-entry-formula",
+            "childChunkId": "vm20-canonical-coverage-vm20-npr-entry-formula-child-002"
+          }
+        ]
+      },
+      {
+        "queryId": "q-vm20-hierarchical-section-3c",
+        "collisionGroups": [
+          {
+            "parentChunkId": "vm20-section3c-hierarchical-section-3-c-2-interest-rates",
+            "childChunkId": "vm20-section3c-hierarchical-section-3-c-2-interest-rates-child-001"
+          }
+        ]
+      },
+      {
+        "queryId": "q-vm20-npr-formula-uls-g",
+        "collisionGroups": [
+          {
+            "parentChunkId": "vm20-canonical-coverage-vm20-npr-entry-formula",
+            "childChunkId": "vm20-canonical-coverage-vm20-npr-entry-formula-child-001"
+          },
+          {
+            "parentChunkId": "vm20-canonical-coverage-vm20-npr-entry-formula",
+            "childChunkId": "vm20-canonical-coverage-vm20-npr-entry-formula-child-002"
+          }
+        ]
+      },
+      {
+        "queryId": "q-vm20-deterministic-reserve-entry",
+        "collisionGroups": [
+          {
+            "parentChunkId": "vm20-section3c-hierarchical-section-3-d-npr-calculation-and-cash-surrender-value-floor",
+            "childChunkId": "vm20-section3c-hierarchical-section-3-d-npr-calculation-and-cash-surrender-value-floor-child-001"
+          }
+        ]
+      },
+      {
+        "queryId": "q-vm20-exclusion-tests",
+        "collisionGroups": [
+          {
+            "parentChunkId": "vm20-canonical-coverage-vm20-section6-exclusion-tests",
+            "childChunkId": "vm20-canonical-coverage-vm20-section6-exclusion-tests-child-001"
+          },
+          {
+            "parentChunkId": "vm20-canonical-coverage-vm20-section6-exclusion-tests",
+            "childChunkId": "vm20-canonical-coverage-vm20-section6-exclusion-tests-child-005"
+          },
+          {
+            "parentChunkId": "vm20-canonical-coverage-vm20-section6-exclusion-tests",
+            "childChunkId": "vm20-canonical-coverage-vm20-section6-exclusion-tests-child-002"
+          },
+          {
+            "parentChunkId": "vm20-canonical-coverage-vm20-section6-exclusion-tests",
+            "childChunkId": "vm20-canonical-coverage-vm20-section6-exclusion-tests-child-004"
+          }
+        ]
+      },
+      {
+        "queryId": "q-vm20-cash-flow-model-structure",
+        "collisionGroups": [
+          {
+            "parentChunkId": "vm20-canonical-coverage-vm20-section7-model-structure",
+            "childChunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-001"
+          },
+          {
+            "parentChunkId": "vm20-canonical-coverage-vm20-section7-model-structure",
+            "childChunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-005"
+          },
+          {
+            "parentChunkId": "vm20-canonical-coverage-vm20-section7-model-structure",
+            "childChunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-003"
+          },
+          {
+            "parentChunkId": "vm20-canonical-coverage-vm20-section7-model-structure",
+            "childChunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-002"
+          }
+        ]
+      },
+      {
+        "queryId": "q-vm20-asset-treatment",
+        "collisionGroups": [
+          {
+            "parentChunkId": "vm20-canonical-coverage-vm20-section7-model-structure",
+            "childChunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-002"
+          },
+          {
+            "parentChunkId": "vm20-canonical-coverage-vm20-section7-model-structure",
+            "childChunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-005"
+          },
+          {
+            "parentChunkId": "vm20-canonical-coverage-vm20-section7-model-structure",
+            "childChunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-001"
+          },
+          {
+            "parentChunkId": "vm20-canonical-coverage-vm20-section7-model-structure",
+            "childChunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-003"
+          }
+        ]
+      },
+      {
+        "queryId": "q-vm20-reinsurance-credit-and-cash-flows",
+        "collisionGroups": [
+          {
+            "parentChunkId": "vm20-practice-note-companion-vm20-pn-reinsurance",
+            "childChunkId": "vm20-practice-note-companion-vm20-pn-reinsurance-child-002"
+          },
+          {
+            "parentChunkId": "vm20-practice-note-companion-vm20-pn-reinsurance",
+            "childChunkId": "vm20-practice-note-companion-vm20-pn-reinsurance-child-005"
+          },
+          {
+            "parentChunkId": "vm20-practice-note-companion-vm20-pn-reinsurance",
+            "childChunkId": "vm20-practice-note-companion-vm20-pn-reinsurance-child-004"
+          }
+        ]
+      },
+      {
+        "queryId": "q-vm20-practice-note-expense-guidance",
+        "collisionGroups": [
+          {
+            "parentChunkId": "vm20-practice-note-companion-vm20-pn-expense",
+            "childChunkId": "vm20-practice-note-companion-vm20-pn-expense-child-001"
+          },
+          {
+            "parentChunkId": "vm20-practice-note-companion-vm20-pn-expense",
+            "childChunkId": "vm20-practice-note-companion-vm20-pn-expense-child-002"
+          },
+          {
+            "parentChunkId": "vm20-practice-note-companion-vm20-pn-expense",
+            "childChunkId": "vm20-practice-note-companion-vm20-pn-expense-child-003"
+          }
+        ]
+      },
+      {
+        "queryId": "q-vm20-section4-methods",
+        "collisionGroups": [
+          {
+            "parentChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section4-complete",
+            "childChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section4-complete-child-001"
+          },
+          {
+            "parentChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section4-complete",
+            "childChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section4-complete-child-002"
+          }
+        ]
+      },
+      {
+        "queryId": "q-vm20-section9-policyholder-exceptions",
+        "collisionGroups": [
+          {
+            "parentChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions",
+            "childChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions-child-002"
+          },
+          {
+            "parentChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions",
+            "childChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions-child-001"
+          },
+          {
+            "parentChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions",
+            "childChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions-child-003"
+          },
+          {
+            "parentChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions",
+            "childChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions-child-004"
+          }
+        ]
+      },
+      {
+        "queryId": "q-vm20-appendix1-scenarios",
+        "collisionGroups": [
+          {
+            "parentChunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix1-f-this-section-describes-the-set-of-16-scenarios-for-the-sert-in-vm-20-starting-with-the-yield-curve",
+            "childChunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix1-f-this-section-describes-the-set-of-16-scenarios-for-the-sert-in-vm-20-starting-with-the-yield-curve-child-001"
+          },
+          {
+            "parentChunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix1-f-this-section-describes-the-set-of-16-scenarios-for-the-sert-in-vm-20-starting-with-the-yield-curve",
+            "childChunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix1-f-this-section-describes-the-set-of-16-scenarios-for-the-sert-in-vm-20-starting-with-the-yield-curve-child-002"
+          }
+        ]
+      },
+      {
+        "queryId": "q-vm20-cross-document-reporting",
+        "collisionGroups": [
+          {
+            "parentChunkId": "vm20-canonical-coverage-vm20-section7-model-structure",
+            "childChunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-002"
+          }
+        ]
+      },
+      {
+        "queryId": "q-vm21-sr-projection-entry",
+        "collisionGroups": [
+          {
+            "parentChunkId": "vm20-practice-note-companion-vm20-pn-sr-overview",
+            "childChunkId": "vm20-practice-note-companion-vm20-pn-sr-overview-child-002"
+          },
+          {
+            "parentChunkId": "vm20-practice-note-companion-vm20-pn-sr-overview",
+            "childChunkId": "vm20-practice-note-companion-vm20-pn-sr-overview-child-003"
+          }
+        ]
+      },
+      {
+        "queryId": "q-reg210-opening-title",
+        "collisionGroups": [
+          {
+            "parentChunkId": "vm20-canonical-coverage-vm20-npr-entry-setup",
+            "childChunkId": "vm20-canonical-coverage-vm20-npr-entry-setup-child-001"
+          },
+          {
+            "parentChunkId": "vm20-canonical-coverage-vm20-npr-entry-setup",
+            "childChunkId": "vm20-canonical-coverage-vm20-npr-entry-setup-child-002"
+          },
+          {
+            "parentChunkId": "vm20-canonical-coverage-vm20-npr-entry-setup",
+            "childChunkId": "vm20-canonical-coverage-vm20-npr-entry-setup-child-003"
+          }
+        ]
+      },
+      {
+        "queryId": "q-reg210-filing-records",
+        "collisionGroups": [
+          {
+            "parentChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-a-general-assumption-requirements",
+            "childChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-a-general-assumption-requirements-child-001"
+          },
+          {
+            "parentChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-a-general-assumption-requirements",
+            "childChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-a-general-assumption-requirements-child-002"
+          }
+        ]
+      },
+      {
+        "queryId": "q-synth-product-spec",
+        "collisionGroups": [
+          {
+            "parentChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions",
+            "childChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions-child-001"
+          }
+        ]
+      },
+      {
+        "queryId": "q-unsupported-liability-modeling",
+        "collisionGroups": [
+          {
+            "parentChunkId": "vm20-practice-note-companion-vm20-pn-starting-assets",
+            "childChunkId": "vm20-practice-note-companion-vm20-pn-starting-assets-child-021"
+          },
+          {
+            "parentChunkId": "vm20-practice-note-companion-vm20-pn-starting-assets",
+            "childChunkId": "vm20-practice-note-companion-vm20-pn-starting-assets-child-005"
+          },
+          {
+            "parentChunkId": "vm20-practice-note-companion-vm20-pn-starting-assets",
+            "childChunkId": "vm20-practice-note-companion-vm20-pn-starting-assets-child-013"
+          },
+          {
+            "parentChunkId": "vm20-practice-note-companion-vm20-pn-starting-assets",
+            "childChunkId": "vm20-practice-note-companion-vm20-pn-starting-assets-child-016"
+          }
+        ]
+      }
+    ]
+  },
   "queries": [
     {
       "queryId": "q-ag01-net-premium",
@@ -75,6 +363,73 @@
       "predictedAuthorityLevel": "guideline",
       "citationAvailable": false,
       "insufficientSupportDetected": false,
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Retrieved evidence is sufficiently aligned for the requested information type under the current corpus declarations.",
+        "requestedInformationTypes": [
+          "general_prose"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "chunk-ag01-net-premium-interpretation-001",
+            "sourceId": "ag01-net-premium-interpretation",
+            "score": 55.24999999999999,
+            "authorityLevel": "guideline"
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-npr-overview-child-006",
+            "sourceId": "vm20-practice-note-companion",
+            "score": 19.249999999999993,
+            "authorityLevel": "companion_guidance"
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-npr-overview-child-007",
+            "sourceId": "vm20-practice-note-companion",
+            "score": 19.249999999999993,
+            "authorityLevel": "companion_guidance"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 55.24999999999999,
+          "matches": [
+            {
+              "chunkId": "chunk-ag01-net-premium-interpretation-001",
+              "score": 55.24999999999999,
+              "tokenOverlap": 8
+            },
+            {
+              "chunkId": "vm20-practice-note-companion-vm20-pn-npr-overview-child-006",
+              "score": 19.249999999999993,
+              "tokenOverlap": 8
+            },
+            {
+              "chunkId": "vm20-practice-note-companion-vm20-pn-npr-overview-child-007",
+              "score": 19.249999999999993,
+              "tokenOverlap": 5
+            },
+            {
+              "chunkId": "vm20-practice-note-companion-vm20-pn-npr-overview-child-009",
+              "score": 19.249999999999993,
+              "tokenOverlap": 5
+            },
+            {
+              "chunkId": "vm20-practice-note-companion-vm20-pn-npr-overview-child-010",
+              "score": 19.099999999999994,
+              "tokenOverlap": 5
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "deduplication": {
+        "rawTopKCollisionGroups": [],
+        "suppressedParentChunkIds": [],
+        "postDeduplicationCollisionCount": 0
+      },
       "resultLabel": "supported_top1"
     },
     {
@@ -104,14 +459,6 @@
           "citationCount": 0
         },
         {
-          "chunkId": "vm20-section3c-hierarchical-section-3-d-npr-calculation-and-cash-surrender-value-floor",
-          "sourceId": "vm20-section3c-hierarchical",
-          "sourceFamilyId": "valuation_manual_pdfs",
-          "authorityLevel": "manual_section",
-          "score": 28.199999999999996,
-          "citationCount": 0
-        },
-        {
           "chunkId": "vm20-section3c-hierarchical-section-3-d-npr-calculation-and-cash-surrender-value-floor-child-001",
           "sourceId": "vm20-section3c-hierarchical",
           "sourceFamilyId": "valuation_manual_pdfs",
@@ -134,6 +481,14 @@
           "authorityLevel": "manual_section",
           "score": 11.1,
           "citationCount": 0
+        },
+        {
+          "chunkId": "vm20-canonical-coverage-vm20-section7-asset-mechanics-child-003",
+          "sourceId": "vm20-canonical-coverage",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 10.95,
+          "citationCount": 0
         }
       ],
       "top1Hit": true,
@@ -144,6 +499,78 @@
       "predictedAuthorityLevel": "guideline",
       "citationAvailable": false,
       "insufficientSupportDetected": false,
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Retrieved evidence is sufficiently aligned for the requested information type under the current corpus declarations.",
+        "requestedInformationTypes": [
+          "general_prose"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "chunk-ag03-maturity-value-interpretation-001",
+            "sourceId": "ag03-maturity-value-interpretation",
+            "score": 44.75,
+            "authorityLevel": "guideline"
+          },
+          {
+            "chunkId": "vm20-section3c-hierarchical-section-3-d-npr-calculation-and-cash-surrender-value-floor-child-001",
+            "sourceId": "vm20-section3c-hierarchical",
+            "score": 28.199999999999996,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "chunk-ag01-net-premium-interpretation-001",
+            "sourceId": "ag01-net-premium-interpretation",
+            "score": 13.45,
+            "authorityLevel": "guideline"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 44.75,
+          "matches": [
+            {
+              "chunkId": "chunk-ag03-maturity-value-interpretation-001",
+              "score": 44.75,
+              "tokenOverlap": 6
+            },
+            {
+              "chunkId": "vm20-section3c-hierarchical-section-3-d-npr-calculation-and-cash-surrender-value-floor-child-001",
+              "score": 28.199999999999996,
+              "tokenOverlap": 4
+            },
+            {
+              "chunkId": "chunk-ag01-net-premium-interpretation-001",
+              "score": 13.45,
+              "tokenOverlap": 3
+            },
+            {
+              "chunkId": "vm20-canonical-coverage-vm20-section7-model-structure",
+              "score": 11.1,
+              "tokenOverlap": 4
+            },
+            {
+              "chunkId": "vm20-canonical-coverage-vm20-section7-asset-mechanics-child-003",
+              "score": 10.95,
+              "tokenOverlap": 3
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "deduplication": {
+        "rawTopKCollisionGroups": [
+          {
+            "parentChunkId": "vm20-section3c-hierarchical-section-3-d-npr-calculation-and-cash-surrender-value-floor",
+            "childChunkId": "vm20-section3c-hierarchical-section-3-d-npr-calculation-and-cash-surrender-value-floor-child-001"
+          }
+        ],
+        "suppressedParentChunkIds": [],
+        "postDeduplicationCollisionCount": 0
+      },
       "resultLabel": "supported_top1"
     },
     {
@@ -213,6 +640,73 @@
       "predictedAuthorityLevel": "manual_section",
       "citationAvailable": false,
       "insufficientSupportDetected": false,
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Retrieved evidence is sufficiently aligned for the requested information type under the current corpus declarations.",
+        "requestedInformationTypes": [
+          "general_prose"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "chunk-vm20-framework-overview-001",
+            "sourceId": "vm20-framework-overview",
+            "score": 42.55,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-dr-overview-child-003",
+            "sourceId": "vm20-practice-note-companion",
+            "score": 31.4,
+            "authorityLevel": "companion_guidance"
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-npr-overview-child-002",
+            "sourceId": "vm20-practice-note-companion",
+            "score": 31.4,
+            "authorityLevel": "companion_guidance"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 42.55,
+          "matches": [
+            {
+              "chunkId": "chunk-vm20-framework-overview-001",
+              "score": 42.55,
+              "tokenOverlap": 8
+            },
+            {
+              "chunkId": "vm20-practice-note-companion-vm20-pn-dr-overview-child-003",
+              "score": 31.4,
+              "tokenOverlap": 10
+            },
+            {
+              "chunkId": "vm20-practice-note-companion-vm20-pn-npr-overview-child-002",
+              "score": 31.4,
+              "tokenOverlap": 9
+            },
+            {
+              "chunkId": "vm20-practice-note-companion-vm20-pn-npr-overview-child-005",
+              "score": 31.4,
+              "tokenOverlap": 9
+            },
+            {
+              "chunkId": "vm20-practice-note-companion-vm20-pn-npr-overview-child-011",
+              "score": 31.4,
+              "tokenOverlap": 9
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "deduplication": {
+        "rawTopKCollisionGroups": [],
+        "suppressedParentChunkIds": [],
+        "postDeduplicationCollisionCount": 0
+      },
       "resultLabel": "supported_top1"
     },
     {
@@ -282,6 +776,73 @@
       "predictedAuthorityLevel": "manual_section",
       "citationAvailable": false,
       "insufficientSupportDetected": false,
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Retrieved evidence is sufficiently aligned for the requested information type under the current corpus declarations.",
+        "requestedInformationTypes": [
+          "general_prose"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "chunk-vm20-framework-boundary-001",
+            "sourceId": "vm20-framework-boundary",
+            "score": 47.75,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-npr-overview-child-002",
+            "sourceId": "vm20-practice-note-companion",
+            "score": 40.8,
+            "authorityLevel": "companion_guidance"
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-dr-overview-child-005",
+            "sourceId": "vm20-practice-note-companion",
+            "score": 40.65,
+            "authorityLevel": "companion_guidance"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 47.75,
+          "matches": [
+            {
+              "chunkId": "chunk-vm20-framework-boundary-001",
+              "score": 47.75,
+              "tokenOverlap": 11
+            },
+            {
+              "chunkId": "vm20-practice-note-companion-vm20-pn-npr-overview-child-002",
+              "score": 40.8,
+              "tokenOverlap": 9
+            },
+            {
+              "chunkId": "vm20-practice-note-companion-vm20-pn-dr-overview-child-005",
+              "score": 40.65,
+              "tokenOverlap": 6
+            },
+            {
+              "chunkId": "vm20-practice-note-companion-vm20-pn-npr-overview-child-003",
+              "score": 40.65,
+              "tokenOverlap": 9
+            },
+            {
+              "chunkId": "vm20-practice-note-companion-vm20-pn-npr-overview-child-011",
+              "score": 40.65,
+              "tokenOverlap": 7
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "deduplication": {
+        "rawTopKCollisionGroups": [],
+        "suppressedParentChunkIds": [],
+        "postDeduplicationCollisionCount": 0
+      },
       "resultLabel": "supported_top1"
     },
     {
@@ -314,14 +875,6 @@
           "citationCount": 0
         },
         {
-          "chunkId": "vm20-canonical-coverage-vm20-npr-entry-formula",
-          "sourceId": "vm20-canonical-coverage",
-          "sourceFamilyId": "valuation_manual_pdfs",
-          "authorityLevel": "manual_section",
-          "score": 57.29999999999999,
-          "citationCount": 0
-        },
-        {
           "chunkId": "vm20-canonical-coverage-vm20-npr-entry-formula-child-001",
           "sourceId": "vm20-canonical-coverage",
           "sourceFamilyId": "valuation_manual_pdfs",
@@ -344,6 +897,14 @@
           "authorityLevel": "manual_section",
           "score": 54.9,
           "citationCount": 0
+        },
+        {
+          "chunkId": "vm20-section3c-hierarchical-section-3-c-1-mortality-rates",
+          "sourceId": "vm20-section3c-hierarchical",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 54.84999999999999,
+          "citationCount": 0
         }
       ],
       "top1Hit": true,
@@ -354,6 +915,84 @@
       "predictedAuthorityLevel": "manual_section",
       "citationAvailable": false,
       "insufficientSupportDetected": false,
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Retrieved evidence is sufficiently aligned for the requested information type under the current corpus declarations.",
+        "requestedInformationTypes": [
+          "general_prose"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "chunk-vm20-assumptions-section-3c-001",
+            "sourceId": "vm20-assumptions-section-3c",
+            "score": 65.1,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm20-canonical-coverage-vm20-npr-entry-formula-child-001",
+            "sourceId": "vm20-canonical-coverage",
+            "score": 57.29999999999999,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm20-canonical-coverage-vm20-npr-entry-formula-child-002",
+            "sourceId": "vm20-canonical-coverage",
+            "score": 56.849999999999994,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 65.1,
+          "matches": [
+            {
+              "chunkId": "chunk-vm20-assumptions-section-3c-001",
+              "score": 65.1,
+              "tokenOverlap": 10
+            },
+            {
+              "chunkId": "vm20-canonical-coverage-vm20-npr-entry-formula-child-001",
+              "score": 57.29999999999999,
+              "tokenOverlap": 13
+            },
+            {
+              "chunkId": "vm20-canonical-coverage-vm20-npr-entry-formula-child-002",
+              "score": 56.849999999999994,
+              "tokenOverlap": 12
+            },
+            {
+              "chunkId": "chunk-vm20-assumptions-section-3c-004",
+              "score": 54.9,
+              "tokenOverlap": 9
+            },
+            {
+              "chunkId": "vm20-section3c-hierarchical-section-3-c-1-mortality-rates",
+              "score": 54.84999999999999,
+              "tokenOverlap": 14
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "deduplication": {
+        "rawTopKCollisionGroups": [
+          {
+            "parentChunkId": "vm20-canonical-coverage-vm20-npr-entry-formula",
+            "childChunkId": "vm20-canonical-coverage-vm20-npr-entry-formula-child-001"
+          },
+          {
+            "parentChunkId": "vm20-canonical-coverage-vm20-npr-entry-formula",
+            "childChunkId": "vm20-canonical-coverage-vm20-npr-entry-formula-child-002"
+          }
+        ],
+        "suppressedParentChunkIds": [
+          "vm20-canonical-coverage-vm20-npr-entry-formula"
+        ],
+        "postDeduplicationCollisionCount": 0
+      },
       "resultLabel": "supported_top1"
     },
     {
@@ -385,22 +1024,6 @@
           "citationCount": 0
         },
         {
-          "chunkId": "vm20-section3c-hierarchical-section-3-c-2-interest-rates",
-          "sourceId": "vm20-section3c-hierarchical",
-          "sourceFamilyId": "valuation_manual_pdfs",
-          "authorityLevel": "manual_section",
-          "score": 52.44999999999999,
-          "citationCount": 0
-        },
-        {
-          "chunkId": "vm20-section3c-hierarchical-section-3-c-1-mortality-rates",
-          "sourceId": "vm20-section3c-hierarchical",
-          "sourceFamilyId": "valuation_manual_pdfs",
-          "authorityLevel": "manual_section",
-          "score": 52.29999999999999,
-          "citationCount": 0
-        },
-        {
           "chunkId": "vm20-section3c-hierarchical-section-3-c-3-lapse-rates",
           "sourceId": "vm20-section3c-hierarchical",
           "sourceFamilyId": "valuation_manual_pdfs",
@@ -415,16 +1038,107 @@
           "authorityLevel": "manual_section",
           "score": 49.44999999999999,
           "citationCount": 0
+        },
+        {
+          "chunkId": "vm20-section3c-hierarchical-section-3-c-1-mortality-rates-child-002",
+          "sourceId": "vm20-section3c-hierarchical",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 49.29999999999999,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm20-section3c-hierarchical-section-3-c-1-mortality-rates-child-003",
+          "sourceId": "vm20-section3c-hierarchical",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 49.14999999999999,
+          "citationCount": 0
         }
       ],
       "top1Hit": false,
       "top3Hit": true,
       "top5Hit": true,
-      "reciprocalRank": 0.2,
+      "reciprocalRank": 0.3333333333333333,
       "predictedSourceFamilyId": "valuation_manual_pdfs",
       "predictedAuthorityLevel": "manual_section",
       "citationAvailable": false,
       "insufficientSupportDetected": false,
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Retrieved evidence is sufficiently aligned for the requested information type under the current corpus declarations.",
+        "requestedInformationTypes": [
+          "general_prose"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "chunk-vm20-assumptions-section-3c-001",
+            "sourceId": "vm20-assumptions-section-3c",
+            "score": 52.949999999999996,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm20-section3c-hierarchical-section-3-c-3-lapse-rates",
+            "sourceId": "vm20-section3c-hierarchical",
+            "score": 52.14999999999999,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm20-section3c-hierarchical-section-3-c-2-interest-rates-child-001",
+            "sourceId": "vm20-section3c-hierarchical",
+            "score": 49.44999999999999,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 52.949999999999996,
+          "matches": [
+            {
+              "chunkId": "chunk-vm20-assumptions-section-3c-001",
+              "score": 52.949999999999996,
+              "tokenOverlap": 9
+            },
+            {
+              "chunkId": "vm20-section3c-hierarchical-section-3-c-3-lapse-rates",
+              "score": 52.14999999999999,
+              "tokenOverlap": 13
+            },
+            {
+              "chunkId": "vm20-section3c-hierarchical-section-3-c-2-interest-rates-child-001",
+              "score": 49.44999999999999,
+              "tokenOverlap": 14
+            },
+            {
+              "chunkId": "vm20-section3c-hierarchical-section-3-c-1-mortality-rates-child-002",
+              "score": 49.29999999999999,
+              "tokenOverlap": 15
+            },
+            {
+              "chunkId": "vm20-section3c-hierarchical-section-3-c-1-mortality-rates-child-003",
+              "score": 49.14999999999999,
+              "tokenOverlap": 13
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "deduplication": {
+        "rawTopKCollisionGroups": [
+          {
+            "parentChunkId": "vm20-section3c-hierarchical-section-3-c-2-interest-rates",
+            "childChunkId": "vm20-section3c-hierarchical-section-3-c-2-interest-rates-child-001"
+          }
+        ],
+        "suppressedParentChunkIds": [
+          "vm20-section3c-hierarchical-section-3-c-2-interest-rates",
+          "vm20-section3c-hierarchical-section-3-c-1-mortality-rates"
+        ],
+        "postDeduplicationCollisionCount": 0
+      },
       "resultLabel": "supported_top3"
     },
     {
@@ -463,14 +1177,6 @@
           "citationCount": 0
         },
         {
-          "chunkId": "vm20-canonical-coverage-vm20-npr-entry-formula",
-          "sourceId": "vm20-canonical-coverage",
-          "sourceFamilyId": "valuation_manual_pdfs",
-          "authorityLevel": "manual_section",
-          "score": 47.7,
-          "citationCount": 0
-        },
-        {
           "chunkId": "vm20-practice-note-companion-vm20-pn-npr-overview-child-008",
           "sourceId": "vm20-practice-note-companion",
           "sourceFamilyId": "practice_notes",
@@ -480,6 +1186,14 @@
         },
         {
           "chunkId": "vm20-practice-note-companion-vm20-pn-npr-overview-child-002",
+          "sourceId": "vm20-practice-note-companion",
+          "sourceFamilyId": "practice_notes",
+          "authorityLevel": "companion_guidance",
+          "score": 31.25,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm20-practice-note-companion-vm20-pn-npr-overview-child-006",
           "sourceId": "vm20-practice-note-companion",
           "sourceFamilyId": "practice_notes",
           "authorityLevel": "companion_guidance",
@@ -495,6 +1209,84 @@
       "predictedAuthorityLevel": "manual_section",
       "citationAvailable": false,
       "insufficientSupportDetected": false,
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Retrieved evidence is sufficiently aligned for the requested information type under the current corpus declarations.",
+        "requestedInformationTypes": [
+          "general_prose"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm20-canonical-coverage-vm20-npr-entry-formula-child-001",
+            "sourceId": "vm20-canonical-coverage",
+            "score": 49.2,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm20-canonical-coverage-vm20-npr-entry-formula-child-002",
+            "sourceId": "vm20-canonical-coverage",
+            "score": 49.050000000000004,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-npr-overview-child-008",
+            "sourceId": "vm20-practice-note-companion",
+            "score": 31.4,
+            "authorityLevel": "companion_guidance"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 49.2,
+          "matches": [
+            {
+              "chunkId": "vm20-canonical-coverage-vm20-npr-entry-formula-child-001",
+              "score": 49.2,
+              "tokenOverlap": 8
+            },
+            {
+              "chunkId": "vm20-canonical-coverage-vm20-npr-entry-formula-child-002",
+              "score": 49.050000000000004,
+              "tokenOverlap": 8
+            },
+            {
+              "chunkId": "vm20-practice-note-companion-vm20-pn-npr-overview-child-008",
+              "score": 31.4,
+              "tokenOverlap": 9
+            },
+            {
+              "chunkId": "vm20-practice-note-companion-vm20-pn-npr-overview-child-002",
+              "score": 31.25,
+              "tokenOverlap": 8
+            },
+            {
+              "chunkId": "vm20-practice-note-companion-vm20-pn-npr-overview-child-006",
+              "score": 31.25,
+              "tokenOverlap": 8
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "deduplication": {
+        "rawTopKCollisionGroups": [
+          {
+            "parentChunkId": "vm20-canonical-coverage-vm20-npr-entry-formula",
+            "childChunkId": "vm20-canonical-coverage-vm20-npr-entry-formula-child-001"
+          },
+          {
+            "parentChunkId": "vm20-canonical-coverage-vm20-npr-entry-formula",
+            "childChunkId": "vm20-canonical-coverage-vm20-npr-entry-formula-child-002"
+          }
+        ],
+        "suppressedParentChunkIds": [
+          "vm20-canonical-coverage-vm20-npr-entry-formula"
+        ],
+        "postDeduplicationCollisionCount": 0
+      },
       "resultLabel": "supported_top1"
     },
     {
@@ -527,14 +1319,6 @@
           "citationCount": 0
         },
         {
-          "chunkId": "vm20-section3c-hierarchical-section-3-d-npr-calculation-and-cash-surrender-value-floor-child-001",
-          "sourceId": "vm20-section3c-hierarchical",
-          "sourceFamilyId": "valuation_manual_pdfs",
-          "authorityLevel": "manual_section",
-          "score": 46.3,
-          "citationCount": 0
-        },
-        {
           "chunkId": "vm20-practice-note-companion-vm20-pn-dr-overview-child-005",
           "sourceId": "vm20-practice-note-companion",
           "sourceFamilyId": "practice_notes",
@@ -557,6 +1341,14 @@
           "authorityLevel": "companion_guidance",
           "score": 40.5,
           "citationCount": 0
+        },
+        {
+          "chunkId": "vm20-practice-note-companion-vm20-pn-dr-overview-child-003",
+          "sourceId": "vm20-practice-note-companion",
+          "sourceFamilyId": "practice_notes",
+          "authorityLevel": "companion_guidance",
+          "score": 40.5,
+          "citationCount": 0
         }
       ],
       "top1Hit": true,
@@ -567,6 +1359,78 @@
       "predictedAuthorityLevel": "manual_section",
       "citationAvailable": false,
       "insufficientSupportDetected": false,
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Retrieved evidence is sufficiently aligned for the requested information type under the current corpus declarations.",
+        "requestedInformationTypes": [
+          "general_prose"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm20-section3c-hierarchical-section-3-d-npr-calculation-and-cash-surrender-value-floor",
+            "sourceId": "vm20-section3c-hierarchical",
+            "score": 49.3,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-dr-overview-child-005",
+            "sourceId": "vm20-practice-note-companion",
+            "score": 40.65,
+            "authorityLevel": "companion_guidance"
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-dr-overview-child-006",
+            "sourceId": "vm20-practice-note-companion",
+            "score": 40.65,
+            "authorityLevel": "companion_guidance"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 49.3,
+          "matches": [
+            {
+              "chunkId": "vm20-section3c-hierarchical-section-3-d-npr-calculation-and-cash-surrender-value-floor",
+              "score": 49.3,
+              "tokenOverlap": 8
+            },
+            {
+              "chunkId": "vm20-practice-note-companion-vm20-pn-dr-overview-child-005",
+              "score": 40.65,
+              "tokenOverlap": 7
+            },
+            {
+              "chunkId": "vm20-practice-note-companion-vm20-pn-dr-overview-child-006",
+              "score": 40.65,
+              "tokenOverlap": 8
+            },
+            {
+              "chunkId": "vm20-practice-note-companion-vm20-pn-dr-overview-child-002",
+              "score": 40.5,
+              "tokenOverlap": 9
+            },
+            {
+              "chunkId": "vm20-practice-note-companion-vm20-pn-dr-overview-child-003",
+              "score": 40.5,
+              "tokenOverlap": 8
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "deduplication": {
+        "rawTopKCollisionGroups": [
+          {
+            "parentChunkId": "vm20-section3c-hierarchical-section-3-d-npr-calculation-and-cash-surrender-value-floor",
+            "childChunkId": "vm20-section3c-hierarchical-section-3-d-npr-calculation-and-cash-surrender-value-floor-child-001"
+          }
+        ],
+        "suppressedParentChunkIds": [],
+        "postDeduplicationCollisionCount": 0
+      },
       "resultLabel": "supported_top1"
     },
     {
@@ -637,6 +1501,73 @@
       "predictedAuthorityLevel": "manual_section",
       "citationAvailable": false,
       "insufficientSupportDetected": false,
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Retrieved evidence is sufficiently aligned for the requested information type under the current corpus declarations.",
+        "requestedInformationTypes": [
+          "general_prose"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm20-canonical-coverage-vm20-section5-entry",
+            "sourceId": "vm20-canonical-coverage",
+            "score": 41,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-sr-overview-child-001",
+            "sourceId": "vm20-practice-note-companion",
+            "score": 40.65,
+            "authorityLevel": "companion_guidance"
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-sr-overview-child-002",
+            "sourceId": "vm20-practice-note-companion",
+            "score": 40.5,
+            "authorityLevel": "companion_guidance"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 41,
+          "matches": [
+            {
+              "chunkId": "vm20-canonical-coverage-vm20-section5-entry",
+              "score": 41,
+              "tokenOverlap": 10
+            },
+            {
+              "chunkId": "vm20-practice-note-companion-vm20-pn-sr-overview-child-001",
+              "score": 40.65,
+              "tokenOverlap": 9
+            },
+            {
+              "chunkId": "vm20-practice-note-companion-vm20-pn-sr-overview-child-002",
+              "score": 40.5,
+              "tokenOverlap": 8
+            },
+            {
+              "chunkId": "vm20-practice-note-companion-vm20-pn-sr-overview-child-003",
+              "score": 40.5,
+              "tokenOverlap": 7
+            },
+            {
+              "chunkId": "vm20-practice-note-companion-vm20-pn-sr-overview-child-004",
+              "score": 40.2,
+              "tokenOverlap": 7
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "deduplication": {
+        "rawTopKCollisionGroups": [],
+        "suppressedParentChunkIds": [],
+        "postDeduplicationCollisionCount": 0
+      },
       "resultLabel": "supported_top1"
     },
     {
@@ -658,14 +1589,6 @@
         "manual_section"
       ],
       "rankedMatches": [
-        {
-          "chunkId": "vm20-canonical-coverage-vm20-section6-exclusion-tests",
-          "sourceId": "vm20-canonical-coverage",
-          "sourceFamilyId": "valuation_manual_pdfs",
-          "authorityLevel": "manual_section",
-          "score": 48.3,
-          "citationCount": 0
-        },
         {
           "chunkId": "vm20-canonical-coverage-vm20-section6-exclusion-tests-child-001",
           "sourceId": "vm20-canonical-coverage",
@@ -697,6 +1620,14 @@
           "authorityLevel": "manual_section",
           "score": 47.85,
           "citationCount": 0
+        },
+        {
+          "chunkId": "vm20-canonical-coverage-vm20-section6-exclusion-tests-child-003",
+          "sourceId": "vm20-canonical-coverage",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 47.550000000000004,
+          "citationCount": 0
         }
       ],
       "top1Hit": true,
@@ -707,6 +1638,92 @@
       "predictedAuthorityLevel": "manual_section",
       "citationAvailable": false,
       "insufficientSupportDetected": false,
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Retrieved evidence is sufficiently aligned for the requested information type under the current corpus declarations.",
+        "requestedInformationTypes": [
+          "general_prose"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm20-canonical-coverage-vm20-section6-exclusion-tests-child-001",
+            "sourceId": "vm20-canonical-coverage",
+            "score": 48.3,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm20-canonical-coverage-vm20-section6-exclusion-tests-child-005",
+            "sourceId": "vm20-canonical-coverage",
+            "score": 48,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm20-canonical-coverage-vm20-section6-exclusion-tests-child-002",
+            "sourceId": "vm20-canonical-coverage",
+            "score": 47.85,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 48.3,
+          "matches": [
+            {
+              "chunkId": "vm20-canonical-coverage-vm20-section6-exclusion-tests-child-001",
+              "score": 48.3,
+              "tokenOverlap": 11
+            },
+            {
+              "chunkId": "vm20-canonical-coverage-vm20-section6-exclusion-tests-child-005",
+              "score": 48,
+              "tokenOverlap": 11
+            },
+            {
+              "chunkId": "vm20-canonical-coverage-vm20-section6-exclusion-tests-child-002",
+              "score": 47.85,
+              "tokenOverlap": 10
+            },
+            {
+              "chunkId": "vm20-canonical-coverage-vm20-section6-exclusion-tests-child-004",
+              "score": 47.85,
+              "tokenOverlap": 10
+            },
+            {
+              "chunkId": "vm20-canonical-coverage-vm20-section6-exclusion-tests-child-003",
+              "score": 47.550000000000004,
+              "tokenOverlap": 10
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "deduplication": {
+        "rawTopKCollisionGroups": [
+          {
+            "parentChunkId": "vm20-canonical-coverage-vm20-section6-exclusion-tests",
+            "childChunkId": "vm20-canonical-coverage-vm20-section6-exclusion-tests-child-001"
+          },
+          {
+            "parentChunkId": "vm20-canonical-coverage-vm20-section6-exclusion-tests",
+            "childChunkId": "vm20-canonical-coverage-vm20-section6-exclusion-tests-child-005"
+          },
+          {
+            "parentChunkId": "vm20-canonical-coverage-vm20-section6-exclusion-tests",
+            "childChunkId": "vm20-canonical-coverage-vm20-section6-exclusion-tests-child-002"
+          },
+          {
+            "parentChunkId": "vm20-canonical-coverage-vm20-section6-exclusion-tests",
+            "childChunkId": "vm20-canonical-coverage-vm20-section6-exclusion-tests-child-004"
+          }
+        ],
+        "suppressedParentChunkIds": [
+          "vm20-canonical-coverage-vm20-section6-exclusion-tests"
+        ],
+        "postDeduplicationCollisionCount": 0
+      },
       "resultLabel": "supported_top1"
     },
     {
@@ -728,14 +1745,6 @@
         "manual_section"
       ],
       "rankedMatches": [
-        {
-          "chunkId": "vm20-canonical-coverage-vm20-section7-model-structure",
-          "sourceId": "vm20-canonical-coverage",
-          "sourceFamilyId": "valuation_manual_pdfs",
-          "authorityLevel": "manual_section",
-          "score": 67.40000000000008,
-          "citationCount": 0
-        },
         {
           "chunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-001",
           "sourceId": "vm20-canonical-coverage",
@@ -767,6 +1776,14 @@
           "authorityLevel": "manual_section",
           "score": 66.65000000000005,
           "citationCount": 0
+        },
+        {
+          "chunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-004",
+          "sourceId": "vm20-canonical-coverage",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 66.65000000000005,
+          "citationCount": 0
         }
       ],
       "top1Hit": true,
@@ -777,6 +1794,92 @@
       "predictedAuthorityLevel": "manual_section",
       "citationAvailable": false,
       "insufficientSupportDetected": false,
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Retrieved evidence is sufficiently aligned for the requested information type under the current corpus declarations.",
+        "requestedInformationTypes": [
+          "general_prose"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-001",
+            "sourceId": "vm20-canonical-coverage",
+            "score": 67.25000000000007,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-005",
+            "sourceId": "vm20-canonical-coverage",
+            "score": 67.25000000000007,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-003",
+            "sourceId": "vm20-canonical-coverage",
+            "score": 66.80000000000005,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 67.25000000000007,
+          "matches": [
+            {
+              "chunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-001",
+              "score": 67.25000000000007,
+              "tokenOverlap": 14
+            },
+            {
+              "chunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-005",
+              "score": 67.25000000000007,
+              "tokenOverlap": 13
+            },
+            {
+              "chunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-003",
+              "score": 66.80000000000005,
+              "tokenOverlap": 11
+            },
+            {
+              "chunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-002",
+              "score": 66.65000000000005,
+              "tokenOverlap": 12
+            },
+            {
+              "chunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-004",
+              "score": 66.65000000000005,
+              "tokenOverlap": 12
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "deduplication": {
+        "rawTopKCollisionGroups": [
+          {
+            "parentChunkId": "vm20-canonical-coverage-vm20-section7-model-structure",
+            "childChunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-001"
+          },
+          {
+            "parentChunkId": "vm20-canonical-coverage-vm20-section7-model-structure",
+            "childChunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-005"
+          },
+          {
+            "parentChunkId": "vm20-canonical-coverage-vm20-section7-model-structure",
+            "childChunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-003"
+          },
+          {
+            "parentChunkId": "vm20-canonical-coverage-vm20-section7-model-structure",
+            "childChunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-002"
+          }
+        ],
+        "suppressedParentChunkIds": [
+          "vm20-canonical-coverage-vm20-section7-model-structure"
+        ],
+        "postDeduplicationCollisionCount": 0
+      },
       "resultLabel": "supported_top1"
     },
     {
@@ -800,14 +1903,6 @@
         "manual_section"
       ],
       "rankedMatches": [
-        {
-          "chunkId": "vm20-canonical-coverage-vm20-section7-model-structure",
-          "sourceId": "vm20-canonical-coverage",
-          "sourceFamilyId": "valuation_manual_pdfs",
-          "authorityLevel": "manual_section",
-          "score": 48.74999999999999,
-          "citationCount": 0
-        },
         {
           "chunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-002",
           "sourceId": "vm20-canonical-coverage",
@@ -839,6 +1934,14 @@
           "authorityLevel": "manual_section",
           "score": 48.15,
           "citationCount": 0
+        },
+        {
+          "chunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-004",
+          "sourceId": "vm20-canonical-coverage",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 48,
+          "citationCount": 0
         }
       ],
       "top1Hit": true,
@@ -849,6 +1952,92 @@
       "predictedAuthorityLevel": "manual_section",
       "citationAvailable": false,
       "insufficientSupportDetected": false,
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Retrieved evidence is sufficiently aligned for the requested information type under the current corpus declarations.",
+        "requestedInformationTypes": [
+          "general_prose"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-002",
+            "sourceId": "vm20-canonical-coverage",
+            "score": 48.449999999999996,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-005",
+            "sourceId": "vm20-canonical-coverage",
+            "score": 48.3,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-001",
+            "sourceId": "vm20-canonical-coverage",
+            "score": 48.15,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 48.449999999999996,
+          "matches": [
+            {
+              "chunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-002",
+              "score": 48.449999999999996,
+              "tokenOverlap": 12
+            },
+            {
+              "chunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-005",
+              "score": 48.3,
+              "tokenOverlap": 10
+            },
+            {
+              "chunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-001",
+              "score": 48.15,
+              "tokenOverlap": 9
+            },
+            {
+              "chunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-003",
+              "score": 48.15,
+              "tokenOverlap": 10
+            },
+            {
+              "chunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-004",
+              "score": 48,
+              "tokenOverlap": 10
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "deduplication": {
+        "rawTopKCollisionGroups": [
+          {
+            "parentChunkId": "vm20-canonical-coverage-vm20-section7-model-structure",
+            "childChunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-002"
+          },
+          {
+            "parentChunkId": "vm20-canonical-coverage-vm20-section7-model-structure",
+            "childChunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-005"
+          },
+          {
+            "parentChunkId": "vm20-canonical-coverage-vm20-section7-model-structure",
+            "childChunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-001"
+          },
+          {
+            "parentChunkId": "vm20-canonical-coverage-vm20-section7-model-structure",
+            "childChunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-003"
+          }
+        ],
+        "suppressedParentChunkIds": [
+          "vm20-canonical-coverage-vm20-section7-model-structure"
+        ],
+        "postDeduplicationCollisionCount": 0
+      },
       "resultLabel": "supported_top1"
     },
     {
@@ -879,14 +2068,6 @@
           "citationCount": 0
         },
         {
-          "chunkId": "vm20-practice-note-companion-vm20-pn-reinsurance",
-          "sourceId": "vm20-practice-note-companion",
-          "sourceFamilyId": "practice_notes",
-          "authorityLevel": "companion_guidance",
-          "score": 25.849999999999994,
-          "citationCount": 0
-        },
-        {
           "chunkId": "vm20-practice-note-companion-vm20-pn-reinsurance-child-002",
           "sourceId": "vm20-practice-note-companion",
           "sourceFamilyId": "practice_notes",
@@ -909,6 +2090,14 @@
           "authorityLevel": "companion_guidance",
           "score": 25.25,
           "citationCount": 0
+        },
+        {
+          "chunkId": "vm20-practice-note-companion-vm20-pn-reinsurance-child-006",
+          "sourceId": "vm20-practice-note-companion",
+          "sourceFamilyId": "practice_notes",
+          "authorityLevel": "companion_guidance",
+          "score": 25.25,
+          "citationCount": 0
         }
       ],
       "top1Hit": true,
@@ -919,6 +2108,88 @@
       "predictedAuthorityLevel": "manual_section",
       "citationAvailable": false,
       "insufficientSupportDetected": false,
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Retrieved evidence is sufficiently aligned for the requested information type under the current corpus declarations.",
+        "requestedInformationTypes": [
+          "general_prose"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm20-canonical-coverage-vm20-section8-reinsurance",
+            "sourceId": "vm20-canonical-coverage",
+            "score": 28.39999999999999,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-reinsurance-child-002",
+            "sourceId": "vm20-practice-note-companion",
+            "score": 25.549999999999997,
+            "authorityLevel": "companion_guidance"
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-reinsurance-child-005",
+            "sourceId": "vm20-practice-note-companion",
+            "score": 25.549999999999997,
+            "authorityLevel": "companion_guidance"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 28.39999999999999,
+          "matches": [
+            {
+              "chunkId": "vm20-canonical-coverage-vm20-section8-reinsurance",
+              "score": 28.39999999999999,
+              "tokenOverlap": 19
+            },
+            {
+              "chunkId": "vm20-practice-note-companion-vm20-pn-reinsurance-child-002",
+              "score": 25.549999999999997,
+              "tokenOverlap": 13
+            },
+            {
+              "chunkId": "vm20-practice-note-companion-vm20-pn-reinsurance-child-005",
+              "score": 25.549999999999997,
+              "tokenOverlap": 12
+            },
+            {
+              "chunkId": "vm20-practice-note-companion-vm20-pn-reinsurance-child-004",
+              "score": 25.25,
+              "tokenOverlap": 10
+            },
+            {
+              "chunkId": "vm20-practice-note-companion-vm20-pn-reinsurance-child-006",
+              "score": 25.25,
+              "tokenOverlap": 9
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "deduplication": {
+        "rawTopKCollisionGroups": [
+          {
+            "parentChunkId": "vm20-practice-note-companion-vm20-pn-reinsurance",
+            "childChunkId": "vm20-practice-note-companion-vm20-pn-reinsurance-child-002"
+          },
+          {
+            "parentChunkId": "vm20-practice-note-companion-vm20-pn-reinsurance",
+            "childChunkId": "vm20-practice-note-companion-vm20-pn-reinsurance-child-005"
+          },
+          {
+            "parentChunkId": "vm20-practice-note-companion-vm20-pn-reinsurance",
+            "childChunkId": "vm20-practice-note-companion-vm20-pn-reinsurance-child-004"
+          }
+        ],
+        "suppressedParentChunkIds": [
+          "vm20-practice-note-companion-vm20-pn-reinsurance"
+        ],
+        "postDeduplicationCollisionCount": 0
+      },
       "resultLabel": "supported_top1"
     },
     {
@@ -993,6 +2264,73 @@
       "predictedAuthorityLevel": "companion_guidance",
       "citationAvailable": false,
       "insufficientSupportDetected": false,
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Retrieved evidence is sufficiently aligned for the requested information type under the current corpus declarations.",
+        "requestedInformationTypes": [
+          "general_prose"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-prudent-estimate-child-005",
+            "sourceId": "vm20-practice-note-companion",
+            "score": 39.6,
+            "authorityLevel": "companion_guidance"
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-prudent-estimate-child-002",
+            "sourceId": "vm20-practice-note-companion",
+            "score": 39.300000000000004,
+            "authorityLevel": "companion_guidance"
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-prudent-estimate-child-003",
+            "sourceId": "vm20-practice-note-companion",
+            "score": 39.150000000000006,
+            "authorityLevel": "companion_guidance"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 39.6,
+          "matches": [
+            {
+              "chunkId": "vm20-practice-note-companion-vm20-pn-prudent-estimate-child-005",
+              "score": 39.6,
+              "tokenOverlap": 11
+            },
+            {
+              "chunkId": "vm20-practice-note-companion-vm20-pn-prudent-estimate-child-002",
+              "score": 39.300000000000004,
+              "tokenOverlap": 11
+            },
+            {
+              "chunkId": "vm20-practice-note-companion-vm20-pn-prudent-estimate-child-003",
+              "score": 39.150000000000006,
+              "tokenOverlap": 10
+            },
+            {
+              "chunkId": "vm20-practice-note-companion-vm20-pn-prudent-estimate-child-004",
+              "score": 39.150000000000006,
+              "tokenOverlap": 10
+            },
+            {
+              "chunkId": "vm20-practice-note-companion-vm20-pn-prudent-estimate-child-001",
+              "score": 39.00000000000001,
+              "tokenOverlap": 9
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "deduplication": {
+        "rawTopKCollisionGroups": [],
+        "suppressedParentChunkIds": [],
+        "postDeduplicationCollisionCount": 0
+      },
       "resultLabel": "supported_top1"
     },
     {
@@ -1015,27 +2353,11 @@
       ],
       "rankedMatches": [
         {
-          "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-e-expense-assumptions",
-          "sourceId": "vm20-remaining-prose-appendix-coverage",
-          "sourceFamilyId": "valuation_manual_pdfs",
-          "authorityLevel": "manual_section",
-          "score": 31.39999999999999,
-          "citationCount": 0
-        },
-        {
-          "chunkId": "vm20-practice-note-companion-vm20-pn-expense",
-          "sourceId": "vm20-practice-note-companion",
-          "sourceFamilyId": "practice_notes",
-          "authorityLevel": "companion_guidance",
-          "score": 30.15,
-          "citationCount": 0
-        },
-        {
           "chunkId": "vm20-practice-note-companion-vm20-pn-expense-child-001",
           "sourceId": "vm20-practice-note-companion",
           "sourceFamilyId": "practice_notes",
           "authorityLevel": "companion_guidance",
-          "score": 30.15,
+          "score": 36.15,
           "citationCount": 0
         },
         {
@@ -1043,7 +2365,7 @@
           "sourceId": "vm20-practice-note-companion",
           "sourceFamilyId": "practice_notes",
           "authorityLevel": "companion_guidance",
-          "score": 29.85,
+          "score": 35.85,
           "citationCount": 0
         },
         {
@@ -1051,19 +2373,118 @@
           "sourceId": "vm20-practice-note-companion",
           "sourceFamilyId": "practice_notes",
           "authorityLevel": "companion_guidance",
-          "score": 29.550000000000004,
+          "score": 35.550000000000004,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-e-expense-assumptions-child-001",
+          "sourceId": "vm20-remaining-prose-appendix-coverage",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 31.39999999999999,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-e-expense-assumptions-child-002",
+          "sourceId": "vm20-remaining-prose-appendix-coverage",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 30.799999999999997,
           "citationCount": 0
         }
       ],
-      "top1Hit": false,
+      "top1Hit": true,
       "top3Hit": true,
       "top5Hit": true,
-      "reciprocalRank": 0.5,
-      "predictedSourceFamilyId": "valuation_manual_pdfs",
-      "predictedAuthorityLevel": "manual_section",
+      "reciprocalRank": 1,
+      "predictedSourceFamilyId": "practice_notes",
+      "predictedAuthorityLevel": "companion_guidance",
       "citationAvailable": false,
       "insufficientSupportDetected": false,
-      "resultLabel": "supported_top3"
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Retrieved evidence is sufficiently aligned for the requested information type under the current corpus declarations.",
+        "requestedInformationTypes": [
+          "general_prose"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-expense-child-001",
+            "sourceId": "vm20-practice-note-companion",
+            "score": 36.15,
+            "authorityLevel": "companion_guidance"
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-expense-child-002",
+            "sourceId": "vm20-practice-note-companion",
+            "score": 35.85,
+            "authorityLevel": "companion_guidance"
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-expense-child-003",
+            "sourceId": "vm20-practice-note-companion",
+            "score": 35.550000000000004,
+            "authorityLevel": "companion_guidance"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 36.15,
+          "matches": [
+            {
+              "chunkId": "vm20-practice-note-companion-vm20-pn-expense-child-001",
+              "score": 36.15,
+              "tokenOverlap": 7
+            },
+            {
+              "chunkId": "vm20-practice-note-companion-vm20-pn-expense-child-002",
+              "score": 35.85,
+              "tokenOverlap": 5
+            },
+            {
+              "chunkId": "vm20-practice-note-companion-vm20-pn-expense-child-003",
+              "score": 35.550000000000004,
+              "tokenOverlap": 4
+            },
+            {
+              "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-e-expense-assumptions-child-001",
+              "score": 31.39999999999999,
+              "tokenOverlap": 9
+            },
+            {
+              "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-e-expense-assumptions-child-002",
+              "score": 30.799999999999997,
+              "tokenOverlap": 5
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "deduplication": {
+        "rawTopKCollisionGroups": [
+          {
+            "parentChunkId": "vm20-practice-note-companion-vm20-pn-expense",
+            "childChunkId": "vm20-practice-note-companion-vm20-pn-expense-child-001"
+          },
+          {
+            "parentChunkId": "vm20-practice-note-companion-vm20-pn-expense",
+            "childChunkId": "vm20-practice-note-companion-vm20-pn-expense-child-002"
+          },
+          {
+            "parentChunkId": "vm20-practice-note-companion-vm20-pn-expense",
+            "childChunkId": "vm20-practice-note-companion-vm20-pn-expense-child-003"
+          }
+        ],
+        "suppressedParentChunkIds": [
+          "vm20-practice-note-companion-vm20-pn-expense",
+          "vm20-remaining-prose-appendix-coverage-vm20-section9-e-expense-assumptions"
+        ],
+        "postDeduplicationCollisionCount": 0
+      },
+      "resultLabel": "supported_top1"
     },
     {
       "queryId": "q-vm20-practice-note-mortality-behavior",
@@ -1085,11 +2506,11 @@
       ],
       "rankedMatches": [
         {
-          "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions",
+          "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions-child-002",
           "sourceId": "vm20-remaining-prose-appendix-coverage",
           "sourceFamilyId": "valuation_manual_pdfs",
           "authorityLevel": "manual_section",
-          "score": 40.49999999999999,
+          "score": 45.599999999999994,
           "citationCount": 0
         },
         {
@@ -1097,7 +2518,15 @@
           "sourceId": "vm20-practice-note-companion",
           "sourceFamilyId": "practice_notes",
           "authorityLevel": "companion_guidance",
-          "score": 38.99999999999999,
+          "score": 44.99999999999999,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions-child-004",
+          "sourceId": "vm20-remaining-prose-appendix-coverage",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 44.85,
           "citationCount": 0
         },
         {
@@ -1105,7 +2534,7 @@
           "sourceId": "vm20-practice-note-companion",
           "sourceFamilyId": "practice_notes",
           "authorityLevel": "companion_guidance",
-          "score": 38.849999999999994,
+          "score": 44.849999999999994,
           "citationCount": 0
         },
         {
@@ -1113,15 +2542,7 @@
           "sourceId": "vm20-practice-note-companion",
           "sourceFamilyId": "practice_notes",
           "authorityLevel": "companion_guidance",
-          "score": 38.699999999999996,
-          "citationCount": 0
-        },
-        {
-          "chunkId": "vm20-practice-note-companion-vm20-pn-behavior-child-006",
-          "sourceId": "vm20-practice-note-companion",
-          "sourceFamilyId": "practice_notes",
-          "authorityLevel": "companion_guidance",
-          "score": 38.55,
+          "score": 44.699999999999996,
           "citationCount": 0
         }
       ],
@@ -1133,6 +2554,73 @@
       "predictedAuthorityLevel": "manual_section",
       "citationAvailable": false,
       "insufficientSupportDetected": false,
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Retrieved evidence is sufficiently aligned for the requested information type under the current corpus declarations.",
+        "requestedInformationTypes": [
+          "general_prose"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions-child-002",
+            "sourceId": "vm20-remaining-prose-appendix-coverage",
+            "score": 45.599999999999994,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-behavior-child-001",
+            "sourceId": "vm20-practice-note-companion",
+            "score": 44.99999999999999,
+            "authorityLevel": "companion_guidance"
+          },
+          {
+            "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions-child-004",
+            "sourceId": "vm20-remaining-prose-appendix-coverage",
+            "score": 44.85,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 45.599999999999994,
+          "matches": [
+            {
+              "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions-child-002",
+              "score": 45.599999999999994,
+              "tokenOverlap": 9
+            },
+            {
+              "chunkId": "vm20-practice-note-companion-vm20-pn-behavior-child-001",
+              "score": 44.99999999999999,
+              "tokenOverlap": 11
+            },
+            {
+              "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions-child-004",
+              "score": 44.85,
+              "tokenOverlap": 9
+            },
+            {
+              "chunkId": "vm20-practice-note-companion-vm20-pn-behavior-child-005",
+              "score": 44.849999999999994,
+              "tokenOverlap": 9
+            },
+            {
+              "chunkId": "vm20-practice-note-companion-vm20-pn-behavior-child-002",
+              "score": 44.699999999999996,
+              "tokenOverlap": 11
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "deduplication": {
+        "rawTopKCollisionGroups": [],
+        "suppressedParentChunkIds": [],
+        "postDeduplicationCollisionCount": 0
+      },
       "resultLabel": "supported_top3"
     },
     {
@@ -1162,7 +2650,7 @@
           "sourceId": "vm20-practice-note-companion",
           "sourceFamilyId": "practice_notes",
           "authorityLevel": "companion_guidance",
-          "score": 29.949999999999996,
+          "score": 35.449999999999996,
           "citationCount": 0
         },
         {
@@ -1170,7 +2658,7 @@
           "sourceId": "vm20-practice-note-companion",
           "sourceFamilyId": "practice_notes",
           "authorityLevel": "companion_guidance",
-          "score": 29.299999999999997,
+          "score": 35.3,
           "citationCount": 0
         },
         {
@@ -1178,7 +2666,7 @@
           "sourceId": "vm20-practice-note-companion",
           "sourceFamilyId": "practice_notes",
           "authorityLevel": "companion_guidance",
-          "score": 29.299999999999997,
+          "score": 35.3,
           "citationCount": 0
         },
         {
@@ -1186,7 +2674,7 @@
           "sourceId": "vm20-practice-note-companion",
           "sourceFamilyId": "practice_notes",
           "authorityLevel": "companion_guidance",
-          "score": 29.15,
+          "score": 35.15,
           "citationCount": 0
         },
         {
@@ -1194,7 +2682,7 @@
           "sourceId": "vm20-practice-note-companion",
           "sourceFamilyId": "practice_notes",
           "authorityLevel": "companion_guidance",
-          "score": 29.15,
+          "score": 35.15,
           "citationCount": 0
         }
       ],
@@ -1206,6 +2694,73 @@
       "predictedAuthorityLevel": "companion_guidance",
       "citationAvailable": false,
       "insufficientSupportDetected": false,
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Retrieved evidence is sufficiently aligned for the requested information type under the current corpus declarations.",
+        "requestedInformationTypes": [
+          "general_prose"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-margins-child-004",
+            "sourceId": "vm20-practice-note-companion",
+            "score": 35.449999999999996,
+            "authorityLevel": "companion_guidance"
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-margins-child-002",
+            "sourceId": "vm20-practice-note-companion",
+            "score": 35.3,
+            "authorityLevel": "companion_guidance"
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-margins-child-006",
+            "sourceId": "vm20-practice-note-companion",
+            "score": 35.3,
+            "authorityLevel": "companion_guidance"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 35.449999999999996,
+          "matches": [
+            {
+              "chunkId": "vm20-practice-note-companion-vm20-pn-margins-child-004",
+              "score": 35.449999999999996,
+              "tokenOverlap": 9
+            },
+            {
+              "chunkId": "vm20-practice-note-companion-vm20-pn-margins-child-002",
+              "score": 35.3,
+              "tokenOverlap": 8
+            },
+            {
+              "chunkId": "vm20-practice-note-companion-vm20-pn-margins-child-006",
+              "score": 35.3,
+              "tokenOverlap": 8
+            },
+            {
+              "chunkId": "vm20-practice-note-companion-vm20-pn-margins-child-001",
+              "score": 35.15,
+              "tokenOverlap": 7
+            },
+            {
+              "chunkId": "vm20-practice-note-companion-vm20-pn-margins-child-005",
+              "score": 35.15,
+              "tokenOverlap": 6
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "deduplication": {
+        "rawTopKCollisionGroups": [],
+        "suppressedParentChunkIds": [],
+        "postDeduplicationCollisionCount": 0
+      },
       "resultLabel": "supported_top1"
     },
     {
@@ -1228,11 +2783,19 @@
       ],
       "rankedMatches": [
         {
-          "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section4-complete",
+          "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section4-complete-child-001",
           "sourceId": "vm20-remaining-prose-appendix-coverage",
           "sourceFamilyId": "valuation_manual_pdfs",
           "authorityLevel": "manual_section",
           "score": 51.39999999999999,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section4-complete-child-002",
+          "sourceId": "vm20-remaining-prose-appendix-coverage",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 50.8,
           "citationCount": 0
         },
         {
@@ -1258,14 +2821,6 @@
           "authorityLevel": "companion_guidance",
           "score": 50.49999999999999,
           "citationCount": 0
-        },
-        {
-          "chunkId": "vm20-practice-note-companion-vm20-pn-npr-overview-child-002",
-          "sourceId": "vm20-practice-note-companion",
-          "sourceFamilyId": "practice_notes",
-          "authorityLevel": "companion_guidance",
-          "score": 50.49999999999999,
-          "citationCount": 0
         }
       ],
       "top1Hit": true,
@@ -1276,6 +2831,84 @@
       "predictedAuthorityLevel": "manual_section",
       "citationAvailable": false,
       "insufficientSupportDetected": false,
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Retrieved evidence is sufficiently aligned for the requested information type under the current corpus declarations.",
+        "requestedInformationTypes": [
+          "general_prose"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section4-complete-child-001",
+            "sourceId": "vm20-remaining-prose-appendix-coverage",
+            "score": 51.39999999999999,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section4-complete-child-002",
+            "sourceId": "vm20-remaining-prose-appendix-coverage",
+            "score": 50.8,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-dr-overview-child-005",
+            "sourceId": "vm20-practice-note-companion",
+            "score": 50.64999999999999,
+            "authorityLevel": "companion_guidance"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 51.39999999999999,
+          "matches": [
+            {
+              "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section4-complete-child-001",
+              "score": 51.39999999999999,
+              "tokenOverlap": 13
+            },
+            {
+              "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section4-complete-child-002",
+              "score": 50.8,
+              "tokenOverlap": 14
+            },
+            {
+              "chunkId": "vm20-practice-note-companion-vm20-pn-dr-overview-child-005",
+              "score": 50.64999999999999,
+              "tokenOverlap": 15
+            },
+            {
+              "chunkId": "vm20-practice-note-companion-vm20-pn-npr-overview-child-012",
+              "score": 50.64999999999999,
+              "tokenOverlap": 14
+            },
+            {
+              "chunkId": "vm20-practice-note-companion-vm20-pn-dr-overview-child-006",
+              "score": 50.49999999999999,
+              "tokenOverlap": 13
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "deduplication": {
+        "rawTopKCollisionGroups": [
+          {
+            "parentChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section4-complete",
+            "childChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section4-complete-child-001"
+          },
+          {
+            "parentChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section4-complete",
+            "childChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section4-complete-child-002"
+          }
+        ],
+        "suppressedParentChunkIds": [
+          "vm20-remaining-prose-appendix-coverage-vm20-section4-complete"
+        ],
+        "postDeduplicationCollisionCount": 0
+      },
       "resultLabel": "supported_top1"
     },
     {
@@ -1298,11 +2931,11 @@
       ],
       "rankedMatches": [
         {
-          "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section5-complete",
+          "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section5-complete-child-001",
           "sourceId": "vm20-remaining-prose-appendix-coverage",
           "sourceFamilyId": "valuation_manual_pdfs",
           "authorityLevel": "manual_section",
-          "score": 51.999999999999986,
+          "score": 53.499999999999986,
           "citationCount": 0
         },
         {
@@ -1346,6 +2979,73 @@
       "predictedAuthorityLevel": "manual_section",
       "citationAvailable": false,
       "insufficientSupportDetected": false,
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Retrieved evidence is sufficiently aligned for the requested information type under the current corpus declarations.",
+        "requestedInformationTypes": [
+          "general_prose"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section5-complete-child-001",
+            "sourceId": "vm20-remaining-prose-appendix-coverage",
+            "score": 53.499999999999986,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-sr-overview-child-002",
+            "sourceId": "vm20-practice-note-companion",
+            "score": 50.64999999999999,
+            "authorityLevel": "companion_guidance"
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-dr-overview-child-005",
+            "sourceId": "vm20-practice-note-companion",
+            "score": 50.349999999999994,
+            "authorityLevel": "companion_guidance"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 53.499999999999986,
+          "matches": [
+            {
+              "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section5-complete-child-001",
+              "score": 53.499999999999986,
+              "tokenOverlap": 16
+            },
+            {
+              "chunkId": "vm20-practice-note-companion-vm20-pn-sr-overview-child-002",
+              "score": 50.64999999999999,
+              "tokenOverlap": 15
+            },
+            {
+              "chunkId": "vm20-practice-note-companion-vm20-pn-dr-overview-child-005",
+              "score": 50.349999999999994,
+              "tokenOverlap": 12
+            },
+            {
+              "chunkId": "vm20-practice-note-companion-vm20-pn-dr-overview-child-006",
+              "score": 50.349999999999994,
+              "tokenOverlap": 12
+            },
+            {
+              "chunkId": "vm20-practice-note-companion-vm20-pn-dr-overview-child-002",
+              "score": 50.199999999999996,
+              "tokenOverlap": 12
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "deduplication": {
+        "rawTopKCollisionGroups": [],
+        "suppressedParentChunkIds": [],
+        "postDeduplicationCollisionCount": 0
+      },
       "resultLabel": "supported_top1"
     },
     {
@@ -1421,6 +3121,73 @@
       "predictedAuthorityLevel": "companion_guidance",
       "citationAvailable": false,
       "insufficientSupportDetected": false,
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Retrieved evidence is sufficiently aligned for the requested information type under the current corpus declarations.",
+        "requestedInformationTypes": [
+          "general_prose"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-dr-overview-child-006",
+            "sourceId": "vm20-practice-note-companion",
+            "score": 60.04999999999999,
+            "authorityLevel": "companion_guidance"
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-dr-overview-child-002",
+            "sourceId": "vm20-practice-note-companion",
+            "score": 59.599999999999994,
+            "authorityLevel": "companion_guidance"
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-dr-overview-child-003",
+            "sourceId": "vm20-practice-note-companion",
+            "score": 59.599999999999994,
+            "authorityLevel": "companion_guidance"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 60.04999999999999,
+          "matches": [
+            {
+              "chunkId": "vm20-practice-note-companion-vm20-pn-dr-overview-child-006",
+              "score": 60.04999999999999,
+              "tokenOverlap": 16
+            },
+            {
+              "chunkId": "vm20-practice-note-companion-vm20-pn-dr-overview-child-002",
+              "score": 59.599999999999994,
+              "tokenOverlap": 15
+            },
+            {
+              "chunkId": "vm20-practice-note-companion-vm20-pn-dr-overview-child-003",
+              "score": 59.599999999999994,
+              "tokenOverlap": 15
+            },
+            {
+              "chunkId": "vm20-practice-note-companion-vm20-pn-dr-overview-child-005",
+              "score": 59.599999999999994,
+              "tokenOverlap": 12
+            },
+            {
+              "chunkId": "vm20-practice-note-companion-vm20-pn-dr-overview-child-004",
+              "score": 59.3,
+              "tokenOverlap": 14
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "deduplication": {
+        "rawTopKCollisionGroups": [],
+        "suppressedParentChunkIds": [],
+        "postDeduplicationCollisionCount": 0
+      },
       "resultLabel": "supported_top1"
     },
     {
@@ -1495,6 +3262,73 @@
       "predictedAuthorityLevel": "companion_guidance",
       "citationAvailable": false,
       "insufficientSupportDetected": false,
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Retrieved evidence is sufficiently aligned for the requested information type under the current corpus declarations.",
+        "requestedInformationTypes": [
+          "general_prose"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-prudent-estimate-child-005",
+            "sourceId": "vm20-practice-note-companion",
+            "score": 67.40000000000008,
+            "authorityLevel": "companion_guidance"
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-prudent-estimate-child-003",
+            "sourceId": "vm20-practice-note-companion",
+            "score": 66.80000000000005,
+            "authorityLevel": "companion_guidance"
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-prudent-estimate-child-001",
+            "sourceId": "vm20-practice-note-companion",
+            "score": 66.65000000000005,
+            "authorityLevel": "companion_guidance"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 67.40000000000008,
+          "matches": [
+            {
+              "chunkId": "vm20-practice-note-companion-vm20-pn-prudent-estimate-child-005",
+              "score": 67.40000000000008,
+              "tokenOverlap": 17
+            },
+            {
+              "chunkId": "vm20-practice-note-companion-vm20-pn-prudent-estimate-child-003",
+              "score": 66.80000000000005,
+              "tokenOverlap": 19
+            },
+            {
+              "chunkId": "vm20-practice-note-companion-vm20-pn-prudent-estimate-child-001",
+              "score": 66.65000000000005,
+              "tokenOverlap": 17
+            },
+            {
+              "chunkId": "vm20-practice-note-companion-vm20-pn-prudent-estimate-child-004",
+              "score": 66.65000000000005,
+              "tokenOverlap": 18
+            },
+            {
+              "chunkId": "vm20-practice-note-companion-vm20-pn-prudent-estimate-child-002",
+              "score": 66.50000000000004,
+              "tokenOverlap": 17
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "deduplication": {
+        "rawTopKCollisionGroups": [],
+        "suppressedParentChunkIds": [],
+        "postDeduplicationCollisionCount": 0
+      },
       "resultLabel": "supported_top1"
     },
     {
@@ -1517,43 +3351,43 @@
       ],
       "rankedMatches": [
         {
-          "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-c-mortality-assumptions",
+          "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-c-mortality-assumptions-child-001",
           "sourceId": "vm20-remaining-prose-appendix-coverage",
           "sourceFamilyId": "valuation_manual_pdfs",
           "authorityLevel": "manual_section",
-          "score": 60.49999999999998,
+          "score": 81.35000000000008,
           "citationCount": 0
         },
         {
-          "chunkId": "vm20-practice-note-companion-vm20-pn-prudent-estimate-child-005",
-          "sourceId": "vm20-practice-note-companion",
-          "sourceFamilyId": "practice_notes",
-          "authorityLevel": "companion_guidance",
-          "score": 58.4,
+          "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-c-mortality-assumptions-child-013",
+          "sourceId": "vm20-remaining-prose-appendix-coverage",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 81.20000000000007,
           "citationCount": 0
         },
         {
-          "chunkId": "vm20-practice-note-companion-vm20-pn-prudent-estimate-child-002",
-          "sourceId": "vm20-practice-note-companion",
-          "sourceFamilyId": "practice_notes",
-          "authorityLevel": "companion_guidance",
-          "score": 57.95,
+          "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-c-mortality-assumptions-child-015",
+          "sourceId": "vm20-remaining-prose-appendix-coverage",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 81.20000000000007,
           "citationCount": 0
         },
         {
-          "chunkId": "vm20-practice-note-companion-vm20-pn-prudent-estimate-child-003",
-          "sourceId": "vm20-practice-note-companion",
-          "sourceFamilyId": "practice_notes",
-          "authorityLevel": "companion_guidance",
-          "score": 57.95,
+          "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-c-mortality-assumptions-child-009",
+          "sourceId": "vm20-remaining-prose-appendix-coverage",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 80.90000000000006,
           "citationCount": 0
         },
         {
-          "chunkId": "vm20-practice-note-companion-vm20-pn-prudent-estimate-child-004",
-          "sourceId": "vm20-practice-note-companion",
-          "sourceFamilyId": "practice_notes",
-          "authorityLevel": "companion_guidance",
-          "score": 57.95,
+          "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-c-mortality-assumptions-child-005",
+          "sourceId": "vm20-remaining-prose-appendix-coverage",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 75.80000000000007,
           "citationCount": 0
         }
       ],
@@ -1565,6 +3399,73 @@
       "predictedAuthorityLevel": "manual_section",
       "citationAvailable": false,
       "insufficientSupportDetected": false,
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Retrieved evidence is sufficiently aligned for the requested information type under the current corpus declarations.",
+        "requestedInformationTypes": [
+          "general_prose"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-c-mortality-assumptions-child-001",
+            "sourceId": "vm20-remaining-prose-appendix-coverage",
+            "score": 81.35000000000008,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-c-mortality-assumptions-child-013",
+            "sourceId": "vm20-remaining-prose-appendix-coverage",
+            "score": 81.20000000000007,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-c-mortality-assumptions-child-015",
+            "sourceId": "vm20-remaining-prose-appendix-coverage",
+            "score": 81.20000000000007,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 81.35000000000008,
+          "matches": [
+            {
+              "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-c-mortality-assumptions-child-001",
+              "score": 81.35000000000008,
+              "tokenOverlap": 18
+            },
+            {
+              "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-c-mortality-assumptions-child-013",
+              "score": 81.20000000000007,
+              "tokenOverlap": 17
+            },
+            {
+              "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-c-mortality-assumptions-child-015",
+              "score": 81.20000000000007,
+              "tokenOverlap": 17
+            },
+            {
+              "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-c-mortality-assumptions-child-009",
+              "score": 80.90000000000006,
+              "tokenOverlap": 16
+            },
+            {
+              "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-c-mortality-assumptions-child-005",
+              "score": 75.80000000000007,
+              "tokenOverlap": 17
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "deduplication": {
+        "rawTopKCollisionGroups": [],
+        "suppressedParentChunkIds": [],
+        "postDeduplicationCollisionCount": 0
+      },
       "resultLabel": "supported_top1"
     },
     {
@@ -1587,19 +3488,11 @@
       ],
       "rankedMatches": [
         {
-          "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions",
-          "sourceId": "vm20-remaining-prose-appendix-coverage",
-          "sourceFamilyId": "valuation_manual_pdfs",
-          "authorityLevel": "manual_section",
-          "score": 61.249999999999986,
-          "citationCount": 0
-        },
-        {
           "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions-child-002",
           "sourceId": "vm20-remaining-prose-appendix-coverage",
           "sourceFamilyId": "valuation_manual_pdfs",
           "authorityLevel": "manual_section",
-          "score": 56.59999999999999,
+          "score": 61.09999999999999,
           "citationCount": 0
         },
         {
@@ -1607,7 +3500,7 @@
           "sourceId": "vm20-remaining-prose-appendix-coverage",
           "sourceFamilyId": "valuation_manual_pdfs",
           "authorityLevel": "manual_section",
-          "score": 56.44999999999999,
+          "score": 60.94999999999999,
           "citationCount": 0
         },
         {
@@ -1615,7 +3508,7 @@
           "sourceId": "vm20-remaining-prose-appendix-coverage",
           "sourceFamilyId": "valuation_manual_pdfs",
           "authorityLevel": "manual_section",
-          "score": 55.99999999999999,
+          "score": 60.49999999999999,
           "citationCount": 0
         },
         {
@@ -1623,19 +3516,113 @@
           "sourceId": "vm20-remaining-prose-appendix-coverage",
           "sourceFamilyId": "valuation_manual_pdfs",
           "authorityLevel": "manual_section",
-          "score": 55.25,
+          "score": 59.75,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-c-mortality-assumptions-child-004",
+          "sourceId": "vm20-remaining-prose-appendix-coverage",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 53.09999999999999,
           "citationCount": 0
         }
       ],
-      "top1Hit": true,
+      "top1Hit": false,
       "top3Hit": true,
       "top5Hit": true,
-      "reciprocalRank": 1,
+      "reciprocalRank": 0.5,
       "predictedSourceFamilyId": "valuation_manual_pdfs",
       "predictedAuthorityLevel": "manual_section",
       "citationAvailable": false,
       "insufficientSupportDetected": false,
-      "resultLabel": "supported_top1"
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Retrieved evidence is sufficiently aligned for the requested information type under the current corpus declarations.",
+        "requestedInformationTypes": [
+          "general_prose"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions-child-002",
+            "sourceId": "vm20-remaining-prose-appendix-coverage",
+            "score": 61.09999999999999,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions-child-001",
+            "sourceId": "vm20-remaining-prose-appendix-coverage",
+            "score": 60.94999999999999,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions-child-003",
+            "sourceId": "vm20-remaining-prose-appendix-coverage",
+            "score": 60.49999999999999,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 61.09999999999999,
+          "matches": [
+            {
+              "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions-child-002",
+              "score": 61.09999999999999,
+              "tokenOverlap": 15
+            },
+            {
+              "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions-child-001",
+              "score": 60.94999999999999,
+              "tokenOverlap": 13
+            },
+            {
+              "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions-child-003",
+              "score": 60.49999999999999,
+              "tokenOverlap": 13
+            },
+            {
+              "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions-child-004",
+              "score": 59.75,
+              "tokenOverlap": 10
+            },
+            {
+              "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-c-mortality-assumptions-child-004",
+              "score": 53.09999999999999,
+              "tokenOverlap": 14
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "deduplication": {
+        "rawTopKCollisionGroups": [
+          {
+            "parentChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions",
+            "childChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions-child-002"
+          },
+          {
+            "parentChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions",
+            "childChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions-child-001"
+          },
+          {
+            "parentChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions",
+            "childChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions-child-003"
+          },
+          {
+            "parentChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions",
+            "childChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions-child-004"
+          }
+        ],
+        "suppressedParentChunkIds": [
+          "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions"
+        ],
+        "postDeduplicationCollisionCount": 0
+      },
+      "resultLabel": "supported_top3"
     },
     {
       "queryId": "q-vm20-section9-cross_section",
@@ -1657,6 +3644,14 @@
         "manual_section"
       ],
       "rankedMatches": [
+        {
+          "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix2-f-current-benchmark-swap-spreads-child-001",
+          "sourceId": "vm20-remaining-prose-appendix-coverage",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 64.55000000000003,
+          "citationCount": 0
+        },
         {
           "chunkId": "vm20-canonical-coverage-vm20-section7-asset-mechanics-child-001",
           "sourceId": "vm20-canonical-coverage",
@@ -1688,25 +3683,84 @@
           "authorityLevel": "manual_section",
           "score": 60.15,
           "citationCount": 0
-        },
-        {
-          "chunkId": "vm20-canonical-coverage-vm20-section7-asset-mechanics-child-003",
-          "sourceId": "vm20-canonical-coverage",
-          "sourceFamilyId": "valuation_manual_pdfs",
-          "authorityLevel": "manual_section",
-          "score": 60,
-          "citationCount": 0
         }
       ],
-      "top1Hit": true,
+      "top1Hit": false,
       "top3Hit": true,
       "top5Hit": true,
-      "reciprocalRank": 1,
+      "reciprocalRank": 0.5,
       "predictedSourceFamilyId": "valuation_manual_pdfs",
       "predictedAuthorityLevel": "manual_section",
       "citationAvailable": false,
       "insufficientSupportDetected": false,
-      "resultLabel": "supported_top1"
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Retrieved evidence is sufficiently aligned for the requested information type under the current corpus declarations.",
+        "requestedInformationTypes": [
+          "general_prose"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix2-f-current-benchmark-swap-spreads-child-001",
+            "sourceId": "vm20-remaining-prose-appendix-coverage",
+            "score": 64.55000000000003,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm20-canonical-coverage-vm20-section7-asset-mechanics-child-001",
+            "sourceId": "vm20-canonical-coverage",
+            "score": 60.599999999999994,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm20-canonical-coverage-vm20-section7-asset-mechanics-child-006",
+            "sourceId": "vm20-canonical-coverage",
+            "score": 60.599999999999994,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 64.55000000000003,
+          "matches": [
+            {
+              "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix2-f-current-benchmark-swap-spreads-child-001",
+              "score": 64.55000000000003,
+              "tokenOverlap": 9
+            },
+            {
+              "chunkId": "vm20-canonical-coverage-vm20-section7-asset-mechanics-child-001",
+              "score": 60.599999999999994,
+              "tokenOverlap": 17
+            },
+            {
+              "chunkId": "vm20-canonical-coverage-vm20-section7-asset-mechanics-child-006",
+              "score": 60.599999999999994,
+              "tokenOverlap": 15
+            },
+            {
+              "chunkId": "vm20-canonical-coverage-vm20-section7-asset-mechanics-child-002",
+              "score": 60.3,
+              "tokenOverlap": 15
+            },
+            {
+              "chunkId": "vm20-canonical-coverage-vm20-section7-asset-mechanics-child-004",
+              "score": 60.15,
+              "tokenOverlap": 13
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "deduplication": {
+        "rawTopKCollisionGroups": [],
+        "suppressedParentChunkIds": [],
+        "postDeduplicationCollisionCount": 0
+      },
+      "resultLabel": "supported_top3"
     },
     {
       "queryId": "q-vm20-appendix1-scenarios",
@@ -1728,19 +3782,11 @@
       ],
       "rankedMatches": [
         {
-          "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix1-f-this-section-describes-the-set-of-16-scenarios-for-the-sert-in-vm-20-starting-with-the-yield-curve",
-          "sourceId": "vm20-remaining-prose-appendix-coverage",
-          "sourceFamilyId": "valuation_manual_pdfs",
-          "authorityLevel": "manual_section",
-          "score": 62.64999999999999,
-          "citationCount": 0
-        },
-        {
           "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix1-f-this-section-describes-the-set-of-16-scenarios-for-the-sert-in-vm-20-starting-with-the-yield-curve-child-001",
           "sourceId": "vm20-remaining-prose-appendix-coverage",
           "sourceFamilyId": "valuation_manual_pdfs",
           "authorityLevel": "manual_section",
-          "score": 59.64999999999999,
+          "score": 55.39999999999999,
           "citationCount": 0
         },
         {
@@ -1748,15 +3794,7 @@
           "sourceId": "vm20-remaining-prose-appendix-coverage",
           "sourceFamilyId": "valuation_manual_pdfs",
           "authorityLevel": "manual_section",
-          "score": 59.05,
-          "citationCount": 0
-        },
-        {
-          "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix1-e-use-of-non-prescribed-scenario-generators",
-          "sourceId": "vm20-remaining-prose-appendix-coverage",
-          "sourceFamilyId": "valuation_manual_pdfs",
-          "authorityLevel": "manual_section",
-          "score": 51.849999999999994,
+          "score": 54.8,
           "citationCount": 0
         },
         {
@@ -1764,7 +3802,23 @@
           "sourceId": "vm20-remaining-prose-appendix-coverage",
           "sourceFamilyId": "valuation_manual_pdfs",
           "authorityLevel": "manual_section",
-          "score": 47.349999999999994,
+          "score": 51.849999999999994,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm20-practice-note-companion-vm20-pn-scenarios-econ-child-005",
+          "sourceId": "vm20-practice-note-companion",
+          "sourceFamilyId": "practice_notes",
+          "authorityLevel": "companion_guidance",
+          "score": 38.349999999999994,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm20-practice-note-companion-vm20-pn-scenarios-econ-child-006",
+          "sourceId": "vm20-practice-note-companion",
+          "sourceFamilyId": "practice_notes",
+          "authorityLevel": "companion_guidance",
+          "score": 38.349999999999994,
           "citationCount": 0
         }
       ],
@@ -1776,6 +3830,84 @@
       "predictedAuthorityLevel": "manual_section",
       "citationAvailable": false,
       "insufficientSupportDetected": false,
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Retrieved evidence is sufficiently aligned for the requested information type under the current corpus declarations.",
+        "requestedInformationTypes": [
+          "general_prose"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix1-f-this-section-describes-the-set-of-16-scenarios-for-the-sert-in-vm-20-starting-with-the-yield-curve-child-001",
+            "sourceId": "vm20-remaining-prose-appendix-coverage",
+            "score": 55.39999999999999,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix1-f-this-section-describes-the-set-of-16-scenarios-for-the-sert-in-vm-20-starting-with-the-yield-curve-child-002",
+            "sourceId": "vm20-remaining-prose-appendix-coverage",
+            "score": 54.8,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix1-e-use-of-non-prescribed-scenario-generators-child-001",
+            "sourceId": "vm20-remaining-prose-appendix-coverage",
+            "score": 51.849999999999994,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 55.39999999999999,
+          "matches": [
+            {
+              "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix1-f-this-section-describes-the-set-of-16-scenarios-for-the-sert-in-vm-20-starting-with-the-yield-curve-child-001",
+              "score": 55.39999999999999,
+              "tokenOverlap": 11
+            },
+            {
+              "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix1-f-this-section-describes-the-set-of-16-scenarios-for-the-sert-in-vm-20-starting-with-the-yield-curve-child-002",
+              "score": 54.8,
+              "tokenOverlap": 10
+            },
+            {
+              "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix1-e-use-of-non-prescribed-scenario-generators-child-001",
+              "score": 51.849999999999994,
+              "tokenOverlap": 10
+            },
+            {
+              "chunkId": "vm20-practice-note-companion-vm20-pn-scenarios-econ-child-005",
+              "score": 38.349999999999994,
+              "tokenOverlap": 11
+            },
+            {
+              "chunkId": "vm20-practice-note-companion-vm20-pn-scenarios-econ-child-006",
+              "score": 38.349999999999994,
+              "tokenOverlap": 11
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "deduplication": {
+        "rawTopKCollisionGroups": [
+          {
+            "parentChunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix1-f-this-section-describes-the-set-of-16-scenarios-for-the-sert-in-vm-20-starting-with-the-yield-curve",
+            "childChunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix1-f-this-section-describes-the-set-of-16-scenarios-for-the-sert-in-vm-20-starting-with-the-yield-curve-child-001"
+          },
+          {
+            "parentChunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix1-f-this-section-describes-the-set-of-16-scenarios-for-the-sert-in-vm-20-starting-with-the-yield-curve",
+            "childChunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix1-f-this-section-describes-the-set-of-16-scenarios-for-the-sert-in-vm-20-starting-with-the-yield-curve-child-002"
+          }
+        ],
+        "suppressedParentChunkIds": [
+          "vm20-remaining-prose-appendix-coverage-vm20-appendix1-f-this-section-describes-the-set-of-16-scenarios-for-the-sert-in-vm-20-starting-with-the-yield-curve"
+        ],
+        "postDeduplicationCollisionCount": 0
+      },
       "resultLabel": "supported_top1"
     },
     {
@@ -1798,27 +3930,11 @@
       ],
       "rankedMatches": [
         {
-          "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix2-b-cumulative-default-rates-used-in-baseline-annual-default-cost-factors",
-          "sourceId": "vm20-remaining-prose-appendix-coverage",
-          "sourceFamilyId": "valuation_manual_pdfs",
-          "authorityLevel": "manual_section",
-          "score": 100.95000000000005,
-          "citationCount": 0
-        },
-        {
           "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix2-b-cumulative-default-rates-used-in-baseline-annual-default-cost-factors-child-001",
           "sourceId": "vm20-remaining-prose-appendix-coverage",
           "sourceFamilyId": "valuation_manual_pdfs",
           "authorityLevel": "manual_section",
-          "score": 94.95000000000005,
-          "citationCount": 0
-        },
-        {
-          "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix2-c-recovery-rate-used-in-baseline-annual-default-cost-factors",
-          "sourceId": "vm20-remaining-prose-appendix-coverage",
-          "sourceFamilyId": "valuation_manual_pdfs",
-          "authorityLevel": "manual_section",
-          "score": 92.00000000000006,
+          "score": 106.20000000000005,
           "citationCount": 0
         },
         {
@@ -1826,26 +3942,109 @@
           "sourceId": "vm20-remaining-prose-appendix-coverage",
           "sourceFamilyId": "valuation_manual_pdfs",
           "authorityLevel": "manual_section",
-          "score": 86.00000000000006,
+          "score": 97.25000000000006,
           "citationCount": 0
         },
         {
-          "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix2-a-baseline-annual-default-cost-factors",
+          "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix2-a-baseline-annual-default-cost-factors-child-001",
           "sourceId": "vm20-remaining-prose-appendix-coverage",
           "sourceFamilyId": "valuation_manual_pdfs",
           "authorityLevel": "manual_section",
-          "score": 82.60000000000005,
+          "score": 87.85000000000005,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix2-d-current-market-benchmark-spreads-child-001",
+          "sourceId": "vm20-remaining-prose-appendix-coverage",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 63.49999999999999,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix2-f-current-benchmark-swap-spreads-child-001",
+          "sourceId": "vm20-remaining-prose-appendix-coverage",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 63.349999999999994,
           "citationCount": 0
         }
       ],
       "top1Hit": false,
       "top3Hit": true,
       "top5Hit": true,
-      "reciprocalRank": 0.2,
+      "reciprocalRank": 0.3333333333333333,
       "predictedSourceFamilyId": "valuation_manual_pdfs",
       "predictedAuthorityLevel": "manual_section",
       "citationAvailable": false,
       "insufficientSupportDetected": false,
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Retrieved evidence is sufficiently aligned for the requested information type under the current corpus declarations.",
+        "requestedInformationTypes": [
+          "general_prose"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix2-b-cumulative-default-rates-used-in-baseline-annual-default-cost-factors-child-001",
+            "sourceId": "vm20-remaining-prose-appendix-coverage",
+            "score": 106.20000000000005,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix2-c-recovery-rate-used-in-baseline-annual-default-cost-factors-child-001",
+            "sourceId": "vm20-remaining-prose-appendix-coverage",
+            "score": 97.25000000000006,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix2-a-baseline-annual-default-cost-factors-child-001",
+            "sourceId": "vm20-remaining-prose-appendix-coverage",
+            "score": 87.85000000000005,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 106.20000000000005,
+          "matches": [
+            {
+              "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix2-b-cumulative-default-rates-used-in-baseline-annual-default-cost-factors-child-001",
+              "score": 106.20000000000005,
+              "tokenOverlap": 20
+            },
+            {
+              "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix2-c-recovery-rate-used-in-baseline-annual-default-cost-factors-child-001",
+              "score": 97.25000000000006,
+              "tokenOverlap": 20
+            },
+            {
+              "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix2-a-baseline-annual-default-cost-factors-child-001",
+              "score": 87.85000000000005,
+              "tokenOverlap": 19
+            },
+            {
+              "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix2-d-current-market-benchmark-spreads-child-001",
+              "score": 63.49999999999999,
+              "tokenOverlap": 14
+            },
+            {
+              "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix2-f-current-benchmark-swap-spreads-child-001",
+              "score": 63.349999999999994,
+              "tokenOverlap": 13
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "deduplication": {
+        "rawTopKCollisionGroups": [],
+        "suppressedParentChunkIds": [],
+        "postDeduplicationCollisionCount": 0
+      },
       "resultLabel": "supported_top3"
     },
     {
@@ -1855,48 +4054,56 @@
       "expectedOutcome": "unsupported",
       "expectedChunkIds": [],
       "expectedSourceIds": [],
+      "supportRequirements": {
+        "informationTypes": [
+          "structured_table_rows",
+          "current_version_metadata"
+        ],
+        "exact": true,
+        "current": true
+      },
       "rationale": "The reviewed VM-20 wave does not contain a structured current-table package; the gap must remain explicit.",
       "expectedSourceFamilyIds": [],
       "expectedAuthorityLevels": [],
       "rankedMatches": [
         {
-          "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix2-c-recovery-rate-used-in-baseline-annual-default-cost-factors",
+          "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix2-c-recovery-rate-used-in-baseline-annual-default-cost-factors-child-001",
           "sourceId": "vm20-remaining-prose-appendix-coverage",
           "sourceFamilyId": "valuation_manual_pdfs",
           "authorityLevel": "manual_section",
-          "score": 43.04999999999999,
+          "score": 49.79999999999999,
           "citationCount": 0
         },
         {
-          "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix2-d-current-market-benchmark-spreads",
+          "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix2-d-current-market-benchmark-spreads-child-001",
           "sourceId": "vm20-remaining-prose-appendix-coverage",
           "sourceFamilyId": "valuation_manual_pdfs",
           "authorityLevel": "manual_section",
-          "score": 42.89999999999999,
+          "score": 49.64999999999999,
           "citationCount": 0
         },
         {
-          "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix2-b-cumulative-default-rates-used-in-baseline-annual-default-cost-factors",
+          "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix2-b-cumulative-default-rates-used-in-baseline-annual-default-cost-factors-child-001",
           "sourceId": "vm20-remaining-prose-appendix-coverage",
           "sourceFamilyId": "valuation_manual_pdfs",
           "authorityLevel": "manual_section",
-          "score": 42.599999999999994,
+          "score": 49.349999999999994,
           "citationCount": 0
         },
         {
-          "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix2-a-baseline-annual-default-cost-factors",
+          "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix2-a-baseline-annual-default-cost-factors-child-001",
           "sourceId": "vm20-remaining-prose-appendix-coverage",
           "sourceFamilyId": "valuation_manual_pdfs",
           "authorityLevel": "manual_section",
-          "score": 42.449999999999996,
+          "score": 49.199999999999996,
           "citationCount": 0
         },
         {
-          "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix2-f-current-benchmark-swap-spreads",
+          "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix2-f-current-benchmark-swap-spreads-child-001",
           "sourceId": "vm20-remaining-prose-appendix-coverage",
           "sourceFamilyId": "valuation_manual_pdfs",
           "authorityLevel": "manual_section",
-          "score": 42.15,
+          "score": 48.9,
           "citationCount": 0
         }
       ],
@@ -1907,8 +4114,76 @@
       "predictedSourceFamilyId": "valuation_manual_pdfs",
       "predictedAuthorityLevel": "manual_section",
       "citationAvailable": false,
-      "insufficientSupportDetected": false,
-      "resultLabel": "false_positive"
+      "insufficientSupportDetected": true,
+      "supportDecision": {
+        "supportState": "unsupported",
+        "evidenceSufficient": false,
+        "reasonCode": "missing_structured_data",
+        "reason": "The retrieved evidence is prose or methodology text, not structured table rows or equivalent structured data.",
+        "requestedInformationTypes": [
+          "structured_table_rows",
+          "current_version_metadata"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix2-c-recovery-rate-used-in-baseline-annual-default-cost-factors-child-001",
+            "sourceId": "vm20-remaining-prose-appendix-coverage",
+            "score": 49.79999999999999,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix2-d-current-market-benchmark-spreads-child-001",
+            "sourceId": "vm20-remaining-prose-appendix-coverage",
+            "score": 49.64999999999999,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix2-b-cumulative-default-rates-used-in-baseline-annual-default-cost-factors-child-001",
+            "sourceId": "vm20-remaining-prose-appendix-coverage",
+            "score": 49.349999999999994,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": "Appendix 2 current prescribed asset-default, asset-spread, and swap-spread table rows are not ingested as structured data. Appendix 2 current table version metadata is deferred to the structured-table milestone. structured_table_rows current_table_values table_version_metadata Review-only VM-20 Sections 4, 5, 9 and Appendices 1-2 coverage. Structured current regulatory tables remain a separate later milestone.",
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 49.79999999999999,
+          "matches": [
+            {
+              "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix2-c-recovery-rate-used-in-baseline-annual-default-cost-factors-child-001",
+              "score": 49.79999999999999,
+              "tokenOverlap": 14
+            },
+            {
+              "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix2-d-current-market-benchmark-spreads-child-001",
+              "score": 49.64999999999999,
+              "tokenOverlap": 14
+            },
+            {
+              "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix2-b-cumulative-default-rates-used-in-baseline-annual-default-cost-factors-child-001",
+              "score": 49.349999999999994,
+              "tokenOverlap": 14
+            },
+            {
+              "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix2-a-baseline-annual-default-cost-factors-child-001",
+              "score": 49.199999999999996,
+              "tokenOverlap": 11
+            },
+            {
+              "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix2-f-current-benchmark-swap-spreads-child-001",
+              "score": 48.9,
+              "tokenOverlap": 11
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "deduplication": {
+        "rawTopKCollisionGroups": [],
+        "suppressedParentChunkIds": [],
+        "postDeduplicationCollisionCount": 0
+      },
+      "resultLabel": "unsupported"
     },
     {
       "queryId": "q-vm20-cross-document-reporting",
@@ -1949,14 +4224,6 @@
           "citationCount": 0
         },
         {
-          "chunkId": "vm20-canonical-coverage-vm20-section7-model-structure",
-          "sourceId": "vm20-canonical-coverage",
-          "sourceFamilyId": "valuation_manual_pdfs",
-          "authorityLevel": "manual_section",
-          "score": 39.6,
-          "citationCount": 0
-        },
-        {
           "chunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-002",
           "sourceId": "vm20-canonical-coverage",
           "sourceFamilyId": "valuation_manual_pdfs",
@@ -1971,6 +4238,14 @@
           "authorityLevel": "manual_section",
           "score": 39.45,
           "citationCount": 0
+        },
+        {
+          "chunkId": "vm20-canonical-coverage-vm20-section7-asset-mechanics-child-003",
+          "sourceId": "vm20-canonical-coverage",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 39.300000000000004,
+          "citationCount": 0
         }
       ],
       "top1Hit": true,
@@ -1981,6 +4256,80 @@
       "predictedAuthorityLevel": "manual_section",
       "citationAvailable": false,
       "insufficientSupportDetected": false,
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Retrieved evidence is sufficiently aligned for the requested information type under the current corpus declarations.",
+        "requestedInformationTypes": [
+          "general_prose"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm20-canonical-coverage-vm20-section7-asset-mechanics-child-007",
+            "sourceId": "vm20-canonical-coverage",
+            "score": 39.6,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm20-canonical-coverage-vm20-section7-asset-mechanics-child-008",
+            "sourceId": "vm20-canonical-coverage",
+            "score": 39.6,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-002",
+            "sourceId": "vm20-canonical-coverage",
+            "score": 39.6,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 39.6,
+          "matches": [
+            {
+              "chunkId": "vm20-canonical-coverage-vm20-section7-asset-mechanics-child-007",
+              "score": 39.6,
+              "tokenOverlap": 11
+            },
+            {
+              "chunkId": "vm20-canonical-coverage-vm20-section7-asset-mechanics-child-008",
+              "score": 39.6,
+              "tokenOverlap": 10
+            },
+            {
+              "chunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-002",
+              "score": 39.6,
+              "tokenOverlap": 10
+            },
+            {
+              "chunkId": "vm20-canonical-coverage-vm20-section7-asset-mechanics-child-002",
+              "score": 39.45,
+              "tokenOverlap": 12
+            },
+            {
+              "chunkId": "vm20-canonical-coverage-vm20-section7-asset-mechanics-child-003",
+              "score": 39.300000000000004,
+              "tokenOverlap": 8
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "deduplication": {
+        "rawTopKCollisionGroups": [
+          {
+            "parentChunkId": "vm20-canonical-coverage-vm20-section7-model-structure",
+            "childChunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-002"
+          }
+        ],
+        "suppressedParentChunkIds": [
+          "vm20-canonical-coverage-vm20-section7-model-structure"
+        ],
+        "postDeduplicationCollisionCount": 0
+      },
       "resultLabel": "supported_top1"
     },
     {
@@ -2021,14 +4370,6 @@
           "citationCount": 0
         },
         {
-          "chunkId": "vm20-practice-note-companion-vm20-pn-sr-overview",
-          "sourceId": "vm20-practice-note-companion",
-          "sourceFamilyId": "practice_notes",
-          "authorityLevel": "companion_guidance",
-          "score": 30.65,
-          "citationCount": 0
-        },
-        {
           "chunkId": "vm20-practice-note-companion-vm20-pn-sr-overview-child-002",
           "sourceId": "vm20-practice-note-companion",
           "sourceFamilyId": "practice_notes",
@@ -2043,6 +4384,14 @@
           "authorityLevel": "companion_guidance",
           "score": 30.65,
           "citationCount": 0
+        },
+        {
+          "chunkId": "vm20-practice-note-companion-vm20-pn-sr-overview-child-001",
+          "sourceId": "vm20-practice-note-companion",
+          "sourceFamilyId": "practice_notes",
+          "authorityLevel": "companion_guidance",
+          "score": 30.35,
+          "citationCount": 0
         }
       ],
       "top1Hit": true,
@@ -2053,6 +4402,84 @@
       "predictedAuthorityLevel": "manual_section",
       "citationAvailable": false,
       "insufficientSupportDetected": false,
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Retrieved evidence is sufficiently aligned for the requested information type under the current corpus declarations.",
+        "requestedInformationTypes": [
+          "general_prose"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "chunk-vm21-sr-projection-entry-001",
+            "sourceId": "vm21-sr-projection-entry",
+            "score": 60.25,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "chunk-vm21-sr-projection-entry-004",
+            "sourceId": "vm21-sr-projection-entry",
+            "score": 40.75,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-sr-overview-child-002",
+            "sourceId": "vm20-practice-note-companion",
+            "score": 30.65,
+            "authorityLevel": "companion_guidance"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 60.25,
+          "matches": [
+            {
+              "chunkId": "chunk-vm21-sr-projection-entry-001",
+              "score": 60.25,
+              "tokenOverlap": 7
+            },
+            {
+              "chunkId": "chunk-vm21-sr-projection-entry-004",
+              "score": 40.75,
+              "tokenOverlap": 6
+            },
+            {
+              "chunkId": "vm20-practice-note-companion-vm20-pn-sr-overview-child-002",
+              "score": 30.65,
+              "tokenOverlap": 8
+            },
+            {
+              "chunkId": "vm20-practice-note-companion-vm20-pn-sr-overview-child-003",
+              "score": 30.65,
+              "tokenOverlap": 7
+            },
+            {
+              "chunkId": "vm20-practice-note-companion-vm20-pn-sr-overview-child-001",
+              "score": 30.35,
+              "tokenOverlap": 6
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "deduplication": {
+        "rawTopKCollisionGroups": [
+          {
+            "parentChunkId": "vm20-practice-note-companion-vm20-pn-sr-overview",
+            "childChunkId": "vm20-practice-note-companion-vm20-pn-sr-overview-child-002"
+          },
+          {
+            "parentChunkId": "vm20-practice-note-companion-vm20-pn-sr-overview",
+            "childChunkId": "vm20-practice-note-companion-vm20-pn-sr-overview-child-003"
+          }
+        ],
+        "suppressedParentChunkIds": [
+          "vm20-practice-note-companion-vm20-pn-sr-overview"
+        ],
+        "postDeduplicationCollisionCount": 0
+      },
       "resultLabel": "supported_top1"
     },
     {
@@ -2125,6 +4552,73 @@
       "predictedAuthorityLevel": "companion_reprint",
       "citationAvailable": false,
       "insufficientSupportDetected": false,
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Retrieved evidence is sufficiently aligned for the requested information type under the current corpus declarations.",
+        "requestedInformationTypes": [
+          "general_prose"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "chunk-ag36-eiul-crvm-law-manual-reprint-001",
+            "sourceId": "ag36-eiul-crvm-law-manual-reprint",
+            "score": 36.75,
+            "authorityLevel": "companion_reprint"
+          },
+          {
+            "chunkId": "chunk-ag36-eiul-crvm-guidance-003",
+            "sourceId": "ag36-eiul-crvm-guidance",
+            "score": 33.599999999999994,
+            "authorityLevel": "guideline"
+          },
+          {
+            "chunkId": "chunk-ag36-eiul-crvm-guidance-004",
+            "sourceId": "ag36-eiul-crvm-guidance",
+            "score": 30.599999999999994,
+            "authorityLevel": "guideline"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 36.75,
+          "matches": [
+            {
+              "chunkId": "chunk-ag36-eiul-crvm-law-manual-reprint-001",
+              "score": 36.75,
+              "tokenOverlap": 10
+            },
+            {
+              "chunkId": "chunk-ag36-eiul-crvm-guidance-003",
+              "score": 33.599999999999994,
+              "tokenOverlap": 7
+            },
+            {
+              "chunkId": "chunk-ag36-eiul-crvm-guidance-004",
+              "score": 30.599999999999994,
+              "tokenOverlap": 5
+            },
+            {
+              "chunkId": "chunk-ag36-eiul-crvm-guidance-001",
+              "score": 25.949999999999996,
+              "tokenOverlap": 6
+            },
+            {
+              "chunkId": "chunk-ag36-eiul-crvm-guidance-002",
+              "score": 22.699999999999996,
+              "tokenOverlap": 5
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "deduplication": {
+        "rawTopKCollisionGroups": [],
+        "suppressedParentChunkIds": [],
+        "postDeduplicationCollisionCount": 0
+      },
       "resultLabel": "supported_top3"
     },
     {
@@ -2150,7 +4644,7 @@
           "sourceId": "ag36-eiul-crvm-law-manual-reprint",
           "sourceFamilyId": "actuarial_guidelines",
           "authorityLevel": "companion_reprint",
-          "score": 27,
+          "score": 28.5,
           "citationCount": 0
         },
         {
@@ -2194,6 +4688,73 @@
       "predictedAuthorityLevel": "companion_reprint",
       "citationAvailable": false,
       "insufficientSupportDetected": false,
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Retrieved evidence is sufficiently aligned for the requested information type under the current corpus declarations.",
+        "requestedInformationTypes": [
+          "general_prose"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "chunk-ag36-eiul-crvm-law-manual-reprint-001",
+            "sourceId": "ag36-eiul-crvm-law-manual-reprint",
+            "score": 28.5,
+            "authorityLevel": "companion_reprint"
+          },
+          {
+            "chunkId": "chunk-ag36-eiul-crvm-guidance-001",
+            "sourceId": "ag36-eiul-crvm-guidance",
+            "score": 14.8,
+            "authorityLevel": "guideline"
+          },
+          {
+            "chunkId": "chunk-ag36-eiul-crvm-guidance-002",
+            "sourceId": "ag36-eiul-crvm-guidance",
+            "score": 14.8,
+            "authorityLevel": "guideline"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 28.5,
+          "matches": [
+            {
+              "chunkId": "chunk-ag36-eiul-crvm-law-manual-reprint-001",
+              "score": 28.5,
+              "tokenOverlap": 6
+            },
+            {
+              "chunkId": "chunk-ag36-eiul-crvm-guidance-001",
+              "score": 14.8,
+              "tokenOverlap": 5
+            },
+            {
+              "chunkId": "chunk-ag36-eiul-crvm-guidance-002",
+              "score": 14.8,
+              "tokenOverlap": 4
+            },
+            {
+              "chunkId": "chunk-ag36-eiul-crvm-guidance-003",
+              "score": 14.8,
+              "tokenOverlap": 4
+            },
+            {
+              "chunkId": "chunk-ag36-eiul-crvm-guidance-004",
+              "score": 14.8,
+              "tokenOverlap": 3
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "deduplication": {
+        "rawTopKCollisionGroups": [],
+        "suppressedParentChunkIds": [],
+        "postDeduplicationCollisionCount": 0
+      },
       "resultLabel": "supported_top1"
     },
     {
@@ -2221,7 +4782,7 @@
           "sourceId": "model-governance-practice-note",
           "sourceFamilyId": "practice_notes",
           "authorityLevel": "practice_note",
-          "score": 39.75000000000001,
+          "score": 39.25000000000001,
           "citationCount": 0
         },
         {
@@ -2229,7 +4790,7 @@
           "sourceId": "model-governance-practice-note",
           "sourceFamilyId": "practice_notes",
           "authorityLevel": "practice_note",
-          "score": 39.35,
+          "score": 38.85,
           "citationCount": 0
         },
         {
@@ -2237,7 +4798,7 @@
           "sourceId": "model-governance-practice-note",
           "sourceFamilyId": "practice_notes",
           "authorityLevel": "practice_note",
-          "score": 30.950000000000003,
+          "score": 36.45,
           "citationCount": 0
         },
         {
@@ -2245,7 +4806,7 @@
           "sourceId": "actuarial-memorandum-practice-note",
           "sourceFamilyId": "practice_notes",
           "authorityLevel": "practice_note",
-          "score": 24.650000000000006,
+          "score": 30.150000000000006,
           "citationCount": 0
         },
         {
@@ -2253,7 +4814,7 @@
           "sourceId": "cia-2022-capital-fct-educational-note",
           "sourceFamilyId": "educational_notes",
           "authorityLevel": "educational_note",
-          "score": 21.050000000000004,
+          "score": 26.550000000000004,
           "citationCount": 0
         }
       ],
@@ -2265,6 +4826,73 @@
       "predictedAuthorityLevel": "practice_note",
       "citationAvailable": false,
       "insufficientSupportDetected": false,
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Retrieved evidence is sufficiently aligned for the requested information type under the current corpus declarations.",
+        "requestedInformationTypes": [
+          "general_prose"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "chunk-model-governance-practice-note-002",
+            "sourceId": "model-governance-practice-note",
+            "score": 39.25000000000001,
+            "authorityLevel": "practice_note"
+          },
+          {
+            "chunkId": "chunk-model-governance-practice-note-003",
+            "sourceId": "model-governance-practice-note",
+            "score": 38.85,
+            "authorityLevel": "practice_note"
+          },
+          {
+            "chunkId": "chunk-model-governance-practice-note-001",
+            "sourceId": "model-governance-practice-note",
+            "score": 36.45,
+            "authorityLevel": "practice_note"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 39.25000000000001,
+          "matches": [
+            {
+              "chunkId": "chunk-model-governance-practice-note-002",
+              "score": 39.25000000000001,
+              "tokenOverlap": 7
+            },
+            {
+              "chunkId": "chunk-model-governance-practice-note-003",
+              "score": 38.85,
+              "tokenOverlap": 9
+            },
+            {
+              "chunkId": "chunk-model-governance-practice-note-001",
+              "score": 36.45,
+              "tokenOverlap": 8
+            },
+            {
+              "chunkId": "chunk-actuarial-memorandum-practice-note-001",
+              "score": 30.150000000000006,
+              "tokenOverlap": 5
+            },
+            {
+              "chunkId": "chunk-cia-2022-capital-fct-educational-note-001",
+              "score": 26.550000000000004,
+              "tokenOverlap": 5
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "deduplication": {
+        "rawTopKCollisionGroups": [],
+        "suppressedParentChunkIds": [],
+        "postDeduplicationCollisionCount": 0
+      },
       "resultLabel": "supported_top1"
     },
     {
@@ -2293,15 +4921,7 @@
           "sourceId": "actuarial-memorandum-practice-note",
           "sourceFamilyId": "practice_notes",
           "authorityLevel": "practice_note",
-          "score": 35.400000000000006,
-          "citationCount": 0
-        },
-        {
-          "chunkId": "chunk-actuarial-memorandum-practice-note-002",
-          "sourceId": "actuarial-memorandum-practice-note",
-          "sourceFamilyId": "practice_notes",
-          "authorityLevel": "practice_note",
-          "score": 27.85,
+          "score": 40.900000000000006,
           "citationCount": 0
         },
         {
@@ -2309,15 +4929,7 @@
           "sourceId": "actuarial-memorandum-practice-note",
           "sourceFamilyId": "practice_notes",
           "authorityLevel": "practice_note",
-          "score": 27.750000000000007,
-          "citationCount": 0
-        },
-        {
-          "chunkId": "chunk-actuarial-memorandum-practice-note-003",
-          "sourceId": "actuarial-memorandum-practice-note",
-          "sourceFamilyId": "practice_notes",
-          "authorityLevel": "practice_note",
-          "score": 26.35,
+          "score": 33.25000000000001,
           "citationCount": 0
         },
         {
@@ -2325,7 +4937,23 @@
           "sourceId": "cia-2022-capital-fct-educational-note",
           "sourceFamilyId": "educational_notes",
           "authorityLevel": "educational_note",
-          "score": 23.250000000000007,
+          "score": 28.750000000000007,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "chunk-actuarial-memorandum-practice-note-002",
+          "sourceId": "actuarial-memorandum-practice-note",
+          "sourceFamilyId": "practice_notes",
+          "authorityLevel": "practice_note",
+          "score": 27.35,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "chunk-actuarial-memorandum-practice-note-003",
+          "sourceId": "actuarial-memorandum-practice-note",
+          "sourceFamilyId": "practice_notes",
+          "authorityLevel": "practice_note",
+          "score": 25.85,
           "citationCount": 0
         }
       ],
@@ -2337,6 +4965,73 @@
       "predictedAuthorityLevel": "practice_note",
       "citationAvailable": false,
       "insufficientSupportDetected": false,
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Retrieved evidence is sufficiently aligned for the requested information type under the current corpus declarations.",
+        "requestedInformationTypes": [
+          "general_prose"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "chunk-actuarial-memorandum-practice-note-001",
+            "sourceId": "actuarial-memorandum-practice-note",
+            "score": 40.900000000000006,
+            "authorityLevel": "practice_note"
+          },
+          {
+            "chunkId": "chunk-actuarial-memorandum-practice-note-004",
+            "sourceId": "actuarial-memorandum-practice-note",
+            "score": 33.25000000000001,
+            "authorityLevel": "practice_note"
+          },
+          {
+            "chunkId": "chunk-cia-2022-capital-fct-educational-note-001",
+            "sourceId": "cia-2022-capital-fct-educational-note",
+            "score": 28.750000000000007,
+            "authorityLevel": "educational_note"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 40.900000000000006,
+          "matches": [
+            {
+              "chunkId": "chunk-actuarial-memorandum-practice-note-001",
+              "score": 40.900000000000006,
+              "tokenOverlap": 7
+            },
+            {
+              "chunkId": "chunk-actuarial-memorandum-practice-note-004",
+              "score": 33.25000000000001,
+              "tokenOverlap": 6
+            },
+            {
+              "chunkId": "chunk-cia-2022-capital-fct-educational-note-001",
+              "score": 28.750000000000007,
+              "tokenOverlap": 5
+            },
+            {
+              "chunkId": "chunk-actuarial-memorandum-practice-note-002",
+              "score": 27.35,
+              "tokenOverlap": 6
+            },
+            {
+              "chunkId": "chunk-actuarial-memorandum-practice-note-003",
+              "score": 25.85,
+              "tokenOverlap": 6
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "deduplication": {
+        "rawTopKCollisionGroups": [],
+        "suppressedParentChunkIds": [],
+        "postDeduplicationCollisionCount": 0
+      },
       "resultLabel": "supported_top1"
     },
     {
@@ -2366,14 +5061,6 @@
           "citationCount": 0
         },
         {
-          "chunkId": "vm20-canonical-coverage-vm20-npr-entry-setup",
-          "sourceId": "vm20-canonical-coverage",
-          "sourceFamilyId": "valuation_manual_pdfs",
-          "authorityLevel": "manual_section",
-          "score": 9.25,
-          "citationCount": 0
-        },
-        {
           "chunkId": "vm20-canonical-coverage-vm20-npr-entry-setup-child-001",
           "sourceId": "vm20-canonical-coverage",
           "sourceFamilyId": "valuation_manual_pdfs",
@@ -2396,6 +5083,14 @@
           "authorityLevel": "manual_section",
           "score": 9.25,
           "citationCount": 0
+        },
+        {
+          "chunkId": "vm20-canonical-coverage-vm20-npr-entry-setup-child-004",
+          "sourceId": "vm20-canonical-coverage",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 9.25,
+          "citationCount": 0
         }
       ],
       "top1Hit": true,
@@ -2406,6 +5101,88 @@
       "predictedAuthorityLevel": "regulation",
       "citationAvailable": false,
       "insufficientSupportDetected": false,
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Retrieved evidence is sufficiently aligned for the requested information type under the current corpus declarations.",
+        "requestedInformationTypes": [
+          "general_prose"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "chunk-reg210-non-guaranteed-elements-001",
+            "sourceId": "reg210-non-guaranteed-elements",
+            "score": 53.74999999999999,
+            "authorityLevel": "regulation"
+          },
+          {
+            "chunkId": "vm20-canonical-coverage-vm20-npr-entry-setup-child-001",
+            "sourceId": "vm20-canonical-coverage",
+            "score": 9.25,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm20-canonical-coverage-vm20-npr-entry-setup-child-002",
+            "sourceId": "vm20-canonical-coverage",
+            "score": 9.25,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 53.74999999999999,
+          "matches": [
+            {
+              "chunkId": "chunk-reg210-non-guaranteed-elements-001",
+              "score": 53.74999999999999,
+              "tokenOverlap": 9
+            },
+            {
+              "chunkId": "vm20-canonical-coverage-vm20-npr-entry-setup-child-001",
+              "score": 9.25,
+              "tokenOverlap": 5
+            },
+            {
+              "chunkId": "vm20-canonical-coverage-vm20-npr-entry-setup-child-002",
+              "score": 9.25,
+              "tokenOverlap": 5
+            },
+            {
+              "chunkId": "vm20-canonical-coverage-vm20-npr-entry-setup-child-003",
+              "score": 9.25,
+              "tokenOverlap": 5
+            },
+            {
+              "chunkId": "vm20-canonical-coverage-vm20-npr-entry-setup-child-004",
+              "score": 9.25,
+              "tokenOverlap": 5
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "deduplication": {
+        "rawTopKCollisionGroups": [
+          {
+            "parentChunkId": "vm20-canonical-coverage-vm20-npr-entry-setup",
+            "childChunkId": "vm20-canonical-coverage-vm20-npr-entry-setup-child-001"
+          },
+          {
+            "parentChunkId": "vm20-canonical-coverage-vm20-npr-entry-setup",
+            "childChunkId": "vm20-canonical-coverage-vm20-npr-entry-setup-child-002"
+          },
+          {
+            "parentChunkId": "vm20-canonical-coverage-vm20-npr-entry-setup",
+            "childChunkId": "vm20-canonical-coverage-vm20-npr-entry-setup-child-003"
+          }
+        ],
+        "suppressedParentChunkIds": [
+          "vm20-canonical-coverage-vm20-npr-entry-setup"
+        ],
+        "postDeduplicationCollisionCount": 0
+      },
       "resultLabel": "supported_top1"
     },
     {
@@ -2475,6 +5252,73 @@
       "predictedAuthorityLevel": "regulation",
       "citationAvailable": false,
       "insufficientSupportDetected": false,
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Retrieved evidence is sufficiently aligned for the requested information type under the current corpus declarations.",
+        "requestedInformationTypes": [
+          "general_prose"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "chunk-reg210-non-guaranteed-elements-002",
+            "sourceId": "reg210-non-guaranteed-elements",
+            "score": 52.74999999999999,
+            "authorityLevel": "regulation"
+          },
+          {
+            "chunkId": "chunk-reg210-non-guaranteed-elements-001",
+            "sourceId": "reg210-non-guaranteed-elements",
+            "score": 7.5,
+            "authorityLevel": "regulation"
+          },
+          {
+            "chunkId": "chunk-reg210-non-guaranteed-elements-003",
+            "sourceId": "reg210-non-guaranteed-elements",
+            "score": 7.5,
+            "authorityLevel": "regulation"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 52.74999999999999,
+          "matches": [
+            {
+              "chunkId": "chunk-reg210-non-guaranteed-elements-002",
+              "score": 52.74999999999999,
+              "tokenOverlap": 9
+            },
+            {
+              "chunkId": "chunk-reg210-non-guaranteed-elements-001",
+              "score": 7.5,
+              "tokenOverlap": 4
+            },
+            {
+              "chunkId": "chunk-reg210-non-guaranteed-elements-003",
+              "score": 7.5,
+              "tokenOverlap": 4
+            },
+            {
+              "chunkId": "chunk-ag36-eiul-crvm-guidance-003",
+              "score": 1.5,
+              "tokenOverlap": 3
+            },
+            {
+              "chunkId": "chunk-ag36-eiul-crvm-law-manual-reprint-001",
+              "score": 1.5,
+              "tokenOverlap": 3
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "deduplication": {
+        "rawTopKCollisionGroups": [],
+        "suppressedParentChunkIds": [],
+        "postDeduplicationCollisionCount": 0
+      },
       "resultLabel": "supported_top1"
     },
     {
@@ -2504,14 +5348,6 @@
           "citationCount": 0
         },
         {
-          "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-a-general-assumption-requirements",
-          "sourceId": "vm20-remaining-prose-appendix-coverage",
-          "sourceFamilyId": "valuation_manual_pdfs",
-          "authorityLevel": "manual_section",
-          "score": 9.4,
-          "citationCount": 0
-        },
-        {
           "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-a-general-assumption-requirements-child-001",
           "sourceId": "vm20-remaining-prose-appendix-coverage",
           "sourceFamilyId": "valuation_manual_pdfs",
@@ -2534,6 +5370,14 @@
           "authorityLevel": "regulation",
           "score": 7.5,
           "citationCount": 0
+        },
+        {
+          "chunkId": "chunk-reg210-non-guaranteed-elements-002",
+          "sourceId": "reg210-non-guaranteed-elements",
+          "sourceFamilyId": "ny_regulations",
+          "authorityLevel": "regulation",
+          "score": 7.5,
+          "citationCount": 0
         }
       ],
       "top1Hit": true,
@@ -2544,6 +5388,84 @@
       "predictedAuthorityLevel": "regulation",
       "citationAvailable": false,
       "insufficientSupportDetected": false,
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Retrieved evidence is sufficiently aligned for the requested information type under the current corpus declarations.",
+        "requestedInformationTypes": [
+          "general_prose"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "chunk-reg210-non-guaranteed-elements-003",
+            "sourceId": "reg210-non-guaranteed-elements",
+            "score": 27.799999999999997,
+            "authorityLevel": "regulation"
+          },
+          {
+            "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-a-general-assumption-requirements-child-001",
+            "sourceId": "vm20-remaining-prose-appendix-coverage",
+            "score": 9.4,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-a-general-assumption-requirements-child-002",
+            "sourceId": "vm20-remaining-prose-appendix-coverage",
+            "score": 9.4,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 27.799999999999997,
+          "matches": [
+            {
+              "chunkId": "chunk-reg210-non-guaranteed-elements-003",
+              "score": 27.799999999999997,
+              "tokenOverlap": 6
+            },
+            {
+              "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-a-general-assumption-requirements-child-001",
+              "score": 9.4,
+              "tokenOverlap": 3
+            },
+            {
+              "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-a-general-assumption-requirements-child-002",
+              "score": 9.4,
+              "tokenOverlap": 3
+            },
+            {
+              "chunkId": "chunk-reg210-non-guaranteed-elements-001",
+              "score": 7.5,
+              "tokenOverlap": 3
+            },
+            {
+              "chunkId": "chunk-reg210-non-guaranteed-elements-002",
+              "score": 7.5,
+              "tokenOverlap": 3
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "deduplication": {
+        "rawTopKCollisionGroups": [
+          {
+            "parentChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-a-general-assumption-requirements",
+            "childChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-a-general-assumption-requirements-child-001"
+          },
+          {
+            "parentChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-a-general-assumption-requirements",
+            "childChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-a-general-assumption-requirements-child-002"
+          }
+        ],
+        "suppressedParentChunkIds": [
+          "vm20-remaining-prose-appendix-coverage-vm20-section9-a-general-assumption-requirements"
+        ],
+        "postDeduplicationCollisionCount": 0
+      },
       "resultLabel": "supported_top1"
     },
     {
@@ -2572,7 +5494,7 @@
           "sourceId": "cia-2022-capital-fct-educational-note",
           "sourceFamilyId": "educational_notes",
           "authorityLevel": "educational_note",
-          "score": 45.05,
+          "score": 45.55,
           "citationCount": 0
         },
         {
@@ -2580,7 +5502,7 @@
           "sourceId": "cia-2022-capital-fct-educational-note",
           "sourceFamilyId": "educational_notes",
           "authorityLevel": "educational_note",
-          "score": 33.85,
+          "score": 34.35,
           "citationCount": 0
         },
         {
@@ -2588,7 +5510,7 @@
           "sourceId": "cia-2022-capital-fct-educational-note",
           "sourceFamilyId": "educational_notes",
           "authorityLevel": "educational_note",
-          "score": 30.65,
+          "score": 31.15,
           "citationCount": 0
         },
         {
@@ -2596,7 +5518,7 @@
           "sourceId": "cia-2022-capital-fct-educational-note",
           "sourceFamilyId": "educational_notes",
           "authorityLevel": "educational_note",
-          "score": 21.200000000000003,
+          "score": 21.700000000000003,
           "citationCount": 0
         },
         {
@@ -2616,6 +5538,73 @@
       "predictedAuthorityLevel": "educational_note",
       "citationAvailable": false,
       "insufficientSupportDetected": false,
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Retrieved evidence is sufficiently aligned for the requested information type under the current corpus declarations.",
+        "requestedInformationTypes": [
+          "general_prose"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "chunk-cia-2022-capital-fct-educational-note-002",
+            "sourceId": "cia-2022-capital-fct-educational-note",
+            "score": 45.55,
+            "authorityLevel": "educational_note"
+          },
+          {
+            "chunkId": "chunk-cia-2022-capital-fct-educational-note-001",
+            "sourceId": "cia-2022-capital-fct-educational-note",
+            "score": 34.35,
+            "authorityLevel": "educational_note"
+          },
+          {
+            "chunkId": "chunk-cia-2022-capital-fct-educational-note-003",
+            "sourceId": "cia-2022-capital-fct-educational-note",
+            "score": 31.15,
+            "authorityLevel": "educational_note"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 45.55,
+          "matches": [
+            {
+              "chunkId": "chunk-cia-2022-capital-fct-educational-note-002",
+              "score": 45.55,
+              "tokenOverlap": 8
+            },
+            {
+              "chunkId": "chunk-cia-2022-capital-fct-educational-note-001",
+              "score": 34.35,
+              "tokenOverlap": 7
+            },
+            {
+              "chunkId": "chunk-cia-2022-capital-fct-educational-note-003",
+              "score": 31.15,
+              "tokenOverlap": 7
+            },
+            {
+              "chunkId": "chunk-cia-2022-capital-fct-educational-note-004",
+              "score": 21.700000000000003,
+              "tokenOverlap": 6
+            },
+            {
+              "chunkId": "chunk-actuarial-memorandum-practice-note-001",
+              "score": 20.950000000000003,
+              "tokenOverlap": 5
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "deduplication": {
+        "rawTopKCollisionGroups": [],
+        "suppressedParentChunkIds": [],
+        "postDeduplicationCollisionCount": 0
+      },
       "resultLabel": "supported_top1"
     },
     {
@@ -2653,14 +5642,6 @@
           "citationCount": 0
         },
         {
-          "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions",
-          "sourceId": "vm20-remaining-prose-appendix-coverage",
-          "sourceFamilyId": "valuation_manual_pdfs",
-          "authorityLevel": "manual_section",
-          "score": 9.850000000000001,
-          "citationCount": 0
-        },
-        {
           "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions-child-001",
           "sourceId": "vm20-remaining-prose-appendix-coverage",
           "sourceFamilyId": "valuation_manual_pdfs",
@@ -2670,6 +5651,14 @@
         },
         {
           "chunkId": "vm20-practice-note-companion-vm20-pn-behavior-child-001",
+          "sourceId": "vm20-practice-note-companion",
+          "sourceFamilyId": "practice_notes",
+          "authorityLevel": "companion_guidance",
+          "score": 9.700000000000001,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm20-practice-note-companion-vm20-pn-behavior-child-004",
           "sourceId": "vm20-practice-note-companion",
           "sourceFamilyId": "practice_notes",
           "authorityLevel": "companion_guidance",
@@ -2685,6 +5674,80 @@
       "predictedAuthorityLevel": "internal",
       "citationAvailable": false,
       "insufficientSupportDetected": false,
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Retrieved evidence is sufficiently aligned for the requested information type under the current corpus declarations.",
+        "requestedInformationTypes": [
+          "general_prose"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "chunk-synthetic-pricing-product-specification-001",
+            "sourceId": "synthetic-pricing-product-specification",
+            "score": 29,
+            "authorityLevel": "internal"
+          },
+          {
+            "chunkId": "chunk-synthetic-pricing-product-specification-002",
+            "sourceId": "synthetic-pricing-product-specification",
+            "score": 25.050000000000004,
+            "authorityLevel": "internal"
+          },
+          {
+            "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions-child-001",
+            "sourceId": "vm20-remaining-prose-appendix-coverage",
+            "score": 9.850000000000001,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 29,
+          "matches": [
+            {
+              "chunkId": "chunk-synthetic-pricing-product-specification-001",
+              "score": 29,
+              "tokenOverlap": 6
+            },
+            {
+              "chunkId": "chunk-synthetic-pricing-product-specification-002",
+              "score": 25.050000000000004,
+              "tokenOverlap": 6
+            },
+            {
+              "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions-child-001",
+              "score": 9.850000000000001,
+              "tokenOverlap": 8
+            },
+            {
+              "chunkId": "vm20-practice-note-companion-vm20-pn-behavior-child-001",
+              "score": 9.700000000000001,
+              "tokenOverlap": 7
+            },
+            {
+              "chunkId": "vm20-practice-note-companion-vm20-pn-behavior-child-004",
+              "score": 9.700000000000001,
+              "tokenOverlap": 7
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "deduplication": {
+        "rawTopKCollisionGroups": [
+          {
+            "parentChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions",
+            "childChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions-child-001"
+          }
+        ],
+        "suppressedParentChunkIds": [
+          "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions"
+        ],
+        "postDeduplicationCollisionCount": 0
+      },
       "resultLabel": "supported_top1"
     },
     {
@@ -2754,6 +5817,73 @@
       "predictedAuthorityLevel": "internal",
       "citationAvailable": false,
       "insufficientSupportDetected": false,
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Retrieved evidence is sufficiently aligned for the requested information type under the current corpus declarations.",
+        "requestedInformationTypes": [
+          "general_prose"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "chunk-synthetic-pricing-assumption-memo-001",
+            "sourceId": "synthetic-pricing-assumption-memo",
+            "score": 25.050000000000004,
+            "authorityLevel": "internal"
+          },
+          {
+            "chunkId": "chunk-synthetic-pricing-assumption-memo-002",
+            "sourceId": "synthetic-pricing-assumption-memo",
+            "score": 18.05,
+            "authorityLevel": "internal"
+          },
+          {
+            "chunkId": "chunk-synthetic-pricing-pricing-methodology-001",
+            "sourceId": "synthetic-pricing-pricing-methodology",
+            "score": 15.95,
+            "authorityLevel": "internal"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 25.050000000000004,
+          "matches": [
+            {
+              "chunkId": "chunk-synthetic-pricing-assumption-memo-001",
+              "score": 25.050000000000004,
+              "tokenOverlap": 5
+            },
+            {
+              "chunkId": "chunk-synthetic-pricing-assumption-memo-002",
+              "score": 18.05,
+              "tokenOverlap": 5
+            },
+            {
+              "chunkId": "chunk-synthetic-pricing-pricing-methodology-001",
+              "score": 15.95,
+              "tokenOverlap": 5
+            },
+            {
+              "chunkId": "chunk-synthetic-pricing-approval-memo-001",
+              "score": 13.65,
+              "tokenOverlap": 3
+            },
+            {
+              "chunkId": "chunk-vm20-assumptions-section-3c-001",
+              "score": 12.35,
+              "tokenOverlap": 4
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "deduplication": {
+        "rawTopKCollisionGroups": [],
+        "suppressedParentChunkIds": [],
+        "postDeduplicationCollisionCount": 0
+      },
       "resultLabel": "supported_top1"
     },
     {
@@ -2823,6 +5953,73 @@
       "predictedAuthorityLevel": "internal",
       "citationAvailable": false,
       "insufficientSupportDetected": false,
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Retrieved evidence is sufficiently aligned for the requested information type under the current corpus declarations.",
+        "requestedInformationTypes": [
+          "general_prose"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "chunk-synthetic-pricing-pricing-methodology-001",
+            "sourceId": "synthetic-pricing-pricing-methodology",
+            "score": 13.7,
+            "authorityLevel": "internal"
+          },
+          {
+            "chunkId": "chunk-synthetic-pricing-pricing-methodology-002",
+            "sourceId": "synthetic-pricing-pricing-methodology",
+            "score": 13.7,
+            "authorityLevel": "internal"
+          },
+          {
+            "chunkId": "chunk-synthetic-pricing-approval-memo-001",
+            "sourceId": "synthetic-pricing-approval-memo",
+            "score": 10.45,
+            "authorityLevel": "internal"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 13.7,
+          "matches": [
+            {
+              "chunkId": "chunk-synthetic-pricing-pricing-methodology-001",
+              "score": 13.7,
+              "tokenOverlap": 4
+            },
+            {
+              "chunkId": "chunk-synthetic-pricing-pricing-methodology-002",
+              "score": 13.7,
+              "tokenOverlap": 4
+            },
+            {
+              "chunkId": "chunk-synthetic-pricing-approval-memo-001",
+              "score": 10.45,
+              "tokenOverlap": 3
+            },
+            {
+              "chunkId": "chunk-synthetic-pricing-product-specification-001",
+              "score": 8,
+              "tokenOverlap": 4
+            },
+            {
+              "chunkId": "chunk-synthetic-pricing-assumption-memo-002",
+              "score": 5.599999999999999,
+              "tokenOverlap": 3
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "deduplication": {
+        "rawTopKCollisionGroups": [],
+        "suppressedParentChunkIds": [],
+        "postDeduplicationCollisionCount": 0
+      },
       "resultLabel": "supported_top1"
     },
     {
@@ -2892,6 +6089,73 @@
       "predictedAuthorityLevel": "internal",
       "citationAvailable": false,
       "insufficientSupportDetected": false,
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Retrieved evidence is sufficiently aligned for the requested information type under the current corpus declarations.",
+        "requestedInformationTypes": [
+          "general_prose"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "chunk-synthetic-pricing-pricing-methodology-002",
+            "sourceId": "synthetic-pricing-pricing-methodology",
+            "score": 19.9,
+            "authorityLevel": "internal"
+          },
+          {
+            "chunkId": "chunk-synthetic-pricing-profitability-study-002",
+            "sourceId": "synthetic-pricing-profitability-study",
+            "score": 19.1,
+            "authorityLevel": "internal"
+          },
+          {
+            "chunkId": "chunk-synthetic-pricing-profitability-study-001",
+            "sourceId": "synthetic-pricing-profitability-study",
+            "score": 14.399999999999999,
+            "authorityLevel": "internal"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 19.9,
+          "matches": [
+            {
+              "chunkId": "chunk-synthetic-pricing-pricing-methodology-002",
+              "score": 19.9,
+              "tokenOverlap": 6
+            },
+            {
+              "chunkId": "chunk-synthetic-pricing-profitability-study-002",
+              "score": 19.1,
+              "tokenOverlap": 3
+            },
+            {
+              "chunkId": "chunk-synthetic-pricing-profitability-study-001",
+              "score": 14.399999999999999,
+              "tokenOverlap": 4
+            },
+            {
+              "chunkId": "chunk-synthetic-pricing-pricing-methodology-001",
+              "score": 8.95,
+              "tokenOverlap": 3
+            },
+            {
+              "chunkId": "chunk-synthetic-pricing-product-specification-001",
+              "score": 8,
+              "tokenOverlap": 4
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "deduplication": {
+        "rawTopKCollisionGroups": [],
+        "suppressedParentChunkIds": [],
+        "postDeduplicationCollisionCount": 0
+      },
       "resultLabel": "supported_top3"
     },
     {
@@ -2961,6 +6225,73 @@
       "predictedAuthorityLevel": "internal",
       "citationAvailable": false,
       "insufficientSupportDetected": false,
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Retrieved evidence is sufficiently aligned for the requested information type under the current corpus declarations.",
+        "requestedInformationTypes": [
+          "general_prose"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "chunk-synthetic-pricing-approval-memo-001",
+            "sourceId": "synthetic-pricing-approval-memo",
+            "score": 31.85000000000001,
+            "authorityLevel": "internal"
+          },
+          {
+            "chunkId": "chunk-synthetic-pricing-assumption-memo-002",
+            "sourceId": "synthetic-pricing-assumption-memo",
+            "score": 16.449999999999996,
+            "authorityLevel": "internal"
+          },
+          {
+            "chunkId": "chunk-synthetic-pricing-approval-memo-002",
+            "sourceId": "synthetic-pricing-approval-memo",
+            "score": 15.75,
+            "authorityLevel": "internal"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 31.85000000000001,
+          "matches": [
+            {
+              "chunkId": "chunk-synthetic-pricing-approval-memo-001",
+              "score": 31.85000000000001,
+              "tokenOverlap": 5
+            },
+            {
+              "chunkId": "chunk-synthetic-pricing-assumption-memo-002",
+              "score": 16.449999999999996,
+              "tokenOverlap": 4
+            },
+            {
+              "chunkId": "chunk-synthetic-pricing-approval-memo-002",
+              "score": 15.75,
+              "tokenOverlap": 5
+            },
+            {
+              "chunkId": "chunk-synthetic-pricing-pricing-methodology-001",
+              "score": 13.149999999999999,
+              "tokenOverlap": 4
+            },
+            {
+              "chunkId": "chunk-synthetic-pricing-assumption-memo-001",
+              "score": 8.95,
+              "tokenOverlap": 3
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "deduplication": {
+        "rawTopKCollisionGroups": [],
+        "suppressedParentChunkIds": [],
+        "postDeduplicationCollisionCount": 0
+      },
       "resultLabel": "supported_top1"
     },
     {
@@ -3023,6 +6354,73 @@
       "predictedAuthorityLevel": "internal",
       "citationAvailable": false,
       "insufficientSupportDetected": false,
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Retrieved evidence is sufficiently aligned for the requested information type under the current corpus declarations.",
+        "requestedInformationTypes": [
+          "general_prose"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "chunk-synthetic-pricing-product-specification-001",
+            "sourceId": "synthetic-pricing-product-specification",
+            "score": 9.6,
+            "authorityLevel": "internal"
+          },
+          {
+            "chunkId": "chunk-synthetic-pricing-pricing-methodology-001",
+            "sourceId": "synthetic-pricing-pricing-methodology",
+            "score": 8.95,
+            "authorityLevel": "internal"
+          },
+          {
+            "chunkId": "chunk-synthetic-pricing-assumption-memo-002",
+            "sourceId": "synthetic-pricing-assumption-memo",
+            "score": 7.699999999999999,
+            "authorityLevel": "internal"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 9.6,
+          "matches": [
+            {
+              "chunkId": "chunk-synthetic-pricing-product-specification-001",
+              "score": 9.6,
+              "tokenOverlap": 3
+            },
+            {
+              "chunkId": "chunk-synthetic-pricing-pricing-methodology-001",
+              "score": 8.95,
+              "tokenOverlap": 1
+            },
+            {
+              "chunkId": "chunk-synthetic-pricing-assumption-memo-002",
+              "score": 7.699999999999999,
+              "tokenOverlap": 2
+            },
+            {
+              "chunkId": "chunk-synthetic-pricing-pricing-methodology-002",
+              "score": 5.449999999999999,
+              "tokenOverlap": 1
+            },
+            {
+              "chunkId": "chunk-synthetic-pricing-approval-memo-001",
+              "score": 5.4,
+              "tokenOverlap": 1
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "deduplication": {
+        "rawTopKCollisionGroups": [],
+        "suppressedParentChunkIds": [],
+        "postDeduplicationCollisionCount": 0
+      },
       "resultLabel": "false_positive"
     },
     {
@@ -3036,14 +6434,6 @@
       "expectedSourceFamilyIds": [],
       "expectedAuthorityLevels": [],
       "rankedMatches": [
-        {
-          "chunkId": "vm20-practice-note-companion-vm20-pn-starting-assets",
-          "sourceId": "vm20-practice-note-companion",
-          "sourceFamilyId": "practice_notes",
-          "authorityLevel": "companion_guidance",
-          "score": 10.4,
-          "citationCount": 0
-        },
         {
           "chunkId": "vm20-practice-note-companion-vm20-pn-starting-assets-child-021",
           "sourceId": "vm20-practice-note-companion",
@@ -3075,6 +6465,14 @@
           "authorityLevel": "companion_guidance",
           "score": 10.25,
           "citationCount": 0
+        },
+        {
+          "chunkId": "vm20-practice-note-companion-vm20-pn-starting-assets-child-020",
+          "sourceId": "vm20-practice-note-companion",
+          "sourceFamilyId": "practice_notes",
+          "authorityLevel": "companion_guidance",
+          "score": 10.25,
+          "citationCount": 0
         }
       ],
       "top1Hit": false,
@@ -3085,6 +6483,92 @@
       "predictedAuthorityLevel": "companion_guidance",
       "citationAvailable": false,
       "insufficientSupportDetected": false,
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Retrieved evidence is sufficiently aligned for the requested information type under the current corpus declarations.",
+        "requestedInformationTypes": [
+          "general_prose"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-starting-assets-child-021",
+            "sourceId": "vm20-practice-note-companion",
+            "score": 10.4,
+            "authorityLevel": "companion_guidance"
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-starting-assets-child-005",
+            "sourceId": "vm20-practice-note-companion",
+            "score": 10.25,
+            "authorityLevel": "companion_guidance"
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-starting-assets-child-013",
+            "sourceId": "vm20-practice-note-companion",
+            "score": 10.25,
+            "authorityLevel": "companion_guidance"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 10.4,
+          "matches": [
+            {
+              "chunkId": "vm20-practice-note-companion-vm20-pn-starting-assets-child-021",
+              "score": 10.4,
+              "tokenOverlap": 4
+            },
+            {
+              "chunkId": "vm20-practice-note-companion-vm20-pn-starting-assets-child-005",
+              "score": 10.25,
+              "tokenOverlap": 2
+            },
+            {
+              "chunkId": "vm20-practice-note-companion-vm20-pn-starting-assets-child-013",
+              "score": 10.25,
+              "tokenOverlap": 4
+            },
+            {
+              "chunkId": "vm20-practice-note-companion-vm20-pn-starting-assets-child-016",
+              "score": 10.25,
+              "tokenOverlap": 3
+            },
+            {
+              "chunkId": "vm20-practice-note-companion-vm20-pn-starting-assets-child-020",
+              "score": 10.25,
+              "tokenOverlap": 4
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "deduplication": {
+        "rawTopKCollisionGroups": [
+          {
+            "parentChunkId": "vm20-practice-note-companion-vm20-pn-starting-assets",
+            "childChunkId": "vm20-practice-note-companion-vm20-pn-starting-assets-child-021"
+          },
+          {
+            "parentChunkId": "vm20-practice-note-companion-vm20-pn-starting-assets",
+            "childChunkId": "vm20-practice-note-companion-vm20-pn-starting-assets-child-005"
+          },
+          {
+            "parentChunkId": "vm20-practice-note-companion-vm20-pn-starting-assets",
+            "childChunkId": "vm20-practice-note-companion-vm20-pn-starting-assets-child-013"
+          },
+          {
+            "parentChunkId": "vm20-practice-note-companion-vm20-pn-starting-assets",
+            "childChunkId": "vm20-practice-note-companion-vm20-pn-starting-assets-child-016"
+          }
+        ],
+        "suppressedParentChunkIds": [
+          "vm20-practice-note-companion-vm20-pn-starting-assets"
+        ],
+        "postDeduplicationCollisionCount": 0
+      },
       "resultLabel": "false_positive"
     }
   ],

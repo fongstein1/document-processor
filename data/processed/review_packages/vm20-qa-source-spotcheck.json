@@ -1,0 +1,78 @@
+{
+  "schemaVersion": "1.0",
+  "qaId": "vm20-qa-source-spotcheck-2026-08-26",
+  "status": "passed",
+  "sourceId": "vm20-remaining-prose-appendix-coverage",
+  "sourceEditionId": "NAIC-VALUATION-MANUAL-2026",
+  "sourceVersionIdentifier": "2026 NAIC Valuation Manual",
+  "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+  "rawPdfPath": "D:\\Work\\AI Projects\\NAIC Valuation Manual Course\\pbr_data_valuation_manual_2026.pdf",
+  "pageCount": 457,
+  "sourceTextMode": "exact_extracted_source_text",
+  "visualTranscription": "not_used",
+  "pageImageBackstop": false,
+  "validationMode": "targeted_validation_only; no corpus reprocessing",
+  "checks": [
+    {
+      "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section4-complete",
+      "pageStart": 66,
+      "pageEnd": 67,
+      "sectionReference": "Section 4: Deterministic Reserve",
+      "exactSourceType": true,
+      "anchorMatches": [
+        true,
+        true
+      ],
+      "representation": "raw_pdf_pypdf_page_text"
+    },
+    {
+      "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section5-complete",
+      "pageStart": 67,
+      "pageEnd": 68,
+      "sectionReference": "Section 5: Stochastic Reserve",
+      "exactSourceType": true,
+      "anchorMatches": [
+        true,
+        true
+      ],
+      "representation": "raw_pdf_pypdf_page_text"
+    },
+    {
+      "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-c-mortality-assumptions",
+      "pageStart": 97,
+      "pageEnd": 118,
+      "sectionReference": "Section 9 C. Mortality Assumptions",
+      "exactSourceType": true,
+      "anchorMatches": [
+        true,
+        true
+      ],
+      "representation": "raw_pdf_pypdf_page_text"
+    },
+    {
+      "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix1-f-this-section-describes-the-set-of-16-scenarios-for-the-sert-in-vm-20-starting-with-the-yield-curve",
+      "pageStart": 132,
+      "pageEnd": 134,
+      "sectionReference": "Appendix 1 F. SERT scenario set",
+      "exactSourceType": true,
+      "anchorMatches": [
+        true,
+        true
+      ],
+      "representation": "raw_pdf_pypdf_page_text"
+    },
+    {
+      "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix2-a-baseline-annual-default-cost-factors",
+      "pageStart": 135,
+      "pageEnd": 136,
+      "sectionReference": "Appendix 2 A. Baseline Annual Default Cost Factors",
+      "exactSourceType": true,
+      "anchorMatches": [
+        true,
+        true
+      ],
+      "representation": "raw_pdf_pypdf_page_text"
+    }
+  ],
+  "notes": "Selected canonical parent excerpts were checked against the corresponding raw PDF page representation. Exact extracted source text was not rewritten; page-image backstop remains false."
+}

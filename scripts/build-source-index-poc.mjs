@@ -106,7 +106,7 @@ const buildClassification = (source) => {
     confidentiality: classification.confidentiality ?? (source.domainId === 'pricing_documents' ? 'internal' : 'internal'),
     publicationDate,
     effectiveDate,
-    version: classification.version ?? (source.versionDate ? '1.0' : null),
+    version: classification.version ?? source.sourceEditionId ?? source.sourceVersionIdentifier ?? (source.versionDate ? '1.0' : null),
     approvalStatus: classification.approvalStatus ?? (source.sourceStatus === 'active' ? 'reviewed' : source.sourceStatus),
     language: classification.language ?? 'en',
     recommendedProfile: classification.recommendedProfile ?? inferProfileName(source),
@@ -169,6 +169,83 @@ const deriveRequirements = (controlledTags) =>
       'jurisdiction_specific_requirement',
     ].includes(tag),
   )
+
+const normalizeStructuralHeading = (value) => {
+  const heading = normalizeText(value)
+  if (/^Appendix 1 F\./i.test(heading)) {
+    return 'Appendix 1 F. SERT scenario set'
+  }
+  return heading
+}
+
+const LOCAL_TOPIC_RULES = [
+  ['company_mortality_experience', ['company experience', 'company mortality', 'aggregate company experience']],
+  ['underwriting_segmentation', ['underwriting process', 'underwriting processes', 'risk class']],
+  ['credibility', ['credibility', 'Bühlmann']],
+  ['relative_risk_tool', ['relative risk tool']],
+  ['industry_mortality_tables', ['industry basic table', 'industry mortality', 'industry experience rates']],
+  ['mortality_margins', ['mortality margin', 'margin percentage', 'prescribed margin']],
+  ['grading', ['grading to', 'grade to', 'grading period']],
+  ['mortality_improvement', ['mortality improvement', 'future mortality improvement']],
+  ['policyholder_behavior', ['policyholder behavior', 'lapse', 'premium persistency']],
+  ['expense_assumptions', ['expense assumption', 'unit expense', 'expense inflation']],
+  ['asset_defaults_spreads', ['default cost', 'default costs', 'benchmark spread', 'swap spread', 'asset spread']],
+  ['revenue_sharing', ['revenue sharing', 'revenue-sharing']],
+]
+
+const deriveLocalTopics = (text) => {
+  const lowerText = String(text ?? '').toLowerCase()
+  return LOCAL_TOPIC_RULES
+    .filter(([, terms]) => terms.some((term) => lowerText.includes(term.toLowerCase())))
+    .map(([topic]) => topic)
+}
+
+const deriveProvisionTypes = (text) => {
+  const lowerText = String(text ?? '').toLowerCase()
+  const types = []
+  if (/\b(shall|must|required to|required that)\b/.test(lowerText)) types.push('regulatory_requirement')
+  if (/\b(may|permitted|permission|elect|election|option)\b/.test(lowerText)) types.push('permission_or_election')
+  if (/\b(may not|must not|prohibited|not permissible)\b/.test(lowerText)) types.push('prohibition')
+  if (/\b(unless|except|exception|provided that|in the absence of)\b/.test(lowerText)) types.push('exception_or_condition')
+  if (/guidance note/.test(lowerText)) types.push('guidance_note')
+  if (/\bprescribed\b/.test(lowerText)) types.push('prescribed_methodology_or_assumption')
+  if (/\b(company experience|company-developed|company developed|own experience)\b/.test(lowerText)) types.push('company_developed_assumption')
+  if (/\b(disclose|disclosure|document|documentation|report|reporting|actuarial report)\b/.test(lowerText)) types.push('documentation_or_reporting_obligation')
+  return [...new Set(types)]
+}
+
+const deriveCrossReferenceCandidates = (text) => {
+  const value = String(text ?? '')
+  const references = []
+  const add = (target, pattern) => {
+    if (pattern.test(value)) references.push({ target, relationType: 'cross_reference_candidate', status: 'pending_human_review', basis: 'explicit_source_text_reference' })
+  }
+  add('Model #820', /Model\s+#?820/i)
+  add('AG 48', /AG\s*48/i)
+  add('Model #830', /Model\s+#?830/i)
+  add('Model #787', /Model\s+#?787/i)
+  add('VM-31', /VM-31/i)
+  add('VM-G', /VM-G/i)
+  add('Appendix 1', /Appendix\s+1/i)
+  add('Appendix 2', /Appendix\s+2/i)
+  add('NAIC current table sources', /NAIC|National Association of Insurance Commissioners/i)
+  return references
+}
+
+const deriveBoundaryMetadata = (text, heading, childNumber) => {
+  const lines = String(text ?? '').split(/\r?\n/).map((line) => line.trim()).filter(Boolean)
+  const firstLine = lines.find((line) => !/^\[p\.\s*\d+\]/i.test(line)) ?? lines[0] ?? ''
+  const markerMatch = firstLine.match(/^(\d+\.|[A-Z]\.|[a-z]\.|[ivx]+\.|[A-Z]\s*=)/)
+  const startsAtBoundary = Boolean(markerMatch)
+  return {
+    status: startsAtBoundary ? 'numbered_or_lettered_boundary' : 'source_paragraph_boundary_with_context',
+    startsAtBoundary,
+    structuralBreadcrumb: `${heading} > ${markerMatch?.[1] ?? `child ${childNumber} continuation; inspect preceding context`}`,
+    note: startsAtBoundary
+      ? 'Child begins at a source-derived numbered, lettered, or formula boundary.'
+      : 'Child begins at a source paragraph boundary without a local marker; preceding and following links provide context before interpretation.',
+  }
+}
 
 const deriveChunk = (source, chunk, index, sourceIndexPath) => {
   const sourceVersionId = source.sourceVersionId ?? source.sourceIndexId
@@ -264,9 +341,19 @@ const deriveChunk = (source, chunk, index, sourceIndexPath) => {
     reviewFlags: chunk.reviewFlags ?? source.chunkDefaults?.reviewFlags ?? [],
     qualityNotes: chunk.qualityNotes ?? source.chunkDefaults?.qualityNotes ?? [],
     evidenceNotes: chunk.evidenceNotes ?? source.chunkDefaults?.evidenceNotes ?? '',
+    ...(chunk.metadataDerivation ? {
+      localTopics: asArray(chunk.localTopics),
+      provisionTypes: asArray(chunk.provisionTypes),
+      provisionTypeBasis: chunk.provisionTypeBasis ?? 'source_text_pattern_only',
+      structuralBreadcrumb: chunk.structuralBreadcrumb ?? null,
+      boundaryQuality: chunk.boundaryQuality ?? null,
+      crossReferenceCandidates: asArray(chunk.crossReferenceCandidates),
+      metadataDerivation: chunk.metadataDerivation,
+    } : {}),
     ...hierarchyFields,
     retrievalEligible: chunk.retrievalEligible ?? true,
     promotionEligible: chunk.promotionEligible ?? false,
+    ...(chunk.retrievalRole ? { retrievalRole: chunk.retrievalRole } : {}),
   }
 
   return derivedChunk
@@ -399,6 +486,7 @@ const buildHierarchicalChunks = async (source) => {
 const buildBatchCoverageChunks = async (source) => {
   const input = source.batchCoverageInput
   if (!input) return asArray(source.chunks)
+  const qaMetadataEnabled = source.sourceId === 'vm20-remaining-prose-appendix-coverage'
   const allowedSourceIds = new Set(input.sourceIds ?? [])
   const allowedKinds = new Set(input.includeKinds ?? ['chunk', 'review_note'])
   const items = []
@@ -415,13 +503,18 @@ const buildBatchCoverageChunks = async (source) => {
   if (items.length === 0) throw new Error(`Batch coverage input has no extracted source text: ${source.sourceId}`)
 
   const records = items.map((item) => {
-    const heading = item.sectionReference ?? item.sourceId ?? item.stableId
+    const heading = normalizeStructuralHeading(item.sectionReference ?? item.sourceId ?? item.stableId)
     const parentId = `${source.sourceId}-${slugify(item.sourceId ?? item.stableId)}`
     const parentText = String(item.chunkText).trim()
     const childTexts = packParagraphs(splitParagraphs(parentText), input.childTargetWords ?? 360)
     const childIds = childTexts.map((_, index) => `${parentId}-child-${String(index + 1).padStart(3, '0')}`)
     const pageRange = parsePageRange(parentText, source.pageRange.start, source.pageRange.end)
-    return { item, heading, parentId, parentText, childTexts, childIds, pageRange }
+    const localTopics = qaMetadataEnabled ? deriveLocalTopics(parentText) : []
+    const crossReferenceCandidates = qaMetadataEnabled ? deriveCrossReferenceCandidates(parentText) : []
+    const parentProvisionTypes = qaMetadataEnabled ? deriveProvisionTypes(parentText) : []
+    const parentIsLarge = qaMetadataEnabled && /Section 9 C\./i.test(heading) && parentText.split(/\s+/).length > 1400 && childTexts.length > 1
+    const parentIsDuplicate = qaMetadataEnabled && childTexts.length === 1 && normalizeText(parentText) === normalizeText(childTexts[0])
+    return { item, heading, parentId, parentText, childTexts, childIds, pageRange, localTopics, crossReferenceCandidates, parentProvisionTypes, parentIsLarge, parentIsDuplicate }
   })
   const allIds = records.flatMap((record) => [record.parentId, ...record.childIds])
   const sourceTags = source.chunkDefaults?.controlledTags ?? []
@@ -445,7 +538,7 @@ const buildBatchCoverageChunks = async (source) => {
       sourceTextExcerpt: record.parentText,
       normalizedTextExcerpt: normalizeText(record.parentText).toLowerCase(),
       summary: record.item.summary ?? `${record.heading} from the reviewed VM-20 source material.`,
-      topic: record.heading,
+      topic: record.localTopics.length > 0 ? `${record.heading} — ${record.localTopics.join(', ')}` : record.heading,
       headingPath: `VM-20 > ${record.heading}`,
       structuralLocator: `VM-20 / ${record.heading}`,
       chunkLevel: 'parent',
@@ -455,20 +548,34 @@ const buildBatchCoverageChunks = async (source) => {
       followingChunkId: allIds[parentIndex + 1] ?? null,
       chunkingMethod: 'hierarchical_structure',
       controlledTags: [...new Set([...sourceTags, ...itemTags, 'hierarchical_parent', 'review_only'])],
-      keywords: ['VM-20', record.heading, record.item.sourceId ?? ''],
+      keywords: record.localTopics.length > 0 ? [...new Set(['VM-20', record.heading, record.item.sourceId ?? '', ...record.localTopics])] : ['VM-20', record.heading, record.item.sourceId ?? ''],
       citations: [{ citationText: record.heading, pageReference: `pp. ${record.pageRange.start}-${record.pageRange.end}`, sectionReference: record.heading, sourceReference: source.sourceReference, lineReference: null }],
       fidelity: source.chunkDefaults?.fidelity ?? 'exact',
       confidence: source.chunkDefaults?.confidence ?? 'high',
       reviewFlags: [...new Set([...baseFlags, ...itemFlags, 'hierarchical_parent', 'review_only'])],
       qualityNotes: [...baseQualityNotes, 'Parent preserves the reviewed source boundary.', 'Child chunks retain contiguous paragraph or semantic boundaries.'],
       evidenceNotes,
-      retrievalEligible: true,
+      ...(qaMetadataEnabled ? {
+        localTopics: record.localTopics,
+        provisionTypes: record.parentProvisionTypes,
+        provisionTypeBasis: 'source_text_pattern_only',
+        structuralBreadcrumb: record.heading,
+        boundaryQuality: { status: 'source_structural_parent', note: 'Parent preserves the complete reviewed source boundary.' },
+        crossReferenceCandidates: record.crossReferenceCandidates,
+        metadataDerivation: 'generated_from_source_text_without_source_text_rewrite',
+      } : {}),
+      retrievalEligible: !(record.parentIsLarge || record.parentIsDuplicate),
+      ...(qaMetadataEnabled ? { retrievalRole: record.parentIsLarge || record.parentIsDuplicate ? 'context_only_parent' : 'first_stage_retrieval' } : {}),
       promotionEligible: false,
     })
     record.childTexts.forEach((childText, index) => {
       const childId = record.childIds[index]
       const childIndex = allIds.indexOf(childId)
       const childPages = parsePageRange(childText, record.pageRange.start, record.pageRange.end)
+      const childLocalTopics = qaMetadataEnabled ? deriveLocalTopics(childText) : []
+      const childProvisionTypes = qaMetadataEnabled ? deriveProvisionTypes(childText) : []
+      const childBoundary = qaMetadataEnabled ? deriveBoundaryMetadata(childText, record.heading, index + 1) : null
+      const childCrossReferences = qaMetadataEnabled ? deriveCrossReferenceCandidates(childText) : []
       chunks.push({
         chunkId: childId,
         chunkOrdinal: ordinal++,
@@ -479,8 +586,8 @@ const buildBatchCoverageChunks = async (source) => {
         sectionReference: record.heading,
         sourceTextExcerpt: childText,
         normalizedTextExcerpt: normalizeText(childText).toLowerCase(),
-        summary: `Retrieval child for ${record.heading}; preserves contiguous source text and associated qualifications.`,
-        topic: record.heading,
+        summary: qaMetadataEnabled ? `Generated retrieval metadata from ${record.item.summary ?? record.heading}; local source terms: ${(childLocalTopics.length > 0 ? childLocalTopics : record.localTopics).join(', ') || 'no additional local topic terms'}.` : `Retrieval child for ${record.heading}; preserves contiguous source text and associated qualifications.`,
+        topic: `${record.heading}${childLocalTopics.length > 0 ? ` — ${childLocalTopics.join(', ')}` : record.localTopics.length > 0 ? ` — ${record.localTopics.join(', ')}` : ''}`,
         headingPath: `VM-20 > ${record.heading}`,
         structuralLocator: `VM-20 / ${record.heading} / child ${index + 1}`,
         chunkLevel: 'child',
@@ -490,14 +597,24 @@ const buildBatchCoverageChunks = async (source) => {
         followingChunkId: allIds[childIndex + 1] ?? null,
         chunkingMethod: 'semantic_boundary',
         controlledTags: [...new Set([...sourceTags, ...itemTags, 'hierarchical_child', 'review_only'])],
-        keywords: ['VM-20', record.heading, record.item.sourceId ?? ''],
+        keywords: qaMetadataEnabled ? [...new Set(['VM-20', record.heading, record.item.sourceId ?? '', ...(childLocalTopics.length > 0 ? childLocalTopics : record.localTopics)])] : ['VM-20', record.heading, record.item.sourceId ?? ''],
         citations: [{ citationText: record.heading, pageReference: `pp. ${childPages.start}-${childPages.end}`, sectionReference: record.heading, sourceReference: source.sourceReference, lineReference: null }],
         fidelity: source.chunkDefaults?.fidelity ?? 'exact',
         confidence: source.chunkDefaults?.confidence ?? 'high',
         reviewFlags: [...new Set([...baseFlags, ...itemFlags, 'hierarchical_child', 'review_only'])],
         qualityNotes: [...baseQualityNotes, 'Child boundary follows paragraph or semantic packing within the reviewed source slice.', 'Requirement, exception, qualification, and condition text remains contiguous where present.'],
         evidenceNotes,
+        ...(qaMetadataEnabled ? {
+          localTopics: [...new Set([...record.localTopics, ...childLocalTopics])],
+          provisionTypes: childProvisionTypes,
+          provisionTypeBasis: 'source_text_pattern_only',
+          structuralBreadcrumb: childBoundary.structuralBreadcrumb,
+          boundaryQuality: childBoundary,
+          crossReferenceCandidates: childCrossReferences,
+          metadataDerivation: 'generated_from_source_text_without_source_text_rewrite',
+        } : {}),
         retrievalEligible: true,
+        ...(qaMetadataEnabled ? { retrievalRole: 'first_stage_retrieval' } : {}),
         promotionEligible: false,
       })
     })
@@ -512,6 +629,11 @@ const buildSourceMarkdown = (sourceIndex) => {
   lines.push('')
   lines.push(`- Source ID: \`${source.sourceId}\``)
   lines.push(`- Source version ID: \`${source.sourceVersionId}\``)
+  if (source.sourceEditionId || source.sourceVersionIdentifier || source.sourceSha256) {
+    lines.push(`- Source edition ID: \`${source.sourceEditionId ?? 'n/a'}\``)
+    lines.push(`- Source version identifier: ${source.sourceVersionIdentifier ?? 'n/a'}`)
+    lines.push(`- Source SHA-256: \`${source.sourceSha256 ?? 'n/a'}\``)
+  }
   lines.push(`- Source reference: ${source.sourceReference}`)
   lines.push(`- Source family: ${source.sourceFamilyId}`)
   lines.push(`- Domain: ${source.domainId}`)
@@ -522,6 +644,7 @@ const buildSourceMarkdown = (sourceIndex) => {
   lines.push(`- Page range: pp. ${source.pageRange.start}-${source.pageRange.end}`)
   lines.push(`- Text layer quality: ${source.textLayerQuality}`)
   lines.push(`- Page-image backstop: ${toBooleanText(source.pageImageBackstop)}`)
+  if (source.sourceTextVerification) lines.push(`- Source-text verification: ${source.sourceTextVerification.sourceTextMode}; ${source.sourceTextVerification.pageRepresentationQA}`)
   lines.push(`- Line references available: ${toBooleanText(source.lineReferencesAvailable)}`)
   lines.push('')
   lines.push('## Classification')
@@ -719,16 +842,41 @@ const buildVm20ReviewPackage = ({ chunkRecords, sourcePackages, evaluation }) =>
   const vm20Queries = evaluation.queries.filter((query) => query.queryId.startsWith('q-vm20'))
   const supportedQueries = vm20Queries.filter((query) => query.expectedOutcome !== 'unsupported')
   const unsupportedQueries = vm20Queries.filter((query) => query.expectedOutcome === 'unsupported')
+  const vm20Deduplication = {
+    topN: evaluation.deduplication?.topN ?? 5,
+    rawTopKCollisionCount: vm20Queries.reduce((sum, query) => sum + (query.deduplication?.rawTopKCollisionGroups?.length ?? 0), 0),
+    rawTopKCollisionGroupCount: new Set(vm20Queries.flatMap((query) => (query.deduplication?.rawTopKCollisionGroups ?? []).map((group) => group.parentChunkId))).size,
+    postDeduplicationCollisionCount: vm20Queries.reduce((sum, query) => sum + (query.deduplication?.postDeduplicationCollisionCount ?? 0), 0),
+    affectedQueries: vm20Queries.filter((query) => (query.deduplication?.rawTopKCollisionGroups?.length ?? 0) > 0).map((query) => ({ queryId: query.queryId, collisionGroups: query.deduplication.rawTopKCollisionGroups })),
+  }
   const evidenceChunkIds = (sourceId, limit = 2) => chunkRecords.filter((chunk) => chunk.sourceId === sourceId).slice(0, limit).map((chunk) => chunk.chunkId)
+  const explicitCrossReferences = new Map()
+  for (const chunk of currentChunks) {
+    for (const candidate of chunk.crossReferenceCandidates ?? []) {
+      const existing = explicitCrossReferences.get(candidate.target) ?? { ...candidate, evidenceChunkIds: [] }
+      if (!existing.evidenceChunkIds.includes(chunk.chunkId)) existing.evidenceChunkIds.push(chunk.chunkId)
+      explicitCrossReferences.set(candidate.target, existing)
+    }
+  }
   const packageJson = {
     schemaVersion: '1.0',
-    reviewPackageId: 'vm20-canonical-coverage-review-package-2026-08-25',
+    reviewPackageId: 'vm20-canonical-coverage-review-package-2026-08-26',
     generatedBy: 'scripts/build-source-index-poc.mjs',
     status: 'review_only',
     learnerFacing: false,
     appReady: false,
     ragReady: false,
     promoted: false,
+    promotionReadiness: {
+      blockersClosed: unsupportedQueries.every((query) => query.supportDecision?.supportState === 'unsupported') && (evaluation.deduplication?.postDeduplicationCollisionCount ?? 0) === 0,
+      status: 'ready_for_promotion_decision',
+      automatedPromotion: false,
+      findings: [
+        { blocker: 'evidence_sufficiency', status: unsupportedQueries.every((query) => query.supportDecision?.supportState === 'unsupported') ? 'closed' : 'open', evidence: 'Generic post-retrieval support decisions classify insufficient structured/current/jurisdiction/product evidence.' },
+        { blocker: 'equivalent_parent_child_top_k_duplication', status: (evaluation.deduplication?.postDeduplicationCollisionCount ?? 0) === 0 ? 'closed' : 'open', evidence: 'Structural and equivalent parent-child overlaps are suppressed from first-stage top-k while hierarchy remains intact.' },
+      ],
+      note: 'This is a readiness result only. A human promotion decision remains required; the package remains review-only and unpromoted.',
+    },
     scope: {
       objective: 'Complete the remaining VM-20 prose and appendix coverage while preserving the frozen source-index architecture and deferring structured current-table ingestion.',
       currentManualCoverage: 'Reviewed current-manual slices from batches 003-012 plus authoritative remaining prose and appendix extraction batches 231-234; Section 4, Section 5, Section 9, Appendix 1, and Appendix 2 prose are now represented hierarchically.',
@@ -779,7 +927,8 @@ const buildVm20ReviewPackage = ({ chunkRecords, sourcePackages, evaluation }) =>
       { target: 'Model #820', relationType: 'cross_reference_candidate', status: 'pending_human_review', evidenceChunkIds: evidenceChunkIds('vm20-framework-overview'), note: 'The current manual framework slice names the model-law context; the model law itself is not canonicalized here.' },
       { target: 'SSAP No. 61R', relationType: 'cross_reference_candidate', status: 'pending_human_review', evidenceChunkIds: evidenceChunkIds('vm20-canonical-coverage'), note: 'The reinsurance slice records the source reference without interpreting accounting authority.' },
       { target: 'VM-20 Section 7 / Section 8 / Appendix 1 / Appendix 2', relationType: 'cross_reference_candidate', status: 'pending_human_review', evidenceChunkIds: evidenceChunkIds('vm20-remaining-prose-appendix-coverage'), note: 'The new source text records explicit operational cross-references; no legal effect or duplicate source authority is inferred.' },
-      { target: 'VM-20 Appendix 2 current tables', relationType: 'coverage_gap_candidate', status: 'pending_structured_table_milestone', evidenceChunkIds: evidenceChunkIds('vm20-remaining-prose-appendix-coverage'), note: 'Appendix 2 prose explains the basis and publication locations, while generalized current table rows and version metadata remain deferred.' }
+      { target: 'VM-20 Appendix 2 current tables', relationType: 'coverage_gap_candidate', status: 'pending_structured_table_milestone', evidenceChunkIds: evidenceChunkIds('vm20-remaining-prose-appendix-coverage'), note: 'Appendix 2 prose explains the basis and publication locations, while generalized current table rows and version metadata remain deferred.' },
+      ...[...explicitCrossReferences.values()].map((candidate) => ({ ...candidate, note: 'Review-only candidate derived from an explicit source-text reference; no applicability, supersession, or legal effect is inferred.' }))
     ],
     retrievalEvaluation: {
       queryCount: vm20Queries.length,
@@ -791,6 +940,10 @@ const buildVm20ReviewPackage = ({ chunkRecords, sourcePackages, evaluation }) =>
       top1Accuracy: supportedQueries.length ? supportedQueries.filter((query) => query.top1Hit).length / supportedQueries.length : 0,
       top3Accuracy: supportedQueries.length ? supportedQueries.filter((query) => query.top3Hit).length / supportedQueries.length : 0,
       unsupportedQueriesDetected: unsupportedQueries.filter((query) => query.resultLabel?.startsWith('unsupported')).length,
+      unsupportedSupportDecisions: unsupportedQueries.map((query) => ({ queryId: query.queryId, supportState: query.supportDecision?.supportState, reasonCode: query.supportDecision?.reasonCode, reason: query.supportDecision?.reason, relatedEvidence: query.supportDecision?.relatedEvidence, corpusGap: query.supportDecision?.corpusGap })),
+      meanReciprocalRank: supportedQueries.length ? supportedQueries.reduce((sum, query) => sum + query.reciprocalRank, 0) / supportedQueries.length : 0,
+      deduplication: vm20Deduplication,
+      corpusDeduplication: evaluation.deduplication,
       parentExpansionChecks: ['q-vm20-section5-scenario-reserve', 'q-vm20-section9-mortality-parent-context', 'q-vm20-appendix1-scenarios'].map((queryId) => {
         const query = vm20Queries.find((candidate) => candidate.queryId === queryId)
         const childChunkId = query?.expectedChunkIds?.find((chunkId) => chunkId.includes('-child-')) ?? null
@@ -800,14 +953,17 @@ const buildVm20ReviewPackage = ({ chunkRecords, sourcePackages, evaluation }) =>
         const parentRetrieved = Boolean(query?.rankedMatches?.some((match) => match.chunkId === parentChunk?.chunkId))
         return { queryId, childChunkId, parentChunkId: parentChunk?.chunkId ?? null, childRetrieved, parentResolvable: Boolean(parentChunk), parentRetrieved, expandedEvidenceChunkCount: parentChunk ? 2 : 0, note: 'Deterministic structural check only; the baseline evaluator does not rerank or synthesize parent-expanded answers.' }
       }),
+      sourceQaPath: 'data/processed/review_packages/vm20-qa-source-spotcheck.json',
+      retrievalQaReportPath: 'data/processed/review_packages/vm20-retrieval-qa-report.json',
+      duplicateParentChildPolicy: 'Equivalent parent/child source excerpts are deduplicated after scoring with the child preferred; very large parents can be context-only and are expanded after child retrieval.',
       baselineBeforeExpansion: { queryCount: 22, supportedQueryCount: 20, unsupportedQueryCount: 2, top1HitCount: 14, top3HitCount: 20, top1Accuracy: 0.70, top3Accuracy: 1.0, note: 'Baseline read from the 9aff2bf retrieval result before VM-20 expansion; query set and corpus size differ from this VM-20 benchmark.' },
-      queryResults: vm20Queries.map((query) => ({ queryId: query.queryId, category: query.queryCategory, top1Hit: query.top1Hit, top3Hit: query.top3Hit, resultLabel: query.resultLabel }))
+      queryResults: vm20Queries.map((query) => ({ queryId: query.queryId, category: query.queryCategory, expectedChunkIds: query.expectedChunkIds, top1ChunkId: query.rankedMatches?.[0]?.chunkId ?? null, top3ChunkIds: query.rankedMatches?.slice(0, 3).map((match) => match.chunkId) ?? [], top1Hit: query.top1Hit, top3Hit: query.top3Hit, resultLabel: query.resultLabel, supportState: query.supportDecision?.supportState, supportReasonCode: query.supportDecision?.reasonCode, rawTopKCollisionGroups: query.deduplication?.rawTopKCollisionGroups ?? [] }))
     },
     knownRetrievalRisks: [
       'The keyword baseline can still rank a nearby parent or companion section above a precise child when terms overlap.',
       'Long source excerpts remain useful for recall but can dilute top-1 precision for broad comparison questions.',
       'Unsupported table questions correctly remain outside the current canonical evidence package.',
-      'Parent expansion and adjacency-aware reranking are not yet implemented in the baseline evaluator.'
+      'Parent expansion remains a deterministic evidence-package step; first-stage retrieval excludes only context-only parents and equivalent duplicate excerpts.'
     ],
     humanReview: {
       decisionOptions: ['APPROVE', 'APPROVE WITH FIXES', 'REPROCESS', 'REJECT'],
@@ -841,7 +997,14 @@ const buildVm20ReviewPackage = ({ chunkRecords, sourcePackages, evaluation }) =>
     `- Supported top-1: ${packageJson.retrievalEvaluation.top1HitCount}/${packageJson.retrievalEvaluation.supportedQueryCount}`,
     `- Supported top-3: ${packageJson.retrievalEvaluation.top3HitCount}/${packageJson.retrievalEvaluation.supportedQueryCount}`,
     `- Unsupported queries detected: ${packageJson.retrievalEvaluation.unsupportedQueriesDetected}/${packageJson.retrievalEvaluation.unsupportedQueryCount}`,
-    '- The baseline now weights hierarchy/topic metadata above long source bodies; this is a generic retrieval improvement, not a question-specific rule.', '',
+    `- Mean reciprocal rank: ${packageJson.retrievalEvaluation.meanReciprocalRank.toFixed(3)}`,
+    `- Raw equivalent parent-child top-k collision slots: ${packageJson.retrievalEvaluation.deduplication?.rawTopKCollisionCount ?? 0}; post-deduplication: ${packageJson.retrievalEvaluation.deduplication?.postDeduplicationCollisionCount ?? 0}`,
+    '- Retrieval uses generic local-topic metadata, equivalent parent/child deduplication, and context-only handling for very large parents; no question-specific rule was added.',
+    '- Raw PDF spot-check: `data/processed/review_packages/vm20-qa-source-spotcheck.json`.',
+    '- Full 26-query report: `data/processed/review_packages/vm20-retrieval-qa-report.json`.', '',
+    '## Promotion readiness', '',
+    `- Blocking findings closed: ${packageJson.promotionReadiness.blockersClosed ? 'Yes' : 'No'}`,
+    '- Automated promotion: no; human promotion decision remains required.', '',
     '## Human review', '', packageJson.humanReview.rationale, '', ...packageJson.humanReview.requiredChecks.map((check) => `- ${check}`), '',
     '## Governance boundary', '', 'This package is a review handoff. Validation demonstrates structural integrity only; it does not approve wording, establish legal effect, or promote content for learners, applications, RAG, or Copilot export.', ''
   ].join('\n')
@@ -913,6 +1076,11 @@ const main = async () => {
         authorityLevel: source.authorityLevel,
         sourceStatus: source.sourceStatus,
         versionDate: source.versionDate ?? null,
+        ...(source.sourceEditionId ? { sourceEditionId: source.sourceEditionId } : {}),
+        ...(source.sourceVersionIdentifier ? { sourceVersionIdentifier: source.sourceVersionIdentifier } : {}),
+        ...(source.sourceSha256 ? { sourceSha256: source.sourceSha256 } : {}),
+        ...(source.sourceTextVerification ? { sourceTextVerification: source.sourceTextVerification } : {}),
+        ...(source.coverageDeclarations ? { coverageDeclarations: source.coverageDeclarations } : {}),
         pageCount: source.pageCount,
         pageRange: source.pageRange,
         reviewBatchIds: source.reviewBatchIds,
@@ -969,6 +1137,11 @@ const main = async () => {
       sourceFamilyId: source.sourceFamilyId,
       documentType: source.documentType,
       sourceStatus: source.sourceStatus,
+      ...(source.sourceEditionId ? { sourceEditionId: source.sourceEditionId } : {}),
+      ...(source.sourceVersionIdentifier ? { sourceVersionIdentifier: source.sourceVersionIdentifier } : {}),
+      ...(source.sourceSha256 ? { sourceSha256: source.sourceSha256 } : {}),
+      ...(source.sourceTextVerification ? { sourceTextVerification: source.sourceTextVerification } : {}),
+      ...(source.coverageDeclarations ? { coverageDeclarations: source.coverageDeclarations } : {}),
       sourceReference: source.sourceReference,
       jurisdiction: source.jurisdiction,
       authorityLevel: source.authorityLevel,
@@ -1012,6 +1185,11 @@ const main = async () => {
         sourceReference: source.sourceReference,
         jurisdiction: source.jurisdiction,
         sourceStatus: source.sourceStatus,
+        ...(source.sourceEditionId ? { sourceEditionId: source.sourceEditionId } : {}),
+        ...(source.sourceVersionIdentifier ? { sourceVersionIdentifier: source.sourceVersionIdentifier } : {}),
+        ...(source.sourceSha256 ? { sourceSha256: source.sourceSha256 } : {}),
+        ...(source.sourceTextVerification ? { sourceTextVerification: source.sourceTextVerification } : {}),
+        ...(source.coverageDeclarations ? { coverageDeclarations: source.coverageDeclarations } : {}),
         authorityLevel: source.authorityLevel,
         pageStart: chunk.pageStart,
         pageEnd: chunk.pageEnd,
@@ -1043,10 +1221,18 @@ const main = async () => {
         citationDisplay: chunk.citationDisplay,
         controlledTags: chunk.controlledTags,
         keywords: chunk.keywords,
+        localTopics: chunk.localTopics,
+        provisionTypes: chunk.provisionTypes,
+        provisionTypeBasis: chunk.provisionTypeBasis,
+        structuralBreadcrumb: chunk.structuralBreadcrumb,
+        boundaryQuality: chunk.boundaryQuality,
+        crossReferenceCandidates: chunk.crossReferenceCandidates,
+        metadataDerivation: chunk.metadataDerivation,
         reviewFlags: chunk.reviewFlags,
         fidelity: chunk.fidelity,
         confidence: chunk.confidence,
         retrievalEligible: chunk.retrievalEligible,
+        retrievalRole: chunk.retrievalRole,
         promotionEligible: chunk.promotionEligible,
         canonicalSourceIndexPath: chunk.canonicalSourceIndexPath,
         relationshipIds: chunk.relationshipIds,
