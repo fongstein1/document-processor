@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "1.0",
+  "promotionDecisionId": "vm20-appendix2-structured-table-promotion-2026-08-26",
+  "decisionDate": "2026-08-26",
+  "decision": "approved_for_canonical_promotion",
+  "scope": {
+    "scopeId": "vm20-appendix2-reviewed-available-structured-tables",
+    "datasetId": "vm20-appendix2-structured-tables-2026-08-26",
+    "tableIds": ["vm20-table-a", "vm20-table-f", "vm20-table-g", "vm20-table-h", "vm20-table-i", "vm20-table-j", "vm20-table-k"],
+    "expectedLogicalTableCount": 7,
+    "expectedVersionCount": 29,
+    "expectedRowCount": 891,
+    "expectedValueCount": 7022,
+    "expectedRetrievalUnitCount": 891
+  },
+  "reviewEvidence": {
+    "reviewPackagePath": "data/processed/review_packages/vm20-appendix2-structured-table-review-package.json",
+    "sourceQaPath": "data/processed/review_packages/vm20-appendix2-structured-table-source-qa.json",
+    "retrievalEvaluationPath": "data/processed/structured_tables/vm20-appendix2-retrieval-evaluation.json",
+    "promotionBlockerRegressionPath": "data/processed/review_packages/vm20-appendix2-promotion-blocker-regression.json",
+    "priorDisposition": "APPROVE WITH FIXES",
+    "finalDisposition": "APPROVE FOR CANONICAL PROMOTION",
+    "blockersClosed": true,
+    "independentReviewRecorded": true
+  },
+  "sourceArtifacts": [
+    { "sourceArtifactId": "table-a-workbook", "sha256": "d7364b3d08824cda3b5e285db9daebd2f175c0587752c82d92044e4f995cd847" },
+    { "sourceArtifactId": "table-f-g-workbook", "sha256": "e1cf4ab5e98777390865559bd0df6d22f6b35d9dcc25ee24e738859218f8fdd7" },
+    { "sourceArtifactId": "table-h-i-workbook", "sha256": "5e2a1946b9d381b2e2c93f1e773e205a412093c4eb3cdfcbbafebc4ba63c1597" },
+    { "sourceArtifactId": "table-j-workbook", "sha256": "fd51a9397ed8369a96ade1ffd32ae523683a1cdcc1ba38e02c948e4d2685bb3d" },
+    { "sourceArtifactId": "table-k-workbook", "sha256": "19a8628714606410c29c6573a8f8aba7139d88bea1ba883e64bcf13c60653758" }
+  ],
+  "semanticBoundaries": {
+    "sourceSummaryRows": 27,
+    "sourceSummaryRowRole": "source_summary_statistic",
+    "sourceSummaryRegulatoryValueEligible": false,
+    "tableJCurrentMeasure": "current_benchmark_swap_spread",
+    "tableJCurrentManualTableIdentity": null,
+    "tableJLongTermMeasure": "long_term_benchmark_swap_spread",
+    "tableJLongTermManualTableIdentity": "Table J"
+  },
+  "exclusions": [
+    "Tables B, C, D, E1, and E2, which remain unavailable and are not reconstructed",
+    "Any VM-20 prose or companion-guidance source outside its separate promotion decision",
+    "Any non-VM-20 structured table family",
+    "Learner-facing, application, RAG, and Copilot export approval"
+  ],
+  "downstreamEligibility": {
+    "learnerFacingAllowed": false,
+    "appReadyAllowed": false,
+    "ragReadyAllowed": false,
+    "copilotExportEligible": false,
+    "reason": "Canonical source promotion and downstream publication/export approval are separate governance decisions."
+  },
+  "reviewerRecord": {
+    "identityRecorded": false,
+    "identity": null,
+    "note": "The supplied final independent-review decision does not provide a reviewer identity; no identity is inferred."
+  },
+  "preservation": {
+    "sourceWorkbookChanged": false,
+    "sourceValueChanged": false,
+    "sourceRowChanged": false,
+    "reviewHistoryPreserved": true,
+    "acceptedValueProjectionSha256": "683c77ce7ddc4b6d8add9e836fe592a2abd02dd7313e2fabac48d3c5ca1f6794",
+    "note": "Promotion changes governance and inventory metadata only. Source values, rows, citations, currentness, effective dates, source-summary roles, and authority boundaries remain unchanged."
+  }
+}

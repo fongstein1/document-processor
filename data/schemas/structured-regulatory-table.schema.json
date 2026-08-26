@@ -24,7 +24,7 @@
     "governance": {
       "type": "object", "additionalProperties": false,
       "required": ["reviewOnly", "promotionStatus", "learnerFacingAllowed", "appReadyAllowed", "ragReadyAllowed", "copilotExportEligible", "separateFromProseCorpus", "note"],
-      "properties": { "reviewOnly": { "const": true }, "promotionStatus": { "const": "not_promoted" }, "learnerFacingAllowed": { "const": false }, "appReadyAllowed": { "const": false }, "ragReadyAllowed": { "const": false }, "copilotExportEligible": { "const": false }, "separateFromProseCorpus": { "const": true }, "note": { "type": "string", "minLength": 1 } }
+      "properties": { "reviewOnly": { "const": false }, "promotionStatus": { "const": "promoted" }, "learnerFacingAllowed": { "const": false }, "appReadyAllowed": { "const": false }, "ragReadyAllowed": { "const": false }, "copilotExportEligible": { "const": false }, "separateFromProseCorpus": { "const": true }, "note": { "type": "string", "minLength": 1 } }
     },
     "manualAuthority": {
       "type": "object", "additionalProperties": false,
@@ -42,7 +42,7 @@
     },
     "tableInventoryItem": {
       "type": "object", "additionalProperties": false, "required": ["tableLabel", "title", "status", "tableId", "reason", "manualPrintedPageRange", "manualPhysicalPageRange"],
-      "properties": { "tableLabel": { "type": "string" }, "title": { "type": "string" }, "status": { "enum": ["ingested_review_only", "unavailable_on_current_official_page"] }, "tableId": { "type": ["string", "null"] }, "reason": { "type": "string" }, "manualPrintedPageRange": { "type": "string" }, "manualPhysicalPageRange": { "type": "string" } }
+      "properties": { "tableLabel": { "type": "string" }, "title": { "type": "string" }, "status": { "enum": ["ingested_canonical_promoted", "unavailable_on_current_official_page"] }, "tableId": { "type": ["string", "null"] }, "reason": { "type": "string" }, "manualPrintedPageRange": { "type": "string" }, "manualPhysicalPageRange": { "type": "string" } }
     },
     "methodologyCitation": {
       "type": "object", "additionalProperties": false, "required": ["manualUrl", "manualSha256", "printedPageRange", "physicalPageRange"],
@@ -74,7 +74,7 @@
     },
     "retrievalUnit": {
       "type": "object", "additionalProperties": false, "required": ["retrievalUnitId", "tableId", "versionId", "rowId", "tableLabel", "tableTitle", "currentness", "asOfDate", "rowRole", "regulatoryValueEligible", "retrievalMode", "dimensionText", "retrievalText", "citation", "reviewOnly"],
-      "properties": { "retrievalUnitId": { "type": "string" }, "tableId": { "type": "string" }, "versionId": { "type": "string" }, "rowId": { "type": "string" }, "tableLabel": { "type": "string" }, "tableTitle": { "type": "string" }, "currentness": { "enum": ["current_as_of_retrieval", "historical_snapshot"] }, "asOfDate": { "type": ["string", "null"], "format": "date" }, "rowRole": { "enum": ["prescribed_dimension_row", "source_summary_statistic"] }, "regulatoryValueEligible": { "type": "boolean" }, "retrievalMode": { "enum": ["normal_regulatory_value", "explicit_source_summary_only"] }, "dimensionText": { "type": "string" }, "retrievalText": { "type": "string" }, "citation": { "$ref": "#/$defs/citation" }, "reviewOnly": { "const": true } }
+      "properties": { "retrievalUnitId": { "type": "string" }, "tableId": { "type": "string" }, "versionId": { "type": "string" }, "rowId": { "type": "string" }, "tableLabel": { "type": "string" }, "tableTitle": { "type": "string" }, "currentness": { "enum": ["current_as_of_retrieval", "historical_snapshot"] }, "asOfDate": { "type": ["string", "null"], "format": "date" }, "rowRole": { "enum": ["prescribed_dimension_row", "source_summary_statistic"] }, "regulatoryValueEligible": { "type": "boolean" }, "retrievalMode": { "enum": ["normal_regulatory_value", "explicit_source_summary_only"] }, "dimensionText": { "type": "string" }, "retrievalText": { "type": "string" }, "citation": { "$ref": "#/$defs/citation" }, "reviewOnly": { "const": false } }
     }
   }
 }

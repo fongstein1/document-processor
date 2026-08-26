@@ -387,7 +387,7 @@ def retrieval_units(tables: list[dict[str, Any]]) -> list[dict[str, Any]]:
                     "dimensionText": dimensions,
                     "retrievalText": f"VM-20 Table {table['tableLabel']} {table['title']}; {dimensions}; row role {row['rowRole']}; as of {table_version['asOfDate'] or 'undated current source'}; units {table['units'] or 'mapping'}.",
                     "citation": table_version["citation"],
-                    "reviewOnly": True,
+                    "reviewOnly": False,
                 })
     return units
 
@@ -405,7 +405,7 @@ def build() -> dict[str, Any]:
         inventory.append({
             "tableLabel": label,
             "title": title,
-            "status": "ingested_review_only" if label in ingested else "unavailable_on_current_official_page",
+            "status": "ingested_canonical_promoted" if label in ingested else "unavailable_on_current_official_page",
             "tableId": f"vm20-table-{label.lower()}" if label in ingested else None,
             "reason": "Parsed from an official workbook linked on the NAIC current-data page." if label in ingested else "The 2026 Valuation Manual describes this table, but the NAIC current-data page did not link a current workbook on the retrieval date; no values were inferred from methodology prose or historical files.",
             "manualPrintedPageRange": printed,
@@ -421,14 +421,14 @@ def build() -> dict[str, Any]:
         "generatedAt": RETRIEVED_AT,
         "generatedBy": "scripts/extract-vm20-appendix2-tables.py",
         "governance": {
-            "reviewOnly": True,
-            "promotionStatus": "not_promoted",
+            "reviewOnly": False,
+            "promotionStatus": "promoted",
             "learnerFacingAllowed": False,
             "appReadyAllowed": False,
             "ragReadyAllowed": False,
             "copilotExportEligible": False,
             "separateFromProseCorpus": True,
-            "note": "Structured table data requires independent human review and a separate promotion decision. Prose promotion does not promote this dataset.",
+            "note": "The independently reviewed available VM-20 Appendix 2 table scope is canonically promoted. Downstream learner, application, RAG, and Copilot eligibility remain separate and false.",
         },
         "manualAuthority": {
             "sourceEditionId": "NAIC-VALUATION-MANUAL-2026",

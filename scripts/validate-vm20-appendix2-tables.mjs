@@ -12,6 +12,7 @@ const reviewMdPath = path.join(repoRoot, 'data', 'processed', 'review_packages',
 const promptPath = path.join(repoRoot, 'data', 'processed', 'review_packages', 'vm20-appendix2-independent-review-prompt.md')
 const regressionPath = path.join(repoRoot, 'data', 'processed', 'review_packages', 'vm20-appendix2-promotion-blocker-regression.json')
 const regressionMdPath = path.join(repoRoot, 'data', 'processed', 'review_packages', 'vm20-appendix2-promotion-blocker-regression.md')
+const promotionDecisionPath = path.join(repoRoot, 'data', 'manual-input', 'promotion-decisions', 'vm20-appendix2-structured-table-promotion.json')
 const schemaPath = path.join(repoRoot, 'data', 'schemas', 'structured-regulatory-table.schema.json')
 
 const readJson = async (filePath) => JSON.parse(await fs.readFile(filePath, 'utf8'))
@@ -19,10 +20,10 @@ const assert = (condition, message) => { if (!condition) throw new Error(message
 const unique = (values, label) => assert(new Set(values).size === values.length, `Duplicate ${label}.`)
 
 const main = async () => {
-  for (const requiredPath of [datasetPath, evaluationPath, sourceQaPath, reviewJsonPath, reviewMdPath, promptPath, regressionPath, regressionMdPath, schemaPath]) await fs.access(requiredPath)
-  const [dataset, evaluation, sourceQa, reviewPackage, regression] = await Promise.all([readJson(datasetPath), readJson(evaluationPath), readJson(sourceQaPath), readJson(reviewJsonPath), readJson(regressionPath)])
+  for (const requiredPath of [datasetPath, evaluationPath, sourceQaPath, reviewJsonPath, reviewMdPath, promptPath, regressionPath, regressionMdPath, promotionDecisionPath, schemaPath]) await fs.access(requiredPath)
+  const [dataset, evaluation, sourceQa, reviewPackage, regression, promotionDecision] = await Promise.all([readJson(datasetPath), readJson(evaluationPath), readJson(sourceQaPath), readJson(reviewJsonPath), readJson(regressionPath), readJson(promotionDecisionPath)])
   assert(dataset.schemaVersion === '1.1', 'Unexpected structured-table schema version.')
-  assert(dataset.governance.reviewOnly === true && dataset.governance.promotionStatus === 'not_promoted' && dataset.governance.learnerFacingAllowed === false && dataset.governance.appReadyAllowed === false && dataset.governance.ragReadyAllowed === false && dataset.governance.copilotExportEligible === false && dataset.governance.separateFromProseCorpus === true, 'Structured-table governance boundary failed.')
+  assert(dataset.governance.reviewOnly === false && dataset.governance.promotionStatus === 'promoted' && dataset.governance.learnerFacingAllowed === false && dataset.governance.appReadyAllowed === false && dataset.governance.ragReadyAllowed === false && dataset.governance.copilotExportEligible === false && dataset.governance.separateFromProseCorpus === true, 'Structured-table promotion or downstream governance boundary failed.')
   assert(dataset.manualAuthority.sha256 === '496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9', 'Manual authority hash mismatch.')
   assert(dataset.sourceArtifacts.length === 5, 'Expected five official workbook artifacts.')
   unique(dataset.sourceArtifacts.map((item) => item.sourceArtifactId), 'source artifact IDs')
@@ -115,7 +116,7 @@ const main = async () => {
   assert(dataset.retrievalUnits.every((unit) => {
     const semantics = rowSemantics.get(unit.rowId)
     const expectedMode = semantics?.regulatoryValueEligible ? 'normal_regulatory_value' : 'explicit_source_summary_only'
-    return tableIds.has(unit.tableId) && versionIds.includes(unit.versionId) && semantics && unit.rowRole === semantics.rowRole && unit.regulatoryValueEligible === semantics.regulatoryValueEligible && unit.retrievalMode === expectedMode && unit.reviewOnly === true && unit.citation?.sourceArtifactId
+    return tableIds.has(unit.tableId) && versionIds.includes(unit.versionId) && semantics && unit.rowRole === semantics.rowRole && unit.regulatoryValueEligible === semantics.regulatoryValueEligible && unit.retrievalMode === expectedMode && unit.reviewOnly === false && unit.citation?.sourceArtifactId
   }), 'Retrieval unit does not preserve row semantics or resolve to table evidence.')
 
   const tableA = dataset.tables.find((item) => item.tableLabel === 'A')
@@ -139,11 +140,12 @@ const main = async () => {
   assert(evaluation.results.some((item) => item.queryId === 'table-j-long-term-short-tenor' && item.manualTableIdentity === 'Table J' && item.regulatoryMeasureId === 'long_term_benchmark_swap_spread'), 'Table J long-term retrieval authority regression missing.')
   assert(evaluation.results.some((item) => item.queryId === 'table-j-january-long-term-note-exclusion' && !item.applicableNoteIds.includes('short-tenor-current-sofr-source')) && evaluation.results.some((item) => item.queryId === 'table-j-january-unrelated-maturity-note-exclusion' && !item.applicableNoteIds.includes('short-tenor-current-sofr-source')) && evaluation.results.some((item) => item.queryId === 'table-j-later-version-note-exclusion' && item.applicableNoteIds.length === 0), 'Table J short-tenor note scope regressions missing.')
   assert(regression.status === 'passed' && regression.focusedQueryCount === 18 && regression.sourceFidelity?.sourceValueChangeCount === 0 && regression.sourceFidelity?.sourceArtifactHashChangeCount === 0 && regression.governance?.productionAnswerEligibleCount === 0, 'Focused promotion-blocker regression report failed.')
-  assert(reviewPackage.status === 'review_only' && reviewPackage.promoted === false && reviewPackage.humanReview?.required === true && reviewPackage.humanReview?.promotionDecisionIncluded === false, 'Review package promotion guardrail failed.')
-  assert(reviewPackage.independentReviewHistory?.some((item) => item.decision === 'APPROVE WITH FIXES') && reviewPackage.correctionsApplied?.length === 2 && reviewPackage.correctionsApplied.every((item) => item.status === 'closed') && reviewPackage.promotionReadiness?.remainingBlockerCount === 0 && reviewPackage.promotionReadiness?.readyForNarrowFinalReview === true && reviewPackage.promotionReadiness?.promotionDecisionIncluded === false, 'Review package does not close the two blockers while retaining the promotion gate.')
+  assert(reviewPackage.status === 'canonical_promoted' && reviewPackage.promoted === true && reviewPackage.learnerFacing === false && reviewPackage.appReady === false && reviewPackage.ragReady === false && reviewPackage.copilotExportEligible === false && reviewPackage.humanReview?.required === false && reviewPackage.humanReview?.promotionDecisionIncluded === true, 'Review package promotion or downstream guardrail failed.')
+  assert(reviewPackage.independentReviewHistory?.some((item) => item.decision === 'APPROVE WITH FIXES') && reviewPackage.independentReviewHistory?.some((item) => item.decision === 'APPROVE FOR CANONICAL PROMOTION') && reviewPackage.correctionsApplied?.length === 2 && reviewPackage.correctionsApplied.every((item) => item.status === 'closed') && reviewPackage.promotionReadiness?.remainingBlockerCount === 0 && reviewPackage.promotionReadiness?.approvedForCanonicalPromotion === true && reviewPackage.promotionReadiness?.promotionDecisionIncluded === true, 'Review package does not preserve review history and the final promotion decision.')
+  assert(promotionDecision.decision === 'approved_for_canonical_promotion' && promotionDecision.scope?.expectedLogicalTableCount === 7 && promotionDecision.scope?.expectedVersionCount === 29 && promotionDecision.scope?.expectedRowCount === 891 && promotionDecision.scope?.expectedValueCount === 7022 && promotionDecision.reviewEvidence?.finalDisposition === 'APPROVE FOR CANONICAL PROMOTION' && promotionDecision.downstreamEligibility?.copilotExportEligible === false && promotionDecision.preservation?.acceptedValueProjectionSha256 === regression.sourceFidelity?.acceptedValueProjectionSha256, 'Structured-table promotion decision is incomplete or inconsistent.')
   const markdown = await fs.readFile(reviewMdPath, 'utf8')
   const prompt = await fs.readFile(promptPath, 'utf8')
-  assert(markdown.includes('Remaining blockers from the independent review: 0') && markdown.includes('narrow final review pending') && prompt.includes('APPROVE WITH FIXES') && prompt.includes('Do not repeat the full 7,022-cell audit') && prompt.includes('Do not promote it during this review'), 'Narrow final review handoff is incomplete.')
+  assert(markdown.includes('Status: canonical promoted') && markdown.includes('APPROVE FOR CANONICAL PROMOTION') && markdown.includes('Canonical promotion does not authorize') && prompt.includes('APPROVE WITH FIXES') && prompt.includes('Do not repeat the full 7,022-cell audit') && prompt.includes('Do not promote it during this review'), 'Promotion record or preserved review history is incomplete.')
   console.log(`Validated ${dataset.tables.length} logical tables, ${versionCount} versions, ${rowCount} rows, ${valueCount} values, and ${evaluation.queryCount} retrieval cases.`)
 }
 

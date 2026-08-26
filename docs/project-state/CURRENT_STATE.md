@@ -843,13 +843,14 @@ Appendix 2 structured-table proof of concept.
 
 ## VM-20 Appendix 2 structured-table proof of concept
 
-The review-only table layer now represents official current-page workbooks for
+The canonically promoted table layer represents official current-page workbooks for
 Tables A, F, G, H, I, J, and K as 29 versions, 891 row retrieval units, and
 7,022 exact source-cell values. Tables B, C, D, E1, and E2 remain explicit
 availability gaps. Every ingested value retains workbook, sheet, cell, raw
-value, displayed precision, and methodology citations. The dataset is not
-promoted and has zero learner/app/RAG/Copilot production eligibility pending
-independent review and a separate promotion decision.
+value, displayed precision, and methodology citations. The final independent
+review approved this available-table scope for canonical promotion. Learner,
+app, RAG, and Copilot production eligibility remain false under the separate
+downstream approval boundary.
 
 The first independent review returned `APPROVE WITH FIXES` after confirming
 all five source hashes and all 7,022 source-cell values. Its two narrow
@@ -857,5 +858,5 @@ blockers are now closed: 27 workbook Average rows are explicitly ineligible
 source summary statistics, and Table J distinguishes Manual table identity
 from official-workbook association for its current and long-term columns.
 Focused retrieval, note-scope, and Table A effective-date regressions pass.
-The corrected dataset remains review-only and not promoted pending a narrow
-final promotion-gate review.
+The final decision is recorded separately from the earlier review artifacts at
+`data/manual-input/promotion-decisions/vm20-appendix2-structured-table-promotion.json`.

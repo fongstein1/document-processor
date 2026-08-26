@@ -1,12 +1,13 @@
 {
   "schemaVersion": "1.1",
   "reviewPackageId": "vm20-appendix2-structured-table-review-package-2026-08-26",
-  "status": "review_only",
-  "promoted": false,
+  "status": "canonical_promoted",
+  "promoted": true,
   "learnerFacing": false,
   "appReady": false,
   "ragReady": false,
   "copilotExportEligible": false,
+  "promotionDecisionPath": "data/manual-input/promotion-decisions/vm20-appendix2-structured-table-promotion.json",
   "datasetPath": "data/processed/structured_tables/vm20-appendix2-tables.json",
   "schemaPath": "data/schemas/structured-regulatory-table.schema.json",
   "sourceQaPath": "data/processed/review_packages/vm20-appendix2-structured-table-source-qa.json",
@@ -16,7 +17,7 @@
   "independentReviewPromptPath": "data/processed/review_packages/vm20-appendix2-independent-review-prompt.md",
   "scope": {
     "included": "Official workbooks currently linked by the NAIC for VM-20 Tables A, F, G, H, I, J, and K, including all dated sheets carried by those workbooks.",
-    "excluded": "Tables B, C, D, E1, and E2 values; other VM tables; prose redesign; embeddings; databases; Copilot implementation; and any table promotion.",
+    "excluded": "Tables B, C, D, E1, and E2 values; other VM tables; prose redesign; embeddings; databases; Copilot implementation; and downstream publication/export approval.",
     "authorityBoundary": "The Manual supplies methodology and Manual table identity; official workbooks supply published values, source column labels, and workbook associations. These authority layers remain distinct, including the current versus long-term columns in the official Table J workbook."
   },
   "summary": {
@@ -229,6 +230,11 @@
       "decision": "APPROVE WITH FIXES",
       "reviewScope": "Full source identity, 7,022-cell fidelity, version, retrieval, and governance review",
       "acceptedFindings": "Five workbook hashes matched; 7,022 / 7,022 values matched; two narrow semantic blockers identified."
+    },
+    {
+      "decision": "APPROVE FOR CANONICAL PROMOTION",
+      "reviewScope": "Narrow final gate after the two semantic corrections",
+      "acceptedFindings": "All prior fidelity findings remain valid; Average-row, Table J authority, note-scope, availability, and retrieval regressions passed with no further correction required."
     }
   ],
   "correctionsApplied": [
@@ -246,9 +252,9 @@
   "promotionReadiness": {
     "blockersClosed": true,
     "remainingBlockerCount": 0,
-    "readyForNarrowFinalReview": true,
-    "narrowFinalReviewRequired": true,
-    "promotionDecisionIncluded": false
+    "finalIndependentReviewComplete": true,
+    "approvedForCanonicalPromotion": true,
+    "promotionDecisionIncluded": true
   },
   "fidelity": {
     "sourceQaStatus": "passed",
@@ -262,7 +268,7 @@
     "status": "passed",
     "queryCount": 31,
     "passedQueryCount": 31,
-    "supportedReviewOnlyCount": 21,
+    "supportedCanonicalCount": 21,
     "unsupportedCount": 8,
     "ambiguousCount": 2,
     "productionAnswerEligibleCount": 0,
@@ -290,21 +296,15 @@
     "Tables B, C, D, E1, and E2 are described in the Manual but were not available as current workbooks on the official page and are not reconstructed."
   ],
   "humanReview": {
-    "required": true,
+    "required": false,
     "decisionOptions": [
       "APPROVE",
       "APPROVE WITH FIXES",
       "REPROCESS",
       "REJECT"
     ],
-    "provisionalDisposition": "APPROVE WITH FIXES - CORRECTIONS APPLIED; NARROW FINAL REVIEW PENDING",
-    "promotionDecisionIncluded": false,
-    "requiredChecks": [
-      "Average-row semantics",
-      "Table J Manual/workbook authority",
-      "focused retrieval regressions",
-      "value/hash preservation",
-      "promotion readiness"
-    ]
+    "finalDisposition": "APPROVE FOR CANONICAL PROMOTION",
+    "promotionDecisionIncluded": true,
+    "reReviewTrigger": "A source workbook hash, source value, row semantic, Table J authority boundary, source-note scope, or currentness/effective-date change."
   }
 }

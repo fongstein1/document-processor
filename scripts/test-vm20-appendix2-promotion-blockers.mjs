@@ -72,7 +72,7 @@ const main = async () => {
   assert(projection.count === 7022 && projection.sha256 === acceptedValueProjectionSha256, 'One or more source-bound value records changed from the accepted independent-review baseline.')
   assert(dataset.sourceArtifacts.every((artifact) => acceptedSourceHashes[artifact.sourceArtifactId] === artifact.sha256), 'A source workbook hash changed from the accepted independent-review baseline.')
   assert(sourceQa.status === 'passed' && sourceQa.valueCellsChecked === 7022 && sourceQa.formulaValueCellCount === 0, 'Deterministic source-cell QA is not fully passing.')
-  assert(dataset.governance.reviewOnly && dataset.governance.promotionStatus === 'not_promoted' && evaluation.productionAnswerEligibleCount === 0, 'Promotion guardrail changed during blocker correction.')
+  assert(dataset.governance.reviewOnly === false && dataset.governance.promotionStatus === 'promoted' && dataset.governance.learnerFacingAllowed === false && dataset.governance.appReadyAllowed === false && dataset.governance.ragReadyAllowed === false && dataset.governance.copilotExportEligible === false && evaluation.productionAnswerEligibleCount === 0, 'Canonical promotion or downstream eligibility boundary is incorrect.')
 
   const report = {
     schemaVersion: '1.0',
@@ -99,7 +99,7 @@ const main = async () => {
     '## Focused cases', '', '| Query ID | Result | Reason |', '| --- | --- | --- |',
     ...selectedResults.map((result) => `| \`${result.queryId}\` | ${result.supportState} | \`${result.reasonCode}\` |`), '',
     '## Gate conclusion', '',
-    'Average rows are source-summary-only, Table J authority and January-note scope are explicit, Table A is blocked before its effective date, all source-value fingerprints and workbook hashes match the accepted baseline, and the dataset remains review-only and not promoted.', '',
+    'Average rows are source-summary-only, Table J authority and January-note scope are explicit, Table A is blocked before its effective date, all source-value fingerprints and workbook hashes match the accepted baseline, and canonical promotion remains separate from downstream production eligibility.', '',
   ]
   await fs.writeFile(reportMarkdownPath, lines.join('\n'), 'utf8')
   console.log(`Passed ${selectedResults.length} focused VM-20 Appendix 2 promotion-blocker regressions.`)

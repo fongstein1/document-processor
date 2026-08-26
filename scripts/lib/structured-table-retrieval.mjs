@@ -24,7 +24,7 @@ const baseResult = (dataset, request) => ({
   queryText: request.queryText,
   intent: request.intent,
   datasetPromotionStatus: dataset.governance.promotionStatus,
-  productionAnswerEligible: dataset.governance.promotionStatus === 'promoted',
+  productionAnswerEligible: dataset.governance.promotionStatus === 'promoted' && dataset.governance.ragReadyAllowed === true,
   supportState: 'unsupported',
   reasonCode: 'unresolved_request',
   evidenceClass: null,
@@ -50,6 +50,8 @@ const authorityFields = (column) => ({
   manualTableIdentity: column?.manualTableIdentity ?? null,
   authorityDisclosure: column?.authorityDisclosure ?? null,
 })
+
+const supportedState = (dataset) => dataset.governance.promotionStatus === 'promoted' ? 'supported_canonical' : 'supported_review_only'
 
 const noteAppliesToCell = (note, versionId, row, columnId) => {
   const appliesTo = note.appliesTo
@@ -87,15 +89,15 @@ export const resolveStructuredTableRequest = (dataset, request) => {
   result.tableId = table.tableId
 
   if (request.intent === 'methodology') {
-    return { ...result, supportState: 'supported_review_only', reasonCode: 'methodology_routed_to_manual_prose', evidenceClass: 'methodology_prose', citation: table.methodologyCitation }
+    return { ...result, supportState: supportedState(dataset), reasonCode: 'methodology_routed_to_manual_prose', evidenceClass: 'methodology_prose', citation: table.methodologyCitation }
   }
   if (request.intent === 'footnote') {
     const note = table.notes.find((item) => !request.noteId || item.noteId === request.noteId)
     if (!note) return { ...result, reasonCode: 'footnote_not_found' }
-    return { ...result, supportState: 'supported_review_only', reasonCode: 'table_note_found', evidenceClass: 'structured_table_note', noteId: note.noteId, note, citation: table.methodologyCitation }
+    return { ...result, supportState: supportedState(dataset), reasonCode: 'table_note_found', evidenceClass: 'structured_table_note', noteId: note.noteId, note, citation: table.methodologyCitation }
   }
   if (request.intent === 'applicability') {
-    return { ...result, supportState: 'supported_review_only', reasonCode: 'table_identity_matched', evidenceClass: 'structured_table_identity', tableId: table.tableId, tableTitle: table.title, citation: table.methodologyCitation }
+    return { ...result, supportState: supportedState(dataset), reasonCode: 'table_identity_matched', evidenceClass: 'structured_table_identity', tableId: table.tableId, tableTitle: table.title, citation: table.methodologyCitation }
   }
 
   const selection = selectVersion(table, request.asOfDate ?? 'current')
@@ -105,19 +107,19 @@ export const resolveStructuredTableRequest = (dataset, request) => {
   result.citation = tableVersion.citation
 
   if (request.intent === 'table_identity') {
-    return { ...result, supportState: 'supported_review_only', reasonCode: 'table_version_found', evidenceClass: 'structured_table_identity', asOfDate: tableVersion.asOfDate, effectiveDate: tableVersion.effectiveDate, currentness: tableVersion.currentness }
+    return { ...result, supportState: supportedState(dataset), reasonCode: 'table_version_found', evidenceClass: 'structured_table_identity', asOfDate: tableVersion.asOfDate, effectiveDate: tableVersion.effectiveDate, currentness: tableVersion.currentness }
   }
   if (request.intent === 'column_interpretation') {
     const column = table.columnDefinitions.find((item) => item.columnId === request.columnId)
     if (!column) return { ...result, reasonCode: 'column_not_found' }
-    return { ...result, supportState: 'supported_review_only', reasonCode: 'column_definition_found', evidenceClass: 'structured_table_column', columnId: column.columnId, columnLabel: column.label, ...authorityFields(column) }
+    return { ...result, supportState: supportedState(dataset), reasonCode: 'column_definition_found', evidenceClass: 'structured_table_column', columnId: column.columnId, columnLabel: column.label, ...authorityFields(column) }
   }
   if (request.intent === 'mapping_lookup') {
     if (!request.columnId || request.lookupValue === undefined) return { ...result, supportState: 'ambiguous', reasonCode: 'mapping_filter_missing' }
     const matches = tableVersion.rows.filter((row) => row.regulatoryValueEligible && row.values.some((value) => value.columnId === request.columnId && String(value.displayValue).toLowerCase() === String(request.lookupValue).toLowerCase()))
     if (matches.length !== 1) return { ...result, supportState: matches.length > 1 ? 'ambiguous' : 'unsupported', reasonCode: matches.length > 1 ? 'mapping_not_unique' : 'mapping_value_not_found' }
     const row = matches[0]
-    return { ...result, supportState: 'supported_review_only', reasonCode: 'mapping_row_found', evidenceClass: 'structured_table_row', rowId: row.rowId, rowRole: row.rowRole, regulatoryValueEligible: row.regulatoryValueEligible, mappedDimensions: row.dimensions }
+    return { ...result, supportState: supportedState(dataset), reasonCode: 'mapping_row_found', evidenceClass: 'structured_table_row', rowId: row.rowId, rowRole: row.rowRole, regulatoryValueEligible: row.regulatoryValueEligible, mappedDimensions: row.dimensions }
   }
   if (!['row_value', 'source_summary'].includes(request.intent)) return { ...result, reasonCode: 'unsupported_intent' }
 
@@ -158,7 +160,7 @@ export const resolveStructuredTableRequest = (dataset, request) => {
   const sourceSummary = request.intent === 'source_summary'
   return {
     ...result,
-    supportState: 'supported_review_only',
+    supportState: supportedState(dataset),
     reasonCode: sourceSummary ? 'source_summary_statistic_found' : value.valueType === 'null' ? 'explicit_source_null' : 'exact_structured_value_found',
     evidenceClass: sourceSummary ? 'structured_table_source_summary' : 'structured_table_cell',
     displayValue: value.displayValue,

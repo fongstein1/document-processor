@@ -22,7 +22,9 @@
     "structuredTableVersions": 29,
     "structuredTableRows": 891,
     "structuredTableValues": 7022,
-    "structuredTablePromotionStatus": "not_promoted",
+    "structuredTablePromotionStatus": "promoted",
+    "promotedStructuredTableLogicalTables": 7,
+    "structuredTablePromotionDecisionPath": "data/manual-input/promotion-decisions/vm20-appendix2-structured-table-promotion.json",
     "sourcesAwaitingCanonicalization": 96,
     "sourcesAwaitingHumanReview": 1,
     "reviewArtifactOnlySources": 34,
@@ -6644,8 +6646,8 @@
       "sourceFamily": "valuation_manual_pdfs",
       "priority": "P0",
       "intendedStatus": "current",
-      "assessment": "canonical_promoted_prose",
-      "reason": "VM-20 has 149 canonically promoted current-manual prose chunks plus 175 separately labeled review-only companion-guidance chunks. Structured current Appendix 2 tables remain a separate review milestone.",
+      "assessment": "canonical_promoted_prose_and_tables",
+      "reason": "VM-20 has 149 canonically promoted current-manual prose chunks and a separately promoted structured Appendix 2 scope for available Tables A, F, G, H, I, J, and K. The 175 companion-guidance chunks remain review-only.",
       "evidenceSourceIds": [
         "supporting-vm01-definitions",
         "supporting-vm02-nonforfeiture",
@@ -6735,7 +6737,7 @@
         "vm31-reporting-crossref",
         "vm31-reporting-definition"
       ],
-      "nextAction": "Build and independently review the structured Appendix 2 table proof of concept without altering the promoted prose corpus."
+      "nextAction": "Retain the approved prose/table scopes and track unavailable Tables B, C, D, E1, and E2 without inference."
     },
     {
       "targetId": "vm-21",
@@ -7053,8 +7055,8 @@
       "sourceFamily": "valuation_manual_pdfs",
       "priority": "P0",
       "intendedStatus": "current",
-      "assessment": "review_candidate_partial_vm20_appendix2",
-      "reason": "A review-only VM-20 Appendix 2 proof of concept now covers official current Tables A, F, G, H, I, J, and K with workbook/sheet/cell citations; Tables B-E2 and all non-VM-20 tables remain gaps.",
+      "assessment": "canonical_promoted_partial_vm20_appendix2",
+      "reason": "The independently reviewed VM-20 Appendix 2 scope for official Tables A, F, G, H, I, J, and K is canonically promoted with workbook/sheet/cell citations; Tables B-E2 and all non-VM-20 tables remain gaps.",
       "evidenceSourceIds": [
         "vm20-table-a",
         "vm20-table-f",
@@ -7064,7 +7066,7 @@
         "vm20-table-j",
         "vm20-table-k"
       ],
-      "nextAction": "Complete independent review of the Appendix 2 proof of concept, then record a separate table promotion decision or fixes; continue other table families separately."
+      "nextAction": "Retain the promoted VM-20 scope and continue other table families separately without reconstructing unavailable values."
     },
     {
       "targetId": "vm-02",

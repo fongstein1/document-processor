@@ -1,13 +1,13 @@
 # Regulatory Canonicalization Backlog
 
-The VM-20 current-manual prose scope is promoted. All other items remain review-only until independent human review and explicit promotion. The sequence favors current tables and other incomplete core packages before supporting sources.
+The VM-20 current-manual prose scope and reviewed available Appendix 2 structured-table scope are promoted under separate decisions. All other items remain review-only until independent human review and explicit promotion. The sequence favors incomplete core packages before supporting sources.
 
 | Order | Priority | Target | Current state | Safe next step |
 | ---: | --- | --- | --- | --- |
-| 1 | P0 | Current prescribed valuation, mortality, spread, and default tables | review_candidate_partial_vm20_appendix2 | Complete independent review of the Appendix 2 proof of concept, then record a separate table promotion decision or fixes; continue other table families separately. |
+| 1 | P0 | Current prescribed valuation, mortality, spread, and default tables | canonical_promoted_partial_vm20_appendix2 | Retain the promoted VM-20 scope and continue other table families separately without reconstructing unavailable values. |
 | 2 | P0 | Complete current 2026 Valuation Manual representation | canonical_partial | Canonicalize the complete manual by chapter with source-bound hierarchy and a separate table profile. |
 | 3 | P0 | VM-01 Definitions | reviewed_not_canonical | Canonicalize definitions first because downstream VM answers depend on stable terms. |
-| 4 | P0 | VM-20 Requirements for Principle-Based Reserves for Life Products | canonical_promoted_prose | Build and independently review the structured Appendix 2 table proof of concept without altering the promoted prose corpus. |
+| 4 | P0 | VM-20 Requirements for Principle-Based Reserves for Life Products | canonical_promoted_prose_and_tables | Retain the approved prose/table scopes and track unavailable Tables B, C, D, E1, and E2 without inference. |
 | 5 | P0 | VM-21 Requirements for Principle-Based Reserves for Variable Annuities | canonical_partial | Canonicalize the reviewed VM-21 wave with parent-child structure and table separation. |
 | 6 | P0 | VM-22 Requirements for Principle-Based Reserves for Non-Variable Annuities | reviewed_not_canonical | Canonicalize reviewed VM-22 sections after table and hedging boundaries are confirmed. |
 | 7 | P0 | VM-30 Actuarial Opinion and Memorandum Requirements | reviewed_not_canonical | Canonicalize the reporting requirements and preserve cross-references to VM-31. |

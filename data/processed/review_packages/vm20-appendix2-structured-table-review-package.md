@@ -1,8 +1,8 @@
 # VM-20 Appendix 2 Structured Table Review Package
 
-- Status: review-only
-- Promoted: no
-- Independent review: APPROVE WITH FIXES; corrections applied; narrow final review pending
+- Status: canonical promoted
+- Promoted: yes
+- Independent review: APPROVE FOR CANONICAL PROMOTION
 - Learner/app/RAG/Copilot eligible: no
 
 ## Promotion blocker corrections
@@ -11,14 +11,15 @@
 - **Closed - table-j-manual-workbook-authority-boundary:** Table J columns now carry separate regulatory measure, official workbook association, Manual table identity, and authority disclosure metadata.
 
 - Remaining blockers from the independent review: 0
-- Ready for narrow final review: yes
-- Promotion decision included: no
+- Final independent review complete: yes
+- Promotion decision included: yes
+- Promotion record: `data/manual-input/promotion-decisions/vm20-appendix2-structured-table-promotion.json`
 
 ## Scope
 
 Official workbooks currently linked by the NAIC for VM-20 Tables A, F, G, H, I, J, and K, including all dated sheets carried by those workbooks.
 
-Excluded: Tables B, C, D, E1, and E2 values; other VM tables; prose redesign; embeddings; databases; Copilot implementation; and any table promotion.
+Excluded: Tables B, C, D, E1, and E2 values; other VM tables; prose redesign; embeddings; databases; Copilot implementation; and downstream publication/export approval.
 
 ## Dataset counts
 
@@ -60,7 +61,7 @@ Excluded: Tables B, C, D, E1, and E2 values; other VM tables; prose redesign; em
 
 - Status: passed
 - Cases passed: 31/31
-- Supported review-only / unsupported / ambiguous: 21 / 8 / 2
+- Supported canonical / unsupported / ambiguous: 21 / 8 / 2
 - Production-answer eligible: 0
 - Focused regression: `data/processed/review_packages/vm20-appendix2-promotion-blocker-regression.md`
 
@@ -72,8 +73,8 @@ Excluded: Tables B, C, D, E1, and E2 values; other VM tables; prose redesign; em
 - Dedicated legal-disclaimer sheets do not expose disclaimer text as ordinary cells; preservation is by source workbook, hash, and sheet locator.
 - Tables B, C, D, E1, and E2 are described in the Manual but were not available as current workbooks on the official page and are not reconstructed.
 
-## Narrow final review
+## Promotion record
 
-Use `data/processed/review_packages/vm20-appendix2-independent-review-prompt.md`. The prior full audit is accepted; repeat the 7,022-cell comparison only if a source hash or recorded value changed.
+The final independent review approved this scope for canonical promotion. The decision is recorded at `data/manual-input/promotion-decisions/vm20-appendix2-structured-table-promotion.json`. The prior narrow-gate prompt remains at `data/processed/review_packages/vm20-appendix2-independent-review-prompt.md` as review history.
 
-The narrow review does not itself promote the dataset. Promotion remains a separate recorded decision.
+Canonical promotion does not authorize learner-facing, application, RAG, or Copilot use.

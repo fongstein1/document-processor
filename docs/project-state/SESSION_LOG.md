@@ -867,3 +867,7 @@
   Table A effective-date regressions. The expanded retrieval evaluation passes
   31/31 cases and the narrow blocker suite passes 18/18 while all 7,022 value
   records and five source hashes remain unchanged.
+- Recorded the final `APPROVE FOR CANONICAL PROMOTION` decision for the reviewed
+  available VM-20 Appendix 2 structured-table scope. Updated table governance,
+  retrieval support state, review history, corpus inventory, backlog, and
+  completeness reporting while retaining zero downstream production eligibility.
