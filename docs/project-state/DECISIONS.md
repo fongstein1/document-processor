@@ -1,5 +1,19 @@
 # Decisions
 
+## VM-20 remaining prose and appendix coverage
+
+Use the authoritative current-manual PDF directly for the remaining prose
+wave. Preserve Section 4, Section 5, Section 9, Appendix 1, and Appendix 2 as
+source-bound hierarchical parents and semantic children, with exact extracted
+text separate from summaries and review commentary. Keep the new extraction
+outputs in ignored working storage and keep only the portable configuration,
+builder logic, and generated review-only source-index artifacts tracked.
+
+Appendix 2 prose and the basis for Tables A-K are canonicalized for review,
+but current table rows and version metadata remain a separate structured-table
+milestone. The new material remains unpromoted pending independent actuarial
+review; deterministic validation does not establish legal effect.
+
 ## VM-20 canonical coverage wave
 
 Keep the current-manual VM-20 expansion source-bound and hierarchical. The

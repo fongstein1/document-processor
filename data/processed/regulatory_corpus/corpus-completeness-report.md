@@ -7,8 +7,8 @@ As of 2026-08-25T00:00:00.000Z, the repository contains a substantial review-onl
 - Source documents inventoried: **105**
 - Documents with declared external raw source: **71**
 - Documents reviewed / review artifacts matched: **97 review indexes**
-- Canonical source packages: **20**
-- Canonical chunks: **282**
+- Canonical source packages: **21**
+- Canonical chunks: **359**
 - Sources awaiting canonicalization: **96**
 - Sources awaiting human review: **1**
 - Review-artifact-only sources: **34**
@@ -17,10 +17,10 @@ As of 2026-08-25T00:00:00.000Z, the repository contains a substantial review-onl
 
 ## VM-20 coverage checkpoint
 
-- Current-manual VM-20 coverage: 72 chunks across the existing framework/Section 3.C packages and the expanded reviewed batches 004, 005, and 007-012.
+- Current-manual VM-20 coverage: 149 exact-text chunks across the existing framework, Section 3.C, and the new Sections 4, 5, 9 and Appendix 1-2 prose packages.
 - VM-20 companion coverage: 175 exact-text chunks from the reviewed 2020 practice-note wave, separately labeled non-binding and historical.
 - Dedicated review package: `data/processed/review_packages/vm20-canonical-coverage-review-package.json` and `.md`.
-- Remaining VM-20 gaps: complete authoritative Sections 4, 5, and 9; Appendices 1-2; and structured current prescribed tables.
+- Remaining VM-20 gap: structured current Appendix 2 asset-default, asset-spread, and swap-spread tables with version metadata; this remains a separate milestone.
 
 ## Interpretation
 

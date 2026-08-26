@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "repositoryManifestId": "source-index-poc-2026-07-21",
-  "sourceCount": 20,
+  "sourceCount": 21,
   "classifications": [
     {
       "repositoryManifestId": "source-index-poc-2026-07-21",
@@ -223,6 +223,39 @@
           "The current manual source is only available in reviewed slices; independent review is required before promotion."
         ],
         "notes": "Current manual evidence only; summaries and review commentary remain distinct from source text."
+      },
+      "reviewIndexPath": "docs/review/vm20_review_index.md",
+      "selfReviewPath": "docs/review/vm20_self_review.md"
+    },
+    {
+      "repositoryManifestId": "source-index-poc-2026-07-21",
+      "sourceIndexId": "source-index-vm20-remaining-prose-appendix-coverage",
+      "sourceId": "vm20-remaining-prose-appendix-coverage",
+      "sourceTitle": "VM-20 Remaining Prose and Appendix Coverage",
+      "sourceFamilyId": "valuation_manual_pdfs",
+      "domainId": "naic_regulatory",
+      "documentType": "valuation_manual_section",
+      "classification": {
+        "domainId": "naic_regulatory",
+        "subdomainId": null,
+        "documentType": "valuation_manual_section",
+        "purpose": "Hierarchical source-bound canonical coverage of the remaining current VM-20 prose and appendix sections.",
+        "intendedAudience": "Valuation, regulatory, and governance reviewers",
+        "authoritySourceType": "regulatory",
+        "confidentiality": "internal",
+        "publicationDate": null,
+        "effectiveDate": null,
+        "version": null,
+        "approvalStatus": "review_only",
+        "language": "en",
+        "recommendedProfile": "regulatory",
+        "recommendedChunkingStrategy": "hierarchical_structure",
+        "confidence": "high",
+        "unresolvedQuestions": [
+          "Independent actuarial review is required before any promotion.",
+          "Appendix 2 table rows and version metadata remain outside this prose milestone."
+        ],
+        "notes": "Current manual source evidence only; generated summaries and review commentary remain distinct from source text."
       },
       "reviewIndexPath": "docs/review/vm20_review_index.md",
       "selfReviewPath": "docs/review/vm20_self_review.md"

@@ -5,8 +5,8 @@
 - Canonical layer: source-index
 - Model version: 1.0
 - Generated at: 2026-07-22T22:52:46.811Z
-- Source package count: 20
-- Chunk count: 282
+- Source package count: 21
+- Chunk count: 359
 
 ## Export files
 
@@ -28,6 +28,7 @@
 | Valuation Manual | pp. 47-47 | `data/processed/source_indexes/sources/vm20-framework-boundary.json` | review-only |
 | VM-20 Section 3.C Assumptions | pp. 58-65 | `data/processed/source_indexes/sources/vm20-assumptions-section-3c.json` | review-only |
 | VM-20 Current Manual Canonical Coverage (Reviewed Wave) | pp. 48-95 | `data/processed/source_indexes/sources/vm20-canonical-coverage.json` | review-only |
+| VM-20 Remaining Prose and Appendix Coverage | pp. 66-140 | `data/processed/source_indexes/sources/vm20-remaining-prose-appendix-coverage.json` | review-only |
 | VM-20 Practice Note Companion Coverage | pp. 1-115 | `data/processed/source_indexes/sources/vm20-practice-note-companion.json` | review-only |
 | VM-21 Stochastic Reserve Projection Entry | pp. 153-159 | `data/processed/source_indexes/sources/vm21-sr-projection-entry.json` | review-only |
 | The Application of the Commissioners Reserve Valuation Method to Equity Indexed Life Insurance Policies | pp. 1-11 | `data/processed/source_indexes/sources/ag36-eiul-crvm-guidance.json` | review-only |
@@ -44,11 +45,11 @@
 
 ## Retrieval summary
 
-- Queries evaluated: 35
-- Supported queries: 32
+- Queries evaluated: 44
+- Supported queries: 41
 - Unsupported queries: 3
-- Top-1 accuracy: 91%
+- Top-1 accuracy: 85%
 - Top-3 accuracy: 100%
 - Top-5 accuracy: 100%
-- Mean reciprocal rank: 0.939
+- Mean reciprocal rank: 0.908
 - Method: keyword_overlap_baseline

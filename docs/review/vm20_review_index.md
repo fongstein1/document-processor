@@ -8,7 +8,8 @@ Status:
 - Not promoted
 
 This tracked index summarizes the ignored review packets for controlled
-VM-20 batches `batch-003` through `batch-012`. It is a handoff summary only.
+VM-20 batches `batch-003` through `batch-012` and the remaining prose/appendix
+extraction outputs in `batch-231` through `batch-234`. It is a handoff summary only.
 The underlying batch outputs remain in `data/work/batches/` and are not
 promoted by this file.
 
@@ -43,6 +44,19 @@ working files themselves.
 | `batch-011` | `pp. 80-87`; Section 7 asset mechanics | Cash-flow model asset mechanics | Keeps asset returns, proxy-fund mapping, scenario language, and derivative mechanics separate from Section 8 | `asset_modeling_judgment`, `boundary_spillover`, `cash_flow_models`, `core_vm_course`, `proxy_mapping`, `requires_human_interpretation` | Asset mechanics require human judgment and should not absorb the Section 8 opener | Passed | `5d4b44d2caa02ca6244e0d95f535e364fd1f45f9` |
 | `batch-012` | `pp. 88-95`; Section 8 reinsurance and Section 9 boundary | Reinsurance / cleanup boundary | Closes the sequence at the reinsurance treatment and leaves the Section 9 opening as review-only cleanup | `core_vm_course`, `cross_reference_mapping`, `regulatory_requirement`, `reinsurance`, `requires_human_interpretation` | Reinsurance assumptions and the Section 9 boundary remain review-only cleanup material | Passed | `5d4b44d2caa02ca6244e0d95f535e364fd1f45f9` |
 
+## Remaining Prose and Appendix Coverage Wave
+
+The following source-bound extraction outputs were generated directly from the
+authoritative current manual PDF. They remain ignored working-batch evidence;
+the tracked canonical source-index package is the review-only derived layer.
+
+| Batch | Selected pages / sections | Topic | Boundary rationale | Extraction categories | Unresolved issues / review concerns | Validation | Commit |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| `batch-231` | `pp. 66-68`; complete Sections 4 and 5 | Deterministic and stochastic reserve mechanics | Splits at the explicit Section 4 and Section 5 headings while retaining boundary-page context | `calculation_structure`, `core_vm_course`, `deterministic_reserve`, `stochastic_reserve`, `cross_reference_mapping`, `requires_human_interpretation` | Confirm formulas, PIMR treatment, scenario references, aggregation, and category attribution against the raw PDF | Passed | current milestone |
+| `batch-232` | `pp. 94-130`; Section 9.A-G | Assumptions chapter | Splits at explicit subsection headings and keeps conditions, exceptions, guidance notes, and cross-references within each subsection | `assumption_layer`, `mortality`, `policyholder_behavior`, `expense`, `asset_assumptions`, `revenue_sharing`, `requires_human_interpretation` | Review large Section 9.C parent/child boundaries and actuarial judgment; line references are unavailable | Passed | current milestone |
+| `batch-233` | `pp. 131-134`; Appendix 1.A-G | Economic scenarios and governance | Splits at explicit Appendix 1 subsections; scenario descriptions remain examples/context, not generalized rules | `economic_scenarios`, `scenario_generator`, `governance`, `appendix_content`, `requires_human_interpretation` | Confirm scenario labels and external technical-document links against the approved raw source | Passed | current milestone |
+| `batch-234` | `pp. 134-140`; Appendix 2.A-H | Asset default, recovery, spread, swap-spread, and table basis prose | Splits at explicit Appendix 2 subsections and retains table references without introducing structured table rows | `asset_default_costs`, `asset_spreads`, `appendix_content`, `structured_table_deferred`, `requires_human_interpretation` | Current table rows/version metadata remain a separate milestone; page-image backstop is pending | Passed | current milestone |
+
 ## Human Review Checklist
 
 - Are extracted requirements source-bound?
@@ -68,22 +82,26 @@ in a later human review step, not in the completed review-only batches.
 
 - Section 3.C assumptions require careful interpretation and should stay
   separate from later mechanics.
-- The deterministic reserve opener and stochastic reserve opener are boundary
-  slices, not full reserve treatments.
+- The new deterministic and stochastic reserve package is a complete extracted
+  prose slice for Sections 4 and 5; independent actuarial confirmation remains
+  pending.
 - Exclusion tests should not absorb cash-flow model mechanics.
 - Asset mechanics and proxy mapping require human actuarial judgment.
-- Reinsurance assumptions and the Section 9 boundary remain review-only
-  cleanup material.
+- Section 9.A-G is now represented, but mortality, policyholder behavior,
+  margins, asset, expense, and revenue-sharing assumptions require focused
+  actuarial review.
+- Appendix 1 scenario descriptions and Appendix 2 prose are first-class
+  review content; Appendix 2 structured current tables remain out of scope for
+  this milestone.
 
 ## Recommended Review Order
 
 1. Framework map first.
-2. NPR mechanics and assumptions.
-3. DR and SR openers.
-4. Exclusion tests.
-5. Cash-flow model structure.
-6. Asset mechanics.
-7. Reinsurance and cleanup boundary.
+2. NPR mechanics and Section 3.C assumptions.
+3. Complete Sections 4 and 5 mechanics.
+4. Section 9.A-G assumptions and actuarial judgment.
+5. Appendix 1 scenario descriptions and governance.
+6. Appendix 2 prose basis, then the separate structured-table milestone.
 
 ## Review Notes
 

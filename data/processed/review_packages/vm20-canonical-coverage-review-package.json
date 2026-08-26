@@ -8,8 +8,8 @@
   "ragReady": false,
   "promoted": false,
   "scope": {
-    "objective": "Complete the first P0 VM-20 canonicalization wave using the reviewed source material already present in the repository.",
-    "currentManualCoverage": "Reviewed current-manual slices from batches 003-012; the expanded package adds batches 004, 005, and 007-012 while the existing Section 3.C package remains intact.",
+    "objective": "Complete the remaining VM-20 prose and appendix coverage while preserving the frozen source-index architecture and deferring structured current-table ingestion.",
+    "currentManualCoverage": "Reviewed current-manual slices from batches 003-012 plus authoritative remaining prose and appendix extraction batches 231-234; Section 4, Section 5, Section 9, Appendix 1, and Appendix 2 prose are now represented hierarchically.",
     "companionCoverage": "Reviewed VM-20 practice-note batches 055-075, indexed separately as non-binding historical companion guidance.",
     "sourceAvailability": "External raw sources remain authoritative; this package records only source text available in ignored reviewed batch outputs."
   },
@@ -17,45 +17,44 @@
     "sectionsCanonicalized": [
       "Section 1 purpose and Section 2 minimum-reserve framework",
       "Section 3 Net Premium Reserve applicability, definitions, setup, formula entry, and Section 3.C assumptions",
-      "Section 4 Deterministic Reserve entry point",
-      "Section 5 Stochastic Reserve entry and aggregation boundary",
+      "Section 4 Deterministic Reserve complete extracted mechanics",
+      "Section 5 Stochastic Reserve complete extracted mechanics",
       "Section 6 stochastic and deterministic exclusion tests",
       "Section 7 cash-flow model structure, starting assets, asset mechanics, scenarios, and proxy mapping",
       "Section 8 reinsurance credit and projected reinsurance cash-flow treatment",
+      "Section 9 assumptions subsections A-G, including general assumptions, margins, mortality, policyholder behavior, expense, asset, and revenue-sharing assumptions",
+      "Appendix 1 economic-scenario description, generator context, scenario set, and governance",
+      "Appendix 2 prose basis for asset default costs, recovery rates, benchmark spreads, swap spreads, and table publication",
       "Practice-note Sections 1-21 as separately labeled companion guidance"
     ],
     "sectionsMissing": [
-      "Complete authoritative Section 4 Deterministic Reserve mechanics beyond the reviewed entry slice",
-      "Complete authoritative Section 5 Stochastic Reserve mechanics beyond the reviewed entry and aggregation slice",
-      "Complete authoritative Section 9 assumptions chapter, including expense, mortality, policyholder behavior, NGE, margins, and prescribed spread/default provisions",
-      "Appendix 1 economic-scenario description as a structured current source package",
-      "Appendix 2 current prescribed asset-default and asset-spread tables as a structured-table package",
-      "Complete current VM-20 chapter coverage outside the reviewed page window 45-95"
+      "Appendix 2 current prescribed asset-default, asset-spread, and swap-spread table rows and version metadata remain deferred to the structured-table milestone",
+      "Independent page-image backstop and line-reference confirmation remain pending human review"
     ],
-    "parentCount": 35,
-    "childCount": 206,
-    "currentManualParentCount": 14,
-    "currentManualChildCount": 52,
+    "parentCount": 59,
+    "childCount": 259,
+    "currentManualParentCount": 38,
+    "currentManualChildCount": 105,
     "companionParentCount": 21,
     "companionChildCount": 154,
     "sourceTextFidelity": {
       "currentManual": {
-        "exact": 72
+        "exact": 149
       },
       "companion": {
         "exact": 175
       }
     },
     "citationCompleteness": {
-      "chunksWithPageOrCitationDisplay": 247,
-      "totalChunks": 247,
+      "chunksWithPageOrCitationDisplay": 324,
+      "totalChunks": 324,
       "lineReferencesAvailable": false,
       "note": "Page and section citations are present in the canonical chunks; the reviewed extraction did not preserve stable line references."
     }
   },
   "unresolvedSourceGaps": [
-    "Raw-source availability is declared externally and is not proven by the ignored working outputs.",
-    "The current-manual wave is slice-complete only for the reviewed boundaries, not chapter-complete.",
+    "The authoritative PDF is external to the repository; ignored batches 231-234 retain its SHA-256 and exact extracted source text for this wave.",
+    "The current-manual wave is source-complete for the targeted Sections 4, 5, 9 and Appendix 1-2 prose boundaries, but not a full structured-table ingestion.",
     "Practice-note text is 2020 companion guidance and must be checked against the current manual before implementation use.",
     "Table rows, version metadata, and page-image confirmation remain outside the current prose canonical layer."
   ],
@@ -100,25 +99,68 @@
       "note": "The reinsurance slice records the source reference without interpreting accounting authority."
     },
     {
-      "target": "VM-20 Appendix 1 and Appendix 2",
-      "relationType": "coverage_gap_candidate",
-      "status": "pending_source_package",
+      "target": "VM-20 Section 7 / Section 8 / Appendix 1 / Appendix 2",
+      "relationType": "cross_reference_candidate",
+      "status": "pending_human_review",
       "evidenceChunkIds": [
-        "chunk-vm20-framework-overview-001"
+        "vm20-remaining-prose-appendix-coverage-vm20-section4-complete",
+        "vm20-remaining-prose-appendix-coverage-vm20-section4-complete-child-001"
       ],
-      "note": "The table of contents and cross-references are present, but the appendices and current tables are not canonicalized."
+      "note": "The new source text records explicit operational cross-references; no legal effect or duplicate source authority is inferred."
+    },
+    {
+      "target": "VM-20 Appendix 2 current tables",
+      "relationType": "coverage_gap_candidate",
+      "status": "pending_structured_table_milestone",
+      "evidenceChunkIds": [
+        "vm20-remaining-prose-appendix-coverage-vm20-section4-complete",
+        "vm20-remaining-prose-appendix-coverage-vm20-section4-complete-child-001"
+      ],
+      "note": "Appendix 2 prose explains the basis and publication locations, while generalized current table rows and version metadata remain deferred."
     }
   ],
   "retrievalEvaluation": {
-    "queryCount": 17,
-    "supportedQueryCount": 16,
+    "queryCount": 26,
+    "supportedQueryCount": 25,
     "unsupportedQueryCount": 1,
-    "top1HitCount": 15,
-    "top3HitCount": 16,
-    "top5HitCount": 16,
-    "top1Accuracy": 0.9375,
+    "top1HitCount": 21,
+    "top3HitCount": 25,
+    "top5HitCount": 25,
+    "top1Accuracy": 0.84,
     "top3Accuracy": 1,
     "unsupportedQueriesDetected": 0,
+    "parentExpansionChecks": [
+      {
+        "queryId": "q-vm20-section5-scenario-reserve",
+        "childChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section5-complete-child-001",
+        "parentChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section5-complete",
+        "childRetrieved": false,
+        "parentResolvable": true,
+        "parentRetrieved": true,
+        "expandedEvidenceChunkCount": 2,
+        "note": "Deterministic structural check only; the baseline evaluator does not rerank or synthesize parent-expanded answers."
+      },
+      {
+        "queryId": "q-vm20-section9-mortality-parent-context",
+        "childChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-c-mortality-assumptions-child-001",
+        "parentChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-c-mortality-assumptions",
+        "childRetrieved": false,
+        "parentResolvable": true,
+        "parentRetrieved": true,
+        "expandedEvidenceChunkCount": 2,
+        "note": "Deterministic structural check only; the baseline evaluator does not rerank or synthesize parent-expanded answers."
+      },
+      {
+        "queryId": "q-vm20-appendix1-scenarios",
+        "childChunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix1-f-this-section-describes-the-set-of-16-scenarios-for-the-sert-in-vm-20-starting-with-the-yield-curve-child-001",
+        "parentChunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix1-f-this-section-describes-the-set-of-16-scenarios-for-the-sert-in-vm-20-starting-with-the-yield-curve",
+        "childRetrieved": true,
+        "parentResolvable": true,
+        "parentRetrieved": true,
+        "expandedEvidenceChunkCount": 2,
+        "note": "Deterministic structural check only; the baseline evaluator does not rerank or synthesize parent-expanded answers."
+      }
+    ],
     "baselineBeforeExpansion": {
       "queryCount": 22,
       "supportedQueryCount": 20,
@@ -217,16 +259,16 @@
       {
         "queryId": "q-vm20-practice-note-expense-guidance",
         "category": "vm20_companion_expense",
-        "top1Hit": true,
+        "top1Hit": false,
         "top3Hit": true,
-        "resultLabel": "supported_top1"
+        "resultLabel": "supported_top3"
       },
       {
         "queryId": "q-vm20-practice-note-mortality-behavior",
         "category": "vm20_companion_assumptions",
-        "top1Hit": true,
+        "top1Hit": false,
         "top3Hit": true,
-        "resultLabel": "supported_top1"
+        "resultLabel": "supported_top3"
       },
       {
         "queryId": "q-vm20-practice-note-margins",
@@ -234,6 +276,69 @@
         "top1Hit": true,
         "top3Hit": true,
         "resultLabel": "supported_top1"
+      },
+      {
+        "queryId": "q-vm20-section4-methods",
+        "category": "vm20_section4_direct",
+        "top1Hit": true,
+        "top3Hit": true,
+        "resultLabel": "supported_top1"
+      },
+      {
+        "queryId": "q-vm20-section5-scenario-reserve",
+        "category": "vm20_section5_methodology",
+        "top1Hit": true,
+        "top3Hit": true,
+        "resultLabel": "supported_top1"
+      },
+      {
+        "queryId": "q-vm20-section4-section5-comparison",
+        "category": "vm20_cross_section_comparison",
+        "top1Hit": true,
+        "top3Hit": true,
+        "resultLabel": "supported_top1"
+      },
+      {
+        "queryId": "q-vm20-section9-general-assumptions",
+        "category": "vm20_section9_applicability",
+        "top1Hit": true,
+        "top3Hit": true,
+        "resultLabel": "supported_top1"
+      },
+      {
+        "queryId": "q-vm20-section9-mortality-parent-context",
+        "category": "vm20_parent_context",
+        "top1Hit": true,
+        "top3Hit": true,
+        "resultLabel": "supported_top1"
+      },
+      {
+        "queryId": "q-vm20-section9-policyholder-exceptions",
+        "category": "vm20_section9_exceptions",
+        "top1Hit": true,
+        "top3Hit": true,
+        "resultLabel": "supported_top1"
+      },
+      {
+        "queryId": "q-vm20-section9-cross_section",
+        "category": "vm20_cross_section",
+        "top1Hit": true,
+        "top3Hit": true,
+        "resultLabel": "supported_top1"
+      },
+      {
+        "queryId": "q-vm20-appendix1-scenarios",
+        "category": "vm20_appendix1_direct",
+        "top1Hit": true,
+        "top3Hit": true,
+        "resultLabel": "supported_top1"
+      },
+      {
+        "queryId": "q-vm20-appendix2-prose-basis",
+        "category": "vm20_appendix2_methodology",
+        "top1Hit": false,
+        "top3Hit": true,
+        "resultLabel": "supported_top3"
       },
       {
         "queryId": "q-vm20-current-table-gap",
@@ -265,11 +370,12 @@
       "REJECT"
     ],
     "provisionalDisposition": "APPROVE WITH FIXES",
-    "rationale": "The reviewed current-manual wave is source-bound and hierarchically retrievable, but chapter gaps, missing line references, table gaps, and historical companion guidance require explicit reviewer disposition before promotion.",
+    "rationale": "The targeted current-manual prose and appendix wave is source-bound and hierarchically retrievable. Structured current tables, page-image backstop, line references, and historical companion guidance still require explicit reviewer disposition before promotion.",
     "requiredChecks": [
       "Confirm current-manual wording and page citations against the approved raw source.",
       "Confirm parent/child boundaries and any child that crosses a requirement, exception, qualification, or table-heading boundary.",
       "Review cross-reference candidates without inferring legal effect or supersession.",
+      "Confirm that Sections 4, 5, 9 and Appendices 1-2 are complete for the stated prose boundaries and that Appendix 2 tables remain deferred.",
       "Decide whether the companion practice-note package is useful as implementation context after currentness review.",
       "Keep all packages review-only unless a separate promotion decision is recorded."
     ]
@@ -345,6 +451,22 @@
         "batch-010",
         "batch-011",
         "batch-012"
+      ]
+    },
+    {
+      "sourceId": "vm20-remaining-prose-appendix-coverage",
+      "title": "VM-20 Remaining Prose and Appendix Coverage",
+      "authorityLevel": "manual_section",
+      "pageRange": {
+        "start": 66,
+        "end": 140
+      },
+      "chunkCount": 77,
+      "reviewBatches": [
+        "batch-231",
+        "batch-232",
+        "batch-233",
+        "batch-234"
       ]
     },
     {

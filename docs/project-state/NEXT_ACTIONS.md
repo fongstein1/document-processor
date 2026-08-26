@@ -1,5 +1,18 @@
 # Next Actions
 
+## VM-20 remaining prose and appendix handoff
+
+The targeted prose coverage is now present in the dedicated review package:
+Sections 4 and 5, Section 9 subsections A-G, Appendix 1 subsections A-G, and
+Appendix 2 prose/basis subsections A-H. Review the generated JSON/Markdown
+package against the approved raw PDF and decide APPROVE, APPROVE WITH FIXES,
+REPROCESS, or REJECT.
+
+The next VM-20 implementation milestone is the separate structured current
+table profile for Appendix 2 Tables A-K and version metadata. Do not promote
+the prose/appendix package automatically, and do not use the 2020 practice
+note as a substitute for current manual authority.
+
 ## VM-20 review handoff
 
 The first P0 VM-20 canonicalization wave is complete as a review-only source

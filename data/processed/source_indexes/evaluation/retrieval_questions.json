@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "repositoryManifestId": "source-index-poc-2026-07-21",
   "method": "keyword_overlap_baseline",
-  "queryCount": 35,
+  "queryCount": 44,
   "queries": [
     {
       "queryId": "q-ag01-net-premium",
@@ -234,6 +234,129 @@
         "vm20-practice-note-companion"
       ],
       "rationale": "Tests margin retrieval from the separate companion package."
+    },
+    {
+      "queryId": "q-vm20-section4-methods",
+      "queryCategory": "vm20_section4_direct",
+      "query": "What methods does VM-20 Section 4 prescribe for calculating the Deterministic Reserve, and what cash flows must be included?",
+      "expectedChunkIds": [
+        "vm20-remaining-prose-appendix-coverage-vm20-section4-complete",
+        "vm20-remaining-prose-appendix-coverage-vm20-section4-complete-child-001"
+      ],
+      "expectedSourceIds": [
+        "vm20-remaining-prose-appendix-coverage"
+      ],
+      "rationale": "Tests direct retrieval of the complete Section 4 methods and associated calculation conditions."
+    },
+    {
+      "queryId": "q-vm20-section5-scenario-reserve",
+      "queryCategory": "vm20_section5_methodology",
+      "query": "How does VM-20 Section 5 calculate the scenario reserve and move from stochastic scenarios to CTE 70 and the final Stochastic Reserve?",
+      "expectedChunkIds": [
+        "vm20-remaining-prose-appendix-coverage-vm20-section5-complete",
+        "vm20-remaining-prose-appendix-coverage-vm20-section5-complete-child-001"
+      ],
+      "expectedSourceIds": [
+        "vm20-remaining-prose-appendix-coverage"
+      ],
+      "rationale": "Tests Section 5 methodology, scenario reserve steps, CTE 70, additional material risk, and PIMR context."
+    },
+    {
+      "queryId": "q-vm20-section4-section5-comparison",
+      "queryCategory": "vm20_cross_section_comparison",
+      "query": "In the current VM-20 manual, how do Section 4 actuarial present value and PIMR deterministic-reserve mechanics compare with Section 5 scenario reserve, CTE 70, and aggregation mechanics?",
+      "expectedChunkIds": [
+        "vm20-remaining-prose-appendix-coverage-vm20-section4-complete",
+        "vm20-remaining-prose-appendix-coverage-vm20-section5-complete",
+        "vm20-practice-note-companion-vm20-pn-dr-overview-child-006",
+        "vm20-practice-note-companion-vm20-pn-sr-overview-child-003"
+      ],
+      "expectedSourceIds": [
+        "vm20-remaining-prose-appendix-coverage",
+        "vm20-practice-note-companion"
+      ],
+      "rationale": "Tests a cross-section comparison without collapsing the two current sections; companion hits remain visible as a known authority-separation risk."
+    },
+    {
+      "queryId": "q-vm20-section9-general-assumptions",
+      "queryCategory": "vm20_section9_applicability",
+      "query": "What does the current VM-20 Section 9.A require for prudent estimate assumptions, anticipated experience, interest-rate and equity stochastic modeling, sensitivity testing, and scenario variation?",
+      "expectedChunkIds": [
+        "vm20-remaining-prose-appendix-coverage-vm20-section9-a-general-assumption-requirements",
+        "vm20-remaining-prose-appendix-coverage-vm20-section9-a-general-assumption-requirements-child-001",
+        "vm20-practice-note-companion-vm20-pn-prudent-estimate-child-005"
+      ],
+      "expectedSourceIds": [
+        "vm20-remaining-prose-appendix-coverage",
+        "vm20-practice-note-companion"
+      ],
+      "rationale": "Tests Section 9 applicability and general assumption requirements while preserving the companion-guidance comparison risk."
+    },
+    {
+      "queryId": "q-vm20-section9-mortality-parent-context",
+      "queryCategory": "vm20_parent_context",
+      "query": "What does current VM-20 Section 9.C require for mortality segments, company experience mortality rates, credibility, prescribed mortality margins, and prudent-estimate mortality assumptions?",
+      "expectedChunkIds": [
+        "vm20-remaining-prose-appendix-coverage-vm20-section9-c-mortality-assumptions",
+        "vm20-remaining-prose-appendix-coverage-vm20-section9-c-mortality-assumptions-child-001"
+      ],
+      "expectedSourceIds": [
+        "vm20-remaining-prose-appendix-coverage"
+      ],
+      "rationale": "Tests child retrieval with its structural Section 9.C parent context."
+    },
+    {
+      "queryId": "q-vm20-section9-policyholder-exceptions",
+      "queryCategory": "vm20_section9_exceptions",
+      "query": "What conditions and conservative adjustments does VM-20 Section 9 address for policyholder behavior assumptions, including lapse and anti-selection effects?",
+      "expectedChunkIds": [
+        "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions",
+        "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions-child-001"
+      ],
+      "expectedSourceIds": [
+        "vm20-remaining-prose-appendix-coverage"
+      ],
+      "rationale": "Tests exception and condition language in the Section 9.D policyholder-behavior subsection."
+    },
+    {
+      "queryId": "q-vm20-section9-cross_section",
+      "queryCategory": "vm20_cross_section",
+      "query": "What does current VM-20 Section 9.F say about prescribed asset default costs, prescribed asset spreads, Section 7 cash-flow modeling, and Appendix 2?",
+      "expectedChunkIds": [
+        "vm20-remaining-prose-appendix-coverage-vm20-section9-f-asset-assumptions",
+        "vm20-remaining-prose-appendix-coverage-vm20-appendix2-a-baseline-annual-default-cost-factors",
+        "vm20-canonical-coverage-vm20-section7-asset-mechanics-child-001"
+      ],
+      "expectedSourceIds": [
+        "vm20-remaining-prose-appendix-coverage"
+      ],
+      "rationale": "Tests explicit cross-references between Section 9.F, Section 7, and Appendix 2; nearby Section 7 hits remain a structural retrieval risk to review."
+    },
+    {
+      "queryId": "q-vm20-appendix1-scenarios",
+      "queryCategory": "vm20_appendix1_direct",
+      "query": "What does VM-20 Appendix 1 say about the prescribed economic scenario models and the sixteen SERT scenarios?",
+      "expectedChunkIds": [
+        "vm20-remaining-prose-appendix-coverage-vm20-appendix1-f-this-section-describes-the-set-of-16-scenarios-for-the-sert-in-vm-20-starting-with-the-yield-curve",
+        "vm20-remaining-prose-appendix-coverage-vm20-appendix1-f-this-section-describes-the-set-of-16-scenarios-for-the-sert-in-vm-20-starting-with-the-yield-curve-child-001"
+      ],
+      "expectedSourceIds": [
+        "vm20-remaining-prose-appendix-coverage"
+      ],
+      "rationale": "Tests first-class Appendix 1 scenario description retrieval without generalizing scenario examples."
+    },
+    {
+      "queryId": "q-vm20-appendix2-prose-basis",
+      "queryCategory": "vm20_appendix2_methodology",
+      "query": "What is the current VM-20 Appendix 2 prose basis for baseline annual default cost factors, cumulative default rates, recovery rates, and benchmark spreads?",
+      "expectedChunkIds": [
+        "vm20-remaining-prose-appendix-coverage-vm20-appendix2-a-baseline-annual-default-cost-factors",
+        "vm20-remaining-prose-appendix-coverage-vm20-appendix2-a-baseline-annual-default-cost-factors-child-001"
+      ],
+      "expectedSourceIds": [
+        "vm20-remaining-prose-appendix-coverage"
+      ],
+      "rationale": "Tests Appendix 2 prose and table-basis context while leaving structured table rows deferred."
     },
     {
       "queryId": "q-vm20-current-table-gap",

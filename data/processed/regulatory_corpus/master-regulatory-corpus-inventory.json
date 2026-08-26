@@ -11,9 +11,11 @@
     "sourceDocumentsInventoried": 105,
     "sourceRecordsWithExternalManifest": 71,
     "reviewIndexes": 97,
-    "selfReviews": 93,
-    "canonicalSourcePackages": 20,
-    "canonicalChunks": 282,
+    "selfReviews": 94,
+    "canonicalSourcePackages": 21,
+    "canonicalChunks": 359,
+    "vm20CurrentManualChunks": 149,
+    "vm20CompanionChunks": 175,
     "sourcesAwaitingCanonicalization": 96,
     "sourcesAwaitingHumanReview": 1,
     "reviewArtifactOnlySources": 34,
@@ -46,7 +48,7 @@
     "historicalProposedDeferred": 9,
     "currentSourceTextFidelityDistribution": {
       "curated": 20,
-      "exact": 262
+      "exact": 339
     }
   },
   "sources": [
@@ -614,7 +616,8 @@
           "docs/review/vm20_review_index.md"
         ],
         "selfReviews": [
-          "docs/review/vm20_practice_note_self_review.md"
+          "docs/review/vm20_practice_note_self_review.md",
+          "docs/review/vm20_self_review.md"
         ],
         "canonicalPackages": [
           "data/processed/source_indexes/sources/vm20-practice-note-companion.json"
@@ -5015,12 +5018,13 @@
           "data/processed/source_indexes/sources/vm20-canonical-coverage.json",
           "data/processed/source_indexes/sources/vm20-framework-boundary.json",
           "data/processed/source_indexes/sources/vm20-framework-overview.json",
+          "data/processed/source_indexes/sources/vm20-remaining-prose-appendix-coverage.json",
           "data/processed/source_indexes/sources/vm20-section3c-hierarchical.json",
           "data/processed/source_indexes/sources/vm21-sr-projection-entry.json"
         ],
         "classification": "not_in_canonical_classification",
         "relationshipRegistry": "none identified",
-        "chunkCount": 76,
+        "chunkCount": 153,
         "sourceTextFidelity": [
           "exact"
         ]
@@ -6497,6 +6501,7 @@
         "vm20-framework-overview",
         "vm20-npr-entry-formula",
         "vm20-npr-entry-setup",
+        "vm20-remaining-prose-appendix-coverage",
         "vm20-role-map-sections-3-4-5",
         "vm20-section3-opener",
         "vm20-section3c-assumptions",
@@ -6622,7 +6627,7 @@
       "priority": "P0",
       "intendedStatus": "current",
       "assessment": "canonical_partial",
-      "reason": "VM-20 now has a 247-chunk review-only coverage set: 72 current-manual chunks across the existing slices and expanded batches, plus 175 separately labeled companion-guidance chunks; it is still not a complete current chapter package.",
+      "reason": "VM-20 now has a 324-chunk review-only coverage set: 149 current-manual chunks across the existing slices and new authoritative prose/appendix batches, plus 175 separately labeled companion-guidance chunks. Structured current Appendix 2 tables remain deferred.",
       "evidenceSourceIds": [
         "supporting-vm01-definitions",
         "supporting-vm02-nonforfeiture",
@@ -6664,6 +6669,7 @@
         "vm20-pn-valuation-date",
         "vm20-practice-note-2020",
         "vm20-practice-note-companion",
+        "vm20-remaining-prose-appendix-coverage",
         "vm20-role-map-sections-3-4-5",
         "vm20-section3-opener",
         "vm20-section3c-assumptions",
@@ -6711,7 +6717,7 @@
         "vm31-reporting-crossref",
         "vm31-reporting-definition"
       ],
-      "nextAction": "Review the dedicated VM-20 package, then complete authoritative Sections 4, 5, and 9 plus Appendices 1-2 and structured current tables."
+      "nextAction": "Review the dedicated VM-20 package, then process the separate structured current-table milestone while preserving the prose/appendix coverage as review-only."
     },
     {
       "targetId": "vm-21",

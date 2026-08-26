@@ -1,5 +1,27 @@
 # Current Project State
 
+## 2026-08-26 VM-20 prose and appendix coverage
+
+The authoritative 2026 Valuation Manual PDF was verified at the external raw
+source path recorded by the existing batch manifests. A source-bound extraction
+wave added complete prose coverage for VM-20 Sections 4 and 5, all seven
+Section 9 subsections, seven Appendix 1 subsections, and eight Appendix 2
+prose/basis subsections. The source-index POC now contains 21 packages and 359
+chunks overall, including 149 current-manual VM-20 chunks and 175 separately
+labeled historical companion chunks.
+
+The dedicated VM-20 review package now reports 38 current-manual parents and
+105 current-manual children, with 24 new structural parents and 53 new
+children from batches 231-234. Appendix 2 table rows and version metadata were
+intentionally not ingested as structured data. All packages remain review-only,
+not learner-facing, not app-ready, not RAG-ready, and not promoted.
+
+Retrieval evaluation now includes 26 VM-20 questions, including direct,
+methodology, applicability, comparison, parent-context, exception,
+cross-section, appendix, and unsupported-table cases. Independent actuarial
+review, page-image backstop, line-reference confirmation, and the separate
+structured-table milestone remain pending.
+
 ## 2026-08-26 VM-20 canonical coverage wave
 
 The first P0 VM-20 canonicalization wave is now substantially expanded from

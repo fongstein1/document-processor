@@ -2,22 +2,22 @@
 
 ## Corpus summary
 
-- Source packages: 20
-- Canonical chunks: 282
-- Retrieval questions: 35
-- Supported questions: 32
+- Source packages: 21
+- Canonical chunks: 359
+- Retrieval questions: 44
+- Supported questions: 41
 - Unsupported questions: 3
 
 ## Metrics
 
-- Top-1 accuracy: 91%
+- Top-1 accuracy: 85%
 - Top-3 accuracy: 100%
 - Top-5 accuracy: 100%
-- Mean reciprocal rank: 0.939
-- Source-family accuracy: 97%
-- Authority-level accuracy: 94%
+- Mean reciprocal rank: 0.908
+- Source-family accuracy: 93%
+- Authority-level accuracy: 90%
 - Citation availability: 0%
-- Multi-chunk evidence recall: 42%
+- Multi-chunk evidence recall: 36%
 - Unsupported-query precision: 0%
 
 ## Category breakdown
@@ -37,9 +37,18 @@
 | vm20_assets | 1 | 100% | 100% | 100% | 1.000 | 0% |
 | vm20_reinsurance | 1 | 100% | 100% | 100% | 1.000 | 0% |
 | vm20_assumptions_comparison | 1 | 100% | 100% | 100% | 1.000 | 0% |
-| vm20_companion_expense | 1 | 100% | 100% | 100% | 1.000 | 0% |
-| vm20_companion_assumptions | 1 | 100% | 100% | 100% | 1.000 | 0% |
+| vm20_companion_expense | 1 | 0% | 100% | 100% | 0.500 | 0% |
+| vm20_companion_assumptions | 1 | 0% | 100% | 100% | 0.500 | 0% |
 | vm20_companion_margins | 1 | 100% | 100% | 100% | 1.000 | 0% |
+| vm20_section4_direct | 1 | 100% | 100% | 100% | 1.000 | 0% |
+| vm20_section5_methodology | 1 | 100% | 100% | 100% | 1.000 | 0% |
+| vm20_cross_section_comparison | 1 | 100% | 100% | 100% | 1.000 | 0% |
+| vm20_section9_applicability | 1 | 100% | 100% | 100% | 1.000 | 0% |
+| vm20_parent_context | 1 | 100% | 100% | 100% | 1.000 | 0% |
+| vm20_section9_exceptions | 1 | 100% | 100% | 100% | 1.000 | 0% |
+| vm20_cross_section | 1 | 100% | 100% | 100% | 1.000 | 0% |
+| vm20_appendix1_direct | 1 | 100% | 100% | 100% | 1.000 | 0% |
+| vm20_appendix2_methodology | 1 | 0% | 100% | 100% | 0.200 | 0% |
 | unsupported | 3 | 0% | 0% | 0% | 0.000 | 0% |
 | vm20_cross_document | 1 | 100% | 100% | 100% | 1.000 | 0% |
 | relationship | 1 | 100% | 100% | 100% | 1.000 | 0% |
@@ -53,7 +62,7 @@
 
 ## Weak spots and failure analysis
 
-- unsupported: What are the exact current 2026 VM-20 Appendix 2 prescribed asset-default table rows and version metadata? -> false_positive; top result vm20-practice-note-companion-vm20-pn-dr-overview-child-006 (21.749999999999993)
+- unsupported: What are the exact current 2026 VM-20 Appendix 2 prescribed asset-default table rows and version metadata? -> false_positive; top result vm20-remaining-prose-appendix-coverage-vm20-appendix2-c-recovery-rate-used-in-baseline-annual-default-cost-factors (43.04999999999999)
 - unsupported: What does this corpus say about pricing support? -> false_positive; top result chunk-synthetic-pricing-product-specification-001 (9.6)
 - unsupported: What does this corpus say about liability modeling support? -> false_positive; top result vm20-practice-note-companion-vm20-pn-starting-assets (10.4)
 

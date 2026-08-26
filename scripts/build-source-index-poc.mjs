@@ -704,7 +704,7 @@ const buildRetrievalReadinessReport = (manifest, evaluation, config) => {
 }
 
 const buildVm20ReviewPackage = ({ chunkRecords, sourcePackages, evaluation }) => {
-  const currentSourceIds = new Set(['vm20-framework-overview', 'vm20-framework-boundary', 'vm20-assumptions-section-3c', 'vm20-section3c-hierarchical', 'vm20-canonical-coverage'])
+  const currentSourceIds = new Set(['vm20-framework-overview', 'vm20-framework-boundary', 'vm20-assumptions-section-3c', 'vm20-section3c-hierarchical', 'vm20-canonical-coverage', 'vm20-remaining-prose-appendix-coverage'])
   const companionSourceIds = new Set(['vm20-practice-note-companion'])
   const currentPackages = sourcePackages.filter((source) => currentSourceIds.has(source.sourceId))
   const companionPackages = sourcePackages.filter((source) => companionSourceIds.has(source.sourceId))
@@ -730,8 +730,8 @@ const buildVm20ReviewPackage = ({ chunkRecords, sourcePackages, evaluation }) =>
     ragReady: false,
     promoted: false,
     scope: {
-      objective: 'Complete the first P0 VM-20 canonicalization wave using the reviewed source material already present in the repository.',
-      currentManualCoverage: 'Reviewed current-manual slices from batches 003-012; the expanded package adds batches 004, 005, and 007-012 while the existing Section 3.C package remains intact.',
+      objective: 'Complete the remaining VM-20 prose and appendix coverage while preserving the frozen source-index architecture and deferring structured current-table ingestion.',
+      currentManualCoverage: 'Reviewed current-manual slices from batches 003-012 plus authoritative remaining prose and appendix extraction batches 231-234; Section 4, Section 5, Section 9, Appendix 1, and Appendix 2 prose are now represented hierarchically.',
       companionCoverage: 'Reviewed VM-20 practice-note batches 055-075, indexed separately as non-binding historical companion guidance.',
       sourceAvailability: 'External raw sources remain authoritative; this package records only source text available in ignored reviewed batch outputs.'
     },
@@ -739,20 +739,19 @@ const buildVm20ReviewPackage = ({ chunkRecords, sourcePackages, evaluation }) =>
       sectionsCanonicalized: [
         'Section 1 purpose and Section 2 minimum-reserve framework',
         'Section 3 Net Premium Reserve applicability, definitions, setup, formula entry, and Section 3.C assumptions',
-        'Section 4 Deterministic Reserve entry point',
-        'Section 5 Stochastic Reserve entry and aggregation boundary',
+        'Section 4 Deterministic Reserve complete extracted mechanics',
+        'Section 5 Stochastic Reserve complete extracted mechanics',
         'Section 6 stochastic and deterministic exclusion tests',
         'Section 7 cash-flow model structure, starting assets, asset mechanics, scenarios, and proxy mapping',
         'Section 8 reinsurance credit and projected reinsurance cash-flow treatment',
+        'Section 9 assumptions subsections A-G, including general assumptions, margins, mortality, policyholder behavior, expense, asset, and revenue-sharing assumptions',
+        'Appendix 1 economic-scenario description, generator context, scenario set, and governance',
+        'Appendix 2 prose basis for asset default costs, recovery rates, benchmark spreads, swap spreads, and table publication',
         'Practice-note Sections 1-21 as separately labeled companion guidance'
       ],
       sectionsMissing: [
-        'Complete authoritative Section 4 Deterministic Reserve mechanics beyond the reviewed entry slice',
-        'Complete authoritative Section 5 Stochastic Reserve mechanics beyond the reviewed entry and aggregation slice',
-        'Complete authoritative Section 9 assumptions chapter, including expense, mortality, policyholder behavior, NGE, margins, and prescribed spread/default provisions',
-        'Appendix 1 economic-scenario description as a structured current source package',
-        'Appendix 2 current prescribed asset-default and asset-spread tables as a structured-table package',
-        'Complete current VM-20 chapter coverage outside the reviewed page window 45-95'
+        'Appendix 2 current prescribed asset-default, asset-spread, and swap-spread table rows and version metadata remain deferred to the structured-table milestone',
+        'Independent page-image backstop and line-reference confirmation remain pending human review'
       ],
       parentCount: allChunks.filter((chunk) => chunk.chunkLevel === 'parent').length,
       childCount: allChunks.filter((chunk) => chunk.chunkLevel === 'child').length,
@@ -769,8 +768,8 @@ const buildVm20ReviewPackage = ({ chunkRecords, sourcePackages, evaluation }) =>
       }
     },
     unresolvedSourceGaps: [
-      'Raw-source availability is declared externally and is not proven by the ignored working outputs.',
-      'The current-manual wave is slice-complete only for the reviewed boundaries, not chapter-complete.',
+      'The authoritative PDF is external to the repository; ignored batches 231-234 retain its SHA-256 and exact extracted source text for this wave.',
+      'The current-manual wave is source-complete for the targeted Sections 4, 5, 9 and Appendix 1-2 prose boundaries, but not a full structured-table ingestion.',
       'Practice-note text is 2020 companion guidance and must be checked against the current manual before implementation use.',
       'Table rows, version metadata, and page-image confirmation remain outside the current prose canonical layer.'
     ],
@@ -779,7 +778,8 @@ const buildVm20ReviewPackage = ({ chunkRecords, sourcePackages, evaluation }) =>
       { target: 'VM-A / VM-C', relationType: 'cross_reference_candidate', status: 'pending_human_review', evidenceChunkIds: evidenceChunkIds('vm20-practice-note-companion'), note: 'Practice-note references are companion guidance and do not establish current authority.' },
       { target: 'Model #820', relationType: 'cross_reference_candidate', status: 'pending_human_review', evidenceChunkIds: evidenceChunkIds('vm20-framework-overview'), note: 'The current manual framework slice names the model-law context; the model law itself is not canonicalized here.' },
       { target: 'SSAP No. 61R', relationType: 'cross_reference_candidate', status: 'pending_human_review', evidenceChunkIds: evidenceChunkIds('vm20-canonical-coverage'), note: 'The reinsurance slice records the source reference without interpreting accounting authority.' },
-      { target: 'VM-20 Appendix 1 and Appendix 2', relationType: 'coverage_gap_candidate', status: 'pending_source_package', evidenceChunkIds: evidenceChunkIds('vm20-framework-overview'), note: 'The table of contents and cross-references are present, but the appendices and current tables are not canonicalized.' }
+      { target: 'VM-20 Section 7 / Section 8 / Appendix 1 / Appendix 2', relationType: 'cross_reference_candidate', status: 'pending_human_review', evidenceChunkIds: evidenceChunkIds('vm20-remaining-prose-appendix-coverage'), note: 'The new source text records explicit operational cross-references; no legal effect or duplicate source authority is inferred.' },
+      { target: 'VM-20 Appendix 2 current tables', relationType: 'coverage_gap_candidate', status: 'pending_structured_table_milestone', evidenceChunkIds: evidenceChunkIds('vm20-remaining-prose-appendix-coverage'), note: 'Appendix 2 prose explains the basis and publication locations, while generalized current table rows and version metadata remain deferred.' }
     ],
     retrievalEvaluation: {
       queryCount: vm20Queries.length,
@@ -791,6 +791,15 @@ const buildVm20ReviewPackage = ({ chunkRecords, sourcePackages, evaluation }) =>
       top1Accuracy: supportedQueries.length ? supportedQueries.filter((query) => query.top1Hit).length / supportedQueries.length : 0,
       top3Accuracy: supportedQueries.length ? supportedQueries.filter((query) => query.top3Hit).length / supportedQueries.length : 0,
       unsupportedQueriesDetected: unsupportedQueries.filter((query) => query.resultLabel?.startsWith('unsupported')).length,
+      parentExpansionChecks: ['q-vm20-section5-scenario-reserve', 'q-vm20-section9-mortality-parent-context', 'q-vm20-appendix1-scenarios'].map((queryId) => {
+        const query = vm20Queries.find((candidate) => candidate.queryId === queryId)
+        const childChunkId = query?.expectedChunkIds?.find((chunkId) => chunkId.includes('-child-')) ?? null
+        const childChunk = childChunkId ? chunkRecords.find((chunk) => chunk.chunkId === childChunkId) : null
+        const parentChunk = childChunk?.parentChunkId ? chunkRecords.find((chunk) => chunk.chunkId === childChunk.parentChunkId) : null
+        const childRetrieved = Boolean(query?.rankedMatches?.some((match) => match.chunkId === childChunkId))
+        const parentRetrieved = Boolean(query?.rankedMatches?.some((match) => match.chunkId === parentChunk?.chunkId))
+        return { queryId, childChunkId, parentChunkId: parentChunk?.chunkId ?? null, childRetrieved, parentResolvable: Boolean(parentChunk), parentRetrieved, expandedEvidenceChunkCount: parentChunk ? 2 : 0, note: 'Deterministic structural check only; the baseline evaluator does not rerank or synthesize parent-expanded answers.' }
+      }),
       baselineBeforeExpansion: { queryCount: 22, supportedQueryCount: 20, unsupportedQueryCount: 2, top1HitCount: 14, top3HitCount: 20, top1Accuracy: 0.70, top3Accuracy: 1.0, note: 'Baseline read from the 9aff2bf retrieval result before VM-20 expansion; query set and corpus size differ from this VM-20 benchmark.' },
       queryResults: vm20Queries.map((query) => ({ queryId: query.queryId, category: query.queryCategory, top1Hit: query.top1Hit, top3Hit: query.top3Hit, resultLabel: query.resultLabel }))
     },
@@ -803,11 +812,12 @@ const buildVm20ReviewPackage = ({ chunkRecords, sourcePackages, evaluation }) =>
     humanReview: {
       decisionOptions: ['APPROVE', 'APPROVE WITH FIXES', 'REPROCESS', 'REJECT'],
       provisionalDisposition: 'APPROVE WITH FIXES',
-      rationale: 'The reviewed current-manual wave is source-bound and hierarchically retrievable, but chapter gaps, missing line references, table gaps, and historical companion guidance require explicit reviewer disposition before promotion.',
+      rationale: 'The targeted current-manual prose and appendix wave is source-bound and hierarchically retrievable. Structured current tables, page-image backstop, line references, and historical companion guidance still require explicit reviewer disposition before promotion.',
       requiredChecks: [
         'Confirm current-manual wording and page citations against the approved raw source.',
         'Confirm parent/child boundaries and any child that crosses a requirement, exception, qualification, or table-heading boundary.',
         'Review cross-reference candidates without inferring legal effect or supersession.',
+        'Confirm that Sections 4, 5, 9 and Appendices 1-2 are complete for the stated prose boundaries and that Appendix 2 tables remain deferred.',
         'Decide whether the companion practice-note package is useful as implementation context after currentness review.',
         'Keep all packages review-only unless a separate promotion decision is recorded.'
       ]

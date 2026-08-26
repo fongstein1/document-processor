@@ -50,7 +50,7 @@
       "notes": "Product features, options, and valuation impact."
     }
   ],
-  "sourcePackageCount": 20,
+  "sourcePackageCount": 21,
   "sourcePackages": [
     {
       "sourceIndexId": "source-index-vm20-section3c-hierarchical",
@@ -414,6 +414,60 @@
       "pageImageBackstop": false,
       "lineReferencesAvailable": false,
       "notes": "Expanded current-manual VM-20 coverage for the reviewed 2026 source slices. This is review-only, not learner-facing, not app-ready, not RAG-ready, and not promoted."
+    },
+    {
+      "sourceIndexId": "source-index-vm20-remaining-prose-appendix-coverage",
+      "classification": {
+        "domainId": "naic_regulatory",
+        "subdomainId": null,
+        "documentType": "valuation_manual_section",
+        "purpose": "Hierarchical source-bound canonical coverage of the remaining current VM-20 prose and appendix sections.",
+        "intendedAudience": "Valuation, regulatory, and governance reviewers",
+        "authoritySourceType": "regulatory",
+        "confidentiality": "internal",
+        "publicationDate": null,
+        "effectiveDate": null,
+        "version": null,
+        "approvalStatus": "review_only",
+        "language": "en",
+        "recommendedProfile": "regulatory",
+        "recommendedChunkingStrategy": "hierarchical_structure",
+        "confidence": "high",
+        "unresolvedQuestions": [
+          "Independent actuarial review is required before any promotion.",
+          "Appendix 2 table rows and version metadata remain outside this prose milestone."
+        ],
+        "notes": "Current manual source evidence only; generated summaries and review commentary remain distinct from source text."
+      },
+      "sourceId": "vm20-remaining-prose-appendix-coverage",
+      "sourceVersionId": "source-index-vm20-remaining-prose-appendix-coverage",
+      "sourceTitle": "VM-20 Remaining Prose and Appendix Coverage",
+      "sourceFamilyId": "valuation_manual_pdfs",
+      "documentType": "valuation_manual_section",
+      "sourceStatus": "active",
+      "sourceReference": "2026 NAIC Valuation Manual",
+      "jurisdiction": "NAIC",
+      "authorityLevel": "manual_section",
+      "pageRange": {
+        "start": 66,
+        "end": 140
+      },
+      "chunkCount": 77,
+      "reviewBatchIds": [
+        "batch-231",
+        "batch-232",
+        "batch-233",
+        "batch-234"
+      ],
+      "sourceIndexPath": "data/processed/source_indexes/sources/vm20-remaining-prose-appendix-coverage.json",
+      "markdownPath": "data/processed/source_indexes/sources/vm20-remaining-prose-appendix-coverage.md",
+      "reviewIndexPath": "docs/review/vm20_review_index.md",
+      "selfReviewPath": "docs/review/vm20_self_review.md",
+      "relationships": [],
+      "textLayerQuality": "clean",
+      "pageImageBackstop": false,
+      "lineReferencesAvailable": false,
+      "notes": "Review-only VM-20 Sections 4, 5, 9 and Appendices 1-2 coverage. Structured current regulatory tables remain a separate later milestone."
     },
     {
       "sourceIndexId": "source-index-vm20-practice-note-companion",
@@ -1157,7 +1211,7 @@
       "notes": "Synthetic non-sensitive approval memo used to exercise the generic governance and pricing profiles."
     }
   ],
-  "chunkCount": 282,
+  "chunkCount": 359,
   "exports": {
     "repositoryManifestPath": "data/processed/source_indexes/repository-manifest.json",
     "exportManifestPath": "data/processed/source_indexes/exports/export_manifest.json",
@@ -1172,23 +1226,23 @@
   "retrievalEvaluation": {
     "evaluationId": "source-index-poc-2026-07-21-retrieval",
     "method": "keyword_overlap_baseline",
-    "queryCount": 35,
-    "supportedQueryCount": 32,
+    "queryCount": 44,
+    "supportedQueryCount": 41,
     "unsupportedQueryCount": 3,
-    "top1HitCount": 29,
-    "top3HitCount": 32,
-    "top5HitCount": 32,
-    "top1Accuracy": 0.90625,
+    "top1HitCount": 35,
+    "top3HitCount": 41,
+    "top5HitCount": 41,
+    "top1Accuracy": 0.8536585365853658,
     "top3Accuracy": 1,
     "top5Accuracy": 1,
-    "meanReciprocalRank": 0.9385416666666666,
-    "sourceFamilyAccuracy": 0.96875,
-    "authorityLevelAccuracy": 0.9375,
+    "meanReciprocalRank": 0.9081300813008131,
+    "sourceFamilyAccuracy": 0.926829268292683,
+    "authorityLevelAccuracy": 0.9024390243902439,
     "citationAvailability": 0,
-    "multiChunkEvidenceRecall": 0.42105263157894735,
+    "multiChunkEvidenceRecall": 0.35714285714285715,
     "unsupportedQueryPrecision": 0,
-    "top3Coverage": 0.9142857142857143,
-    "notes": "Keyword baseline retrieved 29 top-1 hits and 32 top-3 hits across 35 queries."
+    "top3Coverage": 0.9318181818181818,
+    "notes": "Keyword baseline retrieved 35 top-1 hits and 41 top-3 hits across 44 queries."
   },
   "notes": "Canonical source-index proof of concept.",
   "extensions": {
