@@ -50,8 +50,58 @@
       "notes": "Product features, options, and valuation impact."
     }
   ],
-  "sourcePackageCount": 17,
+  "sourcePackageCount": 18,
   "sourcePackages": [
+    {
+      "sourceIndexId": "source-index-vm20-section3c-hierarchical",
+      "classification": {
+        "domainId": "naic_regulatory",
+        "subdomainId": null,
+        "documentType": "valuation_manual_section",
+        "purpose": "Hierarchical source-bound canonical slice for VM-20 Section 3.C assumptions",
+        "intendedAudience": "Valuation, regulatory, and governance reviewers",
+        "authoritySourceType": "regulatory",
+        "confidentiality": "internal",
+        "publicationDate": null,
+        "effectiveDate": null,
+        "version": null,
+        "approvalStatus": "reviewed",
+        "language": "en",
+        "recommendedProfile": "regulatory",
+        "recommendedChunkingStrategy": "hierarchical_structure",
+        "confidence": "high",
+        "unresolvedQuestions": [
+          "Independent review is still required before any promotion or export."
+        ],
+        "notes": "Parent-child chunks preserve Section 3.C structure and contiguous requirement text."
+      },
+      "sourceId": "vm20-section3c-hierarchical",
+      "sourceVersionId": "source-index-vm20-section3c-hierarchical",
+      "sourceTitle": "VM-20 Section 3.C Assumptions (Hierarchical Canonical Slice)",
+      "sourceFamilyId": "valuation_manual_pdfs",
+      "documentType": "valuation_manual_section",
+      "sourceStatus": "active",
+      "sourceReference": "2026 NAIC Valuation Manual",
+      "jurisdiction": "NAIC",
+      "authorityLevel": "manual_section",
+      "pageRange": {
+        "start": 58,
+        "end": 65
+      },
+      "chunkCount": 14,
+      "reviewBatchIds": [
+        "batch-006"
+      ],
+      "sourceIndexPath": "data/processed/source_indexes/sources/vm20-section3c-hierarchical.json",
+      "markdownPath": "data/processed/source_indexes/sources/vm20-section3c-hierarchical.md",
+      "reviewIndexPath": "docs/review/vm20_review_index.md",
+      "selfReviewPath": "docs/review/vm20_self_review.md",
+      "relationships": [],
+      "textLayerQuality": "clean",
+      "pageImageBackstop": false,
+      "lineReferencesAvailable": false,
+      "notes": "Hierarchical parent-child canonicalization of the existing reviewed VM-20 Section 3.C slice. Remains review-only and not promoted."
+    },
     {
       "sourceIndexId": "source-index-ag01-net-premium-interpretation",
       "classification": {
@@ -980,7 +1030,7 @@
       "notes": "Synthetic non-sensitive approval memo used to exercise the generic governance and pricing profiles."
     }
   ],
-  "chunkCount": 41,
+  "chunkCount": 55,
   "exports": {
     "repositoryManifestPath": "data/processed/source_indexes/repository-manifest.json",
     "exportManifestPath": "data/processed/source_indexes/exports/export_manifest.json",
@@ -994,23 +1044,23 @@
   "retrievalEvaluation": {
     "evaluationId": "source-index-poc-2026-07-21-retrieval",
     "method": "keyword_overlap_baseline",
-    "queryCount": 21,
-    "supportedQueryCount": 19,
+    "queryCount": 22,
+    "supportedQueryCount": 20,
     "unsupportedQueryCount": 2,
     "top1HitCount": 14,
-    "top3HitCount": 19,
-    "top5HitCount": 19,
-    "top1Accuracy": 0.7368421052631579,
+    "top3HitCount": 20,
+    "top5HitCount": 20,
+    "top1Accuracy": 0.7,
     "top3Accuracy": 1,
     "top5Accuracy": 1,
-    "meanReciprocalRank": 0.8210526315789473,
+    "meanReciprocalRank": 0.8049999999999999,
     "sourceFamilyAccuracy": 1,
-    "authorityLevelAccuracy": 0.9473684210526315,
+    "authorityLevelAccuracy": 0.95,
     "citationAvailability": 0,
-    "multiChunkEvidenceRecall": 1,
+    "multiChunkEvidenceRecall": 0.5714285714285714,
     "unsupportedQueryPrecision": 0.5,
-    "top3Coverage": 0.9047619047619048,
-    "notes": "Keyword baseline retrieved 14 top-1 hits and 19 top-3 hits across 21 queries."
+    "top3Coverage": 0.9090909090909091,
+    "notes": "Keyword baseline retrieved 14 top-1 hits and 20 top-3 hits across 22 queries."
   },
   "notes": "Canonical source-index proof of concept.",
   "extensions": {

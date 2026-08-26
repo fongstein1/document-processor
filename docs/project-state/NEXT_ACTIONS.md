@@ -1,5 +1,20 @@
 # Next Actions
 
+## Regulatory corpus completion phase
+
+The master inventory, gap assessment, completeness report, and
+canonicalization backlog now live under `data/processed/regulatory_corpus/`.
+Use them as the planning view for the next expansion. The next safe sequence
+is to complete already-reviewed VM-20/VM-21/VM-22/VM-30/VM-31 material with
+hierarchical parent-child canonical packages, then process current structured
+tables through a table-specific profile. Do not infer missing authority from a
+filename or a review summary, and do not promote any package automatically.
+
+The current hierarchical proof is the VM-20 Section 3.C slice in
+`data/processed/source_indexes/sources/vm20-section3c-hierarchical.json`.
+Validation checks parent-child resolution, hierarchy, citations, adjacency,
+and orphan-child prevention.
+
 ## Canonical source-index next steps
 
 The new canonical source-index POC should be treated as the next architecture

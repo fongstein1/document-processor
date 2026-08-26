@@ -58,7 +58,7 @@
     "notes": "Active AG 36 source package retained as a review-only guideline slice."
   },
   "processing": {
-    "createdAt": "2026-07-22T22:52:46.750Z",
+    "createdAt": "2026-08-26T03:36:26.702Z",
     "createdBy": "scripts/build-source-index-poc.mjs",
     "processingMode": "canonical_index_poc",
     "canonicality": "poc",

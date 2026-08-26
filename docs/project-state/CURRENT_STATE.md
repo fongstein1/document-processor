@@ -1,5 +1,26 @@
 # Current Project State
 
+## 2026-08-25 Regulatory corpus completion audit
+
+The repository now has a deterministic master regulatory corpus inventory and
+canonicalization backlog under `data/processed/regulatory_corpus/`. The audit
+reconciles 71 distinct source-document records from ignored batch manifests,
+97 tracked review indexes, 93 self-reviews, 18 review-only canonical source
+packages, and 55 canonical chunks. It distinguishes reviewed evidence from
+canonical packages and does not treat the repository as production-complete.
+
+The P0 finding is partial coverage of the current 2026 Valuation Manual, not
+absence of the manual: the external source is declared in manifests and has
+many reviewed slices, while VM-01, VM-20, VM-21, VM-22, VM-30, VM-31, VM-G,
+VM-C, and the current prescribed tables still need complete canonical
+representations. Candidate relationships remain documentary and unpromoted.
+
+The source-index POC now includes a hierarchical VM-20 Section 3.C package
+derived from the existing reviewed batch-006 source text. It has four parent
+chunks and ten child chunks with parent-child IDs, structural locators,
+adjacency links, and citations. It remains review-only, non-promoted, and not
+Copilot-export eligible.
+
 ## Canonical source-index POC
 
 The repository now includes a tracked canonical source-index proof of

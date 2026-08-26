@@ -55,7 +55,7 @@
     "notes": "Projection-entry slice from the controlled VM-21 wave."
   },
   "processing": {
-    "createdAt": "2026-07-22T22:52:46.748Z",
+    "createdAt": "2026-08-26T03:36:26.700Z",
     "createdBy": "scripts/build-source-index-poc.mjs",
     "processingMode": "canonical_index_poc",
     "canonicality": "poc",

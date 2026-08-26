@@ -4,6 +4,7 @@
   "repositoryName": "Document Processor",
   "repositoryPurpose": "Canonical source-index proof of concept for backend-neutral retrieval",
   "modelVersion": "1.0",
+  "generatedAt": "2026-07-22T22:52:46.811Z",
   "domainProfiles": [
     {
       "domainId": "naic_regulatory",
@@ -49,6 +50,49 @@
     }
   ],
   "sources": [
+    {
+      "sourceIndexId": "source-index-vm20-section3c-hierarchical",
+      "sourceId": "vm20-section3c-hierarchical",
+      "filename": "pbr_data_valuation_manual_2026.pdf",
+      "filePath": "D:\\Work\\AI Projects\\NAIC Valuation Manual Course\\pbr_data_valuation_manual_2026.pdf",
+      "sourceFamilyId": "valuation_manual_pdfs",
+      "domainId": "naic_regulatory",
+      "documentType": "valuation_manual_section",
+      "sourceTitle": "VM-20 Section 3.C Assumptions (Hierarchical Canonical Slice)",
+      "sourceReference": "2026 NAIC Valuation Manual",
+      "jurisdiction": "NAIC",
+      "authorityLevel": "manual_section",
+      "sourceStatus": "active",
+      "versionDate": null,
+      "pageCount": 457,
+      "pageRange": { "start": 58, "end": 65 },
+      "reviewBatchIds": ["batch-006"],
+      "reviewIndexPath": "docs/review/vm20_review_index.md",
+      "selfReviewPath": "docs/review/vm20_self_review.md",
+      "pageImageBackstop": false,
+      "lineReferencesAvailable": false,
+      "textLayerQuality": "clean",
+      "notes": "Hierarchical parent-child canonicalization of the existing reviewed VM-20 Section 3.C slice. Remains review-only and not promoted.",
+      "hierarchicalInput": {
+        "extractionPath": "data/work/batches/batch-006/extraction-output.json",
+        "sourceId": "vm20-section3c-assumptions"
+      },
+      "expectedChunkCount": 14,
+      "classification": {
+        "domainId": "naic_regulatory",
+        "documentType": "valuation_manual_section",
+        "purpose": "Hierarchical source-bound canonical slice for VM-20 Section 3.C assumptions",
+        "intendedAudience": "Valuation, regulatory, and governance reviewers",
+        "authoritySourceType": "regulatory",
+        "confidentiality": "internal",
+        "approvalStatus": "reviewed",
+        "recommendedProfile": "regulatory",
+        "recommendedChunkingStrategy": "hierarchical_structure",
+        "confidence": "high",
+        "unresolvedQuestions": ["Independent review is still required before any promotion or export."],
+        "notes": "Parent-child chunks preserve Section 3.C structure and contiguous requirement text."
+      }
+    },
     {
       "sourceIndexId": "source-index-ag01-net-premium-interpretation",
       "sourceId": "ag01-net-premium-interpretation",
@@ -1890,6 +1934,18 @@
         "vm20-assumptions-section-3c"
       ],
       "rationale": "Tests a four-chunk assumption-layer slice."
+    },
+    {
+      "queryId": "q-vm20-hierarchical-section-3c",
+      "queryCategory": "hierarchical_parent_child",
+      "query": "What mortality, interest-rate, and lapse-rate requirements are in VM-20 Section 3.C, and how do the precise evidence children expand the section context?",
+      "expectedChunkIds": [
+        "vm20-section3c-hierarchical-section-3-c-1-mortality-rates-child-001",
+        "vm20-section3c-hierarchical-section-3-c-2-interest-rates-child-001",
+        "vm20-section3c-hierarchical-section-3-c-3-lapse-rates-child-001"
+      ],
+      "expectedSourceIds": ["vm20-section3c-hierarchical"],
+      "rationale": "Demonstrates child retrieval with parent context and stable adjacency for an existing reviewed source slice."
     },
     {
       "queryId": "q-vm21-sr-projection-entry",

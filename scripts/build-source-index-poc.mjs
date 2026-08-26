@@ -16,6 +16,12 @@ const legacyRetrievalRoot = path.join(outputRoot, 'retrieval')
 
 const readJson = async (filePath) => JSON.parse(await fs.readFile(filePath, 'utf8'))
 
+const slugify = (value) =>
+  String(value)
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+
 const ensureDir = async (dirPath) => {
   await fs.mkdir(dirPath, { recursive: true })
 }
@@ -133,7 +139,9 @@ const buildClassificationMarkdown = (manifest, classificationRecords) => {
 }
 
 const csvEscape = (value) => {
-  const text = value === null || value === undefined ? '' : String(value)
+  const text = value === null || value === undefined
+    ? ''
+    : String(value).replace(/[ \t]+(?=\r?$)/gm, '').replace(/\r?\n/g, '\\n')
   if (/[",\n\r]/.test(text)) {
     return `"${text.replace(/"/g, '""')}"`
   }
@@ -188,6 +196,15 @@ const deriveChunk = (source, chunk, index, sourceIndexPath) => {
   const acronyms = asArray(chunk.acronyms)
   const requirements = asArray(chunk.requirements).length > 0 ? asArray(chunk.requirements) : deriveRequirements(controlledTags)
   const citationDisplay = chunk.citationDisplay ?? buildCitationDisplay(citations)
+  const hierarchyFields = chunk.chunkLevel ? {
+    chunkLevel: chunk.chunkLevel,
+    parentChunkId: chunk.parentChunkId ?? null,
+    childChunkIds: asArray(chunk.childChunkIds),
+    precedingChunkId: chunk.precedingChunkId ?? null,
+    followingChunkId: chunk.followingChunkId ?? null,
+    structuralLocator: chunk.structuralLocator,
+    chunkingMethod: chunk.chunkingMethod,
+  } : {}
   const normalizedSearchText = chunk.normalizedSearchText ??
     normalizeText(
       [
@@ -246,11 +263,136 @@ const deriveChunk = (source, chunk, index, sourceIndexPath) => {
     reviewFlags: chunk.reviewFlags ?? source.chunkDefaults?.reviewFlags ?? [],
     qualityNotes: chunk.qualityNotes ?? source.chunkDefaults?.qualityNotes ?? [],
     evidenceNotes: chunk.evidenceNotes ?? source.chunkDefaults?.evidenceNotes ?? '',
+    ...hierarchyFields,
     retrievalEligible: chunk.retrievalEligible ?? true,
     promotionEligible: chunk.promotionEligible ?? false,
   }
 
   return derivedChunk
+}
+
+const parsePageRange = (text, fallbackStart, fallbackEnd) => {
+  const pages = [...String(text).matchAll(/\[p\.\s*(\d+)\]/g)].map((match) => Number(match[1]))
+  return { start: pages[0] ?? fallbackStart, end: pages.at(-1) ?? fallbackEnd }
+}
+
+const splitParagraphs = (text) => String(text).split(/\n\s*\n/).map((part) => part.trim()).filter(Boolean)
+
+const packParagraphs = (paragraphs, targetWords = 360) => {
+  const groups = []
+  let current = []
+  let words = 0
+  for (const paragraph of paragraphs) {
+    const paragraphWords = paragraph.split(/\s+/).length
+    if (current.length > 0 && words >= targetWords) {
+      groups.push(current.join('\n\n'))
+      current = []
+      words = 0
+    }
+    current.push(paragraph)
+    words += paragraphWords
+  }
+  if (current.length > 0) groups.push(current.join('\n\n'))
+  return groups
+}
+
+const buildHierarchicalChunks = async (source) => {
+  const input = source.hierarchicalInput
+  if (!input) return asArray(source.chunks)
+  const extraction = await readJson(path.resolve(repoRoot, input.extractionPath))
+  const group = extraction.sourceGroups.find((candidate) => candidate.sourceId === input.sourceId)
+  const item = group?.extractedItems?.find((candidate) => candidate.itemKind === 'review_note' || candidate.itemKind === 'chunk')
+  if (!item) throw new Error(`Hierarchical input has no extracted item: ${input.sourceId}`)
+  const text = item.chunkText
+  const parentBoundaries = [
+    ['Section 3.C.1 Mortality Rates', /C\.\s+Net Premium Reserve Assumptions[\s\S]*?(?=\n\s*2\.\s+Interest Rates)/],
+    ['Section 3.C.2 Interest Rates', /2\.\s+Interest Rates[\s\S]*?(?=\n\s*3\.\s+Lapse Rates)/],
+    ['Section 3.C.3 Lapse Rates', /3\.\s+Lapse Rates[\s\S]*?(?=\n\s*D\.\s+NPR Calculation)/],
+    ['Section 3.D NPR Calculation and Cash Surrender Value Floor', /D\.\s+NPR Calculation and Cash Surrender Value Floor[\s\S]*/],
+  ]
+  const parents = []
+  for (const [heading, pattern] of parentBoundaries) {
+    const match = text.match(pattern)
+    if (!match?.[0]) continue
+    const parentId = `${source.sourceId}-${slugify(heading)}`
+    const pageRange = parsePageRange(match[0], source.pageRange.start, source.pageRange.end)
+    const paragraphs = splitParagraphs(match[0])
+    const childTexts = packParagraphs(paragraphs)
+    const childIds = childTexts.map((_, index) => `${parentId}-child-${String(index + 1).padStart(3, '0')}`)
+    parents.push({ heading, parentId, match: match[0], pageRange, childTexts, childIds })
+  }
+  const chunks = []
+  let ordinal = 1
+  const allIds = parents.flatMap((parent) => [parent.parentId, ...parent.childIds])
+  for (const parent of parents) {
+    const parentIndex = allIds.indexOf(parent.parentId)
+    chunks.push({
+      chunkId: parent.parentId,
+      chunkOrdinal: ordinal++,
+      chunkKind: 'source_excerpt',
+      sourceTextType: 'actual_extracted_source_text',
+      pageStart: parent.pageRange.start,
+      pageEnd: parent.pageRange.end,
+      sectionReference: parent.heading,
+      sourceTextExcerpt: parent.match,
+      normalizedTextExcerpt: normalizeText(parent.match).toLowerCase(),
+      summary: `${parent.heading} from the reviewed VM-20 source slice.`,
+      topic: parent.heading,
+      headingPath: `VM-20 > Section 3.C > ${parent.heading.replace(/^Section 3\.C\.\d+\s+/, '')}`,
+      structuralLocator: `VM-20 / ${parent.heading}`,
+      chunkLevel: 'parent',
+      childChunkIds: parent.childIds,
+      precedingChunkId: allIds[parentIndex - 1] ?? null,
+      followingChunkId: allIds[parentIndex + 1] ?? null,
+      chunkingMethod: 'hierarchical_structure',
+      controlledTags: ['core_vm_course', 'hierarchical_parent', 'review_only'],
+      keywords: ['VM-20', 'Section 3.C', parent.heading],
+      citations: [{ citationText: parent.heading, pageReference: `pp. ${parent.pageRange.start}-${parent.pageRange.end}`, sectionReference: parent.heading, sourceReference: source.sourceReference, lineReference: null }],
+      fidelity: 'exact',
+      confidence: 'high',
+      reviewFlags: ['review_only', 'hierarchical_parent'],
+      qualityNotes: ['Parent preserves the explicit VM-20 section boundary.', 'Child chunks remain contiguous source-text excerpts.'],
+      evidenceNotes: 'Derived from ignored batch-006 extraction-output.json; review-only and not promoted.',
+      retrievalEligible: true,
+      promotionEligible: false,
+    })
+    parent.childTexts.forEach((childText, index) => {
+      const childId = parent.childIds[index]
+      const childIndex = allIds.indexOf(childId)
+      const childPages = parsePageRange(childText, parent.pageRange.start, parent.pageRange.end)
+      chunks.push({
+        chunkId: childId,
+        chunkOrdinal: ordinal++,
+        chunkKind: 'source_excerpt',
+        sourceTextType: 'actual_extracted_source_text',
+        pageStart: childPages.start,
+        pageEnd: childPages.end,
+        sectionReference: parent.heading,
+        sourceTextExcerpt: childText,
+        normalizedTextExcerpt: normalizeText(childText).toLowerCase(),
+        summary: `Retrieval child for ${parent.heading}; preserves contiguous requirement and qualification text.`,
+        topic: parent.heading,
+        headingPath: `VM-20 > Section 3.C > ${parent.heading.replace(/^Section 3\.C\.\d+\s+/, '')}`,
+        structuralLocator: `VM-20 / ${parent.heading} / child ${index + 1}`,
+        chunkLevel: 'child',
+        parentChunkId: parent.parentId,
+        precedingChunkId: allIds[childIndex - 1] ?? null,
+        followingChunkId: allIds[childIndex + 1] ?? null,
+        chunkingMethod: 'semantic_boundary',
+        controlledTags: ['core_vm_course', 'hierarchical_child', 'review_only'],
+        keywords: ['VM-20', 'Section 3.C', parent.heading],
+        citations: [{ citationText: parent.heading, pageReference: `pp. ${childPages.start}-${childPages.end}`, sectionReference: parent.heading, sourceReference: source.sourceReference, lineReference: null }],
+        fidelity: 'exact',
+        confidence: 'high',
+        reviewFlags: ['review_only', 'hierarchical_child'],
+        qualityNotes: ['Child boundaries follow paragraph/semantic boundaries.', 'Requirement and qualification paragraphs are kept contiguous.'],
+        evidenceNotes: 'Derived from ignored batch-006 extraction-output.json; review-only and not promoted.',
+        retrievalEligible: true,
+        promotionEligible: false,
+      })
+    })
+  }
+  return chunks
 }
 
 const buildSourceMarkdown = (sourceIndex) => {
@@ -453,6 +595,7 @@ const buildRetrievalReadinessReport = (manifest, evaluation, config) => {
 
 const main = async () => {
   const config = await readJson(configPath)
+  const generatedAt = config.generatedAt ?? new Date().toISOString()
   await ensureDir(outputRoot)
   await ensureDir(sourcesRoot)
   await ensureDir(exportsRoot)
@@ -468,8 +611,16 @@ const main = async () => {
     const sourceVersionId = source.sourceVersionId ?? source.sourceIndexId
     const sourceIndexPath = path.join(sourcesRoot, `${source.sourceId}.json`)
     const markdownPath = path.join(sourcesRoot, `${source.sourceId}.md`)
+    let processingCreatedAt = generatedAt
+    try {
+      const previous = await readJson(sourceIndexPath)
+      processingCreatedAt = previous.processing?.createdAt ?? generatedAt
+    } catch {
+      // New packages use the deterministic config timestamp.
+    }
     const sourceRelationships = asArray(source.relationships)
-    const sourceChunks = asArray(source.chunks).map((chunk, index) =>
+    const hydratedChunks = await buildHierarchicalChunks(source)
+    const sourceChunks = asArray(hydratedChunks).map((chunk, index) =>
       deriveChunk(
         {
           ...source,
@@ -515,7 +666,7 @@ const main = async () => {
         notes: source.notes,
       },
       processing: {
-        createdAt: new Date().toISOString(),
+        createdAt: processingCreatedAt,
         createdBy: 'scripts/build-source-index-poc.mjs',
         processingMode: 'canonical_index_poc',
         canonicality: 'poc',
@@ -615,6 +766,13 @@ const main = async () => {
         chunkOrdinal: chunk.chunkOrdinal,
         chunkKind: chunk.chunkKind,
         sourceTextType: chunk.sourceTextType,
+        chunkLevel: chunk.chunkLevel,
+        parentChunkId: chunk.parentChunkId,
+        childChunkIds: chunk.childChunkIds,
+        precedingChunkId: chunk.precedingChunkId,
+        followingChunkId: chunk.followingChunkId,
+        structuralLocator: chunk.structuralLocator,
+        chunkingMethod: chunk.chunkingMethod,
         sourceTextExcerpt: chunk.sourceTextExcerpt,
         normalizedTextExcerpt: chunk.normalizedTextExcerpt,
         normalizedSearchText: chunk.normalizedSearchText,
@@ -649,7 +807,7 @@ const main = async () => {
     schemaVersion: config.schemaVersion,
     repositoryManifestId: config.pocId,
     repositoryName: config.repositoryName,
-    generatedAt: new Date().toISOString(),
+    generatedAt,
     sourcePackageCount: sourcePackages.length,
     chunkCount: chunkRecords.length,
     exports: {
@@ -668,7 +826,7 @@ const main = async () => {
     repositoryManifestId: config.pocId,
     repositoryName: config.repositoryName,
     repositoryPurpose: config.repositoryPurpose,
-    generatedAt: new Date().toISOString(),
+    generatedAt,
     canonicalLayer: 'source-index',
     modelVersion: config.modelVersion,
     domainProfiles: config.domainProfiles,
@@ -762,6 +920,13 @@ const main = async () => {
     'chunkOrdinal',
     'chunkKind',
     'sourceTextType',
+    'chunkLevel',
+    'parentChunkId',
+    'childChunkIds',
+    'precedingChunkId',
+    'followingChunkId',
+    'structuralLocator',
+    'chunkingMethod',
     'pageStart',
     'pageEnd',
     'pageReference',

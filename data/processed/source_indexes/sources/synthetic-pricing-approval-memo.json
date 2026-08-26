@@ -58,7 +58,7 @@
     "notes": "Synthetic non-sensitive approval memo used to exercise the generic governance and pricing profiles."
   },
   "processing": {
-    "createdAt": "2026-07-22T22:52:46.809Z",
+    "createdAt": "2026-08-26T03:36:26.752Z",
     "createdBy": "scripts/build-source-index-poc.mjs",
     "processingMode": "canonical_index_poc",
     "canonicality": "poc",

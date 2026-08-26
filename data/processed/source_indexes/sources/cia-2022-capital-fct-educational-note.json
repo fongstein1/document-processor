@@ -58,7 +58,7 @@
     "notes": "Canadian Institute of Actuaries educational note retained as review-only companion guidance."
   },
   "processing": {
-    "createdAt": "2026-07-22T22:52:46.794Z",
+    "createdAt": "2026-08-26T03:36:26.727Z",
     "createdBy": "scripts/build-source-index-poc.mjs",
     "processingMode": "canonical_index_poc",
     "canonicality": "poc",

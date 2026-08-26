@@ -2,22 +2,22 @@
 
 ## Corpus summary
 
-- Source packages: 17
-- Canonical chunks: 41
-- Retrieval questions: 21
-- Supported questions: 19
+- Source packages: 18
+- Canonical chunks: 55
+- Retrieval questions: 22
+- Supported questions: 20
 - Unsupported questions: 2
 
 ## Metrics
 
-- Top-1 accuracy: 74%
+- Top-1 accuracy: 70%
 - Top-3 accuracy: 100%
 - Top-5 accuracy: 100%
-- Mean reciprocal rank: 0.821
+- Mean reciprocal rank: 0.805
 - Source-family accuracy: 100%
 - Authority-level accuracy: 95%
 - Citation availability: 0%
-- Multi-chunk evidence recall: 100%
+- Multi-chunk evidence recall: 57%
 - Unsupported-query precision: 50%
 
 ## Category breakdown
@@ -28,6 +28,7 @@
 | framework_overview | 1 | 0% | 100% | 100% | 0.500 | 0% |
 | mechanics_boundary | 1 | 100% | 100% | 100% | 1.000 | 0% |
 | multi_chunk | 6 | 83% | 100% | 100% | 0.917 | 0% |
+| hierarchical_parent_child | 1 | 0% | 100% | 100% | 0.500 | 0% |
 | relationship | 1 | 100% | 100% | 100% | 1.000 | 0% |
 | pricing_domain | 5 | 40% | 100% | 100% | 0.520 | 0% |
 | unsupported | 2 | 0% | 0% | 0% | 0.000 | 50% |

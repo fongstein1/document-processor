@@ -828,3 +828,20 @@
 2026-07-22: Added the reviewed source-pack schema, template, synthetic fixture, and deterministic family-intake-to-source-index adapter. The adapter emits source package JSON/Markdown, JSONL/CSV exports, a repository manifest, and pending retrieval artifacts while preserving review-only and no-promotion guardrails.
 2026-07-22: Added the document-family relationship registry schema, template, synthetic fixture, and deterministic builder. Intake hints and reviewed-package edges now normalize into candidate/needs-review relationships without confirming companion, reprint, amendment, supersession, or cross-reference semantics.
 2026-07-22: Tested the relationship registry against the Regulation 213 family. Added a relative-path family inventory for the base regulation, Amendment 1 text, Amendment 1 FAQ, Amendments 2-6, and their tracked review artifacts; generated 23 evidence-backed documentary candidates; compared them against the empty Reg-213 slice of the curated source-index manifest; and documented unresolved supersession, duplicate/reprint, FAQ clarification, effective-date, and external-reference questions. All candidates remain pending and not promoted.
+
+## 2026-08-25
+
+- Read the Codex goal objective file before continuing the repository task.
+- Audited the current branch, tracked project-state docs, source-family
+  configuration, review indexes, ignored batch manifests, canonical source
+  packages, and relationship registries.
+- Added a deterministic master regulatory corpus inventory, gap assessment,
+  canonicalization backlog, and completeness report. The snapshot records 105
+  source records, 97 review indexes, 18 canonical packages, 55 canonical
+  chunks, 23 candidate relationships, and zero promoted relationships.
+- Added hierarchical parent-child chunking to the source-index contract and
+  canonicalized the existing reviewed VM-20 Section 3.C slice as four parents
+  and ten children with citations and adjacency links. The package remains
+  review-only and not export eligible.
+- Added deterministic inventory and hierarchy validation checks; current
+  source-index and inventory validators pass.

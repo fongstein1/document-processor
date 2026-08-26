@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "repositoryManifestId": "source-index-poc-2026-07-21",
   "method": "keyword_overlap_baseline",
-  "queryCount": 21,
+  "queryCount": 22,
   "queries": [
     {
       "queryId": "q-ag01-net-premium",
@@ -66,6 +66,20 @@
         "vm20-assumptions-section-3c"
       ],
       "rationale": "Tests a four-chunk assumption-layer slice."
+    },
+    {
+      "queryId": "q-vm20-hierarchical-section-3c",
+      "queryCategory": "hierarchical_parent_child",
+      "query": "What mortality, interest-rate, and lapse-rate requirements are in VM-20 Section 3.C, and how do the precise evidence children expand the section context?",
+      "expectedChunkIds": [
+        "vm20-section3c-hierarchical-section-3-c-1-mortality-rates-child-001",
+        "vm20-section3c-hierarchical-section-3-c-2-interest-rates-child-001",
+        "vm20-section3c-hierarchical-section-3-c-3-lapse-rates-child-001"
+      ],
+      "expectedSourceIds": [
+        "vm20-section3c-hierarchical"
+      ],
+      "rationale": "Demonstrates child retrieval with parent context and stable adjacency for an existing reviewed source slice."
     },
     {
       "queryId": "q-vm21-sr-projection-entry",

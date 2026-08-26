@@ -1,10 +1,11 @@
 # Document Processor classification summary
 
 - Manifest ID: `source-index-poc-2026-07-21`
-- Source packages classified: 17
+- Source packages classified: 18
 
 | Source | Domain | Document type | Recommended profile | Chunking strategy | Authority type | Confidence |
 | --- | --- | --- | --- | --- | --- | --- |
+| VM-20 Section 3.C Assumptions (Hierarchical Canonical Slice) | naic_regulatory | valuation_manual_section | regulatory | hierarchical_structure | regulatory | high |
 | Valuation of Policies in Which the Net Premium Exceeds the Gross Premium | naic_regulatory | actuarial_guideline | regulatory | heading_first | regulatory | medium |
 | Definition of the Term Maturity Value in the Standard Nonforfeiture Law of Individual Deferred Annuities | naic_regulatory | actuarial_guideline | regulatory | heading_first | regulatory | medium |
 | Valuation Manual | naic_regulatory | valuation_manual_section | regulatory | heading_first | regulatory | high |

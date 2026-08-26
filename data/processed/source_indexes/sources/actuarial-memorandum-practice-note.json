@@ -58,7 +58,7 @@
     "notes": "Actuarial memorandum companion guidance retained as a non-binding practice note."
   },
   "processing": {
-    "createdAt": "2026-07-22T22:52:46.791Z",
+    "createdAt": "2026-08-26T03:36:26.717Z",
     "createdBy": "scripts/build-source-index-poc.mjs",
     "processingMode": "canonical_index_poc",
     "canonicality": "poc",

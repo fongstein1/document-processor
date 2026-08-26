@@ -56,6 +56,51 @@ const fail = (message) => {
   throw new Error(message)
 }
 
+const countCsvRecords = (text) => {
+  const normalized = text.trim()
+  if (!normalized) return 0
+  let records = 1
+  let quoted = false
+  for (let index = 0; index < normalized.length; index += 1) {
+    const char = normalized[index]
+    if (char === '"') {
+      if (quoted && normalized[index + 1] === '"') index += 1
+      else quoted = !quoted
+    } else if (char === '\n' && !quoted) {
+      records += 1
+    }
+  }
+  return records
+}
+
+const validateHierarchy = (sourceIndex) => {
+  const chunks = sourceIndex.chunks.filter((chunk) => chunk.chunkLevel)
+  if (chunks.length === 0) return
+  const byId = new Map(chunks.map((chunk) => [chunk.chunkId, chunk]))
+  const parents = chunks.filter((chunk) => chunk.chunkLevel === 'parent')
+  const children = chunks.filter((chunk) => chunk.chunkLevel === 'child')
+  if (parents.length === 0 || children.length === 0) fail(`Hierarchical source ${sourceIndex.source.sourceId} must contain both parent and child chunks.`)
+  for (const parent of parents) {
+    if (!Array.isArray(parent.childChunkIds) || parent.childChunkIds.length === 0) fail(`Parent ${parent.chunkId} has no childChunkIds.`)
+    for (const childId of parent.childChunkIds) {
+      const child = byId.get(childId)
+      if (!child || child.chunkLevel !== 'child' || child.parentChunkId !== parent.chunkId) fail(`Parent-child link does not resolve for ${parent.chunkId} -> ${childId}.`)
+    }
+  }
+  for (const child of children) {
+    if (!child.parentChunkId || !byId.has(child.parentChunkId)) fail(`Orphan child chunk ${child.chunkId}.`)
+    if (!Array.isArray(byId.get(child.parentChunkId).childChunkIds) || !byId.get(child.parentChunkId).childChunkIds.includes(child.chunkId)) fail(`Child ${child.chunkId} is not listed by its parent.`)
+    if (!child.structuralLocator || !child.headingPath) fail(`Child ${child.chunkId} is missing structural locator or heading path.`)
+  }
+  for (const chunk of chunks) {
+    for (const adjacentId of [chunk.precedingChunkId, chunk.followingChunkId].filter(Boolean)) {
+      if (!byId.has(adjacentId)) fail(`Adjacent link ${chunk.chunkId} -> ${adjacentId} does not resolve.`)
+    }
+    if (!Array.isArray(chunk.citations) || chunk.citations.length === 0) fail(`Hierarchical chunk ${chunk.chunkId} has no citation.`)
+  }
+  if (!children.some((child) => child.precedingChunkId || child.followingChunkId)) fail(`Hierarchical source ${sourceIndex.source.sourceId} has no child adjacency links.`)
+}
+
 const main = async () => {
   for (const filePath of requiredFiles) {
     if (!(await exists(filePath))) {
@@ -75,7 +120,7 @@ const main = async () => {
   if (repositoryManifest.sourcePackageCount !== config.sources.length) {
     fail('Repository manifest source-package count does not match config.')
   }
-  const expectedChunkCount = config.sources.reduce((sum, source) => sum + source.chunks.length, 0)
+  const expectedChunkCount = config.sources.reduce((sum, source) => sum + (source.expectedChunkCount ?? source.chunks?.length ?? 0), 0)
   if (repositoryManifest.chunkCount !== expectedChunkCount) {
     fail(`Repository manifest chunk count does not match config. Expected ${expectedChunkCount}, found ${repositoryManifest.chunkCount}.`)
   }
@@ -140,14 +185,16 @@ const main = async () => {
     if (sourceIndex.source.sourceId !== source.sourceId) {
       fail(`Source index sourceId mismatch for ${source.sourceId}.`)
     }
-    if (sourceIndex.chunks.length !== source.chunks.length) {
-      fail(`Chunk count mismatch for ${source.sourceId}.`)
+    const expectedSourceChunkCount = source.expectedChunkCount ?? source.chunks?.length ?? 0
+    if (sourceIndex.chunks.length !== expectedSourceChunkCount) {
+      fail(`Chunk count mismatch for ${source.sourceId}. Expected ${expectedSourceChunkCount}, found ${sourceIndex.chunks.length}.`)
     }
-    for (const chunk of source.chunks) {
+    for (const chunk of source.chunks ?? []) {
       if (!sourceIndex.chunks.some((observed) => observed.chunkId === chunk.chunkId)) {
         fail(`Missing chunk ${chunk.chunkId} in source index ${source.sourceId}.`)
       }
     }
+    validateHierarchy(sourceIndex)
     const markdown = await fs.readFile(sourceMdPath, 'utf8')
     if (!markdown.includes(source.sourceTitle) || !markdown.includes(source.sourceId)) {
       fail(`Markdown companion for ${source.sourceId} does not include the source title and ID.`)
@@ -172,14 +219,14 @@ const main = async () => {
   }
 
   const jsonlLines = (await fs.readFile(jsonlPath, 'utf8')).trim().split(/\r?\n/).filter(Boolean)
-  const jsonlChunkCount = config.sources.reduce((sum, source) => sum + source.chunks.length, 0)
+  const jsonlChunkCount = config.sources.reduce((sum, source) => sum + (source.expectedChunkCount ?? source.chunks?.length ?? 0), 0)
   if (jsonlLines.length !== jsonlChunkCount) {
     fail(`JSONL export chunk count mismatch. Expected ${jsonlChunkCount}, found ${jsonlLines.length}.`)
   }
 
-  const csvLines = (await fs.readFile(csvPath, 'utf8')).trim().split(/\r?\n/)
-  if (csvLines.length !== jsonlChunkCount + 1) {
-    fail(`CSV export row count mismatch. Expected ${jsonlChunkCount + 1}, found ${csvLines.length}.`)
+  const csvRecordCount = countCsvRecords(await fs.readFile(csvPath, 'utf8'))
+  if (csvRecordCount !== jsonlChunkCount + 1) {
+    fail(`CSV export row count mismatch. Expected ${jsonlChunkCount + 1}, found ${csvRecordCount}.`)
   }
 
   const evaluation = await readJson(evaluationPath)

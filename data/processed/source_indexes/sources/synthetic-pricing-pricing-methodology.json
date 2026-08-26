@@ -59,7 +59,7 @@
     "notes": "Synthetic non-sensitive pricing methodology used to exercise the generic pricing profile."
   },
   "processing": {
-    "createdAt": "2026-07-22T22:52:46.805Z",
+    "createdAt": "2026-08-26T03:36:26.747Z",
     "createdBy": "scripts/build-source-index-poc.mjs",
     "processingMode": "canonical_index_poc",
     "canonicality": "poc",

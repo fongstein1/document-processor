@@ -1,8 +1,40 @@
 {
   "schemaVersion": "1.0",
   "repositoryManifestId": "source-index-poc-2026-07-21",
-  "sourceCount": 17,
+  "sourceCount": 18,
   "classifications": [
+    {
+      "repositoryManifestId": "source-index-poc-2026-07-21",
+      "sourceIndexId": "source-index-vm20-section3c-hierarchical",
+      "sourceId": "vm20-section3c-hierarchical",
+      "sourceTitle": "VM-20 Section 3.C Assumptions (Hierarchical Canonical Slice)",
+      "sourceFamilyId": "valuation_manual_pdfs",
+      "domainId": "naic_regulatory",
+      "documentType": "valuation_manual_section",
+      "classification": {
+        "domainId": "naic_regulatory",
+        "subdomainId": null,
+        "documentType": "valuation_manual_section",
+        "purpose": "Hierarchical source-bound canonical slice for VM-20 Section 3.C assumptions",
+        "intendedAudience": "Valuation, regulatory, and governance reviewers",
+        "authoritySourceType": "regulatory",
+        "confidentiality": "internal",
+        "publicationDate": null,
+        "effectiveDate": null,
+        "version": null,
+        "approvalStatus": "reviewed",
+        "language": "en",
+        "recommendedProfile": "regulatory",
+        "recommendedChunkingStrategy": "hierarchical_structure",
+        "confidence": "high",
+        "unresolvedQuestions": [
+          "Independent review is still required before any promotion or export."
+        ],
+        "notes": "Parent-child chunks preserve Section 3.C structure and contiguous requirement text."
+      },
+      "reviewIndexPath": "docs/review/vm20_review_index.md",
+      "selfReviewPath": "docs/review/vm20_self_review.md"
+    },
     {
       "repositoryManifestId": "source-index-poc-2026-07-21",
       "sourceIndexId": "source-index-ag01-net-premium-interpretation",

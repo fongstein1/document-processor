@@ -1,5 +1,28 @@
 # Decisions
 
+## Regulatory corpus inventory is the planning view
+
+The master regulatory corpus inventory under
+`data/processed/regulatory_corpus/` extends the existing source-index and
+review architecture. It must distinguish source-document evidence, review
+artifacts, canonical packages, intended corpus targets, and genuine gaps. It
+must not replace source-index packages or treat review commentary as source
+text.
+
+## Hierarchical canonical chunking
+
+Canonical regulatory packages use document-aware hierarchy first: parent
+chunks preserve coherent sections or subsections, child chunks support precise
+retrieval, and structural locators plus preceding/following links remain
+explicit. Semantic paragraph grouping is preferred within large sections;
+token splitting is only a fallback. Tables are a separate processing concern.
+
+## Copilot export remains gated
+
+The inventory records eventual Copilot export eligibility, exclusion reason,
+and approved export version, but every current record remains ineligible. A
+successful validation run is not a human promotion decision.
+
 ## Standalone processor workspace
 
 This repo is a dedicated document-processing workspace. It should not become a

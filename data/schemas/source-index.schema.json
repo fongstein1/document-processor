@@ -584,6 +584,31 @@
         "canonicalSourceIndexPath": {
           "type": "string"
         },
+        "chunkLevel": {
+          "type": "string",
+          "enum": ["parent", "child"]
+        },
+        "parentChunkId": {
+          "type": ["string", "null"]
+        },
+        "childChunkIds": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "precedingChunkId": {
+          "type": ["string", "null"]
+        },
+        "followingChunkId": {
+          "type": ["string", "null"]
+        },
+        "structuralLocator": {
+          "type": "string",
+          "minLength": 1
+        },
+        "chunkingMethod": {
+          "type": "string",
+          "enum": ["hierarchical_structure", "semantic_boundary", "token_fallback", "legacy_poc"]
+        },
         "retrievalEligible": {
           "type": "boolean"
         },

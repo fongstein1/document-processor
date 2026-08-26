@@ -22,6 +22,13 @@ The pipeline should support:
 - future actuarial governance and process documents
 - synthetic corpora used to prove profile portability
 
+The regulatory corpus completion phase also maintains a deterministic master
+inventory and canonicalization backlog under
+`data/processed/regulatory_corpus/`. This planning layer records source
+availability, review evidence, canonical status, currentness, relationships,
+retrieval gaps, and eventual Copilot export eligibility without replacing the
+canonical source-index packages.
+
 ## Non-negotiables
 
 - Keep raw source documents in the external raw folder, not in Git.
@@ -201,7 +208,9 @@ app/product thread to import.
 3. Use the family intake manifest and scanner to select the profile and build a
    deterministic inventory.
 4. Extract text and preserve page or section locators.
-5. Chunk by source structure, not arbitrary token size.
+5. Chunk by source structure, preserving parent sections and child retrieval
+   units; use semantic boundaries within large units and token splitting only
+   as a fallback. Keep tables in a separate structured-table profile.
 6. Label chunks with summary, keywords, confidence, and review flags.
 7. Build concise review packets that only show exceptions and promotions.
 8. Promote approved items into sanitized exports.

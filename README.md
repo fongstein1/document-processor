@@ -12,7 +12,7 @@ review-only batch outputs can be converted into reusable JSON, Markdown, JSONL,
 CSV, and retrieval-evaluation artifacts without replacing the underlying
 review packets or handoff notes.
 
-The expanded POC corpus now covers 17 source packages and 41 canonical chunks.
+The expanded POC corpus now covers 18 source packages and 55 canonical chunks.
 It includes:
 
 - AG 01 net-premium interpretation;
@@ -26,6 +26,8 @@ It includes:
 - actuarial memorandum practice-note material;
 - Regulation 210;
 - the CIA 2022 capital/FCT educational note;
+- a hierarchical VM-20 Section 3.C package with parent-child chunks and
+  structural adjacency;
 - a synthetic pricing corpus that proves the canonical layer can extend
   beyond the regulatory family without hard-coding NAIC-only assumptions.
 
@@ -35,6 +37,12 @@ report, a deterministic classification layer, and a compact evaluation
 harness for the expanded corpus. New document families can now enter through a
 document-family intake manifest and scanner before they are turned into the
 canonical source-index layer.
+
+The current regulatory completion phase is tracked separately under
+`data/processed/regulatory_corpus/`, including the master inventory, gap
+assessment, canonicalization backlog, and completeness report. These artifacts
+distinguish reviewed evidence from canonical packages and genuine corpus gaps;
+they do not promote content or make it Copilot-export eligible.
 
 ## What lives here
 

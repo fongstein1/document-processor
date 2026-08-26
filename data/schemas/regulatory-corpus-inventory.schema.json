@@ -1,0 +1,171 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://codex.local/schemas/regulatory-corpus-inventory.schema.json",
+  "title": "Regulatory Corpus Inventory",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "inventoryId",
+    "generatedAt",
+    "scope",
+    "summary",
+    "sources",
+    "corpusTargets"
+  ],
+  "properties": {
+    "schemaVersion": { "const": "1.0" },
+    "inventoryId": { "type": "string", "minLength": 1 },
+    "generatedAt": { "type": "string", "format": "date-time" },
+    "scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["domain", "rawSourcePolicy", "canonicalLayer"],
+      "properties": {
+        "domain": { "type": "string", "minLength": 1 },
+        "rawSourcePolicy": { "type": "string", "minLength": 1 },
+        "canonicalLayer": { "type": "string", "minLength": 1 }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "sources": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/source" }
+    },
+    "corpusTargets": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/target" }
+    }
+  },
+  "$defs": {
+    "status": { "type": "string", "minLength": 1 },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "sourceId",
+        "documentId",
+        "title",
+        "sourceFamily",
+        "documentType",
+        "jurisdiction",
+        "currentness",
+        "availability",
+        "processing",
+        "review",
+        "retrieval",
+        "priority"
+      ],
+      "properties": {
+        "sourceId": { "type": "string", "minLength": 1 },
+        "documentId": { "type": "string", "minLength": 1 },
+        "title": { "type": "string", "minLength": 1 },
+        "sourceFamily": { "type": "string", "minLength": 1 },
+        "documentType": { "type": "string", "minLength": 1 },
+        "jurisdiction": { "type": ["string", "null"] },
+        "filename": { "type": ["string", "null"] },
+        "sourceLocator": { "type": ["string", "null"] },
+        "version": { "type": ["string", "null"] },
+        "publicationDate": { "type": ["string", "null"] },
+        "effectiveDate": { "type": ["string", "null"] },
+        "currentness": { "$ref": "#/$defs/status" },
+        "availability": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["rawSource", "sourceText", "status"],
+          "properties": {
+            "rawSource": { "$ref": "#/$defs/status" },
+            "sourceText": { "$ref": "#/$defs/status" },
+            "status": { "$ref": "#/$defs/status" }
+          }
+        },
+        "processing": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "processingPlans",
+            "reviewIndexes",
+            "selfReviews",
+            "canonicalPackages",
+            "classification",
+            "relationshipRegistry",
+            "chunkCount",
+            "sourceTextFidelity"
+          ],
+          "properties": {
+            "processingPlans": { "type": "array", "items": { "type": "string" } },
+            "reviewIndexes": { "type": "array", "items": { "type": "string" } },
+            "selfReviews": { "type": "array", "items": { "type": "string" } },
+            "canonicalPackages": { "type": "array", "items": { "type": "string" } },
+            "classification": { "type": "string" },
+            "relationshipRegistry": { "type": "string" },
+            "chunkCount": { "type": "integer", "minimum": 0 },
+            "sourceTextFidelity": { "type": "array", "items": { "type": "string" } }
+          }
+        },
+        "review": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "reviewRequired",
+            "reviewCompleted",
+            "blockingFindings",
+            "promotionState",
+            "canonical",
+            "copilotExportEligible"
+          ],
+          "properties": {
+            "reviewRequired": { "type": "boolean" },
+            "reviewCompleted": { "type": "boolean" },
+            "blockingFindings": { "type": "array", "items": { "type": "string" } },
+            "promotionState": { "type": "string" },
+            "canonical": { "type": "boolean" },
+            "copilotExportEligible": { "type": "boolean" },
+            "exclusionReason": { "type": ["string", "null"] }
+          }
+        },
+        "retrieval": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["associatedQuestions", "expectedCoverage", "evaluationCoverage", "knownGaps"],
+          "properties": {
+            "associatedQuestions": { "type": "array", "items": { "type": "string" } },
+            "expectedCoverage": { "type": "string" },
+            "evaluationCoverage": { "type": "string" },
+            "knownGaps": { "type": "array", "items": { "type": "string" } }
+          }
+        },
+        "priority": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["level", "reason"],
+          "properties": {
+            "level": { "enum": ["P0", "P1", "P2", "P3"] },
+            "reason": { "type": "string", "minLength": 1 }
+          }
+        },
+        "relationships": { "type": "array", "items": { "type": "string" } },
+        "notes": { "type": "string" }
+      }
+    },
+    "target": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["targetId", "title", "sourceFamily", "priority", "intendedStatus", "assessment", "reason"],
+      "properties": {
+        "targetId": { "type": "string", "minLength": 1 },
+        "title": { "type": "string", "minLength": 1 },
+        "sourceFamily": { "type": "string", "minLength": 1 },
+        "priority": { "enum": ["P0", "P1", "P2", "P3"] },
+        "intendedStatus": { "type": "string", "minLength": 1 },
+        "assessment": { "type": "string", "minLength": 1 },
+        "reason": { "type": "string", "minLength": 1 },
+        "evidenceSourceIds": { "type": "array", "items": { "type": "string" } },
+        "nextAction": { "type": "string" }
+      }
+    }
+  }
+}

@@ -55,7 +55,7 @@
     "notes": "Companion-only AG 36 Law Manual reprint retained as separate evidence."
   },
   "processing": {
-    "createdAt": "2026-07-22T22:52:46.764Z",
+    "createdAt": "2026-08-26T03:36:26.712Z",
     "createdBy": "scripts/build-source-index-poc.mjs",
     "processingMode": "canonical_index_poc",
     "canonicality": "poc",

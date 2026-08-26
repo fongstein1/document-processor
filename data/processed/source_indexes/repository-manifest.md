@@ -5,8 +5,8 @@
 - Canonical layer: source-index
 - Model version: 1.0
 - Generated at: 2026-07-22T22:52:46.811Z
-- Source package count: 17
-- Chunk count: 41
+- Source package count: 18
+- Chunk count: 55
 
 ## Export files
 
@@ -21,6 +21,7 @@
 
 | Source | Pages | Source index | Review posture |
 | --- | --- | --- | --- |
+| VM-20 Section 3.C Assumptions (Hierarchical Canonical Slice) | pp. 58-65 | `data/processed/source_indexes/sources/vm20-section3c-hierarchical.json` | review-only |
 | Valuation of Policies in Which the Net Premium Exceeds the Gross Premium | pp. 1-1 | `data/processed/source_indexes/sources/ag01-net-premium-interpretation.json` | review-only |
 | Definition of the Term Maturity Value in the Standard Nonforfeiture Law of Individual Deferred Annuities | pp. 1-1 | `data/processed/source_indexes/sources/ag03-maturity-value-interpretation.json` | review-only |
 | Valuation Manual | pp. 45-46 | `data/processed/source_indexes/sources/vm20-framework-overview.json` | review-only |
@@ -41,11 +42,11 @@
 
 ## Retrieval summary
 
-- Queries evaluated: 21
-- Supported queries: 19
+- Queries evaluated: 22
+- Supported queries: 20
 - Unsupported queries: 2
-- Top-1 accuracy: 74%
+- Top-1 accuracy: 70%
 - Top-3 accuracy: 100%
 - Top-5 accuracy: 100%
-- Mean reciprocal rank: 0.821
+- Mean reciprocal rank: 0.805
 - Method: keyword_overlap_baseline

@@ -55,7 +55,7 @@
     "notes": "High-level framework overview slice from the controlled VM-20 wave."
   },
   "processing": {
-    "createdAt": "2026-07-22T22:52:46.743Z",
+    "createdAt": "2026-08-26T03:36:26.694Z",
     "createdBy": "scripts/build-source-index-poc.mjs",
     "processingMode": "canonical_index_poc",
     "canonicality": "poc",
