@@ -12,7 +12,7 @@ review-only batch outputs can be converted into reusable JSON, Markdown, JSONL,
 CSV, and retrieval-evaluation artifacts without replacing the underlying
 review packets or handoff notes.
 
-The expanded POC corpus now covers 20 source packages and 282 canonical chunks.
+The expanded POC corpus now covers 22 source packages and 457 canonical chunks.
 It includes:
 
 - AG 01 net-premium interpretation;
@@ -31,17 +31,20 @@ It includes:
 - the CIA 2022 capital/FCT educational note;
 - a hierarchical VM-20 Section 3.C package with parent-child chunks and
   structural adjacency;
+- a definition-aware current 2026 VM-01 package with 98 exact-text definition
+  units and a separate lookup index;
 - a synthetic pricing corpus that proves the canonical layer can extend
   beyond the regulatory family without hard-coding NAIC-only assumptions.
 
-The canonical layer stays review-only, not learner-facing, not app-ready, and
-not RAG-ready by default. The repository also includes a retrieval readiness
+The canonical layer stays non-learner-facing, non-app-ready, and non-RAG-ready
+by default. Six current-manual VM-20 prose packages are explicitly promoted,
+while VM-01 and other unpromoted packages remain review-only. The repository also includes a retrieval readiness
 report, a deterministic classification layer, and a compact evaluation
 harness for the expanded corpus. New document families can now enter through a
 document-family intake manifest and scanner before they are turned into the
 canonical source-index layer.
 
-The VM-20 expansion has a dedicated review handoff under
+The VM-20 and VM-01 expansions have dedicated review handoffs under
 `data/processed/review_packages/`. It records canonicalized sections, explicit
 current-manual gaps, parent/child counts, citations, cross-reference
 candidates, retrieval results, and human-review decisions without promoting

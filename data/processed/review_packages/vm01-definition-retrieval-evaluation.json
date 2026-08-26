@@ -1,0 +1,2307 @@
+{
+  "schemaVersion": "1.0",
+  "evaluationId": "vm01-definition-retrieval-evaluation-2026",
+  "method": "keyword_overlap_baseline",
+  "queryCount": 16,
+  "supportedQueryCount": 13,
+  "unsupportedQueryCount": 3,
+  "top1HitCount": 12,
+  "top3HitCount": 13,
+  "top1Accuracy": 0.9230769230769231,
+  "top3Accuracy": 1,
+  "meanReciprocalRank": 0.9423076923076923,
+  "unsupportedCorrectCount": 3,
+  "unsupportedQueryPrecision": 1,
+  "currentAuthorityTop1Count": 13,
+  "deduplication": {
+    "topN": 5,
+    "rawTopKCollisionCount": 2,
+    "rawTopKCollisionGroupCount": 1,
+    "postDeduplicationCollisionCount": 0,
+    "affectedQueries": [
+      {
+        "queryId": "vm01-undefined-deterministic-exclusion-test",
+        "collisionGroups": [
+          {
+            "parentChunkId": "vm20-practice-note-companion-vm20-pn-deterministic-exclusion",
+            "childChunkId": "vm20-practice-note-companion-vm20-pn-deterministic-exclusion-child-002"
+          },
+          {
+            "parentChunkId": "vm20-practice-note-companion-vm20-pn-deterministic-exclusion",
+            "childChunkId": "vm20-practice-note-companion-vm20-pn-deterministic-exclusion-child-001"
+          }
+        ]
+      }
+    ]
+  },
+  "queries": [
+    {
+      "queryId": "vm01-exact-accumulated-deficiency",
+      "queryCategory": "exact_defined_term",
+      "query": "How does VM-01 define accumulated deficiency?",
+      "expectedChunkIds": [
+        "vm01-definition-002-accumulated-deficiency"
+      ],
+      "expectedSourceIds": [
+        "vm01-definitions"
+      ],
+      "supportRequirements": {
+        "informationTypes": [
+          "formal_definition"
+        ],
+        "definedTerm": "accumulated deficiency"
+      },
+      "rationale": "Focused VM-01 definition-aware retrieval coverage.",
+      "expectedSourceFamilyIds": [
+        "valuation_manual_pdfs"
+      ],
+      "expectedAuthorityLevels": [
+        "manual_section"
+      ],
+      "rankedMatches": [
+        {
+          "chunkId": "vm01-definition-002-accumulated-deficiency",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 77.85,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm01-definition-098-vm-20-reserving-category",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 31.200000000000003,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm01-definition-058-non-material-secondary-guarantee",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 28.2,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm01-definition-074-qualified-actuary",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 28.2,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm01-definition-006-appointed-actuary",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 27.85,
+          "citationCount": 0
+        }
+      ],
+      "top1Hit": true,
+      "top3Hit": true,
+      "top5Hit": true,
+      "reciprocalRank": 1,
+      "predictedSourceFamilyId": "valuation_manual_pdfs",
+      "predictedAuthorityLevel": "manual_section",
+      "citationAvailable": false,
+      "insufficientSupportDetected": false,
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Retrieved evidence is sufficiently aligned for the requested information type under the current corpus declarations.",
+        "requestedInformationTypes": [
+          "formal_definition"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm01-definition-002-accumulated-deficiency",
+            "sourceId": "vm01-definitions",
+            "score": 77.85,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm01-definition-098-vm-20-reserving-category",
+            "sourceId": "vm01-definitions",
+            "score": 31.200000000000003,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm01-definition-058-non-material-secondary-guarantee",
+            "sourceId": "vm01-definitions",
+            "score": 28.2,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 77.85,
+          "matches": [
+            {
+              "chunkId": "vm01-definition-002-accumulated-deficiency",
+              "score": 77.85,
+              "tokenOverlap": 4
+            },
+            {
+              "chunkId": "vm01-definition-098-vm-20-reserving-category",
+              "score": 31.200000000000003,
+              "tokenOverlap": 3
+            },
+            {
+              "chunkId": "vm01-definition-058-non-material-secondary-guarantee",
+              "score": 28.2,
+              "tokenOverlap": 2
+            },
+            {
+              "chunkId": "vm01-definition-074-qualified-actuary",
+              "score": 28.2,
+              "tokenOverlap": 2
+            },
+            {
+              "chunkId": "vm01-definition-006-appointed-actuary",
+              "score": 27.85,
+              "tokenOverlap": 2
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "deduplication": {
+        "rawTopKCollisionGroups": [],
+        "suppressedParentChunkIds": [],
+        "postDeduplicationCollisionCount": 0
+      },
+      "resultLabel": "supported_top1"
+    },
+    {
+      "queryId": "vm01-acronym-cte",
+      "queryCategory": "acronym_lookup",
+      "query": "How does VM-01 define CTE?",
+      "expectedChunkIds": [
+        "vm01-definition-016-conditional-tail-expectation"
+      ],
+      "expectedSourceIds": [
+        "vm01-definitions"
+      ],
+      "supportRequirements": {
+        "informationTypes": [
+          "formal_definition"
+        ],
+        "definedTerm": "CTE"
+      },
+      "rationale": "Focused VM-01 definition-aware retrieval coverage.",
+      "expectedSourceFamilyIds": [
+        "valuation_manual_pdfs"
+      ],
+      "expectedAuthorityLevels": [
+        "manual_section"
+      ],
+      "rankedMatches": [
+        {
+          "chunkId": "vm01-definition-016-conditional-tail-expectation",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 58.85,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm01-definition-098-vm-20-reserving-category",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 31.200000000000003,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm01-definition-058-non-material-secondary-guarantee",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 28.2,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm01-definition-074-qualified-actuary",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 28.2,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm01-definition-006-appointed-actuary",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 27.85,
+          "citationCount": 0
+        }
+      ],
+      "top1Hit": true,
+      "top3Hit": true,
+      "top5Hit": true,
+      "reciprocalRank": 1,
+      "predictedSourceFamilyId": "valuation_manual_pdfs",
+      "predictedAuthorityLevel": "manual_section",
+      "citationAvailable": false,
+      "insufficientSupportDetected": false,
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Retrieved evidence is sufficiently aligned for the requested information type under the current corpus declarations.",
+        "requestedInformationTypes": [
+          "formal_definition"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm01-definition-016-conditional-tail-expectation",
+            "sourceId": "vm01-definitions",
+            "score": 58.85,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm01-definition-098-vm-20-reserving-category",
+            "sourceId": "vm01-definitions",
+            "score": 31.200000000000003,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm01-definition-058-non-material-secondary-guarantee",
+            "sourceId": "vm01-definitions",
+            "score": 28.2,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 58.85,
+          "matches": [
+            {
+              "chunkId": "vm01-definition-016-conditional-tail-expectation",
+              "score": 58.85,
+              "tokenOverlap": 3
+            },
+            {
+              "chunkId": "vm01-definition-098-vm-20-reserving-category",
+              "score": 31.200000000000003,
+              "tokenOverlap": 3
+            },
+            {
+              "chunkId": "vm01-definition-058-non-material-secondary-guarantee",
+              "score": 28.2,
+              "tokenOverlap": 2
+            },
+            {
+              "chunkId": "vm01-definition-074-qualified-actuary",
+              "score": 28.2,
+              "tokenOverlap": 2
+            },
+            {
+              "chunkId": "vm01-definition-006-appointed-actuary",
+              "score": 27.85,
+              "tokenOverlap": 2
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "deduplication": {
+        "rawTopKCollisionGroups": [],
+        "suppressedParentChunkIds": [],
+        "postDeduplicationCollisionCount": 0
+      },
+      "resultLabel": "supported_top1"
+    },
+    {
+      "queryId": "vm01-plain-language-tail-measure",
+      "queryCategory": "plain_language_lookup",
+      "query": "Which VM-01 risk measure averages the highest 30% of outcomes?",
+      "expectedChunkIds": [
+        "vm01-definition-016-conditional-tail-expectation"
+      ],
+      "expectedSourceIds": [
+        "vm01-definitions"
+      ],
+      "supportRequirements": {
+        "informationTypes": [
+          "formal_definition"
+        ]
+      },
+      "rationale": "Focused VM-01 definition-aware retrieval coverage.",
+      "expectedSourceFamilyIds": [
+        "valuation_manual_pdfs"
+      ],
+      "expectedAuthorityLevels": [
+        "manual_section"
+      ],
+      "rankedMatches": [
+        {
+          "chunkId": "vm01-definition-061-pension-risk-transfer",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 34.35,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm01-definition-077-risk-factor",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 31.35,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm01-definition-090-tail-risk",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 31.35,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm01-definition-016-conditional-tail-expectation",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 26.35,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm01-definition-098-vm-20-reserving-category",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 25.200000000000003,
+          "citationCount": 0
+        }
+      ],
+      "top1Hit": false,
+      "top3Hit": true,
+      "top5Hit": true,
+      "reciprocalRank": 0.25,
+      "predictedSourceFamilyId": "valuation_manual_pdfs",
+      "predictedAuthorityLevel": "manual_section",
+      "citationAvailable": false,
+      "insufficientSupportDetected": false,
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Retrieved evidence is sufficiently aligned for the requested information type under the current corpus declarations.",
+        "requestedInformationTypes": [
+          "formal_definition"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm01-definition-061-pension-risk-transfer",
+            "sourceId": "vm01-definitions",
+            "score": 34.35,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm01-definition-077-risk-factor",
+            "sourceId": "vm01-definitions",
+            "score": 31.35,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm01-definition-090-tail-risk",
+            "sourceId": "vm01-definitions",
+            "score": 31.35,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 34.35,
+          "matches": [
+            {
+              "chunkId": "vm01-definition-061-pension-risk-transfer",
+              "score": 34.35,
+              "tokenOverlap": 6
+            },
+            {
+              "chunkId": "vm01-definition-077-risk-factor",
+              "score": 31.35,
+              "tokenOverlap": 5
+            },
+            {
+              "chunkId": "vm01-definition-090-tail-risk",
+              "score": 31.35,
+              "tokenOverlap": 5
+            },
+            {
+              "chunkId": "vm01-definition-016-conditional-tail-expectation",
+              "score": 26.35,
+              "tokenOverlap": 9
+            },
+            {
+              "chunkId": "vm01-definition-098-vm-20-reserving-category",
+              "score": 25.200000000000003,
+              "tokenOverlap": 5
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "deduplication": {
+        "rawTopKCollisionGroups": [],
+        "suppressedParentChunkIds": [],
+        "postDeduplicationCollisionCount": 0
+      },
+      "resultLabel": "supported_top3"
+    },
+    {
+      "queryId": "vm01-similar-claim-reserve",
+      "queryCategory": "similar_terms",
+      "query": "How does VM-01 define claim reserve rather than contract reserve?",
+      "expectedChunkIds": [
+        "vm01-definition-012-claim-reserve"
+      ],
+      "expectedSourceIds": [
+        "vm01-definitions"
+      ],
+      "supportRequirements": {
+        "informationTypes": [
+          "formal_definition"
+        ],
+        "definedTerm": "claim reserve"
+      },
+      "rationale": "Focused VM-01 definition-aware retrieval coverage.",
+      "expectedSourceFamilyIds": [
+        "valuation_manual_pdfs"
+      ],
+      "expectedAuthorityLevels": [
+        "manual_section"
+      ],
+      "rankedMatches": [
+        {
+          "chunkId": "vm01-definition-012-claim-reserve",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 77.85,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm01-definition-017-contract-reserve",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 57.85,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm01-definition-030-guaranteed-investment-contract",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 43.35,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm01-definition-056-net-premium-reserve",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 42.2,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm01-definition-022-deterministic-reserve",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 40.35,
+          "citationCount": 0
+        }
+      ],
+      "top1Hit": true,
+      "top3Hit": true,
+      "top5Hit": true,
+      "reciprocalRank": 1,
+      "predictedSourceFamilyId": "valuation_manual_pdfs",
+      "predictedAuthorityLevel": "manual_section",
+      "citationAvailable": false,
+      "insufficientSupportDetected": false,
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Retrieved evidence is sufficiently aligned for the requested information type under the current corpus declarations.",
+        "requestedInformationTypes": [
+          "formal_definition"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm01-definition-012-claim-reserve",
+            "sourceId": "vm01-definitions",
+            "score": 77.85,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm01-definition-017-contract-reserve",
+            "sourceId": "vm01-definitions",
+            "score": 57.85,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm01-definition-030-guaranteed-investment-contract",
+            "sourceId": "vm01-definitions",
+            "score": 43.35,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 77.85,
+          "matches": [
+            {
+              "chunkId": "vm01-definition-012-claim-reserve",
+              "score": 77.85,
+              "tokenOverlap": 4
+            },
+            {
+              "chunkId": "vm01-definition-017-contract-reserve",
+              "score": 57.85,
+              "tokenOverlap": 4
+            },
+            {
+              "chunkId": "vm01-definition-030-guaranteed-investment-contract",
+              "score": 43.35,
+              "tokenOverlap": 3
+            },
+            {
+              "chunkId": "vm01-definition-056-net-premium-reserve",
+              "score": 42.2,
+              "tokenOverlap": 3
+            },
+            {
+              "chunkId": "vm01-definition-022-deterministic-reserve",
+              "score": 40.35,
+              "tokenOverlap": 3
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "deduplication": {
+        "rawTopKCollisionGroups": [],
+        "suppressedParentChunkIds": [],
+        "postDeduplicationCollisionCount": 0
+      },
+      "resultLabel": "supported_top1"
+    },
+    {
+      "queryId": "vm01-similar-contract-reserve",
+      "queryCategory": "similar_terms",
+      "query": "How does VM-01 define contract reserve rather than claim reserve?",
+      "expectedChunkIds": [
+        "vm01-definition-017-contract-reserve"
+      ],
+      "expectedSourceIds": [
+        "vm01-definitions"
+      ],
+      "supportRequirements": {
+        "informationTypes": [
+          "formal_definition"
+        ],
+        "definedTerm": "contract reserve"
+      },
+      "rationale": "Focused VM-01 definition-aware retrieval coverage.",
+      "expectedSourceFamilyIds": [
+        "valuation_manual_pdfs"
+      ],
+      "expectedAuthorityLevels": [
+        "manual_section"
+      ],
+      "rankedMatches": [
+        {
+          "chunkId": "vm01-definition-017-contract-reserve",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 77.85,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm01-definition-012-claim-reserve",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 57.85,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm01-definition-030-guaranteed-investment-contract",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 43.35,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm01-definition-056-net-premium-reserve",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 42.2,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm01-definition-022-deterministic-reserve",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 40.35,
+          "citationCount": 0
+        }
+      ],
+      "top1Hit": true,
+      "top3Hit": true,
+      "top5Hit": true,
+      "reciprocalRank": 1,
+      "predictedSourceFamilyId": "valuation_manual_pdfs",
+      "predictedAuthorityLevel": "manual_section",
+      "citationAvailable": false,
+      "insufficientSupportDetected": false,
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Retrieved evidence is sufficiently aligned for the requested information type under the current corpus declarations.",
+        "requestedInformationTypes": [
+          "formal_definition"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm01-definition-017-contract-reserve",
+            "sourceId": "vm01-definitions",
+            "score": 77.85,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm01-definition-012-claim-reserve",
+            "sourceId": "vm01-definitions",
+            "score": 57.85,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm01-definition-030-guaranteed-investment-contract",
+            "sourceId": "vm01-definitions",
+            "score": 43.35,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 77.85,
+          "matches": [
+            {
+              "chunkId": "vm01-definition-017-contract-reserve",
+              "score": 77.85,
+              "tokenOverlap": 4
+            },
+            {
+              "chunkId": "vm01-definition-012-claim-reserve",
+              "score": 57.85,
+              "tokenOverlap": 4
+            },
+            {
+              "chunkId": "vm01-definition-030-guaranteed-investment-contract",
+              "score": 43.35,
+              "tokenOverlap": 3
+            },
+            {
+              "chunkId": "vm01-definition-056-net-premium-reserve",
+              "score": 42.2,
+              "tokenOverlap": 3
+            },
+            {
+              "chunkId": "vm01-definition-022-deterministic-reserve",
+              "score": 40.35,
+              "tokenOverlap": 3
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "deduplication": {
+        "rawTopKCollisionGroups": [],
+        "suppressedParentChunkIds": [],
+        "postDeduplicationCollisionCount": 0
+      },
+      "resultLabel": "supported_top1"
+    },
+    {
+      "queryId": "vm01-condition-future-hedging",
+      "queryCategory": "condition_or_exception",
+      "query": "How does VM-01 define future hedging strategy, including what does not qualify?",
+      "expectedChunkIds": [
+        "vm01-definition-029-future-hedging-strategy"
+      ],
+      "expectedSourceIds": [
+        "vm01-definitions"
+      ],
+      "supportRequirements": {
+        "informationTypes": [
+          "formal_definition"
+        ],
+        "definedTerm": "future hedging strategy"
+      },
+      "rationale": "Focused VM-01 definition-aware retrieval coverage.",
+      "expectedSourceFamilyIds": [
+        "valuation_manual_pdfs"
+      ],
+      "expectedAuthorityLevels": [
+        "manual_section"
+      ],
+      "rankedMatches": [
+        {
+          "chunkId": "vm01-definition-029-future-hedging-strategy",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 96.7,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm01-definition-013-clearly-defined-hedging-strategy",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 63.35,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm01-definition-049-modeled-company-investment-strategy",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 38.85,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm01-definition-037-hedging-transaction",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 37.35,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm01-definition-098-vm-20-reserving-category",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 34.2,
+          "citationCount": 0
+        }
+      ],
+      "top1Hit": true,
+      "top3Hit": true,
+      "top5Hit": true,
+      "reciprocalRank": 1,
+      "predictedSourceFamilyId": "valuation_manual_pdfs",
+      "predictedAuthorityLevel": "manual_section",
+      "citationAvailable": false,
+      "insufficientSupportDetected": false,
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Retrieved evidence is sufficiently aligned for the requested information type under the current corpus declarations.",
+        "requestedInformationTypes": [
+          "formal_definition"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm01-definition-029-future-hedging-strategy",
+            "sourceId": "vm01-definitions",
+            "score": 96.7,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm01-definition-013-clearly-defined-hedging-strategy",
+            "sourceId": "vm01-definitions",
+            "score": 63.35,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm01-definition-049-modeled-company-investment-strategy",
+            "sourceId": "vm01-definitions",
+            "score": 38.85,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 96.7,
+          "matches": [
+            {
+              "chunkId": "vm01-definition-029-future-hedging-strategy",
+              "score": 96.7,
+              "tokenOverlap": 9
+            },
+            {
+              "chunkId": "vm01-definition-013-clearly-defined-hedging-strategy",
+              "score": 63.35,
+              "tokenOverlap": 8
+            },
+            {
+              "chunkId": "vm01-definition-049-modeled-company-investment-strategy",
+              "score": 38.85,
+              "tokenOverlap": 5
+            },
+            {
+              "chunkId": "vm01-definition-037-hedging-transaction",
+              "score": 37.35,
+              "tokenOverlap": 3
+            },
+            {
+              "chunkId": "vm01-definition-098-vm-20-reserving-category",
+              "score": 34.2,
+              "tokenOverlap": 5
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "deduplication": {
+        "rawTopKCollisionGroups": [],
+        "suppressedParentChunkIds": [],
+        "postDeduplicationCollisionCount": 0
+      },
+      "resultLabel": "supported_top1"
+    },
+    {
+      "queryId": "vm01-incorporated-margin",
+      "queryCategory": "incorporated_defined_term",
+      "query": "How does VM-01 define prudent estimate assumption and incorporate margin?",
+      "expectedChunkIds": [
+        "vm01-definition-073-prudent-estimate-assumption"
+      ],
+      "expectedSourceIds": [
+        "vm01-definitions"
+      ],
+      "supportRequirements": {
+        "informationTypes": [
+          "formal_definition"
+        ],
+        "definedTerm": "prudent estimate assumption"
+      },
+      "rationale": "Focused VM-01 definition-aware retrieval coverage.",
+      "expectedSourceFamilyIds": [
+        "valuation_manual_pdfs"
+      ],
+      "expectedAuthorityLevels": [
+        "manual_section"
+      ],
+      "rankedMatches": [
+        {
+          "chunkId": "vm01-definition-073-prudent-estimate-assumption",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 91.85,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm01-definition-048-margin",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 45.35,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm01-definition-039-index-credit-hedge-margin",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 40.35,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm01-definition-005-anticipated-experience-assumption",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 37.35,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm01-definition-098-vm-20-reserving-category",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 31.200000000000003,
+          "citationCount": 0
+        }
+      ],
+      "top1Hit": true,
+      "top3Hit": true,
+      "top5Hit": true,
+      "reciprocalRank": 1,
+      "predictedSourceFamilyId": "valuation_manual_pdfs",
+      "predictedAuthorityLevel": "manual_section",
+      "citationAvailable": false,
+      "insufficientSupportDetected": false,
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Retrieved evidence is sufficiently aligned for the requested information type under the current corpus declarations.",
+        "requestedInformationTypes": [
+          "formal_definition"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm01-definition-073-prudent-estimate-assumption",
+            "sourceId": "vm01-definitions",
+            "score": 91.85,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm01-definition-048-margin",
+            "sourceId": "vm01-definitions",
+            "score": 45.35,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm01-definition-039-index-credit-hedge-margin",
+            "sourceId": "vm01-definitions",
+            "score": 40.35,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 91.85,
+          "matches": [
+            {
+              "chunkId": "vm01-definition-073-prudent-estimate-assumption",
+              "score": 91.85,
+              "tokenOverlap": 6
+            },
+            {
+              "chunkId": "vm01-definition-048-margin",
+              "score": 45.35,
+              "tokenOverlap": 4
+            },
+            {
+              "chunkId": "vm01-definition-039-index-credit-hedge-margin",
+              "score": 40.35,
+              "tokenOverlap": 4
+            },
+            {
+              "chunkId": "vm01-definition-005-anticipated-experience-assumption",
+              "score": 37.35,
+              "tokenOverlap": 4
+            },
+            {
+              "chunkId": "vm01-definition-098-vm-20-reserving-category",
+              "score": 31.200000000000003,
+              "tokenOverlap": 4
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "deduplication": {
+        "rawTopKCollisionGroups": [],
+        "suppressedParentChunkIds": [],
+        "postDeduplicationCollisionCount": 0
+      },
+      "resultLabel": "supported_top1"
+    },
+    {
+      "queryId": "vm01-cross-reference-npr",
+      "queryCategory": "manual_cross_reference",
+      "query": "How does VM-01 define net premium reserve and where does it point?",
+      "expectedChunkIds": [
+        "vm01-definition-056-net-premium-reserve"
+      ],
+      "expectedSourceIds": [
+        "vm01-definitions"
+      ],
+      "supportRequirements": {
+        "informationTypes": [
+          "formal_definition"
+        ],
+        "definedTerm": "net premium reserve"
+      },
+      "rationale": "Focused VM-01 definition-aware retrieval coverage.",
+      "expectedSourceFamilyIds": [
+        "valuation_manual_pdfs"
+      ],
+      "expectedAuthorityLevels": [
+        "manual_section"
+      ],
+      "rankedMatches": [
+        {
+          "chunkId": "vm01-definition-056-net-premium-reserve",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 101.2,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm01-definition-055-net-premium-refund-liability",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 49.85,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm01-definition-092-unearned-premium-reserve",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 49.85,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm01-definition-022-deterministic-reserve",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 40.35,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm01-definition-054-net-asset-earned-rates",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 40.35,
+          "citationCount": 0
+        }
+      ],
+      "top1Hit": true,
+      "top3Hit": true,
+      "top5Hit": true,
+      "reciprocalRank": 1,
+      "predictedSourceFamilyId": "valuation_manual_pdfs",
+      "predictedAuthorityLevel": "manual_section",
+      "citationAvailable": false,
+      "insufficientSupportDetected": false,
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Retrieved evidence is sufficiently aligned for the requested information type under the current corpus declarations.",
+        "requestedInformationTypes": [
+          "formal_definition"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm01-definition-056-net-premium-reserve",
+            "sourceId": "vm01-definitions",
+            "score": 101.2,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm01-definition-055-net-premium-refund-liability",
+            "sourceId": "vm01-definitions",
+            "score": 49.85,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm01-definition-092-unearned-premium-reserve",
+            "sourceId": "vm01-definitions",
+            "score": 49.85,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 101.2,
+          "matches": [
+            {
+              "chunkId": "vm01-definition-056-net-premium-reserve",
+              "score": 101.2,
+              "tokenOverlap": 5
+            },
+            {
+              "chunkId": "vm01-definition-055-net-premium-refund-liability",
+              "score": 49.85,
+              "tokenOverlap": 4
+            },
+            {
+              "chunkId": "vm01-definition-092-unearned-premium-reserve",
+              "score": 49.85,
+              "tokenOverlap": 4
+            },
+            {
+              "chunkId": "vm01-definition-022-deterministic-reserve",
+              "score": 40.35,
+              "tokenOverlap": 4
+            },
+            {
+              "chunkId": "vm01-definition-054-net-asset-earned-rates",
+              "score": 40.35,
+              "tokenOverlap": 4
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "deduplication": {
+        "rawTopKCollisionGroups": [],
+        "suppressedParentChunkIds": [],
+        "postDeduplicationCollisionCount": 0
+      },
+      "resultLabel": "supported_top1"
+    },
+    {
+      "queryId": "vm01-cross-document-prudent-estimate",
+      "queryCategory": "cross_document_terminology",
+      "query": "VM-20 uses prudent estimate assumption; what formal definition does VM-01 provide?",
+      "expectedChunkIds": [
+        "vm01-definition-073-prudent-estimate-assumption"
+      ],
+      "expectedSourceIds": [
+        "vm01-definitions"
+      ],
+      "supportRequirements": {
+        "informationTypes": [
+          "formal_definition"
+        ],
+        "definedTerm": "prudent estimate assumption"
+      },
+      "rationale": "Focused VM-01 definition-aware retrieval coverage.",
+      "expectedSourceFamilyIds": [
+        "valuation_manual_pdfs"
+      ],
+      "expectedAuthorityLevels": [
+        "manual_section"
+      ],
+      "rankedMatches": [
+        {
+          "chunkId": "vm01-definition-073-prudent-estimate-assumption",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 94.55000000000001,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm01-definition-098-vm-20-reserving-category",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 48.25000000000001,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm01-definition-005-anticipated-experience-assumption",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 43.050000000000004,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm01-definition-058-non-material-secondary-guarantee",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 35.25000000000001,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm01-definition-074-qualified-actuary",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 35.25000000000001,
+          "citationCount": 0
+        }
+      ],
+      "top1Hit": true,
+      "top3Hit": true,
+      "top5Hit": true,
+      "reciprocalRank": 1,
+      "predictedSourceFamilyId": "valuation_manual_pdfs",
+      "predictedAuthorityLevel": "manual_section",
+      "citationAvailable": false,
+      "insufficientSupportDetected": false,
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Retrieved evidence is sufficiently aligned for the requested information type under the current corpus declarations.",
+        "requestedInformationTypes": [
+          "formal_definition"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm01-definition-073-prudent-estimate-assumption",
+            "sourceId": "vm01-definitions",
+            "score": 94.55000000000001,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm01-definition-098-vm-20-reserving-category",
+            "sourceId": "vm01-definitions",
+            "score": 48.25000000000001,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm01-definition-005-anticipated-experience-assumption",
+            "sourceId": "vm01-definitions",
+            "score": 43.050000000000004,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 94.55000000000001,
+          "matches": [
+            {
+              "chunkId": "vm01-definition-073-prudent-estimate-assumption",
+              "score": 94.55000000000001,
+              "tokenOverlap": 6
+            },
+            {
+              "chunkId": "vm01-definition-098-vm-20-reserving-category",
+              "score": 48.25000000000001,
+              "tokenOverlap": 5
+            },
+            {
+              "chunkId": "vm01-definition-005-anticipated-experience-assumption",
+              "score": 43.050000000000004,
+              "tokenOverlap": 5
+            },
+            {
+              "chunkId": "vm01-definition-058-non-material-secondary-guarantee",
+              "score": 35.25000000000001,
+              "tokenOverlap": 4
+            },
+            {
+              "chunkId": "vm01-definition-074-qualified-actuary",
+              "score": 35.25000000000001,
+              "tokenOverlap": 4
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "deduplication": {
+        "rawTopKCollisionGroups": [],
+        "suppressedParentChunkIds": [],
+        "postDeduplicationCollisionCount": 0
+      },
+      "resultLabel": "supported_top1"
+    },
+    {
+      "queryId": "vm01-acronym-iul",
+      "queryCategory": "acronym_lookup",
+      "query": "How does VM-01 define IUL?",
+      "expectedChunkIds": [
+        "vm01-definition-042-indexed-universal-life-iul-insurance-policy"
+      ],
+      "expectedSourceIds": [
+        "vm01-definitions"
+      ],
+      "supportRequirements": {
+        "informationTypes": [
+          "formal_definition"
+        ],
+        "definedTerm": "IUL"
+      },
+      "rationale": "Focused VM-01 definition-aware retrieval coverage.",
+      "expectedSourceFamilyIds": [
+        "valuation_manual_pdfs"
+      ],
+      "expectedAuthorityLevels": [
+        "manual_section"
+      ],
+      "rankedMatches": [
+        {
+          "chunkId": "vm01-definition-042-indexed-universal-life-iul-insurance-policy",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 66.35,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm01-definition-098-vm-20-reserving-category",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 31.200000000000003,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm01-definition-058-non-material-secondary-guarantee",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 28.2,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm01-definition-074-qualified-actuary",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 28.2,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm01-definition-006-appointed-actuary",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 27.85,
+          "citationCount": 0
+        }
+      ],
+      "top1Hit": true,
+      "top3Hit": true,
+      "top5Hit": true,
+      "reciprocalRank": 1,
+      "predictedSourceFamilyId": "valuation_manual_pdfs",
+      "predictedAuthorityLevel": "manual_section",
+      "citationAvailable": false,
+      "insufficientSupportDetected": false,
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Retrieved evidence is sufficiently aligned for the requested information type under the current corpus declarations.",
+        "requestedInformationTypes": [
+          "formal_definition"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm01-definition-042-indexed-universal-life-iul-insurance-policy",
+            "sourceId": "vm01-definitions",
+            "score": 66.35,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm01-definition-098-vm-20-reserving-category",
+            "sourceId": "vm01-definitions",
+            "score": 31.200000000000003,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm01-definition-058-non-material-secondary-guarantee",
+            "sourceId": "vm01-definitions",
+            "score": 28.2,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 66.35,
+          "matches": [
+            {
+              "chunkId": "vm01-definition-042-indexed-universal-life-iul-insurance-policy",
+              "score": 66.35,
+              "tokenOverlap": 3
+            },
+            {
+              "chunkId": "vm01-definition-098-vm-20-reserving-category",
+              "score": 31.200000000000003,
+              "tokenOverlap": 3
+            },
+            {
+              "chunkId": "vm01-definition-058-non-material-secondary-guarantee",
+              "score": 28.2,
+              "tokenOverlap": 2
+            },
+            {
+              "chunkId": "vm01-definition-074-qualified-actuary",
+              "score": 28.2,
+              "tokenOverlap": 2
+            },
+            {
+              "chunkId": "vm01-definition-006-appointed-actuary",
+              "score": 27.85,
+              "tokenOverlap": 2
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "deduplication": {
+        "rawTopKCollisionGroups": [],
+        "suppressedParentChunkIds": [],
+        "postDeduplicationCollisionCount": 0
+      },
+      "resultLabel": "supported_top1"
+    },
+    {
+      "queryId": "vm01-long-category",
+      "queryCategory": "complex_definition",
+      "query": "How does VM-01 define VM-20 reserving category and its three categories?",
+      "expectedChunkIds": [
+        "vm01-definition-098-vm-20-reserving-category"
+      ],
+      "expectedSourceIds": [
+        "vm01-definitions"
+      ],
+      "supportRequirements": {
+        "informationTypes": [
+          "formal_definition"
+        ],
+        "definedTerm": "VM-20 reserving category"
+      },
+      "rationale": "Focused VM-01 definition-aware retrieval coverage.",
+      "expectedSourceFamilyIds": [
+        "valuation_manual_pdfs"
+      ],
+      "expectedAuthorityLevels": [
+        "manual_section"
+      ],
+      "rankedMatches": [
+        {
+          "chunkId": "vm01-definition-098-vm-20-reserving-category",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 98.55000000000001,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm01-definition-058-non-material-secondary-guarantee",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 31.049999999999997,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm01-definition-074-qualified-actuary",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 31.049999999999997,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm01-definition-081-secondary-guarantee",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 31.049999999999997,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm01-definition-006-appointed-actuary",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 30.85,
+          "citationCount": 0
+        }
+      ],
+      "top1Hit": true,
+      "top3Hit": true,
+      "top5Hit": true,
+      "reciprocalRank": 1,
+      "predictedSourceFamilyId": "valuation_manual_pdfs",
+      "predictedAuthorityLevel": "manual_section",
+      "citationAvailable": false,
+      "insufficientSupportDetected": false,
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Retrieved evidence is sufficiently aligned for the requested information type under the current corpus declarations.",
+        "requestedInformationTypes": [
+          "formal_definition"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm01-definition-098-vm-20-reserving-category",
+            "sourceId": "vm01-definitions",
+            "score": 98.55000000000001,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm01-definition-058-non-material-secondary-guarantee",
+            "sourceId": "vm01-definitions",
+            "score": 31.049999999999997,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm01-definition-074-qualified-actuary",
+            "sourceId": "vm01-definitions",
+            "score": 31.049999999999997,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 98.55000000000001,
+          "matches": [
+            {
+              "chunkId": "vm01-definition-098-vm-20-reserving-category",
+              "score": 98.55000000000001,
+              "tokenOverlap": 8
+            },
+            {
+              "chunkId": "vm01-definition-058-non-material-secondary-guarantee",
+              "score": 31.049999999999997,
+              "tokenOverlap": 4
+            },
+            {
+              "chunkId": "vm01-definition-074-qualified-actuary",
+              "score": 31.049999999999997,
+              "tokenOverlap": 4
+            },
+            {
+              "chunkId": "vm01-definition-081-secondary-guarantee",
+              "score": 31.049999999999997,
+              "tokenOverlap": 5
+            },
+            {
+              "chunkId": "vm01-definition-006-appointed-actuary",
+              "score": 30.85,
+              "tokenOverlap": 5
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "deduplication": {
+        "rawTopKCollisionGroups": [],
+        "suppressedParentChunkIds": [],
+        "postDeduplicationCollisionCount": 0
+      },
+      "resultLabel": "supported_top1"
+    },
+    {
+      "queryId": "vm01-gi-exclusions",
+      "queryCategory": "condition_or_exception",
+      "query": "How does VM-01 define guaranteed issue life insurance policy, including disqualifying characteristics?",
+      "expectedChunkIds": [
+        "vm01-definition-031-guaranteed-issue-gi-life-insurance-policy"
+      ],
+      "expectedSourceIds": [
+        "vm01-definitions"
+      ],
+      "supportRequirements": {
+        "informationTypes": [
+          "formal_definition"
+        ],
+        "definedTerm": "guaranteed issue (GI) life insurance policy"
+      },
+      "rationale": "Focused VM-01 definition-aware retrieval coverage.",
+      "expectedSourceFamilyIds": [
+        "valuation_manual_pdfs"
+      ],
+      "expectedAuthorityLevels": [
+        "manual_section"
+      ],
+      "rankedMatches": [
+        {
+          "chunkId": "vm01-definition-031-guaranteed-issue-gi-life-insurance-policy",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 129.85,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm01-definition-042-indexed-universal-life-iul-insurance-policy",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 71.35,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm01-definition-093-universal-life-insurance-policy",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 62.35,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm01-definition-097-variable-life-insurance-policy",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 62.35,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm01-definition-046-life-insurance",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 59.35,
+          "citationCount": 0
+        }
+      ],
+      "top1Hit": true,
+      "top3Hit": true,
+      "top5Hit": true,
+      "reciprocalRank": 1,
+      "predictedSourceFamilyId": "valuation_manual_pdfs",
+      "predictedAuthorityLevel": "manual_section",
+      "citationAvailable": false,
+      "insufficientSupportDetected": false,
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Retrieved evidence is sufficiently aligned for the requested information type under the current corpus declarations.",
+        "requestedInformationTypes": [
+          "formal_definition"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm01-definition-031-guaranteed-issue-gi-life-insurance-policy",
+            "sourceId": "vm01-definitions",
+            "score": 129.85,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm01-definition-042-indexed-universal-life-iul-insurance-policy",
+            "sourceId": "vm01-definitions",
+            "score": 71.35,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm01-definition-093-universal-life-insurance-policy",
+            "sourceId": "vm01-definitions",
+            "score": 62.35,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 129.85,
+          "matches": [
+            {
+              "chunkId": "vm01-definition-031-guaranteed-issue-gi-life-insurance-policy",
+              "score": 129.85,
+              "tokenOverlap": 8
+            },
+            {
+              "chunkId": "vm01-definition-042-indexed-universal-life-iul-insurance-policy",
+              "score": 71.35,
+              "tokenOverlap": 5
+            },
+            {
+              "chunkId": "vm01-definition-093-universal-life-insurance-policy",
+              "score": 62.35,
+              "tokenOverlap": 5
+            },
+            {
+              "chunkId": "vm01-definition-097-variable-life-insurance-policy",
+              "score": 62.35,
+              "tokenOverlap": 5
+            },
+            {
+              "chunkId": "vm01-definition-046-life-insurance",
+              "score": 59.35,
+              "tokenOverlap": 5
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "deduplication": {
+        "rawTopKCollisionGroups": [],
+        "suppressedParentChunkIds": [],
+        "postDeduplicationCollisionCount": 0
+      },
+      "resultLabel": "supported_top1"
+    },
+    {
+      "queryId": "vm01-explicit-alternate-term",
+      "queryCategory": "explicit_alias",
+      "query": "How does VM-01 define contract holder behavior?",
+      "expectedChunkIds": [
+        "vm01-definition-062-policyholder-behavior"
+      ],
+      "expectedSourceIds": [
+        "vm01-definitions"
+      ],
+      "supportRequirements": {
+        "informationTypes": [
+          "formal_definition"
+        ],
+        "definedTerm": "contract holder behavior"
+      },
+      "rationale": "Focused VM-01 definition-aware retrieval coverage.",
+      "expectedSourceFamilyIds": [
+        "valuation_manual_pdfs"
+      ],
+      "expectedAuthorityLevels": [
+        "manual_section"
+      ],
+      "rankedMatches": [
+        {
+          "chunkId": "vm01-definition-062-policyholder-behavior",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 73.35,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm01-definition-030-guaranteed-investment-contract",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 43.35,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm01-definition-089-synthetic-guaranteed-investment-contract",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 41.85,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm01-definition-017-contract-reserve",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 37.35,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm01-definition-019-deposit-type-contract",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 37.35,
+          "citationCount": 0
+        }
+      ],
+      "top1Hit": true,
+      "top3Hit": true,
+      "top5Hit": true,
+      "reciprocalRank": 1,
+      "predictedSourceFamilyId": "valuation_manual_pdfs",
+      "predictedAuthorityLevel": "manual_section",
+      "citationAvailable": false,
+      "insufficientSupportDetected": false,
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Retrieved evidence is sufficiently aligned for the requested information type under the current corpus declarations.",
+        "requestedInformationTypes": [
+          "formal_definition"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm01-definition-062-policyholder-behavior",
+            "sourceId": "vm01-definitions",
+            "score": 73.35,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm01-definition-030-guaranteed-investment-contract",
+            "sourceId": "vm01-definitions",
+            "score": 43.35,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm01-definition-089-synthetic-guaranteed-investment-contract",
+            "sourceId": "vm01-definitions",
+            "score": 41.85,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 73.35,
+          "matches": [
+            {
+              "chunkId": "vm01-definition-062-policyholder-behavior",
+              "score": 73.35,
+              "tokenOverlap": 5
+            },
+            {
+              "chunkId": "vm01-definition-030-guaranteed-investment-contract",
+              "score": 43.35,
+              "tokenOverlap": 3
+            },
+            {
+              "chunkId": "vm01-definition-089-synthetic-guaranteed-investment-contract",
+              "score": 41.85,
+              "tokenOverlap": 4
+            },
+            {
+              "chunkId": "vm01-definition-017-contract-reserve",
+              "score": 37.35,
+              "tokenOverlap": 3
+            },
+            {
+              "chunkId": "vm01-definition-019-deposit-type-contract",
+              "score": 37.35,
+              "tokenOverlap": 3
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "deduplication": {
+        "rawTopKCollisionGroups": [],
+        "suppressedParentChunkIds": [],
+        "postDeduplicationCollisionCount": 0
+      },
+      "resultLabel": "supported_top1"
+    },
+    {
+      "queryId": "vm01-undefined-deterministic-exclusion-test",
+      "queryCategory": "unsupported_term",
+      "query": "How does VM-01 define deterministic exclusion test?",
+      "expectedOutcome": "unsupported",
+      "expectedChunkIds": [],
+      "expectedSourceIds": [],
+      "supportRequirements": {
+        "informationTypes": [
+          "formal_definition"
+        ],
+        "definedTerm": "deterministic exclusion test"
+      },
+      "rationale": "Related deterministic and stochastic material must not become a formal definition.",
+      "expectedSourceFamilyIds": [],
+      "expectedAuthorityLevels": [],
+      "rankedMatches": [
+        {
+          "chunkId": "vm01-definition-086-stochastic-exclusion-test",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 55.85,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm01-definition-022-deterministic-reserve",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 40.35,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm20-practice-note-companion-vm20-pn-deterministic-exclusion-child-002",
+          "sourceId": "vm20-practice-note-companion",
+          "sourceFamilyId": "practice_notes",
+          "authorityLevel": "companion_guidance",
+          "score": 33.05,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm20-practice-note-companion-vm20-pn-deterministic-exclusion-child-001",
+          "sourceId": "vm20-practice-note-companion",
+          "sourceFamilyId": "practice_notes",
+          "authorityLevel": "companion_guidance",
+          "score": 32.9,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm20-practice-note-companion-vm20-pn-deterministic-exclusion-child-004",
+          "sourceId": "vm20-practice-note-companion",
+          "sourceFamilyId": "practice_notes",
+          "authorityLevel": "companion_guidance",
+          "score": 32.9,
+          "citationCount": 0
+        }
+      ],
+      "top1Hit": false,
+      "top3Hit": false,
+      "top5Hit": false,
+      "reciprocalRank": 0,
+      "predictedSourceFamilyId": "valuation_manual_pdfs",
+      "predictedAuthorityLevel": "manual_section",
+      "citationAvailable": false,
+      "insufficientSupportDetected": true,
+      "supportDecision": {
+        "supportState": "unsupported",
+        "evidenceSufficient": false,
+        "reasonCode": "term_not_defined_in_vm01",
+        "reason": "VM-01 does not contain an exact formal definition for the requested term (deterministic exclusion test) in the retrieved current definition corpus.",
+        "requestedInformationTypes": [
+          "formal_definition"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm01-definition-086-stochastic-exclusion-test",
+            "sourceId": "vm01-definitions",
+            "score": 55.85,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm01-definition-022-deterministic-reserve",
+            "sourceId": "vm01-definitions",
+            "score": 40.35,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-deterministic-exclusion-child-002",
+            "sourceId": "vm20-practice-note-companion",
+            "score": 33.05,
+            "authorityLevel": "companion_guidance"
+          }
+        ],
+        "corpusGap": "Expanded hierarchical companion coverage for the reviewed VM-20 practice-note wave. Non-binding, historical, review-only, and not promoted. VM-01 states that some Valuation Manual terms are defined in specific sections rather than in VM-01; those section-local definitions are outside this package. Independent review and explicit promotion remain required. Substantially complete 2026 VM-01 definition coverage. Review-only and not promoted; learner, app, RAG, vector, and Copilot export remain blocked.",
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 55.85,
+          "matches": [
+            {
+              "chunkId": "vm01-definition-086-stochastic-exclusion-test",
+              "score": 55.85,
+              "tokenOverlap": 4
+            },
+            {
+              "chunkId": "vm01-definition-022-deterministic-reserve",
+              "score": 40.35,
+              "tokenOverlap": 3
+            },
+            {
+              "chunkId": "vm20-practice-note-companion-vm20-pn-deterministic-exclusion-child-002",
+              "score": 33.05,
+              "tokenOverlap": 6
+            },
+            {
+              "chunkId": "vm20-practice-note-companion-vm20-pn-deterministic-exclusion-child-001",
+              "score": 32.9,
+              "tokenOverlap": 4
+            },
+            {
+              "chunkId": "vm20-practice-note-companion-vm20-pn-deterministic-exclusion-child-004",
+              "score": 32.9,
+              "tokenOverlap": 5
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "deduplication": {
+        "rawTopKCollisionGroups": [
+          {
+            "parentChunkId": "vm20-practice-note-companion-vm20-pn-deterministic-exclusion",
+            "childChunkId": "vm20-practice-note-companion-vm20-pn-deterministic-exclusion-child-002"
+          },
+          {
+            "parentChunkId": "vm20-practice-note-companion-vm20-pn-deterministic-exclusion",
+            "childChunkId": "vm20-practice-note-companion-vm20-pn-deterministic-exclusion-child-001"
+          }
+        ],
+        "suppressedParentChunkIds": [
+          "vm20-practice-note-companion-vm20-pn-deterministic-exclusion"
+        ],
+        "postDeduplicationCollisionCount": 0
+      },
+      "resultLabel": "unsupported"
+    },
+    {
+      "queryId": "vm01-ambiguous-reserve",
+      "queryCategory": "ambiguous_term",
+      "query": "How does VM-01 define reserve?",
+      "expectedOutcome": "unsupported",
+      "expectedChunkIds": [],
+      "expectedSourceIds": [],
+      "supportRequirements": {
+        "informationTypes": [
+          "formal_definition"
+        ],
+        "definedTerm": "reserve"
+      },
+      "rationale": "Several reserve terms exist, but the broad term is not itself defined.",
+      "expectedSourceFamilyIds": [],
+      "expectedAuthorityLevels": [],
+      "rankedMatches": [
+        {
+          "chunkId": "vm01-definition-056-net-premium-reserve",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 42.2,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm01-definition-022-deterministic-reserve",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 40.35,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm01-definition-066-pretax-interest-maintenance-reserve",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 40.35,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm01-definition-087-stochastic-reserve",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 40.35,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm01-definition-050-modeled-reserve",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 39.2,
+          "citationCount": 0
+        }
+      ],
+      "top1Hit": false,
+      "top3Hit": false,
+      "top5Hit": false,
+      "reciprocalRank": 0,
+      "predictedSourceFamilyId": "valuation_manual_pdfs",
+      "predictedAuthorityLevel": "manual_section",
+      "citationAvailable": false,
+      "insufficientSupportDetected": true,
+      "supportDecision": {
+        "supportState": "unsupported",
+        "evidenceSufficient": false,
+        "reasonCode": "term_not_defined_in_vm01",
+        "reason": "VM-01 does not contain an exact formal definition for the requested term (reserve) in the retrieved current definition corpus.",
+        "requestedInformationTypes": [
+          "formal_definition"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm01-definition-056-net-premium-reserve",
+            "sourceId": "vm01-definitions",
+            "score": 42.2,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm01-definition-022-deterministic-reserve",
+            "sourceId": "vm01-definitions",
+            "score": 40.35,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm01-definition-066-pretax-interest-maintenance-reserve",
+            "sourceId": "vm01-definitions",
+            "score": 40.35,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": "VM-01 states that some Valuation Manual terms are defined in specific sections rather than in VM-01; those section-local definitions are outside this package. Independent review and explicit promotion remain required. Substantially complete 2026 VM-01 definition coverage. Review-only and not promoted; learner, app, RAG, vector, and Copilot export remain blocked.",
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 42.2,
+          "matches": [
+            {
+              "chunkId": "vm01-definition-056-net-premium-reserve",
+              "score": 42.2,
+              "tokenOverlap": 3
+            },
+            {
+              "chunkId": "vm01-definition-022-deterministic-reserve",
+              "score": 40.35,
+              "tokenOverlap": 3
+            },
+            {
+              "chunkId": "vm01-definition-066-pretax-interest-maintenance-reserve",
+              "score": 40.35,
+              "tokenOverlap": 3
+            },
+            {
+              "chunkId": "vm01-definition-087-stochastic-reserve",
+              "score": 40.35,
+              "tokenOverlap": 3
+            },
+            {
+              "chunkId": "vm01-definition-050-modeled-reserve",
+              "score": 39.2,
+              "tokenOverlap": 3
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "deduplication": {
+        "rawTopKCollisionGroups": [],
+        "suppressedParentChunkIds": [],
+        "postDeduplicationCollisionCount": 0
+      },
+      "resultLabel": "unsupported"
+    },
+    {
+      "queryId": "vm01-proposed-2027-version",
+      "queryCategory": "historical_or_proposed_version",
+      "query": "How does the proposed 2027 VM-01 define accumulated deficiency?",
+      "expectedOutcome": "unsupported",
+      "expectedChunkIds": [],
+      "expectedSourceIds": [],
+      "supportRequirements": {
+        "informationTypes": [
+          "formal_definition",
+          "current_version_metadata"
+        ],
+        "definedTerm": "accumulated deficiency",
+        "sourceVersionIdentifier": "proposed 2027 VM-01"
+      },
+      "rationale": "The corpus contains the current 2026 edition, not a proposed 2027 definition source.",
+      "expectedSourceFamilyIds": [],
+      "expectedAuthorityLevels": [],
+      "rankedMatches": [
+        {
+          "chunkId": "vm01-definition-002-accumulated-deficiency",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 77.85,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm01-definition-098-vm-20-reserving-category",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 31.200000000000003,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm01-definition-058-non-material-secondary-guarantee",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 28.2,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm01-definition-074-qualified-actuary",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 28.2,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm01-definition-006-appointed-actuary",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 27.85,
+          "citationCount": 0
+        }
+      ],
+      "top1Hit": false,
+      "top3Hit": false,
+      "top5Hit": false,
+      "reciprocalRank": 0,
+      "predictedSourceFamilyId": "valuation_manual_pdfs",
+      "predictedAuthorityLevel": "manual_section",
+      "citationAvailable": false,
+      "insufficientSupportDetected": true,
+      "supportDecision": {
+        "supportState": "unsupported",
+        "evidenceSufficient": false,
+        "reasonCode": "missing_requested_source_version",
+        "reason": "The requested source version (proposed 2027 VM-01) is not represented by the retrieved source packages.",
+        "requestedInformationTypes": [
+          "formal_definition",
+          "current_version_metadata"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm01-definition-002-accumulated-deficiency",
+            "sourceId": "vm01-definitions",
+            "score": 77.85,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm01-definition-098-vm-20-reserving-category",
+            "sourceId": "vm01-definitions",
+            "score": 31.200000000000003,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm01-definition-058-non-material-secondary-guarantee",
+            "sourceId": "vm01-definitions",
+            "score": 28.2,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": "VM-01 states that some Valuation Manual terms are defined in specific sections rather than in VM-01; those section-local definitions are outside this package. Independent review and explicit promotion remain required. Substantially complete 2026 VM-01 definition coverage. Review-only and not promoted; learner, app, RAG, vector, and Copilot export remain blocked.",
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 77.85,
+          "matches": [
+            {
+              "chunkId": "vm01-definition-002-accumulated-deficiency",
+              "score": 77.85,
+              "tokenOverlap": 5
+            },
+            {
+              "chunkId": "vm01-definition-098-vm-20-reserving-category",
+              "score": 31.200000000000003,
+              "tokenOverlap": 4
+            },
+            {
+              "chunkId": "vm01-definition-058-non-material-secondary-guarantee",
+              "score": 28.2,
+              "tokenOverlap": 3
+            },
+            {
+              "chunkId": "vm01-definition-074-qualified-actuary",
+              "score": 28.2,
+              "tokenOverlap": 3
+            },
+            {
+              "chunkId": "vm01-definition-006-appointed-actuary",
+              "score": 27.85,
+              "tokenOverlap": 3
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "deduplication": {
+        "rawTopKCollisionGroups": [],
+        "suppressedParentChunkIds": [],
+        "postDeduplicationCollisionCount": 0
+      },
+      "resultLabel": "unsupported"
+    }
+  ],
+  "governance": {
+    "reviewOnly": true,
+    "promotionStatus": "not_promoted"
+  }
+}

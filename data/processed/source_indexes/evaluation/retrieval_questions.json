@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "repositoryManifestId": "source-index-poc-2026-07-21",
   "method": "keyword_overlap_baseline",
-  "queryCount": 44,
+  "queryCount": 50,
   "queries": [
     {
       "queryId": "q-ag01-net-premium",
@@ -590,6 +590,108 @@
       "expectedChunkIds": [],
       "expectedSourceIds": [],
       "rationale": "Checks unsupported-query handling for adjacent liability-modeling content."
+    },
+    {
+      "queryId": "q-vm01-exact-cte",
+      "queryCategory": "vm01_exact_definition",
+      "query": "How does VM-01 define conditional tail expectation?",
+      "expectedChunkIds": [
+        "vm01-definition-016-conditional-tail-expectation"
+      ],
+      "expectedSourceIds": [
+        "vm01-definitions"
+      ],
+      "supportRequirements": {
+        "informationTypes": [
+          "formal_definition"
+        ],
+        "definedTerm": "conditional tail expectation"
+      },
+      "rationale": "Tests exact formal-definition retrieval from the current authoritative VM-01 package."
+    },
+    {
+      "queryId": "q-vm01-acronym-gic",
+      "queryCategory": "vm01_acronym_definition",
+      "query": "How does VM-01 define GIC?",
+      "expectedChunkIds": [
+        "vm01-definition-030-guaranteed-investment-contract"
+      ],
+      "expectedSourceIds": [
+        "vm01-definitions"
+      ],
+      "supportRequirements": {
+        "informationTypes": [
+          "formal_definition"
+        ],
+        "definedTerm": "GIC"
+      },
+      "rationale": "Tests an acronym that is explicitly supplied within the VM-01 defined term."
+    },
+    {
+      "queryId": "q-vm01-similar-claim-reserve",
+      "queryCategory": "vm01_similar_terms",
+      "query": "How does VM-01 define claim reserve, rather than contract reserve?",
+      "expectedChunkIds": [
+        "vm01-definition-012-claim-reserve"
+      ],
+      "expectedSourceIds": [
+        "vm01-definitions"
+      ],
+      "supportRequirements": {
+        "informationTypes": [
+          "formal_definition"
+        ],
+        "definedTerm": "claim reserve"
+      },
+      "rationale": "Tests preservation of the distinction between two related reserve terms."
+    },
+    {
+      "queryId": "q-vm01-cross-document-prudent-estimate",
+      "queryCategory": "vm01_cross_document_terminology",
+      "query": "VM-20 uses prudent estimate assumption; what formal definition does VM-01 provide?",
+      "expectedChunkIds": [
+        "vm01-definition-073-prudent-estimate-assumption"
+      ],
+      "expectedSourceIds": [
+        "vm01-definitions"
+      ],
+      "supportRequirements": {
+        "informationTypes": [
+          "formal_definition"
+        ],
+        "definedTerm": "prudent estimate assumption"
+      },
+      "rationale": "Tests terminology-layer retrieval without duplicating the definition into VM-20 chunks."
+    },
+    {
+      "queryId": "q-vm01-unsupported-deterministic-exclusion-test",
+      "queryCategory": "vm01_unsupported_definition",
+      "query": "How does VM-01 define deterministic exclusion test?",
+      "expectedOutcome": "unsupported",
+      "expectedChunkIds": [],
+      "expectedSourceIds": [],
+      "supportRequirements": {
+        "informationTypes": [
+          "formal_definition"
+        ],
+        "definedTerm": "deterministic exclusion test"
+      },
+      "rationale": "Checks that related deterministic-reserve prose cannot be presented as a formal VM-01 definition."
+    },
+    {
+      "queryId": "q-vm01-unsupported-reserve",
+      "queryCategory": "vm01_ambiguous_term",
+      "query": "How does VM-01 define reserve?",
+      "expectedOutcome": "unsupported",
+      "expectedChunkIds": [],
+      "expectedSourceIds": [],
+      "supportRequirements": {
+        "informationTypes": [
+          "formal_definition"
+        ],
+        "definedTerm": "reserve"
+      },
+      "rationale": "Checks that several related reserve definitions do not create a false formal definition for the broader ambiguous term."
     }
   ],
   "notes": "Canonical retrieval questions for the source-index POC."

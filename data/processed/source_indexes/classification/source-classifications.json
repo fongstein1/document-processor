@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "repositoryManifestId": "source-index-poc-2026-07-21",
-  "sourceCount": 21,
+  "sourceCount": 22,
   "classifications": [
     {
       "repositoryManifestId": "source-index-poc-2026-07-21",
@@ -665,6 +665,39 @@
       },
       "reviewIndexPath": "docs/review/synthetic_pricing_review_index.md",
       "selfReviewPath": "docs/review/synthetic_pricing_self_review.md"
+    },
+    {
+      "repositoryManifestId": "source-index-poc-2026-07-21",
+      "sourceIndexId": "source-index-vm01-definitions",
+      "sourceId": "vm01-definitions",
+      "sourceTitle": "VM-01: Definitions for Terms in Requirements",
+      "sourceFamilyId": "valuation_manual_pdfs",
+      "domainId": "naic_regulatory",
+      "documentType": "valuation_manual_section",
+      "classification": {
+        "domainId": "naic_regulatory",
+        "subdomainId": null,
+        "documentType": "valuation_manual_section",
+        "purpose": "Authoritative current common terminology layer for the Valuation Manual corpus",
+        "intendedAudience": "Valuation, regulatory, governance, and retrieval reviewers",
+        "authoritySourceType": "regulatory",
+        "confidentiality": "public",
+        "publicationDate": null,
+        "effectiveDate": null,
+        "version": "2026 Edition",
+        "approvalStatus": "reviewed",
+        "language": "en",
+        "recommendedProfile": "regulatory",
+        "recommendedChunkingStrategy": "definition_aware_one_entry_per_unit",
+        "confidence": "high",
+        "unresolvedQuestions": [
+          "Independent review is required before promotion.",
+          "Publication and effective dates are not asserted beyond the established 2026 edition identity."
+        ],
+        "notes": "Definition source text remains exact and separate from generated lookup metadata."
+      },
+      "reviewIndexPath": "docs/review/supporting_vm_review_index.md",
+      "selfReviewPath": "docs/review/supporting_vm_self_review.md"
     }
   ],
   "notes": "Canonical classification stage for the source-index POC."

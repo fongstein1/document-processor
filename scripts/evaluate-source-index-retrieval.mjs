@@ -161,13 +161,14 @@ export const scoreChunk = (query, chunk) => {
     [chunk.headingPath, 1.5],
     [chunk.summary, 1.5],
     [(chunk.keywords ?? []).join(' '), 1],
-    [(chunk.definedTerms ?? []).join(' '), 0.75],
+    [(chunk.definedTerms ?? []).join(' '), chunk.chunkKind === 'definition' ? 2.5 : 0.75],
+    [(chunk.acronyms ?? []).join(' '), chunk.chunkKind === 'definition' ? 3 : 0],
     [(chunk.requirements ?? []).join(' '), 0.75],
     [chunk.sourceTitle, 0.75],
     [(chunk.concepts ?? []).join(' '), 0.35],
     [(chunk.controlledTags ?? []).join(' '), 0.35],
     [chunk.citationDisplay, 0.5],
-    [chunk.sourceTextExcerpt, 0.15],
+    [chunk.sourceTextExcerpt, chunk.chunkKind === 'definition' ? 1.5 : 0.15],
   ]
   for (const [field, weight] of weightedFields) {
     const fieldTokens = new Set(tokenize(field))
@@ -181,8 +182,13 @@ export const scoreChunk = (query, chunk) => {
   score += phraseBoost(query, chunk.topic, 2)
   score += phraseBoost(query, chunk.headingPath, 1.5)
   score += phraseBoost(query, chunk.sourceReference, 1.5)
+  if (chunk.chunkKind === 'definition') for (const term of [...(chunk.definedTerms ?? []), ...(chunk.acronyms ?? [])]) score += phraseBoost(query, term, 6)
 
   const lowerQuery = normalizeText(query).toLowerCase()
+  const definitionIntent = /\bdefin(?:e|es|ed|ition)\b|\bvm\s*-?\s*01\b/.test(lowerQuery)
+  if (chunk.chunkKind === 'definition' && !definitionIntent) score -= 12
+  if (/\bdefin(?:e|es|ed|ition)\b/.test(lowerQuery) && chunk.chunkKind === 'definition') score += 6
+  if (/\bvm\s*-?\s*01\b/.test(lowerQuery) && chunk.sourceId === 'vm01-definitions') score += 4
   const authorityHints = [
     ['regulation', 'regulation', 0.5],
     ['guideline', 'guideline', 0.5],
@@ -261,13 +267,14 @@ export const evaluateQueries = ({
   const affectedQueries = []
 
   const queryResults = queries.map((query) => {
+    const requestedDefinedTerm = normalizeText(query.supportRequirements?.definedTerm).toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim()
     const rankedMatches = normalizedChunks
       .map((chunk) => ({
         chunkId: chunk.chunkId,
         sourceId: chunk.sourceId,
         sourceFamilyId: chunk.sourceFamilyId,
         authorityLevel: chunk.authorityLevel,
-        score: scoreChunk(query.query, chunk),
+        score: scoreChunk(query.query, chunk) + (requestedDefinedTerm && (chunk.definedTerms ?? []).some((term) => normalizeText(term).toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim() === requestedDefinedTerm) ? 20 : 0),
         citationCount: Array.isArray(chunk.citations) ? chunk.citations.length : 0,
       }))
       .sort((left, right) => right.score - left.score || left.chunkId.localeCompare(right.chunkId))

@@ -50,7 +50,7 @@
       "notes": "Product features, options, and valuation impact."
     }
   ],
-  "sourcePackageCount": 21,
+  "sourcePackageCount": 22,
   "sourcePackages": [
     {
       "sourceIndexId": "source-index-vm20-section3c-hierarchical",
@@ -1286,9 +1286,89 @@
       "reviewOnly": true,
       "promotionStatus": "not_promoted",
       "notes": "Synthetic non-sensitive approval memo used to exercise the generic governance and pricing profiles."
+    },
+    {
+      "sourceIndexId": "source-index-vm01-definitions",
+      "classification": {
+        "domainId": "naic_regulatory",
+        "subdomainId": null,
+        "documentType": "valuation_manual_section",
+        "purpose": "Authoritative current common terminology layer for the Valuation Manual corpus",
+        "intendedAudience": "Valuation, regulatory, governance, and retrieval reviewers",
+        "authoritySourceType": "regulatory",
+        "confidentiality": "public",
+        "publicationDate": null,
+        "effectiveDate": null,
+        "version": "2026 Edition",
+        "approvalStatus": "reviewed",
+        "language": "en",
+        "recommendedProfile": "regulatory",
+        "recommendedChunkingStrategy": "definition_aware_one_entry_per_unit",
+        "confidence": "high",
+        "unresolvedQuestions": [
+          "Independent review is required before promotion.",
+          "Publication and effective dates are not asserted beyond the established 2026 edition identity."
+        ],
+        "notes": "Definition source text remains exact and separate from generated lookup metadata."
+      },
+      "sourceId": "vm01-definitions",
+      "sourceVersionId": "source-index-vm01-definitions-2026",
+      "sourceTitle": "VM-01: Definitions for Terms in Requirements",
+      "sourceFamilyId": "valuation_manual_pdfs",
+      "documentType": "valuation_manual_section",
+      "sourceStatus": "active",
+      "sourceEditionId": "NAIC-VALUATION-MANUAL-2026",
+      "sourceVersionIdentifier": "2026 NAIC Valuation Manual",
+      "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+      "sourceTextVerification": {
+        "sourceTextMode": "exact_extracted_source_text",
+        "extractionMethod": "PyPDF2 page text retained in batch-013",
+        "visualTranscription": "not_used",
+        "pageRepresentationQA": "targeted_raw_pdf_spot_check",
+        "qaScript": "scripts/validate-vm01-definitions.mjs"
+      },
+      "coverageDeclarations": {
+        "scopeType": "current_vm01_definitions",
+        "includedInformationTypes": [
+          "formal_definitions",
+          "explicit_aliases",
+          "explicit_acronyms",
+          "definition_conditions_and_exceptions",
+          "explicit_cross_references"
+        ],
+        "structuredDataAvailable": false,
+        "definitionCount": 98,
+        "retrievalUnitCount": 98,
+        "knownGaps": [
+          "VM-01 states that some Valuation Manual terms are defined in specific sections rather than in VM-01; those section-local definitions are outside this package.",
+          "Independent review and explicit promotion remain required."
+        ]
+      },
+      "sourceReference": "2026 NAIC Valuation Manual",
+      "jurisdiction": "NAIC",
+      "authorityLevel": "manual_section",
+      "pageRange": {
+        "start": 25,
+        "end": 39
+      },
+      "chunkCount": 98,
+      "reviewBatchIds": [
+        "batch-013"
+      ],
+      "sourceIndexPath": "data/processed/source_indexes/sources/vm01-definitions.json",
+      "markdownPath": "data/processed/source_indexes/sources/vm01-definitions.md",
+      "reviewIndexPath": "docs/review/supporting_vm_review_index.md",
+      "selfReviewPath": "docs/review/supporting_vm_self_review.md",
+      "relationships": [],
+      "textLayerQuality": "mixed",
+      "pageImageBackstop": false,
+      "lineReferencesAvailable": false,
+      "reviewOnly": true,
+      "promotionStatus": "not_promoted",
+      "notes": "Substantially complete 2026 VM-01 definition coverage. Review-only and not promoted; learner, app, RAG, vector, and Copilot export remain blocked."
     }
   ],
-  "chunkCount": 359,
+  "chunkCount": 457,
   "exports": {
     "repositoryManifestPath": "data/processed/source_indexes/repository-manifest.json",
     "exportManifestPath": "data/processed/source_indexes/exports/export_manifest.json",
@@ -1303,23 +1383,23 @@
   "retrievalEvaluation": {
     "evaluationId": "source-index-poc-2026-07-21-retrieval",
     "method": "keyword_overlap_baseline",
-    "queryCount": 44,
-    "supportedQueryCount": 41,
-    "unsupportedQueryCount": 3,
-    "top1HitCount": 34,
-    "top3HitCount": 41,
-    "top5HitCount": 41,
-    "top1Accuracy": 0.8292682926829268,
+    "queryCount": 50,
+    "supportedQueryCount": 45,
+    "unsupportedQueryCount": 5,
+    "top1HitCount": 37,
+    "top3HitCount": 45,
+    "top5HitCount": 45,
+    "top1Accuracy": 0.8222222222222222,
     "top3Accuracy": 1,
     "top5Accuracy": 1,
-    "meanReciprocalRank": 0.9024390243902439,
-    "sourceFamilyAccuracy": 0.9512195121951219,
-    "authorityLevelAccuracy": 0.926829268292683,
+    "meanReciprocalRank": 0.9,
+    "sourceFamilyAccuracy": 0.9555555555555556,
+    "authorityLevelAccuracy": 0.9333333333333333,
     "citationAvailability": 0,
     "multiChunkEvidenceRecall": 0.14285714285714285,
-    "unsupportedQueryPrecision": 0.3333333333333333,
-    "top3Coverage": 0.9318181818181818,
-    "notes": "Keyword baseline retrieved 34 top-1 hits and 41 top-3 hits across 44 queries."
+    "unsupportedQueryPrecision": 0.6,
+    "top3Coverage": 0.9,
+    "notes": "Keyword baseline retrieved 37 top-1 hits and 45 top-3 hits across 50 queries."
   },
   "notes": "Canonical source-index proof of concept.",
   "extensions": {

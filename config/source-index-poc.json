@@ -2138,6 +2138,101 @@
           "promotionEligible": false
         }
       ]
+    },
+    {
+      "sourceIndexId": "source-index-vm01-definitions",
+      "sourceVersionId": "source-index-vm01-definitions-2026",
+      "sourceId": "vm01-definitions",
+      "filename": "pbr_data_valuation_manual_2026.pdf",
+      "filePath": "D:\\Work\\AI Projects\\NAIC Valuation Manual Course\\pbr_data_valuation_manual_2026.pdf",
+      "sourceFamilyId": "valuation_manual_pdfs",
+      "domainId": "naic_regulatory",
+      "documentType": "valuation_manual_section",
+      "sourceTitle": "VM-01: Definitions for Terms in Requirements",
+      "sourceReference": "2026 NAIC Valuation Manual",
+      "sourceEditionId": "NAIC-VALUATION-MANUAL-2026",
+      "sourceVersionIdentifier": "2026 NAIC Valuation Manual",
+      "jurisdiction": "NAIC",
+      "authorityLevel": "manual_section",
+      "sourceStatus": "active",
+      "versionDate": null,
+      "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+      "pageCount": 457,
+      "pageRange": { "start": 25, "end": 39 },
+      "expectedChunkCount": 98,
+      "canonicalCandidate": true,
+      "processingCreatedAt": "2026-08-26T00:00:00.000Z",
+      "reviewBatchIds": ["batch-013"],
+      "reviewIndexPath": "docs/review/supporting_vm_review_index.md",
+      "selfReviewPath": "docs/review/supporting_vm_self_review.md",
+      "pageImageBackstop": false,
+      "lineReferencesAvailable": false,
+      "textLayerQuality": "mixed",
+      "sourceTextVerification": {
+        "sourceTextMode": "exact_extracted_source_text",
+        "extractionMethod": "PyPDF2 page text retained in batch-013",
+        "visualTranscription": "not_used",
+        "pageRepresentationQA": "targeted_raw_pdf_spot_check",
+        "qaScript": "scripts/validate-vm01-definitions.mjs"
+      },
+      "coverageDeclarations": {
+        "scopeType": "current_vm01_definitions",
+        "includedInformationTypes": [
+          "formal_definitions",
+          "explicit_aliases",
+          "explicit_acronyms",
+          "definition_conditions_and_exceptions",
+          "explicit_cross_references"
+        ],
+        "structuredDataAvailable": false,
+        "definitionCount": 98,
+        "retrievalUnitCount": 98,
+        "knownGaps": [
+          "VM-01 states that some Valuation Manual terms are defined in specific sections rather than in VM-01; those section-local definitions are outside this package.",
+          "Independent review and explicit promotion remain required."
+        ]
+      },
+      "classification": {
+        "domainId": "naic_regulatory",
+        "documentType": "valuation_manual_section",
+        "purpose": "Authoritative current common terminology layer for the Valuation Manual corpus",
+        "intendedAudience": "Valuation, regulatory, governance, and retrieval reviewers",
+        "authoritySourceType": "regulatory",
+        "confidentiality": "public",
+        "publicationDate": null,
+        "effectiveDate": null,
+        "version": "2026 Edition",
+        "approvalStatus": "reviewed",
+        "language": "en",
+        "recommendedProfile": "regulatory",
+        "recommendedChunkingStrategy": "definition_aware_one_entry_per_unit",
+        "confidence": "high",
+        "unresolvedQuestions": [
+          "Independent review is required before promotion.",
+          "Publication and effective dates are not asserted beyond the established 2026 edition identity."
+        ],
+        "notes": "Definition source text remains exact and separate from generated lookup metadata."
+      },
+      "chunkDefaults": {
+        "sourceTextType": "actual_extracted_source_text",
+        "fidelity": "exact",
+        "confidence": "high",
+        "reviewFlags": ["review_only", "definition_or_terminology"]
+      },
+      "definitionInput": {
+        "extractionPath": "data/work/batches/batch-013/extraction-output.json",
+        "batchManifestPath": "data/work/batches/batch-013/batch-manifest.json",
+        "sourceId": "supporting-vm01-definitions",
+        "expectedSourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+        "expectedDefinitionCount": 98
+      },
+      "extensions": {
+        "definitionModel": "vm01_definition_aware_v1",
+        "definitionLookupIndexPath": "data/processed/source_indexes/definitions/vm01-definition-index.json",
+        "relationshipCandidatePath": "data/processed/relationship_registries/vm01-definition-relationship-candidates.json",
+        "reviewPackagePath": "data/processed/review_packages/vm01-canonical-definitions-review-package.json"
+      },
+      "notes": "Substantially complete 2026 VM-01 definition coverage. Review-only and not promoted; learner, app, RAG, vector, and Copilot export remain blocked."
     }
   ],
   "retrievalSettings": {
@@ -2681,6 +2776,80 @@
       "expectedChunkIds": [],
       "expectedSourceIds": [],
       "rationale": "Checks unsupported-query handling for adjacent liability-modeling content."
+    },
+    {
+      "queryId": "q-vm01-exact-cte",
+      "queryCategory": "vm01_exact_definition",
+      "query": "How does VM-01 define conditional tail expectation?",
+      "expectedChunkIds": ["vm01-definition-016-conditional-tail-expectation"],
+      "expectedSourceIds": ["vm01-definitions"],
+      "supportRequirements": {
+        "informationTypes": ["formal_definition"],
+        "definedTerm": "conditional tail expectation"
+      },
+      "rationale": "Tests exact formal-definition retrieval from the current authoritative VM-01 package."
+    },
+    {
+      "queryId": "q-vm01-acronym-gic",
+      "queryCategory": "vm01_acronym_definition",
+      "query": "How does VM-01 define GIC?",
+      "expectedChunkIds": ["vm01-definition-030-guaranteed-investment-contract"],
+      "expectedSourceIds": ["vm01-definitions"],
+      "supportRequirements": {
+        "informationTypes": ["formal_definition"],
+        "definedTerm": "GIC"
+      },
+      "rationale": "Tests an acronym that is explicitly supplied within the VM-01 defined term."
+    },
+    {
+      "queryId": "q-vm01-similar-claim-reserve",
+      "queryCategory": "vm01_similar_terms",
+      "query": "How does VM-01 define claim reserve, rather than contract reserve?",
+      "expectedChunkIds": ["vm01-definition-012-claim-reserve"],
+      "expectedSourceIds": ["vm01-definitions"],
+      "supportRequirements": {
+        "informationTypes": ["formal_definition"],
+        "definedTerm": "claim reserve"
+      },
+      "rationale": "Tests preservation of the distinction between two related reserve terms."
+    },
+    {
+      "queryId": "q-vm01-cross-document-prudent-estimate",
+      "queryCategory": "vm01_cross_document_terminology",
+      "query": "VM-20 uses prudent estimate assumption; what formal definition does VM-01 provide?",
+      "expectedChunkIds": ["vm01-definition-073-prudent-estimate-assumption"],
+      "expectedSourceIds": ["vm01-definitions"],
+      "supportRequirements": {
+        "informationTypes": ["formal_definition"],
+        "definedTerm": "prudent estimate assumption"
+      },
+      "rationale": "Tests terminology-layer retrieval without duplicating the definition into VM-20 chunks."
+    },
+    {
+      "queryId": "q-vm01-unsupported-deterministic-exclusion-test",
+      "queryCategory": "vm01_unsupported_definition",
+      "query": "How does VM-01 define deterministic exclusion test?",
+      "expectedOutcome": "unsupported",
+      "expectedChunkIds": [],
+      "expectedSourceIds": [],
+      "supportRequirements": {
+        "informationTypes": ["formal_definition"],
+        "definedTerm": "deterministic exclusion test"
+      },
+      "rationale": "Checks that related deterministic-reserve prose cannot be presented as a formal VM-01 definition."
+    },
+    {
+      "queryId": "q-vm01-unsupported-reserve",
+      "queryCategory": "vm01_ambiguous_term",
+      "query": "How does VM-01 define reserve?",
+      "expectedOutcome": "unsupported",
+      "expectedChunkIds": [],
+      "expectedSourceIds": [],
+      "supportRequirements": {
+        "informationTypes": ["formal_definition"],
+        "definedTerm": "reserve"
+      },
+      "rationale": "Checks that several related reserve definitions do not create a false formal definition for the broader ambiguous term."
     }
   ]
 }

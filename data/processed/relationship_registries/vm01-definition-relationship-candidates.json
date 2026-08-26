@@ -1,0 +1,597 @@
+{
+  "schemaVersion": "1.0",
+  "relationshipRegistryId": "vm01-definition-relationship-candidates-2026",
+  "sourceId": "vm01-definitions",
+  "relationshipCount": 29,
+  "relationTypes": [
+    "references"
+  ],
+  "governance": {
+    "reviewOnly": true,
+    "reviewDecision": "pending",
+    "promotionStatus": "not_promoted",
+    "promotionEligible": false
+  },
+  "candidates": [
+    {
+      "relationshipId": "vm01-definition-001-accident-and-health-insurance-references-model-820",
+      "sourceDefinitionId": "vm01-definition-001-accident-and-health-insurance",
+      "sourceTerm": "accident and health insurance",
+      "relationType": "references",
+      "targetLabel": "Model #820",
+      "targetId": "standard-valuation-law-model-820",
+      "targetKind": "corpus_target",
+      "evidence": {
+        "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+        "pageStart": 25,
+        "pageEnd": 25,
+        "sectionReference": "VM-01 definition: accident and health insurance",
+        "sourceTextSha256": "465879c98508b10fe390d001639e65d888f5188c8122ad8908d264f7b9bbbc75"
+      },
+      "evidenceBasis": "explicit_source_text_reference",
+      "reviewDecision": "pending",
+      "promotionStatus": "not_promoted",
+      "promotionEligible": false
+    },
+    {
+      "relationshipId": "vm01-definition-005-anticipated-experience-assumption-references-asop-no-25",
+      "sourceDefinitionId": "vm01-definition-005-anticipated-experience-assumption",
+      "sourceTerm": "anticipated experience assumption",
+      "relationType": "references",
+      "targetLabel": "ASOP No. 25",
+      "targetId": "asop-25",
+      "targetKind": "external_professional_standard",
+      "evidence": {
+        "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+        "pageStart": 25,
+        "pageEnd": 25,
+        "sectionReference": "VM-01 definition: anticipated experience assumption",
+        "sourceTextSha256": "20d874ffa482e061945f9f52cb193dd8e0e912f2db64a2abd3601e0ada30bb5e"
+      },
+      "evidenceBasis": "explicit_source_text_reference",
+      "reviewDecision": "pending",
+      "promotionStatus": "not_promoted",
+      "promotionEligible": false
+    },
+    {
+      "relationshipId": "vm01-definition-005-anticipated-experience-assumption-references-asop-no-52",
+      "sourceDefinitionId": "vm01-definition-005-anticipated-experience-assumption",
+      "sourceTerm": "anticipated experience assumption",
+      "relationType": "references",
+      "targetLabel": "ASOP No. 52",
+      "targetId": "asop-52",
+      "targetKind": "external_professional_standard",
+      "evidence": {
+        "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+        "pageStart": 25,
+        "pageEnd": 25,
+        "sectionReference": "VM-01 definition: anticipated experience assumption",
+        "sourceTextSha256": "20d874ffa482e061945f9f52cb193dd8e0e912f2db64a2abd3601e0ada30bb5e"
+      },
+      "evidenceBasis": "explicit_source_text_reference",
+      "reviewDecision": "pending",
+      "promotionStatus": "not_promoted",
+      "promotionEligible": false
+    },
+    {
+      "relationshipId": "vm01-definition-012-claim-reserve-references-ap-p-manual",
+      "sourceDefinitionId": "vm01-definition-012-claim-reserve",
+      "sourceTerm": "claim reserve",
+      "relationType": "references",
+      "targetLabel": "AP&P Manual",
+      "targetId": "app-manual",
+      "targetKind": "external_regulatory_source",
+      "evidence": {
+        "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+        "pageStart": 26,
+        "pageEnd": 26,
+        "sectionReference": "VM-01 definition: claim reserve",
+        "sourceTextSha256": "fc39777f2d3a3a5dffae8381eaf1862cd576c1201d7a376cbf52a811e5a6d8cb"
+      },
+      "evidenceBasis": "explicit_source_text_reference",
+      "reviewDecision": "pending",
+      "promotionStatus": "not_promoted",
+      "promotionEligible": false
+    },
+    {
+      "relationshipId": "vm01-definition-013-clearly-defined-hedging-strategy-references-ap-p-manual",
+      "sourceDefinitionId": "vm01-definition-013-clearly-defined-hedging-strategy",
+      "sourceTerm": "clearly defined hedging strategy",
+      "relationType": "references",
+      "targetLabel": "AP&P Manual",
+      "targetId": "app-manual",
+      "targetKind": "external_regulatory_source",
+      "evidence": {
+        "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+        "pageStart": 26,
+        "pageEnd": 27,
+        "sectionReference": "VM-01 definition: clearly defined hedging strategy",
+        "sourceTextSha256": "435d9ab6e27515d018cd8b7396cf8e4c7caf7c16094f3bfa92406faa4a02bd98"
+      },
+      "evidenceBasis": "explicit_source_text_reference",
+      "reviewDecision": "pending",
+      "promotionStatus": "not_promoted",
+      "promotionEligible": false
+    },
+    {
+      "relationshipId": "vm01-definition-013-clearly-defined-hedging-strategy-references-ssap-no-86",
+      "sourceDefinitionId": "vm01-definition-013-clearly-defined-hedging-strategy",
+      "sourceTerm": "clearly defined hedging strategy",
+      "relationType": "references",
+      "targetLabel": "SSAP No. 86",
+      "targetId": "ssap-86",
+      "targetKind": "external_accounting_standard",
+      "evidence": {
+        "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+        "pageStart": 26,
+        "pageEnd": 27,
+        "sectionReference": "VM-01 definition: clearly defined hedging strategy",
+        "sourceTextSha256": "435d9ab6e27515d018cd8b7396cf8e4c7caf7c16094f3bfa92406faa4a02bd98"
+      },
+      "evidenceBasis": "explicit_source_text_reference",
+      "reviewDecision": "pending",
+      "promotionStatus": "not_promoted",
+      "promotionEligible": false
+    },
+    {
+      "relationshipId": "vm01-definition-015-company-references-model-820",
+      "sourceDefinitionId": "vm01-definition-015-company",
+      "sourceTerm": "company",
+      "relationType": "references",
+      "targetLabel": "Model #820",
+      "targetId": "standard-valuation-law-model-820",
+      "targetKind": "corpus_target",
+      "evidence": {
+        "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+        "pageStart": 27,
+        "pageEnd": 27,
+        "sectionReference": "VM-01 definition: company",
+        "sourceTextSha256": "6bd927c219876b435ccb278b6ce5dd6b7e2b4de9e8220be098640227ad591cde"
+      },
+      "evidenceBasis": "explicit_source_text_reference",
+      "reviewDecision": "pending",
+      "promotionStatus": "not_promoted",
+      "promotionEligible": false
+    },
+    {
+      "relationshipId": "vm01-definition-019-deposit-type-contract-references-model-820",
+      "sourceDefinitionId": "vm01-definition-019-deposit-type-contract",
+      "sourceTerm": "deposit-type contract",
+      "relationType": "references",
+      "targetLabel": "Model #820",
+      "targetId": "standard-valuation-law-model-820",
+      "targetKind": "corpus_target",
+      "evidence": {
+        "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+        "pageStart": 27,
+        "pageEnd": 27,
+        "sectionReference": "VM-01 definition: deposit-type contract",
+        "sourceTextSha256": "20e86fa1ac101ceae893671532cb8f276ec2a316dd9358a1b1fa4fcbc12ac726"
+      },
+      "evidenceBasis": "explicit_source_text_reference",
+      "reviewDecision": "pending",
+      "promotionStatus": "not_promoted",
+      "promotionEligible": false
+    },
+    {
+      "relationshipId": "vm01-definition-020-derivative-instrument-references-ap-p-manual",
+      "sourceDefinitionId": "vm01-definition-020-derivative-instrument",
+      "sourceTerm": "derivative instrument",
+      "relationType": "references",
+      "targetLabel": "AP&P Manual",
+      "targetId": "app-manual",
+      "targetKind": "external_regulatory_source",
+      "evidence": {
+        "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+        "pageStart": 27,
+        "pageEnd": 28,
+        "sectionReference": "VM-01 definition: derivative instrument",
+        "sourceTextSha256": "c80438677302592b5eef2bec4bd700249438fd9d40e2c5399408d11f05f30203"
+      },
+      "evidenceBasis": "explicit_source_text_reference",
+      "reviewDecision": "pending",
+      "promotionStatus": "not_promoted",
+      "promotionEligible": false
+    },
+    {
+      "relationshipId": "vm01-definition-029-future-hedging-strategy-references-vm-20",
+      "sourceDefinitionId": "vm01-definition-029-future-hedging-strategy",
+      "sourceTerm": "future hedging strategy",
+      "relationType": "references",
+      "targetLabel": "VM-20",
+      "targetId": "vm-20",
+      "targetKind": "corpus_target",
+      "evidence": {
+        "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+        "pageStart": 28,
+        "pageEnd": 28,
+        "sectionReference": "VM-01 definition: future hedging strategy",
+        "sourceTextSha256": "e108a009f83bf0f8be88068089fab3dbc88cc2460623f8b2ce3cbc6a764c5b13"
+      },
+      "evidenceBasis": "explicit_source_text_reference",
+      "reviewDecision": "pending",
+      "promotionStatus": "not_promoted",
+      "promotionEligible": false
+    },
+    {
+      "relationshipId": "vm01-definition-029-future-hedging-strategy-references-vm-21",
+      "sourceDefinitionId": "vm01-definition-029-future-hedging-strategy",
+      "sourceTerm": "future hedging strategy",
+      "relationType": "references",
+      "targetLabel": "VM-21",
+      "targetId": "vm-21",
+      "targetKind": "corpus_target",
+      "evidence": {
+        "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+        "pageStart": 28,
+        "pageEnd": 28,
+        "sectionReference": "VM-01 definition: future hedging strategy",
+        "sourceTextSha256": "e108a009f83bf0f8be88068089fab3dbc88cc2460623f8b2ce3cbc6a764c5b13"
+      },
+      "evidenceBasis": "explicit_source_text_reference",
+      "reviewDecision": "pending",
+      "promotionStatus": "not_promoted",
+      "promotionEligible": false
+    },
+    {
+      "relationshipId": "vm01-definition-029-future-hedging-strategy-references-vm-22",
+      "sourceDefinitionId": "vm01-definition-029-future-hedging-strategy",
+      "sourceTerm": "future hedging strategy",
+      "relationType": "references",
+      "targetLabel": "VM-22",
+      "targetId": "vm-22",
+      "targetKind": "corpus_target",
+      "evidence": {
+        "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+        "pageStart": 28,
+        "pageEnd": 28,
+        "sectionReference": "VM-01 definition: future hedging strategy",
+        "sourceTextSha256": "e108a009f83bf0f8be88068089fab3dbc88cc2460623f8b2ce3cbc6a764c5b13"
+      },
+      "evidenceBasis": "explicit_source_text_reference",
+      "reviewDecision": "pending",
+      "promotionStatus": "not_promoted",
+      "promotionEligible": false
+    },
+    {
+      "relationshipId": "vm01-definition-046-life-insurance-references-model-820",
+      "sourceDefinitionId": "vm01-definition-046-life-insurance",
+      "sourceTerm": "life insurance",
+      "relationType": "references",
+      "targetLabel": "Model #820",
+      "targetId": "standard-valuation-law-model-820",
+      "targetKind": "corpus_target",
+      "evidence": {
+        "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+        "pageStart": 31,
+        "pageEnd": 31,
+        "sectionReference": "VM-01 definition: life insurance",
+        "sourceTextSha256": "092baace8e5bf6a8a215c45975cd3374e373205797037d7a45796da0bcdc486a"
+      },
+      "evidenceBasis": "explicit_source_text_reference",
+      "reviewDecision": "pending",
+      "promotionStatus": "not_promoted",
+      "promotionEligible": false
+    },
+    {
+      "relationshipId": "vm01-definition-050-modeled-reserve-references-vm-20",
+      "sourceDefinitionId": "vm01-definition-050-modeled-reserve",
+      "sourceTerm": "modeled reserve",
+      "relationType": "references",
+      "targetLabel": "VM-20",
+      "targetId": "vm-20",
+      "targetKind": "corpus_target",
+      "evidence": {
+        "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+        "pageStart": 32,
+        "pageEnd": 32,
+        "sectionReference": "VM-01 definition: modeled reserve",
+        "sourceTextSha256": "7d8dc598a78d174daac6b7f88b28ed1ebfb37194d58292396e96d3d15f8bc863"
+      },
+      "evidenceBasis": "explicit_source_text_reference",
+      "reviewDecision": "pending",
+      "promotionStatus": "not_promoted",
+      "promotionEligible": false
+    },
+    {
+      "relationshipId": "vm01-definition-053-naic-references-model-820",
+      "sourceDefinitionId": "vm01-definition-053-naic",
+      "sourceTerm": "NAIC",
+      "relationType": "references",
+      "targetLabel": "Model #820",
+      "targetId": "standard-valuation-law-model-820",
+      "targetKind": "corpus_target",
+      "evidence": {
+        "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+        "pageStart": 32,
+        "pageEnd": 32,
+        "sectionReference": "VM-01 definition: NAIC",
+        "sourceTextSha256": "48fc73633646bf5bb4d9e1dbdb8ebdcf05f31ac01c976c6479317f28bcd07837"
+      },
+      "evidenceBasis": "explicit_source_text_reference",
+      "reviewDecision": "pending",
+      "promotionStatus": "not_promoted",
+      "promotionEligible": false
+    },
+    {
+      "relationshipId": "vm01-definition-056-net-premium-reserve-references-vm-20",
+      "sourceDefinitionId": "vm01-definition-056-net-premium-reserve",
+      "sourceTerm": "net premium reserve",
+      "relationType": "references",
+      "targetLabel": "VM-20",
+      "targetId": "vm-20",
+      "targetKind": "corpus_target",
+      "evidence": {
+        "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+        "pageStart": 32,
+        "pageEnd": 32,
+        "sectionReference": "VM-01 definition: net premium reserve",
+        "sourceTextSha256": "8bbed98e2a34460824fa01803240e23d3e057c22d35452091add7ccd30397b74"
+      },
+      "evidenceBasis": "explicit_source_text_reference",
+      "reviewDecision": "pending",
+      "promotionStatus": "not_promoted",
+      "promotionEligible": false
+    },
+    {
+      "relationshipId": "vm01-definition-058-non-material-secondary-guarantee-references-vm-20",
+      "sourceDefinitionId": "vm01-definition-058-non-material-secondary-guarantee",
+      "sourceTerm": "non-material secondary guarantee",
+      "relationType": "references",
+      "targetLabel": "VM-20",
+      "targetId": "vm-20",
+      "targetKind": "corpus_target",
+      "evidence": {
+        "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+        "pageStart": 32,
+        "pageEnd": 33,
+        "sectionReference": "VM-01 definition: non-material secondary guarantee",
+        "sourceTextSha256": "b1f36bb9c130bfa9434460b32994944d1539e49d8167d5b07d160e88e3685023"
+      },
+      "evidenceBasis": "explicit_source_text_reference",
+      "reviewDecision": "pending",
+      "promotionStatus": "not_promoted",
+      "promotionEligible": false
+    },
+    {
+      "relationshipId": "vm01-definition-062-policyholder-behavior-references-model-820",
+      "sourceDefinitionId": "vm01-definition-062-policyholder-behavior",
+      "sourceTerm": "policyholder behavior",
+      "relationType": "references",
+      "targetLabel": "Model #820",
+      "targetId": "standard-valuation-law-model-820",
+      "targetKind": "corpus_target",
+      "evidence": {
+        "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+        "pageStart": 33,
+        "pageEnd": 33,
+        "sectionReference": "VM-01 definition: policyholder behavior",
+        "sourceTextSha256": "c3020781bca798de15876ec2ae4f84a1b8692d68a46e69ef8360fc69ecb511a5"
+      },
+      "evidenceBasis": "explicit_source_text_reference",
+      "reviewDecision": "pending",
+      "promotionStatus": "not_promoted",
+      "promotionEligible": false
+    },
+    {
+      "relationshipId": "vm01-definition-067-principle-based-reserve-actuarial-report-references-vm-31",
+      "sourceDefinitionId": "vm01-definition-067-principle-based-reserve-actuarial-report",
+      "sourceTerm": "Principle-Based Reserve Actuarial Report",
+      "relationType": "references",
+      "targetLabel": "VM-31",
+      "targetId": "vm-31",
+      "targetKind": "corpus_target",
+      "evidence": {
+        "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+        "pageStart": 34,
+        "pageEnd": 34,
+        "sectionReference": "VM-01 definition: Principle-Based Reserve Actuarial Report",
+        "sourceTextSha256": "d7a31f25b089f8f495502225b8755b661a1f129b2b8b1585f63a71b9e4c3c6e2"
+      },
+      "evidenceBasis": "explicit_source_text_reference",
+      "reviewDecision": "pending",
+      "promotionStatus": "not_promoted",
+      "promotionEligible": false
+    },
+    {
+      "relationshipId": "vm01-definition-068-principle-based-valuation-references-model-820",
+      "sourceDefinitionId": "vm01-definition-068-principle-based-valuation",
+      "sourceTerm": "principle-based valuation",
+      "relationType": "references",
+      "targetLabel": "Model #820",
+      "targetId": "standard-valuation-law-model-820",
+      "targetKind": "corpus_target",
+      "evidence": {
+        "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+        "pageStart": 34,
+        "pageEnd": 34,
+        "sectionReference": "VM-01 definition: principle-based valuation",
+        "sourceTextSha256": "6ec9e53ae79ed6d3480c18c0c20eef039c875cfbe5d3c8b2758194ecde5ae524"
+      },
+      "evidenceBasis": "explicit_source_text_reference",
+      "reviewDecision": "pending",
+      "promotionStatus": "not_promoted",
+      "promotionEligible": false
+    },
+    {
+      "relationshipId": "vm01-definition-074-qualified-actuary-references-vm-20",
+      "sourceDefinitionId": "vm01-definition-074-qualified-actuary",
+      "sourceTerm": "qualified actuary",
+      "relationType": "references",
+      "targetLabel": "VM-20",
+      "targetId": "vm-20",
+      "targetKind": "corpus_target",
+      "evidence": {
+        "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+        "pageStart": 34,
+        "pageEnd": 35,
+        "sectionReference": "VM-01 definition: qualified actuary",
+        "sourceTextSha256": "91a97f7dc3e722adf2f7c6d8265cec153de01278e4eec70b264d3c55e23bc775"
+      },
+      "evidenceBasis": "explicit_source_text_reference",
+      "reviewDecision": "pending",
+      "promotionStatus": "not_promoted",
+      "promotionEligible": false
+    },
+    {
+      "relationshipId": "vm01-definition-074-qualified-actuary-references-vm-21",
+      "sourceDefinitionId": "vm01-definition-074-qualified-actuary",
+      "sourceTerm": "qualified actuary",
+      "relationType": "references",
+      "targetLabel": "VM-21",
+      "targetId": "vm-21",
+      "targetKind": "corpus_target",
+      "evidence": {
+        "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+        "pageStart": 34,
+        "pageEnd": 35,
+        "sectionReference": "VM-01 definition: qualified actuary",
+        "sourceTextSha256": "91a97f7dc3e722adf2f7c6d8265cec153de01278e4eec70b264d3c55e23bc775"
+      },
+      "evidenceBasis": "explicit_source_text_reference",
+      "reviewDecision": "pending",
+      "promotionStatus": "not_promoted",
+      "promotionEligible": false
+    },
+    {
+      "relationshipId": "vm01-definition-081-secondary-guarantee-references-vm-20",
+      "sourceDefinitionId": "vm01-definition-081-secondary-guarantee",
+      "sourceTerm": "secondary guarantee",
+      "relationType": "references",
+      "targetLabel": "VM-20",
+      "targetId": "vm-20",
+      "targetKind": "corpus_target",
+      "evidence": {
+        "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+        "pageStart": 35,
+        "pageEnd": 35,
+        "sectionReference": "VM-01 definition: secondary guarantee",
+        "sourceTextSha256": "a3ea5bd9f0bee36f36f9214dd2fcf9011b3e293a229966951009de1486d74cbc"
+      },
+      "evidenceBasis": "explicit_source_text_reference",
+      "reviewDecision": "pending",
+      "promotionStatus": "not_promoted",
+      "promotionEligible": false
+    },
+    {
+      "relationshipId": "vm01-definition-081-secondary-guarantee-references-vm-m",
+      "sourceDefinitionId": "vm01-definition-081-secondary-guarantee",
+      "sourceTerm": "secondary guarantee",
+      "relationType": "references",
+      "targetLabel": "VM-M",
+      "targetId": "vm-m",
+      "targetKind": "corpus_target",
+      "evidence": {
+        "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+        "pageStart": 35,
+        "pageEnd": 35,
+        "sectionReference": "VM-01 definition: secondary guarantee",
+        "sourceTextSha256": "a3ea5bd9f0bee36f36f9214dd2fcf9011b3e293a229966951009de1486d74cbc"
+      },
+      "evidenceBasis": "explicit_source_text_reference",
+      "reviewDecision": "pending",
+      "promotionStatus": "not_promoted",
+      "promotionEligible": false
+    },
+    {
+      "relationshipId": "vm01-definition-090-tail-risk-references-model-820",
+      "sourceDefinitionId": "vm01-definition-090-tail-risk",
+      "sourceTerm": "tail risk",
+      "relationType": "references",
+      "targetLabel": "Model #820",
+      "targetId": "standard-valuation-law-model-820",
+      "targetKind": "corpus_target",
+      "evidence": {
+        "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+        "pageStart": 36,
+        "pageEnd": 36,
+        "sectionReference": "VM-01 definition: tail risk",
+        "sourceTextSha256": "cc60cbff5279eb6ef29122221ae84fa991790171cc166f3d7c67daece22799a8"
+      },
+      "evidenceBasis": "explicit_source_text_reference",
+      "reviewDecision": "pending",
+      "promotionStatus": "not_promoted",
+      "promotionEligible": false
+    },
+    {
+      "relationshipId": "vm01-definition-094-valuation-date-references-model-820",
+      "sourceDefinitionId": "vm01-definition-094-valuation-date",
+      "sourceTerm": "valuation date",
+      "relationType": "references",
+      "targetLabel": "Model #820",
+      "targetId": "standard-valuation-law-model-820",
+      "targetKind": "corpus_target",
+      "evidence": {
+        "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+        "pageStart": 36,
+        "pageEnd": 36,
+        "sectionReference": "VM-01 definition: valuation date",
+        "sourceTextSha256": "b9a2c992d47db3bd3abd167f792721420265b0504272551f8bbf81c80f540f19"
+      },
+      "evidenceBasis": "explicit_source_text_reference",
+      "reviewDecision": "pending",
+      "promotionStatus": "not_promoted",
+      "promotionEligible": false
+    },
+    {
+      "relationshipId": "vm01-definition-095-valuation-manual-references-model-820",
+      "sourceDefinitionId": "vm01-definition-095-valuation-manual",
+      "sourceTerm": "Valuation Manual",
+      "relationType": "references",
+      "targetLabel": "Model #820",
+      "targetId": "standard-valuation-law-model-820",
+      "targetKind": "corpus_target",
+      "evidence": {
+        "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+        "pageStart": 36,
+        "pageEnd": 36,
+        "sectionReference": "VM-01 definition: Valuation Manual",
+        "sourceTextSha256": "87ace1ef37e972580439814f2db16ff4a93c913728cb31fc38ebcfef86cbe30c"
+      },
+      "evidenceBasis": "explicit_source_text_reference",
+      "reviewDecision": "pending",
+      "promotionStatus": "not_promoted",
+      "promotionEligible": false
+    },
+    {
+      "relationshipId": "vm01-definition-098-vm-20-reserving-category-references-vm-20",
+      "sourceDefinitionId": "vm01-definition-098-vm-20-reserving-category",
+      "sourceTerm": "VM-20 reserving category",
+      "relationType": "references",
+      "targetLabel": "VM-20",
+      "targetId": "vm-20",
+      "targetKind": "corpus_target",
+      "evidence": {
+        "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+        "pageStart": 37,
+        "pageEnd": 37,
+        "sectionReference": "VM-01 definition: VM-20 reserving category",
+        "sourceTextSha256": "f75d24853f85bf2366beb5c1f380f5f468d79a1ae82f68b9a3f79ede1d702641"
+      },
+      "evidenceBasis": "explicit_source_text_reference",
+      "reviewDecision": "pending",
+      "promotionStatus": "not_promoted",
+      "promotionEligible": false
+    },
+    {
+      "relationshipId": "vm01-definition-098-vm-20-reserving-category-references-section-ii",
+      "sourceDefinitionId": "vm01-definition-098-vm-20-reserving-category",
+      "sourceTerm": "VM-20 reserving category",
+      "relationType": "references",
+      "targetLabel": "Section II",
+      "targetId": "valuation-manual-section-ii",
+      "targetKind": "manual_section",
+      "evidence": {
+        "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+        "pageStart": 37,
+        "pageEnd": 37,
+        "sectionReference": "VM-01 definition: VM-20 reserving category",
+        "sourceTextSha256": "f75d24853f85bf2366beb5c1f380f5f468d79a1ae82f68b9a3f79ede1d702641"
+      },
+      "evidenceBasis": "explicit_source_text_reference",
+      "reviewDecision": "pending",
+      "promotionStatus": "not_promoted",
+      "promotionEligible": false
+    }
+  ]
+}

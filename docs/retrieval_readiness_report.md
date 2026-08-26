@@ -2,23 +2,23 @@
 
 ## Corpus summary
 
-- Source packages: 21
-- Canonical chunks: 359
-- Retrieval questions: 44
-- Supported questions: 41
-- Unsupported questions: 3
+- Source packages: 22
+- Canonical chunks: 457
+- Retrieval questions: 50
+- Supported questions: 45
+- Unsupported questions: 5
 
 ## Metrics
 
-- Top-1 accuracy: 83%
+- Top-1 accuracy: 82%
 - Top-3 accuracy: 100%
 - Top-5 accuracy: 100%
-- Mean reciprocal rank: 0.902
-- Source-family accuracy: 95%
+- Mean reciprocal rank: 0.900
+- Source-family accuracy: 96%
 - Authority-level accuracy: 93%
 - Citation availability: 0%
 - Multi-chunk evidence recall: 14%
-- Unsupported-query precision: 33%
+- Unsupported-query precision: 60%
 
 ## Category breakdown
 
@@ -35,7 +35,7 @@
 | vm20_exclusions | 1 | 100% | 100% | 100% | 1.000 | 0% |
 | vm20_cash_flow_models | 1 | 100% | 100% | 100% | 1.000 | 0% |
 | vm20_assets | 1 | 100% | 100% | 100% | 1.000 | 0% |
-| vm20_reinsurance | 1 | 100% | 100% | 100% | 1.000 | 0% |
+| vm20_reinsurance | 1 | 0% | 100% | 100% | 0.500 | 0% |
 | vm20_assumptions_comparison | 1 | 100% | 100% | 100% | 1.000 | 0% |
 | vm20_companion_expense | 1 | 100% | 100% | 100% | 1.000 | 0% |
 | vm20_companion_assumptions | 1 | 0% | 100% | 100% | 0.500 | 0% |
@@ -53,6 +53,12 @@
 | vm20_cross_document | 1 | 100% | 100% | 100% | 1.000 | 0% |
 | relationship | 1 | 100% | 100% | 100% | 1.000 | 0% |
 | pricing_domain | 5 | 80% | 100% | 100% | 0.867 | 0% |
+| vm01_exact_definition | 1 | 100% | 100% | 100% | 1.000 | 0% |
+| vm01_acronym_definition | 1 | 100% | 100% | 100% | 1.000 | 0% |
+| vm01_similar_terms | 1 | 100% | 100% | 100% | 1.000 | 0% |
+| vm01_cross_document_terminology | 1 | 100% | 100% | 100% | 1.000 | 0% |
+| vm01_unsupported_definition | 1 | 0% | 0% | 0% | 0.000 | 100% |
+| vm01_ambiguous_term | 1 | 0% | 0% | 0% | 0.000 | 100% |
 
 ## Strong signals
 

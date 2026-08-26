@@ -1,0 +1,468 @@
+{
+  "schemaVersion": "1.0",
+  "reviewPackageId": "vm01-canonical-definitions-review-package-2026",
+  "status": "review_ready_not_promoted",
+  "promoted": false,
+  "authoritativeSource": {
+    "sourceId": "vm01-definitions",
+    "sourceReference": "2026 NAIC Valuation Manual",
+    "sourceEditionId": "NAIC-VALUATION-MANUAL-2026",
+    "sourceVersionIdentifier": "2026 NAIC Valuation Manual",
+    "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+    "pageRange": {
+      "chapter": {
+        "start": 25,
+        "end": 39
+      },
+      "definitions": {
+        "start": 25,
+        "end": 37
+      },
+      "blankOrNonDefinitionPages": [
+        38,
+        39
+      ]
+    },
+    "sectionReference": "VM-01: Definitions for Terms in Requirements",
+    "publicationDate": null,
+    "effectiveDate": null,
+    "currentness": "current_2026_edition"
+  },
+  "coverage": {
+    "totalDefinitions": 98,
+    "totalRetrievalUnits": 98,
+    "exactSourceTextDefinitions": 98,
+    "complexDefinitionCount": 24,
+    "definitionsWithCrossReferences": 22,
+    "explicitAliasCount": 27,
+    "explicitAcronymExpansionCount": 25
+  },
+  "sourceFidelity": {
+    "mode": "exact_extracted_source_text",
+    "generatedMetadataSeparate": true,
+    "generatedMetadataAuthority": "non_authoritative",
+    "sourceQaPath": "data/processed/review_packages/vm01-definitions-source-qa.json",
+    "sourceQaStatus": "pass",
+    "aggregateSourceEvidenceSha256": "04fecfc622ee792dca2f994f3d7eb6ebf510bd533bd7be9798b4604a70b8ef98"
+  },
+  "complexDefinitions": [
+    {
+      "definitionId": "vm01-definition-005-anticipated-experience-assumption",
+      "exactDefinedTerm": "anticipated experience assumption",
+      "pages": [
+        25,
+        25
+      ],
+      "reasons": [
+        "guidance_note_attached"
+      ]
+    },
+    {
+      "definitionId": "vm01-definition-006-appointed-actuary",
+      "exactDefinedTerm": "appointed actuary",
+      "pages": [
+        25,
+        26
+      ],
+      "reasons": [
+        "long_definition",
+        "enumerated_subparts"
+      ]
+    },
+    {
+      "definitionId": "vm01-definition-012-claim-reserve",
+      "exactDefinedTerm": "claim reserve",
+      "pages": [
+        26,
+        26
+      ],
+      "reasons": [
+        "guidance_note_attached"
+      ]
+    },
+    {
+      "definitionId": "vm01-definition-013-clearly-defined-hedging-strategy",
+      "exactDefinedTerm": "clearly defined hedging strategy",
+      "pages": [
+        26,
+        27
+      ],
+      "reasons": [
+        "enumerated_subparts",
+        "guidance_note_attached"
+      ]
+    },
+    {
+      "definitionId": "vm01-definition-014-commissioner",
+      "exactDefinedTerm": "commissioner",
+      "pages": [
+        27,
+        27
+      ],
+      "reasons": [
+        "enumerated_subparts"
+      ]
+    },
+    {
+      "definitionId": "vm01-definition-019-deposit-type-contract",
+      "exactDefinedTerm": "deposit-type contract",
+      "pages": [
+        27,
+        27
+      ],
+      "reasons": [
+        "condition_or_exception"
+      ]
+    },
+    {
+      "definitionId": "vm01-definition-020-derivative-instrument",
+      "exactDefinedTerm": "derivative instrument",
+      "pages": [
+        27,
+        28
+      ],
+      "reasons": [
+        "enumerated_subparts"
+      ]
+    },
+    {
+      "definitionId": "vm01-definition-026-equity-like-instruments",
+      "exactDefinedTerm": "equity-like instruments",
+      "pages": [
+        28,
+        28
+      ],
+      "reasons": [
+        "enumerated_subparts",
+        "condition_or_exception"
+      ]
+    },
+    {
+      "definitionId": "vm01-definition-029-future-hedging-strategy",
+      "exactDefinedTerm": "future hedging strategy",
+      "pages": [
+        28,
+        28
+      ],
+      "reasons": [
+        "condition_or_exception"
+      ]
+    },
+    {
+      "definitionId": "vm01-definition-031-guaranteed-issue-gi-life-insurance-policy",
+      "exactDefinedTerm": "guaranteed issue (GI) life insurance policy",
+      "pages": [
+        29,
+        29
+      ],
+      "reasons": [
+        "enumerated_subparts",
+        "condition_or_exception"
+      ]
+    },
+    {
+      "definitionId": "vm01-definition-033-guaranteed-minimum-death-benefit",
+      "exactDefinedTerm": "guaranteed minimum death benefit",
+      "pages": [
+        29,
+        29
+      ],
+      "reasons": [
+        "enumerated_subparts"
+      ]
+    },
+    {
+      "definitionId": "vm01-definition-034-guaranteed-minimum-income-benefit",
+      "exactDefinedTerm": "guaranteed minimum income benefit",
+      "pages": [
+        29,
+        30
+      ],
+      "reasons": [
+        "enumerated_subparts",
+        "condition_or_exception"
+      ]
+    },
+    {
+      "definitionId": "vm01-definition-035-guaranteed-minimum-withdrawal-benefit",
+      "exactDefinedTerm": "guaranteed minimum withdrawal benefit",
+      "pages": [
+        30,
+        30
+      ],
+      "reasons": [
+        "enumerated_subparts",
+        "condition_or_exception"
+      ]
+    },
+    {
+      "definitionId": "vm01-definition-037-hedging-transaction",
+      "exactDefinedTerm": "hedging transaction",
+      "pages": [
+        30,
+        30
+      ],
+      "reasons": [
+        "enumerated_subparts"
+      ]
+    },
+    {
+      "definitionId": "vm01-definition-047-longevity-reinsurance",
+      "exactDefinedTerm": "longevity reinsurance",
+      "pages": [
+        31,
+        32
+      ],
+      "reasons": [
+        "long_definition",
+        "enumerated_subparts"
+      ]
+    },
+    {
+      "definitionId": "vm01-definition-049-modeled-company-investment-strategy",
+      "exactDefinedTerm": "modeled company investment strategy",
+      "pages": [
+        32,
+        32
+      ],
+      "reasons": [
+        "condition_or_exception"
+      ]
+    },
+    {
+      "definitionId": "vm01-definition-058-non-material-secondary-guarantee",
+      "exactDefinedTerm": "non-material secondary guarantee",
+      "pages": [
+        32,
+        33
+      ],
+      "reasons": [
+        "enumerated_subparts",
+        "guidance_note_attached"
+      ]
+    },
+    {
+      "definitionId": "vm01-definition-059-ordinary-life-insurance",
+      "exactDefinedTerm": "ordinary life insurance",
+      "pages": [
+        33,
+        33
+      ],
+      "reasons": [
+        "condition_or_exception"
+      ]
+    },
+    {
+      "definitionId": "vm01-definition-062-policyholder-behavior",
+      "exactDefinedTerm": "policyholder behavior",
+      "pages": [
+        33,
+        33
+      ],
+      "reasons": [
+        "condition_or_exception"
+      ]
+    },
+    {
+      "definitionId": "vm01-definition-065-preneed-annuity",
+      "exactDefinedTerm": "preneed annuity",
+      "pages": [
+        33,
+        34
+      ],
+      "reasons": [
+        "guidance_note_attached"
+      ]
+    },
+    {
+      "definitionId": "vm01-definition-079-scenario-greatest-present-value",
+      "exactDefinedTerm": "scenario greatest present value",
+      "pages": [
+        35,
+        35
+      ],
+      "reasons": [
+        "enumerated_subparts"
+      ]
+    },
+    {
+      "definitionId": "vm01-definition-081-secondary-guarantee",
+      "exactDefinedTerm": "secondary guarantee",
+      "pages": [
+        35,
+        35
+      ],
+      "reasons": [
+        "enumerated_subparts"
+      ]
+    },
+    {
+      "definitionId": "vm01-definition-096-variable-annuity-guaranteed-living-benefit",
+      "exactDefinedTerm": "variable annuity guaranteed living benefit",
+      "pages": [
+        36,
+        37
+      ],
+      "reasons": [
+        "condition_or_exception"
+      ]
+    },
+    {
+      "definitionId": "vm01-definition-098-vm-20-reserving-category",
+      "exactDefinedTerm": "VM-20 reserving category",
+      "pages": [
+        37,
+        37
+      ],
+      "reasons": [
+        "long_definition",
+        "enumerated_subparts",
+        "guidance_note_attached",
+        "condition_or_exception"
+      ]
+    }
+  ],
+  "crossReferences": {
+    "candidateCount": 29,
+    "definitionsWithCandidates": 22,
+    "registryPath": "data/processed/relationship_registries/vm01-definition-relationship-candidates.json",
+    "status": "review_only_pending"
+  },
+  "similarTermReviewPairs": [
+    [
+      "claim reserve",
+      "contract reserve"
+    ],
+    [
+      "policyholder behavior",
+      "policyholder efficiency"
+    ],
+    [
+      "deterministic reserve",
+      "stochastic reserve"
+    ],
+    [
+      "guaranteed investment contract (GIC)",
+      "synthetic guaranteed investment contract"
+    ],
+    [
+      "commissioner",
+      "domiciliary commissioner"
+    ]
+  ],
+  "representativeExamples": [
+    {
+      "definitionId": "vm01-definition-002-accumulated-deficiency",
+      "exactDefinedTerm": "accumulated deficiency",
+      "pages": [
+        25,
+        25
+      ],
+      "aliases": [],
+      "complexStructureReasons": [],
+      "explicitReferences": []
+    },
+    {
+      "definitionId": "vm01-definition-012-claim-reserve",
+      "exactDefinedTerm": "claim reserve",
+      "pages": [
+        26,
+        26
+      ],
+      "aliases": [],
+      "complexStructureReasons": [
+        "guidance_note_attached"
+      ],
+      "explicitReferences": [
+        "AP&P Manual"
+      ]
+    },
+    {
+      "definitionId": "vm01-definition-013-clearly-defined-hedging-strategy",
+      "exactDefinedTerm": "clearly defined hedging strategy",
+      "pages": [
+        26,
+        27
+      ],
+      "aliases": [
+        "CDHS"
+      ],
+      "complexStructureReasons": [
+        "enumerated_subparts",
+        "guidance_note_attached"
+      ],
+      "explicitReferences": [
+        "AP&P Manual",
+        "SSAP No. 86"
+      ]
+    },
+    {
+      "definitionId": "vm01-definition-073-prudent-estimate-assumption",
+      "exactDefinedTerm": "prudent estimate assumption",
+      "pages": [
+        34,
+        34
+      ],
+      "aliases": [],
+      "complexStructureReasons": [],
+      "explicitReferences": []
+    },
+    {
+      "definitionId": "vm01-definition-098-vm-20-reserving-category",
+      "exactDefinedTerm": "VM-20 reserving category",
+      "pages": [
+        37,
+        37
+      ],
+      "aliases": [],
+      "complexStructureReasons": [
+        "long_definition",
+        "enumerated_subparts",
+        "guidance_note_attached",
+        "condition_or_exception"
+      ],
+      "explicitReferences": [
+        "VM-20",
+        "Section II"
+      ]
+    }
+  ],
+  "retrievalEvaluation": {
+    "path": "data/processed/review_packages/vm01-definition-retrieval-evaluation.json",
+    "queryCount": 16,
+    "supportedTop1": 12,
+    "supportedQueryCount": 13,
+    "unsupportedCorrect": 3,
+    "unsupportedQueryCount": 3,
+    "currentAuthorityTop1": 13
+  },
+  "unresolvedSourceQuestions": [
+    "Pages 38 and 39 contain no additional definitions; page 39 is explicitly marked intentionally blank.",
+    "Eleven term labels required transparent spacing-only text-layer cleanup in lookup metadata; the exact retained source excerpts remain unchanged.",
+    "Independent source review should confirm all 98 term openings, attached guidance notes, and cross-page boundaries before promotion."
+  ],
+  "artifacts": {
+    "canonicalSourcePackage": "data/processed/source_indexes/sources/vm01-definitions.json",
+    "definitionLookupIndex": "data/processed/source_indexes/definitions/vm01-definition-index.json",
+    "sourceQa": "data/processed/review_packages/vm01-definitions-source-qa.json",
+    "relationshipCandidates": "data/processed/relationship_registries/vm01-definition-relationship-candidates.json",
+    "retrievalEvaluation": "data/processed/review_packages/vm01-definition-retrieval-evaluation.json",
+    "independentReviewPrompt": "data/processed/review_packages/vm01-independent-review-prompt.md"
+  },
+  "promotionReadiness": {
+    "independentReviewRequired": true,
+    "automatedPromotion": false,
+    "currentStatus": "review_only",
+    "promotionStatus": "not_promoted",
+    "blockersClosed": false,
+    "learnerFacingAllowed": false,
+    "appReadyAllowed": false,
+    "ragReadyAllowed": false,
+    "copilotExportEligible": false,
+    "decisionOptions": [
+      "APPROVE FOR CANONICAL PROMOTION",
+      "APPROVE WITH FIXES",
+      "DO NOT PROMOTE"
+    ]
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "schemaVersion": "1.0",
+  "reportId": "vm01-definitions-source-qa-2026",
+  "status": "pass",
+  "sourceIdentity": {
+    "sourceId": "vm01-definitions",
+    "sourceReference": "2026 NAIC Valuation Manual",
+    "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+    "manifestSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+    "pageCount": 457,
+    "chapterPageRange": {
+      "start": 25,
+      "end": 39
+    },
+    "definitionPageRange": {
+      "start": 25,
+      "end": 37
+    },
+    "blankOrNonDefinitionPages": [
+      38,
+      39
+    ],
+    "sectionReference": "VM-01: Definitions for Terms in Requirements"
+  },
+  "checks": {
+    "definitionBulletsFound": 98,
+    "expectedDefinitionBullets": 98,
+    "definitionsWithSourceEvidence": 98,
+    "definitionsWithValidCitations": 98,
+    "uniqueDefinitionIds": 98,
+    "uniqueNormalizedTerms": 98,
+    "explicitAliasCount": 27,
+    "explicitAcronymExpansionCount": 25,
+    "termExtractionSpacingCorrections": 11,
+    "definitionsWithComplexStructureFlags": 24,
+    "definitionsWithExplicitCrossReferences": 22,
+    "sourceEvidenceAggregateSha256": "04fecfc622ee792dca2f994f3d7eb6ebf510bd533bd7be9798b4604a70b8ef98"
+  },
+  "extractionCorrections": [
+    {
+      "definitionId": "vm01-definition-008-asset-associated-derivative",
+      "extractedTerm": "asset -associated derivative",
+      "normalizedTerm": "asset-associated derivative",
+      "basis": "spacing-only PDF text-layer extraction correction verified against source typography"
+    },
+    {
+      "definitionId": "vm01-definition-019-deposit-type-contract",
+      "extractedTerm": "deposit -type contract",
+      "normalizedTerm": "deposit-type contract",
+      "basis": "spacing-only PDF text-layer extraction correction verified against source typography"
+    },
+    {
+      "definitionId": "vm01-definition-026-equity-like-instruments",
+      "extractedTerm": "equity -like instruments",
+      "normalizedTerm": "equity-like instruments",
+      "basis": "spacing-only PDF text-layer extraction correction verified against source typography"
+    },
+    {
+      "definitionId": "vm01-definition-041-index-linked-variable-annuity",
+      "extractedTerm": "index -linked variable annuity",
+      "normalizedTerm": "index-linked variable annuity",
+      "basis": "spacing-only PDF text-layer extraction correction verified against source typography"
+    },
+    {
+      "definitionId": "vm01-definition-043-industrial-life-insurance",
+      "extractedTerm": "i ndustrial life insurance",
+      "normalizedTerm": "industrial life insurance",
+      "basis": "spacing-only PDF text-layer extraction correction verified against source typography"
+    },
+    {
+      "definitionId": "vm01-definition-057-non-guaranteed-elements",
+      "extractedTerm": "non -guaranteed elements",
+      "normalizedTerm": "non-guaranteed elements",
+      "basis": "spacing-only PDF text-layer extraction correction verified against source typography"
+    },
+    {
+      "definitionId": "vm01-definition-058-non-material-secondary-guarantee",
+      "extractedTerm": "non -material secondary guarantee",
+      "normalizedTerm": "non-material secondary guarantee",
+      "basis": "spacing-only PDF text-layer extraction correction verified against source typography"
+    },
+    {
+      "definitionId": "vm01-definition-059-ordinary-life-insurance",
+      "extractedTerm": "o rdinary life insurance",
+      "normalizedTerm": "ordinary life insurance",
+      "basis": "spacing-only PDF text-layer extraction correction verified against source typography"
+    },
+    {
+      "definitionId": "vm01-definition-067-principle-based-reserve-actuarial-report",
+      "extractedTerm": "Principle -Based Reserve Actuarial Report",
+      "normalizedTerm": "Principle-Based Reserve Actuarial Report",
+      "basis": "spacing-only PDF text-layer extraction correction verified against source typography"
+    },
+    {
+      "definitionId": "vm01-definition-068-principle-based-valuation",
+      "extractedTerm": "principle -based valuation",
+      "normalizedTerm": "principle-based valuation",
+      "basis": "spacing-only PDF text-layer extraction correction verified against source typography"
+    },
+    {
+      "definitionId": "vm01-definition-098-vm-20-reserving-category",
+      "extractedTerm": "VM -20 reserving category",
+      "normalizedTerm": "VM-20 reserving category",
+      "basis": "spacing-only PDF text-layer extraction correction verified against source typography"
+    }
+  ],
+  "representativeVisualQa": {
+    "source": "authoritative PDF",
+    "pagesInspected": [
+      25,
+      26,
+      27,
+      28,
+      29,
+      31,
+      32,
+      33,
+      34,
+      37
+    ],
+    "result": "definition bullets, nested conditions, all eleven corrected lookup-term labels, and the final VM-20 reserving-category structure visually align with retained extraction",
+    "pageImagesCommitted": false
+  },
+  "unresolvedSourceQuestions": [
+    "Pages 38 and 39 contain no additional definitions; page 39 is explicitly marked intentionally blank.",
+    "Eleven term labels required transparent spacing-only text-layer cleanup in lookup metadata; the exact retained source excerpts remain unchanged.",
+    "Independent source review should confirm all 98 term openings, attached guidance notes, and cross-page boundaries before promotion."
+  ],
+  "governance": {
+    "reviewOnly": true,
+    "promotionStatus": "not_promoted",
+    "promotionEligible": false
+  }
+}

@@ -1,4 +1,5 @@
 const normalize = (value) => String(value ?? '').replace(/\s+/g, ' ').trim().toLowerCase()
+const normalizeTerm = (value) => normalize(value).replace(/[^a-z0-9]+/g, ' ').trim()
 
 const unique = (values) => [...new Set(values.filter(Boolean))]
 
@@ -17,6 +18,7 @@ const inferInformationTypes = (query) => {
   if (/\b(current version|version metadata|edition|effective date|publication date|as of)\b/.test(value)) types.push('current_version_metadata')
   if (/\b(jurisdiction|state-specific|state specific|provincial|jurisdiction-specific|jurisdiction specific)\b/.test(value)) types.push('jurisdiction_specific_requirement')
   if (/\b(product-specific|product specific|product type|policy form|indexed universal|variable annuity|product assumption)\b/.test(value)) types.push('product_specific_detail')
+  if (/\b(vm\s*-?\s*01|formal)\b.*\b(defin(?:e|es|ed|ition))\b|\b(defin(?:e|es|ed|ition))\b.*\bvm\s*-?\s*01\b/.test(value)) types.push('formal_definition')
   return types.length > 0 ? types : ['general_prose']
 }
 
@@ -71,6 +73,12 @@ export const assessEvidenceSufficiency = ({ query, topMatches, chunkRecords, sou
     authorityLevel: match.authorityLevel,
   }))
   const structuredEvidence = hasStructuredEvidence(retrievedChunks, retrievedPackages)
+  const requestedDefinedTerm = query.supportRequirements?.definedTerm ?? query.requestedDefinedTerm ?? null
+  const requestedSourceVersion = query.supportRequirements?.sourceVersionIdentifier ?? null
+  const normalizedRequestedTerm = normalizeTerm(requestedDefinedTerm)
+  const formalDefinitionEvidence = normalizedRequestedTerm
+    ? retrievedChunks.find((chunk) => chunk.sourceId === 'vm01-definitions' && (chunk.definedTerms ?? []).some((term) => normalizeTerm(term) === normalizedRequestedTerm))
+    : retrievedChunks.find((chunk) => chunk.sourceId === 'vm01-definitions' && chunk.chunkKind === 'definition')
   const reasons = []
 
   if (informationTypes.includes('structured_table_rows') && !structuredEvidence) {
@@ -85,12 +93,19 @@ export const assessEvidenceSufficiency = ({ query, topMatches, chunkRecords, sou
   if (informationTypes.includes('product_specific_detail') && !productDetailSupported(retrievedPackages, retrievedChunks)) {
     reasons.push({ code: 'missing_product_specific_scope', text: 'The retrieved evidence is general guidance and does not declare coverage for the requested product-specific detail.' })
   }
+  if (informationTypes.includes('formal_definition') && !formalDefinitionEvidence) {
+    reasons.push({ code: 'term_not_defined_in_vm01', text: `VM-01 does not contain an exact formal definition for the requested term${requestedDefinedTerm ? ` (${requestedDefinedTerm})` : ''} in the retrieved current definition corpus.` })
+  }
+  if (requestedSourceVersion && !retrievedPackages.some((source) => normalize(source.sourceVersionIdentifier) === normalize(requestedSourceVersion))) {
+    reasons.push({ code: 'missing_requested_source_version', text: `The requested source version (${requestedSourceVersion}) is not represented by the retrieved source packages.` })
+  }
 
   const explicitGap = informationTypes.some((type) => {
     if (type === 'structured_table_rows') return /structured|table|row|version metadata|current prescribed/i.test(gapText)
     if (type === 'current_version_metadata') return /version metadata|version|edition|current/i.test(gapText)
     if (type === 'jurisdiction_specific_requirement') return /jurisdiction|state|provincial/i.test(gapText)
     if (type === 'product_specific_detail') return /product|scope|general guidance/i.test(gapText)
+    if (type === 'formal_definition') return /definition|defined|section-local/i.test(gapText)
     return false
   })
 

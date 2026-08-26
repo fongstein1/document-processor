@@ -5,8 +5,8 @@
 - Canonical layer: source-index
 - Model version: 1.0
 - Generated at: 2026-07-22T22:52:46.811Z
-- Source package count: 21
-- Chunk count: 359
+- Source package count: 22
+- Chunk count: 457
 
 ## Export files
 
@@ -42,14 +42,15 @@
 | Orion Term Accumulator Pricing Methodology | pp. 1-2 | `data/processed/source_indexes/sources/synthetic-pricing-pricing-methodology.json` | review-only |
 | Orion Term Accumulator Profitability Study | pp. 1-2 | `data/processed/source_indexes/sources/synthetic-pricing-profitability-study.json` | review-only |
 | Orion Term Accumulator Approval Memo | pp. 1-2 | `data/processed/source_indexes/sources/synthetic-pricing-approval-memo.json` | review-only |
+| VM-01: Definitions for Terms in Requirements | pp. 25-39 | `data/processed/source_indexes/sources/vm01-definitions.json` | review-only |
 
 ## Retrieval summary
 
-- Queries evaluated: 44
-- Supported queries: 41
-- Unsupported queries: 3
-- Top-1 accuracy: 83%
+- Queries evaluated: 50
+- Supported queries: 45
+- Unsupported queries: 5
+- Top-1 accuracy: 82%
 - Top-3 accuracy: 100%
 - Top-5 accuracy: 100%
-- Mean reciprocal rank: 0.902
+- Mean reciprocal rank: 0.900
 - Method: keyword_overlap_baseline

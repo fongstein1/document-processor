@@ -8,5 +8,5 @@ This directory contains the backend-neutral canonical source-index proof of conc
 - `retrieval/` contains a legacy compatibility summary for earlier handoff notes.
 - `repository-manifest.json` ties the package together.
 
-All files are review-only in the repository context and do not replace the underlying review packets.
+Packages retain per-source governance. Explicitly promoted VM-20 packages remain promoted; VM-01 and other unpromoted packages remain review-only. No package replaces the underlying review evidence or grants downstream export eligibility.
 

@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "bootstrap": "node scripts/bootstrap-small-batch.mjs",
-    "check": "node scripts/validate-scaffold.mjs && node scripts/validate-document-family-intake.mjs && node scripts/validate-source-index-poc.mjs && node scripts/validate-reg213-relationship-registry.mjs && node scripts/validate-regulatory-corpus-inventory.mjs && node scripts/test-vm20-appendix2-promotion-blockers.mjs && node scripts/validate-vm20-appendix2-tables.mjs",
+    "check": "node scripts/validate-scaffold.mjs && node scripts/validate-document-family-intake.mjs && node scripts/validate-source-index-poc.mjs && node scripts/validate-reg213-relationship-registry.mjs && node scripts/validate-vm01-definitions.mjs && node scripts/validate-regulatory-corpus-inventory.mjs && node scripts/test-vm20-appendix2-promotion-blockers.mjs && node scripts/validate-vm20-appendix2-tables.mjs",
     "pilot": "node scripts/run-pilot-batch.mjs",
     "intake:scan": "node scripts/scan-document-family-intake.mjs",
     "intake:build-source-index": "node scripts/build-family-source-index-poc.mjs",
@@ -19,6 +19,9 @@
     "source-index:build": "node scripts/build-source-index-poc.mjs",
     "source-index:evaluate": "node scripts/evaluate-source-index-retrieval.mjs",
     "source-index:validate": "node scripts/validate-source-index-poc.mjs",
+    "vm01:artifacts": "node scripts/build-vm01-definition-artifacts.mjs",
+    "vm01:validate": "node scripts/validate-vm01-definitions.mjs",
+    "vm01:definitions": "npm run source-index:build && npm run vm01:artifacts && npm run vm01:validate",
     "vm20:qa": "node scripts/validate-vm20-qa.mjs && node scripts/build-vm20-qa-report.mjs",
     "vm20:support-test": "node scripts/test-vm20-support-gate.mjs",
     "vm20:dedup-test": "node scripts/test-vm20-retrieval-dedup.mjs",

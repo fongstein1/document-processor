@@ -871,3 +871,9 @@
   available VM-20 Appendix 2 structured-table scope. Updated table governance,
   retrieval support state, review history, corpus inventory, backlog, and
   completeness reporting while retaining zero downstream production eligibility.
+- Canonicalized the current 2026 VM-01 chapter as 98 exact-text definition
+  retrieval units using the established Valuation Manual source identity and
+  SHA-256. Added a reusable definition lookup index, 29 conservative explicit-
+  reference candidates, source QA, focused retrieval/evidence-sufficiency
+  evaluation, deterministic validation, and a dedicated independent-review
+  package. VM-01 remains review-only, not promoted, and downstream-ineligible.

@@ -2,6 +2,7 @@ import fs from 'node:fs/promises'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { buildRetrievalMarkdown, evaluateQueries, normalizeText } from './evaluate-source-index-retrieval.mjs'
+import { buildVm01DefinitionChunks } from './lib/vm01-definitions.mjs'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -1056,17 +1057,19 @@ const main = async () => {
     const sourceVersionId = source.sourceVersionId ?? source.sourceIndexId
     const sourceIndexPath = path.join(sourcesRoot, `${source.sourceId}.json`)
     const markdownPath = path.join(sourcesRoot, `${source.sourceId}.md`)
-    let processingCreatedAt = generatedAt
-    try {
+    let processingCreatedAt = source.processingCreatedAt ?? generatedAt
+    if (!source.processingCreatedAt) try {
       const previous = await readJson(sourceIndexPath)
       processingCreatedAt = previous.processing?.createdAt ?? generatedAt
     } catch {
       // New packages use the deterministic config timestamp.
     }
     const sourceRelationships = asArray(source.relationships)
-    const hydratedChunks = source.batchCoverageInput
-      ? await buildBatchCoverageChunks(source)
-      : await buildHierarchicalChunks(source)
+    const hydratedChunks = source.definitionInput
+      ? await buildVm01DefinitionChunks(repoRoot, source)
+      : source.batchCoverageInput
+        ? await buildBatchCoverageChunks(source)
+        : await buildHierarchicalChunks(source)
     const promoted = promotedSourceIds.has(source.sourceId)
     const sourceChunks = asArray(hydratedChunks).map((chunk, index) =>
       deriveChunk(
@@ -1121,8 +1124,8 @@ const main = async () => {
       processing: {
         createdAt: processingCreatedAt,
         createdBy: 'scripts/build-source-index-poc.mjs',
-        processingMode: promoted ? 'canonical_index' : 'canonical_index_poc',
-        canonicality: promoted ? 'canonical' : 'poc',
+        processingMode: promoted || source.canonicalCandidate ? 'canonical_index' : 'canonical_index_poc',
+        canonicality: promoted || source.canonicalCandidate ? 'canonical' : 'poc',
         reviewOnly: !promoted,
         learnerFacingAllowed: false,
         appReadyAllowed: false,
@@ -1142,13 +1145,14 @@ const main = async () => {
       exportHints: {
         jsonlEligible: true,
         csvEligible: true,
-        vectorEligible: promoted ? false : true,
-        notes: promoted ? 'Canonical JSONL/CSV serialization is available for review and audit; vector, learner, app, RAG, and Copilot export remain blocked pending a separate decision.' : 'Backend-neutral POC exports generated from review-only batch artifacts.',
+        vectorEligible: promoted || source.canonicalCandidate ? false : true,
+        notes: promoted || source.canonicalCandidate ? 'Canonical JSONL/CSV serialization is available for review and audit; vector, learner, app, RAG, and Copilot export remain blocked pending a separate decision.' : 'Backend-neutral POC exports generated from review-only batch artifacts.',
       },
       notes: source.notes,
       extensions: {
         batchIds: source.reviewBatchIds,
         sourceIndexGeneratedBy: 'build-source-index-poc',
+        ...source.extensions,
         ...(promoted ? { promotionDecisionId: promotionDecision.promotionDecisionId, promotionDecisionPath } : {}),
       },
     }
@@ -1367,7 +1371,18 @@ const main = async () => {
     notes: `Keyword baseline retrieved ${evaluation.top1HitCount} top-1 hits and ${evaluation.top3HitCount} top-3 hits across ${config.retrievalQueries.length} queries.`,
   }
 
-  const vm20ReviewPackage = buildVm20ReviewPackage({ chunkRecords, sourcePackages, evaluation, promotionDecision, promotionDecisionPath })
+  // Keep the independently approved VM-20 review package on its accepted
+  // corpus/query boundary. Adding the VM-01 terminology layer may change the
+  // global mixed-corpus ranking, but it must not rewrite the historical VM-20
+  // promotion evidence as though that later corpus existed during review.
+  const vm20ReviewEvaluation = evaluateQueries({
+    queries: config.retrievalQueries.filter((query) => !query.queryId.startsWith('q-vm01-')),
+    chunkRecords: chunkRecords.filter((chunk) => chunk.sourceId !== 'vm01-definitions'),
+    sourcePackages: sourcePackages.filter((source) => source.sourceId !== 'vm01-definitions'),
+    unsupportedThreshold: config.retrievalSettings?.unsupportedThreshold ?? 3,
+    topN: config.retrievalSettings?.topN ?? 5,
+  })
+  const vm20ReviewPackage = buildVm20ReviewPackage({ chunkRecords: chunkRecords.filter((chunk) => chunk.sourceId !== 'vm01-definitions'), sourcePackages: sourcePackages.filter((source) => source.sourceId !== 'vm01-definitions'), evaluation: vm20ReviewEvaluation, promotionDecision, promotionDecisionPath })
   const vm20ReviewPackageJsonPath = path.join(reviewPackagesRoot, 'vm20-canonical-coverage-review-package.json')
   const vm20ReviewPackageMarkdownPath = path.join(reviewPackagesRoot, 'vm20-canonical-coverage-review-package.md')
   await fs.writeFile(vm20ReviewPackageJsonPath, `${JSON.stringify(vm20ReviewPackage.packageJson, null, 2)}\n`, 'utf8')
@@ -1547,7 +1562,7 @@ const main = async () => {
     '- `retrieval/` contains a legacy compatibility summary for earlier handoff notes.',
     '- `repository-manifest.json` ties the package together.',
     '',
-    'All files are review-only in the repository context and do not replace the underlying review packets.',
+    'Packages retain per-source governance. Explicitly promoted VM-20 packages remain promoted; VM-01 and other unpromoted packages remain review-only. No package replaces the underlying review evidence or grants downstream export eligibility.',
     '',
   ].join('\n')
   await fs.writeFile(sourceIndexReadmePath, `${sourceIndexReadme}\n`, 'utf8')

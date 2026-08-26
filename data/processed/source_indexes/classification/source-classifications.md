@@ -1,7 +1,7 @@
 # Document Processor classification summary
 
 - Manifest ID: `source-index-poc-2026-07-21`
-- Source packages classified: 21
+- Source packages classified: 22
 
 | Source | Domain | Document type | Recommended profile | Chunking strategy | Authority type | Confidence |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -26,6 +26,7 @@
 | Orion Term Accumulator Pricing Methodology | pricing_documents | pricing_methodology | pricing | structure_first | synthetic | high |
 | Orion Term Accumulator Profitability Study | pricing_documents | profitability_study | pricing | structure_first | synthetic | high |
 | Orion Term Accumulator Approval Memo | pricing_documents | approval_memo | pricing | structure_first | synthetic | high |
+| VM-01: Definitions for Terms in Requirements | naic_regulatory | valuation_manual_section | regulatory | definition_aware_one_entry_per_unit | regulatory | high |
 
 ## Notes
 

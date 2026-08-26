@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0",
+  "reportId": "vm01-definitions-validation-2026",
+  "status": "pass",
+  "sourceIdentity": {
+    "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+    "sourceEditionId": "NAIC-VALUATION-MANUAL-2026",
+    "pageRange": {
+      "start": 25,
+      "end": 39
+    }
+  },
+  "checks": {
+    "definitions": 98,
+    "retrievalUnits": 98,
+    "uniqueDefinitionIds": 98,
+    "uniqueNormalizedTerms": 98,
+    "validSourceEvidence": 98,
+    "validCitations": 98,
+    "termExtractionCorrections": 11,
+    "relationshipCandidates": 29,
+    "focusedRetrievalQueries": 16,
+    "focusedSupportedTop1": 12,
+    "focusedSupportedTop3": 13,
+    "unsupportedQueriesSafelyAbstained": 3,
+    "globalVm01RegressionQueries": 6,
+    "globalSupportedTop1": 4,
+    "globalUnsupportedAbstained": 2
+  },
+  "governance": {
+    "reviewOnly": true,
+    "promotionStatus": "not_promoted",
+    "learnerFacingAllowed": false,
+    "appReadyAllowed": false,
+    "ragReadyAllowed": false,
+    "vectorEligible": false,
+    "copilotExportEligible": false
+  }
+}

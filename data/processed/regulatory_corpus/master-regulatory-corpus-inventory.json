@@ -12,10 +12,14 @@
     "sourceRecordsWithExternalManifest": 71,
     "reviewIndexes": 97,
     "selfReviews": 94,
-    "canonicalSourcePackages": 21,
-    "canonicalChunks": 359,
+    "canonicalSourcePackages": 22,
+    "canonicalChunks": 457,
     "vm20CurrentManualChunks": 149,
     "vm20CompanionChunks": 175,
+    "vm01Definitions": 98,
+    "vm01RetrievalUnits": 98,
+    "vm01PromotionStatus": "not_promoted",
+    "vm01RelationshipCandidates": 29,
     "promotedCanonicalPackages": 6,
     "promotedCanonicalChunks": 149,
     "structuredTableLogicalTables": 7,
@@ -52,12 +56,12 @@
       "standard-valuation-law-model-820",
       "annual-statement-pbr-reporting"
     ],
-    "candidateRelationships": 23,
+    "candidateRelationships": 52,
     "promotedRelationships": 0,
     "historicalProposedDeferred": 9,
     "currentSourceTextFidelityDistribution": {
       "curated": 20,
-      "exact": 339
+      "exact": 437
     }
   },
   "sources": [
@@ -5023,6 +5027,7 @@
         "reviewIndexes": [],
         "selfReviews": [],
         "canonicalPackages": [
+          "data/processed/source_indexes/sources/vm01-definitions.json",
           "data/processed/source_indexes/sources/vm20-assumptions-section-3c.json",
           "data/processed/source_indexes/sources/vm20-canonical-coverage.json",
           "data/processed/source_indexes/sources/vm20-framework-boundary.json",
@@ -5032,8 +5037,8 @@
           "data/processed/source_indexes/sources/vm21-sr-projection-entry.json"
         ],
         "classification": "not_in_canonical_classification",
-        "relationshipRegistry": "none identified",
-        "chunkCount": 153,
+        "relationshipRegistry": "candidate_registry: data/processed/relationship_registries/vm01-definition-relationship-candidates.json",
+        "chunkCount": 251,
         "sourceTextFidelity": [
           "exact"
         ]
@@ -5070,7 +5075,9 @@
         "level": "P0",
         "reason": "Current Valuation Manual material directly controls life and annuity valuation answers."
       },
-      "relationships": [],
+      "relationships": [
+        "candidate_registry: data/processed/relationship_registries/vm01-definition-relationship-candidates.json"
+      ],
       "notes": "Source record is derived from a processing manifest and has not been matched to a tracked review index."
     },
     {
@@ -6514,6 +6521,7 @@
         "supporting-vm31-boundary",
         "supporting-vm31-detail",
         "supporting-vm31-purpose",
+        "vm01-definitions",
         "vm20-assumptions-section-3c",
         "vm20-canonical-coverage",
         "vm20-core-reserve-mechanics",
@@ -6576,8 +6584,8 @@
       "sourceFamily": "valuation_manual_pdfs",
       "priority": "P0",
       "intendedStatus": "current",
-      "assessment": "reviewed_not_canonical",
-      "reason": "The 2026 manual is present and VM-01 is named in the supporting-wave plan, but no canonical VM-01 package is present.",
+      "assessment": "canonical_review_candidate",
+      "reason": "The current 2026 VM-01 terminology layer now contains 98 exact-text definition units and a reusable definition lookup index; it remains review-only and not promoted.",
       "evidenceSourceIds": [
         "supporting-vm01-definitions",
         "supporting-vm02-nonforfeiture",
@@ -6588,6 +6596,7 @@
         "supporting-vm31-boundary",
         "supporting-vm31-detail",
         "supporting-vm31-purpose",
+        "vm01-definitions",
         "vm20-core-reserve-mechanics",
         "vm20-framework-boundary",
         "vm20-framework-overview",
@@ -6638,7 +6647,7 @@
         "vm31-reporting-crossref",
         "vm31-reporting-definition"
       ],
-      "nextAction": "Canonicalize definitions first because downstream VM answers depend on stable terms."
+      "nextAction": "Complete independent definition review, resolve any findings, and record a separate promotion decision."
     },
     {
       "targetId": "vm-20",

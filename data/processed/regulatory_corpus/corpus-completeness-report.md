@@ -7,15 +7,15 @@ As of 2026-08-26T00:00:00.000Z, the repository contains substantial regulatory e
 - Source documents inventoried: **105**
 - Documents with declared external raw source: **71**
 - Documents reviewed / review artifacts matched: **97 review indexes**
-- Canonical source packages: **21**
-- Canonical chunks: **359**
+- Canonical source packages: **22**
+- Canonical chunks: **457**
 - Promoted canonical prose packages / chunks: **6 / 149**
 - Promoted structured logical tables / versions: **7 / 29**
 - Structured rows / values: **891 / 7022**
 - Sources awaiting canonicalization: **96**
 - Sources awaiting human review: **1**
 - Review-artifact-only sources: **34**
-- Candidate relationships: **23**
+- Candidate relationships: **52**
 - Promoted relationships: **0**
 
 ## VM-20 coverage checkpoint
@@ -27,6 +27,13 @@ As of 2026-08-26T00:00:00.000Z, the repository contains substantial regulatory e
 - Structured-table promotion decision: `data/manual-input/promotion-decisions/vm20-appendix2-structured-table-promotion.json`.
 - Structured-table review package: `data/processed/review_packages/vm20-appendix2-structured-table-review-package.md`.
 - Remaining VM-20 table gap: current Tables B, C, D, E1, and E2 were not available on the official current-data page and were not inferred.
+
+## VM-01 terminology checkpoint
+
+- Current VM-01 definitions / retrieval units: 98 / 98.
+- VM-01 promotion status: not_promoted; independent review remains required.
+- VM-01 explicit-reference candidates: 29; all remain pending and not promoted.
+- Formal-definition requests for undefined or ambiguous terms abstain rather than substituting related evidence.
 
 ## Interpretation
 

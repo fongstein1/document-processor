@@ -38,29 +38,33 @@ The dedicated review handoff is
 and its Markdown companion. It records 14 current/manual-or-existing
 hierarchical parents, 52 current/manual-or-existing hierarchical children,
 21 companion parents, and 154 companion children within the expanded VM-20
-review set. All chunks remain review-only, not learner-facing, not app-ready,
-not RAG-ready, and not promoted.
+review set. The six reviewed current-manual packages (149 chunks) are promoted;
+the 2020 companion material remains review-only. No VM-20 package is
+learner-facing, app-ready, RAG-ready, or Copilot-export eligible.
 
-The remaining VM-20 gaps are complete authoritative Section 4 and Section 5
-mechanics, the full authoritative Section 9 assumptions chapter, Appendices 1
-and 2, and structured current prescribed tables. Line references remain
-unavailable; page and section citations are preserved. The review package
-provisionally recommends APPROVE WITH FIXES pending independent human review.
+The current-manual prose coverage now includes the reviewed Section 4, Section
+5, Section 9, and Appendix 1-2 scope. The separately promoted structured-table
+scope covers available Tables A, F, G, H, I, J, and K; current Tables B, C, D,
+E1, and E2 remain unavailable and were not reconstructed. Line references
+remain unavailable; page, section, workbook, sheet, and cell citations are
+preserved where applicable.
 
 ## 2026-08-25 Regulatory corpus completion audit
 
 The repository now has a deterministic master regulatory corpus inventory and
 canonicalization backlog under `data/processed/regulatory_corpus/`. The audit
-reconciles 71 distinct source-document records from ignored batch manifests,
-97 tracked review indexes, 93 self-reviews, 18 review-only canonical source
-packages, and 55 canonical chunks. It distinguishes reviewed evidence from
+reconciles 105 source-document records, including 71 external-manifest records,
+97 tracked review indexes, 94 self-reviews, 22 canonical source packages, and
+457 canonical chunks. It distinguishes reviewed evidence from
 canonical packages and does not treat the repository as production-complete.
 
 The P0 finding is partial coverage of the current 2026 Valuation Manual, not
 absence of the manual: the external source is declared in manifests and has
-many reviewed slices, while VM-01, VM-20, VM-21, VM-22, VM-30, VM-31, VM-G,
-VM-C, and the current prescribed tables still need complete canonical
-representations. Candidate relationships remain documentary and unpromoted.
+many reviewed slices. VM-20 now has separately promoted prose and available
+structured-table scopes; VM-01 is a 98-definition canonical review candidate.
+VM-21, VM-22, VM-30, VM-31, VM-G, VM-C, unavailable table families, and the
+rest of the manual still require controlled completion. Candidate relationships
+remain documentary and unpromoted.
 
 The source-index POC now includes a hierarchical VM-20 Section 3.C package
 derived from the existing reviewed batch-006 source text. It has four parent
@@ -860,3 +864,19 @@ from official-workbook association for its current and long-term columns.
 Focused retrieval, note-scope, and Table A effective-date regressions pass.
 The final decision is recorded separately from the earlier review artifacts at
 `data/manual-input/promotion-decisions/vm20-appendix2-structured-table-promotion.json`.
+
+## VM-01 canonical definitions review candidate
+
+The current 2026 VM-01 chapter is now represented by one canonical source
+package containing 98 exact-text definition retrieval units. The package reuses
+the established Valuation Manual identity and SHA-256, covers chapter pages
+25-39 (definition-bearing pages 25-37), and keeps formal evidence separate from
+lookup metadata. A dedicated definition index records source-explicit aliases
+and acronym expansions, while 29 explicit-reference relationships remain
+pending review and not promoted.
+
+Focused retrieval covers exact terms, acronyms, plain-language lookup, similar
+terms, conditions, exceptions, cross-references, and cross-document terminology.
+Undefined, ambiguous, and unavailable-version formal-definition requests abstain
+through the generic evidence-sufficiency gate. VM-01 remains review-only and
+not promoted; learner, app, RAG, vector, and Copilot export remain blocked.
