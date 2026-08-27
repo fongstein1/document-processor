@@ -892,3 +892,9 @@
   conditional tail expectation evidence from rank 4 to rank 2 for the
   plain-language case. Added rank-4 support-gate and case/aggregate consistency
   regressions. VM-01 remains review-only pending final narrow approval.
+- The subsequent narrow review passed the corrected metrics, CTE evidence,
+  abstention behavior, source integrity, relationships, and governance, but
+  could not access the requested local scripts. Added a deterministic review
+  package with four byte-exact, SHA-256-bound snapshots covering production
+  ranking, the support gate, the rank-4 regression, and VM-01 validation, plus
+  a code-only review prompt. VM-01 remains review-only and not promoted.

@@ -899,3 +899,10 @@ definition-intent ranking gives the actual definition wording enough weight to
 place CTE at rank 2. Focused results remain 17/18 supported top-1, 18/18 strict
 top-3, 3/3 safe unsupported abstentions, and 18/18 current-authority top-1.
 VM-01 is ready for the final narrow promotion review but is not promoted.
+
+That review passed the strict metrics, CTE case, unsupported behavior, corpus
+integrity, relationships, and governance, but could not inspect local production
+code. A generated review-only implementation package now contains byte-exact,
+SHA-256-bound snapshots of the evaluator, evidence-sufficiency gate, rank-4
+regression test, and VM-01 validator. Only inspection of that code package
+remains; no source or retrieval behavior was changed, and VM-01 is not promoted.

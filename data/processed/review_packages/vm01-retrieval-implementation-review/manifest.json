@@ -1,0 +1,57 @@
+{
+  "schemaVersion": "1.0",
+  "artifactType": "implementation_source_snapshot_manifest",
+  "artifactPurpose": "narrow_independent_code_review",
+  "reviewFindingAddressed": "Provide independently inspectable current production, regression-test, and validation code for the strict top-three VM-01 retrieval correction.",
+  "fileCount": 4,
+  "files": [
+    {
+      "sourcePath": "scripts/evaluate-source-index-retrieval.mjs",
+      "snapshotPath": "data/processed/review_packages/vm01-retrieval-implementation-review/evaluate-source-index-retrieval.mjs",
+      "role": "production_retrieval_ranking_and_top_k_metrics",
+      "sourceSha256": "9080419e9e8b43970c9ec6497adf623f7ffcaacaff298d08c55531ae5e3454b3",
+      "snapshotSha256": "9080419e9e8b43970c9ec6497adf623f7ffcaacaff298d08c55531ae5e3454b3",
+      "byteLength": 24619,
+      "exactByteMatch": true
+    },
+    {
+      "sourcePath": "scripts/evidence-sufficiency.mjs",
+      "snapshotPath": "data/processed/review_packages/vm01-retrieval-implementation-review/evidence-sufficiency.mjs",
+      "role": "production_evidence_sufficiency_gate",
+      "sourceSha256": "71d279cdfd826fae9c64f8d4ae74b095c9f1a61ccc950747879cfcf71c06a1f1",
+      "snapshotSha256": "71d279cdfd826fae9c64f8d4ae74b095c9f1a61ccc950747879cfcf71c06a1f1",
+      "byteLength": 10028,
+      "exactByteMatch": true
+    },
+    {
+      "sourcePath": "scripts/test-vm20-support-gate.mjs",
+      "snapshotPath": "data/processed/review_packages/vm01-retrieval-implementation-review/test-vm20-support-gate.mjs",
+      "role": "generic_support_window_regression_test",
+      "sourceSha256": "9b168b6f524f97bf88953654ec8018bab8093e0483c744333e9603c2560cd9b5",
+      "snapshotSha256": "9b168b6f524f97bf88953654ec8018bab8093e0483c744333e9603c2560cd9b5",
+      "byteLength": 5048,
+      "exactByteMatch": true
+    },
+    {
+      "sourcePath": "scripts/validate-vm01-definitions.mjs",
+      "snapshotPath": "data/processed/review_packages/vm01-retrieval-implementation-review/validate-vm01-definitions.mjs",
+      "role": "vm01_case_and_aggregate_consistency_validator",
+      "sourceSha256": "e6a02a21a32a5142429fe1399e44a44109c58ee5713b694f5df561bf178896a9",
+      "snapshotSha256": "e6a02a21a32a5142429fe1399e44a44109c58ee5713b694f5df561bf178896a9",
+      "byteLength": 28031,
+      "exactByteMatch": true
+    }
+  ],
+  "assertionsToReview": [
+    "Formal-definition support uses only the first three ranked matches.",
+    "top3Hit is computed only from the first three deduplicated ranked matches.",
+    "Definition-intent source-text weighting is generic and contains no query ID, expected chunk ID, or term-specific special case.",
+    "Regression tests reject exact formal-definition evidence first appearing at rank 4.",
+    "VM-01 validation recomputes case-level and aggregate top-one/top-three metrics from displayed evidence."
+  ],
+  "governance": {
+    "reviewOnly": true,
+    "promotionStatus": "not_promoted",
+    "canonicalSourceEvidence": false
+  }
+}

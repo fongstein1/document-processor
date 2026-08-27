@@ -22,6 +22,9 @@
 - Case-level evaluation JSON: `data/processed/review_packages/vm01-definition-retrieval-evaluation.json`
 - Case-level evaluation SHA-256: `97c554bd9b2d73c69620783ae05e1ebc4ed9af3021053f6d1957f1db8ddccafd`
 
+- Implementation review manifest: `data/processed/review_packages/vm01-retrieval-implementation-review/manifest.json`
+- Byte-exact implementation snapshots: 4; manifest SHA-256 `e77de2e399fe44cc20b2546df6ffa608ec17847fc8519299f91d13324906e1da`
+
 ## Representative examples
 
 | Term | Pages | Explicit aliases | Complexity flags | Explicit references |

@@ -442,6 +442,38 @@
     "unsupportedQueryCount": 3,
     "currentAuthorityTop1": 18
   },
+  "implementationReview": {
+    "manifestPath": "data/processed/review_packages/vm01-retrieval-implementation-review/manifest.json",
+    "manifestSha256": "e77de2e399fe44cc20b2546df6ffa608ec17847fc8519299f91d13324906e1da",
+    "exactCodeSnapshotsIncluded": true,
+    "fileCount": 4,
+    "files": [
+      {
+        "sourcePath": "scripts/evaluate-source-index-retrieval.mjs",
+        "snapshotPath": "data/processed/review_packages/vm01-retrieval-implementation-review/evaluate-source-index-retrieval.mjs",
+        "sha256": "9080419e9e8b43970c9ec6497adf623f7ffcaacaff298d08c55531ae5e3454b3",
+        "role": "production_retrieval_ranking_and_top_k_metrics"
+      },
+      {
+        "sourcePath": "scripts/evidence-sufficiency.mjs",
+        "snapshotPath": "data/processed/review_packages/vm01-retrieval-implementation-review/evidence-sufficiency.mjs",
+        "sha256": "71d279cdfd826fae9c64f8d4ae74b095c9f1a61ccc950747879cfcf71c06a1f1",
+        "role": "production_evidence_sufficiency_gate"
+      },
+      {
+        "sourcePath": "scripts/test-vm20-support-gate.mjs",
+        "snapshotPath": "data/processed/review_packages/vm01-retrieval-implementation-review/test-vm20-support-gate.mjs",
+        "sha256": "9b168b6f524f97bf88953654ec8018bab8093e0483c744333e9603c2560cd9b5",
+        "role": "generic_support_window_regression_test"
+      },
+      {
+        "sourcePath": "scripts/validate-vm01-definitions.mjs",
+        "snapshotPath": "data/processed/review_packages/vm01-retrieval-implementation-review/validate-vm01-definitions.mjs",
+        "sha256": "e6a02a21a32a5142429fe1399e44a44109c58ee5713b694f5df561bf178896a9",
+        "role": "vm01_case_and_aggregate_consistency_validator"
+      }
+    ]
+  },
   "independentReviewHistory": [
     {
       "disposition": "APPROVE WITH FIXES",
@@ -475,6 +507,22 @@
       "remainingBlockers": [
         "strict top-three metric and evidence-window consistency for vm01-plain-language-tail-measure"
       ]
+    },
+    {
+      "disposition": "APPROVE WITH FIXES",
+      "scope": "strict top-three correction review",
+      "status": "completed",
+      "acceptedAreas": [
+        "strict top-one and top-three metrics",
+        "plain-language CTE top-three evidence",
+        "unsupported and ambiguity behavior",
+        "source-explicit terms and corpus integrity",
+        "relationships",
+        "governance"
+      ],
+      "remainingBlockers": [
+        "independently inspect exact current production, regression-test, and validation code"
+      ]
     }
   ],
   "blockerCorrections": [
@@ -494,12 +542,19 @@
       "result": "case-level evaluation JSON retained with intended support, expected evidence, strict top-1/top-3 metrics, authority, support decision limited to the top-three evidence window, ambiguity result, and failure reason",
       "artifactPath": "data/processed/review_packages/vm01-definition-retrieval-evaluation.json",
       "artifactSha256": "97c554bd9b2d73c69620783ae05e1ebc4ed9af3021053f6d1957f1db8ddccafd"
+    },
+    {
+      "blockerId": "retrieval_implementation_code_handoff",
+      "status": "resolved_pending_narrow_review",
+      "result": "four byte-exact production, regression-test, and validation code snapshots retained with source/snapshot SHA-256 equality",
+      "artifactPath": "data/processed/review_packages/vm01-retrieval-implementation-review/manifest.json",
+      "artifactSha256": "e77de2e399fe44cc20b2546df6ffa608ec17847fc8519299f91d13324906e1da"
     }
   ],
   "unresolvedSourceQuestions": [
     "Pages 38 and 39 contain no additional definitions; page 39 is explicitly marked intentionally blank.",
     "Eleven term labels required transparent spacing-only text-layer cleanup in lookup metadata; the exact retained source excerpts remain unchanged.",
-    "The independent source audit and narrow blocker review passed the authoritative evidence and source-explicit term boundary; the remaining review is limited to strict top-three retrieval-metric and support-window consistency for the plain-language CTE case."
+    "The independent source audit and narrow blocker review passed the authoritative evidence, source-explicit term boundary, strict top-three metrics, and case-level support window; the remaining review is limited to independently inspecting the exact production and regression code snapshots."
   ],
   "artifacts": {
     "canonicalSourcePackage": "data/processed/source_indexes/sources/vm01-definitions.json",
@@ -507,13 +562,21 @@
     "sourceQa": "data/processed/review_packages/vm01-definitions-source-qa.json",
     "relationshipCandidates": "data/processed/relationship_registries/vm01-definition-relationship-candidates.json",
     "retrievalEvaluation": "data/processed/review_packages/vm01-definition-retrieval-evaluation.json",
+    "implementationReviewManifest": "data/processed/review_packages/vm01-retrieval-implementation-review/manifest.json",
+    "implementationReviewSnapshots": [
+      "data/processed/review_packages/vm01-retrieval-implementation-review/evaluate-source-index-retrieval.mjs",
+      "data/processed/review_packages/vm01-retrieval-implementation-review/evidence-sufficiency.mjs",
+      "data/processed/review_packages/vm01-retrieval-implementation-review/test-vm20-support-gate.mjs",
+      "data/processed/review_packages/vm01-retrieval-implementation-review/validate-vm01-definitions.mjs"
+    ],
     "pdfHashConfirmation": "data/processed/review_packages/vm01-source-pdf-hash-confirmation.json",
-    "independentReviewPrompt": "data/processed/review_packages/vm01-independent-review-prompt.md"
+    "independentReviewPrompt": "data/processed/review_packages/vm01-retrieval-code-review-prompt.md",
+    "priorIndependentReviewPrompt": "data/processed/review_packages/vm01-independent-review-prompt.md"
   },
   "promotionReadiness": {
     "independentReviewRequired": true,
     "automatedPromotion": false,
-    "currentStatus": "narrow_rereview_ready",
+    "currentStatus": "code_handoff_rereview_ready",
     "promotionStatus": "not_promoted",
     "blockersClosed": true,
     "learnerFacingAllowed": false,

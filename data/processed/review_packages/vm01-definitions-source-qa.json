@@ -129,7 +129,7 @@
   "unresolvedSourceQuestions": [
     "Pages 38 and 39 contain no additional definitions; page 39 is explicitly marked intentionally blank.",
     "Eleven term labels required transparent spacing-only text-layer cleanup in lookup metadata; the exact retained source excerpts remain unchanged.",
-    "The independent source audit and narrow blocker review passed the authoritative evidence and source-explicit term boundary; the remaining review is limited to strict top-three retrieval-metric and support-window consistency for the plain-language CTE case."
+    "The independent source audit and narrow blocker review passed the authoritative evidence, source-explicit term boundary, strict top-three metrics, and case-level support window; the remaining review is limited to independently inspecting the exact production and regression code snapshots."
   ],
   "governance": {
     "reviewOnly": true,
