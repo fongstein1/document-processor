@@ -898,3 +898,10 @@
   package with four byte-exact, SHA-256-bound snapshots covering production
   ranking, the support gate, the rank-4 regression, and VM-01 validation, plus
   a code-only review prompt. VM-01 remains review-only and not promoted.
+- Recorded the final independent `APPROVE FOR CANONICAL PROMOTION` disposition
+  for the current 2026 VM-01 definition scope and promoted all 98 definition
+  chunks through the existing decision mechanism. Preserved 125 source-explicit
+  `definedTerms` entries, 17 non-authoritative lookup variants, 27 aliases, and
+  unchanged authoritative evidence. The 29 relationship candidates and all
+  downstream export uses remain separately governed. The approved code
+  snapshots from commit `7067118` remain immutable historical review evidence.

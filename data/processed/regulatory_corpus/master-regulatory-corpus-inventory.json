@@ -18,10 +18,10 @@
     "vm20CompanionChunks": 175,
     "vm01Definitions": 98,
     "vm01RetrievalUnits": 98,
-    "vm01PromotionStatus": "not_promoted",
+    "vm01PromotionStatus": "promoted",
     "vm01RelationshipCandidates": 29,
-    "promotedCanonicalPackages": 6,
-    "promotedCanonicalChunks": 149,
+    "promotedCanonicalPackages": 7,
+    "promotedCanonicalChunks": 247,
     "structuredTableLogicalTables": 7,
     "structuredTableVersions": 29,
     "structuredTableRows": 891,
@@ -34,7 +34,6 @@
     "reviewArtifactOnlySources": 34,
     "p0Gaps": [
       "valuation-manual-2026-complete",
-      "vm-01",
       "vm-20",
       "vm-21",
       "vm-22",
@@ -5052,11 +5051,13 @@
         "promotionState": "partially_promoted_scopes",
         "canonical": true,
         "copilotExportEligible": false,
-        "exclusionReason": "The VM-20 prose scope is canonical, but Copilot export requires a separate explicit approval.",
+        "exclusionReason": "Canonical source promotion is recorded, but Copilot export requires a separate explicit approval.",
         "promotionRecordPaths": [
+          "data/manual-input/promotion-decisions/vm01-2026-definitions-promotion.json",
           "data/manual-input/promotion-decisions/vm20-2026-prose-promotion.json"
         ],
         "promotedSourcePackageIds": [
+          "vm01-definitions",
           "vm20-assumptions-section-3c",
           "vm20-canonical-coverage",
           "vm20-framework-boundary",
@@ -6584,8 +6585,8 @@
       "sourceFamily": "valuation_manual_pdfs",
       "priority": "P0",
       "intendedStatus": "current",
-      "assessment": "canonical_review_candidate",
-      "reason": "The current 2026 VM-01 terminology layer contains 98 exact-text definition units. Retrieval behavior and corpus integrity passed narrow review; byte-exact implementation snapshots now close the remaining code-handoff evidence gap. It remains review-only and not promoted.",
+      "assessment": "canonical_complete",
+      "reason": "The reviewed current 2026 VM-01 terminology layer contains 98 exact-text definition units and is canonically promoted under its scope-specific decision. Its 29 relationship candidates and all downstream export uses remain separately governed.",
       "evidenceSourceIds": [
         "supporting-vm01-definitions",
         "supporting-vm02-nonforfeiture",
@@ -6647,7 +6648,7 @@
         "vm31-reporting-crossref",
         "vm31-reporting-definition"
       ],
-      "nextAction": "Run only the final code-level review of the hashed implementation snapshots, then record a separate promotion decision only if approved."
+      "nextAction": "Retain the approved definition scope and track the 29 relationship candidates as a separate review-only backlog item."
     },
     {
       "targetId": "vm-20",

@@ -33,11 +33,11 @@
 
 - Processing mode: canonical_index
 - Canonicality: canonical
-- Review only: Yes
+- Review only: No
 - Learner facing allowed: No
 - App ready allowed: No
 - RAG ready allowed: No
-- Promotion status: not_promoted
+- Promotion status: promoted
 
 ## Chunks
 
@@ -147,4 +147,4 @@
 - Citation completeness: partial
 - Page-image backstop: No
 - Line references available: No
-- Notes: Substantially complete 2026 VM-01 definition coverage. Review-only and not promoted; learner, app, RAG, vector, and Copilot export remain blocked.
+- Notes: Canonically promoted 2026 VM-01 definition coverage under a recorded independent-review decision; learner, app, RAG, vector, and Copilot export remain blocked, and relationship candidates remain separately governed.

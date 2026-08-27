@@ -6,6 +6,9 @@
   "modelVersion": "1.0",
   "generatedAt": "2026-07-22T22:52:46.811Z",
   "promotionDecisionPath": "data/manual-input/promotion-decisions/vm20-2026-prose-promotion.json",
+  "additionalPromotionDecisionPaths": [
+    "data/manual-input/promotion-decisions/vm01-2026-definitions-promotion.json"
+  ],
   "domainProfiles": [
     {
       "domainId": "naic_regulatory",
@@ -2189,7 +2192,7 @@
         "retrievalUnitCount": 98,
         "knownGaps": [
           "VM-01 states that some Valuation Manual terms are defined in specific sections rather than in VM-01; those section-local definitions are outside this package.",
-          "Independent review and explicit promotion remain required."
+          "The 29 explicit-reference relationship candidates remain separately governed and unpromoted."
         ]
       },
       "classification": {
@@ -2208,8 +2211,8 @@
         "recommendedChunkingStrategy": "definition_aware_one_entry_per_unit",
         "confidence": "high",
         "unresolvedQuestions": [
-          "Independent review is required before promotion.",
-          "Publication and effective dates are not asserted beyond the established 2026 edition identity."
+          "Publication and effective dates are not asserted beyond the established 2026 edition identity.",
+          "Relationship candidates require a separate human review and promotion decision."
         ],
         "notes": "Definition source text remains exact and separate from generated lookup metadata."
       },
@@ -2232,7 +2235,7 @@
         "relationshipCandidatePath": "data/processed/relationship_registries/vm01-definition-relationship-candidates.json",
         "reviewPackagePath": "data/processed/review_packages/vm01-canonical-definitions-review-package.json"
       },
-      "notes": "Substantially complete 2026 VM-01 definition coverage. Review-only and not promoted; learner, app, RAG, vector, and Copilot export remain blocked."
+      "notes": "Canonically promoted 2026 VM-01 definition coverage under a recorded independent-review decision; learner, app, RAG, vector, and Copilot export remain blocked, and relationship candidates remain separately governed."
     }
   ],
   "retrievalSettings": {

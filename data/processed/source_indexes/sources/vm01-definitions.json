@@ -21,8 +21,8 @@
       "recommendedChunkingStrategy": "definition_aware_one_entry_per_unit",
       "confidence": "high",
       "unresolvedQuestions": [
-        "Independent review is required before promotion.",
-        "Publication and effective dates are not asserted beyond the established 2026 edition identity."
+        "Publication and effective dates are not asserted beyond the established 2026 edition identity.",
+        "Relationship candidates require a separate human review and promotion decision."
       ],
       "notes": "Definition source text remains exact and separate from generated lookup metadata."
     },
@@ -64,7 +64,7 @@
       "retrievalUnitCount": 98,
       "knownGaps": [
         "VM-01 states that some Valuation Manual terms are defined in specific sections rather than in VM-01; those section-local definitions are outside this package.",
-        "Independent review and explicit promotion remain required."
+        "The 29 explicit-reference relationship candidates remain separately governed and unpromoted."
       ]
     },
     "pageCount": 457,
@@ -80,19 +80,19 @@
     "pageImageBackstop": false,
     "lineReferencesAvailable": false,
     "textLayerQuality": "mixed",
-    "notes": "Substantially complete 2026 VM-01 definition coverage. Review-only and not promoted; learner, app, RAG, vector, and Copilot export remain blocked."
+    "notes": "Canonically promoted 2026 VM-01 definition coverage under a recorded independent-review decision; learner, app, RAG, vector, and Copilot export remain blocked, and relationship candidates remain separately governed."
   },
   "processing": {
     "createdAt": "2026-08-26T00:00:00.000Z",
     "createdBy": "scripts/build-source-index-poc.mjs",
     "processingMode": "canonical_index",
     "canonicality": "canonical",
-    "reviewOnly": true,
+    "reviewOnly": false,
     "learnerFacingAllowed": false,
     "appReadyAllowed": false,
     "ragReadyAllowed": false,
-    "promotionStatus": "not_promoted",
-    "notes": "Substantially complete 2026 VM-01 definition coverage. Review-only and not promoted; learner, app, RAG, vector, and Copilot export remain blocked."
+    "promotionStatus": "promoted",
+    "notes": "Promoted for the scope recorded in data/manual-input/promotion-decisions/vm01-2026-definitions-promotion.json; downstream export remains blocked."
   },
   "chunks": [
     {
@@ -159,7 +159,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 465879c98508b10fe390d001639e65d888f5188c8122ad8908d264f7b9bbbc75.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-002-accumulated-deficiency",
@@ -223,7 +223,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 36fcd6ccf38f512bc1f876890a4d38e365533a24cdf1ace0d9d4cef25910482e.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-003-actuarial-standards-board",
@@ -292,7 +292,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 ba2556682c8483a19a2d2fd2637fa59eff8c50937baba72db577b8aaf5aa422b.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-004-annual-statement",
@@ -356,7 +356,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 5e42db5e3856df4e3f952f4253f20cb91a3f0935baca72070963578cb289dce3.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-005-anticipated-experience-assumption",
@@ -426,7 +426,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 20d874ffa482e061945f9f52cb193dd8e0e912f2db64a2abd3601e0ada30bb5e.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-006-appointed-actuary",
@@ -492,7 +492,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 e89ddbc49075f610688273fdac88ea2b5d68ba9f551aa5832c20f7529393ea97.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-007-asset-adequacy-analysis",
@@ -556,7 +556,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 063ac0c47959d98a23bf2c45aa40e11cc09ea2a75fe3ab4dacf745812db93658.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-008-asset-associated-derivative",
@@ -621,7 +621,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 32eba48c8725ae33bb33300147d7ef7325c3d5a2030d6d46530c85f48ee222db.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-009-cash-flow",
@@ -685,7 +685,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 60783b2f4b3899e476eda966b02a0dc55cf1539d44075cf4b16551c275a36778.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-010-cash-flow-model",
@@ -750,7 +750,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 18f6c0844b061f0fbadea744e47ed2ea6c76f8c38db57b90d7e4fe934caabcb6.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-011-cash-surrender-value",
@@ -814,7 +814,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 a64a187f2218863a64a2a05d667e986c87bc3c480a1c9b2bd4923f6678b0ac6d.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-012-claim-reserve",
@@ -882,7 +882,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 fc39777f2d3a3a5dffae8381eaf1862cd576c1201d7a376cbf52a811e5a6d8cb.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-013-clearly-defined-hedging-strategy",
@@ -956,7 +956,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 435d9ab6e27515d018cd8b7396cf8e4c7caf7c16094f3bfa92406faa4a02bd98.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-014-commissioner",
@@ -1022,7 +1022,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 83bf87024678088672ceccb5ab7c1684b57512a7200279988f16b1f92f891f67.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-015-company",
@@ -1088,7 +1088,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 6bd927c219876b435ccb278b6ce5dd6b7e2b4de9e8220be098640227ad591cde.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-016-conditional-tail-expectation",
@@ -1156,7 +1156,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 aae2cac777520dcb83101dffb0486988d150a4fd791d675206b0a6c2a57ee988.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-017-contract-reserve",
@@ -1220,7 +1220,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 29310fba7eef765c747d5cd34291e341e187fbba37fd0a68172464ddfdeeb65f.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-018-deferred-income-annuity",
@@ -1288,7 +1288,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 2f7f453a68b70fa13c5a20e513eb636257222105f9dcfaf35abf0c7699534df1.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-019-deposit-type-contract",
@@ -1357,7 +1357,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 20e86fa1ac101ceae893671532cb8f276ec2a316dd9358a1b1fa4fcbc12ac726.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-020-derivative-instrument",
@@ -1425,7 +1425,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 c80438677302592b5eef2bec4bd700249438fd9d40e2c5399408d11f05f30203.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-021-derivative-program",
@@ -1489,7 +1489,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 e1215f516a91dc94ecf51b044fb09ab50fd4f17f44624ce5087283ffb8310904.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-022-deterministic-reserve",
@@ -1557,7 +1557,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 fc6e0f5ffb0693f1617800da4c025b179b5e8b0a6f93f67a360e5f52c488c41f.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-023-discount-rates",
@@ -1621,7 +1621,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 88349185005d825717f4a84bc58419bf7a2baf6406fd5cb3cfb2bb8ffda3ae1a.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-024-domiciliary-commissioner",
@@ -1685,7 +1685,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 8541b97cb7cc3438960700add50db22cceab06b18f272268ca5f61239132081e.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-025-elimination-period",
@@ -1749,7 +1749,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 dd613dd83761fa9812be063c2e3f3a1a3bb8c3b1cd42cdff25eb849dd26d1aac.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-026-equity-like-instruments",
@@ -1816,7 +1816,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 49ae8e7dc9997921ab65739d1bc2119d1b0aa9d5a00cb22c1c556d79aefe3f12.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-027-fraternal-benefits",
@@ -1880,7 +1880,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 308f6d4e4397961f85efefe984100a6a1512c019b55385be9486b4e9def4ffb9.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-028-funding-agreements",
@@ -1944,7 +1944,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 dcfc1b50345a1aaa18a65743908f076d3dd6c3bfcce35d7dbff0ab44eef7dd46.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-029-future-hedging-strategy",
@@ -2016,7 +2016,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 e108a009f83bf0f8be88068089fab3dbc88cc2460623f8b2ce3cbc6a764c5b13.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-030-guaranteed-investment-contract",
@@ -2085,7 +2085,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 286fb5642fde68f10bf549dabf9bc7a782c0905e16f2433d52e4645f3e363e6b.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-031-guaranteed-issue-gi-life-insurance-policy",
@@ -2156,7 +2156,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 99ccaac38a6ab57513c6df298298e7cd16ba384c78f3211c1fffb7e7b51bdcbc.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-032-guaranteed-minimum-accumulation-benefit",
@@ -2225,7 +2225,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 97fb861e1b204442d6712ebd30b1ab064e2219448c202337a226bb293304a581.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-033-guaranteed-minimum-death-benefit",
@@ -2295,7 +2295,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 641ed37d7f7d4890195d3dd07fd6f9362d68e1efa8b8739dd3471eb8c78624f3.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-034-guaranteed-minimum-income-benefit",
@@ -2365,7 +2365,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 0b5ab9089ea68cbdd8ed076c2e46a6626c0c06957252d518bc608353ce0d9f27.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-035-guaranteed-minimum-withdrawal-benefit",
@@ -2435,7 +2435,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 ef2382cd943233f5f7bf7c47481d429683df14d16cc1fb49109f609551540ba1.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-036-guaranteed-payout-annuity-floor",
@@ -2503,7 +2503,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 d71ddd1cb7f0322ede54f41a1e51374d01897cc2638e7e02ccfbf6919483f239.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-037-hedging-transaction",
@@ -2569,7 +2569,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 04750967890e822d835ddf793dba1f2f2acccd9ed9c144d689c42732946aec73.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-038-index-credit",
@@ -2633,7 +2633,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 43564a83fca9932d1e5030ddcbc663b33b417371f0e4c49ef70fb99713b78104.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-039-index-credit-hedge-margin",
@@ -2697,7 +2697,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 de0b07c80795bea96548162ff3a0b7b1f98bce692e902e84b17a739474ad32ff.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-040-index-crediting-strategies",
@@ -2761,7 +2761,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 f7253e2ae23ad189f49012b1a8024068a38d008e4fd70852c716c9a2c9202770.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-041-index-linked-variable-annuity",
@@ -2830,7 +2830,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 10ac67e286d5bdf4c77a262173181b0da29704c1953d0a695bcc1f53208c67d2.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-042-indexed-universal-life-iul-insurance-policy",
@@ -2899,7 +2899,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 834047e2b531f5acdcbb3dee8a2a6642829918eb3e128ac994325ceee631d627.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-043-industrial-life-insurance",
@@ -2963,7 +2963,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 67815aa27b3a39ba535a68dfcb707fc14b8f780aa1f8621f4f7ca66f4e8b3db9.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-044-industry-basic-table",
@@ -3027,7 +3027,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 92edc736772c8a1185b47f8053068ee24275b746fd6bb4782c83e37ef955c641.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-045-insurance-department",
@@ -3091,7 +3091,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 985f332fcbb80a4c206bf7887b8a624f75036189421d1248821f29018d18d50e.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-046-life-insurance",
@@ -3157,7 +3157,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 092baace8e5bf6a8a215c45975cd3374e373205797037d7a45796da0bcdc486a.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-047-longevity-reinsurance",
@@ -3223,7 +3223,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 3e6a542f92000db065af4b64f76861049bd178fb5959055fb8a578415b035dce.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-048-margin",
@@ -3287,7 +3287,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 5d50685ddf6848ff4cbc10b81dde43de029ce78f33fc0a50eae629082e1ab55f.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-049-modeled-company-investment-strategy",
@@ -3353,7 +3353,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 602cca38ee7d7ae5a9ceabe93c209aa418d2b2bd4698b3c28604b1aaea32b402.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-050-modeled-reserve",
@@ -3419,7 +3419,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 7d8dc598a78d174daac6b7f88b28ed1ebfb37194d58292396e96d3d15f8bc863.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-051-model-segment",
@@ -3483,7 +3483,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 b4ac213ad9b0ef842abee10bce7b60ae47cfdb0aaa6661d9703de1e43d008ee4.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-052-mortality-segment",
@@ -3547,7 +3547,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 e8fd875914d973fbd424ad17787935cdeb2a0982183ab2640540d8a73d404f37.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-053-naic",
@@ -3616,7 +3616,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 48fc73633646bf5bb4d9e1dbdb8ebdcf05f31ac01c976c6479317f28bcd07837.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-054-net-asset-earned-rates",
@@ -3684,7 +3684,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 09cf6125aa60e4961d0a9563b2df759343d645ebb83e54e0c45a06b5e8deca5f.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-055-net-premium-refund-liability",
@@ -3748,7 +3748,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 2cfc6b2b87d3573f19ad3644062ba06758985ad7d5b9bf7f45aae4d224d18e70.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-056-net-premium-reserve",
@@ -3818,7 +3818,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 8bbed98e2a34460824fa01803240e23d3e057c22d35452091add7ccd30397b74.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-057-non-guaranteed-elements",
@@ -3887,7 +3887,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 0bae3017a312e7366c988658e42c73614df41164ceb82cbc9274e53be1c76661.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-058-non-material-secondary-guarantee",
@@ -3956,7 +3956,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 b1f36bb9c130bfa9434460b32994944d1539e49d8167d5b07d160e88e3685023.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-059-ordinary-life-insurance",
@@ -4022,7 +4022,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 5ae0264d5898d2c813d2cdc15b51e82f6a22d8c3666827c53c125fe5b35d5abc.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-060-path",
@@ -4086,7 +4086,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 0344b87dc414cfaf588019338899a98198cd2aca43df507874bf1277ce2784dd.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-061-pension-risk-transfer",
@@ -4154,7 +4154,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 3178de0081f2a2321bc9a60b6a1ca84cd7972945c9fe2ce0c54e96cc3774e1ce.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-062-policyholder-behavior",
@@ -4224,7 +4224,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 c3020781bca798de15876ec2ae4f84a1b8692d68a46e69ef8360fc69ecb511a5.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-063-policyholder-efficiency",
@@ -4290,7 +4290,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 f1899813b119608c124099c91633469ae5a69fc0a3a00c8d9be3662436e5f0ba.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-064-preneed",
@@ -4354,7 +4354,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 15dc78626d630c6797d3425afb73e63e897d67fb1d713952cdec7b4f0d971244.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-065-preneed-annuity",
@@ -4420,7 +4420,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 d091efdf1264816da388099e27be2acc3a1b9c45428be754ca69201accf33af7.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-066-pretax-interest-maintenance-reserve",
@@ -4488,7 +4488,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 2d95915978b1c373c561b7fb8045fe7067a834a6275b6a59ea9cf88a41b54893.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-067-principle-based-reserve-actuarial-report",
@@ -4557,7 +4557,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 d7a31f25b089f8f495502225b8755b661a1f129b2b8b1585f63a71b9e4c3c6e2.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-068-principle-based-valuation",
@@ -4624,7 +4624,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 6ec9e53ae79ed6d3480c18c0c20eef039c875cfbe5d3c8b2758194ecde5ae524.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-069-projection-interval",
@@ -4688,7 +4688,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 5063cc187724f36005c1199b36aee33d1d903765eb844890fd0f7beaa6bef0f0.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-070-projection-period",
@@ -4752,7 +4752,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 d315e95328464a04b4c60818353d4e959c602ac76199899b1de70c0e630f9184.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-071-projection-start-date",
@@ -4816,7 +4816,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 4edb6b29d845feeb268baa9870786d57a1196ae555a9b35866e1664c547a0b59.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-072-projection-year",
@@ -4880,7 +4880,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 080d95d0611d104538ed2c5b8a7847b6d2fde5ac08d1954de103f7b2f4acf9e1.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-073-prudent-estimate-assumption",
@@ -4944,7 +4944,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 30487bf6a6337c1dda179af7fbd3990676322bc02df50d0648699d34f782dfb4.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-074-qualified-actuary",
@@ -5012,7 +5012,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 91a97f7dc3e722adf2f7c6d8265cec153de01278e4eec70b264d3c55e23bc775.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-075-reinsurance-cash-flows",
@@ -5076,7 +5076,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 66971327c9e68540fb3a0bca9e7a4b9eaec2db09264c765d9a48d286efb25e44.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-076-revenue-sharing",
@@ -5140,7 +5140,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 cffb0feb94c1749de889bd40fba16797212a53899585524e77f8e81f908dbb8d.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-077-risk-factor",
@@ -5204,7 +5204,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 7a3f9618a2f2bbb802b95eb0da8700bef4929c8baa2a3d83ffd3ccb1f20f7578.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-078-scenario",
@@ -5268,7 +5268,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 ae6bc1a486053a38e8b85633d6088997339ac8cfbbfd2ca3959745c582c95279.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-079-scenario-greatest-present-value",
@@ -5334,7 +5334,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 d5660548bfe76a74b15402c8581f5df310aaa03c5b41744acc68181ab26ed622.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-080-scenario-reserve",
@@ -5398,7 +5398,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 f9bdb6fea4e482f47f4c4c66bea4680f6196af2e0df60f61a2e0ff3772b893ee.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-081-secondary-guarantee",
@@ -5468,7 +5468,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 a3ea5bd9f0bee36f36f9214dd2fcf9011b3e293a229966951009de1486d74cbc.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-082-shadow-account",
@@ -5532,7 +5532,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 e9a7baf3c81910d2b6844ef1879174b0169cf82238d819734dddc36030f61667.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-083-single-premium-immediate-annuity",
@@ -5600,7 +5600,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 453c911b88bcf0f6fab5202e5e505761bbb6b13f70ab0b9880dd4d40f67611c5.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-084-starting-asset-amount",
@@ -5664,7 +5664,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 7cd1a98bee04a5f207ca8ee7a3622d29ac0984384423d2cddbe7dfda21f3bda8.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-085-stable-value-contracts",
@@ -5728,7 +5728,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 63f21543fbda5582890e621ff1bc56991e22df007e68c4fa399a92819162ce3c.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-086-stochastic-exclusion-test",
@@ -5796,7 +5796,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 b6667acd86b5631c26dd2bdf5647078145cc0bbdf76d863de02fcf17836174b1.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-087-stochastic-reserve",
@@ -5864,7 +5864,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 af472a51515f9578687d1271e62ce85919c5fc9e324766c38fec415d7c47b0cd.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-088-structured-settlement-contracts",
@@ -5928,7 +5928,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 c9192267d5c9249b2d6734ee800fb6feba440c8786a354e863a687289d852fe9.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-089-synthetic-guaranteed-investment-contract",
@@ -5996,7 +5996,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 8207551005e76b240aa2001c50c596f8aafbd87e0b45c3b81e7f6a5841c9f26a.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-090-tail-risk",
@@ -6062,7 +6062,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 cc60cbff5279eb6ef29122221ae84fa991790171cc166f3d7c67daece22799a8.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-091-term-certain-payout-annuity",
@@ -6126,7 +6126,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 d34f91bd7d0e7492075e28d215f28b2066b232bd07cb533deaf16d73d9774022.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-092-unearned-premium-reserve",
@@ -6190,7 +6190,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 8040fce08202d43b42c9fac4ffaa8c9dbae9a968a3f64eaf434bb7c3edb8b041.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-093-universal-life-insurance-policy",
@@ -6254,7 +6254,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 03f972ea086a214c7cc29b559eae8abb8321dc13749079e7ae5302148dc28543.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-094-valuation-date",
@@ -6320,7 +6320,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 b9a2c992d47db3bd3abd167f792721420265b0504272551f8bbf81c80f540f19.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-095-valuation-manual",
@@ -6387,7 +6387,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 87ace1ef37e972580439814f2db16ff4a93c913728cb31fc38ebcfef86cbe30c.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-096-variable-annuity-guaranteed-living-benefit",
@@ -6457,7 +6457,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 3bb88e7a079485d86902580066bff4c55706589bc46dfc8c025381d3b8fa0946.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-097-variable-life-insurance-policy",
@@ -6521,7 +6521,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 2c124e3ecfc7c392f4126f2279d676c2cad81535f9fb21e9f9c8d96b570901c5.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     },
     {
       "chunkId": "vm01-definition-098-vm-20-reserving-category",
@@ -6592,7 +6592,7 @@
       ],
       "evidenceNotes": "Exact retained source evidence from data/work/batches/batch-013/extraction-output.json; SHA-256 f75d24853f85bf2366beb5c1f380f5f468d79a1ae82f68b9a3f79ede1d702641.",
       "retrievalEligible": true,
-      "promotionEligible": false
+      "promotionEligible": true
     }
   ],
   "relationships": [],
@@ -6601,7 +6601,7 @@
     "citationCompleteness": "partial",
     "pageImageBackstop": false,
     "lineReferencesAvailable": false,
-    "notes": "Substantially complete 2026 VM-01 definition coverage. Review-only and not promoted; learner, app, RAG, vector, and Copilot export remain blocked."
+    "notes": "Canonically promoted 2026 VM-01 definition coverage under a recorded independent-review decision; learner, app, RAG, vector, and Copilot export remain blocked, and relationship candidates remain separately governed."
   },
   "exportHints": {
     "jsonlEligible": true,
@@ -6609,7 +6609,7 @@
     "vectorEligible": false,
     "notes": "Canonical JSONL/CSV serialization is available for review and audit; vector, learner, app, RAG, and Copilot export remain blocked pending a separate decision."
   },
-  "notes": "Substantially complete 2026 VM-01 definition coverage. Review-only and not promoted; learner, app, RAG, vector, and Copilot export remain blocked.",
+  "notes": "Canonically promoted 2026 VM-01 definition coverage under a recorded independent-review decision; learner, app, RAG, vector, and Copilot export remain blocked, and relationship candidates remain separately governed.",
   "extensions": {
     "batchIds": [
       "batch-013"
@@ -6618,6 +6618,8 @@
     "definitionModel": "vm01_definition_aware_v1",
     "definitionLookupIndexPath": "data/processed/source_indexes/definitions/vm01-definition-index.json",
     "relationshipCandidatePath": "data/processed/relationship_registries/vm01-definition-relationship-candidates.json",
-    "reviewPackagePath": "data/processed/review_packages/vm01-canonical-definitions-review-package.json"
+    "reviewPackagePath": "data/processed/review_packages/vm01-canonical-definitions-review-package.json",
+    "promotionDecisionId": "vm01-2026-definitions-promotion-2026-08-27",
+    "promotionDecisionPath": "data/manual-input/promotion-decisions/vm01-2026-definitions-promotion.json"
   }
 }

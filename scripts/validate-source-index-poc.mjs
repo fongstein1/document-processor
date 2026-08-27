@@ -18,6 +18,7 @@ const requiredFiles = [
     path.join(repoRoot, 'data', 'schemas', 'repository-manifest.schema.json'),
     path.join(repoRoot, 'data', 'schemas', 'canonical-promotion-decision.schema.json'),
     path.join(repoRoot, 'data', 'manual-input', 'promotion-decisions', 'vm20-2026-prose-promotion.json'),
+    path.join(repoRoot, 'data', 'manual-input', 'promotion-decisions', 'vm01-2026-definitions-promotion.json'),
     path.join(repoRoot, 'data', 'schemas', 'document-classification.schema.json'),
     path.join(repoRoot, 'docs', 'prompts', 'generic_document_processing_prompt.md'),
     path.join(repoRoot, 'docs', 'prompts', 'pricing_document_processing_prompt.md'),
@@ -112,7 +113,17 @@ const main = async () => {
 
   const config = await readJson(configPath)
   const promotionDecision = await readJson(path.resolve(repoRoot, config.promotionDecisionPath))
-  const promotedSourceIds = new Set(promotionDecision.scope?.sourceIds ?? [])
+  const promotionDecisionPaths = [config.promotionDecisionPath, ...(config.additionalPromotionDecisionPaths ?? [])]
+  const promotionDecisionRecords = await Promise.all(promotionDecisionPaths.map(async (decisionPath) => ({ decisionPath, decision: await readJson(path.resolve(repoRoot, decisionPath)) })))
+  const promotionBySourceId = new Map()
+  for (const record of promotionDecisionRecords) {
+    if (record.decision.decision !== 'approved_for_canonical_promotion' || record.decision.reviewEvidence?.blockersClosed !== true) fail(`Promotion decision is not approved with closed blockers: ${record.decisionPath}.`)
+    for (const sourceId of record.decision.scope?.sourceIds ?? []) {
+      if (promotionBySourceId.has(sourceId)) fail(`Source ${sourceId} appears in multiple promotion decisions.`)
+      promotionBySourceId.set(sourceId, record)
+    }
+  }
+  const promotedSourceIds = new Set(promotionBySourceId.keys())
   if (promotionDecision.decision !== 'approved_for_canonical_promotion' || promotionDecision.reviewEvidence?.blockersClosed !== true) {
     fail('VM-20 promotion decision is not approved with closed blockers.')
   }
@@ -246,8 +257,13 @@ const main = async () => {
     fail('VM-20 promotion must retain closed blockers and the final independent-review decision.')
   }
   if (vm20ReviewPackage.promotionDecision?.decisionRecordPath !== config.promotionDecisionPath || vm20ReviewPackage.promotionDecision?.downstreamEligibility?.copilotExportEligible !== false) fail('VM-20 promotion boundary or downstream export guardrail is missing.')
-  const promotedChunkCount = [...promotedSourceIds].reduce((sum, sourceId) => sum + (config.sources.find((source) => source.sourceId === sourceId)?.expectedChunkCount ?? config.sources.find((source) => source.sourceId === sourceId)?.chunks?.length ?? 0), 0)
-  if (promotedChunkCount !== promotionDecision.scope.expectedChunkCount || promotedChunkCount !== 149) fail(`VM-20 promotion chunk count mismatch: ${promotedChunkCount}.`)
+  const vm20PromotedChunkCount = promotionDecision.scope.sourceIds.reduce((sum, sourceId) => sum + (config.sources.find((source) => source.sourceId === sourceId)?.expectedChunkCount ?? config.sources.find((source) => source.sourceId === sourceId)?.chunks?.length ?? 0), 0)
+  if (vm20PromotedChunkCount !== promotionDecision.scope.expectedChunkCount || vm20PromotedChunkCount !== 149) fail(`VM-20 promotion chunk count mismatch: ${vm20PromotedChunkCount}.`)
+  const vm01PromotionRecord = promotionDecisionRecords.find((record) => record.decision.scope?.sourceIds?.includes('vm01-definitions'))
+  if (!vm01PromotionRecord || vm01PromotionRecord.decision.scope.expectedChunkCount !== 98 || vm01PromotionRecord.decision.downstreamEligibility?.copilotExportEligible !== false || !vm01PromotionRecord.decision.exclusions.some((item) => item.includes('29 VM-01'))) fail('VM-01 promotion decision scope or exclusions are incomplete.')
+  const vm01SourcePackage = await readJson(path.join(outputRoot, 'sources', 'vm01-definitions.json'))
+  if (vm01SourcePackage.processing?.reviewOnly !== false || vm01SourcePackage.processing?.promotionStatus !== 'promoted' || vm01SourcePackage.chunks.length !== 98 || vm01SourcePackage.chunks.some((chunk) => chunk.promotionEligible !== true) || vm01SourcePackage.extensions?.promotionDecisionPath !== vm01PromotionRecord.decisionPath) fail('VM-01 canonical promotion metadata is incomplete or inconsistent.')
+  if (repositoryManifest.extensions?.promotionDecisionPaths?.length !== promotionDecisionRecords.length || repositoryManifest.extensions?.promotedSourcePackageCount !== 7 || repositoryManifest.extensions?.promotedChunkCount !== 247) fail('Repository manifest does not record both scope-specific canonical promotions.')
   if ((vm20ReviewPackage.coverage?.parentCount ?? 0) < 10 || (vm20ReviewPackage.coverage?.childCount ?? 0) < 20) {
     fail('VM-20 review package does not contain the expected hierarchical coverage.')
   }

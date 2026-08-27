@@ -13,4 +13,5 @@
 - Ambiguous-term abstention: 1 / 1
 - Current VM-01 authority top-1: 18 / 18
 - Relationship candidates: 29; all pending and not promoted
-- Governance: canonical review candidate; review-only / not promoted / downstream export blocked
+- Governance: canonical promoted; downstream learner/app/RAG/vector/Copilot export blocked
+- Approved implementation snapshots remain immutable historical review evidence.

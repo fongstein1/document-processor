@@ -1,6 +1,6 @@
 # Corpus Completeness Report
 
-As of 2026-08-26T00:00:00.000Z, the repository contains substantial regulatory evidence with separately recorded VM-20 prose and structured-table canonical promotions, but it is not production-complete and is not Copilot-export ready.
+As of 2026-08-26T00:00:00.000Z, the repository contains substantial regulatory evidence with separately recorded VM-01 definitions, VM-20 prose, and VM-20 structured-table canonical promotions, but it is not production-complete and is not Copilot-export ready.
 
 ## Counts
 
@@ -9,7 +9,7 @@ As of 2026-08-26T00:00:00.000Z, the repository contains substantial regulatory e
 - Documents reviewed / review artifacts matched: **97 review indexes**
 - Canonical source packages: **22**
 - Canonical chunks: **457**
-- Promoted canonical prose packages / chunks: **6 / 149**
+- Promoted canonical prose packages / chunks: **7 / 247**
 - Promoted structured logical tables / versions: **7 / 29**
 - Structured rows / values: **891 / 7022**
 - Sources awaiting canonicalization: **96**
@@ -31,7 +31,7 @@ As of 2026-08-26T00:00:00.000Z, the repository contains substantial regulatory e
 ## VM-01 terminology checkpoint
 
 - Current VM-01 definitions / retrieval units: 98 / 98.
-- VM-01 promotion status: not_promoted; only the final code-level review of the hashed implementation snapshots remains.
+- VM-01 promotion status: promoted; decision `data/manual-input/promotion-decisions/vm01-2026-definitions-promotion.json`.
 - VM-01 explicit-reference candidates: 29; all remain pending and not promoted.
 - Formal-definition requests for undefined or ambiguous terms abstain rather than substituting related evidence.
 - Canonical `definedTerms` now contains only 98 formal terms plus 27 source-explicit aliases; 17 generated lookup variants remain confined to non-authoritative retrieval metadata.

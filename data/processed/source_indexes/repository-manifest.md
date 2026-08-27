@@ -42,7 +42,7 @@
 | Orion Term Accumulator Pricing Methodology | pp. 1-2 | `data/processed/source_indexes/sources/synthetic-pricing-pricing-methodology.json` | review-only |
 | Orion Term Accumulator Profitability Study | pp. 1-2 | `data/processed/source_indexes/sources/synthetic-pricing-profitability-study.json` | review-only |
 | Orion Term Accumulator Approval Memo | pp. 1-2 | `data/processed/source_indexes/sources/synthetic-pricing-approval-memo.json` | review-only |
-| VM-01: Definitions for Terms in Requirements | pp. 25-39 | `data/processed/source_indexes/sources/vm01-definitions.json` | review-only |
+| VM-01: Definitions for Terms in Requirements | pp. 25-39 | `data/processed/source_indexes/sources/vm01-definitions.json` | canonical promoted; downstream export blocked |
 
 ## Retrieval summary
 

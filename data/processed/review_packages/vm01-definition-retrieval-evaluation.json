@@ -3564,7 +3564,7 @@
             "authorityLevel": "companion_guidance"
           }
         ],
-        "corpusGap": "Expanded hierarchical companion coverage for the reviewed VM-20 practice-note wave. Non-binding, historical, review-only, and not promoted. VM-01 states that some Valuation Manual terms are defined in specific sections rather than in VM-01; those section-local definitions are outside this package. Independent review and explicit promotion remain required. Substantially complete 2026 VM-01 definition coverage. Review-only and not promoted; learner, app, RAG, vector, and Copilot export remain blocked.",
+        "corpusGap": "Expanded hierarchical companion coverage for the reviewed VM-20 practice-note wave. Non-binding, historical, review-only, and not promoted. VM-01 states that some Valuation Manual terms are defined in specific sections rather than in VM-01; those section-local definitions are outside this package. The 29 explicit-reference relationship candidates remain separately governed and unpromoted. Canonically promoted 2026 VM-01 definition coverage under a recorded independent-review decision; learner, app, RAG, vector, and Copilot export remain blocked, and relationship candidates remain separately governed.",
         "structuredEvidenceAvailable": false,
         "semanticAlignment": {
           "topScore": 58.85,
@@ -3752,7 +3752,7 @@
             "authorityLevel": "manual_section"
           }
         ],
-        "corpusGap": "VM-01 states that some Valuation Manual terms are defined in specific sections rather than in VM-01; those section-local definitions are outside this package. Independent review and explicit promotion remain required. Substantially complete 2026 VM-01 definition coverage. Review-only and not promoted; learner, app, RAG, vector, and Copilot export remain blocked.",
+        "corpusGap": "VM-01 states that some Valuation Manual terms are defined in specific sections rather than in VM-01; those section-local definitions are outside this package. The 29 explicit-reference relationship candidates remain separately governed and unpromoted. Canonically promoted 2026 VM-01 definition coverage under a recorded independent-review decision; learner, app, RAG, vector, and Copilot export remain blocked, and relationship candidates remain separately governed.",
         "structuredEvidenceAvailable": false,
         "semanticAlignment": {
           "topScore": 45.2,
@@ -3937,7 +3937,7 @@
             "authorityLevel": "manual_section"
           }
         ],
-        "corpusGap": "VM-01 states that some Valuation Manual terms are defined in specific sections rather than in VM-01; those section-local definitions are outside this package. Independent review and explicit promotion remain required. Substantially complete 2026 VM-01 definition coverage. Review-only and not promoted; learner, app, RAG, vector, and Copilot export remain blocked.",
+        "corpusGap": "VM-01 states that some Valuation Manual terms are defined in specific sections rather than in VM-01; those section-local definitions are outside this package. The 29 explicit-reference relationship candidates remain separately governed and unpromoted. Canonically promoted 2026 VM-01 definition coverage under a recorded independent-review decision; learner, app, RAG, vector, and Copilot export remain blocked, and relationship candidates remain separately governed.",
         "structuredEvidenceAvailable": false,
         "semanticAlignment": {
           "topScore": 80.85,

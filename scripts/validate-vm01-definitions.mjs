@@ -23,6 +23,7 @@ const codeReviewPromptPath = path.join(processedRoot, 'review_packages', 'vm01-r
 const validationPath = path.join(processedRoot, 'review_packages', 'vm01-definitions-validation-report.json')
 const pdfHashConfirmationPath = path.join(processedRoot, 'review_packages', 'vm01-source-pdf-hash-confirmation.json')
 const implementationReviewManifestPath = path.join(processedRoot, 'review_packages', 'vm01-retrieval-implementation-review', 'manifest.json')
+const promotionDecisionPath = path.join(repoRoot, 'data', 'manual-input', 'promotion-decisions', 'vm01-2026-definitions-promotion.json')
 const globalRetrievalPath = path.join(processedRoot, 'source_indexes', 'evaluation', 'retrieval_results.json')
 const configPath = path.join(repoRoot, 'config', 'source-index-poc.json')
 
@@ -31,8 +32,8 @@ const assert = (condition, message) => { if (!condition) throw new Error(message
 const hashFile = async (filePath) => crypto.createHash('sha256').update(await fs.readFile(filePath)).digest('hex')
 
 const main = async () => {
-  const [config, sourcePackage, definitionIndex, relationships, retrieval, sourceQa, reviewPackage, globalRetrieval, pdfHashConfirmation, implementationReview] = await Promise.all([
-    readJson(configPath), readJson(sourcePackagePath), readJson(definitionIndexPath), readJson(relationshipPath), readJson(retrievalPath), readJson(sourceQaPath), readJson(reviewPackagePath), readJson(globalRetrievalPath), readJson(pdfHashConfirmationPath), readJson(implementationReviewManifestPath),
+  const [config, sourcePackage, definitionIndex, relationships, retrieval, sourceQa, reviewPackage, globalRetrieval, pdfHashConfirmation, implementationReview, promotionDecision] = await Promise.all([
+    readJson(configPath), readJson(sourcePackagePath), readJson(definitionIndexPath), readJson(relationshipPath), readJson(retrievalPath), readJson(sourceQaPath), readJson(reviewPackagePath), readJson(globalRetrievalPath), readJson(pdfHashConfirmationPath), readJson(implementationReviewManifestPath), readJson(promotionDecisionPath),
   ])
   await Promise.all([fs.access(promptPath), fs.access(codeReviewPromptPath)])
   const sourceConfig = config.sources.find((source) => source.sourceId === 'vm01-definitions')
@@ -47,7 +48,7 @@ const main = async () => {
   assert(sourcePackage.source.sourceEditionId === 'NAIC-VALUATION-MANUAL-2026' && sourcePackage.source.sourceVersionIdentifier === '2026 NAIC Valuation Manual', 'VM-01 current edition identity is missing.')
   assert(sourcePackage.source.pageRange.start === 25 && sourcePackage.source.pageRange.end === 39, 'VM-01 chapter page range mismatch.')
   assert(sourcePackage.processing.processingMode === 'canonical_index' && sourcePackage.processing.canonicality === 'canonical', 'VM-01 package is not represented as a canonical review candidate.')
-  assert(sourcePackage.processing.reviewOnly === true && sourcePackage.processing.promotionStatus === 'not_promoted', 'VM-01 review/promotion guardrail is incorrect.')
+  assert(sourcePackage.processing.reviewOnly === false && sourcePackage.processing.promotionStatus === 'promoted', 'VM-01 canonical promotion metadata is incorrect.')
   for (const field of ['learnerFacingAllowed', 'appReadyAllowed', 'ragReadyAllowed']) assert(sourcePackage.processing[field] === false, `VM-01 ${field} must remain false.`)
   assert(sourcePackage.exportHints.vectorEligible === false, 'VM-01 vector export must remain blocked before promotion.')
 
@@ -65,8 +66,10 @@ const main = async () => {
     const [sourceBytes, snapshotBytes] = await Promise.all([fs.readFile(sourcePath), fs.readFile(snapshotPath)])
     const sourceSha256 = crypto.createHash('sha256').update(sourceBytes).digest('hex')
     const snapshotSha256 = crypto.createHash('sha256').update(snapshotBytes).digest('hex')
-    assert(sourceBytes.equals(snapshotBytes), `VM-01 implementation snapshot is not byte-identical to its source: ${file.sourcePath}.`)
-    assert(file.exactByteMatch === true && file.sourceSha256 === sourceSha256 && file.snapshotSha256 === snapshotSha256 && sourceSha256 === snapshotSha256, `VM-01 implementation snapshot hash mismatch: ${file.sourcePath}.`)
+    assert(file.exactByteMatch === true && file.sourceSha256 === file.snapshotSha256 && file.snapshotSha256 === snapshotSha256 && file.byteLength === snapshotBytes.length, `Approved VM-01 implementation snapshot hash mismatch: ${file.sourcePath}.`)
+    if (file.sourcePath !== 'scripts/validate-vm01-definitions.mjs') {
+      assert(sourceBytes.equals(snapshotBytes) && sourceSha256 === snapshotSha256, `Reviewed VM-01 production or regression source changed after approval: ${file.sourcePath}.`)
+    }
   }
   assert(expectedImplementationSources.size === 0, `VM-01 implementation review manifest is missing sources: ${[...expectedImplementationSources].join(', ')}.`)
 
@@ -87,7 +90,7 @@ const main = async () => {
     assert(indexEntry.sourceTextSha256 === sha256(chunk.sourceTextExcerpt), `VM-01 source evidence hash mismatch: ${chunk.chunkId}.`)
     assert(chunk.pageStart === definition.pageStart && chunk.pageEnd === definition.pageEnd && chunk.pageStart >= 25 && chunk.pageEnd <= 37, `VM-01 citation page range mismatch: ${chunk.chunkId}.`)
     assert(Array.isArray(chunk.citations) && chunk.citations.length === 1 && chunk.citations[0].sectionReference === 'VM-01: Definitions for Terms in Requirements', `VM-01 citation missing or invalid: ${chunk.chunkId}.`)
-    assert(chunk.retrievalEligible === true && chunk.promotionEligible === false, `VM-01 retrieval/promotion boundary mismatch: ${chunk.chunkId}.`)
+    assert(chunk.retrievalEligible === true && chunk.promotionEligible === true, `VM-01 retrieval/promotion boundary mismatch: ${chunk.chunkId}.`)
     assert(!chunk.chunkLevel && !chunk.parentChunkId && !chunk.childChunkIds, `VM-01 short-definition model unexpectedly introduced hierarchy: ${chunk.chunkId}.`)
     assert(indexEntry.exactDefinedTerm === definition.exactDefinedTerm && indexEntry.extractedDefinedTerm === definition.extractedDefinedTerm && indexEntry.normalizedLookupTerm === definition.normalizedLookupTerm, `VM-01 defined-term metadata mismatch: ${chunk.chunkId}.`)
     assert(JSON.stringify(indexEntry.aliases) === JSON.stringify(definition.aliases) && JSON.stringify(indexEntry.acronymExpansions) === JSON.stringify(definition.acronymExpansions), `VM-01 alias/acronym integrity mismatch: ${chunk.chunkId}.`)
@@ -199,13 +202,17 @@ const main = async () => {
   assert(globalVm01Queries.filter((query) => query.expectedOutcome !== 'unsupported').every((query) => query.resultLabel === 'supported_top1' && query.rankedMatches[0]?.sourceId === 'vm01-definitions'), 'Global source-index retrieval does not rank current VM-01 definitions first.')
   assert(globalVm01Queries.filter((query) => query.expectedOutcome === 'unsupported').every((query) => query.resultLabel === 'unsupported' && query.supportDecision.supportState === 'unsupported'), 'Global source-index unsupported VM-01 queries did not abstain.')
 
-  assert(reviewPackage.status === 'review_ready_not_promoted' && reviewPackage.promoted === false, 'VM-01 review package promotion status mismatch.')
-  assert(reviewPackage.promotionReadiness.independentReviewRequired === true && reviewPackage.promotionReadiness.automatedPromotion === false && reviewPackage.promotionReadiness.blockersClosed === true && reviewPackage.promotionReadiness.copilotExportEligible === false, 'VM-01 review package governance gate mismatch.')
-  assert(reviewPackage.blockerCorrections?.length === 3 && reviewPackage.blockerCorrections.every((blocker) => blocker.status === 'resolved_pending_narrow_review'), 'VM-01 review package does not record all targeted blocker corrections.')
+  assert(reviewPackage.status === 'canonical_promoted' && reviewPackage.promoted === true, 'VM-01 review package promotion status mismatch.')
+  assert(reviewPackage.promotionReadiness.independentReviewRequired === false && reviewPackage.promotionReadiness.automatedPromotion === false && reviewPackage.promotionReadiness.blockersClosed === true && reviewPackage.promotionReadiness.promotionStatus === 'promoted' && reviewPackage.promotionReadiness.copilotExportEligible === false, 'VM-01 review package governance gate mismatch.')
+  assert(reviewPackage.blockerCorrections?.length === 3 && reviewPackage.blockerCorrections.every((blocker) => blocker.status === 'closed'), 'VM-01 review package does not record all targeted blocker corrections as closed.')
   assert(reviewPackage.artifacts.retrievalEvaluation === 'data/processed/review_packages/vm01-definition-retrieval-evaluation.json' && reviewPackage.retrievalEvaluation.caseLevelResultsIncluded === true, 'VM-01 focused retrieval artifact is not included in the review package.')
   assert(reviewPackage.retrievalEvaluation.sha256 === await hashFile(retrievalPath), 'VM-01 focused retrieval artifact hash does not match the review package.')
   assert(reviewPackage.artifacts.implementationReviewManifest === 'data/processed/review_packages/vm01-retrieval-implementation-review/manifest.json' && reviewPackage.implementationReview.exactCodeSnapshotsIncluded === true && reviewPackage.implementationReview.fileCount === 4, 'VM-01 implementation code handoff is not included in the review package.')
   assert(reviewPackage.implementationReview.manifestSha256 === await hashFile(implementationReviewManifestPath), 'VM-01 implementation review manifest hash does not match the review package.')
+  assert(promotionDecision.decision === 'approved_for_canonical_promotion' && promotionDecision.scope.expectedChunkCount === 98 && promotionDecision.scope.sourceIds.length === 1 && promotionDecision.scope.sourceIds[0] === 'vm01-definitions' && promotionDecision.reviewEvidence.blockersClosed === true, 'VM-01 promotion decision is incomplete or out of scope.')
+  assert(promotionDecision.exclusions.some((item) => item.includes('29 VM-01')) && promotionDecision.downstreamEligibility.copilotExportEligible === false && promotionDecision.preservation.sourceTextChanged === false && promotionDecision.preservation.chunkContentChanged === false, 'VM-01 promotion exclusions, downstream boundary, or preservation record is incomplete.')
+  assert(reviewPackage.promotionDecision.decisionRecordPath === 'data/manual-input/promotion-decisions/vm01-2026-definitions-promotion.json' && reviewPackage.promotionDecision.decision === promotionDecision.decision, 'VM-01 review package does not include the canonical promotion decision.')
+  assert(definitionIndex.governance.reviewOnly === false && definitionIndex.governance.promotionStatus === 'promoted' && definitionIndex.governance.promotionEligible === true && definitionIndex.governance.copilotExportEligible === false, 'VM-01 definition index promotion or downstream boundary is incorrect.')
 
   const report = {
     schemaVersion: '1.0', reportId: 'vm01-definitions-validation-2026', status: 'pass',
@@ -213,11 +220,11 @@ const main = async () => {
     authoritativeEvidenceChangeCounts: { sourceTextExcerpt: 0, formalDefinitionSourceText: 0, sourceTextSha256: 0, sourcePages: 0, aggregateSourceEvidenceSha256: aggregateHash },
     definedTermsBoundary: { beforeEntryCount: 142, afterEntryCount: totalDefinedTermsCount, generatedEntriesRemoved: 17, formalTermEntries: 98, sourceExplicitAliasEntries: 27, generatedEntriesRemaining: 0, retrievalOnlyNormalizedVariantsRetained: 17 },
     checks: { definitions: 98, retrievalUnits: 98, uniqueDefinitionIds: 98, uniqueNormalizedTerms: 98, validSourceEvidence: 98, validCitations: 98, termExtractionCorrections: 11, relationshipCandidates: 29, focusedRetrievalQueries: retrieval.queryCount, focusedSupportedQueries: retrieval.supportedQueryCount, focusedSupportedTop1: retrieval.top1HitCount, focusedSupportedTop3: retrieval.top3HitCount, unsupportedQueriesSafelyAbstained: retrieval.unsupportedCorrectCount, ambiguousQueriesSafelyAbstained: ambiguousCase.ambiguityResult.safelyAbstained ? 1 : 0, currentAuthorityTop1: retrieval.currentAuthorityTop1Count, caseLevelRetrievalArtifactSha256: await hashFile(retrievalPath), implementationCodeSnapshots: implementationReview.fileCount, implementationReviewManifestSha256: await hashFile(implementationReviewManifestPath), globalVm01RegressionQueries: 6, globalSupportedTop1: globalVm01Queries.filter((query) => query.expectedOutcome !== 'unsupported' && query.resultLabel === 'supported_top1').length, globalUnsupportedAbstained: globalVm01Queries.filter((query) => query.expectedOutcome === 'unsupported' && query.resultLabel === 'unsupported').length },
-    governance: { reviewOnly: true, promotionStatus: 'not_promoted', learnerFacingAllowed: false, appReadyAllowed: false, ragReadyAllowed: false, vectorEligible: false, copilotExportEligible: false },
+    governance: { reviewOnly: false, promotionStatus: 'promoted', learnerFacingAllowed: false, appReadyAllowed: false, ragReadyAllowed: false, vectorEligible: false, copilotExportEligible: false, promotionDecisionPath: 'data/manual-input/promotion-decisions/vm01-2026-definitions-promotion.json' },
   }
   await fs.writeFile(validationPath, `${JSON.stringify(report, null, 2)}\n`, 'utf8')
   await fs.writeFile(validationPath.replace(/\.json$/, '.md'), [
-    '# VM-01 definitions validation report', '', '- Result: **PASS**', `- Source SHA-256: \`${VM01_SOURCE_SHA256}\``, `- Authoritative source-evidence aggregate SHA-256: \`${aggregateHash}\``, '- Authoritative source-text changes: 0', '- Definitions / retrieval units: 98 / 98', '- Unique IDs / normalized terms: 98 / 98', '- Valid exact evidence / citations: 98 / 98', `- \`definedTerms\` entries before / after: 142 / ${totalDefinedTermsCount}; generated entries remaining: 0`, `- Focused supported top-1 / top-3: ${retrieval.top1HitCount}/${retrieval.supportedQueryCount} / ${retrieval.top3HitCount}/${retrieval.supportedQueryCount}`, `- Unsupported formal-definition abstentions: ${retrieval.unsupportedCorrectCount} / ${retrieval.unsupportedQueryCount}`, '- Ambiguous-term abstention: 1 / 1', `- Current VM-01 authority top-1: ${retrieval.currentAuthorityTop1Count} / ${retrieval.supportedQueryCount}`, '- Relationship candidates: 29; all pending and not promoted', '- Governance: canonical review candidate; review-only / not promoted / downstream export blocked', '',
+    '# VM-01 definitions validation report', '', '- Result: **PASS**', `- Source SHA-256: \`${VM01_SOURCE_SHA256}\``, `- Authoritative source-evidence aggregate SHA-256: \`${aggregateHash}\``, '- Authoritative source-text changes: 0', '- Definitions / retrieval units: 98 / 98', '- Unique IDs / normalized terms: 98 / 98', '- Valid exact evidence / citations: 98 / 98', `- \`definedTerms\` entries before / after: 142 / ${totalDefinedTermsCount}; generated entries remaining: 0`, `- Focused supported top-1 / top-3: ${retrieval.top1HitCount}/${retrieval.supportedQueryCount} / ${retrieval.top3HitCount}/${retrieval.supportedQueryCount}`, `- Unsupported formal-definition abstentions: ${retrieval.unsupportedCorrectCount} / ${retrieval.unsupportedQueryCount}`, '- Ambiguous-term abstention: 1 / 1', `- Current VM-01 authority top-1: ${retrieval.currentAuthorityTop1Count} / ${retrieval.supportedQueryCount}`, '- Relationship candidates: 29; all pending and not promoted', '- Governance: canonical promoted; downstream learner/app/RAG/vector/Copilot export blocked', '- Approved implementation snapshots remain immutable historical review evidence.', '',
   ].join('\n'), 'utf8')
   console.log(`Validated 98 VM-01 definitions, 29 relationship candidates, and ${retrieval.queryCount} focused retrieval queries.`)
 }

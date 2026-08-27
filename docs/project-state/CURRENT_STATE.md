@@ -1,5 +1,23 @@
 # Current Project State
 
+## 2026-08-27 VM-01 canonical promotion
+
+The independently approved current 2026 VM-01 definition scope is now
+canonically promoted through the existing human-governed promotion workflow.
+The scope remains exactly 98 definitions and retrieval units, with 125
+source-explicit `definedTerms` entries (98 exact terms plus 27 explicit
+aliases) and 17 generated lookup variants retained only in non-authoritative
+retrieval metadata. Authoritative excerpts, formal definition text, source
+pages, source-text hashes, and definition ordering are unchanged.
+
+The promotion decision is
+`data/manual-input/promotion-decisions/vm01-2026-definitions-promotion.json`.
+The 29 explicit-reference relationship candidates remain pending, review-only,
+not promoted, and not promotion-eligible. Learner, application, RAG, vector,
+and Copilot export remain blocked pending separate governance decisions. The
+four code snapshots approved in commit `7067118` remain immutable historical
+review evidence rather than being regenerated during promotion.
+
 ## 2026-08-26 VM-20 prose and appendix coverage
 
 The authoritative 2026 Valuation Manual PDF was verified at the external raw

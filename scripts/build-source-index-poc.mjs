@@ -1039,7 +1039,20 @@ const main = async () => {
   const promotionDecisionPath = toRelativePosix(config.promotionDecisionPath)
   const promotionDecision = await readJson(path.resolve(repoRoot, config.promotionDecisionPath))
   if (promotionDecision.decision !== 'approved_for_canonical_promotion') throw new Error('Promotion decision is not approved.')
-  const promotedSourceIds = new Set(promotionDecision.scope?.sourceIds ?? [])
+  const promotionDecisionPaths = [config.promotionDecisionPath, ...asArray(config.additionalPromotionDecisionPaths)]
+  const promotionDecisionRecords = await Promise.all(promotionDecisionPaths.map(async (decisionPath) => ({
+    path: toRelativePosix(decisionPath),
+    decision: await readJson(path.resolve(repoRoot, decisionPath)),
+  })))
+  const promotionBySourceId = new Map()
+  for (const record of promotionDecisionRecords) {
+    if (record.decision.decision !== 'approved_for_canonical_promotion' || record.decision.reviewEvidence?.blockersClosed !== true) throw new Error(`Promotion decision is not approved with closed blockers: ${record.path}`)
+    for (const sourceId of record.decision.scope?.sourceIds ?? []) {
+      if (promotionBySourceId.has(sourceId)) throw new Error(`Source ${sourceId} appears in multiple promotion decisions.`)
+      promotionBySourceId.set(sourceId, record)
+    }
+  }
+  const promotedSourceIds = new Set(promotionBySourceId.keys())
   const generatedAt = config.generatedAt ?? new Date().toISOString()
   await ensureDir(outputRoot)
   await ensureDir(sourcesRoot)
@@ -1070,7 +1083,8 @@ const main = async () => {
       : source.batchCoverageInput
         ? await buildBatchCoverageChunks(source)
         : await buildHierarchicalChunks(source)
-    const promoted = promotedSourceIds.has(source.sourceId)
+    const sourcePromotion = promotionBySourceId.get(source.sourceId) ?? null
+    const promoted = Boolean(sourcePromotion)
     const sourceChunks = asArray(hydratedChunks).map((chunk, index) =>
       deriveChunk(
         {
@@ -1131,7 +1145,11 @@ const main = async () => {
         appReadyAllowed: false,
         ragReadyAllowed: false,
         promotionStatus: promoted ? 'promoted' : 'not_promoted',
-        notes: promoted ? `Promoted for the recorded current-manual prose scope; downstream export remains blocked. Decision: ${promotionDecisionPath}` : source.notes,
+        notes: promoted
+          ? sourcePromotion.path === promotionDecisionPath
+            ? `Promoted for the recorded current-manual prose scope; downstream export remains blocked. Decision: ${sourcePromotion.path}`
+            : `Promoted for the scope recorded in ${sourcePromotion.path}; downstream export remains blocked.`
+          : source.notes,
       },
       chunks: sourceChunks,
       relationships: sourceRelationships,
@@ -1153,7 +1171,7 @@ const main = async () => {
         batchIds: source.reviewBatchIds,
         sourceIndexGeneratedBy: 'build-source-index-poc',
         ...source.extensions,
-        ...(promoted ? { promotionDecisionId: promotionDecision.promotionDecisionId, promotionDecisionPath } : {}),
+        ...(promoted ? { promotionDecisionId: sourcePromotion.decision.promotionDecisionId, promotionDecisionPath: sourcePromotion.path } : {}),
       },
     }
 
@@ -1190,7 +1208,7 @@ const main = async () => {
       lineReferencesAvailable: source.lineReferencesAvailable,
       reviewOnly: !promoted,
       promotionStatus: promoted ? 'promoted' : 'not_promoted',
-      ...(promoted ? { promotionDecisionPath } : {}),
+      ...(promoted ? { promotionDecisionPath: sourcePromotion.path } : {}),
       notes: source.notes,
     })
 
@@ -1336,6 +1354,8 @@ const main = async () => {
       sourceIndexPoc: true,
       promotionDecisionId: promotionDecision.promotionDecisionId,
       promotionDecisionPath,
+      promotionDecisionIds: promotionDecisionRecords.map((record) => record.decision.promotionDecisionId),
+      promotionDecisionPaths: promotionDecisionRecords.map((record) => record.path),
       promotedSourcePackageCount: sourcePackages.filter((source) => source.promotionStatus === 'promoted').length,
       promotedChunkCount: chunkRecords.filter((chunk) => chunk.promotionEligible).length,
     },

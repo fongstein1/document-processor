@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "reviewPackageId": "vm01-canonical-definitions-review-package-2026",
-  "status": "review_ready_not_promoted",
-  "promoted": false,
+  "status": "canonical_promoted",
+  "promoted": true,
   "authoritativeSource": {
     "sourceId": "vm01-definitions",
     "sourceReference": "2026 NAIC Valuation Manual",
@@ -432,7 +432,7 @@
   ],
   "retrievalEvaluation": {
     "path": "data/processed/review_packages/vm01-definition-retrieval-evaluation.json",
-    "sha256": "97c554bd9b2d73c69620783ae05e1ebc4ed9af3021053f6d1957f1db8ddccafd",
+    "sha256": "ab46494dbda945999fc0dc7aa55ff90f2d456a816bd6e0c9041f35e7969c566a",
     "caseLevelResultsIncluded": true,
     "queryCount": 21,
     "supportedTop1": 17,
@@ -472,6 +472,32 @@
         "sha256": "e6a02a21a32a5142429fe1399e44a44109c58ee5713b694f5df561bf178896a9",
         "role": "vm01_case_and_aggregate_consistency_validator"
       }
+    ]
+  },
+  "promotionDecision": {
+    "promotionDecisionId": "vm01-2026-definitions-promotion-2026-08-27",
+    "decision": "approved_for_canonical_promotion",
+    "decisionDate": "2026-08-27",
+    "scopeId": "vm01-2026-current-definitions",
+    "expectedChunkCount": 98,
+    "decisionRecordPath": "data/manual-input/promotion-decisions/vm01-2026-definitions-promotion.json",
+    "downstreamEligibility": {
+      "learnerFacingAllowed": false,
+      "appReadyAllowed": false,
+      "ragReadyAllowed": false,
+      "copilotExportEligible": false,
+      "reason": "Canonical source promotion and downstream publication, retrieval-production, or export approval are separate governance decisions."
+    },
+    "reviewerRecord": {
+      "identityRecorded": false,
+      "identity": null,
+      "note": "The supplied final independent-review disposition records approval but does not provide a reviewer identity; no identity is inferred."
+    },
+    "exclusions": [
+      "The 29 VM-01 explicit-reference relationship candidates, which remain pending, review-only, not promoted, and not promotion-eligible",
+      "Historical, proposed, or section-local definitions outside the reviewed current 2026 VM-01 chapter package",
+      "Any source or chunk outside vm01-definitions",
+      "Learner-facing, application, RAG, vector, and Copilot export approval"
     ]
   },
   "independentReviewHistory": [
@@ -523,12 +549,28 @@
       "remainingBlockers": [
         "independently inspect exact current production, regression-test, and validation code"
       ]
+    },
+    {
+      "disposition": "APPROVE FOR CANONICAL PROMOTION",
+      "scope": "final implementation evidence review",
+      "status": "completed",
+      "acceptedAreas": [
+        "all four implementation snapshot hashes and byte lengths",
+        "live-source byte comparison",
+        "production ranks-one-through-three evidence window",
+        "strict top-three metric calculation",
+        "case-derived aggregate metrics",
+        "generic definition-intent ranking",
+        "rank-four regression coverage",
+        "promotion governance"
+      ],
+      "remainingBlockers": []
     }
   ],
   "blockerCorrections": [
     {
       "blockerId": "defined_terms_source_explicit",
-      "status": "resolved_pending_narrow_review",
+      "status": "closed",
       "result": "125 source-explicit entries across 98 chunks; zero generated entries",
       "retrievalVariantsPreservedIn": [
         "keywords",
@@ -538,14 +580,14 @@
     },
     {
       "blockerId": "focused_retrieval_artifact_handoff",
-      "status": "resolved_pending_narrow_review",
+      "status": "closed",
       "result": "case-level evaluation JSON retained with intended support, expected evidence, strict top-1/top-3 metrics, authority, support decision limited to the top-three evidence window, ambiguity result, and failure reason",
       "artifactPath": "data/processed/review_packages/vm01-definition-retrieval-evaluation.json",
-      "artifactSha256": "97c554bd9b2d73c69620783ae05e1ebc4ed9af3021053f6d1957f1db8ddccafd"
+      "artifactSha256": "ab46494dbda945999fc0dc7aa55ff90f2d456a816bd6e0c9041f35e7969c566a"
     },
     {
       "blockerId": "retrieval_implementation_code_handoff",
-      "status": "resolved_pending_narrow_review",
+      "status": "closed",
       "result": "four byte-exact production, regression-test, and validation code snapshots retained with source/snapshot SHA-256 equality",
       "artifactPath": "data/processed/review_packages/vm01-retrieval-implementation-review/manifest.json",
       "artifactSha256": "e77de2e399fe44cc20b2546df6ffa608ec17847fc8519299f91d13324906e1da"
@@ -570,14 +612,15 @@
       "data/processed/review_packages/vm01-retrieval-implementation-review/validate-vm01-definitions.mjs"
     ],
     "pdfHashConfirmation": "data/processed/review_packages/vm01-source-pdf-hash-confirmation.json",
+    "promotionDecision": "data/manual-input/promotion-decisions/vm01-2026-definitions-promotion.json",
     "independentReviewPrompt": "data/processed/review_packages/vm01-retrieval-code-review-prompt.md",
     "priorIndependentReviewPrompt": "data/processed/review_packages/vm01-independent-review-prompt.md"
   },
   "promotionReadiness": {
-    "independentReviewRequired": true,
+    "independentReviewRequired": false,
     "automatedPromotion": false,
-    "currentStatus": "code_handoff_rereview_ready",
-    "promotionStatus": "not_promoted",
+    "currentStatus": "promoted_after_independent_review",
+    "promotionStatus": "promoted",
     "blockersClosed": true,
     "learnerFacingAllowed": false,
     "appReadyAllowed": false,

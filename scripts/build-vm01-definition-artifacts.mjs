@@ -26,6 +26,7 @@ const reviewPackagePath = path.join(reviewRoot, 'vm01-canonical-definitions-revi
 const promptPath = path.join(reviewRoot, 'vm01-independent-review-prompt.md')
 const codeReviewPromptPath = path.join(reviewRoot, 'vm01-retrieval-code-review-prompt.md')
 const pdfHashConfirmationPath = path.join(reviewRoot, 'vm01-source-pdf-hash-confirmation.json')
+const promotionDecisionPath = path.join(repoRoot, 'data', 'manual-input', 'promotion-decisions', 'vm01-2026-definitions-promotion.json')
 const implementationReviewRoot = path.join(reviewRoot, 'vm01-retrieval-implementation-review')
 const implementationReviewManifestPath = path.join(implementationReviewRoot, 'manifest.json')
 const implementationReviewSpecs = [
@@ -105,11 +106,13 @@ const buildMarkdownTable = (rows) => rows.map((row) => `| ${row.join(' | ')} |`)
 
 const main = async () => {
   await Promise.all([definitionRoot, reviewRoot, relationshipRoot, implementationReviewRoot].map((directory) => fs.mkdir(directory, { recursive: true })))
-  const [sourcePackage, repositoryManifest, config] = await Promise.all([
+  const [sourcePackage, repositoryManifest, config, promotionDecision] = await Promise.all([
     readJson(sourcePackagePath),
     readJson(repositoryManifestPath),
     readJson(path.join(repoRoot, 'config', 'source-index-poc.json')),
+    readJson(promotionDecisionPath),
   ])
+  if (promotionDecision.decision !== 'approved_for_canonical_promotion' || promotionDecision.reviewEvidence?.blockersClosed !== true || !promotionDecision.scope?.sourceIds?.includes('vm01-definitions')) throw new Error('VM-01 canonical promotion decision is missing, unapproved, or out of scope.')
   const sourceConfig = config.sources.find((source) => source.sourceId === 'vm01-definitions')
   const loaded = await loadVm01Extraction(repoRoot, sourceConfig.definitionInput)
   const [verifiedPdfSha256, pdfStat] = await Promise.all([
@@ -147,8 +150,8 @@ const main = async () => {
       explicitReferences: definition.explicitReferences.map((reference) => reference.target),
       sourceFidelity: 'exact_extracted_source_text',
       currentness: 'current_2026_edition',
-      reviewOnly: true,
-      promotionStatus: 'not_promoted',
+      reviewOnly: false,
+      promotionStatus: 'promoted',
     }
   })
 
@@ -168,7 +171,7 @@ const main = async () => {
       relatedTermsAreNotEquivalent: true,
       generatedMetadataIsNotFormalDefinitionEvidence: true,
     },
-    governance: { reviewOnly: true, promotionStatus: 'not_promoted', promotionEligible: false, learnerFacingAllowed: false, appReadyAllowed: false, ragReadyAllowed: false, copilotExportEligible: false },
+    governance: { reviewOnly: false, promotionStatus: 'promoted', promotionEligible: true, learnerFacingAllowed: false, appReadyAllowed: false, ragReadyAllowed: false, copilotExportEligible: false, promotionDecisionPath: relative(promotionDecisionPath) },
     definitions: entries,
   }
   await writeJson(definitionIndexPath, definitionIndex)
@@ -364,52 +367,26 @@ const main = async () => {
     `- Chapter pages: 25-39; definition-bearing pages: 25-37`,
   ].join('\n'))
 
-  const implementationFiles = await Promise.all(implementationReviewSpecs.map(async (spec) => {
-    const sourcePath = path.join(repoRoot, ...spec.sourcePath.split('/'))
-    const snapshotPath = path.join(implementationReviewRoot, path.basename(spec.sourcePath))
-    const sourceBytes = await fs.readFile(sourcePath)
-    await fs.writeFile(snapshotPath, sourceBytes)
-    const snapshotBytes = await fs.readFile(snapshotPath)
-    const sourceSha256 = crypto.createHash('sha256').update(sourceBytes).digest('hex')
-    const snapshotSha256 = crypto.createHash('sha256').update(snapshotBytes).digest('hex')
-    return {
-      sourcePath: spec.sourcePath,
-      snapshotPath: relative(snapshotPath),
-      role: spec.role,
-      sourceSha256,
-      snapshotSha256,
-      byteLength: sourceBytes.length,
-      exactByteMatch: sourceBytes.equals(snapshotBytes) && sourceSha256 === snapshotSha256,
-    }
-  }))
-  const implementationReviewManifest = {
-    schemaVersion: '1.0',
-    artifactType: 'implementation_source_snapshot_manifest',
-    artifactPurpose: 'narrow_independent_code_review',
-    reviewFindingAddressed: 'Provide independently inspectable current production, regression-test, and validation code for the strict top-three VM-01 retrieval correction.',
-    fileCount: implementationFiles.length,
-    files: implementationFiles,
-    assertionsToReview: [
-      'Formal-definition support uses only the first three ranked matches.',
-      'top3Hit is computed only from the first three deduplicated ranked matches.',
-      'Definition-intent source-text weighting is generic and contains no query ID, expected chunk ID, or term-specific special case.',
-      'Regression tests reject exact formal-definition evidence first appearing at rank 4.',
-      'VM-01 validation recomputes case-level and aggregate top-one/top-three metrics from displayed evidence.',
-    ],
-    governance: { reviewOnly: true, promotionStatus: 'not_promoted', canonicalSourceEvidence: false },
+  // The implementation snapshots are the immutable evidence approved in commit 7067118.
+  // Promotion-time governance changes must not rewrite that historical review handoff.
+  const implementationReviewManifest = await readJson(implementationReviewManifestPath)
+  const implementationFiles = implementationReviewManifest.files
+  if (implementationReviewManifest.fileCount !== implementationReviewSpecs.length || implementationFiles.length !== implementationReviewSpecs.length) {
+    throw new Error('Approved VM-01 implementation review evidence is incomplete; do not regenerate it during promotion.')
   }
-  await writeJson(implementationReviewManifestPath, implementationReviewManifest)
-  await fs.writeFile(path.join(implementationReviewRoot, 'README.md'), `${[
-    '# VM-01 retrieval implementation review snapshot', '',
-    'This directory contains byte-exact snapshots of the current production and regression code needed for the final narrow independent review.', '',
-    `- Manifest: \`${relative(implementationReviewManifestPath)}\``,
-    ...implementationFiles.map((file) => `- \`${file.snapshotPath}\` — ${file.role}; SHA-256 \`${file.snapshotSha256}\``), '',
-    'Each snapshot hash must match both the corresponding live repository file and the manifest. These files are review evidence, not a second production implementation.',
-  ].join('\n')}\n`, 'utf8')
+  for (const file of implementationFiles) {
+    const expectedSpec = implementationReviewSpecs.find((spec) => spec.sourcePath === file.sourcePath && spec.role === file.role)
+    if (!expectedSpec) throw new Error(`Unexpected approved VM-01 implementation snapshot: ${file.sourcePath}`)
+    const snapshotBytes = await fs.readFile(path.join(repoRoot, ...file.snapshotPath.split('/')))
+    const snapshotSha256 = crypto.createHash('sha256').update(snapshotBytes).digest('hex')
+    if (snapshotSha256 !== file.snapshotSha256 || snapshotBytes.length !== file.byteLength) {
+      throw new Error(`Approved VM-01 implementation snapshot changed: ${file.snapshotPath}`)
+    }
+  }
   const implementationReviewManifestSha256 = await hashFile(implementationReviewManifestPath)
 
   const reviewPackage = {
-    schemaVersion: '1.0', reviewPackageId: 'vm01-canonical-definitions-review-package-2026', status: 'review_ready_not_promoted', promoted: false,
+    schemaVersion: '1.0', reviewPackageId: 'vm01-canonical-definitions-review-package-2026', status: 'canonical_promoted', promoted: true,
     authoritativeSource: definitionIndex.source,
     coverage: { totalDefinitions: entries.length, totalRetrievalUnits: sourcePackage.chunks.length, exactSourceTextDefinitions: entries.filter((entry) => entry.sourceFidelity === 'exact_extracted_source_text').length, complexDefinitionCount: complexEntries.length, definitionsWithCrossReferences: entries.filter((entry) => entry.explicitReferences.length > 0).length, explicitAliasCount: sourceQa.checks.explicitAliasCount, explicitAcronymExpansionCount: sourceQa.checks.explicitAcronymExpansionCount, sourceExplicitDefinedTermEntries: sourceQa.checks.sourceExplicitDefinedTermEntries, generatedDefinedTermEntries: sourceQa.checks.generatedDefinedTermEntries, retrievalOnlyNormalizedVariants: sourceQa.checks.retrievalOnlyNormalizedVariants },
     sourceFidelity: { mode: 'exact_extracted_source_text', generatedMetadataSeparate: true, generatedMetadataAuthority: 'non_authoritative', sourceQaPath: relative(sourceQaPath), sourceQaStatus: sourceQa.status, aggregateSourceEvidenceSha256: sourceQa.checks.sourceEvidenceAggregateSha256 },
@@ -421,24 +398,28 @@ const main = async () => {
     representativeExamples: entries.filter((entry) => ['accumulated deficiency', 'claim reserve', 'clearly defined hedging strategy', 'prudent estimate assumption', 'VM-20 reserving category'].includes(entry.exactDefinedTerm)).map((entry) => ({ definitionId: entry.definitionId, exactDefinedTerm: entry.exactDefinedTerm, pages: [entry.sourceEvidence.pageStart, entry.sourceEvidence.pageEnd], aliases: entry.aliases, complexStructureReasons: entry.complexStructureReasons, explicitReferences: entry.explicitReferences })),
     retrievalEvaluation: { path: relative(retrievalPath), sha256: focusedResultsSha256, caseLevelResultsIncluded: true, queryCount: focusedResults.queryCount, supportedTop1: focusedResults.top1HitCount, supportedTop3: focusedResults.top3HitCount, supportedQueryCount: focusedResults.supportedQueryCount, unsupportedCorrect: focusedResults.unsupportedCorrectCount, unsupportedQueryCount: focusedResults.unsupportedQueryCount, currentAuthorityTop1: focusedResults.currentAuthorityTop1Count },
     implementationReview: { manifestPath: relative(implementationReviewManifestPath), manifestSha256: implementationReviewManifestSha256, exactCodeSnapshotsIncluded: true, fileCount: implementationFiles.length, files: implementationFiles.map((file) => ({ sourcePath: file.sourcePath, snapshotPath: file.snapshotPath, sha256: file.snapshotSha256, role: file.role })) },
+    promotionDecision: { promotionDecisionId: promotionDecision.promotionDecisionId, decision: promotionDecision.decision, decisionDate: promotionDecision.decisionDate, scopeId: promotionDecision.scope.scopeId, expectedChunkCount: promotionDecision.scope.expectedChunkCount, decisionRecordPath: relative(promotionDecisionPath), downstreamEligibility: promotionDecision.downstreamEligibility, reviewerRecord: promotionDecision.reviewerRecord, exclusions: promotionDecision.exclusions },
     independentReviewHistory: [
       { disposition: 'APPROVE WITH FIXES', scope: 'full VM-01 canonical definitions review', status: 'completed', acceptedAreas: ['98 definition boundaries and IDs', 'source evidence and hashes', 'cross-page stitching and guidance notes', '27 source-explicit aliases', '11 spacing corrections', '29 conservative relationship candidates'], remainingBlockers: ['definedTerms source-explicit boundary', 'case-level focused retrieval artifact handoff'] },
       { disposition: 'APPROVE WITH FIXES', scope: 'narrow blocker-closure review', status: 'completed', acceptedAreas: ['source-explicit definedTerms boundary', 'retrieval-only normalization metadata', 'case-level evaluation artifact', 'undefined-term abstention', 'ambiguity and authority handling', 'unchanged source evidence'], remainingBlockers: ['strict top-three metric and evidence-window consistency for vm01-plain-language-tail-measure'] },
       { disposition: 'APPROVE WITH FIXES', scope: 'strict top-three correction review', status: 'completed', acceptedAreas: ['strict top-one and top-three metrics', 'plain-language CTE top-three evidence', 'unsupported and ambiguity behavior', 'source-explicit terms and corpus integrity', 'relationships', 'governance'], remainingBlockers: ['independently inspect exact current production, regression-test, and validation code'] },
+      { disposition: 'APPROVE FOR CANONICAL PROMOTION', scope: 'final implementation evidence review', status: 'completed', acceptedAreas: ['all four implementation snapshot hashes and byte lengths', 'live-source byte comparison', 'production ranks-one-through-three evidence window', 'strict top-three metric calculation', 'case-derived aggregate metrics', 'generic definition-intent ranking', 'rank-four regression coverage', 'promotion governance'], remainingBlockers: [] },
     ],
     blockerCorrections: [
-      { blockerId: 'defined_terms_source_explicit', status: 'resolved_pending_narrow_review', result: '125 source-explicit entries across 98 chunks; zero generated entries', retrievalVariantsPreservedIn: ['keywords', 'normalizedSearchText', 'definition index normalizedLookupTerm'] },
-      { blockerId: 'focused_retrieval_artifact_handoff', status: 'resolved_pending_narrow_review', result: 'case-level evaluation JSON retained with intended support, expected evidence, strict top-1/top-3 metrics, authority, support decision limited to the top-three evidence window, ambiguity result, and failure reason', artifactPath: relative(retrievalPath), artifactSha256: focusedResultsSha256 },
-      { blockerId: 'retrieval_implementation_code_handoff', status: 'resolved_pending_narrow_review', result: 'four byte-exact production, regression-test, and validation code snapshots retained with source/snapshot SHA-256 equality', artifactPath: relative(implementationReviewManifestPath), artifactSha256: implementationReviewManifestSha256 },
+      { blockerId: 'defined_terms_source_explicit', status: 'closed', result: '125 source-explicit entries across 98 chunks; zero generated entries', retrievalVariantsPreservedIn: ['keywords', 'normalizedSearchText', 'definition index normalizedLookupTerm'] },
+      { blockerId: 'focused_retrieval_artifact_handoff', status: 'closed', result: 'case-level evaluation JSON retained with intended support, expected evidence, strict top-1/top-3 metrics, authority, support decision limited to the top-three evidence window, ambiguity result, and failure reason', artifactPath: relative(retrievalPath), artifactSha256: focusedResultsSha256 },
+      { blockerId: 'retrieval_implementation_code_handoff', status: 'closed', result: 'four byte-exact production, regression-test, and validation code snapshots retained with source/snapshot SHA-256 equality', artifactPath: relative(implementationReviewManifestPath), artifactSha256: implementationReviewManifestSha256 },
     ],
     unresolvedSourceQuestions: sourceQa.unresolvedSourceQuestions,
-    artifacts: { canonicalSourcePackage: relative(sourcePackagePath), definitionLookupIndex: relative(definitionIndexPath), sourceQa: relative(sourceQaPath), relationshipCandidates: relative(relationshipPath), retrievalEvaluation: relative(retrievalPath), implementationReviewManifest: relative(implementationReviewManifestPath), implementationReviewSnapshots: implementationFiles.map((file) => file.snapshotPath), pdfHashConfirmation: relative(pdfHashConfirmationPath), independentReviewPrompt: relative(codeReviewPromptPath), priorIndependentReviewPrompt: relative(promptPath) },
-    promotionReadiness: { independentReviewRequired: true, automatedPromotion: false, currentStatus: 'code_handoff_rereview_ready', promotionStatus: 'not_promoted', blockersClosed: true, learnerFacingAllowed: false, appReadyAllowed: false, ragReadyAllowed: false, copilotExportEligible: false, decisionOptions: ['APPROVE FOR CANONICAL PROMOTION', 'APPROVE WITH FIXES', 'DO NOT PROMOTE'] },
+    artifacts: { canonicalSourcePackage: relative(sourcePackagePath), definitionLookupIndex: relative(definitionIndexPath), sourceQa: relative(sourceQaPath), relationshipCandidates: relative(relationshipPath), retrievalEvaluation: relative(retrievalPath), implementationReviewManifest: relative(implementationReviewManifestPath), implementationReviewSnapshots: implementationFiles.map((file) => file.snapshotPath), pdfHashConfirmation: relative(pdfHashConfirmationPath), promotionDecision: relative(promotionDecisionPath), independentReviewPrompt: relative(codeReviewPromptPath), priorIndependentReviewPrompt: relative(promptPath) },
+    promotionReadiness: { independentReviewRequired: false, automatedPromotion: false, currentStatus: 'promoted_after_independent_review', promotionStatus: 'promoted', blockersClosed: true, learnerFacingAllowed: false, appReadyAllowed: false, ragReadyAllowed: false, copilotExportEligible: false, decisionOptions: ['APPROVE FOR CANONICAL PROMOTION', 'APPROVE WITH FIXES', 'DO NOT PROMOTE'] },
   }
   await writeJson(reviewPackagePath, reviewPackage)
   await writeMarkdown(reviewPackagePath, [
     '# VM-01 canonical definitions review package', '',
-    '- Status: **REVIEW READY — NOT PROMOTED**',
+    '- Status: **CANONICAL PROMOTED**',
+    '- Final independent disposition: **APPROVE FOR CANONICAL PROMOTION**',
+    `- Promotion decision: \`${relative(promotionDecisionPath)}\``,
     `- Authority: ${definitionIndex.source.sourceReference}`,
     `- Source SHA-256: \`${VM01_SOURCE_SHA256}\``,
     '- Chapter pages: 25-39; definition-bearing pages: 25-37; pages 38-39 contain no additional definitions',
@@ -462,11 +443,11 @@ const main = async () => {
     '| Term | Pages | Explicit aliases | Complexity flags | Explicit references |',
     '| --- | --- | --- | --- | --- |',
     buildMarkdownTable(reviewPackage.representativeExamples.map((entry) => [entry.exactDefinedTerm, `${entry.pages[0]}-${entry.pages[1]}`, entry.aliases.join(', ') || 'none', entry.complexStructureReasons.join(', ') || 'none', entry.explicitReferences.join(', ') || 'none'])), '',
-    '## Review focus', '',
-    '- Verify `top3Hit` and aggregate top-three metrics are derived strictly from each case\'s displayed `actualTop3` array.',
-    '- Verify `vm01-plain-language-tail-measure` includes `vm01-definition-016-conditional-tail-expectation` in `actualTop3` and that its support decision cites that same top-three evidence window.',
-    '- Verify undefined, ambiguous, and unavailable-version requests still abstain and current 2026 authority remains preferred.',
-    '- Verify the previously accepted source-explicit term boundary and authoritative source evidence remain unchanged.', '',
+    '## Promotion boundary', '',
+    '- Promotion applies only to the 98 reviewed current 2026 VM-01 definition chunks and their canonical lookup metadata.',
+    '- The 29 relationship candidates remain pending, review-only, not promoted, and not promotion-eligible.',
+    '- Learner, application, RAG, vector, and Copilot export remain blocked pending separate decisions.',
+    '- Historical review prompts and implementation snapshots remain review evidence, not promoted source evidence.', '',
     'This review package is generated review metadata, not authoritative regulatory evidence.',
   ].join('\n'))
 

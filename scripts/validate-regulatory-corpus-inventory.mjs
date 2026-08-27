@@ -27,17 +27,17 @@ const main = async () => {
     if (!inventory.corpusTargets.some((target) => target.priority === priority)) fail(`Inventory is missing ${priority} targets.`)
   }
   if (inventory.summary.canonicalSourcePackages < 20 || inventory.summary.canonicalChunks < 247) fail('Inventory snapshot does not include the expanded VM-20 canonical coverage packages; regenerate intentionally.')
-  if (inventory.summary.promotedCanonicalPackages !== 6 || inventory.summary.promotedCanonicalChunks !== 149) fail('Inventory does not reflect the scope-specific VM-20 prose promotion.')
-  if (inventory.summary.vm01Definitions !== 98 || inventory.summary.vm01RetrievalUnits !== 98 || inventory.summary.vm01PromotionStatus !== 'not_promoted' || inventory.summary.vm01RelationshipCandidates !== 29) fail('Inventory does not reflect the VM-01 canonical review-candidate scope.')
+  if (inventory.summary.promotedCanonicalPackages !== 7 || inventory.summary.promotedCanonicalChunks !== 247) fail('Inventory does not reflect the scope-specific VM-01 definitions and VM-20 prose promotions.')
+  if (inventory.summary.vm01Definitions !== 98 || inventory.summary.vm01RetrievalUnits !== 98 || inventory.summary.vm01PromotionStatus !== 'promoted' || inventory.summary.vm01RelationshipCandidates !== 29) fail('Inventory does not reflect the promoted VM-01 definition scope and separately governed relationships.')
   const vm01Target = inventory.corpusTargets.find((target) => target.targetId === 'vm-01')
-  if (vm01Target?.assessment !== 'canonical_review_candidate' || !vm01Target.evidenceSourceIds.includes('vm01-definitions')) fail('VM-01 target does not record its canonical review-candidate package.')
+  if (vm01Target?.assessment !== 'canonical_complete' || !vm01Target.evidenceSourceIds.includes('vm01-definitions')) fail('VM-01 target does not record its promoted canonical package.')
   const vm20Target = inventory.corpusTargets.find((target) => target.targetId === 'vm-20')
   if (vm20Target?.assessment !== 'canonical_promoted_prose_and_tables') fail('VM-20 target does not record the separately promoted prose and structured-table scopes.')
   const tableTarget = inventory.corpusTargets.find((target) => target.targetId === 'current-regulatory-tables')
   if (tableTarget?.assessment !== 'canonical_promoted_partial_vm20_appendix2' || tableTarget.evidenceSourceIds.length !== 7) fail('Current regulatory-table target does not reflect the promoted available VM-20 Appendix 2 scope.')
   if (inventory.summary.structuredTableLogicalTables !== 7 || inventory.summary.structuredTableVersions !== 29 || inventory.summary.structuredTableRows !== 891 || inventory.summary.structuredTableValues !== 7022 || inventory.summary.structuredTablePromotionStatus !== 'promoted' || inventory.summary.promotedStructuredTableLogicalTables !== 7 || inventory.summary.structuredTablePromotionDecisionPath !== 'data/manual-input/promotion-decisions/vm20-appendix2-structured-table-promotion.json') fail('Structured-table promotion inventory summary is inconsistent.')
   const vm20ManualRecord = inventory.sources.find((source) => source.filename === 'pbr_data_valuation_manual_2026.pdf')
-  if (!vm20ManualRecord?.review?.promotionRecordPaths?.includes('data/manual-input/promotion-decisions/vm20-2026-prose-promotion.json') || vm20ManualRecord.review.copilotExportEligible !== false) fail('VM-20 inventory promotion record or export boundary is missing.')
+  if (!vm20ManualRecord?.review?.promotionRecordPaths?.includes('data/manual-input/promotion-decisions/vm20-2026-prose-promotion.json') || !vm20ManualRecord.review.promotionRecordPaths.includes('data/manual-input/promotion-decisions/vm01-2026-definitions-promotion.json') || vm20ManualRecord.review.copilotExportEligible !== false) fail('Valuation Manual inventory promotion records or export boundary are missing.')
   if (inventory.summary.candidateRelationships !== 52 || inventory.summary.promotedRelationships !== 0) fail('Relationship governance counts are inconsistent with the review-only Reg-213 and VM-01 registries.')
   for (const file of ['master-regulatory-corpus-inventory.md', 'regulatory-gap-assessment.md', 'canonicalization-backlog.md', 'corpus-completeness-report.md']) {
     try { await fs.access(path.join(path.dirname(inventoryPath), file)) } catch { fail(`Missing corpus report: ${file}.`) }

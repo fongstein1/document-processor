@@ -691,8 +691,8 @@
         "recommendedChunkingStrategy": "definition_aware_one_entry_per_unit",
         "confidence": "high",
         "unresolvedQuestions": [
-          "Independent review is required before promotion.",
-          "Publication and effective dates are not asserted beyond the established 2026 edition identity."
+          "Publication and effective dates are not asserted beyond the established 2026 edition identity.",
+          "Relationship candidates require a separate human review and promotion decision."
         ],
         "notes": "Definition source text remains exact and separate from generated lookup metadata."
       },

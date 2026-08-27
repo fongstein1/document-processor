@@ -37,13 +37,14 @@
     "generatedMetadataIsNotFormalDefinitionEvidence": true
   },
   "governance": {
-    "reviewOnly": true,
-    "promotionStatus": "not_promoted",
-    "promotionEligible": false,
+    "reviewOnly": false,
+    "promotionStatus": "promoted",
+    "promotionEligible": true,
     "learnerFacingAllowed": false,
     "appReadyAllowed": false,
     "ragReadyAllowed": false,
-    "copilotExportEligible": false
+    "copilotExportEligible": false,
+    "promotionDecisionPath": "data/manual-input/promotion-decisions/vm01-2026-definitions-promotion.json"
   },
   "definitions": [
     {
@@ -80,8 +81,8 @@
       ],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-002-accumulated-deficiency",
@@ -115,8 +116,8 @@
       "explicitReferences": [],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-003-actuarial-standards-board",
@@ -157,8 +158,8 @@
       "explicitReferences": [],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-004-annual-statement",
@@ -192,8 +193,8 @@
       "explicitReferences": [],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-005-anticipated-experience-assumption",
@@ -232,8 +233,8 @@
       ],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-006-appointed-actuary",
@@ -270,8 +271,8 @@
       "explicitReferences": [],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-007-asset-adequacy-analysis",
@@ -305,8 +306,8 @@
       "explicitReferences": [],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-008-asset-associated-derivative",
@@ -344,8 +345,8 @@
       "explicitReferences": [],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-009-cash-flow",
@@ -379,8 +380,8 @@
       "explicitReferences": [],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-010-cash-flow-model",
@@ -414,8 +415,8 @@
       "explicitReferences": [],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-011-cash-surrender-value",
@@ -449,8 +450,8 @@
       "explicitReferences": [],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-012-claim-reserve",
@@ -488,8 +489,8 @@
       ],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-013-clearly-defined-hedging-strategy",
@@ -536,8 +537,8 @@
       ],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-014-commissioner",
@@ -573,8 +574,8 @@
       "explicitReferences": [],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-015-company",
@@ -610,8 +611,8 @@
       ],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-016-conditional-tail-expectation",
@@ -652,8 +653,8 @@
       "explicitReferences": [],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-017-contract-reserve",
@@ -687,8 +688,8 @@
       "explicitReferences": [],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-018-deferred-income-annuity",
@@ -729,8 +730,8 @@
       "explicitReferences": [],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-019-deposit-type-contract",
@@ -772,8 +773,8 @@
       ],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-020-derivative-instrument",
@@ -811,8 +812,8 @@
       ],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-021-derivative-program",
@@ -846,8 +847,8 @@
       "explicitReferences": [],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-022-deterministic-reserve",
@@ -888,8 +889,8 @@
       "explicitReferences": [],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-023-discount-rates",
@@ -923,8 +924,8 @@
       "explicitReferences": [],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-024-domiciliary-commissioner",
@@ -958,8 +959,8 @@
       "explicitReferences": [],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-025-elimination-period",
@@ -993,8 +994,8 @@
       "explicitReferences": [],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-026-equity-like-instruments",
@@ -1035,8 +1036,8 @@
       "explicitReferences": [],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-027-fraternal-benefits",
@@ -1070,8 +1071,8 @@
       "explicitReferences": [],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-028-funding-agreements",
@@ -1105,8 +1106,8 @@
       "explicitReferences": [],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-029-future-hedging-strategy",
@@ -1146,8 +1147,8 @@
       ],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-030-guaranteed-investment-contract",
@@ -1188,8 +1189,8 @@
       "explicitReferences": [],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-031-guaranteed-issue-gi-life-insurance-policy",
@@ -1233,8 +1234,8 @@
       "explicitReferences": [],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-032-guaranteed-minimum-accumulation-benefit",
@@ -1275,8 +1276,8 @@
       "explicitReferences": [],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-033-guaranteed-minimum-death-benefit",
@@ -1319,8 +1320,8 @@
       "explicitReferences": [],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-034-guaranteed-minimum-income-benefit",
@@ -1364,8 +1365,8 @@
       "explicitReferences": [],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-035-guaranteed-minimum-withdrawal-benefit",
@@ -1409,8 +1410,8 @@
       "explicitReferences": [],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-036-guaranteed-payout-annuity-floor",
@@ -1451,8 +1452,8 @@
       "explicitReferences": [],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-037-hedging-transaction",
@@ -1488,8 +1489,8 @@
       "explicitReferences": [],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-038-index-credit",
@@ -1523,8 +1524,8 @@
       "explicitReferences": [],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-039-index-credit-hedge-margin",
@@ -1558,8 +1559,8 @@
       "explicitReferences": [],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-040-index-crediting-strategies",
@@ -1593,8 +1594,8 @@
       "explicitReferences": [],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-041-index-linked-variable-annuity",
@@ -1639,8 +1640,8 @@
       "explicitReferences": [],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-042-indexed-universal-life-iul-insurance-policy",
@@ -1681,8 +1682,8 @@
       "explicitReferences": [],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-043-industrial-life-insurance",
@@ -1720,8 +1721,8 @@
       "explicitReferences": [],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-044-industry-basic-table",
@@ -1755,8 +1756,8 @@
       "explicitReferences": [],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-045-insurance-department",
@@ -1790,8 +1791,8 @@
       "explicitReferences": [],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-046-life-insurance",
@@ -1827,8 +1828,8 @@
       ],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-047-longevity-reinsurance",
@@ -1865,8 +1866,8 @@
       "explicitReferences": [],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-048-margin",
@@ -1900,8 +1901,8 @@
       "explicitReferences": [],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-049-modeled-company-investment-strategy",
@@ -1937,8 +1938,8 @@
       "explicitReferences": [],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-050-modeled-reserve",
@@ -1974,8 +1975,8 @@
       ],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-051-model-segment",
@@ -2009,8 +2010,8 @@
       "explicitReferences": [],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-052-mortality-segment",
@@ -2044,8 +2045,8 @@
       "explicitReferences": [],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-053-naic",
@@ -2086,8 +2087,8 @@
       ],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-054-net-asset-earned-rates",
@@ -2128,8 +2129,8 @@
       "explicitReferences": [],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-055-net-premium-refund-liability",
@@ -2163,8 +2164,8 @@
       "explicitReferences": [],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-056-net-premium-reserve",
@@ -2207,8 +2208,8 @@
       ],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-057-non-guaranteed-elements",
@@ -2253,8 +2254,8 @@
       "explicitReferences": [],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-058-non-material-secondary-guarantee",
@@ -2297,8 +2298,8 @@
       ],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-059-ordinary-life-insurance",
@@ -2338,8 +2339,8 @@
       "explicitReferences": [],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-060-path",
@@ -2373,8 +2374,8 @@
       "explicitReferences": [],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-061-pension-risk-transfer",
@@ -2415,8 +2416,8 @@
       "explicitReferences": [],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-062-policyholder-behavior",
@@ -2456,8 +2457,8 @@
       ],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-063-policyholder-efficiency",
@@ -2493,8 +2494,8 @@
       "explicitReferences": [],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-064-preneed",
@@ -2528,8 +2529,8 @@
       "explicitReferences": [],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-065-preneed-annuity",
@@ -2565,8 +2566,8 @@
       "explicitReferences": [],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-066-pretax-interest-maintenance-reserve",
@@ -2607,8 +2608,8 @@
       "explicitReferences": [],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-067-principle-based-reserve-actuarial-report",
@@ -2650,8 +2651,8 @@
       ],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-068-principle-based-valuation",
@@ -2691,8 +2692,8 @@
       ],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-069-projection-interval",
@@ -2726,8 +2727,8 @@
       "explicitReferences": [],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-070-projection-period",
@@ -2761,8 +2762,8 @@
       "explicitReferences": [],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-071-projection-start-date",
@@ -2796,8 +2797,8 @@
       "explicitReferences": [],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-072-projection-year",
@@ -2831,8 +2832,8 @@
       "explicitReferences": [],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-073-prudent-estimate-assumption",
@@ -2866,8 +2867,8 @@
       "explicitReferences": [],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-074-qualified-actuary",
@@ -2904,8 +2905,8 @@
       ],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-075-reinsurance-cash-flows",
@@ -2939,8 +2940,8 @@
       "explicitReferences": [],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-076-revenue-sharing",
@@ -2974,8 +2975,8 @@
       "explicitReferences": [],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-077-risk-factor",
@@ -3009,8 +3010,8 @@
       "explicitReferences": [],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-078-scenario",
@@ -3044,8 +3045,8 @@
       "explicitReferences": [],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-079-scenario-greatest-present-value",
@@ -3081,8 +3082,8 @@
       "explicitReferences": [],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-080-scenario-reserve",
@@ -3116,8 +3117,8 @@
       "explicitReferences": [],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-081-secondary-guarantee",
@@ -3156,8 +3157,8 @@
       ],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-082-shadow-account",
@@ -3191,8 +3192,8 @@
       "explicitReferences": [],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-083-single-premium-immediate-annuity",
@@ -3233,8 +3234,8 @@
       "explicitReferences": [],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-084-starting-asset-amount",
@@ -3268,8 +3269,8 @@
       "explicitReferences": [],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-085-stable-value-contracts",
@@ -3303,8 +3304,8 @@
       "explicitReferences": [],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-086-stochastic-exclusion-test",
@@ -3345,8 +3346,8 @@
       "explicitReferences": [],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-087-stochastic-reserve",
@@ -3387,8 +3388,8 @@
       "explicitReferences": [],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-088-structured-settlement-contracts",
@@ -3422,8 +3423,8 @@
       "explicitReferences": [],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-089-synthetic-guaranteed-investment-contract",
@@ -3464,8 +3465,8 @@
       "explicitReferences": [],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-090-tail-risk",
@@ -3501,8 +3502,8 @@
       ],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-091-term-certain-payout-annuity",
@@ -3536,8 +3537,8 @@
       "explicitReferences": [],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-092-unearned-premium-reserve",
@@ -3571,8 +3572,8 @@
       "explicitReferences": [],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-093-universal-life-insurance-policy",
@@ -3606,8 +3607,8 @@
       "explicitReferences": [],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-094-valuation-date",
@@ -3643,8 +3644,8 @@
       ],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-095-valuation-manual",
@@ -3680,8 +3681,8 @@
       ],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-096-variable-annuity-guaranteed-living-benefit",
@@ -3724,8 +3725,8 @@
       "explicitReferences": [],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-097-variable-life-insurance-policy",
@@ -3759,8 +3760,8 @@
       "explicitReferences": [],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     },
     {
       "definitionId": "vm01-definition-098-vm-20-reserving-category",
@@ -3806,8 +3807,8 @@
       ],
       "sourceFidelity": "exact_extracted_source_text",
       "currentness": "current_2026_edition",
-      "reviewOnly": true,
-      "promotionStatus": "not_promoted"
+      "reviewOnly": false,
+      "promotionStatus": "promoted"
     }
   ]
 }

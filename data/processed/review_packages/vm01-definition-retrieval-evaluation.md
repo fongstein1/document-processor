@@ -5,7 +5,7 @@
 - Unsupported correctly abstained: 3/3
 - Current VM-01 authority ranked first: 18/18
 
-- Case-level JSON SHA-256: `97c554bd9b2d73c69620783ae05e1ebc4ed9af3021053f6d1957f1db8ddccafd`
+- Case-level JSON SHA-256: `ab46494dbda945999fc0dc7aa55ff90f2d456a816bd6e0c9041f35e7969c566a`
 
 | Query | Category | Intended support | Actual support | Top-1 | Top-3 | Review note |
 | --- | --- | --- | --- | --- | --- | --- |

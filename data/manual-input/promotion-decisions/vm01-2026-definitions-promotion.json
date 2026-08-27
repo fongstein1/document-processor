@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "1.0",
+  "promotionDecisionId": "vm01-2026-definitions-promotion-2026-08-27",
+  "decisionDate": "2026-08-27",
+  "decision": "approved_for_canonical_promotion",
+  "scope": {
+    "scopeId": "vm01-2026-current-definitions",
+    "sourceEditionId": "NAIC-VALUATION-MANUAL-2026",
+    "sourceVersionIdentifier": "2026 NAIC Valuation Manual",
+    "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+    "sourceIds": [
+      "vm01-definitions"
+    ],
+    "expectedChunkCount": 98,
+    "includedInformationTypes": [
+      "formal_definitions",
+      "source_explicit_aliases_and_acronyms",
+      "definition_conditions_and_exceptions",
+      "definition_lookup_metadata",
+      "retrieval_only_normalized_variants"
+    ]
+  },
+  "reviewEvidence": {
+    "reviewPackagePath": "data/processed/review_packages/vm01-canonical-definitions-review-package.json",
+    "sourceQaPath": "data/processed/review_packages/vm01-definitions-source-qa.json",
+    "retrievalQaPath": "data/processed/review_packages/vm01-definition-retrieval-evaluation.json",
+    "blockersClosed": true,
+    "independentReviewRecorded": true,
+    "notes": "The final independent review approved canonical promotion after the full source review, source-explicit definedTerms correction, case-level retrieval handoff, strict top-three CTE correction, and code-level verification of the production support window, generic ranking, and regression coverage. Implementation evidence is retained at data/processed/review_packages/vm01-retrieval-implementation-review/manifest.json."
+  },
+  "exclusions": [
+    "The 29 VM-01 explicit-reference relationship candidates, which remain pending, review-only, not promoted, and not promotion-eligible",
+    "Historical, proposed, or section-local definitions outside the reviewed current 2026 VM-01 chapter package",
+    "Any source or chunk outside vm01-definitions",
+    "Learner-facing, application, RAG, vector, and Copilot export approval"
+  ],
+  "downstreamEligibility": {
+    "learnerFacingAllowed": false,
+    "appReadyAllowed": false,
+    "ragReadyAllowed": false,
+    "copilotExportEligible": false,
+    "reason": "Canonical source promotion and downstream publication, retrieval-production, or export approval are separate governance decisions."
+  },
+  "reviewerRecord": {
+    "identityRecorded": false,
+    "identity": null,
+    "note": "The supplied final independent-review disposition records approval but does not provide a reviewer identity; no identity is inferred."
+  },
+  "preservation": {
+    "sourceTextChanged": false,
+    "chunkContentChanged": false,
+    "reviewHistoryPreserved": true,
+    "note": "Promotion changes governance metadata only. The 98 source excerpts, definition text, source-text hashes, page citations, IDs, source-explicit aliases, and retrieval-only normalization boundary remain unchanged."
+  }
+}

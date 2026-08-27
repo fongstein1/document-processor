@@ -12,9 +12,9 @@ This is the planning inventory for the US life and annuity valuation-regulation 
 - Self-reviews: 94
 - Canonical source packages: 22
 - Canonical chunks: 457
-- Promoted canonical packages / chunks: 6 / 149
+- Promoted canonical packages / chunks: 7 / 247
 - Structured tables / versions / values: 7 / 29 / 7022 (promoted)
-- VM-01 definitions / retrieval units: 98 / 98 (not_promoted)
+- VM-01 definitions / retrieval units: 98 / 98 (promoted)
 - Awaiting canonicalization: 96
 - Awaiting human review: 1
 - Review-artifact-only sources: 34
@@ -25,7 +25,7 @@ This is the planning inventory for the US life and annuity valuation-regulation 
 | Priority | Target | Assessment | Evidence | Next action |
 | --- | --- | --- | --- | --- |
 | P0 | Complete current 2026 Valuation Manual representation | canonical_partial | ag55-appendix-new-york-7-scenarios, ag55-attribution-aggregation, ag55-cash-flow-testing-details, ag55-definitions-core-terms, ag55-opening-effective-date | Canonicalize the complete manual by chapter with source-bound hierarchy and a separate table profile. |
-| P0 | VM-01 Definitions | canonical_review_candidate | supporting-vm01-definitions, supporting-vm02-nonforfeiture, supporting-vm25-health-reserves, supporting-vm26-credit-disability, supporting-vm30-detail | Run only the final code-level review of the hashed implementation snapshots, then record a separate promotion decision only if approved. |
+| P0 | VM-01 Definitions | canonical_complete | supporting-vm01-definitions, supporting-vm02-nonforfeiture, supporting-vm25-health-reserves, supporting-vm26-credit-disability, supporting-vm30-detail | Retain the approved definition scope and track the 29 relationship candidates as a separate review-only backlog item. |
 | P0 | VM-20 Requirements for Principle-Based Reserves for Life Products | canonical_promoted_prose_and_tables | supporting-vm01-definitions, supporting-vm02-nonforfeiture, supporting-vm25-health-reserves, supporting-vm26-credit-disability, supporting-vm30-detail | Retain the approved prose/table scopes and track unavailable Tables B, C, D, E1, and E2 without inference. |
 | P0 | VM-21 Requirements for Principle-Based Reserves for Variable Annuities | canonical_partial | ag52-early-adoption-text, supporting-vm01-definitions, supporting-vm02-nonforfeiture, supporting-vm25-health-reserves, supporting-vm26-credit-disability | Canonicalize the reviewed VM-21 wave with parent-child structure and table separation. |
 | P0 | VM-22 Requirements for Principle-Based Reserves for Non-Variable Annuities | reviewed_not_canonical | supporting-vm01-definitions, supporting-vm02-nonforfeiture, supporting-vm25-health-reserves, supporting-vm26-credit-disability, supporting-vm30-detail | Canonicalize reviewed VM-22 sections after table and hedging boundaries are confirmed. |
@@ -166,7 +166,7 @@ This is the planning inventory for the US life and annuity valuation-regulation 
 ## Governance notes
 
 - The six VM-20 current-manual prose packages and the reviewed available Appendix 2 structured-table scope are canonically promoted under separate decision records.
-- VM-01 has 98 canonical review-candidate definition units. Its retrieval behavior passed narrow review and its exact implementation code is now packaged for the remaining code-level check; it remains review-only and not promoted.
+- VM-01 has 98 canonically promoted current-definition units under its own decision; its 29 relationship candidates remain pending, review-only, and unpromoted.
 - No inventory record is Copilot-export eligible; canonical promotion and downstream export are separate decisions.
 - Candidate relationship edges remain documentary, source-bound, pending human review, and not promoted.
 - Review summaries and self-review commentary are not verbatim source text.
