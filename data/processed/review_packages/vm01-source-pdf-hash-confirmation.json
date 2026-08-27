@@ -7,6 +7,9 @@
   "expectedSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
   "verifiedSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
   "match": true,
+  "byteLength": 4476496,
+  "verificationMethod": "SHA-256 over local authoritative PDF bytes",
+  "sourceModified": false,
   "pageCount": 457,
   "chapterPageRange": {
     "start": 25,

@@ -880,3 +880,13 @@ terms, conditions, exceptions, cross-references, and cross-document terminology.
 Undefined, ambiguous, and unavailable-version formal-definition requests abstain
 through the generic evidence-sufficiency gate. VM-01 remains review-only and
 not promoted; learner, app, RAG, vector, and Copilot export remain blocked.
+
+Independent review returned `APPROVE WITH FIXES` and accepted the full 98-
+definition source audit. The two narrow blockers are now corrected: canonical
+`definedTerms` contains only 98 formal terms plus 27 source-explicit aliases,
+while 17 normalized variants remain in non-authoritative lookup metadata; and
+the focused retrieval JSON now exposes 21 case-level results. Retrieval is
+17/18 supported top-1, 18/18 supported top-3, 3/3 safe unsupported abstentions,
+and 18/18 current-authority top-1. Authoritative source excerpts, definition-
+index source text, pages, and hashes remain unchanged. VM-01 is ready for the
+narrow final promotion review but is not promoted.

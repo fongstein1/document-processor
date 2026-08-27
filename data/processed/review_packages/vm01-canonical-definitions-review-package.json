@@ -35,7 +35,10 @@
     "complexDefinitionCount": 24,
     "definitionsWithCrossReferences": 22,
     "explicitAliasCount": 27,
-    "explicitAcronymExpansionCount": 25
+    "explicitAcronymExpansionCount": 25,
+    "sourceExplicitDefinedTermEntries": 125,
+    "generatedDefinedTermEntries": 0,
+    "retrievalOnlyNormalizedVariants": 17
   },
   "sourceFidelity": {
     "mode": "exact_extracted_source_text",
@@ -429,17 +432,58 @@
   ],
   "retrievalEvaluation": {
     "path": "data/processed/review_packages/vm01-definition-retrieval-evaluation.json",
-    "queryCount": 16,
-    "supportedTop1": 12,
-    "supportedQueryCount": 13,
+    "sha256": "e77e3d78199323de9e11a68638c3eda6f5e5073cead0a73b6140461a00c50f43",
+    "caseLevelResultsIncluded": true,
+    "queryCount": 21,
+    "supportedTop1": 17,
+    "supportedTop3": 18,
+    "supportedQueryCount": 18,
     "unsupportedCorrect": 3,
     "unsupportedQueryCount": 3,
-    "currentAuthorityTop1": 13
+    "currentAuthorityTop1": 18
   },
+  "independentReviewHistory": [
+    {
+      "disposition": "APPROVE WITH FIXES",
+      "scope": "full VM-01 canonical definitions review",
+      "status": "completed",
+      "acceptedAreas": [
+        "98 definition boundaries and IDs",
+        "source evidence and hashes",
+        "cross-page stitching and guidance notes",
+        "27 source-explicit aliases",
+        "11 spacing corrections",
+        "29 conservative relationship candidates"
+      ],
+      "remainingBlockers": [
+        "definedTerms source-explicit boundary",
+        "case-level focused retrieval artifact handoff"
+      ]
+    }
+  ],
+  "blockerCorrections": [
+    {
+      "blockerId": "defined_terms_source_explicit",
+      "status": "resolved_pending_narrow_review",
+      "result": "125 source-explicit entries across 98 chunks; zero generated entries",
+      "retrievalVariantsPreservedIn": [
+        "keywords",
+        "normalizedSearchText",
+        "definition index normalizedLookupTerm"
+      ]
+    },
+    {
+      "blockerId": "focused_retrieval_artifact_handoff",
+      "status": "resolved_pending_narrow_review",
+      "result": "case-level evaluation JSON retained with intended support, expected evidence, actual top-1/top-3, authority, support decision, ambiguity result, and failure reason",
+      "artifactPath": "data/processed/review_packages/vm01-definition-retrieval-evaluation.json",
+      "artifactSha256": "e77e3d78199323de9e11a68638c3eda6f5e5073cead0a73b6140461a00c50f43"
+    }
+  ],
   "unresolvedSourceQuestions": [
     "Pages 38 and 39 contain no additional definitions; page 39 is explicitly marked intentionally blank.",
     "Eleven term labels required transparent spacing-only text-layer cleanup in lookup metadata; the exact retained source excerpts remain unchanged.",
-    "Independent source review should confirm all 98 term openings, attached guidance notes, and cross-page boundaries before promotion."
+    "The independent source audit passed all 98 term openings, attached guidance notes, and cross-page boundaries; the remaining review is limited to the corrected metadata boundary and inspectable retrieval artifact."
   ],
   "artifacts": {
     "canonicalSourcePackage": "data/processed/source_indexes/sources/vm01-definitions.json",
@@ -453,9 +497,9 @@
   "promotionReadiness": {
     "independentReviewRequired": true,
     "automatedPromotion": false,
-    "currentStatus": "review_only",
+    "currentStatus": "narrow_rereview_ready",
     "promotionStatus": "not_promoted",
-    "blockersClosed": false,
+    "blockersClosed": true,
     "learnerFacingAllowed": false,
     "appReadyAllowed": false,
     "ragReadyAllowed": false,

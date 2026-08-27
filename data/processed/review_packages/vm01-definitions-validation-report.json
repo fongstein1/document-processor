@@ -4,11 +4,29 @@
   "status": "pass",
   "sourceIdentity": {
     "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+    "locallyVerifiedSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+    "hashConfirmationPath": "data/processed/review_packages/vm01-source-pdf-hash-confirmation.json",
     "sourceEditionId": "NAIC-VALUATION-MANUAL-2026",
     "pageRange": {
       "start": 25,
       "end": 39
     }
+  },
+  "authoritativeEvidenceChangeCounts": {
+    "sourceTextExcerpt": 0,
+    "formalDefinitionSourceText": 0,
+    "sourceTextSha256": 0,
+    "sourcePages": 0,
+    "aggregateSourceEvidenceSha256": "04fecfc622ee792dca2f994f3d7eb6ebf510bd533bd7be9798b4604a70b8ef98"
+  },
+  "definedTermsBoundary": {
+    "beforeEntryCount": 142,
+    "afterEntryCount": 125,
+    "generatedEntriesRemoved": 17,
+    "formalTermEntries": 98,
+    "sourceExplicitAliasEntries": 27,
+    "generatedEntriesRemaining": 0,
+    "retrievalOnlyNormalizedVariantsRetained": 17
   },
   "checks": {
     "definitions": 98,
@@ -19,10 +37,14 @@
     "validCitations": 98,
     "termExtractionCorrections": 11,
     "relationshipCandidates": 29,
-    "focusedRetrievalQueries": 16,
-    "focusedSupportedTop1": 12,
-    "focusedSupportedTop3": 13,
+    "focusedRetrievalQueries": 21,
+    "focusedSupportedQueries": 18,
+    "focusedSupportedTop1": 17,
+    "focusedSupportedTop3": 18,
     "unsupportedQueriesSafelyAbstained": 3,
+    "ambiguousQueriesSafelyAbstained": 1,
+    "currentAuthorityTop1": 18,
+    "caseLevelRetrievalArtifactSha256": "e77e3d78199323de9e11a68638c3eda6f5e5073cead0a73b6140461a00c50f43",
     "globalVm01RegressionQueries": 6,
     "globalSupportedTop1": 4,
     "globalUnsupportedAbstained": 2

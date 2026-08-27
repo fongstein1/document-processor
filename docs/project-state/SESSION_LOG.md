@@ -877,3 +877,11 @@
   reference candidates, source QA, focused retrieval/evidence-sufficiency
   evaluation, deterministic validation, and a dedicated independent-review
   package. VM-01 remains review-only, not promoted, and downstream-ineligible.
+- Applied the VM-01 independent review's two targeted blocker corrections
+  without re-extraction: removed 17 generated normalization entries from
+  canonical `definedTerms` while retaining them in existing lookup metadata,
+  added deterministic source-explicit boundary checks, expanded the focused
+  battery to 21 inspectable cases, and generated a byte-level local PDF hash
+  confirmation. The 98 source excerpts, definition-index formal source text,
+  pages, hashes, 27 aliases, and 29 relationship candidates remain unchanged;
+  VM-01 stays review-only pending narrow final review.

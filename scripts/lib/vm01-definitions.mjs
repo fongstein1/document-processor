@@ -5,6 +5,7 @@ import path from 'node:path'
 export const VM01_SOURCE_ID = 'vm01-definitions'
 export const VM01_BATCH_SOURCE_ID = 'supporting-vm01-definitions'
 export const VM01_SOURCE_SHA256 = '496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9'
+export const VM01_SOURCE_EVIDENCE_AGGREGATE_SHA256 = '04fecfc622ee792dca2f994f3d7eb6ebf510bd533bd7be9798b4604a70b8ef98'
 export const VM01_EXPECTED_DEFINITION_COUNT = 98
 export const VM01_PAGE_RANGE = { start: 25, end: 39 }
 

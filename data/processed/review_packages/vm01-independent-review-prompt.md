@@ -21,13 +21,13 @@ Prior independent review disposition was: **APPROVE WITH FIXES** (all 98 definit
 
 1. **Keep definedTerms source-explicit (Blocker 1 Closed)**:
    - Verify that `chunk.definedTerms` in `vm01-definitions.json` contains strictly the exact formal VM-01 defined term and source-explicit aliases (125 total entries across 98 chunks: 98 formal terms + 27 explicit aliases).
-   - Verify that generated normalized variants (such as `asset associated derivative`, `cash flow model`, `guaranteed investment contract`, `guaranteed issue life insurance policy`, `indexed universal life insurance policy`) are removed from `definedTerms` and reside only in non-authoritative lookup metadata (`keywords` and `vm01-definition-index.json`).
+   - Verify that generated normalized variants (such as `asset associated derivative`, `cash flow model`, `guaranteed investment contract`, `guaranteed issue life insurance policy`, `indexed universal life insurance policy`) are removed from `definedTerms` and reside only in non-authoritative lookup metadata (`keywords`, `normalizedSearchText`, and `vm01-definition-index.json`).
    - Verify 0 authoritative source-text changes (`sourceTextExcerpt`, `formalDefinitionSourceText`, hashes, and pages remain identical).
 2. **Focused retrieval evaluation JSON preserved and inspectable (Blocker 2 Closed)**:
    - Verify that the actual focused retrieval evaluation JSON is present and reviewable at `data/processed/review_packages/vm01-definition-retrieval-evaluation.json`.
-   - Inspect individual query cases: exact terms, acronyms, plain language, conditions/exceptions, incorporated terms, cross-references, cross-document terms, undefined terms, ambiguous terms, and version/authority.
+   - Inspect each case's query, intended support state, expected evidence, actual top-1 and top-3, source family, authority level, support decision, ambiguity result, and failure reason. Cover exact terms; DR, SR, NPR, GIC, IUL and other source-explicit acronyms; plain language; conditions/exceptions; a cross-page definition; incorporated terms; cross-references; cross-document terms; undefined terms; ambiguous terms; and version/authority.
    - Confirm that undefined-term queries (`deterministic exclusion test`, `reserve`, `proposed 2027 VM-01`) safely abstain without making false formal-definition claims.
-   - Confirm current authoritative 2026 VM-01 evidence is ranked first (13/13 supported queries).
+   - Confirm current authoritative 2026 VM-01 evidence is ranked first (18/18 supported queries).
 3. **Governance and Readiness**:
    - Verify all 98 definitions, 98 canonical IDs, 27 aliases, 11 text-layer spacing corrections, and 29 relationship candidates remain intact.
    - Verify governance remains review-only / not promoted pending final independent approval.

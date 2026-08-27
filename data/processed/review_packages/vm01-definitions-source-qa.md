@@ -6,6 +6,8 @@
 - Definitions with source evidence and valid citations: 98 / 98
 - Unique normalized terms: 98
 - Explicit aliases / acronym expansions: 27 / 25
+- Source-explicit / generated `definedTerms` entries: 125 / 0
+- Retrieval-only normalized variants: 17 (13 substantive, 4 case-only)
 - Transparent text-layer term-spacing corrections: 11
 - Representative PDF pages visually inspected: 25, 26, 27, 28, 29, 31, 32, 33, 34, 37
 

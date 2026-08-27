@@ -6,16 +6,21 @@
 - Chapter pages: 25-39; definition-bearing pages: 25-37; pages 38-39 contain no additional definitions
 - Definitions / retrieval units: 98 / 98
 - Exact retained source-text definitions: 98
+- Source-explicit / generated `definedTerms` entries: 125 / 0
+- Retrieval-only normalized variants retained outside `definedTerms`: 17
 - Complex definitions flagged: 24
 - Definitions with explicit cross-references: 22
 - Relationship candidates: 29 (review-only, pending)
 
 ## Retrieval
 
-- Focused queries: 16
-- Supported top-1: 12/13
+- Focused queries: 21
+- Supported top-1 / top-3: 17/18 / 18/18
 - Unsupported formal-definition queries abstained: 3/3
-- Current VM-01 authority ranked first: 13/13
+- Current VM-01 authority ranked first: 18/18
+
+- Case-level evaluation JSON: `data/processed/review_packages/vm01-definition-retrieval-evaluation.json`
+- Case-level evaluation SHA-256: `e77e3d78199323de9e11a68638c3eda6f5e5073cead0a73b6140461a00c50f43`
 
 ## Representative examples
 

@@ -31,9 +31,11 @@ As of 2026-08-26T00:00:00.000Z, the repository contains substantial regulatory e
 ## VM-01 terminology checkpoint
 
 - Current VM-01 definitions / retrieval units: 98 / 98.
-- VM-01 promotion status: not_promoted; independent review remains required.
+- VM-01 promotion status: not_promoted; narrow final review remains required after the two targeted blocker corrections.
 - VM-01 explicit-reference candidates: 29; all remain pending and not promoted.
 - Formal-definition requests for undefined or ambiguous terms abstain rather than substituting related evidence.
+- Canonical `definedTerms` now contains only 98 formal terms plus 27 source-explicit aliases; 17 generated lookup variants remain confined to non-authoritative retrieval metadata.
+- The focused case-level retrieval artifact contains 21 inspectable queries, including DR, SR, NPR, GIC, IUL, cross-page, ambiguous, undefined-term, and unavailable-version cases.
 
 ## Interpretation
 

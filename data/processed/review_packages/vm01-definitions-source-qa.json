@@ -31,6 +31,11 @@
     "uniqueNormalizedTerms": 98,
     "explicitAliasCount": 27,
     "explicitAcronymExpansionCount": 25,
+    "sourceExplicitDefinedTermEntries": 125,
+    "generatedDefinedTermEntries": 0,
+    "retrievalOnlyNormalizedVariants": 17,
+    "substantiveNormalizedVariants": 13,
+    "caseOnlyNormalizedVariants": 4,
     "termExtractionSpacingCorrections": 11,
     "definitionsWithComplexStructureFlags": 24,
     "definitionsWithExplicitCrossReferences": 22,
@@ -124,7 +129,7 @@
   "unresolvedSourceQuestions": [
     "Pages 38 and 39 contain no additional definitions; page 39 is explicitly marked intentionally blank.",
     "Eleven term labels required transparent spacing-only text-layer cleanup in lookup metadata; the exact retained source excerpts remain unchanged.",
-    "Independent source review should confirm all 98 term openings, attached guidance notes, and cross-page boundaries before promotion."
+    "The independent source audit passed all 98 term openings, attached guidance notes, and cross-page boundaries; the remaining review is limited to the corrected metadata boundary and inspectable retrieval artifact."
   ],
   "governance": {
     "reviewOnly": true,
