@@ -44,7 +44,7 @@
     "unsupportedQueriesSafelyAbstained": 3,
     "ambiguousQueriesSafelyAbstained": 1,
     "currentAuthorityTop1": 18,
-    "caseLevelRetrievalArtifactSha256": "e77e3d78199323de9e11a68638c3eda6f5e5073cead0a73b6140461a00c50f43",
+    "caseLevelRetrievalArtifactSha256": "97c554bd9b2d73c69620783ae05e1ebc4ed9af3021053f6d1957f1db8ddccafd",
     "globalVm01RegressionQueries": 6,
     "globalSupportedTop1": 4,
     "globalUnsupportedAbstained": 2

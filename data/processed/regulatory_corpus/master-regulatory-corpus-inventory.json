@@ -6585,7 +6585,7 @@
       "priority": "P0",
       "intendedStatus": "current",
       "assessment": "canonical_review_candidate",
-      "reason": "The current 2026 VM-01 terminology layer contains 98 exact-text definition units. Its two independent-review blockers are corrected without source-evidence changes; it remains review-only and not promoted.",
+      "reason": "The current 2026 VM-01 terminology layer contains 98 exact-text definition units. The final retrieval-metric and evidence-window correction is complete without source-evidence changes; it remains review-only and not promoted.",
       "evidenceSourceIds": [
         "supporting-vm01-definitions",
         "supporting-vm02-nonforfeiture",
@@ -6647,7 +6647,7 @@
         "vm31-reporting-crossref",
         "vm31-reporting-definition"
       ],
-      "nextAction": "Run the narrow final review of source-explicit definedTerms and the case-level retrieval artifact, then record a separate promotion decision only if approved."
+      "nextAction": "Run only the final narrow review of strict top-three retrieval and support-window consistency, then record a separate promotion decision only if approved."
     },
     {
       "targetId": "vm-20",

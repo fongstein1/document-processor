@@ -741,16 +741,6 @@
               "chunkId": "vm01-definition-055-net-premium-refund-liability",
               "score": 20.25,
               "tokenOverlap": 4
-            },
-            {
-              "chunkId": "vm20-practice-note-companion-vm20-pn-npr-overview-child-006",
-              "score": 19.249999999999993,
-              "tokenOverlap": 8
-            },
-            {
-              "chunkId": "vm20-practice-note-companion-vm20-pn-npr-overview-child-007",
-              "score": 19.249999999999993,
-              "tokenOverlap": 5
             }
           ]
         },
@@ -877,16 +867,6 @@
               "chunkId": "vm01-definition-011-cash-surrender-value",
               "score": 27,
               "tokenOverlap": 5
-            },
-            {
-              "chunkId": "chunk-ag01-net-premium-interpretation-001",
-              "score": 13.45,
-              "tokenOverlap": 3
-            },
-            {
-              "chunkId": "vm20-canonical-coverage-vm20-section7-model-structure",
-              "score": 11.1,
-              "tokenOverlap": 4
             }
           ]
         },
@@ -1018,16 +998,6 @@
               "chunkId": "vm20-practice-note-companion-vm20-pn-npr-overview-child-002",
               "score": 31.4,
               "tokenOverlap": 9
-            },
-            {
-              "chunkId": "vm20-practice-note-companion-vm20-pn-npr-overview-child-005",
-              "score": 31.4,
-              "tokenOverlap": 9
-            },
-            {
-              "chunkId": "vm20-practice-note-companion-vm20-pn-npr-overview-child-011",
-              "score": 31.4,
-              "tokenOverlap": 9
             }
           ]
         },
@@ -1154,16 +1124,6 @@
               "chunkId": "vm20-practice-note-companion-vm20-pn-dr-overview-child-005",
               "score": 40.65,
               "tokenOverlap": 6
-            },
-            {
-              "chunkId": "vm20-practice-note-companion-vm20-pn-npr-overview-child-003",
-              "score": 40.65,
-              "tokenOverlap": 9
-            },
-            {
-              "chunkId": "vm20-practice-note-companion-vm20-pn-npr-overview-child-011",
-              "score": 40.65,
-              "tokenOverlap": 7
             }
           ]
         },
@@ -1293,16 +1253,6 @@
               "chunkId": "vm20-canonical-coverage-vm20-npr-entry-formula-child-002",
               "score": 56.849999999999994,
               "tokenOverlap": 12
-            },
-            {
-              "chunkId": "chunk-vm20-assumptions-section-3c-004",
-              "score": 54.9,
-              "tokenOverlap": 9
-            },
-            {
-              "chunkId": "vm20-section3c-hierarchical-section-3-c-1-mortality-rates",
-              "score": 54.84999999999999,
-              "tokenOverlap": 14
             }
           ]
         },
@@ -1442,16 +1392,6 @@
               "chunkId": "vm20-section3c-hierarchical-section-3-c-2-interest-rates-child-001",
               "score": 49.44999999999999,
               "tokenOverlap": 14
-            },
-            {
-              "chunkId": "vm20-section3c-hierarchical-section-3-c-1-mortality-rates-child-002",
-              "score": 49.29999999999999,
-              "tokenOverlap": 15
-            },
-            {
-              "chunkId": "vm20-section3c-hierarchical-section-3-c-1-mortality-rates-child-003",
-              "score": 49.14999999999999,
-              "tokenOverlap": 13
             }
           ]
         },
@@ -1587,16 +1527,6 @@
               "chunkId": "vm20-practice-note-companion-vm20-pn-npr-overview-child-008",
               "score": 31.4,
               "tokenOverlap": 9
-            },
-            {
-              "chunkId": "vm20-practice-note-companion-vm20-pn-npr-overview-child-002",
-              "score": 31.25,
-              "tokenOverlap": 8
-            },
-            {
-              "chunkId": "vm20-practice-note-companion-vm20-pn-npr-overview-child-006",
-              "score": 31.25,
-              "tokenOverlap": 8
             }
           ]
         },
@@ -1737,16 +1667,6 @@
               "chunkId": "vm20-practice-note-companion-vm20-pn-dr-overview-child-005",
               "score": 40.65,
               "tokenOverlap": 7
-            },
-            {
-              "chunkId": "vm20-practice-note-companion-vm20-pn-dr-overview-child-006",
-              "score": 40.65,
-              "tokenOverlap": 8
-            },
-            {
-              "chunkId": "vm20-practice-note-companion-vm20-pn-dr-overview-child-002",
-              "score": 40.5,
-              "tokenOverlap": 9
             }
           ]
         },
@@ -1879,16 +1799,6 @@
               "chunkId": "vm20-practice-note-companion-vm20-pn-sr-overview-child-002",
               "score": 40.5,
               "tokenOverlap": 8
-            },
-            {
-              "chunkId": "vm20-practice-note-companion-vm20-pn-sr-overview-child-003",
-              "score": 40.5,
-              "tokenOverlap": 7
-            },
-            {
-              "chunkId": "vm20-practice-note-companion-vm20-pn-sr-overview-child-004",
-              "score": 40.2,
-              "tokenOverlap": 7
             }
           ]
         },
@@ -2015,16 +1925,6 @@
             {
               "chunkId": "vm20-canonical-coverage-vm20-section6-exclusion-tests-child-002",
               "score": 47.85,
-              "tokenOverlap": 10
-            },
-            {
-              "chunkId": "vm20-canonical-coverage-vm20-section6-exclusion-tests-child-004",
-              "score": 47.85,
-              "tokenOverlap": 10
-            },
-            {
-              "chunkId": "vm20-canonical-coverage-vm20-section6-exclusion-tests-child-003",
-              "score": 47.550000000000004,
               "tokenOverlap": 10
             }
           ]
@@ -2172,16 +2072,6 @@
               "chunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-003",
               "score": 66.80000000000005,
               "tokenOverlap": 11
-            },
-            {
-              "chunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-002",
-              "score": 66.65000000000005,
-              "tokenOverlap": 12
-            },
-            {
-              "chunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-004",
-              "score": 66.65000000000005,
-              "tokenOverlap": 12
             }
           ]
         },
@@ -2330,16 +2220,6 @@
               "chunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-001",
               "score": 48.15,
               "tokenOverlap": 9
-            },
-            {
-              "chunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-003",
-              "score": 48.15,
-              "tokenOverlap": 10
-            },
-            {
-              "chunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-004",
-              "score": 48,
-              "tokenOverlap": 10
             }
           ]
         },
@@ -2486,16 +2366,6 @@
               "chunkId": "vm20-practice-note-companion-vm20-pn-reinsurance-child-002",
               "score": 25.549999999999997,
               "tokenOverlap": 13
-            },
-            {
-              "chunkId": "vm20-practice-note-companion-vm20-pn-reinsurance-child-005",
-              "score": 25.549999999999997,
-              "tokenOverlap": 12
-            },
-            {
-              "chunkId": "vm20-practice-note-companion-vm20-pn-reinsurance-child-004",
-              "score": 25.25,
-              "tokenOverlap": 10
             }
           ]
         },
@@ -2638,16 +2508,6 @@
               "chunkId": "vm20-practice-note-companion-vm20-pn-prudent-estimate-child-003",
               "score": 39.150000000000006,
               "tokenOverlap": 10
-            },
-            {
-              "chunkId": "vm20-practice-note-companion-vm20-pn-prudent-estimate-child-004",
-              "score": 39.150000000000006,
-              "tokenOverlap": 10
-            },
-            {
-              "chunkId": "vm20-practice-note-companion-vm20-pn-prudent-estimate-child-001",
-              "score": 39.00000000000001,
-              "tokenOverlap": 9
             }
           ]
         },
@@ -2775,16 +2635,6 @@
               "chunkId": "vm20-practice-note-companion-vm20-pn-expense-child-003",
               "score": 35.550000000000004,
               "tokenOverlap": 4
-            },
-            {
-              "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-e-expense-assumptions-child-001",
-              "score": 31.39999999999999,
-              "tokenOverlap": 9
-            },
-            {
-              "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-e-expense-assumptions-child-002",
-              "score": 30.799999999999997,
-              "tokenOverlap": 5
             }
           ]
         },
@@ -2928,16 +2778,6 @@
               "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions-child-004",
               "score": 44.85,
               "tokenOverlap": 9
-            },
-            {
-              "chunkId": "vm20-practice-note-companion-vm20-pn-behavior-child-005",
-              "score": 44.849999999999994,
-              "tokenOverlap": 9
-            },
-            {
-              "chunkId": "vm20-practice-note-companion-vm20-pn-behavior-child-002",
-              "score": 44.699999999999996,
-              "tokenOverlap": 11
             }
           ]
         },
@@ -3068,16 +2908,6 @@
               "chunkId": "vm20-practice-note-companion-vm20-pn-margins-child-006",
               "score": 35.3,
               "tokenOverlap": 8
-            },
-            {
-              "chunkId": "vm20-practice-note-companion-vm20-pn-margins-child-001",
-              "score": 35.15,
-              "tokenOverlap": 7
-            },
-            {
-              "chunkId": "vm20-practice-note-companion-vm20-pn-margins-child-005",
-              "score": 35.15,
-              "tokenOverlap": 6
             }
           ]
         },
@@ -3205,16 +3035,6 @@
               "chunkId": "vm20-practice-note-companion-vm20-pn-dr-overview-child-005",
               "score": 50.64999999999999,
               "tokenOverlap": 15
-            },
-            {
-              "chunkId": "vm20-practice-note-companion-vm20-pn-npr-overview-child-012",
-              "score": 50.64999999999999,
-              "tokenOverlap": 14
-            },
-            {
-              "chunkId": "vm20-practice-note-companion-vm20-pn-dr-overview-child-006",
-              "score": 50.49999999999999,
-              "tokenOverlap": 13
             }
           ]
         },
@@ -3353,16 +3173,6 @@
               "chunkId": "vm20-practice-note-companion-vm20-pn-dr-overview-child-005",
               "score": 50.349999999999994,
               "tokenOverlap": 12
-            },
-            {
-              "chunkId": "vm20-practice-note-companion-vm20-pn-dr-overview-child-006",
-              "score": 50.349999999999994,
-              "tokenOverlap": 12
-            },
-            {
-              "chunkId": "vm20-practice-note-companion-vm20-pn-dr-overview-child-002",
-              "score": 50.199999999999996,
-              "tokenOverlap": 12
             }
           ]
         },
@@ -3495,16 +3305,6 @@
               "chunkId": "vm20-practice-note-companion-vm20-pn-dr-overview-child-003",
               "score": 59.599999999999994,
               "tokenOverlap": 15
-            },
-            {
-              "chunkId": "vm20-practice-note-companion-vm20-pn-dr-overview-child-005",
-              "score": 59.599999999999994,
-              "tokenOverlap": 12
-            },
-            {
-              "chunkId": "vm20-practice-note-companion-vm20-pn-dr-overview-child-004",
-              "score": 59.3,
-              "tokenOverlap": 14
             }
           ]
         },
@@ -3636,16 +3436,6 @@
               "chunkId": "vm20-practice-note-companion-vm20-pn-prudent-estimate-child-001",
               "score": 66.65000000000005,
               "tokenOverlap": 17
-            },
-            {
-              "chunkId": "vm20-practice-note-companion-vm20-pn-prudent-estimate-child-004",
-              "score": 66.65000000000005,
-              "tokenOverlap": 18
-            },
-            {
-              "chunkId": "vm20-practice-note-companion-vm20-pn-prudent-estimate-child-002",
-              "score": 66.50000000000004,
-              "tokenOverlap": 17
             }
           ]
         },
@@ -3772,16 +3562,6 @@
             {
               "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-c-mortality-assumptions-child-015",
               "score": 81.20000000000007,
-              "tokenOverlap": 17
-            },
-            {
-              "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-c-mortality-assumptions-child-009",
-              "score": 80.90000000000006,
-              "tokenOverlap": 16
-            },
-            {
-              "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-c-mortality-assumptions-child-005",
-              "score": 75.80000000000007,
               "tokenOverlap": 17
             }
           ]
@@ -3910,16 +3690,6 @@
               "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions-child-003",
               "score": 60.49999999999999,
               "tokenOverlap": 13
-            },
-            {
-              "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions-child-004",
-              "score": 59.75,
-              "tokenOverlap": 10
-            },
-            {
-              "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-c-mortality-assumptions-child-004",
-              "score": 53.09999999999999,
-              "tokenOverlap": 14
             }
           ]
         },
@@ -4067,16 +3837,6 @@
               "chunkId": "vm20-canonical-coverage-vm20-section7-asset-mechanics-child-006",
               "score": 60.599999999999994,
               "tokenOverlap": 15
-            },
-            {
-              "chunkId": "vm20-canonical-coverage-vm20-section7-asset-mechanics-child-002",
-              "score": 60.3,
-              "tokenOverlap": 15
-            },
-            {
-              "chunkId": "vm20-canonical-coverage-vm20-section7-asset-mechanics-child-004",
-              "score": 60.15,
-              "tokenOverlap": 13
             }
           ]
         },
@@ -4204,16 +3964,6 @@
               "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix1-e-use-of-non-prescribed-scenario-generators-child-001",
               "score": 51.849999999999994,
               "tokenOverlap": 10
-            },
-            {
-              "chunkId": "vm20-practice-note-companion-vm20-pn-scenarios-econ-child-005",
-              "score": 38.349999999999994,
-              "tokenOverlap": 11
-            },
-            {
-              "chunkId": "vm20-practice-note-companion-vm20-pn-scenarios-econ-child-006",
-              "score": 38.349999999999994,
-              "tokenOverlap": 11
             }
           ]
         },
@@ -4352,16 +4102,6 @@
               "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix2-a-baseline-annual-default-cost-factors-child-001",
               "score": 87.85000000000005,
               "tokenOverlap": 19
-            },
-            {
-              "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix2-d-current-market-benchmark-spreads-child-001",
-              "score": 63.49999999999999,
-              "tokenOverlap": 14
-            },
-            {
-              "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix2-f-current-benchmark-swap-spreads-child-001",
-              "score": 63.349999999999994,
-              "tokenOverlap": 13
             }
           ]
         },
@@ -4490,16 +4230,6 @@
               "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix2-b-cumulative-default-rates-used-in-baseline-annual-default-cost-factors-child-001",
               "score": 49.349999999999994,
               "tokenOverlap": 14
-            },
-            {
-              "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix2-a-baseline-annual-default-cost-factors-child-001",
-              "score": 49.199999999999996,
-              "tokenOverlap": 11
-            },
-            {
-              "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-appendix2-f-current-benchmark-swap-spreads-child-001",
-              "score": 48.9,
-              "tokenOverlap": 11
             }
           ]
         },
@@ -4630,16 +4360,6 @@
               "chunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-002",
               "score": 39.6,
               "tokenOverlap": 10
-            },
-            {
-              "chunkId": "vm20-canonical-coverage-vm20-section7-asset-mechanics-child-002",
-              "score": 39.45,
-              "tokenOverlap": 12
-            },
-            {
-              "chunkId": "vm20-canonical-coverage-vm20-section7-asset-mechanics-child-003",
-              "score": 39.300000000000004,
-              "tokenOverlap": 8
             }
           ]
         },
@@ -4776,16 +4496,6 @@
               "chunkId": "vm01-definition-087-stochastic-reserve",
               "score": 34.6,
               "tokenOverlap": 4
-            },
-            {
-              "chunkId": "vm20-practice-note-companion-vm20-pn-sr-overview-child-002",
-              "score": 30.65,
-              "tokenOverlap": 8
-            },
-            {
-              "chunkId": "vm20-practice-note-companion-vm20-pn-sr-overview-child-003",
-              "score": 30.65,
-              "tokenOverlap": 7
             }
           ]
         },
@@ -4922,16 +4632,6 @@
               "chunkId": "chunk-ag36-eiul-crvm-guidance-004",
               "score": 30.599999999999994,
               "tokenOverlap": 5
-            },
-            {
-              "chunkId": "chunk-ag36-eiul-crvm-guidance-001",
-              "score": 25.949999999999996,
-              "tokenOverlap": 6
-            },
-            {
-              "chunkId": "chunk-ag36-eiul-crvm-guidance-002",
-              "score": 22.699999999999996,
-              "tokenOverlap": 5
             }
           ]
         },
@@ -5058,16 +4758,6 @@
               "chunkId": "chunk-ag36-eiul-crvm-guidance-002",
               "score": 14.8,
               "tokenOverlap": 4
-            },
-            {
-              "chunkId": "chunk-ag36-eiul-crvm-guidance-003",
-              "score": 14.8,
-              "tokenOverlap": 4
-            },
-            {
-              "chunkId": "chunk-ag36-eiul-crvm-guidance-004",
-              "score": 14.8,
-              "tokenOverlap": 3
             }
           ]
         },
@@ -5196,16 +4886,6 @@
               "chunkId": "chunk-model-governance-practice-note-001",
               "score": 36.45,
               "tokenOverlap": 8
-            },
-            {
-              "chunkId": "chunk-actuarial-memorandum-practice-note-001",
-              "score": 30.150000000000006,
-              "tokenOverlap": 5
-            },
-            {
-              "chunkId": "chunk-cia-2022-capital-fct-educational-note-001",
-              "score": 26.550000000000004,
-              "tokenOverlap": 5
             }
           ]
         },
@@ -5335,16 +5015,6 @@
               "chunkId": "chunk-cia-2022-capital-fct-educational-note-001",
               "score": 28.750000000000007,
               "tokenOverlap": 5
-            },
-            {
-              "chunkId": "chunk-actuarial-memorandum-practice-note-002",
-              "score": 27.35,
-              "tokenOverlap": 6
-            },
-            {
-              "chunkId": "chunk-actuarial-memorandum-practice-note-003",
-              "score": 25.85,
-              "tokenOverlap": 6
             }
           ]
         },
@@ -5469,16 +5139,6 @@
             },
             {
               "chunkId": "vm20-canonical-coverage-vm20-npr-entry-setup-child-002",
-              "score": 9.25,
-              "tokenOverlap": 5
-            },
-            {
-              "chunkId": "vm20-canonical-coverage-vm20-npr-entry-setup-child-003",
-              "score": 9.25,
-              "tokenOverlap": 5
-            },
-            {
-              "chunkId": "vm20-canonical-coverage-vm20-npr-entry-setup-child-004",
               "score": 9.25,
               "tokenOverlap": 5
             }
@@ -5622,16 +5282,6 @@
               "chunkId": "chunk-reg210-non-guaranteed-elements-001",
               "score": 7.5,
               "tokenOverlap": 4
-            },
-            {
-              "chunkId": "chunk-reg210-non-guaranteed-elements-003",
-              "score": 7.5,
-              "tokenOverlap": 4
-            },
-            {
-              "chunkId": "vm01-definition-006-appointed-actuary",
-              "score": 5.5,
-              "tokenOverlap": 7
             }
           ]
         },
@@ -5757,16 +5407,6 @@
             {
               "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-a-general-assumption-requirements-child-002",
               "score": 9.4,
-              "tokenOverlap": 3
-            },
-            {
-              "chunkId": "chunk-reg210-non-guaranteed-elements-001",
-              "score": 7.5,
-              "tokenOverlap": 3
-            },
-            {
-              "chunkId": "chunk-reg210-non-guaranteed-elements-002",
-              "score": 7.5,
               "tokenOverlap": 3
             }
           ]
@@ -5908,16 +5548,6 @@
               "chunkId": "chunk-cia-2022-capital-fct-educational-note-003",
               "score": 31.15,
               "tokenOverlap": 7
-            },
-            {
-              "chunkId": "chunk-cia-2022-capital-fct-educational-note-004",
-              "score": 21.700000000000003,
-              "tokenOverlap": 6
-            },
-            {
-              "chunkId": "chunk-actuarial-memorandum-practice-note-001",
-              "score": 20.950000000000003,
-              "tokenOverlap": 5
             }
           ]
         },
@@ -6044,16 +5674,6 @@
               "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions-child-001",
               "score": 9.850000000000001,
               "tokenOverlap": 8
-            },
-            {
-              "chunkId": "vm20-practice-note-companion-vm20-pn-behavior-child-001",
-              "score": 9.700000000000001,
-              "tokenOverlap": 7
-            },
-            {
-              "chunkId": "vm20-practice-note-companion-vm20-pn-behavior-child-004",
-              "score": 9.700000000000001,
-              "tokenOverlap": 7
             }
           ]
         },
@@ -6187,16 +5807,6 @@
               "chunkId": "chunk-synthetic-pricing-pricing-methodology-001",
               "score": 15.95,
               "tokenOverlap": 5
-            },
-            {
-              "chunkId": "chunk-synthetic-pricing-approval-memo-001",
-              "score": 13.65,
-              "tokenOverlap": 3
-            },
-            {
-              "chunkId": "chunk-vm20-assumptions-section-3c-001",
-              "score": 12.35,
-              "tokenOverlap": 4
             }
           ]
         },
@@ -6322,16 +5932,6 @@
             {
               "chunkId": "chunk-synthetic-pricing-approval-memo-001",
               "score": 10.45,
-              "tokenOverlap": 3
-            },
-            {
-              "chunkId": "chunk-synthetic-pricing-product-specification-001",
-              "score": 8,
-              "tokenOverlap": 4
-            },
-            {
-              "chunkId": "chunk-synthetic-pricing-assumption-memo-002",
-              "score": 5.599999999999999,
               "tokenOverlap": 3
             }
           ]
@@ -6459,16 +6059,6 @@
               "chunkId": "chunk-synthetic-pricing-profitability-study-001",
               "score": 14.399999999999999,
               "tokenOverlap": 4
-            },
-            {
-              "chunkId": "chunk-synthetic-pricing-pricing-methodology-001",
-              "score": 8.95,
-              "tokenOverlap": 3
-            },
-            {
-              "chunkId": "chunk-synthetic-pricing-product-specification-001",
-              "score": 8,
-              "tokenOverlap": 4
             }
           ]
         },
@@ -6595,16 +6185,6 @@
               "chunkId": "chunk-synthetic-pricing-approval-memo-002",
               "score": 15.75,
               "tokenOverlap": 5
-            },
-            {
-              "chunkId": "chunk-synthetic-pricing-pricing-methodology-001",
-              "score": 13.149999999999999,
-              "tokenOverlap": 4
-            },
-            {
-              "chunkId": "chunk-synthetic-pricing-assumption-memo-001",
-              "score": 8.95,
-              "tokenOverlap": 3
             }
           ]
         },
@@ -6724,16 +6304,6 @@
               "chunkId": "chunk-synthetic-pricing-assumption-memo-002",
               "score": 7.699999999999999,
               "tokenOverlap": 2
-            },
-            {
-              "chunkId": "chunk-synthetic-pricing-pricing-methodology-002",
-              "score": 5.449999999999999,
-              "tokenOverlap": 1
-            },
-            {
-              "chunkId": "chunk-synthetic-pricing-approval-memo-001",
-              "score": 5.4,
-              "tokenOverlap": 1
             }
           ]
         },
@@ -6853,16 +6423,6 @@
               "chunkId": "vm20-practice-note-companion-vm20-pn-starting-assets-child-013",
               "score": 10.25,
               "tokenOverlap": 4
-            },
-            {
-              "chunkId": "vm20-practice-note-companion-vm20-pn-starting-assets-child-016",
-              "score": 10.25,
-              "tokenOverlap": 3
-            },
-            {
-              "chunkId": "vm20-practice-note-companion-vm20-pn-starting-assets-child-020",
-              "score": 10.25,
-              "tokenOverlap": 4
             }
           ]
         },
@@ -6923,7 +6483,7 @@
           "sourceId": "vm01-definitions",
           "sourceFamilyId": "valuation_manual_pdfs",
           "authorityLevel": "manual_section",
-          "score": 99.35,
+          "score": 103.85,
           "citationCount": 0
         },
         {
@@ -6931,7 +6491,7 @@
           "sourceId": "vm01-definitions",
           "sourceFamilyId": "valuation_manual_pdfs",
           "authorityLevel": "manual_section",
-          "score": 37.35,
+          "score": 38.85,
           "citationCount": 0
         },
         {
@@ -6939,7 +6499,7 @@
           "sourceId": "vm01-definitions",
           "sourceFamilyId": "valuation_manual_pdfs",
           "authorityLevel": "manual_section",
-          "score": 31.200000000000003,
+          "score": 32.7,
           "citationCount": 0
         },
         {
@@ -6947,7 +6507,7 @@
           "sourceId": "vm01-definitions",
           "sourceFamilyId": "valuation_manual_pdfs",
           "authorityLevel": "manual_section",
-          "score": 28.2,
+          "score": 31.2,
           "citationCount": 0
         },
         {
@@ -6955,7 +6515,7 @@
           "sourceId": "vm01-definitions",
           "sourceFamilyId": "valuation_manual_pdfs",
           "authorityLevel": "manual_section",
-          "score": 28.2,
+          "score": 31.2,
           "citationCount": 0
         }
       ],
@@ -6979,51 +6539,41 @@
           {
             "chunkId": "vm01-definition-016-conditional-tail-expectation",
             "sourceId": "vm01-definitions",
-            "score": 99.35,
+            "score": 103.85,
             "authorityLevel": "manual_section"
           },
           {
             "chunkId": "vm01-definition-090-tail-risk",
             "sourceId": "vm01-definitions",
-            "score": 37.35,
+            "score": 38.85,
             "authorityLevel": "manual_section"
           },
           {
             "chunkId": "vm01-definition-098-vm-20-reserving-category",
             "sourceId": "vm01-definitions",
-            "score": 31.200000000000003,
+            "score": 32.7,
             "authorityLevel": "manual_section"
           }
         ],
         "corpusGap": null,
         "structuredEvidenceAvailable": false,
         "semanticAlignment": {
-          "topScore": 99.35,
+          "topScore": 103.85,
           "matches": [
             {
               "chunkId": "vm01-definition-016-conditional-tail-expectation",
-              "score": 99.35,
+              "score": 103.85,
               "tokenOverlap": 5
             },
             {
               "chunkId": "vm01-definition-090-tail-risk",
-              "score": 37.35,
+              "score": 38.85,
               "tokenOverlap": 3
             },
             {
               "chunkId": "vm01-definition-098-vm-20-reserving-category",
-              "score": 31.200000000000003,
+              "score": 32.7,
               "tokenOverlap": 3
-            },
-            {
-              "chunkId": "vm01-definition-058-non-material-secondary-guarantee",
-              "score": 28.2,
-              "tokenOverlap": 2
-            },
-            {
-              "chunkId": "vm01-definition-074-qualified-actuary",
-              "score": 28.2,
-              "tokenOverlap": 2
             }
           ]
         },
@@ -7065,7 +6615,7 @@
           "sourceId": "vm01-definitions",
           "sourceFamilyId": "valuation_manual_pdfs",
           "authorityLevel": "manual_section",
-          "score": 69.35,
+          "score": 73.85,
           "citationCount": 0
         },
         {
@@ -7073,15 +6623,7 @@
           "sourceId": "vm01-definitions",
           "sourceFamilyId": "valuation_manual_pdfs",
           "authorityLevel": "manual_section",
-          "score": 31.200000000000003,
-          "citationCount": 0
-        },
-        {
-          "chunkId": "vm01-definition-031-guaranteed-issue-gi-life-insurance-policy",
-          "sourceId": "vm01-definitions",
-          "sourceFamilyId": "valuation_manual_pdfs",
-          "authorityLevel": "manual_section",
-          "score": 30.85,
+          "score": 32.7,
           "citationCount": 0
         },
         {
@@ -7089,7 +6631,7 @@
           "sourceId": "vm01-definitions",
           "sourceFamilyId": "valuation_manual_pdfs",
           "authorityLevel": "manual_section",
-          "score": 28.2,
+          "score": 31.2,
           "citationCount": 0
         },
         {
@@ -7097,7 +6639,15 @@
           "sourceId": "vm01-definitions",
           "sourceFamilyId": "valuation_manual_pdfs",
           "authorityLevel": "manual_section",
-          "score": 28.2,
+          "score": 31.2,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm01-definition-006-appointed-actuary",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 30.85,
           "citationCount": 0
         }
       ],
@@ -7121,50 +6671,40 @@
           {
             "chunkId": "vm01-definition-030-guaranteed-investment-contract",
             "sourceId": "vm01-definitions",
-            "score": 69.35,
+            "score": 73.85,
             "authorityLevel": "manual_section"
           },
           {
             "chunkId": "vm01-definition-098-vm-20-reserving-category",
             "sourceId": "vm01-definitions",
-            "score": 31.200000000000003,
+            "score": 32.7,
             "authorityLevel": "manual_section"
           },
           {
-            "chunkId": "vm01-definition-031-guaranteed-issue-gi-life-insurance-policy",
+            "chunkId": "vm01-definition-058-non-material-secondary-guarantee",
             "sourceId": "vm01-definitions",
-            "score": 30.85,
+            "score": 31.2,
             "authorityLevel": "manual_section"
           }
         ],
         "corpusGap": null,
         "structuredEvidenceAvailable": false,
         "semanticAlignment": {
-          "topScore": 69.35,
+          "topScore": 73.85,
           "matches": [
             {
               "chunkId": "vm01-definition-030-guaranteed-investment-contract",
-              "score": 69.35,
+              "score": 73.85,
               "tokenOverlap": 3
             },
             {
               "chunkId": "vm01-definition-098-vm-20-reserving-category",
-              "score": 31.200000000000003,
+              "score": 32.7,
               "tokenOverlap": 3
             },
             {
-              "chunkId": "vm01-definition-031-guaranteed-issue-gi-life-insurance-policy",
-              "score": 30.85,
-              "tokenOverlap": 2
-            },
-            {
               "chunkId": "vm01-definition-058-non-material-secondary-guarantee",
-              "score": 28.2,
-              "tokenOverlap": 2
-            },
-            {
-              "chunkId": "vm01-definition-074-qualified-actuary",
-              "score": 28.2,
+              "score": 31.2,
               "tokenOverlap": 2
             }
           ]
@@ -7207,7 +6747,7 @@
           "sourceId": "vm01-definitions",
           "sourceFamilyId": "valuation_manual_pdfs",
           "authorityLevel": "manual_section",
-          "score": 77.85,
+          "score": 80.85,
           "citationCount": 0
         },
         {
@@ -7215,7 +6755,7 @@
           "sourceId": "vm01-definitions",
           "sourceFamilyId": "valuation_manual_pdfs",
           "authorityLevel": "manual_section",
-          "score": 57.85,
+          "score": 60.85,
           "citationCount": 0
         },
         {
@@ -7223,7 +6763,7 @@
           "sourceId": "vm01-definitions",
           "sourceFamilyId": "valuation_manual_pdfs",
           "authorityLevel": "manual_section",
-          "score": 43.35,
+          "score": 47.85,
           "citationCount": 0
         },
         {
@@ -7231,15 +6771,15 @@
           "sourceId": "vm01-definitions",
           "sourceFamilyId": "valuation_manual_pdfs",
           "authorityLevel": "manual_section",
-          "score": 42.2,
+          "score": 45.2,
           "citationCount": 0
         },
         {
-          "chunkId": "vm01-definition-022-deterministic-reserve",
+          "chunkId": "vm01-definition-050-modeled-reserve",
           "sourceId": "vm01-definitions",
           "sourceFamilyId": "valuation_manual_pdfs",
           "authorityLevel": "manual_section",
-          "score": 40.35,
+          "score": 42.2,
           "citationCount": 0
         }
       ],
@@ -7263,50 +6803,40 @@
           {
             "chunkId": "vm01-definition-012-claim-reserve",
             "sourceId": "vm01-definitions",
-            "score": 77.85,
+            "score": 80.85,
             "authorityLevel": "manual_section"
           },
           {
             "chunkId": "vm01-definition-017-contract-reserve",
             "sourceId": "vm01-definitions",
-            "score": 57.85,
+            "score": 60.85,
             "authorityLevel": "manual_section"
           },
           {
             "chunkId": "vm01-definition-030-guaranteed-investment-contract",
             "sourceId": "vm01-definitions",
-            "score": 43.35,
+            "score": 47.85,
             "authorityLevel": "manual_section"
           }
         ],
         "corpusGap": null,
         "structuredEvidenceAvailable": false,
         "semanticAlignment": {
-          "topScore": 77.85,
+          "topScore": 80.85,
           "matches": [
             {
               "chunkId": "vm01-definition-012-claim-reserve",
-              "score": 77.85,
+              "score": 80.85,
               "tokenOverlap": 4
             },
             {
               "chunkId": "vm01-definition-017-contract-reserve",
-              "score": 57.85,
+              "score": 60.85,
               "tokenOverlap": 4
             },
             {
               "chunkId": "vm01-definition-030-guaranteed-investment-contract",
-              "score": 43.35,
-              "tokenOverlap": 3
-            },
-            {
-              "chunkId": "vm01-definition-056-net-premium-reserve",
-              "score": 42.2,
-              "tokenOverlap": 3
-            },
-            {
-              "chunkId": "vm01-definition-022-deterministic-reserve",
-              "score": 40.35,
+              "score": 47.85,
               "tokenOverlap": 3
             }
           ]
@@ -7349,7 +6879,7 @@
           "sourceId": "vm01-definitions",
           "sourceFamilyId": "valuation_manual_pdfs",
           "authorityLevel": "manual_section",
-          "score": 94.55000000000001,
+          "score": 99.05000000000001,
           "citationCount": 0
         },
         {
@@ -7357,7 +6887,7 @@
           "sourceId": "vm01-definitions",
           "sourceFamilyId": "valuation_manual_pdfs",
           "authorityLevel": "manual_section",
-          "score": 48.25000000000001,
+          "score": 51.25000000000001,
           "citationCount": 0
         },
         {
@@ -7365,7 +6895,15 @@
           "sourceId": "vm01-definitions",
           "sourceFamilyId": "valuation_manual_pdfs",
           "authorityLevel": "manual_section",
-          "score": 43.050000000000004,
+          "score": 46.050000000000004,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm01-definition-096-variable-annuity-guaranteed-living-benefit",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 41.050000000000004,
           "citationCount": 0
         },
         {
@@ -7373,15 +6911,7 @@
           "sourceId": "vm01-definitions",
           "sourceFamilyId": "valuation_manual_pdfs",
           "authorityLevel": "manual_section",
-          "score": 35.25000000000001,
-          "citationCount": 0
-        },
-        {
-          "chunkId": "vm01-definition-074-qualified-actuary",
-          "sourceId": "vm01-definitions",
-          "sourceFamilyId": "valuation_manual_pdfs",
-          "authorityLevel": "manual_section",
-          "score": 35.25000000000001,
+          "score": 39.75000000000001,
           "citationCount": 0
         }
       ],
@@ -7405,51 +6935,41 @@
           {
             "chunkId": "vm01-definition-073-prudent-estimate-assumption",
             "sourceId": "vm01-definitions",
-            "score": 94.55000000000001,
+            "score": 99.05000000000001,
             "authorityLevel": "manual_section"
           },
           {
             "chunkId": "vm01-definition-098-vm-20-reserving-category",
             "sourceId": "vm01-definitions",
-            "score": 48.25000000000001,
+            "score": 51.25000000000001,
             "authorityLevel": "manual_section"
           },
           {
             "chunkId": "vm01-definition-005-anticipated-experience-assumption",
             "sourceId": "vm01-definitions",
-            "score": 43.050000000000004,
+            "score": 46.050000000000004,
             "authorityLevel": "manual_section"
           }
         ],
         "corpusGap": null,
         "structuredEvidenceAvailable": false,
         "semanticAlignment": {
-          "topScore": 94.55000000000001,
+          "topScore": 99.05000000000001,
           "matches": [
             {
               "chunkId": "vm01-definition-073-prudent-estimate-assumption",
-              "score": 94.55000000000001,
+              "score": 99.05000000000001,
               "tokenOverlap": 6
             },
             {
               "chunkId": "vm01-definition-098-vm-20-reserving-category",
-              "score": 48.25000000000001,
+              "score": 51.25000000000001,
               "tokenOverlap": 5
             },
             {
               "chunkId": "vm01-definition-005-anticipated-experience-assumption",
-              "score": 43.050000000000004,
+              "score": 46.050000000000004,
               "tokenOverlap": 5
-            },
-            {
-              "chunkId": "vm01-definition-058-non-material-secondary-guarantee",
-              "score": 35.25000000000001,
-              "tokenOverlap": 4
-            },
-            {
-              "chunkId": "vm01-definition-074-qualified-actuary",
-              "score": 35.25000000000001,
-              "tokenOverlap": 4
             }
           ]
         },
@@ -7484,7 +7004,7 @@
           "sourceId": "vm01-definitions",
           "sourceFamilyId": "valuation_manual_pdfs",
           "authorityLevel": "manual_section",
-          "score": 55.85,
+          "score": 58.85,
           "citationCount": 0
         },
         {
@@ -7492,7 +7012,7 @@
           "sourceId": "vm01-definitions",
           "sourceFamilyId": "valuation_manual_pdfs",
           "authorityLevel": "manual_section",
-          "score": 40.35,
+          "score": 41.85,
           "citationCount": 0
         },
         {
@@ -7540,13 +7060,13 @@
           {
             "chunkId": "vm01-definition-086-stochastic-exclusion-test",
             "sourceId": "vm01-definitions",
-            "score": 55.85,
+            "score": 58.85,
             "authorityLevel": "manual_section"
           },
           {
             "chunkId": "vm01-definition-022-deterministic-reserve",
             "sourceId": "vm01-definitions",
-            "score": 40.35,
+            "score": 41.85,
             "authorityLevel": "manual_section"
           },
           {
@@ -7559,32 +7079,22 @@
         "corpusGap": "Expanded hierarchical companion coverage for the reviewed VM-20 practice-note wave. Non-binding, historical, review-only, and not promoted. VM-01 states that some Valuation Manual terms are defined in specific sections rather than in VM-01; those section-local definitions are outside this package. Independent review and explicit promotion remain required. Substantially complete 2026 VM-01 definition coverage. Review-only and not promoted; learner, app, RAG, vector, and Copilot export remain blocked.",
         "structuredEvidenceAvailable": false,
         "semanticAlignment": {
-          "topScore": 55.85,
+          "topScore": 58.85,
           "matches": [
             {
               "chunkId": "vm01-definition-086-stochastic-exclusion-test",
-              "score": 55.85,
+              "score": 58.85,
               "tokenOverlap": 4
             },
             {
               "chunkId": "vm01-definition-022-deterministic-reserve",
-              "score": 40.35,
+              "score": 41.85,
               "tokenOverlap": 3
             },
             {
               "chunkId": "vm20-practice-note-companion-vm20-pn-deterministic-exclusion-child-002",
               "score": 33.05,
               "tokenOverlap": 6
-            },
-            {
-              "chunkId": "vm20-practice-note-companion-vm20-pn-deterministic-exclusion-child-001",
-              "score": 32.9,
-              "tokenOverlap": 4
-            },
-            {
-              "chunkId": "vm20-practice-note-companion-vm20-pn-deterministic-exclusion-child-004",
-              "score": 32.9,
-              "tokenOverlap": 5
             }
           ]
         },
@@ -7630,6 +7140,22 @@
           "sourceId": "vm01-definitions",
           "sourceFamilyId": "valuation_manual_pdfs",
           "authorityLevel": "manual_section",
+          "score": 45.2,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm01-definition-050-modeled-reserve",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 42.2,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm01-definition-067-principle-based-reserve-actuarial-report",
+          "sourceId": "vm01-definitions",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
           "score": 42.2,
           "citationCount": 0
         },
@@ -7638,7 +7164,7 @@
           "sourceId": "vm01-definitions",
           "sourceFamilyId": "valuation_manual_pdfs",
           "authorityLevel": "manual_section",
-          "score": 40.35,
+          "score": 41.85,
           "citationCount": 0
         },
         {
@@ -7646,23 +7172,7 @@
           "sourceId": "vm01-definitions",
           "sourceFamilyId": "valuation_manual_pdfs",
           "authorityLevel": "manual_section",
-          "score": 40.35,
-          "citationCount": 0
-        },
-        {
-          "chunkId": "vm01-definition-087-stochastic-reserve",
-          "sourceId": "vm01-definitions",
-          "sourceFamilyId": "valuation_manual_pdfs",
-          "authorityLevel": "manual_section",
-          "score": 40.35,
-          "citationCount": 0
-        },
-        {
-          "chunkId": "vm01-definition-050-modeled-reserve",
-          "sourceId": "vm01-definitions",
-          "sourceFamilyId": "valuation_manual_pdfs",
-          "authorityLevel": "manual_section",
-          "score": 39.2,
+          "score": 41.85,
           "citationCount": 0
         }
       ],
@@ -7686,50 +7196,40 @@
           {
             "chunkId": "vm01-definition-056-net-premium-reserve",
             "sourceId": "vm01-definitions",
+            "score": 45.2,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm01-definition-050-modeled-reserve",
+            "sourceId": "vm01-definitions",
             "score": 42.2,
             "authorityLevel": "manual_section"
           },
           {
-            "chunkId": "vm01-definition-022-deterministic-reserve",
+            "chunkId": "vm01-definition-067-principle-based-reserve-actuarial-report",
             "sourceId": "vm01-definitions",
-            "score": 40.35,
-            "authorityLevel": "manual_section"
-          },
-          {
-            "chunkId": "vm01-definition-066-pretax-interest-maintenance-reserve",
-            "sourceId": "vm01-definitions",
-            "score": 40.35,
+            "score": 42.2,
             "authorityLevel": "manual_section"
           }
         ],
         "corpusGap": "VM-01 states that some Valuation Manual terms are defined in specific sections rather than in VM-01; those section-local definitions are outside this package. Independent review and explicit promotion remain required. Substantially complete 2026 VM-01 definition coverage. Review-only and not promoted; learner, app, RAG, vector, and Copilot export remain blocked.",
         "structuredEvidenceAvailable": false,
         "semanticAlignment": {
-          "topScore": 42.2,
+          "topScore": 45.2,
           "matches": [
             {
               "chunkId": "vm01-definition-056-net-premium-reserve",
-              "score": 42.2,
-              "tokenOverlap": 3
-            },
-            {
-              "chunkId": "vm01-definition-022-deterministic-reserve",
-              "score": 40.35,
-              "tokenOverlap": 3
-            },
-            {
-              "chunkId": "vm01-definition-066-pretax-interest-maintenance-reserve",
-              "score": 40.35,
-              "tokenOverlap": 3
-            },
-            {
-              "chunkId": "vm01-definition-087-stochastic-reserve",
-              "score": 40.35,
+              "score": 45.2,
               "tokenOverlap": 3
             },
             {
               "chunkId": "vm01-definition-050-modeled-reserve",
-              "score": 39.2,
+              "score": 42.2,
+              "tokenOverlap": 3
+            },
+            {
+              "chunkId": "vm01-definition-067-principle-based-reserve-actuarial-report",
+              "score": 42.2,
               "tokenOverlap": 3
             }
           ]

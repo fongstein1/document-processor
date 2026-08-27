@@ -885,3 +885,10 @@
   confirmation. The 98 source excerpts, definition-index formal source text,
   pages, hashes, 27 aliases, and 29 relationship candidates remain unchanged;
   VM-01 stays review-only pending narrow final review.
+- Corrected the final VM-01 narrow-review finding without changing source
+  evidence: `top3Hit` and aggregate top-three metrics now use exactly three
+  ranked results, the generic evidence-sufficiency gate uses the same top-three
+  answer window, and generic definition-intent source-text weighting moved the
+  conditional tail expectation evidence from rank 4 to rank 2 for the
+  plain-language case. Added rank-4 support-gate and case/aggregate consistency
+  regressions. VM-01 remains review-only pending final narrow approval.

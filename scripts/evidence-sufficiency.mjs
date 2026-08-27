@@ -59,14 +59,18 @@ const evidenceAlignment = (query, topMatches, chunkLookup) => {
 
 export const assessEvidenceSufficiency = ({ query, topMatches, chunkRecords, sourcePackages, unsupportedThreshold = 3 }) => {
   const chunkLookup = new Map(chunkRecords.map((chunk) => [chunk.chunkId, chunk]))
-  const retrievedChunks = topMatches.map((match) => chunkLookup.get(match.chunkId)).filter(Boolean)
+  // The answer/evidence window is deliberately the first three ranked results.
+  // Evidence below rank 3 may remain reviewable as related retrieval output, but
+  // it cannot make the answer support-sufficient.
+  const evidenceMatches = topMatches.slice(0, 3)
+  const retrievedChunks = evidenceMatches.map((match) => chunkLookup.get(match.chunkId)).filter(Boolean)
   const retrievedSourceIds = unique(retrievedChunks.map((chunk) => chunk.sourceId))
   const retrievedPackages = sourcePackages.filter((source) => retrievedSourceIds.includes(source.sourceId))
   const informationTypes = inferInformationTypes(query)
   const requestedJurisdiction = query.supportRequirements?.jurisdiction ?? query.requestedJurisdiction ?? extractRequestedJurisdiction(query.query)
   const gapText = packageGapText(retrievedPackages)
-  const alignment = evidenceAlignment(query, topMatches, chunkLookup)
-  const relatedEvidence = topMatches.slice(0, 3).map((match) => ({
+  const alignment = evidenceAlignment(query, evidenceMatches, chunkLookup)
+  const relatedEvidence = evidenceMatches.map((match) => ({
     chunkId: match.chunkId,
     sourceId: match.sourceId,
     score: match.score,
@@ -125,7 +129,7 @@ export const assessEvidenceSufficiency = ({ query, topMatches, chunkRecords, sou
     }
   }
 
-  if (topMatches.length === 0 || alignment.topScore < unsupportedThreshold) {
+  if (evidenceMatches.length === 0 || alignment.topScore < unsupportedThreshold) {
     return {
       supportState: 'ambiguous_requires_more_context',
       evidenceSufficient: false,

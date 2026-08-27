@@ -432,7 +432,7 @@
   ],
   "retrievalEvaluation": {
     "path": "data/processed/review_packages/vm01-definition-retrieval-evaluation.json",
-    "sha256": "e77e3d78199323de9e11a68638c3eda6f5e5073cead0a73b6140461a00c50f43",
+    "sha256": "97c554bd9b2d73c69620783ae05e1ebc4ed9af3021053f6d1957f1db8ddccafd",
     "caseLevelResultsIncluded": true,
     "queryCount": 21,
     "supportedTop1": 17,
@@ -459,6 +459,22 @@
         "definedTerms source-explicit boundary",
         "case-level focused retrieval artifact handoff"
       ]
+    },
+    {
+      "disposition": "APPROVE WITH FIXES",
+      "scope": "narrow blocker-closure review",
+      "status": "completed",
+      "acceptedAreas": [
+        "source-explicit definedTerms boundary",
+        "retrieval-only normalization metadata",
+        "case-level evaluation artifact",
+        "undefined-term abstention",
+        "ambiguity and authority handling",
+        "unchanged source evidence"
+      ],
+      "remainingBlockers": [
+        "strict top-three metric and evidence-window consistency for vm01-plain-language-tail-measure"
+      ]
     }
   ],
   "blockerCorrections": [
@@ -475,15 +491,15 @@
     {
       "blockerId": "focused_retrieval_artifact_handoff",
       "status": "resolved_pending_narrow_review",
-      "result": "case-level evaluation JSON retained with intended support, expected evidence, actual top-1/top-3, authority, support decision, ambiguity result, and failure reason",
+      "result": "case-level evaluation JSON retained with intended support, expected evidence, strict top-1/top-3 metrics, authority, support decision limited to the top-three evidence window, ambiguity result, and failure reason",
       "artifactPath": "data/processed/review_packages/vm01-definition-retrieval-evaluation.json",
-      "artifactSha256": "e77e3d78199323de9e11a68638c3eda6f5e5073cead0a73b6140461a00c50f43"
+      "artifactSha256": "97c554bd9b2d73c69620783ae05e1ebc4ed9af3021053f6d1957f1db8ddccafd"
     }
   ],
   "unresolvedSourceQuestions": [
     "Pages 38 and 39 contain no additional definitions; page 39 is explicitly marked intentionally blank.",
     "Eleven term labels required transparent spacing-only text-layer cleanup in lookup metadata; the exact retained source excerpts remain unchanged.",
-    "The independent source audit passed all 98 term openings, attached guidance notes, and cross-page boundaries; the remaining review is limited to the corrected metadata boundary and inspectable retrieval artifact."
+    "The independent source audit and narrow blocker review passed the authoritative evidence and source-explicit term boundary; the remaining review is limited to strict top-three retrieval-metric and support-window consistency for the plain-language CTE case."
   ],
   "artifacts": {
     "canonicalSourcePackage": "data/processed/source_indexes/sources/vm01-definitions.json",

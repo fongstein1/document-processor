@@ -888,5 +888,14 @@ while 17 normalized variants remain in non-authoritative lookup metadata; and
 the focused retrieval JSON now exposes 21 case-level results. Retrieval is
 17/18 supported top-1, 18/18 supported top-3, 3/3 safe unsupported abstentions,
 and 18/18 current-authority top-1. Authoritative source excerpts, definition-
-index source text, pages, and hashes remain unchanged. VM-01 is ready for the
-narrow final promotion review but is not promoted.
+index source text, pages, and hashes remain unchanged.
+
+The first narrow review passed those two blocker corrections but identified one
+remaining evaluator inconsistency: the plain-language CTE target was at rank 4
+while the artifact and support gate treated the configured top-5 list as top-3
+evidence. The evaluator now computes top-3 metrics strictly from three results,
+the generic support gate uses that same three-result evidence window, and
+definition-intent ranking gives the actual definition wording enough weight to
+place CTE at rank 2. Focused results remain 17/18 supported top-1, 18/18 strict
+top-3, 3/3 safe unsupported abstentions, and 18/18 current-authority top-1.
+VM-01 is ready for the final narrow promotion review but is not promoted.

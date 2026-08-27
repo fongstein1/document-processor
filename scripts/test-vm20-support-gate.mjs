@@ -67,4 +67,49 @@ const proseDecision = run('What general methodology does this source describe?')
 assert.equal(proseDecision.supportState, 'supported')
 assert.equal(proseDecision.evidenceSufficient, true)
 
-console.log('Passed generic evidence-sufficiency support-gate fixtures (5 cases).')
+const formalDefinitionChunks = [
+  ...['alpha', 'beta', 'gamma'].map((term, index) => ({
+    chunkId: `fixture-definition-${index + 1}`,
+    sourceId: 'vm01-definitions',
+    chunkKind: 'definition',
+    definedTerms: [term],
+    sourceTextExcerpt: `The term ${term} means an unrelated concept.`,
+    topic: term,
+    sectionReference: 'VM-01: Definitions for Terms in Requirements',
+  })),
+  {
+    chunkId: 'fixture-definition-4',
+    sourceId: 'vm01-definitions',
+    chunkKind: 'definition',
+    definedTerms: ['target term'],
+    sourceTextExcerpt: 'The term target term means the requested concept.',
+    topic: 'target term',
+    sectionReference: 'VM-01: Definitions for Terms in Requirements',
+  },
+]
+const vm01Package = packageFixture({ sourceId: 'vm01-definitions' })
+const formalDefinitionQuery = {
+  queryId: 'formal-definition-window',
+  query: 'How does VM-01 define target term?',
+  supportRequirements: { informationTypes: ['formal_definition'], definedTerm: 'target term' },
+}
+const outsideEvidenceWindow = assessEvidenceSufficiency({
+  query: formalDefinitionQuery,
+  topMatches: formalDefinitionChunks.map((definition, index) => ({ chunkId: definition.chunkId, sourceId: definition.sourceId, score: 20 - index, authorityLevel: 'manual_section' })),
+  chunkRecords: formalDefinitionChunks,
+  sourcePackages: [vm01Package],
+})
+assert.equal(outsideEvidenceWindow.supportState, 'unsupported')
+assert.equal(outsideEvidenceWindow.reasonCode, 'term_not_defined_in_vm01')
+assert.equal(outsideEvidenceWindow.relatedEvidence.length, 3)
+
+const insideEvidenceWindow = assessEvidenceSufficiency({
+  query: formalDefinitionQuery,
+  topMatches: [formalDefinitionChunks[3], ...formalDefinitionChunks.slice(0, 3)].map((definition, index) => ({ chunkId: definition.chunkId, sourceId: definition.sourceId, score: 20 - index, authorityLevel: 'manual_section' })),
+  chunkRecords: formalDefinitionChunks,
+  sourcePackages: [vm01Package],
+})
+assert.equal(insideEvidenceWindow.supportState, 'supported')
+assert.equal(insideEvidenceWindow.evidenceSufficient, true)
+
+console.log('Passed generic evidence-sufficiency support-gate fixtures (7 cases).')

@@ -20,7 +20,7 @@
 - Current VM-01 authority ranked first: 18/18
 
 - Case-level evaluation JSON: `data/processed/review_packages/vm01-definition-retrieval-evaluation.json`
-- Case-level evaluation SHA-256: `e77e3d78199323de9e11a68638c3eda6f5e5073cead0a73b6140461a00c50f43`
+- Case-level evaluation SHA-256: `97c554bd9b2d73c69620783ae05e1ebc4ed9af3021053f6d1957f1db8ddccafd`
 
 ## Representative examples
 
@@ -34,11 +34,9 @@
 
 ## Review focus
 
-- Confirm all 98 term openings and definition boundaries against the PDF.
-- Confirm attached guidance notes, conditions, exceptions, and enumerated subparts remain with the correct term.
-- Confirm aliases and acronym expansions are source-explicit only.
-- Confirm the eleven transparent term-label spacing corrections reflect source typography while formal source excerpts remain unchanged.
-- Confirm relationship candidates do not overstate legal effect or applicability.
-- Confirm unsupported and ambiguous definition requests abstain rather than borrowing related prose.
+- Verify `top3Hit` and aggregate top-three metrics are derived strictly from each case's displayed `actualTop3` array.
+- Verify `vm01-plain-language-tail-measure` includes `vm01-definition-016-conditional-tail-expectation` in `actualTop3` and that its support decision cites that same top-three evidence window.
+- Verify undefined, ambiguous, and unavailable-version requests still abstain and current 2026 authority remains preferred.
+- Verify the previously accepted source-explicit term boundary and authoritative source evidence remain unchanged.
 
 This review package is generated review metadata, not authoritative regulatory evidence.
