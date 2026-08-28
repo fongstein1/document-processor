@@ -12,4 +12,5 @@
 - Current authoritative VM-30 top-1: 16/16
 - Support-gate regressions: 4/4; actual VM-20 fixture and inspectable rank-four evidence confirmed
 - VM-01, VM-20, and promoted VM-31 source evidence: unchanged
-- Governance: review-only, not promoted, and blocked from downstream learner/app/RAG/vector/Copilot use
+- Governance: canonical promoted; downstream learner/app/RAG/vector/Copilot export blocked
+- Relationship candidates: separately review-only, pending, and unpromoted

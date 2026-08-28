@@ -1,5 +1,16 @@
 # Session Log
 
+## 2026-08-28 VM-30 canonical promotion
+
+- Recorded the final independent `APPROVE FOR CANONICAL PROMOTION` disposition
+  for the reviewed 51-chunk current 2026 VM-30 scope.
+- Preserved all source excerpts, hashes, citations, hierarchy, definitions,
+  classifications, relationships, and retrieval results during promotion.
+- Kept all 16 relationship candidates pending and unpromoted, and kept learner,
+  app, RAG, vector, and Copilot eligibility blocked under separate governance.
+- Selected the existing validated VM-21 batches 022-037 as the next P0
+  canonicalization input and generic-processor proving ground.
+
 ## 2026-08-28 VM-31 promotion and VM-30 canonical review candidate
 
 - Promoted the independently approved 84-chunk current 2026 VM-31 scope under

@@ -62,14 +62,15 @@
     "authoritativeSourceTextChangeCount": 0
   },
   "governance": {
-    "reviewOnly": true,
-    "promotionStatus": "not_promoted",
-    "promotionEligible": false,
+    "reviewOnly": false,
+    "promotionStatus": "promoted",
+    "promotionEligible": true,
     "learnerFacingAllowed": false,
     "appReadyAllowed": false,
     "ragReadyAllowed": false,
     "vectorEligible": false,
-    "copilotExportEligible": false
+    "copilotExportEligible": false,
+    "promotionDecisionPath": "data/manual-input/promotion-decisions/vm30-2026-current-manual-promotion.json"
   },
   "artifacts": {
     "canonicalSourcePackage": "data/processed/source_indexes/sources/vm30-current-manual.json",

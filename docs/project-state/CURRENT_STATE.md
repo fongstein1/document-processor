@@ -1,9 +1,9 @@
 # Current Project State
 
-## 2026-08-28 VM-30 current-manual review candidate
+## 2026-08-28 VM-30 current-manual canonical promotion
 
-Current 2026 VM-30 is now represented by one substantially complete,
-structure-aware canonical review candidate spanning authoritative PDF pages
+Current 2026 VM-30 is represented by one substantially complete,
+structure-aware canonical package spanning authoritative PDF pages
 325-339. The package contains 8 structural parents and 43 exact-text child
 units (51 chunks total); 42 substantive children are first-stage retrieval
 units and the printed blank page 30-15 is retained only as boundary evidence.
@@ -18,12 +18,13 @@ evaluation passes 15/16 supported top-1, 16/16 strict top-3, 4/4 unsupported
 abstentions, 1/1 ambiguity handling, and 16/16 current-authority top-1 checks.
 All four generic evidence-sufficiency regressions pass.
 
+The final independent disposition was `APPROVE FOR CANONICAL PROMOTION`, and
+the 51-chunk current-manual scope is promoted under
+`data/manual-input/promotion-decisions/vm30-2026-current-manual-promotion.json`.
 Sixteen explicit documentary relationship candidates remain pending,
-review-only, unpromoted, and promotion-ineligible. The VM-30 package itself
-also remains review-only and unpromoted pending independent source and
-actuarial review. Learner, application, RAG, vector, and Copilot export remain
-blocked. VM-31 remains canonically promoted and its source, retrieval, and
-relationship evidence is unchanged.
+review-only, unpromoted, and promotion-ineligible. Learner, application, RAG,
+vector, and Copilot export remain blocked. VM-01, VM-20, and VM-31 remain
+canonically promoted and their authoritative source evidence is unchanged.
 
 ## 2026-08-27 VM-01 canonical promotion
 

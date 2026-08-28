@@ -1,6 +1,6 @@
 # Corpus Completeness Report
 
-As of 2026-08-28T00:00:00.000Z, the repository contains substantial regulatory evidence with separately recorded VM-01 definitions, VM-20 prose, VM-20 structured-table, and VM-31 canonical promotions, but it is not production-complete and is not Copilot-export ready.
+As of 2026-08-28T00:00:00.000Z, the repository contains substantial regulatory evidence with separately recorded VM-01 definitions, VM-20 prose, VM-20 structured-table, VM-30, and VM-31 canonical promotions, but it is not production-complete and is not Copilot-export ready.
 
 ## Counts
 
@@ -9,7 +9,7 @@ As of 2026-08-28T00:00:00.000Z, the repository contains substantial regulatory e
 - Documents reviewed / review artifacts matched: **97 review indexes**
 - Canonical source packages: **24**
 - Canonical chunks: **592**
-- Promoted canonical prose packages / chunks: **8 / 331**
+- Promoted canonical prose packages / chunks: **9 / 382**
 - Promoted structured logical tables / versions: **7 / 29**
 - Structured rows / values: **891 / 7022**
 - Sources awaiting canonicalization: **96**
@@ -39,11 +39,12 @@ As of 2026-08-28T00:00:00.000Z, the repository contains substantial regulatory e
 
 ## VM-30 coverage checkpoint
 
-- Current 2026 VM-30 structural parents / child units: 8 / 43; status not_promoted.
+- Current 2026 VM-30 structural parents / child units: 8 / 43; status promoted.
+- VM-30 promotion decision: `data/manual-input/promotion-decisions/vm30-2026-current-manual-promotion.json`.
 - VM-30 explicit-reference candidates: 16; all remain pending, review-only, and not promoted.
 - Focused VM-30 retrieval contains 21 inspectable cases: 16 supported, four unsupported, and one ambiguous submission-context request, all evaluated within a strict top-three production evidence window.
 - VM-30 source QA records the complete PDF-page 325-339 chapter boundary, page 340 separator, page 341 VM-31 opener, exact retained source text, and zero source-text rewrites.
-- VM-30 remains blocked from promotion and learner, app, RAG, vector, and Copilot use pending independent review and a separate decision.
+- VM-30 remains blocked from learner, app, RAG, vector, and Copilot use pending separate downstream governance decisions.
 
 ## VM-31 coverage checkpoint
 

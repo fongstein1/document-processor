@@ -1,19 +1,8 @@
 # Next Actions
 
-## VM-30 independent review
+## VM-21 canonicalization handoff
 
-The immediate task is a narrow independent source and actuarial review of the
-complete current 2026 VM-30 candidate. Use
-`data/processed/review_packages/vm30-independent-review-prompt.md` and inspect
-the canonical package, source QA, focused retrieval cases, support-gate
-regressions, relationship registry, and validation report listed there.
-
-Confirm the PDF-page 325-339 chapter boundary, 8-parent/43-child hierarchy,
-page-spanning opinion tables, three source-explicit definitions, strict
-top-three retrieval safety, and all 16 source-facing relationship labels.
-End with APPROVE FOR CANONICAL PROMOTION, APPROVE WITH FIXES, or DO NOT
-PROMOTE. Do not promote VM-30 automatically, do not promote its relationships,
-and do not start VM-G or VM-C as part of this review milestone.
+VM-30 canonical promotion is complete under the recorded independent review decision. The next P0 canonicalization priority is the variable annuity reserve framework in VM-21 using the existing validated batches 022-037.
 
 ## VM-20 remaining prose and appendix handoff
 
@@ -914,3 +903,4 @@ additional source units.
 2026-08-27: Send the current 2026 VM-31 source package, source QA, focused retrieval evaluation, support-gate regression, relationship registry, validation report, and canonical coverage review package through fresh independent review. Do not promote VM-31 or start VM-30, VM-G, or VM-C until the VM-31 disposition is returned and any findings are resolved.
 2026-08-28: The VM-31 independent review returned `APPROVE WITH FIXES`; both metadata-only blockers are corrected with zero authoritative source-evidence changes. Send only the Section 1 Purpose classification, the two AG 43 provenance records, source-integrity validation, focused retrieval regression, and governance status through narrow final review. Do not repeat the accepted 84-chunk audit or promote VM-31 without a separate final approval decision.
 2026-08-28: The final VM-31 metadata and implementation-evidence reviews approved canonical promotion. The 84-chunk current-manual scope is promoted under `data/manual-input/promotion-decisions/vm31-2026-current-manual-promotion.json`; keep its 92 relationships and all downstream learner/app/RAG/vector/Copilot uses separately governed. The next P0 milestone is substantially complete current 2026 VM-30 coverage, which must remain review-only pending independent approval.
+2026-08-28: The final VM-30 review approved canonical promotion. Promote the reviewed 51-chunk current-manual scope under `data/manual-input/promotion-decisions/vm30-2026-current-manual-promotion.json`, keep its 16 relationships and all downstream uses separately governed, and use current 2026 VM-21 as the next P0 generic-processor proving ground. Reuse the validated batches 022-037 rather than re-extracting source text.

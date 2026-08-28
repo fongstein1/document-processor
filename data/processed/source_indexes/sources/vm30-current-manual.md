@@ -33,11 +33,11 @@
 
 - Processing mode: canonical_index
 - Canonicality: canonical
-- Review only: Yes
+- Review only: No
 - Learner facing allowed: No
 - App ready allowed: No
 - RAG ready allowed: No
-- Promotion status: not_promoted
+- Promotion status: promoted
 
 ## Chunks
 
@@ -100,4 +100,4 @@
 - Citation completeness: partial
 - Page-image backstop: Yes
 - Line references available: No
-- Notes: Substantially complete current 2026 VM-30 coverage; canonical review candidate only, not promoted, and not eligible for downstream learner, app, RAG, vector, or Copilot use.
+- Notes: Canonically promoted current 2026 VM-30 coverage under a recorded independent-review decision; relationship candidates and downstream learner, app, RAG, vector, and Copilot use remain separately governed.

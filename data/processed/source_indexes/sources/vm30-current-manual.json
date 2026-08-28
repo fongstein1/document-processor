@@ -15,13 +15,13 @@
       "publicationDate": null,
       "effectiveDate": null,
       "version": "2026 Edition",
-      "approvalStatus": "review_only",
+      "approvalStatus": "reviewed",
       "language": "en",
       "recommendedProfile": "reporting",
       "recommendedChunkingStrategy": "subsection_parent_to_complete_numbered_provision_child",
       "confidence": "high",
       "unresolvedQuestions": [
-        "Independent source and actuarial review is required before promotion.",
+        "Relationship candidates require a separate human review and promotion decision.",
         "Downstream learner, application, RAG, vector, and Copilot eligibility require separate decisions."
       ],
       "notes": "Exact source excerpts control; semantic classifications, summaries, and cross-reference candidates are derivative metadata."
@@ -70,8 +70,8 @@
       "childCount": 43,
       "retrievalUnitCount": 42,
       "knownGaps": [
-        "Independent source and actuarial review is required before canonical promotion.",
         "Relationship candidates remain review-only, pending, and not promoted.",
+        "Historical, proposed, companion, and practice-note material remains outside the promoted current-manual scope.",
         "Publication and effective dates are not asserted beyond the established 2026 edition identity."
       ]
     },
@@ -89,19 +89,19 @@
     "pageImageBackstop": true,
     "lineReferencesAvailable": false,
     "textLayerQuality": "mixed",
-    "notes": "Substantially complete current 2026 VM-30 coverage; canonical review candidate only, not promoted, and not eligible for downstream learner, app, RAG, vector, or Copilot use."
+    "notes": "Canonically promoted current 2026 VM-30 coverage under a recorded independent-review decision; relationship candidates and downstream learner, app, RAG, vector, and Copilot use remain separately governed."
   },
   "processing": {
     "createdAt": "2026-08-28T00:00:00Z",
     "createdBy": "scripts/build-source-index-poc.mjs",
     "processingMode": "canonical_index",
     "canonicality": "canonical",
-    "reviewOnly": true,
+    "reviewOnly": false,
     "learnerFacingAllowed": false,
     "appReadyAllowed": false,
     "ragReadyAllowed": false,
-    "promotionStatus": "not_promoted",
-    "notes": "Substantially complete current 2026 VM-30 coverage; canonical review candidate only, not promoted, and not eligible for downstream learner, app, RAG, vector, or Copilot use."
+    "promotionStatus": "promoted",
+    "notes": "Promoted for the scope recorded in data/manual-input/promotion-decisions/vm30-2026-current-manual-promotion.json; downstream export remains blocked."
   },
   "chunks": [
     {
@@ -269,7 +269,7 @@
       "structuralLocator": "VM-30 / Section 1.A: Scope - General",
       "chunkingMethod": "hierarchical_structure",
       "retrievalEligible": false,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "context_only_parent"
     },
     {
@@ -389,7 +389,7 @@
       "structuralLocator": "VM-30 / Section 1.A: Scope - General / 1. AOM requirement scope and actuarial opinion meaning",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -526,7 +526,7 @@
       "structuralLocator": "VM-30 / Section 1.A: Scope - General / 2. Annual statement applicability and exclusions",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -679,7 +679,7 @@
       "structuralLocator": "VM-30 / Section 1.A: Scope - General / 3. Professional judgment, commissioner authority, and applicable guidelines",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -809,7 +809,7 @@
       "structuralLocator": "VM-30 / Section 1.A: Scope - General / 4. Annual requirement and operative-date applicability",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -909,7 +909,7 @@
       "structuralLocator": "VM-30 / Section 1.A: Scope - General / 5. Company-level opinion requirement",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -1012,7 +1012,7 @@
       "structuralLocator": "VM-30 / Section 1.B: Definitions",
       "chunkingMethod": "hierarchical_structure",
       "retrievalEligible": false,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "context_only_parent"
     },
     {
@@ -1107,7 +1107,7 @@
       "structuralLocator": "VM-30 / Section 1.B: Definitions / 1. Adverse opinion",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -1205,7 +1205,7 @@
       "structuralLocator": "VM-30 / Section 1.B: Definitions / 2. Qualified opinion",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -1300,7 +1300,7 @@
       "structuralLocator": "VM-30 / Section 1.B: Definitions / 3. Inconclusive opinion",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -1435,7 +1435,7 @@
       "structuralLocator": "VM-30 / Section 2.A: General submission requirements",
       "chunkingMethod": "hierarchical_structure",
       "retrievalEligible": false,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "context_only_parent"
     },
     {
@@ -1549,7 +1549,7 @@
       "structuralLocator": "VM-30 / Section 2.A: General submission requirements / 1. Statement of Actuarial Opinion in annual statement",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -1671,7 +1671,7 @@
       "structuralLocator": "VM-30 / Section 2.A: General submission requirements / 2. Appointed-actuary notice within five business days",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -1787,7 +1787,7 @@
       "structuralLocator": "VM-30 / Section 2.A: General submission requirements / 3. Replacement and disagreement notices",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -1907,7 +1907,7 @@
       "structuralLocator": "VM-30 / Section 2.B: Standards for Asset Adequacy Analysis",
       "chunkingMethod": "hierarchical_structure",
       "retrievalEligible": false,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "context_only_parent"
     },
     {
@@ -2019,7 +2019,7 @@
       "structuralLocator": "VM-30 / Section 2.B: Standards for Asset Adequacy Analysis / 1. Standards of Practice basis",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -2122,7 +2122,7 @@
       "structuralLocator": "VM-30 / Section 2.B: Standards for Asset Adequacy Analysis / 2. Appropriate methods of analysis",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -2239,7 +2239,7 @@
       "structuralLocator": "VM-30 / Section 2.C: Liabilities to Be Covered",
       "chunkingMethod": "hierarchical_structure",
       "retrievalEligible": false,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "context_only_parent"
     },
     {
@@ -2349,7 +2349,7 @@
       "structuralLocator": "VM-30 / Section 2.C: Liabilities to Be Covered / 1. All in-force business",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -2453,7 +2453,7 @@
       "structuralLocator": "VM-30 / Section 2.C: Liabilities to Be Covered / 2. Additional reserve determined by asset adequacy analysis",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -2567,7 +2567,7 @@
       "structuralLocator": "VM-30 / Section 2.C: Liabilities to Be Covered / 3. Release and disclosure of additional reserves",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -2757,7 +2757,7 @@
       "structuralLocator": "VM-30 / Section 3.A: Statement of Actuarial Opinion Based on an Asset Adequacy Analysis",
       "chunkingMethod": "hierarchical_structure",
       "retrievalEligible": false,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "context_only_parent"
     },
     {
@@ -2875,7 +2875,7 @@
       "structuralLocator": "VM-30 / Section 3.A: Statement of Actuarial Opinion Based on an Asset Adequacy Analysis / 1. Required opinion sections",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -2991,7 +2991,7 @@
       "structuralLocator": "VM-30 / Section 3.A: Statement of Actuarial Opinion Based on an Asset Adequacy Analysis / 2. Prescribed wording and changes",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -3109,7 +3109,7 @@
       "structuralLocator": "VM-30 / Section 3.A: Statement of Actuarial Opinion Based on an Asset Adequacy Analysis / 3. Table of key indicators",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -3239,7 +3239,7 @@
       "structuralLocator": "VM-30 / Section 3.A: Statement of Actuarial Opinion Based on an Asset Adequacy Analysis / 4. Identification section and qualifications",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -3383,7 +3383,7 @@
       "structuralLocator": "VM-30 / Section 3.A: Statement of Actuarial Opinion Based on an Asset Adequacy Analysis / 5. Scope section and asset-adequacy-tested reserve table",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -3503,7 +3503,7 @@
       "structuralLocator": "VM-30 / Section 3.A: Statement of Actuarial Opinion Based on an Asset Adequacy Analysis / 6. Reliance section",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -3642,7 +3642,7 @@
       "structuralLocator": "VM-30 / Section 3.A: Statement of Actuarial Opinion Based on an Asset Adequacy Analysis / 7. Opinion section",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -3753,7 +3753,7 @@
       "structuralLocator": "VM-30 / Section 3.A: Statement of Actuarial Opinion Based on an Asset Adequacy Analysis / 8. Relevant comments section",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -3867,7 +3867,7 @@
       "structuralLocator": "VM-30 / Section 3.A: Statement of Actuarial Opinion Based on an Asset Adequacy Analysis / 9. Signature and date",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -3971,7 +3971,7 @@
       "structuralLocator": "VM-30 / Section 3.A: Statement of Actuarial Opinion Based on an Asset Adequacy Analysis / 10. Category of opinion",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -4069,7 +4069,7 @@
       "structuralLocator": "VM-30 / Section 3.A: Statement of Actuarial Opinion Based on an Asset Adequacy Analysis / 11. New issues, claims, and liabilities",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -4189,7 +4189,7 @@
       "structuralLocator": "VM-30 / Section 3.A: Statement of Actuarial Opinion Based on an Asset Adequacy Analysis / 12. Reliance on experts and certification",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -4382,7 +4382,7 @@
       "structuralLocator": "VM-30 / Section 3.B: Actuarial Memorandum, Asset Adequacy Analysis, and Regulatory Asset Adequacy Issues Summary",
       "chunkingMethod": "hierarchical_structure",
       "retrievalEligible": false,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "context_only_parent"
     },
     {
@@ -4500,7 +4500,7 @@
       "structuralLocator": "VM-30 / Section 3.B: Actuarial Memorandum, Asset Adequacy Analysis, and Regulatory Asset Adequacy Issues Summary / 1. Memorandum preparation and commissioner examination",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -4619,7 +4619,7 @@
       "structuralLocator": "VM-30 / Section 3.B: Actuarial Memorandum, Asset Adequacy Analysis, and Regulatory Asset Adequacy Issues Summary / 2. Reliance on memoranda of other actuaries",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -4744,7 +4744,7 @@
       "structuralLocator": "VM-30 / Section 3.B: Actuarial Memorandum, Asset Adequacy Analysis, and Regulatory Asset Adequacy Issues Summary / 3. Commissioner-engaged actuary, records, and confidentiality",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -4853,7 +4853,7 @@
       "structuralLocator": "VM-30 / Section 3.B: Actuarial Memorandum, Asset Adequacy Analysis, and Regulatory Asset Adequacy Issues Summary / 4. Required standards statement",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -4966,7 +4966,7 @@
       "structuralLocator": "VM-30 / Section 3.B: Actuarial Memorandum, Asset Adequacy Analysis, and Regulatory Asset Adequacy Issues Summary / 5. IMR and AVR assets in asset adequacy analysis",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -5076,7 +5076,7 @@
       "structuralLocator": "VM-30 / Section 3.B: Actuarial Memorandum, Asset Adequacy Analysis, and Regulatory Asset Adequacy Issues Summary / 6. AVR asset disclosure and selection method",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -5204,7 +5204,7 @@
       "structuralLocator": "VM-30 / Section 3.B: Actuarial Memorandum, Asset Adequacy Analysis, and Regulatory Asset Adequacy Issues Summary / 7. Equity-return volatility under moderately adverse conditions",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -5316,7 +5316,7 @@
       "structuralLocator": "VM-30 / Section 3.B: Actuarial Memorandum, Asset Adequacy Analysis, and Regulatory Asset Adequacy Issues Summary / 8. Seven-year documentation retention",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -5428,7 +5428,7 @@
       "structuralLocator": "VM-30 / Section 3.B: Actuarial Memorandum, Asset Adequacy Analysis, and Regulatory Asset Adequacy Issues Summary / 9. Demonstration of asset adequacy analysis standards",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -5544,7 +5544,7 @@
       "structuralLocator": "VM-30 / Section 3.B: Actuarial Memorandum, Asset Adequacy Analysis, and Regulatory Asset Adequacy Issues Summary / 10. Reserve information",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -5652,7 +5652,7 @@
       "structuralLocator": "VM-30 / Section 3.B: Actuarial Memorandum, Asset Adequacy Analysis, and Regulatory Asset Adequacy Issues Summary / 11. Asset information",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -5773,7 +5773,7 @@
       "structuralLocator": "VM-30 / Section 3.B: Actuarial Memorandum, Asset Adequacy Analysis, and Regulatory Asset Adequacy Issues Summary / 12. Analysis basis",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -5879,7 +5879,7 @@
       "structuralLocator": "VM-30 / Section 3.B: Actuarial Memorandum, Asset Adequacy Analysis, and Regulatory Asset Adequacy Issues Summary / 13. Results and conclusions",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -6021,7 +6021,7 @@
       "structuralLocator": "VM-30 / Section 3.B: Actuarial Memorandum, Asset Adequacy Analysis, and Regulatory Asset Adequacy Issues Summary / 14. Regulatory Asset Adequacy Issues Summary",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -6122,7 +6122,7 @@
       "structuralLocator": "VM-30 / VM-30 closing boundary before the unnumbered separator and VM-31",
       "chunkingMethod": "hierarchical_structure",
       "retrievalEligible": false,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "context_only_parent"
     },
     {
@@ -6214,7 +6214,7 @@
       "structuralLocator": "VM-30 / VM-30 closing boundary before the unnumbered separator and VM-31 / Intentional blank page 30-15",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": false,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "context_only_boundary"
     }
   ],
@@ -6224,7 +6224,7 @@
     "citationCompleteness": "partial",
     "pageImageBackstop": true,
     "lineReferencesAvailable": false,
-    "notes": "Substantially complete current 2026 VM-30 coverage; canonical review candidate only, not promoted, and not eligible for downstream learner, app, RAG, vector, or Copilot use."
+    "notes": "Canonically promoted current 2026 VM-30 coverage under a recorded independent-review decision; relationship candidates and downstream learner, app, RAG, vector, and Copilot use remain separately governed."
   },
   "exportHints": {
     "jsonlEligible": true,
@@ -6232,7 +6232,7 @@
     "vectorEligible": false,
     "notes": "Canonical JSONL/CSV serialization is available for review and audit; vector, learner, app, RAG, and Copilot export remain blocked pending a separate decision."
   },
-  "notes": "Substantially complete current 2026 VM-30 coverage; canonical review candidate only, not promoted, and not eligible for downstream learner, app, RAG, vector, or Copilot use.",
+  "notes": "Canonically promoted current 2026 VM-30 coverage under a recorded independent-review decision; relationship candidates and downstream learner, app, RAG, vector, and Copilot use remain separately governed.",
   "extensions": {
     "batchIds": [
       "batch-017",
@@ -6242,6 +6242,8 @@
     "structureModel": "vm30_opinion_memorandum_hierarchy_v1",
     "relationshipCandidatePath": "data/processed/relationship_registries/vm30-current-manual-relationship-candidates.json",
     "reviewPackagePath": "data/processed/review_packages/vm30-canonical-coverage-review-package.json",
-    "focusedRetrievalEvaluationPath": "data/processed/review_packages/vm30-focused-retrieval-evaluation.json"
+    "focusedRetrievalEvaluationPath": "data/processed/review_packages/vm30-focused-retrieval-evaluation.json",
+    "promotionDecisionId": "vm30-2026-current-manual-promotion-2026-08-28",
+    "promotionDecisionPath": "data/manual-input/promotion-decisions/vm30-2026-current-manual-promotion.json"
   }
 }

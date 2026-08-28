@@ -20,6 +20,7 @@ const relationshipPath = path.join(relationshipRoot, 'vm30-current-manual-relati
 const reviewPackagePath = path.join(reviewRoot, 'vm30-canonical-coverage-review-package.json')
 const promptPath = path.join(reviewRoot, 'vm30-independent-review-prompt.md')
 const supportGatePath = path.join(reviewRoot, 'vm30-support-gate-regression.json')
+const promotionDecisionPath = path.join(repoRoot, 'data', 'manual-input', 'promotion-decisions', 'vm30-2026-current-manual-promotion.json')
 
 const readJson = async (filePath) => JSON.parse(await fs.readFile(filePath, 'utf8'))
 const writeJson = async (filePath, value) => {
@@ -133,9 +134,10 @@ const buildFocusedEvaluation = async () => {
 }
 
 const main = async () => {
-  const [config, sourcePackage, supportGate] = await Promise.all([readJson(configPath), readJson(sourcePackagePath), readJson(supportGatePath)])
+  const [config, sourcePackage, supportGate, promotionDecision] = await Promise.all([readJson(configPath), readJson(sourcePackagePath), readJson(supportGatePath), readJson(promotionDecisionPath)])
   const sourceConfig = config.sources.find((source) => source.sourceId === 'vm30-current-manual')
   if (!sourceConfig) throw new Error('VM-30 source configuration is missing.')
+  if (promotionDecision.decision !== 'approved_for_canonical_promotion' || promotionDecision.reviewEvidence?.blockersClosed !== true || promotionDecision.scope?.expectedChunkCount !== VM30_CHUNK_COUNT || !promotionDecision.scope?.sourceIds?.includes('vm30-current-manual')) throw new Error('VM-30 canonical promotion decision is missing, unapproved, or out of scope.')
   const { chapterText, aggregateExtractionSha256 } = await loadVm30Chapter(repoRoot, sourceConfig.vm30Input)
   const structure = segmentVm30Chapter(chapterText)
   const relationships = buildRelationships(sourcePackage)
@@ -235,7 +237,7 @@ const main = async () => {
     'vm30-section-3-b-actuarial-memorandum-8-seven-year-retention', 'vm30-section-3-b-actuarial-memorandum-14-regulatory-asset-adequacy-issues-summary', 'vm30-closing-boundary-intentional-blank-page',
   ]
   const reviewPackage = {
-    schemaVersion: '1.0', reviewPackageId: 'vm30-canonical-coverage-review-package-2026', status: 'review_candidate', promoted: false, authoritativeSource: sourcePackage.source,
+    schemaVersion: '1.0', reviewPackageId: 'vm30-canonical-coverage-review-package-2026', status: 'canonical_promoted', promoted: true, authoritativeSource: sourcePackage.source,
     coverage: { packageCount: 1, parentCount: VM30_PARENT_COUNT, childCount: VM30_CHILD_COUNT, totalChunkCount: VM30_CHUNK_COUNT, retrievalEligibleChildCount: 42, pageRange: VM30_PAGE_RANGE, printedPageRange: { start: '30-1', end: '30-15' }, fidelityDistribution, provisionTypeCounts, contentAreaAudit: sourceQa.contentAreaAudit, sectionCoverageMatrix: sourceQa.sectionCoverage, notCanonicalizedSections: [] },
     sourceFidelity: { sourceQaPath: relative(sourceQaPath), sourceQaStatus: sourceQa.status, aggregateExtractionSha256, canonicalPackageSha256: await hashFile(sourcePackagePath), sourceTextRewriteCount: 0 },
     hierarchy: { model: 'section_or_subsection_parent_to_complete_numbered_requirement_child', adjacencyAvailable: true, nestedListsAndTablesKeptWithGoverningProvision: true, boundaryControlIncluded: true },
@@ -245,20 +247,21 @@ const main = async () => {
     supportGateRegression: { path: relative(supportGatePath), caseCount: supportGate.cases.length, passedCaseCount: supportGate.passedCaseCount, status: supportGate.status, productionEvidenceWindow: supportGate.productionEvidenceWindow, actualVm20Fixture: supportGate.fixtureSources.some((fixture) => fixture.sourceId === 'vm20-canonical-coverage'), fullRankingsInspectable: supportGate.cases.every((testCase) => Array.isArray(testCase.fullRanking) && testCase.fullRanking.length >= testCase.productionWindowEvidence.length) },
     promotionBlockerCorrectionAudit,
     representativeChunks: representativeIds.map((chunkId) => { const chunk = sourcePackage.chunks.find((candidate) => candidate.chunkId === chunkId); return { chunkId, sectionReference: chunk.sectionReference, pageStart: chunk.pageStart, pageEnd: chunk.pageEnd, provisionTypes: chunk.provisionTypes, sourceTextExcerpt: chunk.sourceTextExcerpt } }),
-    unresolvedGaps: sourceQa.unresolvedGaps,
+    unresolvedGaps: sourceQa.unresolvedGaps.filter((gap) => !/independent .*review.*required before promotion/i.test(gap)),
     artifacts: { canonicalSourcePackage: relative(sourcePackagePath), sourceQa: relative(sourceQaPath), relationshipCandidates: relative(relationshipPath), focusedRetrievalEvaluation: relative(retrievalPath), supportGateRegression: relative(supportGatePath), validationReport: 'data/processed/review_packages/vm30-validation-report.json', independentReviewPrompt: relative(promptPath) },
-    promotionReadiness: { independentReviewRequired: true, automatedPromotion: false, currentStatus: 'review_candidate', promotionStatus: 'not_promoted', promotionEligible: false, blockersClosed: false, learnerFacingAllowed: false, appReadyAllowed: false, ragReadyAllowed: false, vectorEligible: false, copilotExportEligible: false },
+    promotionReadiness: { independentReviewRequired: false, automatedPromotion: false, currentStatus: 'promoted_after_independent_review', promotionStatus: 'promoted', promotionEligible: true, blockersClosed: true, learnerFacingAllowed: false, appReadyAllowed: false, ragReadyAllowed: false, vectorEligible: false, copilotExportEligible: false },
+    promotionDecision: { promotionDecisionId: promotionDecision.promotionDecisionId, decision: promotionDecision.decision, decisionDate: promotionDecision.decisionDate, scopeId: promotionDecision.scope.scopeId, expectedChunkCount: promotionDecision.scope.expectedChunkCount, decisionRecordPath: relative(promotionDecisionPath), downstreamEligibility: promotionDecision.downstreamEligibility, reviewerRecord: promotionDecision.reviewerRecord, exclusions: promotionDecision.exclusions },
   }
   await writeJson(reviewPackagePath, reviewPackage)
   await writeMarkdown(reviewPackagePath, [
-    '# VM-30 canonical coverage review package', '', '- Status: **REVIEW CANDIDATE — NOT PROMOTED**', `- Authority: ${sourcePackage.source.sourceVersionIdentifier}`, `- Source SHA-256: \`${VM30_SOURCE_SHA256}\``,
+    '# VM-30 canonical coverage review package', '', '- Status: **CANONICAL PROMOTED**', `- Authority: ${sourcePackage.source.sourceVersionIdentifier}`, `- Source SHA-256: \`${VM30_SOURCE_SHA256}\``,
     '- Chapter boundary: PDF pages 325-339; page 340 blank separator; page 341 begins VM-31', `- Package / parents / children / total chunks: 1 / ${VM30_PARENT_COUNT} / ${VM30_CHILD_COUNT} / ${VM30_CHUNK_COUNT}`,
-    `- Exact source fidelity: ${fidelityDistribution.exact ?? 0}/${VM30_CHUNK_COUNT}`, `- Relationship candidates: ${relationships.relationshipCount} (pending, review-only, not promoted)`, '',
+    `- Exact source fidelity: ${fidelityDistribution.exact ?? 0}/${VM30_CHUNK_COUNT}`, `- Relationship candidates: ${relationships.relationshipCount} (pending, review-only, not promoted)`, `- Promotion decision: \`${relative(promotionDecisionPath)}\``, '- Downstream learner, app, RAG, vector, and Copilot eligibility remains blocked.', '',
     '## Focused retrieval', '', `- Supported top-1 / strict top-3: ${focusedEvaluation.supportedTop1Count}/${focusedEvaluation.supportedQueryCount} / ${focusedEvaluation.supportedTop3Count}/${focusedEvaluation.supportedQueryCount}`,
     `- Unsupported correctly rejected: ${focusedEvaluation.unsupportedCorrectCount}/${focusedEvaluation.unsupportedQueryCount}`, `- Ambiguity safely handled: ${focusedEvaluation.ambiguitySafeCount}/${focusedEvaluation.ambiguityQueryCount}`,
     `- Current authoritative VM-30 top-1: ${focusedEvaluation.currentAuthoritativeVm30Top1Count}/${focusedEvaluation.supportedQueryCount}`, `- Support-gate regressions: ${supportGate.passedCaseCount}/${supportGate.caseCount}`, '- First support case uses actual VM-20 canonical methodology evidence; the full supplied rankings and per-case pass results are inspectable.', '',
     '## Review boundary', '', '- Exact VM-30 source excerpts control; summaries and classifications are generated metadata.', '- VM-01 terminology is not duplicated as VM-30 source definitions.',
-    '- Relationship candidates do not assert legal effect and remain separately governed.', '- Canonical promotion and all learner, application, RAG, vector, and Copilot uses remain blocked.', '',
+    '- Relationship candidates do not assert legal effect and remain separately governed.', '- Canonical source promotion is recorded; learner, application, RAG, vector, and Copilot uses remain blocked.', '',
     'This review package is generated review metadata, not authoritative regulatory evidence.',
   ].join('\n'))
 
