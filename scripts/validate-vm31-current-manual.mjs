@@ -18,10 +18,12 @@ const relationshipPath = path.join(repoRoot, 'data', 'processed', 'relationship_
 const validationPath = path.join(reviewRoot, 'vm31-validation-report.json')
 const repositoryManifestPath = path.join(repoRoot, 'data', 'processed', 'source_indexes', 'repository-manifest.json')
 const structuredTablesPath = path.join(repoRoot, 'data', 'processed', 'structured_tables', 'vm20-appendix2-tables.json')
+const promotionDecisionPath = path.join(repoRoot, 'data', 'manual-input', 'promotion-decisions', 'vm31-2026-current-manual-promotion.json')
 
 const VM01_SOURCE_TEXT_AGGREGATE_SHA256 = '04fecfc622ee792dca2f994f3d7eb6ebf510bd533bd7be9798b4604a70b8ef98'
 const VM20_PROMOTED_SOURCE_TEXT_AGGREGATE_SHA256 = 'c32c9a1e976a0635707af9b82e3847152b4611257147d12f14f29c4a5b1274c6'
 const VM20_STRUCTURED_TABLE_FILE_SHA256 = '2b86d0929da8f8dfc85f9d3a123311166d136283ed33afeca5ded4c32f0d0f3f'
+const VM31_SOURCE_TEXT_AGGREGATE_SHA256 = 'f87b9b995e3c7065365e3f7e035ba20e2779d377d08b79d9d00ccfa7bdc6f5fc'
 const vm20PromotedSourceIds = ['vm20-section3c-hierarchical', 'vm20-framework-overview', 'vm20-framework-boundary', 'vm20-assumptions-section-3c', 'vm20-canonical-coverage', 'vm20-remaining-prose-appendix-coverage']
 
 const readJson = async (filePath) => JSON.parse(await fs.readFile(filePath, 'utf8'))
@@ -33,8 +35,8 @@ const normalizeSourceLabel = (value) => String(value ?? '').toLowerCase().replac
 const sourceTextAggregate = (sourcePackage) => sha256(sourcePackage.chunks.map((chunk) => chunk.sourceTextExcerpt).join('\n\n'))
 
 const main = async () => {
-  const [config, sourcePackage, sourceQa, retrieval, supportGate, reviewPackage, relationships, repositoryManifest] = await Promise.all([
-    readJson(configPath), readJson(sourcePackagePath), readJson(sourceQaPath), readJson(retrievalPath), readJson(supportGatePath), readJson(reviewPackagePath), readJson(relationshipPath), readJson(repositoryManifestPath),
+  const [config, sourcePackage, sourceQa, retrieval, supportGate, reviewPackage, relationships, repositoryManifest, promotionDecision] = await Promise.all([
+    readJson(configPath), readJson(sourcePackagePath), readJson(sourceQaPath), readJson(retrievalPath), readJson(supportGatePath), readJson(reviewPackagePath), readJson(relationshipPath), readJson(repositoryManifestPath), readJson(promotionDecisionPath),
   ])
   const sourceConfig = config.sources.find((source) => source.sourceId === 'vm31-current-manual')
   assert(sourceConfig, 'VM-31 source configuration is missing.')
@@ -46,7 +48,7 @@ const main = async () => {
   assert(sourcePackage.source.pageRange.start === VM31_PAGE_RANGE.start && sourcePackage.source.pageRange.end === VM31_PAGE_RANGE.end, 'VM-31 source page boundary mismatch.')
   const actualPdfHash = await hashFile(sourcePackage.source.filePath)
   assert(actualPdfHash === VM31_SOURCE_SHA256, 'VM-31 local authoritative PDF hash mismatch.')
-  assert(sourcePackage.processing.canonicality === 'canonical' && sourcePackage.processing.reviewOnly === true && sourcePackage.processing.promotionStatus === 'not_promoted', 'VM-31 must remain a canonical review candidate and not promoted.')
+  assert(sourcePackage.processing.canonicality === 'canonical' && sourcePackage.processing.reviewOnly === false && sourcePackage.processing.promotionStatus === 'promoted', 'VM-31 canonical promotion metadata is incorrect.')
   assert(sourcePackage.processing.learnerFacingAllowed === false && sourcePackage.processing.appReadyAllowed === false && sourcePackage.processing.ragReadyAllowed === false && sourcePackage.exportHints.vectorEligible === false, 'VM-31 downstream eligibility boundary is not closed.')
 
   assert(sourcePackage.chunks.length === VM31_CHUNK_COUNT && expectedChunks.length === VM31_CHUNK_COUNT, 'VM-31 total chunk count mismatch.')
@@ -54,7 +56,8 @@ const main = async () => {
   const children = sourcePackage.chunks.filter((chunk) => chunk.chunkLevel === 'child')
   assert(parents.length === VM31_PARENT_COUNT && children.length === VM31_CHILD_COUNT, 'VM-31 parent/child count mismatch.')
   assert(sourcePackage.chunks.filter((chunk) => chunk.retrievalEligible).length === VM31_CHILD_COUNT - 1, 'VM-31 first-stage retrieval-unit count mismatch.')
-  assert(sourcePackage.chunks.every((chunk) => chunk.sourceTextType === 'actual_extracted_source_text' && chunk.fidelity === 'exact' && chunk.promotionEligible === false), 'VM-31 source fidelity or promotion boundary mismatch.')
+  assert(sourcePackage.chunks.every((chunk) => chunk.sourceTextType === 'actual_extracted_source_text' && chunk.fidelity === 'exact' && chunk.promotionEligible === true), 'VM-31 source fidelity or promotion boundary mismatch.')
+  assert(sourceTextAggregate(sourcePackage) === VM31_SOURCE_TEXT_AGGREGATE_SHA256, 'VM-31 authoritative source-text aggregate changed during promotion.')
   assert(sourcePackage.chunks.every((chunk) => chunk.definedTerms.length === 0), 'VM-31 must not create formal defined-term claims.')
   assert(sourcePackage.chunks.some((chunk) => chunk.pageEnd === 386 && chunk.chunkKind === 'boundary_slice' && /intentionally left blank/i.test(chunk.sourceTextExcerpt)), 'VM-31 closing blank-page boundary is missing.')
   assert(!sourcePackage.chunks.some((chunk) => /VM\s*-\s*50|Experience Reporting Requirements/i.test(chunk.sourceTextExcerpt)), 'VM-31 package crosses into the VM-50 opener.')
@@ -124,9 +127,13 @@ const main = async () => {
   }
   assert(supportGate.status === 'pass' && supportGate.productionEvidenceWindow === 3 && supportGate.cases.length === 4 && supportGate.cases.every((testCase) => testCase.decision.supportState === testCase.expectedState && testCase.decision.reasonCode === testCase.expectedReason), 'VM-31 formal-requirement support-gate regression failed.')
 
-  assert(reviewPackage.status === 'canonical_review_candidate' && reviewPackage.promoted === false && reviewPackage.coverage.parentCount === VM31_PARENT_COUNT && reviewPackage.coverage.childCount === VM31_CHILD_COUNT, 'VM-31 review package scope mismatch.')
-  assert(reviewPackage.promotionReadiness.independentReviewRequired === true && reviewPackage.promotionReadiness.promotionStatus === 'not_promoted' && reviewPackage.promotionReadiness.promotionEligible === false && reviewPackage.promotionReadiness.copilotExportEligible === false, 'VM-31 review package governance mismatch.')
+  assert(reviewPackage.status === 'canonical_promoted' && reviewPackage.promoted === true && reviewPackage.coverage.parentCount === VM31_PARENT_COUNT && reviewPackage.coverage.childCount === VM31_CHILD_COUNT, 'VM-31 review package scope mismatch.')
+  assert(reviewPackage.promotionReadiness.independentReviewRequired === false && reviewPackage.promotionReadiness.promotionStatus === 'promoted' && reviewPackage.promotionReadiness.promotionEligible === true && reviewPackage.promotionReadiness.blockersClosed === true && reviewPackage.promotionReadiness.copilotExportEligible === false, 'VM-31 review package governance mismatch.')
   assert(reviewPackage.relationships.candidateCount === 92 && reviewPackage.retrievalEvaluation.allCasesPassed === true, 'VM-31 review package relationship or retrieval summary mismatch.')
+  assert(promotionDecision.decision === 'approved_for_canonical_promotion' && promotionDecision.scope.expectedChunkCount === VM31_CHUNK_COUNT && promotionDecision.scope.sourceIds.length === 1 && promotionDecision.scope.sourceIds[0] === 'vm31-current-manual' && promotionDecision.reviewEvidence.blockersClosed === true, 'VM-31 promotion decision is incomplete or out of scope.')
+  assert(promotionDecision.exclusions.some((item) => item.includes('92 VM-31')) && promotionDecision.downstreamEligibility.copilotExportEligible === false && promotionDecision.preservation.sourceTextChanged === false && promotionDecision.preservation.chunkContentChanged === false, 'VM-31 promotion exclusions, downstream boundary, or preservation record is incomplete.')
+  assert(reviewPackage.promotionDecision.decisionRecordPath === 'data/manual-input/promotion-decisions/vm31-2026-current-manual-promotion.json' && reviewPackage.promotionDecision.decision === promotionDecision.decision, 'VM-31 review package does not include the canonical promotion decision.')
+  assert(sourceQa.governance.reviewOnly === true && sourceQa.governance.promotionStatus === 'not_promoted' && retrieval.governance.reviewOnly === true && retrieval.governance.promotionStatus === 'not_promoted', 'VM-31 QA or retrieval review evidence must remain separately review-only.')
   for (const [artifactName, artifactPath] of Object.entries(reviewPackage.artifacts)) {
     if (artifactName === 'validationReport') continue
     await fs.access(path.join(repoRoot, ...artifactPath.split('/')))
@@ -142,7 +149,7 @@ const main = async () => {
   }
   assert(sha256(vm20Hashes.join('\n')) === VM20_PROMOTED_SOURCE_TEXT_AGGREGATE_SHA256, 'VM-20 promoted prose source evidence changed during VM-31 work.')
   assert(await hashFile(structuredTablesPath) === VM20_STRUCTURED_TABLE_FILE_SHA256, 'VM-20 structured-table corpus changed during VM-31 work.')
-  assert(repositoryManifest.sourcePackageCount === 23 && repositoryManifest.chunkCount === 541 && repositoryManifest.extensions.promotedSourcePackageCount === 7 && repositoryManifest.extensions.promotedChunkCount === 247, 'Repository manifest counts or promotion boundary mismatch after VM-31 addition.')
+  assert(repositoryManifest.sourcePackageCount === 23 && repositoryManifest.chunkCount === 541 && repositoryManifest.extensions.promotionDecisionPaths.length === 3 && repositoryManifest.extensions.promotedSourcePackageCount === 8 && repositoryManifest.extensions.promotedChunkCount === 331, 'Repository manifest counts or promotion boundary mismatch after VM-31 promotion.')
 
   const report = {
     schemaVersion: '1.0',
@@ -151,7 +158,7 @@ const main = async () => {
     sourceIdentity: { sourceSha256: VM31_SOURCE_SHA256, locallyVerifiedSha256: actualPdfHash, sourceEditionId: sourcePackage.source.sourceEditionId, pageRange: VM31_PAGE_RANGE, aggregateExtractionSha256 },
     checks: { packageCount: 1, parents: VM31_PARENT_COUNT, children: VM31_CHILD_COUNT, totalChunks: VM31_CHUNK_COUNT, firstStageRetrievalUnits: VM31_CHILD_COUNT - 1, exactSourceChunks: VM31_CHUNK_COUNT, sourceTextRewrites: 0, purposeContextChunks: purposeChunkIds.length, guidanceNoteChildren: 6, contentAreasCovered: 17, relationshipCandidates: relationships.relationshipCount, sourceFaithfulRelationshipLabels: relationships.relationshipCount, ag43SourceLabelCorrections: ag43Relationships.length, focusedQueries: retrieval.queryCount, supportedQueries: retrieval.supportedQueryCount, supportedTop1: retrieval.supportedTop1Count, supportedStrictTop3: retrieval.supportedTop3Count, unsupportedCorrect: retrieval.unsupportedCorrectCount, ambiguitySafe: retrieval.ambiguitySafeCount, currentAuthorityTop1: retrieval.currentAuthoritativeVm31Top1Count, supportGateRegressions: supportGate.cases.length },
     regressionIntegrity: { vm01SourceTextAggregateSha256: VM01_SOURCE_TEXT_AGGREGATE_SHA256, vm20PromotedSourceTextAggregateSha256: VM20_PROMOTED_SOURCE_TEXT_AGGREGATE_SHA256, vm20StructuredTableFileSha256: VM20_STRUCTURED_TABLE_FILE_SHA256, status: 'unchanged' },
-    governance: { reviewOnly: true, promotionStatus: 'not_promoted', promotionEligible: false, learnerFacingAllowed: false, appReadyAllowed: false, ragReadyAllowed: false, vectorEligible: false, copilotExportEligible: false },
+    governance: { reviewOnly: false, promotionStatus: 'promoted', promotionEligible: true, learnerFacingAllowed: false, appReadyAllowed: false, ragReadyAllowed: false, vectorEligible: false, copilotExportEligible: false, promotionDecisionPath: 'data/manual-input/promotion-decisions/vm31-2026-current-manual-promotion.json' },
   }
   await fs.writeFile(validationPath, `${JSON.stringify(report, null, 2)}\n`, 'utf8')
   await fs.writeFile(validationPath.replace(/\.json$/, '.md'), `${[
@@ -167,7 +174,8 @@ const main = async () => {
     `- Unsupported / ambiguity: ${retrieval.unsupportedCorrectCount}/${retrieval.unsupportedQueryCount} / ${retrieval.ambiguitySafeCount}/${retrieval.ambiguityQueryCount}`,
     `- Current authoritative VM-31 top-1: ${retrieval.currentAuthoritativeVm31Top1Count}/${retrieval.supportedQueryCount}`,
     '- VM-01, VM-20 promoted prose, and VM-20 structured tables: unchanged',
-    '- Governance: review-only / not promoted / downstream export blocked',
+    '- Governance: canonical promoted; downstream learner/app/RAG/vector/Copilot export blocked',
+    '- Relationship candidates: separately review-only, pending, and unpromoted',
   ].join('\n')}\n`, 'utf8')
   console.log(`Validated VM-31: ${VM31_PARENT_COUNT} parents, ${VM31_CHILD_COUNT} children, ${relationships.relationshipCount} relationships, and ${retrieval.queryCount} retrieval cases.`)
 }

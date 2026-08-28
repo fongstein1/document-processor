@@ -718,13 +718,13 @@
         "publicationDate": null,
         "effectiveDate": null,
         "version": "2026 Edition",
-        "approvalStatus": "review_only",
+        "approvalStatus": "reviewed",
         "language": "en",
         "recommendedProfile": "reporting",
         "recommendedChunkingStrategy": "section_subsection_parent_to_complete_numbered_requirement_child",
         "confidence": "high",
         "unresolvedQuestions": [
-          "Independent source and actuarial review is required before promotion.",
+          "Relationship candidates require a separate human review and promotion decision.",
           "Downstream learner, application, RAG, vector, and Copilot eligibility require separate decisions."
         ],
         "notes": "Exact source excerpts control; reporting classifications, summaries, and cross-reference candidates are derivative metadata."

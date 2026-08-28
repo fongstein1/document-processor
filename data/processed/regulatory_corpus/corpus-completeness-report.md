@@ -1,6 +1,6 @@
 # Corpus Completeness Report
 
-As of 2026-08-26T00:00:00.000Z, the repository contains substantial regulatory evidence with separately recorded VM-01 definitions, VM-20 prose, and VM-20 structured-table canonical promotions, but it is not production-complete and is not Copilot-export ready.
+As of 2026-08-26T00:00:00.000Z, the repository contains substantial regulatory evidence with separately recorded VM-01 definitions, VM-20 prose, VM-20 structured-table, and VM-31 canonical promotions, but it is not production-complete and is not Copilot-export ready.
 
 ## Counts
 
@@ -9,7 +9,7 @@ As of 2026-08-26T00:00:00.000Z, the repository contains substantial regulatory e
 - Documents reviewed / review artifacts matched: **97 review indexes**
 - Canonical source packages: **23**
 - Canonical chunks: **541**
-- Promoted canonical prose packages / chunks: **7 / 247**
+- Promoted canonical prose packages / chunks: **8 / 331**
 - Promoted structured logical tables / versions: **7 / 29**
 - Structured rows / values: **891 / 7022**
 - Sources awaiting canonicalization: **96**
@@ -39,10 +39,11 @@ As of 2026-08-26T00:00:00.000Z, the repository contains substantial regulatory e
 
 ## VM-31 coverage checkpoint
 
-- Current 2026 VM-31 structural parents / child units: 9 / 75; status not_promoted.
+- Current 2026 VM-31 structural parents / child units: 9 / 75; status promoted.
+- VM-31 promotion decision: `data/manual-input/promotion-decisions/vm31-2026-current-manual-promotion.json`.
 - VM-31 explicit-reference candidates: 92; all remain pending, review-only, and not promoted.
 - Focused VM-31 retrieval contains 21 inspectable cases covering report obligations, timing, retention, applicability, certifications, exhibits, exceptions, cross-references, unsupported substitutions, ambiguity, and current-authority preference.
-- VM-31 remains blocked from learner, app, RAG, vector, and Copilot use pending independent review and an explicit promotion decision.
+- VM-31 remains blocked from learner, app, RAG, vector, and Copilot use pending separate downstream governance decisions.
 
 ## Interpretation
 

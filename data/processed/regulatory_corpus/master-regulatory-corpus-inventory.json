@@ -22,10 +22,10 @@
     "vm01RelationshipCandidates": 29,
     "vm31StructuralParents": 9,
     "vm31ChildUnits": 75,
-    "vm31PromotionStatus": "not_promoted",
+    "vm31PromotionStatus": "promoted",
     "vm31RelationshipCandidates": 92,
-    "promotedCanonicalPackages": 7,
-    "promotedCanonicalChunks": 247,
+    "promotedCanonicalPackages": 8,
+    "promotedCanonicalChunks": 331,
     "structuredTableLogicalTables": 7,
     "structuredTableVersions": 29,
     "structuredTableRows": 891,
@@ -42,7 +42,6 @@
       "vm-21",
       "vm-22",
       "vm-30",
-      "vm-31",
       "vm-g",
       "vm-c",
       "current-regulatory-tables"
@@ -5059,7 +5058,8 @@
         "exclusionReason": "Canonical source promotion is recorded, but Copilot export requires a separate explicit approval.",
         "promotionRecordPaths": [
           "data/manual-input/promotion-decisions/vm01-2026-definitions-promotion.json",
-          "data/manual-input/promotion-decisions/vm20-2026-prose-promotion.json"
+          "data/manual-input/promotion-decisions/vm20-2026-prose-promotion.json",
+          "data/manual-input/promotion-decisions/vm31-2026-current-manual-promotion.json"
         ],
         "promotedSourcePackageIds": [
           "vm01-definitions",
@@ -5068,7 +5068,8 @@
           "vm20-framework-boundary",
           "vm20-framework-overview",
           "vm20-remaining-prose-appendix-coverage",
-          "vm20-section3c-hierarchical"
+          "vm20-section3c-hierarchical",
+          "vm31-current-manual"
         ]
       },
       "retrieval": {
@@ -6974,8 +6975,8 @@
       "sourceFamily": "valuation_manual_pdfs",
       "priority": "P0",
       "intendedStatus": "current",
-      "assessment": "canonical_review_candidate",
-      "reason": "Current 2026 VM-31 is represented by one substantially complete review-only package with 9 structural parents and 75 exact-text child units.",
+      "assessment": "canonical_complete",
+      "reason": "The reviewed current 2026 VM-31 package contains 9 structural parents and 75 exact-text child units and is canonically promoted under its scope-specific decision. Its 92 relationship candidates and all downstream export uses remain separately governed.",
       "evidenceSourceIds": [
         "supporting-vm01-definitions",
         "supporting-vm02-nonforfeiture",
@@ -7037,7 +7038,7 @@
         "vm31-reporting-crossref",
         "vm31-reporting-definition"
       ],
-      "nextAction": "Send the source package, retrieval evaluation, source QA, relationship registry, and review package for independent review; do not promote or begin another chapter until disposition."
+      "nextAction": "Retain the approved current-manual scope and track the 92 relationship candidates as a separate review-only backlog item."
     },
     {
       "targetId": "vm-g",

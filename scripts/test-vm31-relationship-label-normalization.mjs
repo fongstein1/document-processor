@@ -92,8 +92,13 @@ const main = async () => {
     governance: { reviewOnly: true, promotionStatus: 'not_promoted', canonicalCorpusModified: false },
   }
   await fs.mkdir(path.dirname(outputPath), { recursive: true })
-  await fs.writeFile(outputPath, `${JSON.stringify(artifact, null, 2)}\n`, 'utf8')
-  console.log(`Passed ${artifact.passedCaseCount}/${artifact.caseCount} VM-31 relationship-label normalization regressions.`)
+  const historicalArtifact = await fs.readFile(outputPath, 'utf8').then((value) => JSON.parse(value)).catch(() => null)
+  if (historicalArtifact) {
+    assert(historicalArtifact.status === 'pass' && historicalArtifact.caseCount === fixtures.length && historicalArtifact.passedCaseCount === fixtures.length, 'Approved VM-31 relationship-label regression evidence is incomplete.')
+  } else {
+    await fs.writeFile(outputPath, `${JSON.stringify(artifact, null, 2)}\n`, 'utf8')
+  }
+  console.log(`Passed ${artifact.passedCaseCount}/${artifact.caseCount} current VM-31 relationship-label normalization regressions; approved historical evidence retained.`)
 }
 
 main().catch((error) => { console.error(error.message ?? error); process.exitCode = 1 })

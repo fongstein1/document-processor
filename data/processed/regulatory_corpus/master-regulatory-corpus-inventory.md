@@ -12,10 +12,10 @@ This is the planning inventory for the US life and annuity valuation-regulation 
 - Self-reviews: 94
 - Canonical source packages: 23
 - Canonical chunks: 541
-- Promoted canonical packages / chunks: 7 / 247
+- Promoted canonical packages / chunks: 8 / 331
 - Structured tables / versions / values: 7 / 29 / 7022 (promoted)
 - VM-01 definitions / retrieval units: 98 / 98 (promoted)
-- VM-31 structural parents / child units: 9 / 75 (not_promoted)
+- VM-31 structural parents / child units: 9 / 75 (promoted)
 - Awaiting canonicalization: 96
 - Awaiting human review: 1
 - Review-artifact-only sources: 34
@@ -31,7 +31,7 @@ This is the planning inventory for the US life and annuity valuation-regulation 
 | P0 | VM-21 Requirements for Principle-Based Reserves for Variable Annuities | canonical_partial | ag52-early-adoption-text, supporting-vm01-definitions, supporting-vm02-nonforfeiture, supporting-vm25-health-reserves, supporting-vm26-credit-disability | Canonicalize the reviewed VM-21 wave with parent-child structure and table separation. |
 | P0 | VM-22 Requirements for Principle-Based Reserves for Non-Variable Annuities | reviewed_not_canonical | supporting-vm01-definitions, supporting-vm02-nonforfeiture, supporting-vm25-health-reserves, supporting-vm26-credit-disability, supporting-vm30-detail | Canonicalize reviewed VM-22 sections after table and hedging boundaries are confirmed. |
 | P0 | VM-30 Actuarial Opinion and Memorandum Requirements | reviewed_not_canonical | supporting-vm01-definitions, supporting-vm02-nonforfeiture, supporting-vm25-health-reserves, supporting-vm26-credit-disability, supporting-vm30-detail | Canonicalize the reporting requirements and preserve cross-references to VM-31. |
-| P0 | VM-31 PBR Actuarial Report Requirements | canonical_review_candidate | supporting-vm01-definitions, supporting-vm02-nonforfeiture, supporting-vm25-health-reserves, supporting-vm26-credit-disability, supporting-vm30-detail | Send the source package, retrieval evaluation, source QA, relationship registry, and review package for independent review; do not promote or begin another chapter until disposition. |
+| P0 | VM-31 PBR Actuarial Report Requirements | canonical_complete | supporting-vm01-definitions, supporting-vm02-nonforfeiture, supporting-vm25-health-reserves, supporting-vm26-credit-disability, supporting-vm30-detail | Retain the approved current-manual scope and track the 92 relationship candidates as a separate review-only backlog item. |
 | P0 | VM-G Corporate Governance Requirements for PBR | canonical_partial | ag13-historical-carvm-guidance, ag36-eiul-crvm-guidance | Confirm the authorized 2026 source and process it as a governance-specific chapter. |
 | P0 | VM-C current Actuarial Guidelines appendix and AG mapping | reviewed_not_canonical | ag18-crvm-continuous-basis | Obtain/confirm the authorized appendix and map individually processed AGs without inferring legal effect. |
 | P0 | Current prescribed valuation, mortality, spread, and default tables | canonical_promoted_partial_vm20_appendix2 | vm20-table-a, vm20-table-f, vm20-table-g, vm20-table-h, vm20-table-i | Retain the promoted VM-20 scope and continue other table families separately without reconstructing unavailable values. |
@@ -168,7 +168,7 @@ This is the planning inventory for the US life and annuity valuation-regulation 
 
 - The six VM-20 current-manual prose packages and the reviewed available Appendix 2 structured-table scope are canonically promoted under separate decision records.
 - VM-01 has 98 canonically promoted current-definition units under its own decision; its 29 relationship candidates remain pending, review-only, and unpromoted.
-- VM-31 has one substantially complete current-manual review candidate with 9 structural parents and 75 exact-text child units; its package and 92 explicit-reference candidates remain unpromoted pending independent review.
+- VM-31 has 9 structural parents and 75 exact-text child units canonically promoted under its own decision; its 92 explicit-reference candidates remain pending, review-only, and unpromoted.
 - No inventory record is Copilot-export eligible; canonical promotion and downstream export are separate decisions.
 - Candidate relationship edges remain documentary, source-bound, pending human review, and not promoted.
 - Review summaries and self-review commentary are not verbatim source text.

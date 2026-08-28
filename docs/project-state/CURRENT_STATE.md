@@ -18,7 +18,7 @@ and Copilot export remain blocked pending separate governance decisions. The
 four code snapshots approved in commit `7067118` remain immutable historical
 review evidence rather than being regenerated during promotion.
 
-## 2026-08-27 VM-31 current-manual canonical review candidate
+## 2026-08-28 VM-31 current-manual canonical promotion
 
 Current 2026 VM-31 is represented by one substantially complete, structure-aware
 source package spanning PDF pages 341-386. It contains 9 structural parents and
@@ -34,9 +34,6 @@ VM-31 requirement requests. Ninety-two explicit-reference relationship candidate
 to VM-20, VM-21, VM-22, VM-G, and Actuarial Guideline XLIII remain documentary,
 pending, review-only, and unpromoted.
 
-VM-31 is not promoted. Learner, app, RAG, vector, and Copilot eligibility remain
-false pending independent review and a separately recorded promotion decision.
-
 Independent review returned `APPROVE WITH FIXES` with no source, hierarchy,
 retrieval-safety, authority-separation, terminology, or governance defect. The
 two metadata blockers are now corrected: Section 1 Purpose is classified as
@@ -45,7 +42,14 @@ requirement, and the two AG 43 relationship candidates preserve `AG 43` as the
 source-facing label while retaining `Actuarial Guideline XLIII` separately as
 the canonical target label. All 92 explicit-source relationship labels now pass
 source-wording validation. Authoritative source evidence remains unchanged, and
-VM-31 remains review-only pending narrow final approval.
+The narrow metadata and validator-implementation reviews then closed the final
+evidence gaps, and the final disposition was `APPROVE FOR CANONICAL PROMOTION`.
+The 84-chunk current-manual scope is now promoted under
+`data/manual-input/promotion-decisions/vm31-2026-current-manual-promotion.json`.
+The source-text aggregate, hierarchy, relationships, and focused retrieval
+results remain unchanged. The 92 relationship candidates remain pending,
+review-only, and unpromoted. Learner, app, RAG, vector, and Copilot eligibility
+remain false pending separate downstream governance decisions.
 
 ## 2026-08-26 VM-20 prose and appendix coverage
 

@@ -12,4 +12,5 @@
 - Unsupported / ambiguity: 2/2 / 1/1
 - Current authoritative VM-31 top-1: 18/18
 - VM-01, VM-20 promoted prose, and VM-20 structured tables: unchanged
-- Governance: review-only / not promoted / downstream export blocked
+- Governance: canonical promoted; downstream learner/app/RAG/vector/Copilot export blocked
+- Relationship candidates: separately review-only, pending, and unpromoted

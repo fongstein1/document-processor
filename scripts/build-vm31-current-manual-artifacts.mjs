@@ -20,6 +20,7 @@ const relationshipPath = path.join(relationshipRoot, 'vm31-current-manual-relati
 const reviewPackagePath = path.join(reviewRoot, 'vm31-canonical-coverage-review-package.json')
 const promptPath = path.join(reviewRoot, 'vm31-independent-review-prompt.md')
 const supportGatePath = path.join(reviewRoot, 'vm31-support-gate-regression.json')
+const promotionDecisionPath = path.join(repoRoot, 'data', 'manual-input', 'promotion-decisions', 'vm31-2026-current-manual-promotion.json')
 
 const readJson = async (filePath) => JSON.parse(await fs.readFile(filePath, 'utf8'))
 const writeJson = async (filePath, value) => {
@@ -182,9 +183,10 @@ const buildFocusedEvaluation = async (sourcePackage) => {
 }
 
 const main = async () => {
-  const [config, sourcePackage, supportGate] = await Promise.all([readJson(configPath), readJson(sourcePackagePath), readJson(supportGatePath)])
+  const [config, sourcePackage, supportGate, promotionDecision] = await Promise.all([readJson(configPath), readJson(sourcePackagePath), readJson(supportGatePath), readJson(promotionDecisionPath)])
   const sourceConfig = config.sources.find((source) => source.sourceId === 'vm31-current-manual')
   if (!sourceConfig) throw new Error('VM-31 source configuration is missing.')
+  if (promotionDecision.decision !== 'approved_for_canonical_promotion' || promotionDecision.reviewEvidence?.blockersClosed !== true || promotionDecision.scope?.expectedChunkCount !== VM31_CHUNK_COUNT || !promotionDecision.scope?.sourceIds?.includes('vm31-current-manual')) throw new Error('VM-31 canonical promotion decision is missing, unapproved, or out of scope.')
   const { chapterText, aggregateExtractionSha256 } = await loadVm31Chapter(repoRoot, sourceConfig.vm31Input)
   const structure = segmentVm31Chapter(chapterText)
   const relationships = buildRelationships(sourcePackage)
@@ -276,8 +278,8 @@ const main = async () => {
   const reviewPackage = {
     schemaVersion: '1.0',
     reviewPackageId: 'vm31-canonical-coverage-review-package-2026',
-    status: 'canonical_review_candidate',
-    promoted: false,
+    status: 'canonical_promoted',
+    promoted: true,
     authoritativeSource: sourcePackage.source,
     coverage: { packageCount: 1, parentCount: VM31_PARENT_COUNT, childCount: VM31_CHILD_COUNT, totalChunkCount: VM31_CHUNK_COUNT, pageRange: VM31_PAGE_RANGE, fidelityDistribution, provisionTypeCounts, contentAreaAudit: sourceQa.contentAreaAudit },
     sourceFidelity: { sourceQaPath: relative(sourceQaPath), sourceQaStatus: sourceQa.status, aggregateExtractionSha256, canonicalPackageSha256: await hashFile(sourcePackagePath), sourceTextRewriteCount: 0 },
@@ -294,20 +296,23 @@ const main = async () => {
       const chunk = sourcePackage.chunks.find((candidate) => candidate.chunkId === chunkId)
       return { chunkId, sectionReference: chunk.sectionReference, pageStart: chunk.pageStart, pageEnd: chunk.pageEnd, provisionTypes: chunk.provisionTypes, sourceTextExcerpt: chunk.sourceTextExcerpt }
     }),
-    unresolvedGaps: sourceQa.unresolvedGaps,
+    unresolvedGaps: sourceQa.unresolvedGaps.filter((gap) => !/independent .*review.*required before promotion/i.test(gap)),
     artifacts: { canonicalSourcePackage: relative(sourcePackagePath), sourceQa: relative(sourceQaPath), relationshipCandidates: relative(relationshipPath), focusedRetrievalEvaluation: relative(retrievalPath), supportGateRegression: relative(supportGatePath), validationReport: 'data/processed/review_packages/vm31-validation-report.json', independentReviewPrompt: relative(promptPath) },
-    promotionReadiness: { independentReviewRequired: true, automatedPromotion: false, currentStatus: 'review_only_pending_independent_review', promotionStatus: 'not_promoted', promotionEligible: false, learnerFacingAllowed: false, appReadyAllowed: false, ragReadyAllowed: false, vectorEligible: false, copilotExportEligible: false },
+    promotionReadiness: { independentReviewRequired: false, automatedPromotion: false, currentStatus: 'promoted_after_independent_review', promotionStatus: 'promoted', promotionEligible: true, blockersClosed: true, learnerFacingAllowed: false, appReadyAllowed: false, ragReadyAllowed: false, vectorEligible: false, copilotExportEligible: false },
+    promotionDecision: { promotionDecisionId: promotionDecision.promotionDecisionId, decision: promotionDecision.decision, decisionDate: promotionDecision.decisionDate, scopeId: promotionDecision.scope.scopeId, expectedChunkCount: promotionDecision.scope.expectedChunkCount, decisionRecordPath: relative(promotionDecisionPath), downstreamEligibility: promotionDecision.downstreamEligibility, reviewerRecord: promotionDecision.reviewerRecord, exclusions: promotionDecision.exclusions },
   }
   await writeJson(reviewPackagePath, reviewPackage)
   await writeMarkdown(reviewPackagePath, [
     '# VM-31 canonical coverage review package', '',
-    '- Status: **CANONICAL REVIEW CANDIDATE — NOT PROMOTED**',
+    '- Status: **CANONICAL PROMOTED**',
     `- Authority: ${sourcePackage.source.sourceVersionIdentifier}`,
     `- Source SHA-256: \`${VM31_SOURCE_SHA256}\``,
     '- Chapter boundary: PDF pages 341-385 content; page 386 intentional blank; page 387 begins VM-50',
     `- Package / parents / children / total chunks: 1 / ${VM31_PARENT_COUNT} / ${VM31_CHILD_COUNT} / ${VM31_CHUNK_COUNT}`,
     `- Exact source fidelity: ${fidelityDistribution.exact ?? 0}/${VM31_CHUNK_COUNT}`,
     `- Relationship candidates: ${relationships.relationshipCount} (pending, review-only, not promoted)`, '',
+    `- Promotion decision: \`${relative(promotionDecisionPath)}\``,
+    '- Downstream learner, app, RAG, vector, and Copilot eligibility remains blocked.', '',
     '## Promotion-blocker corrections', '',
     '- Section 1 Purpose is classified as purpose/scope/reporting-framework context, not a standalone substantive requirement.',
     `- AG 43 relationship labels preserve source wording in ${ag43Relationships.length} candidates; the expanded canonical label is stored separately.`,

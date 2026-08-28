@@ -924,3 +924,10 @@
   the canonical label. Strengthened validation across all 92 explicit-source
   labels. Source evidence, hierarchy, retrieval safety, and review-only
   governance remain unchanged pending narrow final approval.
+- Recorded the final independent `APPROVE FOR CANONICAL PROMOTION` disposition
+  for the current 2026 VM-31 scope and promoted all 84 chunks through the
+  established human-governed decision mechanism. Preserved 9 parents, 75
+  children, exact source evidence, the focused retrieval results, and the
+  reviewed source-label matching boundary. The 92 relationship candidates and
+  all learner/app/RAG/vector/Copilot uses remain separately governed. The
+  approved validator snapshot remains immutable historical review evidence.

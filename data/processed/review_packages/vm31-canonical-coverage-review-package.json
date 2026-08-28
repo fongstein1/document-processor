@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "reviewPackageId": "vm31-canonical-coverage-review-package-2026",
-  "status": "canonical_review_candidate",
-  "promoted": false,
+  "status": "canonical_promoted",
+  "promoted": true,
   "authoritativeSource": {
     "classification": {
       "domainId": "naic_regulatory",
@@ -15,13 +15,13 @@
       "publicationDate": null,
       "effectiveDate": null,
       "version": "2026 Edition",
-      "approvalStatus": "review_only",
+      "approvalStatus": "reviewed",
       "language": "en",
       "recommendedProfile": "reporting",
       "recommendedChunkingStrategy": "section_subsection_parent_to_complete_numbered_requirement_child",
       "confidence": "high",
       "unresolvedQuestions": [
-        "Independent source and actuarial review is required before promotion.",
+        "Relationship candidates require a separate human review and promotion decision.",
         "Downstream learner, application, RAG, vector, and Copilot eligibility require separate decisions."
       ],
       "notes": "Exact source excerpts control; reporting classifications, summaries, and cross-reference candidates are derivative metadata."
@@ -70,8 +70,8 @@
       "childCount": 75,
       "retrievalUnitCount": 75,
       "knownGaps": [
-        "Independent review is required before canonical promotion.",
         "Relationship candidates remain review-only, pending, and not promoted.",
+        "Historical, proposed, companion, and practice-note material remains outside the promoted current-manual scope.",
         "Publication and effective dates are not asserted beyond the established 2026 edition identity."
       ]
     },
@@ -90,7 +90,7 @@
     "pageImageBackstop": true,
     "lineReferencesAvailable": false,
     "textLayerQuality": "mixed",
-    "notes": "Substantially complete current 2026 VM-31 reporting coverage; canonical review candidate only, not promoted, and not eligible for downstream learner, app, RAG, vector, or Copilot use."
+    "notes": "Canonically promoted current 2026 VM-31 reporting coverage under a recorded independent-review decision; relationship candidates and downstream learner, app, RAG, vector, and Copilot use remain separately governed."
   },
   "coverage": {
     "packageCount": 1,
@@ -214,7 +214,7 @@
     "sourceQaPath": "data/processed/review_packages/vm31-source-qa.json",
     "sourceQaStatus": "pass",
     "aggregateExtractionSha256": "e30c0c0af7db1cf04a3c71677758f6c868cbdd99c82e94de99c34944bd46859c",
-    "canonicalPackageSha256": "bb1d16707693390c837121c432757300624f92f8ddb2a374fd12d04ab2f3406b",
+    "canonicalPackageSha256": "fe1cfb11b0569aba9d4512303d79dffe888bfecd14bc6875e2c975570a12d1ac",
     "sourceTextRewriteCount": 0
   },
   "hierarchy": {
@@ -415,7 +415,6 @@
     }
   ],
   "unresolvedGaps": [
-    "Independent source and actuarial review is required before promotion.",
     "Publication and effective dates are not inferred beyond the established 2026 edition identity.",
     "No synthetic historical VM-31 source was created for authority testing."
   ],
@@ -429,15 +428,42 @@
     "independentReviewPrompt": "data/processed/review_packages/vm31-independent-review-prompt.md"
   },
   "promotionReadiness": {
-    "independentReviewRequired": true,
+    "independentReviewRequired": false,
     "automatedPromotion": false,
-    "currentStatus": "review_only_pending_independent_review",
-    "promotionStatus": "not_promoted",
-    "promotionEligible": false,
+    "currentStatus": "promoted_after_independent_review",
+    "promotionStatus": "promoted",
+    "promotionEligible": true,
+    "blockersClosed": true,
     "learnerFacingAllowed": false,
     "appReadyAllowed": false,
     "ragReadyAllowed": false,
     "vectorEligible": false,
     "copilotExportEligible": false
+  },
+  "promotionDecision": {
+    "promotionDecisionId": "vm31-2026-current-manual-promotion-2026-08-28",
+    "decision": "approved_for_canonical_promotion",
+    "decisionDate": "2026-08-28",
+    "scopeId": "vm31-2026-current-manual",
+    "expectedChunkCount": 84,
+    "decisionRecordPath": "data/manual-input/promotion-decisions/vm31-2026-current-manual-promotion.json",
+    "downstreamEligibility": {
+      "learnerFacingAllowed": false,
+      "appReadyAllowed": false,
+      "ragReadyAllowed": false,
+      "copilotExportEligible": false,
+      "reason": "Canonical source promotion and downstream publication, retrieval-production, vector, or Copilot export approval are separate governance decisions."
+    },
+    "reviewerRecord": {
+      "identityRecorded": false,
+      "identity": null,
+      "note": "The supplied final independent-review disposition records approval but does not provide a reviewer identity; no identity is inferred."
+    },
+    "exclusions": [
+      "The 92 VM-31 explicit-reference relationship candidates, which remain pending, review-only, not promoted, and not promotion-eligible",
+      "Historical, proposed, companion, and practice-note material outside the reviewed current 2026 VM-31 package",
+      "Any source or chunk outside vm31-current-manual",
+      "Learner-facing, application, RAG, vector, and Copilot export approval"
+    ]
   }
 }

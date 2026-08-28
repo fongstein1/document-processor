@@ -13,6 +13,7 @@ const regressionArtifactRelativePath = 'data/processed/review_packages/vm31-vali
 const manifestPath = path.join(reviewRoot, 'manifest.json')
 const snapshotPath = path.join(reviewRoot, 'validate-vm31-current-manual.mjs')
 const regressionArtifactPath = path.join(reviewRoot, 'relationship-label-normalization-regression.json')
+const sourcePackagePath = path.join(repoRoot, 'data', 'processed', 'source_indexes', 'sources', 'vm31-current-manual.json')
 const sha256 = (value) => crypto.createHash('sha256').update(value).digest('hex')
 const readJson = async (filePath) => JSON.parse(await fs.readFile(filePath, 'utf8'))
 
@@ -27,6 +28,8 @@ const canonicalArtifactBaselines = [
 ].map(([artifactPath, expectedSha256]) => ({ artifactPath, expectedSha256 }))
 
 const main = async () => {
+  const sourcePackage = await readJson(sourcePackagePath)
+  if (sourcePackage.processing?.promotionStatus === 'promoted') throw new Error('The independently approved VM-31 validator evidence package is immutable after canonical promotion; validate the retained snapshot instead of rebuilding it.')
   const liveSourcePath = path.join(repoRoot, ...liveSourceRelativePath.split('/'))
   const regressionSourcePath = path.join(repoRoot, ...regressionSourceRelativePath.split('/'))
   const [liveBytes, regressionSourceBytes, regressionArtifact] = await Promise.all([

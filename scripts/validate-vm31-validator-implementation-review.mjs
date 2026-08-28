@@ -33,20 +33,22 @@ const main = async () => {
   ])
   const liveSha256 = sha256(liveBytes)
   const snapshotSha256 = sha256(snapshotBytes)
-  assert(liveBytes.equals(snapshotBytes), 'VM-31 validator live source and review snapshot bytes differ.')
-  assert(liveSha256 === snapshotSha256 && liveSha256 === manifest.liveSourceSha256 && snapshotSha256 === manifest.snapshotSha256, 'VM-31 validator live/snapshot SHA-256 or manifest value differs.')
-  assert(liveBytes.length === snapshotBytes.length && liveBytes.length === manifest.liveByteLength && snapshotBytes.length === manifest.snapshotByteLength, 'VM-31 validator live/snapshot byte length or manifest value differs.')
+  assert(snapshotSha256 === manifest.liveSourceSha256 && snapshotSha256 === manifest.snapshotSha256, 'Approved VM-31 validator snapshot SHA-256 differs from the reviewed manifest.')
+  assert(snapshotBytes.length === manifest.liveByteLength && snapshotBytes.length === manifest.snapshotByteLength, 'Approved VM-31 validator snapshot byte length differs from the reviewed manifest.')
   assert(manifest.byteIdentical === true && manifest.equalityResult === 'equal', 'VM-31 validator manifest does not record byte equality.')
 
   const liveSource = liveBytes.toString('utf8')
-  const lines = liveSource.split(/\r?\n/)
+  const snapshotSource = snapshotBytes.toString('utf8')
+  const lines = snapshotSource.split(/\r?\n/)
   const normalizerLine = lines.findIndex((line) => line.includes('const normalizeSourceLabel =')) + 1
   const assertionLine = lines.findIndex((line) => line.includes('normalizeSourceLabel(sourceChunk.sourceTextExcerpt).includes(normalizeSourceLabel(candidate.targetLabel))')) + 1
   assert(normalizerLine === manifest.implementationLocations.transparentNormalizer.line && assertionLine === manifest.implementationLocations.directSourceFacingAssertion.line, 'VM-31 validator implementation line locations differ from the manifest.')
+  assert(liveSource.includes("const normalizeSourceLabel = (value) => String(value ?? '').toLowerCase().replace(/[^a-z0-9]+/g, '')"), 'Current VM-31 validator transparent source-label normalizer changed.')
+  assert(liveSource.includes('normalizeSourceLabel(sourceChunk.sourceTextExcerpt).includes(normalizeSourceLabel(candidate.targetLabel))'), 'Current VM-31 validator no longer uses the reviewed direct source-facing label assertion.')
   assert(manifest.matchingBoundary.inputsNotUsed.length === 7 && manifest.matchingBoundary.inputsUsed.length === 2, 'VM-31 validator matching-boundary manifest is incomplete.')
 
   const regressionArtifact = JSON.parse(regressionArtifactBytes.toString('utf8'))
-  assert(sha256(regressionSourceBytes) === manifest.regression.sourceSha256 && sha256(regressionArtifactBytes) === manifest.regression.artifactSha256, 'VM-31 relationship-label regression source/artifact hash differs from the manifest.')
+  assert(sha256(regressionArtifactBytes) === manifest.regression.artifactSha256, 'Approved VM-31 relationship-label regression artifact differs from the reviewed manifest.')
   assert(regressionArtifact.status === 'pass' && regressionArtifact.caseCount === manifest.regression.caseCount && regressionArtifact.passedCaseCount === regressionArtifact.caseCount, 'VM-31 relationship-label regression is incomplete or failed.')
 
   const [sourcePackage, relationships, validationReport] = await Promise.all([
@@ -63,22 +65,26 @@ const main = async () => {
   const ag43Relationships = relationships.candidates.filter((candidate) => candidate.targetId === 'ag-43')
   assert(ag43Relationships.length === 2 && ag43Relationships.every((candidate) => candidate.targetLabel === 'AG 43' && candidate.canonicalTargetLabel === 'Actuarial Guideline XLIII'), 'VM-31 AG 43 source/canonical labels changed during validator evidence packaging.')
   assert(validationReport.checks.sourceFaithfulRelationshipLabels === 92 && validationReport.checks.ag43SourceLabelCorrections === 2, 'Current VM-31 validation report does not record 92/92 source labels and two AG 43 corrections.')
-  assert(sourcePackage.processing.reviewOnly === true && sourcePackage.processing.promotionStatus === 'not_promoted' && sourcePackage.chunks.every((chunk) => chunk.promotionEligible === false), 'VM-31 governance changed during validator evidence packaging.')
+  const promoted = sourcePackage.processing.reviewOnly === false && sourcePackage.processing.promotionStatus === 'promoted' && sourcePackage.chunks.every((chunk) => chunk.promotionEligible === true)
+  assert(promoted || (sourcePackage.processing.reviewOnly === true && sourcePackage.processing.promotionStatus === 'not_promoted' && sourcePackage.chunks.every((chunk) => chunk.promotionEligible === false)), 'VM-31 source-package governance is neither the reviewed pre-promotion state nor the approved promoted state.')
+  if (!promoted) assert(liveBytes.equals(snapshotBytes) && liveSha256 === snapshotSha256 && sha256(regressionSourceBytes) === manifest.regression.sourceSha256, 'Pre-promotion VM-31 implementation evidence no longer matches the live reviewed sources.')
 
   assert(manifest.canonicalArtifactBaselines.length === expectedCanonicalArtifactBaselines.size, 'VM-31 canonical artifact baseline count differs from the evidence validator.')
-  let canonicalArtifactChangeCount = 0
+  const changedFromReviewedBaseline = []
   for (const baseline of manifest.canonicalArtifactBaselines) {
     const expectedSha256 = expectedCanonicalArtifactBaselines.get(baseline.artifactPath)
     assert(expectedSha256 && expectedSha256 === baseline.expectedSha256, `Unexpected VM-31 canonical artifact baseline: ${baseline.artifactPath}.`)
     const actualSha256 = sha256(await fs.readFile(resolveRelative(baseline.artifactPath)))
-    if (actualSha256 !== expectedSha256) canonicalArtifactChangeCount += 1
+    if (actualSha256 !== expectedSha256) changedFromReviewedBaseline.push(baseline.artifactPath)
   }
-  assert(canonicalArtifactChangeCount === 0 && manifest.expectedCanonicalArtifactChangeCount === 0, `VM-31 canonical artifact change count must be zero; found ${canonicalArtifactChangeCount}.`)
+  const permittedPromotionChanges = new Set(['data/processed/source_indexes/sources/vm31-current-manual.json', 'data/processed/review_packages/vm31-canonical-coverage-review-package.json', 'data/processed/review_packages/vm31-validation-report.json'])
+  if (promoted) assert(changedFromReviewedBaseline.length === permittedPromotionChanges.size && changedFromReviewedBaseline.every((artifactPath) => permittedPromotionChanges.has(artifactPath)), `VM-31 post-review changes exceed the three expected promotion-state artifacts: ${changedFromReviewedBaseline.join(', ')}.`)
+  else assert(changedFromReviewedBaseline.length === 0 && manifest.expectedCanonicalArtifactChangeCount === 0, `VM-31 reviewed baseline changed before promotion: ${changedFromReviewedBaseline.join(', ')}.`)
   assert(manifest.governance.reviewOnly === true && manifest.governance.promotionStatus === 'not_promoted' && manifest.governance.promotionEligible === false && manifest.governance.corpusModifiedByPackage === false, 'VM-31 validator evidence-package governance is incorrect.')
 
-  console.log(`Validated byte-identical VM-31 validator evidence: ${liveSha256} (${liveBytes.length} bytes).`)
+  console.log(`Validated immutable reviewed VM-31 validator snapshot: ${snapshotSha256} (${snapshotBytes.length} bytes); current source-label assertion unchanged.`)
   console.log(`Validated ${relationships.relationshipCount}/${relationships.relationshipCount} source-facing relationship labels and ${regressionArtifact.passedCaseCount}/${regressionArtifact.caseCount} focused regression cases.`)
-  console.log(`VM-31 canonical artifact changes: ${canonicalArtifactChangeCount}.`)
+  console.log(`VM-31 post-review promotion-state artifact changes: ${changedFromReviewedBaseline.length}; relationship, retrieval, source-QA, and support-gate evidence unchanged.`)
 }
 
 main().catch((error) => { console.error(error.message ?? error); process.exitCode = 1 })

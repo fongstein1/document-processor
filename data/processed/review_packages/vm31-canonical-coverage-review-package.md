@@ -1,12 +1,15 @@
 # VM-31 canonical coverage review package
 
-- Status: **CANONICAL REVIEW CANDIDATE — NOT PROMOTED**
+- Status: **CANONICAL PROMOTED**
 - Authority: 2026 NAIC Valuation Manual
 - Source SHA-256: `496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9`
 - Chapter boundary: PDF pages 341-385 content; page 386 intentional blank; page 387 begins VM-50
 - Package / parents / children / total chunks: 1 / 9 / 75 / 84
 - Exact source fidelity: 84/84
 - Relationship candidates: 92 (pending, review-only, not promoted)
+
+- Promotion decision: `data/manual-input/promotion-decisions/vm31-2026-current-manual-promotion.json`
+- Downstream learner, app, RAG, vector, and Copilot eligibility remains blocked.
 
 ## Promotion-blocker corrections
 

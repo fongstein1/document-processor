@@ -15,13 +15,13 @@
       "publicationDate": null,
       "effectiveDate": null,
       "version": "2026 Edition",
-      "approvalStatus": "review_only",
+      "approvalStatus": "reviewed",
       "language": "en",
       "recommendedProfile": "reporting",
       "recommendedChunkingStrategy": "section_subsection_parent_to_complete_numbered_requirement_child",
       "confidence": "high",
       "unresolvedQuestions": [
-        "Independent source and actuarial review is required before promotion.",
+        "Relationship candidates require a separate human review and promotion decision.",
         "Downstream learner, application, RAG, vector, and Copilot eligibility require separate decisions."
       ],
       "notes": "Exact source excerpts control; reporting classifications, summaries, and cross-reference candidates are derivative metadata."
@@ -70,8 +70,8 @@
       "childCount": 75,
       "retrievalUnitCount": 75,
       "knownGaps": [
-        "Independent review is required before canonical promotion.",
         "Relationship candidates remain review-only, pending, and not promoted.",
+        "Historical, proposed, companion, and practice-note material remains outside the promoted current-manual scope.",
         "Publication and effective dates are not asserted beyond the established 2026 edition identity."
       ]
     },
@@ -90,19 +90,19 @@
     "pageImageBackstop": true,
     "lineReferencesAvailable": false,
     "textLayerQuality": "mixed",
-    "notes": "Substantially complete current 2026 VM-31 reporting coverage; canonical review candidate only, not promoted, and not eligible for downstream learner, app, RAG, vector, or Copilot use."
+    "notes": "Canonically promoted current 2026 VM-31 reporting coverage under a recorded independent-review decision; relationship candidates and downstream learner, app, RAG, vector, and Copilot use remain separately governed."
   },
   "processing": {
     "createdAt": "2026-08-27T00:00:00.000Z",
     "createdBy": "scripts/build-source-index-poc.mjs",
     "processingMode": "canonical_index",
     "canonicality": "canonical",
-    "reviewOnly": true,
+    "reviewOnly": false,
     "learnerFacingAllowed": false,
     "appReadyAllowed": false,
     "ragReadyAllowed": false,
-    "promotionStatus": "not_promoted",
-    "notes": "Substantially complete current 2026 VM-31 reporting coverage; canonical review candidate only, not promoted, and not eligible for downstream learner, app, RAG, vector, or Copilot use."
+    "promotionStatus": "promoted",
+    "notes": "Promoted for the scope recorded in data/manual-input/promotion-decisions/vm31-2026-current-manual-promotion.json; downstream export remains blocked."
   },
   "chunks": [
     {
@@ -210,7 +210,7 @@
       "structuralLocator": "VM-31 / Section 1: Purpose",
       "chunkingMethod": "hierarchical_structure",
       "retrievalEligible": false,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "context_only_parent"
     },
     {
@@ -315,7 +315,7 @@
       "structuralLocator": "VM-31 / Section 1: Purpose / Purpose",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -464,7 +464,7 @@
       "structuralLocator": "VM-31 / Section 2: General Requirements",
       "chunkingMethod": "hierarchical_structure",
       "retrievalEligible": false,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "context_only_parent"
     },
     {
@@ -609,7 +609,7 @@
       "structuralLocator": "VM-31 / Section 2: General Requirements / A. Annual report applicability and assigned actuaries",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -725,7 +725,7 @@
       "structuralLocator": "VM-31 / Section 2: General Requirements / B. Material decisions and minimum documentation",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -851,7 +851,7 @@
       "structuralLocator": "VM-31 / Section 2: General Requirements / C. Summary and full-report submission timing",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -963,7 +963,7 @@
       "structuralLocator": "VM-31 / Section 2: General Requirements / D. Seven-year retention and reproducibility documentation",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -1078,7 +1078,7 @@
       "structuralLocator": "VM-31 / Section 2: General Requirements / E. Searchable PDF, graphs, and accompanying data",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -1210,7 +1210,7 @@
       "structuralLocator": "VM-31 / Section 3.A: Report order and applicability",
       "chunkingMethod": "hierarchical_structure",
       "retrievalEligible": false,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "context_only_parent"
     },
     {
@@ -1341,7 +1341,7 @@
       "structuralLocator": "VM-31 / Section 3.A: Report order and applicability / A. Report order, headers, and applicability",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -1492,7 +1492,7 @@
       "structuralLocator": "VM-31 / Section 3.B: Executive Summary",
       "chunkingMethod": "hierarchical_structure",
       "retrievalEligible": false,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "context_only_parent"
     },
     {
@@ -1602,7 +1602,7 @@
       "structuralLocator": "VM-31 / Section 3.B: Executive Summary / Executive Summary general requirement",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -1716,7 +1716,7 @@
       "structuralLocator": "VM-31 / Section 3.B: Executive Summary / 1. Qualified Actuary",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -1831,7 +1831,7 @@
       "structuralLocator": "VM-31 / Section 3.B: Executive Summary / 2. Groups of Policies and/or Contracts",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -1946,7 +1946,7 @@
       "structuralLocator": "VM-31 / Section 3.B: Executive Summary / 3. Policies",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -2049,7 +2049,7 @@
       "structuralLocator": "VM-31 / Section 3.B: Executive Summary / 4. Contracts",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -2192,7 +2192,7 @@
       "structuralLocator": "VM-31 / Section 3.B: Executive Summary / 5. High-Level Results",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -2293,7 +2293,7 @@
       "structuralLocator": "VM-31 / Section 3.B: Executive Summary / 6. Governance",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -2445,7 +2445,7 @@
       "structuralLocator": "VM-31 / Section 3.C: Life Summary",
       "chunkingMethod": "hierarchical_structure",
       "retrievalEligible": false,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "context_only_parent"
     },
     {
@@ -2555,7 +2555,7 @@
       "structuralLocator": "VM-31 / Section 3.C: Life Summary / Life Summary general requirement",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -2656,7 +2656,7 @@
       "structuralLocator": "VM-31 / Section 3.C: Life Summary / 1. VM-20 Materiality",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -2790,7 +2790,7 @@
       "structuralLocator": "VM-31 / Section 3.C: Life Summary / 2. Monitored Risks and Findings or Concerns",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -2902,7 +2902,7 @@
       "structuralLocator": "VM-31 / Section 3.C: Life Summary / 3. Changes in Reserve Amounts",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -3002,7 +3002,7 @@
       "structuralLocator": "VM-31 / Section 3.C: Life Summary / 4. Changes in Methods",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -3106,7 +3106,7 @@
       "structuralLocator": "VM-31 / Section 3.C: Life Summary / 5. Assets and Risk Management",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -3208,7 +3208,7 @@
       "structuralLocator": "VM-31 / Section 3.C: Life Summary / 6. Consistency between Life Sub-Reports",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -3312,7 +3312,7 @@
       "structuralLocator": "VM-31 / Section 3.C: Life Summary / 7. Closing Section",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -3419,7 +3419,7 @@
       "structuralLocator": "VM-31 / Section 3.C: Life Summary / 8. Supplement Part 1",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -3526,7 +3526,7 @@
       "structuralLocator": "VM-31 / Section 3.C: Life Summary / 9. Supplement Part 2",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -3639,7 +3639,7 @@
       "structuralLocator": "VM-31 / Section 3.C: Life Summary / 10. Reconciliation of Reported Values",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -3810,7 +3810,7 @@
       "structuralLocator": "VM-31 / Section 3.D: Life Report",
       "chunkingMethod": "hierarchical_structure",
       "retrievalEligible": false,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "context_only_parent"
     },
     {
@@ -3925,7 +3925,7 @@
       "structuralLocator": "VM-31 / Section 3.D: Life Report / Life Report general requirement",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -4065,7 +4065,7 @@
       "structuralLocator": "VM-31 / Section 3.D: Life Report / 1. Assumptions and Margins",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -4199,7 +4199,7 @@
       "structuralLocator": "VM-31 / Section 3.D: Life Report / 2. Cash-Flow Models",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -4331,7 +4331,7 @@
       "structuralLocator": "VM-31 / Section 3.D: Life Report / 3. Mortality",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -4458,7 +4458,7 @@
       "structuralLocator": "VM-31 / Section 3.D: Life Report / 4. Policyholder Behavior",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -4585,7 +4585,7 @@
       "structuralLocator": "VM-31 / Section 3.D: Life Report / 5. Expenses",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -4720,7 +4720,7 @@
       "structuralLocator": "VM-31 / Section 3.D: Life Report / 6. Assets",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -4833,7 +4833,7 @@
       "structuralLocator": "VM-31 / Section 3.D: Life Report / 7. Revenue-Sharing Assumptions",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -4956,7 +4956,7 @@
       "structuralLocator": "VM-31 / Section 3.D: Life Report / 8. Reinsurance",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -5089,7 +5089,7 @@
       "structuralLocator": "VM-31 / Section 3.D: Life Report / 9. Non-guaranteed Elements",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -5230,7 +5230,7 @@
       "structuralLocator": "VM-31 / Section 3.D: Life Report / 10. Exclusion Tests",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -5374,7 +5374,7 @@
       "structuralLocator": "VM-31 / Section 3.D: Life Report / 11. Additional Information",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -5501,7 +5501,7 @@
       "structuralLocator": "VM-31 / Section 3.D: Life Report / 12. Riders and Supplemental Benefits",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -5628,7 +5628,7 @@
       "structuralLocator": "VM-31 / Section 3.D: Life Report / 13. Reliance Descriptions and Statements",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -5756,7 +5756,7 @@
       "structuralLocator": "VM-31 / Section 3.D: Life Report / 14. Certifications",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -5860,7 +5860,7 @@
       "structuralLocator": "VM-31 / Section 3.D: Life Report / 15. Closing Paragraph",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -6016,7 +6016,7 @@
       "structuralLocator": "VM-31 / Section 3.E: Annuity Summary",
       "chunkingMethod": "hierarchical_structure",
       "retrievalEligible": false,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "context_only_parent"
     },
     {
@@ -6135,7 +6135,7 @@
       "structuralLocator": "VM-31 / Section 3.E: Annuity Summary / Annuity Summary general requirement",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -6238,7 +6238,7 @@
       "structuralLocator": "VM-31 / Section 3.E: Annuity Summary / 1. Materiality",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -6367,7 +6367,7 @@
       "structuralLocator": "VM-31 / Section 3.E: Annuity Summary / 2. Material Risks",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -6504,7 +6504,7 @@
       "structuralLocator": "VM-31 / Section 3.E: Annuity Summary / 3. Changes in Reserve Amounts",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -6604,7 +6604,7 @@
       "structuralLocator": "VM-31 / Section 3.E: Annuity Summary / 4. Changes in Methods",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -6708,7 +6708,7 @@
       "structuralLocator": "VM-31 / Section 3.E: Annuity Summary / 5. Assets and Risk Management",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -6810,7 +6810,7 @@
       "structuralLocator": "VM-31 / Section 3.E: Annuity Summary / 6. Consistency between Annuity Sub-Reports",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -6920,7 +6920,7 @@
       "structuralLocator": "VM-31 / Section 3.E: Annuity Summary / 7. Closing Section",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -7022,7 +7022,7 @@
       "structuralLocator": "VM-31 / Section 3.E: Annuity Summary / 8. VA Supplement Part 1",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -7124,7 +7124,7 @@
       "structuralLocator": "VM-31 / Section 3.E: Annuity Summary / 9. VA Supplement Part 2",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -7231,7 +7231,7 @@
       "structuralLocator": "VM-31 / Section 3.E: Annuity Summary / 10. VM-22 Supplement Part 1",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -7338,7 +7338,7 @@
       "structuralLocator": "VM-31 / Section 3.E: Annuity Summary / 11. VM-22 Supplement Part 2",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -7519,7 +7519,7 @@
       "structuralLocator": "VM-31 / Section 3.F: Annuity Report",
       "chunkingMethod": "hierarchical_structure",
       "retrievalEligible": false,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "context_only_parent"
     },
     {
@@ -7636,7 +7636,7 @@
       "structuralLocator": "VM-31 / Section 3.F: Annuity Report / Annuity Report general requirement",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -7751,7 +7751,7 @@
       "structuralLocator": "VM-31 / Section 3.F: Annuity Report / 1. Liabilities",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -7882,7 +7882,7 @@
       "structuralLocator": "VM-31 / Section 3.F: Annuity Report / 2. Cash-Flow Models",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -8024,7 +8024,7 @@
       "structuralLocator": "VM-31 / Section 3.F: Annuity Report / 3. Liability Assumptions and Margins",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -8144,7 +8144,7 @@
       "structuralLocator": "VM-31 / Section 3.F: Annuity Report / 4. Starting Assets",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -8255,7 +8255,7 @@
       "structuralLocator": "VM-31 / Section 3.F: Annuity Report / 5. Separate Account Assets",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -8390,7 +8390,7 @@
       "structuralLocator": "VM-31 / Section 3.F: Annuity Report / 6. General Account Assets",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -8515,7 +8515,7 @@
       "structuralLocator": "VM-31 / Section 3.F: Annuity Report / 7. Revenue-Sharing Assumptions",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -8654,7 +8654,7 @@
       "structuralLocator": "VM-31 / Section 3.F: Annuity Report / 8. Hedging and Risk Management",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -8784,7 +8784,7 @@
       "structuralLocator": "VM-31 / Section 3.F: Annuity Report / 9. Non-guaranteed Elements",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -8927,7 +8927,7 @@
       "structuralLocator": "VM-31 / Section 3.F: Annuity Report / 10. Scenario Generation",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -9042,7 +9042,7 @@
       "structuralLocator": "VM-31 / Section 3.F: Annuity Report / 11. Reinsurance",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -9169,7 +9169,7 @@
       "structuralLocator": "VM-31 / Section 3.F: Annuity Report / 12. Alternative Methodology for VM-21",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -9310,7 +9310,7 @@
       "structuralLocator": "VM-31 / Section 3.F: Annuity Report / 13. Exclusion Tests for VM-22",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -9448,7 +9448,7 @@
       "structuralLocator": "VM-31 / Section 3.F: Annuity Report / 14. Additional Standard Projection Amount",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -9575,7 +9575,7 @@
       "structuralLocator": "VM-31 / Section 3.F: Annuity Report / 15. Riders and Supplemental Benefits",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -9715,7 +9715,7 @@
       "structuralLocator": "VM-31 / Section 3.F: Annuity Report / 16. Additional Information",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -9836,7 +9836,7 @@
       "structuralLocator": "VM-31 / Section 3.F: Annuity Report / 17. RBC",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -9965,7 +9965,7 @@
       "structuralLocator": "VM-31 / Section 3.F: Annuity Report / 18. Reliance Descriptions and Statements",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -10095,7 +10095,7 @@
       "structuralLocator": "VM-31 / Section 3.F: Annuity Report / 19. Certifications",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -10199,7 +10199,7 @@
       "structuralLocator": "VM-31 / Section 3.F: Annuity Report / 20. Closing Paragraph",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval"
     },
     {
@@ -10308,7 +10308,7 @@
       "structuralLocator": "VM-31 / VM-31 closing boundary before VM-50",
       "chunkingMethod": "hierarchical_structure",
       "retrievalEligible": false,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "context_only_parent"
     },
     {
@@ -10402,7 +10402,7 @@
       "structuralLocator": "VM-31 / VM-31 closing boundary before VM-50 / Intentional blank page 31-46",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": false,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "context_only_boundary"
     }
   ],
@@ -10412,7 +10412,7 @@
     "citationCompleteness": "partial",
     "pageImageBackstop": true,
     "lineReferencesAvailable": false,
-    "notes": "Substantially complete current 2026 VM-31 reporting coverage; canonical review candidate only, not promoted, and not eligible for downstream learner, app, RAG, vector, or Copilot use."
+    "notes": "Canonically promoted current 2026 VM-31 reporting coverage under a recorded independent-review decision; relationship candidates and downstream learner, app, RAG, vector, and Copilot use remain separately governed."
   },
   "exportHints": {
     "jsonlEligible": true,
@@ -10420,7 +10420,7 @@
     "vectorEligible": false,
     "notes": "Canonical JSONL/CSV serialization is available for review and audit; vector, learner, app, RAG, and Copilot export remain blocked pending a separate decision."
   },
-  "notes": "Substantially complete current 2026 VM-31 reporting coverage; canonical review candidate only, not promoted, and not eligible for downstream learner, app, RAG, vector, or Copilot use.",
+  "notes": "Canonically promoted current 2026 VM-31 reporting coverage under a recorded independent-review decision; relationship candidates and downstream learner, app, RAG, vector, and Copilot use remain separately governed.",
   "extensions": {
     "batchIds": [
       "batch-019",
@@ -10431,6 +10431,8 @@
     "structureModel": "vm31_reporting_hierarchy_v1",
     "relationshipCandidatePath": "data/processed/relationship_registries/vm31-current-manual-relationship-candidates.json",
     "reviewPackagePath": "data/processed/review_packages/vm31-canonical-coverage-review-package.json",
-    "focusedRetrievalEvaluationPath": "data/processed/review_packages/vm31-focused-retrieval-evaluation.json"
+    "focusedRetrievalEvaluationPath": "data/processed/review_packages/vm31-focused-retrieval-evaluation.json",
+    "promotionDecisionId": "vm31-2026-current-manual-promotion-2026-08-28",
+    "promotionDecisionPath": "data/manual-input/promotion-decisions/vm31-2026-current-manual-promotion.json"
   }
 }
