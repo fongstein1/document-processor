@@ -5,7 +5,9 @@
 - Boundary: pages 341-385 content; page 386 intentional blank; page 387 VM-50
 - Parents / children / chunks: 9 / 75 / 84
 - Exact source chunks / rewrites: 84 / 0
+- Purpose/context classifications corrected: 2/2
 - Relationship candidates: 92; all pending and unpromoted
+- Explicit-source relationship labels validated: 92/92; AG 43 labels corrected: 2
 - Supported top-1 / strict top-3: 15/18 / 18/18
 - Unsupported / ambiguity: 2/2 / 1/1
 - Current authoritative VM-31 top-1: 18/18

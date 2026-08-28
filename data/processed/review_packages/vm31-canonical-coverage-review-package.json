@@ -105,15 +105,18 @@
       "exact": 84
     },
     "provisionTypeCounts": {
-      "reporting_requirement": 74,
-      "documentation_requirement": 70,
-      "applicability_or_exception": 40,
+      "purpose": 1,
+      "scope_context": 1,
+      "reporting_framework_context": 1,
       "cross_reference": 53,
+      "reporting_requirement": 73,
+      "documentation_requirement": 69,
       "actuarial_responsibility": 46,
       "company_responsibility": 49,
       "required_analysis": 28,
       "required_disclosure": 46,
       "timing_or_frequency": 23,
+      "applicability_or_exception": 39,
       "required_exhibit": 29,
       "guidance_note_present": 6,
       "certification": 4,
@@ -211,7 +214,7 @@
     "sourceQaPath": "data/processed/review_packages/vm31-source-qa.json",
     "sourceQaStatus": "pass",
     "aggregateExtractionSha256": "e30c0c0af7db1cf04a3c71677758f6c868cbdd99c82e94de99c34944bd46859c",
-    "canonicalPackageSha256": "6c9b40eeb2b5377df05f0d8183ea9c34251f758184c85388bf53384945d295c9",
+    "canonicalPackageSha256": "bb1d16707693390c837121c432757300624f92f8ddb2a374fd12d04ab2f3406b",
     "sourceTextRewriteCount": 0
   },
   "hierarchy": {
@@ -227,10 +230,30 @@
       "VM-21": 28,
       "VM-22": 30,
       "VM-G": 5,
-      "Actuarial Guideline XLIII": 2
+      "AG 43": 2
     },
     "registryPath": "data/processed/relationship_registries/vm31-current-manual-relationship-candidates.json",
     "status": "review_only_pending"
+  },
+  "promotionBlockerCorrections": {
+    "section1Purpose": {
+      "chunkIds": [
+        "vm31-section-1-purpose",
+        "vm31-section-1-purpose-purpose"
+      ],
+      "result": "classified_as_purpose_scope_and_reporting_framework_context",
+      "substantiveRequirementClaim": false
+    },
+    "ag43RelationshipProvenance": {
+      "relationshipIds": [
+        "vm31-section-3-b-executive-summary-5-high-level-results-references-ag-43",
+        "vm31-section-3-f-annuity-report-16-additional-information-references-ag-43"
+      ],
+      "sourceTargetLabel": "AG 43",
+      "canonicalTargetLabel": "Actuarial Guideline XLIII",
+      "explicitSourceLabelsValidated": 92
+    },
+    "authoritativeSourceTextChanges": 0
   },
   "retrievalEvaluation": {
     "path": "data/processed/review_packages/vm31-focused-retrieval-evaluation.json",

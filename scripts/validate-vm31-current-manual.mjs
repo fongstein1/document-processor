@@ -28,6 +28,7 @@ const readJson = async (filePath) => JSON.parse(await fs.readFile(filePath, 'utf
 const sha256 = (value) => crypto.createHash('sha256').update(value).digest('hex')
 const hashFile = async (filePath) => sha256(await fs.readFile(filePath))
 const assert = (condition, message) => { if (!condition) throw new Error(message) }
+const normalizeSourceLabel = (value) => String(value ?? '').toLowerCase().replace(/[^a-z0-9]+/g, '')
 
 const sourceTextAggregate = (sourcePackage) => sha256(sourcePackage.chunks.map((chunk) => chunk.sourceTextExcerpt).join('\n\n'))
 
@@ -73,6 +74,16 @@ const main = async () => {
   }
   for (const child of children) assert(ids.has(child.parentChunkId), `VM-31 child is orphaned: ${child.chunkId}.`)
 
+  const purposeChunkIds = ['vm31-section-1-purpose', 'vm31-section-1-purpose-purpose']
+  for (const chunkId of purposeChunkIds) {
+    const chunk = sourcePackage.chunks.find((candidate) => candidate.chunkId === chunkId)
+    assert(chunk, `VM-31 purpose/context chunk is missing: ${chunkId}.`)
+    assert(['purpose', 'scope_context', 'reporting_framework_context', 'cross_reference'].every((type) => chunk.provisionTypes.includes(type)), `VM-31 purpose/context classification is incomplete: ${chunkId}.`)
+    assert(!['reporting_requirement', 'documentation_requirement', 'applicability_or_exception'].some((type) => chunk.provisionTypes.includes(type) || chunk.concepts.includes(type) || chunk.controlledTags.includes(type) || chunk.requirements.includes(type)), `VM-31 purpose/context chunk overstates substantive requirement status: ${chunkId}.`)
+    assert(chunk.requirements.length === 0 && /purpose|context/i.test(chunk.summary) && !/source requirement/i.test(chunk.summary), `VM-31 purpose/context summary or requirement metadata is not conservative: ${chunkId}.`)
+    assert(JSON.stringify(chunk.crossReferenceCandidates) === JSON.stringify(['VM-20', 'VM-21', 'VM-22']), `VM-31 purpose/context cross-references changed unexpectedly: ${chunkId}.`)
+  }
+
   assert(sourceQa.status === 'pass' && sourceQa.authoritativeSource.sourceSha256 === VM31_SOURCE_SHA256 && sourceQa.extraction.aggregateExtractionSha256 === aggregateExtractionSha256, 'VM-31 source QA identity or extraction hash mismatch.')
   assert(sourceQa.hierarchy.parentCount === VM31_PARENT_COUNT && sourceQa.hierarchy.childCount === VM31_CHILD_COUNT && sourceQa.sourceFidelity.exactChunkCount === VM31_CHUNK_COUNT && sourceQa.sourceFidelity.sourceTextRewriteCount === 0, 'VM-31 source QA hierarchy or fidelity mismatch.')
   assert(sourceQa.extraction.visualReview.pagesRenderedAndReviewed === '341-387' && sourceQa.extraction.visualReview.intentionalBlankPage === 386 && sourceQa.extraction.visualReview.followingChapter === 'VM-50', 'VM-31 visual boundary QA is incomplete.')
@@ -80,7 +91,7 @@ const main = async () => {
   assert(children.filter((chunk) => chunk.provisionTypes.includes('guidance_note_present')).length === 6, 'VM-31 guidance-note retention inventory changed unexpectedly.')
 
   assert(relationships.relationshipCount === 92 && relationships.candidates.length === 92 && relationships.relationTypes.length === 1 && relationships.relationTypes[0] === 'references', 'VM-31 relationship-candidate count or vocabulary mismatch.')
-  assert(JSON.stringify(relationships.targetCounts) === JSON.stringify({ 'VM-20': 27, 'VM-21': 28, 'VM-22': 30, 'VM-G': 5, 'Actuarial Guideline XLIII': 2 }), 'VM-31 relationship target distribution mismatch.')
+  assert(JSON.stringify(relationships.targetCounts) === JSON.stringify({ 'VM-20': 27, 'VM-21': 28, 'VM-22': 30, 'VM-G': 5, 'AG 43': 2 }), 'VM-31 relationship target distribution mismatch.')
   const relationshipIds = new Set()
   const chunkById = new Map(sourcePackage.chunks.map((chunk) => [chunk.chunkId, chunk]))
   for (const candidate of relationships.candidates) {
@@ -88,9 +99,12 @@ const main = async () => {
     relationshipIds.add(candidate.relationshipId)
     const sourceChunk = chunkById.get(candidate.sourceChunkId)
     assert(sourceChunk && (sourceChunk.crossReferenceCandidates ?? []).includes(candidate.targetLabel), `VM-31 relationship is not supported by explicit source-reference metadata: ${candidate.relationshipId}.`)
+    assert(normalizeSourceLabel(sourceChunk.sourceTextExcerpt).includes(normalizeSourceLabel(candidate.targetLabel)), `VM-31 explicit-source relationship label is not present in retained source text: ${candidate.relationshipId}.`)
     assert(candidate.evidence.sourceSha256 === VM31_SOURCE_SHA256 && candidate.evidence.sourceTextSha256 === sha256(sourceChunk.sourceTextExcerpt), `VM-31 relationship evidence hash mismatch: ${candidate.relationshipId}.`)
     assert(candidate.reviewDecision === 'pending' && candidate.promotionStatus === 'not_promoted' && candidate.promotionEligible === false, `VM-31 relationship governance mismatch: ${candidate.relationshipId}.`)
   }
+  const ag43Relationships = relationships.candidates.filter((candidate) => candidate.targetId === 'ag-43')
+  assert(ag43Relationships.length === 2 && ag43Relationships.every((candidate) => candidate.targetLabel === 'AG 43' && candidate.canonicalTargetLabel === 'Actuarial Guideline XLIII'), 'VM-31 AG 43 source wording or canonical target label is inconsistent.')
 
   assert(retrieval.queryCount === 21 && retrieval.supportedQueryCount === 18 && retrieval.supportedTop1Count === 15 && retrieval.supportedTop3Count === 18, 'VM-31 focused supported retrieval metrics changed unexpectedly.')
   assert(retrieval.unsupportedCorrectCount === 2 && retrieval.unsupportedQueryCount === 2 && retrieval.ambiguitySafeCount === 1 && retrieval.ambiguityQueryCount === 1 && retrieval.currentAuthoritativeVm31Top1Count === 18 && retrieval.allCasesPassed === true, 'VM-31 unsupported, ambiguity, or authority metrics failed.')
@@ -135,7 +149,7 @@ const main = async () => {
     reportId: 'vm31-current-manual-validation-2026',
     status: 'pass',
     sourceIdentity: { sourceSha256: VM31_SOURCE_SHA256, locallyVerifiedSha256: actualPdfHash, sourceEditionId: sourcePackage.source.sourceEditionId, pageRange: VM31_PAGE_RANGE, aggregateExtractionSha256 },
-    checks: { packageCount: 1, parents: VM31_PARENT_COUNT, children: VM31_CHILD_COUNT, totalChunks: VM31_CHUNK_COUNT, firstStageRetrievalUnits: VM31_CHILD_COUNT - 1, exactSourceChunks: VM31_CHUNK_COUNT, sourceTextRewrites: 0, guidanceNoteChildren: 6, contentAreasCovered: 17, relationshipCandidates: relationships.relationshipCount, focusedQueries: retrieval.queryCount, supportedQueries: retrieval.supportedQueryCount, supportedTop1: retrieval.supportedTop1Count, supportedStrictTop3: retrieval.supportedTop3Count, unsupportedCorrect: retrieval.unsupportedCorrectCount, ambiguitySafe: retrieval.ambiguitySafeCount, currentAuthorityTop1: retrieval.currentAuthoritativeVm31Top1Count, supportGateRegressions: supportGate.cases.length },
+    checks: { packageCount: 1, parents: VM31_PARENT_COUNT, children: VM31_CHILD_COUNT, totalChunks: VM31_CHUNK_COUNT, firstStageRetrievalUnits: VM31_CHILD_COUNT - 1, exactSourceChunks: VM31_CHUNK_COUNT, sourceTextRewrites: 0, purposeContextChunks: purposeChunkIds.length, guidanceNoteChildren: 6, contentAreasCovered: 17, relationshipCandidates: relationships.relationshipCount, sourceFaithfulRelationshipLabels: relationships.relationshipCount, ag43SourceLabelCorrections: ag43Relationships.length, focusedQueries: retrieval.queryCount, supportedQueries: retrieval.supportedQueryCount, supportedTop1: retrieval.supportedTop1Count, supportedStrictTop3: retrieval.supportedTop3Count, unsupportedCorrect: retrieval.unsupportedCorrectCount, ambiguitySafe: retrieval.ambiguitySafeCount, currentAuthorityTop1: retrieval.currentAuthoritativeVm31Top1Count, supportGateRegressions: supportGate.cases.length },
     regressionIntegrity: { vm01SourceTextAggregateSha256: VM01_SOURCE_TEXT_AGGREGATE_SHA256, vm20PromotedSourceTextAggregateSha256: VM20_PROMOTED_SOURCE_TEXT_AGGREGATE_SHA256, vm20StructuredTableFileSha256: VM20_STRUCTURED_TABLE_FILE_SHA256, status: 'unchanged' },
     governance: { reviewOnly: true, promotionStatus: 'not_promoted', promotionEligible: false, learnerFacingAllowed: false, appReadyAllowed: false, ragReadyAllowed: false, vectorEligible: false, copilotExportEligible: false },
   }
@@ -146,7 +160,9 @@ const main = async () => {
     '- Boundary: pages 341-385 content; page 386 intentional blank; page 387 VM-50',
     `- Parents / children / chunks: ${VM31_PARENT_COUNT} / ${VM31_CHILD_COUNT} / ${VM31_CHUNK_COUNT}`,
     `- Exact source chunks / rewrites: ${VM31_CHUNK_COUNT} / 0`,
+    `- Purpose/context classifications corrected: ${purposeChunkIds.length}/${purposeChunkIds.length}`,
     `- Relationship candidates: ${relationships.relationshipCount}; all pending and unpromoted`,
+    `- Explicit-source relationship labels validated: ${relationships.relationshipCount}/${relationships.relationshipCount}; AG 43 labels corrected: ${ag43Relationships.length}`,
     `- Supported top-1 / strict top-3: ${retrieval.supportedTop1Count}/${retrieval.supportedQueryCount} / ${retrieval.supportedTop3Count}/${retrieval.supportedQueryCount}`,
     `- Unsupported / ambiguity: ${retrieval.unsupportedCorrectCount}/${retrieval.unsupportedQueryCount} / ${retrieval.ambiguitySafeCount}/${retrieval.ambiguityQueryCount}`,
     `- Current authoritative VM-31 top-1: ${retrieval.currentAuthoritativeVm31Top1Count}/${retrieval.supportedQueryCount}`,

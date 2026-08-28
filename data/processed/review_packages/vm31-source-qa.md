@@ -8,4 +8,7 @@
 - Source-text rewrites: 0
 - Explicit-reference relationship candidates: 92; all pending and unpromoted
 
+- Section 1 Purpose: classified as purpose/scope/reporting-framework context, not a standalone substantive requirement
+- Explicit-source relationship labels validated: 92/92; AG 43 source labels corrected: 2
+
 Generated summaries, reporting classifications, and relationship candidates remain subordinate to exact source excerpts.

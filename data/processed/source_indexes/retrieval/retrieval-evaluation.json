@@ -5054,7 +5054,7 @@
           "sourceId": "vm31-current-manual",
           "sourceFamilyId": "valuation_manual_pdfs",
           "authorityLevel": "manual_section",
-          "score": 11.15,
+          "score": 14.049999999999999,
           "citationCount": 0
         },
         {
@@ -5108,7 +5108,7 @@
           {
             "chunkId": "vm31-section-1-purpose-purpose",
             "sourceId": "vm31-current-manual",
-            "score": 11.15,
+            "score": 14.049999999999999,
             "authorityLevel": "manual_section"
           },
           {
@@ -5130,8 +5130,8 @@
             },
             {
               "chunkId": "vm31-section-1-purpose-purpose",
-              "score": 11.15,
-              "tokenOverlap": 4
+              "score": 14.049999999999999,
+              "tokenOverlap": 5
             },
             {
               "chunkId": "vm20-canonical-coverage-vm20-npr-entry-setup-child-001",

@@ -43,8 +43,8 @@
 
 | Chunk | Pages | Topic | Kind | Fidelity | Summary |
 | --- | --- | --- | --- | --- | --- |
-| `vm31-section-1-purpose` | pp. 341-341 | Section 1: Purpose | source_excerpt | exact | Structural context for Section 1: Purpose; generated metadata does not replace the retained VM-31 source text. |
-| `vm31-section-1-purpose-purpose` | pp. 341-341 | Section 1: Purpose > Purpose | source_excerpt | exact | VM-31 source requirement for Purpose; classification metadata is derivative and the retained excerpt controls. |
+| `vm31-section-1-purpose` | pp. 341-341 | Section 1: Purpose | source_excerpt | exact | Purpose, scope, and reporting-framework context for VM-31; this passage is not classified as a standalone substantive requirement. |
+| `vm31-section-1-purpose-purpose` | pp. 341-341 | Section 1: Purpose > Purpose | source_excerpt | exact | VM-31 purpose, scope, and reporting-framework context; the retained passage frames the section and is not classified as a standalone substantive requirement. |
 | `vm31-section-2-general-requirements` | pp. 341-342 | Section 2: General Requirements | source_excerpt | exact | Structural context for Section 2: General Requirements; generated metadata does not replace the retained VM-31 source text. |
 | `vm31-section-2-general-requirements-a-annual-report-applicability` | pp. 341-341 | Section 2: General Requirements > A. Annual report applicability and assigned actuaries | source_excerpt | exact | VM-31 source requirement for A. Annual report applicability and assigned actuaries; classification metadata is derivative and the retained excerpt controls. |
 | `vm31-section-2-general-requirements-b-material-decisions` | pp. 341-341 | Section 2: General Requirements > B. Material decisions and minimum documentation | source_excerpt | exact | VM-31 source requirement for B. Material decisions and minimum documentation; classification metadata is derivative and the retained excerpt controls. |

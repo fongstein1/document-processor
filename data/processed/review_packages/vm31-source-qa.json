@@ -46,6 +46,32 @@
     "sourceTextRewriteCount": 0,
     "visualTranscriptionCount": 0
   },
+  "metadataCorrectionAudit": {
+    "section1Purpose": {
+      "chunkIds": [
+        "vm31-section-1-purpose",
+        "vm31-section-1-purpose-purpose"
+      ],
+      "classification": [
+        "purpose",
+        "scope_context",
+        "reporting_framework_context",
+        "cross_reference"
+      ],
+      "substantiveRequirementClaim": false,
+      "sourceTextChanged": false
+    },
+    "relationshipProvenance": {
+      "sourceFaithfulLabelsValidated": 92,
+      "ag43RelationshipIds": [
+        "vm31-section-3-b-executive-summary-5-high-level-results-references-ag-43",
+        "vm31-section-3-f-annuity-report-16-additional-information-references-ag-43"
+      ],
+      "sourceTargetLabel": "AG 43",
+      "canonicalTargetLabel": "Actuarial Guideline XLIII",
+      "sourceTextChanged": false
+    }
+  },
   "sectionCoverage": [
     {
       "parentId": "vm31-section-1-purpose",
@@ -121,15 +147,18 @@
     }
   ],
   "provisionTypeCounts": {
-    "reporting_requirement": 74,
-    "documentation_requirement": 70,
-    "applicability_or_exception": 40,
+    "purpose": 1,
+    "scope_context": 1,
+    "reporting_framework_context": 1,
     "cross_reference": 53,
+    "reporting_requirement": 73,
+    "documentation_requirement": 69,
     "actuarial_responsibility": 46,
     "company_responsibility": 49,
     "required_analysis": 28,
     "required_disclosure": 46,
     "timing_or_frequency": 23,
+    "applicability_or_exception": 39,
     "required_exhibit": 29,
     "guidance_note_present": 6,
     "certification": 4,

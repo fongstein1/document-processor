@@ -912,3 +912,15 @@
   reference candidates, deterministic validation, corpus inventory integration,
   and a narrow independent-review handoff. VM-31 remains review-only,
   unpromoted, and downstream-ineligible.
+
+## 2026-08-28
+
+- Applied the two VM-31 independent-review metadata corrections without
+  re-extraction or rechunking. Reclassified the Section 1 parent and child as
+  purpose/scope/reporting-framework context, retained their explicit VM-20,
+  VM-21, and VM-22 references, and removed generated substantive-requirement
+  claims. Corrected two AG 43 relationship records to preserve `AG 43` as the
+  source-facing label while storing `Actuarial Guideline XLIII` separately as
+  the canonical label. Strengthened validation across all 92 explicit-source
+  labels. Source evidence, hierarchy, retrieval safety, and review-only
+  governance remain unchanged pending narrow final approval.

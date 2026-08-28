@@ -11,7 +11,7 @@
     "VM-21": 28,
     "VM-22": 30,
     "VM-G": 5,
-    "Actuarial Guideline XLIII": 2
+    "AG 43": 2
   },
   "governance": {
     "reviewOnly": true,
@@ -443,9 +443,10 @@
       "sourceChunkId": "vm31-section-3-b-executive-summary-5-high-level-results",
       "sourceSection": "5. High-Level Results",
       "relationType": "references",
-      "targetLabel": "Actuarial Guideline XLIII",
+      "targetLabel": "AG 43",
       "targetId": "ag-43",
       "targetKind": "corpus_target",
+      "canonicalTargetLabel": "Actuarial Guideline XLIII",
       "evidence": {
         "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
         "pageStart": 342,
@@ -1939,9 +1940,10 @@
       "sourceChunkId": "vm31-section-3-f-annuity-report-16-additional-information",
       "sourceSection": "16. Additional Information",
       "relationType": "references",
-      "targetLabel": "Actuarial Guideline XLIII",
+      "targetLabel": "AG 43",
       "targetId": "ag-43",
       "targetKind": "corpus_target",
+      "canonicalTargetLabel": "Actuarial Guideline XLIII",
       "evidence": {
         "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
         "pageStart": 382,

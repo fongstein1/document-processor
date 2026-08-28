@@ -8,6 +8,13 @@
 - Exact source fidelity: 84/84
 - Relationship candidates: 92 (pending, review-only, not promoted)
 
+## Promotion-blocker corrections
+
+- Section 1 Purpose is classified as purpose/scope/reporting-framework context, not a standalone substantive requirement.
+- AG 43 relationship labels preserve source wording in 2 candidates; the expanded canonical label is stored separately.
+- Explicit-source relationship labels validated: 92/92.
+- Authoritative source-text changes: 0
+
 ## Focused retrieval
 
 - Supported top-1 / strict top-3: 15/18 / 18/18

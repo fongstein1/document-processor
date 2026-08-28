@@ -37,6 +37,16 @@ pending, review-only, and unpromoted.
 VM-31 is not promoted. Learner, app, RAG, vector, and Copilot eligibility remain
 false pending independent review and a separately recorded promotion decision.
 
+Independent review returned `APPROVE WITH FIXES` with no source, hierarchy,
+retrieval-safety, authority-separation, terminology, or governance defect. The
+two metadata blockers are now corrected: Section 1 Purpose is classified as
+purpose/scope/reporting-framework context rather than a standalone substantive
+requirement, and the two AG 43 relationship candidates preserve `AG 43` as the
+source-facing label while retaining `Actuarial Guideline XLIII` separately as
+the canonical target label. All 92 explicit-source relationship labels now pass
+source-wording validation. Authoritative source evidence remains unchanged, and
+VM-31 remains review-only pending narrow final approval.
+
 ## 2026-08-26 VM-20 prose and appendix coverage
 
 The authoritative 2026 Valuation Manual PDF was verified at the external raw

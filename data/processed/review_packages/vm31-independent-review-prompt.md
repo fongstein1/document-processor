@@ -1,6 +1,6 @@
-# Independent review prompt: current 2026 VM-31 canonical coverage
+# Narrow independent review prompt: VM-31 promotion-blocker corrections
 
-Please independently review the current 2026 VM-31 canonical review candidate in the Document Processor repository. Do not modify or promote the corpus.
+Please independently review only the two targeted metadata corrections applied to the current 2026 VM-31 canonical review candidate in the Document Processor repository. Do not modify or promote the corpus, and do not repeat the accepted 84-chunk source audit unless authoritative source evidence changed.
 
 ## Primary files
 
@@ -14,15 +14,13 @@ Please independently review the current 2026 VM-31 canonical review candidate in
 
 ## Review scope
 
-1. Verify the authoritative source identity, SHA-256, and boundary: PDF pages 341-385 contain VM-31, page 386 is intentionally blank, and page 387 begins VM-50.
-2. Verify all 9 parents and 75 children are structurally faithful, complete, adjacent, and keep list headings with their nested requirements, qualifications, exceptions, guidance notes, and certifications.
-3. Compare representative and risk-focused source excerpts against the PDF, especially Sections 2.A-2.E, 3.D.1, 3.D.3, 3.D.10, 3.D.14, 3.F.2, 3.F.8, 3.F.13, 3.F.16, and 3.F.19.
-4. Confirm generated reporting classifications remain derivative and do not turn explanatory or guidance text into new requirements.
-5. Confirm VM-20 reserve methodology remains distinct from VM-31 reporting/documentation authority, and the support gate rejects related VM-20 evidence when actual VM-31 requirement evidence is absent from ranks 1-3.
-6. Confirm VM-01 terminology is referenced through the common terminology layer rather than duplicated into VM-31 source text.
-7. Review every relationship candidate for explicit source support and confirm no legal hierarchy, supersession, or promotion is inferred.
-8. Recompute supported top-1 and strict top-3 metrics from case-level evidence; inspect unsupported and ambiguous cases and current-authority ranking.
-9. Confirm VM-31 remains review-only, not promoted, and downstream-ineligible pending this decision.
+1. Inspect `vm31-section-1-purpose` and `vm31-section-1-purpose-purpose`. Confirm both are classified as purpose/scope/reporting-framework context, retain legitimate VM-20/VM-21/VM-22 cross-references, and no longer claim to be documentation requirements, operative reporting requirements, or applicability exceptions.
+2. Inspect `vm31-section-3-b-executive-summary-5-high-level-results-references-ag-43` and `vm31-section-3-f-annuity-report-16-additional-information-references-ag-43`. Confirm `targetLabel` preserves the explicit source wording `AG 43`, `targetId` remains `ag-43`, and `canonicalTargetLabel` separately records `Actuarial Guideline XLIII`.
+3. Confirm the relationship validator checks all 92 explicit-source labels against retained source text using only transparent case/punctuation/spacing normalization.
+4. Confirm source evidence is unchanged: 9 parents, 75 children, 84 total chunks, identical source excerpts/hashes/pages/IDs/hierarchy/order, and zero source-text rewrites.
+5. Confirm retrieval remains 15/18 supported top-1, 18/18 strict top-3, 2/2 unsupported abstentions, 1/1 ambiguity safety, and 18/18 current-authority top-1, with the VM-20 substitution gate still passing.
+6. Confirm VM-31 remains review-only, not promoted, promotion-ineligible, and blocked from learner, app, RAG, vector, and Copilot use.
+7. Decide whether these two metadata blockers are closed and VM-31 is ready for a separately recorded canonical-promotion decision.
 
 Report findings with severity, exact chunk/query/relationship IDs, and source-page references. End with exactly one disposition:
 
@@ -30,4 +28,4 @@ Report findings with severity, exact chunk/query/relationship IDs, and source-pa
 - APPROVE WITH FIXES
 - DO NOT PROMOTE
 
-Do not repeat the completed VM-01 or VM-20 source audits unless a VM-31 finding directly demonstrates a regression in those packages.
+Do not repeat the completed VM-01, VM-20, or full VM-31 source audits unless this correction pass changed authoritative source evidence.

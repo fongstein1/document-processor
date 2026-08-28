@@ -40,6 +40,7 @@ const relationshipTargets = {
   'VM-30': { targetId: 'vm-30', targetKind: 'corpus_target' },
   'VM-G': { targetId: 'vm-g', targetKind: 'corpus_target' },
   'VM-M': { targetId: 'vm-m', targetKind: 'corpus_target' },
+  'AG 43': { targetId: 'ag-43', targetKind: 'corpus_target', canonicalTargetLabel: 'Actuarial Guideline XLIII' },
   'Actuarial Guideline XLIII': { targetId: 'ag-43', targetKind: 'corpus_target' },
 }
 
@@ -57,6 +58,7 @@ const buildRelationships = (sourcePackage) => {
         targetLabel,
         targetId: target.targetId,
         targetKind: target.targetKind,
+        ...(target.canonicalTargetLabel ? { canonicalTargetLabel: target.canonicalTargetLabel } : {}),
         evidence: {
           sourceSha256: VM31_SOURCE_SHA256,
           pageStart: chunk.pageStart,
@@ -187,6 +189,11 @@ const main = async () => {
   const structure = segmentVm31Chapter(chapterText)
   const relationships = buildRelationships(sourcePackage)
   await writeJson(relationshipPath, relationships)
+  const purposeChunkIds = ['vm31-section-1-purpose', 'vm31-section-1-purpose-purpose']
+  const purposeChunks = purposeChunkIds.map((chunkId) => sourcePackage.chunks.find((chunk) => chunk.chunkId === chunkId))
+  const ag43Relationships = relationships.candidates.filter((candidate) => candidate.targetId === 'ag-43')
+  if (purposeChunks.some((chunk) => !chunk)) throw new Error('VM-31 purpose/context chunks are missing from the canonical source package.')
+  if (ag43Relationships.length !== 2) throw new Error(`Expected 2 AG 43 relationship candidates; found ${ag43Relationships.length}.`)
 
   const focusedEvaluation = await buildFocusedEvaluation(sourcePackage)
   await writeJson(retrievalPath, focusedEvaluation)
@@ -214,6 +221,10 @@ const main = async () => {
     extraction: { batchIds: sourcePackage.source.reviewBatchIds, extractionMethod: sourcePackage.source.sourceTextVerification.extractionMethod, aggregateExtractionSha256, visualReview: { pagesRenderedAndReviewed: '341-387', vm31ContentPages: '341-385', intentionalBlankPage: 386, followingChapterPage: 387, followingChapter: 'VM-50', status: 'pass' } },
     hierarchy: { parentCount: VM31_PARENT_COUNT, childCount: VM31_CHILD_COUNT, totalChunkCount: VM31_CHUNK_COUNT, parentCoverageContinuous: true, numberedRequirementsKeptWithNestedItems: true, adjacencyComplete: true },
     sourceFidelity: { distribution: fidelityDistribution, exactChunkCount: fidelityDistribution.exact ?? 0, generatedMetadataSeparate: true, sourceTextRewriteCount: 0, visualTranscriptionCount: 0 },
+    metadataCorrectionAudit: {
+      section1Purpose: { chunkIds: purposeChunkIds, classification: ['purpose', 'scope_context', 'reporting_framework_context', 'cross_reference'], substantiveRequirementClaim: false, sourceTextChanged: false },
+      relationshipProvenance: { sourceFaithfulLabelsValidated: relationships.relationshipCount, ag43RelationshipIds: ag43Relationships.map((candidate) => candidate.relationshipId), sourceTargetLabel: 'AG 43', canonicalTargetLabel: 'Actuarial Guideline XLIII', sourceTextChanged: false },
+    },
     sectionCoverage: structure.map((parent) => ({ parentId: `vm31-${parent.id}`, title: parent.title, pageStart: parent.pages.start, pageEnd: parent.pages.end, childCount: parent.children.length, sourceTextSha256: parent.sourceTextSha256 })),
     provisionTypeCounts,
     contentAreaAudit: [
@@ -247,6 +258,8 @@ const main = async () => {
     `- Exact source chunks: ${sourceQa.sourceFidelity.exactChunkCount}/${VM31_CHUNK_COUNT}`,
     '- Source-text rewrites: 0',
     `- Explicit-reference relationship candidates: ${relationships.relationshipCount}; all pending and unpromoted`, '',
+    '- Section 1 Purpose: classified as purpose/scope/reporting-framework context, not a standalone substantive requirement',
+    `- Explicit-source relationship labels validated: ${relationships.relationshipCount}/${relationships.relationshipCount}; AG 43 source labels corrected: ${ag43Relationships.length}`, '',
     'Generated summaries, reporting classifications, and relationship candidates remain subordinate to exact source excerpts.',
   ].join('\n'))
 
@@ -270,6 +283,11 @@ const main = async () => {
     sourceFidelity: { sourceQaPath: relative(sourceQaPath), sourceQaStatus: sourceQa.status, aggregateExtractionSha256, canonicalPackageSha256: await hashFile(sourcePackagePath), sourceTextRewriteCount: 0 },
     hierarchy: { model: 'section_or_subsection_parent_to_complete_numbered_or_lettered_requirement_child', adjacencyAvailable: true, nestedListsKeptWithGoverningHeading: true, boundaryControlIncluded: true },
     relationships: { candidateCount: relationships.relationshipCount, targetCounts: relationships.targetCounts, registryPath: relative(relationshipPath), status: 'review_only_pending' },
+    promotionBlockerCorrections: {
+      section1Purpose: { chunkIds: purposeChunkIds, result: 'classified_as_purpose_scope_and_reporting_framework_context', substantiveRequirementClaim: false },
+      ag43RelationshipProvenance: { relationshipIds: ag43Relationships.map((candidate) => candidate.relationshipId), sourceTargetLabel: 'AG 43', canonicalTargetLabel: 'Actuarial Guideline XLIII', explicitSourceLabelsValidated: relationships.relationshipCount },
+      authoritativeSourceTextChanges: 0,
+    },
     retrievalEvaluation: { path: relative(retrievalPath), queryCount: focusedEvaluation.queryCount, supportedTop1: focusedEvaluation.supportedTop1Count, supportedTop3: focusedEvaluation.supportedTop3Count, supportedQueryCount: focusedEvaluation.supportedQueryCount, unsupportedCorrect: focusedEvaluation.unsupportedCorrectCount, unsupportedQueryCount: focusedEvaluation.unsupportedQueryCount, ambiguitySafe: focusedEvaluation.ambiguitySafeCount, ambiguityQueryCount: focusedEvaluation.ambiguityQueryCount, currentAuthorityTop1: focusedEvaluation.currentAuthoritativeVm31Top1Count, allCasesPassed: focusedEvaluation.allCasesPassed },
     supportGateRegression: { path: relative(supportGatePath), caseCount: supportGate.cases.length, status: supportGate.status, productionEvidenceWindow: supportGate.productionEvidenceWindow },
     representativeChunks: representativeIds.map((chunkId) => {
@@ -290,6 +308,11 @@ const main = async () => {
     `- Package / parents / children / total chunks: 1 / ${VM31_PARENT_COUNT} / ${VM31_CHILD_COUNT} / ${VM31_CHUNK_COUNT}`,
     `- Exact source fidelity: ${fidelityDistribution.exact ?? 0}/${VM31_CHUNK_COUNT}`,
     `- Relationship candidates: ${relationships.relationshipCount} (pending, review-only, not promoted)`, '',
+    '## Promotion-blocker corrections', '',
+    '- Section 1 Purpose is classified as purpose/scope/reporting-framework context, not a standalone substantive requirement.',
+    `- AG 43 relationship labels preserve source wording in ${ag43Relationships.length} candidates; the expanded canonical label is stored separately.`,
+    `- Explicit-source relationship labels validated: ${relationships.relationshipCount}/${relationships.relationshipCount}.`,
+    '- Authoritative source-text changes: 0', '',
     '## Focused retrieval', '',
     `- Supported top-1 / strict top-3: ${focusedEvaluation.supportedTop1Count}/${focusedEvaluation.supportedQueryCount} / ${focusedEvaluation.supportedTop3Count}/${focusedEvaluation.supportedQueryCount}`,
     `- Unsupported correctly rejected: ${focusedEvaluation.unsupportedCorrectCount}/${focusedEvaluation.unsupportedQueryCount}`,
@@ -305,8 +328,8 @@ const main = async () => {
   ].join('\n'))
 
   await fs.writeFile(promptPath, `${[
-    '# Independent review prompt: current 2026 VM-31 canonical coverage', '',
-    'Please independently review the current 2026 VM-31 canonical review candidate in the Document Processor repository. Do not modify or promote the corpus.', '',
+    '# Narrow independent review prompt: VM-31 promotion-blocker corrections', '',
+    'Please independently review only the two targeted metadata corrections applied to the current 2026 VM-31 canonical review candidate in the Document Processor repository. Do not modify or promote the corpus, and do not repeat the accepted 84-chunk source audit unless authoritative source evidence changed.', '',
     '## Primary files', '',
     `- Canonical source package: \`${relative(sourcePackagePath)}\``,
     `- Review package: \`${relative(reviewPackagePath)}\``,
@@ -316,20 +339,18 @@ const main = async () => {
     `- Support-gate regression: \`${relative(supportGatePath)}\``,
     '- Validation report: `data/processed/review_packages/vm31-validation-report.json`', '',
     '## Review scope', '',
-    '1. Verify the authoritative source identity, SHA-256, and boundary: PDF pages 341-385 contain VM-31, page 386 is intentionally blank, and page 387 begins VM-50.',
-    `2. Verify all ${VM31_PARENT_COUNT} parents and ${VM31_CHILD_COUNT} children are structurally faithful, complete, adjacent, and keep list headings with their nested requirements, qualifications, exceptions, guidance notes, and certifications.`,
-    '3. Compare representative and risk-focused source excerpts against the PDF, especially Sections 2.A-2.E, 3.D.1, 3.D.3, 3.D.10, 3.D.14, 3.F.2, 3.F.8, 3.F.13, 3.F.16, and 3.F.19.',
-    '4. Confirm generated reporting classifications remain derivative and do not turn explanatory or guidance text into new requirements.',
-    '5. Confirm VM-20 reserve methodology remains distinct from VM-31 reporting/documentation authority, and the support gate rejects related VM-20 evidence when actual VM-31 requirement evidence is absent from ranks 1-3.',
-    '6. Confirm VM-01 terminology is referenced through the common terminology layer rather than duplicated into VM-31 source text.',
-    '7. Review every relationship candidate for explicit source support and confirm no legal hierarchy, supersession, or promotion is inferred.',
-    '8. Recompute supported top-1 and strict top-3 metrics from case-level evidence; inspect unsupported and ambiguous cases and current-authority ranking.',
-    '9. Confirm VM-31 remains review-only, not promoted, and downstream-ineligible pending this decision.', '',
+    '1. Inspect `vm31-section-1-purpose` and `vm31-section-1-purpose-purpose`. Confirm both are classified as purpose/scope/reporting-framework context, retain legitimate VM-20/VM-21/VM-22 cross-references, and no longer claim to be documentation requirements, operative reporting requirements, or applicability exceptions.',
+    '2. Inspect `vm31-section-3-b-executive-summary-5-high-level-results-references-ag-43` and `vm31-section-3-f-annuity-report-16-additional-information-references-ag-43`. Confirm `targetLabel` preserves the explicit source wording `AG 43`, `targetId` remains `ag-43`, and `canonicalTargetLabel` separately records `Actuarial Guideline XLIII`.',
+    `3. Confirm the relationship validator checks all ${relationships.relationshipCount} explicit-source labels against retained source text using only transparent case/punctuation/spacing normalization.`,
+    `4. Confirm source evidence is unchanged: ${VM31_PARENT_COUNT} parents, ${VM31_CHILD_COUNT} children, ${VM31_CHUNK_COUNT} total chunks, identical source excerpts/hashes/pages/IDs/hierarchy/order, and zero source-text rewrites.`,
+    `5. Confirm retrieval remains ${focusedEvaluation.supportedTop1Count}/${focusedEvaluation.supportedQueryCount} supported top-1, ${focusedEvaluation.supportedTop3Count}/${focusedEvaluation.supportedQueryCount} strict top-3, ${focusedEvaluation.unsupportedCorrectCount}/${focusedEvaluation.unsupportedQueryCount} unsupported abstentions, ${focusedEvaluation.ambiguitySafeCount}/${focusedEvaluation.ambiguityQueryCount} ambiguity safety, and ${focusedEvaluation.currentAuthoritativeVm31Top1Count}/${focusedEvaluation.supportedQueryCount} current-authority top-1, with the VM-20 substitution gate still passing.`,
+    '6. Confirm VM-31 remains review-only, not promoted, promotion-ineligible, and blocked from learner, app, RAG, vector, and Copilot use.',
+    '7. Decide whether these two metadata blockers are closed and VM-31 is ready for a separately recorded canonical-promotion decision.', '',
     'Report findings with severity, exact chunk/query/relationship IDs, and source-page references. End with exactly one disposition:', '',
     '- APPROVE FOR CANONICAL PROMOTION',
     '- APPROVE WITH FIXES',
     '- DO NOT PROMOTE', '',
-    'Do not repeat the completed VM-01 or VM-20 source audits unless a VM-31 finding directly demonstrates a regression in those packages.',
+    'Do not repeat the completed VM-01, VM-20, or full VM-31 source audits unless this correction pass changed authoritative source evidence.',
   ].join('\n')}\n`, 'utf8')
 
   console.log(`Built VM-31 artifacts for ${VM31_PARENT_COUNT} parents, ${VM31_CHILD_COUNT} children, ${relationships.relationshipCount} relationship candidates, and ${focusedEvaluation.queryCount} retrieval cases.`)

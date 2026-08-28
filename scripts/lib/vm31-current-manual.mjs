@@ -196,6 +196,8 @@ const pageRangeFor = (chapterText, start, end) => ({
 const normalize = (value) => String(value ?? '').replace(/\s+/g, ' ').trim()
 const sha256 = (value) => crypto.createHash('sha256').update(value, 'utf8').digest('hex')
 const unique = (values) => [...new Set(values.filter(Boolean))]
+const purposeContextTypes = ['purpose', 'scope_context', 'reporting_framework_context', 'cross_reference']
+const purposeContextTopics = ['Purpose', 'Scope context', 'Reporting framework context']
 
 const deriveProvisionTypes = (text, title) => {
   const value = `${title} ${normalize(text)}`
@@ -222,7 +224,8 @@ const crossReferencePatterns = [
   ['VM-30', /VM\s*-\s*30\b/i],
   ['VM-G', /VM\s*-\s*G\b/i],
   ['VM-M', /VM\s*-\s*M\b/i],
-  ['Actuarial Guideline XLIII', /(?:Actuarial Guideline\s+XLIII|AG\s*43)\b/i],
+  ['AG 43', /AG\s*43\b/i],
+  ['Actuarial Guideline XLIII', /Actuarial Guideline\s+XLIII\b/i],
 ]
 
 export const deriveVm31CrossReferences = (text) => crossReferencePatterns
@@ -310,7 +313,8 @@ export const buildVm31Chunks = async (repoRoot, source) => {
     const parentId = `vm31-${parent.id}`
     const parentIdIndex = ids.indexOf(parentId)
     const childIds = parent.children.map((child) => `vm31-${parent.id}-${child.id}`)
-    const parentTypes = unique(parent.children.flatMap((child) => deriveProvisionTypes(child.text, child.title)))
+    const purposeContext = parent.id === 'section-1-purpose'
+    const parentTypes = purposeContext ? purposeContextTypes : unique(parent.children.flatMap((child) => deriveProvisionTypes(child.text, child.title)))
     const parentReferences = deriveVm31CrossReferences(parent.text)
     chunks.push({
       chunkId: parentId,
@@ -322,15 +326,19 @@ export const buildVm31Chunks = async (repoRoot, source) => {
       sectionReference: parent.title,
       sourceTextExcerpt: parent.text,
       normalizedTextExcerpt: normalize(parent.text).toLowerCase(),
-      summary: `Structural context for ${parent.title}; generated metadata does not replace the retained VM-31 source text.`,
+      summary: purposeContext
+        ? 'Purpose, scope, and reporting-framework context for VM-31; this passage is not classified as a standalone substantive requirement.'
+        : `Structural context for ${parent.title}; generated metadata does not replace the retained VM-31 source text.`,
       topic: parent.title,
       headingPath: `VM-31 > ${parent.title}`,
-      keyPoints: [`Context parent for ${parent.children.length} source-bound requirement unit${parent.children.length === 1 ? '' : 's'}.`],
+      keyPoints: purposeContext
+        ? ['Purpose/context statement that frames the VM-31 reporting framework; explicit VM-20, VM-21, and VM-22 references are retained.']
+        : [`Context parent for ${parent.children.length} source-bound requirement unit${parent.children.length === 1 ? '' : 's'}.`],
       concepts: parentTypes,
       definedTerms: [],
       preserveEmptyDefinedTerms: true,
       acronyms: extractAcronyms(parent.text),
-      requirements: parentTypes,
+      requirements: purposeContext ? [] : parentTypes,
       controlledTags: unique(['vm31_current_manual', 'hierarchical_parent', 'review_only', ...parentTypes]),
       keywords: unique(['VM-31', parent.title, ...parentReferences, ...titleKeywords(parent.title)]),
       citations: [{ citationText: parent.title, pageReference: `pp. ${parent.pages.start}-${parent.pages.end}`, sectionReference: parent.title, sourceReference: source.sourceReference, lineReference: null }],
@@ -346,9 +354,9 @@ export const buildVm31Chunks = async (repoRoot, source) => {
       followingChunkId: ids[parentIdIndex + 1] ?? null,
       structuralLocator: `VM-31 / ${parent.title}`,
       chunkingMethod: 'hierarchical_structure',
-      localTopics: titleKeywords(parent.title),
+      localTopics: purposeContext ? purposeContextTopics : titleKeywords(parent.title),
       provisionTypes: parentTypes,
-      provisionTypeBasis: 'source_text_pattern_only',
+      provisionTypeBasis: purposeContext ? 'source_heading_and_context_statement' : 'source_text_pattern_only',
       structuralBreadcrumb: `VM-31 > ${parent.title}`,
       boundaryQuality: { status: 'source_structural_parent', startsAtBoundary: true, note: 'Parent begins at an explicit source heading or the intentional closing-boundary page.' },
       crossReferenceCandidates: parentReferences,
@@ -360,7 +368,7 @@ export const buildVm31Chunks = async (repoRoot, source) => {
     for (const child of parent.children) {
       const childId = `vm31-${parent.id}-${child.id}`
       const childIdIndex = ids.indexOf(childId)
-      const types = deriveProvisionTypes(child.text, child.title)
+      const types = purposeContext ? purposeContextTypes : deriveProvisionTypes(child.text, child.title)
       const references = deriveVm31CrossReferences(child.text)
       const boundaryOnly = parent.id === 'closing-boundary'
       chunks.push({
@@ -375,15 +383,21 @@ export const buildVm31Chunks = async (repoRoot, source) => {
         normalizedTextExcerpt: normalize(child.text).toLowerCase(),
         summary: boundaryOnly
           ? 'VM-31 ends with an intentional blank page before VM-50 begins on the next PDF page.'
+          : purposeContext
+            ? 'VM-31 purpose, scope, and reporting-framework context; the retained passage frames the section and is not classified as a standalone substantive requirement.'
           : `VM-31 source requirement for ${child.title}; classification metadata is derivative and the retained excerpt controls.`,
         topic: `${parent.title} > ${child.title}`,
         headingPath: `VM-31 > ${parent.title} > ${child.title}`,
-        keyPoints: boundaryOnly ? ['Boundary control only; this is not a reporting requirement.'] : [`Complete numbered or lettered source unit for ${child.title}.`],
+        keyPoints: boundaryOnly
+          ? ['Boundary control only; this is not a reporting requirement.']
+          : purposeContext
+            ? ['Purpose/context statement for the VM-31 reporting framework; explicit cross-references remain source-bound.']
+            : [`Complete numbered or lettered source unit for ${child.title}.`],
         concepts: boundaryOnly ? ['boundary_control'] : types,
         definedTerms: [],
         preserveEmptyDefinedTerms: true,
         acronyms: extractAcronyms(child.text),
-        requirements: boundaryOnly ? [] : types,
+        requirements: boundaryOnly || purposeContext ? [] : types,
         controlledTags: unique(['vm31_current_manual', 'hierarchical_child', 'review_only', ...(boundaryOnly ? ['boundary_control'] : types)]),
         keywords: unique(['VM-31', parent.title, child.title, ...references, ...titleKeywords(child.title)]),
         citations: [{ citationText: child.title, pageReference: `pp. ${child.pages.start}-${child.pages.end}`, sectionReference: child.title, sourceReference: source.sourceReference, lineReference: null }],
@@ -399,9 +413,9 @@ export const buildVm31Chunks = async (repoRoot, source) => {
         followingChunkId: ids[childIdIndex + 1] ?? null,
         structuralLocator: `VM-31 / ${parent.title} / ${child.title}`,
         chunkingMethod: 'semantic_boundary',
-        localTopics: titleKeywords(child.title),
+        localTopics: purposeContext ? purposeContextTopics : titleKeywords(child.title),
         provisionTypes: boundaryOnly ? ['boundary_control'] : types,
-        provisionTypeBasis: 'source_text_pattern_only',
+        provisionTypeBasis: purposeContext ? 'source_heading_and_context_statement' : 'source_text_pattern_only',
         structuralBreadcrumb: `VM-31 > ${parent.title} > ${child.title}`,
         boundaryQuality: { status: 'numbered_or_lettered_boundary', startsAtBoundary: true, note: 'Child is a complete source-numbered, source-lettered, or explicit boundary-control unit.' },
         crossReferenceCandidates: references,
