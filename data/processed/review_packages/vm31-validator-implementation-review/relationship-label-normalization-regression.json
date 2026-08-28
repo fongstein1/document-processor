@@ -1,0 +1,90 @@
+{
+  "schemaVersion": "1.0",
+  "artifactType": "vm31_explicit_source_relationship_label_regression",
+  "generatedAt": "2026-08-28T00:00:00.000Z",
+  "status": "pass",
+  "validatorSourcePath": "scripts/validate-vm31-current-manual.mjs",
+  "validatorSourceSha256": "006a7c0368ab1d475d0c41da566ae3b9fd21dc1799a0a08fd67dcc8d2d0be555",
+  "productionSourceInspection": {
+    "normalizerDeclarationPresent": true,
+    "directSourceFacingAssertionPresent": true
+  },
+  "transparentNormalization": [
+    "lowercase ASCII text",
+    "remove characters outside a-z and 0-9",
+    "thereby ignore punctuation and spacing"
+  ],
+  "prohibitedSubstitutions": [
+    "targetId",
+    "canonicalTargetLabel",
+    "alias registry",
+    "semantic similarity",
+    "fuzzy entity equivalence",
+    "acronym expansion",
+    "curated synonyms"
+  ],
+  "caseCount": 5,
+  "passedCaseCount": 5,
+  "cases": [
+    {
+      "caseId": "explicit-ag43-source-label-matches",
+      "sourceText": "The report shall include results determined under AG 43.",
+      "targetLabel": "AG 43",
+      "canonicalTargetLabel": null,
+      "targetId": null,
+      "expectedMatch": true,
+      "boundary": "exact source-facing wording",
+      "actualMatch": true,
+      "passed": true
+    },
+    {
+      "caseId": "canonical-expansion-cannot-substitute-for-source-label",
+      "sourceText": "The report shall include results determined under AG 43.",
+      "targetLabel": "Actuarial Guideline XLIII",
+      "canonicalTargetLabel": null,
+      "targetId": null,
+      "expectedMatch": false,
+      "boundary": "semantic or canonical expansion is not source wording",
+      "actualMatch": false,
+      "passed": true
+    },
+    {
+      "caseId": "canonical-label-may-coexist-with-source-label",
+      "sourceText": "The report shall include results determined under AG 43.",
+      "targetLabel": "AG 43",
+      "canonicalTargetLabel": "Actuarial Guideline XLIII",
+      "targetId": "ag-43",
+      "expectedMatch": true,
+      "boundary": "canonical label and target ID are present but are not matcher inputs",
+      "actualMatch": true,
+      "passed": true
+    },
+    {
+      "caseId": "transparent-case-spacing-punctuation-normalization",
+      "sourceText": "The methods defined in VM - 20 apply.",
+      "targetLabel": "vm-20",
+      "canonicalTargetLabel": null,
+      "targetId": null,
+      "expectedMatch": true,
+      "boundary": "case, punctuation, and spacing differences only",
+      "actualMatch": true,
+      "passed": true
+    },
+    {
+      "caseId": "target-id-cannot-rescue-mismatched-source-label",
+      "sourceText": "The report shall include results determined under AG 43.",
+      "targetLabel": "Actuarial Guideline XLIII",
+      "canonicalTargetLabel": null,
+      "targetId": "ag-43",
+      "expectedMatch": false,
+      "boundary": "targetId is deliberately ignored by the matcher",
+      "actualMatch": false,
+      "passed": true
+    }
+  ],
+  "governance": {
+    "reviewOnly": true,
+    "promotionStatus": "not_promoted",
+    "canonicalCorpusModified": false
+  }
+}

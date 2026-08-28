@@ -1,0 +1,96 @@
+{
+  "schemaVersion": "1.0",
+  "artifactType": "implementation_source_snapshot_manifest",
+  "artifactPurpose": "narrow_independent_vm31_validator_code_review",
+  "generatedAt": "2026-08-28T00:00:00.000Z",
+  "reviewFindingAddressed": "Provide independently inspectable, byte-exact production validator evidence for the transparent explicit-source relationship-label check.",
+  "liveSourcePath": "scripts/validate-vm31-current-manual.mjs",
+  "liveSourceFullWindowsPath": "C:\\Users\\David\\OneDrive\\Documents\\Document Processor\\scripts\\validate-vm31-current-manual.mjs",
+  "snapshotPath": "data/processed/review_packages/vm31-validator-implementation-review/validate-vm31-current-manual.mjs",
+  "snapshotFullWindowsPath": "C:\\Users\\David\\OneDrive\\Documents\\Document Processor\\data\\processed\\review_packages\\vm31-validator-implementation-review\\validate-vm31-current-manual.mjs",
+  "liveSourceSha256": "006a7c0368ab1d475d0c41da566ae3b9fd21dc1799a0a08fd67dcc8d2d0be555",
+  "snapshotSha256": "006a7c0368ab1d475d0c41da566ae3b9fd21dc1799a0a08fd67dcc8d2d0be555",
+  "liveByteLength": 20038,
+  "snapshotByteLength": 20038,
+  "byteIdentical": true,
+  "equalityResult": "equal",
+  "implementationLocations": {
+    "transparentNormalizer": {
+      "identifier": "normalizeSourceLabel",
+      "line": 31,
+      "rule": "lowercase, then remove characters outside a-z and 0-9"
+    },
+    "directSourceFacingAssertion": {
+      "line": 102,
+      "retainedSourceInput": "sourceChunk.sourceTextExcerpt",
+      "sourceFacingLabelInput": "candidate.targetLabel"
+    }
+  },
+  "matchingBoundary": {
+    "permittedNormalization": [
+      "case",
+      "punctuation",
+      "spacing"
+    ],
+    "inputsUsed": [
+      "retained sourceTextExcerpt",
+      "source-facing targetLabel"
+    ],
+    "inputsNotUsed": [
+      "targetId",
+      "canonicalTargetLabel",
+      "alias registry",
+      "semantic similarity",
+      "fuzzy entity equivalence",
+      "acronym expansion",
+      "curated synonyms"
+    ]
+  },
+  "regression": {
+    "sourcePath": "scripts/test-vm31-relationship-label-normalization.mjs",
+    "sourceSha256": "3bb4d87b989b60e2e2b70188f27da4177f967eac993fdbe069fab5aa4972ef6e",
+    "artifactPath": "data/processed/review_packages/vm31-validator-implementation-review/relationship-label-normalization-regression.json",
+    "artifactSha256": "f277fca2185cb79e21abf4e3e572bc4fcda2942da5b8b81ebe1a9efe80feab1e",
+    "status": "pass",
+    "caseCount": 5,
+    "passedCaseCount": 5
+  },
+  "canonicalArtifactBaselines": [
+    {
+      "artifactPath": "data/processed/source_indexes/sources/vm31-current-manual.json",
+      "expectedSha256": "bb1d16707693390c837121c432757300624f92f8ddb2a374fd12d04ab2f3406b"
+    },
+    {
+      "artifactPath": "data/processed/relationship_registries/vm31-current-manual-relationship-candidates.json",
+      "expectedSha256": "abc3f6cfa6bc792a50569e28758039b60e902e9400201f7207b813b890df103d"
+    },
+    {
+      "artifactPath": "data/processed/review_packages/vm31-focused-retrieval-evaluation.json",
+      "expectedSha256": "0bcfe4da9bbe99111e11e656869f9ee64e362de46ef1eb7d6c87cc679df7df5c"
+    },
+    {
+      "artifactPath": "data/processed/review_packages/vm31-source-qa.json",
+      "expectedSha256": "9dea317a8ee85a0d0bf78d5542cace887f17eee1dbf3cdb85c826f4b88eeb2f7"
+    },
+    {
+      "artifactPath": "data/processed/review_packages/vm31-canonical-coverage-review-package.json",
+      "expectedSha256": "63ff36dd08b24b20edebda2a47d7190408ffc983a42742f7de1318c7715a336a"
+    },
+    {
+      "artifactPath": "data/processed/review_packages/vm31-support-gate-regression.json",
+      "expectedSha256": "02170a656f06c7354eda634d2d86eeff36ab9f23eff193023b2088c54695613d"
+    },
+    {
+      "artifactPath": "data/processed/review_packages/vm31-validation-report.json",
+      "expectedSha256": "a35c181edae4c59352869468671c1deeb58f846d30c1135b2fd0736a0b2bcae4"
+    }
+  ],
+  "expectedCanonicalArtifactChangeCount": 0,
+  "governance": {
+    "reviewOnly": true,
+    "promotionStatus": "not_promoted",
+    "promotionEligible": false,
+    "canonicalSourceEvidence": false,
+    "corpusModifiedByPackage": false
+  }
+}
