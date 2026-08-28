@@ -18,6 +18,25 @@ and Copilot export remain blocked pending separate governance decisions. The
 four code snapshots approved in commit `7067118` remain immutable historical
 review evidence rather than being regenerated during promotion.
 
+## 2026-08-27 VM-31 current-manual canonical review candidate
+
+Current 2026 VM-31 is represented by one substantially complete, structure-aware
+source package spanning PDF pages 341-386. It contains 9 structural parents and
+75 exact-text child units (84 total chunks), including all numbered and lettered
+provisions, six guidance-note units, and the explicit blank-page closing boundary.
+All 84 chunks reproduce source extraction exactly; no source text was rewritten or
+visually transcribed.
+
+The focused 21-case evaluation passes 15/18 supported top-1, 18/18 strict top-3,
+2/2 unsupported abstentions, 1/1 ambiguity handling, and 18/18 current-authority
+top-1 checks. The generic support gate requires actual VM-31 evidence for formal
+VM-31 requirement requests. Ninety-two explicit-reference relationship candidates
+to VM-20, VM-21, VM-22, VM-G, and Actuarial Guideline XLIII remain documentary,
+pending, review-only, and unpromoted.
+
+VM-31 is not promoted. Learner, app, RAG, vector, and Copilot eligibility remain
+false pending independent review and a separately recorded promotion decision.
+
 ## 2026-08-26 VM-20 prose and appendix coverage
 
 The authoritative 2026 Valuation Manual PDF was verified at the external raw

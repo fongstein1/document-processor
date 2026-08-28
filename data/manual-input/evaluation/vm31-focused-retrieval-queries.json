@@ -1,0 +1,221 @@
+{
+  "schemaVersion": "1.0",
+  "evaluationId": "vm31-focused-retrieval-2026",
+  "sourceScope": "vm31-current-manual",
+  "queries": [
+    {
+      "queryId": "vm31-direct-annual-report",
+      "queryCategory": "direct_reporting_requirement",
+      "query": "When must a company prepare a PBR Actuarial Report under VM-31?",
+      "expectedOutcome": "supported",
+      "expectedChunkIds": ["vm31-section-2-general-requirements-a-annual-report-applicability"],
+      "expectedSourceIds": ["vm31-current-manual"],
+      "supportRequirements": { "informationTypes": ["formal_requirement"], "requiredSourceIds": ["vm31-current-manual"] },
+      "expectedEvidence": "Section 2.A annual PBR Actuarial Report preparation and applicability language."
+    },
+    {
+      "queryId": "vm31-report-components",
+      "queryCategory": "required_report_content",
+      "query": "Under VM-31, must the PBR Actuarial Report consist of an Executive Summary, Life Summary, Life Report, Annuity Summary, and Annuity Report?",
+      "expectedOutcome": "supported",
+      "expectedChunkIds": ["vm31-section-2-general-requirements-a-annual-report-applicability"],
+      "expectedSourceIds": ["vm31-current-manual"],
+      "supportRequirements": { "informationTypes": ["formal_requirement"], "requiredSourceIds": ["vm31-current-manual"] },
+      "expectedEvidence": "Section 2.A report-component and sub-report language."
+    },
+    {
+      "queryId": "vm31-submission-timing",
+      "queryCategory": "timing_frequency",
+      "query": "When must the VM-31 summaries and full PBR Actuarial Report be submitted to the domiciliary commissioner?",
+      "expectedOutcome": "supported",
+      "expectedChunkIds": ["vm31-section-2-general-requirements-c-submission-timing"],
+      "expectedSourceIds": ["vm31-current-manual"],
+      "supportRequirements": { "informationTypes": ["formal_requirement"], "requiredSourceIds": ["vm31-current-manual"] },
+      "expectedEvidence": "Section 2.C April 1 and within-30-days submission timing."
+    },
+    {
+      "queryId": "vm31-retention",
+      "queryCategory": "retention_requirement",
+      "query": "How long does VM-31 require the company to retain supporting documentation, and what must it allow reviewers to determine?",
+      "expectedOutcome": "supported",
+      "expectedChunkIds": ["vm31-section-2-general-requirements-d-seven-year-retention"],
+      "expectedSourceIds": ["vm31-current-manual"],
+      "supportRequirements": { "informationTypes": ["formal_requirement"], "requiredSourceIds": ["vm31-current-manual"] },
+      "expectedEvidence": "Section 2.D seven-year retention and reproducibility requirement."
+    },
+    {
+      "queryId": "vm31-order-applicability",
+      "queryCategory": "applicability_exception",
+      "query": "How does VM-31 handle report-order headers and inapplicable Life or Annuity sections?",
+      "expectedOutcome": "supported",
+      "expectedChunkIds": ["vm31-section-3-a-report-order-and-applicability-report-order-and-applicability"],
+      "expectedSourceIds": ["vm31-current-manual"],
+      "supportRequirements": { "informationTypes": ["formal_requirement"], "requiredSourceIds": ["vm31-current-manual"] },
+      "expectedEvidence": "Section 3.A order, applicability, retained headers, and explanatory-statement language."
+    },
+    {
+      "queryId": "vm31-executive-qualified-actuary",
+      "queryCategory": "actuarial_responsibility",
+      "query": "What qualified-actuary information must the VM-31 Executive Summary identify?",
+      "expectedOutcome": "supported",
+      "expectedChunkIds": ["vm31-section-3-b-executive-summary-1-qualified-actuary"],
+      "expectedSourceIds": ["vm31-current-manual"],
+      "supportRequirements": { "informationTypes": ["formal_requirement"], "requiredSourceIds": ["vm31-current-manual"] },
+      "expectedEvidence": "Section 3.B.1 qualified-actuary paragraph."
+    },
+    {
+      "queryId": "vm31-life-assumptions-margins",
+      "queryCategory": "assumption_documentation",
+      "query": "What assumption and margin documentation does VM-31 require in the Life Report?",
+      "expectedOutcome": "supported",
+      "expectedChunkIds": ["vm31-section-3-d-life-report-1-assumptions-and-margins"],
+      "expectedSourceIds": ["vm31-current-manual"],
+      "supportRequirements": { "informationTypes": ["formal_requirement"], "requiredSourceIds": ["vm31-current-manual"] },
+      "expectedEvidence": "Section 3.D.1 tables, changes, experience studies, and assumption-development documentation."
+    },
+    {
+      "queryId": "vm31-life-mortality",
+      "queryCategory": "multi_part_requirement",
+      "query": "What mortality segments, company experience, credibility, improvement, and prudent-estimate material must the VM-31 Life Report document?",
+      "expectedOutcome": "supported",
+      "expectedChunkIds": ["vm31-section-3-d-life-report-3-mortality"],
+      "expectedSourceIds": ["vm31-current-manual"],
+      "supportRequirements": { "informationTypes": ["formal_requirement"], "requiredSourceIds": ["vm31-current-manual"] },
+      "expectedEvidence": "Complete Section 3.D.3 mortality requirement with its nested provisions."
+    },
+    {
+      "queryId": "vm31-life-exclusion-tests",
+      "queryCategory": "cross_reference_vm20",
+      "query": "What exclusion-test information does VM-31 require the Life Report to provide for VM-20?",
+      "expectedOutcome": "supported",
+      "expectedChunkIds": ["vm31-section-3-d-life-report-10-exclusion-tests"],
+      "expectedSourceIds": ["vm31-current-manual"],
+      "supportRequirements": { "informationTypes": ["formal_requirement"], "requiredSourceIds": ["vm31-current-manual"] },
+      "expectedEvidence": "Section 3.D.10 VM-20 exclusion-test reporting requirements."
+    },
+    {
+      "queryId": "vm31-life-certifications",
+      "queryCategory": "certification",
+      "query": "Which investment, actuarial, and management certifications are required in the VM-31 Life Report?",
+      "expectedOutcome": "supported",
+      "expectedChunkIds": ["vm31-section-3-d-life-report-14-certifications"],
+      "expectedSourceIds": ["vm31-current-manual"],
+      "supportRequirements": { "informationTypes": ["formal_requirement"], "requiredSourceIds": ["vm31-current-manual"] },
+      "expectedEvidence": "Complete Section 3.D.14 Life Report certification list."
+    },
+    {
+      "queryId": "vm31-life-supplement-exhibit",
+      "queryCategory": "required_exhibit",
+      "query": "What does the VM-31 Life Summary require for Part 1 of the VM-20 Reserves Supplement?",
+      "expectedOutcome": "supported",
+      "expectedChunkIds": ["vm31-section-3-c-life-summary-8-supplement-part-1"],
+      "expectedSourceIds": ["vm31-current-manual"],
+      "supportRequirements": { "informationTypes": ["formal_requirement"], "requiredSourceIds": ["vm31-current-manual"] },
+      "expectedEvidence": "Section 3.C.8 required supplement copy."
+    },
+    {
+      "queryId": "vm31-annuity-cash-flow-models",
+      "queryCategory": "documentation_requirement",
+      "query": "What cash-flow model systems, segments, validation, and projection-period information must the VM-31 Annuity Report document?",
+      "expectedOutcome": "supported",
+      "expectedChunkIds": ["vm31-section-3-f-annuity-report-2-cash-flow-models"],
+      "expectedSourceIds": ["vm31-current-manual"],
+      "supportRequirements": { "informationTypes": ["formal_requirement"], "requiredSourceIds": ["vm31-current-manual"] },
+      "expectedEvidence": "Complete Section 3.F.2 annuity cash-flow model requirement."
+    },
+    {
+      "queryId": "vm31-annuity-hedging",
+      "queryCategory": "required_analysis",
+      "query": "What hedging strategy, CDHS, model-result, error-factor, and back-testing information does VM-31 require in the Annuity Report?",
+      "expectedOutcome": "supported",
+      "expectedChunkIds": ["vm31-section-3-f-annuity-report-8-hedging-and-risk-management"],
+      "expectedSourceIds": ["vm31-current-manual"],
+      "supportRequirements": { "informationTypes": ["formal_requirement"], "requiredSourceIds": ["vm31-current-manual"] },
+      "expectedEvidence": "Complete Section 3.F.8 hedging and risk-management requirement."
+    },
+    {
+      "queryId": "vm31-vm22-exclusion-tests",
+      "queryCategory": "cross_reference_vm22",
+      "query": "What single-scenario and stochastic-exclusion information does VM-31 require for VM-22 business?",
+      "expectedOutcome": "supported",
+      "expectedChunkIds": ["vm31-section-3-f-annuity-report-13-exclusion-tests-vm22"],
+      "expectedSourceIds": ["vm31-current-manual"],
+      "supportRequirements": { "informationTypes": ["formal_requirement"], "requiredSourceIds": ["vm31-current-manual"] },
+      "expectedEvidence": "Complete Section 3.F.13 VM-22 exclusion-test reporting requirement."
+    },
+    {
+      "queryId": "vm31-vm21-alternative-methodology",
+      "queryCategory": "cross_reference_vm21",
+      "query": "What Alternative Methodology grouping, assumptions, contract features, and exclusion-test documentation does VM-31 require for VM-21?",
+      "expectedOutcome": "supported",
+      "expectedChunkIds": ["vm31-section-3-f-annuity-report-12-alternative-methodology-vm21"],
+      "expectedSourceIds": ["vm31-current-manual"],
+      "supportRequirements": { "informationTypes": ["formal_requirement"], "requiredSourceIds": ["vm31-current-manual"] },
+      "expectedEvidence": "Complete Section 3.F.12 Alternative Methodology requirement."
+    },
+    {
+      "queryId": "vm31-nge-conditional-exclusion",
+      "queryCategory": "condition_exception",
+      "query": "Under what conditions may VM-31 reporting exclude a portion of an NGE, and what must be disclosed if it is excluded?",
+      "expectedOutcome": "supported",
+      "expectedChunkIds": ["vm31-section-3-d-life-report-9-non-guaranteed-elements"],
+      "expectedSourceIds": ["vm31-current-manual"],
+      "supportRequirements": { "informationTypes": ["formal_requirement"], "requiredSourceIds": ["vm31-current-manual"] },
+      "expectedEvidence": "Section 3.D.9 conditional-exclusion language and disclosures."
+    },
+    {
+      "queryId": "vm31-life-subreport-consistency",
+      "queryCategory": "similar_reporting_concepts",
+      "query": "How must the Life Summary explain material differences in methods, assumptions, or risk management between sub-reports?",
+      "expectedOutcome": "supported",
+      "expectedChunkIds": ["vm31-section-3-c-life-summary-6-consistency-between-sub-reports"],
+      "expectedSourceIds": ["vm31-current-manual"],
+      "supportRequirements": { "informationTypes": ["formal_requirement"], "requiredSourceIds": ["vm31-current-manual"] },
+      "expectedEvidence": "Section 3.C.6 Life sub-report consistency requirement, distinct from Annuity Summary 3.E.6."
+    },
+    {
+      "queryId": "vm31-current-authority-submission",
+      "queryCategory": "version_authority",
+      "query": "Under current 2026 VM-31, when shall the Executive Summary, Life Summary, and Annuity Summary be submitted?",
+      "expectedOutcome": "supported",
+      "expectedChunkIds": ["vm31-section-2-general-requirements-c-submission-timing"],
+      "expectedSourceIds": ["vm31-current-manual"],
+      "supportRequirements": { "informationTypes": ["formal_requirement"], "requiredSourceIds": ["vm31-current-manual"], "sourceVersionIdentifier": "2026 NAIC Valuation Manual" },
+      "expectedEvidence": "Current authoritative Section 2.C submission timing."
+    },
+    {
+      "queryId": "vm31-unsupported-vm20-premium-deficiency",
+      "queryCategory": "unsupported_vm20_substitution",
+      "query": "What does VM-31 require the report to document about the VM-20 premium deficiency reserve methodology?",
+      "expectedOutcome": "unsupported",
+      "expectedChunkIds": [],
+      "expectedSourceIds": [],
+      "supportRequirements": { "informationTypes": ["formal_requirement"], "requiredSourceIds": ["vm31-current-manual"], "requiredEvidenceTerms": ["premium deficiency reserve"] },
+      "expectedEvidence": "No VM-31 provision in the current chapter establishes the requested premium-deficiency-reserve reporting requirement; related VM-20 methodology is not sufficient."
+    },
+    {
+      "queryId": "vm31-unsupported-cryptoasset-exhibit",
+      "queryCategory": "unsupported_reporting_request",
+      "query": "What cryptoasset stress-test exhibit does VM-31 require?",
+      "expectedOutcome": "unsupported",
+      "expectedChunkIds": [],
+      "expectedSourceIds": [],
+      "supportRequirements": { "informationTypes": ["formal_requirement"], "requiredSourceIds": ["vm31-current-manual"], "requiredEvidenceTerms": ["cryptoasset"] },
+      "expectedEvidence": "No source provision contains the requested cryptoasset requirement."
+    },
+    {
+      "queryId": "vm31-ambiguous-certification",
+      "queryCategory": "ambiguous_reporting_question",
+      "query": "What qualified-actuary certification does VM-31 require?",
+      "expectedOutcome": "ambiguous",
+      "expectedChunkIds": [
+        "vm31-section-3-d-life-report-14-certifications",
+        "vm31-section-3-f-annuity-report-13-exclusion-tests-vm22",
+        "vm31-section-3-f-annuity-report-19-certifications"
+      ],
+      "expectedSourceIds": ["vm31-current-manual"],
+      "supportRequirements": { "informationTypes": ["formal_requirement"], "requiredSourceIds": ["vm31-current-manual"] },
+      "expectedEvidence": "The question is underspecified because VM-31 contains separate Life and Annuity certification provisions as well as test-method certification requirements."
+    }
+  ]
+}

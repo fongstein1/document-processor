@@ -1,0 +1,2812 @@
+{
+  "schemaVersion": "1.0",
+  "evaluationId": "vm31-focused-retrieval-2026",
+  "artifactPurpose": "case_level_independent_review",
+  "method": "generic_formal_requirement_keyword_overlap",
+  "productionEvidenceWindow": 3,
+  "queryCount": 21,
+  "supportedQueryCount": 18,
+  "supportedTop1Count": 15,
+  "supportedTop3Count": 18,
+  "unsupportedQueryCount": 2,
+  "unsupportedCorrectCount": 2,
+  "ambiguityQueryCount": 1,
+  "ambiguitySafeCount": 1,
+  "currentAuthoritativeVm31Top1Count": 18,
+  "sourceFamilyAccuracyCount": 18,
+  "authorityLevelAccuracyCount": 18,
+  "allCasesPassed": true,
+  "queries": [
+    {
+      "queryId": "vm31-direct-annual-report",
+      "queryCategory": "direct_reporting_requirement",
+      "query": "When must a company prepare a PBR Actuarial Report under VM-31?",
+      "intendedSupportState": "supported",
+      "expectedEvidence": "Section 2.A annual PBR Actuarial Report preparation and applicability language.",
+      "expectedChunkIds": [
+        "vm31-section-2-general-requirements-a-annual-report-applicability"
+      ],
+      "actualTop1": {
+        "rank": 1,
+        "chunkId": "vm31-section-2-general-requirements-a-annual-report-applicability",
+        "sourceId": "vm31-current-manual",
+        "sourceFamilyId": "valuation_manual_pdfs",
+        "authorityLevel": "manual_section",
+        "score": 76.64999999999999,
+        "sectionReference": "A. Annual report applicability and assigned actuaries",
+        "pageStart": 341,
+        "pageEnd": 341,
+        "citationAvailable": true
+      },
+      "actualTop3": [
+        {
+          "rank": 1,
+          "chunkId": "vm31-section-2-general-requirements-a-annual-report-applicability",
+          "sourceId": "vm31-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 76.64999999999999,
+          "sectionReference": "A. Annual report applicability and assigned actuaries",
+          "pageStart": 341,
+          "pageEnd": 341,
+          "citationAvailable": true
+        },
+        {
+          "rank": 2,
+          "chunkId": "vm31-section-3-f-annuity-report-13-exclusion-tests-vm22",
+          "sourceId": "vm31-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 70.65,
+          "sectionReference": "13. Exclusion Tests for VM-22",
+          "pageStart": 379,
+          "pageEnd": 380,
+          "citationAvailable": true
+        },
+        {
+          "rank": 3,
+          "chunkId": "vm31-section-3-f-annuity-report-12-alternative-methodology-vm21",
+          "sourceId": "vm31-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 69.15,
+          "sectionReference": "12. Alternative Methodology for VM-21",
+          "pageStart": 378,
+          "pageEnd": 379,
+          "citationAvailable": true
+        }
+      ],
+      "top1Hit": true,
+      "top3Hit": true,
+      "sourceFamilyResult": {
+        "expected": [
+          "valuation_manual_pdfs"
+        ],
+        "actualTop1": "valuation_manual_pdfs",
+        "correct": true
+      },
+      "authorityResult": {
+        "expected": [
+          "manual_section"
+        ],
+        "actualTop1": "manual_section",
+        "correct": true,
+        "currentAuthoritativeVm31Top1": true
+      },
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Actual source text from the requested formal requirement source is present inside the production evidence window.",
+        "requestedInformationTypes": [
+          "formal_requirement"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm31-section-2-general-requirements-a-annual-report-applicability",
+            "sourceId": "vm31-current-manual",
+            "score": 76.64999999999999,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm31-section-3-f-annuity-report-13-exclusion-tests-vm22",
+            "sourceId": "vm31-current-manual",
+            "score": 70.65,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm31-section-3-f-annuity-report-12-alternative-methodology-vm21",
+            "sourceId": "vm31-current-manual",
+            "score": 69.15,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 76.64999999999999,
+          "matches": [
+            {
+              "chunkId": "vm31-section-2-general-requirements-a-annual-report-applicability",
+              "score": 76.64999999999999
+            },
+            {
+              "chunkId": "vm31-section-3-f-annuity-report-13-exclusion-tests-vm22",
+              "score": 70.65
+            },
+            {
+              "chunkId": "vm31-section-3-f-annuity-report-12-alternative-methodology-vm21",
+              "score": 69.15
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "ambiguityResult": {
+        "safelyAbstained": false,
+        "reasonCode": "not_applicable",
+        "candidateChunkIds": []
+      },
+      "passed": true,
+      "failureReason": null
+    },
+    {
+      "queryId": "vm31-report-components",
+      "queryCategory": "required_report_content",
+      "query": "Under VM-31, must the PBR Actuarial Report consist of an Executive Summary, Life Summary, Life Report, Annuity Summary, and Annuity Report?",
+      "intendedSupportState": "supported",
+      "expectedEvidence": "Section 2.A report-component and sub-report language.",
+      "expectedChunkIds": [
+        "vm31-section-2-general-requirements-a-annual-report-applicability"
+      ],
+      "actualTop1": {
+        "rank": 1,
+        "chunkId": "vm31-section-2-general-requirements-c-submission-timing",
+        "sourceId": "vm31-current-manual",
+        "sourceFamilyId": "valuation_manual_pdfs",
+        "authorityLevel": "manual_section",
+        "score": 105.69999999999999,
+        "sectionReference": "C. Summary and full-report submission timing",
+        "pageStart": 341,
+        "pageEnd": 342,
+        "citationAvailable": true
+      },
+      "actualTop3": [
+        {
+          "rank": 1,
+          "chunkId": "vm31-section-2-general-requirements-c-submission-timing",
+          "sourceId": "vm31-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 105.69999999999999,
+          "sectionReference": "C. Summary and full-report submission timing",
+          "pageStart": 341,
+          "pageEnd": 342,
+          "citationAvailable": true
+        },
+        {
+          "rank": 2,
+          "chunkId": "vm31-section-2-general-requirements-a-annual-report-applicability",
+          "sourceId": "vm31-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 105.19999999999999,
+          "sectionReference": "A. Annual report applicability and assigned actuaries",
+          "pageStart": 341,
+          "pageEnd": 341,
+          "citationAvailable": true
+        },
+        {
+          "rank": 3,
+          "chunkId": "vm31-section-3-c-life-summary-general-requirement",
+          "sourceId": "vm31-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 88.69999999999999,
+          "sectionReference": "Life Summary general requirement",
+          "pageStart": 343,
+          "pageEnd": 343,
+          "citationAvailable": true
+        }
+      ],
+      "top1Hit": false,
+      "top3Hit": true,
+      "sourceFamilyResult": {
+        "expected": [
+          "valuation_manual_pdfs"
+        ],
+        "actualTop1": "valuation_manual_pdfs",
+        "correct": true
+      },
+      "authorityResult": {
+        "expected": [
+          "manual_section"
+        ],
+        "actualTop1": "manual_section",
+        "correct": true,
+        "currentAuthoritativeVm31Top1": true
+      },
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Actual source text from the requested formal requirement source is present inside the production evidence window.",
+        "requestedInformationTypes": [
+          "formal_requirement"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm31-section-2-general-requirements-c-submission-timing",
+            "sourceId": "vm31-current-manual",
+            "score": 105.69999999999999,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm31-section-2-general-requirements-a-annual-report-applicability",
+            "sourceId": "vm31-current-manual",
+            "score": 105.19999999999999,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm31-section-3-c-life-summary-general-requirement",
+            "sourceId": "vm31-current-manual",
+            "score": 88.69999999999999,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 105.69999999999999,
+          "matches": [
+            {
+              "chunkId": "vm31-section-2-general-requirements-c-submission-timing",
+              "score": 105.69999999999999
+            },
+            {
+              "chunkId": "vm31-section-2-general-requirements-a-annual-report-applicability",
+              "score": 105.19999999999999
+            },
+            {
+              "chunkId": "vm31-section-3-c-life-summary-general-requirement",
+              "score": 88.69999999999999
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "ambiguityResult": {
+        "safelyAbstained": false,
+        "reasonCode": "not_applicable",
+        "candidateChunkIds": []
+      },
+      "passed": true,
+      "failureReason": null
+    },
+    {
+      "queryId": "vm31-submission-timing",
+      "queryCategory": "timing_frequency",
+      "query": "When must the VM-31 summaries and full PBR Actuarial Report be submitted to the domiciliary commissioner?",
+      "intendedSupportState": "supported",
+      "expectedEvidence": "Section 2.C April 1 and within-30-days submission timing.",
+      "expectedChunkIds": [
+        "vm31-section-2-general-requirements-c-submission-timing"
+      ],
+      "actualTop1": {
+        "rank": 1,
+        "chunkId": "vm31-section-2-general-requirements-c-submission-timing",
+        "sourceId": "vm31-current-manual",
+        "sourceFamilyId": "valuation_manual_pdfs",
+        "authorityLevel": "manual_section",
+        "score": 93.19999999999999,
+        "sectionReference": "C. Summary and full-report submission timing",
+        "pageStart": 341,
+        "pageEnd": 342,
+        "citationAvailable": true
+      },
+      "actualTop3": [
+        {
+          "rank": 1,
+          "chunkId": "vm31-section-2-general-requirements-c-submission-timing",
+          "sourceId": "vm31-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 93.19999999999999,
+          "sectionReference": "C. Summary and full-report submission timing",
+          "pageStart": 341,
+          "pageEnd": 342,
+          "citationAvailable": true
+        },
+        {
+          "rank": 2,
+          "chunkId": "vm31-section-3-d-life-report-3-mortality",
+          "sourceId": "vm31-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 70.69999999999999,
+          "sectionReference": "3. Mortality",
+          "pageStart": 346,
+          "pageEnd": 350,
+          "citationAvailable": true
+        },
+        {
+          "rank": 3,
+          "chunkId": "vm31-section-3-f-annuity-report-2-cash-flow-models",
+          "sourceId": "vm31-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 69.19999999999999,
+          "sectionReference": "2. Cash-Flow Models",
+          "pageStart": 366,
+          "pageEnd": 367,
+          "citationAvailable": true
+        }
+      ],
+      "top1Hit": true,
+      "top3Hit": true,
+      "sourceFamilyResult": {
+        "expected": [
+          "valuation_manual_pdfs"
+        ],
+        "actualTop1": "valuation_manual_pdfs",
+        "correct": true
+      },
+      "authorityResult": {
+        "expected": [
+          "manual_section"
+        ],
+        "actualTop1": "manual_section",
+        "correct": true,
+        "currentAuthoritativeVm31Top1": true
+      },
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Actual source text from the requested formal requirement source is present inside the production evidence window.",
+        "requestedInformationTypes": [
+          "formal_requirement"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm31-section-2-general-requirements-c-submission-timing",
+            "sourceId": "vm31-current-manual",
+            "score": 93.19999999999999,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm31-section-3-d-life-report-3-mortality",
+            "sourceId": "vm31-current-manual",
+            "score": 70.69999999999999,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm31-section-3-f-annuity-report-2-cash-flow-models",
+            "sourceId": "vm31-current-manual",
+            "score": 69.19999999999999,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 93.19999999999999,
+          "matches": [
+            {
+              "chunkId": "vm31-section-2-general-requirements-c-submission-timing",
+              "score": 93.19999999999999
+            },
+            {
+              "chunkId": "vm31-section-3-d-life-report-3-mortality",
+              "score": 70.69999999999999
+            },
+            {
+              "chunkId": "vm31-section-3-f-annuity-report-2-cash-flow-models",
+              "score": 69.19999999999999
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "ambiguityResult": {
+        "safelyAbstained": false,
+        "reasonCode": "not_applicable",
+        "candidateChunkIds": []
+      },
+      "passed": true,
+      "failureReason": null
+    },
+    {
+      "queryId": "vm31-retention",
+      "queryCategory": "retention_requirement",
+      "query": "How long does VM-31 require the company to retain supporting documentation, and what must it allow reviewers to determine?",
+      "intendedSupportState": "supported",
+      "expectedEvidence": "Section 2.D seven-year retention and reproducibility requirement.",
+      "expectedChunkIds": [
+        "vm31-section-2-general-requirements-d-seven-year-retention"
+      ],
+      "actualTop1": {
+        "rank": 1,
+        "chunkId": "vm31-section-3-d-life-report-11-additional-information",
+        "sourceId": "vm31-current-manual",
+        "sourceFamilyId": "valuation_manual_pdfs",
+        "authorityLevel": "manual_section",
+        "score": 59.400000000000006,
+        "sectionReference": "11. Additional Information",
+        "pageStart": 358,
+        "pageEnd": 362,
+        "citationAvailable": true
+      },
+      "actualTop3": [
+        {
+          "rank": 1,
+          "chunkId": "vm31-section-3-d-life-report-11-additional-information",
+          "sourceId": "vm31-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 59.400000000000006,
+          "sectionReference": "11. Additional Information",
+          "pageStart": 358,
+          "pageEnd": 362,
+          "citationAvailable": true
+        },
+        {
+          "rank": 2,
+          "chunkId": "vm31-section-2-general-requirements-d-seven-year-retention",
+          "sourceId": "vm31-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 55.9,
+          "sectionReference": "D. Seven-year retention and reproducibility documentation",
+          "pageStart": 342,
+          "pageEnd": 342,
+          "citationAvailable": true
+        },
+        {
+          "rank": 3,
+          "chunkId": "vm31-section-3-f-annuity-report-14-additional-standard-projection-amount",
+          "sourceId": "vm31-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 55.4,
+          "sectionReference": "14. Additional Standard Projection Amount",
+          "pageStart": 380,
+          "pageEnd": 382,
+          "citationAvailable": true
+        }
+      ],
+      "top1Hit": false,
+      "top3Hit": true,
+      "sourceFamilyResult": {
+        "expected": [
+          "valuation_manual_pdfs"
+        ],
+        "actualTop1": "valuation_manual_pdfs",
+        "correct": true
+      },
+      "authorityResult": {
+        "expected": [
+          "manual_section"
+        ],
+        "actualTop1": "manual_section",
+        "correct": true,
+        "currentAuthoritativeVm31Top1": true
+      },
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Actual source text from the requested formal requirement source is present inside the production evidence window.",
+        "requestedInformationTypes": [
+          "formal_requirement"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm31-section-3-d-life-report-11-additional-information",
+            "sourceId": "vm31-current-manual",
+            "score": 59.400000000000006,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm31-section-2-general-requirements-d-seven-year-retention",
+            "sourceId": "vm31-current-manual",
+            "score": 55.9,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm31-section-3-f-annuity-report-14-additional-standard-projection-amount",
+            "sourceId": "vm31-current-manual",
+            "score": 55.4,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 59.400000000000006,
+          "matches": [
+            {
+              "chunkId": "vm31-section-3-d-life-report-11-additional-information",
+              "score": 59.400000000000006
+            },
+            {
+              "chunkId": "vm31-section-2-general-requirements-d-seven-year-retention",
+              "score": 55.9
+            },
+            {
+              "chunkId": "vm31-section-3-f-annuity-report-14-additional-standard-projection-amount",
+              "score": 55.4
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "ambiguityResult": {
+        "safelyAbstained": false,
+        "reasonCode": "not_applicable",
+        "candidateChunkIds": []
+      },
+      "passed": true,
+      "failureReason": null
+    },
+    {
+      "queryId": "vm31-order-applicability",
+      "queryCategory": "applicability_exception",
+      "query": "How does VM-31 handle report-order headers and inapplicable Life or Annuity sections?",
+      "intendedSupportState": "supported",
+      "expectedEvidence": "Section 3.A order, applicability, retained headers, and explanatory-statement language.",
+      "expectedChunkIds": [
+        "vm31-section-3-a-report-order-and-applicability-report-order-and-applicability"
+      ],
+      "actualTop1": {
+        "rank": 1,
+        "chunkId": "vm31-section-3-a-report-order-and-applicability-report-order-and-applicability",
+        "sourceId": "vm31-current-manual",
+        "sourceFamilyId": "valuation_manual_pdfs",
+        "authorityLevel": "manual_section",
+        "score": 92.25,
+        "sectionReference": "A. Report order, headers, and applicability",
+        "pageStart": 342,
+        "pageEnd": 342,
+        "citationAvailable": true
+      },
+      "actualTop3": [
+        {
+          "rank": 1,
+          "chunkId": "vm31-section-3-a-report-order-and-applicability-report-order-and-applicability",
+          "sourceId": "vm31-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 92.25,
+          "sectionReference": "A. Report order, headers, and applicability",
+          "pageStart": 342,
+          "pageEnd": 342,
+          "citationAvailable": true
+        },
+        {
+          "rank": 2,
+          "chunkId": "vm31-section-3-d-life-report-general-requirement",
+          "sourceId": "vm31-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 57.25,
+          "sectionReference": "Life Report general requirement",
+          "pageStart": 344,
+          "pageEnd": 344,
+          "citationAvailable": true
+        },
+        {
+          "rank": 3,
+          "chunkId": "vm31-section-3-f-annuity-report-general-requirement",
+          "sourceId": "vm31-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 57.25,
+          "sectionReference": "Annuity Report general requirement",
+          "pageStart": 366,
+          "pageEnd": 366,
+          "citationAvailable": true
+        }
+      ],
+      "top1Hit": true,
+      "top3Hit": true,
+      "sourceFamilyResult": {
+        "expected": [
+          "valuation_manual_pdfs"
+        ],
+        "actualTop1": "valuation_manual_pdfs",
+        "correct": true
+      },
+      "authorityResult": {
+        "expected": [
+          "manual_section"
+        ],
+        "actualTop1": "manual_section",
+        "correct": true,
+        "currentAuthoritativeVm31Top1": true
+      },
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Actual source text from the requested formal requirement source is present inside the production evidence window.",
+        "requestedInformationTypes": [
+          "formal_requirement"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm31-section-3-a-report-order-and-applicability-report-order-and-applicability",
+            "sourceId": "vm31-current-manual",
+            "score": 92.25,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm31-section-3-d-life-report-general-requirement",
+            "sourceId": "vm31-current-manual",
+            "score": 57.25,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm31-section-3-f-annuity-report-general-requirement",
+            "sourceId": "vm31-current-manual",
+            "score": 57.25,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 92.25,
+          "matches": [
+            {
+              "chunkId": "vm31-section-3-a-report-order-and-applicability-report-order-and-applicability",
+              "score": 92.25
+            },
+            {
+              "chunkId": "vm31-section-3-d-life-report-general-requirement",
+              "score": 57.25
+            },
+            {
+              "chunkId": "vm31-section-3-f-annuity-report-general-requirement",
+              "score": 57.25
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "ambiguityResult": {
+        "safelyAbstained": false,
+        "reasonCode": "not_applicable",
+        "candidateChunkIds": []
+      },
+      "passed": true,
+      "failureReason": null
+    },
+    {
+      "queryId": "vm31-executive-qualified-actuary",
+      "queryCategory": "actuarial_responsibility",
+      "query": "What qualified-actuary information must the VM-31 Executive Summary identify?",
+      "intendedSupportState": "supported",
+      "expectedEvidence": "Section 3.B.1 qualified-actuary paragraph.",
+      "expectedChunkIds": [
+        "vm31-section-3-b-executive-summary-1-qualified-actuary"
+      ],
+      "actualTop1": {
+        "rank": 1,
+        "chunkId": "vm31-section-3-b-executive-summary-1-qualified-actuary",
+        "sourceId": "vm31-current-manual",
+        "sourceFamilyId": "valuation_manual_pdfs",
+        "authorityLevel": "manual_section",
+        "score": 70,
+        "sectionReference": "1. Qualified Actuary",
+        "pageStart": 342,
+        "pageEnd": 342,
+        "citationAvailable": true
+      },
+      "actualTop3": [
+        {
+          "rank": 1,
+          "chunkId": "vm31-section-3-b-executive-summary-1-qualified-actuary",
+          "sourceId": "vm31-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 70,
+          "sectionReference": "1. Qualified Actuary",
+          "pageStart": 342,
+          "pageEnd": 342,
+          "citationAvailable": true
+        },
+        {
+          "rank": 2,
+          "chunkId": "vm31-section-3-b-executive-summary-general-requirement",
+          "sourceId": "vm31-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 59.5,
+          "sectionReference": "Executive Summary general requirement",
+          "pageStart": 342,
+          "pageEnd": 342,
+          "citationAvailable": true
+        },
+        {
+          "rank": 3,
+          "chunkId": "vm31-section-3-f-annuity-report-16-additional-information",
+          "sourceId": "vm31-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 56.99999999999999,
+          "sectionReference": "16. Additional Information",
+          "pageStart": 382,
+          "pageEnd": 384,
+          "citationAvailable": true
+        }
+      ],
+      "top1Hit": true,
+      "top3Hit": true,
+      "sourceFamilyResult": {
+        "expected": [
+          "valuation_manual_pdfs"
+        ],
+        "actualTop1": "valuation_manual_pdfs",
+        "correct": true
+      },
+      "authorityResult": {
+        "expected": [
+          "manual_section"
+        ],
+        "actualTop1": "manual_section",
+        "correct": true,
+        "currentAuthoritativeVm31Top1": true
+      },
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Actual source text from the requested formal requirement source is present inside the production evidence window.",
+        "requestedInformationTypes": [
+          "formal_requirement"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm31-section-3-b-executive-summary-1-qualified-actuary",
+            "sourceId": "vm31-current-manual",
+            "score": 70,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm31-section-3-b-executive-summary-general-requirement",
+            "sourceId": "vm31-current-manual",
+            "score": 59.5,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm31-section-3-f-annuity-report-16-additional-information",
+            "sourceId": "vm31-current-manual",
+            "score": 56.99999999999999,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 70,
+          "matches": [
+            {
+              "chunkId": "vm31-section-3-b-executive-summary-1-qualified-actuary",
+              "score": 70
+            },
+            {
+              "chunkId": "vm31-section-3-b-executive-summary-general-requirement",
+              "score": 59.5
+            },
+            {
+              "chunkId": "vm31-section-3-f-annuity-report-16-additional-information",
+              "score": 56.99999999999999
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "ambiguityResult": {
+        "safelyAbstained": false,
+        "reasonCode": "not_applicable",
+        "candidateChunkIds": []
+      },
+      "passed": true,
+      "failureReason": null
+    },
+    {
+      "queryId": "vm31-life-assumptions-margins",
+      "queryCategory": "assumption_documentation",
+      "query": "What assumption and margin documentation does VM-31 require in the Life Report?",
+      "intendedSupportState": "supported",
+      "expectedEvidence": "Section 3.D.1 tables, changes, experience studies, and assumption-development documentation.",
+      "expectedChunkIds": [
+        "vm31-section-3-d-life-report-1-assumptions-and-margins"
+      ],
+      "actualTop1": {
+        "rank": 1,
+        "chunkId": "vm31-section-3-d-life-report-1-assumptions-and-margins",
+        "sourceId": "vm31-current-manual",
+        "sourceFamilyId": "valuation_manual_pdfs",
+        "authorityLevel": "manual_section",
+        "score": 79.19999999999999,
+        "sectionReference": "1. Assumptions and Margins",
+        "pageStart": 344,
+        "pageEnd": 345,
+        "citationAvailable": true
+      },
+      "actualTop3": [
+        {
+          "rank": 1,
+          "chunkId": "vm31-section-3-d-life-report-1-assumptions-and-margins",
+          "sourceId": "vm31-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 79.19999999999999,
+          "sectionReference": "1. Assumptions and Margins",
+          "pageStart": 344,
+          "pageEnd": 345,
+          "citationAvailable": true
+        },
+        {
+          "rank": 2,
+          "chunkId": "vm31-section-3-f-annuity-report-3-liability-assumptions-and-margins",
+          "sourceId": "vm31-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 73.19999999999999,
+          "sectionReference": "3. Liability Assumptions and Margins",
+          "pageStart": 367,
+          "pageEnd": 370,
+          "citationAvailable": true
+        },
+        {
+          "rank": 3,
+          "chunkId": "vm31-section-3-d-life-report-general-requirement",
+          "sourceId": "vm31-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 72.7,
+          "sectionReference": "Life Report general requirement",
+          "pageStart": 344,
+          "pageEnd": 344,
+          "citationAvailable": true
+        }
+      ],
+      "top1Hit": true,
+      "top3Hit": true,
+      "sourceFamilyResult": {
+        "expected": [
+          "valuation_manual_pdfs"
+        ],
+        "actualTop1": "valuation_manual_pdfs",
+        "correct": true
+      },
+      "authorityResult": {
+        "expected": [
+          "manual_section"
+        ],
+        "actualTop1": "manual_section",
+        "correct": true,
+        "currentAuthoritativeVm31Top1": true
+      },
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Actual source text from the requested formal requirement source is present inside the production evidence window.",
+        "requestedInformationTypes": [
+          "formal_requirement"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm31-section-3-d-life-report-1-assumptions-and-margins",
+            "sourceId": "vm31-current-manual",
+            "score": 79.19999999999999,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm31-section-3-f-annuity-report-3-liability-assumptions-and-margins",
+            "sourceId": "vm31-current-manual",
+            "score": 73.19999999999999,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm31-section-3-d-life-report-general-requirement",
+            "sourceId": "vm31-current-manual",
+            "score": 72.7,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 79.19999999999999,
+          "matches": [
+            {
+              "chunkId": "vm31-section-3-d-life-report-1-assumptions-and-margins",
+              "score": 79.19999999999999
+            },
+            {
+              "chunkId": "vm31-section-3-f-annuity-report-3-liability-assumptions-and-margins",
+              "score": 73.19999999999999
+            },
+            {
+              "chunkId": "vm31-section-3-d-life-report-general-requirement",
+              "score": 72.7
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "ambiguityResult": {
+        "safelyAbstained": false,
+        "reasonCode": "not_applicable",
+        "candidateChunkIds": []
+      },
+      "passed": true,
+      "failureReason": null
+    },
+    {
+      "queryId": "vm31-life-mortality",
+      "queryCategory": "multi_part_requirement",
+      "query": "What mortality segments, company experience, credibility, improvement, and prudent-estimate material must the VM-31 Life Report document?",
+      "intendedSupportState": "supported",
+      "expectedEvidence": "Complete Section 3.D.3 mortality requirement with its nested provisions.",
+      "expectedChunkIds": [
+        "vm31-section-3-d-life-report-3-mortality"
+      ],
+      "actualTop1": {
+        "rank": 1,
+        "chunkId": "vm31-section-3-d-life-report-3-mortality",
+        "sourceId": "vm31-current-manual",
+        "sourceFamilyId": "valuation_manual_pdfs",
+        "authorityLevel": "manual_section",
+        "score": 88.19999999999999,
+        "sectionReference": "3. Mortality",
+        "pageStart": 346,
+        "pageEnd": 350,
+        "citationAvailable": true
+      },
+      "actualTop3": [
+        {
+          "rank": 1,
+          "chunkId": "vm31-section-3-d-life-report-3-mortality",
+          "sourceId": "vm31-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 88.19999999999999,
+          "sectionReference": "3. Mortality",
+          "pageStart": 346,
+          "pageEnd": 350,
+          "citationAvailable": true
+        },
+        {
+          "rank": 2,
+          "chunkId": "vm31-section-3-d-life-report-11-additional-information",
+          "sourceId": "vm31-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 79.19999999999999,
+          "sectionReference": "11. Additional Information",
+          "pageStart": 358,
+          "pageEnd": 362,
+          "citationAvailable": true
+        },
+        {
+          "rank": 3,
+          "chunkId": "vm31-section-3-d-life-report-1-assumptions-and-margins",
+          "sourceId": "vm31-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 73.19999999999999,
+          "sectionReference": "1. Assumptions and Margins",
+          "pageStart": 344,
+          "pageEnd": 345,
+          "citationAvailable": true
+        }
+      ],
+      "top1Hit": true,
+      "top3Hit": true,
+      "sourceFamilyResult": {
+        "expected": [
+          "valuation_manual_pdfs"
+        ],
+        "actualTop1": "valuation_manual_pdfs",
+        "correct": true
+      },
+      "authorityResult": {
+        "expected": [
+          "manual_section"
+        ],
+        "actualTop1": "manual_section",
+        "correct": true,
+        "currentAuthoritativeVm31Top1": true
+      },
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Actual source text from the requested formal requirement source is present inside the production evidence window.",
+        "requestedInformationTypes": [
+          "formal_requirement"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm31-section-3-d-life-report-3-mortality",
+            "sourceId": "vm31-current-manual",
+            "score": 88.19999999999999,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm31-section-3-d-life-report-11-additional-information",
+            "sourceId": "vm31-current-manual",
+            "score": 79.19999999999999,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm31-section-3-d-life-report-1-assumptions-and-margins",
+            "sourceId": "vm31-current-manual",
+            "score": 73.19999999999999,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 88.19999999999999,
+          "matches": [
+            {
+              "chunkId": "vm31-section-3-d-life-report-3-mortality",
+              "score": 88.19999999999999
+            },
+            {
+              "chunkId": "vm31-section-3-d-life-report-11-additional-information",
+              "score": 79.19999999999999
+            },
+            {
+              "chunkId": "vm31-section-3-d-life-report-1-assumptions-and-margins",
+              "score": 73.19999999999999
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "ambiguityResult": {
+        "safelyAbstained": false,
+        "reasonCode": "not_applicable",
+        "candidateChunkIds": []
+      },
+      "passed": true,
+      "failureReason": null
+    },
+    {
+      "queryId": "vm31-life-exclusion-tests",
+      "queryCategory": "cross_reference_vm20",
+      "query": "What exclusion-test information does VM-31 require the Life Report to provide for VM-20?",
+      "intendedSupportState": "supported",
+      "expectedEvidence": "Section 3.D.10 VM-20 exclusion-test reporting requirements.",
+      "expectedChunkIds": [
+        "vm31-section-3-d-life-report-10-exclusion-tests"
+      ],
+      "actualTop1": {
+        "rank": 1,
+        "chunkId": "vm31-section-3-d-life-report-11-additional-information",
+        "sourceId": "vm31-current-manual",
+        "sourceFamilyId": "valuation_manual_pdfs",
+        "authorityLevel": "manual_section",
+        "score": 83.24999999999999,
+        "sectionReference": "11. Additional Information",
+        "pageStart": 358,
+        "pageEnd": 362,
+        "citationAvailable": true
+      },
+      "actualTop3": [
+        {
+          "rank": 1,
+          "chunkId": "vm31-section-3-d-life-report-11-additional-information",
+          "sourceId": "vm31-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 83.24999999999999,
+          "sectionReference": "11. Additional Information",
+          "pageStart": 358,
+          "pageEnd": 362,
+          "citationAvailable": true
+        },
+        {
+          "rank": 2,
+          "chunkId": "vm31-section-3-f-annuity-report-13-exclusion-tests-vm22",
+          "sourceId": "vm31-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 79.24999999999999,
+          "sectionReference": "13. Exclusion Tests for VM-22",
+          "pageStart": 379,
+          "pageEnd": 380,
+          "citationAvailable": true
+        },
+        {
+          "rank": 3,
+          "chunkId": "vm31-section-3-d-life-report-10-exclusion-tests",
+          "sourceId": "vm31-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 76.24999999999999,
+          "sectionReference": "10. Exclusion Tests",
+          "pageStart": 357,
+          "pageEnd": 358,
+          "citationAvailable": true
+        }
+      ],
+      "top1Hit": false,
+      "top3Hit": true,
+      "sourceFamilyResult": {
+        "expected": [
+          "valuation_manual_pdfs"
+        ],
+        "actualTop1": "valuation_manual_pdfs",
+        "correct": true
+      },
+      "authorityResult": {
+        "expected": [
+          "manual_section"
+        ],
+        "actualTop1": "manual_section",
+        "correct": true,
+        "currentAuthoritativeVm31Top1": true
+      },
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Actual source text from the requested formal requirement source is present inside the production evidence window.",
+        "requestedInformationTypes": [
+          "formal_requirement"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm31-section-3-d-life-report-11-additional-information",
+            "sourceId": "vm31-current-manual",
+            "score": 83.24999999999999,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm31-section-3-f-annuity-report-13-exclusion-tests-vm22",
+            "sourceId": "vm31-current-manual",
+            "score": 79.24999999999999,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm31-section-3-d-life-report-10-exclusion-tests",
+            "sourceId": "vm31-current-manual",
+            "score": 76.24999999999999,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 83.24999999999999,
+          "matches": [
+            {
+              "chunkId": "vm31-section-3-d-life-report-11-additional-information",
+              "score": 83.24999999999999
+            },
+            {
+              "chunkId": "vm31-section-3-f-annuity-report-13-exclusion-tests-vm22",
+              "score": 79.24999999999999
+            },
+            {
+              "chunkId": "vm31-section-3-d-life-report-10-exclusion-tests",
+              "score": 76.24999999999999
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "ambiguityResult": {
+        "safelyAbstained": false,
+        "reasonCode": "not_applicable",
+        "candidateChunkIds": []
+      },
+      "passed": true,
+      "failureReason": null
+    },
+    {
+      "queryId": "vm31-life-certifications",
+      "queryCategory": "certification",
+      "query": "Which investment, actuarial, and management certifications are required in the VM-31 Life Report?",
+      "intendedSupportState": "supported",
+      "expectedEvidence": "Complete Section 3.D.14 Life Report certification list.",
+      "expectedChunkIds": [
+        "vm31-section-3-d-life-report-14-certifications"
+      ],
+      "actualTop1": {
+        "rank": 1,
+        "chunkId": "vm31-section-3-d-life-report-14-certifications",
+        "sourceId": "vm31-current-manual",
+        "sourceFamilyId": "valuation_manual_pdfs",
+        "authorityLevel": "manual_section",
+        "score": 73.89999999999999,
+        "sectionReference": "14. Certifications",
+        "pageStart": 362,
+        "pageEnd": 363,
+        "citationAvailable": true
+      },
+      "actualTop3": [
+        {
+          "rank": 1,
+          "chunkId": "vm31-section-3-d-life-report-14-certifications",
+          "sourceId": "vm31-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 73.89999999999999,
+          "sectionReference": "14. Certifications",
+          "pageStart": 362,
+          "pageEnd": 363,
+          "citationAvailable": true
+        },
+        {
+          "rank": 2,
+          "chunkId": "vm31-section-3-d-life-report-11-additional-information",
+          "sourceId": "vm31-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 68.4,
+          "sectionReference": "11. Additional Information",
+          "pageStart": 358,
+          "pageEnd": 362,
+          "citationAvailable": true
+        },
+        {
+          "rank": 3,
+          "chunkId": "vm31-section-3-d-life-report-6-assets",
+          "sourceId": "vm31-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 67.39999999999999,
+          "sectionReference": "6. Assets",
+          "pageStart": 352,
+          "pageEnd": 355,
+          "citationAvailable": true
+        }
+      ],
+      "top1Hit": true,
+      "top3Hit": true,
+      "sourceFamilyResult": {
+        "expected": [
+          "valuation_manual_pdfs"
+        ],
+        "actualTop1": "valuation_manual_pdfs",
+        "correct": true
+      },
+      "authorityResult": {
+        "expected": [
+          "manual_section"
+        ],
+        "actualTop1": "manual_section",
+        "correct": true,
+        "currentAuthoritativeVm31Top1": true
+      },
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Actual source text from the requested formal requirement source is present inside the production evidence window.",
+        "requestedInformationTypes": [
+          "formal_requirement"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm31-section-3-d-life-report-14-certifications",
+            "sourceId": "vm31-current-manual",
+            "score": 73.89999999999999,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm31-section-3-d-life-report-11-additional-information",
+            "sourceId": "vm31-current-manual",
+            "score": 68.4,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm31-section-3-d-life-report-6-assets",
+            "sourceId": "vm31-current-manual",
+            "score": 67.39999999999999,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 73.89999999999999,
+          "matches": [
+            {
+              "chunkId": "vm31-section-3-d-life-report-14-certifications",
+              "score": 73.89999999999999
+            },
+            {
+              "chunkId": "vm31-section-3-d-life-report-11-additional-information",
+              "score": 68.4
+            },
+            {
+              "chunkId": "vm31-section-3-d-life-report-6-assets",
+              "score": 67.39999999999999
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "ambiguityResult": {
+        "safelyAbstained": false,
+        "reasonCode": "not_applicable",
+        "candidateChunkIds": []
+      },
+      "passed": true,
+      "failureReason": null
+    },
+    {
+      "queryId": "vm31-life-supplement-exhibit",
+      "queryCategory": "required_exhibit",
+      "query": "What does the VM-31 Life Summary require for Part 1 of the VM-20 Reserves Supplement?",
+      "intendedSupportState": "supported",
+      "expectedEvidence": "Section 3.C.8 required supplement copy.",
+      "expectedChunkIds": [
+        "vm31-section-3-c-life-summary-8-supplement-part-1"
+      ],
+      "actualTop1": {
+        "rank": 1,
+        "chunkId": "vm31-section-3-c-life-summary-8-supplement-part-1",
+        "sourceId": "vm31-current-manual",
+        "sourceFamilyId": "valuation_manual_pdfs",
+        "authorityLevel": "manual_section",
+        "score": 108,
+        "sectionReference": "8. Supplement Part 1",
+        "pageStart": 344,
+        "pageEnd": 344,
+        "citationAvailable": true
+      },
+      "actualTop3": [
+        {
+          "rank": 1,
+          "chunkId": "vm31-section-3-c-life-summary-8-supplement-part-1",
+          "sourceId": "vm31-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 108,
+          "sectionReference": "8. Supplement Part 1",
+          "pageStart": 344,
+          "pageEnd": 344,
+          "citationAvailable": true
+        },
+        {
+          "rank": 2,
+          "chunkId": "vm31-section-3-e-annuity-summary-10-vm22-supplement-part-1",
+          "sourceId": "vm31-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 94.5,
+          "sectionReference": "10. VM-22 Supplement Part 1",
+          "pageStart": 366,
+          "pageEnd": 366,
+          "citationAvailable": true
+        },
+        {
+          "rank": 3,
+          "chunkId": "vm31-section-3-c-life-summary-9-supplement-part-2",
+          "sourceId": "vm31-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 85,
+          "sectionReference": "9. Supplement Part 2",
+          "pageStart": 344,
+          "pageEnd": 344,
+          "citationAvailable": true
+        }
+      ],
+      "top1Hit": true,
+      "top3Hit": true,
+      "sourceFamilyResult": {
+        "expected": [
+          "valuation_manual_pdfs"
+        ],
+        "actualTop1": "valuation_manual_pdfs",
+        "correct": true
+      },
+      "authorityResult": {
+        "expected": [
+          "manual_section"
+        ],
+        "actualTop1": "manual_section",
+        "correct": true,
+        "currentAuthoritativeVm31Top1": true
+      },
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Actual source text from the requested formal requirement source is present inside the production evidence window.",
+        "requestedInformationTypes": [
+          "formal_requirement"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm31-section-3-c-life-summary-8-supplement-part-1",
+            "sourceId": "vm31-current-manual",
+            "score": 108,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm31-section-3-e-annuity-summary-10-vm22-supplement-part-1",
+            "sourceId": "vm31-current-manual",
+            "score": 94.5,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm31-section-3-c-life-summary-9-supplement-part-2",
+            "sourceId": "vm31-current-manual",
+            "score": 85,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 108,
+          "matches": [
+            {
+              "chunkId": "vm31-section-3-c-life-summary-8-supplement-part-1",
+              "score": 108
+            },
+            {
+              "chunkId": "vm31-section-3-e-annuity-summary-10-vm22-supplement-part-1",
+              "score": 94.5
+            },
+            {
+              "chunkId": "vm31-section-3-c-life-summary-9-supplement-part-2",
+              "score": 85
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "ambiguityResult": {
+        "safelyAbstained": false,
+        "reasonCode": "not_applicable",
+        "candidateChunkIds": []
+      },
+      "passed": true,
+      "failureReason": null
+    },
+    {
+      "queryId": "vm31-annuity-cash-flow-models",
+      "queryCategory": "documentation_requirement",
+      "query": "What cash-flow model systems, segments, validation, and projection-period information must the VM-31 Annuity Report document?",
+      "intendedSupportState": "supported",
+      "expectedEvidence": "Complete Section 3.F.2 annuity cash-flow model requirement.",
+      "expectedChunkIds": [
+        "vm31-section-3-f-annuity-report-2-cash-flow-models"
+      ],
+      "actualTop1": {
+        "rank": 1,
+        "chunkId": "vm31-section-3-f-annuity-report-2-cash-flow-models",
+        "sourceId": "vm31-current-manual",
+        "sourceFamilyId": "valuation_manual_pdfs",
+        "authorityLevel": "manual_section",
+        "score": 110.74999999999999,
+        "sectionReference": "2. Cash-Flow Models",
+        "pageStart": 366,
+        "pageEnd": 367,
+        "citationAvailable": true
+      },
+      "actualTop3": [
+        {
+          "rank": 1,
+          "chunkId": "vm31-section-3-f-annuity-report-2-cash-flow-models",
+          "sourceId": "vm31-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 110.74999999999999,
+          "sectionReference": "2. Cash-Flow Models",
+          "pageStart": 366,
+          "pageEnd": 367,
+          "citationAvailable": true
+        },
+        {
+          "rank": 2,
+          "chunkId": "vm31-section-3-d-life-report-2-cash-flow-models",
+          "sourceId": "vm31-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 102.74999999999999,
+          "sectionReference": "2. Cash-Flow Models",
+          "pageStart": 345,
+          "pageEnd": 346,
+          "citationAvailable": true
+        },
+        {
+          "rank": 3,
+          "chunkId": "vm31-section-3-f-annuity-report-14-additional-standard-projection-amount",
+          "sourceId": "vm31-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 78.74999999999999,
+          "sectionReference": "14. Additional Standard Projection Amount",
+          "pageStart": 380,
+          "pageEnd": 382,
+          "citationAvailable": true
+        }
+      ],
+      "top1Hit": true,
+      "top3Hit": true,
+      "sourceFamilyResult": {
+        "expected": [
+          "valuation_manual_pdfs"
+        ],
+        "actualTop1": "valuation_manual_pdfs",
+        "correct": true
+      },
+      "authorityResult": {
+        "expected": [
+          "manual_section"
+        ],
+        "actualTop1": "manual_section",
+        "correct": true,
+        "currentAuthoritativeVm31Top1": true
+      },
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Actual source text from the requested formal requirement source is present inside the production evidence window.",
+        "requestedInformationTypes": [
+          "formal_requirement"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm31-section-3-f-annuity-report-2-cash-flow-models",
+            "sourceId": "vm31-current-manual",
+            "score": 110.74999999999999,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm31-section-3-d-life-report-2-cash-flow-models",
+            "sourceId": "vm31-current-manual",
+            "score": 102.74999999999999,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm31-section-3-f-annuity-report-14-additional-standard-projection-amount",
+            "sourceId": "vm31-current-manual",
+            "score": 78.74999999999999,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 110.74999999999999,
+          "matches": [
+            {
+              "chunkId": "vm31-section-3-f-annuity-report-2-cash-flow-models",
+              "score": 110.74999999999999
+            },
+            {
+              "chunkId": "vm31-section-3-d-life-report-2-cash-flow-models",
+              "score": 102.74999999999999
+            },
+            {
+              "chunkId": "vm31-section-3-f-annuity-report-14-additional-standard-projection-amount",
+              "score": 78.74999999999999
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "ambiguityResult": {
+        "safelyAbstained": false,
+        "reasonCode": "not_applicable",
+        "candidateChunkIds": []
+      },
+      "passed": true,
+      "failureReason": null
+    },
+    {
+      "queryId": "vm31-annuity-hedging",
+      "queryCategory": "required_analysis",
+      "query": "What hedging strategy, CDHS, model-result, error-factor, and back-testing information does VM-31 require in the Annuity Report?",
+      "intendedSupportState": "supported",
+      "expectedEvidence": "Complete Section 3.F.8 hedging and risk-management requirement.",
+      "expectedChunkIds": [
+        "vm31-section-3-f-annuity-report-8-hedging-and-risk-management"
+      ],
+      "actualTop1": {
+        "rank": 1,
+        "chunkId": "vm31-section-3-f-annuity-report-8-hedging-and-risk-management",
+        "sourceId": "vm31-current-manual",
+        "sourceFamilyId": "valuation_manual_pdfs",
+        "authorityLevel": "manual_section",
+        "score": 97.24999999999999,
+        "sectionReference": "8. Hedging and Risk Management",
+        "pageStart": 373,
+        "pageEnd": 375,
+        "citationAvailable": true
+      },
+      "actualTop3": [
+        {
+          "rank": 1,
+          "chunkId": "vm31-section-3-f-annuity-report-8-hedging-and-risk-management",
+          "sourceId": "vm31-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 97.24999999999999,
+          "sectionReference": "8. Hedging and Risk Management",
+          "pageStart": 373,
+          "pageEnd": 375,
+          "citationAvailable": true
+        },
+        {
+          "rank": 2,
+          "chunkId": "vm31-section-3-f-annuity-report-general-requirement",
+          "sourceId": "vm31-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 71.25,
+          "sectionReference": "Annuity Report general requirement",
+          "pageStart": 366,
+          "pageEnd": 366,
+          "citationAvailable": true
+        },
+        {
+          "rank": 3,
+          "chunkId": "vm31-section-3-f-annuity-report-16-additional-information",
+          "sourceId": "vm31-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 69.75,
+          "sectionReference": "16. Additional Information",
+          "pageStart": 382,
+          "pageEnd": 384,
+          "citationAvailable": true
+        }
+      ],
+      "top1Hit": true,
+      "top3Hit": true,
+      "sourceFamilyResult": {
+        "expected": [
+          "valuation_manual_pdfs"
+        ],
+        "actualTop1": "valuation_manual_pdfs",
+        "correct": true
+      },
+      "authorityResult": {
+        "expected": [
+          "manual_section"
+        ],
+        "actualTop1": "manual_section",
+        "correct": true,
+        "currentAuthoritativeVm31Top1": true
+      },
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Actual source text from the requested formal requirement source is present inside the production evidence window.",
+        "requestedInformationTypes": [
+          "formal_requirement"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm31-section-3-f-annuity-report-8-hedging-and-risk-management",
+            "sourceId": "vm31-current-manual",
+            "score": 97.24999999999999,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm31-section-3-f-annuity-report-general-requirement",
+            "sourceId": "vm31-current-manual",
+            "score": 71.25,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm31-section-3-f-annuity-report-16-additional-information",
+            "sourceId": "vm31-current-manual",
+            "score": 69.75,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 97.24999999999999,
+          "matches": [
+            {
+              "chunkId": "vm31-section-3-f-annuity-report-8-hedging-and-risk-management",
+              "score": 97.24999999999999
+            },
+            {
+              "chunkId": "vm31-section-3-f-annuity-report-general-requirement",
+              "score": 71.25
+            },
+            {
+              "chunkId": "vm31-section-3-f-annuity-report-16-additional-information",
+              "score": 69.75
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "ambiguityResult": {
+        "safelyAbstained": false,
+        "reasonCode": "not_applicable",
+        "candidateChunkIds": []
+      },
+      "passed": true,
+      "failureReason": null
+    },
+    {
+      "queryId": "vm31-vm22-exclusion-tests",
+      "queryCategory": "cross_reference_vm22",
+      "query": "What single-scenario and stochastic-exclusion information does VM-31 require for VM-22 business?",
+      "intendedSupportState": "supported",
+      "expectedEvidence": "Complete Section 3.F.13 VM-22 exclusion-test reporting requirement.",
+      "expectedChunkIds": [
+        "vm31-section-3-f-annuity-report-13-exclusion-tests-vm22"
+      ],
+      "actualTop1": {
+        "rank": 1,
+        "chunkId": "vm31-section-3-f-annuity-report-13-exclusion-tests-vm22",
+        "sourceId": "vm31-current-manual",
+        "sourceFamilyId": "valuation_manual_pdfs",
+        "authorityLevel": "manual_section",
+        "score": 102.74999999999999,
+        "sectionReference": "13. Exclusion Tests for VM-22",
+        "pageStart": 379,
+        "pageEnd": 380,
+        "citationAvailable": true
+      },
+      "actualTop3": [
+        {
+          "rank": 1,
+          "chunkId": "vm31-section-3-f-annuity-report-13-exclusion-tests-vm22",
+          "sourceId": "vm31-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 102.74999999999999,
+          "sectionReference": "13. Exclusion Tests for VM-22",
+          "pageStart": 379,
+          "pageEnd": 380,
+          "citationAvailable": true
+        },
+        {
+          "rank": 2,
+          "chunkId": "vm31-section-3-f-annuity-report-10-scenario-generation",
+          "sourceId": "vm31-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 66.75,
+          "sectionReference": "10. Scenario Generation",
+          "pageStart": 376,
+          "pageEnd": 378,
+          "citationAvailable": true
+        },
+        {
+          "rank": 3,
+          "chunkId": "vm31-section-3-d-life-report-10-exclusion-tests",
+          "sourceId": "vm31-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 62.24999999999999,
+          "sectionReference": "10. Exclusion Tests",
+          "pageStart": 357,
+          "pageEnd": 358,
+          "citationAvailable": true
+        }
+      ],
+      "top1Hit": true,
+      "top3Hit": true,
+      "sourceFamilyResult": {
+        "expected": [
+          "valuation_manual_pdfs"
+        ],
+        "actualTop1": "valuation_manual_pdfs",
+        "correct": true
+      },
+      "authorityResult": {
+        "expected": [
+          "manual_section"
+        ],
+        "actualTop1": "manual_section",
+        "correct": true,
+        "currentAuthoritativeVm31Top1": true
+      },
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Actual source text from the requested formal requirement source is present inside the production evidence window.",
+        "requestedInformationTypes": [
+          "formal_requirement"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm31-section-3-f-annuity-report-13-exclusion-tests-vm22",
+            "sourceId": "vm31-current-manual",
+            "score": 102.74999999999999,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm31-section-3-f-annuity-report-10-scenario-generation",
+            "sourceId": "vm31-current-manual",
+            "score": 66.75,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm31-section-3-d-life-report-10-exclusion-tests",
+            "sourceId": "vm31-current-manual",
+            "score": 62.24999999999999,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 102.74999999999999,
+          "matches": [
+            {
+              "chunkId": "vm31-section-3-f-annuity-report-13-exclusion-tests-vm22",
+              "score": 102.74999999999999
+            },
+            {
+              "chunkId": "vm31-section-3-f-annuity-report-10-scenario-generation",
+              "score": 66.75
+            },
+            {
+              "chunkId": "vm31-section-3-d-life-report-10-exclusion-tests",
+              "score": 62.24999999999999
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "ambiguityResult": {
+        "safelyAbstained": false,
+        "reasonCode": "not_applicable",
+        "candidateChunkIds": []
+      },
+      "passed": true,
+      "failureReason": null
+    },
+    {
+      "queryId": "vm31-vm21-alternative-methodology",
+      "queryCategory": "cross_reference_vm21",
+      "query": "What Alternative Methodology grouping, assumptions, contract features, and exclusion-test documentation does VM-31 require for VM-21?",
+      "intendedSupportState": "supported",
+      "expectedEvidence": "Complete Section 3.F.12 Alternative Methodology requirement.",
+      "expectedChunkIds": [
+        "vm31-section-3-f-annuity-report-12-alternative-methodology-vm21"
+      ],
+      "actualTop1": {
+        "rank": 1,
+        "chunkId": "vm31-section-3-f-annuity-report-12-alternative-methodology-vm21",
+        "sourceId": "vm31-current-manual",
+        "sourceFamilyId": "valuation_manual_pdfs",
+        "authorityLevel": "manual_section",
+        "score": 117.44999999999999,
+        "sectionReference": "12. Alternative Methodology for VM-21",
+        "pageStart": 378,
+        "pageEnd": 379,
+        "citationAvailable": true
+      },
+      "actualTop3": [
+        {
+          "rank": 1,
+          "chunkId": "vm31-section-3-f-annuity-report-12-alternative-methodology-vm21",
+          "sourceId": "vm31-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 117.44999999999999,
+          "sectionReference": "12. Alternative Methodology for VM-21",
+          "pageStart": 378,
+          "pageEnd": 379,
+          "citationAvailable": true
+        },
+        {
+          "rank": 2,
+          "chunkId": "vm31-section-3-f-annuity-report-13-exclusion-tests-vm22",
+          "sourceId": "vm31-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 73.44999999999999,
+          "sectionReference": "13. Exclusion Tests for VM-22",
+          "pageStart": 379,
+          "pageEnd": 380,
+          "citationAvailable": true
+        },
+        {
+          "rank": 3,
+          "chunkId": "vm31-section-3-d-life-report-10-exclusion-tests",
+          "sourceId": "vm31-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 65.94999999999999,
+          "sectionReference": "10. Exclusion Tests",
+          "pageStart": 357,
+          "pageEnd": 358,
+          "citationAvailable": true
+        }
+      ],
+      "top1Hit": true,
+      "top3Hit": true,
+      "sourceFamilyResult": {
+        "expected": [
+          "valuation_manual_pdfs"
+        ],
+        "actualTop1": "valuation_manual_pdfs",
+        "correct": true
+      },
+      "authorityResult": {
+        "expected": [
+          "manual_section"
+        ],
+        "actualTop1": "manual_section",
+        "correct": true,
+        "currentAuthoritativeVm31Top1": true
+      },
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Actual source text from the requested formal requirement source is present inside the production evidence window.",
+        "requestedInformationTypes": [
+          "formal_requirement"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm31-section-3-f-annuity-report-12-alternative-methodology-vm21",
+            "sourceId": "vm31-current-manual",
+            "score": 117.44999999999999,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm31-section-3-f-annuity-report-13-exclusion-tests-vm22",
+            "sourceId": "vm31-current-manual",
+            "score": 73.44999999999999,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm31-section-3-d-life-report-10-exclusion-tests",
+            "sourceId": "vm31-current-manual",
+            "score": 65.94999999999999,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 117.44999999999999,
+          "matches": [
+            {
+              "chunkId": "vm31-section-3-f-annuity-report-12-alternative-methodology-vm21",
+              "score": 117.44999999999999
+            },
+            {
+              "chunkId": "vm31-section-3-f-annuity-report-13-exclusion-tests-vm22",
+              "score": 73.44999999999999
+            },
+            {
+              "chunkId": "vm31-section-3-d-life-report-10-exclusion-tests",
+              "score": 65.94999999999999
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "ambiguityResult": {
+        "safelyAbstained": false,
+        "reasonCode": "not_applicable",
+        "candidateChunkIds": []
+      },
+      "passed": true,
+      "failureReason": null
+    },
+    {
+      "queryId": "vm31-nge-conditional-exclusion",
+      "queryCategory": "condition_exception",
+      "query": "Under what conditions may VM-31 reporting exclude a portion of an NGE, and what must be disclosed if it is excluded?",
+      "intendedSupportState": "supported",
+      "expectedEvidence": "Section 3.D.9 conditional-exclusion language and disclosures.",
+      "expectedChunkIds": [
+        "vm31-section-3-d-life-report-9-non-guaranteed-elements"
+      ],
+      "actualTop1": {
+        "rank": 1,
+        "chunkId": "vm31-section-3-d-life-report-9-non-guaranteed-elements",
+        "sourceId": "vm31-current-manual",
+        "sourceFamilyId": "valuation_manual_pdfs",
+        "authorityLevel": "manual_section",
+        "score": 63.45,
+        "sectionReference": "9. Non-guaranteed Elements",
+        "pageStart": 356,
+        "pageEnd": 357,
+        "citationAvailable": true
+      },
+      "actualTop3": [
+        {
+          "rank": 1,
+          "chunkId": "vm31-section-3-d-life-report-9-non-guaranteed-elements",
+          "sourceId": "vm31-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 63.45,
+          "sectionReference": "9. Non-guaranteed Elements",
+          "pageStart": 356,
+          "pageEnd": 357,
+          "citationAvailable": true
+        },
+        {
+          "rank": 2,
+          "chunkId": "vm31-section-3-d-life-report-11-additional-information",
+          "sourceId": "vm31-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 58.95,
+          "sectionReference": "11. Additional Information",
+          "pageStart": 358,
+          "pageEnd": 362,
+          "citationAvailable": true
+        },
+        {
+          "rank": 3,
+          "chunkId": "vm31-section-3-d-life-report-3-mortality",
+          "sourceId": "vm31-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 51.95,
+          "sectionReference": "3. Mortality",
+          "pageStart": 346,
+          "pageEnd": 350,
+          "citationAvailable": true
+        }
+      ],
+      "top1Hit": true,
+      "top3Hit": true,
+      "sourceFamilyResult": {
+        "expected": [
+          "valuation_manual_pdfs"
+        ],
+        "actualTop1": "valuation_manual_pdfs",
+        "correct": true
+      },
+      "authorityResult": {
+        "expected": [
+          "manual_section"
+        ],
+        "actualTop1": "manual_section",
+        "correct": true,
+        "currentAuthoritativeVm31Top1": true
+      },
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Actual source text from the requested formal requirement source is present inside the production evidence window.",
+        "requestedInformationTypes": [
+          "formal_requirement"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm31-section-3-d-life-report-9-non-guaranteed-elements",
+            "sourceId": "vm31-current-manual",
+            "score": 63.45,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm31-section-3-d-life-report-11-additional-information",
+            "sourceId": "vm31-current-manual",
+            "score": 58.95,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm31-section-3-d-life-report-3-mortality",
+            "sourceId": "vm31-current-manual",
+            "score": 51.95,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 63.45,
+          "matches": [
+            {
+              "chunkId": "vm31-section-3-d-life-report-9-non-guaranteed-elements",
+              "score": 63.45
+            },
+            {
+              "chunkId": "vm31-section-3-d-life-report-11-additional-information",
+              "score": 58.95
+            },
+            {
+              "chunkId": "vm31-section-3-d-life-report-3-mortality",
+              "score": 51.95
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "ambiguityResult": {
+        "safelyAbstained": false,
+        "reasonCode": "not_applicable",
+        "candidateChunkIds": []
+      },
+      "passed": true,
+      "failureReason": null
+    },
+    {
+      "queryId": "vm31-life-subreport-consistency",
+      "queryCategory": "similar_reporting_concepts",
+      "query": "How must the Life Summary explain material differences in methods, assumptions, or risk management between sub-reports?",
+      "intendedSupportState": "supported",
+      "expectedEvidence": "Section 3.C.6 Life sub-report consistency requirement, distinct from Annuity Summary 3.E.6.",
+      "expectedChunkIds": [
+        "vm31-section-3-c-life-summary-6-consistency-between-sub-reports"
+      ],
+      "actualTop1": {
+        "rank": 1,
+        "chunkId": "vm31-section-3-c-life-summary-6-consistency-between-sub-reports",
+        "sourceId": "vm31-current-manual",
+        "sourceFamilyId": "valuation_manual_pdfs",
+        "authorityLevel": "manual_section",
+        "score": 117.49999999999999,
+        "sectionReference": "6. Consistency between Life Sub-Reports",
+        "pageStart": 344,
+        "pageEnd": 344,
+        "citationAvailable": true
+      },
+      "actualTop3": [
+        {
+          "rank": 1,
+          "chunkId": "vm31-section-3-c-life-summary-6-consistency-between-sub-reports",
+          "sourceId": "vm31-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 117.49999999999999,
+          "sectionReference": "6. Consistency between Life Sub-Reports",
+          "pageStart": 344,
+          "pageEnd": 344,
+          "citationAvailable": true
+        },
+        {
+          "rank": 2,
+          "chunkId": "vm31-section-3-e-annuity-summary-6-consistency-between-sub-reports",
+          "sourceId": "vm31-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 105.49999999999999,
+          "sectionReference": "6. Consistency between Annuity Sub-Reports",
+          "pageStart": 365,
+          "pageEnd": 365,
+          "citationAvailable": true
+        },
+        {
+          "rank": 3,
+          "chunkId": "vm31-section-3-f-annuity-report-8-hedging-and-risk-management",
+          "sourceId": "vm31-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 64.99999999999999,
+          "sectionReference": "8. Hedging and Risk Management",
+          "pageStart": 373,
+          "pageEnd": 375,
+          "citationAvailable": true
+        }
+      ],
+      "top1Hit": true,
+      "top3Hit": true,
+      "sourceFamilyResult": {
+        "expected": [
+          "valuation_manual_pdfs"
+        ],
+        "actualTop1": "valuation_manual_pdfs",
+        "correct": true
+      },
+      "authorityResult": {
+        "expected": [
+          "manual_section"
+        ],
+        "actualTop1": "manual_section",
+        "correct": true,
+        "currentAuthoritativeVm31Top1": true
+      },
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Actual source text from the requested formal requirement source is present inside the production evidence window.",
+        "requestedInformationTypes": [
+          "formal_requirement"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm31-section-3-c-life-summary-6-consistency-between-sub-reports",
+            "sourceId": "vm31-current-manual",
+            "score": 117.49999999999999,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm31-section-3-e-annuity-summary-6-consistency-between-sub-reports",
+            "sourceId": "vm31-current-manual",
+            "score": 105.49999999999999,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm31-section-3-f-annuity-report-8-hedging-and-risk-management",
+            "sourceId": "vm31-current-manual",
+            "score": 64.99999999999999,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 117.49999999999999,
+          "matches": [
+            {
+              "chunkId": "vm31-section-3-c-life-summary-6-consistency-between-sub-reports",
+              "score": 117.49999999999999
+            },
+            {
+              "chunkId": "vm31-section-3-e-annuity-summary-6-consistency-between-sub-reports",
+              "score": 105.49999999999999
+            },
+            {
+              "chunkId": "vm31-section-3-f-annuity-report-8-hedging-and-risk-management",
+              "score": 64.99999999999999
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "ambiguityResult": {
+        "safelyAbstained": false,
+        "reasonCode": "not_applicable",
+        "candidateChunkIds": []
+      },
+      "passed": true,
+      "failureReason": null
+    },
+    {
+      "queryId": "vm31-current-authority-submission",
+      "queryCategory": "version_authority",
+      "query": "Under current 2026 VM-31, when shall the Executive Summary, Life Summary, and Annuity Summary be submitted?",
+      "intendedSupportState": "supported",
+      "expectedEvidence": "Current authoritative Section 2.C submission timing.",
+      "expectedChunkIds": [
+        "vm31-section-2-general-requirements-c-submission-timing"
+      ],
+      "actualTop1": {
+        "rank": 1,
+        "chunkId": "vm31-section-2-general-requirements-c-submission-timing",
+        "sourceId": "vm31-current-manual",
+        "sourceFamilyId": "valuation_manual_pdfs",
+        "authorityLevel": "manual_section",
+        "score": 93.35,
+        "sectionReference": "C. Summary and full-report submission timing",
+        "pageStart": 341,
+        "pageEnd": 342,
+        "citationAvailable": true
+      },
+      "actualTop3": [
+        {
+          "rank": 1,
+          "chunkId": "vm31-section-2-general-requirements-c-submission-timing",
+          "sourceId": "vm31-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 93.35,
+          "sectionReference": "C. Summary and full-report submission timing",
+          "pageStart": 341,
+          "pageEnd": 342,
+          "citationAvailable": true
+        },
+        {
+          "rank": 2,
+          "chunkId": "vm31-section-3-b-executive-summary-general-requirement",
+          "sourceId": "vm31-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 66.35,
+          "sectionReference": "Executive Summary general requirement",
+          "pageStart": 342,
+          "pageEnd": 342,
+          "citationAvailable": true
+        },
+        {
+          "rank": 3,
+          "chunkId": "vm31-section-3-c-life-summary-general-requirement",
+          "sourceId": "vm31-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 66.35,
+          "sectionReference": "Life Summary general requirement",
+          "pageStart": 343,
+          "pageEnd": 343,
+          "citationAvailable": true
+        }
+      ],
+      "top1Hit": true,
+      "top3Hit": true,
+      "sourceFamilyResult": {
+        "expected": [
+          "valuation_manual_pdfs"
+        ],
+        "actualTop1": "valuation_manual_pdfs",
+        "correct": true
+      },
+      "authorityResult": {
+        "expected": [
+          "manual_section"
+        ],
+        "actualTop1": "manual_section",
+        "correct": true,
+        "currentAuthoritativeVm31Top1": true
+      },
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Actual source text from the requested formal requirement source is present inside the production evidence window.",
+        "requestedInformationTypes": [
+          "formal_requirement"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm31-section-2-general-requirements-c-submission-timing",
+            "sourceId": "vm31-current-manual",
+            "score": 93.35,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm31-section-3-b-executive-summary-general-requirement",
+            "sourceId": "vm31-current-manual",
+            "score": 66.35,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm31-section-3-c-life-summary-general-requirement",
+            "sourceId": "vm31-current-manual",
+            "score": 66.35,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 93.35,
+          "matches": [
+            {
+              "chunkId": "vm31-section-2-general-requirements-c-submission-timing",
+              "score": 93.35
+            },
+            {
+              "chunkId": "vm31-section-3-b-executive-summary-general-requirement",
+              "score": 66.35
+            },
+            {
+              "chunkId": "vm31-section-3-c-life-summary-general-requirement",
+              "score": 66.35
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "ambiguityResult": {
+        "safelyAbstained": false,
+        "reasonCode": "not_applicable",
+        "candidateChunkIds": []
+      },
+      "passed": true,
+      "failureReason": null
+    },
+    {
+      "queryId": "vm31-unsupported-vm20-premium-deficiency",
+      "queryCategory": "unsupported_vm20_substitution",
+      "query": "What does VM-31 require the report to document about the VM-20 premium deficiency reserve methodology?",
+      "intendedSupportState": "unsupported",
+      "expectedEvidence": "No VM-31 provision in the current chapter establishes the requested premium-deficiency-reserve reporting requirement; related VM-20 methodology is not sufficient.",
+      "expectedChunkIds": [],
+      "actualTop1": {
+        "rank": 1,
+        "chunkId": "vm31-section-3-f-annuity-report-12-alternative-methodology-vm21",
+        "sourceId": "vm31-current-manual",
+        "sourceFamilyId": "valuation_manual_pdfs",
+        "authorityLevel": "manual_section",
+        "score": 65.25,
+        "sectionReference": "12. Alternative Methodology for VM-21",
+        "pageStart": 378,
+        "pageEnd": 379,
+        "citationAvailable": true
+      },
+      "actualTop3": [
+        {
+          "rank": 1,
+          "chunkId": "vm31-section-3-f-annuity-report-12-alternative-methodology-vm21",
+          "sourceId": "vm31-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 65.25,
+          "sectionReference": "12. Alternative Methodology for VM-21",
+          "pageStart": 378,
+          "pageEnd": 379,
+          "citationAvailable": true
+        },
+        {
+          "rank": 2,
+          "chunkId": "vm31-section-3-d-life-report-12-riders-and-supplemental-benefits",
+          "sourceId": "vm31-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 57.25,
+          "sectionReference": "12. Riders and Supplemental Benefits",
+          "pageStart": 362,
+          "pageEnd": 362,
+          "citationAvailable": true
+        },
+        {
+          "rank": 3,
+          "chunkId": "vm31-section-3-d-life-report-10-exclusion-tests",
+          "sourceId": "vm31-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 56.75,
+          "sectionReference": "10. Exclusion Tests",
+          "pageStart": 357,
+          "pageEnd": 358,
+          "citationAvailable": true
+        }
+      ],
+      "top1Hit": false,
+      "top3Hit": false,
+      "sourceFamilyResult": {
+        "expected": [],
+        "actualTop1": "valuation_manual_pdfs",
+        "correct": false
+      },
+      "authorityResult": {
+        "expected": [],
+        "actualTop1": "manual_section",
+        "correct": false,
+        "currentAuthoritativeVm31Top1": true
+      },
+      "supportDecision": {
+        "supportState": "unsupported",
+        "evidenceSufficient": false,
+        "reasonCode": "missing_required_requirement_terms",
+        "reason": "The retrieved formal-source evidence does not contain the required topic term(s): premium deficiency reserve.",
+        "requestedInformationTypes": [
+          "formal_requirement"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm31-section-3-f-annuity-report-12-alternative-methodology-vm21",
+            "sourceId": "vm31-current-manual",
+            "score": 65.25,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm31-section-3-d-life-report-12-riders-and-supplemental-benefits",
+            "sourceId": "vm31-current-manual",
+            "score": 57.25,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm31-section-3-d-life-report-10-exclusion-tests",
+            "sourceId": "vm31-current-manual",
+            "score": 56.75,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": "The retrieved formal-source evidence does not contain the required topic term(s): premium deficiency reserve.",
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 65.25,
+          "matches": [
+            {
+              "chunkId": "vm31-section-3-f-annuity-report-12-alternative-methodology-vm21",
+              "score": 65.25
+            },
+            {
+              "chunkId": "vm31-section-3-d-life-report-12-riders-and-supplemental-benefits",
+              "score": 57.25
+            },
+            {
+              "chunkId": "vm31-section-3-d-life-report-10-exclusion-tests",
+              "score": 56.75
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "ambiguityResult": {
+        "safelyAbstained": false,
+        "reasonCode": "not_applicable",
+        "candidateChunkIds": []
+      },
+      "passed": true,
+      "failureReason": null
+    },
+    {
+      "queryId": "vm31-unsupported-cryptoasset-exhibit",
+      "queryCategory": "unsupported_reporting_request",
+      "query": "What cryptoasset stress-test exhibit does VM-31 require?",
+      "intendedSupportState": "unsupported",
+      "expectedEvidence": "No source provision contains the requested cryptoasset requirement.",
+      "expectedChunkIds": [],
+      "actualTop1": {
+        "rank": 1,
+        "chunkId": "vm31-section-3-f-annuity-report-13-exclusion-tests-vm22",
+        "sourceId": "vm31-current-manual",
+        "sourceFamilyId": "valuation_manual_pdfs",
+        "authorityLevel": "manual_section",
+        "score": 46.95,
+        "sectionReference": "13. Exclusion Tests for VM-22",
+        "pageStart": 379,
+        "pageEnd": 380,
+        "citationAvailable": true
+      },
+      "actualTop3": [
+        {
+          "rank": 1,
+          "chunkId": "vm31-section-3-f-annuity-report-13-exclusion-tests-vm22",
+          "sourceId": "vm31-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 46.95,
+          "sectionReference": "13. Exclusion Tests for VM-22",
+          "pageStart": 379,
+          "pageEnd": 380,
+          "citationAvailable": true
+        },
+        {
+          "rank": 2,
+          "chunkId": "vm31-section-3-d-life-report-10-exclusion-tests",
+          "sourceId": "vm31-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 44.449999999999996,
+          "sectionReference": "10. Exclusion Tests",
+          "pageStart": 357,
+          "pageEnd": 358,
+          "citationAvailable": true
+        },
+        {
+          "rank": 3,
+          "chunkId": "vm31-section-3-f-annuity-report-12-alternative-methodology-vm21",
+          "sourceId": "vm31-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 43.5,
+          "sectionReference": "12. Alternative Methodology for VM-21",
+          "pageStart": 378,
+          "pageEnd": 379,
+          "citationAvailable": true
+        }
+      ],
+      "top1Hit": false,
+      "top3Hit": false,
+      "sourceFamilyResult": {
+        "expected": [],
+        "actualTop1": "valuation_manual_pdfs",
+        "correct": false
+      },
+      "authorityResult": {
+        "expected": [],
+        "actualTop1": "manual_section",
+        "correct": false,
+        "currentAuthoritativeVm31Top1": true
+      },
+      "supportDecision": {
+        "supportState": "unsupported",
+        "evidenceSufficient": false,
+        "reasonCode": "missing_required_requirement_terms",
+        "reason": "The retrieved formal-source evidence does not contain the required topic term(s): cryptoasset.",
+        "requestedInformationTypes": [
+          "formal_requirement"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm31-section-3-f-annuity-report-13-exclusion-tests-vm22",
+            "sourceId": "vm31-current-manual",
+            "score": 46.95,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm31-section-3-d-life-report-10-exclusion-tests",
+            "sourceId": "vm31-current-manual",
+            "score": 44.449999999999996,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm31-section-3-f-annuity-report-12-alternative-methodology-vm21",
+            "sourceId": "vm31-current-manual",
+            "score": 43.5,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": "The retrieved formal-source evidence does not contain the required topic term(s): cryptoasset.",
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 46.95,
+          "matches": [
+            {
+              "chunkId": "vm31-section-3-f-annuity-report-13-exclusion-tests-vm22",
+              "score": 46.95
+            },
+            {
+              "chunkId": "vm31-section-3-d-life-report-10-exclusion-tests",
+              "score": 44.449999999999996
+            },
+            {
+              "chunkId": "vm31-section-3-f-annuity-report-12-alternative-methodology-vm21",
+              "score": 43.5
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "ambiguityResult": {
+        "safelyAbstained": false,
+        "reasonCode": "not_applicable",
+        "candidateChunkIds": []
+      },
+      "passed": true,
+      "failureReason": null
+    },
+    {
+      "queryId": "vm31-ambiguous-certification",
+      "queryCategory": "ambiguous_reporting_question",
+      "query": "What qualified-actuary certification does VM-31 require?",
+      "intendedSupportState": "ambiguous",
+      "expectedEvidence": "The question is underspecified because VM-31 contains separate Life and Annuity certification provisions as well as test-method certification requirements.",
+      "expectedChunkIds": [
+        "vm31-section-3-d-life-report-14-certifications",
+        "vm31-section-3-f-annuity-report-13-exclusion-tests-vm22",
+        "vm31-section-3-f-annuity-report-19-certifications"
+      ],
+      "actualTop1": {
+        "rank": 1,
+        "chunkId": "vm31-section-3-b-executive-summary-1-qualified-actuary",
+        "sourceId": "vm31-current-manual",
+        "sourceFamilyId": "valuation_manual_pdfs",
+        "authorityLevel": "manual_section",
+        "score": 59.5,
+        "sectionReference": "1. Qualified Actuary",
+        "pageStart": 342,
+        "pageEnd": 342,
+        "citationAvailable": true
+      },
+      "actualTop3": [
+        {
+          "rank": 1,
+          "chunkId": "vm31-section-3-b-executive-summary-1-qualified-actuary",
+          "sourceId": "vm31-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 59.5,
+          "sectionReference": "1. Qualified Actuary",
+          "pageStart": 342,
+          "pageEnd": 342,
+          "citationAvailable": true
+        },
+        {
+          "rank": 2,
+          "chunkId": "vm31-section-3-d-life-report-14-certifications",
+          "sourceId": "vm31-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 47.95,
+          "sectionReference": "14. Certifications",
+          "pageStart": 362,
+          "pageEnd": 363,
+          "citationAvailable": true
+        },
+        {
+          "rank": 3,
+          "chunkId": "vm31-section-3-f-annuity-report-13-exclusion-tests-vm22",
+          "sourceId": "vm31-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 46.95,
+          "sectionReference": "13. Exclusion Tests for VM-22",
+          "pageStart": 379,
+          "pageEnd": 380,
+          "citationAvailable": true
+        }
+      ],
+      "top1Hit": false,
+      "top3Hit": false,
+      "sourceFamilyResult": {
+        "expected": [
+          "valuation_manual_pdfs"
+        ],
+        "actualTop1": "valuation_manual_pdfs",
+        "correct": true
+      },
+      "authorityResult": {
+        "expected": [
+          "manual_section"
+        ],
+        "actualTop1": "manual_section",
+        "correct": true,
+        "currentAuthoritativeVm31Top1": true
+      },
+      "supportDecision": {
+        "supportState": "ambiguous_requires_more_context",
+        "evidenceSufficient": false,
+        "reasonCode": "multiple_vm31_certification_contexts",
+        "reason": "The request does not identify the applicable report or certification context, and multiple current VM-31 contexts are retrieved.",
+        "requestedInformationTypes": [
+          "formal_requirement"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm31-section-3-b-executive-summary-1-qualified-actuary",
+            "sourceId": "vm31-current-manual",
+            "score": 59.5,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm31-section-3-d-life-report-14-certifications",
+            "sourceId": "vm31-current-manual",
+            "score": 47.95,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm31-section-3-f-annuity-report-13-exclusion-tests-vm22",
+            "sourceId": "vm31-current-manual",
+            "score": 46.95,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 59.5,
+          "matches": [
+            {
+              "chunkId": "vm31-section-3-b-executive-summary-1-qualified-actuary",
+              "score": 59.5
+            },
+            {
+              "chunkId": "vm31-section-3-d-life-report-14-certifications",
+              "score": 47.95
+            },
+            {
+              "chunkId": "vm31-section-3-f-annuity-report-13-exclusion-tests-vm22",
+              "score": 46.95
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "ambiguityResult": {
+        "safelyAbstained": true,
+        "reasonCode": "multiple_vm31_certification_contexts",
+        "candidateChunkIds": [
+          "vm31-section-3-d-life-report-14-certifications",
+          "vm31-section-3-f-annuity-report-13-exclusion-tests-vm22"
+        ]
+      },
+      "passed": true,
+      "failureReason": null
+    }
+  ],
+  "governance": {
+    "reviewOnly": true,
+    "promotionStatus": "not_promoted",
+    "promotionEligible": false
+  }
+}

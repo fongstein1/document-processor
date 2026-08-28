@@ -7,15 +7,15 @@ As of 2026-08-26T00:00:00.000Z, the repository contains substantial regulatory e
 - Source documents inventoried: **105**
 - Documents with declared external raw source: **71**
 - Documents reviewed / review artifacts matched: **97 review indexes**
-- Canonical source packages: **22**
-- Canonical chunks: **457**
+- Canonical source packages: **23**
+- Canonical chunks: **541**
 - Promoted canonical prose packages / chunks: **7 / 247**
 - Promoted structured logical tables / versions: **7 / 29**
 - Structured rows / values: **891 / 7022**
 - Sources awaiting canonicalization: **96**
 - Sources awaiting human review: **1**
 - Review-artifact-only sources: **34**
-- Candidate relationships: **52**
+- Candidate relationships: **144**
 - Promoted relationships: **0**
 
 ## VM-20 coverage checkpoint
@@ -36,6 +36,13 @@ As of 2026-08-26T00:00:00.000Z, the repository contains substantial regulatory e
 - Formal-definition requests for undefined or ambiguous terms abstain rather than substituting related evidence.
 - Canonical `definedTerms` now contains only 98 formal terms plus 27 source-explicit aliases; 17 generated lookup variants remain confined to non-authoritative retrieval metadata.
 - The focused case-level retrieval artifact contains 21 inspectable queries, including DR, SR, NPR, GIC, IUL, cross-page, ambiguous, undefined-term, and unavailable-version cases.
+
+## VM-31 coverage checkpoint
+
+- Current 2026 VM-31 structural parents / child units: 9 / 75; status not_promoted.
+- VM-31 explicit-reference candidates: 92; all remain pending, review-only, and not promoted.
+- Focused VM-31 retrieval contains 21 inspectable cases covering report obligations, timing, retention, applicability, certifications, exhibits, exceptions, cross-references, unsupported substitutions, ambiguity, and current-authority preference.
+- VM-31 remains blocked from learner, app, RAG, vector, and Copilot use pending independent review and an explicit promotion decision.
 
 ## Interpretation
 

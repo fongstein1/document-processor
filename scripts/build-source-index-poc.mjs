@@ -3,6 +3,7 @@ import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { buildRetrievalMarkdown, evaluateQueries, normalizeText } from './evaluate-source-index-retrieval.mjs'
 import { buildVm01DefinitionChunks } from './lib/vm01-definitions.mjs'
+import { buildVm31Chunks } from './lib/vm31-current-manual.mjs'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -271,7 +272,7 @@ const deriveChunk = (source, chunk, index, sourceIndexPath) => {
   ]
   const keyPoints = asArray(chunk.keyPoints).length > 0 ? asArray(chunk.keyPoints) : [summary]
   const concepts = asArray(chunk.concepts).length > 0 ? asArray(chunk.concepts) : controlledTags
-  const definedTerms = asArray(chunk.definedTerms).length > 0 ? asArray(chunk.definedTerms) : keywords
+  const definedTerms = chunk.preserveEmptyDefinedTerms ? asArray(chunk.definedTerms) : asArray(chunk.definedTerms).length > 0 ? asArray(chunk.definedTerms) : keywords
   const acronyms = asArray(chunk.acronyms)
   const requirements = asArray(chunk.requirements).length > 0 ? asArray(chunk.requirements) : deriveRequirements(controlledTags)
   const citationDisplay = chunk.citationDisplay ?? buildCitationDisplay(citations)
@@ -1080,6 +1081,8 @@ const main = async () => {
     const sourceRelationships = asArray(source.relationships)
     const hydratedChunks = source.definitionInput
       ? await buildVm01DefinitionChunks(repoRoot, source)
+      : source.vm31Input
+        ? await buildVm31Chunks(repoRoot, source)
       : source.batchCoverageInput
         ? await buildBatchCoverageChunks(source)
         : await buildHierarchicalChunks(source)

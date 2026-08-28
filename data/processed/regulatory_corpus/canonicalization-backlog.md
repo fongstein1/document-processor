@@ -1,6 +1,6 @@
 # Regulatory Canonicalization Backlog
 
-The VM-01 current-definition scope, VM-20 current-manual prose scope, and reviewed available Appendix 2 structured-table scope are promoted under separate decisions. All other items remain review-only until independent human review and explicit promotion. VM-01 relationship candidates remain a separate review-only governance item. The sequence favors incomplete core packages before supporting sources.
+The VM-01 current-definition scope, VM-20 current-manual prose scope, and reviewed available Appendix 2 structured-table scope are promoted under separate decisions. VM-31 is a substantially complete review candidate but remains unpromoted. All other items remain review-only until independent human review and explicit promotion. VM-01 and VM-31 relationship candidates remain separate review-only governance items. The sequence favors independent disposition of completed review candidates before another source chapter begins.
 
 | Order | Priority | Target | Current state | Safe next step |
 | ---: | --- | --- | --- | --- |
@@ -10,7 +10,7 @@ The VM-01 current-definition scope, VM-20 current-manual prose scope, and review
 | 4 | P0 | VM-21 Requirements for Principle-Based Reserves for Variable Annuities | canonical_partial | Canonicalize the reviewed VM-21 wave with parent-child structure and table separation. |
 | 5 | P0 | VM-22 Requirements for Principle-Based Reserves for Non-Variable Annuities | reviewed_not_canonical | Canonicalize reviewed VM-22 sections after table and hedging boundaries are confirmed. |
 | 6 | P0 | VM-30 Actuarial Opinion and Memorandum Requirements | reviewed_not_canonical | Canonicalize the reporting requirements and preserve cross-references to VM-31. |
-| 7 | P0 | VM-31 PBR Actuarial Report Requirements | reviewed_not_canonical | Canonicalize the report requirements with reporting-obligation chunk types. |
+| 7 | P0 | VM-31 PBR Actuarial Report Requirements | canonical_review_candidate | Send the source package, retrieval evaluation, source QA, relationship registry, and review package for independent review; do not promote or begin another chapter until disposition. |
 | 8 | P0 | VM-C current Actuarial Guidelines appendix and AG mapping | reviewed_not_canonical | Obtain/confirm the authorized appendix and map individually processed AGs without inferring legal effect. |
 | 9 | P0 | VM-G Corporate Governance Requirements for PBR | canonical_partial | Confirm the authorized 2026 source and process it as a governance-specific chapter. |
 | 10 | P1 | Annual statement, actuarial opinion, and PBR reporting instructions | reviewed_not_canonical | Add only authorized reporting instructions that materially affect valuation answers. |

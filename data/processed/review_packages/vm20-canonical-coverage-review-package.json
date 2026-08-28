@@ -572,7 +572,7 @@
     },
     "corpusDeduplication": {
       "topN": 5,
-      "rawTopKCollisionCount": 46,
+      "rawTopKCollisionCount": 45,
       "rawTopKCollisionGroupCount": 19,
       "postDeduplicationCollisionCount": 0,
       "affectedQueries": [
@@ -805,10 +805,6 @@
             {
               "parentChunkId": "vm20-canonical-coverage-vm20-npr-entry-setup",
               "childChunkId": "vm20-canonical-coverage-vm20-npr-entry-setup-child-002"
-            },
-            {
-              "parentChunkId": "vm20-canonical-coverage-vm20-npr-entry-setup",
-              "childChunkId": "vm20-canonical-coverage-vm20-npr-entry-setup-child-003"
             }
           ]
         },

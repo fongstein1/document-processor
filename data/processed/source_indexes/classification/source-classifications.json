@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "repositoryManifestId": "source-index-poc-2026-07-21",
-  "sourceCount": 22,
+  "sourceCount": 23,
   "classifications": [
     {
       "repositoryManifestId": "source-index-poc-2026-07-21",
@@ -698,6 +698,39 @@
       },
       "reviewIndexPath": "docs/review/supporting_vm_review_index.md",
       "selfReviewPath": "docs/review/supporting_vm_self_review.md"
+    },
+    {
+      "repositoryManifestId": "source-index-poc-2026-07-21",
+      "sourceIndexId": "source-index-vm31-current-manual",
+      "sourceId": "vm31-current-manual",
+      "sourceTitle": "VM-31: PBR Actuarial Report Requirements for Business Subject to a Principle-Based Valuation",
+      "sourceFamilyId": "valuation_manual_pdfs",
+      "domainId": "naic_regulatory",
+      "documentType": "valuation_manual_section",
+      "classification": {
+        "domainId": "naic_regulatory",
+        "subdomainId": null,
+        "documentType": "valuation_manual_section",
+        "purpose": "Authoritative current reporting and documentation layer for PBR Actuarial Report requirements",
+        "intendedAudience": "Valuation, reporting, regulatory, governance, and retrieval reviewers",
+        "authoritySourceType": "regulatory",
+        "confidentiality": "public",
+        "publicationDate": null,
+        "effectiveDate": null,
+        "version": "2026 Edition",
+        "approvalStatus": "review_only",
+        "language": "en",
+        "recommendedProfile": "reporting",
+        "recommendedChunkingStrategy": "section_subsection_parent_to_complete_numbered_requirement_child",
+        "confidence": "high",
+        "unresolvedQuestions": [
+          "Independent source and actuarial review is required before promotion.",
+          "Downstream learner, application, RAG, vector, and Copilot eligibility require separate decisions."
+        ],
+        "notes": "Exact source excerpts control; reporting classifications, summaries, and cross-reference candidates are derivative metadata."
+      },
+      "reviewIndexPath": "data/processed/review_packages/vm31-canonical-coverage-review-package.md",
+      "selfReviewPath": "data/processed/review_packages/vm31-source-qa.md"
     }
   ],
   "notes": "Canonical classification stage for the source-index POC."

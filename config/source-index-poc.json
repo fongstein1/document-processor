@@ -2236,6 +2236,128 @@
         "reviewPackagePath": "data/processed/review_packages/vm01-canonical-definitions-review-package.json"
       },
       "notes": "Canonically promoted 2026 VM-01 definition coverage under a recorded independent-review decision; learner, app, RAG, vector, and Copilot export remain blocked, and relationship candidates remain separately governed."
+    },
+    {
+      "sourceIndexId": "source-index-vm31-current-manual",
+      "sourceVersionId": "source-index-vm31-current-manual-2026",
+      "sourceId": "vm31-current-manual",
+      "filename": "pbr_data_valuation_manual_2026.pdf",
+      "filePath": "D:\\Work\\AI Projects\\NAIC Valuation Manual Course\\pbr_data_valuation_manual_2026.pdf",
+      "sourceFamilyId": "valuation_manual_pdfs",
+      "domainId": "naic_regulatory",
+      "documentType": "valuation_manual_section",
+      "sourceTitle": "VM-31: PBR Actuarial Report Requirements for Business Subject to a Principle-Based Valuation",
+      "sourceReference": "2026 NAIC Valuation Manual",
+      "sourceEditionId": "NAIC-VALUATION-MANUAL-2026",
+      "sourceVersionIdentifier": "2026 NAIC Valuation Manual",
+      "jurisdiction": "NAIC",
+      "authorityLevel": "manual_section",
+      "sourceStatus": "active",
+      "versionDate": null,
+      "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+      "pageCount": 457,
+      "pageRange": { "start": 341, "end": 386 },
+      "expectedChunkCount": 84,
+      "canonicalCandidate": true,
+      "processingCreatedAt": "2026-08-27T00:00:00.000Z",
+      "reviewBatchIds": ["batch-019", "batch-020", "batch-021"],
+      "reviewIndexPath": "data/processed/review_packages/vm31-canonical-coverage-review-package.md",
+      "selfReviewPath": "data/processed/review_packages/vm31-source-qa.md",
+      "pageImageBackstop": true,
+      "lineReferencesAvailable": false,
+      "textLayerQuality": "mixed",
+      "sourceTextVerification": {
+        "sourceTextMode": "exact_extracted_source_text",
+        "extractionMethod": "PyPDF2 page text retained in batches 019-021",
+        "visualTranscription": "not_used",
+        "pageRepresentationQA": "complete 46-page rendered boundary and hierarchy review",
+        "qaScript": "scripts/validate-vm31-current-manual.mjs"
+      },
+      "coverageDeclarations": {
+        "scopeType": "current_vm31_reporting_and_documentation_requirements",
+        "includedInformationTypes": [
+          "purpose_and_applicability",
+          "general_reporting_requirements",
+          "executive_summary",
+          "life_summary",
+          "life_report",
+          "annuity_summary",
+          "annuity_report",
+          "certifications",
+          "supporting_exhibits",
+          "explicit_cross_references",
+          "closing_boundary"
+        ],
+        "structuredDataAvailable": false,
+        "parentCount": 9,
+        "childCount": 75,
+        "retrievalUnitCount": 75,
+        "knownGaps": [
+          "Independent review is required before canonical promotion.",
+          "Relationship candidates remain review-only, pending, and not promoted.",
+          "Publication and effective dates are not asserted beyond the established 2026 edition identity."
+        ]
+      },
+      "classification": {
+        "domainId": "naic_regulatory",
+        "documentType": "valuation_manual_section",
+        "purpose": "Authoritative current reporting and documentation layer for PBR Actuarial Report requirements",
+        "intendedAudience": "Valuation, reporting, regulatory, governance, and retrieval reviewers",
+        "authoritySourceType": "regulatory",
+        "confidentiality": "public",
+        "publicationDate": null,
+        "effectiveDate": null,
+        "version": "2026 Edition",
+        "approvalStatus": "review_only",
+        "language": "en",
+        "recommendedProfile": "reporting",
+        "recommendedChunkingStrategy": "section_subsection_parent_to_complete_numbered_requirement_child",
+        "confidence": "high",
+        "unresolvedQuestions": [
+          "Independent source and actuarial review is required before promotion.",
+          "Downstream learner, application, RAG, vector, and Copilot eligibility require separate decisions."
+        ],
+        "notes": "Exact source excerpts control; reporting classifications, summaries, and cross-reference candidates are derivative metadata."
+      },
+      "chunkDefaults": {
+        "sourceTextType": "actual_extracted_source_text",
+        "fidelity": "exact",
+        "confidence": "high",
+        "reviewFlags": ["review_only", "requires_independent_review"],
+        "controlledTags": ["vm31_current_manual", "reporting_requirement"],
+        "qualityNotes": [
+          "Actual source text from the authoritative current VM-31 chapter is retained without source-text rewriting.",
+          "Each child keeps a complete numbered or lettered provision with its nested qualifications and list items.",
+          "The blank page 386 and VM-50 opener at page 387 were visually confirmed as the closing boundary."
+        ],
+        "evidenceNotes": "Derived from reviewed supporting batches 019-021 with the authoritative 2026 Valuation Manual SHA-256; review-only and not promoted."
+      },
+      "vm31Input": {
+        "extractions": [
+          {
+            "extractionPath": "data/work/batches/batch-019/extraction-output.json",
+            "batchManifestPath": "data/work/batches/batch-019/batch-manifest.json",
+            "sourceId": "supporting-vm31-purpose"
+          },
+          {
+            "extractionPath": "data/work/batches/batch-020/extraction-output.json",
+            "batchManifestPath": "data/work/batches/batch-020/batch-manifest.json",
+            "sourceId": "supporting-vm31-detail"
+          },
+          {
+            "extractionPath": "data/work/batches/batch-021/extraction-output.json",
+            "batchManifestPath": "data/work/batches/batch-021/batch-manifest.json",
+            "sourceId": "supporting-vm31-boundary"
+          }
+        ]
+      },
+      "extensions": {
+        "structureModel": "vm31_reporting_hierarchy_v1",
+        "relationshipCandidatePath": "data/processed/relationship_registries/vm31-current-manual-relationship-candidates.json",
+        "reviewPackagePath": "data/processed/review_packages/vm31-canonical-coverage-review-package.json",
+        "focusedRetrievalEvaluationPath": "data/processed/review_packages/vm31-focused-retrieval-evaluation.json"
+      },
+      "notes": "Substantially complete current 2026 VM-31 reporting coverage; canonical review candidate only, not promoted, and not eligible for downstream learner, app, RAG, vector, or Copilot use."
     }
   ],
   "retrievalSettings": {

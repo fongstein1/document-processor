@@ -19,7 +19,7 @@
   "unsupportedQueryPrecision": 0.6,
   "deduplication": {
     "topN": 5,
-    "rawTopKCollisionCount": 46,
+    "rawTopKCollisionCount": 45,
     "rawTopKCollisionGroupCount": 20,
     "postDeduplicationCollisionCount": 0,
     "affectedQueries": [
@@ -244,10 +244,6 @@
           {
             "parentChunkId": "vm20-canonical-coverage-vm20-npr-entry-setup",
             "childChunkId": "vm20-canonical-coverage-vm20-npr-entry-setup-child-002"
-          },
-          {
-            "parentChunkId": "vm20-canonical-coverage-vm20-npr-entry-setup",
-            "childChunkId": "vm20-canonical-coverage-vm20-npr-entry-setup-child-003"
           }
         ]
       },
@@ -5054,6 +5050,14 @@
           "citationCount": 0
         },
         {
+          "chunkId": "vm31-section-1-purpose-purpose",
+          "sourceId": "vm31-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 11.15,
+          "citationCount": 0
+        },
+        {
           "chunkId": "vm20-canonical-coverage-vm20-npr-entry-setup-child-001",
           "sourceId": "vm20-canonical-coverage",
           "sourceFamilyId": "valuation_manual_pdfs",
@@ -5071,14 +5075,6 @@
         },
         {
           "chunkId": "vm20-canonical-coverage-vm20-npr-entry-setup-child-003",
-          "sourceId": "vm20-canonical-coverage",
-          "sourceFamilyId": "valuation_manual_pdfs",
-          "authorityLevel": "manual_section",
-          "score": 9.25,
-          "citationCount": 0
-        },
-        {
-          "chunkId": "vm20-canonical-coverage-vm20-npr-entry-setup-child-004",
           "sourceId": "vm20-canonical-coverage",
           "sourceFamilyId": "valuation_manual_pdfs",
           "authorityLevel": "manual_section",
@@ -5110,13 +5106,13 @@
             "authorityLevel": "regulation"
           },
           {
-            "chunkId": "vm20-canonical-coverage-vm20-npr-entry-setup-child-001",
-            "sourceId": "vm20-canonical-coverage",
-            "score": 9.25,
+            "chunkId": "vm31-section-1-purpose-purpose",
+            "sourceId": "vm31-current-manual",
+            "score": 11.15,
             "authorityLevel": "manual_section"
           },
           {
-            "chunkId": "vm20-canonical-coverage-vm20-npr-entry-setup-child-002",
+            "chunkId": "vm20-canonical-coverage-vm20-npr-entry-setup-child-001",
             "sourceId": "vm20-canonical-coverage",
             "score": 9.25,
             "authorityLevel": "manual_section"
@@ -5133,12 +5129,12 @@
               "tokenOverlap": 9
             },
             {
-              "chunkId": "vm20-canonical-coverage-vm20-npr-entry-setup-child-001",
-              "score": 9.25,
-              "tokenOverlap": 5
+              "chunkId": "vm31-section-1-purpose-purpose",
+              "score": 11.15,
+              "tokenOverlap": 4
             },
             {
-              "chunkId": "vm20-canonical-coverage-vm20-npr-entry-setup-child-002",
+              "chunkId": "vm20-canonical-coverage-vm20-npr-entry-setup-child-001",
               "score": 9.25,
               "tokenOverlap": 5
             }
@@ -5155,10 +5151,6 @@
           {
             "parentChunkId": "vm20-canonical-coverage-vm20-npr-entry-setup",
             "childChunkId": "vm20-canonical-coverage-vm20-npr-entry-setup-child-002"
-          },
-          {
-            "parentChunkId": "vm20-canonical-coverage-vm20-npr-entry-setup",
-            "childChunkId": "vm20-canonical-coverage-vm20-npr-entry-setup-child-003"
           }
         ],
         "suppressedParentChunkIds": [
@@ -5203,6 +5195,14 @@
           "citationCount": 0
         },
         {
+          "chunkId": "vm31-section-3-b-executive-summary-1-qualified-actuary",
+          "sourceId": "vm31-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 17.299999999999997,
+          "citationCount": 0
+        },
+        {
           "chunkId": "chunk-reg210-non-guaranteed-elements-001",
           "sourceId": "reg210-non-guaranteed-elements",
           "sourceFamilyId": "ny_regulations",
@@ -5216,14 +5216,6 @@
           "sourceFamilyId": "ny_regulations",
           "authorityLevel": "regulation",
           "score": 7.5,
-          "citationCount": 0
-        },
-        {
-          "chunkId": "vm01-definition-006-appointed-actuary",
-          "sourceId": "vm01-definitions",
-          "sourceFamilyId": "valuation_manual_pdfs",
-          "authorityLevel": "manual_section",
-          "score": 5.5,
           "citationCount": 0
         }
       ],
@@ -5257,10 +5249,10 @@
             "authorityLevel": "manual_section"
           },
           {
-            "chunkId": "chunk-reg210-non-guaranteed-elements-001",
-            "sourceId": "reg210-non-guaranteed-elements",
-            "score": 7.5,
-            "authorityLevel": "regulation"
+            "chunkId": "vm31-section-3-b-executive-summary-1-qualified-actuary",
+            "sourceId": "vm31-current-manual",
+            "score": 17.299999999999997,
+            "authorityLevel": "manual_section"
           }
         ],
         "corpusGap": null,
@@ -5279,9 +5271,9 @@
               "tokenOverlap": 5
             },
             {
-              "chunkId": "chunk-reg210-non-guaranteed-elements-001",
-              "score": 7.5,
-              "tokenOverlap": 4
+              "chunkId": "vm31-section-3-b-executive-summary-1-qualified-actuary",
+              "score": 17.299999999999997,
+              "tokenOverlap": 5
             }
           ]
         },
@@ -5862,19 +5854,19 @@
           "citationCount": 0
         },
         {
-          "chunkId": "chunk-synthetic-pricing-product-specification-001",
-          "sourceId": "synthetic-pricing-product-specification",
-          "sourceFamilyId": "synthetic_pricing_documents",
-          "authorityLevel": "internal",
-          "score": 8,
+          "chunkId": "vm31-section-3-c-life-summary-4-changes-in-methods",
+          "sourceId": "vm31-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 8.65,
           "citationCount": 0
         },
         {
-          "chunkId": "chunk-synthetic-pricing-assumption-memo-002",
-          "sourceId": "synthetic-pricing-assumption-memo",
-          "sourceFamilyId": "synthetic_pricing_documents",
-          "authorityLevel": "internal",
-          "score": 5.599999999999999,
+          "chunkId": "vm31-section-3-e-annuity-summary-4-changes-in-methods",
+          "sourceId": "vm31-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 8.65,
           "citationCount": 0
         }
       ],

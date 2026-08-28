@@ -1,0 +1,420 @@
+{
+  "schemaVersion": "1.0",
+  "reviewPackageId": "vm31-canonical-coverage-review-package-2026",
+  "status": "canonical_review_candidate",
+  "promoted": false,
+  "authoritativeSource": {
+    "classification": {
+      "domainId": "naic_regulatory",
+      "subdomainId": null,
+      "documentType": "valuation_manual_section",
+      "purpose": "Authoritative current reporting and documentation layer for PBR Actuarial Report requirements",
+      "intendedAudience": "Valuation, reporting, regulatory, governance, and retrieval reviewers",
+      "authoritySourceType": "regulatory",
+      "confidentiality": "public",
+      "publicationDate": null,
+      "effectiveDate": null,
+      "version": "2026 Edition",
+      "approvalStatus": "review_only",
+      "language": "en",
+      "recommendedProfile": "reporting",
+      "recommendedChunkingStrategy": "section_subsection_parent_to_complete_numbered_requirement_child",
+      "confidence": "high",
+      "unresolvedQuestions": [
+        "Independent source and actuarial review is required before promotion.",
+        "Downstream learner, application, RAG, vector, and Copilot eligibility require separate decisions."
+      ],
+      "notes": "Exact source excerpts control; reporting classifications, summaries, and cross-reference candidates are derivative metadata."
+    },
+    "profileData": null,
+    "sourceId": "vm31-current-manual",
+    "sourceVersionId": "source-index-vm31-current-manual-2026",
+    "filename": "pbr_data_valuation_manual_2026.pdf",
+    "filePath": "D:\\Work\\AI Projects\\NAIC Valuation Manual Course\\pbr_data_valuation_manual_2026.pdf",
+    "sourceFamilyId": "valuation_manual_pdfs",
+    "domainId": "naic_regulatory",
+    "documentType": "valuation_manual_section",
+    "sourceTitle": "VM-31: PBR Actuarial Report Requirements for Business Subject to a Principle-Based Valuation",
+    "sourceReference": "2026 NAIC Valuation Manual",
+    "jurisdiction": "NAIC",
+    "authorityLevel": "manual_section",
+    "sourceStatus": "active",
+    "versionDate": null,
+    "sourceEditionId": "NAIC-VALUATION-MANUAL-2026",
+    "sourceVersionIdentifier": "2026 NAIC Valuation Manual",
+    "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+    "sourceTextVerification": {
+      "sourceTextMode": "exact_extracted_source_text",
+      "extractionMethod": "PyPDF2 page text retained in batches 019-021",
+      "visualTranscription": "not_used",
+      "pageRepresentationQA": "complete 46-page rendered boundary and hierarchy review",
+      "qaScript": "scripts/validate-vm31-current-manual.mjs"
+    },
+    "coverageDeclarations": {
+      "scopeType": "current_vm31_reporting_and_documentation_requirements",
+      "includedInformationTypes": [
+        "purpose_and_applicability",
+        "general_reporting_requirements",
+        "executive_summary",
+        "life_summary",
+        "life_report",
+        "annuity_summary",
+        "annuity_report",
+        "certifications",
+        "supporting_exhibits",
+        "explicit_cross_references",
+        "closing_boundary"
+      ],
+      "structuredDataAvailable": false,
+      "parentCount": 9,
+      "childCount": 75,
+      "retrievalUnitCount": 75,
+      "knownGaps": [
+        "Independent review is required before canonical promotion.",
+        "Relationship candidates remain review-only, pending, and not promoted.",
+        "Publication and effective dates are not asserted beyond the established 2026 edition identity."
+      ]
+    },
+    "pageCount": 457,
+    "pageRange": {
+      "start": 341,
+      "end": 386
+    },
+    "reviewBatchIds": [
+      "batch-019",
+      "batch-020",
+      "batch-021"
+    ],
+    "reviewIndexPath": "data/processed/review_packages/vm31-canonical-coverage-review-package.md",
+    "selfReviewPath": "data/processed/review_packages/vm31-source-qa.md",
+    "pageImageBackstop": true,
+    "lineReferencesAvailable": false,
+    "textLayerQuality": "mixed",
+    "notes": "Substantially complete current 2026 VM-31 reporting coverage; canonical review candidate only, not promoted, and not eligible for downstream learner, app, RAG, vector, or Copilot use."
+  },
+  "coverage": {
+    "packageCount": 1,
+    "parentCount": 9,
+    "childCount": 75,
+    "totalChunkCount": 84,
+    "pageRange": {
+      "start": 341,
+      "end": 386
+    },
+    "fidelityDistribution": {
+      "exact": 84
+    },
+    "provisionTypeCounts": {
+      "reporting_requirement": 74,
+      "documentation_requirement": 70,
+      "applicability_or_exception": 40,
+      "cross_reference": 53,
+      "actuarial_responsibility": 46,
+      "company_responsibility": 49,
+      "required_analysis": 28,
+      "required_disclosure": 46,
+      "timing_or_frequency": 23,
+      "required_exhibit": 29,
+      "guidance_note_present": 6,
+      "certification": 4,
+      "boundary_control": 1
+    },
+    "contentAreaAudit": [
+      {
+        "contentArea": "scope_and_applicability",
+        "status": "covered",
+        "representativeChunkId": "vm31-section-2-general-requirements-a-annual-report-applicability"
+      },
+      {
+        "contentArea": "required_actuarial_reports",
+        "status": "covered",
+        "representativeChunkId": "vm31-section-2-general-requirements-a-annual-report-applicability"
+      },
+      {
+        "contentArea": "report_content",
+        "status": "covered",
+        "representativeChunkId": "vm31-section-3-a-report-order-and-applicability-report-order-and-applicability"
+      },
+      {
+        "contentArea": "methodology_documentation",
+        "status": "covered",
+        "representativeChunkId": "vm31-section-3-f-annuity-report-2-cash-flow-models"
+      },
+      {
+        "contentArea": "assumption_documentation_and_margins",
+        "status": "covered",
+        "representativeChunkId": "vm31-section-3-d-life-report-1-assumptions-and-margins"
+      },
+      {
+        "contentArea": "models",
+        "status": "covered",
+        "representativeChunkId": "vm31-section-3-d-life-report-2-cash-flow-models"
+      },
+      {
+        "contentArea": "assets",
+        "status": "covered",
+        "representativeChunkId": "vm31-section-3-f-annuity-report-4-starting-assets"
+      },
+      {
+        "contentArea": "reinsurance",
+        "status": "covered",
+        "representativeChunkId": "vm31-section-3-f-annuity-report-11-reinsurance"
+      },
+      {
+        "contentArea": "aggregation",
+        "status": "covered",
+        "representativeChunkId": "vm31-section-3-f-annuity-report-16-additional-information"
+      },
+      {
+        "contentArea": "sensitivity_and_testing",
+        "status": "covered",
+        "representativeChunkId": "vm31-section-3-f-annuity-report-16-additional-information"
+      },
+      {
+        "contentArea": "governance",
+        "status": "covered",
+        "representativeChunkId": "vm31-section-3-b-executive-summary-6-governance"
+      },
+      {
+        "contentArea": "certifications",
+        "status": "covered",
+        "representativeChunkId": "vm31-section-3-d-life-report-14-certifications"
+      },
+      {
+        "contentArea": "supporting_documentation",
+        "status": "covered",
+        "representativeChunkId": "vm31-section-2-general-requirements-d-seven-year-retention"
+      },
+      {
+        "contentArea": "required_exhibits_and_tables",
+        "status": "covered",
+        "representativeChunkId": "vm31-section-3-c-life-summary-8-supplement-part-1"
+      },
+      {
+        "contentArea": "retention_and_submission",
+        "status": "covered",
+        "representativeChunkId": "vm31-section-2-general-requirements-c-submission-timing"
+      },
+      {
+        "contentArea": "cross_references",
+        "status": "covered",
+        "representativeChunkId": "vm31-section-3-d-life-report-10-exclusion-tests"
+      },
+      {
+        "contentArea": "exceptions_and_qualifications",
+        "status": "covered",
+        "representativeChunkId": "vm31-section-3-a-report-order-and-applicability-report-order-and-applicability"
+      }
+    ]
+  },
+  "sourceFidelity": {
+    "sourceQaPath": "data/processed/review_packages/vm31-source-qa.json",
+    "sourceQaStatus": "pass",
+    "aggregateExtractionSha256": "e30c0c0af7db1cf04a3c71677758f6c868cbdd99c82e94de99c34944bd46859c",
+    "canonicalPackageSha256": "6c9b40eeb2b5377df05f0d8183ea9c34251f758184c85388bf53384945d295c9",
+    "sourceTextRewriteCount": 0
+  },
+  "hierarchy": {
+    "model": "section_or_subsection_parent_to_complete_numbered_or_lettered_requirement_child",
+    "adjacencyAvailable": true,
+    "nestedListsKeptWithGoverningHeading": true,
+    "boundaryControlIncluded": true
+  },
+  "relationships": {
+    "candidateCount": 92,
+    "targetCounts": {
+      "VM-20": 27,
+      "VM-21": 28,
+      "VM-22": 30,
+      "VM-G": 5,
+      "Actuarial Guideline XLIII": 2
+    },
+    "registryPath": "data/processed/relationship_registries/vm31-current-manual-relationship-candidates.json",
+    "status": "review_only_pending"
+  },
+  "retrievalEvaluation": {
+    "path": "data/processed/review_packages/vm31-focused-retrieval-evaluation.json",
+    "queryCount": 21,
+    "supportedTop1": 15,
+    "supportedTop3": 18,
+    "supportedQueryCount": 18,
+    "unsupportedCorrect": 2,
+    "unsupportedQueryCount": 2,
+    "ambiguitySafe": 1,
+    "ambiguityQueryCount": 1,
+    "currentAuthorityTop1": 18,
+    "allCasesPassed": true
+  },
+  "supportGateRegression": {
+    "path": "data/processed/review_packages/vm31-support-gate-regression.json",
+    "caseCount": 4,
+    "status": "pass",
+    "productionEvidenceWindow": 3
+  },
+  "representativeChunks": [
+    {
+      "chunkId": "vm31-section-2-general-requirements-a-annual-report-applicability",
+      "sectionReference": "A. Annual report applicability and assigned actuaries",
+      "pageStart": 341,
+      "pageEnd": 341,
+      "provisionTypes": [
+        "reporting_requirement",
+        "documentation_requirement",
+        "actuarial_responsibility",
+        "company_responsibility",
+        "required_analysis",
+        "required_disclosure",
+        "timing_or_frequency",
+        "applicability_or_exception",
+        "cross_reference"
+      ],
+      "sourceTextExcerpt": "A. Each year a company shall prepare, under the direction of one or more qualified actuaries, as \nassigned by the company under the provisions of VM -G, a PBR Actuarial Report if the company \ncomputes an exclusion test for any policy or contract as defined in VM -20 or VM -22, or computes \na minimum reserve as defined in VM-20, VM-21, or VM -22. \nA company that does not compute any DR or SR under VM -20 or VM -22 for a group of policies \nor contracts as a result of passing the exclusion tests as defined in VM -20 Section 6 or VM -22 \nSection 7 must still develop a sub -report for that group of policies or contracts that addresses the \nrelevant requirements of Section 3. \nA company that computes reserves under the Alternative Methodology defined in VM -21 must still \ndevelop a sub -report with the applicable requirements to the Alternative Methodology for that \ngroup of policies that addresses the relevant requirements of Secti on 3. \nThe PBR Actuarial Report shall consist of an Executive Summary, a Life Summary, a Life Report , \nan Annuity Summary, and an Annuity Report, as applicable. The Life Report and the Annuity \nReport shall each contain one or more sub -reports, with each such sub -report covering one or more \ngroup s of policies , model segments or contracts . Each such sub -report shall be prepared by the \nqualified actuary assigned responsibility for such group s of policies or contracts under the \nprovisions of VM -G. The PBR Actuarial Rep ort must include documentation and disclosure \nsufficient for another actuary qualified in the same practice area to evaluate the work."
+    },
+    {
+      "chunkId": "vm31-section-2-general-requirements-c-submission-timing",
+      "sectionReference": "C. Summary and full-report submission timing",
+      "pageStart": 341,
+      "pageEnd": 342,
+      "provisionTypes": [
+        "reporting_requirement",
+        "documentation_requirement",
+        "actuarial_responsibility",
+        "company_responsibility",
+        "required_disclosure",
+        "timing_or_frequency",
+        "applicability_or_exception"
+      ],
+      "sourceTextExcerpt": "C. The Executive Summary , Life Summary and Annuity Summary of the PBR Actuarial Report , as \nprovided in Section 3.B , Section 3.C and Section 3.E , shall be submitted to the company’s \ndomiciliary commissioner no later than April 1 of the year following the year to which the PBR \nActuarial Report applies. The entire PBR Actuarial Report , as provided by the entirety of Section \n3, shall be submitted upon request to the company’s domiciliary commissioner no later than April \n1 of the year following the year to which the PBR Actuarial Report applies or within 30 days, if \nrequested after April 1. Similarly, the company shall submit the entire PBR Actuarial Report or the \nExecutive Summary, Life Summary and Annuity Summary upon request, to the commissioner of \nany other jurisdiction in which the company is licensed.\n\n[p. 342] PBR Actuarial Report Requirements for Business Subject to a Principle -Based Valuation VM-31 \n© 20 25 National Association of Insurance Commissioners 31-2"
+    },
+    {
+      "chunkId": "vm31-section-3-d-life-report-1-assumptions-and-margins",
+      "sectionReference": "1. Assumptions and Margins",
+      "pageStart": 344,
+      "pageEnd": 345,
+      "provisionTypes": [
+        "reporting_requirement",
+        "documentation_requirement",
+        "actuarial_responsibility",
+        "company_responsibility",
+        "required_exhibit",
+        "required_analysis",
+        "required_disclosure",
+        "timing_or_frequency",
+        "applicability_or_exception",
+        "guidance_note_present",
+        "cross_reference"
+      ],
+      "sourceTextExcerpt": "1. Assumptions and Margins – Details on the valuation assumptions and margins , including : \na. Tables – For each material risk, the anticipated experience assumptions, margins, \nand prudent estimate assumptions used in the model, provided in Excel format. A \ncomplete table of reinsurance premiums is not required. If applicable, provide upon \nrequest a sample calculation demonstrating the methodology used to determine \nfuture reinsurance premiums reflecting non -guara nteed reinsurance features, \nincluding margins and details of any simplifications and approximations used. \n \nGuidance Note: See VM -20 Section 9.B.1 for a discussion on material risks. \nThere is a Sample Assumptions Summary for PBR Actuarial Report located on the NAIC website \n(https://www.naic.org/pbr_data.htm?tab_3 ), which may be a useful reference document when \ndeveloping reporting in accordance with Section 3.D.1.a. For valuation dates prior to Dec. 31, 2022, \nthe company’s domiciliary commissioner may permit less than full compliance with the above \nSection 3. D.1.a, provided that the commissioner determines that the company has made a good \nfaith attempt to comply. \n \nb. Changes – A description of any changes in anticipated experience assumptions or \nmargins since the last PBR Actuarial Report.\n\n[p. 345] PBR Actuarial Report Requirements for Business Subject to a Principle -Based Valuation VM-31 \n© 20 25 National Association of Insurance Commissioners 31-5 \nc. Company Experience Studies – The following information for each risk factor, \nprovided using PBR Actuarial Report Template C provided on the NAIC website \n(https://content.naic.org/pbr_data.htm ): the type(s) of policies included by \nVM-20 reserving category , the year the most recent experience study was \nperformed, along with the observation calendar years, the policy issue years \nincluded, and the length of the lag time used to allow for events reported after the \nstudy period. \n \nd. Assumption and Margin Development – The following information for each risk \nfactor: description of the method s used to determine anticipated experience \nassumptions and margins, including the sources of experience (e.g., company \nexperience, industry experience, or other data) ; how changes in such experience \nare monitored ; any adjustments made to increase mortality margins above the \nprescribed margin (such as to reflect increased uncertainty due to newer \nunderwriting approaches) ; and any other considerations , such as conversion \nfeatures, helpful in or necessary to understanding the rationale behind the \ndevelopment of assumptions and margins, even if such considerations are not \nexplicitly mentioned in the Valuation Manual ."
+    },
+    {
+      "chunkId": "vm31-section-3-d-life-report-3-mortality",
+      "sectionReference": "3. Mortality",
+      "pageStart": 346,
+      "pageEnd": 350,
+      "provisionTypes": [
+        "reporting_requirement",
+        "documentation_requirement",
+        "actuarial_responsibility",
+        "company_responsibility",
+        "required_exhibit",
+        "required_analysis",
+        "required_disclosure",
+        "timing_or_frequency",
+        "applicability_or_exception",
+        "cross_reference"
+      ],
+      "sourceTextExcerpt": "3. Mortality – The following information regarding the mortality assumptions used by the \ncompany in performing a principle -based valuation under VM -20: \na. Mortality Segments – Description of each mortality segment and the rationale for \nselecting the policies to include in each mortality segment. \nb. Company Experience – If company experience is used, a description and summary \nof the company experience mortality rates for each mortality segment , including a \nsummary of the company experience mortality rates for any aggregate class that \nmortality rates are based on pursuant to VM -20 Section 9.C.2.d . \nc. Industry Tables – Description of the industry basic table used for each mortality \nsegment , including : \ni. For mortality segments where industry basic tables are used in lieu of \ncompany experience at all durations, a discussion of why company \nexperience data is limited or unavailable and the rationale for the choice \nof industry basic table to the extent not co vered in Section 3. D.3.e and \nSection 3. D.3.f below. \nii. For mortality segments where company experience with margins is graded \nto industry basic table with margins per VM -20 Section 9.C. 7.b, the \nrationale for the choice of industry basic table to the extent not covered in \nSection 3. D.3.e and Section 3. D.3.f below. \nd. Aggregate Company Experience – If the company bases mortality rates on more \naggregate company experience pursuant to VM -20 Section 9.C.2.d: \ni. Documentation that when the mortality segments are weighted together, \nthe total amount of expected claims is not less than the aggregate company \nexperience data for the group .\n\n[p. 347] PBR Actuarial Report Requirements for Business Subject to a Principle -Based Valuation VM-31 \n© 20 25 National Association of Insurance Commissioners 31-7 ii. If underwriting processes are treated similar pursuant to VM -20 Section \n9.C.2.d.iii, a description, summary and citation of the third -party \nproprietary experience studies or published medical, clinical or other \npublished studies used to support the expecta tions regarding mortality. \nThe full reports and analyses for any third -party proprietary experience \nstudies shall be submitted upon request, considered part of the PBR \nActuarial Report, and kept confidential to the same extent as is prescribed \nby law with respect the rest of the PBR Actuarial Report. \n \niii. If underwriting processes are treated similar pursuant to VM -20 Section \n9.C.2.d.iv, a description, explanation and summary of results for the most \nrecent retrospective demonstration. \ne. Relative Risk Tool – Description, rationale and results of applying the Relative \nRisk Tool to select the industry basic table(s), and a summary of the analysis \nperformed to evaluate the relationship between the Relative Risk Tool and the \nanticipated mortality established fo r mortality segments where the mortality \nassumption is affected by the application of the Relative Risk Tool. If \nunderwriting -based justification not involving the Relative Risk Tool is being \napplied, provide similar analysis applicabl e to the company 's methods. \nf. Alternative Data Sources – If company experience mortality rates for any mortality \nsegment are not based on the experience directly applicable to the mortality \nsegment (whether or not the data source is from the company), a summary \ncontaining the following: \ni. The source of data, including a detailed explanation of the appropriateness \nof the data, and the underlying source of data, including how the company \nexperience mortality rates were developed, graduated and smoothed. \nii. Similarities or differences noted between policies in the mortality segment \nand the policies from the data source (e.g., type of underwriting, marketing \nchannel, average policy size, etc.). \niii. Adjustments made to the experience mortality rates to account for \ndifferences between the mortality segment and the data source. \niv. The number of deaths and death claim amounts by major grouping and \nincluding: age, gender, risk class, policy duration and other relevant \ninformation. \ng. Adjustments to Company Experience Mortality – If the company makes \nadjustments to company experience mortality rates: \ni. Rationale for the adjustments. \nii. For adjustments due to changes in risk selection and/or underwriting \npractices, a description, summary and citation of the published medical, \nclinical or other published studies used to support the adjustments, \nincluding rationale and support for use of t he study (or studies).\n\n[p. 348] PBR Actuarial Report Requirements for Business Subject to a Principle -Based Valuation VM-31 \n© 20 25 National Association of Insurance Commissioners 31-8 iii. Documentation of the mathematics used to adjust the mortality. \niv. Summary of any other relevant information concerning adjustments to the \nexperience mortality, including the removal of policies insuring impaired \nlives and those for which there is a reasonable expectation, due to \nconditions such as changes in premiums or other policy provisions, that \npolicyholder behavior will lead to mortality results that vary significantly \nfrom those that would otherwise be expected. \nh. Credibility – The following items related to credibility: \ni. Identification of the method used to determine credibility percentage(s) for \nthe company’s mortality exposure period, including a listing of the \ncredibility percentage that was used in VM -20 Section 9.C. 7.b for each \nmortality segment, and an indication of whether each such credibility \npercentage was determined at the mortality segment level or at a higher \nlevel using aggregate mortality experience. \nii. A statement confirming that the credibility level was calculated using the \ndata from the company’s mortality experience study, based on uncapped \namounts of insurance. \niii. For each credibility percentage that was used in VM -20 Section 9.C.6.b, \nthe numerical values of all credibility formula inputs, along with \ncalculation steps. For the Limited Fluctuation Method, this shall include r, \nz, m, , and the resulting value of Z. For the Bühlmann Empirical Bayesian \nMethod, this shall include A, B, C, and the resulting value of Z. \ni. Mortality Improvement – Description of and rationale for the mortality \nimprovement assumptions applied up to the valuation date and the mortality \nimprovement assumptions applied beyond the valuation date . Such a description \nshall include the assumed start and end dates of the improvements and a table of \nthe annual improvement percentage(s) used, both without and with margin, \nseparately for company experience and the industry basic table(s), along with a \nsample calculation of the adjustment (e.g. , for a male preferred nonsmoker age 45). \nj. Mortality for Converted Policies – Description of the treatment of mortality for \npolicies issued under group or term conversion privileges including: \n \ni. A description of the method(s) by which any excess conversion mortality \nwas taken into account in the development of company experience \nmortality rates (e.g., through the use of separate mortality segments for \npolicies issued upon conversion, through aggre gation of claim experience, \nor through use of other methods), the rationale for the method(s) used, and \nany changes in the method(s) from those used in previous years. \n \nii. The source(s) of the data used in the method(s) employed. \n \nk. Mortality for Impaired Lives or Policyholder Behavior – Disclosure of: \ni. the percentage of business that is on impaired lives ; \nii. whether impaired lives were included or excluded from the mortality study\n\n[p. 349] PBR Actuarial Report Requirements for Business Subject to a Principle -Based Valuation VM-31 \n© 20 25 National Association of Insurance Commissioners 31-9 upon which company experience mortality was based ; and \niii. whether any adjustments to mortality assumptions for impaired lives or \npolicyholder behavior were found to be necessary and, if so, the rationale \nfor the adjustments that were used . \n Item (iii) above is a required disclosure for post -level term mortality assumptions \neven if the company uses a 100% shock lapse assumption, since it pertains to the \nanalysis demonstrating whether there are post -level term profits. \nl. Setting Prudent Estimate Assumptions for Mortality – If company experience is \nused, a summary of the approach used to determine the final set of prudent estimate \nassumptions for mortality, including : \ni. The start and ending period of time used to grade company experience to \nthe industry basic table, including the approach used to grade company \nexperience mortality rates to the industry table for advanced ages (attained \nage 100 and up ). \nii. Description and results of any smoothing technique used. \niii. Description of any adjustments that were made to ensure reasonable \nrelationships are maintained between mortality segments that reflect the \nunderwriting class or risk class of each mortality segment. \niv. Description and justification of the mortality rates the company actually \nexpects to emerge, and a demonstration that the anticipated experience \nassumptions are no lower than the mortality rates that are actually expected \nto emerge. The description and demonstration should include the level of \ngranularity at which the comparison is made (e.g., ordinary life, term only, \npreferred term, etc.) . For the mortality rates that are actually expected to \nemerge, the description should include a forward -looking qu alitative \nanalysis which includes, but is not limited to, the discussion of any \nunderwriting standard changes (or lack thereof), distribution channel \nchanges (or lack thereof), any pandemic adjustments (or lack thereof), and \nthe results of ongoing experien ce monitoring. \n \nm. Actual to Expected Mortality Analysis – Summary of the results of an actual to \nexpected (without margins) analysis at least once every three years, or, for \nmortality segments for which mortality rates are based on more aggregate company \nexperience pursuant to VM -20 Section 9.C.2.d.vi, at least a nnually for each \nindividual mortality segment separately until such a time as the estimated change \nin expected mortality has been shown to be stable and unlikely to change based on \nfurther review. For the purposes of this analysis, the expected mortality s hall be \nthat last determined under VM -20 Section 9.C.2.e. \nn. Adjustments to NPR Mortality – Description and rationale of any adjustments \nmade to the CSO mortality rates used in the NPR calculation to reflect the \nrequirements of VM -20 Section 3.C.1.g. \n o.  Adjustments to Prescribed Margins - Description and rationale for any adjustments \nmade to prescribed mortality margins pursuant to VM -20, Section 9.C.6.d or \nSection 9.C.6.e. \np. Non-US Mortality – Description and rationale for mortality tables used to value\n\n[p. 350] PBR Actuarial Report Requirements for Business Subject to a Principle -Based Valuation VM-31 \n© 20 25 National Association of Insurance Commissioners 31-10 non-US blocks of business, pursuant to VM -20 Section 3.C.1.h and VM -20 Section \n9.C.3.b. \ni. At implementation and alongside with the five -year (or sooner) non -US \nmortality table update, provide: \n \na) Valuation results before and after the update. \n \nb) Impact of how much the reserves increase or decrease when using \na non -US mortality table instead of the otherwise prescribed US \nmortality table for all applicable groups of contracts issued to \nindividuals residing outside of the US. \n \nc) Discussion and support for why mortality is higher or lower in the \nlocal jurisdiction than in the relevant US insured population. \n \nd) Reference to external studies or publications to provide support, \nwhenever available. \n \ne) A summary of the material submitted to the Life Actuarial (A) \nTask Force for the approval of the non -US valuation mortality \ntable, non -US industry mortality table and the non -US mortality \nimprovement factors used to bring the non -US industry mortality \ntables forward or backward to the as of date of the non -US \nvaluation mortality tables. \n \nii. At all reporting times, provide the disclosure and justification of the \nmortality improvement factors used to bring the non -US industry mortality \ntable forward to the valuation date."
+    },
+    {
+      "chunkId": "vm31-section-3-d-life-report-14-certifications",
+      "sectionReference": "14. Certifications",
+      "pageStart": 362,
+      "pageEnd": 363,
+      "provisionTypes": [
+        "reporting_requirement",
+        "documentation_requirement",
+        "certification",
+        "actuarial_responsibility",
+        "company_responsibility",
+        "required_disclosure",
+        "applicability_or_exception",
+        "cross_reference"
+      ],
+      "sourceTextExcerpt": "14. Certifications \na. Investment Officer on Investments – A certification from a duly authorized \ninvestment officer that the modeled company investment strategy , including any \nfuture hedging strategies supporting the policies , is representative of and consistent \nwith the company’s investment policy and that documentation of the CDHS \nattributes for any future hedging strategies supporting the policies are accurate . \nb. Qualified Actuary on Investments – A certification by a qualified actuary, not \nnecessarily the same qualified actuary that has been assigned responsibility for the \nPBR Actuarial Report or this sub -report, that the modeling of any future hedging\n\n[p. 363] PBR Actuarial Report Requirements for Business Subject to a Principle -Based Valuation VM-31 \n© 20 25 National Association of Insurance Commissioners 31-23 strategies supporting the policies is consistent with the company’s actual future \nhedging strategies and was performed in accordance with VM -20 and in \ncompliance with all applicable ASOPs , and the alternative investment strategy as \ndefined in VM -20 Section 7.E.1.g reflects the prescribed mix of assets with the \nsame WAL as the reinvestment assets in the company investment strategy . \nc. Senior Management on Internal Controls – A certification from senior \nmanagement , other than the qualified actuary, regardi ng the effectiveness of \ninternal controls with respect to the principle -based valuation under VM -20, as \nprovided in Section 12B(2) of Model #820 . \nd. Qualified Actuary on Interest Rate and Volatility Risks – Certification, by the \nqualified actuary assigned responsibility under VM -G for a group of policies that \nqualifies for exclusion from the requirement to calculate a SR under the provisions \nof VM -20, Section 6. A.1.a.iii, that this group of policies is not subject to material \ninterest rate risk or asset return volatility risk. \ne. Qualified Actuary on Accordance with VM-20 and Model #820 – Certification by \nthe qualified actuary, for the groups of policies for which responsibility was \nassigned, that the principle -based valuation was performed in accordance with the \nrequirements outlined in VM -20 and the relevant sections of Model #820 . \nf. Qualified Actuary on Assumptions and Margins – Certification by the qualified \nactuary, for the groups of policies for which responsibility was assigned, that the \nassumptions used in the principle -based valuation under VM -20, other than \nassumptions used for risk factors that are prescribed or stochastically modeled, are \nprudent estimate assumptions and the margins applied therein are appropriate. \ng. Qualified Actuary on Conservatism of Converted Policies – Certification by the \nqualified actuary assigned responsibility under VM -G for a group of policies that \nqualifies for exclusion from the requirement to calculate a DR under the provisions \nof VM -20 Section 6.B.2.b, that the total reserve for this group of policies includes \na prudent provision for the additional mortality associated with the conversion and \nreasonably exceed the value of a DR which otherwise would have been calculated \nfor this group o f policies."
+    },
+    {
+      "chunkId": "vm31-section-3-f-annuity-report-8-hedging-and-risk-management",
+      "sectionReference": "8. Hedging and Risk Management",
+      "pageStart": 373,
+      "pageEnd": 375,
+      "provisionTypes": [
+        "reporting_requirement",
+        "documentation_requirement",
+        "actuarial_responsibility",
+        "company_responsibility",
+        "required_exhibit",
+        "required_analysis",
+        "required_disclosure",
+        "applicability_or_exception",
+        "cross_reference"
+      ],
+      "sourceTextExcerpt": "8. Hedging and Risk Management – The following information regarding the hedging and \nrisk management assumptions used by the company in performing a principle -based \nvaluation under VM -21 or VM -22: \na. Strategies – Detailed description of risk management strategies, such as hedging \nand other derivative programs, including any future hedging strategies supporting \nthe contracts , specific to the groups of contracts covered in this sub -report. \ni. Descriptions of basis risk, gap risk, price risk and assumption risk. \nii. Methods and criteria for estimating the a priori effectiveness of the \nstrategy. \niii. Results of any reviews of actual historical hedging effectiveness . \nb. CDHS – Documentation addressing each of the CDHS documentation attributes \nfor any future hedging strategies supporting the contracts . \nc. Strategy Changes – Discussion of any changes to the hedging strategy during the \npast 12 months, including identification of the change, reasons for the change, and \nthe implementation date of the change . \nd. Hedge Modeling – Description of how the hedge strategy was incorporated into \nmodeling, including: \ni. Differences in timing between model and actual strategy implementation. \nii. For a company that does not have a future hedging strategy supporting the \ncontracts , confirmation that currently held hedge assets were included in \nthe starting assets. \niii. Evaluations of the appropriateness of the assumptions on future trading, \ntransaction costs, other elements of the model, the strategy, and other items \nthat are likely to result in materially adverse results . \niv. Discussion of the projection horizon for the future hedg ing strategy as \nmodeled and a comparison to the timeline for any anticipated future \nchanges in the company’s hedg ing strategy. \nv. If residual risks and frictional costs are assumed to have a value of zero, a \ndemonstration that a value of zero is an appropriate expectation. \nvi. Any discontinuous hedging strategies modeled, and where such \ndiscontinuous hedging strategies contribute materially to a reduction in the \nSR, any evaluations of the interaction of future trigger definitions and the \ndiscontinuous hedging strategy, including any analyses of model \nassumptions that, when combined with the reliance on the discontinuous \nhedging strategy, may result in adverse result s relative to those modeled . \nvii. Disclosure of any situations where the modeled hedging strategies make \nmoney in some scenarios without losing a reasonable amount in some \nother scenarios, and an explanation of why the situations are not material\n\n[p. 374] PBR Actuarial Report Requirements for Business Subject to a Principle -Based Valuation VM-31 \n© 20 25 National Association of Insurance Commissioners 31-34 for determining the CTE 70 (best efforts) . \nviii. Results of any testing of the method used to determine prices of financial \ninstruments for trading in scenarios against actual initial market prices, \nincluding how the testing considered historical relationships. If there are \nsubstantial discrepancies, disclosure of the substantial discrepancies and \ndocumentation as to why the model -based prices are appropriate for \ndetermining the DR and SR. \nix. Any model adjustments made when calculating CTE 70 (adjusted), in \nparticular, any liquidation or substitution of assets for currently held \nhedges . If there is liquidation or a substitution of assets for currently held \nhedges, disclosure of the impact on the adjusted run. \nx. Justification for the margin for any future hedging strategy that offsets \ninterest index credits associated with index crediting strategies (index \ncredits), including relevant experience, other relevant analysis, and an \nassessment of potential model error . \nxi. Ten years of historical experience on hedge gains/losses as a percent of \nindex credited for hedge programs supporting index credits. \nxii. If there is less than five years of historical experience of this hedging \nprogram or a hedging program on similar products, an explanation of how \nthe company considered increases in the error factor to account for limited \nhistorical experience. \n \n \ne. Error Factor ( E) and Back -Testing – Description of E, the error factor, and formal back -\ntests performed, including: \ni. The value of E, and the approach and rationale for the value of E used in the reserve \ncalculation . \nii. For companies that model hedge cash flows using the explicit method, as described \nin VM -21 Section 9.C.6.a or VM -22 Section 9.C.6.a , and have 12 months of \nexperience, an analysis of at least the most recent 12 months of experience and the \nresults of a back -test showing that the model is able to replicate the hedging results \nexperienced in a way that justifies the value used for E. Include at least a ratio of \nthe actual change in market value of the hedges to the modeled change in market \nvalue of the hedges at least quarterly . \niii. For companies that model hedge cash flows using the implicit method , and have \n12 months of experience, as described in VM -21 Section 9.C.6.b or VM -22 Section \n9.C.6.b , the results of a back -test in which (a) actual hedge asset gains and losses \nare compared against (b) proportional fair value movements in hedged liability, \nincluding: \na) Delta, rho and vega coverage ratios in each month over the back -testing \nperiod, which may be presented in a chart or graph. \nb) The implied volatility level used to quantify the fair value of the hedged \nitem, as well as the methodology undertaken to determine the appropriate \nlevel used.\n\n[p. 375] PBR Actuarial Report Requirements for Business Subject to a Principle -Based Valuation VM-31 \n© 20 25 National Association of Insurance Commissioners 31-35 iv. For companies that do not model hedge cash flows using either the explicit method \nor the implicit method, as described in VM -21 Section 9.C.6.c or VM -22 Section \n9.C.6.c , and have 12 months of experience, the results of the formal back -test \nconducted to validate the appropriateness of the selected method and value used \nfor E. \nv. For companies that do not have 12 months of experience, the basis for the value of \nE that is chosen based on the guidance provided in VM -21 Section 9.C.7 or VM -\n22 Section 9.C.7 , considering the actual history available , mock testing performed, \nand the degree and nature of any changes made to the hedge strategy. \nvi. The basis for the magnitude of adjustment or lack of adjustment for the value of E \nchosen based on the robustness of the documentation outlining the future hedging \nstrategy. \n \nf. Safe Harbor for Future Hedging Strategies – If electing the safe harbor approach for a \nfuture hedging strategy supporting the contracts , as discussed in VM -21 Section 9. B.5 or \nVM-22 Section 9.B.5 , a description of the linear instruments used to model the option \nportfolio . \ng. Hedge Model Results – Disclosure of whether the calculated CTE 70 (best efforts) is below \nboth the fair value and CTE 70 (adjusted), and if so, justification for why that result is \nreasonable, as discussed in VM -21 Section 9.D or VM -22 Section 9.D ."
+    },
+    {
+      "chunkId": "vm31-section-3-f-annuity-report-13-exclusion-tests-vm22",
+      "sectionReference": "13. Exclusion Tests for VM-22",
+      "pageStart": 379,
+      "pageEnd": 380,
+      "provisionTypes": [
+        "reporting_requirement",
+        "documentation_requirement",
+        "certification",
+        "actuarial_responsibility",
+        "company_responsibility",
+        "required_exhibit",
+        "required_analysis",
+        "required_disclosure",
+        "timing_or_frequency",
+        "applicability_or_exception",
+        "cross_reference"
+      ],
+      "sourceTextExcerpt": "13. Exclusion Tests – For VM -22, the following information regarding the single scenario test \nand stochastic exclusion test, if calculated: \na. Policies – Identification and description of each group of contracts using the single \nscenario test and stochastic exclusion test, including contract type and risk profile, \nand rationale for each grouping of contracts . \nb. Type of Stochastic Exclusion Test – Identification of each group of contracts that \nthe company elects to exclude from SR requirements and the SET used (passing \nthe SERT or stochastic exclusion demonstration test, or certification that the group \nof contracts does not contain material interest rate risk , mortality and/or longevity \nrisk, or asset return volatility ). For any group of contracts for which a prior year’s \nresult is being invoked as to the passing of the stochastic exclusion demonstration \ntest or the certification that contracts are not subject to material interest rate risk , \nmortality and/or longevity risk, or asset return volatility a statement indicating \nwhich prior year’s result it was. \nc. Stochastic Exclusion Ratio Test – For groups of contracts for which the SERT is \nused, the following data on a post -reinsurance -ceded basis calculated in \naccordance with VM -22 Section 7.C and on a pre -reinsurance -ceded basis \ncalculated in accordance with VM -22 Section 5.A.3: \ni. The adjusted scenario reserve for each of the scenarios . \nii. The values of a, b and c . \niii. The value of the test ratio (b – a)/c. \niv. A discussion of why the test results are or are not reasonable and expected, \ngiven the nature of the product and any product or supporting asset \nfeatures that could result in material interest rate risk , mortality and/or \nlongevity risk, or asset return volatility.\n\n[p. 380] PBR Actuarial Report Requirements for Business Subject to a Principle -Based Valuation VM-31 \n© 20 25 National Association of Insurance Commissioners 31-40 d. Stochastic Exclusion Demonstration Test – For groups of contracts for which the \nstochastic exclusion demonstration test is used, the rationale for using the \ndemonstration test, identification of which acceptable demonstration method listed \nunder VM -22 Section 7.D.2 was applied or a statement that another method \nacceptable to the commissioner was applied, and the details of the demonstration \nsupporting the exclusion in the initial exclusion year and at least once every three \ncalendar years subsequent to t he initial exclusion year. \ne. SET Certification Method – For groups of contracts for which the SET certification \nmethod is used, support for the certification including supporting analysis and \ntests. \nf. Fallback Results – If the stochastic exclusion demonstration test or the certification \nmethod was successfully used for any group of contracts for which the SERT was \ninitially attempted but failed, the company shall so indicate and show the \nunsuccessful SERT results. \nSimilarly, if the Stochastic Exclusion Ratio Test was successfully used for any \ngroup of contracts for which the stochastic exclusion demonstration test under the \nmethod of VM-22 Section 7.D.2.c or VM-22 Section 7.D.2.d was initially \nattempted but failed, the company shall so indicate and show the results of the \nunsuccessful stochastic exclusion demonstration test. \ng. Single Scenario Test – For groups of contracts for which the Single Scenario Test \nis used , provide disclosures consistent with Subsections b through f above, but \ninstead of for the stochastic exclusion test, as applicable to the Single Scenario \nTest pursuant to the requirements in VM -22 Section 7.E."
+    },
+    {
+      "chunkId": "vm31-closing-boundary-intentional-blank-page",
+      "sectionReference": "Intentional blank page 31-46",
+      "pageStart": 386,
+      "pageEnd": 386,
+      "provisionTypes": [
+        "boundary_control"
+      ],
+      "sourceTextExcerpt": "[p. 386] PBR Actuarial Report Requirements for Business Subject to a Principle -Based Valuation VM-31 \n© 20 25 National Association of Insurance Commissioners 31-46 \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \nThis page intentionally left blank."
+    }
+  ],
+  "unresolvedGaps": [
+    "Independent source and actuarial review is required before promotion.",
+    "Publication and effective dates are not inferred beyond the established 2026 edition identity.",
+    "No synthetic historical VM-31 source was created for authority testing."
+  ],
+  "artifacts": {
+    "canonicalSourcePackage": "data/processed/source_indexes/sources/vm31-current-manual.json",
+    "sourceQa": "data/processed/review_packages/vm31-source-qa.json",
+    "relationshipCandidates": "data/processed/relationship_registries/vm31-current-manual-relationship-candidates.json",
+    "focusedRetrievalEvaluation": "data/processed/review_packages/vm31-focused-retrieval-evaluation.json",
+    "supportGateRegression": "data/processed/review_packages/vm31-support-gate-regression.json",
+    "validationReport": "data/processed/review_packages/vm31-validation-report.json",
+    "independentReviewPrompt": "data/processed/review_packages/vm31-independent-review-prompt.md"
+  },
+  "promotionReadiness": {
+    "independentReviewRequired": true,
+    "automatedPromotion": false,
+    "currentStatus": "review_only_pending_independent_review",
+    "promotionStatus": "not_promoted",
+    "promotionEligible": false,
+    "learnerFacingAllowed": false,
+    "appReadyAllowed": false,
+    "ragReadyAllowed": false,
+    "vectorEligible": false,
+    "copilotExportEligible": false
+  }
+}

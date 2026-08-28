@@ -905,3 +905,10 @@
   unchanged authoritative evidence. The 29 relationship candidates and all
   downstream export uses remain separately governed. The approved code
   snapshots from commit `7067118` remain immutable historical review evidence.
+- Built substantially complete current 2026 VM-31 canonical review coverage as
+  one source package with 9 structural parents and 75 exact-text child units.
+  Added source QA, a 21-case focused retrieval evaluation, a generic formal-
+  requirement evidence gate and regression suite, 92 conservative explicit-
+  reference candidates, deterministic validation, corpus inventory integration,
+  and a narrow independent-review handoff. VM-31 remains review-only,
+  unpromoted, and downstream-ineligible.

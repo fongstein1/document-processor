@@ -12,14 +12,18 @@
     "sourceRecordsWithExternalManifest": 71,
     "reviewIndexes": 97,
     "selfReviews": 94,
-    "canonicalSourcePackages": 22,
-    "canonicalChunks": 457,
+    "canonicalSourcePackages": 23,
+    "canonicalChunks": 541,
     "vm20CurrentManualChunks": 149,
     "vm20CompanionChunks": 175,
     "vm01Definitions": 98,
     "vm01RetrievalUnits": 98,
     "vm01PromotionStatus": "promoted",
     "vm01RelationshipCandidates": 29,
+    "vm31StructuralParents": 9,
+    "vm31ChildUnits": 75,
+    "vm31PromotionStatus": "not_promoted",
+    "vm31RelationshipCandidates": 92,
     "promotedCanonicalPackages": 7,
     "promotedCanonicalChunks": 247,
     "structuredTableLogicalTables": 7,
@@ -55,12 +59,12 @@
       "standard-valuation-law-model-820",
       "annual-statement-pbr-reporting"
     ],
-    "candidateRelationships": 52,
+    "candidateRelationships": 144,
     "promotedRelationships": 0,
     "historicalProposedDeferred": 9,
     "currentSourceTextFidelityDistribution": {
       "curated": 20,
-      "exact": 437
+      "exact": 521
     }
   },
   "sources": [
@@ -5033,11 +5037,12 @@
           "data/processed/source_indexes/sources/vm20-framework-overview.json",
           "data/processed/source_indexes/sources/vm20-remaining-prose-appendix-coverage.json",
           "data/processed/source_indexes/sources/vm20-section3c-hierarchical.json",
-          "data/processed/source_indexes/sources/vm21-sr-projection-entry.json"
+          "data/processed/source_indexes/sources/vm21-sr-projection-entry.json",
+          "data/processed/source_indexes/sources/vm31-current-manual.json"
         ],
         "classification": "not_in_canonical_classification",
         "relationshipRegistry": "candidate_registry: data/processed/relationship_registries/vm01-definition-relationship-candidates.json",
-        "chunkCount": 251,
+        "chunkCount": 335,
         "sourceTextFidelity": [
           "exact"
         ]
@@ -6574,6 +6579,7 @@
         "vm22-standard-projection-mortality-tables-2",
         "vm22-standard-projection-overview",
         "vm22-stochastic-exclusion",
+        "vm31-current-manual",
         "vm31-reporting-crossref",
         "vm31-reporting-definition"
       ],
@@ -6968,8 +6974,8 @@
       "sourceFamily": "valuation_manual_pdfs",
       "priority": "P0",
       "intendedStatus": "current",
-      "assessment": "reviewed_not_canonical",
-      "reason": "VM-31 is represented by reviewed slices but lacks a canonical package.",
+      "assessment": "canonical_review_candidate",
+      "reason": "Current 2026 VM-31 is represented by one substantially complete review-only package with 9 structural parents and 75 exact-text child units.",
       "evidenceSourceIds": [
         "supporting-vm01-definitions",
         "supporting-vm02-nonforfeiture",
@@ -7027,10 +7033,11 @@
         "vm22-standard-projection-mortality-tables-2",
         "vm22-standard-projection-overview",
         "vm22-stochastic-exclusion",
+        "vm31-current-manual",
         "vm31-reporting-crossref",
         "vm31-reporting-definition"
       ],
-      "nextAction": "Canonicalize the report requirements with reporting-obligation chunk types."
+      "nextAction": "Send the source package, retrieval evaluation, source QA, relationship registry, and review package for independent review; do not promote or begin another chapter until disposition."
     },
     {
       "targetId": "vm-g",

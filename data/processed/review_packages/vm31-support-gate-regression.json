@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "1.0",
+  "artifactType": "formal_requirement_support_gate_regression",
+  "status": "pass",
+  "productionEvidenceWindow": 3,
+  "genericBoundary": "A formal requirement request requires actual source text from the requested source inside ranks 1-3; related methodology or companion material is insufficient.",
+  "cases": [
+    {
+      "caseId": "vm20-methodology-alone-cannot-support-vm31-requirement",
+      "decision": {
+        "supportState": "unsupported",
+        "evidenceSufficient": false,
+        "reasonCode": "missing_requested_formal_requirement_source",
+        "reason": "The production evidence window does not contain actual source text from the requested formal requirement source (vm31-current-manual). Related methodology or companion evidence cannot substitute for it.",
+        "requestedInformationTypes": [
+          "formal_requirement"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm20-canonical-coverage-vm20-role-map-sections-3-4-5",
+            "sourceId": "vm20-canonical-coverage",
+            "score": 20,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": "The production evidence window does not contain actual source text from the requested formal requirement source (vm31-current-manual). Related methodology or companion evidence cannot substitute for it.",
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 20,
+          "matches": [
+            {
+              "chunkId": "vm20-canonical-coverage-vm20-role-map-sections-3-4-5",
+              "score": 20
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "expectedState": "unsupported",
+      "expectedReason": "missing_requested_formal_requirement_source"
+    },
+    {
+      "caseId": "vm31-evidence-at-rank-four-is-outside-production-window",
+      "decision": {
+        "supportState": "unsupported",
+        "evidenceSufficient": false,
+        "reasonCode": "missing_requested_formal_requirement_source",
+        "reason": "The production evidence window does not contain actual source text from the requested formal requirement source (vm31-current-manual). Related methodology or companion evidence cannot substitute for it.",
+        "requestedInformationTypes": [
+          "formal_requirement"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm20-canonical-coverage-vm20-role-map-sections-3-4-5",
+            "sourceId": "vm20-canonical-coverage",
+            "score": 20,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm20-canonical-coverage-vm20-role-map-sections-3-4-5",
+            "sourceId": "vm20-canonical-coverage",
+            "score": 19,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm20-canonical-coverage-vm20-role-map-sections-3-4-5",
+            "sourceId": "vm20-canonical-coverage",
+            "score": 18,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": "The production evidence window does not contain actual source text from the requested formal requirement source (vm31-current-manual). Related methodology or companion evidence cannot substitute for it.",
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 20,
+          "matches": [
+            {
+              "chunkId": "vm20-canonical-coverage-vm20-role-map-sections-3-4-5",
+              "score": 20
+            },
+            {
+              "chunkId": "vm20-canonical-coverage-vm20-role-map-sections-3-4-5",
+              "score": 19
+            },
+            {
+              "chunkId": "vm20-canonical-coverage-vm20-role-map-sections-3-4-5",
+              "score": 18
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "expectedState": "unsupported",
+      "expectedReason": "missing_requested_formal_requirement_source"
+    },
+    {
+      "caseId": "vm31-source-evidence-inside-top-three-supports-request",
+      "decision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Actual source text from the requested formal requirement source is present inside the production evidence window.",
+        "requestedInformationTypes": [
+          "formal_requirement"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm20-canonical-coverage-vm20-role-map-sections-3-4-5",
+            "sourceId": "vm20-canonical-coverage",
+            "score": 20,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm31-section-2-general-requirements-c-submission-timing",
+            "sourceId": "vm31-current-manual",
+            "score": 19,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 20,
+          "matches": [
+            {
+              "chunkId": "vm20-canonical-coverage-vm20-role-map-sections-3-4-5",
+              "score": 20
+            },
+            {
+              "chunkId": "vm31-section-2-general-requirements-c-submission-timing",
+              "score": 19
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "expectedState": "supported",
+      "expectedReason": "retrieved_evidence_matches_requested_information_type"
+    },
+    {
+      "caseId": "formal-source-without-requested-topic-does-not-support-claim",
+      "decision": {
+        "supportState": "unsupported",
+        "evidenceSufficient": false,
+        "reasonCode": "missing_required_requirement_terms",
+        "reason": "The retrieved formal-source evidence does not contain the required topic term(s): cryptoasset.",
+        "requestedInformationTypes": [
+          "formal_requirement"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm31-section-2-general-requirements-c-submission-timing",
+            "sourceId": "vm31-current-manual",
+            "score": 20,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": "The retrieved formal-source evidence does not contain the required topic term(s): cryptoasset.",
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 20,
+          "matches": [
+            {
+              "chunkId": "vm31-section-2-general-requirements-c-submission-timing",
+              "score": 20
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "expectedState": "unsupported",
+      "expectedReason": "missing_required_requirement_terms"
+    }
+  ],
+  "governance": {
+    "reviewOnly": true,
+    "promotionStatus": "not_promoted",
+    "promotionEligible": false
+  }
+}

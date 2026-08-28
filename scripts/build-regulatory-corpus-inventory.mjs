@@ -14,6 +14,7 @@ const vm01PromotionDecisionPath = 'data/manual-input/promotion-decisions/vm01-20
 const vm20StructuredTablePromotionDecisionPath = 'data/manual-input/promotion-decisions/vm20-appendix2-structured-table-promotion.json'
 const structuredTableDatasetPath = path.join(repoRoot, 'data', 'processed', 'structured_tables', 'vm20-appendix2-tables.json')
 const vm01RelationshipRegistryPath = path.join(repoRoot, 'data', 'processed', 'relationship_registries', 'vm01-definition-relationship-candidates.json')
+const vm31RelationshipRegistryPath = path.join(repoRoot, 'data', 'processed', 'relationship_registries', 'vm31-current-manual-relationship-candidates.json')
 
 const readJson = async (filePath) => JSON.parse(await fs.readFile(filePath, 'utf8'))
 const exists = async (filePath) => fs.access(filePath).then(() => true).catch(() => false)
@@ -39,7 +40,7 @@ const targetDefinitions = [
   ['vm-21', 'VM-21 Requirements for Principle-Based Reserves for Variable Annuities', 'valuation_manual_pdfs', 'P0', 'current', 'VM-21 has a reviewed controlled wave and one canonical projection-entry package, but not a complete chapter package.', 'Canonicalize the reviewed VM-21 wave with parent-child structure and table separation.'],
   ['vm-22', 'VM-22 Requirements for Principle-Based Reserves for Non-Variable Annuities', 'valuation_manual_pdfs', 'P0', 'current', 'VM-22 is represented in reviewed ignored batches but has no current canonical source package.', 'Canonicalize reviewed VM-22 sections after table and hedging boundaries are confirmed.'],
   ['vm-30', 'VM-30 Actuarial Opinion and Memorandum Requirements', 'valuation_manual_pdfs', 'P0', 'current', 'VM-30 appears in the supporting-wave plan and reviewed slices, but no canonical package is present.', 'Canonicalize the reporting requirements and preserve cross-references to VM-31.'],
-  ['vm-31', 'VM-31 PBR Actuarial Report Requirements', 'valuation_manual_pdfs', 'P0', 'current', 'VM-31 is represented by reviewed slices but lacks a canonical package.', 'Canonicalize the report requirements with reporting-obligation chunk types.'],
+  ['vm-31', 'VM-31 PBR Actuarial Report Requirements', 'valuation_manual_pdfs', 'P0', 'current', 'Current 2026 VM-31 is represented by one substantially complete review-only package with 9 structural parents and 75 exact-text child units.', 'Send the source package, retrieval evaluation, source QA, relationship registry, and review package for independent review; do not promote or begin another chapter until disposition.'],
   ['vm-g', 'VM-G Corporate Governance Requirements for PBR', 'valuation_manual_pdfs', 'P0', 'current', 'No source package or reviewed source ID for VM-G was found in the tracked POC or current batch manifests.', 'Confirm the authorized 2026 source and process it as a governance-specific chapter.'],
   ['vm-c', 'VM-C current Actuarial Guidelines appendix and AG mapping', 'valuation_manual_pdfs', 'P0', 'current', 'The repository has many AG review artifacts, but no current VM-C appendix package or authoritative mapping package.', 'Obtain/confirm the authorized appendix and map individually processed AGs without inferring legal effect.'],
   ['current-regulatory-tables', 'Current prescribed valuation, mortality, spread, and default tables', 'valuation_manual_pdfs', 'P0', 'current', 'The independently reviewed VM-20 Appendix 2 scope for official Tables A, F, G, H, I, J, and K is canonically promoted with workbook/sheet/cell citations; Tables B-E2 and all non-VM-20 tables remain gaps.', 'Retain the promoted VM-20 scope and continue other table families separately without reconstructing unavailable values.'],
@@ -182,6 +183,7 @@ const targetAssessment = (target, canonical, batchEvidence, reviewArtifacts, str
   if (id === 'valuation-manual-2026-complete' && canonicalMatches.length > 0) assessment = 'canonical_partial'
   if (id === 'vm-01' && canonicalMatches.some((pkg) => pkg.source.sourceId === 'vm01-definitions' && pkg.processing?.canonicality === 'canonical' && pkg.processing?.reviewOnly === true && pkg.processing?.promotionStatus === 'not_promoted')) assessment = 'canonical_review_candidate'
   if (id === 'vm-01' && canonicalMatches.some((pkg) => pkg.source.sourceId === 'vm01-definitions' && pkg.processing?.canonicality === 'canonical' && pkg.processing?.reviewOnly === false && pkg.processing?.promotionStatus === 'promoted')) assessment = 'canonical_complete'
+  if (id === 'vm-31' && canonicalMatches.some((pkg) => pkg.source.sourceId === 'vm31-current-manual' && pkg.processing?.canonicality === 'canonical' && pkg.processing?.reviewOnly === true && pkg.processing?.promotionStatus === 'not_promoted')) assessment = 'canonical_review_candidate'
   if (id === 'vm-20') {
     const promotedVm20 = canonical.filter((pkg) => pkg.source.authorityLevel === 'manual_section' && pkg.source.sourceId.startsWith('vm20-') && pkg.processing?.promotionStatus === 'promoted')
     if (promotedVm20.length === 6 && structuredTables?.governance?.promotionStatus === 'promoted') assessment = 'canonical_promoted_prose_and_tables'
@@ -199,7 +201,7 @@ const targetAssessment = (target, canonical, batchEvidence, reviewArtifacts, str
 }
 
 const buildInventory = async () => {
-  const [canonical, batchEvidence, reviewArtifacts, structuredTables, vm01Relationships] = await Promise.all([loadCanonical(), loadBatchEvidence(), loadReviewArtifacts(), exists(structuredTableDatasetPath).then((present) => present ? readJson(structuredTableDatasetPath) : null), exists(vm01RelationshipRegistryPath).then((present) => present ? readJson(vm01RelationshipRegistryPath) : null)])
+  const [canonical, batchEvidence, reviewArtifacts, structuredTables, vm01Relationships, vm31Relationships] = await Promise.all([loadCanonical(), loadBatchEvidence(), loadReviewArtifacts(), exists(structuredTableDatasetPath).then((present) => present ? readJson(structuredTableDatasetPath) : null), exists(vm01RelationshipRegistryPath).then((present) => present ? readJson(vm01RelationshipRegistryPath) : null), exists(vm31RelationshipRegistryPath).then((present) => present ? readJson(vm31RelationshipRegistryPath) : null)])
   const classificationPath = path.join(canonicalRoot, 'classification', 'source-classifications.json')
   const classifications = await exists(classificationPath) ? await readJson(classificationPath) : { classifications: [] }
   const classificationBySource = new Map(asArray(classifications.classifications).map((entry) => [entry.sourceId, entry]))
@@ -317,6 +319,10 @@ const buildInventory = async () => {
     vm01RetrievalUnits: canonical.find((pkg) => pkg.source.sourceId === 'vm01-definitions')?.chunks?.length ?? 0,
     vm01PromotionStatus: canonical.find((pkg) => pkg.source.sourceId === 'vm01-definitions')?.processing?.promotionStatus ?? 'not_present',
     vm01RelationshipCandidates: vm01Relationships?.relationshipCount ?? 0,
+    vm31StructuralParents: canonical.find((pkg) => pkg.source.sourceId === 'vm31-current-manual')?.source?.coverageDeclarations?.parentCount ?? 0,
+    vm31ChildUnits: canonical.find((pkg) => pkg.source.sourceId === 'vm31-current-manual')?.source?.coverageDeclarations?.childCount ?? 0,
+    vm31PromotionStatus: canonical.find((pkg) => pkg.source.sourceId === 'vm31-current-manual')?.processing?.promotionStatus ?? 'not_present',
+    vm31RelationshipCandidates: vm31Relationships?.relationshipCount ?? 0,
     promotedCanonicalPackages: canonical.filter((pkg) => pkg.processing?.promotionStatus === 'promoted').length,
     promotedCanonicalChunks: canonical.filter((pkg) => pkg.processing?.promotionStatus === 'promoted').reduce((sum, pkg) => sum + (pkg.chunks?.length ?? 0), 0),
     structuredTableLogicalTables: structuredTables?.summary?.ingestedLogicalTableCount ?? 0,
@@ -331,7 +337,7 @@ const buildInventory = async () => {
     reviewArtifactOnlySources: sources.filter((source) => source.availability.status === 'represented_only_by_review_artifact').length,
     p0Gaps: corpusTargets.filter((target) => target.priority === 'P0' && target.assessment !== 'canonical_complete').map((target) => target.targetId),
     p1Gaps: corpusTargets.filter((target) => target.priority === 'P1' && target.assessment !== 'canonical_complete').map((target) => target.targetId),
-    candidateRelationships: 23 + (vm01Relationships?.relationshipCount ?? 0),
+    candidateRelationships: 23 + (vm01Relationships?.relationshipCount ?? 0) + (vm31Relationships?.relationshipCount ?? 0),
     promotedRelationships: 0,
     historicalProposedDeferred: sources.filter((source) => source.currentness.includes('historical') || source.currentness.includes('proposed')).length + corpusTargets.filter((target) => ['historical', 'proposed'].includes(target.intendedStatus)).length,
     currentSourceTextFidelityDistribution: fidelityCounts
@@ -355,6 +361,7 @@ const buildMarkdown = (inventory) => {
     `- Promoted canonical packages / chunks: ${s.promotedCanonicalPackages} / ${s.promotedCanonicalChunks}`,
     `- Structured tables / versions / values: ${s.structuredTableLogicalTables} / ${s.structuredTableVersions} / ${s.structuredTableValues} (${s.structuredTablePromotionStatus})`,
     `- VM-01 definitions / retrieval units: ${s.vm01Definitions} / ${s.vm01RetrievalUnits} (${s.vm01PromotionStatus})`,
+    `- VM-31 structural parents / child units: ${s.vm31StructuralParents} / ${s.vm31ChildUnits} (${s.vm31PromotionStatus})`,
     `- Awaiting canonicalization: ${s.sourcesAwaitingCanonicalization}`,
     `- Awaiting human review: ${s.sourcesAwaitingHumanReview}`,
     `- Review-artifact-only sources: ${s.reviewArtifactOnlySources}`,
@@ -365,7 +372,7 @@ const buildMarkdown = (inventory) => {
   for (const target of inventory.corpusTargets) lines.push(`| ${target.priority} | ${target.title} | ${target.assessment} | ${target.evidenceSourceIds.slice(0, 5).join(', ') || 'none confirmed'} | ${target.nextAction} |`)
   lines.push('', '## Source records', '', '| Priority | Source ID | Title | Family | Currentness | Raw/source text | Review | Canonical | Chunks | Fidelity |', '| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |')
   for (const source of inventory.sources) lines.push(`| ${source.priority.level} | ${source.sourceId} | ${source.title.replace(/\|/g, '\\|')} | ${source.sourceFamily} | ${source.currentness} | ${source.availability.rawSource} / ${source.availability.sourceText} | ${source.review.reviewCompleted ? 'completed artifact' : 'not matched'} | ${source.review.canonical ? 'yes' : 'no'} | ${source.processing.chunkCount} | ${source.processing.sourceTextFidelity.join(', ') || 'not available'} |`)
-  lines.push('', '## Governance notes', '', '- The six VM-20 current-manual prose packages and the reviewed available Appendix 2 structured-table scope are canonically promoted under separate decision records.', '- VM-01 has 98 canonically promoted current-definition units under its own decision; its 29 relationship candidates remain pending, review-only, and unpromoted.', '- No inventory record is Copilot-export eligible; canonical promotion and downstream export are separate decisions.', '- Candidate relationship edges remain documentary, source-bound, pending human review, and not promoted.', '- Review summaries and self-review commentary are not verbatim source text.', '')
+  lines.push('', '## Governance notes', '', '- The six VM-20 current-manual prose packages and the reviewed available Appendix 2 structured-table scope are canonically promoted under separate decision records.', '- VM-01 has 98 canonically promoted current-definition units under its own decision; its 29 relationship candidates remain pending, review-only, and unpromoted.', '- VM-31 has one substantially complete current-manual review candidate with 9 structural parents and 75 exact-text child units; its package and 92 explicit-reference candidates remain unpromoted pending independent review.', '- No inventory record is Copilot-export eligible; canonical promotion and downstream export are separate decisions.', '- Candidate relationship edges remain documentary, source-bound, pending human review, and not promoted.', '- Review summaries and self-review commentary are not verbatim source text.', '')
   return lines.join('\n')
 }
 
@@ -380,7 +387,7 @@ const buildGapReport = (inventory) => {
 
 const buildBacklog = (inventory) => {
   const ordered = inventory.corpusTargets.filter((target) => target.assessment !== 'canonical_complete').sort((a, b) => `${a.priority}-${a.targetId}`.localeCompare(`${b.priority}-${b.targetId}`))
-  const lines = ['# Regulatory Canonicalization Backlog', '', 'The VM-01 current-definition scope, VM-20 current-manual prose scope, and reviewed available Appendix 2 structured-table scope are promoted under separate decisions. All other items remain review-only until independent human review and explicit promotion. VM-01 relationship candidates remain a separate review-only governance item. The sequence favors incomplete core packages before supporting sources.', '', '| Order | Priority | Target | Current state | Safe next step |', '| ---: | --- | --- | --- | --- |']
+  const lines = ['# Regulatory Canonicalization Backlog', '', 'The VM-01 current-definition scope, VM-20 current-manual prose scope, and reviewed available Appendix 2 structured-table scope are promoted under separate decisions. VM-31 is a substantially complete review candidate but remains unpromoted. All other items remain review-only until independent human review and explicit promotion. VM-01 and VM-31 relationship candidates remain separate review-only governance items. The sequence favors independent disposition of completed review candidates before another source chapter begins.', '', '| Order | Priority | Target | Current state | Safe next step |', '| ---: | --- | --- | --- | --- |']
   ordered.forEach((target, index) => lines.push(`| ${index + 1} | ${target.priority} | ${target.title} | ${target.assessment} | ${target.nextAction} |`))
   lines.push('', '## Chunking acceptance criteria', '', '- Use document → chapter → section → subsection → paragraph/requirement hierarchy.', '- Use parent chunks for coherent structural units and child chunks for precise retrieval; preserve `parentChunkId`, `precedingChunkId`, `followingChunkId`, `headingPath`, and a structural locator.', '- Keep requirement, exception, qualification, condition, definition, and table headings together when they are directly associated.', '- Use token splitting only as a fallback within an unusually large structural unit.', '- Keep tables in a structured-table profile, separate from prose chunking.', '- Retrieval should support child retrieval, reranking, parent/adjacent expansion, and an evidence package.', '')
   return lines.join('\n')
@@ -420,6 +427,11 @@ const buildCompleteness = (inventory) => {
     '- Formal-definition requests for undefined or ambiguous terms abstain rather than substituting related evidence.',
     '- Canonical `definedTerms` now contains only 98 formal terms plus 27 source-explicit aliases; 17 generated lookup variants remain confined to non-authoritative retrieval metadata.',
     '- The focused case-level retrieval artifact contains 21 inspectable queries, including DR, SR, NPR, GIC, IUL, cross-page, ambiguous, undefined-term, and unavailable-version cases.', '',
+    '## VM-31 coverage checkpoint', '',
+    `- Current 2026 VM-31 structural parents / child units: ${s.vm31StructuralParents} / ${s.vm31ChildUnits}; status ${s.vm31PromotionStatus}.`,
+    `- VM-31 explicit-reference candidates: ${s.vm31RelationshipCandidates}; all remain pending, review-only, and not promoted.`,
+    '- Focused VM-31 retrieval contains 21 inspectable cases covering report obligations, timing, retention, applicability, certifications, exhibits, exceptions, cross-references, unsupported substitutions, ambiguity, and current-authority preference.',
+    '- VM-31 remains blocked from learner, app, RAG, vector, and Copilot use pending independent review and an explicit promotion decision.', '',
     '## Interpretation', '',
     '- “Canonical promoted” applies only where an explicit promotion decision names the source package or structured-table scope.',
     '- Structured table data remains separate from prose even after its own canonical promotion.',

@@ -1,0 +1,240 @@
+{
+  "schemaVersion": "1.0",
+  "qaId": "vm31-current-manual-source-qa-2026",
+  "status": "pass",
+  "authoritativeSource": {
+    "sourceEditionId": "NAIC-VALUATION-MANUAL-2026",
+    "sourceVersionIdentifier": "2026 NAIC Valuation Manual",
+    "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+    "pageRange": {
+      "start": 341,
+      "end": 386
+    },
+    "localPdfHashVerified": true
+  },
+  "extraction": {
+    "batchIds": [
+      "batch-019",
+      "batch-020",
+      "batch-021"
+    ],
+    "extractionMethod": "PyPDF2 page text retained in batches 019-021",
+    "aggregateExtractionSha256": "e30c0c0af7db1cf04a3c71677758f6c868cbdd99c82e94de99c34944bd46859c",
+    "visualReview": {
+      "pagesRenderedAndReviewed": "341-387",
+      "vm31ContentPages": "341-385",
+      "intentionalBlankPage": 386,
+      "followingChapterPage": 387,
+      "followingChapter": "VM-50",
+      "status": "pass"
+    }
+  },
+  "hierarchy": {
+    "parentCount": 9,
+    "childCount": 75,
+    "totalChunkCount": 84,
+    "parentCoverageContinuous": true,
+    "numberedRequirementsKeptWithNestedItems": true,
+    "adjacencyComplete": true
+  },
+  "sourceFidelity": {
+    "distribution": {
+      "exact": 84
+    },
+    "exactChunkCount": 84,
+    "generatedMetadataSeparate": true,
+    "sourceTextRewriteCount": 0,
+    "visualTranscriptionCount": 0
+  },
+  "sectionCoverage": [
+    {
+      "parentId": "vm31-section-1-purpose",
+      "title": "Section 1: Purpose",
+      "pageStart": 341,
+      "pageEnd": 341,
+      "childCount": 1,
+      "sourceTextSha256": "658958b41cd038b2bb32fa93c827c062b592b47f06b6b9b00218945107810d84"
+    },
+    {
+      "parentId": "vm31-section-2-general-requirements",
+      "title": "Section 2: General Requirements",
+      "pageStart": 341,
+      "pageEnd": 342,
+      "childCount": 5,
+      "sourceTextSha256": "71a35b2716ebe41820de84a6eeddb008a63db724339b50c9a98a74cbb0801af4"
+    },
+    {
+      "parentId": "vm31-section-3-a-report-order-and-applicability",
+      "title": "Section 3.A: Report order and applicability",
+      "pageStart": 342,
+      "pageEnd": 342,
+      "childCount": 1,
+      "sourceTextSha256": "e2290dd06ab1574b009578dde5c13105e3826ee49a18f22435367445b4c7e3a8"
+    },
+    {
+      "parentId": "vm31-section-3-b-executive-summary",
+      "title": "Section 3.B: Executive Summary",
+      "pageStart": 342,
+      "pageEnd": 343,
+      "childCount": 7,
+      "sourceTextSha256": "fbe74e4ae9d2d0644c1264ec3e77daaeb96960e2f6896dc848921ba0b1524a7f"
+    },
+    {
+      "parentId": "vm31-section-3-c-life-summary",
+      "title": "Section 3.C: Life Summary",
+      "pageStart": 343,
+      "pageEnd": 344,
+      "childCount": 11,
+      "sourceTextSha256": "66e7e6b6ec8ba204b23852f2b2d1275b77b8b334451f8fc1e3a89c584dfd653d"
+    },
+    {
+      "parentId": "vm31-section-3-d-life-report",
+      "title": "Section 3.D: Life Report",
+      "pageStart": 344,
+      "pageEnd": 363,
+      "childCount": 16,
+      "sourceTextSha256": "1f1e5939d4ffdce74345cb93e55aafddc7748b0263d99a3fa7eb0f2c97ce33a7"
+    },
+    {
+      "parentId": "vm31-section-3-e-annuity-summary",
+      "title": "Section 3.E: Annuity Summary",
+      "pageStart": 363,
+      "pageEnd": 366,
+      "childCount": 12,
+      "sourceTextSha256": "59b24c13bda795b0f27f0b15a90afbf96fdbe45a19d3afda31a0248415a88823"
+    },
+    {
+      "parentId": "vm31-section-3-f-annuity-report",
+      "title": "Section 3.F: Annuity Report",
+      "pageStart": 366,
+      "pageEnd": 385,
+      "childCount": 21,
+      "sourceTextSha256": "a890251052af2a9f723ea512186a7c8517cbb86867952109d59f086674298150"
+    },
+    {
+      "parentId": "vm31-closing-boundary",
+      "title": "VM-31 closing boundary before VM-50",
+      "pageStart": 386,
+      "pageEnd": 386,
+      "childCount": 1,
+      "sourceTextSha256": "77aa85c7af242bc1dd483847773c54e7b24e87132e536cf17c9802784d397d13"
+    }
+  ],
+  "provisionTypeCounts": {
+    "reporting_requirement": 74,
+    "documentation_requirement": 70,
+    "applicability_or_exception": 40,
+    "cross_reference": 53,
+    "actuarial_responsibility": 46,
+    "company_responsibility": 49,
+    "required_analysis": 28,
+    "required_disclosure": 46,
+    "timing_or_frequency": 23,
+    "required_exhibit": 29,
+    "guidance_note_present": 6,
+    "certification": 4,
+    "boundary_control": 1
+  },
+  "contentAreaAudit": [
+    {
+      "contentArea": "scope_and_applicability",
+      "status": "covered",
+      "representativeChunkId": "vm31-section-2-general-requirements-a-annual-report-applicability"
+    },
+    {
+      "contentArea": "required_actuarial_reports",
+      "status": "covered",
+      "representativeChunkId": "vm31-section-2-general-requirements-a-annual-report-applicability"
+    },
+    {
+      "contentArea": "report_content",
+      "status": "covered",
+      "representativeChunkId": "vm31-section-3-a-report-order-and-applicability-report-order-and-applicability"
+    },
+    {
+      "contentArea": "methodology_documentation",
+      "status": "covered",
+      "representativeChunkId": "vm31-section-3-f-annuity-report-2-cash-flow-models"
+    },
+    {
+      "contentArea": "assumption_documentation_and_margins",
+      "status": "covered",
+      "representativeChunkId": "vm31-section-3-d-life-report-1-assumptions-and-margins"
+    },
+    {
+      "contentArea": "models",
+      "status": "covered",
+      "representativeChunkId": "vm31-section-3-d-life-report-2-cash-flow-models"
+    },
+    {
+      "contentArea": "assets",
+      "status": "covered",
+      "representativeChunkId": "vm31-section-3-f-annuity-report-4-starting-assets"
+    },
+    {
+      "contentArea": "reinsurance",
+      "status": "covered",
+      "representativeChunkId": "vm31-section-3-f-annuity-report-11-reinsurance"
+    },
+    {
+      "contentArea": "aggregation",
+      "status": "covered",
+      "representativeChunkId": "vm31-section-3-f-annuity-report-16-additional-information"
+    },
+    {
+      "contentArea": "sensitivity_and_testing",
+      "status": "covered",
+      "representativeChunkId": "vm31-section-3-f-annuity-report-16-additional-information"
+    },
+    {
+      "contentArea": "governance",
+      "status": "covered",
+      "representativeChunkId": "vm31-section-3-b-executive-summary-6-governance"
+    },
+    {
+      "contentArea": "certifications",
+      "status": "covered",
+      "representativeChunkId": "vm31-section-3-d-life-report-14-certifications"
+    },
+    {
+      "contentArea": "supporting_documentation",
+      "status": "covered",
+      "representativeChunkId": "vm31-section-2-general-requirements-d-seven-year-retention"
+    },
+    {
+      "contentArea": "required_exhibits_and_tables",
+      "status": "covered",
+      "representativeChunkId": "vm31-section-3-c-life-summary-8-supplement-part-1"
+    },
+    {
+      "contentArea": "retention_and_submission",
+      "status": "covered",
+      "representativeChunkId": "vm31-section-2-general-requirements-c-submission-timing"
+    },
+    {
+      "contentArea": "cross_references",
+      "status": "covered",
+      "representativeChunkId": "vm31-section-3-d-life-report-10-exclusion-tests"
+    },
+    {
+      "contentArea": "exceptions_and_qualifications",
+      "status": "covered",
+      "representativeChunkId": "vm31-section-3-a-report-order-and-applicability-report-order-and-applicability"
+    }
+  ],
+  "unresolvedGaps": [
+    "Independent source and actuarial review is required before promotion.",
+    "Publication and effective dates are not inferred beyond the established 2026 edition identity.",
+    "No synthetic historical VM-31 source was created for authority testing."
+  ],
+  "governance": {
+    "reviewOnly": true,
+    "promotionStatus": "not_promoted",
+    "promotionEligible": false,
+    "learnerFacingAllowed": false,
+    "appReadyAllowed": false,
+    "ragReadyAllowed": false,
+    "vectorEligible": false,
+    "copilotExportEligible": false
+  }
+}

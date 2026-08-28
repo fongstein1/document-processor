@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "reportId": "vm31-current-manual-validation-2026",
+  "status": "pass",
+  "sourceIdentity": {
+    "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+    "locallyVerifiedSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+    "sourceEditionId": "NAIC-VALUATION-MANUAL-2026",
+    "pageRange": {
+      "start": 341,
+      "end": 386
+    },
+    "aggregateExtractionSha256": "e30c0c0af7db1cf04a3c71677758f6c868cbdd99c82e94de99c34944bd46859c"
+  },
+  "checks": {
+    "packageCount": 1,
+    "parents": 9,
+    "children": 75,
+    "totalChunks": 84,
+    "firstStageRetrievalUnits": 74,
+    "exactSourceChunks": 84,
+    "sourceTextRewrites": 0,
+    "guidanceNoteChildren": 6,
+    "contentAreasCovered": 17,
+    "relationshipCandidates": 92,
+    "focusedQueries": 21,
+    "supportedQueries": 18,
+    "supportedTop1": 15,
+    "supportedStrictTop3": 18,
+    "unsupportedCorrect": 2,
+    "ambiguitySafe": 1,
+    "currentAuthorityTop1": 18,
+    "supportGateRegressions": 4
+  },
+  "regressionIntegrity": {
+    "vm01SourceTextAggregateSha256": "04fecfc622ee792dca2f994f3d7eb6ebf510bd533bd7be9798b4604a70b8ef98",
+    "vm20PromotedSourceTextAggregateSha256": "c32c9a1e976a0635707af9b82e3847152b4611257147d12f14f29c4a5b1274c6",
+    "vm20StructuredTableFileSha256": "2b86d0929da8f8dfc85f9d3a123311166d136283ed33afeca5ded4c32f0d0f3f",
+    "status": "unchanged"
+  },
+  "governance": {
+    "reviewOnly": true,
+    "promotionStatus": "not_promoted",
+    "promotionEligible": false,
+    "learnerFacingAllowed": false,
+    "appReadyAllowed": false,
+    "ragReadyAllowed": false,
+    "vectorEligible": false,
+    "copilotExportEligible": false
+  }
+}
