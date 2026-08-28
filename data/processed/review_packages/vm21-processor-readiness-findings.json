@@ -1,0 +1,139 @@
+{
+  "schemaVersion": "1.0",
+  "assessmentId": "vm21-generic-processor-readiness-2026",
+  "overallRating": "AMBER",
+  "ratingReason": "The generic architecture successfully reused overlapping reviewed batches, preserved complete hierarchical source coverage, and enforced review-only evidence boundaries. Dense tables, formulas, and actuarial classifications still require targeted independent review before promotion.",
+  "findings": [
+    {
+      "findingId": "vm21-readiness-001",
+      "source": "vm21-current-manual batches 022-037",
+      "genericOrSourceSpecific": "generic",
+      "classification": "architecture_improvement",
+      "severity": "resolved",
+      "finding": "Overlapping reviewed batches previously had no full-chapter reconciliation step.",
+      "detectionMethod": "deterministic page-marker inventory and duplicate-page SHA/content comparison",
+      "existingValidatorCaught": false,
+      "newValidatorAdded": true,
+      "response": "The reusable loader deduplicates page markers, requires exact equality for every overlap, rejects missing pages, and rejects page 226 boundary crossing.",
+      "residualHumanReviewNeed": "none for page completeness or overlap equality",
+      "evidence": {
+        "overlapPages": [
+          151,
+          218
+        ],
+        "allExact": true
+      }
+    },
+    {
+      "findingId": "vm21-readiness-002",
+      "source": "generic canonical package builder",
+      "genericOrSourceSpecific": "generic",
+      "classification": "architecture_improvement",
+      "severity": "resolved",
+      "finding": "An explicitly empty requirements array could be repopulated from controlled tags, inflating definition chunks into freestanding obligations.",
+      "detectionMethod": "new derivative-metadata validator rejected definition chunks with non-empty requirements",
+      "existingValidatorCaught": false,
+      "newValidatorAdded": true,
+      "response": "Added an opt-in preserveEmptyRequirements path to the generic builder and validation that definition metadata does not inflate into requirements.",
+      "residualHumanReviewNeed": "sample semantic review that definitions were correctly identified"
+    },
+    {
+      "findingId": "vm21-readiness-003",
+      "source": "generic canonical package validation layer",
+      "genericOrSourceSpecific": "generic",
+      "classification": "architecture_improvement",
+      "severity": "resolved",
+      "finding": "Canonical package checks needed reusable source-hash, hierarchy, adjacency, citation, source-explicit-term, derivative-metadata, and review-governance coverage.",
+      "detectionMethod": "requirements-to-validator coverage audit",
+      "existingValidatorCaught": "partial",
+      "newValidatorAdded": true,
+      "response": "Added scripts/lib/canonical-package-validation.mjs and integrated it into VM-21 validation without weakening existing source-specific checks.",
+      "residualHumanReviewNeed": "semantic classifications still require exception/sample review"
+    },
+    {
+      "findingId": "vm21-readiness-004",
+      "source": "authoritative 2026 VM-21 PDF text layer",
+      "genericOrSourceSpecific": "source_specific",
+      "classification": "source_specific_quality_observation",
+      "severity": "non_blocking",
+      "finding": "The retained PDF text layer contains visual spacing and hyphen artifacts.",
+      "detectionMethod": "boundary rendering and extraction-text inspection",
+      "existingValidatorCaught": true,
+      "newValidatorAdded": false,
+      "response": "No source rewriting was performed. Search normalization remains derivative, and exact source excerpts plus hashes control.",
+      "residualHumanReviewNeed": "visual sampling where layout affects meaning"
+    },
+    {
+      "findingId": "vm21-readiness-005",
+      "source": "VM-21 Sections 6-9 and 13",
+      "genericOrSourceSpecific": "source_specific",
+      "classification": "human_review_requirement",
+      "severity": "promotion_blocker",
+      "finding": "VM-21 includes dense factor tables, matrices, nested prescribed assumptions, and formula sequences.",
+      "detectionMethod": "structured-evidence scan plus chapter review",
+      "existingValidatorCaught": true,
+      "newValidatorAdded": false,
+      "response": "Created a source-bound structured-evidence inventory; numeric recomputation and semantic approval are deferred to targeted independent review.",
+      "residualHumanReviewNeed": "targeted visual and actuarial review of dimensions, values, notes, and formula semantics"
+    },
+    {
+      "findingId": "vm21-readiness-006",
+      "source": "VM-21 processing architecture",
+      "genericOrSourceSpecific": "generic",
+      "classification": "no_change_needed",
+      "severity": "resolved",
+      "finding": "No new document-specific core schema fork or second retrieval architecture was needed.",
+      "detectionMethod": "architecture diff review",
+      "existingValidatorCaught": "not_applicable",
+      "newValidatorAdded": false,
+      "response": "The implementation extends the existing canonical package, generic support gate, relationship registry, retrieval evaluator, and governance model.",
+      "residualHumanReviewNeed": "none"
+    }
+  ],
+  "humanReviewBurden": {
+    "automaticallyValidated": [
+      "source identity and SHA-256",
+      "83-page boundary completeness",
+      "exact overlap equality and deduplication",
+      "deterministic source-text SHA values",
+      "parent/child links and adjacency",
+      "source-explicit defined terms",
+      "literal relationship-label fidelity",
+      "strict top-three retrieval metrics",
+      "wrong-source, rank-four, wrong-topic, and unavailable-version support behavior",
+      "review-only and downstream-governance boundaries"
+    ],
+    "humanReviewRequired": [
+      "actuarial semantic accuracy of provision classifications",
+      "table row/column dimensions, units, displayed values, notes, and footnotes",
+      "formula and model-sequence meaning",
+      "conservatism and completeness of relationship candidates",
+      "promotion decision"
+    ],
+    "newGenericFailureClassCount": 2,
+    "repeatAlreadyKnownClassCount": 7,
+    "newGenericFailureClasses": [
+      "overlapping batch pages require exact deterministic reconciliation before canonical assembly",
+      "explicitly empty semantic arrays must not be repopulated by fallback derivation"
+    ],
+    "repeatAlreadyKnownClasses": [
+      "source identity and boundary control",
+      "source-text hash fidelity",
+      "definition versus requirement discipline",
+      "literal relationship-label fidelity",
+      "wrong-source and wrong-topic support rejection",
+      "strict rank-three production window",
+      "promotion versus downstream eligibility separation"
+    ]
+  },
+  "genericRegressionEvidence": {
+    "supportGatePath": "data/processed/review_packages/vm21-support-gate-regression.json",
+    "supportCasesPassed": "4/4",
+    "focusedRetrievalPath": "data/processed/review_packages/vm21-focused-retrieval-evaluation.json",
+    "allFocusedCasesPassed": true
+  },
+  "governance": {
+    "reviewOnly": true,
+    "promotionStatus": "not_promoted"
+  }
+}

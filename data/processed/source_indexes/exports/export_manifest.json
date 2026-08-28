@@ -5,7 +5,7 @@
   "repositoryName": "Document Processor",
   "generatedAt": "2026-07-22T22:52:46.811Z",
   "sourcePackageCount": 24,
-  "chunkCount": 592,
+  "chunkCount": 666,
   "exportFiles": {
     "repositoryManifestPath": "data/processed/source_indexes/repository-manifest.json",
     "exportManifestPath": "data/processed/source_indexes/exports/export_manifest.json",

@@ -9,18 +9,19 @@ This is the planning inventory for the US life and annuity valuation-regulation 
 - Source documents inventoried: 105
 - Records with declared external raw source: 71
 - Review indexes: 97
-- Self-reviews: 94
+- Self-reviews: 95
 - Canonical source packages: 24
-- Canonical chunks: 592
+- Canonical chunks: 666
 - Promoted canonical packages / chunks: 9 / 382
 - Structured tables / versions / values: 7 / 29 / 7022 (promoted)
 - VM-01 definitions / retrieval units: 98 / 98 (promoted)
+- VM-21 structural parents / child units: 15 / 63 (not_promoted)
 - VM-30 structural parents / child units: 8 / 43 (promoted)
 - VM-31 structural parents / child units: 9 / 75 (promoted)
 - Awaiting canonicalization: 96
 - Awaiting human review: 1
 - Review-artifact-only sources: 34
-- Candidate relationships: 160; promoted: 0
+- Candidate relationships: 180; promoted: 0
 
 ## Corpus targets
 
@@ -29,7 +30,7 @@ This is the planning inventory for the US life and annuity valuation-regulation 
 | P0 | Complete current 2026 Valuation Manual representation | canonical_partial | ag55-appendix-new-york-7-scenarios, ag55-attribution-aggregation, ag55-cash-flow-testing-details, ag55-definitions-core-terms, ag55-opening-effective-date | Canonicalize the complete manual by chapter with source-bound hierarchy and a separate table profile. |
 | P0 | VM-01 Definitions | canonical_complete | supporting-vm01-definitions, supporting-vm02-nonforfeiture, supporting-vm25-health-reserves, supporting-vm26-credit-disability, supporting-vm30-detail | Retain the approved definition scope and track the 29 relationship candidates as a separate review-only backlog item. |
 | P0 | VM-20 Requirements for Principle-Based Reserves for Life Products | canonical_promoted_prose_and_tables | supporting-vm01-definitions, supporting-vm02-nonforfeiture, supporting-vm25-health-reserves, supporting-vm26-credit-disability, supporting-vm30-detail | Retain the approved prose/table scopes and track unavailable Tables B, C, D, E1, and E2 without inference. |
-| P0 | VM-21 Requirements for Principle-Based Reserves for Variable Annuities | canonical_partial | ag52-early-adoption-text, supporting-vm01-definitions, supporting-vm02-nonforfeiture, supporting-vm25-health-reserves, supporting-vm26-credit-disability | Canonicalize the reviewed VM-21 wave with parent-child structure and table separation. |
+| P0 | VM-21 Requirements for Principle-Based Reserves for Variable Annuities | canonical_review_candidate | ag52-early-adoption-text, supporting-vm01-definitions, supporting-vm02-nonforfeiture, supporting-vm25-health-reserves, supporting-vm26-credit-disability | Complete targeted independent review and record a promotion decision; keep relationships and downstream uses separately governed. |
 | P0 | VM-22 Requirements for Principle-Based Reserves for Non-Variable Annuities | reviewed_not_canonical | supporting-vm01-definitions, supporting-vm02-nonforfeiture, supporting-vm25-health-reserves, supporting-vm26-credit-disability, supporting-vm30-detail | Canonicalize reviewed VM-22 sections after table and hedging boundaries are confirmed. |
 | P0 | VM-30 Actuarial Opinion and Memorandum Requirements | canonical_complete | supporting-vm01-definitions, supporting-vm02-nonforfeiture, supporting-vm25-health-reserves, supporting-vm26-credit-disability, supporting-vm30-detail | Retain the approved current-manual scope and track the 16 relationship candidates as a separate review-only backlog item. |
 | P0 | VM-31 PBR Actuarial Report Requirements | canonical_complete | supporting-vm01-definitions, supporting-vm02-nonforfeiture, supporting-vm25-health-reserves, supporting-vm26-credit-disability, supporting-vm30-detail | Retain the approved current-manual scope and track the 92 relationship candidates as a separate review-only backlog item. |
@@ -139,7 +140,7 @@ This is the planning inventory for the US life and annuity valuation-regulation 
 | P2 | ltci_practice_note | LTCI Practice Note Review Index | practice_notes | current_or_unconfirmed | not_confirmed_in_repo / review_artifact_only | completed artifact | no | 0 | not available |
 | P2 | model_governance_practice_note | Model Governance Practice-Note Review Index | practice_notes | current_or_unconfirmed | not_confirmed_in_repo / review_artifact_only | completed artifact | no | 0 | not available |
 | P2 | model_regulation_xxx_practice_note | Model Regulation XXX Practice-Note Review Index | practice_notes | current_or_unconfirmed | not_confirmed_in_repo / review_artifact_only | completed artifact | no | 0 | not available |
-| P0 | pbr-data-valuation-manual-2026-pdf | Valuation Manual | valuation_manual_pdfs | current_or_unconfirmed | declared_external / extraction_output_or_review_packet | not matched | yes | 386 | exact |
+| P0 | pbr-data-valuation-manual-2026-pdf | Valuation Manual | valuation_manual_pdfs | current_or_unconfirmed | declared_external / extraction_output_or_review_packet | not matched | yes | 460 | exact |
 | P2 | reg-141-11-nycrr-s128-reinsurance-pdf | Commutation of Reinsurance Agreements | ny_regulations | current_or_unconfirmed | declared_external / extraction_output_or_review_packet | completed artifact | no | 0 | not available |
 | P2 | reg-210-11-nycrr-s048-pdf | Life Insurance and Annuity Non-Guaranteed Elements | ny_regulations | current_or_unconfirmed | declared_external / extraction_output_or_review_packet | completed artifact | yes | 3 | exact |
 | P2 | reg056 | Regulation 56 Review Index | ny_regulations | current_or_unconfirmed | not_confirmed_in_repo / review_artifact_only | completed artifact | no | 0 | not available |

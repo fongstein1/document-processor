@@ -1,5 +1,27 @@
 # Session Log
 
+## 2026-08-28 VM-21 canonical candidate and processor-readiness proof
+
+- Reused all reviewed VM-21 batches 022-037 without source re-extraction,
+  reconciled 83 unique PDF pages, and verified the two overlapping pages
+  exactly before deduplication.
+- Replaced the four-placeholder VM-21 source slice with one complete
+  review-only current-manual package containing 15 parents, 63 children, and
+  78 exact-text chunks across PDF pages 143-225.
+- Added 20 explicit-reference relationship candidates, 27 source-bound
+  structured table/formula records, 30 focused retrieval cases, four generic
+  support-gate regressions, source QA, deterministic validation, and an
+  independent-review prompt.
+- Added reusable canonical-package checks for source hashes, citations,
+  hierarchy, adjacency, parent retrieval suppression, source-explicit terms,
+  derivative metadata, and governance. Corrected the generic builder so an
+  explicitly empty requirements array cannot be repopulated from tags.
+- Rated processor readiness AMBER: automated controls cover known integrity,
+  retrieval, and governance failures, while dense actuarial tables, formulas,
+  and semantic classifications still require targeted independent review.
+- Kept VM-21 review-only, not promoted, and blocked from all downstream uses;
+  promoted VM-01, VM-20, VM-30, and VM-31 evidence passed regression checks.
+
 ## 2026-08-28 VM-30 canonical promotion
 
 - Recorded the final independent `APPROVE FOR CANONICAL PROMOTION` disposition

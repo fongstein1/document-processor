@@ -572,8 +572,8 @@
     },
     "corpusDeduplication": {
       "topN": 5,
-      "rawTopKCollisionCount": 43,
-      "rawTopKCollisionGroupCount": 18,
+      "rawTopKCollisionCount": 41,
+      "rawTopKCollisionGroupCount": 17,
       "postDeduplicationCollisionCount": 0,
       "affectedQueries": [
         {
@@ -779,19 +779,6 @@
             {
               "parentChunkId": "vm20-canonical-coverage-vm20-section7-model-structure",
               "childChunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-002"
-            }
-          ]
-        },
-        {
-          "queryId": "q-vm21-sr-projection-entry",
-          "collisionGroups": [
-            {
-              "parentChunkId": "vm20-practice-note-companion-vm20-pn-sr-overview",
-              "childChunkId": "vm20-practice-note-companion-vm20-pn-sr-overview-child-002"
-            },
-            {
-              "parentChunkId": "vm20-practice-note-companion-vm20-pn-sr-overview",
-              "childChunkId": "vm20-practice-note-companion-vm20-pn-sr-overview-child-003"
             }
           ]
         },

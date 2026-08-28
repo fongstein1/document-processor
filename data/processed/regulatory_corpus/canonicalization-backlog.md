@@ -1,13 +1,13 @@
 # Regulatory Canonicalization Backlog
 
-The VM-01 current-definition scope, VM-20 current-manual prose scope, reviewed available Appendix 2 structured-table scope, and current VM-30 and VM-31 scopes are promoted under separate decisions. VM-01, VM-30, and VM-31 relationship candidates remain separate review-only governance items. The next P0 proving-ground chapter is VM-21.
+The VM-01 current-definition scope, VM-20 current-manual prose scope, reviewed available Appendix 2 structured-table scope, and current VM-30 and VM-31 scopes are promoted under separate decisions. VM-21 is a substantially complete review-only canonical candidate pending independent review. VM-01, VM-21, VM-30, and VM-31 relationship candidates remain separate review-only governance items. After VM-21 review and any promotion decision, the next P0 proving-ground chapter is VM-22.
 
 | Order | Priority | Target | Current state | Safe next step |
 | ---: | --- | --- | --- | --- |
 | 1 | P0 | Current prescribed valuation, mortality, spread, and default tables | canonical_promoted_partial_vm20_appendix2 | Retain the promoted VM-20 scope and continue other table families separately without reconstructing unavailable values. |
 | 2 | P0 | Complete current 2026 Valuation Manual representation | canonical_partial | Canonicalize the complete manual by chapter with source-bound hierarchy and a separate table profile. |
 | 3 | P0 | VM-20 Requirements for Principle-Based Reserves for Life Products | canonical_promoted_prose_and_tables | Retain the approved prose/table scopes and track unavailable Tables B, C, D, E1, and E2 without inference. |
-| 4 | P0 | VM-21 Requirements for Principle-Based Reserves for Variable Annuities | canonical_partial | Canonicalize the reviewed VM-21 wave with parent-child structure and table separation. |
+| 4 | P0 | VM-21 Requirements for Principle-Based Reserves for Variable Annuities | canonical_review_candidate | Complete targeted independent review and record a promotion decision; keep relationships and downstream uses separately governed. |
 | 5 | P0 | VM-22 Requirements for Principle-Based Reserves for Non-Variable Annuities | reviewed_not_canonical | Canonicalize reviewed VM-22 sections after table and hedging boundaries are confirmed. |
 | 6 | P0 | VM-C current Actuarial Guidelines appendix and AG mapping | reviewed_not_canonical | Obtain/confirm the authorized appendix and map individually processed AGs without inferring legal effect. |
 | 7 | P0 | VM-G Corporate Governance Requirements for PBR | canonical_partial | Confirm the authorized 2026 source and process it as a governance-specific chapter. |

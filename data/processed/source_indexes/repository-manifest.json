@@ -593,62 +593,110 @@
       "notes": "Expanded hierarchical companion coverage for the reviewed VM-20 practice-note wave. Non-binding, historical, review-only, and not promoted."
     },
     {
-      "sourceIndexId": "source-index-vm21-sr-projection-entry",
+      "sourceIndexId": "source-index-vm21-current-manual",
       "classification": {
         "domainId": "naic_regulatory",
         "subdomainId": null,
         "documentType": "valuation_manual_section",
-        "purpose": "Projection-entry slice from the controlled VM-21 wave.",
-        "intendedAudience": "Valuation, regulatory, and governance reviewers",
+        "purpose": "Authoritative current variable-annuity principle-based reserve requirements",
+        "intendedAudience": "Valuation, modeling, reporting, governance, and retrieval reviewers",
         "authoritySourceType": "regulatory",
-        "confidentiality": "internal",
+        "confidentiality": "public",
         "publicationDate": null,
         "effectiveDate": null,
-        "version": null,
-        "approvalStatus": "reviewed",
+        "version": "2026 Edition",
+        "approvalStatus": "under_review",
         "language": "en",
-        "recommendedProfile": "regulatory",
-        "recommendedChunkingStrategy": "heading_first",
+        "recommendedProfile": "calculation_and_assumptions",
+        "recommendedChunkingStrategy": "section_parent_to_complete_lettered_subsection_child",
         "confidence": "high",
         "unresolvedQuestions": [
-          "Line references are unavailable and page locators are primary."
+          "Independent review is required before canonical promotion.",
+          "Relationship candidates and downstream learner, application, RAG, vector, and Copilot eligibility require separate decisions."
         ],
-        "notes": "Projection-entry slice from the controlled VM-21 wave."
+        "notes": "Exact source excerpts control; semantic classifications, summaries, structured-evidence labels, and cross-reference candidates are derivative metadata."
       },
-      "sourceId": "vm21-sr-projection-entry",
-      "sourceVersionId": "source-index-vm21-sr-projection-entry",
-      "sourceTitle": "VM-21 Stochastic Reserve Projection Entry",
+      "sourceId": "vm21-current-manual",
+      "sourceVersionId": "source-index-vm21-current-manual-2026",
+      "sourceTitle": "VM-21: Requirements for Principle-Based Reserves for Variable Annuities",
       "sourceFamilyId": "valuation_manual_pdfs",
       "documentType": "valuation_manual_section",
       "sourceStatus": "active",
+      "sourceEditionId": "NAIC-VALUATION-MANUAL-2026",
+      "sourceVersionIdentifier": "2026 NAIC Valuation Manual",
+      "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+      "sourceTextVerification": {
+        "sourceTextMode": "exact_extracted_source_text",
+        "extractionMethod": "PyPDF2 page text retained in reviewed batches 022-037",
+        "visualTranscription": "not_used",
+        "pageRepresentationQA": "preceding VM-20 printed blank, unnumbered separator, VM-21 opener and continuation, intentional VM-21 closing blank, following separator, and VM-22 opener rendered and inspected",
+        "qaScript": "scripts/validate-vm21-current-manual.mjs"
+      },
+      "coverageDeclarations": {
+        "coveredSections": [
+          "chapter_opening",
+          "section_1",
+          "section_2",
+          "section_3",
+          "section_4",
+          "section_5",
+          "section_6",
+          "section_7",
+          "section_8",
+          "section_9",
+          "section_10",
+          "section_11",
+          "section_12",
+          "section_13",
+          "closing_boundary"
+        ],
+        "structuredDataAvailable": true,
+        "parentCount": 15,
+        "childCount": 63,
+        "retrievalUnitCount": 61,
+        "knownGaps": [
+          "Relationship candidates remain review-only, pending, and not promoted.",
+          "Structured table and formula records are review aids; exact source text remains authoritative.",
+          "Publication and effective dates are not asserted beyond the established 2026 edition identity."
+        ]
+      },
       "sourceReference": "2026 NAIC Valuation Manual",
       "jurisdiction": "NAIC",
       "authorityLevel": "manual_section",
       "pageRange": {
-        "start": 153,
-        "end": 159
+        "start": 143,
+        "end": 225
       },
-      "chunkCount": 4,
+      "chunkCount": 78,
       "reviewBatchIds": [
-        "batch-025"
+        "batch-022",
+        "batch-023",
+        "batch-024",
+        "batch-025",
+        "batch-026",
+        "batch-027",
+        "batch-028",
+        "batch-029",
+        "batch-030",
+        "batch-031",
+        "batch-032",
+        "batch-033",
+        "batch-034",
+        "batch-035",
+        "batch-036",
+        "batch-037"
       ],
-      "sourceIndexPath": "data/processed/source_indexes/sources/vm21-sr-projection-entry.json",
-      "markdownPath": "data/processed/source_indexes/sources/vm21-sr-projection-entry.md",
+      "sourceIndexPath": "data/processed/source_indexes/sources/vm21-current-manual.json",
+      "markdownPath": "data/processed/source_indexes/sources/vm21-current-manual.md",
       "reviewIndexPath": "docs/review/vm21_review_index.md",
       "selfReviewPath": "docs/review/vm21_self_review.md",
-      "relationships": [
-        {
-          "relationType": "related_methodology",
-          "targetSourceId": "vm20-assumptions-section-3c",
-          "notes": "VM-21 projection entry follows the VM-20 assumption layer."
-        }
-      ],
-      "textLayerQuality": "clean",
-      "pageImageBackstop": false,
+      "relationships": [],
+      "textLayerQuality": "mixed",
+      "pageImageBackstop": true,
       "lineReferencesAvailable": false,
       "reviewOnly": true,
       "promotionStatus": "not_promoted",
-      "notes": "Projection-entry slice from the controlled VM-21 wave."
+      "notes": "Substantially complete current 2026 VM-21 canonical candidate built from the existing controlled extraction wave; review-only and not promoted pending independent approval."
     },
     {
       "sourceIndexId": "source-index-ag36-eiul-crvm-guidance",
@@ -1550,7 +1598,7 @@
       "notes": "Canonically promoted current 2026 VM-31 reporting coverage under a recorded independent-review decision; relationship candidates and downstream learner, app, RAG, vector, and Copilot use remain separately governed."
     }
   ],
-  "chunkCount": 592,
+  "chunkCount": 666,
   "exports": {
     "repositoryManifestPath": "data/processed/source_indexes/repository-manifest.json",
     "exportManifestPath": "data/processed/source_indexes/exports/export_manifest.json",

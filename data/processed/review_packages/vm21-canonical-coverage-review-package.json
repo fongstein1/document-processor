@@ -1,0 +1,711 @@
+{
+  "schemaVersion": "1.0",
+  "reviewPackageId": "vm21-canonical-coverage-review-package-2026",
+  "status": "review_only",
+  "promoted": false,
+  "authoritativeSource": {
+    "classification": {
+      "domainId": "naic_regulatory",
+      "subdomainId": null,
+      "documentType": "valuation_manual_section",
+      "purpose": "Authoritative current variable-annuity principle-based reserve requirements",
+      "intendedAudience": "Valuation, modeling, reporting, governance, and retrieval reviewers",
+      "authoritySourceType": "regulatory",
+      "confidentiality": "public",
+      "publicationDate": null,
+      "effectiveDate": null,
+      "version": "2026 Edition",
+      "approvalStatus": "under_review",
+      "language": "en",
+      "recommendedProfile": "calculation_and_assumptions",
+      "recommendedChunkingStrategy": "section_parent_to_complete_lettered_subsection_child",
+      "confidence": "high",
+      "unresolvedQuestions": [
+        "Independent review is required before canonical promotion.",
+        "Relationship candidates and downstream learner, application, RAG, vector, and Copilot eligibility require separate decisions."
+      ],
+      "notes": "Exact source excerpts control; semantic classifications, summaries, structured-evidence labels, and cross-reference candidates are derivative metadata."
+    },
+    "profileData": null,
+    "sourceId": "vm21-current-manual",
+    "sourceVersionId": "source-index-vm21-current-manual-2026",
+    "filename": "pbr_data_valuation_manual_2026.pdf",
+    "filePath": "D:\\Work\\AI Projects\\NAIC Valuation Manual Course\\pbr_data_valuation_manual_2026.pdf",
+    "sourceFamilyId": "valuation_manual_pdfs",
+    "domainId": "naic_regulatory",
+    "documentType": "valuation_manual_section",
+    "sourceTitle": "VM-21: Requirements for Principle-Based Reserves for Variable Annuities",
+    "sourceReference": "2026 NAIC Valuation Manual",
+    "jurisdiction": "NAIC",
+    "authorityLevel": "manual_section",
+    "sourceStatus": "active",
+    "versionDate": null,
+    "sourceEditionId": "NAIC-VALUATION-MANUAL-2026",
+    "sourceVersionIdentifier": "2026 NAIC Valuation Manual",
+    "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+    "sourceTextVerification": {
+      "sourceTextMode": "exact_extracted_source_text",
+      "extractionMethod": "PyPDF2 page text retained in reviewed batches 022-037",
+      "visualTranscription": "not_used",
+      "pageRepresentationQA": "preceding VM-20 printed blank, unnumbered separator, VM-21 opener and continuation, intentional VM-21 closing blank, following separator, and VM-22 opener rendered and inspected",
+      "qaScript": "scripts/validate-vm21-current-manual.mjs"
+    },
+    "coverageDeclarations": {
+      "coveredSections": [
+        "chapter_opening",
+        "section_1",
+        "section_2",
+        "section_3",
+        "section_4",
+        "section_5",
+        "section_6",
+        "section_7",
+        "section_8",
+        "section_9",
+        "section_10",
+        "section_11",
+        "section_12",
+        "section_13",
+        "closing_boundary"
+      ],
+      "structuredDataAvailable": true,
+      "parentCount": 15,
+      "childCount": 63,
+      "retrievalUnitCount": 61,
+      "knownGaps": [
+        "Relationship candidates remain review-only, pending, and not promoted.",
+        "Structured table and formula records are review aids; exact source text remains authoritative.",
+        "Publication and effective dates are not asserted beyond the established 2026 edition identity."
+      ]
+    },
+    "pageCount": 457,
+    "pageRange": {
+      "start": 143,
+      "end": 225
+    },
+    "reviewBatchIds": [
+      "batch-022",
+      "batch-023",
+      "batch-024",
+      "batch-025",
+      "batch-026",
+      "batch-027",
+      "batch-028",
+      "batch-029",
+      "batch-030",
+      "batch-031",
+      "batch-032",
+      "batch-033",
+      "batch-034",
+      "batch-035",
+      "batch-036",
+      "batch-037"
+    ],
+    "reviewIndexPath": "docs/review/vm21_review_index.md",
+    "selfReviewPath": "docs/review/vm21_self_review.md",
+    "pageImageBackstop": true,
+    "lineReferencesAvailable": false,
+    "textLayerQuality": "mixed",
+    "notes": "Substantially complete current 2026 VM-21 canonical candidate built from the existing controlled extraction wave; review-only and not promoted pending independent approval."
+  },
+  "coverage": {
+    "packageCount": 1,
+    "parentCount": 15,
+    "childCount": 63,
+    "totalChunkCount": 78,
+    "retrievalEligibleChildCount": 61,
+    "pageRange": {
+      "start": 143,
+      "end": 225
+    },
+    "printedPageRange": {
+      "start": "21-1",
+      "end": "21-83"
+    },
+    "boundaryEvidence": {
+      "precedingVm20IntentionalBlank": 141,
+      "precedingUnnumberedSeparator": 142,
+      "vm21Start": 143,
+      "vm21IntentionalClosingBlank": 225,
+      "followingUnnumberedSeparator": 226,
+      "vm22Start": 227
+    },
+    "exactChunkCount": 78,
+    "sectionCoverageMatrix": [
+      {
+        "sectionOrBoundary": "VM-21 chapter opening and table of contents",
+        "pageRange": {
+          "start": 143,
+          "end": 143
+        },
+        "canonicalParentChunkId": "vm21-chapter-opening",
+        "childChunkIds": [
+          "vm21-chapter-opening-table-of-contents"
+        ],
+        "childCount": 1,
+        "requirementTypes": [
+          "boundary_control"
+        ],
+        "crossReferences": [],
+        "sourceTextSha256": "8db6cb36c160324a2a73f798f12b9ceecfacab8e8c10fb80f286e4ae98d6cb7a",
+        "canonicalized": true,
+        "unresolvedSourceQuestions": []
+      },
+      {
+        "sectionOrBoundary": "Section 1: Background",
+        "pageRange": {
+          "start": 143,
+          "end": 147
+        },
+        "canonicalParentChunkId": "vm21-section-1-background",
+        "childChunkIds": [
+          "vm21-section-1-background-a-purpose",
+          "vm21-section-1-background-b-principles",
+          "vm21-section-1-background-c-risks-reflected-and-not-reflected",
+          "vm21-section-1-background-d-definitions",
+          "vm21-section-1-background-e-materiality"
+        ],
+        "childCount": 5,
+        "requirementTypes": [
+          "regulatory_requirement",
+          "permission_or_election",
+          "exception_or_condition",
+          "guidance_note_present",
+          "calculation_or_formula",
+          "cross_reference",
+          "timing_or_effective_date",
+          "definition_or_terminology"
+        ],
+        "crossReferences": [
+          "VM-G",
+          "Model #820",
+          "AG 43",
+          "RBC requirements",
+          "AP&P Manual",
+          "C3 RBC amount"
+        ],
+        "sourceTextSha256": "45d5b56aa37f7b8dd7ec7448337f0d2ec82e9f73afe29f05e8e43a4da9037976",
+        "canonicalized": true,
+        "unresolvedSourceQuestions": []
+      },
+      {
+        "sectionOrBoundary": "Section 2: Scope and Effective Date",
+        "pageRange": {
+          "start": 147,
+          "end": 151
+        },
+        "canonicalParentChunkId": "vm21-section-2-scope-effective-date",
+        "childChunkIds": [
+          "vm21-section-2-scope-effective-date-a-scope",
+          "vm21-section-2-scope-effective-date-b-effective-date-and-phase-in",
+          "vm21-section-2-scope-effective-date-c-economic-scenario-generator-phase-in"
+        ],
+        "childCount": 3,
+        "requirementTypes": [
+          "scope_or_applicability",
+          "regulatory_requirement",
+          "permission_or_election",
+          "exception_or_condition",
+          "guidance_note_present",
+          "calculation_or_formula",
+          "cross_reference",
+          "documentation_or_reporting_obligation",
+          "timing_or_effective_date"
+        ],
+        "crossReferences": [
+          "VM-01",
+          "VM-31",
+          "AG 43",
+          "Life RBC instructions"
+        ],
+        "sourceTextSha256": "0198611be85cbceb2e31bab0531d06d3fcf2cfbde29585af3ec6ba6fc54f2708",
+        "canonicalized": true,
+        "unresolvedSourceQuestions": []
+      },
+      {
+        "sectionOrBoundary": "Section 3: Reserve Methodology",
+        "pageRange": {
+          "start": 151,
+          "end": 153
+        },
+        "canonicalParentChunkId": "vm21-section-3-reserve-methodology",
+        "childChunkIds": [
+          "vm21-section-3-reserve-methodology-a-aggregate-reserve",
+          "vm21-section-3-reserve-methodology-b-impact-of-reinsurance-ceded",
+          "vm21-section-3-reserve-methodology-c-additional-standard-projection-amount",
+          "vm21-section-3-reserve-methodology-d-sr",
+          "vm21-section-3-reserve-methodology-e-alternative-methodology",
+          "vm21-section-3-reserve-methodology-f-contract-allocation",
+          "vm21-section-3-reserve-methodology-g-general-account-reserve",
+          "vm21-section-3-reserve-methodology-h-simplifications",
+          "vm21-section-3-reserve-methodology-i-calculation-date"
+        ],
+        "childCount": 9,
+        "requirementTypes": [
+          "reserve_methodology_requirement",
+          "regulatory_requirement",
+          "permission_or_election",
+          "calculation_or_formula",
+          "documentation_or_reporting_obligation",
+          "cross_reference",
+          "guidance_note_present",
+          "timing_or_effective_date",
+          "exception_or_condition"
+        ],
+        "crossReferences": [
+          "VM-G",
+          "VM-31"
+        ],
+        "sourceTextSha256": "5c078a7f60c37a80c6d7cadc81b65231345e2184b0cb8350b927883fcc597eb0",
+        "canonicalized": true,
+        "unresolvedSourceQuestions": []
+      },
+      {
+        "sectionOrBoundary": "Section 4: Determination of the SR",
+        "pageRange": {
+          "start": 153,
+          "end": 165
+        },
+        "canonicalParentChunkId": "vm21-section-4-determination-of-sr",
+        "childChunkIds": [
+          "vm21-section-4-determination-of-sr-a-projection-of-accumulated-deficiencies",
+          "vm21-section-4-determination-of-sr-b-scenario-reserve",
+          "vm21-section-4-determination-of-sr-c-projection-scenarios",
+          "vm21-section-4-determination-of-sr-d-projection-of-assets",
+          "vm21-section-4-determination-of-sr-e-annuitization-benefits",
+          "vm21-section-4-determination-of-sr-f-projection-frequency-and-horizon",
+          "vm21-section-4-determination-of-sr-g-asop-compliance"
+        ],
+        "childCount": 7,
+        "requirementTypes": [
+          "reserve_methodology_requirement",
+          "regulatory_requirement",
+          "permission_or_election",
+          "exception_or_condition",
+          "guidance_note_present",
+          "calculation_or_formula",
+          "timing_or_effective_date",
+          "cross_reference"
+        ],
+        "crossReferences": [
+          "VM-22",
+          "ASOPs"
+        ],
+        "sourceTextSha256": "6065eb068fcea0949070d436c82174a4eac494d1d6ad430ddaff9ee2a656c33d",
+        "canonicalized": true,
+        "unresolvedSourceQuestions": []
+      },
+      {
+        "sectionOrBoundary": "Section 5: Reinsurance Ceded",
+        "pageRange": {
+          "start": 165,
+          "end": 166
+        },
+        "canonicalParentChunkId": "vm21-section-5-reinsurance-ceded",
+        "childChunkIds": [
+          "vm21-section-5-reinsurance-ceded-a-treatment-in-aggregate-reserve"
+        ],
+        "childCount": 1,
+        "requirementTypes": [
+          "reinsurance_requirement",
+          "regulatory_requirement",
+          "permission_or_election",
+          "exception_or_condition"
+        ],
+        "crossReferences": [],
+        "sourceTextSha256": "c61e85c5d12afb0a1d2c3f7888e2dda7a9d9992adf240fca3aa578cf854962a3",
+        "canonicalized": true,
+        "unresolvedSourceQuestions": []
+      },
+      {
+        "sectionOrBoundary": "Section 6: Requirements for the Additional Standard Projection Amount",
+        "pageRange": {
+          "start": 166,
+          "end": 182
+        },
+        "canonicalParentChunkId": "vm21-section-6-additional-standard-projection-amount",
+        "childChunkIds": [
+          "vm21-section-6-additional-standard-projection-amount-a-overview",
+          "vm21-section-6-additional-standard-projection-amount-b-additional-standard-projection-amount",
+          "vm21-section-6-additional-standard-projection-amount-c-prescribed-assumptions"
+        ],
+        "childCount": 3,
+        "requirementTypes": [
+          "additional_standard_projection_requirement",
+          "regulatory_requirement",
+          "permission_or_election",
+          "exception_or_condition",
+          "guidance_note_present",
+          "calculation_or_formula",
+          "documentation_or_reporting_obligation",
+          "timing_or_effective_date",
+          "structured_table_evidence",
+          "cross_reference"
+        ],
+        "crossReferences": [
+          "VM-01"
+        ],
+        "sourceTextSha256": "f4e5d643748e8d55fe310a99f43ed11696aac86dae92ba0e923e132cd6c79301",
+        "canonicalized": true,
+        "unresolvedSourceQuestions": []
+      },
+      {
+        "sectionOrBoundary": "Section 7: Alternative Methodology",
+        "pageRange": {
+          "start": 182,
+          "end": 199
+        },
+        "canonicalParentChunkId": "vm21-section-7-alternative-methodology",
+        "childChunkIds": [
+          "vm21-section-7-alternative-methodology-a-general-methodology",
+          "vm21-section-7-alternative-methodology-b-calculation-of-ca-and-fe",
+          "vm21-section-7-alternative-methodology-c-calculation-of-gc-component",
+          "vm21-section-7-alternative-methodology-d-fund-categorization",
+          "vm21-section-7-alternative-methodology-e-tables"
+        ],
+        "childCount": 5,
+        "requirementTypes": [
+          "alternative_methodology",
+          "definition_or_terminology",
+          "regulatory_requirement",
+          "permission_or_election",
+          "exception_or_condition",
+          "guidance_note_present",
+          "calculation_or_formula",
+          "documentation_or_reporting_obligation",
+          "timing_or_effective_date",
+          "cross_reference",
+          "structured_table_evidence"
+        ],
+        "crossReferences": [
+          "VM-C",
+          "AG 33"
+        ],
+        "sourceTextSha256": "ef96fe2cd56751dd47b01ba88381145bc00c469aa574e0842a8da01d85ee4cd9",
+        "canonicalized": true,
+        "unresolvedSourceQuestions": []
+      },
+      {
+        "sectionOrBoundary": "Section 8: Scenario Generation",
+        "pageRange": {
+          "start": 199,
+          "end": 202
+        },
+        "canonicalParentChunkId": "vm21-section-8-scenario-generation",
+        "childChunkIds": [
+          "vm21-section-8-scenario-generation-a-general",
+          "vm21-section-8-scenario-generation-b-interest-rate-generator",
+          "vm21-section-8-scenario-generation-c-investment-return-generator",
+          "vm21-section-8-scenario-generation-d-implied-volatility",
+          "vm21-section-8-scenario-generation-e-non-prescribed-generators",
+          "vm21-section-8-scenario-generation-f-number-of-scenarios"
+        ],
+        "childCount": 6,
+        "requirementTypes": [
+          "scenario_generation_requirement",
+          "regulatory_requirement",
+          "guidance_note_present",
+          "documentation_or_reporting_obligation",
+          "permission_or_election",
+          "exception_or_condition"
+        ],
+        "crossReferences": [],
+        "sourceTextSha256": "86deeb3be0d590a064a2a93473ba027ee9b0e87fbca0ca710f69d8e76a3ff3b6",
+        "canonicalized": true,
+        "unresolvedSourceQuestions": []
+      },
+      {
+        "sectionOrBoundary": "Section 9: Modeling of Hedges under a Future Non-Index Credit Hedging Strategy",
+        "pageRange": {
+          "start": 202,
+          "end": 209
+        },
+        "canonicalParentChunkId": "vm21-section-9-modeling-hedges",
+        "childChunkIds": [
+          "vm21-section-9-modeling-hedges-a-initial-considerations",
+          "vm21-section-9-modeling-hedges-b-modeling-approaches",
+          "vm21-section-9-modeling-hedges-c-calculation-of-sr-reported",
+          "vm21-section-9-modeling-hedges-d-cte70-best-efforts",
+          "vm21-section-9-modeling-hedges-e-specific-requirements"
+        ],
+        "childCount": 5,
+        "requirementTypes": [
+          "hedging_or_risk_mitigation",
+          "regulatory_requirement",
+          "exception_or_condition",
+          "calculation_or_formula",
+          "permission_or_election",
+          "guidance_note_present",
+          "documentation_or_reporting_obligation",
+          "timing_or_effective_date",
+          "cross_reference"
+        ],
+        "crossReferences": [
+          "VM-01"
+        ],
+        "sourceTextSha256": "2a6a6b305cc9f7abf6c5907eb4519980f4fa336e3a3abbdd5223192e726388b1",
+        "canonicalized": true,
+        "unresolvedSourceQuestions": []
+      },
+      {
+        "sectionOrBoundary": "Section 10: Contract Holder Behavior Assumptions",
+        "pageRange": {
+          "start": 209,
+          "end": 213
+        },
+        "canonicalParentChunkId": "vm21-section-10-contract-holder-behavior",
+        "childChunkIds": [
+          "vm21-section-10-contract-holder-behavior-a-general",
+          "vm21-section-10-contract-holder-behavior-b-aggregate-vs-individual-margins",
+          "vm21-section-10-contract-holder-behavior-c-sensitivity-testing",
+          "vm21-section-10-contract-holder-behavior-d-specific-requirements",
+          "vm21-section-10-contract-holder-behavior-e-dynamic-assumptions",
+          "vm21-section-10-contract-holder-behavior-f-consistency-with-cte",
+          "vm21-section-10-contract-holder-behavior-g-guaranteed-benefit-considerations"
+        ],
+        "childCount": 7,
+        "requirementTypes": [
+          "assumption_requirement",
+          "permission_or_election",
+          "regulatory_requirement",
+          "exception_or_condition",
+          "calculation_or_formula"
+        ],
+        "crossReferences": [],
+        "sourceTextSha256": "a2ac0e05a457c492a33702df20e136156e1a08376ce4f412eccb160f0016b89f",
+        "canonicalized": true,
+        "unresolvedSourceQuestions": []
+      },
+      {
+        "sectionOrBoundary": "Section 11: Guidance and Requirements for Setting Prudent Estimate Mortality Assumptions",
+        "pageRange": {
+          "start": 213,
+          "end": 218
+        },
+        "canonicalParentChunkId": "vm21-section-11-mortality-assumptions",
+        "childChunkIds": [
+          "vm21-section-11-mortality-assumptions-a-overview",
+          "vm21-section-11-mortality-assumptions-b-expected-mortality-curves",
+          "vm21-section-11-mortality-assumptions-c-credibility-adjustment",
+          "vm21-section-11-mortality-assumptions-d-future-mortality-improvement"
+        ],
+        "childCount": 4,
+        "requirementTypes": [
+          "assumption_requirement",
+          "regulatory_requirement",
+          "permission_or_election",
+          "exception_or_condition",
+          "structured_table_evidence",
+          "documentation_or_reporting_obligation",
+          "guidance_note_present",
+          "timing_or_effective_date"
+        ],
+        "crossReferences": [],
+        "sourceTextSha256": "4c812a47feab4edcd24be9ad3ba111365fe1fa9fc03272a48cc4e06d365aec82",
+        "canonicalized": true,
+        "unresolvedSourceQuestions": []
+      },
+      {
+        "sectionOrBoundary": "Section 12: Other Guidance and Requirements for Assumptions",
+        "pageRange": {
+          "start": 218,
+          "end": 222
+        },
+        "canonicalParentChunkId": "vm21-section-12-other-assumptions",
+        "childChunkIds": [
+          "vm21-section-12-other-assumptions-a-overview",
+          "vm21-section-12-other-assumptions-b-general-requirements",
+          "vm21-section-12-other-assumptions-c-assumption-margins",
+          "vm21-section-12-other-assumptions-d-expense-assumptions"
+        ],
+        "childCount": 4,
+        "requirementTypes": [
+          "assumption_requirement",
+          "regulatory_requirement",
+          "permission_or_election",
+          "exception_or_condition",
+          "guidance_note_present",
+          "calculation_or_formula",
+          "timing_or_effective_date",
+          "cross_reference"
+        ],
+        "crossReferences": [
+          "Model #820",
+          "ASOPs"
+        ],
+        "sourceTextSha256": "855e8350d1ae64403929736473ad17779a56c6513b0f944cdb31e8a5b63090e4",
+        "canonicalized": true,
+        "unresolvedSourceQuestions": []
+      },
+      {
+        "sectionOrBoundary": "Section 13: Allocation of the Aggregate Reserve to the Contract Level",
+        "pageRange": {
+          "start": 222,
+          "end": 224
+        },
+        "canonicalParentChunkId": "vm21-section-13-contract-allocation",
+        "childChunkIds": [
+          "vm21-section-13-contract-allocation-a-cash-surrender-value",
+          "vm21-section-13-contract-allocation-b-excess-aggregate-reserve"
+        ],
+        "childCount": 2,
+        "requirementTypes": [
+          "contract_allocation_requirement",
+          "regulatory_requirement",
+          "permission_or_election",
+          "structured_table_evidence",
+          "calculation_or_formula"
+        ],
+        "crossReferences": [],
+        "sourceTextSha256": "7f838f4aff54735177e3c195543e01eadfe946f63edac97b8590b1c143817426",
+        "canonicalized": true,
+        "unresolvedSourceQuestions": []
+      },
+      {
+        "sectionOrBoundary": "VM-21 closing boundary before the unnumbered separator and VM-22",
+        "pageRange": {
+          "start": 225,
+          "end": 225
+        },
+        "canonicalParentChunkId": "vm21-closing-boundary",
+        "childChunkIds": [
+          "vm21-closing-boundary-intentional-blank-page"
+        ],
+        "childCount": 1,
+        "requirementTypes": [
+          "boundary_control"
+        ],
+        "crossReferences": [],
+        "sourceTextSha256": "ca52aaffd18f5eac3c0c78d64790c0a4ff20b6c59e88c281c97579d70eff3e0c",
+        "canonicalized": true,
+        "unresolvedSourceQuestions": []
+      }
+    ],
+    "notCanonicalizedSections": []
+  },
+  "sourceFidelity": {
+    "sourceQaPath": "data/processed/review_packages/vm21-source-qa.json",
+    "sourceQaStatus": "pass",
+    "aggregateExtractionSha256": "82cf575ffcaff6dd094cb296b9535f4ac9ba39832ef657ca4a213702e39b2a2d",
+    "canonicalPackageSha256": "57e9b04613517afe4e703774a7d7520e0a550d18a28af80cecc0f238a6eefaf0",
+    "sourceTextRewriteCount": 0,
+    "sourceReExtractionPerformed": false
+  },
+  "hierarchy": {
+    "model": "section_parent_to_complete_top_level_lettered_subsection_child",
+    "adjacencyAvailable": true,
+    "nestedListsGuidanceTablesAndFormulasKeptWithGoverningSubsection": true,
+    "openingAndClosingBoundaryControlsIncluded": true
+  },
+  "definitions": {
+    "sourceExplicitTermCount": 25,
+    "sourceExplicitTerms": [
+      "cash surrender value",
+      "guaranteed minimum death benefit",
+      "GMDB",
+      "total asset requirement",
+      "TAR",
+      "Annualized Account Charge Differential",
+      "Asset Exposure",
+      "Benchmark",
+      "Deterministic Calculations",
+      "Foreign Securities",
+      "Grouped Fund Holdings",
+      "Guaranteed Value",
+      "High-Yield Bonds",
+      "Investment Grade Fixed Income Securities",
+      "Liquid Securities",
+      "Margin Offset",
+      "Multi-Point Linear Interpolation",
+      "Model Office",
+      "Quota-Share Reinsurance",
+      "Resets",
+      "Risk Mitigation Strategy",
+      "Risk Profile",
+      "Risk Transfer Arrangements",
+      "Roll-Up",
+      "Volatility"
+    ],
+    "generatedVariantsInDefinedTerms": 0
+  },
+  "relationships": {
+    "candidateCount": 20,
+    "targetCounts": {
+      "VM-01": 3,
+      "VM-22": 1,
+      "VM-31": 2,
+      "VM-G": 2,
+      "VM-C": 1,
+      "Model #820": 2,
+      "AG 43": 2,
+      "AG 33": 1,
+      "RBC requirements": 1,
+      "C3 RBC amount": 1,
+      "Life RBC instructions": 1,
+      "ASOPs": 2,
+      "AP&P Manual": 1
+    },
+    "registryPath": "data/processed/relationship_registries/vm21-current-manual-relationship-candidates.json",
+    "status": "review_only_pending"
+  },
+  "structuredEvidence": {
+    "path": "data/processed/review_packages/vm21-structured-evidence-inventory.json",
+    "recordCount": 27,
+    "tableOrMatrixCount": 20,
+    "formulaOrCalculationCount": 7,
+    "numericRecomputationPerformed": false
+  },
+  "retrievalEvaluation": {
+    "path": "data/processed/review_packages/vm21-focused-retrieval-evaluation.json",
+    "queryCount": 30,
+    "supportedTop1": 18,
+    "supportedTop3": 22,
+    "supportedQueryCount": 22,
+    "unsupportedCorrect": 6,
+    "unsupportedQueryCount": 6,
+    "ambiguitySafe": 2,
+    "ambiguityQueryCount": 2,
+    "currentAuthorityTop1": 22,
+    "allCasesPassed": true
+  },
+  "supportGateRegression": {
+    "path": "data/processed/review_packages/vm21-support-gate-regression.json",
+    "caseCount": 4,
+    "passedCaseCount": 4,
+    "status": "pass",
+    "productionEvidenceWindow": 3
+  },
+  "processorReadiness": {
+    "path": "data/processed/review_packages/vm21-processor-readiness-findings.json",
+    "rating": "AMBER",
+    "findingCount": 6
+  },
+  "unresolvedGaps": [
+    "Independent source and actuarial review is required before promotion.",
+    "Dense tables and formula sequences require targeted human semantic review; this pass preserves them but does not recompute values.",
+    "Publication and effective dates are not inferred beyond explicit source language and the established 2026 edition identity."
+  ],
+  "artifacts": {
+    "canonicalSourcePackage": "data/processed/source_indexes/sources/vm21-current-manual.json",
+    "sourceQa": "data/processed/review_packages/vm21-source-qa.json",
+    "relationshipCandidates": "data/processed/relationship_registries/vm21-current-manual-relationship-candidates.json",
+    "structuredEvidenceInventory": "data/processed/review_packages/vm21-structured-evidence-inventory.json",
+    "focusedRetrievalEvaluation": "data/processed/review_packages/vm21-focused-retrieval-evaluation.json",
+    "supportGateRegression": "data/processed/review_packages/vm21-support-gate-regression.json",
+    "processorReadiness": "data/processed/review_packages/vm21-processor-readiness-findings.json",
+    "validationReport": "data/processed/review_packages/vm21-validation-report.json",
+    "independentReviewPrompt": "data/processed/review_packages/vm21-independent-review-prompt.md"
+  },
+  "promotionReadiness": {
+    "independentReviewRequired": true,
+    "automatedPromotion": false,
+    "currentStatus": "review_only_pending_independent_review",
+    "promotionStatus": "not_promoted",
+    "promotionEligible": false,
+    "learnerFacingAllowed": false,
+    "appReadyAllowed": false,
+    "ragReadyAllowed": false,
+    "vectorEligible": false,
+    "copilotExportEligible": false
+  }
+}

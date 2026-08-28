@@ -294,9 +294,9 @@
     },
     {
       "repositoryManifestId": "source-index-poc-2026-07-21",
-      "sourceIndexId": "source-index-vm21-sr-projection-entry",
-      "sourceId": "vm21-sr-projection-entry",
-      "sourceTitle": "VM-21 Stochastic Reserve Projection Entry",
+      "sourceIndexId": "source-index-vm21-current-manual",
+      "sourceId": "vm21-current-manual",
+      "sourceTitle": "VM-21: Requirements for Principle-Based Reserves for Variable Annuities",
       "sourceFamilyId": "valuation_manual_pdfs",
       "domainId": "naic_regulatory",
       "documentType": "valuation_manual_section",
@@ -304,22 +304,23 @@
         "domainId": "naic_regulatory",
         "subdomainId": null,
         "documentType": "valuation_manual_section",
-        "purpose": "Projection-entry slice from the controlled VM-21 wave.",
-        "intendedAudience": "Valuation, regulatory, and governance reviewers",
+        "purpose": "Authoritative current variable-annuity principle-based reserve requirements",
+        "intendedAudience": "Valuation, modeling, reporting, governance, and retrieval reviewers",
         "authoritySourceType": "regulatory",
-        "confidentiality": "internal",
+        "confidentiality": "public",
         "publicationDate": null,
         "effectiveDate": null,
-        "version": null,
-        "approvalStatus": "reviewed",
+        "version": "2026 Edition",
+        "approvalStatus": "under_review",
         "language": "en",
-        "recommendedProfile": "regulatory",
-        "recommendedChunkingStrategy": "heading_first",
+        "recommendedProfile": "calculation_and_assumptions",
+        "recommendedChunkingStrategy": "section_parent_to_complete_lettered_subsection_child",
         "confidence": "high",
         "unresolvedQuestions": [
-          "Line references are unavailable and page locators are primary."
+          "Independent review is required before canonical promotion.",
+          "Relationship candidates and downstream learner, application, RAG, vector, and Copilot eligibility require separate decisions."
         ],
-        "notes": "Projection-entry slice from the controlled VM-21 wave."
+        "notes": "Exact source excerpts control; semantic classifications, summaries, structured-evidence labels, and cross-reference candidates are derivative metadata."
       },
       "reviewIndexPath": "docs/review/vm21_review_index.md",
       "selfReviewPath": "docs/review/vm21_self_review.md"

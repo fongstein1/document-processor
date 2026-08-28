@@ -11,15 +11,19 @@
     "sourceDocumentsInventoried": 105,
     "sourceRecordsWithExternalManifest": 71,
     "reviewIndexes": 97,
-    "selfReviews": 94,
+    "selfReviews": 95,
     "canonicalSourcePackages": 24,
-    "canonicalChunks": 592,
+    "canonicalChunks": 666,
     "vm20CurrentManualChunks": 149,
     "vm20CompanionChunks": 175,
     "vm01Definitions": 98,
     "vm01RetrievalUnits": 98,
     "vm01PromotionStatus": "promoted",
     "vm01RelationshipCandidates": 29,
+    "vm21StructuralParents": 15,
+    "vm21ChildUnits": 63,
+    "vm21PromotionStatus": "not_promoted",
+    "vm21RelationshipCandidates": 20,
     "vm30StructuralParents": 8,
     "vm30ChildUnits": 43,
     "vm30PromotionStatus": "promoted",
@@ -61,12 +65,12 @@
       "standard-valuation-law-model-820",
       "annual-statement-pbr-reporting"
     ],
-    "candidateRelationships": 160,
+    "candidateRelationships": 180,
     "promotedRelationships": 0,
     "historicalProposedDeferred": 9,
     "currentSourceTextFidelityDistribution": {
       "curated": 20,
-      "exact": 572
+      "exact": 646
     }
   },
   "sources": [
@@ -4027,7 +4031,8 @@
           "docs/review/vm21_review_index.md"
         ],
         "selfReviews": [
-          "docs/review/ag52_self_review.md"
+          "docs/review/ag52_self_review.md",
+          "docs/review/vm21_self_review.md"
         ],
         "canonicalPackages": [],
         "classification": "not_in_canonical_classification",
@@ -5039,13 +5044,13 @@
           "data/processed/source_indexes/sources/vm20-framework-overview.json",
           "data/processed/source_indexes/sources/vm20-remaining-prose-appendix-coverage.json",
           "data/processed/source_indexes/sources/vm20-section3c-hierarchical.json",
-          "data/processed/source_indexes/sources/vm21-sr-projection-entry.json",
+          "data/processed/source_indexes/sources/vm21-current-manual.json",
           "data/processed/source_indexes/sources/vm30-current-manual.json",
           "data/processed/source_indexes/sources/vm31-current-manual.json"
         ],
         "classification": "not_in_canonical_classification",
         "relationshipRegistry": "candidate_registry: data/processed/relationship_registries/vm01-definition-relationship-candidates.json",
-        "chunkCount": 386,
+        "chunkCount": 460,
         "sourceTextFidelity": [
           "exact"
         ]
@@ -6558,6 +6563,7 @@
         "vm21-alt-method-tables",
         "vm21-background-principles",
         "vm21-behavior-assumptions",
+        "vm21-current-manual",
         "vm21-hedging-cdhs",
         "vm21-mortality-assumptions",
         "vm21-other-assumptions",
@@ -6769,8 +6775,8 @@
       "sourceFamily": "valuation_manual_pdfs",
       "priority": "P0",
       "intendedStatus": "current",
-      "assessment": "canonical_partial",
-      "reason": "VM-21 has a reviewed controlled wave and one canonical projection-entry package, but not a complete chapter package.",
+      "assessment": "canonical_review_candidate",
+      "reason": "Current 2026 VM-21 has one substantially complete review-only canonical candidate with 15 structural parents, 63 exact-text child units, 20 explicit-reference candidates, and a separate structured-evidence inventory.",
       "evidenceSourceIds": [
         "ag52-early-adoption-text",
         "supporting-vm01-definitions",
@@ -6802,6 +6808,7 @@
         "vm21-alt-method-tables",
         "vm21-background-principles",
         "vm21-behavior-assumptions",
+        "vm21-current-manual",
         "vm21-hedging-cdhs",
         "vm21-mortality-assumptions",
         "vm21-other-assumptions",
@@ -6833,7 +6840,7 @@
         "vm31-reporting-crossref",
         "vm31-reporting-definition"
       ],
-      "nextAction": "Canonicalize the reviewed VM-21 wave with parent-child structure and table separation."
+      "nextAction": "Complete targeted independent review and record a promotion decision; keep relationships and downstream uses separately governed."
     },
     {
       "targetId": "vm-22",

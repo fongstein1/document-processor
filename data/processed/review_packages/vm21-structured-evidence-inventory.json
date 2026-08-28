@@ -1,0 +1,1028 @@
+{
+  "schemaVersion": "1.0",
+  "inventoryId": "vm21-structured-evidence-inventory-2026",
+  "sourceId": "vm21-current-manual",
+  "recordCount": 27,
+  "tableOrMatrixCount": 20,
+  "formulaOrCalculationCount": 7,
+  "decision": "These records identify source areas suited to structured review objects. They do not numerically reinterpret, recompute, or replace exact VM-21 source text.",
+  "governance": {
+    "reviewOnly": true,
+    "promotionStatus": "not_promoted",
+    "promotionEligible": false
+  },
+  "records": [
+    {
+      "structuredEvidenceId": "vm21-section-6-additional-standard-projection-amount-c-prescribed-assumptions-table-6-2",
+      "sourceChunkId": "vm21-section-6-additional-standard-projection-amount-c-prescribed-assumptions",
+      "sourceSection": "C. Prescribed Assumptions",
+      "pageStart": 168,
+      "pageEnd": 182,
+      "evidenceType": "table_or_grid",
+      "label": "Table 6.2",
+      "recommendedTreatment": "structured_table_or_matrix_candidate",
+      "sourceIdentity": {
+        "sourceId": "vm21-current-manual",
+        "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9"
+      },
+      "sourceLocator": {
+        "pageStart": 168,
+        "pageEnd": 182,
+        "sectionReference": "C. Prescribed Assumptions",
+        "chunkId": "vm21-section-6-additional-standard-projection-amount-c-prescribed-assumptions"
+      },
+      "dimensions": {
+        "status": "requires_visual_structured_extraction",
+        "rowIdentity": "retained_only_in_exact_source_text",
+        "columnIdentity": "retained_only_in_exact_source_text"
+      },
+      "units": {
+        "status": "retained_in_exact_source_text_not_normalized"
+      },
+      "notesAndFootnotes": {
+        "status": "retained_with_governing_source_subsection"
+      },
+      "values": {
+        "rawAndDisplayValues": "retained_in_exact_source_text_not_recomputed"
+      },
+      "sourceTextSha256": "0bc55b7ff28e21c307a30b641a233be44a54dc24f9fe4d4f3ac5aff81b0221df",
+      "authoritativeRepresentation": "exact_source_text_excerpt",
+      "reviewDecision": "pending",
+      "promotionStatus": "not_promoted"
+    },
+    {
+      "structuredEvidenceId": "vm21-section-6-additional-standard-projection-amount-c-prescribed-assumptions-table-6-3",
+      "sourceChunkId": "vm21-section-6-additional-standard-projection-amount-c-prescribed-assumptions",
+      "sourceSection": "C. Prescribed Assumptions",
+      "pageStart": 168,
+      "pageEnd": 182,
+      "evidenceType": "table_or_grid",
+      "label": "Table 6.3",
+      "recommendedTreatment": "structured_table_or_matrix_candidate",
+      "sourceIdentity": {
+        "sourceId": "vm21-current-manual",
+        "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9"
+      },
+      "sourceLocator": {
+        "pageStart": 168,
+        "pageEnd": 182,
+        "sectionReference": "C. Prescribed Assumptions",
+        "chunkId": "vm21-section-6-additional-standard-projection-amount-c-prescribed-assumptions"
+      },
+      "dimensions": {
+        "status": "requires_visual_structured_extraction",
+        "rowIdentity": "retained_only_in_exact_source_text",
+        "columnIdentity": "retained_only_in_exact_source_text"
+      },
+      "units": {
+        "status": "retained_in_exact_source_text_not_normalized"
+      },
+      "notesAndFootnotes": {
+        "status": "retained_with_governing_source_subsection"
+      },
+      "values": {
+        "rawAndDisplayValues": "retained_in_exact_source_text_not_recomputed"
+      },
+      "sourceTextSha256": "0bc55b7ff28e21c307a30b641a233be44a54dc24f9fe4d4f3ac5aff81b0221df",
+      "authoritativeRepresentation": "exact_source_text_excerpt",
+      "reviewDecision": "pending",
+      "promotionStatus": "not_promoted"
+    },
+    {
+      "structuredEvidenceId": "vm21-section-6-additional-standard-projection-amount-c-prescribed-assumptions-table-6-4",
+      "sourceChunkId": "vm21-section-6-additional-standard-projection-amount-c-prescribed-assumptions",
+      "sourceSection": "C. Prescribed Assumptions",
+      "pageStart": 168,
+      "pageEnd": 182,
+      "evidenceType": "table_or_grid",
+      "label": "Table 6.4",
+      "recommendedTreatment": "structured_table_or_matrix_candidate",
+      "sourceIdentity": {
+        "sourceId": "vm21-current-manual",
+        "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9"
+      },
+      "sourceLocator": {
+        "pageStart": 168,
+        "pageEnd": 182,
+        "sectionReference": "C. Prescribed Assumptions",
+        "chunkId": "vm21-section-6-additional-standard-projection-amount-c-prescribed-assumptions"
+      },
+      "dimensions": {
+        "status": "requires_visual_structured_extraction",
+        "rowIdentity": "retained_only_in_exact_source_text",
+        "columnIdentity": "retained_only_in_exact_source_text"
+      },
+      "units": {
+        "status": "retained_in_exact_source_text_not_normalized"
+      },
+      "notesAndFootnotes": {
+        "status": "retained_with_governing_source_subsection"
+      },
+      "values": {
+        "rawAndDisplayValues": "retained_in_exact_source_text_not_recomputed"
+      },
+      "sourceTextSha256": "0bc55b7ff28e21c307a30b641a233be44a54dc24f9fe4d4f3ac5aff81b0221df",
+      "authoritativeRepresentation": "exact_source_text_excerpt",
+      "reviewDecision": "pending",
+      "promotionStatus": "not_promoted"
+    },
+    {
+      "structuredEvidenceId": "vm21-section-6-additional-standard-projection-amount-c-prescribed-assumptions-table-6-5",
+      "sourceChunkId": "vm21-section-6-additional-standard-projection-amount-c-prescribed-assumptions",
+      "sourceSection": "C. Prescribed Assumptions",
+      "pageStart": 168,
+      "pageEnd": 182,
+      "evidenceType": "table_or_grid",
+      "label": "Table 6.5",
+      "recommendedTreatment": "structured_table_or_matrix_candidate",
+      "sourceIdentity": {
+        "sourceId": "vm21-current-manual",
+        "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9"
+      },
+      "sourceLocator": {
+        "pageStart": 168,
+        "pageEnd": 182,
+        "sectionReference": "C. Prescribed Assumptions",
+        "chunkId": "vm21-section-6-additional-standard-projection-amount-c-prescribed-assumptions"
+      },
+      "dimensions": {
+        "status": "requires_visual_structured_extraction",
+        "rowIdentity": "retained_only_in_exact_source_text",
+        "columnIdentity": "retained_only_in_exact_source_text"
+      },
+      "units": {
+        "status": "retained_in_exact_source_text_not_normalized"
+      },
+      "notesAndFootnotes": {
+        "status": "retained_with_governing_source_subsection"
+      },
+      "values": {
+        "rawAndDisplayValues": "retained_in_exact_source_text_not_recomputed"
+      },
+      "sourceTextSha256": "0bc55b7ff28e21c307a30b641a233be44a54dc24f9fe4d4f3ac5aff81b0221df",
+      "authoritativeRepresentation": "exact_source_text_excerpt",
+      "reviewDecision": "pending",
+      "promotionStatus": "not_promoted"
+    },
+    {
+      "structuredEvidenceId": "vm21-section-6-additional-standard-projection-amount-c-prescribed-assumptions-table-6-6",
+      "sourceChunkId": "vm21-section-6-additional-standard-projection-amount-c-prescribed-assumptions",
+      "sourceSection": "C. Prescribed Assumptions",
+      "pageStart": 168,
+      "pageEnd": 182,
+      "evidenceType": "table_or_grid",
+      "label": "Table 6.6",
+      "recommendedTreatment": "structured_table_or_matrix_candidate",
+      "sourceIdentity": {
+        "sourceId": "vm21-current-manual",
+        "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9"
+      },
+      "sourceLocator": {
+        "pageStart": 168,
+        "pageEnd": 182,
+        "sectionReference": "C. Prescribed Assumptions",
+        "chunkId": "vm21-section-6-additional-standard-projection-amount-c-prescribed-assumptions"
+      },
+      "dimensions": {
+        "status": "requires_visual_structured_extraction",
+        "rowIdentity": "retained_only_in_exact_source_text",
+        "columnIdentity": "retained_only_in_exact_source_text"
+      },
+      "units": {
+        "status": "retained_in_exact_source_text_not_normalized"
+      },
+      "notesAndFootnotes": {
+        "status": "retained_with_governing_source_subsection"
+      },
+      "values": {
+        "rawAndDisplayValues": "retained_in_exact_source_text_not_recomputed"
+      },
+      "sourceTextSha256": "0bc55b7ff28e21c307a30b641a233be44a54dc24f9fe4d4f3ac5aff81b0221df",
+      "authoritativeRepresentation": "exact_source_text_excerpt",
+      "reviewDecision": "pending",
+      "promotionStatus": "not_promoted"
+    },
+    {
+      "structuredEvidenceId": "vm21-section-6-additional-standard-projection-amount-c-prescribed-assumptions-table-6-7",
+      "sourceChunkId": "vm21-section-6-additional-standard-projection-amount-c-prescribed-assumptions",
+      "sourceSection": "C. Prescribed Assumptions",
+      "pageStart": 168,
+      "pageEnd": 182,
+      "evidenceType": "table_or_grid",
+      "label": "Table 6.7",
+      "recommendedTreatment": "structured_table_or_matrix_candidate",
+      "sourceIdentity": {
+        "sourceId": "vm21-current-manual",
+        "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9"
+      },
+      "sourceLocator": {
+        "pageStart": 168,
+        "pageEnd": 182,
+        "sectionReference": "C. Prescribed Assumptions",
+        "chunkId": "vm21-section-6-additional-standard-projection-amount-c-prescribed-assumptions"
+      },
+      "dimensions": {
+        "status": "requires_visual_structured_extraction",
+        "rowIdentity": "retained_only_in_exact_source_text",
+        "columnIdentity": "retained_only_in_exact_source_text"
+      },
+      "units": {
+        "status": "retained_in_exact_source_text_not_normalized"
+      },
+      "notesAndFootnotes": {
+        "status": "retained_with_governing_source_subsection"
+      },
+      "values": {
+        "rawAndDisplayValues": "retained_in_exact_source_text_not_recomputed"
+      },
+      "sourceTextSha256": "0bc55b7ff28e21c307a30b641a233be44a54dc24f9fe4d4f3ac5aff81b0221df",
+      "authoritativeRepresentation": "exact_source_text_excerpt",
+      "reviewDecision": "pending",
+      "promotionStatus": "not_promoted"
+    },
+    {
+      "structuredEvidenceId": "vm21-section-6-additional-standard-projection-amount-c-prescribed-assumptions-table-6-48",
+      "sourceChunkId": "vm21-section-6-additional-standard-projection-amount-c-prescribed-assumptions",
+      "sourceSection": "C. Prescribed Assumptions",
+      "pageStart": 168,
+      "pageEnd": 182,
+      "evidenceType": "table_or_grid",
+      "label": "Table 6.48",
+      "recommendedTreatment": "structured_table_or_matrix_candidate",
+      "sourceIdentity": {
+        "sourceId": "vm21-current-manual",
+        "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9"
+      },
+      "sourceLocator": {
+        "pageStart": 168,
+        "pageEnd": 182,
+        "sectionReference": "C. Prescribed Assumptions",
+        "chunkId": "vm21-section-6-additional-standard-projection-amount-c-prescribed-assumptions"
+      },
+      "dimensions": {
+        "status": "requires_visual_structured_extraction",
+        "rowIdentity": "retained_only_in_exact_source_text",
+        "columnIdentity": "retained_only_in_exact_source_text"
+      },
+      "units": {
+        "status": "retained_in_exact_source_text_not_normalized"
+      },
+      "notesAndFootnotes": {
+        "status": "retained_with_governing_source_subsection"
+      },
+      "values": {
+        "rawAndDisplayValues": "retained_in_exact_source_text_not_recomputed"
+      },
+      "sourceTextSha256": "0bc55b7ff28e21c307a30b641a233be44a54dc24f9fe4d4f3ac5aff81b0221df",
+      "authoritativeRepresentation": "exact_source_text_excerpt",
+      "reviewDecision": "pending",
+      "promotionStatus": "not_promoted"
+    },
+    {
+      "structuredEvidenceId": "vm21-section-6-additional-standard-projection-amount-c-prescribed-assumptions-table-6-9",
+      "sourceChunkId": "vm21-section-6-additional-standard-projection-amount-c-prescribed-assumptions",
+      "sourceSection": "C. Prescribed Assumptions",
+      "pageStart": 168,
+      "pageEnd": 182,
+      "evidenceType": "table_or_grid",
+      "label": "Table 6.9",
+      "recommendedTreatment": "structured_table_or_matrix_candidate",
+      "sourceIdentity": {
+        "sourceId": "vm21-current-manual",
+        "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9"
+      },
+      "sourceLocator": {
+        "pageStart": 168,
+        "pageEnd": 182,
+        "sectionReference": "C. Prescribed Assumptions",
+        "chunkId": "vm21-section-6-additional-standard-projection-amount-c-prescribed-assumptions"
+      },
+      "dimensions": {
+        "status": "requires_visual_structured_extraction",
+        "rowIdentity": "retained_only_in_exact_source_text",
+        "columnIdentity": "retained_only_in_exact_source_text"
+      },
+      "units": {
+        "status": "retained_in_exact_source_text_not_normalized"
+      },
+      "notesAndFootnotes": {
+        "status": "retained_with_governing_source_subsection"
+      },
+      "values": {
+        "rawAndDisplayValues": "retained_in_exact_source_text_not_recomputed"
+      },
+      "sourceTextSha256": "0bc55b7ff28e21c307a30b641a233be44a54dc24f9fe4d4f3ac5aff81b0221df",
+      "authoritativeRepresentation": "exact_source_text_excerpt",
+      "reviewDecision": "pending",
+      "promotionStatus": "not_promoted"
+    },
+    {
+      "structuredEvidenceId": "vm21-section-7-alternative-methodology-b-calculation-of-ca-and-fe-table-7-1",
+      "sourceChunkId": "vm21-section-7-alternative-methodology-b-calculation-of-ca-and-fe",
+      "sourceSection": "B. Calculation of CA and FE",
+      "pageStart": 186,
+      "pageEnd": 188,
+      "evidenceType": "table_or_grid",
+      "label": "Table 7.1",
+      "recommendedTreatment": "structured_table_or_matrix_candidate",
+      "sourceIdentity": {
+        "sourceId": "vm21-current-manual",
+        "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9"
+      },
+      "sourceLocator": {
+        "pageStart": 186,
+        "pageEnd": 188,
+        "sectionReference": "B. Calculation of CA and FE",
+        "chunkId": "vm21-section-7-alternative-methodology-b-calculation-of-ca-and-fe"
+      },
+      "dimensions": {
+        "status": "requires_visual_structured_extraction",
+        "rowIdentity": "retained_only_in_exact_source_text",
+        "columnIdentity": "retained_only_in_exact_source_text"
+      },
+      "units": {
+        "status": "retained_in_exact_source_text_not_normalized"
+      },
+      "notesAndFootnotes": {
+        "status": "retained_with_governing_source_subsection"
+      },
+      "values": {
+        "rawAndDisplayValues": "retained_in_exact_source_text_not_recomputed"
+      },
+      "sourceTextSha256": "a1731dcc10e135774ccb0c9b6c1cfc546f76108192dc8add42dadb698cecca17",
+      "authoritativeRepresentation": "exact_source_text_excerpt",
+      "reviewDecision": "pending",
+      "promotionStatus": "not_promoted"
+    },
+    {
+      "structuredEvidenceId": "vm21-section-7-alternative-methodology-c-calculation-of-gc-component-table-7-6",
+      "sourceChunkId": "vm21-section-7-alternative-methodology-c-calculation-of-gc-component",
+      "sourceSection": "C. Calculation of the GC Component",
+      "pageStart": 188,
+      "pageEnd": 192,
+      "evidenceType": "table_or_grid",
+      "label": "Table 7.6",
+      "recommendedTreatment": "structured_table_or_matrix_candidate",
+      "sourceIdentity": {
+        "sourceId": "vm21-current-manual",
+        "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9"
+      },
+      "sourceLocator": {
+        "pageStart": 188,
+        "pageEnd": 192,
+        "sectionReference": "C. Calculation of the GC Component",
+        "chunkId": "vm21-section-7-alternative-methodology-c-calculation-of-gc-component"
+      },
+      "dimensions": {
+        "status": "requires_visual_structured_extraction",
+        "rowIdentity": "retained_only_in_exact_source_text",
+        "columnIdentity": "retained_only_in_exact_source_text"
+      },
+      "units": {
+        "status": "retained_in_exact_source_text_not_normalized"
+      },
+      "notesAndFootnotes": {
+        "status": "retained_with_governing_source_subsection"
+      },
+      "values": {
+        "rawAndDisplayValues": "retained_in_exact_source_text_not_recomputed"
+      },
+      "sourceTextSha256": "8d6e0a6d39aa6f4149f73fc5c3c3ab0af8aab55fbd9d4995ecf2c78f0a9ac937",
+      "authoritativeRepresentation": "exact_source_text_excerpt",
+      "reviewDecision": "pending",
+      "promotionStatus": "not_promoted"
+    },
+    {
+      "structuredEvidenceId": "vm21-section-7-alternative-methodology-c-calculation-of-gc-component-factor-grid",
+      "sourceChunkId": "vm21-section-7-alternative-methodology-c-calculation-of-gc-component",
+      "sourceSection": "C. Calculation of the GC Component",
+      "pageStart": 188,
+      "pageEnd": 192,
+      "evidenceType": "table_or_grid",
+      "label": "factor grid",
+      "recommendedTreatment": "structured_table_or_matrix_candidate",
+      "sourceIdentity": {
+        "sourceId": "vm21-current-manual",
+        "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9"
+      },
+      "sourceLocator": {
+        "pageStart": 188,
+        "pageEnd": 192,
+        "sectionReference": "C. Calculation of the GC Component",
+        "chunkId": "vm21-section-7-alternative-methodology-c-calculation-of-gc-component"
+      },
+      "dimensions": {
+        "status": "requires_visual_structured_extraction",
+        "rowIdentity": "retained_only_in_exact_source_text",
+        "columnIdentity": "retained_only_in_exact_source_text"
+      },
+      "units": {
+        "status": "retained_in_exact_source_text_not_normalized"
+      },
+      "notesAndFootnotes": {
+        "status": "retained_with_governing_source_subsection"
+      },
+      "values": {
+        "rawAndDisplayValues": "retained_in_exact_source_text_not_recomputed"
+      },
+      "sourceTextSha256": "8d6e0a6d39aa6f4149f73fc5c3c3ab0af8aab55fbd9d4995ecf2c78f0a9ac937",
+      "authoritativeRepresentation": "exact_source_text_excerpt",
+      "reviewDecision": "pending",
+      "promotionStatus": "not_promoted"
+    },
+    {
+      "structuredEvidenceId": "vm21-section-7-alternative-methodology-d-fund-categorization-table-7-3",
+      "sourceChunkId": "vm21-section-7-alternative-methodology-d-fund-categorization",
+      "sourceSection": "D. Fund Categorization",
+      "pageStart": 192,
+      "pageEnd": 197,
+      "evidenceType": "table_or_grid",
+      "label": "Table 7.3",
+      "recommendedTreatment": "structured_table_or_matrix_candidate",
+      "sourceIdentity": {
+        "sourceId": "vm21-current-manual",
+        "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9"
+      },
+      "sourceLocator": {
+        "pageStart": 192,
+        "pageEnd": 197,
+        "sectionReference": "D. Fund Categorization",
+        "chunkId": "vm21-section-7-alternative-methodology-d-fund-categorization"
+      },
+      "dimensions": {
+        "status": "requires_visual_structured_extraction",
+        "rowIdentity": "retained_only_in_exact_source_text",
+        "columnIdentity": "retained_only_in_exact_source_text"
+      },
+      "units": {
+        "status": "retained_in_exact_source_text_not_normalized"
+      },
+      "notesAndFootnotes": {
+        "status": "retained_with_governing_source_subsection"
+      },
+      "values": {
+        "rawAndDisplayValues": "retained_in_exact_source_text_not_recomputed"
+      },
+      "sourceTextSha256": "75ac9acebbfe689022255c79b3ce8c16ab0b27687c8a3659e7cfa195e42c803a",
+      "authoritativeRepresentation": "exact_source_text_excerpt",
+      "reviewDecision": "pending",
+      "promotionStatus": "not_promoted"
+    },
+    {
+      "structuredEvidenceId": "vm21-section-7-alternative-methodology-d-fund-categorization-table-7-2",
+      "sourceChunkId": "vm21-section-7-alternative-methodology-d-fund-categorization",
+      "sourceSection": "D. Fund Categorization",
+      "pageStart": 192,
+      "pageEnd": 197,
+      "evidenceType": "table_or_grid",
+      "label": "Table 7.2",
+      "recommendedTreatment": "structured_table_or_matrix_candidate",
+      "sourceIdentity": {
+        "sourceId": "vm21-current-manual",
+        "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9"
+      },
+      "sourceLocator": {
+        "pageStart": 192,
+        "pageEnd": 197,
+        "sectionReference": "D. Fund Categorization",
+        "chunkId": "vm21-section-7-alternative-methodology-d-fund-categorization"
+      },
+      "dimensions": {
+        "status": "requires_visual_structured_extraction",
+        "rowIdentity": "retained_only_in_exact_source_text",
+        "columnIdentity": "retained_only_in_exact_source_text"
+      },
+      "units": {
+        "status": "retained_in_exact_source_text_not_normalized"
+      },
+      "notesAndFootnotes": {
+        "status": "retained_with_governing_source_subsection"
+      },
+      "values": {
+        "rawAndDisplayValues": "retained_in_exact_source_text_not_recomputed"
+      },
+      "sourceTextSha256": "75ac9acebbfe689022255c79b3ce8c16ab0b27687c8a3659e7cfa195e42c803a",
+      "authoritativeRepresentation": "exact_source_text_excerpt",
+      "reviewDecision": "pending",
+      "promotionStatus": "not_promoted"
+    },
+    {
+      "structuredEvidenceId": "vm21-section-7-alternative-methodology-d-fund-categorization-correlation-matrix",
+      "sourceChunkId": "vm21-section-7-alternative-methodology-d-fund-categorization",
+      "sourceSection": "D. Fund Categorization",
+      "pageStart": 192,
+      "pageEnd": 197,
+      "evidenceType": "matrix",
+      "label": "Correlation Matrix",
+      "recommendedTreatment": "structured_table_or_matrix_candidate",
+      "sourceIdentity": {
+        "sourceId": "vm21-current-manual",
+        "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9"
+      },
+      "sourceLocator": {
+        "pageStart": 192,
+        "pageEnd": 197,
+        "sectionReference": "D. Fund Categorization",
+        "chunkId": "vm21-section-7-alternative-methodology-d-fund-categorization"
+      },
+      "dimensions": {
+        "status": "requires_visual_structured_extraction",
+        "rowIdentity": "retained_only_in_exact_source_text",
+        "columnIdentity": "retained_only_in_exact_source_text"
+      },
+      "units": {
+        "status": "retained_in_exact_source_text_not_normalized"
+      },
+      "notesAndFootnotes": {
+        "status": "retained_with_governing_source_subsection"
+      },
+      "values": {
+        "rawAndDisplayValues": "retained_in_exact_source_text_not_recomputed"
+      },
+      "sourceTextSha256": "75ac9acebbfe689022255c79b3ce8c16ab0b27687c8a3659e7cfa195e42c803a",
+      "authoritativeRepresentation": "exact_source_text_excerpt",
+      "reviewDecision": "pending",
+      "promotionStatus": "not_promoted"
+    },
+    {
+      "structuredEvidenceId": "vm21-section-7-alternative-methodology-e-tables-table-7-4",
+      "sourceChunkId": "vm21-section-7-alternative-methodology-e-tables",
+      "sourceSection": "E. Tables",
+      "pageStart": 197,
+      "pageEnd": 199,
+      "evidenceType": "table_or_grid",
+      "label": "Table 7.4",
+      "recommendedTreatment": "structured_table_or_matrix_candidate",
+      "sourceIdentity": {
+        "sourceId": "vm21-current-manual",
+        "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9"
+      },
+      "sourceLocator": {
+        "pageStart": 197,
+        "pageEnd": 199,
+        "sectionReference": "E. Tables",
+        "chunkId": "vm21-section-7-alternative-methodology-e-tables"
+      },
+      "dimensions": {
+        "status": "requires_visual_structured_extraction",
+        "rowIdentity": "retained_only_in_exact_source_text",
+        "columnIdentity": "retained_only_in_exact_source_text"
+      },
+      "units": {
+        "status": "retained_in_exact_source_text_not_normalized"
+      },
+      "notesAndFootnotes": {
+        "status": "retained_with_governing_source_subsection"
+      },
+      "values": {
+        "rawAndDisplayValues": "retained_in_exact_source_text_not_recomputed"
+      },
+      "sourceTextSha256": "3bfe92f23c5ef753c95a4e85cfd5de8083eff3e2287e6858122aa22894f43756",
+      "authoritativeRepresentation": "exact_source_text_excerpt",
+      "reviewDecision": "pending",
+      "promotionStatus": "not_promoted"
+    },
+    {
+      "structuredEvidenceId": "vm21-section-7-alternative-methodology-e-tables-table-7-5",
+      "sourceChunkId": "vm21-section-7-alternative-methodology-e-tables",
+      "sourceSection": "E. Tables",
+      "pageStart": 197,
+      "pageEnd": 199,
+      "evidenceType": "table_or_grid",
+      "label": "Table 7.5",
+      "recommendedTreatment": "structured_table_or_matrix_candidate",
+      "sourceIdentity": {
+        "sourceId": "vm21-current-manual",
+        "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9"
+      },
+      "sourceLocator": {
+        "pageStart": 197,
+        "pageEnd": 199,
+        "sectionReference": "E. Tables",
+        "chunkId": "vm21-section-7-alternative-methodology-e-tables"
+      },
+      "dimensions": {
+        "status": "requires_visual_structured_extraction",
+        "rowIdentity": "retained_only_in_exact_source_text",
+        "columnIdentity": "retained_only_in_exact_source_text"
+      },
+      "units": {
+        "status": "retained_in_exact_source_text_not_normalized"
+      },
+      "notesAndFootnotes": {
+        "status": "retained_with_governing_source_subsection"
+      },
+      "values": {
+        "rawAndDisplayValues": "retained_in_exact_source_text_not_recomputed"
+      },
+      "sourceTextSha256": "3bfe92f23c5ef753c95a4e85cfd5de8083eff3e2287e6858122aa22894f43756",
+      "authoritativeRepresentation": "exact_source_text_excerpt",
+      "reviewDecision": "pending",
+      "promotionStatus": "not_promoted"
+    },
+    {
+      "structuredEvidenceId": "vm21-section-7-alternative-methodology-e-tables-table-7-6",
+      "sourceChunkId": "vm21-section-7-alternative-methodology-e-tables",
+      "sourceSection": "E. Tables",
+      "pageStart": 197,
+      "pageEnd": 199,
+      "evidenceType": "table_or_grid",
+      "label": "Table 7.6",
+      "recommendedTreatment": "structured_table_or_matrix_candidate",
+      "sourceIdentity": {
+        "sourceId": "vm21-current-manual",
+        "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9"
+      },
+      "sourceLocator": {
+        "pageStart": 197,
+        "pageEnd": 199,
+        "sectionReference": "E. Tables",
+        "chunkId": "vm21-section-7-alternative-methodology-e-tables"
+      },
+      "dimensions": {
+        "status": "requires_visual_structured_extraction",
+        "rowIdentity": "retained_only_in_exact_source_text",
+        "columnIdentity": "retained_only_in_exact_source_text"
+      },
+      "units": {
+        "status": "retained_in_exact_source_text_not_normalized"
+      },
+      "notesAndFootnotes": {
+        "status": "retained_with_governing_source_subsection"
+      },
+      "values": {
+        "rawAndDisplayValues": "retained_in_exact_source_text_not_recomputed"
+      },
+      "sourceTextSha256": "3bfe92f23c5ef753c95a4e85cfd5de8083eff3e2287e6858122aa22894f43756",
+      "authoritativeRepresentation": "exact_source_text_excerpt",
+      "reviewDecision": "pending",
+      "promotionStatus": "not_promoted"
+    },
+    {
+      "structuredEvidenceId": "vm21-section-11-mortality-assumptions-b-expected-mortality-curves-table-11-1",
+      "sourceChunkId": "vm21-section-11-mortality-assumptions-b-expected-mortality-curves",
+      "sourceSection": "B. Determination of Expected Mortality Curves",
+      "pageStart": 214,
+      "pageEnd": 217,
+      "evidenceType": "table_or_grid",
+      "label": "Table 11.1",
+      "recommendedTreatment": "structured_table_or_matrix_candidate",
+      "sourceIdentity": {
+        "sourceId": "vm21-current-manual",
+        "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9"
+      },
+      "sourceLocator": {
+        "pageStart": 214,
+        "pageEnd": 217,
+        "sectionReference": "B. Determination of Expected Mortality Curves",
+        "chunkId": "vm21-section-11-mortality-assumptions-b-expected-mortality-curves"
+      },
+      "dimensions": {
+        "status": "requires_visual_structured_extraction",
+        "rowIdentity": "retained_only_in_exact_source_text",
+        "columnIdentity": "retained_only_in_exact_source_text"
+      },
+      "units": {
+        "status": "retained_in_exact_source_text_not_normalized"
+      },
+      "notesAndFootnotes": {
+        "status": "retained_with_governing_source_subsection"
+      },
+      "values": {
+        "rawAndDisplayValues": "retained_in_exact_source_text_not_recomputed"
+      },
+      "sourceTextSha256": "57b2f06bef40f6f75e099395c39544c6eb5ffbe231d33316139718b688b5ce9d",
+      "authoritativeRepresentation": "exact_source_text_excerpt",
+      "reviewDecision": "pending",
+      "promotionStatus": "not_promoted"
+    },
+    {
+      "structuredEvidenceId": "vm21-section-11-mortality-assumptions-c-credibility-adjustment-table-1",
+      "sourceChunkId": "vm21-section-11-mortality-assumptions-c-credibility-adjustment",
+      "sourceSection": "C. Adjustment for Credibility to Determine Prudent Estimate Mortality",
+      "pageStart": 217,
+      "pageEnd": 218,
+      "evidenceType": "table_or_grid",
+      "label": "Table 1",
+      "recommendedTreatment": "structured_table_or_matrix_candidate",
+      "sourceIdentity": {
+        "sourceId": "vm21-current-manual",
+        "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9"
+      },
+      "sourceLocator": {
+        "pageStart": 217,
+        "pageEnd": 218,
+        "sectionReference": "C. Adjustment for Credibility to Determine Prudent Estimate Mortality",
+        "chunkId": "vm21-section-11-mortality-assumptions-c-credibility-adjustment"
+      },
+      "dimensions": {
+        "status": "requires_visual_structured_extraction",
+        "rowIdentity": "retained_only_in_exact_source_text",
+        "columnIdentity": "retained_only_in_exact_source_text"
+      },
+      "units": {
+        "status": "retained_in_exact_source_text_not_normalized"
+      },
+      "notesAndFootnotes": {
+        "status": "retained_with_governing_source_subsection"
+      },
+      "values": {
+        "rawAndDisplayValues": "retained_in_exact_source_text_not_recomputed"
+      },
+      "sourceTextSha256": "cbda7634145b5c6d1da36d0172ff33c87d34d74f6b279ae6cc32646cd59f8d1b",
+      "authoritativeRepresentation": "exact_source_text_excerpt",
+      "reviewDecision": "pending",
+      "promotionStatus": "not_promoted"
+    },
+    {
+      "structuredEvidenceId": "vm21-section-13-contract-allocation-b-excess-aggregate-reserve-table-12-1",
+      "sourceChunkId": "vm21-section-13-contract-allocation-b-excess-aggregate-reserve",
+      "sourceSection": "B. Allocated excess aggregate reserve",
+      "pageStart": 223,
+      "pageEnd": 224,
+      "evidenceType": "table_or_grid",
+      "label": "Table 12.1",
+      "recommendedTreatment": "structured_table_or_matrix_candidate",
+      "sourceIdentity": {
+        "sourceId": "vm21-current-manual",
+        "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9"
+      },
+      "sourceLocator": {
+        "pageStart": 223,
+        "pageEnd": 224,
+        "sectionReference": "B. Allocated excess aggregate reserve",
+        "chunkId": "vm21-section-13-contract-allocation-b-excess-aggregate-reserve"
+      },
+      "dimensions": {
+        "status": "requires_visual_structured_extraction",
+        "rowIdentity": "retained_only_in_exact_source_text",
+        "columnIdentity": "retained_only_in_exact_source_text"
+      },
+      "units": {
+        "status": "retained_in_exact_source_text_not_normalized"
+      },
+      "notesAndFootnotes": {
+        "status": "retained_with_governing_source_subsection"
+      },
+      "values": {
+        "rawAndDisplayValues": "retained_in_exact_source_text_not_recomputed"
+      },
+      "sourceTextSha256": "b662545995d57d50da2c9f48d5568d872d38a40b7829117ae749e05e86d7851e",
+      "authoritativeRepresentation": "exact_source_text_excerpt",
+      "reviewDecision": "pending",
+      "promotionStatus": "not_promoted"
+    },
+    {
+      "structuredEvidenceId": "vm21-section-4-determination-of-sr-b-scenario-reserve-scenario_reserve_calculation",
+      "sourceChunkId": "vm21-section-4-determination-of-sr-b-scenario-reserve",
+      "sourceSection": "B. Determination of Scenario Reserve",
+      "pageStart": 158,
+      "pageEnd": 160,
+      "evidenceType": "formula_or_calculation_sequence",
+      "label": "scenario_reserve_calculation",
+      "recommendedTreatment": "structured_semantic_record_without_numeric_recomputation",
+      "sourceIdentity": {
+        "sourceId": "vm21-current-manual",
+        "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9"
+      },
+      "sourceLocator": {
+        "pageStart": 158,
+        "pageEnd": 160,
+        "sectionReference": "B. Determination of Scenario Reserve",
+        "chunkId": "vm21-section-4-determination-of-sr-b-scenario-reserve"
+      },
+      "dimensions": {
+        "status": "not_applicable_formula_or_sequence"
+      },
+      "units": {
+        "status": "retained_in_exact_source_text_not_normalized"
+      },
+      "notesAndFootnotes": {
+        "status": "retained_with_governing_source_subsection"
+      },
+      "values": {
+        "rawAndDisplayValues": "retained_in_exact_source_text_not_recomputed"
+      },
+      "sourceTextSha256": "136a4ca4b33df7a0bb6e33da0f6c997710556f77a5704af2a02d559b2f1d79f2",
+      "authoritativeRepresentation": "exact_source_text_excerpt",
+      "reviewDecision": "pending",
+      "promotionStatus": "not_promoted"
+    },
+    {
+      "structuredEvidenceId": "vm21-section-6-additional-standard-projection-amount-b-additional-standard-projection-amount-additional_standard_projection_sequence",
+      "sourceChunkId": "vm21-section-6-additional-standard-projection-amount-b-additional-standard-projection-amount",
+      "sourceSection": "B. Additional Standard Projection Amount",
+      "pageStart": 166,
+      "pageEnd": 168,
+      "evidenceType": "formula_or_calculation_sequence",
+      "label": "additional_standard_projection_sequence",
+      "recommendedTreatment": "structured_semantic_record_without_numeric_recomputation",
+      "sourceIdentity": {
+        "sourceId": "vm21-current-manual",
+        "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9"
+      },
+      "sourceLocator": {
+        "pageStart": 166,
+        "pageEnd": 168,
+        "sectionReference": "B. Additional Standard Projection Amount",
+        "chunkId": "vm21-section-6-additional-standard-projection-amount-b-additional-standard-projection-amount"
+      },
+      "dimensions": {
+        "status": "not_applicable_formula_or_sequence"
+      },
+      "units": {
+        "status": "retained_in_exact_source_text_not_normalized"
+      },
+      "notesAndFootnotes": {
+        "status": "retained_with_governing_source_subsection"
+      },
+      "values": {
+        "rawAndDisplayValues": "retained_in_exact_source_text_not_recomputed"
+      },
+      "sourceTextSha256": "0667bf289f43dc2e0d0f1b3f07ec8a700a686c4f26784045c2a357d16345ef63",
+      "authoritativeRepresentation": "exact_source_text_excerpt",
+      "reviewDecision": "pending",
+      "promotionStatus": "not_promoted"
+    },
+    {
+      "structuredEvidenceId": "vm21-section-6-additional-standard-projection-amount-c-prescribed-assumptions-prescribed_assumption_formulas_and_tables",
+      "sourceChunkId": "vm21-section-6-additional-standard-projection-amount-c-prescribed-assumptions",
+      "sourceSection": "C. Prescribed Assumptions",
+      "pageStart": 168,
+      "pageEnd": 182,
+      "evidenceType": "formula_or_calculation_sequence",
+      "label": "prescribed_assumption_formulas_and_tables",
+      "recommendedTreatment": "structured_semantic_record_without_numeric_recomputation",
+      "sourceIdentity": {
+        "sourceId": "vm21-current-manual",
+        "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9"
+      },
+      "sourceLocator": {
+        "pageStart": 168,
+        "pageEnd": 182,
+        "sectionReference": "C. Prescribed Assumptions",
+        "chunkId": "vm21-section-6-additional-standard-projection-amount-c-prescribed-assumptions"
+      },
+      "dimensions": {
+        "status": "not_applicable_formula_or_sequence"
+      },
+      "units": {
+        "status": "retained_in_exact_source_text_not_normalized"
+      },
+      "notesAndFootnotes": {
+        "status": "retained_with_governing_source_subsection"
+      },
+      "values": {
+        "rawAndDisplayValues": "retained_in_exact_source_text_not_recomputed"
+      },
+      "sourceTextSha256": "0bc55b7ff28e21c307a30b641a233be44a54dc24f9fe4d4f3ac5aff81b0221df",
+      "authoritativeRepresentation": "exact_source_text_excerpt",
+      "reviewDecision": "pending",
+      "promotionStatus": "not_promoted"
+    },
+    {
+      "structuredEvidenceId": "vm21-section-7-alternative-methodology-b-calculation-of-ca-and-fe-ca_and_fe_calculation",
+      "sourceChunkId": "vm21-section-7-alternative-methodology-b-calculation-of-ca-and-fe",
+      "sourceSection": "B. Calculation of CA and FE",
+      "pageStart": 186,
+      "pageEnd": 188,
+      "evidenceType": "formula_or_calculation_sequence",
+      "label": "ca_and_fe_calculation",
+      "recommendedTreatment": "structured_semantic_record_without_numeric_recomputation",
+      "sourceIdentity": {
+        "sourceId": "vm21-current-manual",
+        "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9"
+      },
+      "sourceLocator": {
+        "pageStart": 186,
+        "pageEnd": 188,
+        "sectionReference": "B. Calculation of CA and FE",
+        "chunkId": "vm21-section-7-alternative-methodology-b-calculation-of-ca-and-fe"
+      },
+      "dimensions": {
+        "status": "not_applicable_formula_or_sequence"
+      },
+      "units": {
+        "status": "retained_in_exact_source_text_not_normalized"
+      },
+      "notesAndFootnotes": {
+        "status": "retained_with_governing_source_subsection"
+      },
+      "values": {
+        "rawAndDisplayValues": "retained_in_exact_source_text_not_recomputed"
+      },
+      "sourceTextSha256": "a1731dcc10e135774ccb0c9b6c1cfc546f76108192dc8add42dadb698cecca17",
+      "authoritativeRepresentation": "exact_source_text_excerpt",
+      "reviewDecision": "pending",
+      "promotionStatus": "not_promoted"
+    },
+    {
+      "structuredEvidenceId": "vm21-section-7-alternative-methodology-c-calculation-of-gc-component-gc_factor_calculation",
+      "sourceChunkId": "vm21-section-7-alternative-methodology-c-calculation-of-gc-component",
+      "sourceSection": "C. Calculation of the GC Component",
+      "pageStart": 188,
+      "pageEnd": 192,
+      "evidenceType": "formula_or_calculation_sequence",
+      "label": "gc_factor_calculation",
+      "recommendedTreatment": "structured_semantic_record_without_numeric_recomputation",
+      "sourceIdentity": {
+        "sourceId": "vm21-current-manual",
+        "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9"
+      },
+      "sourceLocator": {
+        "pageStart": 188,
+        "pageEnd": 192,
+        "sectionReference": "C. Calculation of the GC Component",
+        "chunkId": "vm21-section-7-alternative-methodology-c-calculation-of-gc-component"
+      },
+      "dimensions": {
+        "status": "not_applicable_formula_or_sequence"
+      },
+      "units": {
+        "status": "retained_in_exact_source_text_not_normalized"
+      },
+      "notesAndFootnotes": {
+        "status": "retained_with_governing_source_subsection"
+      },
+      "values": {
+        "rawAndDisplayValues": "retained_in_exact_source_text_not_recomputed"
+      },
+      "sourceTextSha256": "8d6e0a6d39aa6f4149f73fc5c3c3ab0af8aab55fbd9d4995ecf2c78f0a9ac937",
+      "authoritativeRepresentation": "exact_source_text_excerpt",
+      "reviewDecision": "pending",
+      "promotionStatus": "not_promoted"
+    },
+    {
+      "structuredEvidenceId": "vm21-section-9-modeling-hedges-c-calculation-of-sr-reported-reported_sr_hedge_adjustment",
+      "sourceChunkId": "vm21-section-9-modeling-hedges-c-calculation-of-sr-reported",
+      "sourceSection": "C. Calculation of SR (Reported)",
+      "pageStart": 204,
+      "pageEnd": 207,
+      "evidenceType": "formula_or_calculation_sequence",
+      "label": "reported_sr_hedge_adjustment",
+      "recommendedTreatment": "structured_semantic_record_without_numeric_recomputation",
+      "sourceIdentity": {
+        "sourceId": "vm21-current-manual",
+        "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9"
+      },
+      "sourceLocator": {
+        "pageStart": 204,
+        "pageEnd": 207,
+        "sectionReference": "C. Calculation of SR (Reported)",
+        "chunkId": "vm21-section-9-modeling-hedges-c-calculation-of-sr-reported"
+      },
+      "dimensions": {
+        "status": "not_applicable_formula_or_sequence"
+      },
+      "units": {
+        "status": "retained_in_exact_source_text_not_normalized"
+      },
+      "notesAndFootnotes": {
+        "status": "retained_with_governing_source_subsection"
+      },
+      "values": {
+        "rawAndDisplayValues": "retained_in_exact_source_text_not_recomputed"
+      },
+      "sourceTextSha256": "5dfacbe27d2fc0c765126379099f5c1a320f7182d983879f2c2ddb1ec781dde9",
+      "authoritativeRepresentation": "exact_source_text_excerpt",
+      "reviewDecision": "pending",
+      "promotionStatus": "not_promoted"
+    },
+    {
+      "structuredEvidenceId": "vm21-section-13-contract-allocation-b-excess-aggregate-reserve-contract_allocation_formula",
+      "sourceChunkId": "vm21-section-13-contract-allocation-b-excess-aggregate-reserve",
+      "sourceSection": "B. Allocated excess aggregate reserve",
+      "pageStart": 223,
+      "pageEnd": 224,
+      "evidenceType": "formula_or_calculation_sequence",
+      "label": "contract_allocation_formula",
+      "recommendedTreatment": "structured_semantic_record_without_numeric_recomputation",
+      "sourceIdentity": {
+        "sourceId": "vm21-current-manual",
+        "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9"
+      },
+      "sourceLocator": {
+        "pageStart": 223,
+        "pageEnd": 224,
+        "sectionReference": "B. Allocated excess aggregate reserve",
+        "chunkId": "vm21-section-13-contract-allocation-b-excess-aggregate-reserve"
+      },
+      "dimensions": {
+        "status": "not_applicable_formula_or_sequence"
+      },
+      "units": {
+        "status": "retained_in_exact_source_text_not_normalized"
+      },
+      "notesAndFootnotes": {
+        "status": "retained_with_governing_source_subsection"
+      },
+      "values": {
+        "rawAndDisplayValues": "retained_in_exact_source_text_not_recomputed"
+      },
+      "sourceTextSha256": "b662545995d57d50da2c9f48d5568d872d38a40b7829117ae749e05e86d7851e",
+      "authoritativeRepresentation": "exact_source_text_excerpt",
+      "reviewDecision": "pending",
+      "promotionStatus": "not_promoted"
+    }
+  ]
+}

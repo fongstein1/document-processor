@@ -1,5 +1,34 @@
 # Current Project State
 
+## 2026-08-28 VM-21 current-manual canonical candidate
+
+Current 2026 VM-21 is now represented by one substantially complete,
+structure-aware canonical candidate spanning authoritative PDF pages 143-225.
+The package reuses the existing reviewed batches 022-037 without source
+re-extraction. It reconciles all 83 physical pages, deduplicates the overlapping
+pages 151 and 218 only after exact equality checks, and excludes page 226 before
+VM-22 begins on page 227.
+
+The package contains 15 structural parents and 63 complete top-level child
+units (78 chunks total), covering the chapter opening, Sections 1-13, and the
+intentional printed blank page 21-83. Exact source text, nested lists, guidance
+notes, tables, formulas, page locators, source-text hashes, hierarchy, and
+adjacency are retained. Twenty explicit documentary relationship candidates
+and 27 structured table/formula review records remain pending, review-only,
+and unpromoted.
+
+The 30-case focused evaluation passes 18/22 supported top-1, 22/22 strict
+top-3, 6/6 unsupported abstentions, 2/2 ambiguity handling, and 22/22 current
+VM-21 authority top-1 checks. All four generic evidence-sufficiency regressions
+pass. Processor readiness is rated AMBER: the generic architecture handled
+overlap reconciliation, source-bound hierarchy, evidence sufficiency, and
+governance successfully, while dense actuarial tables and formula sequences
+still require targeted independent review.
+
+VM-21 remains `review_only / not_promoted`, promotion-ineligible, and blocked
+from learner, application, RAG, vector, and Copilot use. VM-30 remains
+canonically promoted and its authoritative source evidence is unchanged.
+
 ## 2026-08-28 VM-30 current-manual canonical promotion
 
 Current 2026 VM-30 is represented by one substantially complete,

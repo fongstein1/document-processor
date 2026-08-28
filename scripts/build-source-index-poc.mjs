@@ -3,6 +3,7 @@ import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { buildRetrievalMarkdown, evaluateQueries, normalizeText } from './evaluate-source-index-retrieval.mjs'
 import { buildVm01DefinitionChunks } from './lib/vm01-definitions.mjs'
+import { buildVm21Chunks } from './lib/vm21-current-manual.mjs'
 import { buildVm30Chunks } from './lib/vm30-current-manual.mjs'
 import { buildVm31Chunks } from './lib/vm31-current-manual.mjs'
 
@@ -275,7 +276,7 @@ const deriveChunk = (source, chunk, index, sourceIndexPath) => {
   const concepts = asArray(chunk.concepts).length > 0 ? asArray(chunk.concepts) : controlledTags
   const definedTerms = chunk.preserveEmptyDefinedTerms ? asArray(chunk.definedTerms) : asArray(chunk.definedTerms).length > 0 ? asArray(chunk.definedTerms) : keywords
   const acronyms = asArray(chunk.acronyms)
-  const requirements = asArray(chunk.requirements).length > 0 ? asArray(chunk.requirements) : deriveRequirements(controlledTags)
+  const requirements = chunk.preserveEmptyRequirements ? asArray(chunk.requirements) : asArray(chunk.requirements).length > 0 ? asArray(chunk.requirements) : deriveRequirements(controlledTags)
   const citationDisplay = chunk.citationDisplay ?? buildCitationDisplay(citations)
   const hierarchyFields = chunk.chunkLevel ? {
     chunkLevel: chunk.chunkLevel,
@@ -321,6 +322,7 @@ const deriveChunk = (source, chunk, index, sourceIndexPath) => {
     sectionReference: chunk.sectionReference,
     lineReference: chunk.lineReference ?? null,
     sourceTextExcerpt,
+    ...(chunk.sourceTextSha256 ? { sourceTextSha256: chunk.sourceTextSha256 } : {}),
     normalizedTextExcerpt,
     summary,
     topic,
@@ -357,6 +359,7 @@ const deriveChunk = (source, chunk, index, sourceIndexPath) => {
     retrievalEligible: chunk.retrievalEligible ?? true,
     promotionEligible: chunk.promotionEligible ?? false,
     ...(chunk.retrievalRole ? { retrievalRole: chunk.retrievalRole } : {}),
+    ...(chunk.structuredEvidence ? { structuredEvidence: asArray(chunk.structuredEvidence) } : {}),
   }
 
   return derivedChunk
@@ -1082,6 +1085,8 @@ const main = async () => {
     const sourceRelationships = asArray(source.relationships)
     const hydratedChunks = source.definitionInput
       ? await buildVm01DefinitionChunks(repoRoot, source)
+      : source.vm21Input
+        ? await buildVm21Chunks(repoRoot, source)
       : source.vm30Input
         ? await buildVm30Chunks(repoRoot, source)
       : source.vm31Input

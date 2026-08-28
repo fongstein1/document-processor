@@ -8,14 +8,14 @@ As of 2026-08-28T00:00:00.000Z, the repository contains substantial regulatory e
 - Documents with declared external raw source: **71**
 - Documents reviewed / review artifacts matched: **97 review indexes**
 - Canonical source packages: **24**
-- Canonical chunks: **592**
+- Canonical chunks: **666**
 - Promoted canonical prose packages / chunks: **9 / 382**
 - Promoted structured logical tables / versions: **7 / 29**
 - Structured rows / values: **891 / 7022**
 - Sources awaiting canonicalization: **96**
 - Sources awaiting human review: **1**
 - Review-artifact-only sources: **34**
-- Candidate relationships: **160**
+- Candidate relationships: **180**
 - Promoted relationships: **0**
 
 ## VM-20 coverage checkpoint
@@ -36,6 +36,14 @@ As of 2026-08-28T00:00:00.000Z, the repository contains substantial regulatory e
 - Formal-definition requests for undefined or ambiguous terms abstain rather than substituting related evidence.
 - Canonical `definedTerms` now contains only 98 formal terms plus 27 source-explicit aliases; 17 generated lookup variants remain confined to non-authoritative retrieval metadata.
 - The focused case-level retrieval artifact contains 21 inspectable queries, including DR, SR, NPR, GIC, IUL, cross-page, ambiguous, undefined-term, and unavailable-version cases.
+
+## VM-21 coverage checkpoint
+
+- Current 2026 VM-21 structural parents / child units: 15 / 63; status not_promoted.
+- VM-21 explicit-reference candidates: 20; all remain pending, review-only, and not promoted.
+- Focused VM-21 retrieval contains 30 inspectable cases: 22 supported, six unsupported, and two ambiguous requests, with a strict top-three production evidence window.
+- VM-21 source QA records complete PDF-page 143-225 coverage, exact reconciliation of the two overlapping batch pages, exclusion of page 226, and zero source re-extraction or source-text rewrites.
+- VM-21 remains a review-only canonical candidate blocked from learner, app, RAG, vector, and Copilot use pending independent review.
 
 ## VM-30 coverage checkpoint
 

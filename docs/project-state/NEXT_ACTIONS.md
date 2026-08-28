@@ -2,7 +2,20 @@
 
 ## VM-21 canonicalization handoff
 
-VM-30 canonical promotion is complete under the recorded independent review decision. The next P0 canonicalization priority is the variable annuity reserve framework in VM-21 using the existing validated batches 022-037.
+VM-30 canonical promotion is complete under the recorded independent review
+decision. The current 2026 VM-21 canonical candidate is also complete as a
+review-only package built from the existing validated batches 022-037.
+
+The immediate action is a fresh independent review using
+`data/processed/review_packages/vm21-independent-review-prompt.md`. Review the
+78 exact-text chunks, 20 relationship candidates, 27 structured table/formula
+records, 30 focused retrieval cases, four support-gate regressions, and the
+AMBER processor-readiness findings. Do not promote VM-21 or enable downstream
+uses without an explicit review decision.
+
+If VM-21 is approved and promoted through the existing decision workflow, the
+next highest-value P0 source is current 2026 VM-22, reusing its existing
+reviewed extraction wave before considering any new PDF extraction.
 
 ## VM-20 remaining prose and appendix handoff
 

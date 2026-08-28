@@ -392,19 +392,18 @@
       "rationale": "Tests cross-reference retrieval for VM-31 and related valuation-manual sections without inferring legal effect."
     },
     {
-      "queryId": "q-vm21-sr-projection-entry",
+      "queryId": "q-vm21-current-sr-determination",
       "queryCategory": "multi_chunk",
-      "query": "How does VM-21 progress from the stochastic reserve projection setup through the closeout boundary?",
+      "query": "How does current VM-21 determine the stochastic reserve through accumulated deficiencies, scenario reserves, and projection scenarios?",
       "expectedChunkIds": [
-        "chunk-vm21-sr-projection-entry-001",
-        "chunk-vm21-sr-projection-entry-002",
-        "chunk-vm21-sr-projection-entry-003",
-        "chunk-vm21-sr-projection-entry-004"
+        "vm21-section-4-determination-of-sr-a-projection-of-accumulated-deficiencies",
+        "vm21-section-4-determination-of-sr-b-scenario-reserve",
+        "vm21-section-4-determination-of-sr-c-projection-scenarios"
       ],
       "expectedSourceIds": [
-        "vm21-sr-projection-entry"
+        "vm21-current-manual"
       ],
-      "rationale": "Tests the neighboring VM chapter and its stochastic projection structure."
+      "rationale": "Tests the current authoritative VM-21 stochastic-reserve structure across adjacent source subsections."
     },
     {
       "queryId": "q-ag36-active-overview",

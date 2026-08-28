@@ -16,6 +16,34 @@ promoted by this file.
 This index is not learner-facing, not app-ready, not RAG-ready, and not
 promoted.
 
+## Canonical Candidate Addendum — 2026-08-28
+
+The complete batch sequence has now been reused to build one review-only
+current-manual canonical candidate at
+`data/processed/source_indexes/sources/vm21-current-manual.json`. The earlier
+four-placeholder `vm21-sr-projection-entry` package has been removed rather
+than retained as a competing source.
+
+- Authoritative boundary: PDF pages 143-225; page 226 excluded; VM-22 begins
+  on page 227.
+- Structure: 15 parents, 63 children, 78 total chunks.
+- Batch reuse: all 83 pages present; overlapping pages 151 and 218 match
+  exactly and are represented once.
+- Source re-extraction / authoritative source-text rewrites: 0 / 0.
+- Focused retrieval: 18/22 top-1, 22/22 strict top-3, 6/6 unsupported,
+  2/2 ambiguity-safe, and 22/22 current-authority top-1.
+- Relationships: 20 explicit-reference candidates, all pending and
+  unpromoted.
+- Structured evidence: 27 table, matrix, formula, or calculation-sequence
+  review records; exact source text remains authoritative.
+- Processor readiness: AMBER pending targeted independent review of dense
+  tables, formulas, and actuarial classifications.
+
+The primary review package is
+`data/processed/review_packages/vm21-canonical-coverage-review-package.json`.
+VM-21 remains `review_only / not_promoted` and blocked from learner, app, RAG,
+vector, and Copilot use.
+
 Note on commit hashes: the hashes below refer to the tracked commit that
 recorded the batch group or completion refresh, not to the ignored working
 files themselves.

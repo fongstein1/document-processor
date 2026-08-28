@@ -1,0 +1,562 @@
+{
+  "schemaVersion": "1.0",
+  "artifactType": "formal_requirement_support_gate_regression",
+  "status": "pass",
+  "productionEvidenceWindow": 3,
+  "genericBoundary": "A formal VM-21 requirement request requires relevant actual VM-21 source text inside ranks 1-3; other-manual methodology, rank-4 VM-21 evidence, or wrong-topic VM-21 text is insufficient.",
+  "fixtureSources": [
+    {
+      "sourceId": "vm21-current-manual",
+      "sourceFamilyId": "valuation_manual_pdfs",
+      "authorityLevel": "manual_section"
+    },
+    {
+      "sourceId": "vm20-canonical-coverage",
+      "sourceFamilyId": "valuation_manual_pdfs",
+      "authorityLevel": "manual_section"
+    },
+    {
+      "sourceId": "vm30-current-manual",
+      "sourceFamilyId": "valuation_manual_pdfs",
+      "authorityLevel": "manual_section"
+    }
+  ],
+  "caseCount": 4,
+  "passedCaseCount": 4,
+  "cases": [
+    {
+      "testId": "other-manual-methodology-cannot-support-vm21-requirement",
+      "description": "Actual VM-20 methodology and VM-30 reporting evidence cannot substitute for requested formal VM-21 authority.",
+      "query": "What prescribed interest rate scenario generator does VM-21 require?",
+      "requestedSourceAuthority": {
+        "sourceIds": [
+          "vm21-current-manual"
+        ],
+        "informationTypes": [
+          "formal_requirement"
+        ],
+        "authorityLevel": "manual_section"
+      },
+      "requiredEvidenceTerms": [
+        "prescribed interest rate scenario generator"
+      ],
+      "productionEvidenceWindowSize": 3,
+      "fullRanking": [
+        {
+          "rank": 1,
+          "chunkId": "vm20-canonical-coverage-vm20-section4-entry-child-001",
+          "sourceId": "vm20-canonical-coverage",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 20,
+          "sectionReference": "Section 4: Deterministic Reserve (entry point)",
+          "pageStart": 66,
+          "pageEnd": 66,
+          "sourceTextType": "actual_extracted_source_text",
+          "sourceTextExcerpt": "[p. 66] Requirements for Principle -Based Reserves for Life Products VM-20 \n© 2025 National Associati on of Insurance Commissioners 20-22 b. The policy cash surrender value calculated as of the valuation date and in a manner \nthat is consistent with that used in calculating the NPR on the valuation date. \n2. For a universal life policy, the NPR shall not be less than the greater of: \na. The amount needed to cover the cost of insurance to the next processing date on \nwhich cost of insurance charges are deducted with respect to the policy. The cost \nof insurance for this purpose shall be based on the policy year in which the \nvaluation date falls, using the mortality tables for the policy prescribed in Section \n3.C, and it shall be based upon the net amount at risk. “Cost of insurance ,” as used \nhere, refers to the valuation mortality rate, not the UL policy’s contractual cost of \ninsurance or expense charges . \nb. The policy cash surrender value calculated as of the valuation date and in a manner \nthat is consistent with that used in calculating the NPR on the valuation date. \nE. The policy minimum NPR is defined to be the policy NPR determined in Section 3.A through \nSection 3.D, less a credit for reinsurance ceded as defined in Section 8. \nSection 4: Deterministic Reserve \nFor a group of one or more policies for which a DR is to be calculated, the company shall calculate the DR \nfor the group using the method described in either Section 4.A or Section 4.B below . \nA. Calculate the DR equal to the actuarial present value of benefits, expenses and related amounts less \nthe actuarial present value of premiums and related amounts, less the positive or negative PIMR \nbalance at the valuation date allocated to the group of one or more policies being modeled under \nSection 7.D. 7, plus the balance of separate account assets on the valuation date, and plus the policy \nloan balance at the valuation date with appropriate reflection of any relevant due, accrued or \nunearned loan int erest (if policy loans are explicitly modeled under Section 7.F.3.b) , where: \n1. Cash flows are projected in compliance with the app licable requirements in Section 7, \nSection 8 and Section 9 over economic scenario 12 described in Section 7.G.1, and further \ndescribed in Appendix 1 .E. \n2. Present values are calculated using the path of discount rates for the corresponding model \nsegment determined in compliance with Section 7.H. 3. \n3. The actuarial present value of benefits, expenses and related amount equals the sum of: \na. Present value of future benefits, but before netting the repayment of any policy \nloans . \nGuidance Note: Future benefits include , but are not limited to , death and cash surrender benefits. \nb. Present value of future expenses excluding federal income taxes and expenses paid \nto provide fraternal benefits in lieu of federal income taxes . \n4. The actuarial present value of premiums and related amounts equals the sum of the present \nvalues of: \na. Future gross premium payments and/or other applicable revenue . \nb. Future cash flows to the general account from the separate account , less cash flows \nfrom the general account to the separate account ."
+        },
+        {
+          "rank": 2,
+          "chunkId": "vm20-canonical-coverage-vm20-section5-entry-child-001",
+          "sourceId": "vm20-canonical-coverage",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 19,
+          "sectionReference": "Section 5: Stochastic Reserve (entry point and aggregation)",
+          "pageStart": 67,
+          "pageEnd": 67,
+          "sourceTextType": "actual_extracted_source_text",
+          "sourceTextExcerpt": "[p. 67] Requirements for Principle -Based Reserves for Life Products VM-20 \n© 2025 National Associati on of Insurance Commissioners 20-23 c. Future net policy loan cash flows, if policy loans are explicitly modeled under \nSection 7.F.3 .b. \nGuidance Note: Future net policy loan cash flows include: policy loan interest paid in cash plus \nrepayments of policy loan principal, including repayments occurring at death or surrender (note \nthat the future benefits in Section 4.A.3.a are before consideration of policy loans), less additional \npolicy loan principal (but excluding policy loan interest that is added to the policy loan principal \nbalance) . \nd. Future net reinsurance cash flows determined in compliance with Section 8 . \ne. The future derivative liability program net cash flows (i.e., cash received minus \ncash paid) that are allocated to this group of policies. \n5. If a group of policies is excluded from the SR requirements, the company may not include \nfuture transactions associated with non -hedging derivative programs in determining the \nDR for those policies. \nB. Calculate the DR as a – b, where \na = the aggregate annual statement value of those starting assets which, when projected along with \nall premium and investment income, result in the liquidation of all projected future benefits and \nexpenses by the end of the projection horizon. Under this a lternative, the following considerations \napply: \n1. Cash flows are projected in compliance with the applicable requirements in Section \n7, Section 8 and Section 9 over economic scenario 12 described in Section 7.G.1 \nand found in Appendix 1 .\n\n2. The requirements for future benefits and premiums in Section 4.A apply as well to \nthe calculation of the DR under this subsection.\n\n3. The balance of policy loans on the valuation date (if explicitly modeled under \nSection 7.F.3.b) and the balance of separate account assets on the valuation date \nare modeled each period in compliance with the applicable changes in these asset \nbalances as de fined in Section 7. \nb = that portion of the PIMR amount allocated under Section 7.D.\n\nC. If a group of policies for which a DR is calculated includes policies from more than one VM-20 \nreserving category , where VM-20 reserving category is as defined in VM -01, a DR shall be \ndetermined for each subgroup of the group of policies consisting of only those policies from each \nindividual VM-20 reserving category by following the process of Section 4.A and Section 4.B \nabove . The NAER used for discounting each such subgroup may be the NAER for the group of \npolicies. If the sum of the DR for these subgroup s does not equal the total DR calculated for the \ngroup of policies as a whole, the DR for the group of policies shall be allocated to each such \nsubgroup proportionally. \nSection 5: Stochastic Reserve \nFor a group of one or more policies for which a SR is to be calculated, the company shall calculate the SR \nas follows: \nA. Project cash flows in compliance with the app licable requirements in Section 7, Section 8 and \nSection 9 using the stochastically generated scenarios described in Section 7.G.2., and further"
+        },
+        {
+          "rank": 3,
+          "chunkId": "vm30-section-2-a-general-2-appointed-actuary-notice",
+          "sourceId": "vm30-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 18,
+          "sectionReference": "2. Appointed-actuary notice within five business days",
+          "pageStart": 326,
+          "pageEnd": 326,
+          "sourceTextType": "actual_extracted_source_text",
+          "sourceTextExcerpt": "2. Within five business days of the appointment of an appointed actuary, the company shall \nnotify the domiciliary commissioner of the name, title (and, in the case of a consulting \nactuary, the name of the firm) and manner of appointment or retention of each person \nappointed or retained by the company as an appointed actuary and shall state in the notice \nthat the person meets the r equirements of an appointed actuary. Once these notices are \nfurnished, no further notice is required with respect to this person unless the actuary ceases \nto be appointed or retained or ceases to meet the requirements of an appointed actuary ."
+        }
+      ],
+      "productionWindowEvidence": [
+        {
+          "rank": 1,
+          "chunkId": "vm20-canonical-coverage-vm20-section4-entry-child-001",
+          "sourceId": "vm20-canonical-coverage",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 20,
+          "sectionReference": "Section 4: Deterministic Reserve (entry point)",
+          "pageStart": 66,
+          "pageEnd": 66,
+          "sourceTextType": "actual_extracted_source_text",
+          "sourceTextExcerpt": "[p. 66] Requirements for Principle -Based Reserves for Life Products VM-20 \n© 2025 National Associati on of Insurance Commissioners 20-22 b. The policy cash surrender value calculated as of the valuation date and in a manner \nthat is consistent with that used in calculating the NPR on the valuation date. \n2. For a universal life policy, the NPR shall not be less than the greater of: \na. The amount needed to cover the cost of insurance to the next processing date on \nwhich cost of insurance charges are deducted with respect to the policy. The cost \nof insurance for this purpose shall be based on the policy year in which the \nvaluation date falls, using the mortality tables for the policy prescribed in Section \n3.C, and it shall be based upon the net amount at risk. “Cost of insurance ,” as used \nhere, refers to the valuation mortality rate, not the UL policy’s contractual cost of \ninsurance or expense charges . \nb. The policy cash surrender value calculated as of the valuation date and in a manner \nthat is consistent with that used in calculating the NPR on the valuation date. \nE. The policy minimum NPR is defined to be the policy NPR determined in Section 3.A through \nSection 3.D, less a credit for reinsurance ceded as defined in Section 8. \nSection 4: Deterministic Reserve \nFor a group of one or more policies for which a DR is to be calculated, the company shall calculate the DR \nfor the group using the method described in either Section 4.A or Section 4.B below . \nA. Calculate the DR equal to the actuarial present value of benefits, expenses and related amounts less \nthe actuarial present value of premiums and related amounts, less the positive or negative PIMR \nbalance at the valuation date allocated to the group of one or more policies being modeled under \nSection 7.D. 7, plus the balance of separate account assets on the valuation date, and plus the policy \nloan balance at the valuation date with appropriate reflection of any relevant due, accrued or \nunearned loan int erest (if policy loans are explicitly modeled under Section 7.F.3.b) , where: \n1. Cash flows are projected in compliance with the app licable requirements in Section 7, \nSection 8 and Section 9 over economic scenario 12 described in Section 7.G.1, and further \ndescribed in Appendix 1 .E. \n2. Present values are calculated using the path of discount rates for the corresponding model \nsegment determined in compliance with Section 7.H. 3. \n3. The actuarial present value of benefits, expenses and related amount equals the sum of: \na. Present value of future benefits, but before netting the repayment of any policy \nloans . \nGuidance Note: Future benefits include , but are not limited to , death and cash surrender benefits. \nb. Present value of future expenses excluding federal income taxes and expenses paid \nto provide fraternal benefits in lieu of federal income taxes . \n4. The actuarial present value of premiums and related amounts equals the sum of the present \nvalues of: \na. Future gross premium payments and/or other applicable revenue . \nb. Future cash flows to the general account from the separate account , less cash flows \nfrom the general account to the separate account ."
+        },
+        {
+          "rank": 2,
+          "chunkId": "vm20-canonical-coverage-vm20-section5-entry-child-001",
+          "sourceId": "vm20-canonical-coverage",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 19,
+          "sectionReference": "Section 5: Stochastic Reserve (entry point and aggregation)",
+          "pageStart": 67,
+          "pageEnd": 67,
+          "sourceTextType": "actual_extracted_source_text",
+          "sourceTextExcerpt": "[p. 67] Requirements for Principle -Based Reserves for Life Products VM-20 \n© 2025 National Associati on of Insurance Commissioners 20-23 c. Future net policy loan cash flows, if policy loans are explicitly modeled under \nSection 7.F.3 .b. \nGuidance Note: Future net policy loan cash flows include: policy loan interest paid in cash plus \nrepayments of policy loan principal, including repayments occurring at death or surrender (note \nthat the future benefits in Section 4.A.3.a are before consideration of policy loans), less additional \npolicy loan principal (but excluding policy loan interest that is added to the policy loan principal \nbalance) . \nd. Future net reinsurance cash flows determined in compliance with Section 8 . \ne. The future derivative liability program net cash flows (i.e., cash received minus \ncash paid) that are allocated to this group of policies. \n5. If a group of policies is excluded from the SR requirements, the company may not include \nfuture transactions associated with non -hedging derivative programs in determining the \nDR for those policies. \nB. Calculate the DR as a – b, where \na = the aggregate annual statement value of those starting assets which, when projected along with \nall premium and investment income, result in the liquidation of all projected future benefits and \nexpenses by the end of the projection horizon. Under this a lternative, the following considerations \napply: \n1. Cash flows are projected in compliance with the applicable requirements in Section \n7, Section 8 and Section 9 over economic scenario 12 described in Section 7.G.1 \nand found in Appendix 1 .\n\n2. The requirements for future benefits and premiums in Section 4.A apply as well to \nthe calculation of the DR under this subsection.\n\n3. The balance of policy loans on the valuation date (if explicitly modeled under \nSection 7.F.3.b) and the balance of separate account assets on the valuation date \nare modeled each period in compliance with the applicable changes in these asset \nbalances as de fined in Section 7. \nb = that portion of the PIMR amount allocated under Section 7.D.\n\nC. If a group of policies for which a DR is calculated includes policies from more than one VM-20 \nreserving category , where VM-20 reserving category is as defined in VM -01, a DR shall be \ndetermined for each subgroup of the group of policies consisting of only those policies from each \nindividual VM-20 reserving category by following the process of Section 4.A and Section 4.B \nabove . The NAER used for discounting each such subgroup may be the NAER for the group of \npolicies. If the sum of the DR for these subgroup s does not equal the total DR calculated for the \ngroup of policies as a whole, the DR for the group of policies shall be allocated to each such \nsubgroup proportionally. \nSection 5: Stochastic Reserve \nFor a group of one or more policies for which a SR is to be calculated, the company shall calculate the SR \nas follows: \nA. Project cash flows in compliance with the app licable requirements in Section 7, Section 8 and \nSection 9 using the stochastically generated scenarios described in Section 7.G.2., and further"
+        },
+        {
+          "rank": 3,
+          "chunkId": "vm30-section-2-a-general-2-appointed-actuary-notice",
+          "sourceId": "vm30-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 18,
+          "sectionReference": "2. Appointed-actuary notice within five business days",
+          "pageStart": 326,
+          "pageEnd": 326,
+          "sourceTextType": "actual_extracted_source_text",
+          "sourceTextExcerpt": "2. Within five business days of the appointment of an appointed actuary, the company shall \nnotify the domiciliary commissioner of the name, title (and, in the case of a consulting \nactuary, the name of the firm) and manner of appointment or retention of each person \nappointed or retained by the company as an appointed actuary and shall state in the notice \nthat the person meets the r equirements of an appointed actuary. Once these notices are \nfurnished, no further notice is required with respect to this person unless the actuary ceases \nto be appointed or retained or ceases to meet the requirements of an appointed actuary ."
+        }
+      ],
+      "supportState": "unsupported",
+      "evidenceSufficient": false,
+      "reasonCode": "missing_requested_formal_requirement_source",
+      "expectedSupportState": "unsupported",
+      "expectedReasonCode": "missing_requested_formal_requirement_source",
+      "passed": true,
+      "assertionFailureMessage": null,
+      "decision": {
+        "supportState": "unsupported",
+        "evidenceSufficient": false,
+        "reasonCode": "missing_requested_formal_requirement_source",
+        "reason": "The production evidence window does not contain actual source text from the requested formal requirement source (vm21-current-manual). Related methodology or companion evidence cannot substitute for it.",
+        "requestedInformationTypes": [
+          "formal_requirement"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm20-canonical-coverage-vm20-section4-entry-child-001",
+            "sourceId": "vm20-canonical-coverage",
+            "score": 20,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm20-canonical-coverage-vm20-section5-entry-child-001",
+            "sourceId": "vm20-canonical-coverage",
+            "score": 19,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm30-section-2-a-general-2-appointed-actuary-notice",
+            "sourceId": "vm30-current-manual",
+            "score": 18,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": "The production evidence window does not contain actual source text from the requested formal requirement source (vm21-current-manual). Related methodology or companion evidence cannot substitute for it.",
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 20,
+          "matches": [
+            {
+              "chunkId": "vm20-canonical-coverage-vm20-section4-entry-child-001",
+              "score": 20
+            },
+            {
+              "chunkId": "vm20-canonical-coverage-vm20-section5-entry-child-001",
+              "score": 19
+            },
+            {
+              "chunkId": "vm30-section-2-a-general-2-appointed-actuary-notice",
+              "score": 18
+            }
+          ]
+        },
+        "lowScore": false
+      }
+    },
+    {
+      "testId": "vm21-evidence-at-rank-four-is-outside-production-window",
+      "description": "Correct VM-21 evidence at rank 4 remains outside the production evidence window.",
+      "query": "What prescribed interest rate scenario generator does VM-21 require?",
+      "requestedSourceAuthority": {
+        "sourceIds": [
+          "vm21-current-manual"
+        ],
+        "informationTypes": [
+          "formal_requirement"
+        ],
+        "authorityLevel": "manual_section"
+      },
+      "requiredEvidenceTerms": [
+        "prescribed interest rate scenario generator"
+      ],
+      "productionEvidenceWindowSize": 3,
+      "fullRanking": [
+        {
+          "rank": 1,
+          "chunkId": "vm20-canonical-coverage-vm20-section4-entry-child-001",
+          "sourceId": "vm20-canonical-coverage",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 20,
+          "sectionReference": "Section 4: Deterministic Reserve (entry point)",
+          "pageStart": 66,
+          "pageEnd": 66,
+          "sourceTextType": "actual_extracted_source_text",
+          "sourceTextExcerpt": "[p. 66] Requirements for Principle -Based Reserves for Life Products VM-20 \n© 2025 National Associati on of Insurance Commissioners 20-22 b. The policy cash surrender value calculated as of the valuation date and in a manner \nthat is consistent with that used in calculating the NPR on the valuation date. \n2. For a universal life policy, the NPR shall not be less than the greater of: \na. The amount needed to cover the cost of insurance to the next processing date on \nwhich cost of insurance charges are deducted with respect to the policy. The cost \nof insurance for this purpose shall be based on the policy year in which the \nvaluation date falls, using the mortality tables for the policy prescribed in Section \n3.C, and it shall be based upon the net amount at risk. “Cost of insurance ,” as used \nhere, refers to the valuation mortality rate, not the UL policy’s contractual cost of \ninsurance or expense charges . \nb. The policy cash surrender value calculated as of the valuation date and in a manner \nthat is consistent with that used in calculating the NPR on the valuation date. \nE. The policy minimum NPR is defined to be the policy NPR determined in Section 3.A through \nSection 3.D, less a credit for reinsurance ceded as defined in Section 8. \nSection 4: Deterministic Reserve \nFor a group of one or more policies for which a DR is to be calculated, the company shall calculate the DR \nfor the group using the method described in either Section 4.A or Section 4.B below . \nA. Calculate the DR equal to the actuarial present value of benefits, expenses and related amounts less \nthe actuarial present value of premiums and related amounts, less the positive or negative PIMR \nbalance at the valuation date allocated to the group of one or more policies being modeled under \nSection 7.D. 7, plus the balance of separate account assets on the valuation date, and plus the policy \nloan balance at the valuation date with appropriate reflection of any relevant due, accrued or \nunearned loan int erest (if policy loans are explicitly modeled under Section 7.F.3.b) , where: \n1. Cash flows are projected in compliance with the app licable requirements in Section 7, \nSection 8 and Section 9 over economic scenario 12 described in Section 7.G.1, and further \ndescribed in Appendix 1 .E. \n2. Present values are calculated using the path of discount rates for the corresponding model \nsegment determined in compliance with Section 7.H. 3. \n3. The actuarial present value of benefits, expenses and related amount equals the sum of: \na. Present value of future benefits, but before netting the repayment of any policy \nloans . \nGuidance Note: Future benefits include , but are not limited to , death and cash surrender benefits. \nb. Present value of future expenses excluding federal income taxes and expenses paid \nto provide fraternal benefits in lieu of federal income taxes . \n4. The actuarial present value of premiums and related amounts equals the sum of the present \nvalues of: \na. Future gross premium payments and/or other applicable revenue . \nb. Future cash flows to the general account from the separate account , less cash flows \nfrom the general account to the separate account ."
+        },
+        {
+          "rank": 2,
+          "chunkId": "vm20-canonical-coverage-vm20-section5-entry-child-001",
+          "sourceId": "vm20-canonical-coverage",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 19,
+          "sectionReference": "Section 5: Stochastic Reserve (entry point and aggregation)",
+          "pageStart": 67,
+          "pageEnd": 67,
+          "sourceTextType": "actual_extracted_source_text",
+          "sourceTextExcerpt": "[p. 67] Requirements for Principle -Based Reserves for Life Products VM-20 \n© 2025 National Associati on of Insurance Commissioners 20-23 c. Future net policy loan cash flows, if policy loans are explicitly modeled under \nSection 7.F.3 .b. \nGuidance Note: Future net policy loan cash flows include: policy loan interest paid in cash plus \nrepayments of policy loan principal, including repayments occurring at death or surrender (note \nthat the future benefits in Section 4.A.3.a are before consideration of policy loans), less additional \npolicy loan principal (but excluding policy loan interest that is added to the policy loan principal \nbalance) . \nd. Future net reinsurance cash flows determined in compliance with Section 8 . \ne. The future derivative liability program net cash flows (i.e., cash received minus \ncash paid) that are allocated to this group of policies. \n5. If a group of policies is excluded from the SR requirements, the company may not include \nfuture transactions associated with non -hedging derivative programs in determining the \nDR for those policies. \nB. Calculate the DR as a – b, where \na = the aggregate annual statement value of those starting assets which, when projected along with \nall premium and investment income, result in the liquidation of all projected future benefits and \nexpenses by the end of the projection horizon. Under this a lternative, the following considerations \napply: \n1. Cash flows are projected in compliance with the applicable requirements in Section \n7, Section 8 and Section 9 over economic scenario 12 described in Section 7.G.1 \nand found in Appendix 1 .\n\n2. The requirements for future benefits and premiums in Section 4.A apply as well to \nthe calculation of the DR under this subsection.\n\n3. The balance of policy loans on the valuation date (if explicitly modeled under \nSection 7.F.3.b) and the balance of separate account assets on the valuation date \nare modeled each period in compliance with the applicable changes in these asset \nbalances as de fined in Section 7. \nb = that portion of the PIMR amount allocated under Section 7.D.\n\nC. If a group of policies for which a DR is calculated includes policies from more than one VM-20 \nreserving category , where VM-20 reserving category is as defined in VM -01, a DR shall be \ndetermined for each subgroup of the group of policies consisting of only those policies from each \nindividual VM-20 reserving category by following the process of Section 4.A and Section 4.B \nabove . The NAER used for discounting each such subgroup may be the NAER for the group of \npolicies. If the sum of the DR for these subgroup s does not equal the total DR calculated for the \ngroup of policies as a whole, the DR for the group of policies shall be allocated to each such \nsubgroup proportionally. \nSection 5: Stochastic Reserve \nFor a group of one or more policies for which a SR is to be calculated, the company shall calculate the SR \nas follows: \nA. Project cash flows in compliance with the app licable requirements in Section 7, Section 8 and \nSection 9 using the stochastically generated scenarios described in Section 7.G.2., and further"
+        },
+        {
+          "rank": 3,
+          "chunkId": "vm30-section-2-a-general-2-appointed-actuary-notice",
+          "sourceId": "vm30-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 18,
+          "sectionReference": "2. Appointed-actuary notice within five business days",
+          "pageStart": 326,
+          "pageEnd": 326,
+          "sourceTextType": "actual_extracted_source_text",
+          "sourceTextExcerpt": "2. Within five business days of the appointment of an appointed actuary, the company shall \nnotify the domiciliary commissioner of the name, title (and, in the case of a consulting \nactuary, the name of the firm) and manner of appointment or retention of each person \nappointed or retained by the company as an appointed actuary and shall state in the notice \nthat the person meets the r equirements of an appointed actuary. Once these notices are \nfurnished, no further notice is required with respect to this person unless the actuary ceases \nto be appointed or retained or ceases to meet the requirements of an appointed actuary ."
+        },
+        {
+          "rank": 4,
+          "chunkId": "vm21-section-8-scenario-generation-b-interest-rate-generator",
+          "sourceId": "vm21-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 17,
+          "sectionReference": "B. Prescribed Interest Rate Scenario Generator",
+          "pageStart": 199,
+          "pageEnd": 199,
+          "sourceTextType": "actual_extracted_source_text",
+          "sourceTextExcerpt": "B. Prescribed Interest Rate Scenario Generator \n1. Treasury Department interest rate curves shall be determined on a stochastic basis using \nthe prescribed interest rate scenario s , or scenarios based on a non -prescribed generator that \nmeets the requirements described in Section 8.E. \n \n2. The prescribed interest rate scenario s can be found on Conning ’s website address, \nhttps://naic.conning.com/scenariofiles ."
+        }
+      ],
+      "productionWindowEvidence": [
+        {
+          "rank": 1,
+          "chunkId": "vm20-canonical-coverage-vm20-section4-entry-child-001",
+          "sourceId": "vm20-canonical-coverage",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 20,
+          "sectionReference": "Section 4: Deterministic Reserve (entry point)",
+          "pageStart": 66,
+          "pageEnd": 66,
+          "sourceTextType": "actual_extracted_source_text",
+          "sourceTextExcerpt": "[p. 66] Requirements for Principle -Based Reserves for Life Products VM-20 \n© 2025 National Associati on of Insurance Commissioners 20-22 b. The policy cash surrender value calculated as of the valuation date and in a manner \nthat is consistent with that used in calculating the NPR on the valuation date. \n2. For a universal life policy, the NPR shall not be less than the greater of: \na. The amount needed to cover the cost of insurance to the next processing date on \nwhich cost of insurance charges are deducted with respect to the policy. The cost \nof insurance for this purpose shall be based on the policy year in which the \nvaluation date falls, using the mortality tables for the policy prescribed in Section \n3.C, and it shall be based upon the net amount at risk. “Cost of insurance ,” as used \nhere, refers to the valuation mortality rate, not the UL policy’s contractual cost of \ninsurance or expense charges . \nb. The policy cash surrender value calculated as of the valuation date and in a manner \nthat is consistent with that used in calculating the NPR on the valuation date. \nE. The policy minimum NPR is defined to be the policy NPR determined in Section 3.A through \nSection 3.D, less a credit for reinsurance ceded as defined in Section 8. \nSection 4: Deterministic Reserve \nFor a group of one or more policies for which a DR is to be calculated, the company shall calculate the DR \nfor the group using the method described in either Section 4.A or Section 4.B below . \nA. Calculate the DR equal to the actuarial present value of benefits, expenses and related amounts less \nthe actuarial present value of premiums and related amounts, less the positive or negative PIMR \nbalance at the valuation date allocated to the group of one or more policies being modeled under \nSection 7.D. 7, plus the balance of separate account assets on the valuation date, and plus the policy \nloan balance at the valuation date with appropriate reflection of any relevant due, accrued or \nunearned loan int erest (if policy loans are explicitly modeled under Section 7.F.3.b) , where: \n1. Cash flows are projected in compliance with the app licable requirements in Section 7, \nSection 8 and Section 9 over economic scenario 12 described in Section 7.G.1, and further \ndescribed in Appendix 1 .E. \n2. Present values are calculated using the path of discount rates for the corresponding model \nsegment determined in compliance with Section 7.H. 3. \n3. The actuarial present value of benefits, expenses and related amount equals the sum of: \na. Present value of future benefits, but before netting the repayment of any policy \nloans . \nGuidance Note: Future benefits include , but are not limited to , death and cash surrender benefits. \nb. Present value of future expenses excluding federal income taxes and expenses paid \nto provide fraternal benefits in lieu of federal income taxes . \n4. The actuarial present value of premiums and related amounts equals the sum of the present \nvalues of: \na. Future gross premium payments and/or other applicable revenue . \nb. Future cash flows to the general account from the separate account , less cash flows \nfrom the general account to the separate account ."
+        },
+        {
+          "rank": 2,
+          "chunkId": "vm20-canonical-coverage-vm20-section5-entry-child-001",
+          "sourceId": "vm20-canonical-coverage",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 19,
+          "sectionReference": "Section 5: Stochastic Reserve (entry point and aggregation)",
+          "pageStart": 67,
+          "pageEnd": 67,
+          "sourceTextType": "actual_extracted_source_text",
+          "sourceTextExcerpt": "[p. 67] Requirements for Principle -Based Reserves for Life Products VM-20 \n© 2025 National Associati on of Insurance Commissioners 20-23 c. Future net policy loan cash flows, if policy loans are explicitly modeled under \nSection 7.F.3 .b. \nGuidance Note: Future net policy loan cash flows include: policy loan interest paid in cash plus \nrepayments of policy loan principal, including repayments occurring at death or surrender (note \nthat the future benefits in Section 4.A.3.a are before consideration of policy loans), less additional \npolicy loan principal (but excluding policy loan interest that is added to the policy loan principal \nbalance) . \nd. Future net reinsurance cash flows determined in compliance with Section 8 . \ne. The future derivative liability program net cash flows (i.e., cash received minus \ncash paid) that are allocated to this group of policies. \n5. If a group of policies is excluded from the SR requirements, the company may not include \nfuture transactions associated with non -hedging derivative programs in determining the \nDR for those policies. \nB. Calculate the DR as a – b, where \na = the aggregate annual statement value of those starting assets which, when projected along with \nall premium and investment income, result in the liquidation of all projected future benefits and \nexpenses by the end of the projection horizon. Under this a lternative, the following considerations \napply: \n1. Cash flows are projected in compliance with the applicable requirements in Section \n7, Section 8 and Section 9 over economic scenario 12 described in Section 7.G.1 \nand found in Appendix 1 .\n\n2. The requirements for future benefits and premiums in Section 4.A apply as well to \nthe calculation of the DR under this subsection.\n\n3. The balance of policy loans on the valuation date (if explicitly modeled under \nSection 7.F.3.b) and the balance of separate account assets on the valuation date \nare modeled each period in compliance with the applicable changes in these asset \nbalances as de fined in Section 7. \nb = that portion of the PIMR amount allocated under Section 7.D.\n\nC. If a group of policies for which a DR is calculated includes policies from more than one VM-20 \nreserving category , where VM-20 reserving category is as defined in VM -01, a DR shall be \ndetermined for each subgroup of the group of policies consisting of only those policies from each \nindividual VM-20 reserving category by following the process of Section 4.A and Section 4.B \nabove . The NAER used for discounting each such subgroup may be the NAER for the group of \npolicies. If the sum of the DR for these subgroup s does not equal the total DR calculated for the \ngroup of policies as a whole, the DR for the group of policies shall be allocated to each such \nsubgroup proportionally. \nSection 5: Stochastic Reserve \nFor a group of one or more policies for which a SR is to be calculated, the company shall calculate the SR \nas follows: \nA. Project cash flows in compliance with the app licable requirements in Section 7, Section 8 and \nSection 9 using the stochastically generated scenarios described in Section 7.G.2., and further"
+        },
+        {
+          "rank": 3,
+          "chunkId": "vm30-section-2-a-general-2-appointed-actuary-notice",
+          "sourceId": "vm30-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 18,
+          "sectionReference": "2. Appointed-actuary notice within five business days",
+          "pageStart": 326,
+          "pageEnd": 326,
+          "sourceTextType": "actual_extracted_source_text",
+          "sourceTextExcerpt": "2. Within five business days of the appointment of an appointed actuary, the company shall \nnotify the domiciliary commissioner of the name, title (and, in the case of a consulting \nactuary, the name of the firm) and manner of appointment or retention of each person \nappointed or retained by the company as an appointed actuary and shall state in the notice \nthat the person meets the r equirements of an appointed actuary. Once these notices are \nfurnished, no further notice is required with respect to this person unless the actuary ceases \nto be appointed or retained or ceases to meet the requirements of an appointed actuary ."
+        }
+      ],
+      "supportState": "unsupported",
+      "evidenceSufficient": false,
+      "reasonCode": "missing_requested_formal_requirement_source",
+      "expectedSupportState": "unsupported",
+      "expectedReasonCode": "missing_requested_formal_requirement_source",
+      "passed": true,
+      "assertionFailureMessage": null,
+      "decision": {
+        "supportState": "unsupported",
+        "evidenceSufficient": false,
+        "reasonCode": "missing_requested_formal_requirement_source",
+        "reason": "The production evidence window does not contain actual source text from the requested formal requirement source (vm21-current-manual). Related methodology or companion evidence cannot substitute for it.",
+        "requestedInformationTypes": [
+          "formal_requirement"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm20-canonical-coverage-vm20-section4-entry-child-001",
+            "sourceId": "vm20-canonical-coverage",
+            "score": 20,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm20-canonical-coverage-vm20-section5-entry-child-001",
+            "sourceId": "vm20-canonical-coverage",
+            "score": 19,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm30-section-2-a-general-2-appointed-actuary-notice",
+            "sourceId": "vm30-current-manual",
+            "score": 18,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": "The production evidence window does not contain actual source text from the requested formal requirement source (vm21-current-manual). Related methodology or companion evidence cannot substitute for it.",
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 20,
+          "matches": [
+            {
+              "chunkId": "vm20-canonical-coverage-vm20-section4-entry-child-001",
+              "score": 20
+            },
+            {
+              "chunkId": "vm20-canonical-coverage-vm20-section5-entry-child-001",
+              "score": 19
+            },
+            {
+              "chunkId": "vm30-section-2-a-general-2-appointed-actuary-notice",
+              "score": 18
+            }
+          ]
+        },
+        "lowScore": false
+      }
+    },
+    {
+      "testId": "vm21-evidence-inside-top-three-supports-request",
+      "description": "Correct relevant VM-21 evidence inside ranks 1-3 supports the request.",
+      "query": "What prescribed interest rate scenario generator does VM-21 require?",
+      "requestedSourceAuthority": {
+        "sourceIds": [
+          "vm21-current-manual"
+        ],
+        "informationTypes": [
+          "formal_requirement"
+        ],
+        "authorityLevel": "manual_section"
+      },
+      "requiredEvidenceTerms": [
+        "prescribed interest rate scenario generator"
+      ],
+      "productionEvidenceWindowSize": 3,
+      "fullRanking": [
+        {
+          "rank": 1,
+          "chunkId": "vm20-canonical-coverage-vm20-section4-entry-child-001",
+          "sourceId": "vm20-canonical-coverage",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 20,
+          "sectionReference": "Section 4: Deterministic Reserve (entry point)",
+          "pageStart": 66,
+          "pageEnd": 66,
+          "sourceTextType": "actual_extracted_source_text",
+          "sourceTextExcerpt": "[p. 66] Requirements for Principle -Based Reserves for Life Products VM-20 \n© 2025 National Associati on of Insurance Commissioners 20-22 b. The policy cash surrender value calculated as of the valuation date and in a manner \nthat is consistent with that used in calculating the NPR on the valuation date. \n2. For a universal life policy, the NPR shall not be less than the greater of: \na. The amount needed to cover the cost of insurance to the next processing date on \nwhich cost of insurance charges are deducted with respect to the policy. The cost \nof insurance for this purpose shall be based on the policy year in which the \nvaluation date falls, using the mortality tables for the policy prescribed in Section \n3.C, and it shall be based upon the net amount at risk. “Cost of insurance ,” as used \nhere, refers to the valuation mortality rate, not the UL policy’s contractual cost of \ninsurance or expense charges . \nb. The policy cash surrender value calculated as of the valuation date and in a manner \nthat is consistent with that used in calculating the NPR on the valuation date. \nE. The policy minimum NPR is defined to be the policy NPR determined in Section 3.A through \nSection 3.D, less a credit for reinsurance ceded as defined in Section 8. \nSection 4: Deterministic Reserve \nFor a group of one or more policies for which a DR is to be calculated, the company shall calculate the DR \nfor the group using the method described in either Section 4.A or Section 4.B below . \nA. Calculate the DR equal to the actuarial present value of benefits, expenses and related amounts less \nthe actuarial present value of premiums and related amounts, less the positive or negative PIMR \nbalance at the valuation date allocated to the group of one or more policies being modeled under \nSection 7.D. 7, plus the balance of separate account assets on the valuation date, and plus the policy \nloan balance at the valuation date with appropriate reflection of any relevant due, accrued or \nunearned loan int erest (if policy loans are explicitly modeled under Section 7.F.3.b) , where: \n1. Cash flows are projected in compliance with the app licable requirements in Section 7, \nSection 8 and Section 9 over economic scenario 12 described in Section 7.G.1, and further \ndescribed in Appendix 1 .E. \n2. Present values are calculated using the path of discount rates for the corresponding model \nsegment determined in compliance with Section 7.H. 3. \n3. The actuarial present value of benefits, expenses and related amount equals the sum of: \na. Present value of future benefits, but before netting the repayment of any policy \nloans . \nGuidance Note: Future benefits include , but are not limited to , death and cash surrender benefits. \nb. Present value of future expenses excluding federal income taxes and expenses paid \nto provide fraternal benefits in lieu of federal income taxes . \n4. The actuarial present value of premiums and related amounts equals the sum of the present \nvalues of: \na. Future gross premium payments and/or other applicable revenue . \nb. Future cash flows to the general account from the separate account , less cash flows \nfrom the general account to the separate account ."
+        },
+        {
+          "rank": 2,
+          "chunkId": "vm21-section-8-scenario-generation-b-interest-rate-generator",
+          "sourceId": "vm21-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 19,
+          "sectionReference": "B. Prescribed Interest Rate Scenario Generator",
+          "pageStart": 199,
+          "pageEnd": 199,
+          "sourceTextType": "actual_extracted_source_text",
+          "sourceTextExcerpt": "B. Prescribed Interest Rate Scenario Generator \n1. Treasury Department interest rate curves shall be determined on a stochastic basis using \nthe prescribed interest rate scenario s , or scenarios based on a non -prescribed generator that \nmeets the requirements described in Section 8.E. \n \n2. The prescribed interest rate scenario s can be found on Conning ’s website address, \nhttps://naic.conning.com/scenariofiles ."
+        }
+      ],
+      "productionWindowEvidence": [
+        {
+          "rank": 1,
+          "chunkId": "vm20-canonical-coverage-vm20-section4-entry-child-001",
+          "sourceId": "vm20-canonical-coverage",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 20,
+          "sectionReference": "Section 4: Deterministic Reserve (entry point)",
+          "pageStart": 66,
+          "pageEnd": 66,
+          "sourceTextType": "actual_extracted_source_text",
+          "sourceTextExcerpt": "[p. 66] Requirements for Principle -Based Reserves for Life Products VM-20 \n© 2025 National Associati on of Insurance Commissioners 20-22 b. The policy cash surrender value calculated as of the valuation date and in a manner \nthat is consistent with that used in calculating the NPR on the valuation date. \n2. For a universal life policy, the NPR shall not be less than the greater of: \na. The amount needed to cover the cost of insurance to the next processing date on \nwhich cost of insurance charges are deducted with respect to the policy. The cost \nof insurance for this purpose shall be based on the policy year in which the \nvaluation date falls, using the mortality tables for the policy prescribed in Section \n3.C, and it shall be based upon the net amount at risk. “Cost of insurance ,” as used \nhere, refers to the valuation mortality rate, not the UL policy’s contractual cost of \ninsurance or expense charges . \nb. The policy cash surrender value calculated as of the valuation date and in a manner \nthat is consistent with that used in calculating the NPR on the valuation date. \nE. The policy minimum NPR is defined to be the policy NPR determined in Section 3.A through \nSection 3.D, less a credit for reinsurance ceded as defined in Section 8. \nSection 4: Deterministic Reserve \nFor a group of one or more policies for which a DR is to be calculated, the company shall calculate the DR \nfor the group using the method described in either Section 4.A or Section 4.B below . \nA. Calculate the DR equal to the actuarial present value of benefits, expenses and related amounts less \nthe actuarial present value of premiums and related amounts, less the positive or negative PIMR \nbalance at the valuation date allocated to the group of one or more policies being modeled under \nSection 7.D. 7, plus the balance of separate account assets on the valuation date, and plus the policy \nloan balance at the valuation date with appropriate reflection of any relevant due, accrued or \nunearned loan int erest (if policy loans are explicitly modeled under Section 7.F.3.b) , where: \n1. Cash flows are projected in compliance with the app licable requirements in Section 7, \nSection 8 and Section 9 over economic scenario 12 described in Section 7.G.1, and further \ndescribed in Appendix 1 .E. \n2. Present values are calculated using the path of discount rates for the corresponding model \nsegment determined in compliance with Section 7.H. 3. \n3. The actuarial present value of benefits, expenses and related amount equals the sum of: \na. Present value of future benefits, but before netting the repayment of any policy \nloans . \nGuidance Note: Future benefits include , but are not limited to , death and cash surrender benefits. \nb. Present value of future expenses excluding federal income taxes and expenses paid \nto provide fraternal benefits in lieu of federal income taxes . \n4. The actuarial present value of premiums and related amounts equals the sum of the present \nvalues of: \na. Future gross premium payments and/or other applicable revenue . \nb. Future cash flows to the general account from the separate account , less cash flows \nfrom the general account to the separate account ."
+        },
+        {
+          "rank": 2,
+          "chunkId": "vm21-section-8-scenario-generation-b-interest-rate-generator",
+          "sourceId": "vm21-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 19,
+          "sectionReference": "B. Prescribed Interest Rate Scenario Generator",
+          "pageStart": 199,
+          "pageEnd": 199,
+          "sourceTextType": "actual_extracted_source_text",
+          "sourceTextExcerpt": "B. Prescribed Interest Rate Scenario Generator \n1. Treasury Department interest rate curves shall be determined on a stochastic basis using \nthe prescribed interest rate scenario s , or scenarios based on a non -prescribed generator that \nmeets the requirements described in Section 8.E. \n \n2. The prescribed interest rate scenario s can be found on Conning ’s website address, \nhttps://naic.conning.com/scenariofiles ."
+        }
+      ],
+      "supportState": "supported",
+      "evidenceSufficient": true,
+      "reasonCode": "retrieved_evidence_matches_requested_information_type",
+      "expectedSupportState": "supported",
+      "expectedReasonCode": "retrieved_evidence_matches_requested_information_type",
+      "passed": true,
+      "assertionFailureMessage": null,
+      "decision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Actual source text from the requested formal requirement source is present inside the production evidence window.",
+        "requestedInformationTypes": [
+          "formal_requirement"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm20-canonical-coverage-vm20-section4-entry-child-001",
+            "sourceId": "vm20-canonical-coverage",
+            "score": 20,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm21-section-8-scenario-generation-b-interest-rate-generator",
+            "sourceId": "vm21-current-manual",
+            "score": 19,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 20,
+          "matches": [
+            {
+              "chunkId": "vm20-canonical-coverage-vm20-section4-entry-child-001",
+              "score": 20
+            },
+            {
+              "chunkId": "vm21-section-8-scenario-generation-b-interest-rate-generator",
+              "score": 19
+            }
+          ]
+        },
+        "lowScore": false
+      }
+    },
+    {
+      "testId": "wrong-topic-vm21-evidence-does-not-support-claim",
+      "description": "VM-21 definition evidence cannot support an unrelated invented quarterly filing.",
+      "query": "What quarterly reserve filing does VM-21 require?",
+      "requestedSourceAuthority": {
+        "sourceIds": [
+          "vm21-current-manual"
+        ],
+        "informationTypes": [
+          "formal_requirement"
+        ],
+        "authorityLevel": "manual_section"
+      },
+      "requiredEvidenceTerms": [
+        "quarterly reserve filing"
+      ],
+      "productionEvidenceWindowSize": 3,
+      "fullRanking": [
+        {
+          "rank": 1,
+          "chunkId": "vm21-section-1-background-d-definitions",
+          "sourceId": "vm21-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 20,
+          "sectionReference": "D. Definitions",
+          "pageStart": 147,
+          "pageEnd": 147,
+          "sourceTextType": "actual_extracted_source_text",
+          "sourceTextExcerpt": "D. Definitions \n1. The term “cash surrender value” means, for the purposes of these requirements, the amount \navailable to the contract holder upon surrender of the contract. Generally, it is equal to the \naccount value less any applicable surrender charges, where the surrender charge reflects \nthe availability of any free partial surrender options. However, f or contracts where all or a \nportion of the amount available to the contract holder upon surrender is subject to a market \nvalue adjustment, the cash surrender value shall re flect the market value adjustment \nconsistent with the required treatment of the underlying assets. That is, the cash surrender \nvalue shall reflect any market value adjustments where the underlying assets are reported \nat market value, but it shall not reflect any market value adjustments where the underlying \nassets are reported at book value. \n \n2. The term “guaranteed minimum death benefit” (GMDB) means a provision (or provisions) \nfor a guaranteed benefit payable on the death of a contract holder, annuitant, participant or \ninsured where the amount payable is either (i) a minimum amount ; or (ii) exceeds the \nminimum amount and is: \n \n– is increased by an amount that may be either specified by or computed from other policy \nor contract values ; and \n \n– has the potential to produce a contractual total amount payable on such death that \nexceeds the account value , or \n \n– in the case of an annuity providing income payments, guarantees payment upon \nsuch death of an amount payable on death in addition to the continuation of any \nguaranteed income payments. \nGuidance Note: The definition of GMDB includes benefits that are based on a portion of the excess \nof the account value over the net of premiums paid less partial withdrawals made (e.g., an earnings \nenhanced death benefit). \n3. The term “total asset requirement” (TAR) means the sum of the reserve determined from \nthe VM-21 requirements prior to any adjustment for the elective phase -in pursuant to \nSection 2.B plus the C3 RBC amount from LR027 step (paragraph D) prior to any \nadjustment for phase -in or smoothing."
+        }
+      ],
+      "productionWindowEvidence": [
+        {
+          "rank": 1,
+          "chunkId": "vm21-section-1-background-d-definitions",
+          "sourceId": "vm21-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 20,
+          "sectionReference": "D. Definitions",
+          "pageStart": 147,
+          "pageEnd": 147,
+          "sourceTextType": "actual_extracted_source_text",
+          "sourceTextExcerpt": "D. Definitions \n1. The term “cash surrender value” means, for the purposes of these requirements, the amount \navailable to the contract holder upon surrender of the contract. Generally, it is equal to the \naccount value less any applicable surrender charges, where the surrender charge reflects \nthe availability of any free partial surrender options. However, f or contracts where all or a \nportion of the amount available to the contract holder upon surrender is subject to a market \nvalue adjustment, the cash surrender value shall re flect the market value adjustment \nconsistent with the required treatment of the underlying assets. That is, the cash surrender \nvalue shall reflect any market value adjustments where the underlying assets are reported \nat market value, but it shall not reflect any market value adjustments where the underlying \nassets are reported at book value. \n \n2. The term “guaranteed minimum death benefit” (GMDB) means a provision (or provisions) \nfor a guaranteed benefit payable on the death of a contract holder, annuitant, participant or \ninsured where the amount payable is either (i) a minimum amount ; or (ii) exceeds the \nminimum amount and is: \n \n– is increased by an amount that may be either specified by or computed from other policy \nor contract values ; and \n \n– has the potential to produce a contractual total amount payable on such death that \nexceeds the account value , or \n \n– in the case of an annuity providing income payments, guarantees payment upon \nsuch death of an amount payable on death in addition to the continuation of any \nguaranteed income payments. \nGuidance Note: The definition of GMDB includes benefits that are based on a portion of the excess \nof the account value over the net of premiums paid less partial withdrawals made (e.g., an earnings \nenhanced death benefit). \n3. The term “total asset requirement” (TAR) means the sum of the reserve determined from \nthe VM-21 requirements prior to any adjustment for the elective phase -in pursuant to \nSection 2.B plus the C3 RBC amount from LR027 step (paragraph D) prior to any \nadjustment for phase -in or smoothing."
+        }
+      ],
+      "supportState": "unsupported",
+      "evidenceSufficient": false,
+      "reasonCode": "missing_required_requirement_terms",
+      "expectedSupportState": "unsupported",
+      "expectedReasonCode": "missing_required_requirement_terms",
+      "passed": true,
+      "assertionFailureMessage": null,
+      "decision": {
+        "supportState": "unsupported",
+        "evidenceSufficient": false,
+        "reasonCode": "missing_required_requirement_terms",
+        "reason": "The retrieved formal-source evidence does not contain the required topic term(s): quarterly reserve filing.",
+        "requestedInformationTypes": [
+          "formal_requirement"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm21-section-1-background-d-definitions",
+            "sourceId": "vm21-current-manual",
+            "score": 20,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": "The retrieved formal-source evidence does not contain the required topic term(s): quarterly reserve filing.",
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 20,
+          "matches": [
+            {
+              "chunkId": "vm21-section-1-background-d-definitions",
+              "score": 20
+            }
+          ]
+        },
+        "lowScore": false
+      }
+    }
+  ],
+  "governance": {
+    "reviewOnly": true,
+    "promotionStatus": "not_promoted",
+    "promotionEligible": false
+  }
+}

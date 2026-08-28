@@ -1,0 +1,109 @@
+{
+  "schemaVersion": "1.0",
+  "validationReportId": "vm21-current-manual-validation-2026",
+  "status": "pass",
+  "sourceId": "vm21-current-manual",
+  "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+  "metrics": {
+    "pageCount": 83,
+    "overlapPageCount": 2,
+    "parentCount": 15,
+    "childCount": 63,
+    "totalChunkCount": 78,
+    "exactSourceChunkCount": 78,
+    "sourceTextRewriteCount": 0,
+    "sourceReExtractionCount": 0,
+    "sourceExplicitDefinedTermCount": 25,
+    "relationshipCandidateCount": 20,
+    "structuredEvidenceRecordCount": 27,
+    "supportedTop1": 18,
+    "supportedTop3": 22,
+    "supportedQueryCount": 22,
+    "unsupportedCorrect": 6,
+    "unsupportedQueryCount": 6,
+    "ambiguitySafe": 2,
+    "ambiguityQueryCount": 2,
+    "supportGatePassed": 4,
+    "supportGateCaseCount": 4
+  },
+  "checks": [
+    {
+      "checkId": "canonical_package_structure",
+      "status": "pass",
+      "errors": [],
+      "metrics": {
+        "chunkCount": 78,
+        "parentCount": 15,
+        "childCount": 63,
+        "uniqueChunkIdCount": 78
+      }
+    },
+    {
+      "checkId": "source_explicit_defined_terms",
+      "status": "pass",
+      "errors": [],
+      "metrics": {
+        "termCount": 25
+      }
+    },
+    {
+      "checkId": "derivative_metadata_evidence",
+      "status": "pass",
+      "errors": [],
+      "metrics": {
+        "classifiedChunkCount": 63
+      }
+    },
+    {
+      "checkId": "review_only_governance",
+      "status": "pass",
+      "errors": []
+    },
+    {
+      "checkId": "deterministic_batch_reuse",
+      "status": "pass",
+      "details": "83 unique pages; 2 exact overlap checks; no source re-extraction."
+    },
+    {
+      "checkId": "deterministic_segmentation_fidelity",
+      "status": "pass",
+      "details": "78/78 chunks match deterministic source segments and SHA-256 values."
+    },
+    {
+      "checkId": "focused_retrieval",
+      "status": "pass",
+      "details": "18/22 top-1; 22/22 strict top-3; 6/6 unsupported; 2/2 ambiguity."
+    },
+    {
+      "checkId": "formal_requirement_support_gate",
+      "status": "pass",
+      "details": "4/4 case-level regressions passed."
+    },
+    {
+      "checkId": "relationship_governance",
+      "status": "pass",
+      "details": "20 explicit-reference candidates remain pending and unpromoted."
+    },
+    {
+      "checkId": "structured_evidence_governance",
+      "status": "pass",
+      "details": "27 source-bound review records remain pending and unpromoted."
+    },
+    {
+      "checkId": "processor_readiness",
+      "status": "pass",
+      "details": "Rating AMBER; generic improvements and human-review limits explicitly classified."
+    }
+  ],
+  "unresolvedHumanReview": [
+    "Independent source and actuarial review is required before promotion.",
+    "Dense tables and formula sequences require targeted human semantic review; this pass preserves them but does not recompute values.",
+    "Publication and effective dates are not inferred beyond explicit source language and the established 2026 edition identity."
+  ],
+  "governance": {
+    "reviewOnly": true,
+    "promotionStatus": "not_promoted",
+    "promotionEligible": false,
+    "independentReviewRequired": true
+  }
+}
