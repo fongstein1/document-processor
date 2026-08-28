@@ -20,6 +20,7 @@
     "firstStageRetrievalUnits": 42,
     "exactSourceChunks": 51,
     "sourceTextRewrites": 0,
+    "targetedMetadataCorrections": 5,
     "sourceExplicitDefinedTerms": 3,
     "contentAreasCovered": 14,
     "relationshipCandidates": 16,
@@ -31,7 +32,27 @@
     "unsupportedCorrect": 4,
     "ambiguitySafe": 1,
     "currentAuthorityTop1": 16,
-    "supportGateRegressions": 4
+    "supportGateRegressions": 4,
+    "supportGateRegressionsPassed": 4
+  },
+  "promotionBlockerEvidence": {
+    "baselineCommit": "b36a1c7",
+    "correctedChunkIds": [
+      "vm30-section-1-a-general-1-aom-requirement-scope",
+      "vm30-section-1-a-general-5-company-level-opinion",
+      "vm30-section-1-b-definitions-1-adverse-opinion",
+      "vm30-section-1-b-definitions-2-qualified-opinion",
+      "vm30-section-1-b-definitions-3-inconclusive-opinion"
+    ],
+    "actualVm20SupportFixture": true,
+    "vm20FixtureSourceId": "vm20-canonical-coverage",
+    "rankFourEvidenceInspectable": true,
+    "perCasePassed": {
+      "vm20-methodology-alone-cannot-support-vm30-requirement": true,
+      "vm30-evidence-at-rank-four-is-outside-production-window": true,
+      "vm30-source-evidence-inside-top-three-supports-request": true,
+      "vm30-source-without-requested-topic-does-not-support-claim": true
+    }
   },
   "regressionIntegrity": {
     "vm01SourceTextAggregateSha256": "04fecfc622ee792dca2f994f3d7eb6ebf510bd533bd7be9798b4604a70b8ef98",

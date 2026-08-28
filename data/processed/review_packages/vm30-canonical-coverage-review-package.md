@@ -15,6 +15,7 @@
 - Ambiguity safely handled: 1/1
 - Current authoritative VM-30 top-1: 16/16
 - Support-gate regressions: 4/4
+- First support case uses actual VM-20 canonical methodology evidence; the full supplied rankings and per-case pass results are inspectable.
 
 ## Review boundary
 

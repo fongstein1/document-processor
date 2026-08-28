@@ -32,7 +32,7 @@
         "sourceId": "vm30-current-manual",
         "sourceFamilyId": "valuation_manual_pdfs",
         "authorityLevel": "manual_section",
-        "score": 75.75,
+        "score": 74.3,
         "sectionReference": "1. AOM requirement scope and actuarial opinion meaning",
         "pageStart": 325,
         "pageEnd": 325,
@@ -45,7 +45,7 @@
           "sourceId": "vm30-current-manual",
           "sourceFamilyId": "valuation_manual_pdfs",
           "authorityLevel": "manual_section",
-          "score": 75.75,
+          "score": 74.3,
           "sectionReference": "1. AOM requirement scope and actuarial opinion meaning",
           "pageStart": 325,
           "pageEnd": 325,
@@ -105,7 +105,7 @@
           {
             "chunkId": "vm30-section-1-a-general-1-aom-requirement-scope",
             "sourceId": "vm30-current-manual",
-            "score": 75.75,
+            "score": 74.3,
             "authorityLevel": "manual_section"
           },
           {
@@ -124,11 +124,11 @@
         "corpusGap": null,
         "structuredEvidenceAvailable": false,
         "semanticAlignment": {
-          "topScore": 75.75,
+          "topScore": 74.3,
           "matches": [
             {
               "chunkId": "vm30-section-1-a-general-1-aom-requirement-scope",
-              "score": 75.75
+              "score": 74.3
             },
             {
               "chunkId": "vm30-section-1-a-general-2-annual-statement-applicability",
@@ -190,7 +190,7 @@
           "sourceId": "vm30-current-manual",
           "sourceFamilyId": "valuation_manual_pdfs",
           "authorityLevel": "manual_section",
-          "score": 126.6,
+          "score": 125.14999999999998,
           "sectionReference": "1. AOM requirement scope and actuarial opinion meaning",
           "pageStart": 325,
           "pageEnd": 325,
@@ -244,7 +244,7 @@
           {
             "chunkId": "vm30-section-1-a-general-1-aom-requirement-scope",
             "sourceId": "vm30-current-manual",
-            "score": 126.6,
+            "score": 125.14999999999998,
             "authorityLevel": "manual_section"
           },
           {
@@ -265,7 +265,7 @@
             },
             {
               "chunkId": "vm30-section-1-a-general-1-aom-requirement-scope",
-              "score": 126.6
+              "score": 125.14999999999998
             },
             {
               "chunkId": "vm30-section-2-a-general-1-opinion-in-annual-statement",
@@ -298,7 +298,7 @@
         "sourceId": "vm30-current-manual",
         "sourceFamilyId": "valuation_manual_pdfs",
         "authorityLevel": "manual_section",
-        "score": 62.45,
+        "score": 61.75,
         "sectionReference": "1. Adverse opinion",
         "pageStart": 326,
         "pageEnd": 326,
@@ -311,7 +311,7 @@
           "sourceId": "vm30-current-manual",
           "sourceFamilyId": "valuation_manual_pdfs",
           "authorityLevel": "manual_section",
-          "score": 62.45,
+          "score": 61.75,
           "sectionReference": "1. Adverse opinion",
           "pageStart": 326,
           "pageEnd": 326,
@@ -371,7 +371,7 @@
           {
             "chunkId": "vm30-section-1-b-definitions-1-adverse-opinion",
             "sourceId": "vm30-current-manual",
-            "score": 62.45,
+            "score": 61.75,
             "authorityLevel": "manual_section"
           },
           {
@@ -390,11 +390,11 @@
         "corpusGap": null,
         "structuredEvidenceAvailable": false,
         "semanticAlignment": {
-          "topScore": 62.45,
+          "topScore": 61.75,
           "matches": [
             {
               "chunkId": "vm30-section-1-b-definitions-1-adverse-opinion",
-              "score": 62.45
+              "score": 61.75
             },
             {
               "chunkId": "vm30-section-3-b-actuarial-memorandum-7-equity-return-volatility",
@@ -2560,18 +2560,6 @@
         },
         {
           "rank": 2,
-          "chunkId": "vm30-section-1-a-general-1-aom-requirement-scope",
-          "sourceId": "vm30-current-manual",
-          "sourceFamilyId": "valuation_manual_pdfs",
-          "authorityLevel": "manual_section",
-          "score": 57.35,
-          "sectionReference": "1. AOM requirement scope and actuarial opinion meaning",
-          "pageStart": 325,
-          "pageEnd": 325,
-          "citationAvailable": true
-        },
-        {
-          "rank": 3,
           "chunkId": "vm30-section-3-b-actuarial-memorandum-7-equity-return-volatility",
           "sourceId": "vm30-current-manual",
           "sourceFamilyId": "valuation_manual_pdfs",
@@ -2580,6 +2568,18 @@
           "sectionReference": "7. Equity-return volatility under moderately adverse conditions",
           "pageStart": 335,
           "pageEnd": 336,
+          "citationAvailable": true
+        },
+        {
+          "rank": 3,
+          "chunkId": "vm30-section-1-a-general-1-aom-requirement-scope",
+          "sourceId": "vm30-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 54.449999999999996,
+          "sectionReference": "1. AOM requirement scope and actuarial opinion meaning",
+          "pageStart": 325,
+          "pageEnd": 325,
           "citationAvailable": true
         }
       ],
@@ -2612,15 +2612,15 @@
             "authorityLevel": "manual_section"
           },
           {
-            "chunkId": "vm30-section-1-a-general-1-aom-requirement-scope",
-            "sourceId": "vm30-current-manual",
-            "score": 57.35,
-            "authorityLevel": "manual_section"
-          },
-          {
             "chunkId": "vm30-section-3-b-actuarial-memorandum-7-equity-return-volatility",
             "sourceId": "vm30-current-manual",
             "score": 55.85,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm30-section-1-a-general-1-aom-requirement-scope",
+            "sourceId": "vm30-current-manual",
+            "score": 54.449999999999996,
             "authorityLevel": "manual_section"
           }
         ],
@@ -2634,12 +2634,12 @@
               "score": 84.85000000000001
             },
             {
-              "chunkId": "vm30-section-1-a-general-1-aom-requirement-scope",
-              "score": 57.35
-            },
-            {
               "chunkId": "vm30-section-3-b-actuarial-memorandum-7-equity-return-volatility",
               "score": 55.85
+            },
+            {
+              "chunkId": "vm30-section-1-a-general-1-aom-requirement-scope",
+              "score": 54.449999999999996
             }
           ]
         },

@@ -160,6 +160,17 @@ const main = async () => {
   const fidelityDistribution = Object.fromEntries(unique(sourcePackage.chunks.map((chunk) => chunk.fidelity)).map((fidelity) => [fidelity, sourcePackage.chunks.filter((chunk) => chunk.fidelity === fidelity).length]))
   const provisionTypeCounts = {}
   for (const chunk of sourcePackage.chunks.filter((candidate) => candidate.chunkLevel === 'child')) for (const type of chunk.provisionTypes ?? []) provisionTypeCounts[type] = (provisionTypeCounts[type] ?? 0) + 1
+  const correctedMetadataChunkIds = [
+    'vm30-section-1-a-general-1-aom-requirement-scope',
+    'vm30-section-1-a-general-5-company-level-opinion',
+    'vm30-section-1-b-definitions-1-adverse-opinion',
+    'vm30-section-1-b-definitions-2-qualified-opinion',
+    'vm30-section-1-b-definitions-3-inconclusive-opinion',
+  ]
+  const promotionBlockerCorrectionAudit = correctedMetadataChunkIds.map((chunkId) => {
+    const chunk = sourcePackage.chunks.find((candidate) => candidate.chunkId === chunkId)
+    return { chunkId, provisionTypes: chunk.provisionTypes, requirements: chunk.requirements, concepts: chunk.concepts, controlledTags: chunk.controlledTags, sourceTextChanged: false }
+  })
   const sourceQa = {
     schemaVersion: '1.0', qaId: 'vm30-current-manual-source-qa-2026', status: 'pass',
     authoritativeSource: { sourceEditionId: sourcePackage.source.sourceEditionId, sourceVersionIdentifier: sourcePackage.source.sourceVersionIdentifier, sourceSha256: VM30_SOURCE_SHA256, pageRange: VM30_PAGE_RANGE, localPdfHashVerified: true },
@@ -203,6 +214,7 @@ const main = async () => {
       ['chapter_boundary', 'vm30-closing-boundary-intentional-blank-page'],
     ].map(([contentArea, representativeChunkId]) => ({ contentArea, status: 'covered', representativeChunkId })),
     relationshipProvenance: { explicitSourceLabelsValidated: relationships.relationshipCount, canonicalLabelsStoredSeparately: true, sourceTextChanged: false },
+    promotionBlockerCorrectionAudit,
     unresolvedGaps: ['Independent source and actuarial review is required before promotion.', 'Publication and effective dates are not inferred beyond the established 2026 edition identity.', 'No synthetic historical or future VM-30 source was created for authority testing.'],
     governance: { reviewOnly: true, promotionStatus: 'not_promoted', promotionEligible: false, learnerFacingAllowed: false, appReadyAllowed: false, ragReadyAllowed: false, vectorEligible: false, copilotExportEligible: false },
   }
@@ -213,7 +225,7 @@ const main = async () => {
     `- Parents / children / chunks: ${VM30_PARENT_COUNT} / ${VM30_CHILD_COUNT} / ${VM30_CHUNK_COUNT}`,
     `- Exact source chunks: ${sourceQa.sourceFidelity.exactChunkCount}/${VM30_CHUNK_COUNT}`, '- Source-text rewrites: 0',
     '- Source-explicit defined terms: adverse opinion, qualified opinion, inconclusive opinion',
-    `- Explicit-reference relationship candidates: ${relationships.relationshipCount}; all pending and unpromoted`, '',
+    `- Explicit-reference relationship candidates: ${relationships.relationshipCount}; all pending and unpromoted`, `- Narrow metadata corrections: ${promotionBlockerCorrectionAudit.length}; authoritative source-text changes: 0`, '',
     'Generated summaries, classifications, and relationship candidates remain subordinate to exact source excerpts.',
   ].join('\n'))
 
@@ -230,7 +242,8 @@ const main = async () => {
     definitions: sourceQa.definedTermsAudit,
     relationships: { candidateCount: relationships.relationshipCount, targetCounts: relationships.targetCounts, registryPath: relative(relationshipPath), status: 'review_only_pending' },
     retrievalEvaluation: { path: relative(retrievalPath), queryCount: focusedEvaluation.queryCount, supportedTop1: focusedEvaluation.supportedTop1Count, supportedTop3: focusedEvaluation.supportedTop3Count, supportedQueryCount: focusedEvaluation.supportedQueryCount, unsupportedCorrect: focusedEvaluation.unsupportedCorrectCount, unsupportedQueryCount: focusedEvaluation.unsupportedQueryCount, ambiguitySafe: focusedEvaluation.ambiguitySafeCount, ambiguityQueryCount: focusedEvaluation.ambiguityQueryCount, currentAuthorityTop1: focusedEvaluation.currentAuthoritativeVm30Top1Count, sourceFamilyAccuracy: focusedEvaluation.sourceFamilyAccuracyCount, authorityLevelAccuracy: focusedEvaluation.authorityLevelAccuracyCount, allCasesPassed: focusedEvaluation.allCasesPassed },
-    supportGateRegression: { path: relative(supportGatePath), caseCount: supportGate.cases.length, status: supportGate.status, productionEvidenceWindow: supportGate.productionEvidenceWindow },
+    supportGateRegression: { path: relative(supportGatePath), caseCount: supportGate.cases.length, passedCaseCount: supportGate.passedCaseCount, status: supportGate.status, productionEvidenceWindow: supportGate.productionEvidenceWindow, actualVm20Fixture: supportGate.fixtureSources.some((fixture) => fixture.sourceId === 'vm20-canonical-coverage'), fullRankingsInspectable: supportGate.cases.every((testCase) => Array.isArray(testCase.fullRanking) && testCase.fullRanking.length >= testCase.productionWindowEvidence.length) },
+    promotionBlockerCorrectionAudit,
     representativeChunks: representativeIds.map((chunkId) => { const chunk = sourcePackage.chunks.find((candidate) => candidate.chunkId === chunkId); return { chunkId, sectionReference: chunk.sectionReference, pageStart: chunk.pageStart, pageEnd: chunk.pageEnd, provisionTypes: chunk.provisionTypes, sourceTextExcerpt: chunk.sourceTextExcerpt } }),
     unresolvedGaps: sourceQa.unresolvedGaps,
     artifacts: { canonicalSourcePackage: relative(sourcePackagePath), sourceQa: relative(sourceQaPath), relationshipCandidates: relative(relationshipPath), focusedRetrievalEvaluation: relative(retrievalPath), supportGateRegression: relative(supportGatePath), validationReport: 'data/processed/review_packages/vm30-validation-report.json', independentReviewPrompt: relative(promptPath) },
@@ -243,27 +256,30 @@ const main = async () => {
     `- Exact source fidelity: ${fidelityDistribution.exact ?? 0}/${VM30_CHUNK_COUNT}`, `- Relationship candidates: ${relationships.relationshipCount} (pending, review-only, not promoted)`, '',
     '## Focused retrieval', '', `- Supported top-1 / strict top-3: ${focusedEvaluation.supportedTop1Count}/${focusedEvaluation.supportedQueryCount} / ${focusedEvaluation.supportedTop3Count}/${focusedEvaluation.supportedQueryCount}`,
     `- Unsupported correctly rejected: ${focusedEvaluation.unsupportedCorrectCount}/${focusedEvaluation.unsupportedQueryCount}`, `- Ambiguity safely handled: ${focusedEvaluation.ambiguitySafeCount}/${focusedEvaluation.ambiguityQueryCount}`,
-    `- Current authoritative VM-30 top-1: ${focusedEvaluation.currentAuthoritativeVm30Top1Count}/${focusedEvaluation.supportedQueryCount}`, `- Support-gate regressions: ${supportGate.cases.length}/${supportGate.cases.length}`, '',
+    `- Current authoritative VM-30 top-1: ${focusedEvaluation.currentAuthoritativeVm30Top1Count}/${focusedEvaluation.supportedQueryCount}`, `- Support-gate regressions: ${supportGate.passedCaseCount}/${supportGate.caseCount}`, '- First support case uses actual VM-20 canonical methodology evidence; the full supplied rankings and per-case pass results are inspectable.', '',
     '## Review boundary', '', '- Exact VM-30 source excerpts control; summaries and classifications are generated metadata.', '- VM-01 terminology is not duplicated as VM-30 source definitions.',
     '- Relationship candidates do not assert legal effect and remain separately governed.', '- Canonical promotion and all learner, application, RAG, vector, and Copilot uses remain blocked.', '',
     'This review package is generated review metadata, not authoritative regulatory evidence.',
   ].join('\n'))
 
   await fs.writeFile(promptPath, `${[
-    '# Independent review prompt: 2026 VM-30 canonical review candidate', '',
-    'Please independently review the current 2026 VM-30 canonical review candidate in the Document Processor repository. Do not modify or promote the corpus. VM-31 is already canonically promoted; do not reopen its accepted source audit unless this VM-30 pass changed VM-31 evidence.', '',
+    '# Narrow independent review prompt: remaining 2026 VM-30 promotion blockers', '',
+    'Please perform a narrow independent review of the corrected current 2026 VM-30 canonical candidate in the Document Processor repository. Compare the correction with baseline commit `b36a1c7`. Do not repeat the accepted source, hierarchy, table, definition-identity, relationship, or boundary audits unless authoritative evidence changed.', '',
     '## Primary files', '', `- Canonical source package: \`${relative(sourcePackagePath)}\``, `- Review package: \`${relative(reviewPackagePath)}\``, `- Focused retrieval evaluation: \`${relative(retrievalPath)}\``,
     `- Source QA: \`${relative(sourceQaPath)}\``, `- Relationship registry: \`${relative(relationshipPath)}\``, `- Support-gate regression: \`${relative(supportGatePath)}\``, '- Validation report: `data/processed/review_packages/vm30-validation-report.json`', '',
     '## Review scope', '',
-    `1. Confirm the authoritative chapter boundary: PDF page 324 ends VM-26, pages ${VM30_PAGE_RANGE.start}-${VM30_PAGE_RANGE.end} comprise VM-30 (including printed blank page 30-15), page 340 is an unnumbered separator, and page 341 begins VM-31.`,
-    `2. Confirm ${VM30_PARENT_COUNT} parents, ${VM30_CHILD_COUNT} children, ${VM30_CHUNK_COUNT} chunks, continuous hierarchy/adjacency, exact source fidelity, and zero source-text rewrites. Pay particular attention to the page-spanning key-indicators and reserve tables.`,
-    '3. Confirm only adverse opinion, qualified opinion, and inconclusive opinion are represented as source-defined VM-30 terms; VM-01 terminology is not duplicated.',
-    `4. Review all ${relationships.relationshipCount} explicit-reference candidates. Confirm source-facing target labels occur in retained source text, canonical labels are separate metadata, and every candidate remains pending, unpromoted, and non-eligible.`,
-    `5. Inspect all ${focusedEvaluation.queryCount} focused retrieval cases. Confirm strict top-three metrics, unsupported VM-31/invented/future-version abstentions, ambiguous submission handling, and current-authority preference.`,
-    `6. Confirm all ${supportGate.cases.length} generic support-gate regressions pass and actual VM-30 source evidence is required inside ranks 1-3.`,
-    '7. Confirm VM-30 remains review-only, not promoted, promotion-ineligible, and blocked from learner, app, RAG, vector, and Copilot use.', '',
+    '1. Confirm the correction is actually present relative to `b36a1c7`.',
+    '2. Confirm `vm30-section-1-a-general-1-aom-requirement-scope` no longer carries documentation, timing/submission, or supporting-exhibit classifications and retains only supported scope, AOM framework, and cross-reference metadata.',
+    '3. Confirm `vm30-section-1-a-general-5-company-level-opinion` represents company scope plus the single-company actuarial-opinion requirement, without generic documentation or timing metadata.',
+    '4. Confirm the adverse, qualified, and inconclusive opinion chunks remain formal definitions with empty `requirements` arrays and narrow definition-oriented classifications; directly stated consequences may remain conservative metadata.',
+    `5. Confirm all ${VM30_CHUNK_COUNT} source excerpts, source-text SHA values, pages, citations, IDs, hierarchy, adjacency, tables, definition terms, and the authoritative PDF identity are unchanged; expected authoritative source-text changes: 0.`,
+    '6. Confirm the first support-gate fixture uses actual `vm20-canonical-coverage` evidence and no VM-31 substitute fixture.',
+    '7. Confirm the rank-four case visibly includes the correct VM-30 evidence at rank 4 in `fullRanking`, while `productionWindowEvidence` contains only ranks 1-3.',
+    `8. Confirm all ${supportGate.caseCount} support cases expose explicit expected and actual decisions, evidence sufficiency, reason codes, failure messages, and per-case \`passed: true\`; confirm the implementation exercises the generic support gate rather than query-ID hard-coding.`,
+    `9. Confirm focused retrieval remains ${focusedEvaluation.supportedTop1Count}/${focusedEvaluation.supportedQueryCount} top-1, ${focusedEvaluation.supportedTop3Count}/${focusedEvaluation.supportedQueryCount} strict top-3, ${focusedEvaluation.unsupportedCorrectCount}/${focusedEvaluation.unsupportedQueryCount} unsupported, ${focusedEvaluation.ambiguitySafeCount}/${focusedEvaluation.ambiguityQueryCount} ambiguity-safe, and ${focusedEvaluation.currentAuthoritativeVm30Top1Count}/${focusedEvaluation.supportedQueryCount} current-authority top-1.`,
+    '10. Confirm VM-30 remains review-only, not promoted, promotion-ineligible, and blocked from learner, app, RAG, vector, and Copilot use pending this decision.', '',
     'Report findings with severity, exact chunk/query/relationship IDs, and source-page references. End with exactly one disposition:', '', '- APPROVE FOR CANONICAL PROMOTION', '- APPROVE WITH FIXES', '- DO NOT PROMOTE', '',
-    'Do not start VM-G or VM-C, and do not repeat the completed VM-01, VM-20, or VM-31 source audits unless this pass changed their authoritative evidence.',
+    'Do not ask for another broad VM-30 audit and do not repeat the completed VM-01, VM-20, or VM-31 source audits unless this correction changed their authoritative evidence.',
   ].join('\n')}\n`, 'utf8')
 
   console.log(`Built VM-30 artifacts for ${VM30_PARENT_COUNT} parents, ${VM30_CHILD_COUNT} children, ${relationships.relationshipCount} relationship candidates, and ${focusedEvaluation.queryCount} retrieval cases.`)

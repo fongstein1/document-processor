@@ -8,5 +8,6 @@
 - Source-text rewrites: 0
 - Source-explicit defined terms: adverse opinion, qualified opinion, inconclusive opinion
 - Explicit-reference relationship candidates: 16; all pending and unpromoted
+- Narrow metadata corrections: 5; authoritative source-text changes: 0
 
 Generated summaries, classifications, and relationship candidates remain subordinate to exact source excerpts.

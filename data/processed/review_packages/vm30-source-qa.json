@@ -80,14 +80,14 @@
         "scope_or_applicability",
         "actuarial_opinion_requirement",
         "actuarial_memorandum_requirement",
-        "appointed_actuary_responsibility",
+        "cross_reference",
         "documentation_requirement",
         "submission_or_timing_requirement",
-        "supporting_exhibit_or_material",
-        "cross_reference",
         "exception_or_exemption",
         "guidance_note_present",
+        "supporting_exhibit_or_material",
         "asset_adequacy_analysis_requirement",
+        "appointed_actuary_responsibility",
         "commissioner_authority_or_process",
         "required_statement_or_disclosure"
       ],
@@ -122,14 +122,10 @@
       "childCount": 3,
       "requirementTypes": [
         "definition_or_terminology",
-        "actuarial_opinion_requirement",
-        "appointed_actuary_responsibility",
         "exception_or_exemption",
-        "qualification_requirement",
-        "documentation_requirement",
         "required_statement_or_disclosure"
       ],
-      "exceptionProvisionCount": 3,
+      "exceptionProvisionCount": 2,
       "guidanceNoteProvisionCount": 0,
       "crossReferences": [],
       "canonicalized": true,
@@ -364,21 +360,21 @@
   ],
   "provisionTypeCounts": {
     "scope_or_applicability": 15,
-    "actuarial_opinion_requirement": 32,
+    "actuarial_opinion_requirement": 30,
     "actuarial_memorandum_requirement": 26,
-    "appointed_actuary_responsibility": 25,
-    "documentation_requirement": 36,
-    "submission_or_timing_requirement": 14,
-    "supporting_exhibit_or_material": 11,
     "cross_reference": 11,
-    "exception_or_exemption": 13,
+    "documentation_requirement": 32,
+    "submission_or_timing_requirement": 12,
+    "exception_or_exemption": 12,
     "guidance_note_present": 3,
+    "supporting_exhibit_or_material": 10,
     "asset_adequacy_analysis_requirement": 16,
+    "appointed_actuary_responsibility": 21,
     "commissioner_authority_or_process": 14,
-    "required_statement_or_disclosure": 16,
+    "required_statement_or_disclosure": 17,
     "definition_or_terminology": 3,
-    "qualification_requirement": 5,
     "retention_requirement": 4,
+    "qualification_requirement": 4,
     "certification": 4,
     "boundary_control": 1
   },
@@ -459,6 +455,125 @@
     "canonicalLabelsStoredSeparately": true,
     "sourceTextChanged": false
   },
+  "promotionBlockerCorrectionAudit": [
+    {
+      "chunkId": "vm30-section-1-a-general-1-aom-requirement-scope",
+      "provisionTypes": [
+        "scope_or_applicability",
+        "actuarial_opinion_requirement",
+        "actuarial_memorandum_requirement",
+        "cross_reference"
+      ],
+      "requirements": [
+        "scope_or_applicability",
+        "actuarial_opinion_requirement",
+        "actuarial_memorandum_requirement",
+        "cross_reference"
+      ],
+      "concepts": [
+        "scope_or_applicability",
+        "actuarial_opinion_requirement",
+        "actuarial_memorandum_requirement",
+        "cross_reference"
+      ],
+      "controlledTags": [
+        "vm30_current_manual",
+        "hierarchical_child",
+        "review_only",
+        "scope_or_applicability",
+        "actuarial_opinion_requirement",
+        "actuarial_memorandum_requirement",
+        "cross_reference"
+      ],
+      "sourceTextChanged": false
+    },
+    {
+      "chunkId": "vm30-section-1-a-general-5-company-level-opinion",
+      "provisionTypes": [
+        "scope_or_applicability",
+        "actuarial_opinion_requirement"
+      ],
+      "requirements": [
+        "scope_or_applicability",
+        "actuarial_opinion_requirement"
+      ],
+      "concepts": [
+        "scope_or_applicability",
+        "actuarial_opinion_requirement"
+      ],
+      "controlledTags": [
+        "vm30_current_manual",
+        "hierarchical_child",
+        "review_only",
+        "scope_or_applicability",
+        "actuarial_opinion_requirement"
+      ],
+      "sourceTextChanged": false
+    },
+    {
+      "chunkId": "vm30-section-1-b-definitions-1-adverse-opinion",
+      "provisionTypes": [
+        "definition_or_terminology",
+        "exception_or_exemption"
+      ],
+      "requirements": [],
+      "concepts": [
+        "definition_or_terminology",
+        "exception_or_exemption"
+      ],
+      "controlledTags": [
+        "vm30_current_manual",
+        "hierarchical_child",
+        "review_only",
+        "definition_or_terminology",
+        "exception_or_exemption"
+      ],
+      "sourceTextChanged": false
+    },
+    {
+      "chunkId": "vm30-section-1-b-definitions-2-qualified-opinion",
+      "provisionTypes": [
+        "definition_or_terminology",
+        "exception_or_exemption",
+        "required_statement_or_disclosure"
+      ],
+      "requirements": [],
+      "concepts": [
+        "definition_or_terminology",
+        "exception_or_exemption",
+        "required_statement_or_disclosure"
+      ],
+      "controlledTags": [
+        "vm30_current_manual",
+        "hierarchical_child",
+        "review_only",
+        "definition_or_terminology",
+        "exception_or_exemption",
+        "required_statement_or_disclosure"
+      ],
+      "sourceTextChanged": false
+    },
+    {
+      "chunkId": "vm30-section-1-b-definitions-3-inconclusive-opinion",
+      "provisionTypes": [
+        "definition_or_terminology",
+        "required_statement_or_disclosure"
+      ],
+      "requirements": [],
+      "concepts": [
+        "definition_or_terminology",
+        "required_statement_or_disclosure"
+      ],
+      "controlledTags": [
+        "vm30_current_manual",
+        "hierarchical_child",
+        "review_only",
+        "definition_or_terminology",
+        "required_statement_or_disclosure"
+      ],
+      "sourceTextChanged": false
+    }
+  ],
   "unresolvedGaps": [
     "Independent source and actuarial review is required before promotion.",
     "Publication and effective dates are not inferred beyond the established 2026 edition identity.",

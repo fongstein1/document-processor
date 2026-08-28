@@ -169,7 +169,17 @@ export const deriveVm30CrossReferences = (text) => {
   return labels
 }
 
-const deriveProvisionTypes = (text, title, parentId) => {
+const targetedProvisionTypes = new Map([
+  ['section-1-a-general/1-aom-requirement-scope', ['scope_or_applicability', 'actuarial_opinion_requirement', 'actuarial_memorandum_requirement', 'cross_reference']],
+  ['section-1-a-general/5-company-level-opinion', ['scope_or_applicability', 'actuarial_opinion_requirement']],
+  ['section-1-b-definitions/1-adverse-opinion', ['definition_or_terminology', 'exception_or_exemption']],
+  ['section-1-b-definitions/2-qualified-opinion', ['definition_or_terminology', 'exception_or_exemption', 'required_statement_or_disclosure']],
+  ['section-1-b-definitions/3-inconclusive-opinion', ['definition_or_terminology', 'required_statement_or_disclosure']],
+])
+
+const deriveProvisionTypes = (text, title, parentId, childId = null) => {
+  const targetedTypes = targetedProvisionTypes.get(`${parentId}/${childId}`)
+  if (targetedTypes) return [...targetedTypes]
   const value = `${title} ${normalize(text)}`
   const types = []
   if (parentId === 'section-1-b-definitions') types.push('definition_or_terminology')
@@ -263,7 +273,7 @@ export const buildVm30Chunks = async (repoRoot, source) => {
     const parentIdIndex = ids.indexOf(parentId)
     const childIds = parent.children.map((child) => `vm30-${parent.id}-${child.id}`)
     const boundaryOnly = parent.id === 'closing-boundary'
-    const parentTypes = boundaryOnly ? ['boundary_control'] : unique(parent.children.flatMap((child) => deriveProvisionTypes(child.text, child.title, parent.id)))
+    const parentTypes = boundaryOnly ? ['boundary_control'] : unique(parent.children.flatMap((child) => deriveProvisionTypes(child.text, child.title, parent.id, child.id)))
     const parentReferences = deriveVm30CrossReferences(parent.text)
     chunks.push({
       chunkId: parentId, chunkOrdinal: ordinal++, chunkKind: boundaryOnly ? 'boundary_slice' : 'source_excerpt', sourceTextType: 'actual_extracted_source_text', pageStart: parent.pages.start, pageEnd: parent.pages.end, sectionReference: parent.title, sourceTextExcerpt: parent.text, normalizedTextExcerpt: normalize(parent.text).toLowerCase(),
@@ -275,7 +285,7 @@ export const buildVm30Chunks = async (repoRoot, source) => {
     for (const child of parent.children) {
       const childId = `vm30-${parent.id}-${child.id}`
       const childIdIndex = ids.indexOf(childId)
-      const types = boundaryOnly ? ['boundary_control'] : deriveProvisionTypes(child.text, child.title, parent.id)
+      const types = boundaryOnly ? ['boundary_control'] : deriveProvisionTypes(child.text, child.title, parent.id, child.id)
       const references = deriveVm30CrossReferences(child.text)
       chunks.push({
         chunkId: childId, chunkOrdinal: ordinal++, chunkKind: boundaryOnly ? 'boundary_slice' : 'source_excerpt', sourceTextType: 'actual_extracted_source_text', pageStart: child.pages.start, pageEnd: child.pages.end, sectionReference: child.title, sourceTextExcerpt: child.text, normalizedTextExcerpt: normalize(child.text).toLowerCase(),

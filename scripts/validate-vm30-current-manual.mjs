@@ -79,6 +79,21 @@ const main = async () => {
   assert(JSON.stringify(definedTermEntries.map((entry) => entry.term)) === JSON.stringify(['adverse opinion', 'qualified opinion', 'inconclusive opinion']), 'VM-30 must expose only its three source-explicit opinion definitions.')
   assert(definedTermEntries.every((entry) => normalizeSourceLabel(sourcePackage.chunks.find((chunk) => chunk.chunkId === entry.chunkId).sourceTextExcerpt).includes(normalizeSourceLabel(`term ${entry.term} means`))), 'A VM-30 defined term is not explicit in its retained source provision.')
   assert(!sourcePackage.chunks.some((chunk) => chunk.definedTerms.some((term) => normalizeSourceLabel(term) === 'appointedactuary')), 'VM-01 appointed-actuary terminology must not be duplicated as a VM-30 definition.')
+  const targetedMetadata = new Map([
+    ['vm30-section-1-a-general-1-aom-requirement-scope', ['scope_or_applicability', 'actuarial_opinion_requirement', 'actuarial_memorandum_requirement', 'cross_reference']],
+    ['vm30-section-1-a-general-5-company-level-opinion', ['scope_or_applicability', 'actuarial_opinion_requirement']],
+    ['vm30-section-1-b-definitions-1-adverse-opinion', ['definition_or_terminology', 'exception_or_exemption']],
+    ['vm30-section-1-b-definitions-2-qualified-opinion', ['definition_or_terminology', 'exception_or_exemption', 'required_statement_or_disclosure']],
+    ['vm30-section-1-b-definitions-3-inconclusive-opinion', ['definition_or_terminology', 'required_statement_or_disclosure']],
+  ])
+  for (const [chunkId, expectedTypes] of targetedMetadata) {
+    const chunk = sourcePackage.chunks.find((candidate) => candidate.chunkId === chunkId)
+    assert(chunk && JSON.stringify(chunk.provisionTypes) === JSON.stringify(expectedTypes), `VM-30 targeted provision classifications regressed: ${chunkId}.`)
+    assert(JSON.stringify(chunk.concepts) === JSON.stringify(expectedTypes), `VM-30 targeted concepts do not mirror the narrow classifications: ${chunkId}.`)
+    assert(JSON.stringify(chunk.controlledTags.slice(3)) === JSON.stringify(expectedTypes), `VM-30 targeted controlled tags do not mirror the narrow classifications: ${chunkId}.`)
+    const expectedRequirements = chunkId.includes('section-1-b-definitions') ? [] : expectedTypes
+    assert(JSON.stringify(chunk.requirements) === JSON.stringify(expectedRequirements), `VM-30 targeted requirements are over- or under-classified: ${chunkId}.`)
+  }
   assert(children.filter((chunk) => chunk.provisionTypes.includes('actuarial_opinion_requirement')).length >= 17, 'VM-30 actuarial-opinion classification coverage is unexpectedly low.')
   assert(children.filter((chunk) => chunk.provisionTypes.includes('actuarial_memorandum_requirement')).length >= 14, 'VM-30 actuarial-memorandum classification coverage is unexpectedly low.')
 
@@ -116,7 +131,24 @@ const main = async () => {
     } else assert(testCase.supportDecision.supportState === 'ambiguous_requires_more_context' && testCase.ambiguityResult.safelyAbstained === true, `VM-30 ambiguous case was not handled safely: ${testCase.queryId}.`)
     assert(testCase.passed && testCase.failureReason === null, `VM-30 focused case failed: ${testCase.queryId}.`)
   }
-  assert(supportGate.status === 'pass' && supportGate.productionEvidenceWindow === 3 && supportGate.cases.length === 4 && supportGate.cases.every((testCase) => testCase.decision.supportState === testCase.expectedState && testCase.decision.reasonCode === testCase.expectedReason), 'VM-30 formal-requirement support-gate regression failed.')
+  assert(supportGate.status === 'pass' && supportGate.productionEvidenceWindow === 3 && supportGate.caseCount === 4 && supportGate.passedCaseCount === 4 && supportGate.cases.length === 4, 'VM-30 formal-requirement support-gate regression summary failed.')
+  assert(supportGate.fixtureSources.some((fixture) => fixture.sourceId === 'vm20-canonical-coverage') && !supportGate.fixtureSources.some((fixture) => fixture.sourceId === 'vm31-current-manual'), 'VM-30 support-gate fixture must use actual VM-20 evidence and must not substitute VM-31.')
+  for (const testCase of supportGate.cases) {
+    assert(testCase.productionEvidenceWindowSize === 3 && Array.isArray(testCase.fullRanking) && Array.isArray(testCase.productionWindowEvidence), `VM-30 support-gate ranking evidence is not inspectable: ${testCase.testId}.`)
+    assert(testCase.fullRanking.every((evidence, index) => evidence.rank === index + 1 && evidence.chunkId && evidence.sourceId && evidence.sourceFamilyId && evidence.authorityLevel && evidence.sourceTextType && evidence.sourceTextExcerpt), `VM-30 support-gate ranked evidence is incomplete: ${testCase.testId}.`)
+    assert(JSON.stringify(testCase.productionWindowEvidence) === JSON.stringify(testCase.fullRanking.slice(0, 3)), `VM-30 production evidence projection is not ranks 1-3: ${testCase.testId}.`)
+    assert(testCase.supportState === testCase.expectedSupportState && testCase.reasonCode === testCase.expectedReasonCode && testCase.decision.supportState === testCase.supportState && testCase.decision.reasonCode === testCase.reasonCode, `VM-30 support-gate result differs from its inspectable expectation: ${testCase.testId}.`)
+    assert(testCase.evidenceSufficient === testCase.decision.evidenceSufficient && testCase.passed === true && testCase.assertionFailureMessage === null, `VM-30 support-gate case did not pass cleanly: ${testCase.testId}.`)
+  }
+  const supportCases = new Map(supportGate.cases.map((testCase) => [testCase.testId, testCase]))
+  const vm20SubstitutionCase = supportCases.get('vm20-methodology-alone-cannot-support-vm30-requirement')
+  assert(vm20SubstitutionCase?.fullRanking.length === 3 && vm20SubstitutionCase.fullRanking.every((evidence) => evidence.sourceId === 'vm20-canonical-coverage') && vm20SubstitutionCase.supportState === 'unsupported', 'Actual VM-20 methodology evidence did not fail the requested VM-30 authority boundary.')
+  const rankFourCase = supportCases.get('vm30-evidence-at-rank-four-is-outside-production-window')
+  assert(rankFourCase?.fullRanking.length === 4 && rankFourCase.fullRanking[3].rank === 4 && rankFourCase.fullRanking[3].sourceId === 'vm30-current-manual' && rankFourCase.fullRanking[3].chunkId === 'vm30-section-2-a-general-2-appointed-actuary-notice' && rankFourCase.productionWindowEvidence.every((evidence) => evidence.sourceId !== 'vm30-current-manual') && rankFourCase.supportState === 'unsupported', 'Correct VM-30 rank-four evidence is not visibly excluded from the production window.')
+  const inWindowCase = supportCases.get('vm30-source-evidence-inside-top-three-supports-request')
+  assert(inWindowCase?.productionWindowEvidence.some((evidence) => evidence.sourceId === 'vm30-current-manual') && inWindowCase.supportState === 'supported', 'In-window VM-30 support regression failed.')
+  const wrongTopicCase = supportCases.get('vm30-source-without-requested-topic-does-not-support-claim')
+  assert(wrongTopicCase?.fullRanking.every((evidence) => evidence.sourceId === 'vm30-current-manual') && wrongTopicCase.supportState === 'unsupported' && wrongTopicCase.reasonCode === 'missing_required_requirement_terms', 'Wrong-topic VM-30 evidence was not rejected.')
   assert(reviewPackage.status === 'review_candidate' && reviewPackage.promoted === false && reviewPackage.coverage.totalChunkCount === VM30_CHUNK_COUNT && reviewPackage.relationships.candidateCount === 16 && reviewPackage.retrievalEvaluation.allCasesPassed === true, 'VM-30 review package scope or evidence summary mismatch.')
   assert(reviewPackage.promotionReadiness.independentReviewRequired === true && reviewPackage.promotionReadiness.promotionStatus === 'not_promoted' && reviewPackage.promotionReadiness.promotionEligible === false && reviewPackage.promotionReadiness.copilotExportEligible === false, 'VM-30 review package governance mismatch.')
   for (const [artifactName, artifactPath] of Object.entries(reviewPackage.artifacts)) if (artifactName !== 'validationReport') await fs.access(path.join(repoRoot, ...artifactPath.split('/')))
@@ -133,7 +165,8 @@ const main = async () => {
   const report = {
     schemaVersion: '1.0', reportId: 'vm30-current-manual-validation-2026', status: 'pass',
     sourceIdentity: { sourceSha256: VM30_SOURCE_SHA256, locallyVerifiedSha256: actualPdfHash, sourceEditionId: sourcePackage.source.sourceEditionId, pageRange: VM30_PAGE_RANGE, aggregateExtractionSha256 },
-    checks: { packageCount: 1, parents: VM30_PARENT_COUNT, children: VM30_CHILD_COUNT, totalChunks: VM30_CHUNK_COUNT, firstStageRetrievalUnits: 42, exactSourceChunks: VM30_CHUNK_COUNT, sourceTextRewrites: 0, sourceExplicitDefinedTerms: 3, contentAreasCovered: sourceQa.contentAreaAudit.length, relationshipCandidates: relationships.relationshipCount, sourceFaithfulRelationshipLabels: relationships.relationshipCount, focusedQueries: retrieval.queryCount, supportedQueries: retrieval.supportedQueryCount, supportedTop1: retrieval.supportedTop1Count, supportedStrictTop3: retrieval.supportedTop3Count, unsupportedCorrect: retrieval.unsupportedCorrectCount, ambiguitySafe: retrieval.ambiguitySafeCount, currentAuthorityTop1: retrieval.currentAuthoritativeVm30Top1Count, supportGateRegressions: supportGate.cases.length },
+    checks: { packageCount: 1, parents: VM30_PARENT_COUNT, children: VM30_CHILD_COUNT, totalChunks: VM30_CHUNK_COUNT, firstStageRetrievalUnits: 42, exactSourceChunks: VM30_CHUNK_COUNT, sourceTextRewrites: 0, targetedMetadataCorrections: targetedMetadata.size, sourceExplicitDefinedTerms: 3, contentAreasCovered: sourceQa.contentAreaAudit.length, relationshipCandidates: relationships.relationshipCount, sourceFaithfulRelationshipLabels: relationships.relationshipCount, focusedQueries: retrieval.queryCount, supportedQueries: retrieval.supportedQueryCount, supportedTop1: retrieval.supportedTop1Count, supportedStrictTop3: retrieval.supportedTop3Count, unsupportedCorrect: retrieval.unsupportedCorrectCount, ambiguitySafe: retrieval.ambiguitySafeCount, currentAuthorityTop1: retrieval.currentAuthoritativeVm30Top1Count, supportGateRegressions: supportGate.cases.length, supportGateRegressionsPassed: supportGate.passedCaseCount },
+    promotionBlockerEvidence: { baselineCommit: 'b36a1c7', correctedChunkIds: [...targetedMetadata.keys()], actualVm20SupportFixture: true, vm20FixtureSourceId: 'vm20-canonical-coverage', rankFourEvidenceInspectable: true, perCasePassed: Object.fromEntries(supportGate.cases.map((testCase) => [testCase.testId, testCase.passed])) },
     regressionIntegrity: { vm01SourceTextAggregateSha256: VM01_SOURCE_TEXT_AGGREGATE_SHA256, vm20PromotedSourceTextAggregateSha256: VM20_PROMOTED_SOURCE_TEXT_AGGREGATE_SHA256, vm20StructuredTableFileSha256: VM20_STRUCTURED_TABLE_FILE_SHA256, vm31SourceTextAggregateSha256: VM31_SOURCE_TEXT_AGGREGATE_SHA256, authoritativeSourceTextChangeCount: 0 },
     governance: { reviewOnly: true, promotionStatus: 'not_promoted', promotionEligible: false, learnerFacingAllowed: false, appReadyAllowed: false, ragReadyAllowed: false, vectorEligible: false, copilotExportEligible: false },
     artifacts: reviewPackage.artifacts,
@@ -141,10 +174,10 @@ const main = async () => {
   await fs.writeFile(validationPath, `${JSON.stringify(report, null, 2)}\n`, 'utf8')
   await fs.writeFile(validationPath.replace(/\.json$/, '.md'), `${[
     '# VM-30 validation report', '', '- Result: **PASS**', `- Source SHA-256: \`${VM30_SOURCE_SHA256}\``, `- Parents / children / chunks: ${VM30_PARENT_COUNT} / ${VM30_CHILD_COUNT} / ${VM30_CHUNK_COUNT}`,
-    '- Authoritative source-text changes: 0', '- Source-explicit defined terms: 3', `- Relationship candidates: ${relationships.relationshipCount}; all pending and unpromoted`,
+    '- Authoritative source-text changes: 0', `- Narrow metadata corrections: ${targetedMetadata.size}`, '- Source-explicit defined terms: 3', `- Relationship candidates: ${relationships.relationshipCount}; all pending and unpromoted`,
     `- Supported top-1 / strict top-3: ${retrieval.supportedTop1Count}/${retrieval.supportedQueryCount} / ${retrieval.supportedTop3Count}/${retrieval.supportedQueryCount}`,
     `- Unsupported / ambiguity: ${retrieval.unsupportedCorrectCount}/${retrieval.unsupportedQueryCount} / ${retrieval.ambiguitySafeCount}/${retrieval.ambiguityQueryCount}`,
-    `- Current authoritative VM-30 top-1: ${retrieval.currentAuthoritativeVm30Top1Count}/${retrieval.supportedQueryCount}`,
+    `- Current authoritative VM-30 top-1: ${retrieval.currentAuthoritativeVm30Top1Count}/${retrieval.supportedQueryCount}`, `- Support-gate regressions: ${supportGate.passedCaseCount}/${supportGate.caseCount}; actual VM-20 fixture and inspectable rank-four evidence confirmed`,
     '- VM-01, VM-20, and promoted VM-31 source evidence: unchanged', '- Governance: review-only, not promoted, and blocked from downstream learner/app/RAG/vector/Copilot use',
   ].join('\n')}\n`, 'utf8')
   console.log(`Validated VM-30: ${VM30_PARENT_COUNT} parents, ${VM30_CHILD_COUNT} children, ${relationships.relationshipCount} relationships, and ${retrieval.queryCount} retrieval cases.`)
