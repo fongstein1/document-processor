@@ -3,6 +3,7 @@ import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { buildRetrievalMarkdown, evaluateQueries, normalizeText } from './evaluate-source-index-retrieval.mjs'
 import { buildVm01DefinitionChunks } from './lib/vm01-definitions.mjs'
+import { buildVm30Chunks } from './lib/vm30-current-manual.mjs'
 import { buildVm31Chunks } from './lib/vm31-current-manual.mjs'
 
 const __filename = fileURLToPath(import.meta.url)
@@ -1081,6 +1082,8 @@ const main = async () => {
     const sourceRelationships = asArray(source.relationships)
     const hydratedChunks = source.definitionInput
       ? await buildVm01DefinitionChunks(repoRoot, source)
+      : source.vm30Input
+        ? await buildVm30Chunks(repoRoot, source)
       : source.vm31Input
         ? await buildVm31Chunks(repoRoot, source)
       : source.batchCoverageInput

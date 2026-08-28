@@ -1,0 +1,62 @@
+{
+  "schemaVersion": "1.0",
+  "reportId": "vm30-current-manual-validation-2026",
+  "status": "pass",
+  "sourceIdentity": {
+    "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+    "locallyVerifiedSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+    "sourceEditionId": "NAIC-VALUATION-MANUAL-2026",
+    "pageRange": {
+      "start": 325,
+      "end": 339
+    },
+    "aggregateExtractionSha256": "7833edcd509df2025457d3878194946cfb74dce7555bcfeeee53ed597f932731"
+  },
+  "checks": {
+    "packageCount": 1,
+    "parents": 8,
+    "children": 43,
+    "totalChunks": 51,
+    "firstStageRetrievalUnits": 42,
+    "exactSourceChunks": 51,
+    "sourceTextRewrites": 0,
+    "sourceExplicitDefinedTerms": 3,
+    "contentAreasCovered": 14,
+    "relationshipCandidates": 16,
+    "sourceFaithfulRelationshipLabels": 16,
+    "focusedQueries": 21,
+    "supportedQueries": 16,
+    "supportedTop1": 15,
+    "supportedStrictTop3": 16,
+    "unsupportedCorrect": 4,
+    "ambiguitySafe": 1,
+    "currentAuthorityTop1": 16,
+    "supportGateRegressions": 4
+  },
+  "regressionIntegrity": {
+    "vm01SourceTextAggregateSha256": "04fecfc622ee792dca2f994f3d7eb6ebf510bd533bd7be9798b4604a70b8ef98",
+    "vm20PromotedSourceTextAggregateSha256": "c32c9a1e976a0635707af9b82e3847152b4611257147d12f14f29c4a5b1274c6",
+    "vm20StructuredTableFileSha256": "2b86d0929da8f8dfc85f9d3a123311166d136283ed33afeca5ded4c32f0d0f3f",
+    "vm31SourceTextAggregateSha256": "f87b9b995e3c7065365e3f7e035ba20e2779d377d08b79d9d00ccfa7bdc6f5fc",
+    "authoritativeSourceTextChangeCount": 0
+  },
+  "governance": {
+    "reviewOnly": true,
+    "promotionStatus": "not_promoted",
+    "promotionEligible": false,
+    "learnerFacingAllowed": false,
+    "appReadyAllowed": false,
+    "ragReadyAllowed": false,
+    "vectorEligible": false,
+    "copilotExportEligible": false
+  },
+  "artifacts": {
+    "canonicalSourcePackage": "data/processed/source_indexes/sources/vm30-current-manual.json",
+    "sourceQa": "data/processed/review_packages/vm30-source-qa.json",
+    "relationshipCandidates": "data/processed/relationship_registries/vm30-current-manual-relationship-candidates.json",
+    "focusedRetrievalEvaluation": "data/processed/review_packages/vm30-focused-retrieval-evaluation.json",
+    "supportGateRegression": "data/processed/review_packages/vm30-support-gate-regression.json",
+    "validationReport": "data/processed/review_packages/vm30-validation-report.json",
+    "independentReviewPrompt": "data/processed/review_packages/vm30-independent-review-prompt.md"
+  }
+}

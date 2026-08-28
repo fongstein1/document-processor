@@ -1,5 +1,19 @@
 # Session Log
 
+## 2026-08-28 VM-31 promotion and VM-30 canonical review candidate
+
+- Promoted the independently approved 84-chunk current 2026 VM-31 scope under
+  its existing human-governed promotion workflow while leaving all 92
+  relationships and every downstream export use separately blocked.
+- Verified the authoritative VM-30 PDF boundary visually from pages 324-341
+  and built a complete pages 325-339 exact-source hierarchy with 8 parents,
+  43 children, and 51 total chunks.
+- Added 16 conservative explicit-reference candidates, 21 case-level focused
+  retrieval tests, four generic evidence-sufficiency regressions, source QA,
+  deterministic validation, and a copy-paste independent-review prompt.
+- Kept VM-30 review-only and unpromoted; no VM-01, VM-20, or VM-31
+  authoritative source evidence changed.
+
 ## 2026-07-21 Canonical source-index POC
 
 - Added backend-neutral source-index schemas for the canonical package and

@@ -1,0 +1,2801 @@
+{
+  "schemaVersion": "1.0",
+  "evaluationId": "vm30-focused-retrieval-2026",
+  "artifactPurpose": "case_level_independent_review",
+  "method": "generic_formal_requirement_keyword_overlap",
+  "productionEvidenceWindow": 3,
+  "queryCount": 21,
+  "supportedQueryCount": 16,
+  "supportedTop1Count": 15,
+  "supportedTop3Count": 16,
+  "unsupportedQueryCount": 4,
+  "unsupportedCorrectCount": 4,
+  "ambiguityQueryCount": 1,
+  "ambiguitySafeCount": 1,
+  "currentAuthoritativeVm30Top1Count": 16,
+  "sourceFamilyAccuracyCount": 16,
+  "authorityLevelAccuracyCount": 16,
+  "allCasesPassed": true,
+  "queries": [
+    {
+      "queryId": "vm30-aom-scope",
+      "queryCategory": "exact_formal_scope",
+      "query": "What requirements does current VM-30 establish for actuarial opinions and supporting actuarial memoranda?",
+      "intendedSupportState": "supported",
+      "expectedEvidence": "Section 1.A.1 scope and meaning of the VM-30 AOM requirements.",
+      "expectedChunkIds": [
+        "vm30-section-1-a-general-1-aom-requirement-scope"
+      ],
+      "actualTop1": {
+        "rank": 1,
+        "chunkId": "vm30-section-1-a-general-1-aom-requirement-scope",
+        "sourceId": "vm30-current-manual",
+        "sourceFamilyId": "valuation_manual_pdfs",
+        "authorityLevel": "manual_section",
+        "score": 75.75,
+        "sectionReference": "1. AOM requirement scope and actuarial opinion meaning",
+        "pageStart": 325,
+        "pageEnd": 325,
+        "citationAvailable": true
+      },
+      "actualTop3": [
+        {
+          "rank": 1,
+          "chunkId": "vm30-section-1-a-general-1-aom-requirement-scope",
+          "sourceId": "vm30-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 75.75,
+          "sectionReference": "1. AOM requirement scope and actuarial opinion meaning",
+          "pageStart": 325,
+          "pageEnd": 325,
+          "citationAvailable": true
+        },
+        {
+          "rank": 2,
+          "chunkId": "vm30-section-1-a-general-2-annual-statement-applicability",
+          "sourceId": "vm30-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 71.25,
+          "sectionReference": "2. Annual statement applicability and exclusions",
+          "pageStart": 325,
+          "pageEnd": 325,
+          "citationAvailable": true
+        },
+        {
+          "rank": 3,
+          "chunkId": "vm30-section-1-a-general-3-professional-judgment-and-commissioner-authority",
+          "sourceId": "vm30-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 71.25,
+          "sectionReference": "3. Professional judgment, commissioner authority, and applicable guidelines",
+          "pageStart": 325,
+          "pageEnd": 325,
+          "citationAvailable": true
+        }
+      ],
+      "top1Hit": true,
+      "top3Hit": true,
+      "sourceFamilyResult": {
+        "expected": [
+          "valuation_manual_pdfs"
+        ],
+        "actualTop1": "valuation_manual_pdfs",
+        "correct": true
+      },
+      "authorityResult": {
+        "expected": [
+          "manual_section"
+        ],
+        "actualTop1": "manual_section",
+        "correct": true,
+        "currentAuthoritativeVm30Top1": true
+      },
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Actual source text from the requested formal requirement source is present inside the production evidence window.",
+        "requestedInformationTypes": [
+          "formal_requirement"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm30-section-1-a-general-1-aom-requirement-scope",
+            "sourceId": "vm30-current-manual",
+            "score": 75.75,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm30-section-1-a-general-2-annual-statement-applicability",
+            "sourceId": "vm30-current-manual",
+            "score": 71.25,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm30-section-1-a-general-3-professional-judgment-and-commissioner-authority",
+            "sourceId": "vm30-current-manual",
+            "score": 71.25,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 75.75,
+          "matches": [
+            {
+              "chunkId": "vm30-section-1-a-general-1-aom-requirement-scope",
+              "score": 75.75
+            },
+            {
+              "chunkId": "vm30-section-1-a-general-2-annual-statement-applicability",
+              "score": 71.25
+            },
+            {
+              "chunkId": "vm30-section-1-a-general-3-professional-judgment-and-commissioner-authority",
+              "score": 71.25
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "ambiguityResult": {
+        "safelyAbstained": false,
+        "reasonCode": "not_applicable",
+        "candidateChunkIds": []
+      },
+      "passed": true,
+      "failureReason": null
+    },
+    {
+      "queryId": "vm30-annual-statement-applicability",
+      "queryCategory": "scope_exception_and_guidance_note",
+      "query": "Under VM-30, which companies file the life, A&H, or fraternal annual statement, and when are property/casualty (P/C) or health annual-statement filers not subject to these actuarial opinion and supporting actuarial memoranda requirements?",
+      "intendedSupportState": "supported",
+      "expectedEvidence": "Section 1.A.2 annual-statement applicability, stated exclusions, and the associated Guidance Note.",
+      "expectedChunkIds": [
+        "vm30-section-1-a-general-2-annual-statement-applicability"
+      ],
+      "actualTop1": {
+        "rank": 1,
+        "chunkId": "vm30-section-1-a-general-2-annual-statement-applicability",
+        "sourceId": "vm30-current-manual",
+        "sourceFamilyId": "valuation_manual_pdfs",
+        "authorityLevel": "manual_section",
+        "score": 176.59999999999997,
+        "sectionReference": "2. Annual statement applicability and exclusions",
+        "pageStart": 325,
+        "pageEnd": 325,
+        "citationAvailable": true
+      },
+      "actualTop3": [
+        {
+          "rank": 1,
+          "chunkId": "vm30-section-1-a-general-2-annual-statement-applicability",
+          "sourceId": "vm30-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 176.59999999999997,
+          "sectionReference": "2. Annual statement applicability and exclusions",
+          "pageStart": 325,
+          "pageEnd": 325,
+          "citationAvailable": true
+        },
+        {
+          "rank": 2,
+          "chunkId": "vm30-section-1-a-general-1-aom-requirement-scope",
+          "sourceId": "vm30-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 126.6,
+          "sectionReference": "1. AOM requirement scope and actuarial opinion meaning",
+          "pageStart": 325,
+          "pageEnd": 325,
+          "citationAvailable": true
+        },
+        {
+          "rank": 3,
+          "chunkId": "vm30-section-2-a-general-1-opinion-in-annual-statement",
+          "sourceId": "vm30-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 93.10000000000001,
+          "sectionReference": "1. Statement of Actuarial Opinion in annual statement",
+          "pageStart": 326,
+          "pageEnd": 326,
+          "citationAvailable": true
+        }
+      ],
+      "top1Hit": true,
+      "top3Hit": true,
+      "sourceFamilyResult": {
+        "expected": [
+          "valuation_manual_pdfs"
+        ],
+        "actualTop1": "valuation_manual_pdfs",
+        "correct": true
+      },
+      "authorityResult": {
+        "expected": [
+          "manual_section"
+        ],
+        "actualTop1": "manual_section",
+        "correct": true,
+        "currentAuthoritativeVm30Top1": true
+      },
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Actual source text from the requested formal requirement source is present inside the production evidence window.",
+        "requestedInformationTypes": [
+          "formal_requirement"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm30-section-1-a-general-2-annual-statement-applicability",
+            "sourceId": "vm30-current-manual",
+            "score": 176.59999999999997,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm30-section-1-a-general-1-aom-requirement-scope",
+            "sourceId": "vm30-current-manual",
+            "score": 126.6,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm30-section-2-a-general-1-opinion-in-annual-statement",
+            "sourceId": "vm30-current-manual",
+            "score": 93.10000000000001,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 176.59999999999997,
+          "matches": [
+            {
+              "chunkId": "vm30-section-1-a-general-2-annual-statement-applicability",
+              "score": 176.59999999999997
+            },
+            {
+              "chunkId": "vm30-section-1-a-general-1-aom-requirement-scope",
+              "score": 126.6
+            },
+            {
+              "chunkId": "vm30-section-2-a-general-1-opinion-in-annual-statement",
+              "score": 93.10000000000001
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "ambiguityResult": {
+        "safelyAbstained": false,
+        "reasonCode": "not_applicable",
+        "candidateChunkIds": []
+      },
+      "passed": true,
+      "failureReason": null
+    },
+    {
+      "queryId": "vm30-adverse-opinion-definition",
+      "queryCategory": "source_defined_term",
+      "query": "How does VM-30 define adverse opinion?",
+      "intendedSupportState": "supported",
+      "expectedEvidence": "The exact Section 1.B.1 adverse-opinion definition.",
+      "expectedChunkIds": [
+        "vm30-section-1-b-definitions-1-adverse-opinion"
+      ],
+      "actualTop1": {
+        "rank": 1,
+        "chunkId": "vm30-section-1-b-definitions-1-adverse-opinion",
+        "sourceId": "vm30-current-manual",
+        "sourceFamilyId": "valuation_manual_pdfs",
+        "authorityLevel": "manual_section",
+        "score": 62.45,
+        "sectionReference": "1. Adverse opinion",
+        "pageStart": 326,
+        "pageEnd": 326,
+        "citationAvailable": true
+      },
+      "actualTop3": [
+        {
+          "rank": 1,
+          "chunkId": "vm30-section-1-b-definitions-1-adverse-opinion",
+          "sourceId": "vm30-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 62.45,
+          "sectionReference": "1. Adverse opinion",
+          "pageStart": 326,
+          "pageEnd": 326,
+          "citationAvailable": true
+        },
+        {
+          "rank": 2,
+          "chunkId": "vm30-section-3-b-actuarial-memorandum-7-equity-return-volatility",
+          "sourceId": "vm30-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 53.699999999999996,
+          "sectionReference": "7. Equity-return volatility under moderately adverse conditions",
+          "pageStart": 335,
+          "pageEnd": 336,
+          "citationAvailable": true
+        },
+        {
+          "rank": 3,
+          "chunkId": "vm30-section-1-a-general-1-aom-requirement-scope",
+          "sourceId": "vm30-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 51.7,
+          "sectionReference": "1. AOM requirement scope and actuarial opinion meaning",
+          "pageStart": 325,
+          "pageEnd": 325,
+          "citationAvailable": true
+        }
+      ],
+      "top1Hit": true,
+      "top3Hit": true,
+      "sourceFamilyResult": {
+        "expected": [
+          "valuation_manual_pdfs"
+        ],
+        "actualTop1": "valuation_manual_pdfs",
+        "correct": true
+      },
+      "authorityResult": {
+        "expected": [
+          "manual_section"
+        ],
+        "actualTop1": "manual_section",
+        "correct": true,
+        "currentAuthoritativeVm30Top1": true
+      },
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Actual source text from the requested formal requirement source is present inside the production evidence window.",
+        "requestedInformationTypes": [
+          "formal_requirement"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm30-section-1-b-definitions-1-adverse-opinion",
+            "sourceId": "vm30-current-manual",
+            "score": 62.45,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm30-section-3-b-actuarial-memorandum-7-equity-return-volatility",
+            "sourceId": "vm30-current-manual",
+            "score": 53.699999999999996,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm30-section-1-a-general-1-aom-requirement-scope",
+            "sourceId": "vm30-current-manual",
+            "score": 51.7,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 62.45,
+          "matches": [
+            {
+              "chunkId": "vm30-section-1-b-definitions-1-adverse-opinion",
+              "score": 62.45
+            },
+            {
+              "chunkId": "vm30-section-3-b-actuarial-memorandum-7-equity-return-volatility",
+              "score": 53.699999999999996
+            },
+            {
+              "chunkId": "vm30-section-1-a-general-1-aom-requirement-scope",
+              "score": 51.7
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "ambiguityResult": {
+        "safelyAbstained": false,
+        "reasonCode": "not_applicable",
+        "candidateChunkIds": []
+      },
+      "passed": true,
+      "failureReason": null
+    },
+    {
+      "queryId": "vm30-appointed-actuary-notice",
+      "queryCategory": "submission_timing",
+      "query": "What notice must a company give within five business days after appointing an actuary under VM-30?",
+      "intendedSupportState": "supported",
+      "expectedEvidence": "Section 2.A.2 appointed-actuary notice requirement.",
+      "expectedChunkIds": [
+        "vm30-section-2-a-general-2-appointed-actuary-notice"
+      ],
+      "actualTop1": {
+        "rank": 1,
+        "chunkId": "vm30-section-2-a-general-2-appointed-actuary-notice",
+        "sourceId": "vm30-current-manual",
+        "sourceFamilyId": "valuation_manual_pdfs",
+        "authorityLevel": "manual_section",
+        "score": 134.95,
+        "sectionReference": "2. Appointed-actuary notice within five business days",
+        "pageStart": 326,
+        "pageEnd": 326,
+        "citationAvailable": true
+      },
+      "actualTop3": [
+        {
+          "rank": 1,
+          "chunkId": "vm30-section-2-a-general-2-appointed-actuary-notice",
+          "sourceId": "vm30-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 134.95,
+          "sectionReference": "2. Appointed-actuary notice within five business days",
+          "pageStart": 326,
+          "pageEnd": 326,
+          "citationAvailable": true
+        },
+        {
+          "rank": 2,
+          "chunkId": "vm30-section-2-a-general-3-replacement-and-disagreement-notices",
+          "sourceId": "vm30-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 62.45,
+          "sectionReference": "3. Replacement and disagreement notices",
+          "pageStart": 326,
+          "pageEnd": 327,
+          "citationAvailable": true
+        },
+        {
+          "rank": 3,
+          "chunkId": "vm30-section-3-b-actuarial-memorandum-7-equity-return-volatility",
+          "sourceId": "vm30-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 54.949999999999996,
+          "sectionReference": "7. Equity-return volatility under moderately adverse conditions",
+          "pageStart": 335,
+          "pageEnd": 336,
+          "citationAvailable": true
+        }
+      ],
+      "top1Hit": true,
+      "top3Hit": true,
+      "sourceFamilyResult": {
+        "expected": [
+          "valuation_manual_pdfs"
+        ],
+        "actualTop1": "valuation_manual_pdfs",
+        "correct": true
+      },
+      "authorityResult": {
+        "expected": [
+          "manual_section"
+        ],
+        "actualTop1": "manual_section",
+        "correct": true,
+        "currentAuthoritativeVm30Top1": true
+      },
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Actual source text from the requested formal requirement source is present inside the production evidence window.",
+        "requestedInformationTypes": [
+          "formal_requirement"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm30-section-2-a-general-2-appointed-actuary-notice",
+            "sourceId": "vm30-current-manual",
+            "score": 134.95,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm30-section-2-a-general-3-replacement-and-disagreement-notices",
+            "sourceId": "vm30-current-manual",
+            "score": 62.45,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm30-section-3-b-actuarial-memorandum-7-equity-return-volatility",
+            "sourceId": "vm30-current-manual",
+            "score": 54.949999999999996,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 134.95,
+          "matches": [
+            {
+              "chunkId": "vm30-section-2-a-general-2-appointed-actuary-notice",
+              "score": 134.95
+            },
+            {
+              "chunkId": "vm30-section-2-a-general-3-replacement-and-disagreement-notices",
+              "score": 62.45
+            },
+            {
+              "chunkId": "vm30-section-3-b-actuarial-memorandum-7-equity-return-volatility",
+              "score": 54.949999999999996
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "ambiguityResult": {
+        "safelyAbstained": false,
+        "reasonCode": "not_applicable",
+        "candidateChunkIds": []
+      },
+      "passed": true,
+      "failureReason": null
+    },
+    {
+      "queryId": "vm30-replacement-disagreement",
+      "queryCategory": "condition_and_process",
+      "query": "What replacement-actuary and disagreement notices does VM-30 require when the appointed actuary changes?",
+      "intendedSupportState": "supported",
+      "expectedEvidence": "Complete Section 2.A.3 replacement and disagreement process.",
+      "expectedChunkIds": [
+        "vm30-section-2-a-general-3-replacement-and-disagreement-notices"
+      ],
+      "actualTop1": {
+        "rank": 1,
+        "chunkId": "vm30-section-2-a-general-3-replacement-and-disagreement-notices",
+        "sourceId": "vm30-current-manual",
+        "sourceFamilyId": "valuation_manual_pdfs",
+        "authorityLevel": "manual_section",
+        "score": 91.4,
+        "sectionReference": "3. Replacement and disagreement notices",
+        "pageStart": 326,
+        "pageEnd": 327,
+        "citationAvailable": true
+      },
+      "actualTop3": [
+        {
+          "rank": 1,
+          "chunkId": "vm30-section-2-a-general-3-replacement-and-disagreement-notices",
+          "sourceId": "vm30-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 91.4,
+          "sectionReference": "3. Replacement and disagreement notices",
+          "pageStart": 326,
+          "pageEnd": 327,
+          "citationAvailable": true
+        },
+        {
+          "rank": 2,
+          "chunkId": "vm30-section-3-a-statement-of-actuarial-opinion-2-prescribed-wording-changes",
+          "sourceId": "vm30-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 66.9,
+          "sectionReference": "2. Prescribed wording and changes",
+          "pageStart": 327,
+          "pageEnd": 328,
+          "citationAvailable": true
+        },
+        {
+          "rank": 3,
+          "chunkId": "vm30-section-2-a-general-2-appointed-actuary-notice",
+          "sourceId": "vm30-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 65.9,
+          "sectionReference": "2. Appointed-actuary notice within five business days",
+          "pageStart": 326,
+          "pageEnd": 326,
+          "citationAvailable": true
+        }
+      ],
+      "top1Hit": true,
+      "top3Hit": true,
+      "sourceFamilyResult": {
+        "expected": [
+          "valuation_manual_pdfs"
+        ],
+        "actualTop1": "valuation_manual_pdfs",
+        "correct": true
+      },
+      "authorityResult": {
+        "expected": [
+          "manual_section"
+        ],
+        "actualTop1": "manual_section",
+        "correct": true,
+        "currentAuthoritativeVm30Top1": true
+      },
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Actual source text from the requested formal requirement source is present inside the production evidence window.",
+        "requestedInformationTypes": [
+          "formal_requirement"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm30-section-2-a-general-3-replacement-and-disagreement-notices",
+            "sourceId": "vm30-current-manual",
+            "score": 91.4,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm30-section-3-a-statement-of-actuarial-opinion-2-prescribed-wording-changes",
+            "sourceId": "vm30-current-manual",
+            "score": 66.9,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm30-section-2-a-general-2-appointed-actuary-notice",
+            "sourceId": "vm30-current-manual",
+            "score": 65.9,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 91.4,
+          "matches": [
+            {
+              "chunkId": "vm30-section-2-a-general-3-replacement-and-disagreement-notices",
+              "score": 91.4
+            },
+            {
+              "chunkId": "vm30-section-3-a-statement-of-actuarial-opinion-2-prescribed-wording-changes",
+              "score": 66.9
+            },
+            {
+              "chunkId": "vm30-section-2-a-general-2-appointed-actuary-notice",
+              "score": 65.9
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "ambiguityResult": {
+        "safelyAbstained": false,
+        "reasonCode": "not_applicable",
+        "candidateChunkIds": []
+      },
+      "passed": true,
+      "failureReason": null
+    },
+    {
+      "queryId": "vm30-asset-adequacy-standards",
+      "queryCategory": "asset_adequacy_cross_reference",
+      "query": "What standards of practice established by the Actuarial Standards Board must the VM-30 asset adequacy analysis follow?",
+      "intendedSupportState": "supported",
+      "expectedEvidence": "Section 2.B.1 standards-of-practice basis.",
+      "expectedChunkIds": [
+        "vm30-section-2-b-asset-adequacy-standards-1-standards-of-practice"
+      ],
+      "actualTop1": {
+        "rank": 1,
+        "chunkId": "vm30-section-2-b-asset-adequacy-standards-1-standards-of-practice",
+        "sourceId": "vm30-current-manual",
+        "sourceFamilyId": "valuation_manual_pdfs",
+        "authorityLevel": "manual_section",
+        "score": 118.05,
+        "sectionReference": "1. Standards of Practice basis",
+        "pageStart": 327,
+        "pageEnd": 327,
+        "citationAvailable": true
+      },
+      "actualTop3": [
+        {
+          "rank": 1,
+          "chunkId": "vm30-section-2-b-asset-adequacy-standards-1-standards-of-practice",
+          "sourceId": "vm30-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 118.05,
+          "sectionReference": "1. Standards of Practice basis",
+          "pageStart": 327,
+          "pageEnd": 327,
+          "citationAvailable": true
+        },
+        {
+          "rank": 2,
+          "chunkId": "vm30-section-3-b-actuarial-memorandum-9-analysis-standards-demonstration",
+          "sourceId": "vm30-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 104.05000000000001,
+          "sectionReference": "9. Demonstration of asset adequacy analysis standards",
+          "pageStart": 336,
+          "pageEnd": 336,
+          "citationAvailable": true
+        },
+        {
+          "rank": 3,
+          "chunkId": "vm30-section-3-a-statement-of-actuarial-opinion-7-opinion-section",
+          "sourceId": "vm30-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 104.05,
+          "sectionReference": "7. Opinion section",
+          "pageStart": 332,
+          "pageEnd": 333,
+          "citationAvailable": true
+        }
+      ],
+      "top1Hit": true,
+      "top3Hit": true,
+      "sourceFamilyResult": {
+        "expected": [
+          "valuation_manual_pdfs"
+        ],
+        "actualTop1": "valuation_manual_pdfs",
+        "correct": true
+      },
+      "authorityResult": {
+        "expected": [
+          "manual_section"
+        ],
+        "actualTop1": "manual_section",
+        "correct": true,
+        "currentAuthoritativeVm30Top1": true
+      },
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Actual source text from the requested formal requirement source is present inside the production evidence window.",
+        "requestedInformationTypes": [
+          "formal_requirement"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm30-section-2-b-asset-adequacy-standards-1-standards-of-practice",
+            "sourceId": "vm30-current-manual",
+            "score": 118.05,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm30-section-3-b-actuarial-memorandum-9-analysis-standards-demonstration",
+            "sourceId": "vm30-current-manual",
+            "score": 104.05000000000001,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm30-section-3-a-statement-of-actuarial-opinion-7-opinion-section",
+            "sourceId": "vm30-current-manual",
+            "score": 104.05,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 118.05,
+          "matches": [
+            {
+              "chunkId": "vm30-section-2-b-asset-adequacy-standards-1-standards-of-practice",
+              "score": 118.05
+            },
+            {
+              "chunkId": "vm30-section-3-b-actuarial-memorandum-9-analysis-standards-demonstration",
+              "score": 104.05000000000001
+            },
+            {
+              "chunkId": "vm30-section-3-a-statement-of-actuarial-opinion-7-opinion-section",
+              "score": 104.05
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "ambiguityResult": {
+        "safelyAbstained": false,
+        "reasonCode": "not_applicable",
+        "candidateChunkIds": []
+      },
+      "passed": true,
+      "failureReason": null
+    },
+    {
+      "queryId": "vm30-additional-reserve",
+      "queryCategory": "liability_and_condition",
+      "query": "When does VM-30 require an additional reserve based on asset adequacy analysis?",
+      "intendedSupportState": "supported",
+      "expectedEvidence": "Section 2.C.2 additional-reserve condition.",
+      "expectedChunkIds": [
+        "vm30-section-2-c-liabilities-covered-2-additional-reserve"
+      ],
+      "actualTop1": {
+        "rank": 1,
+        "chunkId": "vm30-section-2-c-liabilities-covered-2-additional-reserve",
+        "sourceId": "vm30-current-manual",
+        "sourceFamilyId": "valuation_manual_pdfs",
+        "authorityLevel": "manual_section",
+        "score": 115.35,
+        "sectionReference": "2. Additional reserve determined by asset adequacy analysis",
+        "pageStart": 327,
+        "pageEnd": 327,
+        "citationAvailable": true
+      },
+      "actualTop3": [
+        {
+          "rank": 1,
+          "chunkId": "vm30-section-2-c-liabilities-covered-2-additional-reserve",
+          "sourceId": "vm30-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 115.35,
+          "sectionReference": "2. Additional reserve determined by asset adequacy analysis",
+          "pageStart": 327,
+          "pageEnd": 327,
+          "citationAvailable": true
+        },
+        {
+          "rank": 2,
+          "chunkId": "vm30-section-3-a-statement-of-actuarial-opinion-5-scope-section-and-reserve-table",
+          "sourceId": "vm30-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 108.35,
+          "sectionReference": "5. Scope section and asset-adequacy-tested reserve table",
+          "pageStart": 329,
+          "pageEnd": 332,
+          "citationAvailable": true
+        },
+        {
+          "rank": 3,
+          "chunkId": "vm30-section-3-b-actuarial-memorandum-14-regulatory-asset-adequacy-issues-summary",
+          "sourceId": "vm30-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 101.35,
+          "sectionReference": "14. Regulatory Asset Adequacy Issues Summary",
+          "pageStart": 337,
+          "pageEnd": 338,
+          "citationAvailable": true
+        }
+      ],
+      "top1Hit": true,
+      "top3Hit": true,
+      "sourceFamilyResult": {
+        "expected": [
+          "valuation_manual_pdfs"
+        ],
+        "actualTop1": "valuation_manual_pdfs",
+        "correct": true
+      },
+      "authorityResult": {
+        "expected": [
+          "manual_section"
+        ],
+        "actualTop1": "manual_section",
+        "correct": true,
+        "currentAuthoritativeVm30Top1": true
+      },
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Actual source text from the requested formal requirement source is present inside the production evidence window.",
+        "requestedInformationTypes": [
+          "formal_requirement"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm30-section-2-c-liabilities-covered-2-additional-reserve",
+            "sourceId": "vm30-current-manual",
+            "score": 115.35,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm30-section-3-a-statement-of-actuarial-opinion-5-scope-section-and-reserve-table",
+            "sourceId": "vm30-current-manual",
+            "score": 108.35,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm30-section-3-b-actuarial-memorandum-14-regulatory-asset-adequacy-issues-summary",
+            "sourceId": "vm30-current-manual",
+            "score": 101.35,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 115.35,
+          "matches": [
+            {
+              "chunkId": "vm30-section-2-c-liabilities-covered-2-additional-reserve",
+              "score": 115.35
+            },
+            {
+              "chunkId": "vm30-section-3-a-statement-of-actuarial-opinion-5-scope-section-and-reserve-table",
+              "score": 108.35
+            },
+            {
+              "chunkId": "vm30-section-3-b-actuarial-memorandum-14-regulatory-asset-adequacy-issues-summary",
+              "score": 101.35
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "ambiguityResult": {
+        "safelyAbstained": false,
+        "reasonCode": "not_applicable",
+        "candidateChunkIds": []
+      },
+      "passed": true,
+      "failureReason": null
+    },
+    {
+      "queryId": "vm30-opinion-sections",
+      "queryCategory": "required_content",
+      "query": "What sections must the VM-30 Statement of Actuarial Opinion contain?",
+      "intendedSupportState": "supported",
+      "expectedEvidence": "Section 3.A.1 list of required opinion sections.",
+      "expectedChunkIds": [
+        "vm30-section-3-a-statement-of-actuarial-opinion-1-required-opinion-sections"
+      ],
+      "actualTop1": {
+        "rank": 1,
+        "chunkId": "vm30-section-2-a-general-1-opinion-in-annual-statement",
+        "sourceId": "vm30-current-manual",
+        "sourceFamilyId": "valuation_manual_pdfs",
+        "authorityLevel": "manual_section",
+        "score": 107.85000000000001,
+        "sectionReference": "1. Statement of Actuarial Opinion in annual statement",
+        "pageStart": 326,
+        "pageEnd": 326,
+        "citationAvailable": true
+      },
+      "actualTop3": [
+        {
+          "rank": 1,
+          "chunkId": "vm30-section-2-a-general-1-opinion-in-annual-statement",
+          "sourceId": "vm30-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 107.85000000000001,
+          "sectionReference": "1. Statement of Actuarial Opinion in annual statement",
+          "pageStart": 326,
+          "pageEnd": 326,
+          "citationAvailable": true
+        },
+        {
+          "rank": 2,
+          "chunkId": "vm30-section-3-a-statement-of-actuarial-opinion-1-required-opinion-sections",
+          "sourceId": "vm30-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 90.89999999999999,
+          "sectionReference": "1. Required opinion sections",
+          "pageStart": 327,
+          "pageEnd": 327,
+          "citationAvailable": true
+        },
+        {
+          "rank": 3,
+          "chunkId": "vm30-section-3-a-statement-of-actuarial-opinion-7-opinion-section",
+          "sourceId": "vm30-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 89.35,
+          "sectionReference": "7. Opinion section",
+          "pageStart": 332,
+          "pageEnd": 333,
+          "citationAvailable": true
+        }
+      ],
+      "top1Hit": false,
+      "top3Hit": true,
+      "sourceFamilyResult": {
+        "expected": [
+          "valuation_manual_pdfs"
+        ],
+        "actualTop1": "valuation_manual_pdfs",
+        "correct": true
+      },
+      "authorityResult": {
+        "expected": [
+          "manual_section"
+        ],
+        "actualTop1": "manual_section",
+        "correct": true,
+        "currentAuthoritativeVm30Top1": true
+      },
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Actual source text from the requested formal requirement source is present inside the production evidence window.",
+        "requestedInformationTypes": [
+          "formal_requirement"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm30-section-2-a-general-1-opinion-in-annual-statement",
+            "sourceId": "vm30-current-manual",
+            "score": 107.85000000000001,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm30-section-3-a-statement-of-actuarial-opinion-1-required-opinion-sections",
+            "sourceId": "vm30-current-manual",
+            "score": 90.89999999999999,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm30-section-3-a-statement-of-actuarial-opinion-7-opinion-section",
+            "sourceId": "vm30-current-manual",
+            "score": 89.35,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 107.85000000000001,
+          "matches": [
+            {
+              "chunkId": "vm30-section-2-a-general-1-opinion-in-annual-statement",
+              "score": 107.85000000000001
+            },
+            {
+              "chunkId": "vm30-section-3-a-statement-of-actuarial-opinion-1-required-opinion-sections",
+              "score": 90.89999999999999
+            },
+            {
+              "chunkId": "vm30-section-3-a-statement-of-actuarial-opinion-7-opinion-section",
+              "score": 89.35
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "ambiguityResult": {
+        "safelyAbstained": false,
+        "reasonCode": "not_applicable",
+        "candidateChunkIds": []
+      },
+      "passed": true,
+      "failureReason": null
+    },
+    {
+      "queryId": "vm30-key-indicators-table",
+      "queryCategory": "required_table",
+      "query": "What key indicators table does VM-30 require in the actuarial opinion?",
+      "intendedSupportState": "supported",
+      "expectedEvidence": "Complete Section 3.A.3 key-indicators table, including its page-spanning rows.",
+      "expectedChunkIds": [
+        "vm30-section-3-a-statement-of-actuarial-opinion-3-table-of-key-indicators"
+      ],
+      "actualTop1": {
+        "rank": 1,
+        "chunkId": "vm30-section-3-a-statement-of-actuarial-opinion-3-table-of-key-indicators",
+        "sourceId": "vm30-current-manual",
+        "sourceFamilyId": "valuation_manual_pdfs",
+        "authorityLevel": "manual_section",
+        "score": 97.39999999999999,
+        "sectionReference": "3. Table of key indicators",
+        "pageStart": 328,
+        "pageEnd": 329,
+        "citationAvailable": true
+      },
+      "actualTop3": [
+        {
+          "rank": 1,
+          "chunkId": "vm30-section-3-a-statement-of-actuarial-opinion-3-table-of-key-indicators",
+          "sourceId": "vm30-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 97.39999999999999,
+          "sectionReference": "3. Table of key indicators",
+          "pageStart": 328,
+          "pageEnd": 329,
+          "citationAvailable": true
+        },
+        {
+          "rank": 2,
+          "chunkId": "vm30-section-1-a-general-1-aom-requirement-scope",
+          "sourceId": "vm30-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 73.9,
+          "sectionReference": "1. AOM requirement scope and actuarial opinion meaning",
+          "pageStart": 325,
+          "pageEnd": 325,
+          "citationAvailable": true
+        },
+        {
+          "rank": 3,
+          "chunkId": "vm30-section-3-a-statement-of-actuarial-opinion-5-scope-section-and-reserve-table",
+          "sourceId": "vm30-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 71.4,
+          "sectionReference": "5. Scope section and asset-adequacy-tested reserve table",
+          "pageStart": 329,
+          "pageEnd": 332,
+          "citationAvailable": true
+        }
+      ],
+      "top1Hit": true,
+      "top3Hit": true,
+      "sourceFamilyResult": {
+        "expected": [
+          "valuation_manual_pdfs"
+        ],
+        "actualTop1": "valuation_manual_pdfs",
+        "correct": true
+      },
+      "authorityResult": {
+        "expected": [
+          "manual_section"
+        ],
+        "actualTop1": "manual_section",
+        "correct": true,
+        "currentAuthoritativeVm30Top1": true
+      },
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Actual source text from the requested formal requirement source is present inside the production evidence window.",
+        "requestedInformationTypes": [
+          "formal_requirement"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm30-section-3-a-statement-of-actuarial-opinion-3-table-of-key-indicators",
+            "sourceId": "vm30-current-manual",
+            "score": 97.39999999999999,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm30-section-1-a-general-1-aom-requirement-scope",
+            "sourceId": "vm30-current-manual",
+            "score": 73.9,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm30-section-3-a-statement-of-actuarial-opinion-5-scope-section-and-reserve-table",
+            "sourceId": "vm30-current-manual",
+            "score": 71.4,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 97.39999999999999,
+          "matches": [
+            {
+              "chunkId": "vm30-section-3-a-statement-of-actuarial-opinion-3-table-of-key-indicators",
+              "score": 97.39999999999999
+            },
+            {
+              "chunkId": "vm30-section-1-a-general-1-aom-requirement-scope",
+              "score": 73.9
+            },
+            {
+              "chunkId": "vm30-section-3-a-statement-of-actuarial-opinion-5-scope-section-and-reserve-table",
+              "score": 71.4
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "ambiguityResult": {
+        "safelyAbstained": false,
+        "reasonCode": "not_applicable",
+        "candidateChunkIds": []
+      },
+      "passed": true,
+      "failureReason": null
+    },
+    {
+      "queryId": "vm30-identification-qualifications",
+      "queryCategory": "qualification_and_identity",
+      "query": "What identification and qualification information should the appointed actuary provide in the VM-30 opinion?",
+      "intendedSupportState": "supported",
+      "expectedEvidence": "Section 3.A.4 identification section and qualifications.",
+      "expectedChunkIds": [
+        "vm30-section-3-a-statement-of-actuarial-opinion-4-identification-section"
+      ],
+      "actualTop1": {
+        "rank": 1,
+        "chunkId": "vm30-section-3-a-statement-of-actuarial-opinion-4-identification-section",
+        "sourceId": "vm30-current-manual",
+        "sourceFamilyId": "valuation_manual_pdfs",
+        "authorityLevel": "manual_section",
+        "score": 73.55000000000001,
+        "sectionReference": "4. Identification section and qualifications",
+        "pageStart": 329,
+        "pageEnd": 329,
+        "citationAvailable": true
+      },
+      "actualTop3": [
+        {
+          "rank": 1,
+          "chunkId": "vm30-section-3-a-statement-of-actuarial-opinion-4-identification-section",
+          "sourceId": "vm30-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 73.55000000000001,
+          "sectionReference": "4. Identification section and qualifications",
+          "pageStart": 329,
+          "pageEnd": 329,
+          "citationAvailable": true
+        },
+        {
+          "rank": 2,
+          "chunkId": "vm30-section-3-a-statement-of-actuarial-opinion-2-prescribed-wording-changes",
+          "sourceId": "vm30-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 66.1,
+          "sectionReference": "2. Prescribed wording and changes",
+          "pageStart": 327,
+          "pageEnd": 328,
+          "citationAvailable": true
+        },
+        {
+          "rank": 3,
+          "chunkId": "vm30-section-2-a-general-2-appointed-actuary-notice",
+          "sourceId": "vm30-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 64.65,
+          "sectionReference": "2. Appointed-actuary notice within five business days",
+          "pageStart": 326,
+          "pageEnd": 326,
+          "citationAvailable": true
+        }
+      ],
+      "top1Hit": true,
+      "top3Hit": true,
+      "sourceFamilyResult": {
+        "expected": [
+          "valuation_manual_pdfs"
+        ],
+        "actualTop1": "valuation_manual_pdfs",
+        "correct": true
+      },
+      "authorityResult": {
+        "expected": [
+          "manual_section"
+        ],
+        "actualTop1": "manual_section",
+        "correct": true,
+        "currentAuthoritativeVm30Top1": true
+      },
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Actual source text from the requested formal requirement source is present inside the production evidence window.",
+        "requestedInformationTypes": [
+          "formal_requirement"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm30-section-3-a-statement-of-actuarial-opinion-4-identification-section",
+            "sourceId": "vm30-current-manual",
+            "score": 73.55000000000001,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm30-section-3-a-statement-of-actuarial-opinion-2-prescribed-wording-changes",
+            "sourceId": "vm30-current-manual",
+            "score": 66.1,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm30-section-2-a-general-2-appointed-actuary-notice",
+            "sourceId": "vm30-current-manual",
+            "score": 64.65,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 73.55000000000001,
+          "matches": [
+            {
+              "chunkId": "vm30-section-3-a-statement-of-actuarial-opinion-4-identification-section",
+              "score": 73.55000000000001
+            },
+            {
+              "chunkId": "vm30-section-3-a-statement-of-actuarial-opinion-2-prescribed-wording-changes",
+              "score": 66.1
+            },
+            {
+              "chunkId": "vm30-section-2-a-general-2-appointed-actuary-notice",
+              "score": 64.65
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "ambiguityResult": {
+        "safelyAbstained": false,
+        "reasonCode": "not_applicable",
+        "candidateChunkIds": []
+      },
+      "passed": true,
+      "failureReason": null
+    },
+    {
+      "queryId": "vm30-scope-reserve-table",
+      "queryCategory": "cross_page_prescribed_table",
+      "query": "What reserve table and asset-adequacy-tested amounts belong in the VM-30 scope section?",
+      "intendedSupportState": "supported",
+      "expectedEvidence": "Complete Section 3.A.5 scope wording and reserve table spanning PDF pages 329-332.",
+      "expectedChunkIds": [
+        "vm30-section-3-a-statement-of-actuarial-opinion-5-scope-section-and-reserve-table"
+      ],
+      "actualTop1": {
+        "rank": 1,
+        "chunkId": "vm30-section-3-a-statement-of-actuarial-opinion-5-scope-section-and-reserve-table",
+        "sourceId": "vm30-current-manual",
+        "sourceFamilyId": "valuation_manual_pdfs",
+        "authorityLevel": "manual_section",
+        "score": 163.85000000000002,
+        "sectionReference": "5. Scope section and asset-adequacy-tested reserve table",
+        "pageStart": 329,
+        "pageEnd": 332,
+        "citationAvailable": true
+      },
+      "actualTop3": [
+        {
+          "rank": 1,
+          "chunkId": "vm30-section-3-a-statement-of-actuarial-opinion-5-scope-section-and-reserve-table",
+          "sourceId": "vm30-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 163.85000000000002,
+          "sectionReference": "5. Scope section and asset-adequacy-tested reserve table",
+          "pageStart": 329,
+          "pageEnd": 332,
+          "citationAvailable": true
+        },
+        {
+          "rank": 2,
+          "chunkId": "vm30-section-3-b-actuarial-memorandum-14-regulatory-asset-adequacy-issues-summary",
+          "sourceId": "vm30-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 79.35,
+          "sectionReference": "14. Regulatory Asset Adequacy Issues Summary",
+          "pageStart": 337,
+          "pageEnd": 338,
+          "citationAvailable": true
+        },
+        {
+          "rank": 3,
+          "chunkId": "vm30-section-2-c-liabilities-covered-2-additional-reserve",
+          "sourceId": "vm30-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 78.89999999999999,
+          "sectionReference": "2. Additional reserve determined by asset adequacy analysis",
+          "pageStart": 327,
+          "pageEnd": 327,
+          "citationAvailable": true
+        }
+      ],
+      "top1Hit": true,
+      "top3Hit": true,
+      "sourceFamilyResult": {
+        "expected": [
+          "valuation_manual_pdfs"
+        ],
+        "actualTop1": "valuation_manual_pdfs",
+        "correct": true
+      },
+      "authorityResult": {
+        "expected": [
+          "manual_section"
+        ],
+        "actualTop1": "manual_section",
+        "correct": true,
+        "currentAuthoritativeVm30Top1": true
+      },
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Actual source text from the requested formal requirement source is present inside the production evidence window.",
+        "requestedInformationTypes": [
+          "formal_requirement"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm30-section-3-a-statement-of-actuarial-opinion-5-scope-section-and-reserve-table",
+            "sourceId": "vm30-current-manual",
+            "score": 163.85000000000002,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm30-section-3-b-actuarial-memorandum-14-regulatory-asset-adequacy-issues-summary",
+            "sourceId": "vm30-current-manual",
+            "score": 79.35,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm30-section-2-c-liabilities-covered-2-additional-reserve",
+            "sourceId": "vm30-current-manual",
+            "score": 78.89999999999999,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 163.85000000000002,
+          "matches": [
+            {
+              "chunkId": "vm30-section-3-a-statement-of-actuarial-opinion-5-scope-section-and-reserve-table",
+              "score": 163.85000000000002
+            },
+            {
+              "chunkId": "vm30-section-3-b-actuarial-memorandum-14-regulatory-asset-adequacy-issues-summary",
+              "score": 79.35
+            },
+            {
+              "chunkId": "vm30-section-2-c-liabilities-covered-2-additional-reserve",
+              "score": 78.89999999999999
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "ambiguityResult": {
+        "safelyAbstained": false,
+        "reasonCode": "not_applicable",
+        "candidateChunkIds": []
+      },
+      "passed": true,
+      "failureReason": null
+    },
+    {
+      "queryId": "vm30-reliance-on-experts",
+      "queryCategory": "condition_certification",
+      "query": "What certification and supporting information are required when the VM-30 appointed actuary relies on other experts?",
+      "intendedSupportState": "supported",
+      "expectedEvidence": "Section 3.A.12 reliance-on-experts condition and certification.",
+      "expectedChunkIds": [
+        "vm30-section-3-a-statement-of-actuarial-opinion-12-reliance-on-experts"
+      ],
+      "actualTop1": {
+        "rank": 1,
+        "chunkId": "vm30-section-3-a-statement-of-actuarial-opinion-12-reliance-on-experts",
+        "sourceId": "vm30-current-manual",
+        "sourceFamilyId": "valuation_manual_pdfs",
+        "authorityLevel": "manual_section",
+        "score": 93.25,
+        "sectionReference": "12. Reliance on experts and certification",
+        "pageStart": 334,
+        "pageEnd": 334,
+        "citationAvailable": true
+      },
+      "actualTop3": [
+        {
+          "rank": 1,
+          "chunkId": "vm30-section-3-a-statement-of-actuarial-opinion-12-reliance-on-experts",
+          "sourceId": "vm30-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 93.25,
+          "sectionReference": "12. Reliance on experts and certification",
+          "pageStart": 334,
+          "pageEnd": 334,
+          "citationAvailable": true
+        },
+        {
+          "rank": 2,
+          "chunkId": "vm30-section-2-a-general-2-appointed-actuary-notice",
+          "sourceId": "vm30-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 64.4,
+          "sectionReference": "2. Appointed-actuary notice within five business days",
+          "pageStart": 326,
+          "pageEnd": 326,
+          "citationAvailable": true
+        },
+        {
+          "rank": 3,
+          "chunkId": "vm30-section-3-a-statement-of-actuarial-opinion-1-required-opinion-sections",
+          "sourceId": "vm30-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 59.35,
+          "sectionReference": "1. Required opinion sections",
+          "pageStart": 327,
+          "pageEnd": 327,
+          "citationAvailable": true
+        }
+      ],
+      "top1Hit": true,
+      "top3Hit": true,
+      "sourceFamilyResult": {
+        "expected": [
+          "valuation_manual_pdfs"
+        ],
+        "actualTop1": "valuation_manual_pdfs",
+        "correct": true
+      },
+      "authorityResult": {
+        "expected": [
+          "manual_section"
+        ],
+        "actualTop1": "manual_section",
+        "correct": true,
+        "currentAuthoritativeVm30Top1": true
+      },
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Actual source text from the requested formal requirement source is present inside the production evidence window.",
+        "requestedInformationTypes": [
+          "formal_requirement"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm30-section-3-a-statement-of-actuarial-opinion-12-reliance-on-experts",
+            "sourceId": "vm30-current-manual",
+            "score": 93.25,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm30-section-2-a-general-2-appointed-actuary-notice",
+            "sourceId": "vm30-current-manual",
+            "score": 64.4,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm30-section-3-a-statement-of-actuarial-opinion-1-required-opinion-sections",
+            "sourceId": "vm30-current-manual",
+            "score": 59.35,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 93.25,
+          "matches": [
+            {
+              "chunkId": "vm30-section-3-a-statement-of-actuarial-opinion-12-reliance-on-experts",
+              "score": 93.25
+            },
+            {
+              "chunkId": "vm30-section-2-a-general-2-appointed-actuary-notice",
+              "score": 64.4
+            },
+            {
+              "chunkId": "vm30-section-3-a-statement-of-actuarial-opinion-1-required-opinion-sections",
+              "score": 59.35
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "ambiguityResult": {
+        "safelyAbstained": false,
+        "reasonCode": "not_applicable",
+        "candidateChunkIds": []
+      },
+      "passed": true,
+      "failureReason": null
+    },
+    {
+      "queryId": "vm30-memorandum-availability",
+      "queryCategory": "commissioner_access",
+      "query": "When must the VM-30 actuarial memorandum be made available for commissioner examination?",
+      "intendedSupportState": "supported",
+      "expectedEvidence": "Section 3.B.1 memorandum preparation and examination availability.",
+      "expectedChunkIds": [
+        "vm30-section-3-b-actuarial-memorandum-1-memorandum-availability"
+      ],
+      "actualTop1": {
+        "rank": 1,
+        "chunkId": "vm30-section-3-b-actuarial-memorandum-1-memorandum-availability",
+        "sourceId": "vm30-current-manual",
+        "sourceFamilyId": "valuation_manual_pdfs",
+        "authorityLevel": "manual_section",
+        "score": 102.35,
+        "sectionReference": "1. Memorandum preparation and commissioner examination",
+        "pageStart": 334,
+        "pageEnd": 335,
+        "citationAvailable": true
+      },
+      "actualTop3": [
+        {
+          "rank": 1,
+          "chunkId": "vm30-section-3-b-actuarial-memorandum-1-memorandum-availability",
+          "sourceId": "vm30-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 102.35,
+          "sectionReference": "1. Memorandum preparation and commissioner examination",
+          "pageStart": 334,
+          "pageEnd": 335,
+          "citationAvailable": true
+        },
+        {
+          "rank": 2,
+          "chunkId": "vm30-section-3-b-actuarial-memorandum-14-regulatory-asset-adequacy-issues-summary",
+          "sourceId": "vm30-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 64.85,
+          "sectionReference": "14. Regulatory Asset Adequacy Issues Summary",
+          "pageStart": 337,
+          "pageEnd": 338,
+          "citationAvailable": true
+        },
+        {
+          "rank": 3,
+          "chunkId": "vm30-section-3-b-actuarial-memorandum-11-asset-information",
+          "sourceId": "vm30-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 62.85,
+          "sectionReference": "11. Asset information",
+          "pageStart": 336,
+          "pageEnd": 337,
+          "citationAvailable": true
+        }
+      ],
+      "top1Hit": true,
+      "top3Hit": true,
+      "sourceFamilyResult": {
+        "expected": [
+          "valuation_manual_pdfs"
+        ],
+        "actualTop1": "valuation_manual_pdfs",
+        "correct": true
+      },
+      "authorityResult": {
+        "expected": [
+          "manual_section"
+        ],
+        "actualTop1": "manual_section",
+        "correct": true,
+        "currentAuthoritativeVm30Top1": true
+      },
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Actual source text from the requested formal requirement source is present inside the production evidence window.",
+        "requestedInformationTypes": [
+          "formal_requirement"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm30-section-3-b-actuarial-memorandum-1-memorandum-availability",
+            "sourceId": "vm30-current-manual",
+            "score": 102.35,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm30-section-3-b-actuarial-memorandum-14-regulatory-asset-adequacy-issues-summary",
+            "sourceId": "vm30-current-manual",
+            "score": 64.85,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm30-section-3-b-actuarial-memorandum-11-asset-information",
+            "sourceId": "vm30-current-manual",
+            "score": 62.85,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 102.35,
+          "matches": [
+            {
+              "chunkId": "vm30-section-3-b-actuarial-memorandum-1-memorandum-availability",
+              "score": 102.35
+            },
+            {
+              "chunkId": "vm30-section-3-b-actuarial-memorandum-14-regulatory-asset-adequacy-issues-summary",
+              "score": 64.85
+            },
+            {
+              "chunkId": "vm30-section-3-b-actuarial-memorandum-11-asset-information",
+              "score": 62.85
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "ambiguityResult": {
+        "safelyAbstained": false,
+        "reasonCode": "not_applicable",
+        "candidateChunkIds": []
+      },
+      "passed": true,
+      "failureReason": null
+    },
+    {
+      "queryId": "vm30-seven-year-retention",
+      "queryCategory": "retention",
+      "query": "For at least how many years shall the appointed actuary retain on file sufficient VM-30 documentation of procedures followed, analyses performed, assumptions, and results obtained?",
+      "intendedSupportState": "supported",
+      "expectedEvidence": "Section 3.B.8 seven-year retention requirement.",
+      "expectedChunkIds": [
+        "vm30-section-3-b-actuarial-memorandum-8-seven-year-retention"
+      ],
+      "actualTop1": {
+        "rank": 1,
+        "chunkId": "vm30-section-3-b-actuarial-memorandum-8-seven-year-retention",
+        "sourceId": "vm30-current-manual",
+        "sourceFamilyId": "valuation_manual_pdfs",
+        "authorityLevel": "manual_section",
+        "score": 104.35,
+        "sectionReference": "8. Seven-year documentation retention",
+        "pageStart": 336,
+        "pageEnd": 336,
+        "citationAvailable": true
+      },
+      "actualTop3": [
+        {
+          "rank": 1,
+          "chunkId": "vm30-section-3-b-actuarial-memorandum-8-seven-year-retention",
+          "sourceId": "vm30-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 104.35,
+          "sectionReference": "8. Seven-year documentation retention",
+          "pageStart": 336,
+          "pageEnd": 336,
+          "citationAvailable": true
+        },
+        {
+          "rank": 2,
+          "chunkId": "vm30-section-2-a-general-2-appointed-actuary-notice",
+          "sourceId": "vm30-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 64.4,
+          "sectionReference": "2. Appointed-actuary notice within five business days",
+          "pageStart": 326,
+          "pageEnd": 326,
+          "citationAvailable": true
+        },
+        {
+          "rank": 3,
+          "chunkId": "vm30-section-3-b-actuarial-memorandum-14-regulatory-asset-adequacy-issues-summary",
+          "sourceId": "vm30-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 63.35000000000001,
+          "sectionReference": "14. Regulatory Asset Adequacy Issues Summary",
+          "pageStart": 337,
+          "pageEnd": 338,
+          "citationAvailable": true
+        }
+      ],
+      "top1Hit": true,
+      "top3Hit": true,
+      "sourceFamilyResult": {
+        "expected": [
+          "valuation_manual_pdfs"
+        ],
+        "actualTop1": "valuation_manual_pdfs",
+        "correct": true
+      },
+      "authorityResult": {
+        "expected": [
+          "manual_section"
+        ],
+        "actualTop1": "manual_section",
+        "correct": true,
+        "currentAuthoritativeVm30Top1": true
+      },
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Actual source text from the requested formal requirement source is present inside the production evidence window.",
+        "requestedInformationTypes": [
+          "formal_requirement"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm30-section-3-b-actuarial-memorandum-8-seven-year-retention",
+            "sourceId": "vm30-current-manual",
+            "score": 104.35,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm30-section-2-a-general-2-appointed-actuary-notice",
+            "sourceId": "vm30-current-manual",
+            "score": 64.4,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm30-section-3-b-actuarial-memorandum-14-regulatory-asset-adequacy-issues-summary",
+            "sourceId": "vm30-current-manual",
+            "score": 63.35000000000001,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 104.35,
+          "matches": [
+            {
+              "chunkId": "vm30-section-3-b-actuarial-memorandum-8-seven-year-retention",
+              "score": 104.35
+            },
+            {
+              "chunkId": "vm30-section-2-a-general-2-appointed-actuary-notice",
+              "score": 64.4
+            },
+            {
+              "chunkId": "vm30-section-3-b-actuarial-memorandum-14-regulatory-asset-adequacy-issues-summary",
+              "score": 63.35000000000001
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "ambiguityResult": {
+        "safelyAbstained": false,
+        "reasonCode": "not_applicable",
+        "candidateChunkIds": []
+      },
+      "passed": true,
+      "failureReason": null
+    },
+    {
+      "queryId": "vm30-memorandum-reserve-information",
+      "queryCategory": "memorandum_content",
+      "query": "What reserve information must the VM-30 actuarial memorandum specify?",
+      "intendedSupportState": "supported",
+      "expectedEvidence": "Complete Section 3.B.10 reserve-information provision.",
+      "expectedChunkIds": [
+        "vm30-section-3-b-actuarial-memorandum-10-reserve-information"
+      ],
+      "actualTop1": {
+        "rank": 1,
+        "chunkId": "vm30-section-3-b-actuarial-memorandum-10-reserve-information",
+        "sourceId": "vm30-current-manual",
+        "sourceFamilyId": "valuation_manual_pdfs",
+        "authorityLevel": "manual_section",
+        "score": 78.4,
+        "sectionReference": "10. Reserve information",
+        "pageStart": 336,
+        "pageEnd": 336,
+        "citationAvailable": true
+      },
+      "actualTop3": [
+        {
+          "rank": 1,
+          "chunkId": "vm30-section-3-b-actuarial-memorandum-10-reserve-information",
+          "sourceId": "vm30-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 78.4,
+          "sectionReference": "10. Reserve information",
+          "pageStart": 336,
+          "pageEnd": 336,
+          "citationAvailable": true
+        },
+        {
+          "rank": 2,
+          "chunkId": "vm30-section-3-b-actuarial-memorandum-11-asset-information",
+          "sourceId": "vm30-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 69.9,
+          "sectionReference": "11. Asset information",
+          "pageStart": 336,
+          "pageEnd": 337,
+          "citationAvailable": true
+        },
+        {
+          "rank": 3,
+          "chunkId": "vm30-section-3-a-statement-of-actuarial-opinion-5-scope-section-and-reserve-table",
+          "sourceId": "vm30-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 62.4,
+          "sectionReference": "5. Scope section and asset-adequacy-tested reserve table",
+          "pageStart": 329,
+          "pageEnd": 332,
+          "citationAvailable": true
+        }
+      ],
+      "top1Hit": true,
+      "top3Hit": true,
+      "sourceFamilyResult": {
+        "expected": [
+          "valuation_manual_pdfs"
+        ],
+        "actualTop1": "valuation_manual_pdfs",
+        "correct": true
+      },
+      "authorityResult": {
+        "expected": [
+          "manual_section"
+        ],
+        "actualTop1": "manual_section",
+        "correct": true,
+        "currentAuthoritativeVm30Top1": true
+      },
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Actual source text from the requested formal requirement source is present inside the production evidence window.",
+        "requestedInformationTypes": [
+          "formal_requirement"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm30-section-3-b-actuarial-memorandum-10-reserve-information",
+            "sourceId": "vm30-current-manual",
+            "score": 78.4,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm30-section-3-b-actuarial-memorandum-11-asset-information",
+            "sourceId": "vm30-current-manual",
+            "score": 69.9,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm30-section-3-a-statement-of-actuarial-opinion-5-scope-section-and-reserve-table",
+            "sourceId": "vm30-current-manual",
+            "score": 62.4,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 78.4,
+          "matches": [
+            {
+              "chunkId": "vm30-section-3-b-actuarial-memorandum-10-reserve-information",
+              "score": 78.4
+            },
+            {
+              "chunkId": "vm30-section-3-b-actuarial-memorandum-11-asset-information",
+              "score": 69.9
+            },
+            {
+              "chunkId": "vm30-section-3-a-statement-of-actuarial-opinion-5-scope-section-and-reserve-table",
+              "score": 62.4
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "ambiguityResult": {
+        "safelyAbstained": false,
+        "reasonCode": "not_applicable",
+        "candidateChunkIds": []
+      },
+      "passed": true,
+      "failureReason": null
+    },
+    {
+      "queryId": "vm30-regulatory-issues-summary",
+      "queryCategory": "summary_timing_and_content",
+      "query": "What Regulatory Asset Adequacy Issues Summary does VM-30 require, including its April 1 timing?",
+      "intendedSupportState": "supported",
+      "expectedEvidence": "Complete Section 3.B.14 Regulatory Asset Adequacy Issues Summary provision.",
+      "expectedChunkIds": [
+        "vm30-section-3-b-actuarial-memorandum-14-regulatory-asset-adequacy-issues-summary"
+      ],
+      "actualTop1": {
+        "rank": 1,
+        "chunkId": "vm30-section-3-b-actuarial-memorandum-14-regulatory-asset-adequacy-issues-summary",
+        "sourceId": "vm30-current-manual",
+        "sourceFamilyId": "valuation_manual_pdfs",
+        "authorityLevel": "manual_section",
+        "score": 153.35,
+        "sectionReference": "14. Regulatory Asset Adequacy Issues Summary",
+        "pageStart": 337,
+        "pageEnd": 338,
+        "citationAvailable": true
+      },
+      "actualTop3": [
+        {
+          "rank": 1,
+          "chunkId": "vm30-section-3-b-actuarial-memorandum-14-regulatory-asset-adequacy-issues-summary",
+          "sourceId": "vm30-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 153.35,
+          "sectionReference": "14. Regulatory Asset Adequacy Issues Summary",
+          "pageStart": 337,
+          "pageEnd": 338,
+          "citationAvailable": true
+        },
+        {
+          "rank": 2,
+          "chunkId": "vm30-section-3-b-actuarial-memorandum-5-imr-and-avr-assets",
+          "sourceId": "vm30-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 89.4,
+          "sectionReference": "5. IMR and AVR assets in asset adequacy analysis",
+          "pageStart": 335,
+          "pageEnd": 335,
+          "citationAvailable": true
+        },
+        {
+          "rank": 3,
+          "chunkId": "vm30-section-3-b-actuarial-memorandum-9-analysis-standards-demonstration",
+          "sourceId": "vm30-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 89.4,
+          "sectionReference": "9. Demonstration of asset adequacy analysis standards",
+          "pageStart": 336,
+          "pageEnd": 336,
+          "citationAvailable": true
+        }
+      ],
+      "top1Hit": true,
+      "top3Hit": true,
+      "sourceFamilyResult": {
+        "expected": [
+          "valuation_manual_pdfs"
+        ],
+        "actualTop1": "valuation_manual_pdfs",
+        "correct": true
+      },
+      "authorityResult": {
+        "expected": [
+          "manual_section"
+        ],
+        "actualTop1": "manual_section",
+        "correct": true,
+        "currentAuthoritativeVm30Top1": true
+      },
+      "supportDecision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Actual source text from the requested formal requirement source is present inside the production evidence window.",
+        "requestedInformationTypes": [
+          "formal_requirement"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm30-section-3-b-actuarial-memorandum-14-regulatory-asset-adequacy-issues-summary",
+            "sourceId": "vm30-current-manual",
+            "score": 153.35,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm30-section-3-b-actuarial-memorandum-5-imr-and-avr-assets",
+            "sourceId": "vm30-current-manual",
+            "score": 89.4,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm30-section-3-b-actuarial-memorandum-9-analysis-standards-demonstration",
+            "sourceId": "vm30-current-manual",
+            "score": 89.4,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 153.35,
+          "matches": [
+            {
+              "chunkId": "vm30-section-3-b-actuarial-memorandum-14-regulatory-asset-adequacy-issues-summary",
+              "score": 153.35
+            },
+            {
+              "chunkId": "vm30-section-3-b-actuarial-memorandum-5-imr-and-avr-assets",
+              "score": 89.4
+            },
+            {
+              "chunkId": "vm30-section-3-b-actuarial-memorandum-9-analysis-standards-demonstration",
+              "score": 89.4
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "ambiguityResult": {
+        "safelyAbstained": false,
+        "reasonCode": "not_applicable",
+        "candidateChunkIds": []
+      },
+      "passed": true,
+      "failureReason": null
+    },
+    {
+      "queryId": "vm30-unsupported-vm20-methodology",
+      "queryCategory": "unsupported_vm20_methodology_substitution",
+      "query": "What does VM-30 require for calculating the VM-20 deterministic reserve methodology?",
+      "intendedSupportState": "unsupported",
+      "expectedEvidence": "Related VM-20 methodology cannot establish an absent VM-30 opinion or memorandum requirement.",
+      "expectedChunkIds": [],
+      "actualTop1": {
+        "rank": 1,
+        "chunkId": "vm20-practice-note-companion-vm20-pn-dr-overview",
+        "sourceId": "vm20-practice-note-companion",
+        "sourceFamilyId": "practice_notes",
+        "authorityLevel": "companion_guidance",
+        "score": 54.39999999999999,
+        "sectionReference": "Section 5 - VM-20 Calculation Overview - Part B. Deterministic Reserve",
+        "pageStart": 28,
+        "pageEnd": 32,
+        "citationAvailable": true
+      },
+      "actualTop3": [
+        {
+          "rank": 1,
+          "chunkId": "vm20-practice-note-companion-vm20-pn-dr-overview",
+          "sourceId": "vm20-practice-note-companion",
+          "sourceFamilyId": "practice_notes",
+          "authorityLevel": "companion_guidance",
+          "score": 54.39999999999999,
+          "sectionReference": "Section 5 - VM-20 Calculation Overview - Part B. Deterministic Reserve",
+          "pageStart": 28,
+          "pageEnd": 32,
+          "citationAvailable": true
+        },
+        {
+          "rank": 2,
+          "chunkId": "vm20-practice-note-companion-vm20-pn-dr-overview-child-005",
+          "sourceId": "vm20-practice-note-companion",
+          "sourceFamilyId": "practice_notes",
+          "authorityLevel": "companion_guidance",
+          "score": 53.9,
+          "sectionReference": "Section 5 - VM-20 Calculation Overview - Part B. Deterministic Reserve",
+          "pageStart": 28,
+          "pageEnd": 32,
+          "citationAvailable": true
+        },
+        {
+          "rank": 3,
+          "chunkId": "vm20-practice-note-companion-vm20-pn-dr-overview-child-003",
+          "sourceId": "vm20-practice-note-companion",
+          "sourceFamilyId": "practice_notes",
+          "authorityLevel": "companion_guidance",
+          "score": 51.9,
+          "sectionReference": "Section 5 - VM-20 Calculation Overview - Part B. Deterministic Reserve",
+          "pageStart": 30,
+          "pageEnd": 30,
+          "citationAvailable": true
+        }
+      ],
+      "top1Hit": false,
+      "top3Hit": false,
+      "sourceFamilyResult": {
+        "expected": [],
+        "actualTop1": "practice_notes",
+        "correct": false
+      },
+      "authorityResult": {
+        "expected": [],
+        "actualTop1": "companion_guidance",
+        "correct": false,
+        "currentAuthoritativeVm30Top1": false
+      },
+      "supportDecision": {
+        "supportState": "unsupported",
+        "evidenceSufficient": false,
+        "reasonCode": "missing_requested_formal_requirement_source",
+        "reason": "The production evidence window does not contain actual source text from the requested formal requirement source (vm30-current-manual). Related methodology or companion evidence cannot substitute for it.",
+        "requestedInformationTypes": [
+          "formal_requirement"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-dr-overview",
+            "sourceId": "vm20-practice-note-companion",
+            "score": 54.39999999999999,
+            "authorityLevel": "companion_guidance"
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-dr-overview-child-005",
+            "sourceId": "vm20-practice-note-companion",
+            "score": 53.9,
+            "authorityLevel": "companion_guidance"
+          },
+          {
+            "chunkId": "vm20-practice-note-companion-vm20-pn-dr-overview-child-003",
+            "sourceId": "vm20-practice-note-companion",
+            "score": 51.9,
+            "authorityLevel": "companion_guidance"
+          }
+        ],
+        "corpusGap": "The production evidence window does not contain actual source text from the requested formal requirement source (vm30-current-manual). Related methodology or companion evidence cannot substitute for it.",
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 54.39999999999999,
+          "matches": [
+            {
+              "chunkId": "vm20-practice-note-companion-vm20-pn-dr-overview",
+              "score": 54.39999999999999
+            },
+            {
+              "chunkId": "vm20-practice-note-companion-vm20-pn-dr-overview-child-005",
+              "score": 53.9
+            },
+            {
+              "chunkId": "vm20-practice-note-companion-vm20-pn-dr-overview-child-003",
+              "score": 51.9
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "ambiguityResult": {
+        "safelyAbstained": false,
+        "reasonCode": "not_applicable",
+        "candidateChunkIds": []
+      },
+      "passed": true,
+      "failureReason": null
+    },
+    {
+      "queryId": "vm30-unsupported-vm31-executive-summary",
+      "queryCategory": "unsupported_vm31_substitution",
+      "query": "What Executive Summary does VM-30 require for the PBR Actuarial Report?",
+      "intendedSupportState": "unsupported",
+      "expectedEvidence": "VM-30 does not establish the VM-31 PBR Actuarial Report Executive Summary requirement.",
+      "expectedChunkIds": [],
+      "actualTop1": {
+        "rank": 1,
+        "chunkId": "vm30-section-3-b-actuarial-memorandum-14-regulatory-asset-adequacy-issues-summary",
+        "sourceId": "vm30-current-manual",
+        "sourceFamilyId": "valuation_manual_pdfs",
+        "authorityLevel": "manual_section",
+        "score": 59.699999999999996,
+        "sectionReference": "14. Regulatory Asset Adequacy Issues Summary",
+        "pageStart": 337,
+        "pageEnd": 338,
+        "citationAvailable": true
+      },
+      "actualTop3": [
+        {
+          "rank": 1,
+          "chunkId": "vm30-section-3-b-actuarial-memorandum-14-regulatory-asset-adequacy-issues-summary",
+          "sourceId": "vm30-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 59.699999999999996,
+          "sectionReference": "14. Regulatory Asset Adequacy Issues Summary",
+          "pageStart": 337,
+          "pageEnd": 338,
+          "citationAvailable": true
+        },
+        {
+          "rank": 2,
+          "chunkId": "vm30-section-1-a-general-1-aom-requirement-scope",
+          "sourceId": "vm30-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 53.2,
+          "sectionReference": "1. AOM requirement scope and actuarial opinion meaning",
+          "pageStart": 325,
+          "pageEnd": 325,
+          "citationAvailable": true
+        },
+        {
+          "rank": 3,
+          "chunkId": "vm30-section-3-b-actuarial-memorandum-1-memorandum-availability",
+          "sourceId": "vm30-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 52.2,
+          "sectionReference": "1. Memorandum preparation and commissioner examination",
+          "pageStart": 334,
+          "pageEnd": 335,
+          "citationAvailable": true
+        }
+      ],
+      "top1Hit": false,
+      "top3Hit": false,
+      "sourceFamilyResult": {
+        "expected": [],
+        "actualTop1": "valuation_manual_pdfs",
+        "correct": false
+      },
+      "authorityResult": {
+        "expected": [],
+        "actualTop1": "manual_section",
+        "correct": false,
+        "currentAuthoritativeVm30Top1": true
+      },
+      "supportDecision": {
+        "supportState": "unsupported",
+        "evidenceSufficient": false,
+        "reasonCode": "missing_required_requirement_terms",
+        "reason": "The retrieved formal-source evidence does not contain the required topic term(s): PBR Actuarial Report Executive Summary.",
+        "requestedInformationTypes": [
+          "formal_requirement"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm30-section-3-b-actuarial-memorandum-14-regulatory-asset-adequacy-issues-summary",
+            "sourceId": "vm30-current-manual",
+            "score": 59.699999999999996,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm30-section-1-a-general-1-aom-requirement-scope",
+            "sourceId": "vm30-current-manual",
+            "score": 53.2,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm30-section-3-b-actuarial-memorandum-1-memorandum-availability",
+            "sourceId": "vm30-current-manual",
+            "score": 52.2,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": "The retrieved formal-source evidence does not contain the required topic term(s): PBR Actuarial Report Executive Summary.",
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 59.699999999999996,
+          "matches": [
+            {
+              "chunkId": "vm30-section-3-b-actuarial-memorandum-14-regulatory-asset-adequacy-issues-summary",
+              "score": 59.699999999999996
+            },
+            {
+              "chunkId": "vm30-section-1-a-general-1-aom-requirement-scope",
+              "score": 53.2
+            },
+            {
+              "chunkId": "vm30-section-3-b-actuarial-memorandum-1-memorandum-availability",
+              "score": 52.2
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "ambiguityResult": {
+        "safelyAbstained": false,
+        "reasonCode": "not_applicable",
+        "candidateChunkIds": []
+      },
+      "passed": true,
+      "failureReason": null
+    },
+    {
+      "queryId": "vm30-unsupported-quarterly-update",
+      "queryCategory": "unsupported_invented_timing",
+      "query": "What quarterly update to the actuarial opinion does VM-30 require?",
+      "intendedSupportState": "unsupported",
+      "expectedEvidence": "No current VM-30 provision establishes a quarterly opinion-update requirement.",
+      "expectedChunkIds": [],
+      "actualTop1": {
+        "rank": 1,
+        "chunkId": "vm30-section-1-a-general-1-aom-requirement-scope",
+        "sourceId": "vm30-current-manual",
+        "sourceFamilyId": "valuation_manual_pdfs",
+        "authorityLevel": "manual_section",
+        "score": 73.9,
+        "sectionReference": "1. AOM requirement scope and actuarial opinion meaning",
+        "pageStart": 325,
+        "pageEnd": 325,
+        "citationAvailable": true
+      },
+      "actualTop3": [
+        {
+          "rank": 1,
+          "chunkId": "vm30-section-1-a-general-1-aom-requirement-scope",
+          "sourceId": "vm30-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 73.9,
+          "sectionReference": "1. AOM requirement scope and actuarial opinion meaning",
+          "pageStart": 325,
+          "pageEnd": 325,
+          "citationAvailable": true
+        },
+        {
+          "rank": 2,
+          "chunkId": "vm30-section-3-a-statement-of-actuarial-opinion-7-opinion-section",
+          "sourceId": "vm30-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 66.4,
+          "sectionReference": "7. Opinion section",
+          "pageStart": 332,
+          "pageEnd": 333,
+          "citationAvailable": true
+        },
+        {
+          "rank": 3,
+          "chunkId": "vm30-section-2-a-general-1-opinion-in-annual-statement",
+          "sourceId": "vm30-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 63.900000000000006,
+          "sectionReference": "1. Statement of Actuarial Opinion in annual statement",
+          "pageStart": 326,
+          "pageEnd": 326,
+          "citationAvailable": true
+        }
+      ],
+      "top1Hit": false,
+      "top3Hit": false,
+      "sourceFamilyResult": {
+        "expected": [],
+        "actualTop1": "valuation_manual_pdfs",
+        "correct": false
+      },
+      "authorityResult": {
+        "expected": [],
+        "actualTop1": "manual_section",
+        "correct": false,
+        "currentAuthoritativeVm30Top1": true
+      },
+      "supportDecision": {
+        "supportState": "unsupported",
+        "evidenceSufficient": false,
+        "reasonCode": "missing_required_requirement_terms",
+        "reason": "The retrieved formal-source evidence does not contain the required topic term(s): quarterly update.",
+        "requestedInformationTypes": [
+          "formal_requirement"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm30-section-1-a-general-1-aom-requirement-scope",
+            "sourceId": "vm30-current-manual",
+            "score": 73.9,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm30-section-3-a-statement-of-actuarial-opinion-7-opinion-section",
+            "sourceId": "vm30-current-manual",
+            "score": 66.4,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm30-section-2-a-general-1-opinion-in-annual-statement",
+            "sourceId": "vm30-current-manual",
+            "score": 63.900000000000006,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": "The retrieved formal-source evidence does not contain the required topic term(s): quarterly update.",
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 73.9,
+          "matches": [
+            {
+              "chunkId": "vm30-section-1-a-general-1-aom-requirement-scope",
+              "score": 73.9
+            },
+            {
+              "chunkId": "vm30-section-3-a-statement-of-actuarial-opinion-7-opinion-section",
+              "score": 66.4
+            },
+            {
+              "chunkId": "vm30-section-2-a-general-1-opinion-in-annual-statement",
+              "score": 63.900000000000006
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "ambiguityResult": {
+        "safelyAbstained": false,
+        "reasonCode": "not_applicable",
+        "candidateChunkIds": []
+      },
+      "passed": true,
+      "failureReason": null
+    },
+    {
+      "queryId": "vm30-unsupported-future-version",
+      "queryCategory": "unavailable_version",
+      "query": "Under the 2027 VM-30, what new filing requirement replaced the 2026 appointed-actuary notice?",
+      "intendedSupportState": "unsupported",
+      "expectedEvidence": "The corpus contains current 2026 VM-30 evidence, not an unavailable 2027 version.",
+      "expectedChunkIds": [],
+      "actualTop1": {
+        "rank": 1,
+        "chunkId": "vm30-section-2-a-general-2-appointed-actuary-notice",
+        "sourceId": "vm30-current-manual",
+        "sourceFamilyId": "valuation_manual_pdfs",
+        "authorityLevel": "manual_section",
+        "score": 84.85000000000001,
+        "sectionReference": "2. Appointed-actuary notice within five business days",
+        "pageStart": 326,
+        "pageEnd": 326,
+        "citationAvailable": true
+      },
+      "actualTop3": [
+        {
+          "rank": 1,
+          "chunkId": "vm30-section-2-a-general-2-appointed-actuary-notice",
+          "sourceId": "vm30-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 84.85000000000001,
+          "sectionReference": "2. Appointed-actuary notice within five business days",
+          "pageStart": 326,
+          "pageEnd": 326,
+          "citationAvailable": true
+        },
+        {
+          "rank": 2,
+          "chunkId": "vm30-section-1-a-general-1-aom-requirement-scope",
+          "sourceId": "vm30-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 57.35,
+          "sectionReference": "1. AOM requirement scope and actuarial opinion meaning",
+          "pageStart": 325,
+          "pageEnd": 325,
+          "citationAvailable": true
+        },
+        {
+          "rank": 3,
+          "chunkId": "vm30-section-3-b-actuarial-memorandum-7-equity-return-volatility",
+          "sourceId": "vm30-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 55.85,
+          "sectionReference": "7. Equity-return volatility under moderately adverse conditions",
+          "pageStart": 335,
+          "pageEnd": 336,
+          "citationAvailable": true
+        }
+      ],
+      "top1Hit": false,
+      "top3Hit": false,
+      "sourceFamilyResult": {
+        "expected": [],
+        "actualTop1": "valuation_manual_pdfs",
+        "correct": false
+      },
+      "authorityResult": {
+        "expected": [],
+        "actualTop1": "manual_section",
+        "correct": false,
+        "currentAuthoritativeVm30Top1": true
+      },
+      "supportDecision": {
+        "supportState": "unsupported",
+        "evidenceSufficient": false,
+        "reasonCode": "missing_requested_source_version",
+        "reason": "The requested source version (2027 NAIC Valuation Manual) is not represented by the retrieved formal-source evidence.",
+        "requestedInformationTypes": [
+          "formal_requirement"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm30-section-2-a-general-2-appointed-actuary-notice",
+            "sourceId": "vm30-current-manual",
+            "score": 84.85000000000001,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm30-section-1-a-general-1-aom-requirement-scope",
+            "sourceId": "vm30-current-manual",
+            "score": 57.35,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm30-section-3-b-actuarial-memorandum-7-equity-return-volatility",
+            "sourceId": "vm30-current-manual",
+            "score": 55.85,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": "The requested source version (2027 NAIC Valuation Manual) is not represented by the retrieved formal-source evidence.",
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 84.85000000000001,
+          "matches": [
+            {
+              "chunkId": "vm30-section-2-a-general-2-appointed-actuary-notice",
+              "score": 84.85000000000001
+            },
+            {
+              "chunkId": "vm30-section-1-a-general-1-aom-requirement-scope",
+              "score": 57.35
+            },
+            {
+              "chunkId": "vm30-section-3-b-actuarial-memorandum-7-equity-return-volatility",
+              "score": 55.85
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "ambiguityResult": {
+        "safelyAbstained": false,
+        "reasonCode": "not_applicable",
+        "candidateChunkIds": []
+      },
+      "passed": true,
+      "failureReason": null
+    },
+    {
+      "queryId": "vm30-ambiguous-submit",
+      "queryCategory": "ambiguous_submission_question",
+      "query": "In VM-30, does an underspecified request for what the appointed actuary must submit refer to the Statement of Actuarial Opinion included with the annual statement, the appointment notice to the domiciliary commissioner, or the Regulatory Asset Adequacy Issues Summary submitted by April 1?",
+      "intendedSupportState": "ambiguous",
+      "expectedEvidence": "The question is underspecified because VM-30 contains distinct opinion, notice, memorandum, and regulatory-summary submission contexts.",
+      "expectedChunkIds": [
+        "vm30-section-2-a-general-1-opinion-in-annual-statement",
+        "vm30-section-2-a-general-2-appointed-actuary-notice",
+        "vm30-section-3-b-actuarial-memorandum-14-regulatory-asset-adequacy-issues-summary"
+      ],
+      "actualTop1": {
+        "rank": 1,
+        "chunkId": "vm30-section-3-b-actuarial-memorandum-14-regulatory-asset-adequacy-issues-summary",
+        "sourceId": "vm30-current-manual",
+        "sourceFamilyId": "valuation_manual_pdfs",
+        "authorityLevel": "manual_section",
+        "score": 214.10000000000008,
+        "sectionReference": "14. Regulatory Asset Adequacy Issues Summary",
+        "pageStart": 337,
+        "pageEnd": 338,
+        "citationAvailable": true
+      },
+      "actualTop3": [
+        {
+          "rank": 1,
+          "chunkId": "vm30-section-3-b-actuarial-memorandum-14-regulatory-asset-adequacy-issues-summary",
+          "sourceId": "vm30-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 214.10000000000008,
+          "sectionReference": "14. Regulatory Asset Adequacy Issues Summary",
+          "pageStart": 337,
+          "pageEnd": 338,
+          "citationAvailable": true
+        },
+        {
+          "rank": 2,
+          "chunkId": "vm30-section-2-a-general-1-opinion-in-annual-statement",
+          "sourceId": "vm30-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 146.75,
+          "sectionReference": "1. Statement of Actuarial Opinion in annual statement",
+          "pageStart": 326,
+          "pageEnd": 326,
+          "citationAvailable": true
+        },
+        {
+          "rank": 3,
+          "chunkId": "vm30-section-3-a-statement-of-actuarial-opinion-5-scope-section-and-reserve-table",
+          "sourceId": "vm30-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 136.10000000000002,
+          "sectionReference": "5. Scope section and asset-adequacy-tested reserve table",
+          "pageStart": 329,
+          "pageEnd": 332,
+          "citationAvailable": true
+        }
+      ],
+      "top1Hit": false,
+      "top3Hit": false,
+      "sourceFamilyResult": {
+        "expected": [
+          "valuation_manual_pdfs"
+        ],
+        "actualTop1": "valuation_manual_pdfs",
+        "correct": true
+      },
+      "authorityResult": {
+        "expected": [
+          "manual_section"
+        ],
+        "actualTop1": "manual_section",
+        "correct": true,
+        "currentAuthoritativeVm30Top1": true
+      },
+      "supportDecision": {
+        "supportState": "ambiguous_requires_more_context",
+        "evidenceSufficient": false,
+        "reasonCode": "multiple_vm30_submission_contexts",
+        "reason": "The request does not identify the applicable VM-30 opinion, notice, memorandum, or regulatory-summary submission context.",
+        "requestedInformationTypes": [
+          "formal_requirement"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm30-section-3-b-actuarial-memorandum-14-regulatory-asset-adequacy-issues-summary",
+            "sourceId": "vm30-current-manual",
+            "score": 214.10000000000008,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm30-section-2-a-general-1-opinion-in-annual-statement",
+            "sourceId": "vm30-current-manual",
+            "score": 146.75,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm30-section-3-a-statement-of-actuarial-opinion-5-scope-section-and-reserve-table",
+            "sourceId": "vm30-current-manual",
+            "score": 136.10000000000002,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 214.10000000000008,
+          "matches": [
+            {
+              "chunkId": "vm30-section-3-b-actuarial-memorandum-14-regulatory-asset-adequacy-issues-summary",
+              "score": 214.10000000000008
+            },
+            {
+              "chunkId": "vm30-section-2-a-general-1-opinion-in-annual-statement",
+              "score": 146.75
+            },
+            {
+              "chunkId": "vm30-section-3-a-statement-of-actuarial-opinion-5-scope-section-and-reserve-table",
+              "score": 136.10000000000002
+            }
+          ]
+        },
+        "lowScore": false
+      },
+      "ambiguityResult": {
+        "safelyAbstained": true,
+        "reasonCode": "multiple_vm30_submission_contexts",
+        "candidateChunkIds": [
+          "vm30-section-3-b-actuarial-memorandum-14-regulatory-asset-adequacy-issues-summary",
+          "vm30-section-2-a-general-1-opinion-in-annual-statement",
+          "vm30-section-3-a-statement-of-actuarial-opinion-5-scope-section-and-reserve-table"
+        ]
+      },
+      "passed": true,
+      "failureReason": null
+    }
+  ],
+  "governance": {
+    "reviewOnly": true,
+    "promotionStatus": "not_promoted",
+    "promotionEligible": false
+  }
+}

@@ -1,5 +1,20 @@
 # Next Actions
 
+## VM-30 independent review
+
+The immediate task is a narrow independent source and actuarial review of the
+complete current 2026 VM-30 candidate. Use
+`data/processed/review_packages/vm30-independent-review-prompt.md` and inspect
+the canonical package, source QA, focused retrieval cases, support-gate
+regressions, relationship registry, and validation report listed there.
+
+Confirm the PDF-page 325-339 chapter boundary, 8-parent/43-child hierarchy,
+page-spanning opinion tables, three source-explicit definitions, strict
+top-three retrieval safety, and all 16 source-facing relationship labels.
+End with APPROVE FOR CANONICAL PROMOTION, APPROVE WITH FIXES, or DO NOT
+PROMOTE. Do not promote VM-30 automatically, do not promote its relationships,
+and do not start VM-G or VM-C as part of this review milestone.
+
 ## VM-20 remaining prose and appendix handoff
 
 The targeted prose coverage is now present in the dedicated review package:

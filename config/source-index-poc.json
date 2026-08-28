@@ -2239,6 +2239,115 @@
       "notes": "Canonically promoted 2026 VM-01 definition coverage under a recorded independent-review decision; learner, app, RAG, vector, and Copilot export remain blocked, and relationship candidates remain separately governed."
     },
     {
+      "sourceIndexId": "source-index-vm30-current-manual",
+      "sourceVersionId": "source-index-vm30-current-manual-2026",
+      "sourceId": "vm30-current-manual",
+      "filename": "pbr_data_valuation_manual_2026.pdf",
+      "filePath": "D:\\Work\\AI Projects\\NAIC Valuation Manual Course\\pbr_data_valuation_manual_2026.pdf",
+      "sourceFamilyId": "valuation_manual_pdfs",
+      "domainId": "naic_regulatory",
+      "documentType": "valuation_manual_section",
+      "sourceTitle": "VM-30: Actuarial Opinion and Memorandum Requirements",
+      "sourceReference": "2026 NAIC Valuation Manual",
+      "sourceEditionId": "NAIC-VALUATION-MANUAL-2026",
+      "sourceVersionIdentifier": "2026 NAIC Valuation Manual",
+      "jurisdiction": "NAIC",
+      "authorityLevel": "manual_section",
+      "sourceStatus": "active",
+      "versionDate": null,
+      "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+      "pageCount": 457,
+      "pageRange": { "start": 325, "end": 339 },
+      "expectedChunkCount": 51,
+      "canonicalCandidate": true,
+      "processingCreatedAt": "2026-08-28T00:00:00Z",
+      "reviewBatchIds": ["batch-017", "batch-018"],
+      "reviewIndexPath": "data/processed/review_packages/vm30-canonical-coverage-review-package.md",
+      "selfReviewPath": "data/processed/review_packages/vm30-source-qa.md",
+      "pageImageBackstop": true,
+      "lineReferencesAvailable": false,
+      "textLayerQuality": "mixed",
+      "sourceTextVerification": {
+        "sourceTextMode": "exact_extracted_source_text",
+        "extractionMethod": "PyPDF2 page text retained in reviewed batches 017-018",
+        "visualTranscription": "not_used",
+        "pageRepresentationQA": "complete rendered review of pages 324-341, including both chapter boundaries",
+        "qaScript": "scripts/validate-vm30-current-manual.mjs"
+      },
+      "coverageDeclarations": {
+        "scopeType": "current_vm30_actuarial_opinion_memorandum_and_asset_adequacy_requirements",
+        "includedInformationTypes": [
+          "scope_and_applicability",
+          "actuarial_opinion_requirements",
+          "actuarial_memorandum_requirements",
+          "appointed_actuary_responsibilities",
+          "asset_adequacy_analysis_requirements",
+          "qualification_and_reliance_requirements",
+          "commissioner_process_and_authority",
+          "documentation_retention_and_submission",
+          "required_statements_disclosures_and_certifications",
+          "explicit_cross_references",
+          "closing_boundary"
+        ],
+        "structuredDataAvailable": false,
+        "parentCount": 8,
+        "childCount": 43,
+        "retrievalUnitCount": 42,
+        "knownGaps": [
+          "Independent source and actuarial review is required before canonical promotion.",
+          "Relationship candidates remain review-only, pending, and not promoted.",
+          "Publication and effective dates are not asserted beyond the established 2026 edition identity."
+        ]
+      },
+      "classification": {
+        "domainId": "naic_regulatory",
+        "documentType": "valuation_manual_section",
+        "purpose": "Authoritative current actuarial opinion, memorandum, and asset adequacy analysis requirements",
+        "intendedAudience": "Valuation, reporting, regulatory, governance, and retrieval reviewers",
+        "authoritySourceType": "regulatory",
+        "confidentiality": "public",
+        "publicationDate": null,
+        "effectiveDate": null,
+        "version": "2026 Edition",
+        "approvalStatus": "review_only",
+        "language": "en",
+        "recommendedProfile": "reporting",
+        "recommendedChunkingStrategy": "subsection_parent_to_complete_numbered_provision_child",
+        "confidence": "high",
+        "unresolvedQuestions": [
+          "Independent source and actuarial review is required before promotion.",
+          "Downstream learner, application, RAG, vector, and Copilot eligibility require separate decisions."
+        ],
+        "notes": "Exact source excerpts control; semantic classifications, summaries, and cross-reference candidates are derivative metadata."
+      },
+      "chunkDefaults": {
+        "sourceTextType": "actual_extracted_source_text",
+        "fidelity": "exact",
+        "confidence": "high",
+        "reviewFlags": ["review_only", "requires_independent_review"],
+        "controlledTags": ["vm30_current_manual", "actuarial_opinion_and_memorandum"],
+        "qualityNotes": [
+          "Actual source text from the authoritative current VM-30 chapter is retained without source-text rewriting.",
+          "Each child keeps a complete numbered provision with nested qualifications, prescribed wording, guidance notes, and tables.",
+          "Printed page 30-15 is intentionally blank; physical page 340 is an unnumbered separator and page 341 begins VM-31."
+        ],
+        "evidenceNotes": "Derived from reviewed supporting batches 017-018 with the authoritative 2026 Valuation Manual SHA-256; review-only and not promoted."
+      },
+      "vm30Input": {
+        "extractions": [
+          { "extractionPath": "data/work/batches/batch-017/extraction-output.json", "batchManifestPath": "data/work/batches/batch-017/batch-manifest.json", "sourceId": "supporting-vm30-scope" },
+          { "extractionPath": "data/work/batches/batch-018/extraction-output.json", "batchManifestPath": "data/work/batches/batch-018/batch-manifest.json", "sourceId": "supporting-vm30-detail" }
+        ]
+      },
+      "extensions": {
+        "structureModel": "vm30_opinion_memorandum_hierarchy_v1",
+        "relationshipCandidatePath": "data/processed/relationship_registries/vm30-current-manual-relationship-candidates.json",
+        "reviewPackagePath": "data/processed/review_packages/vm30-canonical-coverage-review-package.json",
+        "focusedRetrievalEvaluationPath": "data/processed/review_packages/vm30-focused-retrieval-evaluation.json"
+      },
+      "notes": "Substantially complete current 2026 VM-30 coverage; canonical review candidate only, not promoted, and not eligible for downstream learner, app, RAG, vector, or Copilot use."
+    },
+    {
       "sourceIndexId": "source-index-vm31-current-manual",
       "sourceVersionId": "source-index-vm31-current-manual-2026",
       "sourceId": "vm31-current-manual",

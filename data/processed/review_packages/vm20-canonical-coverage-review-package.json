@@ -572,8 +572,8 @@
     },
     "corpusDeduplication": {
       "topN": 5,
-      "rawTopKCollisionCount": 45,
-      "rawTopKCollisionGroupCount": 19,
+      "rawTopKCollisionCount": 43,
+      "rawTopKCollisionGroupCount": 18,
       "postDeduplicationCollisionCount": 0,
       "affectedQueries": [
         {
@@ -792,19 +792,6 @@
             {
               "parentChunkId": "vm20-practice-note-companion-vm20-pn-sr-overview",
               "childChunkId": "vm20-practice-note-companion-vm20-pn-sr-overview-child-003"
-            }
-          ]
-        },
-        {
-          "queryId": "q-reg210-opening-title",
-          "collisionGroups": [
-            {
-              "parentChunkId": "vm20-canonical-coverage-vm20-npr-entry-setup",
-              "childChunkId": "vm20-canonical-coverage-vm20-npr-entry-setup-child-001"
-            },
-            {
-              "parentChunkId": "vm20-canonical-coverage-vm20-npr-entry-setup",
-              "childChunkId": "vm20-canonical-coverage-vm20-npr-entry-setup-child-002"
             }
           ]
         },

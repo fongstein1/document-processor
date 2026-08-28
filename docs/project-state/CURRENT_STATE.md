@@ -1,5 +1,30 @@
 # Current Project State
 
+## 2026-08-28 VM-30 current-manual review candidate
+
+Current 2026 VM-30 is now represented by one substantially complete,
+structure-aware canonical review candidate spanning authoritative PDF pages
+325-339. The package contains 8 structural parents and 43 exact-text child
+units (51 chunks total); 42 substantive children are first-stage retrieval
+units and the printed blank page 30-15 is retained only as boundary evidence.
+Visual QA confirms page 324 ends VM-26, page 340 is an unnumbered blank
+separator, and page 341 begins VM-31. No source text was rewritten or visually
+transcribed.
+
+Only the three terms explicitly defined in VM-30—`adverse opinion`,
+`qualified opinion`, and `inconclusive opinion`—are represented in
+`definedTerms`; VM-01 terminology is not duplicated. The 21-case focused
+evaluation passes 15/16 supported top-1, 16/16 strict top-3, 4/4 unsupported
+abstentions, 1/1 ambiguity handling, and 16/16 current-authority top-1 checks.
+All four generic evidence-sufficiency regressions pass.
+
+Sixteen explicit documentary relationship candidates remain pending,
+review-only, unpromoted, and promotion-ineligible. The VM-30 package itself
+also remains review-only and unpromoted pending independent source and
+actuarial review. Learner, application, RAG, vector, and Copilot export remain
+blocked. VM-31 remains canonically promoted and its source, retrieval, and
+relationship evidence is unchanged.
+
 ## 2026-08-27 VM-01 canonical promotion
 
 The independently approved current 2026 VM-01 definition scope is now

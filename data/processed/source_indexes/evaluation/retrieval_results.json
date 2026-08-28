@@ -19,8 +19,8 @@
   "unsupportedQueryPrecision": 0.6,
   "deduplication": {
     "topN": 5,
-    "rawTopKCollisionCount": 45,
-    "rawTopKCollisionGroupCount": 20,
+    "rawTopKCollisionCount": 43,
+    "rawTopKCollisionGroupCount": 19,
     "postDeduplicationCollisionCount": 0,
     "affectedQueries": [
       {
@@ -231,19 +231,6 @@
           {
             "parentChunkId": "vm20-practice-note-companion-vm20-pn-sr-overview",
             "childChunkId": "vm20-practice-note-companion-vm20-pn-sr-overview-child-002"
-          }
-        ]
-      },
-      {
-        "queryId": "q-reg210-opening-title",
-        "collisionGroups": [
-          {
-            "parentChunkId": "vm20-canonical-coverage-vm20-npr-entry-setup",
-            "childChunkId": "vm20-canonical-coverage-vm20-npr-entry-setup-child-001"
-          },
-          {
-            "parentChunkId": "vm20-canonical-coverage-vm20-npr-entry-setup",
-            "childChunkId": "vm20-canonical-coverage-vm20-npr-entry-setup-child-002"
           }
         ]
       },
@@ -5058,23 +5045,23 @@
           "citationCount": 0
         },
         {
-          "chunkId": "vm20-canonical-coverage-vm20-npr-entry-setup-child-001",
-          "sourceId": "vm20-canonical-coverage",
+          "chunkId": "vm30-section-3-a-statement-of-actuarial-opinion-5-scope-section-and-reserve-table",
+          "sourceId": "vm30-current-manual",
           "sourceFamilyId": "valuation_manual_pdfs",
           "authorityLevel": "manual_section",
-          "score": 9.25,
+          "score": 10.1,
           "citationCount": 0
         },
         {
-          "chunkId": "vm20-canonical-coverage-vm20-npr-entry-setup-child-002",
-          "sourceId": "vm20-canonical-coverage",
+          "chunkId": "vm30-section-1-a-general-1-aom-requirement-scope",
+          "sourceId": "vm30-current-manual",
           "sourceFamilyId": "valuation_manual_pdfs",
           "authorityLevel": "manual_section",
-          "score": 9.25,
+          "score": 9.95,
           "citationCount": 0
         },
         {
-          "chunkId": "vm20-canonical-coverage-vm20-npr-entry-setup-child-003",
+          "chunkId": "vm20-canonical-coverage-vm20-npr-entry-setup",
           "sourceId": "vm20-canonical-coverage",
           "sourceFamilyId": "valuation_manual_pdfs",
           "authorityLevel": "manual_section",
@@ -5112,9 +5099,9 @@
             "authorityLevel": "manual_section"
           },
           {
-            "chunkId": "vm20-canonical-coverage-vm20-npr-entry-setup-child-001",
-            "sourceId": "vm20-canonical-coverage",
-            "score": 9.25,
+            "chunkId": "vm30-section-3-a-statement-of-actuarial-opinion-5-scope-section-and-reserve-table",
+            "sourceId": "vm30-current-manual",
+            "score": 10.1,
             "authorityLevel": "manual_section"
           }
         ],
@@ -5134,8 +5121,8 @@
               "tokenOverlap": 5
             },
             {
-              "chunkId": "vm20-canonical-coverage-vm20-npr-entry-setup-child-001",
-              "score": 9.25,
+              "chunkId": "vm30-section-3-a-statement-of-actuarial-opinion-5-scope-section-and-reserve-table",
+              "score": 10.1,
               "tokenOverlap": 5
             }
           ]
@@ -5143,19 +5130,8 @@
         "lowScore": false
       },
       "deduplication": {
-        "rawTopKCollisionGroups": [
-          {
-            "parentChunkId": "vm20-canonical-coverage-vm20-npr-entry-setup",
-            "childChunkId": "vm20-canonical-coverage-vm20-npr-entry-setup-child-001"
-          },
-          {
-            "parentChunkId": "vm20-canonical-coverage-vm20-npr-entry-setup",
-            "childChunkId": "vm20-canonical-coverage-vm20-npr-entry-setup-child-002"
-          }
-        ],
-        "suppressedParentChunkIds": [
-          "vm20-canonical-coverage-vm20-npr-entry-setup"
-        ],
+        "rawTopKCollisionGroups": [],
+        "suppressedParentChunkIds": [],
         "postDeduplicationCollisionCount": 0
       },
       "resultLabel": "supported_top1"
@@ -5203,19 +5179,19 @@
           "citationCount": 0
         },
         {
-          "chunkId": "chunk-reg210-non-guaranteed-elements-001",
-          "sourceId": "reg210-non-guaranteed-elements",
-          "sourceFamilyId": "ny_regulations",
-          "authorityLevel": "regulation",
-          "score": 7.5,
+          "chunkId": "vm30-section-1-b-definitions-2-qualified-opinion",
+          "sourceId": "vm30-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 10.25,
           "citationCount": 0
         },
         {
-          "chunkId": "chunk-reg210-non-guaranteed-elements-003",
-          "sourceId": "reg210-non-guaranteed-elements",
-          "sourceFamilyId": "ny_regulations",
-          "authorityLevel": "regulation",
-          "score": 7.5,
+          "chunkId": "vm30-section-2-a-general-2-appointed-actuary-notice",
+          "sourceId": "vm30-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 10.1,
           "citationCount": 0
         }
       ],
@@ -5329,15 +5305,15 @@
           "citationCount": 0
         },
         {
-          "chunkId": "chunk-reg210-non-guaranteed-elements-001",
-          "sourceId": "reg210-non-guaranteed-elements",
-          "sourceFamilyId": "ny_regulations",
-          "authorityLevel": "regulation",
-          "score": 7.5,
+          "chunkId": "vm30-section-3-b-actuarial-memorandum-3-commissioner-engaged-actuary",
+          "sourceId": "vm30-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 9.4,
           "citationCount": 0
         },
         {
-          "chunkId": "chunk-reg210-non-guaranteed-elements-002",
+          "chunkId": "chunk-reg210-non-guaranteed-elements-001",
           "sourceId": "reg210-non-guaranteed-elements",
           "sourceFamilyId": "ny_regulations",
           "authorityLevel": "regulation",
@@ -5854,15 +5830,15 @@
           "citationCount": 0
         },
         {
-          "chunkId": "vm31-section-3-c-life-summary-4-changes-in-methods",
-          "sourceId": "vm31-current-manual",
+          "chunkId": "vm30-section-2-b-asset-adequacy-standards-2-methods-of-analysis",
+          "sourceId": "vm30-current-manual",
           "sourceFamilyId": "valuation_manual_pdfs",
           "authorityLevel": "manual_section",
           "score": 8.65,
           "citationCount": 0
         },
         {
-          "chunkId": "vm31-section-3-e-annuity-summary-4-changes-in-methods",
+          "chunkId": "vm31-section-3-c-life-summary-4-changes-in-methods",
           "sourceId": "vm31-current-manual",
           "sourceFamilyId": "valuation_manual_pdfs",
           "authorityLevel": "manual_section",

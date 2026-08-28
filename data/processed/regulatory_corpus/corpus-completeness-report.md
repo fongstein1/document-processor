@@ -1,21 +1,21 @@
 # Corpus Completeness Report
 
-As of 2026-08-26T00:00:00.000Z, the repository contains substantial regulatory evidence with separately recorded VM-01 definitions, VM-20 prose, VM-20 structured-table, and VM-31 canonical promotions, but it is not production-complete and is not Copilot-export ready.
+As of 2026-08-28T00:00:00.000Z, the repository contains substantial regulatory evidence with separately recorded VM-01 definitions, VM-20 prose, VM-20 structured-table, and VM-31 canonical promotions, but it is not production-complete and is not Copilot-export ready.
 
 ## Counts
 
 - Source documents inventoried: **105**
 - Documents with declared external raw source: **71**
 - Documents reviewed / review artifacts matched: **97 review indexes**
-- Canonical source packages: **23**
-- Canonical chunks: **541**
+- Canonical source packages: **24**
+- Canonical chunks: **592**
 - Promoted canonical prose packages / chunks: **8 / 331**
 - Promoted structured logical tables / versions: **7 / 29**
 - Structured rows / values: **891 / 7022**
 - Sources awaiting canonicalization: **96**
 - Sources awaiting human review: **1**
 - Review-artifact-only sources: **34**
-- Candidate relationships: **144**
+- Candidate relationships: **160**
 - Promoted relationships: **0**
 
 ## VM-20 coverage checkpoint
@@ -36,6 +36,14 @@ As of 2026-08-26T00:00:00.000Z, the repository contains substantial regulatory e
 - Formal-definition requests for undefined or ambiguous terms abstain rather than substituting related evidence.
 - Canonical `definedTerms` now contains only 98 formal terms plus 27 source-explicit aliases; 17 generated lookup variants remain confined to non-authoritative retrieval metadata.
 - The focused case-level retrieval artifact contains 21 inspectable queries, including DR, SR, NPR, GIC, IUL, cross-page, ambiguous, undefined-term, and unavailable-version cases.
+
+## VM-30 coverage checkpoint
+
+- Current 2026 VM-30 structural parents / child units: 8 / 43; status not_promoted.
+- VM-30 explicit-reference candidates: 16; all remain pending, review-only, and not promoted.
+- Focused VM-30 retrieval contains 21 inspectable cases: 16 supported, four unsupported, and one ambiguous submission-context request, all evaluated within a strict top-three production evidence window.
+- VM-30 source QA records the complete PDF-page 325-339 chapter boundary, page 340 separator, page 341 VM-31 opener, exact retained source text, and zero source-text rewrites.
+- VM-30 remains blocked from promotion and learner, app, RAG, vector, and Copilot use pending independent review and a separate decision.
 
 ## VM-31 coverage checkpoint
 

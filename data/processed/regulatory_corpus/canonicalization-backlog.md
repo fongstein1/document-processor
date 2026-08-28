@@ -1,6 +1,6 @@
 # Regulatory Canonicalization Backlog
 
-The VM-01 current-definition scope, VM-20 current-manual prose scope, reviewed available Appendix 2 structured-table scope, and current VM-31 scope are promoted under separate decisions. All other items remain review-only until independent human review and explicit promotion. VM-01 and VM-31 relationship candidates remain separate review-only governance items. The next P0 chapter is VM-30.
+The VM-01 current-definition scope, VM-20 current-manual prose scope, reviewed available Appendix 2 structured-table scope, and current VM-31 scope are promoted under separate decisions. VM-30 is now a complete current-chapter review candidate and remains unpromoted pending independent review. VM-01, VM-30, and VM-31 relationship candidates remain separate review-only governance items. Do not start VM-G or VM-C in this milestone.
 
 | Order | Priority | Target | Current state | Safe next step |
 | ---: | --- | --- | --- | --- |
@@ -9,10 +9,10 @@ The VM-01 current-definition scope, VM-20 current-manual prose scope, reviewed a
 | 3 | P0 | VM-20 Requirements for Principle-Based Reserves for Life Products | canonical_promoted_prose_and_tables | Retain the approved prose/table scopes and track unavailable Tables B, C, D, E1, and E2 without inference. |
 | 4 | P0 | VM-21 Requirements for Principle-Based Reserves for Variable Annuities | canonical_partial | Canonicalize the reviewed VM-21 wave with parent-child structure and table separation. |
 | 5 | P0 | VM-22 Requirements for Principle-Based Reserves for Non-Variable Annuities | reviewed_not_canonical | Canonicalize reviewed VM-22 sections after table and hedging boundaries are confirmed. |
-| 6 | P0 | VM-30 Actuarial Opinion and Memorandum Requirements | reviewed_not_canonical | Canonicalize the reporting requirements and preserve cross-references to VM-31. |
+| 6 | P0 | VM-30 Actuarial Opinion and Memorandum Requirements | canonical_review_candidate | Obtain independent source and actuarial review; do not promote or export before a separate approval decision. |
 | 7 | P0 | VM-C current Actuarial Guidelines appendix and AG mapping | reviewed_not_canonical | Obtain/confirm the authorized appendix and map individually processed AGs without inferring legal effect. |
 | 8 | P0 | VM-G Corporate Governance Requirements for PBR | canonical_partial | Confirm the authorized 2026 source and process it as a governance-specific chapter. |
-| 9 | P1 | Annual statement, actuarial opinion, and PBR reporting instructions | reviewed_not_canonical | Add only authorized reporting instructions that materially affect valuation answers. |
+| 9 | P1 | Annual statement, actuarial opinion, and PBR reporting instructions | canonical_partial | Add only authorized reporting instructions that materially affect valuation answers. |
 | 10 | P1 | Standard Valuation Law / Model #820 | reviewed_not_canonical | Add the authorized model-law source for interpretation and applicability context. |
 | 11 | P1 | Current Valuation Manual amendments and change material | review_artifact_only | Inventory authorized current amendments and preserve version/effective-date relationships. |
 | 12 | P1 | Valuation Manual Maintenance Agenda and amendment proposals | missing | Keep proposed material separate and explicitly non-controlling. |

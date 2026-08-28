@@ -5,8 +5,8 @@
 - Canonical layer: source-index
 - Model version: 1.0
 - Generated at: 2026-07-22T22:52:46.811Z
-- Source package count: 23
-- Chunk count: 541
+- Source package count: 24
+- Chunk count: 592
 
 ## Export files
 
@@ -43,6 +43,7 @@
 | Orion Term Accumulator Profitability Study | pp. 1-2 | `data/processed/source_indexes/sources/synthetic-pricing-profitability-study.json` | review-only |
 | Orion Term Accumulator Approval Memo | pp. 1-2 | `data/processed/source_indexes/sources/synthetic-pricing-approval-memo.json` | review-only |
 | VM-01: Definitions for Terms in Requirements | pp. 25-39 | `data/processed/source_indexes/sources/vm01-definitions.json` | canonical promoted; downstream export blocked |
+| VM-30: Actuarial Opinion and Memorandum Requirements | pp. 325-339 | `data/processed/source_indexes/sources/vm30-current-manual.json` | review-only |
 | VM-31: PBR Actuarial Report Requirements for Business Subject to a Principle-Based Valuation | pp. 341-386 | `data/processed/source_indexes/sources/vm31-current-manual.json` | canonical promoted; downstream export blocked |
 
 ## Retrieval summary

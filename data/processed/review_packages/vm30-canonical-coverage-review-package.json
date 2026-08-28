@@ -1,0 +1,727 @@
+{
+  "schemaVersion": "1.0",
+  "reviewPackageId": "vm30-canonical-coverage-review-package-2026",
+  "status": "review_candidate",
+  "promoted": false,
+  "authoritativeSource": {
+    "classification": {
+      "domainId": "naic_regulatory",
+      "subdomainId": null,
+      "documentType": "valuation_manual_section",
+      "purpose": "Authoritative current actuarial opinion, memorandum, and asset adequacy analysis requirements",
+      "intendedAudience": "Valuation, reporting, regulatory, governance, and retrieval reviewers",
+      "authoritySourceType": "regulatory",
+      "confidentiality": "public",
+      "publicationDate": null,
+      "effectiveDate": null,
+      "version": "2026 Edition",
+      "approvalStatus": "review_only",
+      "language": "en",
+      "recommendedProfile": "reporting",
+      "recommendedChunkingStrategy": "subsection_parent_to_complete_numbered_provision_child",
+      "confidence": "high",
+      "unresolvedQuestions": [
+        "Independent source and actuarial review is required before promotion.",
+        "Downstream learner, application, RAG, vector, and Copilot eligibility require separate decisions."
+      ],
+      "notes": "Exact source excerpts control; semantic classifications, summaries, and cross-reference candidates are derivative metadata."
+    },
+    "profileData": null,
+    "sourceId": "vm30-current-manual",
+    "sourceVersionId": "source-index-vm30-current-manual-2026",
+    "filename": "pbr_data_valuation_manual_2026.pdf",
+    "filePath": "D:\\Work\\AI Projects\\NAIC Valuation Manual Course\\pbr_data_valuation_manual_2026.pdf",
+    "sourceFamilyId": "valuation_manual_pdfs",
+    "domainId": "naic_regulatory",
+    "documentType": "valuation_manual_section",
+    "sourceTitle": "VM-30: Actuarial Opinion and Memorandum Requirements",
+    "sourceReference": "2026 NAIC Valuation Manual",
+    "jurisdiction": "NAIC",
+    "authorityLevel": "manual_section",
+    "sourceStatus": "active",
+    "versionDate": null,
+    "sourceEditionId": "NAIC-VALUATION-MANUAL-2026",
+    "sourceVersionIdentifier": "2026 NAIC Valuation Manual",
+    "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+    "sourceTextVerification": {
+      "sourceTextMode": "exact_extracted_source_text",
+      "extractionMethod": "PyPDF2 page text retained in reviewed batches 017-018",
+      "visualTranscription": "not_used",
+      "pageRepresentationQA": "complete rendered review of pages 324-341, including both chapter boundaries",
+      "qaScript": "scripts/validate-vm30-current-manual.mjs"
+    },
+    "coverageDeclarations": {
+      "scopeType": "current_vm30_actuarial_opinion_memorandum_and_asset_adequacy_requirements",
+      "includedInformationTypes": [
+        "scope_and_applicability",
+        "actuarial_opinion_requirements",
+        "actuarial_memorandum_requirements",
+        "appointed_actuary_responsibilities",
+        "asset_adequacy_analysis_requirements",
+        "qualification_and_reliance_requirements",
+        "commissioner_process_and_authority",
+        "documentation_retention_and_submission",
+        "required_statements_disclosures_and_certifications",
+        "explicit_cross_references",
+        "closing_boundary"
+      ],
+      "structuredDataAvailable": false,
+      "parentCount": 8,
+      "childCount": 43,
+      "retrievalUnitCount": 42,
+      "knownGaps": [
+        "Independent source and actuarial review is required before canonical promotion.",
+        "Relationship candidates remain review-only, pending, and not promoted.",
+        "Publication and effective dates are not asserted beyond the established 2026 edition identity."
+      ]
+    },
+    "pageCount": 457,
+    "pageRange": {
+      "start": 325,
+      "end": 339
+    },
+    "reviewBatchIds": [
+      "batch-017",
+      "batch-018"
+    ],
+    "reviewIndexPath": "data/processed/review_packages/vm30-canonical-coverage-review-package.md",
+    "selfReviewPath": "data/processed/review_packages/vm30-source-qa.md",
+    "pageImageBackstop": true,
+    "lineReferencesAvailable": false,
+    "textLayerQuality": "mixed",
+    "notes": "Substantially complete current 2026 VM-30 coverage; canonical review candidate only, not promoted, and not eligible for downstream learner, app, RAG, vector, or Copilot use."
+  },
+  "coverage": {
+    "packageCount": 1,
+    "parentCount": 8,
+    "childCount": 43,
+    "totalChunkCount": 51,
+    "retrievalEligibleChildCount": 42,
+    "pageRange": {
+      "start": 325,
+      "end": 339
+    },
+    "printedPageRange": {
+      "start": "30-1",
+      "end": "30-15"
+    },
+    "fidelityDistribution": {
+      "exact": 51
+    },
+    "provisionTypeCounts": {
+      "scope_or_applicability": 15,
+      "actuarial_opinion_requirement": 32,
+      "actuarial_memorandum_requirement": 26,
+      "appointed_actuary_responsibility": 25,
+      "documentation_requirement": 36,
+      "submission_or_timing_requirement": 14,
+      "supporting_exhibit_or_material": 11,
+      "cross_reference": 11,
+      "exception_or_exemption": 13,
+      "guidance_note_present": 3,
+      "asset_adequacy_analysis_requirement": 16,
+      "commissioner_authority_or_process": 14,
+      "required_statement_or_disclosure": 16,
+      "definition_or_terminology": 3,
+      "qualification_requirement": 5,
+      "retention_requirement": 4,
+      "certification": 4,
+      "boundary_control": 1
+    },
+    "contentAreaAudit": [
+      {
+        "contentArea": "scope_and_applicability",
+        "status": "covered",
+        "representativeChunkId": "vm30-section-1-a-general-2-annual-statement-applicability"
+      },
+      {
+        "contentArea": "source_defined_opinion_terms",
+        "status": "covered",
+        "representativeChunkId": "vm30-section-1-b-definitions-1-adverse-opinion"
+      },
+      {
+        "contentArea": "appointed_actuary_notices",
+        "status": "covered",
+        "representativeChunkId": "vm30-section-2-a-general-2-appointed-actuary-notice"
+      },
+      {
+        "contentArea": "asset_adequacy_standards",
+        "status": "covered",
+        "representativeChunkId": "vm30-section-2-b-asset-adequacy-standards-1-standards-of-practice"
+      },
+      {
+        "contentArea": "liabilities_and_additional_reserves",
+        "status": "covered",
+        "representativeChunkId": "vm30-section-2-c-liabilities-covered-2-additional-reserve"
+      },
+      {
+        "contentArea": "opinion_sections_and_prescribed_wording",
+        "status": "covered",
+        "representativeChunkId": "vm30-section-3-a-statement-of-actuarial-opinion-2-prescribed-wording-changes"
+      },
+      {
+        "contentArea": "key_indicators_table",
+        "status": "covered",
+        "representativeChunkId": "vm30-section-3-a-statement-of-actuarial-opinion-3-table-of-key-indicators"
+      },
+      {
+        "contentArea": "reserve_table",
+        "status": "covered",
+        "representativeChunkId": "vm30-section-3-a-statement-of-actuarial-opinion-5-scope-section-and-reserve-table"
+      },
+      {
+        "contentArea": "qualifications_and_reliance",
+        "status": "covered",
+        "representativeChunkId": "vm30-section-3-a-statement-of-actuarial-opinion-12-reliance-on-experts"
+      },
+      {
+        "contentArea": "memorandum_content",
+        "status": "covered",
+        "representativeChunkId": "vm30-section-3-b-actuarial-memorandum-10-reserve-information"
+      },
+      {
+        "contentArea": "retention",
+        "status": "covered",
+        "representativeChunkId": "vm30-section-3-b-actuarial-memorandum-8-seven-year-retention"
+      },
+      {
+        "contentArea": "regulatory_asset_adequacy_issues_summary",
+        "status": "covered",
+        "representativeChunkId": "vm30-section-3-b-actuarial-memorandum-14-regulatory-asset-adequacy-issues-summary"
+      },
+      {
+        "contentArea": "cross_references",
+        "status": "covered",
+        "representativeChunkId": "vm30-section-3-b-actuarial-memorandum-2-reliance-on-other-actuaries"
+      },
+      {
+        "contentArea": "chapter_boundary",
+        "status": "covered",
+        "representativeChunkId": "vm30-closing-boundary-intentional-blank-page"
+      }
+    ],
+    "sectionCoverageMatrix": [
+      {
+        "sectionOrSubsection": "Section 1.A: Scope - General",
+        "pageRange": {
+          "physicalPdfStart": 325,
+          "physicalPdfEnd": 326,
+          "printedStart": "30-1",
+          "printedEnd": "30-2"
+        },
+        "canonicalParentChunkId": "vm30-section-1-a-general",
+        "childChunkIds": [
+          "vm30-section-1-a-general-1-aom-requirement-scope",
+          "vm30-section-1-a-general-2-annual-statement-applicability",
+          "vm30-section-1-a-general-3-professional-judgment-and-commissioner-authority",
+          "vm30-section-1-a-general-4-annual-requirement-and-operative-date",
+          "vm30-section-1-a-general-5-company-level-opinion"
+        ],
+        "childCount": 5,
+        "requirementTypes": [
+          "scope_or_applicability",
+          "actuarial_opinion_requirement",
+          "actuarial_memorandum_requirement",
+          "appointed_actuary_responsibility",
+          "documentation_requirement",
+          "submission_or_timing_requirement",
+          "supporting_exhibit_or_material",
+          "cross_reference",
+          "exception_or_exemption",
+          "guidance_note_present",
+          "asset_adequacy_analysis_requirement",
+          "commissioner_authority_or_process",
+          "required_statement_or_disclosure"
+        ],
+        "exceptionProvisionCount": 1,
+        "guidanceNoteProvisionCount": 1,
+        "crossReferences": [
+          "Model #820",
+          "annual statement instructions",
+          "AG 48",
+          "AG 51",
+          "AP&P Manual",
+          "ASOPs"
+        ],
+        "canonicalized": true,
+        "unresolvedSourceQuestions": [],
+        "sourceTextSha256": "833744bfbf5fcefe6614a133bf4071a5ed5f0c038229645edc31359a36f38d8e"
+      },
+      {
+        "sectionOrSubsection": "Section 1.B: Definitions",
+        "pageRange": {
+          "physicalPdfStart": 326,
+          "physicalPdfEnd": 326,
+          "printedStart": "30-2",
+          "printedEnd": "30-2"
+        },
+        "canonicalParentChunkId": "vm30-section-1-b-definitions",
+        "childChunkIds": [
+          "vm30-section-1-b-definitions-1-adverse-opinion",
+          "vm30-section-1-b-definitions-2-qualified-opinion",
+          "vm30-section-1-b-definitions-3-inconclusive-opinion"
+        ],
+        "childCount": 3,
+        "requirementTypes": [
+          "definition_or_terminology",
+          "actuarial_opinion_requirement",
+          "appointed_actuary_responsibility",
+          "exception_or_exemption",
+          "qualification_requirement",
+          "documentation_requirement",
+          "required_statement_or_disclosure"
+        ],
+        "exceptionProvisionCount": 3,
+        "guidanceNoteProvisionCount": 0,
+        "crossReferences": [],
+        "canonicalized": true,
+        "unresolvedSourceQuestions": [],
+        "sourceTextSha256": "6233fe50388aa9dfceb601d061aeefb5180cac264c6bd297ce4ea5d92b576add"
+      },
+      {
+        "sectionOrSubsection": "Section 2.A: General submission requirements",
+        "pageRange": {
+          "physicalPdfStart": 326,
+          "physicalPdfEnd": 327,
+          "printedStart": "30-2",
+          "printedEnd": "30-3"
+        },
+        "canonicalParentChunkId": "vm30-section-2-a-general",
+        "childChunkIds": [
+          "vm30-section-2-a-general-1-opinion-in-annual-statement",
+          "vm30-section-2-a-general-2-appointed-actuary-notice",
+          "vm30-section-2-a-general-3-replacement-and-disagreement-notices"
+        ],
+        "childCount": 3,
+        "requirementTypes": [
+          "actuarial_opinion_requirement",
+          "appointed_actuary_responsibility",
+          "documentation_requirement",
+          "submission_or_timing_requirement",
+          "required_statement_or_disclosure",
+          "scope_or_applicability",
+          "commissioner_authority_or_process",
+          "retention_requirement",
+          "exception_or_exemption",
+          "actuarial_memorandum_requirement"
+        ],
+        "exceptionProvisionCount": 1,
+        "guidanceNoteProvisionCount": 0,
+        "crossReferences": [],
+        "canonicalized": true,
+        "unresolvedSourceQuestions": [],
+        "sourceTextSha256": "dec767a3a6586113f7f087b651ae29181aa4e00f0c2836bceecc20d010e1fa1a"
+      },
+      {
+        "sectionOrSubsection": "Section 2.B: Standards for Asset Adequacy Analysis",
+        "pageRange": {
+          "physicalPdfStart": 327,
+          "physicalPdfEnd": 327,
+          "printedStart": "30-3",
+          "printedEnd": "30-3"
+        },
+        "canonicalParentChunkId": "vm30-section-2-b-asset-adequacy-standards",
+        "childChunkIds": [
+          "vm30-section-2-b-asset-adequacy-standards-1-standards-of-practice",
+          "vm30-section-2-b-asset-adequacy-standards-2-methods-of-analysis"
+        ],
+        "childCount": 2,
+        "requirementTypes": [
+          "asset_adequacy_analysis_requirement",
+          "actuarial_opinion_requirement",
+          "documentation_requirement",
+          "cross_reference"
+        ],
+        "exceptionProvisionCount": 0,
+        "guidanceNoteProvisionCount": 0,
+        "crossReferences": [
+          "ASB"
+        ],
+        "canonicalized": true,
+        "unresolvedSourceQuestions": [],
+        "sourceTextSha256": "899d392927ff6f83993d2465fad9e9ee713f0aea424748a7d54a1376462c5d31"
+      },
+      {
+        "sectionOrSubsection": "Section 2.C: Liabilities to Be Covered",
+        "pageRange": {
+          "physicalPdfStart": 327,
+          "physicalPdfEnd": 327,
+          "printedStart": "30-3",
+          "printedEnd": "30-3"
+        },
+        "canonicalParentChunkId": "vm30-section-2-c-liabilities-covered",
+        "childChunkIds": [
+          "vm30-section-2-c-liabilities-covered-1-all-in-force-business",
+          "vm30-section-2-c-liabilities-covered-2-additional-reserve",
+          "vm30-section-2-c-liabilities-covered-3-release-and-disclosure"
+        ],
+        "childCount": 3,
+        "requirementTypes": [
+          "asset_adequacy_analysis_requirement",
+          "scope_or_applicability",
+          "actuarial_opinion_requirement",
+          "documentation_requirement",
+          "submission_or_timing_requirement",
+          "appointed_actuary_responsibility"
+        ],
+        "exceptionProvisionCount": 0,
+        "guidanceNoteProvisionCount": 0,
+        "crossReferences": [],
+        "canonicalized": true,
+        "unresolvedSourceQuestions": [],
+        "sourceTextSha256": "368b9cadaeab33b7f0dd945897013d83e41b9c1c683c3e9114b3be899e7d309f"
+      },
+      {
+        "sectionOrSubsection": "Section 3.A: Statement of Actuarial Opinion Based on an Asset Adequacy Analysis",
+        "pageRange": {
+          "physicalPdfStart": 327,
+          "physicalPdfEnd": 334,
+          "printedStart": "30-3",
+          "printedEnd": "30-10"
+        },
+        "canonicalParentChunkId": "vm30-section-3-a-statement-of-actuarial-opinion",
+        "childChunkIds": [
+          "vm30-section-3-a-statement-of-actuarial-opinion-1-required-opinion-sections",
+          "vm30-section-3-a-statement-of-actuarial-opinion-2-prescribed-wording-changes",
+          "vm30-section-3-a-statement-of-actuarial-opinion-3-table-of-key-indicators",
+          "vm30-section-3-a-statement-of-actuarial-opinion-4-identification-section",
+          "vm30-section-3-a-statement-of-actuarial-opinion-5-scope-section-and-reserve-table",
+          "vm30-section-3-a-statement-of-actuarial-opinion-6-reliance-section",
+          "vm30-section-3-a-statement-of-actuarial-opinion-7-opinion-section",
+          "vm30-section-3-a-statement-of-actuarial-opinion-8-relevant-comments",
+          "vm30-section-3-a-statement-of-actuarial-opinion-9-signature-and-date",
+          "vm30-section-3-a-statement-of-actuarial-opinion-10-category-of-opinion",
+          "vm30-section-3-a-statement-of-actuarial-opinion-11-new-issues-and-liabilities",
+          "vm30-section-3-a-statement-of-actuarial-opinion-12-reliance-on-experts"
+        ],
+        "childCount": 12,
+        "requirementTypes": [
+          "actuarial_opinion_requirement",
+          "scope_or_applicability",
+          "asset_adequacy_analysis_requirement",
+          "appointed_actuary_responsibility",
+          "qualification_requirement",
+          "documentation_requirement",
+          "supporting_exhibit_or_material",
+          "actuarial_memorandum_requirement",
+          "commissioner_authority_or_process",
+          "required_statement_or_disclosure",
+          "exception_or_exemption",
+          "guidance_note_present",
+          "cross_reference",
+          "submission_or_timing_requirement",
+          "certification",
+          "retention_requirement"
+        ],
+        "exceptionProvisionCount": 3,
+        "guidanceNoteProvisionCount": 2,
+        "crossReferences": [
+          "Actuarial Opinion and Memorandum Regulation",
+          "Academy qualification standards",
+          "ASOPs",
+          "Actuarial Standards Board"
+        ],
+        "canonicalized": true,
+        "unresolvedSourceQuestions": [],
+        "sourceTextSha256": "a66edb468ed6a90739cd89c2be2501ff09d14272fe4e3529c09f362b1872f5a7"
+      },
+      {
+        "sectionOrSubsection": "Section 3.B: Actuarial Memorandum, Asset Adequacy Analysis, and Regulatory Asset Adequacy Issues Summary",
+        "pageRange": {
+          "physicalPdfStart": 334,
+          "physicalPdfEnd": 338,
+          "printedStart": "30-10",
+          "printedEnd": "30-14"
+        },
+        "canonicalParentChunkId": "vm30-section-3-b-actuarial-memorandum",
+        "childChunkIds": [
+          "vm30-section-3-b-actuarial-memorandum-1-memorandum-availability",
+          "vm30-section-3-b-actuarial-memorandum-2-reliance-on-other-actuaries",
+          "vm30-section-3-b-actuarial-memorandum-3-commissioner-engaged-actuary",
+          "vm30-section-3-b-actuarial-memorandum-4-required-standards-statement",
+          "vm30-section-3-b-actuarial-memorandum-5-imr-and-avr-assets",
+          "vm30-section-3-b-actuarial-memorandum-6-avr-disclosure",
+          "vm30-section-3-b-actuarial-memorandum-7-equity-return-volatility",
+          "vm30-section-3-b-actuarial-memorandum-8-seven-year-retention",
+          "vm30-section-3-b-actuarial-memorandum-9-analysis-standards-demonstration",
+          "vm30-section-3-b-actuarial-memorandum-10-reserve-information",
+          "vm30-section-3-b-actuarial-memorandum-11-asset-information",
+          "vm30-section-3-b-actuarial-memorandum-12-analysis-basis",
+          "vm30-section-3-b-actuarial-memorandum-13-results-and-conclusions",
+          "vm30-section-3-b-actuarial-memorandum-14-regulatory-asset-adequacy-issues-summary"
+        ],
+        "childCount": 14,
+        "requirementTypes": [
+          "actuarial_memorandum_requirement",
+          "scope_or_applicability",
+          "actuarial_opinion_requirement",
+          "appointed_actuary_responsibility",
+          "commissioner_authority_or_process",
+          "documentation_requirement",
+          "qualification_requirement",
+          "exception_or_exemption",
+          "cross_reference",
+          "retention_requirement",
+          "required_statement_or_disclosure",
+          "asset_adequacy_analysis_requirement",
+          "supporting_exhibit_or_material",
+          "submission_or_timing_requirement",
+          "certification"
+        ],
+        "exceptionProvisionCount": 5,
+        "guidanceNoteProvisionCount": 0,
+        "crossReferences": [
+          "VM-01",
+          "Standard Valuation Law",
+          "Actuarial Standards Board",
+          "ASOPs"
+        ],
+        "canonicalized": true,
+        "unresolvedSourceQuestions": [],
+        "sourceTextSha256": "f168766317185a2a05077eb9384eb6f78f4a002e0d0746609b48e4cb1f3e2fc4"
+      },
+      {
+        "sectionOrSubsection": "VM-30 closing boundary before the unnumbered separator and VM-31",
+        "pageRange": {
+          "physicalPdfStart": 339,
+          "physicalPdfEnd": 339,
+          "printedStart": "30-15",
+          "printedEnd": "30-15"
+        },
+        "canonicalParentChunkId": "vm30-closing-boundary",
+        "childChunkIds": [
+          "vm30-closing-boundary-intentional-blank-page"
+        ],
+        "childCount": 1,
+        "requirementTypes": [
+          "boundary_control"
+        ],
+        "exceptionProvisionCount": 0,
+        "guidanceNoteProvisionCount": 0,
+        "crossReferences": [],
+        "canonicalized": true,
+        "unresolvedSourceQuestions": [],
+        "sourceTextSha256": "d913559708a4b1a7ec6142b5596b656215be6aa0cf8b45d78645a43af4a09d52"
+      }
+    ],
+    "notCanonicalizedSections": []
+  },
+  "sourceFidelity": {
+    "sourceQaPath": "data/processed/review_packages/vm30-source-qa.json",
+    "sourceQaStatus": "pass",
+    "aggregateExtractionSha256": "7833edcd509df2025457d3878194946cfb74dce7555bcfeeee53ed597f932731",
+    "canonicalPackageSha256": "1d47dad97a56272211fba35e683572a1b1b344504681e2ca45e7d43788899b91",
+    "sourceTextRewriteCount": 0
+  },
+  "hierarchy": {
+    "model": "section_or_subsection_parent_to_complete_numbered_requirement_child",
+    "adjacencyAvailable": true,
+    "nestedListsAndTablesKeptWithGoverningProvision": true,
+    "boundaryControlIncluded": true
+  },
+  "definitions": {
+    "sourceExplicitTerms": [
+      "adverse opinion",
+      "qualified opinion",
+      "inconclusive opinion"
+    ],
+    "sourceExplicitTermCount": 3,
+    "duplicatedVm01Terms": 0,
+    "appointedActuaryClaimedAsVm30Definition": false
+  },
+  "relationships": {
+    "candidateCount": 16,
+    "targetCounts": {
+      "VM-01": 1,
+      "Model #820": 1,
+      "AG 48": 1,
+      "AG 51": 1,
+      "AP&P Manual": 1,
+      "ASOPs": 3,
+      "ASB": 2,
+      "Actuarial Standards Board": 2,
+      "Actuarial Opinion and Memorandum Regulation": 1,
+      "Standard Valuation Law": 1,
+      "annual statement instructions": 1,
+      "Academy qualification standards": 1
+    },
+    "registryPath": "data/processed/relationship_registries/vm30-current-manual-relationship-candidates.json",
+    "status": "review_only_pending"
+  },
+  "retrievalEvaluation": {
+    "path": "data/processed/review_packages/vm30-focused-retrieval-evaluation.json",
+    "queryCount": 21,
+    "supportedTop1": 15,
+    "supportedTop3": 16,
+    "supportedQueryCount": 16,
+    "unsupportedCorrect": 4,
+    "unsupportedQueryCount": 4,
+    "ambiguitySafe": 1,
+    "ambiguityQueryCount": 1,
+    "currentAuthorityTop1": 16,
+    "sourceFamilyAccuracy": 16,
+    "authorityLevelAccuracy": 16,
+    "allCasesPassed": true
+  },
+  "supportGateRegression": {
+    "path": "data/processed/review_packages/vm30-support-gate-regression.json",
+    "caseCount": 4,
+    "status": "pass",
+    "productionEvidenceWindow": 3
+  },
+  "representativeChunks": [
+    {
+      "chunkId": "vm30-section-1-a-general-2-annual-statement-applicability",
+      "sectionReference": "2. Annual statement applicability and exclusions",
+      "pageStart": 325,
+      "pageEnd": 325,
+      "provisionTypes": [
+        "scope_or_applicability",
+        "actuarial_opinion_requirement",
+        "actuarial_memorandum_requirement",
+        "documentation_requirement",
+        "submission_or_timing_requirement",
+        "exception_or_exemption",
+        "guidance_note_present",
+        "supporting_exhibit_or_material",
+        "cross_reference"
+      ],
+      "sourceTextExcerpt": "2. Actuarial opinion and supporting actuarial memoranda requirements are provided in VM-\n30 for companies that file the life, A&H annual statement or the fraternal annual statement . \nCompanies that file the property/casualty (P/C) annual statement or the health annual \nstatement will follow the actuarial opinion and supporting actuarial memoranda \nrequirements pursuant to the instructions for those annual statements. Such companies are \nnot subject to actuarial opinion and supporting actuarial memoranda requirem ents in this \nVM-30 unless the instructions for the P/C annual statement or the instructions for the health \nannual statement provide for requirements in VM -30. \nGuidance Note: It is the intent to allow the annual statement instructions to address all issues \nrelating to the actuarial opinion and memorandum for these two statements ( P/C annual statement \nand the health annual statement ), but not preclude the use of requirements as appropriate in VM -\n30 in the instructions for these two statements."
+    },
+    {
+      "chunkId": "vm30-section-1-b-definitions-1-adverse-opinion",
+      "sectionReference": "1. Adverse opinion",
+      "pageStart": 326,
+      "pageEnd": 326,
+      "provisionTypes": [
+        "definition_or_terminology",
+        "actuarial_opinion_requirement",
+        "appointed_actuary_responsibility",
+        "exception_or_exemption"
+      ],
+      "sourceTextExcerpt": "1. The term “adverse opinion” means an actuarial opinion in which the appointed actuary \ndetermines that the reserves and liabilities are not adequate. (An adverse opinion does not \nmeet Section 3.A.7.e.)"
+    },
+    {
+      "chunkId": "vm30-section-2-a-general-2-appointed-actuary-notice",
+      "sectionReference": "2. Appointed-actuary notice within five business days",
+      "pageStart": 326,
+      "pageEnd": 326,
+      "provisionTypes": [
+        "scope_or_applicability",
+        "appointed_actuary_responsibility",
+        "commissioner_authority_or_process",
+        "submission_or_timing_requirement",
+        "retention_requirement",
+        "exception_or_exemption"
+      ],
+      "sourceTextExcerpt": "2. Within five business days of the appointment of an appointed actuary, the company shall \nnotify the domiciliary commissioner of the name, title (and, in the case of a consulting \nactuary, the name of the firm) and manner of appointment or retention of each person \nappointed or retained by the company as an appointed actuary and shall state in the notice \nthat the person meets the r equirements of an appointed actuary. Once these notices are \nfurnished, no further notice is required with respect to this person unless the actuary ceases \nto be appointed or retained or ceases to meet the requirements of an appointed actuary ."
+    },
+    {
+      "chunkId": "vm30-section-3-a-statement-of-actuarial-opinion-3-table-of-key-indicators",
+      "sectionReference": "3. Table of key indicators",
+      "pageStart": 328,
+      "pageEnd": 329,
+      "provisionTypes": [
+        "actuarial_opinion_requirement",
+        "scope_or_applicability",
+        "actuarial_memorandum_requirement",
+        "commissioner_authority_or_process",
+        "documentation_requirement",
+        "exception_or_exemption",
+        "required_statement_or_disclosure"
+      ],
+      "sourceTextExcerpt": "3. The table of key indicators is to be at the top of the opinion and is to be completed consistent \nwith the remainder of the opinion. The only options are those presented below: \nIdentification Section (Check one box only) \nPrescribed Wording Only \nPrescribed Wording with Additional Wording \nRevised Wording  \n \n \nScope Section (Check one box only) \nPrescribed Wording Only \nPrescribed Wording with Additional Wording \nRevised Wording  \n \n \nReliance Section (Check one box only) \nPrescribed Wording Only \nPrescribed Wording with Additional Wording \nRevised Wording  \n \n \nOpinion Section (Check one box only) \nPrescribed Wording Only \nPrescribed Wording with Additional Wording \nRevised Wording  \n \n \nActuarial Memorandum Section (Check one box only) \nThe Actuarial Memorandum includes “Deviation from Standard” wording regarding conformity with an \nActuarial Standard of Practice  \nThe Actuarial Memorandum does not include “Deviation from Standard” wording regarding conformity \nwith an Actuarial Standard of Practice  \nRelevant Comments Section (Check one box only) \nComments are included  \nComments are not included  \nCategory of Opinion\n\n[p. 329] Actuarial Opinion and Memorandum Requirements VM-30 \n© 2025 National Association of Insurance Commissioners 30-5 Unqualified  \nAdverse  \nQualified  \nInconclusive "
+    },
+    {
+      "chunkId": "vm30-section-3-a-statement-of-actuarial-opinion-5-scope-section-and-reserve-table",
+      "sectionReference": "5. Scope section and asset-adequacy-tested reserve table",
+      "pageStart": 329,
+      "pageEnd": 332,
+      "provisionTypes": [
+        "actuarial_opinion_requirement",
+        "scope_or_applicability",
+        "actuarial_memorandum_requirement",
+        "asset_adequacy_analysis_requirement",
+        "appointed_actuary_responsibility",
+        "commissioner_authority_or_process",
+        "documentation_requirement",
+        "submission_or_timing_requirement",
+        "required_statement_or_disclosure",
+        "supporting_exhibit_or_material"
+      ],
+      "sourceTextExcerpt": "5. The scope section should contain only the following statement (including all specified lines \neven if the value is zero) if the appointed actuary is using the prescribed wording: \n“I have examined the assumptions and methods used in determining reserves and related \nactuarial items listed below, as shown in the annual statement of the company, as prepared \nfor filing with state regulatory officials, as of December 31, 20__. Tabulated below are \nthose reserves and related actuarial items which have been subjected to asset adequacy \nanalysis. ”\n\n[p. 330] Actuarial Opinion and Memorandum Requirements VM-30 \n© 2025 National Association of Insurance Commissioners 30-6 Asset Adequacy Tested Amounts —Reserves and Related Actuarial Items \nStatement Item Formula \nReserves \n(1) Principle -Based \nReserves \n(2) Additional \nReserves a \n(3) Analysis \nMethod b \n Other \nAmount \n(4) Total Amount = \n(1)+(2)+(3)+(4) \n(5) \nExhibit 5 \n \nA Life Insurance \nB Annuities \nC Supplementary \nContracts Involving \nLife Contingencies \nD Accidental Death \nBenefit s \nE Disability —\nActive \nF Disability — \nDisabled \nG Miscellaneous \nTotal \nExhibit 6 \n \nA Active Life \nReserve \nB Claim Reserve \nTotal \nExhibit 7 \n \nGuaranteed Interest \nContracts \nAnnuities Certain \nSupplemental \nContracts \nDividend \nAccumulations or \nRefunds\n\n[p. 331] Actuarial Opinion and Memorandum Requirements VM-30 \n© 2025 National Association of Insurance Commissioners 30-7 Asset Adequacy Tested Amounts —Reserves and Related Actuarial Items \nStatement Item Formula \nReserves \n(1) Principle -Based \nReserves \n(2) Additional \nReserves a \n(3) Analysis \nMethod b \n Other \nAmount \n(4) Total Amount = \n(1)+(2)+(3)+(4) \n(5) \nPremium and Other \nDeposit Funds \nTotal Exhibit 7 \nExhibit 8 Part 1 \n \n1 Life \n2 Health \nTotal Exhibit 8, \nPart 1 \nSeparate Accounts \n(Page 3 of the \nAnnual Statement \nof the Separate \nAccounts, \nLines 1 and 2) \nOther Reserves \nand Related \nActuarial Items \nTested \n \n<<include a \ndescription and the \nlocation of other \nreserves and related \nactuarial items \ntested>> \nTOTAL \nRESERVES \n \n \n \n \n \n \n \n \na. The additional reserves are the reserves established under Section 2.C.2. \nb. The appointed actuary should indicate the method of analysis, determined in \naccordance with the standards for asset adequacy analysis referred to in Section \n2.B of these AOM requirements, by means of symbols that should be defined in \nfootnotes to the table . If more than one method of analysis is used for any single \nannual statement line or line from the above table, an additional line for each \nmethod of analysis shall be provided with the method of analysis identified for IMR (General Account, Page____ Line____) \n(Separate Accounts, Page____ Line____) \nAVRc (Page____ Line____) \nNet Deferred and Uncollected Premium\n\n[p. 332] Actuarial Opinion and Memorandum Requirements VM-30 \n© 2025 National Association of Insurance Commissioners 30-8 each line. \nc. This is the a llocated amount of AVR."
+    },
+    {
+      "chunkId": "vm30-section-3-b-actuarial-memorandum-8-seven-year-retention",
+      "sectionReference": "8. Seven-year documentation retention",
+      "pageStart": 336,
+      "pageEnd": 336,
+      "provisionTypes": [
+        "actuarial_memorandum_requirement",
+        "appointed_actuary_responsibility",
+        "documentation_requirement",
+        "submission_or_timing_requirement",
+        "retention_requirement"
+      ],
+      "sourceTextExcerpt": "8. The appointed actuary shall retain on file, for at least seven years, sufficient documentation \nso that it will be possible to determine the procedures followed, the analyses performed, \nthe bases for assumptions and the results obtained."
+    },
+    {
+      "chunkId": "vm30-section-3-b-actuarial-memorandum-14-regulatory-asset-adequacy-issues-summary",
+      "sectionReference": "14. Regulatory Asset Adequacy Issues Summary",
+      "pageStart": 337,
+      "pageEnd": 338,
+      "provisionTypes": [
+        "actuarial_memorandum_requirement",
+        "scope_or_applicability",
+        "actuarial_opinion_requirement",
+        "asset_adequacy_analysis_requirement",
+        "appointed_actuary_responsibility",
+        "commissioner_authority_or_process",
+        "certification",
+        "documentation_requirement",
+        "submission_or_timing_requirement",
+        "exception_or_exemption",
+        "required_statement_or_disclosure",
+        "supporting_exhibit_or_material"
+      ],
+      "sourceTextExcerpt": "14. The appointed actuary shall prepare a regulatory asset adequacy issues summary, the contents of \nwhich are specified below . The regulatory asset adequacy issues summary will be submitted to the \ndomiciliary commissioner no later than April 1 of the year following the year for which a statement \nof actuarial opinion based on asset adequacy is required and shall be available to any other \ninsurance commissioners on request. A n insurance commissioner shall keep the regulatory asset \nadequacy issues summary confidential to the same extent and under the same conditions as the \nactuarial memorandum. \na. The regulatory asset adequacy issues summary shall include: \ni. The following key indicator. The only options are those presented below: \nThis opinion is unqualified: Yes No \nIf the response is “No ,” the appointed actuary shall explain the reason(s) \nwhy the opinion is not unqualified in a manner that is satisfactory to the \ninsurance commissioner. \nii. Descriptions of the scenarios tested (including whether those scenarios are \nstochastic or deterministic) and the sensitivity testing done relative to \nthose scenarios. If negative ending surplus results under certain tests in the \naggregate, the actuary sho uld describe those tests and the amount of \nadditional reserve as of the valuation date , which, if held, would eliminate \nthe negative aggregate surplus values. Ending surplus values shall be\n\n[p. 338] Actuarial Opinion and Memorandum Requirements VM-30 \n© 2025 National Association of Insurance Commissioners 30-14 determined by either extending the projection period until the in force and \nassociated assets and liabilities at the end of the projection period are \nimmaterial or by adjusting the surplus amount at the end of the projection \nperiod by an amount that appropriately estimates the value that can \nreasonably be expected to ari se from the assets and liabilities remaining in \nforce. The actuary shall provide a summary of the testing results, tabular \nor otherwise, sufficient to provide a clear understanding of the ba sis for \nthe actuarial opinion. This summary shall include clarifying explanations \nof the results as needed . \niii. The extent to which the appointed actuary uses assumptions in the asset \nadequacy analysis that are materially different from the assumptions used \nin the previous asset adequacy analysis . \niv. The amount of reserves and the identity of the product lines that had been \nsubjected to asset adequacy analysis in the prior opinion but were not \nsubject to analysis for the current opinion . \nv. Comments on any interim results that may be of significant concern to the \nappointed actuary . \nvi. The methods used by the actuary to recognize the impact of reinsurance \non the company’s cash flows, including both assets and liabilities, under \neach of the scenarios tested . \nvii. Whether the actuary has been satisfied that all options , whether explicit or \nembedded, in any asset or liability (including , but not limited to , those \naffecting cash flows embedded in fixed income securities) and equity -like \nfeatures in any investments have been appropriately considered in the asset \nadequacy analysis. \nb. The regulatory asset adequacy issues summary shall contain the name of the \ncompany for which the regulatory asset adequacy issues summary is being \nsupplied and shall be signed and dated by the appointed actuary rendering the \nactuarial opinion."
+    },
+    {
+      "chunkId": "vm30-closing-boundary-intentional-blank-page",
+      "sectionReference": "Intentional blank page 30-15",
+      "pageStart": 339,
+      "pageEnd": 339,
+      "provisionTypes": [
+        "boundary_control"
+      ],
+      "sourceTextExcerpt": "[p. 339] Actuarial Opinion and Memorandum Requirements VM-30 \n© 2025 National Association of Insurance Commissioners 30-15 This page intentionally left blank."
+    }
+  ],
+  "unresolvedGaps": [
+    "Independent source and actuarial review is required before promotion.",
+    "Publication and effective dates are not inferred beyond the established 2026 edition identity.",
+    "No synthetic historical or future VM-30 source was created for authority testing."
+  ],
+  "artifacts": {
+    "canonicalSourcePackage": "data/processed/source_indexes/sources/vm30-current-manual.json",
+    "sourceQa": "data/processed/review_packages/vm30-source-qa.json",
+    "relationshipCandidates": "data/processed/relationship_registries/vm30-current-manual-relationship-candidates.json",
+    "focusedRetrievalEvaluation": "data/processed/review_packages/vm30-focused-retrieval-evaluation.json",
+    "supportGateRegression": "data/processed/review_packages/vm30-support-gate-regression.json",
+    "validationReport": "data/processed/review_packages/vm30-validation-report.json",
+    "independentReviewPrompt": "data/processed/review_packages/vm30-independent-review-prompt.md"
+  },
+  "promotionReadiness": {
+    "independentReviewRequired": true,
+    "automatedPromotion": false,
+    "currentStatus": "review_candidate",
+    "promotionStatus": "not_promoted",
+    "promotionEligible": false,
+    "blockersClosed": false,
+    "learnerFacingAllowed": false,
+    "appReadyAllowed": false,
+    "ragReadyAllowed": false,
+    "vectorEligible": false,
+    "copilotExportEligible": false
+  }
+}

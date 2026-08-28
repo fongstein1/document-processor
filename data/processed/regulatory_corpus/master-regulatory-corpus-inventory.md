@@ -1,6 +1,6 @@
 # Master Regulatory Corpus Inventory
 
-Generated: 2026-08-26T00:00:00.000Z
+Generated: 2026-08-28T00:00:00.000Z
 
 This is the planning inventory for the US life and annuity valuation-regulation corpus. It reconciles external-source declarations in processing manifests, tracked review artifacts, and the review-only canonical source-index POC. A review artifact or batch manifest does not prove that a current raw source is available or canonical.
 
@@ -10,16 +10,17 @@ This is the planning inventory for the US life and annuity valuation-regulation 
 - Records with declared external raw source: 71
 - Review indexes: 97
 - Self-reviews: 94
-- Canonical source packages: 23
-- Canonical chunks: 541
+- Canonical source packages: 24
+- Canonical chunks: 592
 - Promoted canonical packages / chunks: 8 / 331
 - Structured tables / versions / values: 7 / 29 / 7022 (promoted)
 - VM-01 definitions / retrieval units: 98 / 98 (promoted)
+- VM-30 structural parents / child units: 8 / 43 (not_promoted)
 - VM-31 structural parents / child units: 9 / 75 (promoted)
 - Awaiting canonicalization: 96
 - Awaiting human review: 1
 - Review-artifact-only sources: 34
-- Candidate relationships: 144; promoted: 0
+- Candidate relationships: 160; promoted: 0
 
 ## Corpus targets
 
@@ -30,7 +31,7 @@ This is the planning inventory for the US life and annuity valuation-regulation 
 | P0 | VM-20 Requirements for Principle-Based Reserves for Life Products | canonical_promoted_prose_and_tables | supporting-vm01-definitions, supporting-vm02-nonforfeiture, supporting-vm25-health-reserves, supporting-vm26-credit-disability, supporting-vm30-detail | Retain the approved prose/table scopes and track unavailable Tables B, C, D, E1, and E2 without inference. |
 | P0 | VM-21 Requirements for Principle-Based Reserves for Variable Annuities | canonical_partial | ag52-early-adoption-text, supporting-vm01-definitions, supporting-vm02-nonforfeiture, supporting-vm25-health-reserves, supporting-vm26-credit-disability | Canonicalize the reviewed VM-21 wave with parent-child structure and table separation. |
 | P0 | VM-22 Requirements for Principle-Based Reserves for Non-Variable Annuities | reviewed_not_canonical | supporting-vm01-definitions, supporting-vm02-nonforfeiture, supporting-vm25-health-reserves, supporting-vm26-credit-disability, supporting-vm30-detail | Canonicalize reviewed VM-22 sections after table and hedging boundaries are confirmed. |
-| P0 | VM-30 Actuarial Opinion and Memorandum Requirements | reviewed_not_canonical | supporting-vm01-definitions, supporting-vm02-nonforfeiture, supporting-vm25-health-reserves, supporting-vm26-credit-disability, supporting-vm30-detail | Canonicalize the reporting requirements and preserve cross-references to VM-31. |
+| P0 | VM-30 Actuarial Opinion and Memorandum Requirements | canonical_review_candidate | supporting-vm01-definitions, supporting-vm02-nonforfeiture, supporting-vm25-health-reserves, supporting-vm26-credit-disability, supporting-vm30-detail | Obtain independent source and actuarial review; do not promote or export before a separate approval decision. |
 | P0 | VM-31 PBR Actuarial Report Requirements | canonical_complete | supporting-vm01-definitions, supporting-vm02-nonforfeiture, supporting-vm25-health-reserves, supporting-vm26-credit-disability, supporting-vm30-detail | Retain the approved current-manual scope and track the 92 relationship candidates as a separate review-only backlog item. |
 | P0 | VM-G Corporate Governance Requirements for PBR | canonical_partial | ag13-historical-carvm-guidance, ag36-eiul-crvm-guidance | Confirm the authorized 2026 source and process it as a governance-specific chapter. |
 | P0 | VM-C current Actuarial Guidelines appendix and AG mapping | reviewed_not_canonical | ag18-crvm-continuous-basis | Obtain/confirm the authorized appendix and map individually processed AGs without inferring legal effect. |
@@ -44,7 +45,7 @@ This is the planning inventory for the US life and annuity valuation-regulation 
 | P1 | Current Valuation Manual amendments and change material | review_artifact_only | reg213_amendment1_faq, reg213_amendment1_text, reg213_amendment2, reg213_amendment3, reg213_amendment4 | Inventory authorized current amendments and preserve version/effective-date relationships. |
 | P1 | Valuation Manual Maintenance Agenda and amendment proposals | missing | none confirmed | Keep proposed material separate and explicitly non-controlling. |
 | P1 | Standard Valuation Law / Model #820 | reviewed_not_canonical | ag26-election-of-operative-dates | Add the authorized model-law source for interpretation and applicability context. |
-| P1 | Annual statement, actuarial opinion, and PBR reporting instructions | reviewed_not_canonical | ag14-surveillance-opinion-procedure, ag48-opinion-memorandum-sunset, ag48-reinsurance-authority-scope, ag48-reinsurance-security-method | Add only authorized reporting instructions that materially affect valuation answers. |
+| P1 | Annual statement, actuarial opinion, and PBR reporting instructions | canonical_partial | ag14-surveillance-opinion-procedure, ag48-opinion-memorandum-sunset, ag48-reinsurance-authority-scope, ag48-reinsurance-security-method, vm30-current-manual | Add only authorized reporting instructions that materially affect valuation answers. |
 | P2 | New York valuation regulations and amendments | reviewed_not_canonical | ag15-variable-life-illustration-guideline, ag38-model-regulation, ag42-preferred-mortality-tables, ag46-segment-length-interpretation, ag48-opinion-memorandum-sunset | Prioritize jurisdictional deviations after P0 current NAIC chapters. |
 | P2 | Implementation FAQs | review_artifact_only | reg213_amendment1_faq | Keep FAQ material companion-only and source-bound. |
 | P2 | Actuarial practice notes and educational notes | canonical_partial | actuarial-memorandum-practice-note, actuarial_memorandum_practice_note, am-appendices-and-checklist, am-drafting-content-considerations, am-judgment-and-reserve-items | Canonicalize selectively when it answers likely implementation questions without replacing authority. |
@@ -138,7 +139,7 @@ This is the planning inventory for the US life and annuity valuation-regulation 
 | P2 | ltci_practice_note | LTCI Practice Note Review Index | practice_notes | current_or_unconfirmed | not_confirmed_in_repo / review_artifact_only | completed artifact | no | 0 | not available |
 | P2 | model_governance_practice_note | Model Governance Practice-Note Review Index | practice_notes | current_or_unconfirmed | not_confirmed_in_repo / review_artifact_only | completed artifact | no | 0 | not available |
 | P2 | model_regulation_xxx_practice_note | Model Regulation XXX Practice-Note Review Index | practice_notes | current_or_unconfirmed | not_confirmed_in_repo / review_artifact_only | completed artifact | no | 0 | not available |
-| P0 | pbr-data-valuation-manual-2026-pdf | Valuation Manual | valuation_manual_pdfs | current_or_unconfirmed | declared_external / extraction_output_or_review_packet | not matched | yes | 335 | exact |
+| P0 | pbr-data-valuation-manual-2026-pdf | Valuation Manual | valuation_manual_pdfs | current_or_unconfirmed | declared_external / extraction_output_or_review_packet | not matched | yes | 386 | exact |
 | P2 | reg-141-11-nycrr-s128-reinsurance-pdf | Commutation of Reinsurance Agreements | ny_regulations | current_or_unconfirmed | declared_external / extraction_output_or_review_packet | completed artifact | no | 0 | not available |
 | P2 | reg-210-11-nycrr-s048-pdf | Life Insurance and Annuity Non-Guaranteed Elements | ny_regulations | current_or_unconfirmed | declared_external / extraction_output_or_review_packet | completed artifact | yes | 3 | exact |
 | P2 | reg056 | Regulation 56 Review Index | ny_regulations | current_or_unconfirmed | not_confirmed_in_repo / review_artifact_only | completed artifact | no | 0 | not available |
@@ -168,6 +169,7 @@ This is the planning inventory for the US life and annuity valuation-regulation 
 
 - The six VM-20 current-manual prose packages and the reviewed available Appendix 2 structured-table scope are canonically promoted under separate decision records.
 - VM-01 has 98 canonically promoted current-definition units under its own decision; its 29 relationship candidates remain pending, review-only, and unpromoted.
+- VM-30 has 8 structural parents and 43 exact-text child units as a review-only candidate; its 16 explicit-reference candidates remain pending, review-only, and unpromoted.
 - VM-31 has 9 structural parents and 75 exact-text child units canonically promoted under its own decision; its 92 explicit-reference candidates remain pending, review-only, and unpromoted.
 - No inventory record is Copilot-export eligible; canonical promotion and downstream export are separate decisions.
 - Candidate relationship edges remain documentary, source-bound, pending human review, and not promoted.

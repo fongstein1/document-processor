@@ -1,0 +1,221 @@
+{
+  "schemaVersion": "1.0",
+  "evaluationId": "vm30-focused-retrieval-2026",
+  "sourceScope": "vm30-current-manual",
+  "queries": [
+    {
+      "queryId": "vm30-aom-scope",
+      "queryCategory": "exact_formal_scope",
+      "query": "What requirements does current VM-30 establish for actuarial opinions and supporting actuarial memoranda?",
+      "expectedOutcome": "supported",
+      "expectedChunkIds": ["vm30-section-1-a-general-1-aom-requirement-scope"],
+      "expectedSourceIds": ["vm30-current-manual"],
+      "supportRequirements": { "informationTypes": ["formal_requirement"], "requiredSourceIds": ["vm30-current-manual"] },
+      "expectedEvidence": "Section 1.A.1 scope and meaning of the VM-30 AOM requirements."
+    },
+    {
+      "queryId": "vm30-annual-statement-applicability",
+      "queryCategory": "scope_exception_and_guidance_note",
+      "query": "Under VM-30, which companies file the life, A&H, or fraternal annual statement, and when are property/casualty (P/C) or health annual-statement filers not subject to these actuarial opinion and supporting actuarial memoranda requirements?",
+      "expectedOutcome": "supported",
+      "expectedChunkIds": ["vm30-section-1-a-general-2-annual-statement-applicability"],
+      "expectedSourceIds": ["vm30-current-manual"],
+      "supportRequirements": { "informationTypes": ["formal_requirement"], "requiredSourceIds": ["vm30-current-manual"] },
+      "expectedEvidence": "Section 1.A.2 annual-statement applicability, stated exclusions, and the associated Guidance Note."
+    },
+    {
+      "queryId": "vm30-adverse-opinion-definition",
+      "queryCategory": "source_defined_term",
+      "query": "How does VM-30 define adverse opinion?",
+      "expectedOutcome": "supported",
+      "expectedChunkIds": ["vm30-section-1-b-definitions-1-adverse-opinion"],
+      "expectedSourceIds": ["vm30-current-manual"],
+      "supportRequirements": { "informationTypes": ["formal_requirement"], "requiredSourceIds": ["vm30-current-manual"], "requiredEvidenceTerms": ["adverse opinion"] },
+      "expectedEvidence": "The exact Section 1.B.1 adverse-opinion definition."
+    },
+    {
+      "queryId": "vm30-appointed-actuary-notice",
+      "queryCategory": "submission_timing",
+      "query": "What notice must a company give within five business days after appointing an actuary under VM-30?",
+      "expectedOutcome": "supported",
+      "expectedChunkIds": ["vm30-section-2-a-general-2-appointed-actuary-notice"],
+      "expectedSourceIds": ["vm30-current-manual"],
+      "supportRequirements": { "informationTypes": ["formal_requirement"], "requiredSourceIds": ["vm30-current-manual"], "requiredEvidenceTerms": ["five business days"] },
+      "expectedEvidence": "Section 2.A.2 appointed-actuary notice requirement."
+    },
+    {
+      "queryId": "vm30-replacement-disagreement",
+      "queryCategory": "condition_and_process",
+      "query": "What replacement-actuary and disagreement notices does VM-30 require when the appointed actuary changes?",
+      "expectedOutcome": "supported",
+      "expectedChunkIds": ["vm30-section-2-a-general-3-replacement-and-disagreement-notices"],
+      "expectedSourceIds": ["vm30-current-manual"],
+      "supportRequirements": { "informationTypes": ["formal_requirement"], "requiredSourceIds": ["vm30-current-manual"] },
+      "expectedEvidence": "Complete Section 2.A.3 replacement and disagreement process."
+    },
+    {
+      "queryId": "vm30-asset-adequacy-standards",
+      "queryCategory": "asset_adequacy_cross_reference",
+      "query": "What standards of practice established by the Actuarial Standards Board must the VM-30 asset adequacy analysis follow?",
+      "expectedOutcome": "supported",
+      "expectedChunkIds": ["vm30-section-2-b-asset-adequacy-standards-1-standards-of-practice"],
+      "expectedSourceIds": ["vm30-current-manual"],
+      "supportRequirements": { "informationTypes": ["formal_requirement"], "requiredSourceIds": ["vm30-current-manual"] },
+      "expectedEvidence": "Section 2.B.1 standards-of-practice basis."
+    },
+    {
+      "queryId": "vm30-additional-reserve",
+      "queryCategory": "liability_and_condition",
+      "query": "When does VM-30 require an additional reserve based on asset adequacy analysis?",
+      "expectedOutcome": "supported",
+      "expectedChunkIds": ["vm30-section-2-c-liabilities-covered-2-additional-reserve"],
+      "expectedSourceIds": ["vm30-current-manual"],
+      "supportRequirements": { "informationTypes": ["formal_requirement"], "requiredSourceIds": ["vm30-current-manual"], "requiredEvidenceTerms": ["additional reserve"] },
+      "expectedEvidence": "Section 2.C.2 additional-reserve condition."
+    },
+    {
+      "queryId": "vm30-opinion-sections",
+      "queryCategory": "required_content",
+      "query": "What sections must the VM-30 Statement of Actuarial Opinion contain?",
+      "expectedOutcome": "supported",
+      "expectedChunkIds": ["vm30-section-3-a-statement-of-actuarial-opinion-1-required-opinion-sections"],
+      "expectedSourceIds": ["vm30-current-manual"],
+      "supportRequirements": { "informationTypes": ["formal_requirement"], "requiredSourceIds": ["vm30-current-manual"] },
+      "expectedEvidence": "Section 3.A.1 list of required opinion sections."
+    },
+    {
+      "queryId": "vm30-key-indicators-table",
+      "queryCategory": "required_table",
+      "query": "What key indicators table does VM-30 require in the actuarial opinion?",
+      "expectedOutcome": "supported",
+      "expectedChunkIds": ["vm30-section-3-a-statement-of-actuarial-opinion-3-table-of-key-indicators"],
+      "expectedSourceIds": ["vm30-current-manual"],
+      "supportRequirements": { "informationTypes": ["formal_requirement"], "requiredSourceIds": ["vm30-current-manual"] },
+      "expectedEvidence": "Complete Section 3.A.3 key-indicators table, including its page-spanning rows."
+    },
+    {
+      "queryId": "vm30-identification-qualifications",
+      "queryCategory": "qualification_and_identity",
+      "query": "What identification and qualification information should the appointed actuary provide in the VM-30 opinion?",
+      "expectedOutcome": "supported",
+      "expectedChunkIds": ["vm30-section-3-a-statement-of-actuarial-opinion-4-identification-section"],
+      "expectedSourceIds": ["vm30-current-manual"],
+      "supportRequirements": { "informationTypes": ["formal_requirement"], "requiredSourceIds": ["vm30-current-manual"] },
+      "expectedEvidence": "Section 3.A.4 identification section and qualifications."
+    },
+    {
+      "queryId": "vm30-scope-reserve-table",
+      "queryCategory": "cross_page_prescribed_table",
+      "query": "What reserve table and asset-adequacy-tested amounts belong in the VM-30 scope section?",
+      "expectedOutcome": "supported",
+      "expectedChunkIds": ["vm30-section-3-a-statement-of-actuarial-opinion-5-scope-section-and-reserve-table"],
+      "expectedSourceIds": ["vm30-current-manual"],
+      "supportRequirements": { "informationTypes": ["formal_requirement"], "requiredSourceIds": ["vm30-current-manual"] },
+      "expectedEvidence": "Complete Section 3.A.5 scope wording and reserve table spanning PDF pages 329-332."
+    },
+    {
+      "queryId": "vm30-reliance-on-experts",
+      "queryCategory": "condition_certification",
+      "query": "What certification and supporting information are required when the VM-30 appointed actuary relies on other experts?",
+      "expectedOutcome": "supported",
+      "expectedChunkIds": ["vm30-section-3-a-statement-of-actuarial-opinion-12-reliance-on-experts"],
+      "expectedSourceIds": ["vm30-current-manual"],
+      "supportRequirements": { "informationTypes": ["formal_requirement"], "requiredSourceIds": ["vm30-current-manual"] },
+      "expectedEvidence": "Section 3.A.12 reliance-on-experts condition and certification."
+    },
+    {
+      "queryId": "vm30-memorandum-availability",
+      "queryCategory": "commissioner_access",
+      "query": "When must the VM-30 actuarial memorandum be made available for commissioner examination?",
+      "expectedOutcome": "supported",
+      "expectedChunkIds": ["vm30-section-3-b-actuarial-memorandum-1-memorandum-availability"],
+      "expectedSourceIds": ["vm30-current-manual"],
+      "supportRequirements": { "informationTypes": ["formal_requirement"], "requiredSourceIds": ["vm30-current-manual"] },
+      "expectedEvidence": "Section 3.B.1 memorandum preparation and examination availability."
+    },
+    {
+      "queryId": "vm30-seven-year-retention",
+      "queryCategory": "retention",
+      "query": "For at least how many years shall the appointed actuary retain on file sufficient VM-30 documentation of procedures followed, analyses performed, assumptions, and results obtained?",
+      "expectedOutcome": "supported",
+      "expectedChunkIds": ["vm30-section-3-b-actuarial-memorandum-8-seven-year-retention"],
+      "expectedSourceIds": ["vm30-current-manual"],
+      "supportRequirements": { "informationTypes": ["formal_requirement"], "requiredSourceIds": ["vm30-current-manual"], "requiredEvidenceTerms": ["seven years"] },
+      "expectedEvidence": "Section 3.B.8 seven-year retention requirement."
+    },
+    {
+      "queryId": "vm30-memorandum-reserve-information",
+      "queryCategory": "memorandum_content",
+      "query": "What reserve information must the VM-30 actuarial memorandum specify?",
+      "expectedOutcome": "supported",
+      "expectedChunkIds": ["vm30-section-3-b-actuarial-memorandum-10-reserve-information"],
+      "expectedSourceIds": ["vm30-current-manual"],
+      "supportRequirements": { "informationTypes": ["formal_requirement"], "requiredSourceIds": ["vm30-current-manual"] },
+      "expectedEvidence": "Complete Section 3.B.10 reserve-information provision."
+    },
+    {
+      "queryId": "vm30-regulatory-issues-summary",
+      "queryCategory": "summary_timing_and_content",
+      "query": "What Regulatory Asset Adequacy Issues Summary does VM-30 require, including its April 1 timing?",
+      "expectedOutcome": "supported",
+      "expectedChunkIds": ["vm30-section-3-b-actuarial-memorandum-14-regulatory-asset-adequacy-issues-summary"],
+      "expectedSourceIds": ["vm30-current-manual"],
+      "supportRequirements": { "informationTypes": ["formal_requirement"], "requiredSourceIds": ["vm30-current-manual"], "requiredEvidenceTerms": ["April 1"] },
+      "expectedEvidence": "Complete Section 3.B.14 Regulatory Asset Adequacy Issues Summary provision."
+    },
+    {
+      "queryId": "vm30-unsupported-vm20-methodology",
+      "queryCategory": "unsupported_vm20_methodology_substitution",
+      "query": "What does VM-30 require for calculating the VM-20 deterministic reserve methodology?",
+      "expectedOutcome": "unsupported",
+      "expectedChunkIds": [],
+      "expectedSourceIds": [],
+      "supportRequirements": { "informationTypes": ["formal_requirement"], "requiredSourceIds": ["vm30-current-manual"], "requiredEvidenceTerms": ["VM-20 deterministic reserve methodology"] },
+      "expectedEvidence": "Related VM-20 methodology cannot establish an absent VM-30 opinion or memorandum requirement."
+    },
+    {
+      "queryId": "vm30-unsupported-vm31-executive-summary",
+      "queryCategory": "unsupported_vm31_substitution",
+      "query": "What Executive Summary does VM-30 require for the PBR Actuarial Report?",
+      "expectedOutcome": "unsupported",
+      "expectedChunkIds": [],
+      "expectedSourceIds": [],
+      "supportRequirements": { "informationTypes": ["formal_requirement"], "requiredSourceIds": ["vm30-current-manual"], "requiredEvidenceTerms": ["PBR Actuarial Report Executive Summary"] },
+      "expectedEvidence": "VM-30 does not establish the VM-31 PBR Actuarial Report Executive Summary requirement."
+    },
+    {
+      "queryId": "vm30-unsupported-quarterly-update",
+      "queryCategory": "unsupported_invented_timing",
+      "query": "What quarterly update to the actuarial opinion does VM-30 require?",
+      "expectedOutcome": "unsupported",
+      "expectedChunkIds": [],
+      "expectedSourceIds": [],
+      "supportRequirements": { "informationTypes": ["formal_requirement"], "requiredSourceIds": ["vm30-current-manual"], "requiredEvidenceTerms": ["quarterly update"] },
+      "expectedEvidence": "No current VM-30 provision establishes a quarterly opinion-update requirement."
+    },
+    {
+      "queryId": "vm30-unsupported-future-version",
+      "queryCategory": "unavailable_version",
+      "query": "Under the 2027 VM-30, what new filing requirement replaced the 2026 appointed-actuary notice?",
+      "expectedOutcome": "unsupported",
+      "expectedChunkIds": [],
+      "expectedSourceIds": [],
+      "supportRequirements": { "informationTypes": ["formal_requirement"], "requiredSourceIds": ["vm30-current-manual"], "sourceVersionIdentifier": "2027 NAIC Valuation Manual" },
+      "expectedEvidence": "The corpus contains current 2026 VM-30 evidence, not an unavailable 2027 version."
+    },
+    {
+      "queryId": "vm30-ambiguous-submit",
+      "queryCategory": "ambiguous_submission_question",
+      "query": "In VM-30, does an underspecified request for what the appointed actuary must submit refer to the Statement of Actuarial Opinion included with the annual statement, the appointment notice to the domiciliary commissioner, or the Regulatory Asset Adequacy Issues Summary submitted by April 1?",
+      "expectedOutcome": "ambiguous",
+      "expectedChunkIds": [
+        "vm30-section-2-a-general-1-opinion-in-annual-statement",
+        "vm30-section-2-a-general-2-appointed-actuary-notice",
+        "vm30-section-3-b-actuarial-memorandum-14-regulatory-asset-adequacy-issues-summary"
+      ],
+      "expectedSourceIds": ["vm30-current-manual"],
+      "supportRequirements": { "informationTypes": ["formal_requirement"], "requiredSourceIds": ["vm30-current-manual"] },
+      "expectedEvidence": "The question is underspecified because VM-30 contains distinct opinion, notice, memorandum, and regulatory-summary submission contexts."
+    }
+  ]
+}

@@ -1,0 +1,477 @@
+{
+  "schemaVersion": "1.0",
+  "qaId": "vm30-current-manual-source-qa-2026",
+  "status": "pass",
+  "authoritativeSource": {
+    "sourceEditionId": "NAIC-VALUATION-MANUAL-2026",
+    "sourceVersionIdentifier": "2026 NAIC Valuation Manual",
+    "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+    "pageRange": {
+      "start": 325,
+      "end": 339
+    },
+    "localPdfHashVerified": true
+  },
+  "extraction": {
+    "batchIds": [
+      "batch-017",
+      "batch-018"
+    ],
+    "extractionMethod": "PyPDF2 page text retained in reviewed batches 017-018",
+    "aggregateExtractionSha256": "7833edcd509df2025457d3878194946cfb74dce7555bcfeeee53ed597f932731",
+    "visualReview": {
+      "pagesRenderedAndReviewed": "324-341",
+      "precedingChapterPage": 324,
+      "vm30ChapterPages": "325-339",
+      "intentionalBlankPageInsideChapter": 339,
+      "unnumberedBlankSeparator": 340,
+      "followingChapterPage": 341,
+      "followingChapter": "VM-31",
+      "status": "pass"
+    }
+  },
+  "hierarchy": {
+    "parentCount": 8,
+    "childCount": 43,
+    "totalChunkCount": 51,
+    "retrievalEligibleChildCount": 42,
+    "parentCoverageContinuous": true,
+    "numberedRequirementsKeptWithNestedItemsAndTables": true,
+    "adjacencyComplete": true
+  },
+  "sourceFidelity": {
+    "distribution": {
+      "exact": 51
+    },
+    "exactChunkCount": 51,
+    "generatedMetadataSeparate": true,
+    "sourceTextRewriteCount": 0,
+    "visualTranscriptionCount": 0
+  },
+  "definedTermsAudit": {
+    "sourceExplicitTerms": [
+      "adverse opinion",
+      "qualified opinion",
+      "inconclusive opinion"
+    ],
+    "sourceExplicitTermCount": 3,
+    "duplicatedVm01Terms": 0,
+    "appointedActuaryClaimedAsVm30Definition": false
+  },
+  "sectionCoverage": [
+    {
+      "sectionOrSubsection": "Section 1.A: Scope - General",
+      "pageRange": {
+        "physicalPdfStart": 325,
+        "physicalPdfEnd": 326,
+        "printedStart": "30-1",
+        "printedEnd": "30-2"
+      },
+      "canonicalParentChunkId": "vm30-section-1-a-general",
+      "childChunkIds": [
+        "vm30-section-1-a-general-1-aom-requirement-scope",
+        "vm30-section-1-a-general-2-annual-statement-applicability",
+        "vm30-section-1-a-general-3-professional-judgment-and-commissioner-authority",
+        "vm30-section-1-a-general-4-annual-requirement-and-operative-date",
+        "vm30-section-1-a-general-5-company-level-opinion"
+      ],
+      "childCount": 5,
+      "requirementTypes": [
+        "scope_or_applicability",
+        "actuarial_opinion_requirement",
+        "actuarial_memorandum_requirement",
+        "appointed_actuary_responsibility",
+        "documentation_requirement",
+        "submission_or_timing_requirement",
+        "supporting_exhibit_or_material",
+        "cross_reference",
+        "exception_or_exemption",
+        "guidance_note_present",
+        "asset_adequacy_analysis_requirement",
+        "commissioner_authority_or_process",
+        "required_statement_or_disclosure"
+      ],
+      "exceptionProvisionCount": 1,
+      "guidanceNoteProvisionCount": 1,
+      "crossReferences": [
+        "Model #820",
+        "annual statement instructions",
+        "AG 48",
+        "AG 51",
+        "AP&P Manual",
+        "ASOPs"
+      ],
+      "canonicalized": true,
+      "unresolvedSourceQuestions": [],
+      "sourceTextSha256": "833744bfbf5fcefe6614a133bf4071a5ed5f0c038229645edc31359a36f38d8e"
+    },
+    {
+      "sectionOrSubsection": "Section 1.B: Definitions",
+      "pageRange": {
+        "physicalPdfStart": 326,
+        "physicalPdfEnd": 326,
+        "printedStart": "30-2",
+        "printedEnd": "30-2"
+      },
+      "canonicalParentChunkId": "vm30-section-1-b-definitions",
+      "childChunkIds": [
+        "vm30-section-1-b-definitions-1-adverse-opinion",
+        "vm30-section-1-b-definitions-2-qualified-opinion",
+        "vm30-section-1-b-definitions-3-inconclusive-opinion"
+      ],
+      "childCount": 3,
+      "requirementTypes": [
+        "definition_or_terminology",
+        "actuarial_opinion_requirement",
+        "appointed_actuary_responsibility",
+        "exception_or_exemption",
+        "qualification_requirement",
+        "documentation_requirement",
+        "required_statement_or_disclosure"
+      ],
+      "exceptionProvisionCount": 3,
+      "guidanceNoteProvisionCount": 0,
+      "crossReferences": [],
+      "canonicalized": true,
+      "unresolvedSourceQuestions": [],
+      "sourceTextSha256": "6233fe50388aa9dfceb601d061aeefb5180cac264c6bd297ce4ea5d92b576add"
+    },
+    {
+      "sectionOrSubsection": "Section 2.A: General submission requirements",
+      "pageRange": {
+        "physicalPdfStart": 326,
+        "physicalPdfEnd": 327,
+        "printedStart": "30-2",
+        "printedEnd": "30-3"
+      },
+      "canonicalParentChunkId": "vm30-section-2-a-general",
+      "childChunkIds": [
+        "vm30-section-2-a-general-1-opinion-in-annual-statement",
+        "vm30-section-2-a-general-2-appointed-actuary-notice",
+        "vm30-section-2-a-general-3-replacement-and-disagreement-notices"
+      ],
+      "childCount": 3,
+      "requirementTypes": [
+        "actuarial_opinion_requirement",
+        "appointed_actuary_responsibility",
+        "documentation_requirement",
+        "submission_or_timing_requirement",
+        "required_statement_or_disclosure",
+        "scope_or_applicability",
+        "commissioner_authority_or_process",
+        "retention_requirement",
+        "exception_or_exemption",
+        "actuarial_memorandum_requirement"
+      ],
+      "exceptionProvisionCount": 1,
+      "guidanceNoteProvisionCount": 0,
+      "crossReferences": [],
+      "canonicalized": true,
+      "unresolvedSourceQuestions": [],
+      "sourceTextSha256": "dec767a3a6586113f7f087b651ae29181aa4e00f0c2836bceecc20d010e1fa1a"
+    },
+    {
+      "sectionOrSubsection": "Section 2.B: Standards for Asset Adequacy Analysis",
+      "pageRange": {
+        "physicalPdfStart": 327,
+        "physicalPdfEnd": 327,
+        "printedStart": "30-3",
+        "printedEnd": "30-3"
+      },
+      "canonicalParentChunkId": "vm30-section-2-b-asset-adequacy-standards",
+      "childChunkIds": [
+        "vm30-section-2-b-asset-adequacy-standards-1-standards-of-practice",
+        "vm30-section-2-b-asset-adequacy-standards-2-methods-of-analysis"
+      ],
+      "childCount": 2,
+      "requirementTypes": [
+        "asset_adequacy_analysis_requirement",
+        "actuarial_opinion_requirement",
+        "documentation_requirement",
+        "cross_reference"
+      ],
+      "exceptionProvisionCount": 0,
+      "guidanceNoteProvisionCount": 0,
+      "crossReferences": [
+        "ASB"
+      ],
+      "canonicalized": true,
+      "unresolvedSourceQuestions": [],
+      "sourceTextSha256": "899d392927ff6f83993d2465fad9e9ee713f0aea424748a7d54a1376462c5d31"
+    },
+    {
+      "sectionOrSubsection": "Section 2.C: Liabilities to Be Covered",
+      "pageRange": {
+        "physicalPdfStart": 327,
+        "physicalPdfEnd": 327,
+        "printedStart": "30-3",
+        "printedEnd": "30-3"
+      },
+      "canonicalParentChunkId": "vm30-section-2-c-liabilities-covered",
+      "childChunkIds": [
+        "vm30-section-2-c-liabilities-covered-1-all-in-force-business",
+        "vm30-section-2-c-liabilities-covered-2-additional-reserve",
+        "vm30-section-2-c-liabilities-covered-3-release-and-disclosure"
+      ],
+      "childCount": 3,
+      "requirementTypes": [
+        "asset_adequacy_analysis_requirement",
+        "scope_or_applicability",
+        "actuarial_opinion_requirement",
+        "documentation_requirement",
+        "submission_or_timing_requirement",
+        "appointed_actuary_responsibility"
+      ],
+      "exceptionProvisionCount": 0,
+      "guidanceNoteProvisionCount": 0,
+      "crossReferences": [],
+      "canonicalized": true,
+      "unresolvedSourceQuestions": [],
+      "sourceTextSha256": "368b9cadaeab33b7f0dd945897013d83e41b9c1c683c3e9114b3be899e7d309f"
+    },
+    {
+      "sectionOrSubsection": "Section 3.A: Statement of Actuarial Opinion Based on an Asset Adequacy Analysis",
+      "pageRange": {
+        "physicalPdfStart": 327,
+        "physicalPdfEnd": 334,
+        "printedStart": "30-3",
+        "printedEnd": "30-10"
+      },
+      "canonicalParentChunkId": "vm30-section-3-a-statement-of-actuarial-opinion",
+      "childChunkIds": [
+        "vm30-section-3-a-statement-of-actuarial-opinion-1-required-opinion-sections",
+        "vm30-section-3-a-statement-of-actuarial-opinion-2-prescribed-wording-changes",
+        "vm30-section-3-a-statement-of-actuarial-opinion-3-table-of-key-indicators",
+        "vm30-section-3-a-statement-of-actuarial-opinion-4-identification-section",
+        "vm30-section-3-a-statement-of-actuarial-opinion-5-scope-section-and-reserve-table",
+        "vm30-section-3-a-statement-of-actuarial-opinion-6-reliance-section",
+        "vm30-section-3-a-statement-of-actuarial-opinion-7-opinion-section",
+        "vm30-section-3-a-statement-of-actuarial-opinion-8-relevant-comments",
+        "vm30-section-3-a-statement-of-actuarial-opinion-9-signature-and-date",
+        "vm30-section-3-a-statement-of-actuarial-opinion-10-category-of-opinion",
+        "vm30-section-3-a-statement-of-actuarial-opinion-11-new-issues-and-liabilities",
+        "vm30-section-3-a-statement-of-actuarial-opinion-12-reliance-on-experts"
+      ],
+      "childCount": 12,
+      "requirementTypes": [
+        "actuarial_opinion_requirement",
+        "scope_or_applicability",
+        "asset_adequacy_analysis_requirement",
+        "appointed_actuary_responsibility",
+        "qualification_requirement",
+        "documentation_requirement",
+        "supporting_exhibit_or_material",
+        "actuarial_memorandum_requirement",
+        "commissioner_authority_or_process",
+        "required_statement_or_disclosure",
+        "exception_or_exemption",
+        "guidance_note_present",
+        "cross_reference",
+        "submission_or_timing_requirement",
+        "certification",
+        "retention_requirement"
+      ],
+      "exceptionProvisionCount": 3,
+      "guidanceNoteProvisionCount": 2,
+      "crossReferences": [
+        "Actuarial Opinion and Memorandum Regulation",
+        "Academy qualification standards",
+        "ASOPs",
+        "Actuarial Standards Board"
+      ],
+      "canonicalized": true,
+      "unresolvedSourceQuestions": [],
+      "sourceTextSha256": "a66edb468ed6a90739cd89c2be2501ff09d14272fe4e3529c09f362b1872f5a7"
+    },
+    {
+      "sectionOrSubsection": "Section 3.B: Actuarial Memorandum, Asset Adequacy Analysis, and Regulatory Asset Adequacy Issues Summary",
+      "pageRange": {
+        "physicalPdfStart": 334,
+        "physicalPdfEnd": 338,
+        "printedStart": "30-10",
+        "printedEnd": "30-14"
+      },
+      "canonicalParentChunkId": "vm30-section-3-b-actuarial-memorandum",
+      "childChunkIds": [
+        "vm30-section-3-b-actuarial-memorandum-1-memorandum-availability",
+        "vm30-section-3-b-actuarial-memorandum-2-reliance-on-other-actuaries",
+        "vm30-section-3-b-actuarial-memorandum-3-commissioner-engaged-actuary",
+        "vm30-section-3-b-actuarial-memorandum-4-required-standards-statement",
+        "vm30-section-3-b-actuarial-memorandum-5-imr-and-avr-assets",
+        "vm30-section-3-b-actuarial-memorandum-6-avr-disclosure",
+        "vm30-section-3-b-actuarial-memorandum-7-equity-return-volatility",
+        "vm30-section-3-b-actuarial-memorandum-8-seven-year-retention",
+        "vm30-section-3-b-actuarial-memorandum-9-analysis-standards-demonstration",
+        "vm30-section-3-b-actuarial-memorandum-10-reserve-information",
+        "vm30-section-3-b-actuarial-memorandum-11-asset-information",
+        "vm30-section-3-b-actuarial-memorandum-12-analysis-basis",
+        "vm30-section-3-b-actuarial-memorandum-13-results-and-conclusions",
+        "vm30-section-3-b-actuarial-memorandum-14-regulatory-asset-adequacy-issues-summary"
+      ],
+      "childCount": 14,
+      "requirementTypes": [
+        "actuarial_memorandum_requirement",
+        "scope_or_applicability",
+        "actuarial_opinion_requirement",
+        "appointed_actuary_responsibility",
+        "commissioner_authority_or_process",
+        "documentation_requirement",
+        "qualification_requirement",
+        "exception_or_exemption",
+        "cross_reference",
+        "retention_requirement",
+        "required_statement_or_disclosure",
+        "asset_adequacy_analysis_requirement",
+        "supporting_exhibit_or_material",
+        "submission_or_timing_requirement",
+        "certification"
+      ],
+      "exceptionProvisionCount": 5,
+      "guidanceNoteProvisionCount": 0,
+      "crossReferences": [
+        "VM-01",
+        "Standard Valuation Law",
+        "Actuarial Standards Board",
+        "ASOPs"
+      ],
+      "canonicalized": true,
+      "unresolvedSourceQuestions": [],
+      "sourceTextSha256": "f168766317185a2a05077eb9384eb6f78f4a002e0d0746609b48e4cb1f3e2fc4"
+    },
+    {
+      "sectionOrSubsection": "VM-30 closing boundary before the unnumbered separator and VM-31",
+      "pageRange": {
+        "physicalPdfStart": 339,
+        "physicalPdfEnd": 339,
+        "printedStart": "30-15",
+        "printedEnd": "30-15"
+      },
+      "canonicalParentChunkId": "vm30-closing-boundary",
+      "childChunkIds": [
+        "vm30-closing-boundary-intentional-blank-page"
+      ],
+      "childCount": 1,
+      "requirementTypes": [
+        "boundary_control"
+      ],
+      "exceptionProvisionCount": 0,
+      "guidanceNoteProvisionCount": 0,
+      "crossReferences": [],
+      "canonicalized": true,
+      "unresolvedSourceQuestions": [],
+      "sourceTextSha256": "d913559708a4b1a7ec6142b5596b656215be6aa0cf8b45d78645a43af4a09d52"
+    }
+  ],
+  "provisionTypeCounts": {
+    "scope_or_applicability": 15,
+    "actuarial_opinion_requirement": 32,
+    "actuarial_memorandum_requirement": 26,
+    "appointed_actuary_responsibility": 25,
+    "documentation_requirement": 36,
+    "submission_or_timing_requirement": 14,
+    "supporting_exhibit_or_material": 11,
+    "cross_reference": 11,
+    "exception_or_exemption": 13,
+    "guidance_note_present": 3,
+    "asset_adequacy_analysis_requirement": 16,
+    "commissioner_authority_or_process": 14,
+    "required_statement_or_disclosure": 16,
+    "definition_or_terminology": 3,
+    "qualification_requirement": 5,
+    "retention_requirement": 4,
+    "certification": 4,
+    "boundary_control": 1
+  },
+  "contentAreaAudit": [
+    {
+      "contentArea": "scope_and_applicability",
+      "status": "covered",
+      "representativeChunkId": "vm30-section-1-a-general-2-annual-statement-applicability"
+    },
+    {
+      "contentArea": "source_defined_opinion_terms",
+      "status": "covered",
+      "representativeChunkId": "vm30-section-1-b-definitions-1-adverse-opinion"
+    },
+    {
+      "contentArea": "appointed_actuary_notices",
+      "status": "covered",
+      "representativeChunkId": "vm30-section-2-a-general-2-appointed-actuary-notice"
+    },
+    {
+      "contentArea": "asset_adequacy_standards",
+      "status": "covered",
+      "representativeChunkId": "vm30-section-2-b-asset-adequacy-standards-1-standards-of-practice"
+    },
+    {
+      "contentArea": "liabilities_and_additional_reserves",
+      "status": "covered",
+      "representativeChunkId": "vm30-section-2-c-liabilities-covered-2-additional-reserve"
+    },
+    {
+      "contentArea": "opinion_sections_and_prescribed_wording",
+      "status": "covered",
+      "representativeChunkId": "vm30-section-3-a-statement-of-actuarial-opinion-2-prescribed-wording-changes"
+    },
+    {
+      "contentArea": "key_indicators_table",
+      "status": "covered",
+      "representativeChunkId": "vm30-section-3-a-statement-of-actuarial-opinion-3-table-of-key-indicators"
+    },
+    {
+      "contentArea": "reserve_table",
+      "status": "covered",
+      "representativeChunkId": "vm30-section-3-a-statement-of-actuarial-opinion-5-scope-section-and-reserve-table"
+    },
+    {
+      "contentArea": "qualifications_and_reliance",
+      "status": "covered",
+      "representativeChunkId": "vm30-section-3-a-statement-of-actuarial-opinion-12-reliance-on-experts"
+    },
+    {
+      "contentArea": "memorandum_content",
+      "status": "covered",
+      "representativeChunkId": "vm30-section-3-b-actuarial-memorandum-10-reserve-information"
+    },
+    {
+      "contentArea": "retention",
+      "status": "covered",
+      "representativeChunkId": "vm30-section-3-b-actuarial-memorandum-8-seven-year-retention"
+    },
+    {
+      "contentArea": "regulatory_asset_adequacy_issues_summary",
+      "status": "covered",
+      "representativeChunkId": "vm30-section-3-b-actuarial-memorandum-14-regulatory-asset-adequacy-issues-summary"
+    },
+    {
+      "contentArea": "cross_references",
+      "status": "covered",
+      "representativeChunkId": "vm30-section-3-b-actuarial-memorandum-2-reliance-on-other-actuaries"
+    },
+    {
+      "contentArea": "chapter_boundary",
+      "status": "covered",
+      "representativeChunkId": "vm30-closing-boundary-intentional-blank-page"
+    }
+  ],
+  "relationshipProvenance": {
+    "explicitSourceLabelsValidated": 16,
+    "canonicalLabelsStoredSeparately": true,
+    "sourceTextChanged": false
+  },
+  "unresolvedGaps": [
+    "Independent source and actuarial review is required before promotion.",
+    "Publication and effective dates are not inferred beyond the established 2026 edition identity.",
+    "No synthetic historical or future VM-30 source was created for authority testing."
+  ],
+  "governance": {
+    "reviewOnly": true,
+    "promotionStatus": "not_promoted",
+    "promotionEligible": false,
+    "learnerFacingAllowed": false,
+    "appReadyAllowed": false,
+    "ragReadyAllowed": false,
+    "vectorEligible": false,
+    "copilotExportEligible": false
+  }
+}

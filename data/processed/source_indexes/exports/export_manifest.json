@@ -4,8 +4,8 @@
   "repositoryManifestId": "source-index-poc-2026-07-21",
   "repositoryName": "Document Processor",
   "generatedAt": "2026-07-22T22:52:46.811Z",
-  "sourcePackageCount": 23,
-  "chunkCount": 541,
+  "sourcePackageCount": 24,
+  "chunkCount": 592,
   "exportFiles": {
     "repositoryManifestPath": "data/processed/source_indexes/repository-manifest.json",
     "exportManifestPath": "data/processed/source_indexes/exports/export_manifest.json",

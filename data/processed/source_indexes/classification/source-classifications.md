@@ -1,7 +1,7 @@
 # Document Processor classification summary
 
 - Manifest ID: `source-index-poc-2026-07-21`
-- Source packages classified: 23
+- Source packages classified: 24
 
 | Source | Domain | Document type | Recommended profile | Chunking strategy | Authority type | Confidence |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -27,6 +27,7 @@
 | Orion Term Accumulator Profitability Study | pricing_documents | profitability_study | pricing | structure_first | synthetic | high |
 | Orion Term Accumulator Approval Memo | pricing_documents | approval_memo | pricing | structure_first | synthetic | high |
 | VM-01: Definitions for Terms in Requirements | naic_regulatory | valuation_manual_section | regulatory | definition_aware_one_entry_per_unit | regulatory | high |
+| VM-30: Actuarial Opinion and Memorandum Requirements | naic_regulatory | valuation_manual_section | reporting | subsection_parent_to_complete_numbered_provision_child | regulatory | high |
 | VM-31: PBR Actuarial Report Requirements for Business Subject to a Principle-Based Valuation | naic_regulatory | valuation_manual_section | reporting | section_subsection_parent_to_complete_numbered_requirement_child | regulatory | high |
 
 ## Notes

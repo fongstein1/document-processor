@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "repositoryManifestId": "source-index-poc-2026-07-21",
-  "sourceCount": 23,
+  "sourceCount": 24,
   "classifications": [
     {
       "repositoryManifestId": "source-index-poc-2026-07-21",
@@ -698,6 +698,39 @@
       },
       "reviewIndexPath": "docs/review/supporting_vm_review_index.md",
       "selfReviewPath": "docs/review/supporting_vm_self_review.md"
+    },
+    {
+      "repositoryManifestId": "source-index-poc-2026-07-21",
+      "sourceIndexId": "source-index-vm30-current-manual",
+      "sourceId": "vm30-current-manual",
+      "sourceTitle": "VM-30: Actuarial Opinion and Memorandum Requirements",
+      "sourceFamilyId": "valuation_manual_pdfs",
+      "domainId": "naic_regulatory",
+      "documentType": "valuation_manual_section",
+      "classification": {
+        "domainId": "naic_regulatory",
+        "subdomainId": null,
+        "documentType": "valuation_manual_section",
+        "purpose": "Authoritative current actuarial opinion, memorandum, and asset adequacy analysis requirements",
+        "intendedAudience": "Valuation, reporting, regulatory, governance, and retrieval reviewers",
+        "authoritySourceType": "regulatory",
+        "confidentiality": "public",
+        "publicationDate": null,
+        "effectiveDate": null,
+        "version": "2026 Edition",
+        "approvalStatus": "review_only",
+        "language": "en",
+        "recommendedProfile": "reporting",
+        "recommendedChunkingStrategy": "subsection_parent_to_complete_numbered_provision_child",
+        "confidence": "high",
+        "unresolvedQuestions": [
+          "Independent source and actuarial review is required before promotion.",
+          "Downstream learner, application, RAG, vector, and Copilot eligibility require separate decisions."
+        ],
+        "notes": "Exact source excerpts control; semantic classifications, summaries, and cross-reference candidates are derivative metadata."
+      },
+      "reviewIndexPath": "data/processed/review_packages/vm30-canonical-coverage-review-package.md",
+      "selfReviewPath": "data/processed/review_packages/vm30-source-qa.md"
     },
     {
       "repositoryManifestId": "source-index-poc-2026-07-21",

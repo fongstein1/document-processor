@@ -1,5 +1,21 @@
 # Decisions
 
+## VM-30 canonicalization remains review-only
+
+Represent the complete current 2026 VM-30 chapter as a source-bound hierarchy:
+explicit section/subsection parents and complete numbered-provision children.
+Retain prescribed wording, nested lists, guidance notes, and the page-spanning
+key-indicators and reserve tables with their governing provisions. Preserve
+the printed blank page 30-15 as boundary evidence, but exclude the unnumbered
+page 340 separator and the VM-31 opener on page 341.
+
+Treat only adverse opinion, qualified opinion, and inconclusive opinion as
+source-defined VM-30 terms. Do not duplicate VM-01 terminology. Cross-document
+references are documentary candidates only: preserve source-facing labels,
+store expanded canonical labels separately, and keep every candidate pending,
+unpromoted, and promotion-ineligible. Passing validation creates a review
+candidate; it does not authorize canonical promotion or downstream use.
+
 ## VM-20 remaining prose and appendix coverage
 
 Use the authoritative current-manual PDF directly for the remaining prose
