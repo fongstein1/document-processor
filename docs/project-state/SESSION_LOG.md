@@ -1,5 +1,21 @@
 # Session Log
 
+## 2026-09-01 VM-30 forensics and GitHub handoff
+
+- Completed the VM-30 reset/recommit and dropped-stash forensic adjudication.
+  The evidence found no user-work loss or unrelated-work absorption, accounted
+  for all 30 recoverable stash paths, and found VM-30 commit `93f6861` plus its
+  direct VM-21 child `8c2130a` safe for a normal fast-forward push.
+- Re-ran `npm run check`, source-index validation, corpus validation, and
+  `git diff --check` successfully from the clean authoritative checkout.
+- Advanced GitHub `main` from `34ceb08` to the reviewed local history without
+  force. VM-21 remains `review_only / not_promoted`; no promotion or downstream
+  eligibility was inferred from repository synchronization.
+- Recorded the next processor-readiness phase: VM-21 and VM-22 are the final
+  high-touch proving sources before a controlled 20-50 document pilot, assuming
+  no new generic failure class appears. The target model is automated
+  validation with exception-based human review and sample QA.
+
 ## 2026-08-28 VM-21 canonical candidate and processor-readiness proof
 
 - Reused all reviewed VM-21 batches 022-037 without source re-extraction,

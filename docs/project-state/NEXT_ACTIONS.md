@@ -17,6 +17,17 @@ If VM-21 is approved and promoted through the existing decision workflow, the
 next highest-value P0 source is current 2026 VM-22, reusing its existing
 reviewed extraction wave before considering any new PDF extraction.
 
+## Generic processor readiness path
+
+Use VM-21 and VM-22 as the final high-touch proving sources for the generic
+processor. The target operating model is automated validation plus
+exception-based human review and sample QA, while preserving source-bound
+evidence and explicit promotion governance. If VM-22 introduces no new generic
+architectural failure class, prepare a controlled 20-50 document
+batch-readiness pilot. Do not use this readiness path to bypass independent
+VM-21 review, VM-22 source review, promotion decisions, or downstream-use
+approval.
+
 ## VM-20 remaining prose and appendix handoff
 
 The targeted prose coverage is now present in the dedicated review package:

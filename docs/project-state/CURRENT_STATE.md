@@ -29,6 +29,13 @@ VM-21 remains `review_only / not_promoted`, promotion-ineligible, and blocked
 from learner, application, RAG, vector, and Copilot use. VM-30 remains
 canonically promoted and its authoritative source evidence is unchanged.
 
+The processor-readiness direction is now explicit: move from bespoke,
+document-by-document review toward automated validation with exception-based
+human review and sample QA. VM-21 and VM-22 are the final high-touch proving
+sources before a 20-50 document batch-readiness pilot, provided neither source
+reveals another generic architectural failure class. This direction does not
+change VM-21 governance or authorize promotion or downstream use.
+
 ## 2026-08-28 VM-30 current-manual canonical promotion
 
 Current 2026 VM-30 is represented by one substantially complete,
