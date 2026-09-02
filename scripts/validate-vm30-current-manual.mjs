@@ -24,7 +24,7 @@ const VM30_SOURCE_TEXT_AGGREGATE_SHA256 = '27c7cc7eaa7c47152329e25dc65faff043a6a
 const VM31_SOURCE_TEXT_AGGREGATE_SHA256 = 'f87b9b995e3c7065365e3f7e035ba20e2779d377d08b79d9d00ccfa7bdc6f5fc'
 const VM01_SOURCE_TEXT_AGGREGATE_SHA256 = '04fecfc622ee792dca2f994f3d7eb6ebf510bd533bd7be9798b4604a70b8ef98'
 const VM20_PROMOTED_SOURCE_TEXT_AGGREGATE_SHA256 = 'c32c9a1e976a0635707af9b82e3847152b4611257147d12f14f29c4a5b1274c6'
-const VM20_STRUCTURED_TABLE_FILE_SHA256 = '2b86d0929da8f8dfc85f9d3a123311166d136283ed33afeca5ded4c32f0d0f3f'
+const VM20_STRUCTURED_TABLE_FILE_SHA256 = '9c09e8bd41baa3939e2eefec0eef4409d8e3ff5d9e58b2241d2fd062f429d9f0'
 const vm20PromotedSourceIds = ['vm20-section3c-hierarchical', 'vm20-framework-overview', 'vm20-framework-boundary', 'vm20-assumptions-section-3c', 'vm20-canonical-coverage', 'vm20-remaining-prose-appendix-coverage']
 
 const readJson = async (filePath) => JSON.parse(await fs.readFile(filePath, 'utf8'))
