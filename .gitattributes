@@ -1,0 +1,20 @@
+# Reviewed validator evidence is hashed as exact UTF-8 bytes. Keep these
+# tracked text artifacts LF on every checkout, regardless of global Git config.
+/scripts/evaluate-source-index-retrieval.mjs -text
+/scripts/evidence-sufficiency.mjs -text
+/scripts/test-vm20-support-gate.mjs -text
+/scripts/validate-vm01-definitions.mjs -text
+/scripts/validate-vm31-current-manual.mjs -text
+/scripts/test-vm31-relationship-label-normalization.mjs -text
+/data/processed/review_packages/vm01-definition-retrieval-evaluation.json -text
+/data/processed/source_indexes/sources/vm31-current-manual.json -text
+/data/processed/relationship_registries/vm31-current-manual-relationship-candidates.json -text
+/data/processed/review_packages/vm31-focused-retrieval-evaluation.json -text
+/data/processed/review_packages/vm31-source-qa.json -text
+/data/processed/review_packages/vm31-canonical-coverage-review-package.json -text
+/data/processed/review_packages/vm31-validation-report.json -text
+/data/processed/review_packages/vm01-retrieval-implementation-review/*.mjs -text
+/data/processed/review_packages/vm01-retrieval-implementation-review/manifest.json -text
+/data/processed/review_packages/vm31-validator-implementation-review/*.mjs -text
+/data/processed/review_packages/vm31-validator-implementation-review/manifest.json -text
+/data/processed/review_packages/vm31-validator-implementation-review/relationship-label-normalization-regression.json -text
