@@ -232,7 +232,7 @@ $summary = @"
 
 ## Boundary
 
-Discovery and inventory only. No new regulatory document was downloaded, processed, canonicalized, promoted, or added to the repository. Existing files under `C:\Dev\Document Processor Sources\2026-09-02 Intake` were not modified, renamed, moved, or deleted. The authoritative repository is `C:\Dev\Document Processor`; the authoritative external source root is `C:\Dev\Document Processor Sources`. Historical OneDrive paths remain historical provenance only and were not used for new work.
+Discovery and inventory only. No new regulatory document was downloaded, processed, canonicalized, promoted, or added to the repository. The existing external inventory and source files under `C:\Dev\Document Processor Sources\2026-09-02 Intake` were not modified, renamed, moved, or deleted; only the generated discovery catalog artifacts were regenerated. The authoritative repository is `C:\Dev\Document Processor`; the authoritative external source root is `C:\Dev\Document Processor Sources`. Historical OneDrive paths remain historical provenance only and were not used for new work.
 
 ## Branch and baseline
 
