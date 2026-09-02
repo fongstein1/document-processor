@@ -415,14 +415,15 @@ function Invoke-SourceHttpRequest {
             $stream = if ($response.PSObject.Properties.Name -contains 'RawContentStream') { $response.RawContentStream } else { $null }
             $bytes = if ($stream -and $stream -is [IO.MemoryStream]) { $stream.ToArray() } else { [Text.Encoding]::UTF8.GetBytes([string]$response.Content) }
             $finalUrl = $Uri
-            if ($response.PSObject.Properties.Name -contains 'BaseResponse' -and $response.BaseResponse.ResponseUri) { $finalUrl = $response.BaseResponse.ResponseUri.AbsoluteUri }
+            $baseResponse = if ($response.PSObject.Properties.Name -contains 'BaseResponse') { $response.BaseResponse } else { $null }
+            if ($baseResponse -and $baseResponse.PSObject.Properties.Name -contains 'ResponseUri' -and $baseResponse.ResponseUri) { $finalUrl = $baseResponse.ResponseUri.AbsoluteUri }
             $status = [int]$response.StatusCode
             $result = [pscustomobject]@{ StatusCode = $status; ContentType = $response.Headers['Content-Type']; Bytes = $bytes; FinalUrl = $finalUrl; IsSuccess = ($status -ge 200 -and $status -lt 300) }
             if ($result.IsSuccess -or $attempt -eq $maxAttempts -or $status -notin @(408, 429, 500, 502, 503, 504)) { return $result }
         }
         catch {
             $status = 0
-            $webResponse = $_.Exception.Response
+            $webResponse = if ($_.Exception.PSObject.Properties.Name -contains 'Response') { $_.Exception.Response } else { $null }
             if ($webResponse) {
                 try { $status = [int]$webResponse.StatusCode.value__ } catch { $status = 0 }
             }
