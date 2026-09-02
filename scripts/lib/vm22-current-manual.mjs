@@ -1,6 +1,7 @@
 import crypto from 'node:crypto'
 import fs from 'node:fs/promises'
 import path from 'node:path'
+import { deduplicateStructuredEvidenceCandidates } from './structured-evidence-identity.mjs'
 
 export const VM22_SOURCE_SHA256 = '496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9'
 export const VM22_PAGE_RANGE = { start: 227, end: 318 }
@@ -76,7 +77,14 @@ const deriveProvisionTypes = (text, parentId) => {
   if (deriveVm22CrossReferences(text).length > 0) types.push('cross_reference')
   return unique(types.length ? types : ['contextual_source_provision'])
 }
-const deriveStructuredEvidence = (text) => unique([...(String(text).match(/\bTable\s+(?:\d+(?:\.\d+)?|[A-Z]-?\d+)\b/gi) ?? []), ...(String(text).match(/\b(?:correlation matrix|factor grid|lookup table|mortality table|factor table)\b/gi) ?? [])].map(normalize)).map((label) => ({ evidenceType: /matrix|grid/i.test(label) ? 'matrix_or_grid' : 'table_or_formula', label, sourceBound: true, extractionTreatment: 'retained_in_exact_source_text', promotionStatus: 'not_promoted' }))
+const deriveStructuredEvidence = (text, sourceChunkId = '') => {
+  const labels = [
+    ...(String(text).match(/\bTable\s+(?:\d+(?:\.\d+)?|[A-Z]-?\d+)\b/gi) ?? []),
+    ...(String(text).match(/\b(?:correlation matrix|factor grid|lookup table|mortality table|factor table)\b/gi) ?? []),
+  ]
+  const candidates = labels.map((label) => ({ sourceChunkId, evidenceType: /matrix|grid/i.test(label) ? 'matrix_or_grid' : 'table_or_formula', label: normalize(label), sourceBound: true, extractionTreatment: 'retained_in_exact_source_text', promotionStatus: 'not_promoted' }))
+  return deduplicateStructuredEvidenceCandidates(candidates).map(({ sourceChunkId: _sourceChunkId, ...evidence }) => evidence)
+}
 
 export const loadVm22Chapter = async (repoRoot, input) => {
   const pageMap = new Map(); const sourceRecords = []; const overlapChecks = []

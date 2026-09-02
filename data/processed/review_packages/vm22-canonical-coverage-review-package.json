@@ -625,7 +625,7 @@
     "sourceQaPath": "data/processed/review_packages/vm22-source-qa.json",
     "sourceQaStatus": "pass",
     "aggregateExtractionSha256": "6bc8368b773b96cf865e3b8cdbec72595a696c8f63bfa2ecbae08ab30f111090",
-    "canonicalPackageSha256": "fa1edfd943202c73a16f62474c4c6b50d773b79bf57995b6f16cd32766a305f7",
+    "canonicalPackageSha256": "10d24ad406a7e71c00c4887870696acf0e1fa1da791246cd7aac362d12248b39",
     "sourceTextRewriteCount": 0,
     "sourceReExtractionPerformed": false
   },
@@ -656,8 +656,8 @@
   },
   "structuredEvidence": {
     "path": "data/processed/review_packages/vm22-structured-evidence-inventory.json",
-    "recordCount": 6,
-    "tableOrMatrixCount": 6,
+    "recordCount": 5,
+    "tableOrMatrixCount": 5,
     "formulaOrCalculationCount": 0,
     "numericRecomputationPerformed": false
   },
@@ -684,8 +684,8 @@
   "processorReadiness": {
     "path": "data/processed/review_packages/vm22-processor-readiness-findings.json",
     "rating": "GREEN",
-    "findingCount": 4,
-    "newGenericFailureClassCount": 0
+    "findingCount": 5,
+    "newGenericFailureClassCount": 1
   },
   "governance": {
     "reviewOnly": true,

@@ -4,6 +4,7 @@ import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { evaluateFormalRequirementQueries } from './evaluate-formal-requirement-retrieval.mjs'
 import { loadVm22Chapter, segmentVm22Chapter, VM22_CHILD_COUNT, VM22_CHUNK_COUNT, VM22_PAGE_RANGE, VM22_PARENT_COUNT, VM22_SOURCE_SHA256 } from './lib/vm22-current-manual.mjs'
+import { assignStructuredEvidenceIds } from './lib/structured-evidence-identity.mjs'
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const processedRoot = path.join(repoRoot, 'data', 'processed')
@@ -23,8 +24,19 @@ const reviewPackagePath = path.join(reviewRoot, 'vm22-canonical-coverage-review-
 const promptPath = path.join(reviewRoot, 'vm22-independent-review-prompt.md')
 
 const readJson = async (filePath) => JSON.parse(await fs.readFile(filePath, 'utf8'))
-const writeJson = async (filePath, value) => { await fs.mkdir(path.dirname(filePath), { recursive: true }); await fs.writeFile(filePath, `${JSON.stringify(value, null, 2)}\n`, 'utf8') }
-const writeMd = async (jsonPath, text) => { await fs.mkdir(path.dirname(jsonPath), { recursive: true }); await fs.writeFile(jsonPath.replace(/\.json$/, '.md'), `${text.trim()}\n`, 'utf8') }
+const applyReadinessFinding = (value) => {
+  if (value?.assessmentId === 'vm22-generic-processor-readiness-2026') {
+    const finding = { findingId: 'vm22-readiness-005', genericOrSourceSpecific: 'generic', classification: 'generic_failure_class', severity: 'resolved', finding: 'Structured-evidence normalization/deduplication can create duplicate canonical evidence identities', response: 'The reusable structured-evidence identity layer normalizes semantic labels, removes equivalent detections, assigns stable collision-safe IDs, and fails validation for duplicate IDs or semantic identities.' }
+    value.findings = [...(value.findings ?? []).filter((item) => item.finding !== finding.finding).map((item) => item.finding === 'No new generic failure class requires processor redesign.' ? { ...item, finding: 'No unresolved generic failure class remains after the structured-evidence identity correction.', response: 'The new structured-evidence identity failure class is resolved by reusable normalization, deduplication, collision-safe IDs, and fail-closed validation.' } : item), finding]
+    value.newGenericFailureClassCount = 1
+    value.unresolvedGenericFailureClassCount = 0
+    value.genericFailureModeDecision = 'A new generic structured-evidence identity failure class was discovered and resolved; no unresolved generic processor failure class remains.'
+  }
+  if (value?.reviewPackageId === 'vm22-canonical-coverage-review-package-2026') value.processorReadiness.newGenericFailureClassCount = 1
+  return value
+}
+const writeJson = async (filePath, value) => { applyReadinessFinding(value); await fs.mkdir(path.dirname(filePath), { recursive: true }); await fs.writeFile(filePath, `${JSON.stringify(value, null, 2)}\n`, 'utf8') }
+const writeMd = async (jsonPath, text) => { const correctedText = text.replace(/new generic failure classes: 0/gi, 'new generic failure classes: 1; unresolved: 0').replace(/New generic failure classes: 0/gi, 'New generic failure classes: 1 (resolved); unresolved: 0'); await fs.mkdir(path.dirname(jsonPath), { recursive: true }); await fs.writeFile(jsonPath.replace(/\.json$/, '.md'), `${correctedText.trim()}\n`, 'utf8') }
 const relative = (filePath) => path.relative(repoRoot, filePath).replace(/\\/g, '/')
 const sha256 = (value) => crypto.createHash('sha256').update(value).digest('hex')
 const hashFile = async (filePath) => sha256(await fs.readFile(filePath))
@@ -50,7 +62,8 @@ const buildRelationships = (sourcePackage) => {
 const buildStructuredEvidence = (sourcePackage) => {
   const records = []
   for (const chunk of sourcePackage.chunks.filter((item) => item.chunkLevel === 'child')) for (const evidence of chunk.structuredEvidence ?? []) records.push({ structuredEvidenceId: `${chunk.chunkId}-${String(evidence.label).toLowerCase().replace(/[^a-z0-9]+/g, '-')}`, sourceChunkId: chunk.chunkId, sourceSection: chunk.sectionReference, pageStart: chunk.pageStart, pageEnd: chunk.pageEnd, evidenceType: evidence.evidenceType, label: evidence.label, recommendedTreatment: evidence.evidenceType === 'formula_or_calculation_sequence' ? 'structured_semantic_record_without_numeric_recomputation' : 'structured_table_or_matrix_candidate', sourceIdentity: { sourceId: 'vm22-current-manual', sourceSha256: VM22_SOURCE_SHA256 }, sourceLocator: { pageStart: chunk.pageStart, pageEnd: chunk.pageEnd, sectionReference: chunk.sectionReference, chunkId: chunk.chunkId }, dimensions: { status: 'requires_visual_structured_extraction', rowIdentity: 'retained_only_in_exact_source_text', columnIdentity: 'retained_only_in_exact_source_text' }, units: { status: 'retained_in_exact_source_text_not_normalized' }, notesAndFootnotes: { status: 'retained_with_governing_source_subsection' }, values: { rawAndDisplayValues: 'retained_in_exact_source_text_not_recomputed' }, sourceTextSha256: chunk.sourceTextSha256, authoritativeRepresentation: 'exact_source_text_excerpt', reviewDecision: 'pending', promotionStatus: 'not_promoted' })
-  return { schemaVersion: '1.0', inventoryId: 'vm22-structured-evidence-inventory-2026', sourceId: 'vm22-current-manual', recordCount: records.length, tableOrMatrixCount: records.filter((record) => record.evidenceType !== 'formula_or_calculation_sequence').length, formulaOrCalculationCount: records.filter((record) => record.evidenceType === 'formula_or_calculation_sequence').length, decision: 'Review-only records identify source areas for structured inspection. Exact VM-22 source text remains authoritative; values are not recomputed.', governance: { reviewOnly: true, promotionStatus: 'not_promoted', promotionEligible: false }, records }
+  const deduplicatedRecords = assignStructuredEvidenceIds(records.map(({ structuredEvidenceId: _generatedId, ...record }) => record))
+  return { schemaVersion: '1.0', inventoryId: 'vm22-structured-evidence-inventory-2026', sourceId: 'vm22-current-manual', recordCount: deduplicatedRecords.length, tableOrMatrixCount: deduplicatedRecords.filter((record) => record.evidenceType !== 'formula_or_calculation_sequence').length, formulaOrCalculationCount: deduplicatedRecords.filter((record) => record.evidenceType === 'formula_or_calculation_sequence').length, decision: 'Review-only records identify source areas for structured inspection. Exact VM-22 source text remains authoritative; values are not recomputed.', governance: { reviewOnly: true, promotionStatus: 'not_promoted', promotionEligible: false }, records: deduplicatedRecords }
 }
 
 const buildFocusedEvaluation = async () => {

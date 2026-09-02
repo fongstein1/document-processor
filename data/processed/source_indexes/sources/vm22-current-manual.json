@@ -3991,13 +3991,6 @@
           "sourceBound": true,
           "extractionTreatment": "retained_in_exact_source_text",
           "promotionStatus": "not_promoted"
-        },
-        {
-          "evidenceType": "table_or_formula",
-          "label": "mortality table",
-          "sourceBound": true,
-          "extractionTreatment": "retained_in_exact_source_text",
-          "promotionStatus": "not_promoted"
         }
       ]
     },
@@ -4387,13 +4380,6 @@
         {
           "evidenceType": "table_or_formula",
           "label": "Mortality Table",
-          "sourceBound": true,
-          "extractionTreatment": "retained_in_exact_source_text",
-          "promotionStatus": "not_promoted"
-        },
-        {
-          "evidenceType": "table_or_formula",
-          "label": "mortality table",
           "sourceBound": true,
           "extractionTreatment": "retained_in_exact_source_text",
           "promotionStatus": "not_promoted"

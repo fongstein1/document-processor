@@ -3,8 +3,8 @@
   "assessmentId": "vm22-generic-processor-readiness-2026",
   "overallRating": "GREEN",
   "ratingReason": "The retained-batch reconciliation, hierarchical segmentation, source-fidelity checks, generic support gate, and review-only governance controls completed without an unresolved new generic processor failure class.",
-  "newGenericFailureClassCount": 0,
-  "genericFailureModeDecision": "No unresolved genuinely new generic processor failure mode was discovered in VM-22.",
+  "newGenericFailureClassCount": 1,
+  "genericFailureModeDecision": "A new generic structured-evidence identity failure class was discovered and resolved; no unresolved generic processor failure class remains.",
   "findings": [
     {
       "findingId": "vm22-readiness-001",
@@ -35,13 +35,22 @@
       "genericOrSourceSpecific": "generic",
       "classification": "no_change_needed",
       "severity": "informational",
-      "finding": "No new generic failure class requires processor redesign.",
-      "response": "Existing generic controls are sufficient for this candidate."
+      "finding": "No unresolved generic failure class remains after the structured-evidence identity correction.",
+      "response": "The new structured-evidence identity failure class is resolved by reusable normalization, deduplication, collision-safe IDs, and fail-closed validation."
+    },
+    {
+      "findingId": "vm22-readiness-005",
+      "genericOrSourceSpecific": "generic",
+      "classification": "generic_failure_class",
+      "severity": "resolved",
+      "finding": "Structured-evidence normalization/deduplication can create duplicate canonical evidence identities",
+      "response": "The reusable structured-evidence identity layer normalizes semantic labels, removes equivalent detections, assigns stable collision-safe IDs, and fails validation for duplicate IDs or semantic identities."
     }
   ],
   "governance": {
     "reviewOnly": true,
     "promotionStatus": "not_promoted",
     "promotionEligible": false
-  }
+  },
+  "unresolvedGenericFailureClassCount": 0
 }

@@ -20,7 +20,7 @@
     "sourceTextRewrites": 0,
     "sourceReExtractionCount": 0,
     "relationships": 111,
-    "structuredEvidenceRecords": 6,
+    "structuredEvidenceRecords": 5,
     "focusedQueries": 25,
     "supportedTop1": 21,
     "supportedStrictTop3": 22,
@@ -32,7 +32,7 @@
   },
   "readiness": {
     "rating": "GREEN",
-    "newGenericFailureClassCount": 0
+    "newGenericFailureClassCount": 1
   },
   "governance": {
     "reviewOnly": true,

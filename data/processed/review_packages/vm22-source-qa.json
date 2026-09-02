@@ -558,7 +558,7 @@
   ],
   "structuredEvidence": {
     "path": "data/processed/review_packages/vm22-structured-evidence-inventory.json",
-    "recordCount": 6,
+    "recordCount": 5,
     "exactSourceTextRemainsAuthoritative": true
   },
   "unresolvedGaps": [
