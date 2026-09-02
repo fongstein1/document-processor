@@ -9,7 +9,8 @@
   "additionalPromotionDecisionPaths": [
     "data/manual-input/promotion-decisions/vm01-2026-definitions-promotion.json",
     "data/manual-input/promotion-decisions/vm31-2026-current-manual-promotion.json",
-    "data/manual-input/promotion-decisions/vm30-2026-current-manual-promotion.json"
+    "data/manual-input/promotion-decisions/vm30-2026-current-manual-promotion.json",
+    "data/manual-input/promotion-decisions/vm21-2026-current-manual-promotion.json"
   ],
   "domainProfiles": [
     {
@@ -914,6 +915,105 @@
         "structuredEvidencePath": "data/processed/review_packages/vm21-structured-evidence-inventory.json"
       },
       "notes": "Substantially complete current 2026 VM-21 canonical candidate built from the existing controlled extraction wave; review-only and not promoted pending independent approval."
+    },
+    {
+      "sourceIndexId": "source-index-vm22-current-manual",
+      "sourceVersionId": "source-index-vm22-current-manual-2026",
+      "sourceId": "vm22-current-manual",
+      "filename": "pbr_data_valuation_manual_2026.pdf",
+      "filePath": "D:\\Work\\AI Projects\\NAIC Valuation Manual Course\\pbr_data_valuation_manual_2026.pdf",
+      "sourceFamilyId": "valuation_manual_pdfs",
+      "domainId": "naic_regulatory",
+      "documentType": "valuation_manual_section",
+      "sourceTitle": "VM-22: Requirements for Principle-Based Reserves for Non-Variable Annuities",
+      "sourceReference": "2026 NAIC Valuation Manual",
+      "sourceEditionId": "NAIC-VALUATION-MANUAL-2026",
+      "sourceVersionIdentifier": "2026 NAIC Valuation Manual",
+      "jurisdiction": "NAIC",
+      "authorityLevel": "manual_section",
+      "sourceStatus": "active",
+      "versionDate": null,
+      "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+      "pageCount": 457,
+      "pageRange": { "start": 227, "end": 318 },
+      "expectedChunkCount": 83,
+      "canonicalCandidate": true,
+      "processingCreatedAt": "2026-09-02T00:00:00Z",
+      "reviewBatchIds": ["batch-038", "batch-039", "batch-040", "batch-041", "batch-042", "batch-043", "batch-044", "batch-045", "batch-046", "batch-047", "batch-048", "batch-049", "batch-050", "batch-051", "batch-052", "batch-053", "batch-054"],
+      "reviewIndexPath": "docs/review/vm22_review_index.md",
+      "selfReviewPath": "docs/review/vm22_self_review.md",
+      "pageImageBackstop": true,
+      "lineReferencesAvailable": false,
+      "textLayerQuality": "mixed",
+      "sourceTextVerification": {
+        "sourceTextMode": "exact_extracted_source_text",
+        "extractionMethod": "PyPDF2 page text retained in reviewed batches 038-054",
+        "visualTranscription": "not_used",
+        "pageRepresentationQA": "VM-22 pages 227-318 retained; page 318 is the intentional blank closing page and page 319 begins VM-25 outside scope",
+        "qaScript": "scripts/validate-vm22-current-manual.mjs"
+      },
+      "coverageDeclarations": {
+        "coveredSections": ["chapter_opening", "section_1", "section_2", "section_3", "section_4", "section_5", "section_6", "section_7", "section_8", "section_9", "section_10", "section_11", "section_12", "section_13", "closing_boundary"],
+        "structuredDataAvailable": true,
+        "parentCount": 15,
+        "childCount": 68,
+        "retrievalUnitCount": 66,
+        "knownGaps": ["Relationship candidates remain review-only, pending, and not promoted.", "Structured table and formula records are review aids; exact source text remains authoritative.", "The April 3, 2025 LATF referral is retained as future-context guidance and is not treated as a current operative requirement."]
+      },
+      "classification": {
+        "domainId": "naic_regulatory",
+        "documentType": "valuation_manual_section",
+        "purpose": "Authoritative current non-variable-annuity principle-based reserve requirements",
+        "intendedAudience": "Valuation, modeling, reporting, governance, and retrieval reviewers",
+        "authoritySourceType": "regulatory",
+        "confidentiality": "public",
+        "publicationDate": null,
+        "effectiveDate": null,
+        "version": "2026 Edition",
+        "approvalStatus": "under_review",
+        "language": "en",
+        "recommendedProfile": "calculation_and_assumptions",
+        "recommendedChunkingStrategy": "section_parent_to_complete_lettered_subsection_child",
+        "confidence": "high",
+        "unresolvedQuestions": ["Independent review is required before canonical promotion.", "Dense tables, formulas, assumption classifications, relationships, and downstream eligibility require separate review."],
+        "notes": "Exact source excerpts control; semantic classifications, summaries, structured-evidence labels, and cross-reference candidates are derivative metadata."
+      },
+      "chunkDefaults": {
+        "sourceTextType": "actual_extracted_source_text",
+        "fidelity": "exact",
+        "confidence": "high",
+        "reviewFlags": ["review_only", "requires_independent_review"],
+        "controlledTags": ["vm22_current_manual", "non_variable_annuity_reserves"],
+        "qualityNotes": ["Actual source text from the authoritative current VM-22 chapter is retained without source-text rewriting.", "Each child keeps a complete top-level lettered provision with nested qualifications, guidance notes, formulas, and table text.", "Physical page 318 is intentionally blank and physical page 319 begins VM-25 outside scope."],
+        "evidenceNotes": "Derived from reviewed supporting batches 038-054 with the authoritative 2026 Valuation Manual SHA-256; review-only and not promoted."
+      },
+      "vm22Input": { "extractions": [
+        { "extractionPath": "data/work/batches/batch-038/extraction-output.json", "batchManifestPath": "data/work/batches/batch-038/batch-manifest.json" },
+        { "extractionPath": "data/work/batches/batch-039/extraction-output.json", "batchManifestPath": "data/work/batches/batch-039/batch-manifest.json" },
+        { "extractionPath": "data/work/batches/batch-040/extraction-output.json", "batchManifestPath": "data/work/batches/batch-040/batch-manifest.json" },
+        { "extractionPath": "data/work/batches/batch-041/extraction-output.json", "batchManifestPath": "data/work/batches/batch-041/batch-manifest.json" },
+        { "extractionPath": "data/work/batches/batch-042/extraction-output.json", "batchManifestPath": "data/work/batches/batch-042/batch-manifest.json" },
+        { "extractionPath": "data/work/batches/batch-043/extraction-output.json", "batchManifestPath": "data/work/batches/batch-043/batch-manifest.json" },
+        { "extractionPath": "data/work/batches/batch-044/extraction-output.json", "batchManifestPath": "data/work/batches/batch-044/batch-manifest.json" },
+        { "extractionPath": "data/work/batches/batch-045/extraction-output.json", "batchManifestPath": "data/work/batches/batch-045/batch-manifest.json" },
+        { "extractionPath": "data/work/batches/batch-046/extraction-output.json", "batchManifestPath": "data/work/batches/batch-046/batch-manifest.json" },
+        { "extractionPath": "data/work/batches/batch-047/extraction-output.json", "batchManifestPath": "data/work/batches/batch-047/batch-manifest.json" },
+        { "extractionPath": "data/work/batches/batch-048/extraction-output.json", "batchManifestPath": "data/work/batches/batch-048/batch-manifest.json" },
+        { "extractionPath": "data/work/batches/batch-049/extraction-output.json", "batchManifestPath": "data/work/batches/batch-049/batch-manifest.json" },
+        { "extractionPath": "data/work/batches/batch-050/extraction-output.json", "batchManifestPath": "data/work/batches/batch-050/batch-manifest.json" },
+        { "extractionPath": "data/work/batches/batch-051/extraction-output.json", "batchManifestPath": "data/work/batches/batch-051/batch-manifest.json" },
+        { "extractionPath": "data/work/batches/batch-052/extraction-output.json", "batchManifestPath": "data/work/batches/batch-052/batch-manifest.json" },
+        { "extractionPath": "data/work/batches/batch-053/extraction-output.json", "batchManifestPath": "data/work/batches/batch-053/batch-manifest.json" },
+        { "extractionPath": "data/work/batches/batch-054/extraction-output.json", "batchManifestPath": "data/work/batches/batch-054/batch-manifest.json" }
+      ] },
+      "extensions": {
+        "structureModel": "vm22_section_subsection_hierarchy_v1",
+        "relationshipCandidatePath": "data/processed/relationship_registries/vm22-current-manual-relationship-candidates.json",
+        "reviewPackagePath": "data/processed/review_packages/vm22-canonical-coverage-review-package.json",
+        "focusedRetrievalEvaluationPath": "data/processed/review_packages/vm22-focused-retrieval-evaluation.json",
+        "structuredEvidencePath": "data/processed/review_packages/vm22-structured-evidence-inventory.json"
+      },
+      "notes": "Substantially complete current 2026 VM-22 canonical candidate built from the existing controlled extraction wave; review-only and not promoted pending independent approval."
     },
     {
       "sourceIndexId": "source-index-ag36-eiul-crvm-guidance",

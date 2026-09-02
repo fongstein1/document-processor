@@ -7,15 +7,15 @@ As of 2026-08-28T00:00:00.000Z, the repository contains substantial regulatory e
 - Source documents inventoried: **105**
 - Documents with declared external raw source: **71**
 - Documents reviewed / review artifacts matched: **97 review indexes**
-- Canonical source packages: **24**
-- Canonical chunks: **666**
-- Promoted canonical prose packages / chunks: **9 / 382**
+- Canonical source packages: **25**
+- Canonical chunks: **749**
+- Promoted canonical prose packages / chunks: **10 / 460**
 - Promoted structured logical tables / versions: **7 / 29**
 - Structured rows / values: **891 / 7022**
 - Sources awaiting canonicalization: **96**
 - Sources awaiting human review: **1**
 - Review-artifact-only sources: **34**
-- Candidate relationships: **180**
+- Candidate relationships: **291**
 - Promoted relationships: **0**
 
 ## VM-20 coverage checkpoint
@@ -39,11 +39,18 @@ As of 2026-08-28T00:00:00.000Z, the repository contains substantial regulatory e
 
 ## VM-21 coverage checkpoint
 
-- Current 2026 VM-21 structural parents / child units: 15 / 63; status not_promoted.
+- Current 2026 VM-21 structural parents / child units: 15 / 63; status promoted.
 - VM-21 explicit-reference candidates: 20; all remain pending, review-only, and not promoted.
 - Focused VM-21 retrieval contains 30 inspectable cases: 22 supported, six unsupported, and two ambiguous requests, with a strict top-three production evidence window.
 - VM-21 source QA records complete PDF-page 143-225 coverage, exact reconciliation of the two overlapping batch pages, exclusion of page 226, and zero source re-extraction or source-text rewrites.
 - VM-21 remains a review-only canonical candidate blocked from learner, app, RAG, vector, and Copilot use pending independent review.
+
+## VM-22 coverage checkpoint
+
+- Current 2026 VM-22 structural parents / child units: 15 / 68; status not_promoted.
+- VM-22 explicit-reference candidates: 111; all remain pending, review-only, and not promoted.
+- VM-22 uses retained reviewed batches 038-054, with 83 exact-text chunks and focused retrieval/support-gate evidence; independent review is required before promotion.
+- VM-22 remains blocked from learner, app, RAG, vector, and Copilot use pending separate governance decisions.
 
 ## VM-30 coverage checkpoint
 

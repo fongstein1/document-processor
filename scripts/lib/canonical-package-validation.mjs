@@ -62,7 +62,7 @@ export const validateDerivativeMetadataEvidence = (sourcePackage) => {
   const checks = [
     ['timing_or_effective_date', /effective\s+date|valuation\s+date|within\s+\d+|annually|time\s+horizon/i],
     ['documentation_or_reporting_obligation', /document|report|record|retain/i],
-    ['structured_table_evidence', /table\s+(?:\d|[a-z]-)|correlation\s+matrix|factor\s+grid|lookup\s+table/i],
+    ['structured_table_evidence', /\btable(?:s)?\b|\bmatrix\b|\bfactor\s+grid\b|\blookup\b|\brow(?:s)?\b|\bcolumn(?:s)?\b|\bformula(?:s)?\b|\bcalculation(?:s)?\b/i],
     ['definition_or_terminology', /\bmeans\b|\bdefined\b|\bdefinition/i],
   ]
   let classifiedChunkCount = 0
@@ -76,13 +76,20 @@ export const validateDerivativeMetadataEvidence = (sourcePackage) => {
   return { checkId: 'derivative_metadata_evidence', status: errors.length === 0 ? 'pass' : 'fail', errors: unique(errors), metrics: { classifiedChunkCount } }
 }
 
-export const validateReviewOnlyGovernance = (sourcePackage) => {
+export const validateReviewOnlyGovernance = (sourcePackage, { allowPromoted = false } = {}) => {
   const processing = sourcePackage?.processing ?? {}
   const errors = []
-  if (processing.reviewOnly !== true) errors.push('processing.reviewOnly must be true.')
-  if (processing.promotionStatus !== 'not_promoted') errors.push('processing.promotionStatus must be not_promoted.')
+  if (allowPromoted) {
+    if (processing.reviewOnly !== false) errors.push('Promoted processing.reviewOnly must be false.')
+    if (processing.promotionStatus !== 'promoted') errors.push('Promoted processing.promotionStatus must be promoted.')
+  } else {
+    if (processing.reviewOnly !== true) errors.push('processing.reviewOnly must be true.')
+    if (processing.promotionStatus !== 'not_promoted') errors.push('processing.promotionStatus must be not_promoted.')
+  }
   if (processing.learnerFacingAllowed || processing.appReadyAllowed || processing.ragReadyAllowed) errors.push('Downstream eligibility must remain false.')
-  if ((sourcePackage?.chunks ?? []).some((chunk) => chunk.promotionEligible !== false)) errors.push('Every chunk must remain promotion-ineligible.')
+  if (allowPromoted) {
+    if ((sourcePackage?.chunks ?? []).some((chunk) => chunk.promotionEligible !== true)) errors.push('Every promoted chunk must be promotion-eligible for canonical indexing.')
+  } else if ((sourcePackage?.chunks ?? []).some((chunk) => chunk.promotionEligible !== false)) errors.push('Every chunk must remain promotion-ineligible.')
   return { checkId: 'review_only_governance', status: errors.length === 0 ? 'pass' : 'fail', errors }
 }
 
@@ -91,7 +98,7 @@ export const validateCanonicalPackage = (options) => {
     validateCanonicalPackageStructure(options),
     validateSourceExplicitDefinedTerms(options.sourcePackage),
     validateDerivativeMetadataEvidence(options.sourcePackage),
-    validateReviewOnlyGovernance(options.sourcePackage),
+    validateReviewOnlyGovernance(options.sourcePackage, options),
   ]
   return { status: checks.every((check) => check.status === 'pass') ? 'pass' : 'fail', checks, errors: checks.flatMap((check) => check.errors) }
 }

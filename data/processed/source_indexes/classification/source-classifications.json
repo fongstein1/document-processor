@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "repositoryManifestId": "source-index-poc-2026-07-21",
-  "sourceCount": 24,
+  "sourceCount": 25,
   "classifications": [
     {
       "repositoryManifestId": "source-index-poc-2026-07-21",
@@ -324,6 +324,39 @@
       },
       "reviewIndexPath": "docs/review/vm21_review_index.md",
       "selfReviewPath": "docs/review/vm21_self_review.md"
+    },
+    {
+      "repositoryManifestId": "source-index-poc-2026-07-21",
+      "sourceIndexId": "source-index-vm22-current-manual",
+      "sourceId": "vm22-current-manual",
+      "sourceTitle": "VM-22: Requirements for Principle-Based Reserves for Non-Variable Annuities",
+      "sourceFamilyId": "valuation_manual_pdfs",
+      "domainId": "naic_regulatory",
+      "documentType": "valuation_manual_section",
+      "classification": {
+        "domainId": "naic_regulatory",
+        "subdomainId": null,
+        "documentType": "valuation_manual_section",
+        "purpose": "Authoritative current non-variable-annuity principle-based reserve requirements",
+        "intendedAudience": "Valuation, modeling, reporting, governance, and retrieval reviewers",
+        "authoritySourceType": "regulatory",
+        "confidentiality": "public",
+        "publicationDate": null,
+        "effectiveDate": null,
+        "version": "2026 Edition",
+        "approvalStatus": "under_review",
+        "language": "en",
+        "recommendedProfile": "calculation_and_assumptions",
+        "recommendedChunkingStrategy": "section_parent_to_complete_lettered_subsection_child",
+        "confidence": "high",
+        "unresolvedQuestions": [
+          "Independent review is required before canonical promotion.",
+          "Dense tables, formulas, assumption classifications, relationships, and downstream eligibility require separate review."
+        ],
+        "notes": "Exact source excerpts control; semantic classifications, summaries, structured-evidence labels, and cross-reference candidates are derivative metadata."
+      },
+      "reviewIndexPath": "docs/review/vm22_review_index.md",
+      "selfReviewPath": "docs/review/vm22_self_review.md"
     },
     {
       "repositoryManifestId": "source-index-poc-2026-07-21",

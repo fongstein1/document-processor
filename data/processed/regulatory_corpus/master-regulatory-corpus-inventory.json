@@ -12,8 +12,8 @@
     "sourceRecordsWithExternalManifest": 71,
     "reviewIndexes": 97,
     "selfReviews": 95,
-    "canonicalSourcePackages": 24,
-    "canonicalChunks": 666,
+    "canonicalSourcePackages": 25,
+    "canonicalChunks": 749,
     "vm20CurrentManualChunks": 149,
     "vm20CompanionChunks": 175,
     "vm01Definitions": 98,
@@ -22,8 +22,12 @@
     "vm01RelationshipCandidates": 29,
     "vm21StructuralParents": 15,
     "vm21ChildUnits": 63,
-    "vm21PromotionStatus": "not_promoted",
+    "vm21PromotionStatus": "promoted",
     "vm21RelationshipCandidates": 20,
+    "vm22StructuralParents": 15,
+    "vm22ChildUnits": 68,
+    "vm22PromotionStatus": "not_promoted",
+    "vm22RelationshipCandidates": 111,
     "vm30StructuralParents": 8,
     "vm30ChildUnits": 43,
     "vm30PromotionStatus": "promoted",
@@ -32,8 +36,8 @@
     "vm31ChildUnits": 75,
     "vm31PromotionStatus": "promoted",
     "vm31RelationshipCandidates": 92,
-    "promotedCanonicalPackages": 9,
-    "promotedCanonicalChunks": 382,
+    "promotedCanonicalPackages": 10,
+    "promotedCanonicalChunks": 460,
     "structuredTableLogicalTables": 7,
     "structuredTableVersions": 29,
     "structuredTableRows": 891,
@@ -47,7 +51,6 @@
     "p0Gaps": [
       "valuation-manual-2026-complete",
       "vm-20",
-      "vm-21",
       "vm-22",
       "vm-g",
       "vm-c",
@@ -65,12 +68,12 @@
       "standard-valuation-law-model-820",
       "annual-statement-pbr-reporting"
     ],
-    "candidateRelationships": 180,
+    "candidateRelationships": 291,
     "promotedRelationships": 0,
     "historicalProposedDeferred": 9,
     "currentSourceTextFidelityDistribution": {
       "curated": 20,
-      "exact": 646
+      "exact": 729
     }
   },
   "sources": [
@@ -5045,12 +5048,13 @@
           "data/processed/source_indexes/sources/vm20-remaining-prose-appendix-coverage.json",
           "data/processed/source_indexes/sources/vm20-section3c-hierarchical.json",
           "data/processed/source_indexes/sources/vm21-current-manual.json",
+          "data/processed/source_indexes/sources/vm22-current-manual.json",
           "data/processed/source_indexes/sources/vm30-current-manual.json",
           "data/processed/source_indexes/sources/vm31-current-manual.json"
         ],
         "classification": "not_in_canonical_classification",
         "relationshipRegistry": "candidate_registry: data/processed/relationship_registries/vm01-definition-relationship-candidates.json",
-        "chunkCount": 460,
+        "chunkCount": 543,
         "sourceTextFidelity": [
           "exact"
         ]
@@ -5068,6 +5072,7 @@
         "promotionRecordPaths": [
           "data/manual-input/promotion-decisions/vm01-2026-definitions-promotion.json",
           "data/manual-input/promotion-decisions/vm20-2026-prose-promotion.json",
+          "data/manual-input/promotion-decisions/vm21-2026-current-manual-promotion.json",
           "data/manual-input/promotion-decisions/vm30-2026-current-manual-promotion.json",
           "data/manual-input/promotion-decisions/vm31-2026-current-manual-promotion.json"
         ],
@@ -5079,6 +5084,7 @@
           "vm20-framework-overview",
           "vm20-remaining-prose-appendix-coverage",
           "vm20-section3c-hierarchical",
+          "vm21-current-manual",
           "vm30-current-manual",
           "vm31-current-manual"
         ]
@@ -6579,6 +6585,7 @@
         "vm22-asset-projection",
         "vm22-background-scope",
         "vm22-behavior-assumptions",
+        "vm22-current-manual",
         "vm22-hedging-strategy",
         "vm22-mortality-assumptions",
         "vm22-other-assumptions",
@@ -6775,7 +6782,7 @@
       "sourceFamily": "valuation_manual_pdfs",
       "priority": "P0",
       "intendedStatus": "current",
-      "assessment": "canonical_review_candidate",
+      "assessment": "canonical_complete",
       "reason": "Current 2026 VM-21 has one substantially complete review-only canonical candidate with 15 structural parents, 63 exact-text child units, 20 explicit-reference candidates, and a separate structured-evidence inventory.",
       "evidenceSourceIds": [
         "ag52-early-adoption-text",
@@ -6848,8 +6855,8 @@
       "sourceFamily": "valuation_manual_pdfs",
       "priority": "P0",
       "intendedStatus": "current",
-      "assessment": "reviewed_not_canonical",
-      "reason": "VM-22 is represented in reviewed ignored batches but has no current canonical source package.",
+      "assessment": "canonical_review_candidate",
+      "reason": "VM-22 has a retained-batch canonical candidate with 15 parents, 68 children, and 83 exact-text chunks; independent review remains open.",
       "evidenceSourceIds": [
         "supporting-vm01-definitions",
         "supporting-vm02-nonforfeiture",
@@ -6895,6 +6902,7 @@
         "vm22-asset-projection",
         "vm22-background-scope",
         "vm22-behavior-assumptions",
+        "vm22-current-manual",
         "vm22-hedging-strategy",
         "vm22-mortality-assumptions",
         "vm22-other-assumptions",
@@ -6911,7 +6919,7 @@
         "vm31-reporting-crossref",
         "vm31-reporting-definition"
       ],
-      "nextAction": "Canonicalize reviewed VM-22 sections after table and hedging boundaries are confirmed."
+      "nextAction": "Complete the narrow independent review and record a promotion decision only if the candidate passes."
     },
     {
       "targetId": "vm-30",

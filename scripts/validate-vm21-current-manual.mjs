@@ -14,7 +14,7 @@ const readJson = async (filePath) => JSON.parse(await fs.readFile(filePath, 'utf
 const assert = (condition, message) => { if (!condition) throw new Error(message) }
 
 const main = async () => {
-  const [config, sourcePackage, sourceQa, retrieval, supportGate, relationships, structuredEvidence, readiness, reviewPackage] = await Promise.all([
+  const [config, sourcePackage, sourceQa, retrieval, supportGate, relationships, structuredEvidence, readiness, reviewPackage, promotionDecision] = await Promise.all([
     readJson(path.join(repoRoot, 'config', 'source-index-poc.json')),
     readJson(sourcePath),
     readJson(path.join(reviewRoot, 'vm21-source-qa.json')),
@@ -24,6 +24,7 @@ const main = async () => {
     readJson(path.join(reviewRoot, 'vm21-structured-evidence-inventory.json')),
     readJson(path.join(reviewRoot, 'vm21-processor-readiness-findings.json')),
     readJson(path.join(reviewRoot, 'vm21-canonical-coverage-review-package.json')),
+    readJson(path.join(repoRoot, 'data', 'manual-input', 'promotion-decisions', 'vm21-2026-current-manual-promotion.json')),
   ])
   const sourceConfig = config.sources.find((source) => source.sourceId === 'vm21-current-manual')
   assert(sourceConfig, 'VM-21 source config is missing.')
@@ -31,7 +32,7 @@ const main = async () => {
   const loaded = await loadVm21Chapter(repoRoot, sourceConfig.vm21Input)
   const structure = segmentVm21Chapter(loaded.chapterText)
 
-  const genericValidation = validateCanonicalPackage({ sourcePackage, expectedSourceId: 'vm21-current-manual', expectedParentCount: VM21_PARENT_COUNT, expectedChildCount: VM21_CHILD_COUNT, expectedChunkCount: VM21_CHUNK_COUNT, pageRange: VM21_PAGE_RANGE })
+  const genericValidation = validateCanonicalPackage({ sourcePackage, expectedSourceId: 'vm21-current-manual', expectedParentCount: VM21_PARENT_COUNT, expectedChildCount: VM21_CHILD_COUNT, expectedChunkCount: VM21_CHUNK_COUNT, pageRange: VM21_PAGE_RANGE, allowPromoted: true })
   assert(genericValidation.status === 'pass', `Generic canonical-package validation failed:\n${genericValidation.errors.join('\n')}`)
   assert(sourcePackage.source.sourceSha256 === VM21_SOURCE_SHA256, 'VM-21 source SHA-256 mismatch.')
   assert(sourcePackage.source.pageRange.start === 143 && sourcePackage.source.pageRange.end === 225, 'VM-21 package boundary mismatch.')
@@ -59,6 +60,8 @@ const main = async () => {
   assert(structuredEvidence.recordCount === structuredEvidence.records.length && structuredEvidence.records.every((record) => record.sourceIdentity?.sourceId === 'vm21-current-manual' && record.sourceIdentity?.sourceSha256 === VM21_SOURCE_SHA256 && record.sourceLocator?.chunkId === record.sourceChunkId && record.values?.rawAndDisplayValues === 'retained_in_exact_source_text_not_recomputed' && record.authoritativeRepresentation === 'exact_source_text_excerpt' && record.reviewDecision === 'pending' && record.promotionStatus === 'not_promoted'), 'VM-21 structured-evidence provenance or governance failed.')
   assert(readiness.overallRating === 'AMBER' && readiness.findings.some((finding) => finding.classification === 'architecture_improvement') && readiness.findings.some((finding) => finding.classification === 'human_review_requirement'), 'VM-21 processor-readiness assessment is incomplete.')
   assert(reviewPackage.promoted === false && reviewPackage.promotionReadiness.currentStatus === 'review_only_pending_independent_review' && reviewPackage.promotionReadiness.promotionStatus === 'not_promoted' && reviewPackage.promotionReadiness.promotionEligible === false, 'VM-21 review package governance failed.')
+  assert(sourcePackage.processing.reviewOnly === false && sourcePackage.processing.promotionStatus === 'promoted', 'VM-21 canonical promotion state is incomplete.')
+  assert(promotionDecision.decision === 'approved_for_canonical_promotion' && promotionDecision.reviewEvidence?.blockersClosed === true && promotionDecision.scope?.sourceIds?.includes('vm21-current-manual'), 'VM-21 promotion decision is missing or out of scope.')
 
   const checks = [
     ...genericValidation.checks,
@@ -74,10 +77,10 @@ const main = async () => {
     schemaVersion: '1.0', validationReportId: 'vm21-current-manual-validation-2026', status: 'pass', sourceId: 'vm21-current-manual', sourceSha256: VM21_SOURCE_SHA256,
     metrics: { pageCount: 83, overlapPageCount: loaded.overlapChecks.length, parentCount: VM21_PARENT_COUNT, childCount: VM21_CHILD_COUNT, totalChunkCount: VM21_CHUNK_COUNT, exactSourceChunkCount: VM21_CHUNK_COUNT, sourceTextRewriteCount: 0, sourceReExtractionCount: 0, sourceExplicitDefinedTermCount: sourcePackage.chunks.flatMap((chunk) => chunk.definedTerms ?? []).length, relationshipCandidateCount: relationships.relationshipCount, structuredEvidenceRecordCount: structuredEvidence.recordCount, supportedTop1: retrieval.supportedTop1Count, supportedTop3: retrieval.supportedTop3Count, supportedQueryCount: retrieval.supportedQueryCount, unsupportedCorrect: retrieval.unsupportedCorrectCount, unsupportedQueryCount: retrieval.unsupportedQueryCount, ambiguitySafe: retrieval.ambiguitySafeCount, ambiguityQueryCount: retrieval.ambiguityQueryCount, supportGatePassed: supportGate.passedCaseCount, supportGateCaseCount: supportGate.caseCount },
     checks, unresolvedHumanReview: sourceQa.unresolvedGaps,
-    governance: { reviewOnly: true, promotionStatus: 'not_promoted', promotionEligible: false, independentReviewRequired: true },
+    governance: { reviewOnly: false, promotionStatus: 'promoted', promotionEligible: true, independentReviewRequired: false, downstreamEligibilitySeparatelyGoverned: true },
   }
   await fs.writeFile(reportPath, `${JSON.stringify(report, null, 2)}\n`, 'utf8')
-  await fs.writeFile(reportPath.replace(/\.json$/, '.md'), `${['# VM-21 validation report', '', '- Result: **PASS**', `- Pages / parents / children / chunks: 83 / ${VM21_PARENT_COUNT} / ${VM21_CHILD_COUNT} / ${VM21_CHUNK_COUNT}`, '- Source re-extractions / source-text rewrites: 0 / 0', `- Focused retrieval top-1 / strict top-3: ${retrieval.supportedTop1Count}/${retrieval.supportedQueryCount} / ${retrieval.supportedTop3Count}/${retrieval.supportedQueryCount}`, `- Unsupported / ambiguity: ${retrieval.unsupportedCorrectCount}/${retrieval.unsupportedQueryCount} / ${retrieval.ambiguitySafeCount}/${retrieval.ambiguityQueryCount}`, `- Support gate: ${supportGate.passedCaseCount}/${supportGate.caseCount}`, '- Governance: review-only / not promoted', '', 'Independent review remains required.'].join('\n')}\n`, 'utf8')
+  await fs.writeFile(reportPath.replace(/\.json$/, '.md'), `${['# VM-21 validation report', '', '- Result: **PASS**', `- Pages / parents / children / chunks: 83 / ${VM21_PARENT_COUNT} / ${VM21_CHILD_COUNT} / ${VM21_CHUNK_COUNT}`, '- Source re-extractions / source-text rewrites: 0 / 0', `- Focused retrieval top-1 / strict top-3: ${retrieval.supportedTop1Count}/${retrieval.supportedQueryCount} / ${retrieval.supportedTop3Count}/${retrieval.supportedQueryCount}`, `- Unsupported / ambiguity: ${retrieval.unsupportedCorrectCount}/${retrieval.unsupportedQueryCount} / ${retrieval.ambiguitySafeCount}/${retrieval.ambiguityQueryCount}`, `- Support gate: ${supportGate.passedCaseCount}/${supportGate.caseCount}`, '- Governance: canonical promoted; learner/app/RAG/vector/Copilot export remains separately blocked', '', 'The canonical source package is promoted under the recorded independent-review decision; this validation report remains QA evidence.'].join('\n')}\n`, 'utf8')
   console.log(`Validated VM-21: ${VM21_PARENT_COUNT} parents, ${VM21_CHILD_COUNT} children, ${VM21_CHUNK_COUNT} chunks, ${relationships.relationshipCount} relationships, ${structuredEvidence.recordCount} structured records.`)
 }
 

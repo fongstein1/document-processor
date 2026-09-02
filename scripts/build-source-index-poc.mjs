@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url'
 import { buildRetrievalMarkdown, evaluateQueries, normalizeText } from './evaluate-source-index-retrieval.mjs'
 import { buildVm01DefinitionChunks } from './lib/vm01-definitions.mjs'
 import { buildVm21Chunks } from './lib/vm21-current-manual.mjs'
+import { buildVm22Chunks } from './lib/vm22-current-manual.mjs'
 import { buildVm30Chunks } from './lib/vm30-current-manual.mjs'
 import { buildVm31Chunks } from './lib/vm31-current-manual.mjs'
 
@@ -1087,6 +1088,8 @@ const main = async () => {
       ? await buildVm01DefinitionChunks(repoRoot, source)
       : source.vm21Input
         ? await buildVm21Chunks(repoRoot, source)
+      : source.vm22Input
+        ? await buildVm22Chunks(repoRoot, source)
       : source.vm30Input
         ? await buildVm30Chunks(repoRoot, source)
       : source.vm31Input

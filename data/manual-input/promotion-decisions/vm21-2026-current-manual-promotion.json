@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "1.0",
+  "promotionDecisionId": "vm21-2026-current-manual-promotion-2026-09-02",
+  "decisionDate": "2026-09-02",
+  "decision": "approved_for_canonical_promotion",
+  "scope": {
+    "scopeId": "vm21-2026-current-manual",
+    "sourceEditionId": "NAIC-VALUATION-MANUAL-2026",
+    "sourceVersionIdentifier": "2026 NAIC Valuation Manual",
+    "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+    "sourceIds": ["vm21-current-manual"],
+    "expectedChunkCount": 78,
+    "includedInformationTypes": [
+      "current_manual_vm21_requirements",
+      "complete_hierarchical_source_coverage",
+      "source_explicit_terms_and_cross_references",
+      "structured_evidence_review_records",
+      "closing_boundary_control"
+    ]
+  },
+  "reviewEvidence": {
+    "reviewPackagePath": "data/processed/review_packages/vm21-canonical-coverage-review-package.json",
+    "sourceQaPath": "data/processed/review_packages/vm21-source-qa.json",
+    "retrievalQaPath": "data/processed/review_packages/vm21-focused-retrieval-evaluation.json",
+    "supportGatePath": "data/processed/review_packages/vm21-support-gate-regression.json",
+    "blockersClosed": true,
+    "independentReviewRecorded": true,
+    "disposition": "APPROVE FOR CANONICAL PROMOTION",
+    "notes": "Independent review approved the exact-source current 2026 VM-21 canonical candidate. Relationship candidates and structured evidence remain separately governed."
+  },
+  "exclusions": [
+    "The 20 VM-21 explicit-reference relationship candidates, which remain pending, review-only, not promoted, and not promotion-eligible",
+    "The 27 structured table/formula review records, which remain pending, review-only, and not promoted",
+    "Learner-facing, application, RAG, vector, and Copilot export approval"
+  ],
+  "downstreamEligibility": {
+    "learnerFacingAllowed": false,
+    "appReadyAllowed": false,
+    "ragReadyAllowed": false,
+    "copilotExportEligible": false,
+    "vectorEligible": false,
+    "reason": "Canonical source promotion and downstream publication or export approval are separate governance decisions."
+  },
+  "reviewerRecord": {
+    "identityRecorded": false,
+    "identity": null,
+    "note": "The independent-review disposition was supplied without reviewer identity; no identity is inferred."
+  },
+  "preservation": {
+    "sourceTextChanged": false,
+    "chunkContentChanged": false,
+    "reviewHistoryPreserved": true,
+    "note": "Promotion changes governance metadata only; exact source excerpts, pages, hashes, IDs, hierarchy, adjacency, relationships, structured evidence, and retrieval results remain unchanged."
+  }
+}

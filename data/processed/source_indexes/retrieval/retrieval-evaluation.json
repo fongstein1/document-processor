@@ -4390,6 +4390,14 @@
           "citationCount": 0
         },
         {
+          "chunkId": "vm22-section-4-determination-dr-sr-a-projection-accumulated-deficiencies",
+          "sourceId": "vm22-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 34.54999999999999,
+          "citationCount": 0
+        },
+        {
           "chunkId": "vm20-practice-note-companion-vm20-pn-sr-overview-child-002",
           "sourceId": "vm20-practice-note-companion",
           "sourceFamilyId": "practice_notes",
@@ -4403,14 +4411,6 @@
           "sourceFamilyId": "practice_notes",
           "authorityLevel": "companion_guidance",
           "score": 30.65,
-          "citationCount": 0
-        },
-        {
-          "chunkId": "vm21-section-4-determination-of-sr-b-scenario-reserve",
-          "sourceId": "vm21-current-manual",
-          "sourceFamilyId": "valuation_manual_pdfs",
-          "authorityLevel": "manual_section",
-          "score": 30.54999999999999,
           "citationCount": 0
         }
       ],
@@ -4444,10 +4444,10 @@
             "authorityLevel": "manual_section"
           },
           {
-            "chunkId": "vm20-practice-note-companion-vm20-pn-sr-overview-child-002",
-            "sourceId": "vm20-practice-note-companion",
-            "score": 30.949999999999996,
-            "authorityLevel": "companion_guidance"
+            "chunkId": "vm22-section-4-determination-dr-sr-a-projection-accumulated-deficiencies",
+            "sourceId": "vm22-current-manual",
+            "score": 34.54999999999999,
+            "authorityLevel": "manual_section"
           }
         ],
         "corpusGap": null,
@@ -4466,9 +4466,9 @@
               "tokenOverlap": 8
             },
             {
-              "chunkId": "vm20-practice-note-companion-vm20-pn-sr-overview-child-002",
-              "score": 30.949999999999996,
-              "tokenOverlap": 11
+              "chunkId": "vm22-section-4-determination-dr-sr-a-projection-accumulated-deficiencies",
+              "score": 34.54999999999999,
+              "tokenOverlap": 13
             }
           ]
         },

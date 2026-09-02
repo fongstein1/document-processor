@@ -5,8 +5,8 @@
 - Canonical layer: source-index
 - Model version: 1.0
 - Generated at: 2026-07-22T22:52:46.811Z
-- Source package count: 24
-- Chunk count: 666
+- Source package count: 25
+- Chunk count: 749
 
 ## Export files
 
@@ -30,7 +30,8 @@
 | VM-20 Current Manual Canonical Coverage (Reviewed Wave) | pp. 48-95 | `data/processed/source_indexes/sources/vm20-canonical-coverage.json` | canonical promoted; downstream export blocked |
 | VM-20 Remaining Prose and Appendix Coverage | pp. 66-140 | `data/processed/source_indexes/sources/vm20-remaining-prose-appendix-coverage.json` | canonical promoted; downstream export blocked |
 | VM-20 Practice Note Companion Coverage | pp. 1-115 | `data/processed/source_indexes/sources/vm20-practice-note-companion.json` | review-only |
-| VM-21: Requirements for Principle-Based Reserves for Variable Annuities | pp. 143-225 | `data/processed/source_indexes/sources/vm21-current-manual.json` | review-only |
+| VM-21: Requirements for Principle-Based Reserves for Variable Annuities | pp. 143-225 | `data/processed/source_indexes/sources/vm21-current-manual.json` | canonical promoted; downstream export blocked |
+| VM-22: Requirements for Principle-Based Reserves for Non-Variable Annuities | pp. 227-318 | `data/processed/source_indexes/sources/vm22-current-manual.json` | review-only |
 | The Application of the Commissioners Reserve Valuation Method to Equity Indexed Life Insurance Policies | pp. 1-11 | `data/processed/source_indexes/sources/ag36-eiul-crvm-guidance.json` | review-only |
 | The Application of the Commissioners Reserve Valuation Method to Equity Indexed Life Insurance Policies | pp. 1-18 | `data/processed/source_indexes/sources/ag36-eiul-crvm-law-manual-reprint.json` | review-only |
 | Model Governance: Some Considerations for Practicing Life Actuaries | pp. 1-18 | `data/processed/source_indexes/sources/model-governance-practice-note.json` | review-only |

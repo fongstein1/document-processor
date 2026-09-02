@@ -101,9 +101,10 @@
     "Publication and effective dates are not inferred beyond explicit source language and the established 2026 edition identity."
   ],
   "governance": {
-    "reviewOnly": true,
-    "promotionStatus": "not_promoted",
-    "promotionEligible": false,
-    "independentReviewRequired": true
+    "reviewOnly": false,
+    "promotionStatus": "promoted",
+    "promotionEligible": true,
+    "independentReviewRequired": false,
+    "downstreamEligibilitySeparatelyGoverned": true
   }
 }

@@ -113,12 +113,12 @@
     "createdBy": "scripts/build-source-index-poc.mjs",
     "processingMode": "canonical_index",
     "canonicality": "canonical",
-    "reviewOnly": true,
+    "reviewOnly": false,
     "learnerFacingAllowed": false,
     "appReadyAllowed": false,
     "ragReadyAllowed": false,
-    "promotionStatus": "not_promoted",
-    "notes": "Substantially complete current 2026 VM-21 canonical candidate built from the existing controlled extraction wave; review-only and not promoted pending independent approval."
+    "promotionStatus": "promoted",
+    "notes": "Promoted for the scope recorded in data/manual-input/promotion-decisions/vm21-2026-current-manual-promotion.json; downstream export remains blocked."
   },
   "chunks": [
     {
@@ -220,7 +220,7 @@
       "structuralLocator": "VM-21 / VM-21 chapter opening and table of contents",
       "chunkingMethod": "hierarchical_structure",
       "retrievalEligible": false,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "context_only_parent",
       "structuredEvidence": []
     },
@@ -326,7 +326,7 @@
       "structuralLocator": "VM-21 / VM-21 chapter opening and table of contents / Chapter title, table of contents, and Section 1 opener",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": false,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "context_only_boundary",
       "structuredEvidence": []
     },
@@ -466,7 +466,7 @@
       "structuralLocator": "VM-21 / Section 1: Background",
       "chunkingMethod": "hierarchical_structure",
       "retrievalEligible": false,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "context_only_parent",
       "structuredEvidence": []
     },
@@ -596,7 +596,7 @@
       "structuralLocator": "VM-21 / Section 1: Background / A. Purpose",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval",
       "structuredEvidence": []
     },
@@ -712,7 +712,7 @@
       "structuralLocator": "VM-21 / Section 1: Background / B. Principles",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval",
       "structuredEvidence": []
     },
@@ -824,7 +824,7 @@
       "structuralLocator": "VM-21 / Section 1: Background / C. Risks Reflected and Risks Not Reflected",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval",
       "structuredEvidence": []
     },
@@ -946,7 +946,7 @@
       "structuralLocator": "VM-21 / Section 1: Background / D. Definitions",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval",
       "structuredEvidence": []
     },
@@ -1040,7 +1040,7 @@
       "structuralLocator": "VM-21 / Section 1: Background / E. Materiality",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval",
       "structuredEvidence": []
     },
@@ -1181,7 +1181,7 @@
       "structuralLocator": "VM-21 / Section 2: Scope and Effective Date",
       "chunkingMethod": "hierarchical_structure",
       "retrievalEligible": false,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "context_only_parent",
       "structuredEvidence": []
     },
@@ -1306,7 +1306,7 @@
       "structuralLocator": "VM-21 / Section 2: Scope and Effective Date / A. Scope",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval",
       "structuredEvidence": []
     },
@@ -1444,7 +1444,7 @@
       "structuralLocator": "VM-21 / Section 2: Scope and Effective Date / B. Effective Date and Phase-In",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval",
       "structuredEvidence": []
     },
@@ -1569,7 +1569,7 @@
       "structuralLocator": "VM-21 / Section 2: Scope and Effective Date / C. Economic Scenario Generator Phase-In",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval",
       "structuredEvidence": []
     },
@@ -1707,7 +1707,7 @@
       "structuralLocator": "VM-21 / Section 3: Reserve Methodology",
       "chunkingMethod": "hierarchical_structure",
       "retrievalEligible": false,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "context_only_parent",
       "structuredEvidence": []
     },
@@ -1807,7 +1807,7 @@
       "structuralLocator": "VM-21 / Section 3: Reserve Methodology / A. Aggregate Reserve",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval",
       "structuredEvidence": []
     },
@@ -1907,7 +1907,7 @@
       "structuralLocator": "VM-21 / Section 3: Reserve Methodology / B. Impact of Reinsurance Ceded",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval",
       "structuredEvidence": []
     },
@@ -2011,7 +2011,7 @@
       "structuralLocator": "VM-21 / Section 3: Reserve Methodology / C. The Additional Standard Projection Amount",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval",
       "structuredEvidence": []
     },
@@ -2109,7 +2109,7 @@
       "structuralLocator": "VM-21 / Section 3: Reserve Methodology / D. The SR",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval",
       "structuredEvidence": []
     },
@@ -2233,7 +2233,7 @@
       "structuralLocator": "VM-21 / Section 3: Reserve Methodology / E. Alternative Methodology",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval",
       "structuredEvidence": []
     },
@@ -2337,7 +2337,7 @@
       "structuralLocator": "VM-21 / Section 3: Reserve Methodology / F. Allocation of the Aggregate Reserve to Contracts",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval",
       "structuredEvidence": []
     },
@@ -2450,7 +2450,7 @@
       "structuralLocator": "VM-21 / Section 3: Reserve Methodology / G. Reserve to Be Held in the General Account",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval",
       "structuredEvidence": []
     },
@@ -2569,7 +2569,7 @@
       "structuralLocator": "VM-21 / Section 3: Reserve Methodology / H. Simplifications, approximations, and modeling efficiencies",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval",
       "structuredEvidence": []
     },
@@ -2684,7 +2684,7 @@
       "structuralLocator": "VM-21 / Section 3: Reserve Methodology / I. Calculation date before the valuation date",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval",
       "structuredEvidence": []
     },
@@ -2823,7 +2823,7 @@
       "structuralLocator": "VM-21 / Section 4: Determination of the SR",
       "chunkingMethod": "hierarchical_structure",
       "retrievalEligible": false,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "context_only_parent",
       "structuredEvidence": []
     },
@@ -2949,7 +2949,7 @@
       "structuralLocator": "VM-21 / Section 4: Determination of the SR / A. Projection of Accumulated Deficiencies",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval",
       "structuredEvidence": []
     },
@@ -3082,7 +3082,7 @@
       "structuralLocator": "VM-21 / Section 4: Determination of the SR / B. Determination of Scenario Reserve",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval",
       "structuredEvidence": []
     },
@@ -3184,7 +3184,7 @@
       "structuralLocator": "VM-21 / Section 4: Determination of the SR / C. Projection Scenarios",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval",
       "structuredEvidence": []
     },
@@ -3299,7 +3299,7 @@
       "structuralLocator": "VM-21 / Section 4: Determination of the SR / D. Projection of Assets",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval",
       "structuredEvidence": []
     },
@@ -3411,7 +3411,7 @@
       "structuralLocator": "VM-21 / Section 4: Determination of the SR / E. Projection of Annuitization Benefits",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval",
       "structuredEvidence": []
     },
@@ -3526,7 +3526,7 @@
       "structuralLocator": "VM-21 / Section 4: Determination of the SR / F. Frequency of Projection and Time Horizon",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval",
       "structuredEvidence": []
     },
@@ -3636,7 +3636,7 @@
       "structuralLocator": "VM-21 / Section 4: Determination of the SR / G. Compliance with ASOPs",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval",
       "structuredEvidence": []
     },
@@ -3743,7 +3743,7 @@
       "structuralLocator": "VM-21 / Section 5: Reinsurance Ceded",
       "chunkingMethod": "hierarchical_structure",
       "retrievalEligible": false,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "context_only_parent",
       "structuredEvidence": []
     },
@@ -3860,7 +3860,7 @@
       "structuralLocator": "VM-21 / Section 5: Reinsurance Ceded / A. Treatment of Reinsurance Ceded in the Aggregate Reserve",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval",
       "structuredEvidence": []
     },
@@ -4012,7 +4012,7 @@
       "structuralLocator": "VM-21 / Section 6: Requirements for the Additional Standard Projection Amount",
       "chunkingMethod": "hierarchical_structure",
       "retrievalEligible": false,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "context_only_parent",
       "structuredEvidence": [
         {
@@ -4186,7 +4186,7 @@
       "structuralLocator": "VM-21 / Section 6: Requirements for the Additional Standard Projection Amount / A. Overview",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval",
       "structuredEvidence": []
     },
@@ -4314,7 +4314,7 @@
       "structuralLocator": "VM-21 / Section 6: Requirements for the Additional Standard Projection Amount / B. Additional Standard Projection Amount",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval",
       "structuredEvidence": []
     },
@@ -4453,7 +4453,7 @@
       "structuralLocator": "VM-21 / Section 6: Requirements for the Additional Standard Projection Amount / C. Prescribed Assumptions",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval",
       "structuredEvidence": [
         {
@@ -4654,7 +4654,7 @@
       "structuralLocator": "VM-21 / Section 7: Alternative Methodology",
       "chunkingMethod": "hierarchical_structure",
       "retrievalEligible": false,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "context_only_parent",
       "structuredEvidence": [
         {
@@ -4886,7 +4886,7 @@
       "structuralLocator": "VM-21 / Section 7: Alternative Methodology / A. General Methodology",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval",
       "structuredEvidence": []
     },
@@ -5010,7 +5010,7 @@
       "structuralLocator": "VM-21 / Section 7: Alternative Methodology / B. Calculation of CA and FE",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval",
       "structuredEvidence": [
         {
@@ -5154,7 +5154,7 @@
       "structuralLocator": "VM-21 / Section 7: Alternative Methodology / C. Calculation of the GC Component",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval",
       "structuredEvidence": [
         {
@@ -5288,7 +5288,7 @@
       "structuralLocator": "VM-21 / Section 7: Alternative Methodology / D. Fund Categorization",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval",
       "structuredEvidence": [
         {
@@ -5416,7 +5416,7 @@
       "structuralLocator": "VM-21 / Section 7: Alternative Methodology / E. Tables",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval",
       "structuredEvidence": [
         {
@@ -5556,7 +5556,7 @@
       "structuralLocator": "VM-21 / Section 8: Scenario Generation",
       "chunkingMethod": "hierarchical_structure",
       "retrievalEligible": false,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "context_only_parent",
       "structuredEvidence": []
     },
@@ -5661,7 +5661,7 @@
       "structuralLocator": "VM-21 / Section 8: Scenario Generation / A. General",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval",
       "structuredEvidence": []
     },
@@ -5765,7 +5765,7 @@
       "structuralLocator": "VM-21 / Section 8: Scenario Generation / B. Prescribed Interest Rate Scenario Generator",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval",
       "structuredEvidence": []
     },
@@ -5886,7 +5886,7 @@
       "structuralLocator": "VM-21 / Section 8: Scenario Generation / C. Prescribed Total Investment Return Scenario Generator",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval",
       "structuredEvidence": []
     },
@@ -6002,7 +6002,7 @@
       "structuralLocator": "VM-21 / Section 8: Scenario Generation / D. Implied Volatility Scenarios",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval",
       "structuredEvidence": []
     },
@@ -6112,7 +6112,7 @@
       "structuralLocator": "VM-21 / Section 8: Scenario Generation / E. Use of Non-Prescribed Scenario Generators",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval",
       "structuredEvidence": []
     },
@@ -6210,7 +6210,7 @@
       "structuralLocator": "VM-21 / Section 8: Scenario Generation / F. Number of Scenarios",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval",
       "structuredEvidence": []
     },
@@ -6358,7 +6358,7 @@
       "structuralLocator": "VM-21 / Section 9: Modeling of Hedges under a Future Non-Index Credit Hedging Strategy",
       "chunkingMethod": "hierarchical_structure",
       "retrievalEligible": false,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "context_only_parent",
       "structuredEvidence": []
     },
@@ -6467,7 +6467,7 @@
       "structuralLocator": "VM-21 / Section 9: Modeling of Hedges under a Future Non-Index Credit Hedging Strategy / A. Initial Considerations",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval",
       "structuredEvidence": []
     },
@@ -6574,7 +6574,7 @@
       "structuralLocator": "VM-21 / Section 9: Modeling of Hedges under a Future Non-Index Credit Hedging Strategy / B. Modeling Approaches",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval",
       "structuredEvidence": []
     },
@@ -6711,7 +6711,7 @@
       "structuralLocator": "VM-21 / Section 9: Modeling of Hedges under a Future Non-Index Credit Hedging Strategy / C. Calculation of SR (Reported)",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval",
       "structuredEvidence": []
     },
@@ -6828,7 +6828,7 @@
       "structuralLocator": "VM-21 / Section 9: Modeling of Hedges under a Future Non-Index Credit Hedging Strategy / D. Additional Considerations for CTE 70 (best efforts)",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval",
       "structuredEvidence": []
     },
@@ -6941,7 +6941,7 @@
       "structuralLocator": "VM-21 / Section 9: Modeling of Hedges under a Future Non-Index Credit Hedging Strategy / E. Specific Considerations and Requirements",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval",
       "structuredEvidence": []
     },
@@ -7061,7 +7061,7 @@
       "structuralLocator": "VM-21 / Section 10: Contract Holder Behavior Assumptions",
       "chunkingMethod": "hierarchical_structure",
       "retrievalEligible": false,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "context_only_parent",
       "structuredEvidence": []
     },
@@ -7157,7 +7157,7 @@
       "structuralLocator": "VM-21 / Section 10: Contract Holder Behavior Assumptions / A. General",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval",
       "structuredEvidence": []
     },
@@ -7267,7 +7267,7 @@
       "structuralLocator": "VM-21 / Section 10: Contract Holder Behavior Assumptions / B. Aggregate vs. Individual Margins",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval",
       "structuredEvidence": []
     },
@@ -7369,7 +7369,7 @@
       "structuralLocator": "VM-21 / Section 10: Contract Holder Behavior Assumptions / C. Sensitivity Testing",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval",
       "structuredEvidence": []
     },
@@ -7482,7 +7482,7 @@
       "structuralLocator": "VM-21 / Section 10: Contract Holder Behavior Assumptions / D. Specific Considerations and Requirements",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval",
       "structuredEvidence": []
     },
@@ -7584,7 +7584,7 @@
       "structuralLocator": "VM-21 / Section 10: Contract Holder Behavior Assumptions / E. Dynamic Assumptions",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval",
       "structuredEvidence": []
     },
@@ -7690,7 +7690,7 @@
       "structuralLocator": "VM-21 / Section 10: Contract Holder Behavior Assumptions / F. Consistency with the CTE Level",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval",
       "structuredEvidence": []
     },
@@ -7806,7 +7806,7 @@
       "structuralLocator": "VM-21 / Section 10: Contract Holder Behavior Assumptions / G. Additional Considerations and Requirements for Assumptions Applicable to Guaranteed Benefits",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval",
       "structuredEvidence": []
     },
@@ -7944,7 +7944,7 @@
       "structuralLocator": "VM-21 / Section 11: Guidance and Requirements for Setting Prudent Estimate Mortality Assumptions",
       "chunkingMethod": "hierarchical_structure",
       "retrievalEligible": false,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "context_only_parent",
       "structuredEvidence": [
         {
@@ -8067,7 +8067,7 @@
       "structuralLocator": "VM-21 / Section 11: Guidance and Requirements for Setting Prudent Estimate Mortality Assumptions / A. Overview",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval",
       "structuredEvidence": []
     },
@@ -8189,7 +8189,7 @@
       "structuralLocator": "VM-21 / Section 11: Guidance and Requirements for Setting Prudent Estimate Mortality Assumptions / B. Determination of Expected Mortality Curves",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval",
       "structuredEvidence": [
         {
@@ -8324,7 +8324,7 @@
       "structuralLocator": "VM-21 / Section 11: Guidance and Requirements for Setting Prudent Estimate Mortality Assumptions / C. Adjustment for Credibility to Determine Prudent Estimate Mortality",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval",
       "structuredEvidence": [
         {
@@ -8446,7 +8446,7 @@
       "structuralLocator": "VM-21 / Section 11: Guidance and Requirements for Setting Prudent Estimate Mortality Assumptions / D. Future Mortality Improvement",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval",
       "structuredEvidence": []
     },
@@ -8584,7 +8584,7 @@
       "structuralLocator": "VM-21 / Section 12: Other Guidance and Requirements for Assumptions",
       "chunkingMethod": "hierarchical_structure",
       "retrievalEligible": false,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "context_only_parent",
       "structuredEvidence": []
     },
@@ -8678,7 +8678,7 @@
       "structuralLocator": "VM-21 / Section 12: Other Guidance and Requirements for Assumptions / A. Overview",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval",
       "structuredEvidence": []
     },
@@ -8810,7 +8810,7 @@
       "structuralLocator": "VM-21 / Section 12: Other Guidance and Requirements for Assumptions / B. General Assumption Requirements",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval",
       "structuredEvidence": []
     },
@@ -8924,7 +8924,7 @@
       "structuralLocator": "VM-21 / Section 12: Other Guidance and Requirements for Assumptions / C. Assumption Margins",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval",
       "structuredEvidence": []
     },
@@ -9050,7 +9050,7 @@
       "structuralLocator": "VM-21 / Section 12: Other Guidance and Requirements for Assumptions / D. Expense Assumptions",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval",
       "structuredEvidence": []
     },
@@ -9168,7 +9168,7 @@
       "structuralLocator": "VM-21 / Section 13: Allocation of the Aggregate Reserve to the Contract Level",
       "chunkingMethod": "hierarchical_structure",
       "retrievalEligible": false,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "context_only_parent",
       "structuredEvidence": [
         {
@@ -9274,7 +9274,7 @@
       "structuralLocator": "VM-21 / Section 13: Allocation of the Aggregate Reserve to the Contract Level / A. Contract cash surrender value",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval",
       "structuredEvidence": []
     },
@@ -9390,7 +9390,7 @@
       "structuralLocator": "VM-21 / Section 13: Allocation of the Aggregate Reserve to the Contract Level / B. Allocated excess aggregate reserve",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": true,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "first_stage_retrieval",
       "structuredEvidence": [
         {
@@ -9503,7 +9503,7 @@
       "structuralLocator": "VM-21 / VM-21 closing boundary before the unnumbered separator and VM-22",
       "chunkingMethod": "hierarchical_structure",
       "retrievalEligible": false,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "context_only_parent",
       "structuredEvidence": []
     },
@@ -9599,7 +9599,7 @@
       "structuralLocator": "VM-21 / VM-21 closing boundary before the unnumbered separator and VM-22 / Intentional blank page 21-83",
       "chunkingMethod": "semantic_boundary",
       "retrievalEligible": false,
-      "promotionEligible": false,
+      "promotionEligible": true,
       "retrievalRole": "context_only_boundary",
       "structuredEvidence": []
     }
@@ -9643,6 +9643,8 @@
     "relationshipCandidatePath": "data/processed/relationship_registries/vm21-current-manual-relationship-candidates.json",
     "reviewPackagePath": "data/processed/review_packages/vm21-canonical-coverage-review-package.json",
     "focusedRetrievalEvaluationPath": "data/processed/review_packages/vm21-focused-retrieval-evaluation.json",
-    "structuredEvidencePath": "data/processed/review_packages/vm21-structured-evidence-inventory.json"
+    "structuredEvidencePath": "data/processed/review_packages/vm21-structured-evidence-inventory.json",
+    "promotionDecisionId": "vm21-2026-current-manual-promotion-2026-09-02",
+    "promotionDecisionPath": "data/manual-input/promotion-decisions/vm21-2026-current-manual-promotion.json"
   }
 }

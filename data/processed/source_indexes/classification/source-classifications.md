@@ -1,7 +1,7 @@
 # Document Processor classification summary
 
 - Manifest ID: `source-index-poc-2026-07-21`
-- Source packages classified: 24
+- Source packages classified: 25
 
 | Source | Domain | Document type | Recommended profile | Chunking strategy | Authority type | Confidence |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -15,6 +15,7 @@
 | VM-20 Remaining Prose and Appendix Coverage | naic_regulatory | valuation_manual_section | regulatory | hierarchical_structure | regulatory | high |
 | VM-20 Practice Note Companion Coverage | naic_regulatory | practice_note | regulatory | hierarchical_structure | companion | high |
 | VM-21: Requirements for Principle-Based Reserves for Variable Annuities | naic_regulatory | valuation_manual_section | calculation_and_assumptions | section_parent_to_complete_lettered_subsection_child | regulatory | high |
+| VM-22: Requirements for Principle-Based Reserves for Non-Variable Annuities | naic_regulatory | valuation_manual_section | calculation_and_assumptions | section_parent_to_complete_lettered_subsection_child | regulatory | high |
 | The Application of the Commissioners Reserve Valuation Method to Equity Indexed Life Insurance Policies | naic_regulatory | actuarial_guideline | regulatory | heading_first | regulatory | medium |
 | The Application of the Commissioners Reserve Valuation Method to Equity Indexed Life Insurance Policies | naic_regulatory | actuarial_guideline | regulatory | heading_first | regulatory | medium |
 | Model Governance: Some Considerations for Practicing Life Actuaries | naic_regulatory | practice_note | regulatory | heading_first | companion | high |

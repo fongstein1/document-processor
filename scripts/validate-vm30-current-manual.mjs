@@ -165,7 +165,7 @@ const main = async () => {
   for (const sourceId of vm20PromotedSourceIds) { const source = await readJson(path.join(sourceRoot, `${sourceId}.json`)); vm20Hashes.push(`${sourceId}:${sourceTextAggregate(source)}`); assert(source.processing.promotionStatus === 'promoted', `VM-20 source promotion regressed: ${sourceId}.`) }
   assert(sha256(vm20Hashes.join('\n')) === VM20_PROMOTED_SOURCE_TEXT_AGGREGATE_SHA256, 'VM-20 promoted prose source evidence changed during VM-30 work.')
   assert(await hashFile(structuredTablesPath) === VM20_STRUCTURED_TABLE_FILE_SHA256, 'VM-20 structured-table corpus changed during VM-30 work.')
-  assert(repositoryManifest.sourcePackageCount === 24 && repositoryManifest.chunkCount === 666 && repositoryManifest.extensions.promotionDecisionPaths.length === 4 && repositoryManifest.extensions.promotedSourcePackageCount === 9 && repositoryManifest.extensions.promotedChunkCount === 382, 'Repository manifest counts or promotion boundary mismatch after review-only VM-21 expansion.')
+  assert(repositoryManifest.sourcePackageCount === 25 && repositoryManifest.chunkCount === 749 && repositoryManifest.extensions.promotionDecisionPaths.length === 5 && repositoryManifest.extensions.promotedSourcePackageCount === 10 && repositoryManifest.extensions.promotedChunkCount === 460, 'Repository manifest counts or promotion boundary mismatch after VM-21 promotion and VM-22 review-only expansion.')
 
   const report = {
     schemaVersion: '1.0', reportId: 'vm30-current-manual-validation-2026', status: 'pass',

@@ -2,8 +2,8 @@
 
 ## Corpus summary
 
-- Source packages: 24
-- Canonical chunks: 666
+- Source packages: 25
+- Canonical chunks: 749
 - Retrieval questions: 50
 - Supported questions: 45
 - Unsupported questions: 5

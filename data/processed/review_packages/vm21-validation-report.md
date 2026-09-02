@@ -6,6 +6,6 @@
 - Focused retrieval top-1 / strict top-3: 18/22 / 22/22
 - Unsupported / ambiguity: 6/6 / 2/2
 - Support gate: 4/4
-- Governance: review-only / not promoted
+- Governance: canonical promoted; learner/app/RAG/vector/Copilot export remains separately blocked
 
-Independent review remains required.
+The canonical source package is promoted under the recorded independent-review decision; this validation report remains QA evidence.
