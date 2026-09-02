@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "request": {
+    "userAgent": "Document-Processor-Source-Acquisition/1.0 (+review-only-regulatory-intake)",
+    "timeoutSeconds": 45,
+    "retryCount": 2,
+    "retryDelaySeconds": 2,
+    "minimumDownloadBytes": 512
+  },
+  "sites": [
+    {
+      "siteId": "NAIC-Model-Laws",
+      "displayName": "NAIC Model Laws",
+      "discoveryUrl": "https://content.naic.org/model-laws",
+      "publisher": "National Association of Insurance Commissioners",
+      "sourceFamily": "NAIC Model Laws",
+      "allowedHosts": ["content.naic.org"],
+      "parser": "model-law-list",
+      "discoverySection": "Standard Nonforfeiture and Valuation (Model Numbers 805-830)",
+      "sectionStartPattern": "<p\\b[^>]*>\\s*<span\\b[^>]*>\\s*Model Numbers:\\s*</span>\\s*805-830\\s*</p>",
+      "sectionEndPattern": "</article>",
+      "referenceIdPatterns": ["\\b(?:MO|ST|PH)-\\d+\\b"],
+      "allowedReferenceIds": ["MO-805", "MO-808", "MO-820", "MO-822", "MO-830"],
+      "allowedDocumentPattern": "(?i)/model-law-(?:805|808|820|822|830)\\.pdf(?:$|[?#])",
+      "excludedDocumentPatterns": ["(?i)model-law-state-page-", "(?i)model-laws-project-history-", "(?i)\\b(?:ST|PH)-\\d+\\b"],
+      "expectedFileExtensions": [".pdf"],
+      "destinationSubdirectory": "01_NAIC_Current_Authority\\Model_Laws",
+      "defaultAuthorityClassification": "primary_regulatory_authority",
+      "documentType": "model_law",
+      "prefixReferenceId": false
+    },
+    {
+      "siteId": "NAIC-SAPWG-Adoptions",
+      "displayName": "NAIC SAPWG Adopted Revisions",
+      "discoveryUrl": "https://content.naic.org/committees/e/statutory-accounting-principles-wg/adoptions",
+      "publisher": "National Association of Insurance Commissioners",
+      "sourceFamily": "NAIC SAPWG Adopted Revisions",
+      "allowedHosts": ["content.naic.org"],
+      "parser": "section-table",
+      "sectionStartPattern": "<h3\\b[^>]*>\\s*{year}\\s+ADOPTIONS\\s*</h3>",
+      "sectionEndPattern": "<h3\\b[^>]*>\\s*{previousYear}\\s+ADOPTIONS\\s*</h3>",
+      "referenceIdPattern": "^\\d{2,4}-\\d{1,2}[A-Z]{0,4}$",
+      "allowedDocumentPattern": "(?i)/inline-files/.*\\.pdf(?:$|[?#])",
+      "excludedDocumentPatterns": [],
+      "expectedFileExtensions": [".pdf"],
+      "destinationSubdirectory": "01_NAIC_Current_Authority\\SAPWG_{year}_Adoptions",
+      "defaultAuthorityClassification": "adopted_change_authority",
+      "documentType": "adopted_revision_agenda_item",
+      "prefixReferenceId": true
+    }
+  ]
+}

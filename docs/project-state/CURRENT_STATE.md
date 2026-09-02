@@ -228,7 +228,7 @@ artifacts.
 
 ## Repo path
 
-`C:\Users\David\OneDrive\Documents\Document Processor`
+`C:\Dev\Document Processor`
 
 ## Current branch
 

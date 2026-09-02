@@ -3,6 +3,14 @@
 This repository is a durable document-processing workspace for actuarial,
 regulatory, and related governance material.
 
+## Authoritative local paths
+
+- Authoritative repository: `C:\Dev\Document Processor`
+- Authoritative external raw-source root: `C:\Dev\Document Processor Sources`
+- Retired legacy working locations: `C:\Users\David\OneDrive\Documents\Document Processor` and `C:\Users\David\OneDrive\Documents\Document Processor Sources`
+- Do not write new work to the retired OneDrive locations. They may remain temporarily for rollback, but are not active working locations.
+- Keep raw-source paths out of canonical regulatory metadata; use explicit external configuration or `DOCUMENT_PROCESSOR_SOURCE_ROOT` for acquisition tooling.
+
 ## Core rules
 
 - Keep JSON as the canonical machine-readable contract.
