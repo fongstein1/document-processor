@@ -1,5 +1,19 @@
 # Session Log
 
+## 2026-09-02 VM-21 promotion and VM-22 canonical candidate
+
+- Recorded the independent `APPROVE FOR CANONICAL PROMOTION` decision for the
+  reviewed current 2026 VM-21 package; the canonical source package is promoted
+  while its 20 relationships, 27 structured records, and downstream uses remain
+  separately governed and unpromoted.
+- Reused VM-22 retained batches 038-054 without source re-extraction and built
+  the 15-parent / 68-child / 83-chunk current-manual candidate for pages 227-318.
+- Added case-level VM-22 retrieval, generic four-case support-gate evidence,
+  source QA, structured-evidence inventory, 111 relationship candidates,
+  GREEN readiness assessment, validation, and independent-review handoff.
+- Confirmed VM-22 remains `review_only / not_promoted`; no promotion or push is
+  authorized until the narrow independent review is complete.
+
 ## 2026-09-01 VM-30 forensics and GitHub handoff
 
 - Completed the VM-30 reset/recommit and dropped-stash forensic adjudication.

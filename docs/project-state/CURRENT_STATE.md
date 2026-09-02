@@ -1,5 +1,29 @@
 # Current Project State
 
+## 2026-09-02 VM-21 promotion and VM-22 canonical candidate
+
+The independently approved current 2026 VM-21 package is now canonically
+promoted under `data/manual-input/promotion-decisions/vm21-2026-current-manual-promotion.json`.
+It remains exactly 15 structural parents, 63 child units, and 78 chunks; its
+20 relationship candidates and 27 structured evidence records remain pending,
+review-only, and unpromoted, and all downstream eligibility remains separately
+governed and blocked.
+
+The current 2026 VM-22 candidate reuses retained reviewed batches 038-054
+without source re-extraction. It contains 15 parents, 68 child units, and 83
+exact-text chunks across PDF pages 227-318, including the intentional blank
+closing page 318 and excluding page 319. Retrieval passes 21/22 supported
+top-1, 22/22 strict top-3, 2/2 unsupported, 1/1 ambiguity-safe, and 22/22
+current-authority top-1; the generic support gate passes 4/4. It has 111
+explicit-reference candidates and 6 structured-evidence records, all pending,
+review-only, and unpromoted. Processor readiness is GREEN with zero unresolved
+new generic failure classes, but independent VM-22 review is still required.
+
+VM-22 remains `review_only / not_promoted`, promotion-ineligible, and blocked
+from learner, application, RAG, vector, and Copilot use. The next milestone
+after independent VM-22 review is a controlled heterogeneous 20-50 document
+pilot if the review confirms the readiness conclusion.
+
 ## 2026-08-28 VM-21 current-manual canonical candidate
 
 Current 2026 VM-21 is now represented by one substantially complete,

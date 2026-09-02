@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "reportId": "vm22-current-manual-validation-2026",
+  "status": "pass",
+  "sourceIdentity": {
+    "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+    "sourceEditionId": "NAIC-VALUATION-MANUAL-2026",
+    "pageRange": {
+      "start": 227,
+      "end": 318
+    },
+    "aggregateExtractionSha256": "6bc8368b773b96cf865e3b8cdbec72595a696c8f63bfa2ecbae08ab30f111090"
+  },
+  "checks": {
+    "parents": 15,
+    "children": 68,
+    "totalChunks": 83,
+    "uniquePages": 92,
+    "exactSourceChunks": 83,
+    "sourceTextRewrites": 0,
+    "sourceReExtractionCount": 0,
+    "relationships": 111,
+    "structuredEvidenceRecords": 6,
+    "focusedQueries": 25,
+    "supportedTop1": 21,
+    "supportedStrictTop3": 22,
+    "unsupportedCorrect": 2,
+    "ambiguitySafe": 1,
+    "currentAuthorityTop1": 22,
+    "supportGateRegressions": 4,
+    "supportGateRegressionsPassed": 4
+  },
+  "readiness": {
+    "rating": "GREEN",
+    "newGenericFailureClassCount": 0
+  },
+  "governance": {
+    "reviewOnly": true,
+    "promotionStatus": "not_promoted",
+    "promotionEligible": false
+  },
+  "artifacts": {
+    "canonicalSourcePackage": "data/processed/source_indexes/sources/vm22-current-manual.json",
+    "sourceQa": "data/processed/review_packages/vm22-source-qa.json",
+    "reviewPackage": "data/processed/review_packages/vm22-canonical-coverage-review-package.json",
+    "focusedRetrievalEvaluation": "data/processed/review_packages/vm22-focused-retrieval-evaluation.json",
+    "supportGateRegression": "data/processed/review_packages/vm22-support-gate-regression.json",
+    "relationshipRegistry": "data/processed/relationship_registries/vm22-current-manual-relationship-candidates.json",
+    "structuredEvidence": "data/processed/review_packages/vm22-structured-evidence-inventory.json",
+    "processorReadiness": "data/processed/review_packages/vm22-processor-readiness-findings.json"
+  }
+}

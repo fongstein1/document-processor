@@ -1,0 +1,244 @@
+{
+  "schemaVersion": "1.0",
+  "inventoryId": "vm22-structured-evidence-inventory-2026",
+  "sourceId": "vm22-current-manual",
+  "recordCount": 6,
+  "tableOrMatrixCount": 6,
+  "formulaOrCalculationCount": 0,
+  "decision": "Review-only records identify source areas for structured inspection. Exact VM-22 source text remains authoritative; values are not recomputed.",
+  "governance": {
+    "reviewOnly": true,
+    "promotionStatus": "not_promoted",
+    "promotionEligible": false
+  },
+  "records": [
+    {
+      "structuredEvidenceId": "vm22-section-6-standard-projection-amount-c-prescribed-assumptions-table-6",
+      "sourceChunkId": "vm22-section-6-standard-projection-amount-c-prescribed-assumptions",
+      "sourceSection": "C. Prescribed Assumptions",
+      "pageStart": 253,
+      "pageEnd": 280,
+      "evidenceType": "table_or_formula",
+      "label": "Table 6",
+      "recommendedTreatment": "structured_table_or_matrix_candidate",
+      "sourceIdentity": {
+        "sourceId": "vm22-current-manual",
+        "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9"
+      },
+      "sourceLocator": {
+        "pageStart": 253,
+        "pageEnd": 280,
+        "sectionReference": "C. Prescribed Assumptions",
+        "chunkId": "vm22-section-6-standard-projection-amount-c-prescribed-assumptions"
+      },
+      "dimensions": {
+        "status": "requires_visual_structured_extraction",
+        "rowIdentity": "retained_only_in_exact_source_text",
+        "columnIdentity": "retained_only_in_exact_source_text"
+      },
+      "units": {
+        "status": "retained_in_exact_source_text_not_normalized"
+      },
+      "notesAndFootnotes": {
+        "status": "retained_with_governing_source_subsection"
+      },
+      "values": {
+        "rawAndDisplayValues": "retained_in_exact_source_text_not_recomputed"
+      },
+      "sourceTextSha256": "f205350f53f138e1814c898fcfd634a251bf435347078c8786f874e53738b2ef",
+      "authoritativeRepresentation": "exact_source_text_excerpt",
+      "reviewDecision": "pending",
+      "promotionStatus": "not_promoted"
+    },
+    {
+      "structuredEvidenceId": "vm22-section-6-standard-projection-amount-c-prescribed-assumptions-mortality-table",
+      "sourceChunkId": "vm22-section-6-standard-projection-amount-c-prescribed-assumptions",
+      "sourceSection": "C. Prescribed Assumptions",
+      "pageStart": 253,
+      "pageEnd": 280,
+      "evidenceType": "table_or_formula",
+      "label": "Mortality Table",
+      "recommendedTreatment": "structured_table_or_matrix_candidate",
+      "sourceIdentity": {
+        "sourceId": "vm22-current-manual",
+        "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9"
+      },
+      "sourceLocator": {
+        "pageStart": 253,
+        "pageEnd": 280,
+        "sectionReference": "C. Prescribed Assumptions",
+        "chunkId": "vm22-section-6-standard-projection-amount-c-prescribed-assumptions"
+      },
+      "dimensions": {
+        "status": "requires_visual_structured_extraction",
+        "rowIdentity": "retained_only_in_exact_source_text",
+        "columnIdentity": "retained_only_in_exact_source_text"
+      },
+      "units": {
+        "status": "retained_in_exact_source_text_not_normalized"
+      },
+      "notesAndFootnotes": {
+        "status": "retained_with_governing_source_subsection"
+      },
+      "values": {
+        "rawAndDisplayValues": "retained_in_exact_source_text_not_recomputed"
+      },
+      "sourceTextSha256": "f205350f53f138e1814c898fcfd634a251bf435347078c8786f874e53738b2ef",
+      "authoritativeRepresentation": "exact_source_text_excerpt",
+      "reviewDecision": "pending",
+      "promotionStatus": "not_promoted"
+    },
+    {
+      "structuredEvidenceId": "vm22-section-6-standard-projection-amount-c-prescribed-assumptions-mortality-table",
+      "sourceChunkId": "vm22-section-6-standard-projection-amount-c-prescribed-assumptions",
+      "sourceSection": "C. Prescribed Assumptions",
+      "pageStart": 253,
+      "pageEnd": 280,
+      "evidenceType": "table_or_formula",
+      "label": "mortality table",
+      "recommendedTreatment": "structured_table_or_matrix_candidate",
+      "sourceIdentity": {
+        "sourceId": "vm22-current-manual",
+        "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9"
+      },
+      "sourceLocator": {
+        "pageStart": 253,
+        "pageEnd": 280,
+        "sectionReference": "C. Prescribed Assumptions",
+        "chunkId": "vm22-section-6-standard-projection-amount-c-prescribed-assumptions"
+      },
+      "dimensions": {
+        "status": "requires_visual_structured_extraction",
+        "rowIdentity": "retained_only_in_exact_source_text",
+        "columnIdentity": "retained_only_in_exact_source_text"
+      },
+      "units": {
+        "status": "retained_in_exact_source_text_not_normalized"
+      },
+      "notesAndFootnotes": {
+        "status": "retained_with_governing_source_subsection"
+      },
+      "values": {
+        "rawAndDisplayValues": "retained_in_exact_source_text_not_recomputed"
+      },
+      "sourceTextSha256": "f205350f53f138e1814c898fcfd634a251bf435347078c8786f874e53738b2ef",
+      "authoritativeRepresentation": "exact_source_text_excerpt",
+      "reviewDecision": "pending",
+      "promotionStatus": "not_promoted"
+    },
+    {
+      "structuredEvidenceId": "vm22-section-7-stochastic-exclusion-c-stochastic-exclusion-ratio-test-mortality-table",
+      "sourceChunkId": "vm22-section-7-stochastic-exclusion-c-stochastic-exclusion-ratio-test",
+      "sourceSection": "C. Stochastic Exclusion Ratio Test",
+      "pageStart": 281,
+      "pageEnd": 284,
+      "evidenceType": "table_or_formula",
+      "label": "mortality table",
+      "recommendedTreatment": "structured_table_or_matrix_candidate",
+      "sourceIdentity": {
+        "sourceId": "vm22-current-manual",
+        "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9"
+      },
+      "sourceLocator": {
+        "pageStart": 281,
+        "pageEnd": 284,
+        "sectionReference": "C. Stochastic Exclusion Ratio Test",
+        "chunkId": "vm22-section-7-stochastic-exclusion-c-stochastic-exclusion-ratio-test"
+      },
+      "dimensions": {
+        "status": "requires_visual_structured_extraction",
+        "rowIdentity": "retained_only_in_exact_source_text",
+        "columnIdentity": "retained_only_in_exact_source_text"
+      },
+      "units": {
+        "status": "retained_in_exact_source_text_not_normalized"
+      },
+      "notesAndFootnotes": {
+        "status": "retained_with_governing_source_subsection"
+      },
+      "values": {
+        "rawAndDisplayValues": "retained_in_exact_source_text_not_recomputed"
+      },
+      "sourceTextSha256": "34d5d91f68ccd71a771d3cadbb6beecd8b22950f1e0a3bf1ce128a9d3e47a442",
+      "authoritativeRepresentation": "exact_source_text_excerpt",
+      "reviewDecision": "pending",
+      "promotionStatus": "not_promoted"
+    },
+    {
+      "structuredEvidenceId": "vm22-section-11-mortality-c-credibility-adjustment-mortality-table",
+      "sourceChunkId": "vm22-section-11-mortality-c-credibility-adjustment",
+      "sourceSection": "C. Adjustment for Credibility to Determine Prudent Estimate Mortality",
+      "pageStart": 307,
+      "pageEnd": 308,
+      "evidenceType": "table_or_formula",
+      "label": "mortality table",
+      "recommendedTreatment": "structured_table_or_matrix_candidate",
+      "sourceIdentity": {
+        "sourceId": "vm22-current-manual",
+        "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9"
+      },
+      "sourceLocator": {
+        "pageStart": 307,
+        "pageEnd": 308,
+        "sectionReference": "C. Adjustment for Credibility to Determine Prudent Estimate Mortality",
+        "chunkId": "vm22-section-11-mortality-c-credibility-adjustment"
+      },
+      "dimensions": {
+        "status": "requires_visual_structured_extraction",
+        "rowIdentity": "retained_only_in_exact_source_text",
+        "columnIdentity": "retained_only_in_exact_source_text"
+      },
+      "units": {
+        "status": "retained_in_exact_source_text_not_normalized"
+      },
+      "notesAndFootnotes": {
+        "status": "retained_with_governing_source_subsection"
+      },
+      "values": {
+        "rawAndDisplayValues": "retained_in_exact_source_text_not_recomputed"
+      },
+      "sourceTextSha256": "2ed7e661b6a693bfc2ab62725e4add611bd2207a82b872934230df33f7a54404",
+      "authoritativeRepresentation": "exact_source_text_excerpt",
+      "reviewDecision": "pending",
+      "promotionStatus": "not_promoted"
+    },
+    {
+      "structuredEvidenceId": "vm22-section-13-contract-allocation-e-example-table-1",
+      "sourceChunkId": "vm22-section-13-contract-allocation-e-example",
+      "sourceSection": "E. Example",
+      "pageStart": 316,
+      "pageEnd": 317,
+      "evidenceType": "table_or_formula",
+      "label": "Table 1",
+      "recommendedTreatment": "structured_table_or_matrix_candidate",
+      "sourceIdentity": {
+        "sourceId": "vm22-current-manual",
+        "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9"
+      },
+      "sourceLocator": {
+        "pageStart": 316,
+        "pageEnd": 317,
+        "sectionReference": "E. Example",
+        "chunkId": "vm22-section-13-contract-allocation-e-example"
+      },
+      "dimensions": {
+        "status": "requires_visual_structured_extraction",
+        "rowIdentity": "retained_only_in_exact_source_text",
+        "columnIdentity": "retained_only_in_exact_source_text"
+      },
+      "units": {
+        "status": "retained_in_exact_source_text_not_normalized"
+      },
+      "notesAndFootnotes": {
+        "status": "retained_with_governing_source_subsection"
+      },
+      "values": {
+        "rawAndDisplayValues": "retained_in_exact_source_text_not_recomputed"
+      },
+      "sourceTextSha256": "db48c1d3740d051787310341dd08a3655ad62db14de8e1c35d90474d72ef815f",
+      "authoritativeRepresentation": "exact_source_text_excerpt",
+      "reviewDecision": "pending",
+      "promotionStatus": "not_promoted"
+    }
+  ]
+}

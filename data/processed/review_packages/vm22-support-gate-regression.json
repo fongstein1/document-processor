@@ -1,0 +1,518 @@
+{
+  "schemaVersion": "1.0",
+  "artifactType": "formal_requirement_support_gate_regression",
+  "status": "pass",
+  "productionEvidenceWindow": 3,
+  "genericBoundary": "Formal VM-22 requirement support requires relevant actual VM-22 source text inside ranks 1-3; other-manual evidence, rank-4 correct evidence, and wrong-topic VM-22 text are insufficient.",
+  "fixtureSources": [
+    {
+      "sourceId": "vm22-current-manual",
+      "sourceFamilyId": "valuation_manual_pdfs",
+      "authorityLevel": "manual_section"
+    },
+    {
+      "sourceId": "vm20-canonical-coverage",
+      "sourceFamilyId": "valuation_manual_pdfs",
+      "authorityLevel": "manual_section"
+    },
+    {
+      "sourceId": "vm30-current-manual",
+      "sourceFamilyId": "valuation_manual_pdfs",
+      "authorityLevel": "manual_section"
+    }
+  ],
+  "caseCount": 4,
+  "passedCaseCount": 4,
+  "cases": [
+    {
+      "testId": "other-manual-methodology-cannot-support-vm22-requirement",
+      "description": "VM-20 and VM-30 evidence cannot substitute for requested formal VM-22 authority.",
+      "query": "What prescribed interest rate scenario generator does VM-22 require?",
+      "requestedSourceAuthority": {
+        "sourceIds": [
+          "vm22-current-manual"
+        ],
+        "informationTypes": [
+          "formal_requirement"
+        ]
+      },
+      "requiredEvidenceTerms": [
+        "interest rate scenario generator"
+      ],
+      "productionEvidenceWindowSize": 3,
+      "fullRanking": [
+        {
+          "rank": 1,
+          "chunkId": "vm20-canonical-coverage-vm20-role-map-sections-3-4-5-child-001",
+          "sourceId": "vm20-canonical-coverage",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 20,
+          "sectionReference": "Section 2: Minimum Reserve (role map statement)",
+          "pageStart": 48,
+          "pageEnd": 48,
+          "sourceTextType": "actual_extracted_source_text",
+          "sourceTextExcerpt": "[p. 48] Requirements for Principle -Based Reserves for Life Products VM-20 \n� 2025 National Associati on of Insurance Commissioners 20-4 the test and documented the results. \na. For the group of policies and riders for which the company did not compute the \nDR nor the SR: the sum of the policy minimum NPRs for those policies. \nb. For the group of policies and riders for which the company did not compute the \nSR but did compute the DR: the sum of the policy minimum NPRs for those \npolicies plus the excess, if any, of the DR for those policies determined pursuant \nto Section 4 over the quantity (A �B), where A = the sum of the policy minimum \nNPRs for those policies, and B = any due and deferred premium asset held on \naccount of those policies. \nc. For the group of policies and riders for which the company computes all three \nreserve calculations: the sum of the policy minimum NPRs for those policies plus \nthe excess, if any, of the greater of the DR for those policies determined pursuant \nto Section 4 and the SR for those policies determined pursuant to Section 5 over \nthe quantity (A �B), where A = the sum of the policy minimum NPRs for those \npolicies, and B = any due and deferred premium asset held on account of those \npolicies. \nB. Section 3 defines the requirements for the policy NPR . Section 4 defines the requirements for the \nDR, and Section 4.C defines how that reserve is attributed to a VM-20 reserving category . Section \n5 defines the requirements for the SR, and Section 5.G defines how that reserve is determined for \neach VM-20 reserving category . \nC. The reserve for each VM-20 reserving category as determined in Section 2. A.1, Section 2. A.2 or \nSection 2. A.3 shall be allocated to each policy within that VM-20 reserving category in the same \nproportion as the minimum NPR for that policy to the minimum NPR for the VM-20 reserving \ncategory with the exception to make best efforts to minimize allocating the deterministic or SR in \nexcess of the net premium reserve, with any adjustment for due and deferred premiums, to policies \nwhich did not produce this excess. A clear example is to use the NPR per policy in Section 2.A.3.a \nas the allocated reserve per policy , given that no deterministic or SR is used in Section 2.A.3.a . \nD. The reserves for supplemental benefits and riders shall be calculated consistent with the \nrequirements for �Riders and Supplemental Benefits� in Section II , Reserve Requirements ."
+        },
+        {
+          "rank": 2,
+          "chunkId": "vm30-section-1-a-general-1-aom-requirement-scope",
+          "sourceId": "vm30-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 19,
+          "sectionReference": "1. AOM requirement scope and actuarial opinion meaning",
+          "pageStart": 325,
+          "pageEnd": 325,
+          "sourceTextType": "actual_extracted_source_text",
+          "sourceTextExcerpt": "1. The following provisions contain the requirements for the actuarial opinion of reserves and \nfor supporting actuarial memoranda in accordance with Section 3 of Model #820 , and are \ncollectively referred to as Actuarial Opinion and Memorandum ( AOM ) requirements. For \npurposes of these VM -30 requirements , the term “actuarial opinion” means the opinion of \nan appointed actuary regarding the adequacy of reserves and related actuarial items \npursuant to these AOM requirements for companies that file the life, A&H annual \nstatement or the fraternal annual statement."
+        }
+      ],
+      "productionWindowEvidence": [
+        {
+          "rank": 1,
+          "chunkId": "vm20-canonical-coverage-vm20-role-map-sections-3-4-5-child-001",
+          "sourceId": "vm20-canonical-coverage",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 20,
+          "sectionReference": "Section 2: Minimum Reserve (role map statement)",
+          "pageStart": 48,
+          "pageEnd": 48,
+          "sourceTextType": "actual_extracted_source_text",
+          "sourceTextExcerpt": "[p. 48] Requirements for Principle -Based Reserves for Life Products VM-20 \n� 2025 National Associati on of Insurance Commissioners 20-4 the test and documented the results. \na. For the group of policies and riders for which the company did not compute the \nDR nor the SR: the sum of the policy minimum NPRs for those policies. \nb. For the group of policies and riders for which the company did not compute the \nSR but did compute the DR: the sum of the policy minimum NPRs for those \npolicies plus the excess, if any, of the DR for those policies determined pursuant \nto Section 4 over the quantity (A �B), where A = the sum of the policy minimum \nNPRs for those policies, and B = any due and deferred premium asset held on \naccount of those policies. \nc. For the group of policies and riders for which the company computes all three \nreserve calculations: the sum of the policy minimum NPRs for those policies plus \nthe excess, if any, of the greater of the DR for those policies determined pursuant \nto Section 4 and the SR for those policies determined pursuant to Section 5 over \nthe quantity (A �B), where A = the sum of the policy minimum NPRs for those \npolicies, and B = any due and deferred premium asset held on account of those \npolicies. \nB. Section 3 defines the requirements for the policy NPR . Section 4 defines the requirements for the \nDR, and Section 4.C defines how that reserve is attributed to a VM-20 reserving category . Section \n5 defines the requirements for the SR, and Section 5.G defines how that reserve is determined for \neach VM-20 reserving category . \nC. The reserve for each VM-20 reserving category as determined in Section 2. A.1, Section 2. A.2 or \nSection 2. A.3 shall be allocated to each policy within that VM-20 reserving category in the same \nproportion as the minimum NPR for that policy to the minimum NPR for the VM-20 reserving \ncategory with the exception to make best efforts to minimize allocating the deterministic or SR in \nexcess of the net premium reserve, with any adjustment for due and deferred premiums, to policies \nwhich did not produce this excess. A clear example is to use the NPR per policy in Section 2.A.3.a \nas the allocated reserve per policy , given that no deterministic or SR is used in Section 2.A.3.a . \nD. The reserves for supplemental benefits and riders shall be calculated consistent with the \nrequirements for �Riders and Supplemental Benefits� in Section II , Reserve Requirements ."
+        },
+        {
+          "rank": 2,
+          "chunkId": "vm30-section-1-a-general-1-aom-requirement-scope",
+          "sourceId": "vm30-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 19,
+          "sectionReference": "1. AOM requirement scope and actuarial opinion meaning",
+          "pageStart": 325,
+          "pageEnd": 325,
+          "sourceTextType": "actual_extracted_source_text",
+          "sourceTextExcerpt": "1. The following provisions contain the requirements for the actuarial opinion of reserves and \nfor supporting actuarial memoranda in accordance with Section 3 of Model #820 , and are \ncollectively referred to as Actuarial Opinion and Memorandum ( AOM ) requirements. For \npurposes of these VM -30 requirements , the term “actuarial opinion” means the opinion of \nan appointed actuary regarding the adequacy of reserves and related actuarial items \npursuant to these AOM requirements for companies that file the life, A&H annual \nstatement or the fraternal annual statement."
+        }
+      ],
+      "supportState": "unsupported",
+      "evidenceSufficient": false,
+      "reasonCode": "missing_requested_formal_requirement_source",
+      "expectedSupportState": "unsupported",
+      "expectedReasonCode": "missing_requested_formal_requirement_source",
+      "passed": true,
+      "decision": {
+        "supportState": "unsupported",
+        "evidenceSufficient": false,
+        "reasonCode": "missing_requested_formal_requirement_source",
+        "reason": "The production evidence window does not contain actual source text from the requested formal requirement source (vm22-current-manual). Related methodology or companion evidence cannot substitute for it.",
+        "requestedInformationTypes": [
+          "formal_requirement"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm20-canonical-coverage-vm20-role-map-sections-3-4-5-child-001",
+            "sourceId": "vm20-canonical-coverage",
+            "score": 20,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm30-section-1-a-general-1-aom-requirement-scope",
+            "sourceId": "vm30-current-manual",
+            "score": 19,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": "The production evidence window does not contain actual source text from the requested formal requirement source (vm22-current-manual). Related methodology or companion evidence cannot substitute for it.",
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 20,
+          "matches": [
+            {
+              "chunkId": "vm20-canonical-coverage-vm20-role-map-sections-3-4-5-child-001",
+              "score": 20
+            },
+            {
+              "chunkId": "vm30-section-1-a-general-1-aom-requirement-scope",
+              "score": 19
+            }
+          ]
+        },
+        "lowScore": false
+      }
+    },
+    {
+      "testId": "vm22-evidence-at-rank-four-is-outside-production-window",
+      "description": "Correct VM-22 evidence at rank 4 remains outside the production evidence window.",
+      "query": "What prescribed interest rate scenario generator does VM-22 require?",
+      "requestedSourceAuthority": {
+        "sourceIds": [
+          "vm22-current-manual"
+        ],
+        "informationTypes": [
+          "formal_requirement"
+        ]
+      },
+      "requiredEvidenceTerms": [
+        "interest rate scenario generator"
+      ],
+      "productionEvidenceWindowSize": 3,
+      "fullRanking": [
+        {
+          "rank": 1,
+          "chunkId": "vm20-canonical-coverage-vm20-role-map-sections-3-4-5-child-001",
+          "sourceId": "vm20-canonical-coverage",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 20,
+          "sectionReference": "Section 2: Minimum Reserve (role map statement)",
+          "pageStart": 48,
+          "pageEnd": 48,
+          "sourceTextType": "actual_extracted_source_text",
+          "sourceTextExcerpt": "[p. 48] Requirements for Principle -Based Reserves for Life Products VM-20 \n� 2025 National Associati on of Insurance Commissioners 20-4 the test and documented the results. \na. For the group of policies and riders for which the company did not compute the \nDR nor the SR: the sum of the policy minimum NPRs for those policies. \nb. For the group of policies and riders for which the company did not compute the \nSR but did compute the DR: the sum of the policy minimum NPRs for those \npolicies plus the excess, if any, of the DR for those policies determined pursuant \nto Section 4 over the quantity (A �B), where A = the sum of the policy minimum \nNPRs for those policies, and B = any due and deferred premium asset held on \naccount of those policies. \nc. For the group of policies and riders for which the company computes all three \nreserve calculations: the sum of the policy minimum NPRs for those policies plus \nthe excess, if any, of the greater of the DR for those policies determined pursuant \nto Section 4 and the SR for those policies determined pursuant to Section 5 over \nthe quantity (A �B), where A = the sum of the policy minimum NPRs for those \npolicies, and B = any due and deferred premium asset held on account of those \npolicies. \nB. Section 3 defines the requirements for the policy NPR . Section 4 defines the requirements for the \nDR, and Section 4.C defines how that reserve is attributed to a VM-20 reserving category . Section \n5 defines the requirements for the SR, and Section 5.G defines how that reserve is determined for \neach VM-20 reserving category . \nC. The reserve for each VM-20 reserving category as determined in Section 2. A.1, Section 2. A.2 or \nSection 2. A.3 shall be allocated to each policy within that VM-20 reserving category in the same \nproportion as the minimum NPR for that policy to the minimum NPR for the VM-20 reserving \ncategory with the exception to make best efforts to minimize allocating the deterministic or SR in \nexcess of the net premium reserve, with any adjustment for due and deferred premiums, to policies \nwhich did not produce this excess. A clear example is to use the NPR per policy in Section 2.A.3.a \nas the allocated reserve per policy , given that no deterministic or SR is used in Section 2.A.3.a . \nD. The reserves for supplemental benefits and riders shall be calculated consistent with the \nrequirements for �Riders and Supplemental Benefits� in Section II , Reserve Requirements ."
+        },
+        {
+          "rank": 2,
+          "chunkId": "vm30-section-1-a-general-1-aom-requirement-scope",
+          "sourceId": "vm30-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 19,
+          "sectionReference": "1. AOM requirement scope and actuarial opinion meaning",
+          "pageStart": 325,
+          "pageEnd": 325,
+          "sourceTextType": "actual_extracted_source_text",
+          "sourceTextExcerpt": "1. The following provisions contain the requirements for the actuarial opinion of reserves and \nfor supporting actuarial memoranda in accordance with Section 3 of Model #820 , and are \ncollectively referred to as Actuarial Opinion and Memorandum ( AOM ) requirements. For \npurposes of these VM -30 requirements , the term “actuarial opinion” means the opinion of \nan appointed actuary regarding the adequacy of reserves and related actuarial items \npursuant to these AOM requirements for companies that file the life, A&H annual \nstatement or the fraternal annual statement."
+        },
+        {
+          "rank": 3,
+          "chunkId": "vm20-canonical-coverage-vm20-role-map-sections-3-4-5-child-002",
+          "sourceId": "vm20-canonical-coverage",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 18,
+          "sectionReference": "Section 2: Minimum Reserve (role map statement)",
+          "pageStart": 48,
+          "pageEnd": 48,
+          "sourceTextType": "actual_extracted_source_text",
+          "sourceTextExcerpt": "E. The company may calculate the DR and the SR as of a date no earlier than three months before the \nvaluation date, using relevant company data, provided an appropriate method is used to adjust those \nreserves to the valuation date. Company data used for experience studies to determine prudent \nestimate assumptions are not subject to this three -month limitation. \nF. If a company has separate account business, the company shall allocate the minimum reserve \nbetween the general and separate accounts subject to the following: \n1. The amount allocated to the general account shall not be less than zero and shall include \nany liability related to contractual guarantees provided by the general account . \n2. The amount allocated to the separate account shall not be less than the sum of the cash \nsurrender values and not be greater than the sum of the account values attributable to the \nseparate account portion of all such contracts. \nG. A company may use simplifications, approximations and modeling efficiency techniques to \ncalculate the NPR , the DR and/or the SR required by this section if the company can demonstrate \nthat the use of such techniques does not understate the reserve by a material amount , and the \nexpected value of the reserve calculated using simplifications, approximations and modeling"
+        },
+        {
+          "rank": 4,
+          "chunkId": "vm22-section-8-scenario-generation-b-interest-rate-generator",
+          "sourceId": "vm22-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 17,
+          "sectionReference": "B. Prescribed Interest Rate Scenario Generator",
+          "pageStart": 287,
+          "pageEnd": 287,
+          "sourceTextType": "actual_extracted_source_text",
+          "sourceTextExcerpt": "B. Prescribed Interest Rate Scenario Generator \n1. Treasury Department interest rate curves shall be determined on a stochastic basis using the \nprescribed interest rate scenario s, or scenarios based on a non -prescribed generator that meets \nthe requirements described in Section 8.E. \n2. The prescribed interest rate scenarios can be found on Conning’s website address, \nhttps://naic.conning.com/scenariofiles ."
+        }
+      ],
+      "productionWindowEvidence": [
+        {
+          "rank": 1,
+          "chunkId": "vm20-canonical-coverage-vm20-role-map-sections-3-4-5-child-001",
+          "sourceId": "vm20-canonical-coverage",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 20,
+          "sectionReference": "Section 2: Minimum Reserve (role map statement)",
+          "pageStart": 48,
+          "pageEnd": 48,
+          "sourceTextType": "actual_extracted_source_text",
+          "sourceTextExcerpt": "[p. 48] Requirements for Principle -Based Reserves for Life Products VM-20 \n� 2025 National Associati on of Insurance Commissioners 20-4 the test and documented the results. \na. For the group of policies and riders for which the company did not compute the \nDR nor the SR: the sum of the policy minimum NPRs for those policies. \nb. For the group of policies and riders for which the company did not compute the \nSR but did compute the DR: the sum of the policy minimum NPRs for those \npolicies plus the excess, if any, of the DR for those policies determined pursuant \nto Section 4 over the quantity (A �B), where A = the sum of the policy minimum \nNPRs for those policies, and B = any due and deferred premium asset held on \naccount of those policies. \nc. For the group of policies and riders for which the company computes all three \nreserve calculations: the sum of the policy minimum NPRs for those policies plus \nthe excess, if any, of the greater of the DR for those policies determined pursuant \nto Section 4 and the SR for those policies determined pursuant to Section 5 over \nthe quantity (A �B), where A = the sum of the policy minimum NPRs for those \npolicies, and B = any due and deferred premium asset held on account of those \npolicies. \nB. Section 3 defines the requirements for the policy NPR . Section 4 defines the requirements for the \nDR, and Section 4.C defines how that reserve is attributed to a VM-20 reserving category . Section \n5 defines the requirements for the SR, and Section 5.G defines how that reserve is determined for \neach VM-20 reserving category . \nC. The reserve for each VM-20 reserving category as determined in Section 2. A.1, Section 2. A.2 or \nSection 2. A.3 shall be allocated to each policy within that VM-20 reserving category in the same \nproportion as the minimum NPR for that policy to the minimum NPR for the VM-20 reserving \ncategory with the exception to make best efforts to minimize allocating the deterministic or SR in \nexcess of the net premium reserve, with any adjustment for due and deferred premiums, to policies \nwhich did not produce this excess. A clear example is to use the NPR per policy in Section 2.A.3.a \nas the allocated reserve per policy , given that no deterministic or SR is used in Section 2.A.3.a . \nD. The reserves for supplemental benefits and riders shall be calculated consistent with the \nrequirements for �Riders and Supplemental Benefits� in Section II , Reserve Requirements ."
+        },
+        {
+          "rank": 2,
+          "chunkId": "vm30-section-1-a-general-1-aom-requirement-scope",
+          "sourceId": "vm30-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 19,
+          "sectionReference": "1. AOM requirement scope and actuarial opinion meaning",
+          "pageStart": 325,
+          "pageEnd": 325,
+          "sourceTextType": "actual_extracted_source_text",
+          "sourceTextExcerpt": "1. The following provisions contain the requirements for the actuarial opinion of reserves and \nfor supporting actuarial memoranda in accordance with Section 3 of Model #820 , and are \ncollectively referred to as Actuarial Opinion and Memorandum ( AOM ) requirements. For \npurposes of these VM -30 requirements , the term “actuarial opinion” means the opinion of \nan appointed actuary regarding the adequacy of reserves and related actuarial items \npursuant to these AOM requirements for companies that file the life, A&H annual \nstatement or the fraternal annual statement."
+        },
+        {
+          "rank": 3,
+          "chunkId": "vm20-canonical-coverage-vm20-role-map-sections-3-4-5-child-002",
+          "sourceId": "vm20-canonical-coverage",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 18,
+          "sectionReference": "Section 2: Minimum Reserve (role map statement)",
+          "pageStart": 48,
+          "pageEnd": 48,
+          "sourceTextType": "actual_extracted_source_text",
+          "sourceTextExcerpt": "E. The company may calculate the DR and the SR as of a date no earlier than three months before the \nvaluation date, using relevant company data, provided an appropriate method is used to adjust those \nreserves to the valuation date. Company data used for experience studies to determine prudent \nestimate assumptions are not subject to this three -month limitation. \nF. If a company has separate account business, the company shall allocate the minimum reserve \nbetween the general and separate accounts subject to the following: \n1. The amount allocated to the general account shall not be less than zero and shall include \nany liability related to contractual guarantees provided by the general account . \n2. The amount allocated to the separate account shall not be less than the sum of the cash \nsurrender values and not be greater than the sum of the account values attributable to the \nseparate account portion of all such contracts. \nG. A company may use simplifications, approximations and modeling efficiency techniques to \ncalculate the NPR , the DR and/or the SR required by this section if the company can demonstrate \nthat the use of such techniques does not understate the reserve by a material amount , and the \nexpected value of the reserve calculated using simplifications, approximations and modeling"
+        }
+      ],
+      "supportState": "unsupported",
+      "evidenceSufficient": false,
+      "reasonCode": "missing_requested_formal_requirement_source",
+      "expectedSupportState": "unsupported",
+      "expectedReasonCode": "missing_requested_formal_requirement_source",
+      "passed": true,
+      "decision": {
+        "supportState": "unsupported",
+        "evidenceSufficient": false,
+        "reasonCode": "missing_requested_formal_requirement_source",
+        "reason": "The production evidence window does not contain actual source text from the requested formal requirement source (vm22-current-manual). Related methodology or companion evidence cannot substitute for it.",
+        "requestedInformationTypes": [
+          "formal_requirement"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm20-canonical-coverage-vm20-role-map-sections-3-4-5-child-001",
+            "sourceId": "vm20-canonical-coverage",
+            "score": 20,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm30-section-1-a-general-1-aom-requirement-scope",
+            "sourceId": "vm30-current-manual",
+            "score": 19,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm20-canonical-coverage-vm20-role-map-sections-3-4-5-child-002",
+            "sourceId": "vm20-canonical-coverage",
+            "score": 18,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": "The production evidence window does not contain actual source text from the requested formal requirement source (vm22-current-manual). Related methodology or companion evidence cannot substitute for it.",
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 20,
+          "matches": [
+            {
+              "chunkId": "vm20-canonical-coverage-vm20-role-map-sections-3-4-5-child-001",
+              "score": 20
+            },
+            {
+              "chunkId": "vm30-section-1-a-general-1-aom-requirement-scope",
+              "score": 19
+            },
+            {
+              "chunkId": "vm20-canonical-coverage-vm20-role-map-sections-3-4-5-child-002",
+              "score": 18
+            }
+          ]
+        },
+        "lowScore": false
+      }
+    },
+    {
+      "testId": "vm22-evidence-inside-top-three-supports-request",
+      "description": "Correct relevant VM-22 evidence inside ranks 1-3 supports the request.",
+      "query": "What prescribed interest rate scenario generator does VM-22 require?",
+      "requestedSourceAuthority": {
+        "sourceIds": [
+          "vm22-current-manual"
+        ],
+        "informationTypes": [
+          "formal_requirement"
+        ]
+      },
+      "requiredEvidenceTerms": [
+        "interest rate scenario generator"
+      ],
+      "productionEvidenceWindowSize": 3,
+      "fullRanking": [
+        {
+          "rank": 1,
+          "chunkId": "vm20-canonical-coverage-vm20-role-map-sections-3-4-5-child-001",
+          "sourceId": "vm20-canonical-coverage",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 20,
+          "sectionReference": "Section 2: Minimum Reserve (role map statement)",
+          "pageStart": 48,
+          "pageEnd": 48,
+          "sourceTextType": "actual_extracted_source_text",
+          "sourceTextExcerpt": "[p. 48] Requirements for Principle -Based Reserves for Life Products VM-20 \n� 2025 National Associati on of Insurance Commissioners 20-4 the test and documented the results. \na. For the group of policies and riders for which the company did not compute the \nDR nor the SR: the sum of the policy minimum NPRs for those policies. \nb. For the group of policies and riders for which the company did not compute the \nSR but did compute the DR: the sum of the policy minimum NPRs for those \npolicies plus the excess, if any, of the DR for those policies determined pursuant \nto Section 4 over the quantity (A �B), where A = the sum of the policy minimum \nNPRs for those policies, and B = any due and deferred premium asset held on \naccount of those policies. \nc. For the group of policies and riders for which the company computes all three \nreserve calculations: the sum of the policy minimum NPRs for those policies plus \nthe excess, if any, of the greater of the DR for those policies determined pursuant \nto Section 4 and the SR for those policies determined pursuant to Section 5 over \nthe quantity (A �B), where A = the sum of the policy minimum NPRs for those \npolicies, and B = any due and deferred premium asset held on account of those \npolicies. \nB. Section 3 defines the requirements for the policy NPR . Section 4 defines the requirements for the \nDR, and Section 4.C defines how that reserve is attributed to a VM-20 reserving category . Section \n5 defines the requirements for the SR, and Section 5.G defines how that reserve is determined for \neach VM-20 reserving category . \nC. The reserve for each VM-20 reserving category as determined in Section 2. A.1, Section 2. A.2 or \nSection 2. A.3 shall be allocated to each policy within that VM-20 reserving category in the same \nproportion as the minimum NPR for that policy to the minimum NPR for the VM-20 reserving \ncategory with the exception to make best efforts to minimize allocating the deterministic or SR in \nexcess of the net premium reserve, with any adjustment for due and deferred premiums, to policies \nwhich did not produce this excess. A clear example is to use the NPR per policy in Section 2.A.3.a \nas the allocated reserve per policy , given that no deterministic or SR is used in Section 2.A.3.a . \nD. The reserves for supplemental benefits and riders shall be calculated consistent with the \nrequirements for �Riders and Supplemental Benefits� in Section II , Reserve Requirements ."
+        },
+        {
+          "rank": 2,
+          "chunkId": "vm22-section-8-scenario-generation-b-interest-rate-generator",
+          "sourceId": "vm22-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 19,
+          "sectionReference": "B. Prescribed Interest Rate Scenario Generator",
+          "pageStart": 287,
+          "pageEnd": 287,
+          "sourceTextType": "actual_extracted_source_text",
+          "sourceTextExcerpt": "B. Prescribed Interest Rate Scenario Generator \n1. Treasury Department interest rate curves shall be determined on a stochastic basis using the \nprescribed interest rate scenario s, or scenarios based on a non -prescribed generator that meets \nthe requirements described in Section 8.E. \n2. The prescribed interest rate scenarios can be found on Conning’s website address, \nhttps://naic.conning.com/scenariofiles ."
+        }
+      ],
+      "productionWindowEvidence": [
+        {
+          "rank": 1,
+          "chunkId": "vm20-canonical-coverage-vm20-role-map-sections-3-4-5-child-001",
+          "sourceId": "vm20-canonical-coverage",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 20,
+          "sectionReference": "Section 2: Minimum Reserve (role map statement)",
+          "pageStart": 48,
+          "pageEnd": 48,
+          "sourceTextType": "actual_extracted_source_text",
+          "sourceTextExcerpt": "[p. 48] Requirements for Principle -Based Reserves for Life Products VM-20 \n� 2025 National Associati on of Insurance Commissioners 20-4 the test and documented the results. \na. For the group of policies and riders for which the company did not compute the \nDR nor the SR: the sum of the policy minimum NPRs for those policies. \nb. For the group of policies and riders for which the company did not compute the \nSR but did compute the DR: the sum of the policy minimum NPRs for those \npolicies plus the excess, if any, of the DR for those policies determined pursuant \nto Section 4 over the quantity (A �B), where A = the sum of the policy minimum \nNPRs for those policies, and B = any due and deferred premium asset held on \naccount of those policies. \nc. For the group of policies and riders for which the company computes all three \nreserve calculations: the sum of the policy minimum NPRs for those policies plus \nthe excess, if any, of the greater of the DR for those policies determined pursuant \nto Section 4 and the SR for those policies determined pursuant to Section 5 over \nthe quantity (A �B), where A = the sum of the policy minimum NPRs for those \npolicies, and B = any due and deferred premium asset held on account of those \npolicies. \nB. Section 3 defines the requirements for the policy NPR . Section 4 defines the requirements for the \nDR, and Section 4.C defines how that reserve is attributed to a VM-20 reserving category . Section \n5 defines the requirements for the SR, and Section 5.G defines how that reserve is determined for \neach VM-20 reserving category . \nC. The reserve for each VM-20 reserving category as determined in Section 2. A.1, Section 2. A.2 or \nSection 2. A.3 shall be allocated to each policy within that VM-20 reserving category in the same \nproportion as the minimum NPR for that policy to the minimum NPR for the VM-20 reserving \ncategory with the exception to make best efforts to minimize allocating the deterministic or SR in \nexcess of the net premium reserve, with any adjustment for due and deferred premiums, to policies \nwhich did not produce this excess. A clear example is to use the NPR per policy in Section 2.A.3.a \nas the allocated reserve per policy , given that no deterministic or SR is used in Section 2.A.3.a . \nD. The reserves for supplemental benefits and riders shall be calculated consistent with the \nrequirements for �Riders and Supplemental Benefits� in Section II , Reserve Requirements ."
+        },
+        {
+          "rank": 2,
+          "chunkId": "vm22-section-8-scenario-generation-b-interest-rate-generator",
+          "sourceId": "vm22-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 19,
+          "sectionReference": "B. Prescribed Interest Rate Scenario Generator",
+          "pageStart": 287,
+          "pageEnd": 287,
+          "sourceTextType": "actual_extracted_source_text",
+          "sourceTextExcerpt": "B. Prescribed Interest Rate Scenario Generator \n1. Treasury Department interest rate curves shall be determined on a stochastic basis using the \nprescribed interest rate scenario s, or scenarios based on a non -prescribed generator that meets \nthe requirements described in Section 8.E. \n2. The prescribed interest rate scenarios can be found on Conning’s website address, \nhttps://naic.conning.com/scenariofiles ."
+        }
+      ],
+      "supportState": "supported",
+      "evidenceSufficient": true,
+      "reasonCode": "retrieved_evidence_matches_requested_information_type",
+      "expectedSupportState": "supported",
+      "expectedReasonCode": "retrieved_evidence_matches_requested_information_type",
+      "passed": true,
+      "decision": {
+        "supportState": "supported",
+        "evidenceSufficient": true,
+        "reasonCode": "retrieved_evidence_matches_requested_information_type",
+        "reason": "Actual source text from the requested formal requirement source is present inside the production evidence window.",
+        "requestedInformationTypes": [
+          "formal_requirement"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm20-canonical-coverage-vm20-role-map-sections-3-4-5-child-001",
+            "sourceId": "vm20-canonical-coverage",
+            "score": 20,
+            "authorityLevel": "manual_section"
+          },
+          {
+            "chunkId": "vm22-section-8-scenario-generation-b-interest-rate-generator",
+            "sourceId": "vm22-current-manual",
+            "score": 19,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": null,
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 20,
+          "matches": [
+            {
+              "chunkId": "vm20-canonical-coverage-vm20-role-map-sections-3-4-5-child-001",
+              "score": 20
+            },
+            {
+              "chunkId": "vm22-section-8-scenario-generation-b-interest-rate-generator",
+              "score": 19
+            }
+          ]
+        },
+        "lowScore": false
+      }
+    },
+    {
+      "testId": "wrong-topic-vm22-evidence-does-not-support-claim",
+      "description": "VM-22 source text on an unrelated topic cannot support an invented formal requirement.",
+      "query": "What quarterly reserve filing does VM-22 require?",
+      "requestedSourceAuthority": {
+        "sourceIds": [
+          "vm22-current-manual"
+        ],
+        "informationTypes": [
+          "formal_requirement"
+        ]
+      },
+      "requiredEvidenceTerms": [
+        "quarterly reserve filing"
+      ],
+      "productionEvidenceWindowSize": 3,
+      "fullRanking": [
+        {
+          "rank": 1,
+          "chunkId": "vm22-section-1-background-a-purpose",
+          "sourceId": "vm22-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 20,
+          "sectionReference": "A. Purpose",
+          "pageStart": 227,
+          "pageEnd": 227,
+          "sourceTextType": "actual_extracted_source_text",
+          "sourceTextExcerpt": "A. Purpose \n \nThese requirements establish the minimum reserve valuation standard for non -variable annuity contracts \nas defined in Section II of the Valuation Manual, Subsection 2.C . For all contracts encompassed by the \nScope, t hese requirements constitute the Commissioners Annuity Reserve Valuation Method ( CARVM ) \nand, for some contracts and certificates , the Commissioners Reserve Valuation Method (CRVM). \n \nGuidance Note: CRVM requirements apply to some group pension contracts."
+        }
+      ],
+      "productionWindowEvidence": [
+        {
+          "rank": 1,
+          "chunkId": "vm22-section-1-background-a-purpose",
+          "sourceId": "vm22-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 20,
+          "sectionReference": "A. Purpose",
+          "pageStart": 227,
+          "pageEnd": 227,
+          "sourceTextType": "actual_extracted_source_text",
+          "sourceTextExcerpt": "A. Purpose \n \nThese requirements establish the minimum reserve valuation standard for non -variable annuity contracts \nas defined in Section II of the Valuation Manual, Subsection 2.C . For all contracts encompassed by the \nScope, t hese requirements constitute the Commissioners Annuity Reserve Valuation Method ( CARVM ) \nand, for some contracts and certificates , the Commissioners Reserve Valuation Method (CRVM). \n \nGuidance Note: CRVM requirements apply to some group pension contracts."
+        }
+      ],
+      "supportState": "unsupported",
+      "evidenceSufficient": false,
+      "reasonCode": "missing_required_requirement_terms",
+      "expectedSupportState": "unsupported",
+      "expectedReasonCode": "missing_required_requirement_terms",
+      "passed": true,
+      "decision": {
+        "supportState": "unsupported",
+        "evidenceSufficient": false,
+        "reasonCode": "missing_required_requirement_terms",
+        "reason": "The retrieved formal-source evidence does not contain the required topic term(s): quarterly reserve filing.",
+        "requestedInformationTypes": [
+          "formal_requirement"
+        ],
+        "relatedEvidence": [
+          {
+            "chunkId": "vm22-section-1-background-a-purpose",
+            "sourceId": "vm22-current-manual",
+            "score": 20,
+            "authorityLevel": "manual_section"
+          }
+        ],
+        "corpusGap": "The retrieved formal-source evidence does not contain the required topic term(s): quarterly reserve filing.",
+        "structuredEvidenceAvailable": false,
+        "semanticAlignment": {
+          "topScore": 20,
+          "matches": [
+            {
+              "chunkId": "vm22-section-1-background-a-purpose",
+              "score": 20
+            }
+          ]
+        },
+        "lowScore": false
+      }
+    }
+  ],
+  "governance": {
+    "reviewOnly": true,
+    "promotionStatus": "not_promoted",
+    "promotionEligible": false
+  }
+}

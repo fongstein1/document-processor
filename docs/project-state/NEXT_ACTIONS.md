@@ -1,21 +1,33 @@
 # Next Actions
 
+## VM-22 independent review handoff
+
+VM-21 promotion is complete under its approved independent-review decision.
+VM-22 is now the next P0 current-manual candidate, built from retained batches
+038-054 with 15 parents, 68 children, 83 chunks, case-level retrieval and
+support-gate evidence, 111 pending relationship candidates, 6 pending
+structured-evidence records, and GREEN processor readiness.
+
+Run the narrow review in
+`data/processed/review_packages/vm22-independent-review-prompt.md`. Do not
+promote VM-22, its relationship candidates, structured evidence, or any
+downstream learner/app/RAG/vector/Copilot use without a separate decision.
+If approved, the next highest-value P0 is the controlled heterogeneous 20-50
+document batch-readiness pilot rather than further VM-22 polishing.
+
 ## VM-21 canonicalization handoff
 
 VM-30 canonical promotion is complete under the recorded independent review
-decision. The current 2026 VM-21 canonical candidate is also complete as a
-review-only package built from the existing validated batches 022-037.
+decision. The current 2026 VM-21 package is canonically promoted under its
+recorded approval, while its relationship and structured-evidence artifacts
+remain separately governed and unpromoted.
 
-The immediate action is a fresh independent review using
-`data/processed/review_packages/vm21-independent-review-prompt.md`. Review the
-78 exact-text chunks, 20 relationship candidates, 27 structured table/formula
-records, 30 focused retrieval cases, four support-gate regressions, and the
-AMBER processor-readiness findings. Do not promote VM-21 or enable downstream
-uses without an explicit review decision.
+The historical handoff below is superseded by the completed VM-21 promotion.
+Review the VM-22 prompt and package named above; do not promote VM-21 or enable
+downstream uses without an explicit review decision.
 
-If VM-21 is approved and promoted through the existing decision workflow, the
-next highest-value P0 source is current 2026 VM-22, reusing its existing
-reviewed extraction wave before considering any new PDF extraction.
+The current VM-22 review package and prompt are the active handoff; no new PDF
+extraction is warranted unless deterministic validation fails.
 
 ## Generic processor readiness path
 
