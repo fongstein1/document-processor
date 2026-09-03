@@ -8,6 +8,7 @@
   "exceptionTaxonomy": [
     "PDF_EXTRACTION_FAILED",
     "XLSX_STRUCTURE_PARSE_FAILED",
+    "XLSX_NON_CELL_CONTENT_REQUIRES_REVIEW",
     "EMPTY_PAGE_BENIGN",
     "EMPTY_PAGE_REQUIRES_REVIEW",
     "IMAGE_ONLY_SUBSTANTIVE_CONTENT",
@@ -23,8 +24,8 @@
   "summary": {
     "totalAdmitted": 7,
     "processedSuccessfully": 7,
-    "cleanReviewCandidates": 7,
-    "humanReviewRequired": 0,
+    "cleanReviewCandidates": 6,
+    "humanReviewRequired": 1,
     "processingBlocked": 0,
     "systemicFailures": 0,
     "totalChunks": 2232,
@@ -40,6 +41,13 @@
     "authoritySupportPreserved": true,
     "structuredEvidenceIdentity": true,
     "retrievalSmokeTests": true,
-    "reviewOnlyGuardrails": true
+    "reviewOnlyGuardrails": true,
+    "sourceExceptionAggregation": true
+  },
+  "failedSystemicControls": [],
+  "terminology": {
+    "extraction": "page-aware extraction",
+    "pdfGrouping": "deterministic page-window grouping; semantic hierarchy not claimed",
+    "workbookStructure": "conservative workbook table-block grouping; table-aware semantics not claimed"
   }
 }

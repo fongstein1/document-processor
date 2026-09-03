@@ -15,9 +15,9 @@
     "processingIntent": "Low-touch processing pilot for admitted raw sources.",
     "sourceFileCount": 7,
     "extractedItemCount": 2232,
-    "exceptionCount": 0,
+    "exceptionCount": 1,
     "summary": "All admitted sources were processed through review-only extraction, structure, chunking, source-index candidate, retrieval smoke test, and validation.",
-    "notes": "{\"totalAdmitted\":7,\"processedSuccessfully\":7,\"cleanReviewCandidates\":7,\"humanReviewRequired\":0,\"processingBlocked\":0,\"systemicFailures\":0,\"totalChunks\":2232,\"totalStructuredEvidence\":9}"
+    "notes": "{\"totalAdmitted\":7,\"processedSuccessfully\":7,\"cleanReviewCandidates\":6,\"humanReviewRequired\":1,\"processingBlocked\":0,\"systemicFailures\":0,\"totalChunks\":2232,\"totalStructuredEvidence\":9}"
   },
   "sourceFilesProcessed": [
     {
@@ -30,8 +30,9 @@
       "documentType": "valuation_rates_workbook",
       "processingStatus": "review_pending",
       "pageCount": null,
-      "issueCount": 0,
-      "notes": "Automated source binding, extraction, structure, chunking, citation, SHA, and retrieval checks passed."
+      "issueCount": 1,
+      "rightsStatus": "RIGHTS_REVIEW_REQUIRED",
+      "notes": "1 worksheet(s) contain native non-cell structures not represented by cell extraction and require human review: LEGAL DISCLAIMER."
     },
     {
       "sourceId": "naic-accounting-publications-appm-2026",
@@ -44,7 +45,8 @@
       "processingStatus": "review_pending",
       "pageCount": 2117,
       "issueCount": 0,
-      "notes": "Automated source binding, extraction, structure, chunking, citation, SHA, and retrieval checks passed."
+      "rightsStatus": "RIGHTS_REVIEW_REQUIRED",
+      "notes": "Automated source binding, extraction, deterministic page-window grouping, citation, SHA, and retrieval checks passed."
     },
     {
       "sourceId": "naic-life-fraternal-reporting-2026-03bwg",
@@ -57,7 +59,8 @@
       "processingStatus": "review_pending",
       "pageCount": 22,
       "issueCount": 0,
-      "notes": "Automated source binding, extraction, structure, chunking, citation, SHA, and retrieval checks passed."
+      "rightsStatus": "RIGHTS_REVIEW_REQUIRED",
+      "notes": "Automated source binding, extraction, deterministic page-window grouping, citation, SHA, and retrieval checks passed."
     },
     {
       "sourceId": "naic-pbr-vm-20-vm-31-vm-51-pbr-vm-current-redline",
@@ -70,7 +73,8 @@
       "processingStatus": "review_pending",
       "pageCount": 482,
       "issueCount": 0,
-      "notes": "Automated source binding, extraction, structure, chunking, citation, SHA, retrieval, and benign-empty-page checks passed."
+      "rightsStatus": "RIGHTS_REVIEW_REQUIRED",
+      "notes": "Automated source binding, extraction, deterministic page-window grouping, citation, SHA, retrieval, and benign-empty-page checks passed."
     },
     {
       "sourceId": "naic-accounting-publications-spd-2026",
@@ -83,7 +87,8 @@
       "processingStatus": "review_pending",
       "pageCount": 37,
       "issueCount": 0,
-      "notes": "Automated source binding, extraction, structure, chunking, citation, SHA, and retrieval checks passed."
+      "rightsStatus": "RIGHTS_REVIEW_REQUIRED",
+      "notes": "Automated source binding, extraction, deterministic page-window grouping, citation, SHA, and retrieval checks passed."
     },
     {
       "sourceId": "naic-life-fraternal-reporting-qsb-life-2026",
@@ -96,7 +101,8 @@
       "processingStatus": "review_pending",
       "pageCount": 51,
       "issueCount": 0,
-      "notes": "Automated source binding, extraction, structure, chunking, citation, SHA, and retrieval checks passed."
+      "rightsStatus": "RIGHTS_REVIEW_REQUIRED",
+      "notes": "Automated source binding, extraction, deterministic page-window grouping, citation, SHA, and retrieval checks passed."
     },
     {
       "sourceId": "society-of-actuaries-experience-studies-soa-2015-vbt-report",
@@ -109,7 +115,8 @@
       "processingStatus": "review_pending",
       "pageCount": 94,
       "issueCount": 0,
-      "notes": "Automated source binding, extraction, structure, chunking, citation, SHA, and retrieval checks passed."
+      "rightsStatus": "RIGHTS_REVIEW_REQUIRED",
+      "notes": "Automated source binding, extraction, deterministic page-window grouping, citation, SHA, and retrieval checks passed."
     }
   ],
   "extractedItems": [
@@ -123,11 +130,16 @@
       "sourcePath": "C:\\Dev\\Document Processor Sources\\2026-09-02 Intake\\01_NAIC_Current_Authority\\PBR\\pbr-2026-vmv-nonjumbo-jumbo-valuation-rates.xlsx",
       "pageReference": "Workbook",
       "sectionReference": "Workbook sheets",
-      "summary": "Automated source binding, extraction, structure, chunking, citation, SHA, and retrieval checks passed.",
-      "confidence": "high",
-      "reviewFlags": [],
+      "outcome": "HUMAN_REVIEW_REQUIRED",
+      "exceptionCode": "XLSX_NON_CELL_CONTENT_REQUIRES_REVIEW",
+      "summary": "1 worksheet(s) contain native non-cell structures not represented by cell extraction and require human review: LEGAL DISCLAIMER.",
+      "confidence": "medium",
+      "reviewFlags": [
+        "XLSX_NON_CELL_CONTENT_REQUIRES_REVIEW"
+      ],
       "learnerFacingEligible": false,
       "appReadyEligible": false,
+      "rightsStatus": "RIGHTS_REVIEW_REQUIRED",
       "notes": "Review-only candidate; no promotion or downstream eligibility is implied."
     },
     {
@@ -140,11 +152,14 @@
       "sourcePath": "C:\\Dev\\Document Processor Sources\\2026-09-02 Intake\\01_NAIC_Current_Authority\\Accounting\\publication-app-manual.pdf",
       "pageReference": "pp. 1-2117",
       "sectionReference": "Page-aware extraction",
-      "summary": "Automated source binding, extraction, structure, chunking, citation, SHA, and retrieval checks passed.",
+      "outcome": "CLEAN_REVIEW_CANDIDATE",
+      "exceptionCode": "NONE",
+      "summary": "Automated source binding, extraction, deterministic page-window grouping, citation, SHA, and retrieval checks passed.",
       "confidence": "high",
       "reviewFlags": [],
       "learnerFacingEligible": false,
       "appReadyEligible": false,
+      "rightsStatus": "RIGHTS_REVIEW_REQUIRED",
       "notes": "Review-only candidate; no promotion or downstream eligibility is implied."
     },
     {
@@ -157,11 +172,14 @@
       "sourcePath": "C:\\Dev\\Document Processor Sources\\2026-09-02 Intake\\01_NAIC_Current_Authority\\Life_Fraternal_Reporting\\2026-03BWG_Modified.pdf",
       "pageReference": "pp. 1-22",
       "sectionReference": "Page-aware extraction",
-      "summary": "Automated source binding, extraction, structure, chunking, citation, SHA, and retrieval checks passed.",
+      "outcome": "CLEAN_REVIEW_CANDIDATE",
+      "exceptionCode": "NONE",
+      "summary": "Automated source binding, extraction, deterministic page-window grouping, citation, SHA, and retrieval checks passed.",
       "confidence": "high",
       "reviewFlags": [],
       "learnerFacingEligible": false,
       "appReadyEligible": false,
+      "rightsStatus": "RIGHTS_REVIEW_REQUIRED",
       "notes": "Review-only candidate; no promotion or downstream eligibility is implied."
     },
     {
@@ -174,11 +192,14 @@
       "sourcePath": "C:\\Dev\\Document Processor Sources\\2026-09-02 Intake\\02_NAIC_Current_Support\\PBR\\pbr_data_valuation_manual_current_edition_redline.pdf",
       "pageReference": "pp. 1-482",
       "sectionReference": "Page-aware extraction",
-      "summary": "Automated source binding, extraction, structure, chunking, citation, SHA, retrieval, and benign-empty-page checks passed.",
+      "outcome": "CLEAN_REVIEW_CANDIDATE",
+      "exceptionCode": "NONE",
+      "summary": "Automated source binding, extraction, deterministic page-window grouping, citation, SHA, retrieval, and benign-empty-page checks passed.",
       "confidence": "high",
       "reviewFlags": [],
       "learnerFacingEligible": false,
       "appReadyEligible": false,
+      "rightsStatus": "RIGHTS_REVIEW_REQUIRED",
       "notes": "Review-only candidate; no promotion or downstream eligibility is implied."
     },
     {
@@ -191,11 +212,14 @@
       "sourcePath": "C:\\Dev\\Document Processor Sources\\2026-09-02 Intake\\02_NAIC_Current_Support\\Accounting\\spd-ops.pdf",
       "pageReference": "pp. 1-37",
       "sectionReference": "Page-aware extraction",
-      "summary": "Automated source binding, extraction, structure, chunking, citation, SHA, and retrieval checks passed.",
+      "outcome": "CLEAN_REVIEW_CANDIDATE",
+      "exceptionCode": "NONE",
+      "summary": "Automated source binding, extraction, deterministic page-window grouping, citation, SHA, and retrieval checks passed.",
       "confidence": "high",
       "reviewFlags": [],
       "learnerFacingEligible": false,
       "appReadyEligible": false,
+      "rightsStatus": "RIGHTS_REVIEW_REQUIRED",
       "notes": "Review-only candidate; no promotion or downstream eligibility is implied."
     },
     {
@@ -208,11 +232,14 @@
       "sourcePath": "C:\\Dev\\Document Processor Sources\\2026-09-02 Intake\\02_NAIC_Current_Support\\Life_Fraternal_Reporting\\publication-quarterly-statement-blanks-life-frat.pdf",
       "pageReference": "pp. 1-51",
       "sectionReference": "Page-aware extraction",
-      "summary": "Automated source binding, extraction, structure, chunking, citation, SHA, and retrieval checks passed.",
+      "outcome": "CLEAN_REVIEW_CANDIDATE",
+      "exceptionCode": "NONE",
+      "summary": "Automated source binding, extraction, deterministic page-window grouping, citation, SHA, and retrieval checks passed.",
       "confidence": "high",
       "reviewFlags": [],
       "learnerFacingEligible": false,
       "appReadyEligible": false,
+      "rightsStatus": "RIGHTS_REVIEW_REQUIRED",
       "notes": "Review-only candidate; no promotion or downstream eligibility is implied."
     },
     {
@@ -225,18 +252,64 @@
       "sourcePath": "C:\\Dev\\Document Processor Sources\\2026-09-02 Intake\\03_Professional_Support\\SOA_Experience_Studies\\2015-vbt-report.pdf",
       "pageReference": "pp. 1-94",
       "sectionReference": "Page-aware extraction",
-      "summary": "Automated source binding, extraction, structure, chunking, citation, SHA, and retrieval checks passed.",
+      "outcome": "CLEAN_REVIEW_CANDIDATE",
+      "exceptionCode": "NONE",
+      "summary": "Automated source binding, extraction, deterministic page-window grouping, citation, SHA, and retrieval checks passed.",
       "confidence": "high",
       "reviewFlags": [],
       "learnerFacingEligible": false,
       "appReadyEligible": false,
+      "rightsStatus": "RIGHTS_REVIEW_REQUIRED",
       "notes": "Review-only candidate; no promotion or downstream eligibility is implied."
     }
   ],
-  "requiredHumanDecisions": [],
-  "exceptionsAndFlags": [],
+  "requiredHumanDecisions": [
+    {
+      "decisionId": "naic-pbr-vm-20-vm-31-vm-51-vmv-rates-2026-review-disposition",
+      "decisionType": "promotion_gate",
+      "question": "Is the VM-V nonjumbo and jumbo valuation rates, 2026 evidence sufficient for any later promotion consideration?",
+      "whyItMatters": "1 worksheet(s) contain native non-cell structures not represented by cell extraction and require human review: LEGAL DISCLAIMER.",
+      "recommendedOwner": "source reviewer",
+      "priority": "medium"
+    },
+    {
+      "issueId": "naic-accounting-publications-appm-2026-rights-distribution-control",
+      "severity": "high",
+      "issueType": "rights_distribution_control",
+      "sourceId": "naic-accounting-publications-appm-2026",
+      "message": "A3 distribution/software-integration restriction requires rights and storage review; no legal conclusion is made.",
+      "recommendedAction": "Keep substantive A3 text external/private pending rights review; retain only non-content processing evidence in public Git."
+    }
+  ],
+  "exceptionsAndFlags": [
+    {
+      "flagId": "naic-pbr-vm-20-vm-31-vm-51-vmv-rates-2026-xlsx_non_cell_content_requires_review",
+      "severity": "medium",
+      "sourceId": "naic-pbr-vm-20-vm-31-vm-51-vmv-rates-2026",
+      "flagType": "xlsx_non_cell_content_requires_review",
+      "message": "1 worksheet(s) contain native non-cell structures not represented by cell extraction and require human review: LEGAL DISCLAIMER.",
+      "notes": "Keep this source in human review; do not promote."
+    }
+  ],
   "citationIssues": [],
-  "unresolvedIssues": [],
+  "unresolvedIssues": [
+    {
+      "issueId": "naic-pbr-vm-20-vm-31-vm-51-vmv-rates-2026-xlsx_non_cell_content_requires_review",
+      "severity": "medium",
+      "issueType": "xlsx_non_cell_content_requires_review",
+      "sourceId": "naic-pbr-vm-20-vm-31-vm-51-vmv-rates-2026",
+      "message": "1 worksheet(s) contain native non-cell structures not represented by cell extraction and require human review: LEGAL DISCLAIMER.",
+      "recommendedAction": "Review source-specific evidence before any future promotion decision."
+    },
+    {
+      "issueId": "naic-accounting-publications-appm-2026-rights-distribution-control",
+      "severity": "high",
+      "issueType": "rights_distribution_control",
+      "sourceId": "naic-accounting-publications-appm-2026",
+      "message": "A3 distribution/software-integration restriction requires rights and storage review; no legal conclusion is made.",
+      "recommendedAction": "Keep substantive A3 text external/private pending rights review; retain only non-content processing evidence in public Git."
+    }
+  ],
   "promotionRecommendation": {
     "status": "not_recommended",
     "reason": "This is a low-touch review-only pilot; no canonical promotion is authorized.",
@@ -260,15 +333,15 @@
     "targetExports": [],
     "notes": "No promotion was performed."
   },
-  "reviewerNotes": "Proposed clean sample: native workbook and empirical-study PDF. Review all exceptions.",
+  "reviewerNotes": "Proposed clean sample: native workbook and empirical-study PDF. Review all exceptions and the A3 rights/storage hold.",
   "extensions": {
     "processingRunId": "processing-acquisition-pilot-2026-09-02",
     "acquisitionManifestPath": "C:\\Dev\\Document Processor Sources\\2026-09-02 Intake\\_acquisition-manifests\\approved-pilot-20260902\\final-20260902\\acquisition-manifest.json",
     "summary": {
       "totalAdmitted": 7,
       "processedSuccessfully": 7,
-      "cleanReviewCandidates": 7,
-      "humanReviewRequired": 0,
+      "cleanReviewCandidates": 6,
+      "humanReviewRequired": 1,
       "processingBlocked": 0,
       "systemicFailures": 0,
       "totalChunks": 2232,

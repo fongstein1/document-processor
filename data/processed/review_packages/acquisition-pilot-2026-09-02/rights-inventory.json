@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "1.0",
+  "status": "RIGHTS_REVIEW_REQUIRED",
+  "publicRepository": true,
+  "materialArtifacts": [
+    {"path":"data/processed/review_packages/acquisition-pilot-2026-09-02/extraction-output.json","artifactType":"extraction evidence","sourceId":"naic-accounting-publications-appm-2026","approximateTextCharacters":6297285,"serializedBytes":6462267,"firstCommit":"1edba701c74189a16e0ac166fef1acaa30c3023d"},
+    {"path":"data/processed/review_packages/acquisition-pilot-2026-09-02/chunk-manifest.json","artifactType":"source chunks","sourceId":"naic-accounting-publications-appm-2026","approximateTextCharacters":6291549,"serializedBytes":22714281,"firstCommit":"1edba701c74189a16e0ac166fef1acaa30c3023d"},
+    {"path":"data/processed/review_packages/acquisition-pilot-2026-09-02/source-index-candidates.json","artifactType":"review-only index candidates","sourceId":"naic-accounting-publications-appm-2026","approximateTextCharacters":6291549,"serializedBytes":22202468,"firstCommit":"1edba701c74189a16e0ac166fef1acaa30c3023d"}
+  ],
+  "otherPilotSources": "The same output classes may contain substantive text for other pilot sources; source-specific rights review is unresolved.",
+  "remediationBoundary": "Do not rewrite history, delete branches, change visibility, or make a legal determination in this task."
+}
