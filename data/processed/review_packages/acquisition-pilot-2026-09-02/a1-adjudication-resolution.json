@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "1.0",
+  "recordType": "A1_ADJUDICATION_RESOLUTION_METADATA_ONLY",
+  "pilotSlot": "A1",
+  "candidateId": "naic-pbr-vm-20-vm-31-vm-51-pbr-plenary-amendments-current",
+  "payloadSha256": "3029ee3b55a1d51bd31d92c0aa3913020a47c2bed7e780c403822a1727111c8c",
+  "observedPayloadTitle": "Life Amendments to the 2026 Valuation Manual for the Consideration of the Life Insurance and Annuities (A) Committee",
+  "faceDate": "July 14, 2025",
+  "faceContext": "Life Insurance and Annuities (A) Committee; Attachment A",
+  "adoptionEvidence": ["Life Insurance and Annuities (A) Committee adopted July 14, 2025", "Executive/Plenary adopted August 13, 2025"],
+  "correctRole": "Adopted-amendment layer for the 2026 Valuation Manual",
+  "limitations": ["Not the complete 2026 Valuation Manual", "Not an independent replacement for the complete manual"],
+  "officialLocatorTreatment": "Mutable official locator; any acquired payload remains bound to SHA-256, acquisition date, and observed face identity.",
+  "correctedDisposition": "ADMIT_TO_PROCESSING_QUEUE",
+  "processingDisposition": "NOT_PROCESSED_IN_THIS_TASK",
+  "historicalQuarantineEvidencePreserved": true,
+  "resolutionStatus": "RESOLVED_METADATA_ONLY",
+  "humanReviewBoundary": "This record does not authorize processing, promotion, legal conclusion, or replacement of the complete manual."
+}
