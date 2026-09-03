@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "1.0",
+  "policyId": "document-processor-rights-storage-control",
+  "statuses": [
+    "RIGHTS_CLEARED_FOR_REPOSITORY",
+    "RIGHTS_EXTERNAL_STORAGE_ONLY",
+    "RIGHTS_REVIEW_REQUIRED"
+  ],
+  "defaultStatus": "RIGHTS_REVIEW_REQUIRED",
+  "rules": {
+    "rawSource": "Keep raw source bytes in the authoritative external source root; do not commit raw regulatory files.",
+    "substantiveExtractedText": "For RIGHTS_REVIEW_REQUIRED or RIGHTS_EXTERNAL_STORAGE_ONLY, keep substantive extracted text, chunks, and rendered derivatives external/private.",
+    "permittedGitEvidence": ["sourceId", "sourceSha256", "sourceUrl", "issuer", "counts", "structuralCoordinates", "validationResults", "exceptionCodes", "reviewDecisions", "externalArtifactHashes"],
+    "promotionBoundary": "No source with unresolved rights/storage status is canonical, learner-facing, app-ready, or RAG-ready.",
+    "legalConclusion": "This policy records a storage-control status and is not a legal determination."
+  }
+}
