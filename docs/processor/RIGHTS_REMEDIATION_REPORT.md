@@ -2,12 +2,35 @@
 
 Status: `RIGHTS_REVIEW_REQUIRED`
 
-This is a storage-control finding, not a legal conclusion. The repository is
-public, and the current processing branch contains substantive extracted text
-from the A3 2026 AP&P Manual. Human/legal review is required before any
-continued public distribution or promotion decision.
+This is a storage-control finding, not a legal conclusion. Human/legal review
+is required before any distribution or promotion decision.
 
-## Material public-branch artifacts
+## A. CURRENT TREE ENFORCEMENT STATUS
+
+The current processing tree is operationally protected. All seven pilot source
+records carry `RIGHTS_REVIEW_REQUIRED`; substantive extraction, chunk text,
+source-index text, and retrieval queries are generated under the external
+private root recorded in `external-artifact-manifest.json`. The Git review
+package retains only source identity, hashes, counts, structural coordinates,
+exception/review outcomes, and external artifact paths/hashes. The rights
+validator verifies that prohibited text is absent from the current output and
+that every required external artifact exists with matching SHA-256 and byte
+count. This status does not clear rights or make a legal determination.
+
+External root for this run:
+`C:\Dev\Document Processor Sources\_processed-private\processing-acquisition-pilot-2026-09-02`
+
+Manifest:
+`data/processed/review_packages/acquisition-pilot-2026-09-02/external-artifact-manifest.json`
+
+## B. HISTORICAL GIT EXPOSURE STATUS
+
+Historical exposure remains unresolved. Earlier commits contain substantive
+A3 text and possibly other pilot-source text. This report does not rewrite
+history, delete branches, change repository visibility, or decide whether
+historical remediation is legally or operationally required.
+
+### Historical material public-branch artifacts
 
 The following committed artifacts contain substantial A3 source text. Each was
 first added in commit `1edba701c74189a16e0ac166fef1acaa30c3023d`:
@@ -18,9 +41,10 @@ first added in commit `1edba701c74189a16e0ac166fef1acaa30c3023d`:
 | `data/processed/review_packages/acquisition-pilot-2026-09-02/chunk-manifest.json` | source chunks | 6,291,549 excerpt characters; 22,714,281 serialized bytes | externalize or replace with structural coordinates and hashes |
 | `data/processed/review_packages/acquisition-pilot-2026-09-02/source-index-candidates.json` | review-only index candidates | 6,291,549 excerpt characters; 22,202,468 serialized bytes | externalize or replace with non-content index evidence |
 
-The same artifact classes can contain substantive text for the other six pilot
-sources. Their rights status is not adjudicated by this report; the generic
-default remains `RIGHTS_REVIEW_REQUIRED` until source-specific review.
+The same artifact classes contained substantive text for the other six pilot
+sources before current-tree enforcement. Their rights status is not adjudicated
+by this report; the generic default remains `RIGHTS_REVIEW_REQUIRED` until
+source-specific review.
 
 ## Safe options requiring a separate human decision
 
@@ -39,7 +63,7 @@ authoritative external source root or another approved private store for
 only source identity, SHA, URL, issuer, counts, structural coordinates,
 validation/exception/review evidence, and hashes of external artifacts.
 
-## Current boundary
+## Remediation boundary
 
 No canonical, learner-facing, app-ready, or RAG-ready use is authorized. The
 existing 20-source proposal remains selection-only. A1 is resolved by a
