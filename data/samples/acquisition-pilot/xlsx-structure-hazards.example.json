@@ -1,0 +1,33 @@
+{
+  "fixtureType": "synthetic_xlsx_structure_hazards",
+  "notes": "Contract fixture only; no real source content and no acquisition authorization.",
+  "sheets": [
+    {
+      "name": "Rates",
+      "state": "visible",
+      "mergedRanges": ["A1:C1"],
+      "cells": [
+        {"ref": "A1", "rowNumber": 1, "columnNumber": 1, "formula": null, "value": "Valuation Rates", "dataType": "s"},
+        {"ref": "A3", "rowNumber": 3, "columnNumber": 1, "formula": null, "value": "Amount", "dataType": "s"},
+        {"ref": "B3", "rowNumber": 3, "columnNumber": 2, "formula": "SUM(B4:B5)", "value": "125", "dataType": "formula"},
+        {"ref": "A5", "rowNumber": 5, "columnNumber": 1, "formula": null, "value": "Amount", "dataType": "s"}
+      ],
+      "blankSpacerRows": [2, 4],
+      "tableBlocks": [
+        {"blockOrdinal": 1, "startRow": 1, "endRow": 1, "rowCount": 1, "cellRefs": ["A1"], "nonEmptyCellCount": 1, "titleCandidates": ["Valuation Rates"]},
+        {"blockOrdinal": 2, "startRow": 3, "endRow": 3, "rowCount": 1, "cellRefs": ["A3", "B3"], "nonEmptyCellCount": 2, "titleCandidates": ["Amount"]},
+        {"blockOrdinal": 3, "startRow": 5, "endRow": 5, "rowCount": 1, "cellRefs": ["A5"], "nonEmptyCellCount": 1, "titleCandidates": ["Amount"]}
+      ],
+      "duplicateLabelValues": ["Amount"]
+    },
+    {
+      "name": "Hidden Support",
+      "state": "hidden",
+      "mergedRanges": [],
+      "cells": [{"ref": "A1", "rowNumber": 1, "columnNumber": 1, "formula": null, "value": "Amount", "dataType": "s"}],
+      "blankSpacerRows": [],
+      "tableBlocks": [{"blockOrdinal": 1, "startRow": 1, "endRow": 1, "rowCount": 1, "cellRefs": ["A1"], "nonEmptyCellCount": 1, "titleCandidates": ["Amount"]}],
+      "duplicateLabelValues": ["Amount"]
+    }
+  ]
+}

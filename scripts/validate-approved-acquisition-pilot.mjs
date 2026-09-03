@@ -35,7 +35,8 @@ const main = async () => {
     if (await sha256(item.filePath) !== item.fileHash) fail('Raw source SHA mismatch: ' + item.sourceId)
   }
   const workbook = indexes.sourceIndexes.find((index) => index.source.sourceId === 'naic-pbr-vm-20-vm-31-vm-51-vmv-rates-2026')
-  if (!workbook || (workbook.extensions?.structuredEvidence?.length ?? 0) !== 5) fail('A2 workbook structured evidence is incomplete.')
+  if (!workbook || (workbook.extensions?.structuredEvidence?.length ?? 0) < 1 || workbook.extensions.structuredEvidence.some((item) => !item.structuredEvidenceId || !item.tableBlock || !Array.isArray(item.mergedRanges) || !item.sheetState)) fail('A2 workbook structured evidence is incomplete or lacks deterministic table-block metadata.')
+  if (!Array.isArray(report.exceptionTaxonomy) || !report.exceptionTaxonomy.includes('EMPTY_PAGE_BENIGN') || !report.exceptionTaxonomy.includes('IMAGE_ONLY_SUBSTANTIVE_CONTENT')) fail('Exception taxonomy is incomplete.')
   if (indexes.sourceIndexes.some((index) => index.processing?.reviewOnly !== true || index.processing?.promotionStatus !== 'not_promoted' || index.chunks.some((chunk) => chunk.promotionEligible !== false))) fail('A source-index candidate is not review-only/not-promoted.')
   console.log('Validated low-touch acquisition processing pilot: 7 sources, ' + chunks.chunks.length + ' chunks, 7/7 smoke-test sources passed, no promotion.')
 }

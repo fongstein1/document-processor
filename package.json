@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "bootstrap": "node scripts/bootstrap-small-batch.mjs",
-    "check": "node scripts/validate-byte-hashed-text-artifacts.mjs && node scripts/validate-scaffold.mjs && node scripts/validate-document-family-intake.mjs && node scripts/validate-source-index-poc.mjs && node scripts/validate-reg213-relationship-registry.mjs && node scripts/validate-vm01-definitions.mjs && node scripts/test-vm21-support-gate.mjs && node scripts/validate-vm21-current-manual.mjs && node scripts/test-vm22-support-gate.mjs && node scripts/validate-vm22-current-manual.mjs && node scripts/test-structured-evidence-identity.mjs && node scripts/validate-structured-evidence-identity.mjs && node scripts/test-vm30-support-gate.mjs && node scripts/validate-vm30-current-manual.mjs && node scripts/test-vm31-support-gate.mjs && node scripts/validate-vm31-current-manual.mjs && node scripts/test-vm31-relationship-label-normalization.mjs && node scripts/validate-vm31-validator-implementation-review.mjs && node scripts/validate-regulatory-corpus-inventory.mjs && node scripts/test-vm20-appendix2-promotion-blockers.mjs && node scripts/validate-vm20-appendix2-tables.mjs && node scripts/validate-approved-acquisition-pilot.mjs",
+    "check": "node scripts/validate-byte-hashed-text-artifacts.mjs && node scripts/validate-scaffold.mjs && node scripts/validate-document-family-intake.mjs && node scripts/validate-source-index-poc.mjs && node scripts/validate-reg213-relationship-registry.mjs && node scripts/validate-vm01-definitions.mjs && node scripts/test-vm21-support-gate.mjs && node scripts/validate-vm21-current-manual.mjs && node scripts/test-vm22-support-gate.mjs && node scripts/validate-vm22-current-manual.mjs && node scripts/test-structured-evidence-identity.mjs && node scripts/validate-structured-evidence-identity.mjs && node scripts/test-vm30-support-gate.mjs && node scripts/validate-vm30-current-manual.mjs && node scripts/test-vm31-support-gate.mjs && node scripts/validate-vm31-current-manual.mjs && node scripts/test-vm31-relationship-label-normalization.mjs && node scripts/validate-vm31-validator-implementation-review.mjs && node scripts/validate-regulatory-corpus-inventory.mjs && node scripts/test-vm20-appendix2-promotion-blockers.mjs && node scripts/validate-vm20-appendix2-tables.mjs && node scripts/validate-approved-acquisition-pilot.mjs && node scripts/test-acquisition-pilot-regressions.mjs",
     "pilot": "node scripts/run-pilot-batch.mjs",
     "intake:scan": "node scripts/scan-document-family-intake.mjs",
     "intake:build-source-index": "node scripts/build-family-source-index-poc.mjs",
@@ -21,6 +21,7 @@
     "source-index:validate": "node scripts/validate-source-index-poc.mjs",
     "acquisition-pilot:process": "node scripts/process-approved-acquisition-pilot.mjs",
     "acquisition-pilot:validate": "node scripts/validate-approved-acquisition-pilot.mjs",
+    "acquisition-pilot:test": "node scripts/test-acquisition-pilot-regressions.mjs",
     "vm01:artifacts": "node scripts/build-vm01-definition-artifacts.mjs",
     "vm01:validate": "node scripts/validate-vm01-definitions.mjs",
     "vm01:definitions": "npm run source-index:build && npm run vm01:artifacts && npm run vm01:validate",
