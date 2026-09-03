@@ -18,10 +18,18 @@
       "pageCount": null,
       "processingStatus": "review_pending",
       "authorityLevel": "current_authority",
+      "rightsStatus": "RIGHTS_REVIEW_REQUIRED",
       "fileHash": "85f7aa611f268d29d2e114efef91a41ddd049d86af70f8149b48ca1210b36dd5",
       "sizeBytes": 106848,
       "extension": ".xlsx",
-      "notes": "1 worksheet(s) contain native non-cell structures not represented by cell extraction and require human review: LEGAL DISCLAIMER."
+      "notes": "1 worksheet(s) contain native non-cell structures not represented by cell extraction and require human review: LEGAL DISCLAIMER.",
+      "externalArtifactTypes": [
+        "extraction",
+        "chunk-manifest",
+        "source-index",
+        "retrieval-smoke-tests"
+      ],
+      "externalArtifactManifestPath": "data/processed/review_packages/acquisition-pilot-2026-09-02/external-artifact-manifest.json"
     },
     {
       "sourceId": "naic-accounting-publications-appm-2026",
@@ -35,10 +43,18 @@
       "pageCount": 2117,
       "processingStatus": "review_pending",
       "authorityLevel": "current_authority",
+      "rightsStatus": "RIGHTS_REVIEW_REQUIRED",
       "fileHash": "572b86e1e45582656f23d218d4695ba5a102e5f13f00c4cb34ae68e54d3830a0",
       "sizeBytes": 11002522,
       "extension": ".pdf",
-      "notes": "Automated source binding, extraction, deterministic page-window grouping, citation, SHA, and retrieval checks passed."
+      "notes": "Automated source binding, extraction, deterministic page-window grouping, citation, SHA, and retrieval checks passed.",
+      "externalArtifactTypes": [
+        "extraction",
+        "chunk-manifest",
+        "source-index",
+        "retrieval-smoke-tests"
+      ],
+      "externalArtifactManifestPath": "data/processed/review_packages/acquisition-pilot-2026-09-02/external-artifact-manifest.json"
     },
     {
       "sourceId": "naic-life-fraternal-reporting-2026-03bwg",
@@ -52,10 +68,18 @@
       "pageCount": 22,
       "processingStatus": "review_pending",
       "authorityLevel": "current_authority",
+      "rightsStatus": "RIGHTS_REVIEW_REQUIRED",
       "fileHash": "b7eb1248ab98bb401c3627d788ff9593219ce100a18d3eb77c3557a52ab971de",
       "sizeBytes": 310051,
       "extension": ".pdf",
-      "notes": "Automated source binding, extraction, deterministic page-window grouping, citation, SHA, and retrieval checks passed."
+      "notes": "Automated source binding, extraction, deterministic page-window grouping, citation, SHA, and retrieval checks passed.",
+      "externalArtifactTypes": [
+        "extraction",
+        "chunk-manifest",
+        "source-index",
+        "retrieval-smoke-tests"
+      ],
+      "externalArtifactManifestPath": "data/processed/review_packages/acquisition-pilot-2026-09-02/external-artifact-manifest.json"
     },
     {
       "sourceId": "naic-pbr-vm-20-vm-31-vm-51-pbr-vm-current-redline",
@@ -69,10 +93,18 @@
       "pageCount": 482,
       "processingStatus": "review_pending",
       "authorityLevel": "current_support",
+      "rightsStatus": "RIGHTS_REVIEW_REQUIRED",
       "fileHash": "9f963e3e447bf225c2e8c2dedea3d5d227c6235809558bbcdd60e475088e3bbc",
       "sizeBytes": 5013437,
       "extension": ".pdf",
-      "notes": "Automated source binding, extraction, deterministic page-window grouping, citation, SHA, retrieval, and benign-empty-page checks passed."
+      "notes": "Automated source binding, extraction, deterministic page-window grouping, citation, SHA, retrieval, and benign-empty-page checks passed.",
+      "externalArtifactTypes": [
+        "extraction",
+        "chunk-manifest",
+        "source-index",
+        "retrieval-smoke-tests"
+      ],
+      "externalArtifactManifestPath": "data/processed/review_packages/acquisition-pilot-2026-09-02/external-artifact-manifest.json"
     },
     {
       "sourceId": "naic-accounting-publications-spd-2026",
@@ -86,10 +118,18 @@
       "pageCount": 37,
       "processingStatus": "review_pending",
       "authorityLevel": "current_support",
+      "rightsStatus": "RIGHTS_REVIEW_REQUIRED",
       "fileHash": "9638eda15c22ab3c53a0c5c3c2135082bad2c3a73ba1fcaa3dda4b5146ba471e",
       "sizeBytes": 8363251,
       "extension": ".pdf",
-      "notes": "Automated source binding, extraction, deterministic page-window grouping, citation, SHA, and retrieval checks passed."
+      "notes": "Automated source binding, extraction, deterministic page-window grouping, citation, SHA, and retrieval checks passed.",
+      "externalArtifactTypes": [
+        "extraction",
+        "chunk-manifest",
+        "source-index",
+        "retrieval-smoke-tests"
+      ],
+      "externalArtifactManifestPath": "data/processed/review_packages/acquisition-pilot-2026-09-02/external-artifact-manifest.json"
     },
     {
       "sourceId": "naic-life-fraternal-reporting-qsb-life-2026",
@@ -103,10 +143,18 @@
       "pageCount": 51,
       "processingStatus": "review_pending",
       "authorityLevel": "current_support",
+      "rightsStatus": "RIGHTS_REVIEW_REQUIRED",
       "fileHash": "1bc3be9b8db1489ee2366bcd2c6c088e733fe1eb10e8cec1f12b031ee93322af",
       "sizeBytes": 710734,
       "extension": ".pdf",
-      "notes": "Automated source binding, extraction, deterministic page-window grouping, citation, SHA, and retrieval checks passed."
+      "notes": "Automated source binding, extraction, deterministic page-window grouping, citation, SHA, and retrieval checks passed.",
+      "externalArtifactTypes": [
+        "extraction",
+        "chunk-manifest",
+        "source-index",
+        "retrieval-smoke-tests"
+      ],
+      "externalArtifactManifestPath": "data/processed/review_packages/acquisition-pilot-2026-09-02/external-artifact-manifest.json"
     },
     {
       "sourceId": "society-of-actuaries-experience-studies-soa-2015-vbt-report",
@@ -120,10 +168,18 @@
       "pageCount": 94,
       "processingStatus": "review_pending",
       "authorityLevel": "current_support",
+      "rightsStatus": "RIGHTS_REVIEW_REQUIRED",
       "fileHash": "66b13374cbf60b3a493ad761cd01e2e93e701e57146f187b416321479f94fe51",
       "sizeBytes": 1096860,
       "extension": ".pdf",
-      "notes": "Automated source binding, extraction, deterministic page-window grouping, citation, SHA, and retrieval checks passed."
+      "notes": "Automated source binding, extraction, deterministic page-window grouping, citation, SHA, and retrieval checks passed.",
+      "externalArtifactTypes": [
+        "extraction",
+        "chunk-manifest",
+        "source-index",
+        "retrieval-smoke-tests"
+      ],
+      "externalArtifactManifestPath": "data/processed/review_packages/acquisition-pilot-2026-09-02/external-artifact-manifest.json"
     }
   ],
   "summary": {

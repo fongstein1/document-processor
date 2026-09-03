@@ -140,6 +140,7 @@
       "learnerFacingEligible": false,
       "appReadyEligible": false,
       "rightsStatus": "RIGHTS_REVIEW_REQUIRED",
+      "externalArtifactManifestPath": "data/processed/review_packages/acquisition-pilot-2026-09-02/external-artifact-manifest.json",
       "notes": "Review-only candidate; no promotion or downstream eligibility is implied."
     },
     {
@@ -160,6 +161,7 @@
       "learnerFacingEligible": false,
       "appReadyEligible": false,
       "rightsStatus": "RIGHTS_REVIEW_REQUIRED",
+      "externalArtifactManifestPath": "data/processed/review_packages/acquisition-pilot-2026-09-02/external-artifact-manifest.json",
       "notes": "Review-only candidate; no promotion or downstream eligibility is implied."
     },
     {
@@ -180,6 +182,7 @@
       "learnerFacingEligible": false,
       "appReadyEligible": false,
       "rightsStatus": "RIGHTS_REVIEW_REQUIRED",
+      "externalArtifactManifestPath": "data/processed/review_packages/acquisition-pilot-2026-09-02/external-artifact-manifest.json",
       "notes": "Review-only candidate; no promotion or downstream eligibility is implied."
     },
     {
@@ -200,6 +203,7 @@
       "learnerFacingEligible": false,
       "appReadyEligible": false,
       "rightsStatus": "RIGHTS_REVIEW_REQUIRED",
+      "externalArtifactManifestPath": "data/processed/review_packages/acquisition-pilot-2026-09-02/external-artifact-manifest.json",
       "notes": "Review-only candidate; no promotion or downstream eligibility is implied."
     },
     {
@@ -220,6 +224,7 @@
       "learnerFacingEligible": false,
       "appReadyEligible": false,
       "rightsStatus": "RIGHTS_REVIEW_REQUIRED",
+      "externalArtifactManifestPath": "data/processed/review_packages/acquisition-pilot-2026-09-02/external-artifact-manifest.json",
       "notes": "Review-only candidate; no promotion or downstream eligibility is implied."
     },
     {
@@ -240,6 +245,7 @@
       "learnerFacingEligible": false,
       "appReadyEligible": false,
       "rightsStatus": "RIGHTS_REVIEW_REQUIRED",
+      "externalArtifactManifestPath": "data/processed/review_packages/acquisition-pilot-2026-09-02/external-artifact-manifest.json",
       "notes": "Review-only candidate; no promotion or downstream eligibility is implied."
     },
     {
@@ -260,9 +266,27 @@
       "learnerFacingEligible": false,
       "appReadyEligible": false,
       "rightsStatus": "RIGHTS_REVIEW_REQUIRED",
+      "externalArtifactManifestPath": "data/processed/review_packages/acquisition-pilot-2026-09-02/external-artifact-manifest.json",
       "notes": "Review-only candidate; no promotion or downstream eligibility is implied."
     }
   ],
+  "cleanReviewSample": {
+    "sampleType": "CLEAN_REVIEW_CANDIDATE",
+    "sourceIds": [
+      "naic-accounting-publications-appm-2026",
+      "naic-life-fraternal-reporting-2026-03bwg",
+      "naic-pbr-vm-20-vm-31-vm-51-pbr-vm-current-redline",
+      "naic-accounting-publications-spd-2026",
+      "naic-life-fraternal-reporting-qsb-life-2026",
+      "society-of-actuaries-experience-studies-soa-2015-vbt-report"
+    ]
+  },
+  "exceptionReviewSample": {
+    "sampleType": "HUMAN_REVIEW_REQUIRED",
+    "sourceIds": [
+      "naic-pbr-vm-20-vm-31-vm-51-vmv-rates-2026"
+    ]
+  },
   "requiredHumanDecisions": [
     {
       "decisionId": "naic-pbr-vm-20-vm-31-vm-51-vmv-rates-2026-review-disposition",
@@ -298,6 +322,8 @@
       "severity": "medium",
       "issueType": "xlsx_non_cell_content_requires_review",
       "sourceId": "naic-pbr-vm-20-vm-31-vm-51-vmv-rates-2026",
+      "outcome": "HUMAN_REVIEW_REQUIRED",
+      "exceptionCode": "XLSX_NON_CELL_CONTENT_REQUIRES_REVIEW",
       "message": "1 worksheet(s) contain native non-cell structures not represented by cell extraction and require human review: LEGAL DISCLAIMER.",
       "recommendedAction": "Review source-specific evidence before any future promotion decision."
     },
@@ -313,7 +339,7 @@
   "promotionRecommendation": {
     "status": "not_recommended",
     "reason": "This is a low-touch review-only pilot; no canonical promotion is authorized.",
-    "recommendedNextStep": "Inspect the stratified clean sample and all exceptions.",
+    "recommendedNextStep": "Inspect the exception review sample and the clean review sample.",
     "targetExport": "review_packet"
   },
   "learnerFacingStatus": {
@@ -333,7 +359,7 @@
     "targetExports": [],
     "notes": "No promotion was performed."
   },
-  "reviewerNotes": "Proposed clean sample: native workbook and empirical-study PDF. Review all exceptions and the A3 rights/storage hold.",
+  "reviewerNotes": "Clean sample contains only CLEAN_REVIEW_CANDIDATE records. A2 is the workbook exception sample and requires human review. S4 remains a clean empirical-study sample. A3 rights/storage remains unresolved.",
   "extensions": {
     "processingRunId": "processing-acquisition-pilot-2026-09-02",
     "acquisitionManifestPath": "C:\\Dev\\Document Processor Sources\\2026-09-02 Intake\\_acquisition-manifests\\approved-pilot-20260902\\final-20260902\\acquisition-manifest.json",

@@ -41,6 +41,10 @@
     "authoritySupportPreserved": true,
     "structuredEvidenceIdentity": true,
     "retrievalSmokeTests": true,
+    "retrievalShaAssertions": true,
+    "retrievalRoleAssertions": true,
+    "a2NumericAssertions": true,
+    "confusionSetNegatives": true,
     "reviewOnlyGuardrails": true,
     "sourceExceptionAggregation": true
   },

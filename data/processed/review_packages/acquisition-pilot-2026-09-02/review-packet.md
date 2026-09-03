@@ -25,7 +25,15 @@
 
 ## Stratified clean sample
 
-- A2: native XLSX workbook with sheet/cell/formula preservation.
-- S4: empirical actuarial-study PDF with page-aware extraction and citation evidence.
+- naic-accounting-publications-appm-2026: clean review candidate; structural/text evidence is stored externally under the rights boundary.
+- naic-life-fraternal-reporting-2026-03bwg: clean review candidate; structural/text evidence is stored externally under the rights boundary.
+- naic-pbr-vm-20-vm-31-vm-51-pbr-vm-current-redline: clean review candidate; structural/text evidence is stored externally under the rights boundary.
+- naic-accounting-publications-spd-2026: clean review candidate; structural/text evidence is stored externally under the rights boundary.
+- naic-life-fraternal-reporting-qsb-life-2026: clean review candidate; structural/text evidence is stored externally under the rights boundary.
+- society-of-actuaries-experience-studies-soa-2015-vbt-report: clean review candidate; structural/text evidence is stored externally under the rights boundary.
+
+## Exception review sample
+
+- naic-pbr-vm-20-vm-31-vm-51-vmv-rates-2026: workbook/page exception sample (XLSX_NON_CELL_CONTENT_REQUIRES_REVIEW).
 
 All outputs are review-only; no canonical promotion, learner-facing use, RAG eligibility, or authority expansion occurred.
