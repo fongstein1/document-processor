@@ -17,6 +17,15 @@
       "sourceReference": "https://content.naic.org/sites/default/files/pbr-2026-vmv-nonjumbo-jumbo-valuation-rates.xlsx",
       "pageCount": null,
       "extractionMethod": "OOXML zip/XML sheet-cell and package-content inventory",
+      "packageRelevantParts": [
+        "xl/drawings/_rels/vmlDrawing1.vml.rels",
+        "xl/drawings/drawing1.xml",
+        "xl/drawings/vmlDrawing1.vml",
+        "xl/embeddings/Microsoft_Word_Document.docx",
+        "xl/externalLinks/_rels/externalLink1.xml.rels",
+        "xl/externalLinks/externalLink1.xml",
+        "xl/media/image1.emf"
+      ],
       "sheets": [
         {
           "name": "2026 Jumbo Rates",
@@ -33285,6 +33294,9 @@
             "commentNoteIndicators": [],
             "hiddenState": false,
             "externalLinkIndicators": [],
+            "packageExternalLinkIndicators": [
+              "xl/externalLinks/externalLink1.xml"
+            ],
             "otherRelationships": [
               {
                 "id": "rId1",
@@ -34014,6 +34026,9 @@
             "commentNoteIndicators": [],
             "hiddenState": false,
             "externalLinkIndicators": [],
+            "packageExternalLinkIndicators": [
+              "xl/externalLinks/externalLink1.xml"
+            ],
             "otherRelationships": [
               {
                 "id": "rId1",
@@ -37275,6 +37290,9 @@
             "commentNoteIndicators": [],
             "hiddenState": false,
             "externalLinkIndicators": [],
+            "packageExternalLinkIndicators": [
+              "xl/externalLinks/externalLink1.xml"
+            ],
             "otherRelationships": [],
             "substantiveNonCellContentMayExist": false,
             "exceptionCode": null
@@ -63456,6 +63474,9 @@
             "commentNoteIndicators": [],
             "hiddenState": false,
             "externalLinkIndicators": [],
+            "packageExternalLinkIndicators": [
+              "xl/externalLinks/externalLink1.xml"
+            ],
             "otherRelationships": [
               {
                 "id": "rId1",
@@ -63518,6 +63539,9 @@
             "commentNoteIndicators": [],
             "hiddenState": false,
             "externalLinkIndicators": [],
+            "packageExternalLinkIndicators": [
+              "xl/externalLinks/externalLink1.xml"
+            ],
             "otherRelationships": [
               {
                 "id": "rId3",
