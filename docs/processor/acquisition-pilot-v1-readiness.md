@@ -44,3 +44,21 @@ The default governance policy is:
 `EMPTY_PAGE_BENIGN` means only that the page has no extracted text, no PDF content-stream bytes, and no image XObjects. It does not establish legal or substantive irrelevance. `IMAGE_ONLY_SUBSTANTIVE_CONTENT` and `EMPTY_PAGE_REQUIRES_REVIEW` remain human-review exceptions. XLSX table blocks are conservative row-contiguity units, not a claim that every visual table has been semantically understood. Source support roles remain support roles: S1 is redline/change-comparison support, S2 is support rather than law, S3 is a reporting blank rather than reserve authority, S4 is empirical support, A2 is VM-V rate authority within its stated scope, and A4 is a change instrument.
 
 The next-batch proposal is selection-only catalog evidence. It contains no new candidate IDs and no acquisition or processing authorization.
+## Corrective terminology and boundaries
+
+The current pilot provides page-aware PDF extraction and deterministic
+page-window grouping. It does not claim semantic hierarchy. Workbook output
+uses conservative contiguous table-block grouping and does not claim complete
+table semantics. Where deterministic, extraction retains page citations and
+records heading/SSAP/section signals; unsupported parent/child hierarchy is
+not invented. These limitations must be resolved before any canonical or RAG
+promotion decision.
+
+Native workbook objects that are not represented by cell extraction are
+classified as `XLSX_NON_CELL_CONTENT_REQUIRES_REVIEW` and propagate to the
+source outcome. A2's `LEGAL DISCLAIMER` worksheet is therefore not a clean
+review candidate.
+
+Rights/storage status is governed by `config/rights-storage-policy.json`.
+The current public processing artifacts are `RIGHTS_REVIEW_REQUIRED`; see
+`RIGHTS_REMEDIATION_REPORT.md`. This is not a legal determination.
