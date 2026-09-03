@@ -8,22 +8,128 @@
       "tests": [
         {
           "testId": "naic-pbr-vm-20-vm-31-vm-51-vmv-rates-2026-smoke-1",
-          "query": "VM-V nonjumbo and jumbo valuation rates, 2026 identity",
+          "testKind": "title_identity",
+          "query": "VM-V nonjumbo and jumbo valuation rates, 2026",
           "expectedCandidateId": "naic-pbr-vm-20-vm-31-vm-51-vmv-rates-2026",
-          "topChunkId": "naic-pbr-vm-20-vm-31-vm-51-vmv-rates-2026--sheet-2026-jumbo-rates",
+          "expectedMatch": true,
+          "expectedStructuralRegion": "source identity",
+          "topRank": 1,
+          "topChunkId": "naic-pbr-vm-20-vm-31-vm-51-vmv-rates-2026--sheet-2026-jumbo-rates--rows-1-369",
           "topScore": 5,
+          "citationTarget": {
+            "citationText": "VM-V nonjumbo and jumbo valuation rates, 2026",
+            "pageReference": "Workbook",
+            "sectionReference": "Sheet: 2026 Jumbo Rates rows 1-369",
+            "sourceReference": "https://content.naic.org/sites/default/files/pbr-2026-vmv-nonjumbo-jumbo-valuation-rates.xlsx"
+          },
           "citationResolves": true,
           "supportRolePreserved": true,
+          "rationale": "Title query must resolve to a cited chunk for the same candidate.",
           "pass": true
         },
         {
           "testId": "naic-pbr-vm-20-vm-31-vm-51-vmv-rates-2026-smoke-2",
-          "query": "nonjumbo jumbo valuation rates 2026 bucket",
+          "testKind": "substantive_content",
+          "query": "valuation bucket premium",
           "expectedCandidateId": "naic-pbr-vm-20-vm-31-vm-51-vmv-rates-2026",
-          "topChunkId": "naic-pbr-vm-20-vm-31-vm-51-vmv-rates-2026--sheet-2026-jumbo-rates",
-          "topScore": 6,
+          "expectedMatch": true,
+          "expectedStructuralRegion": "Sheet: 2026 Jumbo Rates rows 1-369",
+          "topRank": 1,
+          "topChunkId": "naic-pbr-vm-20-vm-31-vm-51-vmv-rates-2026--sheet-2026-jumbo-rates--rows-1-369",
+          "topScore": 3,
+          "citationTarget": {
+            "citationText": "VM-V nonjumbo and jumbo valuation rates, 2026",
+            "pageReference": "Workbook",
+            "sectionReference": "Sheet: 2026 Jumbo Rates rows 1-369",
+            "sourceReference": "https://content.naic.org/sites/default/files/pbr-2026-vmv-nonjumbo-jumbo-valuation-rates.xlsx"
+          },
           "citationResolves": true,
           "supportRolePreserved": true,
+          "rationale": "A source-derived substantive term query must resolve within this source.",
+          "pass": true
+        },
+        {
+          "testId": "naic-pbr-vm-20-vm-31-vm-51-vmv-rates-2026-smoke-3",
+          "testKind": "structure_or_table",
+          "query": "Sheet: 2026 Jumbo Rates rows 1-369",
+          "expectedCandidateId": "naic-pbr-vm-20-vm-31-vm-51-vmv-rates-2026",
+          "expectedMatch": true,
+          "expectedStructuralRegion": "Sheet: 2026 Jumbo Rates rows 1-369",
+          "topRank": 1,
+          "topChunkId": "naic-pbr-vm-20-vm-31-vm-51-vmv-rates-2026--sheet-2026-jumbo-rates--rows-1-369",
+          "topScore": 5,
+          "citationTarget": {
+            "citationText": "VM-V nonjumbo and jumbo valuation rates, 2026",
+            "pageReference": "Workbook",
+            "sectionReference": "Sheet: 2026 Jumbo Rates rows 1-369",
+            "sourceReference": "https://content.naic.org/sites/default/files/pbr-2026-vmv-nonjumbo-jumbo-valuation-rates.xlsx"
+          },
+          "citationResolves": true,
+          "supportRolePreserved": true,
+          "rationale": "The structural locator must be searchable and citable.",
+          "pass": true
+        },
+        {
+          "testId": "naic-pbr-vm-20-vm-31-vm-51-vmv-rates-2026-smoke-4",
+          "testKind": "numeric_or_form",
+          "query": "2026 rate table",
+          "expectedCandidateId": "naic-pbr-vm-20-vm-31-vm-51-vmv-rates-2026",
+          "expectedMatch": true,
+          "expectedStructuralRegion": "Sheet: LEGAL DISCLAIMER rows 1-1",
+          "topRank": 1,
+          "topChunkId": "naic-pbr-vm-20-vm-31-vm-51-vmv-rates-2026--sheet-2026-vm-v-tables-1-thru-4--rows-1-9",
+          "topScore": 3,
+          "citationTarget": {
+            "citationText": "VM-V nonjumbo and jumbo valuation rates, 2026",
+            "pageReference": "Workbook",
+            "sectionReference": "Sheet: 2026 VM-V Tables 1 thru 4 rows 1-9",
+            "sourceReference": "https://content.naic.org/sites/default/files/pbr-2026-vmv-nonjumbo-jumbo-valuation-rates.xlsx"
+          },
+          "citationResolves": true,
+          "supportRolePreserved": true,
+          "rationale": "A numeric/table or form-oriented query must resolve without changing source role.",
+          "pass": true
+        },
+        {
+          "testId": "naic-pbr-vm-20-vm-31-vm-51-vmv-rates-2026-smoke-5",
+          "testKind": "authority_support_boundary",
+          "query": "VM-V nonjumbo and jumbo valuation rates, 2026 CURRENT AUTHORITY — DOWNLOAD",
+          "expectedCandidateId": "naic-pbr-vm-20-vm-31-vm-51-vmv-rates-2026",
+          "expectedMatch": true,
+          "expectedStructuralRegion": "source identity and approved role",
+          "topRank": 1,
+          "topChunkId": "naic-pbr-vm-20-vm-31-vm-51-vmv-rates-2026--sheet-2026-jumbo-rates--rows-1-369",
+          "topScore": 5,
+          "citationTarget": {
+            "citationText": "VM-V nonjumbo and jumbo valuation rates, 2026",
+            "pageReference": "Workbook",
+            "sectionReference": "Sheet: 2026 Jumbo Rates rows 1-369",
+            "sourceReference": "https://content.naic.org/sites/default/files/pbr-2026-vmv-nonjumbo-jumbo-valuation-rates.xlsx"
+          },
+          "citationResolves": true,
+          "supportRolePreserved": true,
+          "rationale": "Role language is retained as metadata; support is not upgraded to authority.",
+          "pass": true
+        },
+        {
+          "testId": "naic-pbr-vm-20-vm-31-vm-51-vmv-rates-2026-smoke-6",
+          "testKind": "wrong_source_negative",
+          "query": "qzxv-blorf-mivak-94731",
+          "expectedCandidateId": null,
+          "expectedMatch": false,
+          "expectedStructuralRegion": "no matching source region",
+          "topRank": 1,
+          "topChunkId": "naic-pbr-vm-20-vm-31-vm-51-vmv-rates-2026--sheet-2026-jumbo-rates--rows-1-369",
+          "topScore": 0,
+          "citationTarget": {
+            "citationText": "VM-V nonjumbo and jumbo valuation rates, 2026",
+            "pageReference": "Workbook",
+            "sectionReference": "Sheet: 2026 Jumbo Rates rows 1-369",
+            "sourceReference": "https://content.naic.org/sites/default/files/pbr-2026-vmv-nonjumbo-jumbo-valuation-rates.xlsx"
+          },
+          "citationResolves": true,
+          "supportRolePreserved": true,
+          "rationale": "A clearly foreign token must not retrieve this source.",
           "pass": true
         }
       ],
@@ -35,22 +141,128 @@
       "tests": [
         {
           "testId": "naic-accounting-publications-appm-2026-smoke-1",
-          "query": "2026 Accounting Practices and Procedures Manual identity",
+          "testKind": "title_identity",
+          "query": "2026 Accounting Practices and Procedures Manual",
           "expectedCandidateId": "naic-accounting-publications-appm-2026",
-          "topChunkId": "naic-accounting-publications-appm-2026--p-764",
-          "topScore": 6,
+          "expectedMatch": true,
+          "expectedStructuralRegion": "source identity",
+          "topRank": 1,
+          "topChunkId": "naic-accounting-publications-appm-2026--p-1-4",
+          "topScore": 5,
+          "citationTarget": {
+            "citationText": "2026 Accounting Practices and Procedures Manual",
+            "pageReference": "p. 1",
+            "sectionReference": "Pages 1-4",
+            "sourceReference": "https://content.naic.org/sites/default/files/publication-app-manual.pdf"
+          },
           "citationResolves": true,
           "supportRolePreserved": true,
+          "rationale": "Title query must resolve to a cited chunk for the same candidate.",
           "pass": true
         },
         {
           "testId": "naic-accounting-publications-appm-2026-smoke-2",
-          "query": "2026 accounting practices procedures manual march",
+          "testKind": "substantive_content",
+          "query": "accounting practices procedures",
           "expectedCandidateId": "naic-accounting-publications-appm-2026",
-          "topChunkId": "naic-accounting-publications-appm-2026--p-1",
-          "topScore": 6,
+          "expectedMatch": true,
+          "expectedStructuralRegion": "Pages 1-4",
+          "topRank": 1,
+          "topChunkId": "naic-accounting-publications-appm-2026--p-1-4",
+          "topScore": 3,
+          "citationTarget": {
+            "citationText": "2026 Accounting Practices and Procedures Manual",
+            "pageReference": "p. 1",
+            "sectionReference": "Pages 1-4",
+            "sourceReference": "https://content.naic.org/sites/default/files/publication-app-manual.pdf"
+          },
           "citationResolves": true,
           "supportRolePreserved": true,
+          "rationale": "A source-derived substantive term query must resolve within this source.",
+          "pass": true
+        },
+        {
+          "testId": "naic-accounting-publications-appm-2026-smoke-3",
+          "testKind": "structure_or_table",
+          "query": "Pages 1-4",
+          "expectedCandidateId": "naic-accounting-publications-appm-2026",
+          "expectedMatch": true,
+          "expectedStructuralRegion": "Pages 1-4",
+          "topRank": 1,
+          "topChunkId": "naic-accounting-publications-appm-2026--p-1-4",
+          "topScore": 1,
+          "citationTarget": {
+            "citationText": "2026 Accounting Practices and Procedures Manual",
+            "pageReference": "p. 1",
+            "sectionReference": "Pages 1-4",
+            "sourceReference": "https://content.naic.org/sites/default/files/publication-app-manual.pdf"
+          },
+          "citationResolves": true,
+          "supportRolePreserved": true,
+          "rationale": "The structural locator must be searchable and citable.",
+          "pass": true
+        },
+        {
+          "testId": "naic-accounting-publications-appm-2026-smoke-4",
+          "testKind": "numeric_or_form",
+          "query": "2116 appendix implementation",
+          "expectedCandidateId": "naic-accounting-publications-appm-2026",
+          "expectedMatch": true,
+          "expectedStructuralRegion": "Pages 2116-2117",
+          "topRank": 1,
+          "topChunkId": "naic-accounting-publications-appm-2026--p-2116-2117",
+          "topScore": 3,
+          "citationTarget": {
+            "citationText": "2026 Accounting Practices and Procedures Manual",
+            "pageReference": "p. 2116",
+            "sectionReference": "Pages 2116-2117",
+            "sourceReference": "https://content.naic.org/sites/default/files/publication-app-manual.pdf"
+          },
+          "citationResolves": true,
+          "supportRolePreserved": true,
+          "rationale": "A numeric/table or form-oriented query must resolve without changing source role.",
+          "pass": true
+        },
+        {
+          "testId": "naic-accounting-publications-appm-2026-smoke-5",
+          "testKind": "authority_support_boundary",
+          "query": "2026 Accounting Practices and Procedures Manual CURRENT AUTHORITY — DOWNLOAD",
+          "expectedCandidateId": "naic-accounting-publications-appm-2026",
+          "expectedMatch": true,
+          "expectedStructuralRegion": "source identity and approved role",
+          "topRank": 1,
+          "topChunkId": "naic-accounting-publications-appm-2026--p-1121-1121",
+          "topScore": 7,
+          "citationTarget": {
+            "citationText": "2026 Accounting Practices and Procedures Manual",
+            "pageReference": "p. 1121",
+            "sectionReference": "Pages 1121-1121",
+            "sourceReference": "https://content.naic.org/sites/default/files/publication-app-manual.pdf"
+          },
+          "citationResolves": true,
+          "supportRolePreserved": true,
+          "rationale": "Role language is retained as metadata; support is not upgraded to authority.",
+          "pass": true
+        },
+        {
+          "testId": "naic-accounting-publications-appm-2026-smoke-6",
+          "testKind": "wrong_source_negative",
+          "query": "qzxv-blorf-mivak-94731",
+          "expectedCandidateId": null,
+          "expectedMatch": false,
+          "expectedStructuralRegion": "no matching source region",
+          "topRank": 1,
+          "topChunkId": "naic-accounting-publications-appm-2026--p-1-4",
+          "topScore": 0,
+          "citationTarget": {
+            "citationText": "2026 Accounting Practices and Procedures Manual",
+            "pageReference": "p. 1",
+            "sectionReference": "Pages 1-4",
+            "sourceReference": "https://content.naic.org/sites/default/files/publication-app-manual.pdf"
+          },
+          "citationResolves": true,
+          "supportRolePreserved": true,
+          "rationale": "A clearly foreign token must not retrieve this source.",
           "pass": true
         }
       ],
@@ -62,22 +274,128 @@
       "tests": [
         {
           "testId": "naic-life-fraternal-reporting-2026-03bwg-smoke-1",
-          "query": "2026-03BWG Modified Blanks identity",
+          "testKind": "title_identity",
+          "query": "2026-03BWG Modified Blanks",
           "expectedCandidateId": "naic-life-fraternal-reporting-2026-03bwg",
-          "topChunkId": "naic-life-fraternal-reporting-2026-03bwg--p-1",
+          "expectedMatch": true,
+          "expectedStructuralRegion": "source identity",
+          "topRank": 1,
+          "topChunkId": "naic-life-fraternal-reporting-2026-03bwg--p-1-1",
           "topScore": 4,
+          "citationTarget": {
+            "citationText": "2026-03BWG Modified Blanks",
+            "pageReference": "p. 1",
+            "sectionReference": "Pages 1-1",
+            "sourceReference": "https://content.naic.org/sites/default/files/inline-files/2026-03BWG_Modified.pdf"
+          },
           "citationResolves": true,
           "supportRolePreserved": true,
+          "rationale": "Title query must resolve to a cited chunk for the same candidate.",
           "pass": true
         },
         {
           "testId": "naic-life-fraternal-reporting-2026-03bwg-smoke-2",
-          "query": "2026 03bwg modified blanks national association",
+          "testKind": "substantive_content",
+          "query": "2026 national association",
           "expectedCandidateId": "naic-life-fraternal-reporting-2026-03bwg",
-          "topChunkId": "naic-life-fraternal-reporting-2026-03bwg--p-1",
-          "topScore": 6,
+          "expectedMatch": true,
+          "expectedStructuralRegion": "Pages 1-1",
+          "topRank": 1,
+          "topChunkId": "naic-life-fraternal-reporting-2026-03bwg--p-1-1",
+          "topScore": 3,
+          "citationTarget": {
+            "citationText": "2026-03BWG Modified Blanks",
+            "pageReference": "p. 1",
+            "sectionReference": "Pages 1-1",
+            "sourceReference": "https://content.naic.org/sites/default/files/inline-files/2026-03BWG_Modified.pdf"
+          },
           "citationResolves": true,
           "supportRolePreserved": true,
+          "rationale": "A source-derived substantive term query must resolve within this source.",
+          "pass": true
+        },
+        {
+          "testId": "naic-life-fraternal-reporting-2026-03bwg-smoke-3",
+          "testKind": "structure_or_table",
+          "query": "Pages 1-1",
+          "expectedCandidateId": "naic-life-fraternal-reporting-2026-03bwg",
+          "expectedMatch": true,
+          "expectedStructuralRegion": "Pages 1-1",
+          "topRank": 1,
+          "topChunkId": "naic-life-fraternal-reporting-2026-03bwg--p-1-1",
+          "topScore": 1,
+          "citationTarget": {
+            "citationText": "2026-03BWG Modified Blanks",
+            "pageReference": "p. 1",
+            "sectionReference": "Pages 1-1",
+            "sourceReference": "https://content.naic.org/sites/default/files/inline-files/2026-03BWG_Modified.pdf"
+          },
+          "citationResolves": true,
+          "supportRolePreserved": true,
+          "rationale": "The structural locator must be searchable and citable.",
+          "pass": true
+        },
+        {
+          "testId": "naic-life-fraternal-reporting-2026-03bwg-smoke-4",
+          "testKind": "numeric_or_form",
+          "query": "2026 national association",
+          "expectedCandidateId": "naic-life-fraternal-reporting-2026-03bwg",
+          "expectedMatch": true,
+          "expectedStructuralRegion": "Pages 22-22",
+          "topRank": 1,
+          "topChunkId": "naic-life-fraternal-reporting-2026-03bwg--p-1-1",
+          "topScore": 3,
+          "citationTarget": {
+            "citationText": "2026-03BWG Modified Blanks",
+            "pageReference": "p. 1",
+            "sectionReference": "Pages 1-1",
+            "sourceReference": "https://content.naic.org/sites/default/files/inline-files/2026-03BWG_Modified.pdf"
+          },
+          "citationResolves": true,
+          "supportRolePreserved": true,
+          "rationale": "A numeric/table or form-oriented query must resolve without changing source role.",
+          "pass": true
+        },
+        {
+          "testId": "naic-life-fraternal-reporting-2026-03bwg-smoke-5",
+          "testKind": "authority_support_boundary",
+          "query": "2026-03BWG Modified Blanks CURRENT AUTHORITY — DOWNLOAD",
+          "expectedCandidateId": "naic-life-fraternal-reporting-2026-03bwg",
+          "expectedMatch": true,
+          "expectedStructuralRegion": "source identity and approved role",
+          "topRank": 1,
+          "topChunkId": "naic-life-fraternal-reporting-2026-03bwg--p-16-16",
+          "topScore": 5,
+          "citationTarget": {
+            "citationText": "2026-03BWG Modified Blanks",
+            "pageReference": "p. 16",
+            "sectionReference": "Pages 16-16",
+            "sourceReference": "https://content.naic.org/sites/default/files/inline-files/2026-03BWG_Modified.pdf"
+          },
+          "citationResolves": true,
+          "supportRolePreserved": true,
+          "rationale": "Role language is retained as metadata; support is not upgraded to authority.",
+          "pass": true
+        },
+        {
+          "testId": "naic-life-fraternal-reporting-2026-03bwg-smoke-6",
+          "testKind": "wrong_source_negative",
+          "query": "qzxv-blorf-mivak-94731",
+          "expectedCandidateId": null,
+          "expectedMatch": false,
+          "expectedStructuralRegion": "no matching source region",
+          "topRank": 1,
+          "topChunkId": "naic-life-fraternal-reporting-2026-03bwg--p-1-1",
+          "topScore": 0,
+          "citationTarget": {
+            "citationText": "2026-03BWG Modified Blanks",
+            "pageReference": "p. 1",
+            "sectionReference": "Pages 1-1",
+            "sourceReference": "https://content.naic.org/sites/default/files/inline-files/2026-03BWG_Modified.pdf"
+          },
+          "citationResolves": true,
+          "supportRolePreserved": true,
+          "rationale": "A clearly foreign token must not retrieve this source.",
           "pass": true
         }
       ],
@@ -89,22 +407,128 @@
       "tests": [
         {
           "testId": "naic-pbr-vm-20-vm-31-vm-51-pbr-vm-current-redline-smoke-1",
-          "query": "Current PBR Valuation Manual, redline edition identity",
+          "testKind": "title_identity",
+          "query": "Current PBR Valuation Manual, redline edition",
           "expectedCandidateId": "naic-pbr-vm-20-vm-31-vm-51-pbr-vm-current-redline",
-          "topChunkId": "naic-pbr-vm-20-vm-31-vm-51-pbr-vm-current-redline--p-360",
-          "topScore": 6,
+          "expectedMatch": true,
+          "expectedStructuralRegion": "source identity",
+          "topRank": 1,
+          "topChunkId": "naic-pbr-vm-20-vm-31-vm-51-pbr-vm-current-redline--p-1-2",
+          "topScore": 5,
+          "citationTarget": {
+            "citationText": "Current PBR Valuation Manual, redline edition",
+            "pageReference": "p. 1",
+            "sectionReference": "Pages 1-2",
+            "sourceReference": "https://content.naic.org/sites/default/files/pbr_data_valuation_manual_current_edition_redline.pdf"
+          },
           "citationResolves": true,
           "supportRolePreserved": true,
+          "rationale": "Title query must resolve to a cited chunk for the same candidate.",
           "pass": true
         },
         {
           "testId": "naic-pbr-vm-20-vm-31-vm-51-pbr-vm-current-redline-smoke-2",
-          "query": "current valuation manual redline edition 2025",
+          "testKind": "substantive_content",
+          "query": "valuation manual 2025",
           "expectedCandidateId": "naic-pbr-vm-20-vm-31-vm-51-pbr-vm-current-redline",
-          "topChunkId": "naic-pbr-vm-20-vm-31-vm-51-pbr-vm-current-redline--p-1",
-          "topScore": 6,
+          "expectedMatch": true,
+          "expectedStructuralRegion": "Pages 1-2",
+          "topRank": 1,
+          "topChunkId": "naic-pbr-vm-20-vm-31-vm-51-pbr-vm-current-redline--p-1-2",
+          "topScore": 3,
+          "citationTarget": {
+            "citationText": "Current PBR Valuation Manual, redline edition",
+            "pageReference": "p. 1",
+            "sectionReference": "Pages 1-2",
+            "sourceReference": "https://content.naic.org/sites/default/files/pbr_data_valuation_manual_current_edition_redline.pdf"
+          },
           "citationResolves": true,
           "supportRolePreserved": true,
+          "rationale": "A source-derived substantive term query must resolve within this source.",
+          "pass": true
+        },
+        {
+          "testId": "naic-pbr-vm-20-vm-31-vm-51-pbr-vm-current-redline-smoke-3",
+          "testKind": "structure_or_table",
+          "query": "Pages 1-2",
+          "expectedCandidateId": "naic-pbr-vm-20-vm-31-vm-51-pbr-vm-current-redline",
+          "expectedMatch": true,
+          "expectedStructuralRegion": "Pages 1-2",
+          "topRank": 1,
+          "topChunkId": "naic-pbr-vm-20-vm-31-vm-51-pbr-vm-current-redline--p-1-2",
+          "topScore": 1,
+          "citationTarget": {
+            "citationText": "Current PBR Valuation Manual, redline edition",
+            "pageReference": "p. 1",
+            "sectionReference": "Pages 1-2",
+            "sourceReference": "https://content.naic.org/sites/default/files/pbr_data_valuation_manual_current_edition_redline.pdf"
+          },
+          "citationResolves": true,
+          "supportRolePreserved": true,
+          "rationale": "The structural locator must be searchable and citable.",
+          "pass": true
+        },
+        {
+          "testId": "naic-pbr-vm-20-vm-31-vm-51-pbr-vm-current-redline-smoke-4",
+          "testKind": "numeric_or_form",
+          "query": "2024 2025 national",
+          "expectedCandidateId": "naic-pbr-vm-20-vm-31-vm-51-pbr-vm-current-redline",
+          "expectedMatch": true,
+          "expectedStructuralRegion": "Pages 481-482",
+          "topRank": 1,
+          "topChunkId": "naic-pbr-vm-20-vm-31-vm-51-pbr-vm-current-redline--p-10-10",
+          "topScore": 3,
+          "citationTarget": {
+            "citationText": "Current PBR Valuation Manual, redline edition",
+            "pageReference": "p. 10",
+            "sectionReference": "Pages 10-10",
+            "sourceReference": "https://content.naic.org/sites/default/files/pbr_data_valuation_manual_current_edition_redline.pdf"
+          },
+          "citationResolves": true,
+          "supportRolePreserved": true,
+          "rationale": "A numeric/table or form-oriented query must resolve without changing source role.",
+          "pass": true
+        },
+        {
+          "testId": "naic-pbr-vm-20-vm-31-vm-51-pbr-vm-current-redline-smoke-5",
+          "testKind": "authority_support_boundary",
+          "query": "Current PBR Valuation Manual, redline edition CURRENT SUPPORT — DOWNLOAD",
+          "expectedCandidateId": "naic-pbr-vm-20-vm-31-vm-51-pbr-vm-current-redline",
+          "expectedMatch": true,
+          "expectedStructuralRegion": "source identity and approved role",
+          "topRank": 1,
+          "topChunkId": "naic-pbr-vm-20-vm-31-vm-51-pbr-vm-current-redline--p-1-2",
+          "topScore": 6,
+          "citationTarget": {
+            "citationText": "Current PBR Valuation Manual, redline edition",
+            "pageReference": "p. 1",
+            "sectionReference": "Pages 1-2",
+            "sourceReference": "https://content.naic.org/sites/default/files/pbr_data_valuation_manual_current_edition_redline.pdf"
+          },
+          "citationResolves": true,
+          "supportRolePreserved": true,
+          "rationale": "Role language is retained as metadata; support is not upgraded to authority.",
+          "pass": true
+        },
+        {
+          "testId": "naic-pbr-vm-20-vm-31-vm-51-pbr-vm-current-redline-smoke-6",
+          "testKind": "wrong_source_negative",
+          "query": "qzxv-blorf-mivak-94731",
+          "expectedCandidateId": null,
+          "expectedMatch": false,
+          "expectedStructuralRegion": "no matching source region",
+          "topRank": 1,
+          "topChunkId": "naic-pbr-vm-20-vm-31-vm-51-pbr-vm-current-redline--p-1-2",
+          "topScore": 0,
+          "citationTarget": {
+            "citationText": "Current PBR Valuation Manual, redline edition",
+            "pageReference": "p. 1",
+            "sectionReference": "Pages 1-2",
+            "sourceReference": "https://content.naic.org/sites/default/files/pbr_data_valuation_manual_current_edition_redline.pdf"
+          },
+          "citationResolves": true,
+          "supportRolePreserved": true,
+          "rationale": "A clearly foreign token must not retrieve this source.",
           "pass": true
         }
       ],
@@ -116,22 +540,128 @@
       "tests": [
         {
           "testId": "naic-accounting-publications-spd-2026-smoke-1",
-          "query": "2026 States Prescribed Differences identity",
+          "testKind": "title_identity",
+          "query": "2026 States Prescribed Differences",
           "expectedCandidateId": "naic-accounting-publications-spd-2026",
-          "topChunkId": "naic-accounting-publications-spd-2026--p-1",
+          "expectedMatch": true,
+          "expectedStructuralRegion": "source identity",
+          "topRank": 1,
+          "topChunkId": "naic-accounting-publications-spd-2026--p-1-2",
           "topScore": 4,
+          "citationTarget": {
+            "citationText": "2026 States Prescribed Differences",
+            "pageReference": "p. 1",
+            "sectionReference": "Pages 1-2",
+            "sourceReference": "https://content.naic.org/sites/default/files/spd-ops.pdf"
+          },
           "citationResolves": true,
           "supportRolePreserved": true,
+          "rationale": "Title query must resolve to a cited chunk for the same candidate.",
           "pass": true
         },
         {
           "testId": "naic-accounting-publications-spd-2026-smoke-2",
-          "query": "2026 states prescribed differences from naic",
+          "testKind": "substantive_content",
+          "query": "states prescribed differences",
           "expectedCandidateId": "naic-accounting-publications-spd-2026",
-          "topChunkId": "naic-accounting-publications-spd-2026--p-1",
-          "topScore": 6,
+          "expectedMatch": true,
+          "expectedStructuralRegion": "Pages 1-2",
+          "topRank": 1,
+          "topChunkId": "naic-accounting-publications-spd-2026--p-1-2",
+          "topScore": 3,
+          "citationTarget": {
+            "citationText": "2026 States Prescribed Differences",
+            "pageReference": "p. 1",
+            "sectionReference": "Pages 1-2",
+            "sourceReference": "https://content.naic.org/sites/default/files/spd-ops.pdf"
+          },
           "citationResolves": true,
           "supportRolePreserved": true,
+          "rationale": "A source-derived substantive term query must resolve within this source.",
+          "pass": true
+        },
+        {
+          "testId": "naic-accounting-publications-spd-2026-smoke-3",
+          "testKind": "structure_or_table",
+          "query": "Pages 1-2",
+          "expectedCandidateId": "naic-accounting-publications-spd-2026",
+          "expectedMatch": true,
+          "expectedStructuralRegion": "Pages 1-2",
+          "topRank": 1,
+          "topChunkId": "naic-accounting-publications-spd-2026--p-1-2",
+          "topScore": 1,
+          "citationTarget": {
+            "citationText": "2026 States Prescribed Differences",
+            "pageReference": "p. 1",
+            "sectionReference": "Pages 1-2",
+            "sourceReference": "https://content.naic.org/sites/default/files/spd-ops.pdf"
+          },
+          "citationResolves": true,
+          "supportRolePreserved": true,
+          "rationale": "The structural locator must be searchable and citable.",
+          "pass": true
+        },
+        {
+          "testId": "naic-accounting-publications-spd-2026-smoke-4",
+          "testKind": "numeric_or_form",
+          "query": "states prescribed differences",
+          "expectedCandidateId": "naic-accounting-publications-spd-2026",
+          "expectedMatch": true,
+          "expectedStructuralRegion": "Pages 35-37",
+          "topRank": 1,
+          "topChunkId": "naic-accounting-publications-spd-2026--p-1-2",
+          "topScore": 3,
+          "citationTarget": {
+            "citationText": "2026 States Prescribed Differences",
+            "pageReference": "p. 1",
+            "sectionReference": "Pages 1-2",
+            "sourceReference": "https://content.naic.org/sites/default/files/spd-ops.pdf"
+          },
+          "citationResolves": true,
+          "supportRolePreserved": true,
+          "rationale": "A numeric/table or form-oriented query must resolve without changing source role.",
+          "pass": true
+        },
+        {
+          "testId": "naic-accounting-publications-spd-2026-smoke-5",
+          "testKind": "authority_support_boundary",
+          "query": "2026 States Prescribed Differences CURRENT SUPPORT — DOWNLOAD",
+          "expectedCandidateId": "naic-accounting-publications-spd-2026",
+          "expectedMatch": true,
+          "expectedStructuralRegion": "source identity and approved role",
+          "topRank": 1,
+          "topChunkId": "naic-accounting-publications-spd-2026--p-18-19",
+          "topScore": 6,
+          "citationTarget": {
+            "citationText": "2026 States Prescribed Differences",
+            "pageReference": "p. 18",
+            "sectionReference": "Pages 18-19",
+            "sourceReference": "https://content.naic.org/sites/default/files/spd-ops.pdf"
+          },
+          "citationResolves": true,
+          "supportRolePreserved": true,
+          "rationale": "Role language is retained as metadata; support is not upgraded to authority.",
+          "pass": true
+        },
+        {
+          "testId": "naic-accounting-publications-spd-2026-smoke-6",
+          "testKind": "wrong_source_negative",
+          "query": "qzxv-blorf-mivak-94731",
+          "expectedCandidateId": null,
+          "expectedMatch": false,
+          "expectedStructuralRegion": "no matching source region",
+          "topRank": 1,
+          "topChunkId": "naic-accounting-publications-spd-2026--p-1-2",
+          "topScore": 0,
+          "citationTarget": {
+            "citationText": "2026 States Prescribed Differences",
+            "pageReference": "p. 1",
+            "sectionReference": "Pages 1-2",
+            "sourceReference": "https://content.naic.org/sites/default/files/spd-ops.pdf"
+          },
+          "citationResolves": true,
+          "supportRolePreserved": true,
+          "rationale": "A clearly foreign token must not retrieve this source.",
           "pass": true
         }
       ],
@@ -143,22 +673,128 @@
       "tests": [
         {
           "testId": "naic-life-fraternal-reporting-qsb-life-2026-smoke-1",
-          "query": "2026 Quarterly Statement Blank, Life/Fraternal identity",
+          "testKind": "title_identity",
+          "query": "2026 Quarterly Statement Blank, Life/Fraternal",
           "expectedCandidateId": "naic-life-fraternal-reporting-qsb-life-2026",
-          "topChunkId": "naic-life-fraternal-reporting-qsb-life-2026--p-1",
+          "expectedMatch": true,
+          "expectedStructuralRegion": "source identity",
+          "topRank": 1,
+          "topChunkId": "naic-life-fraternal-reporting-qsb-life-2026--p-1-3",
           "topScore": 6,
+          "citationTarget": {
+            "citationText": "2026 Quarterly Statement Blank, Life/Fraternal",
+            "pageReference": "p. 1",
+            "sectionReference": "Pages 1-3",
+            "sourceReference": "https://content.naic.org/sites/default/files/publication-quarterly-statement-blanks-life-frat.pdf"
+          },
           "citationResolves": true,
           "supportRolePreserved": true,
+          "rationale": "Title query must resolve to a cited chunk for the same candidate.",
           "pass": true
         },
         {
           "testId": "naic-life-fraternal-reporting-qsb-life-2026-smoke-2",
-          "query": "2026 quarterly statement blank life fraternal",
+          "testKind": "substantive_content",
+          "query": "life accident health",
           "expectedCandidateId": "naic-life-fraternal-reporting-qsb-life-2026",
-          "topChunkId": "naic-life-fraternal-reporting-qsb-life-2026--p-1",
-          "topScore": 6,
+          "expectedMatch": true,
+          "expectedStructuralRegion": "Pages 1-3",
+          "topRank": 1,
+          "topChunkId": "naic-life-fraternal-reporting-qsb-life-2026--p-1-3",
+          "topScore": 3,
+          "citationTarget": {
+            "citationText": "2026 Quarterly Statement Blank, Life/Fraternal",
+            "pageReference": "p. 1",
+            "sectionReference": "Pages 1-3",
+            "sourceReference": "https://content.naic.org/sites/default/files/publication-quarterly-statement-blanks-life-frat.pdf"
+          },
           "citationResolves": true,
           "supportRolePreserved": true,
+          "rationale": "A source-derived substantive term query must resolve within this source.",
+          "pass": true
+        },
+        {
+          "testId": "naic-life-fraternal-reporting-qsb-life-2026-smoke-3",
+          "testKind": "structure_or_table",
+          "query": "Pages 1-3",
+          "expectedCandidateId": "naic-life-fraternal-reporting-qsb-life-2026",
+          "expectedMatch": true,
+          "expectedStructuralRegion": "Pages 1-3",
+          "topRank": 1,
+          "topChunkId": "naic-life-fraternal-reporting-qsb-life-2026--p-1-3",
+          "topScore": 1,
+          "citationTarget": {
+            "citationText": "2026 Quarterly Statement Blank, Life/Fraternal",
+            "pageReference": "p. 1",
+            "sectionReference": "Pages 1-3",
+            "sourceReference": "https://content.naic.org/sites/default/files/publication-quarterly-statement-blanks-life-frat.pdf"
+          },
+          "citationResolves": true,
+          "supportRolePreserved": true,
+          "rationale": "The structural locator must be searchable and citable.",
+          "pass": true
+        },
+        {
+          "testId": "naic-life-fraternal-reporting-qsb-life-2026-smoke-4",
+          "testKind": "numeric_or_form",
+          "query": "statement 2018 2025",
+          "expectedCandidateId": "naic-life-fraternal-reporting-qsb-life-2026",
+          "expectedMatch": true,
+          "expectedStructuralRegion": "Pages 50-51",
+          "topRank": 1,
+          "topChunkId": "naic-life-fraternal-reporting-qsb-life-2026--p-1-3",
+          "topScore": 3,
+          "citationTarget": {
+            "citationText": "2026 Quarterly Statement Blank, Life/Fraternal",
+            "pageReference": "p. 1",
+            "sectionReference": "Pages 1-3",
+            "sourceReference": "https://content.naic.org/sites/default/files/publication-quarterly-statement-blanks-life-frat.pdf"
+          },
+          "citationResolves": true,
+          "supportRolePreserved": true,
+          "rationale": "A numeric/table or form-oriented query must resolve without changing source role.",
+          "pass": true
+        },
+        {
+          "testId": "naic-life-fraternal-reporting-qsb-life-2026-smoke-5",
+          "testKind": "authority_support_boundary",
+          "query": "2026 Quarterly Statement Blank, Life/Fraternal CURRENT SUPPORT — DOWNLOAD",
+          "expectedCandidateId": "naic-life-fraternal-reporting-qsb-life-2026",
+          "expectedMatch": true,
+          "expectedStructuralRegion": "source identity and approved role",
+          "topRank": 1,
+          "topChunkId": "naic-life-fraternal-reporting-qsb-life-2026--p-1-3",
+          "topScore": 8,
+          "citationTarget": {
+            "citationText": "2026 Quarterly Statement Blank, Life/Fraternal",
+            "pageReference": "p. 1",
+            "sectionReference": "Pages 1-3",
+            "sourceReference": "https://content.naic.org/sites/default/files/publication-quarterly-statement-blanks-life-frat.pdf"
+          },
+          "citationResolves": true,
+          "supportRolePreserved": true,
+          "rationale": "Role language is retained as metadata; support is not upgraded to authority.",
+          "pass": true
+        },
+        {
+          "testId": "naic-life-fraternal-reporting-qsb-life-2026-smoke-6",
+          "testKind": "wrong_source_negative",
+          "query": "qzxv-blorf-mivak-94731",
+          "expectedCandidateId": null,
+          "expectedMatch": false,
+          "expectedStructuralRegion": "no matching source region",
+          "topRank": 1,
+          "topChunkId": "naic-life-fraternal-reporting-qsb-life-2026--p-1-3",
+          "topScore": 0,
+          "citationTarget": {
+            "citationText": "2026 Quarterly Statement Blank, Life/Fraternal",
+            "pageReference": "p. 1",
+            "sectionReference": "Pages 1-3",
+            "sourceReference": "https://content.naic.org/sites/default/files/publication-quarterly-statement-blanks-life-frat.pdf"
+          },
+          "citationResolves": true,
+          "supportRolePreserved": true,
+          "rationale": "A clearly foreign token must not retrieve this source.",
           "pass": true
         }
       ],
@@ -170,22 +806,128 @@
       "tests": [
         {
           "testId": "society-of-actuaries-experience-studies-soa-2015-vbt-report-smoke-1",
-          "query": "2015 Valuation Basic Table Report identity",
+          "testKind": "title_identity",
+          "query": "2015 Valuation Basic Table Report",
           "expectedCandidateId": "society-of-actuaries-experience-studies-soa-2015-vbt-report",
-          "topChunkId": "society-of-actuaries-experience-studies-soa-2015-vbt-report--p-1",
+          "expectedMatch": true,
+          "expectedStructuralRegion": "source identity",
+          "topRank": 1,
+          "topChunkId": "society-of-actuaries-experience-studies-soa-2015-vbt-report--p-1-3",
           "topScore": 5,
+          "citationTarget": {
+            "citationText": "2015 Valuation Basic Table Report",
+            "pageReference": "p. 1",
+            "sectionReference": "Pages 1-3",
+            "sourceReference": "https://www.soa.org/globalassets/assets/files/resources/experience-studies/2018/2015-vbt-report.pdf"
+          },
           "citationResolves": true,
           "supportRolePreserved": true,
+          "rationale": "Title query must resolve to a cited chunk for the same candidate.",
           "pass": true
         },
         {
           "testId": "society-of-actuaries-experience-studies-soa-2015-vbt-report-smoke-2",
-          "query": "2015 valuation basic table report joint",
+          "testKind": "substantive_content",
+          "query": "2015 valuation basic",
           "expectedCandidateId": "society-of-actuaries-experience-studies-soa-2015-vbt-report",
-          "topChunkId": "society-of-actuaries-experience-studies-soa-2015-vbt-report--p-1",
-          "topScore": 6,
+          "expectedMatch": true,
+          "expectedStructuralRegion": "Pages 1-3",
+          "topRank": 1,
+          "topChunkId": "society-of-actuaries-experience-studies-soa-2015-vbt-report--p-1-3",
+          "topScore": 3,
+          "citationTarget": {
+            "citationText": "2015 Valuation Basic Table Report",
+            "pageReference": "p. 1",
+            "sectionReference": "Pages 1-3",
+            "sourceReference": "https://www.soa.org/globalassets/assets/files/resources/experience-studies/2018/2015-vbt-report.pdf"
+          },
           "citationResolves": true,
           "supportRolePreserved": true,
+          "rationale": "A source-derived substantive term query must resolve within this source.",
+          "pass": true
+        },
+        {
+          "testId": "society-of-actuaries-experience-studies-soa-2015-vbt-report-smoke-3",
+          "testKind": "structure_or_table",
+          "query": "Pages 1-3",
+          "expectedCandidateId": "society-of-actuaries-experience-studies-soa-2015-vbt-report",
+          "expectedMatch": true,
+          "expectedStructuralRegion": "Pages 1-3",
+          "topRank": 1,
+          "topChunkId": "society-of-actuaries-experience-studies-soa-2015-vbt-report--p-1-3",
+          "topScore": 1,
+          "citationTarget": {
+            "citationText": "2015 Valuation Basic Table Report",
+            "pageReference": "p. 1",
+            "sectionReference": "Pages 1-3",
+            "sourceReference": "https://www.soa.org/globalassets/assets/files/resources/experience-studies/2018/2015-vbt-report.pdf"
+          },
+          "citationResolves": true,
+          "supportRolePreserved": true,
+          "rationale": "The structural locator must be searchable and citable.",
+          "pass": true
+        },
+        {
+          "testId": "society-of-actuaries-experience-studies-soa-2015-vbt-report-smoke-4",
+          "testKind": "numeric_or_form",
+          "query": "appendix mortality improvement",
+          "expectedCandidateId": "society-of-actuaries-experience-studies-soa-2015-vbt-report",
+          "expectedMatch": true,
+          "expectedStructuralRegion": "Pages 93-94",
+          "topRank": 1,
+          "topChunkId": "society-of-actuaries-experience-studies-soa-2015-vbt-report--p-1-3",
+          "topScore": 3,
+          "citationTarget": {
+            "citationText": "2015 Valuation Basic Table Report",
+            "pageReference": "p. 1",
+            "sectionReference": "Pages 1-3",
+            "sourceReference": "https://www.soa.org/globalassets/assets/files/resources/experience-studies/2018/2015-vbt-report.pdf"
+          },
+          "citationResolves": true,
+          "supportRolePreserved": true,
+          "rationale": "A numeric/table or form-oriented query must resolve without changing source role.",
+          "pass": true
+        },
+        {
+          "testId": "society-of-actuaries-experience-studies-soa-2015-vbt-report-smoke-5",
+          "testKind": "authority_support_boundary",
+          "query": "2015 Valuation Basic Table Report CURRENT SUPPORT — DOWNLOAD",
+          "expectedCandidateId": "society-of-actuaries-experience-studies-soa-2015-vbt-report",
+          "expectedMatch": true,
+          "expectedStructuralRegion": "source identity and approved role",
+          "topRank": 1,
+          "topChunkId": "society-of-actuaries-experience-studies-soa-2015-vbt-report--p-1-3",
+          "topScore": 6,
+          "citationTarget": {
+            "citationText": "2015 Valuation Basic Table Report",
+            "pageReference": "p. 1",
+            "sectionReference": "Pages 1-3",
+            "sourceReference": "https://www.soa.org/globalassets/assets/files/resources/experience-studies/2018/2015-vbt-report.pdf"
+          },
+          "citationResolves": true,
+          "supportRolePreserved": true,
+          "rationale": "Role language is retained as metadata; support is not upgraded to authority.",
+          "pass": true
+        },
+        {
+          "testId": "society-of-actuaries-experience-studies-soa-2015-vbt-report-smoke-6",
+          "testKind": "wrong_source_negative",
+          "query": "qzxv-blorf-mivak-94731",
+          "expectedCandidateId": null,
+          "expectedMatch": false,
+          "expectedStructuralRegion": "no matching source region",
+          "topRank": 1,
+          "topChunkId": "society-of-actuaries-experience-studies-soa-2015-vbt-report--p-1-3",
+          "topScore": 0,
+          "citationTarget": {
+            "citationText": "2015 Valuation Basic Table Report",
+            "pageReference": "p. 1",
+            "sectionReference": "Pages 1-3",
+            "sourceReference": "https://www.soa.org/globalassets/assets/files/resources/experience-studies/2018/2015-vbt-report.pdf"
+          },
+          "citationResolves": true,
+          "supportRolePreserved": true,
+          "rationale": "A clearly foreign token must not retrieve this source.",
           "pass": true
         }
       ],
@@ -194,6 +936,7 @@
   ],
   "summary": {
     "sourceCount": 7,
-    "passedSourceCount": 7
+    "passedSourceCount": 7,
+    "testCount": 42
   }
 }

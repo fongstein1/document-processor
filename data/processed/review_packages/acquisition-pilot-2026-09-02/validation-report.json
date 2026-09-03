@@ -5,15 +5,30 @@
   "status": "pass",
   "processingRunId": "processing-acquisition-pilot-2026-09-02",
   "sourceOfTruth": "C:\\Dev\\Document Processor Sources\\2026-09-02 Intake\\_acquisition-manifests\\approved-pilot-20260902\\final-20260902\\acquisition-manifest.json",
+  "exceptionTaxonomy": [
+    "PDF_EXTRACTION_FAILED",
+    "XLSX_STRUCTURE_PARSE_FAILED",
+    "EMPTY_PAGE_BENIGN",
+    "EMPTY_PAGE_REQUIRES_REVIEW",
+    "IMAGE_ONLY_SUBSTANTIVE_CONTENT",
+    "STRUCTURE_AMBIGUOUS",
+    "TABLE_STRUCTURE_AMBIGUOUS",
+    "STRUCTURED_EVIDENCE_IDENTITY_COLLISION",
+    "RETRIEVAL_SMOKE_TEST_FAILED",
+    "SOURCE_LINEAGE_MISMATCH",
+    "AUTHORITY_ROLE_CONFLICT",
+    "METADATA_INCOMPLETE",
+    "DETERMINISM_FAILURE"
+  ],
   "summary": {
     "totalAdmitted": 7,
     "processedSuccessfully": 7,
-    "cleanReviewCandidates": 6,
-    "humanReviewRequired": 1,
+    "cleanReviewCandidates": 7,
+    "humanReviewRequired": 0,
     "processingBlocked": 0,
     "systemicFailures": 0,
-    "totalChunks": 2808,
-    "totalStructuredEvidence": 5
+    "totalChunks": 2232,
+    "totalStructuredEvidence": 9
   },
   "checks": {
     "rawShaLineage": true,

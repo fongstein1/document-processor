@@ -12,12 +12,12 @@
       "naic_life_fraternal_reporting",
       "society_of_actuaries_experience_studies"
     ],
-    "processingIntent": "Low-touch processing pilot for seven admitted raw sources.",
+    "processingIntent": "Low-touch processing pilot for admitted raw sources.",
     "sourceFileCount": 7,
-    "extractedItemCount": 2808,
-    "exceptionCount": 1,
+    "extractedItemCount": 2232,
+    "exceptionCount": 0,
     "summary": "All admitted sources were processed through review-only extraction, structure, chunking, source-index candidate, retrieval smoke test, and validation.",
-    "notes": "{\"totalAdmitted\":7,\"processedSuccessfully\":7,\"cleanReviewCandidates\":6,\"humanReviewRequired\":1,\"processingBlocked\":0,\"systemicFailures\":0,\"totalChunks\":2808,\"totalStructuredEvidence\":5}"
+    "notes": "{\"totalAdmitted\":7,\"processedSuccessfully\":7,\"cleanReviewCandidates\":7,\"humanReviewRequired\":0,\"processingBlocked\":0,\"systemicFailures\":0,\"totalChunks\":2232,\"totalStructuredEvidence\":9}"
   },
   "sourceFilesProcessed": [
     {
@@ -29,7 +29,7 @@
       "domainId": "naic_regulatory",
       "documentType": "valuation_rates_workbook",
       "processingStatus": "review_pending",
-      "pageCount": 1,
+      "pageCount": null,
       "issueCount": 0,
       "notes": "Automated source binding, extraction, structure, chunking, citation, SHA, and retrieval checks passed."
     },
@@ -69,8 +69,8 @@
       "documentType": "redline_manual",
       "processingStatus": "review_pending",
       "pageCount": 482,
-      "issueCount": 1,
-      "notes": "6 PDF page(s) have no extractable text; retain page-image backstop."
+      "issueCount": 0,
+      "notes": "Automated source binding, extraction, structure, chunking, citation, SHA, retrieval, and benign-empty-page checks passed."
     },
     {
       "sourceId": "naic-accounting-publications-spd-2026",
@@ -174,11 +174,9 @@
       "sourcePath": "C:\\Dev\\Document Processor Sources\\2026-09-02 Intake\\02_NAIC_Current_Support\\PBR\\pbr_data_valuation_manual_current_edition_redline.pdf",
       "pageReference": "pp. 1-482",
       "sectionReference": "Page-aware extraction",
-      "summary": "6 PDF page(s) have no extractable text; retain page-image backstop.",
-      "confidence": "medium",
-      "reviewFlags": [
-        "EMPTY_PAGE_TEXT_LAYER"
-      ],
+      "summary": "Automated source binding, extraction, structure, chunking, citation, SHA, retrieval, and benign-empty-page checks passed.",
+      "confidence": "high",
+      "reviewFlags": [],
       "learnerFacingEligible": false,
       "appReadyEligible": false,
       "notes": "Review-only candidate; no promotion or downstream eligibility is implied."
@@ -235,37 +233,10 @@
       "notes": "Review-only candidate; no promotion or downstream eligibility is implied."
     }
   ],
-  "requiredHumanDecisions": [
-    {
-      "decisionId": "naic-pbr-vm-20-vm-31-vm-51-pbr-vm-current-redline-review-disposition",
-      "decisionType": "promotion_gate",
-      "question": "Is the Current PBR Valuation Manual, redline edition evidence sufficient for any later promotion consideration?",
-      "whyItMatters": "6 PDF page(s) have no extractable text; retain page-image backstop.",
-      "recommendedOwner": "source reviewer",
-      "priority": "medium"
-    }
-  ],
-  "exceptionsAndFlags": [
-    {
-      "flagId": "naic-pbr-vm-20-vm-31-vm-51-pbr-vm-current-redline-empty_page_text_layer",
-      "severity": "medium",
-      "sourceId": "naic-pbr-vm-20-vm-31-vm-51-pbr-vm-current-redline",
-      "flagType": "empty_page_text_layer",
-      "message": "6 PDF page(s) have no extractable text; retain page-image backstop.",
-      "notes": "Keep this source in human review; do not promote."
-    }
-  ],
+  "requiredHumanDecisions": [],
+  "exceptionsAndFlags": [],
   "citationIssues": [],
-  "unresolvedIssues": [
-    {
-      "issueId": "naic-pbr-vm-20-vm-31-vm-51-pbr-vm-current-redline-empty_page_text_layer",
-      "severity": "medium",
-      "issueType": "empty_page_text_layer",
-      "sourceId": "naic-pbr-vm-20-vm-31-vm-51-pbr-vm-current-redline",
-      "message": "6 PDF page(s) have no extractable text; retain page-image backstop.",
-      "recommendedAction": "Review source-specific evidence before any future promotion decision."
-    }
-  ],
+  "unresolvedIssues": [],
   "promotionRecommendation": {
     "status": "not_recommended",
     "reason": "This is a low-touch review-only pilot; no canonical promotion is authorized.",
@@ -289,19 +260,19 @@
     "targetExports": [],
     "notes": "No promotion was performed."
   },
-  "reviewerNotes": "Proposed clean sample: A2 workbook and S4 experience-study PDF. Review all exceptions.",
+  "reviewerNotes": "Proposed clean sample: native workbook and empirical-study PDF. Review all exceptions.",
   "extensions": {
     "processingRunId": "processing-acquisition-pilot-2026-09-02",
     "acquisitionManifestPath": "C:\\Dev\\Document Processor Sources\\2026-09-02 Intake\\_acquisition-manifests\\approved-pilot-20260902\\final-20260902\\acquisition-manifest.json",
     "summary": {
       "totalAdmitted": 7,
       "processedSuccessfully": 7,
-      "cleanReviewCandidates": 6,
-      "humanReviewRequired": 1,
+      "cleanReviewCandidates": 7,
+      "humanReviewRequired": 0,
       "processingBlocked": 0,
       "systemicFailures": 0,
-      "totalChunks": 2808,
-      "totalStructuredEvidence": 5
+      "totalChunks": 2232,
+      "totalStructuredEvidence": 9
     }
   }
 }

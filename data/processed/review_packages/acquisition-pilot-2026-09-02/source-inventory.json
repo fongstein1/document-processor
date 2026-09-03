@@ -15,7 +15,7 @@
       "documentType": "valuation_rates_workbook",
       "sourceTitle": "VM-V nonjumbo and jumbo valuation rates, 2026",
       "sourceReference": "https://content.naic.org/sites/default/files/pbr-2026-vmv-nonjumbo-jumbo-valuation-rates.xlsx",
-      "pageCount": 1,
+      "pageCount": null,
       "processingStatus": "review_pending",
       "authorityLevel": "current_authority",
       "fileHash": "85f7aa611f268d29d2e114efef91a41ddd049d86af70f8149b48ca1210b36dd5",
@@ -72,7 +72,7 @@
       "fileHash": "9f963e3e447bf225c2e8c2dedea3d5d227c6235809558bbcdd60e475088e3bbc",
       "sizeBytes": 5013437,
       "extension": ".pdf",
-      "notes": "6 PDF page(s) have no extractable text; retain page-image backstop."
+      "notes": "Automated source binding, extraction, structure, chunking, citation, SHA, retrieval, and benign-empty-page checks passed."
     },
     {
       "sourceId": "naic-accounting-publications-spd-2026",

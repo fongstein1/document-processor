@@ -39,7 +39,7 @@
       "documentType": "valuation_rates_workbook",
       "sourceTitle": "VM-V nonjumbo and jumbo valuation rates, 2026",
       "sourceReference": "https://content.naic.org/sites/default/files/pbr-2026-vmv-nonjumbo-jumbo-valuation-rates.xlsx",
-      "pageCount": 1,
+      "pageCount": null,
       "processingStatus": "review_pending",
       "authorityLevel": "current_authority",
       "fileHash": "85f7aa611f268d29d2e114efef91a41ddd049d86af70f8149b48ca1210b36dd5",
@@ -96,7 +96,7 @@
       "fileHash": "9f963e3e447bf225c2e8c2dedea3d5d227c6235809558bbcdd60e475088e3bbc",
       "sizeBytes": 5013437,
       "extension": ".pdf",
-      "notes": "6 PDF page(s) have no extractable text; retain page-image backstop."
+      "notes": "Automated source binding, extraction, structure, chunking, citation, SHA, retrieval, and benign-empty-page checks passed."
     },
     {
       "sourceId": "naic-accounting-publications-spd-2026",
@@ -175,7 +175,7 @@
     "appExportRequested": false,
     "ragReadinessRequested": false,
     "reviewStrategy": "exception_first",
-    "notes": "Exactly the seven admitted records were processed; A1 remained excluded."
+    "notes": "Only records explicitly admitted by the acquisition manifest were processed; quarantined records remained outside the processing queue."
   },
   "boundaries": {
     "rawSourceRoot": "C:\\Dev\\Document Processor Sources\\2026-09-02 Intake",
@@ -207,6 +207,7 @@
     "processingRunId": "processing-acquisition-pilot-2026-09-02",
     "acquisitionManifestPath": "C:\\Dev\\Document Processor Sources\\2026-09-02 Intake\\_acquisition-manifests\\approved-pilot-20260902\\final-20260902\\acquisition-manifest.json",
     "authorizedProcessingScope": "ADMIT_TO_PROCESSING_QUEUE only",
+    "quarantinedRecordCount": 1,
     "a1Excluded": true
   }
 }
