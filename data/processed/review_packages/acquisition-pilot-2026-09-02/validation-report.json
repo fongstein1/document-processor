@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "reportId": "validation-acquisition-pilot-2026-09-02",
+  "generatedAt": "2026-09-03T03:22:51.7659179Z",
+  "status": "pass",
+  "processingRunId": "processing-acquisition-pilot-2026-09-02",
+  "sourceOfTruth": "C:\\Dev\\Document Processor Sources\\2026-09-02 Intake\\_acquisition-manifests\\approved-pilot-20260902\\final-20260902\\acquisition-manifest.json",
+  "summary": {
+    "totalAdmitted": 7,
+    "processedSuccessfully": 7,
+    "cleanReviewCandidates": 6,
+    "humanReviewRequired": 1,
+    "processingBlocked": 0,
+    "systemicFailures": 0,
+    "totalChunks": 2808,
+    "totalStructuredEvidence": 5
+  },
+  "checks": {
+    "rawShaLineage": true,
+    "sourceIdentityBinding": true,
+    "extractionCompleteness": true,
+    "structuralSegmentation": true,
+    "deterministicIds": true,
+    "metadataCompleteness": true,
+    "authoritySupportPreserved": true,
+    "structuredEvidenceIdentity": true,
+    "retrievalSmokeTests": true,
+    "reviewOnlyGuardrails": true
+  }
+}

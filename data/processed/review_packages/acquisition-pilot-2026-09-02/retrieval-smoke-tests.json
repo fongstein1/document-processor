@@ -1,0 +1,199 @@
+{
+  "schemaVersion": "1.0",
+  "processingRunId": "processing-acquisition-pilot-2026-09-02",
+  "tests": [
+    {
+      "candidateId": "naic-pbr-vm-20-vm-31-vm-51-vmv-rates-2026",
+      "sourceFamilyId": "naic_pbr_vm_20_vm_31_vm_51",
+      "tests": [
+        {
+          "testId": "naic-pbr-vm-20-vm-31-vm-51-vmv-rates-2026-smoke-1",
+          "query": "VM-V nonjumbo and jumbo valuation rates, 2026 identity",
+          "expectedCandidateId": "naic-pbr-vm-20-vm-31-vm-51-vmv-rates-2026",
+          "topChunkId": "naic-pbr-vm-20-vm-31-vm-51-vmv-rates-2026--sheet-2026-jumbo-rates",
+          "topScore": 5,
+          "citationResolves": true,
+          "supportRolePreserved": true,
+          "pass": true
+        },
+        {
+          "testId": "naic-pbr-vm-20-vm-31-vm-51-vmv-rates-2026-smoke-2",
+          "query": "nonjumbo jumbo valuation rates 2026 bucket",
+          "expectedCandidateId": "naic-pbr-vm-20-vm-31-vm-51-vmv-rates-2026",
+          "topChunkId": "naic-pbr-vm-20-vm-31-vm-51-vmv-rates-2026--sheet-2026-jumbo-rates",
+          "topScore": 6,
+          "citationResolves": true,
+          "supportRolePreserved": true,
+          "pass": true
+        }
+      ],
+      "allPassed": true
+    },
+    {
+      "candidateId": "naic-accounting-publications-appm-2026",
+      "sourceFamilyId": "naic_accounting_publications",
+      "tests": [
+        {
+          "testId": "naic-accounting-publications-appm-2026-smoke-1",
+          "query": "2026 Accounting Practices and Procedures Manual identity",
+          "expectedCandidateId": "naic-accounting-publications-appm-2026",
+          "topChunkId": "naic-accounting-publications-appm-2026--p-764",
+          "topScore": 6,
+          "citationResolves": true,
+          "supportRolePreserved": true,
+          "pass": true
+        },
+        {
+          "testId": "naic-accounting-publications-appm-2026-smoke-2",
+          "query": "2026 accounting practices procedures manual march",
+          "expectedCandidateId": "naic-accounting-publications-appm-2026",
+          "topChunkId": "naic-accounting-publications-appm-2026--p-1",
+          "topScore": 6,
+          "citationResolves": true,
+          "supportRolePreserved": true,
+          "pass": true
+        }
+      ],
+      "allPassed": true
+    },
+    {
+      "candidateId": "naic-life-fraternal-reporting-2026-03bwg",
+      "sourceFamilyId": "naic_life_fraternal_reporting",
+      "tests": [
+        {
+          "testId": "naic-life-fraternal-reporting-2026-03bwg-smoke-1",
+          "query": "2026-03BWG Modified Blanks identity",
+          "expectedCandidateId": "naic-life-fraternal-reporting-2026-03bwg",
+          "topChunkId": "naic-life-fraternal-reporting-2026-03bwg--p-1",
+          "topScore": 4,
+          "citationResolves": true,
+          "supportRolePreserved": true,
+          "pass": true
+        },
+        {
+          "testId": "naic-life-fraternal-reporting-2026-03bwg-smoke-2",
+          "query": "2026 03bwg modified blanks national association",
+          "expectedCandidateId": "naic-life-fraternal-reporting-2026-03bwg",
+          "topChunkId": "naic-life-fraternal-reporting-2026-03bwg--p-1",
+          "topScore": 6,
+          "citationResolves": true,
+          "supportRolePreserved": true,
+          "pass": true
+        }
+      ],
+      "allPassed": true
+    },
+    {
+      "candidateId": "naic-pbr-vm-20-vm-31-vm-51-pbr-vm-current-redline",
+      "sourceFamilyId": "naic_pbr_vm_20_vm_31_vm_51",
+      "tests": [
+        {
+          "testId": "naic-pbr-vm-20-vm-31-vm-51-pbr-vm-current-redline-smoke-1",
+          "query": "Current PBR Valuation Manual, redline edition identity",
+          "expectedCandidateId": "naic-pbr-vm-20-vm-31-vm-51-pbr-vm-current-redline",
+          "topChunkId": "naic-pbr-vm-20-vm-31-vm-51-pbr-vm-current-redline--p-360",
+          "topScore": 6,
+          "citationResolves": true,
+          "supportRolePreserved": true,
+          "pass": true
+        },
+        {
+          "testId": "naic-pbr-vm-20-vm-31-vm-51-pbr-vm-current-redline-smoke-2",
+          "query": "current valuation manual redline edition 2025",
+          "expectedCandidateId": "naic-pbr-vm-20-vm-31-vm-51-pbr-vm-current-redline",
+          "topChunkId": "naic-pbr-vm-20-vm-31-vm-51-pbr-vm-current-redline--p-1",
+          "topScore": 6,
+          "citationResolves": true,
+          "supportRolePreserved": true,
+          "pass": true
+        }
+      ],
+      "allPassed": true
+    },
+    {
+      "candidateId": "naic-accounting-publications-spd-2026",
+      "sourceFamilyId": "naic_accounting_publications",
+      "tests": [
+        {
+          "testId": "naic-accounting-publications-spd-2026-smoke-1",
+          "query": "2026 States Prescribed Differences identity",
+          "expectedCandidateId": "naic-accounting-publications-spd-2026",
+          "topChunkId": "naic-accounting-publications-spd-2026--p-1",
+          "topScore": 4,
+          "citationResolves": true,
+          "supportRolePreserved": true,
+          "pass": true
+        },
+        {
+          "testId": "naic-accounting-publications-spd-2026-smoke-2",
+          "query": "2026 states prescribed differences from naic",
+          "expectedCandidateId": "naic-accounting-publications-spd-2026",
+          "topChunkId": "naic-accounting-publications-spd-2026--p-1",
+          "topScore": 6,
+          "citationResolves": true,
+          "supportRolePreserved": true,
+          "pass": true
+        }
+      ],
+      "allPassed": true
+    },
+    {
+      "candidateId": "naic-life-fraternal-reporting-qsb-life-2026",
+      "sourceFamilyId": "naic_life_fraternal_reporting",
+      "tests": [
+        {
+          "testId": "naic-life-fraternal-reporting-qsb-life-2026-smoke-1",
+          "query": "2026 Quarterly Statement Blank, Life/Fraternal identity",
+          "expectedCandidateId": "naic-life-fraternal-reporting-qsb-life-2026",
+          "topChunkId": "naic-life-fraternal-reporting-qsb-life-2026--p-1",
+          "topScore": 6,
+          "citationResolves": true,
+          "supportRolePreserved": true,
+          "pass": true
+        },
+        {
+          "testId": "naic-life-fraternal-reporting-qsb-life-2026-smoke-2",
+          "query": "2026 quarterly statement blank life fraternal",
+          "expectedCandidateId": "naic-life-fraternal-reporting-qsb-life-2026",
+          "topChunkId": "naic-life-fraternal-reporting-qsb-life-2026--p-1",
+          "topScore": 6,
+          "citationResolves": true,
+          "supportRolePreserved": true,
+          "pass": true
+        }
+      ],
+      "allPassed": true
+    },
+    {
+      "candidateId": "society-of-actuaries-experience-studies-soa-2015-vbt-report",
+      "sourceFamilyId": "society_of_actuaries_experience_studies",
+      "tests": [
+        {
+          "testId": "society-of-actuaries-experience-studies-soa-2015-vbt-report-smoke-1",
+          "query": "2015 Valuation Basic Table Report identity",
+          "expectedCandidateId": "society-of-actuaries-experience-studies-soa-2015-vbt-report",
+          "topChunkId": "society-of-actuaries-experience-studies-soa-2015-vbt-report--p-1",
+          "topScore": 5,
+          "citationResolves": true,
+          "supportRolePreserved": true,
+          "pass": true
+        },
+        {
+          "testId": "society-of-actuaries-experience-studies-soa-2015-vbt-report-smoke-2",
+          "query": "2015 valuation basic table report joint",
+          "expectedCandidateId": "society-of-actuaries-experience-studies-soa-2015-vbt-report",
+          "topChunkId": "society-of-actuaries-experience-studies-soa-2015-vbt-report--p-1",
+          "topScore": 6,
+          "citationResolves": true,
+          "supportRolePreserved": true,
+          "pass": true
+        }
+      ],
+      "allPassed": true
+    }
+  ],
+  "summary": {
+    "sourceCount": 7,
+    "passedSourceCount": 7
+  }
+}

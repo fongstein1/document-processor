@@ -1,0 +1,307 @@
+{
+  "schemaVersion": "1.0",
+  "packetId": "review-packet-acquisition-pilot-2026-09-02",
+  "batchId": "acquisition-pilot-2026-09-02",
+  "generatedAt": "2026-09-03T03:22:51.7659179Z",
+  "reviewMode": "exception_first",
+  "batchSummary": {
+    "batchName": "Acquisition pilot 2026-09-02 - low-touch review-only processing",
+    "sourceFamilies": [
+      "naic_pbr_vm_20_vm_31_vm_51",
+      "naic_accounting_publications",
+      "naic_life_fraternal_reporting",
+      "society_of_actuaries_experience_studies"
+    ],
+    "processingIntent": "Low-touch processing pilot for seven admitted raw sources.",
+    "sourceFileCount": 7,
+    "extractedItemCount": 2808,
+    "exceptionCount": 1,
+    "summary": "All admitted sources were processed through review-only extraction, structure, chunking, source-index candidate, retrieval smoke test, and validation.",
+    "notes": "{\"totalAdmitted\":7,\"processedSuccessfully\":7,\"cleanReviewCandidates\":6,\"humanReviewRequired\":1,\"processingBlocked\":0,\"systemicFailures\":0,\"totalChunks\":2808,\"totalStructuredEvidence\":5}"
+  },
+  "sourceFilesProcessed": [
+    {
+      "sourceId": "naic-pbr-vm-20-vm-31-vm-51-vmv-rates-2026",
+      "filename": "pbr-2026-vmv-nonjumbo-jumbo-valuation-rates.xlsx",
+      "filePath": "C:\\Dev\\Document Processor Sources\\2026-09-02 Intake\\01_NAIC_Current_Authority\\PBR\\pbr-2026-vmv-nonjumbo-jumbo-valuation-rates.xlsx",
+      "sourceReference": "https://content.naic.org/sites/default/files/pbr-2026-vmv-nonjumbo-jumbo-valuation-rates.xlsx",
+      "sourceFamilyId": "naic_pbr_vm_20_vm_31_vm_51",
+      "domainId": "naic_regulatory",
+      "documentType": "valuation_rates_workbook",
+      "processingStatus": "review_pending",
+      "pageCount": 1,
+      "issueCount": 0,
+      "notes": "Automated source binding, extraction, structure, chunking, citation, SHA, and retrieval checks passed."
+    },
+    {
+      "sourceId": "naic-accounting-publications-appm-2026",
+      "filename": "publication-app-manual.pdf",
+      "filePath": "C:\\Dev\\Document Processor Sources\\2026-09-02 Intake\\01_NAIC_Current_Authority\\Accounting\\publication-app-manual.pdf",
+      "sourceReference": "https://content.naic.org/sites/default/files/publication-app-manual.pdf",
+      "sourceFamilyId": "naic_accounting_publications",
+      "domainId": "naic_regulatory",
+      "documentType": "accounting_manual",
+      "processingStatus": "review_pending",
+      "pageCount": 2117,
+      "issueCount": 0,
+      "notes": "Automated source binding, extraction, structure, chunking, citation, SHA, and retrieval checks passed."
+    },
+    {
+      "sourceId": "naic-life-fraternal-reporting-2026-03bwg",
+      "filename": "2026-03BWG_Modified.pdf",
+      "filePath": "C:\\Dev\\Document Processor Sources\\2026-09-02 Intake\\01_NAIC_Current_Authority\\Life_Fraternal_Reporting\\2026-03BWG_Modified.pdf",
+      "sourceReference": "https://content.naic.org/sites/default/files/inline-files/2026-03BWG_Modified.pdf",
+      "sourceFamilyId": "naic_life_fraternal_reporting",
+      "domainId": "naic_regulatory",
+      "documentType": "reporting_blank",
+      "processingStatus": "review_pending",
+      "pageCount": 22,
+      "issueCount": 0,
+      "notes": "Automated source binding, extraction, structure, chunking, citation, SHA, and retrieval checks passed."
+    },
+    {
+      "sourceId": "naic-pbr-vm-20-vm-31-vm-51-pbr-vm-current-redline",
+      "filename": "pbr_data_valuation_manual_current_edition_redline.pdf",
+      "filePath": "C:\\Dev\\Document Processor Sources\\2026-09-02 Intake\\02_NAIC_Current_Support\\PBR\\pbr_data_valuation_manual_current_edition_redline.pdf",
+      "sourceReference": "https://content.naic.org/sites/default/files/pbr_data_valuation_manual_current_edition_redline.pdf",
+      "sourceFamilyId": "naic_pbr_vm_20_vm_31_vm_51",
+      "domainId": "naic_regulatory",
+      "documentType": "redline_manual",
+      "processingStatus": "review_pending",
+      "pageCount": 482,
+      "issueCount": 1,
+      "notes": "6 PDF page(s) have no extractable text; retain page-image backstop."
+    },
+    {
+      "sourceId": "naic-accounting-publications-spd-2026",
+      "filename": "spd-ops.pdf",
+      "filePath": "C:\\Dev\\Document Processor Sources\\2026-09-02 Intake\\02_NAIC_Current_Support\\Accounting\\spd-ops.pdf",
+      "sourceReference": "https://content.naic.org/sites/default/files/spd-ops.pdf",
+      "sourceFamilyId": "naic_accounting_publications",
+      "domainId": "naic_regulatory",
+      "documentType": "prescribed_differences",
+      "processingStatus": "review_pending",
+      "pageCount": 37,
+      "issueCount": 0,
+      "notes": "Automated source binding, extraction, structure, chunking, citation, SHA, and retrieval checks passed."
+    },
+    {
+      "sourceId": "naic-life-fraternal-reporting-qsb-life-2026",
+      "filename": "publication-quarterly-statement-blanks-life-frat.pdf",
+      "filePath": "C:\\Dev\\Document Processor Sources\\2026-09-02 Intake\\02_NAIC_Current_Support\\Life_Fraternal_Reporting\\publication-quarterly-statement-blanks-life-frat.pdf",
+      "sourceReference": "https://content.naic.org/sites/default/files/publication-quarterly-statement-blanks-life-frat.pdf",
+      "sourceFamilyId": "naic_life_fraternal_reporting",
+      "domainId": "naic_regulatory",
+      "documentType": "reporting_blank",
+      "processingStatus": "review_pending",
+      "pageCount": 51,
+      "issueCount": 0,
+      "notes": "Automated source binding, extraction, structure, chunking, citation, SHA, and retrieval checks passed."
+    },
+    {
+      "sourceId": "society-of-actuaries-experience-studies-soa-2015-vbt-report",
+      "filename": "2015-vbt-report.pdf",
+      "filePath": "C:\\Dev\\Document Processor Sources\\2026-09-02 Intake\\03_Professional_Support\\SOA_Experience_Studies\\2015-vbt-report.pdf",
+      "sourceReference": "https://www.soa.org/globalassets/assets/files/resources/experience-studies/2018/2015-vbt-report.pdf",
+      "sourceFamilyId": "society_of_actuaries_experience_studies",
+      "domainId": "actuarial_experience",
+      "documentType": "experience_study_report",
+      "processingStatus": "review_pending",
+      "pageCount": 94,
+      "issueCount": 0,
+      "notes": "Automated source binding, extraction, structure, chunking, citation, SHA, and retrieval checks passed."
+    }
+  ],
+  "extractedItems": [
+    {
+      "stableId": "naic-pbr-vm-20-vm-31-vm-51-vmv-rates-2026--review-item",
+      "sourceId": "naic-pbr-vm-20-vm-31-vm-51-vmv-rates-2026",
+      "sourceFamilyId": "naic_pbr_vm_20_vm_31_vm_51",
+      "domainId": "naic_regulatory",
+      "documentType": "valuation_rates_workbook",
+      "sourceReference": "https://content.naic.org/sites/default/files/pbr-2026-vmv-nonjumbo-jumbo-valuation-rates.xlsx",
+      "sourcePath": "C:\\Dev\\Document Processor Sources\\2026-09-02 Intake\\01_NAIC_Current_Authority\\PBR\\pbr-2026-vmv-nonjumbo-jumbo-valuation-rates.xlsx",
+      "pageReference": "Workbook",
+      "sectionReference": "Workbook sheets",
+      "summary": "Automated source binding, extraction, structure, chunking, citation, SHA, and retrieval checks passed.",
+      "confidence": "high",
+      "reviewFlags": [],
+      "learnerFacingEligible": false,
+      "appReadyEligible": false,
+      "notes": "Review-only candidate; no promotion or downstream eligibility is implied."
+    },
+    {
+      "stableId": "naic-accounting-publications-appm-2026--review-item",
+      "sourceId": "naic-accounting-publications-appm-2026",
+      "sourceFamilyId": "naic_accounting_publications",
+      "domainId": "naic_regulatory",
+      "documentType": "accounting_manual",
+      "sourceReference": "https://content.naic.org/sites/default/files/publication-app-manual.pdf",
+      "sourcePath": "C:\\Dev\\Document Processor Sources\\2026-09-02 Intake\\01_NAIC_Current_Authority\\Accounting\\publication-app-manual.pdf",
+      "pageReference": "pp. 1-2117",
+      "sectionReference": "Page-aware extraction",
+      "summary": "Automated source binding, extraction, structure, chunking, citation, SHA, and retrieval checks passed.",
+      "confidence": "high",
+      "reviewFlags": [],
+      "learnerFacingEligible": false,
+      "appReadyEligible": false,
+      "notes": "Review-only candidate; no promotion or downstream eligibility is implied."
+    },
+    {
+      "stableId": "naic-life-fraternal-reporting-2026-03bwg--review-item",
+      "sourceId": "naic-life-fraternal-reporting-2026-03bwg",
+      "sourceFamilyId": "naic_life_fraternal_reporting",
+      "domainId": "naic_regulatory",
+      "documentType": "reporting_blank",
+      "sourceReference": "https://content.naic.org/sites/default/files/inline-files/2026-03BWG_Modified.pdf",
+      "sourcePath": "C:\\Dev\\Document Processor Sources\\2026-09-02 Intake\\01_NAIC_Current_Authority\\Life_Fraternal_Reporting\\2026-03BWG_Modified.pdf",
+      "pageReference": "pp. 1-22",
+      "sectionReference": "Page-aware extraction",
+      "summary": "Automated source binding, extraction, structure, chunking, citation, SHA, and retrieval checks passed.",
+      "confidence": "high",
+      "reviewFlags": [],
+      "learnerFacingEligible": false,
+      "appReadyEligible": false,
+      "notes": "Review-only candidate; no promotion or downstream eligibility is implied."
+    },
+    {
+      "stableId": "naic-pbr-vm-20-vm-31-vm-51-pbr-vm-current-redline--review-item",
+      "sourceId": "naic-pbr-vm-20-vm-31-vm-51-pbr-vm-current-redline",
+      "sourceFamilyId": "naic_pbr_vm_20_vm_31_vm_51",
+      "domainId": "naic_regulatory",
+      "documentType": "redline_manual",
+      "sourceReference": "https://content.naic.org/sites/default/files/pbr_data_valuation_manual_current_edition_redline.pdf",
+      "sourcePath": "C:\\Dev\\Document Processor Sources\\2026-09-02 Intake\\02_NAIC_Current_Support\\PBR\\pbr_data_valuation_manual_current_edition_redline.pdf",
+      "pageReference": "pp. 1-482",
+      "sectionReference": "Page-aware extraction",
+      "summary": "6 PDF page(s) have no extractable text; retain page-image backstop.",
+      "confidence": "medium",
+      "reviewFlags": [
+        "EMPTY_PAGE_TEXT_LAYER"
+      ],
+      "learnerFacingEligible": false,
+      "appReadyEligible": false,
+      "notes": "Review-only candidate; no promotion or downstream eligibility is implied."
+    },
+    {
+      "stableId": "naic-accounting-publications-spd-2026--review-item",
+      "sourceId": "naic-accounting-publications-spd-2026",
+      "sourceFamilyId": "naic_accounting_publications",
+      "domainId": "naic_regulatory",
+      "documentType": "prescribed_differences",
+      "sourceReference": "https://content.naic.org/sites/default/files/spd-ops.pdf",
+      "sourcePath": "C:\\Dev\\Document Processor Sources\\2026-09-02 Intake\\02_NAIC_Current_Support\\Accounting\\spd-ops.pdf",
+      "pageReference": "pp. 1-37",
+      "sectionReference": "Page-aware extraction",
+      "summary": "Automated source binding, extraction, structure, chunking, citation, SHA, and retrieval checks passed.",
+      "confidence": "high",
+      "reviewFlags": [],
+      "learnerFacingEligible": false,
+      "appReadyEligible": false,
+      "notes": "Review-only candidate; no promotion or downstream eligibility is implied."
+    },
+    {
+      "stableId": "naic-life-fraternal-reporting-qsb-life-2026--review-item",
+      "sourceId": "naic-life-fraternal-reporting-qsb-life-2026",
+      "sourceFamilyId": "naic_life_fraternal_reporting",
+      "domainId": "naic_regulatory",
+      "documentType": "reporting_blank",
+      "sourceReference": "https://content.naic.org/sites/default/files/publication-quarterly-statement-blanks-life-frat.pdf",
+      "sourcePath": "C:\\Dev\\Document Processor Sources\\2026-09-02 Intake\\02_NAIC_Current_Support\\Life_Fraternal_Reporting\\publication-quarterly-statement-blanks-life-frat.pdf",
+      "pageReference": "pp. 1-51",
+      "sectionReference": "Page-aware extraction",
+      "summary": "Automated source binding, extraction, structure, chunking, citation, SHA, and retrieval checks passed.",
+      "confidence": "high",
+      "reviewFlags": [],
+      "learnerFacingEligible": false,
+      "appReadyEligible": false,
+      "notes": "Review-only candidate; no promotion or downstream eligibility is implied."
+    },
+    {
+      "stableId": "society-of-actuaries-experience-studies-soa-2015-vbt-report--review-item",
+      "sourceId": "society-of-actuaries-experience-studies-soa-2015-vbt-report",
+      "sourceFamilyId": "society_of_actuaries_experience_studies",
+      "domainId": "actuarial_experience",
+      "documentType": "experience_study_report",
+      "sourceReference": "https://www.soa.org/globalassets/assets/files/resources/experience-studies/2018/2015-vbt-report.pdf",
+      "sourcePath": "C:\\Dev\\Document Processor Sources\\2026-09-02 Intake\\03_Professional_Support\\SOA_Experience_Studies\\2015-vbt-report.pdf",
+      "pageReference": "pp. 1-94",
+      "sectionReference": "Page-aware extraction",
+      "summary": "Automated source binding, extraction, structure, chunking, citation, SHA, and retrieval checks passed.",
+      "confidence": "high",
+      "reviewFlags": [],
+      "learnerFacingEligible": false,
+      "appReadyEligible": false,
+      "notes": "Review-only candidate; no promotion or downstream eligibility is implied."
+    }
+  ],
+  "requiredHumanDecisions": [
+    {
+      "decisionId": "naic-pbr-vm-20-vm-31-vm-51-pbr-vm-current-redline-review-disposition",
+      "decisionType": "promotion_gate",
+      "question": "Is the Current PBR Valuation Manual, redline edition evidence sufficient for any later promotion consideration?",
+      "whyItMatters": "6 PDF page(s) have no extractable text; retain page-image backstop.",
+      "recommendedOwner": "source reviewer",
+      "priority": "medium"
+    }
+  ],
+  "exceptionsAndFlags": [
+    {
+      "flagId": "naic-pbr-vm-20-vm-31-vm-51-pbr-vm-current-redline-empty_page_text_layer",
+      "severity": "medium",
+      "sourceId": "naic-pbr-vm-20-vm-31-vm-51-pbr-vm-current-redline",
+      "flagType": "empty_page_text_layer",
+      "message": "6 PDF page(s) have no extractable text; retain page-image backstop.",
+      "notes": "Keep this source in human review; do not promote."
+    }
+  ],
+  "citationIssues": [],
+  "unresolvedIssues": [
+    {
+      "issueId": "naic-pbr-vm-20-vm-31-vm-51-pbr-vm-current-redline-empty_page_text_layer",
+      "severity": "medium",
+      "issueType": "empty_page_text_layer",
+      "sourceId": "naic-pbr-vm-20-vm-31-vm-51-pbr-vm-current-redline",
+      "message": "6 PDF page(s) have no extractable text; retain page-image backstop.",
+      "recommendedAction": "Review source-specific evidence before any future promotion decision."
+    }
+  ],
+  "promotionRecommendation": {
+    "status": "not_recommended",
+    "reason": "This is a low-touch review-only pilot; no canonical promotion is authorized.",
+    "recommendedNextStep": "Inspect the stratified clean sample and all exceptions.",
+    "targetExport": "review_packet"
+  },
+  "learnerFacingStatus": {
+    "ready": false,
+    "reason": "No learner-facing use is authorized.",
+    "statusText": "not approved"
+  },
+  "ragReadiness": {
+    "ready": false,
+    "reason": "No RAG eligibility is authorized.",
+    "indexableItemCount": 0,
+    "notes": "Source-index candidates are review-only."
+  },
+  "appExportReadiness": {
+    "ready": false,
+    "reason": "No app-ready export is authorized.",
+    "targetExports": [],
+    "notes": "No promotion was performed."
+  },
+  "reviewerNotes": "Proposed clean sample: A2 workbook and S4 experience-study PDF. Review all exceptions.",
+  "extensions": {
+    "processingRunId": "processing-acquisition-pilot-2026-09-02",
+    "acquisitionManifestPath": "C:\\Dev\\Document Processor Sources\\2026-09-02 Intake\\_acquisition-manifests\\approved-pilot-20260902\\final-20260902\\acquisition-manifest.json",
+    "summary": {
+      "totalAdmitted": 7,
+      "processedSuccessfully": 7,
+      "cleanReviewCandidates": 6,
+      "humanReviewRequired": 1,
+      "processingBlocked": 0,
+      "systemicFailures": 0,
+      "totalChunks": 2808,
+      "totalStructuredEvidence": 5
+    }
+  }
+}
