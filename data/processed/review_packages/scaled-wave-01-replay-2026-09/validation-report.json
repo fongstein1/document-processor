@@ -1,0 +1,57 @@
+{
+  "schemaVersion": "1.0",
+  "reportId": "validation-scaled-wave-01-replay-2026-09",
+  "generatedAt": "2026-09-07T22:06:56.0631031Z",
+  "status": "pass",
+  "processingRunId": "processing-scaled-wave-01-replay-2026-09",
+  "sourceOfTruth": "C:\\Dev\\Document Processor Sources\\2026-09-02 Intake\\_acquisition-manifests\\approved-pilot-20260902\\run-20260907-180645-779\\acquisition-manifest.json",
+  "exceptionTaxonomy": [
+    "PDF_EXTRACTION_FAILED",
+    "XLSX_STRUCTURE_PARSE_FAILED",
+    "XLSX_NON_CELL_CONTENT_REQUIRES_REVIEW",
+    "EMPTY_PAGE_BENIGN",
+    "EMPTY_PAGE_REQUIRES_REVIEW",
+    "IMAGE_ONLY_SUBSTANTIVE_CONTENT",
+    "STRUCTURE_AMBIGUOUS",
+    "TABLE_STRUCTURE_AMBIGUOUS",
+    "STRUCTURED_EVIDENCE_IDENTITY_COLLISION",
+    "RETRIEVAL_SMOKE_TEST_FAILED",
+    "SOURCE_LINEAGE_MISMATCH",
+    "AUTHORITY_ROLE_CONFLICT",
+    "METADATA_INCOMPLETE",
+    "DETERMINISM_FAILURE"
+  ],
+  "summary": {
+    "totalAdmitted": 12,
+    "processedSuccessfully": 12,
+    "cleanReviewCandidates": 6,
+    "humanReviewRequired": 6,
+    "processingBlocked": 0,
+    "systemicFailures": 0,
+    "totalChunks": 555,
+    "totalStructuredEvidence": 136
+  },
+  "checks": {
+    "rawShaLineage": true,
+    "sourceIdentityBinding": true,
+    "extractionCompleteness": true,
+    "structuralSegmentation": true,
+    "deterministicIds": true,
+    "metadataCompleteness": true,
+    "authoritySupportPreserved": true,
+    "structuredEvidenceIdentity": true,
+    "retrievalSmokeTests": true,
+    "retrievalShaAssertions": true,
+    "retrievalRoleAssertions": true,
+    "a2NumericAssertions": true,
+    "confusionSetNegatives": true,
+    "reviewOnlyGuardrails": true,
+    "sourceExceptionAggregation": true
+  },
+  "failedSystemicControls": [],
+  "terminology": {
+    "extraction": "page-aware extraction",
+    "pdfGrouping": "deterministic page-window grouping; semantic hierarchy not claimed",
+    "workbookStructure": "conservative workbook table-block grouping; table-aware semantics not claimed"
+  }
+}
