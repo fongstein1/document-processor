@@ -31,10 +31,244 @@ const runPython = (code, filePath) => {
   return JSON.parse(result.stdout)
 }
 
-const redactExtractionGroup = (group) => ({ ...group, pages: group.pages?.map((page) => ({ pageNumber: page.pageNumber })), structureSignals: group.structureSignals ? { headingCandidateCount: group.structureSignals.headingCandidates?.length || 0, ssapIdentifiers: group.structureSignals.ssapIdentifiers || [], sectionBoundaryCount: group.structureSignals.sectionBoundaryCandidates?.length || 0, semanticHierarchyDetected: false, parentChildGrouping: 'not_claimed' } : undefined, sheets: group.sheets?.map((sheet) => ({ ...sheet, cells: undefined, rows: undefined, duplicateLabelValues: [], tableBlocks: (sheet.tableBlocks || []).map((block) => ({ ...block, titleCandidates: [] })) })) })
-const redactChunk = (chunk) => { const { sourceTextExcerpt, normalizedTextExcerpt, normalizedSearchText, keywords, keyPoints, concepts, definedTerms, requirements, ...evidence } = chunk; return { ...evidence, sourceTextType: 'external_artifact', substantiveTextExternal: true } }
-const redactSourceIndex = (index, externalArtifacts) => ({ ...index, source: { ...index.source, externalArtifactManifestPath: 'data/processed/review_packages/' + batchId + '/external-artifact-manifest.json', externalArtifactTypes: externalArtifacts.map((item) => item.artifactType) }, chunks: index.chunks.map(redactChunk), extensions: { ...index.extensions, externalArtifactManifestPath: 'data/processed/review_packages/' + batchId + '/external-artifact-manifest.json', structuredEvidence: (index.extensions?.structuredEvidence || []).map((item) => ({ ...item, tableBlock: { ...item.tableBlock, titleCandidates: [] }, duplicateLabelValues: [] })) } })
-const redactSmoke = (source) => ({ ...source, tests: source.tests.map((test) => { const { query, ...evidence } = test; return evidence }) })
+const projectTableBlock = (block = {}) => ({
+  blockOrdinal: block.blockOrdinal,
+  startRow: block.startRow,
+  endRow: block.endRow,
+  rowCount: block.rowCount,
+  cellRefs: Array.isArray(block.cellRefs) ? block.cellRefs : [],
+  nonEmptyCellCount: block.nonEmptyCellCount
+})
+const projectContentInventory = (inventory = {}) => ({
+  cellContentCount: inventory.cellContentCount,
+  formulaCount: inventory.formulaCount,
+  mergedRanges: Array.isArray(inventory.mergedRanges) ? inventory.mergedRanges : [],
+  drawingRelationships: inventory.drawingRelationships || 0,
+  imageRelationships: inventory.imageRelationships || 0,
+  textBoxShapeIndicators: inventory.textBoxShapeIndicators || 0,
+  commentNoteIndicators: inventory.commentNoteIndicators || 0,
+  hiddenState: inventory.hiddenState || 'visible',
+  externalLinkIndicators: inventory.externalLinkIndicators || 0,
+  packageExternalLinkIndicators: inventory.packageExternalLinkIndicators || 0,
+  otherRelationships: (inventory.otherRelationships || []).map((relationship) => ({ id: relationship.id, type: relationship.type, target: relationship.target, targetMode: relationship.targetMode }))
+    .filter((relationship) => relationship.id || relationship.type || relationship.target),
+  substantiveNonCellContentMayExist: inventory.substantiveNonCellContentMayExist === true,
+  exceptionCode: inventory.exceptionCode || null
+})
+const projectSheetEvidence = (sheet = {}) => ({
+  name: sheet.name,
+  worksheetPath: sheet.worksheetPath,
+  state: sheet.state,
+  cellContentCount: sheet.cellContentCount,
+  formulaCount: sheet.formulaCount,
+  mergedRanges: Array.isArray(sheet.mergedRanges) ? sheet.mergedRanges : [],
+  tableBlocks: (sheet.tableBlocks || []).map(projectTableBlock),
+  blankSpacerRows: Array.isArray(sheet.blankSpacerRows) ? sheet.blankSpacerRows : [],
+  contentInventory: projectContentInventory(sheet.contentInventory || sheet)
+})
+const projectPageEvidence = (page = {}) => ({
+  pageNumber: page.pageNumber,
+  classification: page.classification,
+  contentStreamBytes: page.contentStreamBytes,
+  imageXObjects: page.imageXObjects,
+  formXObjects: page.formXObjects,
+  annotationCount: page.annotationCount,
+  acroFormFieldCount: page.acroFormFieldCount,
+  vectorOperatorCount: page.vectorOperatorCount,
+  embeddedObjectCount: page.embeddedObjectCount,
+  renderedOccupancy: page.renderedOccupancy
+})
+const projectCitation = (citation = {}) => ({
+  pageReference: citation.pageReference || null,
+  sectionReference: citation.sectionReference || null,
+  sourceReference: citation.sourceReference || null
+})
+const toGitSafeChunkEvidence = (chunk = {}) => ({
+  chunkId: chunk.chunkId,
+  chunkOrdinal: chunk.chunkOrdinal,
+  chunkKind: chunk.chunkKind,
+  sourceTextType: 'external_artifact',
+  pageStart: chunk.pageStart,
+  pageEnd: chunk.pageEnd,
+  sectionReference: chunk.sectionReference || null,
+  lineReference: chunk.lineReference || null,
+  fidelity: chunk.fidelity,
+  confidence: chunk.confidence,
+  reviewFlags: Array.isArray(chunk.reviewFlags) ? chunk.reviewFlags : [],
+  controlledTags: Array.isArray(chunk.controlledTags) ? chunk.controlledTags : [],
+  citations: (chunk.citations || []).map(projectCitation),
+  sourceVersionId: chunk.sourceVersionId,
+  canonicalSourceIndexPath: chunk.canonicalSourceIndexPath,
+  retrievalEligible: chunk.retrievalEligible === true,
+  promotionEligible: chunk.promotionEligible === true,
+  extensions: {
+    worksheet: chunk.extensions?.worksheet || null,
+    sheetState: chunk.extensions?.sheetState || null,
+    mergedRanges: Array.isArray(chunk.extensions?.mergedRanges) ? chunk.extensions.mergedRanges : [],
+    tableBlock: chunk.extensions?.tableBlock ? projectTableBlock(chunk.extensions.tableBlock) : null,
+    contentInventory: chunk.extensions?.contentInventory ? projectContentInventory(chunk.extensions.contentInventory) : null,
+    exceptionCode: chunk.extensions?.exceptionCode || null,
+    authoritySupportRole: chunk.extensions?.authoritySupportRole || null,
+    sourceSha256: chunk.extensions?.sourceSha256 || null
+  },
+  sourceId: chunk.sourceId,
+  sourceFamilyId: chunk.sourceFamilyId,
+  domainId: chunk.domainId,
+  documentType: chunk.documentType,
+  sourcePath: chunk.sourcePath,
+  substantiveTextExternal: true
+})
+const toGitSafeExtractionEvidence = (group = {}) => ({
+  sourceId: group.sourceId,
+  filename: group.filename,
+  filePath: group.filePath,
+  sourceFamilyId: group.sourceFamilyId,
+  domainId: group.domainId,
+  documentType: group.documentType,
+  sourceTitle: group.sourceTitle,
+  sourceReference: group.sourceReference,
+  pageCount: group.pageCount,
+  extractionMethod: group.extractionMethod,
+  pages: (group.pages || []).map(projectPageEvidence),
+  emptyPageDetails: (group.emptyPageDetails || []).map(projectPageEvidence),
+  structureSignals: group.structureSignals ? {
+    headingCandidateCount: group.structureSignals.headingCandidateCount || group.structureSignals.headingCandidates?.length || 0,
+    sectionBoundaryCount: group.structureSignals.sectionBoundaryCount || group.structureSignals.sectionBoundaryCandidates?.length || 0,
+    semanticHierarchyDetected: false,
+    parentChildGrouping: 'not_claimed'
+  } : null,
+  sheets: (group.sheets || []).map(projectSheetEvidence),
+  substantiveTextExternal: true
+})
+const toGitSafeSourceIndexEvidence = (index, externalArtifacts) => ({
+  schemaVersion: index.schemaVersion,
+  sourceIndexId: index.sourceIndexId,
+  repositoryManifestId: index.repositoryManifestId,
+  sourceVersionId: index.sourceVersionId,
+  source: {
+    sourceId: index.source.sourceId,
+    filename: index.source.filename,
+    filePath: index.source.filePath,
+    sourceFamilyId: index.source.sourceFamilyId,
+    domainId: index.source.domainId,
+    documentType: index.source.documentType,
+    sourceTitle: index.source.sourceTitle,
+    sourceReference: index.source.sourceReference,
+    authorityLevel: index.source.authorityLevel,
+    sourceStatus: index.source.sourceStatus,
+    versionDate: index.source.versionDate,
+    sourceSha256: index.source.sourceSha256,
+    pageCount: index.source.pageCount,
+    reviewBatchIds: Array.isArray(index.source.reviewBatchIds) ? index.source.reviewBatchIds : [],
+    reviewIndexPath: index.source.reviewIndexPath,
+    selfReviewPath: index.source.selfReviewPath,
+    pageImageBackstop: index.source.pageImageBackstop === true,
+    lineReferencesAvailable: index.source.lineReferencesAvailable === true,
+    textLayerQuality: index.source.textLayerQuality,
+    rightsStatus: index.source.rightsStatus,
+    externalArtifactManifestPath: 'data/processed/review_packages/' + batchId + '/external-artifact-manifest.json',
+    externalArtifactTypes: externalArtifacts.map((item) => item.artifactType)
+  },
+  processing: {
+    createdAt: index.processing?.createdAt,
+    createdBy: index.processing?.createdBy,
+    processingMode: index.processing?.processingMode,
+    canonicality: index.processing?.canonicality,
+    reviewOnly: index.processing?.reviewOnly === true,
+    learnerFacingAllowed: false,
+    appReadyAllowed: false,
+    ragReadyAllowed: false,
+    promotionStatus: 'not_promoted',
+    rightsStatus: index.processing?.rightsStatus
+  },
+  chunks: (index.chunks || []).map(toGitSafeChunkEvidence),
+  quality: {
+    textLayerQuality: index.quality?.textLayerQuality,
+    citationCompleteness: index.quality?.citationCompleteness,
+    pageImageBackstop: index.quality?.pageImageBackstop === true,
+    lineReferencesAvailable: index.quality?.lineReferencesAvailable === true,
+    emptyPageDetails: (index.quality?.emptyPageDetails || []).map(projectPageEvidence)
+  },
+  exportHints: {
+    jsonlEligible: false,
+    csvEligible: false,
+    vectorEligible: false
+  },
+  extensions: {
+    acquisitionCandidateId: index.extensions?.acquisitionCandidateId,
+    rawSourcePath: index.extensions?.rawSourcePath,
+    rawSourceSha256: index.extensions?.rawSourceSha256,
+    issuer: index.extensions?.issuer,
+    sourceUrl: index.extensions?.sourceUrl,
+    acquisitionManifestPath: index.extensions?.acquisitionManifestPath,
+    authoritySupportRole: index.extensions?.authoritySupportRole,
+    structuredEvidence: (index.extensions?.structuredEvidence || []).map((item) => ({
+      structuredEvidenceId: item.structuredEvidenceId,
+      sheetName: item.sheetName,
+      worksheetPath: item.worksheetPath,
+      sheetState: item.sheetState,
+      mergedRanges: Array.isArray(item.mergedRanges) ? item.mergedRanges : [],
+      tableBlock: item.tableBlock ? projectTableBlock(item.tableBlock) : null,
+      nonEmptyCellCount: item.nonEmptyCellCount,
+      reviewOnly: item.reviewOnly === true,
+      promotionStatus: 'not_promoted'
+    })),
+    rightsStatus: index.extensions?.rightsStatus,
+    externalArtifactManifestPath: 'data/processed/review_packages/' + batchId + '/external-artifact-manifest.json'
+  },
+  substantiveTextExternal: true
+})
+const toGitSafeRetrievalEvidence = (source) => ({
+  candidateId: source.candidateId,
+  sourceFamilyId: source.sourceFamilyId,
+  tests: source.tests.map((test) => ({
+    testId: test.testId,
+    testKind: test.testKind,
+    expectedCandidateId: test.expectedCandidateId,
+    negativeAgainstCandidateId: test.negativeAgainstCandidateId || null,
+    expectedMatch: test.expectedMatch,
+    expectedRankThreshold: test.expectedRankThreshold,
+    expectedStructuralRegion: test.expectedStructuralRegion,
+    expectedSheet: test.expectedSheet || null,
+    expectedCellRefs: Array.isArray(test.expectedCellRefs) ? test.expectedCellRefs : [],
+    expectedSourceSha256: test.expectedSourceSha256 || null,
+    expectedAuthorityRole: test.expectedAuthorityRole || null,
+    expectedWorkbookEvidence: test.expectedWorkbookEvidence ? {
+      sheetName: test.expectedWorkbookEvidence.sheetName,
+      worksheetPath: test.expectedWorkbookEvidence.worksheetPath,
+      cellRef: test.expectedWorkbookEvidence.cellRef,
+      expectedStoredValue: test.expectedWorkbookEvidence.expectedStoredValue,
+      expectedFormula: test.expectedWorkbookEvidence.expectedFormula,
+      selectedStoredValue: test.expectedWorkbookEvidence.selectedStoredValue,
+      selectedFormula: test.expectedWorkbookEvidence.selectedFormula,
+      sourceSha256: test.expectedWorkbookEvidence.sourceSha256,
+      expectedAuthoritySupportRole: test.expectedWorkbookEvidence.expectedAuthoritySupportRole,
+      citationCoordinate: test.expectedWorkbookEvidence.citationCoordinate
+    } : null,
+    topRank: test.topRank,
+    topChunkId: test.topChunkId || null,
+    topSourceId: test.topSourceId || null,
+    topScore: test.topScore,
+    selectedSourceSha256: test.selectedSourceSha256 || null,
+    selectedChunkSourceSha256: test.selectedChunkSourceSha256 || null,
+    selectedAuthorityRole: test.selectedAuthorityRole || null,
+    citationTarget: test.citationTarget ? projectCitation(test.citationTarget) : null,
+    citationResolves: test.citationResolves,
+    shaMatches: test.shaMatches,
+    lineageMatches: test.lineageMatches,
+    supportRolePreserved: test.supportRolePreserved,
+    roleMatches: test.roleMatches,
+    structuralMatch: test.structuralMatch,
+    workbookEvidenceMatch: test.workbookEvidenceMatch,
+    wrongSourceExcluded: test.wrongSourceExcluded,
+    pass: test.pass
+  })),
+  allPassed: source.allPassed
+})
+const redactExtractionGroup = toGitSafeExtractionEvidence
+const redactChunk = toGitSafeChunkEvidence
+const redactSourceIndex = toGitSafeSourceIndexEvidence
+const redactSmoke = toGitSafeRetrievalEvidence
 const writeExternalJson = async (externalRoot, sourceId, artifactType, value, source, generatedAt) => {
   if (!source) throw new Error('Cannot create external artifact without inventory source: ' + sourceId + '/' + artifactType)
   const fileName = artifactType + '.json'

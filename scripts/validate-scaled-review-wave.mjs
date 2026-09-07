@@ -2,7 +2,7 @@ import crypto from 'node:crypto'
 import fs from 'node:fs/promises'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { hasSubstantiveContent, validateRightsFilesystem } from './rights-storage.mjs'
+import { validateGitSafeArtifact, validateRightsFilesystem } from './rights-storage.mjs'
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const argValue = (name, fallback) => process.argv.includes(name) ? process.argv[process.argv.indexOf(name) + 1] : fallback
@@ -91,7 +91,7 @@ const validateScaledWave = async () => {
   const rights = await validateRightsFilesystem({ policy, repoRoot, outputRoot })
   const repoArtifacts = {}
   for (const name of ['extraction-output.json', 'chunk-manifest.json', 'source-index-candidates.json', 'retrieval-smoke-tests.json']) repoArtifacts[name] = await readJson(path.join(outputRoot, name))
-  if (Object.values(repoArtifacts).some((artifact) => hasSubstantiveContent(artifact))) fail('Substantive content is present in a tracked scaled-wave artifact.')
+  for (const [artifactType, artifact] of Object.entries(repoArtifacts)) validateGitSafeArtifact({ artifactType, value: artifact })
   console.log(JSON.stringify({ batchId: batch.batchId, waveSizeStatus: ids.length >= 8 && ids.length <= 12 ? 'PASS' : 'BLOCKED_BELOW_MINIMUM_ADMITTED_COUNT', admitted: ids.length, acquired: acquisition.summary.successfullyDownloaded, quarantined: acquisition.summary.quarantined, rejected: acquisition.summary.rejected, processed: report.summary.processedSuccessfully, clean: report.summary.cleanReviewCandidates, humanReview: report.summary.humanReviewRequired, blocked: report.summary.processingBlocked, systemicFailures: report.summary.systemicFailures, pdfCount: admitted.filter((record) => record.expectedFileType === 'PDF').length, xlsxCount: admitted.filter((record) => record.expectedFileType === 'XLSX').length, retrievalTests: allTests.length, retrievalPassed: allTests.filter((test) => test.pass).length, confusionSetNegatives: confusion.length, cleanSample: clean, externalArtifactCount: rights.externalArtifactCount, rightsControlledSources: rights.controlledSourceCount, checks }, null, 2))
 }
 

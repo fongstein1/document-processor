@@ -4,7 +4,8 @@ import { fileURLToPath } from 'node:url'
 import { validateRightsFilesystem, validateRightsState } from './rights-storage.mjs'
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
-const outputRoot = path.join(root, 'data', 'processed', 'review_packages', 'acquisition-pilot-2026-09-02')
+const argValue = (name, fallback) => process.argv.includes(name) ? process.argv[process.argv.indexOf(name) + 1] : fallback
+const outputRoot = path.resolve(argValue('--output-root', path.join(root, 'data', 'processed', 'review_packages', 'acquisition-pilot-2026-09-02')))
 const policy = JSON.parse(await fs.readFile(path.join(root, 'config', 'rights-storage-policy.json'), 'utf8'))
 const required = ['RIGHTS_CLEARED_FOR_REPOSITORY', 'RIGHTS_EXTERNAL_STORAGE_ONLY', 'RIGHTS_REVIEW_REQUIRED']
 if (!required.every((status) => policy.statuses.includes(status)) || policy.defaultStatus !== 'RIGHTS_REVIEW_REQUIRED') throw new Error('Rights/storage policy statuses are incomplete.')

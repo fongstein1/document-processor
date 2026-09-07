@@ -7,28 +7,34 @@ is required before any distribution or promotion decision.
 
 ## A. CURRENT TREE ENFORCEMENT STATUS
 
-The current processing tree is operationally protected. All seven pilot source
-records carry `RIGHTS_REVIEW_REQUIRED`; substantive extraction, chunk text,
-source-index text, and retrieval queries are generated under the external
-private root recorded in `external-artifact-manifest.json`. The Git review
-package retains only source identity, hashes, counts, structural coordinates,
-exception/review outcomes, and external artifact paths/hashes. The rights
-validator verifies that prohibited text is absent from the current output and
-that every required external artifact exists with matching SHA-256 and byte
-count. This status does not clear rights or make a legal determination.
+The current scaled-wave replay tree is sanitized and compliant with the
+storage-control model. All twelve replay source records carry
+`RIGHTS_REVIEW_REQUIRED`; substantive extraction, chunk text, source-index
+text, and retrieval queries are generated under the external private root
+recorded in `external-artifact-manifest.json`. The Git review package is built
+from explicit allowlisted projections and retains only source identity, hashes,
+counts, structural coordinates, exception/review outcomes, bounded validation
+evidence, and external artifact paths/hashes. The rights validator now checks
+the allowlisted schema, rejects leaked nested source-content fields (including
+`duplicateLabelValues` and `titleCandidates`), and verifies every required
+external artifact's SHA-256, byte count, and raw-source lineage. This status
+does not clear rights or make a legal determination.
 
 External root for this run:
-`C:\Dev\Document Processor Sources\_processed-private\processing-acquisition-pilot-2026-09-02`
+`C:\Dev\Document Processor Sources\_processed-private\processing-scaled-wave-01-replay-2026-09`
 
 Manifest:
-`data/processed/review_packages/acquisition-pilot-2026-09-02/external-artifact-manifest.json`
+`data/processed/review_packages/scaled-wave-01-replay-2026-09/external-artifact-manifest.json`
 
 ## B. HISTORICAL GIT EXPOSURE STATUS
 
-Historical exposure remains unresolved. Earlier commits contain substantive
-A3 text and possibly other pilot-source text. This report does not rewrite
-history, delete branches, change repository visibility, or decide whether
-historical remediation is legally or operationally required.
+Historical exposure remains unresolved. The starting commit
+`fe13c8f89b5a66d17c2688f38d1518f26e08bd40` and earlier commits contain
+substantive evidence projections, including the previously identified A3 text
+and the nested workbook fields corrected in the current tree. This report does
+not rewrite history, delete branches, change repository visibility, or decide
+whether historical remediation is legally or operationally required. The
+current-tree correction therefore does not imply historical removal.
 
 ### Historical material public-branch artifacts
 
