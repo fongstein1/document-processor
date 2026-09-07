@@ -218,7 +218,7 @@ try {
     $approved = Get-Content -Raw -LiteralPath $ApprovedManifestPath | ConvertFrom-Json
     if ($approved.selectionApproved -ne $true -or $approved.downloadAuthorized -ne $true -or $approved.processingAuthorized -ne $false -or $approved.canonicalizationAuthorized -ne $false -or $approved.promotionAuthorized -ne $false) { throw 'Approved manifest governance flags are invalid.' }
     $records = @($approved.selectedRecords)
-    if ($records.Count -ne 8 -or $approved.authorizationScope.candidateCount -ne 8 -or $approved.authorizationScope.noOtherCandidatesAuthorized -ne $true) { throw 'Approved manifest scope is not exactly eight candidates.' }
+    if ($records.Count -lt 8 -or $records.Count -gt 12 -or $approved.authorizationScope.candidateCount -ne $records.Count -or $approved.authorizationScope.noOtherCandidatesAuthorized -ne $true) { throw 'Approved manifest scope is outside the controlled 8-12 candidate range.' }
     $sourceRoot = [IO.Path]::GetFullPath([string]$approved.sourceRoot)
     $inventoryPath = Join-Path $sourceRoot '2026-09-02 Intake\_discovery\regulatory-source-local-inventory.json'
     $inventory = @(Get-Content -Raw -LiteralPath $inventoryPath | ConvertFrom-Json)
