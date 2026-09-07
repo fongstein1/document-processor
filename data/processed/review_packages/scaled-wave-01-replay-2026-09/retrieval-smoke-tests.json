@@ -27,7 +27,6 @@
           "selectedChunkSourceSha256": "b96b7dd1025aa3b1590f617162480d4ade27f4f8ccfbfbf90b61556a0df02443",
           "selectedAuthorityRole": "CURRENT SUPPORT — DOWNLOAD",
           "citationTarget": {
-            "citationText": "VM Maintenance Agenda, 2026-04-28",
             "pageReference": "Workbook",
             "sectionReference": "Sheet: Active Listing rows 1-4",
             "sourceReference": "https://content.naic.org/sites/default/files/inline-files/VM%20Maintenance%20Agenda%20042826%20%281%29.xlsx"
@@ -40,8 +39,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "Title query is ranked against the complete batch corpus and must resolve to this source."
+          "pass": true
         },
         {
           "testId": "naic-pbr-vm-20-vm-31-vm-51-vm-maintenance-agenda-2026-04-28-smoke-2",
@@ -64,7 +62,6 @@
           "selectedChunkSourceSha256": "b96b7dd1025aa3b1590f617162480d4ade27f4f8ccfbfbf90b61556a0df02443",
           "selectedAuthorityRole": "CURRENT SUPPORT — DOWNLOAD",
           "citationTarget": {
-            "citationText": "VM Maintenance Agenda, 2026-04-28",
             "pageReference": "Workbook",
             "sectionReference": "Sheet: How to use the MA rows 1-2",
             "sourceReference": "https://content.naic.org/sites/default/files/inline-files/VM%20Maintenance%20Agenda%20042826%20%281%29.xlsx"
@@ -77,8 +74,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "A source-derived substantive query must resolve to the expected source in the corpus."
+          "pass": true
         },
         {
           "testId": "naic-pbr-vm-20-vm-31-vm-51-vm-maintenance-agenda-2026-04-28-smoke-3",
@@ -101,7 +97,6 @@
           "selectedChunkSourceSha256": "b96b7dd1025aa3b1590f617162480d4ade27f4f8ccfbfbf90b61556a0df02443",
           "selectedAuthorityRole": "CURRENT SUPPORT — DOWNLOAD",
           "citationTarget": {
-            "citationText": "VM Maintenance Agenda, 2026-04-28",
             "pageReference": "Workbook",
             "sectionReference": "Sheet: How to use the MA rows 1-2",
             "sourceReference": "https://content.naic.org/sites/default/files/inline-files/VM%20Maintenance%20Agenda%20042826%20%281%29.xlsx"
@@ -114,8 +109,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "A deterministic page window or workbook table locator remains citable."
+          "pass": true
         },
         {
           "testId": "naic-pbr-vm-20-vm-31-vm-51-vm-maintenance-agenda-2026-04-28-smoke-4",
@@ -151,7 +145,6 @@
           "selectedChunkSourceSha256": "b96b7dd1025aa3b1590f617162480d4ade27f4f8ccfbfbf90b61556a0df02443",
           "selectedAuthorityRole": "CURRENT SUPPORT — DOWNLOAD",
           "citationTarget": {
-            "citationText": "VM Maintenance Agenda, 2026-04-28",
             "pageReference": "Workbook",
             "sectionReference": "Sheet: Rejected Listing rows 1-4",
             "sourceReference": "https://content.naic.org/sites/default/files/inline-files/VM%20Maintenance%20Agenda%20042826%20%281%29.xlsx"
@@ -164,8 +157,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "Numeric/form evidence is checked against the corpus, structural locator, role, and exact source SHA."
+          "pass": true
         },
         {
           "testId": "naic-pbr-vm-20-vm-31-vm-51-vm-maintenance-agenda-2026-04-28-smoke-5",
@@ -188,7 +180,6 @@
           "selectedChunkSourceSha256": "b96b7dd1025aa3b1590f617162480d4ade27f4f8ccfbfbf90b61556a0df02443",
           "selectedAuthorityRole": "CURRENT SUPPORT — DOWNLOAD",
           "citationTarget": {
-            "citationText": "VM Maintenance Agenda, 2026-04-28",
             "pageReference": "Workbook",
             "sectionReference": "Sheet: Active Listing rows 1-4",
             "sourceReference": "https://content.naic.org/sites/default/files/inline-files/VM%20Maintenance%20Agenda%20042826%20%281%29.xlsx"
@@ -201,8 +192,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "Approved authority/support metadata remains bound to the selected source and is not upgraded."
+          "pass": true
         },
         {
           "testId": "naic-pbr-vm-20-vm-31-vm-51-vm-maintenance-agenda-2026-04-28-smoke-6",
@@ -233,8 +223,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "A nonsense token remains a basic no-match control and is not counted as confusion-set coverage."
+          "pass": true
         },
         {
           "testId": "naic-pbr-vm-20-vm-31-vm-51-vm-maintenance-agenda-2026-04-28-smoke-7",
@@ -257,7 +246,6 @@
           "selectedChunkSourceSha256": "bcdeb352a66771c18f8d47efd5b1b97a8facd51fa672b0a8c8585be768d31753",
           "selectedAuthorityRole": "CURRENT SUPPORT — DOWNLOAD",
           "citationTarget": {
-            "citationText": "VM-20 Table F/G current spreads, 2026",
             "pageReference": "Workbook",
             "sectionReference": "Sheet: April_2026 rows 1-35",
             "sourceReference": "https://content.naic.org/sites/default/files/pbr-2026-vm20-table-f-g-current-spreads.xlsx"
@@ -270,8 +258,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "A plausible overlapping domain query must resolve to the intended source and not accept the competing source as support."
+          "pass": true
         }
       ],
       "allPassed": true
@@ -301,7 +288,6 @@
           "selectedChunkSourceSha256": "bcdeb352a66771c18f8d47efd5b1b97a8facd51fa672b0a8c8585be768d31753",
           "selectedAuthorityRole": "CURRENT SUPPORT — DOWNLOAD",
           "citationTarget": {
-            "citationText": "VM-20 Table F/G current spreads, 2026",
             "pageReference": "Workbook",
             "sectionReference": "Sheet: April_2026 rows 1-35",
             "sourceReference": "https://content.naic.org/sites/default/files/pbr-2026-vm20-table-f-g-current-spreads.xlsx"
@@ -314,8 +300,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "Title query is ranked against the complete batch corpus and must resolve to this source."
+          "pass": true
         },
         {
           "testId": "naic-pbr-vm-20-vm-31-vm-51-vm20-tables-2026-f-g-smoke-2",
@@ -338,7 +323,6 @@
           "selectedChunkSourceSha256": "bcdeb352a66771c18f8d47efd5b1b97a8facd51fa672b0a8c8585be768d31753",
           "selectedAuthorityRole": "CURRENT SUPPORT — DOWNLOAD",
           "citationTarget": {
-            "citationText": "VM-20 Table F/G current spreads, 2026",
             "pageReference": "Workbook",
             "sectionReference": "Sheet: August_2026 rows 1-35",
             "sourceReference": "https://content.naic.org/sites/default/files/pbr-2026-vm20-table-f-g-current-spreads.xlsx"
@@ -351,8 +335,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "A source-derived substantive query must resolve to the expected source in the corpus."
+          "pass": true
         },
         {
           "testId": "naic-pbr-vm-20-vm-31-vm-51-vm20-tables-2026-f-g-smoke-3",
@@ -375,7 +358,6 @@
           "selectedChunkSourceSha256": "bcdeb352a66771c18f8d47efd5b1b97a8facd51fa672b0a8c8585be768d31753",
           "selectedAuthorityRole": "CURRENT SUPPORT — DOWNLOAD",
           "citationTarget": {
-            "citationText": "VM-20 Table F/G current spreads, 2026",
             "pageReference": "Workbook",
             "sectionReference": "Sheet: August_2026 rows 1-35",
             "sourceReference": "https://content.naic.org/sites/default/files/pbr-2026-vm20-table-f-g-current-spreads.xlsx"
@@ -388,8 +370,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "A deterministic page window or workbook table locator remains citable."
+          "pass": true
         },
         {
           "testId": "naic-pbr-vm-20-vm-31-vm-51-vm20-tables-2026-f-g-smoke-4",
@@ -425,7 +406,6 @@
           "selectedChunkSourceSha256": "bcdeb352a66771c18f8d47efd5b1b97a8facd51fa672b0a8c8585be768d31753",
           "selectedAuthorityRole": "CURRENT SUPPORT — DOWNLOAD",
           "citationTarget": {
-            "citationText": "VM-20 Table F/G current spreads, 2026",
             "pageReference": "Workbook",
             "sectionReference": "Sheet: August_2026 rows 1-35",
             "sourceReference": "https://content.naic.org/sites/default/files/pbr-2026-vm20-table-f-g-current-spreads.xlsx"
@@ -438,8 +418,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "Numeric/form evidence is checked against the corpus, structural locator, role, and exact source SHA."
+          "pass": true
         },
         {
           "testId": "naic-pbr-vm-20-vm-31-vm-51-vm20-tables-2026-f-g-smoke-5",
@@ -462,7 +441,6 @@
           "selectedChunkSourceSha256": "bcdeb352a66771c18f8d47efd5b1b97a8facd51fa672b0a8c8585be768d31753",
           "selectedAuthorityRole": "CURRENT SUPPORT — DOWNLOAD",
           "citationTarget": {
-            "citationText": "VM-20 Table F/G current spreads, 2026",
             "pageReference": "Workbook",
             "sectionReference": "Sheet: April_2026 rows 1-35",
             "sourceReference": "https://content.naic.org/sites/default/files/pbr-2026-vm20-table-f-g-current-spreads.xlsx"
@@ -475,8 +453,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "Approved authority/support metadata remains bound to the selected source and is not upgraded."
+          "pass": true
         },
         {
           "testId": "naic-pbr-vm-20-vm-31-vm-51-vm20-tables-2026-f-g-smoke-6",
@@ -507,8 +484,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "A nonsense token remains a basic no-match control and is not counted as confusion-set coverage."
+          "pass": true
         },
         {
           "testId": "naic-pbr-vm-20-vm-31-vm-51-vm20-tables-2026-f-g-smoke-7",
@@ -531,7 +507,6 @@
           "selectedChunkSourceSha256": "5e2a1946b9d381b2e2c93f1e773e205a412093c4eb3cdfcbbafebc4ba63c1597",
           "selectedAuthorityRole": "CURRENT SUPPORT — DOWNLOAD",
           "citationTarget": {
-            "citationText": "VM-20 Table H/I long-term spreads, 2026",
             "pageReference": "Workbook",
             "sectionReference": "Sheet: December_2025 rows 1-35",
             "sourceReference": "https://content.naic.org/sites/default/files/pbr-2026-vm20-table-h-i-long-term-spreads.xlsx"
@@ -544,8 +519,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "A plausible overlapping domain query must resolve to the intended source and not accept the competing source as support."
+          "pass": true
         }
       ],
       "allPassed": true
@@ -575,7 +549,6 @@
           "selectedChunkSourceSha256": "5e2a1946b9d381b2e2c93f1e773e205a412093c4eb3cdfcbbafebc4ba63c1597",
           "selectedAuthorityRole": "CURRENT SUPPORT — DOWNLOAD",
           "citationTarget": {
-            "citationText": "VM-20 Table H/I long-term spreads, 2026",
             "pageReference": "Workbook",
             "sectionReference": "Sheet: December_2025 rows 1-35",
             "sourceReference": "https://content.naic.org/sites/default/files/pbr-2026-vm20-table-h-i-long-term-spreads.xlsx"
@@ -588,8 +561,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "Title query is ranked against the complete batch corpus and must resolve to this source."
+          "pass": true
         },
         {
           "testId": "naic-pbr-vm-20-vm-31-vm-51-vm20-tables-2026-h-i-smoke-2",
@@ -612,7 +584,6 @@
           "selectedChunkSourceSha256": "5e2a1946b9d381b2e2c93f1e773e205a412093c4eb3cdfcbbafebc4ba63c1597",
           "selectedAuthorityRole": "CURRENT SUPPORT — DOWNLOAD",
           "citationTarget": {
-            "citationText": "VM-20 Table H/I long-term spreads, 2026",
             "pageReference": "Workbook",
             "sectionReference": "Sheet: June_2026 rows 1-35",
             "sourceReference": "https://content.naic.org/sites/default/files/pbr-2026-vm20-table-h-i-long-term-spreads.xlsx"
@@ -625,8 +596,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "A source-derived substantive query must resolve to the expected source in the corpus."
+          "pass": true
         },
         {
           "testId": "naic-pbr-vm-20-vm-31-vm-51-vm20-tables-2026-h-i-smoke-3",
@@ -649,7 +619,6 @@
           "selectedChunkSourceSha256": "5e2a1946b9d381b2e2c93f1e773e205a412093c4eb3cdfcbbafebc4ba63c1597",
           "selectedAuthorityRole": "CURRENT SUPPORT — DOWNLOAD",
           "citationTarget": {
-            "citationText": "VM-20 Table H/I long-term spreads, 2026",
             "pageReference": "Workbook",
             "sectionReference": "Sheet: June_2026 rows 1-35",
             "sourceReference": "https://content.naic.org/sites/default/files/pbr-2026-vm20-table-h-i-long-term-spreads.xlsx"
@@ -662,8 +631,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "A deterministic page window or workbook table locator remains citable."
+          "pass": true
         },
         {
           "testId": "naic-pbr-vm-20-vm-31-vm-51-vm20-tables-2026-h-i-smoke-4",
@@ -699,7 +667,6 @@
           "selectedChunkSourceSha256": "5e2a1946b9d381b2e2c93f1e773e205a412093c4eb3cdfcbbafebc4ba63c1597",
           "selectedAuthorityRole": "CURRENT SUPPORT — DOWNLOAD",
           "citationTarget": {
-            "citationText": "VM-20 Table H/I long-term spreads, 2026",
             "pageReference": "Workbook",
             "sectionReference": "Sheet: June_2026 rows 1-35",
             "sourceReference": "https://content.naic.org/sites/default/files/pbr-2026-vm20-table-h-i-long-term-spreads.xlsx"
@@ -712,8 +679,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "Numeric/form evidence is checked against the corpus, structural locator, role, and exact source SHA."
+          "pass": true
         },
         {
           "testId": "naic-pbr-vm-20-vm-31-vm-51-vm20-tables-2026-h-i-smoke-5",
@@ -736,7 +702,6 @@
           "selectedChunkSourceSha256": "5e2a1946b9d381b2e2c93f1e773e205a412093c4eb3cdfcbbafebc4ba63c1597",
           "selectedAuthorityRole": "CURRENT SUPPORT — DOWNLOAD",
           "citationTarget": {
-            "citationText": "VM-20 Table H/I long-term spreads, 2026",
             "pageReference": "Workbook",
             "sectionReference": "Sheet: December_2025 rows 1-35",
             "sourceReference": "https://content.naic.org/sites/default/files/pbr-2026-vm20-table-h-i-long-term-spreads.xlsx"
@@ -749,8 +714,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "Approved authority/support metadata remains bound to the selected source and is not upgraded."
+          "pass": true
         },
         {
           "testId": "naic-pbr-vm-20-vm-31-vm-51-vm20-tables-2026-h-i-smoke-6",
@@ -781,8 +745,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "A nonsense token remains a basic no-match control and is not counted as confusion-set coverage."
+          "pass": true
         },
         {
           "testId": "naic-pbr-vm-20-vm-31-vm-51-vm20-tables-2026-h-i-smoke-7",
@@ -805,7 +768,6 @@
           "selectedChunkSourceSha256": "8329ad290f2ddeb3055729019fcbedf513b09d6c99a2817d274b14d01c2ea493",
           "selectedAuthorityRole": "CURRENT SUPPORT — DOWNLOAD",
           "citationTarget": {
-            "citationText": "VM-20 Table J swaps, 2026",
             "pageReference": "Workbook",
             "sectionReference": "Sheet: April_2026 rows 1-36",
             "sourceReference": "https://content.naic.org/sites/default/files/pbr-2026-vm20-table-j-swaps.xlsx"
@@ -818,8 +780,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "A plausible overlapping domain query must resolve to the intended source and not accept the competing source as support."
+          "pass": true
         }
       ],
       "allPassed": true
@@ -849,7 +810,6 @@
           "selectedChunkSourceSha256": "8329ad290f2ddeb3055729019fcbedf513b09d6c99a2817d274b14d01c2ea493",
           "selectedAuthorityRole": "CURRENT SUPPORT — DOWNLOAD",
           "citationTarget": {
-            "citationText": "VM-20 Table J swaps, 2026",
             "pageReference": "Workbook",
             "sectionReference": "Sheet: April_2026 rows 1-36",
             "sourceReference": "https://content.naic.org/sites/default/files/pbr-2026-vm20-table-j-swaps.xlsx"
@@ -862,8 +822,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "Title query is ranked against the complete batch corpus and must resolve to this source."
+          "pass": true
         },
         {
           "testId": "naic-pbr-vm-20-vm-31-vm-51-vm20-tables-2026-j-smoke-2",
@@ -886,7 +845,6 @@
           "selectedChunkSourceSha256": "8329ad290f2ddeb3055729019fcbedf513b09d6c99a2817d274b14d01c2ea493",
           "selectedAuthorityRole": "CURRENT SUPPORT — DOWNLOAD",
           "citationTarget": {
-            "citationText": "VM-20 Table J swaps, 2026",
             "pageReference": "Workbook",
             "sectionReference": "Sheet: August_2026 rows 1-36",
             "sourceReference": "https://content.naic.org/sites/default/files/pbr-2026-vm20-table-j-swaps.xlsx"
@@ -899,8 +857,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "A source-derived substantive query must resolve to the expected source in the corpus."
+          "pass": true
         },
         {
           "testId": "naic-pbr-vm-20-vm-31-vm-51-vm20-tables-2026-j-smoke-3",
@@ -923,7 +880,6 @@
           "selectedChunkSourceSha256": "8329ad290f2ddeb3055729019fcbedf513b09d6c99a2817d274b14d01c2ea493",
           "selectedAuthorityRole": "CURRENT SUPPORT — DOWNLOAD",
           "citationTarget": {
-            "citationText": "VM-20 Table J swaps, 2026",
             "pageReference": "Workbook",
             "sectionReference": "Sheet: August_2026 rows 1-36",
             "sourceReference": "https://content.naic.org/sites/default/files/pbr-2026-vm20-table-j-swaps.xlsx"
@@ -936,8 +892,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "A deterministic page window or workbook table locator remains citable."
+          "pass": true
         },
         {
           "testId": "naic-pbr-vm-20-vm-31-vm-51-vm20-tables-2026-j-smoke-4",
@@ -973,7 +928,6 @@
           "selectedChunkSourceSha256": "8329ad290f2ddeb3055729019fcbedf513b09d6c99a2817d274b14d01c2ea493",
           "selectedAuthorityRole": "CURRENT SUPPORT — DOWNLOAD",
           "citationTarget": {
-            "citationText": "VM-20 Table J swaps, 2026",
             "pageReference": "Workbook",
             "sectionReference": "Sheet: August_2026 rows 1-36",
             "sourceReference": "https://content.naic.org/sites/default/files/pbr-2026-vm20-table-j-swaps.xlsx"
@@ -986,8 +940,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "Numeric/form evidence is checked against the corpus, structural locator, role, and exact source SHA."
+          "pass": true
         },
         {
           "testId": "naic-pbr-vm-20-vm-31-vm-51-vm20-tables-2026-j-smoke-5",
@@ -1010,7 +963,6 @@
           "selectedChunkSourceSha256": "8329ad290f2ddeb3055729019fcbedf513b09d6c99a2817d274b14d01c2ea493",
           "selectedAuthorityRole": "CURRENT SUPPORT — DOWNLOAD",
           "citationTarget": {
-            "citationText": "VM-20 Table J swaps, 2026",
             "pageReference": "Workbook",
             "sectionReference": "Sheet: April_2026 rows 1-36",
             "sourceReference": "https://content.naic.org/sites/default/files/pbr-2026-vm20-table-j-swaps.xlsx"
@@ -1023,8 +975,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "Approved authority/support metadata remains bound to the selected source and is not upgraded."
+          "pass": true
         },
         {
           "testId": "naic-pbr-vm-20-vm-31-vm-51-vm20-tables-2026-j-smoke-6",
@@ -1055,8 +1006,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "A nonsense token remains a basic no-match control and is not counted as confusion-set coverage."
+          "pass": true
         },
         {
           "testId": "naic-pbr-vm-20-vm-31-vm-51-vm20-tables-2026-j-smoke-7",
@@ -1079,7 +1029,6 @@
           "selectedChunkSourceSha256": "19a8628714606410c29c6573a8f8aba7139d88bea1ba883e64bcf13c60653758",
           "selectedAuthorityRole": "CURRENT SUPPORT — DOWNLOAD",
           "citationTarget": {
-            "citationText": "VM-20 Table K conversion",
             "pageReference": "Workbook",
             "sectionReference": "Sheet: Table K rows 1-11",
             "sourceReference": "https://content.naic.org/sites/default/files/inline-files/pbr_data_table_k_conversion.xlsx"
@@ -1092,8 +1041,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "A plausible overlapping domain query must resolve to the intended source and not accept the competing source as support."
+          "pass": true
         }
       ],
       "allPassed": true
@@ -1123,7 +1071,6 @@
           "selectedChunkSourceSha256": "19a8628714606410c29c6573a8f8aba7139d88bea1ba883e64bcf13c60653758",
           "selectedAuthorityRole": "CURRENT SUPPORT — DOWNLOAD",
           "citationTarget": {
-            "citationText": "VM-20 Table K conversion",
             "pageReference": "Workbook",
             "sectionReference": "Sheet: LEGAL DISCLAIMER rows 1-1",
             "sourceReference": "https://content.naic.org/sites/default/files/inline-files/pbr_data_table_k_conversion.xlsx"
@@ -1136,8 +1083,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "Title query is ranked against the complete batch corpus and must resolve to this source."
+          "pass": true
         },
         {
           "testId": "naic-pbr-vm-20-vm-31-vm-51-vm20-tables-2026-k-smoke-2",
@@ -1160,7 +1106,6 @@
           "selectedChunkSourceSha256": "19a8628714606410c29c6573a8f8aba7139d88bea1ba883e64bcf13c60653758",
           "selectedAuthorityRole": "CURRENT SUPPORT — DOWNLOAD",
           "citationTarget": {
-            "citationText": "VM-20 Table K conversion",
             "pageReference": "Workbook",
             "sectionReference": "Sheet: Table K rows 1-11",
             "sourceReference": "https://content.naic.org/sites/default/files/inline-files/pbr_data_table_k_conversion.xlsx"
@@ -1173,8 +1118,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "A source-derived substantive query must resolve to the expected source in the corpus."
+          "pass": true
         },
         {
           "testId": "naic-pbr-vm-20-vm-31-vm-51-vm20-tables-2026-k-smoke-3",
@@ -1197,7 +1141,6 @@
           "selectedChunkSourceSha256": "19a8628714606410c29c6573a8f8aba7139d88bea1ba883e64bcf13c60653758",
           "selectedAuthorityRole": "CURRENT SUPPORT — DOWNLOAD",
           "citationTarget": {
-            "citationText": "VM-20 Table K conversion",
             "pageReference": "Workbook",
             "sectionReference": "Sheet: Table K rows 1-11",
             "sourceReference": "https://content.naic.org/sites/default/files/inline-files/pbr_data_table_k_conversion.xlsx"
@@ -1210,8 +1153,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "A deterministic page window or workbook table locator remains citable."
+          "pass": true
         },
         {
           "testId": "naic-pbr-vm-20-vm-31-vm-51-vm20-tables-2026-k-smoke-4",
@@ -1247,7 +1189,6 @@
           "selectedChunkSourceSha256": "19a8628714606410c29c6573a8f8aba7139d88bea1ba883e64bcf13c60653758",
           "selectedAuthorityRole": "CURRENT SUPPORT — DOWNLOAD",
           "citationTarget": {
-            "citationText": "VM-20 Table K conversion",
             "pageReference": "Workbook",
             "sectionReference": "Sheet: Table K rows 1-11",
             "sourceReference": "https://content.naic.org/sites/default/files/inline-files/pbr_data_table_k_conversion.xlsx"
@@ -1260,8 +1201,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "Numeric/form evidence is checked against the corpus, structural locator, role, and exact source SHA."
+          "pass": true
         },
         {
           "testId": "naic-pbr-vm-20-vm-31-vm-51-vm20-tables-2026-k-smoke-5",
@@ -1284,7 +1224,6 @@
           "selectedChunkSourceSha256": "19a8628714606410c29c6573a8f8aba7139d88bea1ba883e64bcf13c60653758",
           "selectedAuthorityRole": "CURRENT SUPPORT — DOWNLOAD",
           "citationTarget": {
-            "citationText": "VM-20 Table K conversion",
             "pageReference": "Workbook",
             "sectionReference": "Sheet: LEGAL DISCLAIMER rows 1-1",
             "sourceReference": "https://content.naic.org/sites/default/files/inline-files/pbr_data_table_k_conversion.xlsx"
@@ -1297,8 +1236,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "Approved authority/support metadata remains bound to the selected source and is not upgraded."
+          "pass": true
         },
         {
           "testId": "naic-pbr-vm-20-vm-31-vm-51-vm20-tables-2026-k-smoke-6",
@@ -1329,8 +1267,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "A nonsense token remains a basic no-match control and is not counted as confusion-set coverage."
+          "pass": true
         },
         {
           "testId": "naic-pbr-vm-20-vm-31-vm-51-vm20-tables-2026-k-smoke-7",
@@ -1353,7 +1290,6 @@
           "selectedChunkSourceSha256": "932c9164967363ac06db624fb6f8711c29a31ba4f767201361e4bfa6027a5dcd",
           "selectedAuthorityRole": "CURRENT SUPPORT — DOWNLOAD",
           "citationTarget": {
-            "citationText": "VM-31 actuarial reports templates",
             "pageReference": "Workbook",
             "sectionReference": "Sheet: Confidentiality rows 1-1",
             "sourceReference": "https://content.naic.org/sites/default/files/inline-files/pbr_data_actuarial_reports_templates_0.xlsx"
@@ -1366,8 +1302,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "A plausible overlapping domain query must resolve to the intended source and not accept the competing source as support."
+          "pass": true
         }
       ],
       "allPassed": true
@@ -1397,7 +1332,6 @@
           "selectedChunkSourceSha256": "932c9164967363ac06db624fb6f8711c29a31ba4f767201361e4bfa6027a5dcd",
           "selectedAuthorityRole": "CURRENT SUPPORT — DOWNLOAD",
           "citationTarget": {
-            "citationText": "VM-31 actuarial reports templates",
             "pageReference": "Workbook",
             "sectionReference": "Sheet: Confidentiality rows 1-1",
             "sourceReference": "https://content.naic.org/sites/default/files/inline-files/pbr_data_actuarial_reports_templates_0.xlsx"
@@ -1410,8 +1344,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "Title query is ranked against the complete batch corpus and must resolve to this source."
+          "pass": true
         },
         {
           "testId": "naic-pbr-vm-20-vm-31-vm-51-vm31-templates-reports-smoke-2",
@@ -1434,7 +1367,6 @@
           "selectedChunkSourceSha256": "932c9164967363ac06db624fb6f8711c29a31ba4f767201361e4bfa6027a5dcd",
           "selectedAuthorityRole": "CURRENT SUPPORT — DOWNLOAD",
           "citationTarget": {
-            "citationText": "VM-31 actuarial reports templates",
             "pageReference": "Workbook",
             "sectionReference": "Sheet: Confidentiality rows 1-1",
             "sourceReference": "https://content.naic.org/sites/default/files/inline-files/pbr_data_actuarial_reports_templates_0.xlsx"
@@ -1447,8 +1379,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "A source-derived substantive query must resolve to the expected source in the corpus."
+          "pass": true
         },
         {
           "testId": "naic-pbr-vm-20-vm-31-vm-51-vm31-templates-reports-smoke-3",
@@ -1471,7 +1402,6 @@
           "selectedChunkSourceSha256": "932c9164967363ac06db624fb6f8711c29a31ba4f767201361e4bfa6027a5dcd",
           "selectedAuthorityRole": "CURRENT SUPPORT — DOWNLOAD",
           "citationTarget": {
-            "citationText": "VM-31 actuarial reports templates",
             "pageReference": "Workbook",
             "sectionReference": "Sheet: Confidentiality rows 1-1",
             "sourceReference": "https://content.naic.org/sites/default/files/inline-files/pbr_data_actuarial_reports_templates_0.xlsx"
@@ -1484,8 +1414,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "A deterministic page window or workbook table locator remains citable."
+          "pass": true
         },
         {
           "testId": "naic-pbr-vm-20-vm-31-vm-51-vm31-templates-reports-smoke-4",
@@ -1521,7 +1450,6 @@
           "selectedChunkSourceSha256": "932c9164967363ac06db624fb6f8711c29a31ba4f767201361e4bfa6027a5dcd",
           "selectedAuthorityRole": "CURRENT SUPPORT — DOWNLOAD",
           "citationTarget": {
-            "citationText": "VM-31 actuarial reports templates",
             "pageReference": "Workbook",
             "sectionReference": "Sheet: Instructions Template A rows 6-8",
             "sourceReference": "https://content.naic.org/sites/default/files/inline-files/pbr_data_actuarial_reports_templates_0.xlsx"
@@ -1534,8 +1462,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "Numeric/form evidence is checked against the corpus, structural locator, role, and exact source SHA."
+          "pass": true
         },
         {
           "testId": "naic-pbr-vm-20-vm-31-vm-51-vm31-templates-reports-smoke-5",
@@ -1558,7 +1485,6 @@
           "selectedChunkSourceSha256": "932c9164967363ac06db624fb6f8711c29a31ba4f767201361e4bfa6027a5dcd",
           "selectedAuthorityRole": "CURRENT SUPPORT — DOWNLOAD",
           "citationTarget": {
-            "citationText": "VM-31 actuarial reports templates",
             "pageReference": "Workbook",
             "sectionReference": "Sheet: Confidentiality rows 1-1",
             "sourceReference": "https://content.naic.org/sites/default/files/inline-files/pbr_data_actuarial_reports_templates_0.xlsx"
@@ -1571,8 +1497,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "Approved authority/support metadata remains bound to the selected source and is not upgraded."
+          "pass": true
         },
         {
           "testId": "naic-pbr-vm-20-vm-31-vm-51-vm31-templates-reports-smoke-6",
@@ -1603,8 +1528,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "A nonsense token remains a basic no-match control and is not counted as confusion-set coverage."
+          "pass": true
         },
         {
           "testId": "naic-pbr-vm-20-vm-31-vm-51-vm31-templates-reports-smoke-7",
@@ -1627,7 +1551,6 @@
           "selectedChunkSourceSha256": "b96b7dd1025aa3b1590f617162480d4ade27f4f8ccfbfbf90b61556a0df02443",
           "selectedAuthorityRole": "CURRENT SUPPORT — DOWNLOAD",
           "citationTarget": {
-            "citationText": "VM Maintenance Agenda, 2026-04-28",
             "pageReference": "Workbook",
             "sectionReference": "Sheet: Active Listing rows 6-24",
             "sourceReference": "https://content.naic.org/sites/default/files/inline-files/VM%20Maintenance%20Agenda%20042826%20%281%29.xlsx"
@@ -1640,8 +1563,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "A plausible overlapping domain query must resolve to the intended source and not accept the competing source as support."
+          "pass": true
         }
       ],
       "allPassed": true
@@ -1671,7 +1593,6 @@
           "selectedChunkSourceSha256": "6819aeff68578d789fc5a0e09ba5b60e15edc89305ae9d42fd3b66048147cae1",
           "selectedAuthorityRole": "CURRENT SUPPORT — DOWNLOAD",
           "citationTarget": {
-            "citationText": "2025 Annual Statement Blank, Life/Fraternal",
             "pageReference": "p. 1",
             "sectionReference": "Pages 1-3",
             "sourceReference": "https://content.naic.org/sites/default/files/publication-asb-life.pdf"
@@ -1684,8 +1605,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "Title query is ranked against the complete batch corpus and must resolve to this source."
+          "pass": true
         },
         {
           "testId": "naic-life-fraternal-reporting-asb-life-2025-smoke-2",
@@ -1708,7 +1628,6 @@
           "selectedChunkSourceSha256": "6819aeff68578d789fc5a0e09ba5b60e15edc89305ae9d42fd3b66048147cae1",
           "selectedAuthorityRole": "CURRENT SUPPORT — DOWNLOAD",
           "citationTarget": {
-            "citationText": "2025 Annual Statement Blank, Life/Fraternal",
             "pageReference": "p. 1",
             "sectionReference": "Pages 1-3",
             "sourceReference": "https://content.naic.org/sites/default/files/publication-asb-life.pdf"
@@ -1721,8 +1640,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "A source-derived substantive query must resolve to the expected source in the corpus."
+          "pass": true
         },
         {
           "testId": "naic-life-fraternal-reporting-asb-life-2025-smoke-3",
@@ -1745,7 +1663,6 @@
           "selectedChunkSourceSha256": "6819aeff68578d789fc5a0e09ba5b60e15edc89305ae9d42fd3b66048147cae1",
           "selectedAuthorityRole": "CURRENT SUPPORT — DOWNLOAD",
           "citationTarget": {
-            "citationText": "2025 Annual Statement Blank, Life/Fraternal",
             "pageReference": "p. 1",
             "sectionReference": "Pages 1-3",
             "sourceReference": "https://content.naic.org/sites/default/files/publication-asb-life.pdf"
@@ -1758,8 +1675,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "A deterministic page window or workbook table locator remains citable."
+          "pass": true
         },
         {
           "testId": "naic-life-fraternal-reporting-asb-life-2025-smoke-4",
@@ -1782,7 +1698,6 @@
           "selectedChunkSourceSha256": "6819aeff68578d789fc5a0e09ba5b60e15edc89305ae9d42fd3b66048147cae1",
           "selectedAuthorityRole": "CURRENT SUPPORT — DOWNLOAD",
           "citationTarget": {
-            "citationText": "2025 Annual Statement Blank, Life/Fraternal",
             "pageReference": "p. 210",
             "sectionReference": "Pages 210-211",
             "sourceReference": "https://content.naic.org/sites/default/files/publication-asb-life.pdf"
@@ -1795,8 +1710,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "Numeric/form evidence is checked against the corpus, structural locator, role, and exact source SHA."
+          "pass": true
         },
         {
           "testId": "naic-life-fraternal-reporting-asb-life-2025-smoke-5",
@@ -1819,7 +1733,6 @@
           "selectedChunkSourceSha256": "6819aeff68578d789fc5a0e09ba5b60e15edc89305ae9d42fd3b66048147cae1",
           "selectedAuthorityRole": "CURRENT SUPPORT — DOWNLOAD",
           "citationTarget": {
-            "citationText": "2025 Annual Statement Blank, Life/Fraternal",
             "pageReference": "p. 1",
             "sectionReference": "Pages 1-3",
             "sourceReference": "https://content.naic.org/sites/default/files/publication-asb-life.pdf"
@@ -1832,8 +1745,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "Approved authority/support metadata remains bound to the selected source and is not upgraded."
+          "pass": true
         },
         {
           "testId": "naic-life-fraternal-reporting-asb-life-2025-smoke-6",
@@ -1864,8 +1776,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "A nonsense token remains a basic no-match control and is not counted as confusion-set coverage."
+          "pass": true
         },
         {
           "testId": "naic-life-fraternal-reporting-asb-life-2025-smoke-7",
@@ -1888,7 +1799,6 @@
           "selectedChunkSourceSha256": "fa507228461252f92cbe8d0e728b0cc5dfdd93f6c93a4cf9a6380063dec44f31",
           "selectedAuthorityRole": "CURRENT SUPPORT — DOWNLOAD",
           "citationTarget": {
-            "citationText": "2026 Quarterly Statement Instructions, Life/Fraternal",
             "pageReference": "p. 1",
             "sectionReference": "Pages 1-3",
             "sourceReference": "https://content.naic.org/sites/default/files/publication-quarterly-statement-instructions-life-frat.pdf"
@@ -1901,8 +1811,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "A plausible overlapping domain query must resolve to the intended source and not accept the competing source as support."
+          "pass": true
         }
       ],
       "allPassed": true
@@ -1932,7 +1841,6 @@
           "selectedChunkSourceSha256": "fa507228461252f92cbe8d0e728b0cc5dfdd93f6c93a4cf9a6380063dec44f31",
           "selectedAuthorityRole": "CURRENT SUPPORT — DOWNLOAD",
           "citationTarget": {
-            "citationText": "2026 Quarterly Statement Instructions, Life/Fraternal",
             "pageReference": "p. 1",
             "sectionReference": "Pages 1-3",
             "sourceReference": "https://content.naic.org/sites/default/files/publication-quarterly-statement-instructions-life-frat.pdf"
@@ -1945,8 +1853,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "Title query is ranked against the complete batch corpus and must resolve to this source."
+          "pass": true
         },
         {
           "testId": "naic-life-fraternal-reporting-qsi-life-2026-smoke-2",
@@ -1969,7 +1876,6 @@
           "selectedChunkSourceSha256": "fa507228461252f92cbe8d0e728b0cc5dfdd93f6c93a4cf9a6380063dec44f31",
           "selectedAuthorityRole": "CURRENT SUPPORT — DOWNLOAD",
           "citationTarget": {
-            "citationText": "2026 Quarterly Statement Instructions, Life/Fraternal",
             "pageReference": "p. 1",
             "sectionReference": "Pages 1-3",
             "sourceReference": "https://content.naic.org/sites/default/files/publication-quarterly-statement-instructions-life-frat.pdf"
@@ -1982,8 +1888,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "A source-derived substantive query must resolve to the expected source in the corpus."
+          "pass": true
         },
         {
           "testId": "naic-life-fraternal-reporting-qsi-life-2026-smoke-3",
@@ -2006,7 +1911,6 @@
           "selectedChunkSourceSha256": "fa507228461252f92cbe8d0e728b0cc5dfdd93f6c93a4cf9a6380063dec44f31",
           "selectedAuthorityRole": "CURRENT SUPPORT — DOWNLOAD",
           "citationTarget": {
-            "citationText": "2026 Quarterly Statement Instructions, Life/Fraternal",
             "pageReference": "p. 1",
             "sectionReference": "Pages 1-3",
             "sourceReference": "https://content.naic.org/sites/default/files/publication-quarterly-statement-instructions-life-frat.pdf"
@@ -2019,8 +1923,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "A deterministic page window or workbook table locator remains citable."
+          "pass": true
         },
         {
           "testId": "naic-life-fraternal-reporting-qsi-life-2026-smoke-4",
@@ -2043,7 +1946,6 @@
           "selectedChunkSourceSha256": "fa507228461252f92cbe8d0e728b0cc5dfdd93f6c93a4cf9a6380063dec44f31",
           "selectedAuthorityRole": "CURRENT SUPPORT — DOWNLOAD",
           "citationTarget": {
-            "citationText": "2026 Quarterly Statement Instructions, Life/Fraternal",
             "pageReference": "p. 306",
             "sectionReference": "Pages 306-307",
             "sourceReference": "https://content.naic.org/sites/default/files/publication-quarterly-statement-instructions-life-frat.pdf"
@@ -2056,8 +1958,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "Numeric/form evidence is checked against the corpus, structural locator, role, and exact source SHA."
+          "pass": true
         },
         {
           "testId": "naic-life-fraternal-reporting-qsi-life-2026-smoke-5",
@@ -2080,7 +1981,6 @@
           "selectedChunkSourceSha256": "fa507228461252f92cbe8d0e728b0cc5dfdd93f6c93a4cf9a6380063dec44f31",
           "selectedAuthorityRole": "CURRENT SUPPORT — DOWNLOAD",
           "citationTarget": {
-            "citationText": "2026 Quarterly Statement Instructions, Life/Fraternal",
             "pageReference": "p. 1",
             "sectionReference": "Pages 1-3",
             "sourceReference": "https://content.naic.org/sites/default/files/publication-quarterly-statement-instructions-life-frat.pdf"
@@ -2093,8 +1993,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "Approved authority/support metadata remains bound to the selected source and is not upgraded."
+          "pass": true
         },
         {
           "testId": "naic-life-fraternal-reporting-qsi-life-2026-smoke-6",
@@ -2125,8 +2024,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "A nonsense token remains a basic no-match control and is not counted as confusion-set coverage."
+          "pass": true
         },
         {
           "testId": "naic-life-fraternal-reporting-qsi-life-2026-smoke-7",
@@ -2149,7 +2047,6 @@
           "selectedChunkSourceSha256": "6819aeff68578d789fc5a0e09ba5b60e15edc89305ae9d42fd3b66048147cae1",
           "selectedAuthorityRole": "CURRENT SUPPORT — DOWNLOAD",
           "citationTarget": {
-            "citationText": "2025 Annual Statement Blank, Life/Fraternal",
             "pageReference": "p. 1",
             "sectionReference": "Pages 1-3",
             "sourceReference": "https://content.naic.org/sites/default/files/publication-asb-life.pdf"
@@ -2162,8 +2059,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "A plausible overlapping domain query must resolve to the intended source and not accept the competing source as support."
+          "pass": true
         }
       ],
       "allPassed": true
@@ -2193,7 +2089,6 @@
           "selectedChunkSourceSha256": "d6040cf8bf880fa6b37529dffe7327b9c2a007a67a7c560709d58cda9b612d23",
           "selectedAuthorityRole": "CURRENT SUPPORT — DOWNLOAD",
           "citationTarget": {
-            "citationText": "2015 VBT preferred wearoff factors",
             "pageReference": "Workbook",
             "sectionReference": "Sheet: Wearoff Factors rows 1-1",
             "sourceReference": "https://www.soa.org/globalassets/assets/files/resources/experience-studies/2018/2015-vbt-preferred-wearoff-factors.xlsx"
@@ -2206,8 +2101,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "Title query is ranked against the complete batch corpus and must resolve to this source."
+          "pass": true
         },
         {
           "testId": "society-of-actuaries-experience-studies-soa-2015-vbt-preferred-wearoff-smoke-2",
@@ -2230,7 +2124,6 @@
           "selectedChunkSourceSha256": "d6040cf8bf880fa6b37529dffe7327b9c2a007a67a7c560709d58cda9b612d23",
           "selectedAuthorityRole": "CURRENT SUPPORT — DOWNLOAD",
           "citationTarget": {
-            "citationText": "2015 VBT preferred wearoff factors",
             "pageReference": "Workbook",
             "sectionReference": "Sheet: Wearoff Factors rows 1-1",
             "sourceReference": "https://www.soa.org/globalassets/assets/files/resources/experience-studies/2018/2015-vbt-preferred-wearoff-factors.xlsx"
@@ -2243,8 +2136,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "A source-derived substantive query must resolve to the expected source in the corpus."
+          "pass": true
         },
         {
           "testId": "society-of-actuaries-experience-studies-soa-2015-vbt-preferred-wearoff-smoke-3",
@@ -2267,7 +2159,6 @@
           "selectedChunkSourceSha256": "d6040cf8bf880fa6b37529dffe7327b9c2a007a67a7c560709d58cda9b612d23",
           "selectedAuthorityRole": "CURRENT SUPPORT — DOWNLOAD",
           "citationTarget": {
-            "citationText": "2015 VBT preferred wearoff factors",
             "pageReference": "Workbook",
             "sectionReference": "Sheet: Wearoff Factors rows 1-1",
             "sourceReference": "https://www.soa.org/globalassets/assets/files/resources/experience-studies/2018/2015-vbt-preferred-wearoff-factors.xlsx"
@@ -2280,8 +2171,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "A deterministic page window or workbook table locator remains citable."
+          "pass": true
         },
         {
           "testId": "society-of-actuaries-experience-studies-soa-2015-vbt-preferred-wearoff-smoke-4",
@@ -2317,7 +2207,6 @@
           "selectedChunkSourceSha256": "d6040cf8bf880fa6b37529dffe7327b9c2a007a67a7c560709d58cda9b612d23",
           "selectedAuthorityRole": "CURRENT SUPPORT — DOWNLOAD",
           "citationTarget": {
-            "citationText": "2015 VBT preferred wearoff factors",
             "pageReference": "Workbook",
             "sectionReference": "Sheet: Wearoff Factors rows 3-103",
             "sourceReference": "https://www.soa.org/globalassets/assets/files/resources/experience-studies/2018/2015-vbt-preferred-wearoff-factors.xlsx"
@@ -2330,8 +2219,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "Numeric/form evidence is checked against the corpus, structural locator, role, and exact source SHA."
+          "pass": true
         },
         {
           "testId": "society-of-actuaries-experience-studies-soa-2015-vbt-preferred-wearoff-smoke-5",
@@ -2354,7 +2242,6 @@
           "selectedChunkSourceSha256": "d6040cf8bf880fa6b37529dffe7327b9c2a007a67a7c560709d58cda9b612d23",
           "selectedAuthorityRole": "CURRENT SUPPORT — DOWNLOAD",
           "citationTarget": {
-            "citationText": "2015 VBT preferred wearoff factors",
             "pageReference": "Workbook",
             "sectionReference": "Sheet: Wearoff Factors rows 1-1",
             "sourceReference": "https://www.soa.org/globalassets/assets/files/resources/experience-studies/2018/2015-vbt-preferred-wearoff-factors.xlsx"
@@ -2367,8 +2254,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "Approved authority/support metadata remains bound to the selected source and is not upgraded."
+          "pass": true
         },
         {
           "testId": "society-of-actuaries-experience-studies-soa-2015-vbt-preferred-wearoff-smoke-6",
@@ -2399,8 +2285,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "A nonsense token remains a basic no-match control and is not counted as confusion-set coverage."
+          "pass": true
         },
         {
           "testId": "society-of-actuaries-experience-studies-soa-2015-vbt-preferred-wearoff-smoke-7",
@@ -2423,7 +2308,6 @@
           "selectedChunkSourceSha256": "847ddfd96ed51f47435d5ce99b9dac4f32363186d80336d0d14a1afd1d1e513d",
           "selectedAuthorityRole": "CURRENT SUPPORT — DOWNLOAD",
           "citationTarget": {
-            "citationText": "2015 VBT mortality improvement factors",
             "pageReference": "Workbook",
             "sectionReference": "Sheet: Documentation rows 2-3",
             "sourceReference": "https://www.soa.org/globalassets/assets/files/resources/experience-studies/2018/2015-vbt-improvement-factors.xlsx"
@@ -2436,8 +2320,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "A plausible overlapping domain query must resolve to the intended source and not accept the competing source as support."
+          "pass": true
         }
       ],
       "allPassed": true
@@ -2467,7 +2350,6 @@
           "selectedChunkSourceSha256": "847ddfd96ed51f47435d5ce99b9dac4f32363186d80336d0d14a1afd1d1e513d",
           "selectedAuthorityRole": "CURRENT SUPPORT — DOWNLOAD",
           "citationTarget": {
-            "citationText": "2015 VBT mortality improvement factors",
             "pageReference": "Workbook",
             "sectionReference": "Sheet: Documentation rows 10-10",
             "sourceReference": "https://www.soa.org/globalassets/assets/files/resources/experience-studies/2018/2015-vbt-improvement-factors.xlsx"
@@ -2480,8 +2362,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "Title query is ranked against the complete batch corpus and must resolve to this source."
+          "pass": true
         },
         {
           "testId": "society-of-actuaries-experience-studies-soa-2015-vbt-improvement-smoke-2",
@@ -2504,7 +2385,6 @@
           "selectedChunkSourceSha256": "847ddfd96ed51f47435d5ce99b9dac4f32363186d80336d0d14a1afd1d1e513d",
           "selectedAuthorityRole": "CURRENT SUPPORT — DOWNLOAD",
           "citationTarget": {
-            "citationText": "2015 VBT mortality improvement factors",
             "pageReference": "Workbook",
             "sectionReference": "Sheet: Documentation rows 2-3",
             "sourceReference": "https://www.soa.org/globalassets/assets/files/resources/experience-studies/2018/2015-vbt-improvement-factors.xlsx"
@@ -2517,8 +2397,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "A source-derived substantive query must resolve to the expected source in the corpus."
+          "pass": true
         },
         {
           "testId": "society-of-actuaries-experience-studies-soa-2015-vbt-improvement-smoke-3",
@@ -2541,7 +2420,6 @@
           "selectedChunkSourceSha256": "847ddfd96ed51f47435d5ce99b9dac4f32363186d80336d0d14a1afd1d1e513d",
           "selectedAuthorityRole": "CURRENT SUPPORT — DOWNLOAD",
           "citationTarget": {
-            "citationText": "2015 VBT mortality improvement factors",
             "pageReference": "Workbook",
             "sectionReference": "Sheet: Documentation rows 2-3",
             "sourceReference": "https://www.soa.org/globalassets/assets/files/resources/experience-studies/2018/2015-vbt-improvement-factors.xlsx"
@@ -2554,8 +2432,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "A deterministic page window or workbook table locator remains citable."
+          "pass": true
         },
         {
           "testId": "society-of-actuaries-experience-studies-soa-2015-vbt-improvement-smoke-4",
@@ -2591,7 +2468,6 @@
           "selectedChunkSourceSha256": "847ddfd96ed51f47435d5ce99b9dac4f32363186d80336d0d14a1afd1d1e513d",
           "selectedAuthorityRole": "CURRENT SUPPORT — DOWNLOAD",
           "citationTarget": {
-            "citationText": "2015 VBT mortality improvement factors",
             "pageReference": "Workbook",
             "sectionReference": "Sheet: MNS Unimproved rows 1-94",
             "sourceReference": "https://www.soa.org/globalassets/assets/files/resources/experience-studies/2018/2015-vbt-improvement-factors.xlsx"
@@ -2604,8 +2480,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "Numeric/form evidence is checked against the corpus, structural locator, role, and exact source SHA."
+          "pass": true
         },
         {
           "testId": "society-of-actuaries-experience-studies-soa-2015-vbt-improvement-smoke-5",
@@ -2628,7 +2503,6 @@
           "selectedChunkSourceSha256": "847ddfd96ed51f47435d5ce99b9dac4f32363186d80336d0d14a1afd1d1e513d",
           "selectedAuthorityRole": "CURRENT SUPPORT — DOWNLOAD",
           "citationTarget": {
-            "citationText": "2015 VBT mortality improvement factors",
             "pageReference": "Workbook",
             "sectionReference": "Sheet: Documentation rows 10-10",
             "sourceReference": "https://www.soa.org/globalassets/assets/files/resources/experience-studies/2018/2015-vbt-improvement-factors.xlsx"
@@ -2641,8 +2515,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "Approved authority/support metadata remains bound to the selected source and is not upgraded."
+          "pass": true
         },
         {
           "testId": "society-of-actuaries-experience-studies-soa-2015-vbt-improvement-smoke-6",
@@ -2673,8 +2546,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "A nonsense token remains a basic no-match control and is not counted as confusion-set coverage."
+          "pass": true
         },
         {
           "testId": "society-of-actuaries-experience-studies-soa-2015-vbt-improvement-smoke-7",
@@ -2697,7 +2569,6 @@
           "selectedChunkSourceSha256": "c7036b837750a184cdddaf2bdb2fb643450803fdf63565edc8b9f4356c44f801",
           "selectedAuthorityRole": "CURRENT SUPPORT — DOWNLOAD",
           "citationTarget": {
-            "citationText": "2015 VBT unismoke ALB/ANB tables",
             "pageReference": "Workbook",
             "sectionReference": "Sheet: 2015 Female Unismoke ANB rows 1-99",
             "sourceReference": "https://www.soa.org/globalassets/assets/files/research/exp-study/2015-vbt-unismoke-alb-anb.xlsx"
@@ -2710,8 +2581,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "A plausible overlapping domain query must resolve to the intended source and not accept the competing source as support."
+          "pass": true
         }
       ],
       "allPassed": true
@@ -2741,7 +2611,6 @@
           "selectedChunkSourceSha256": "c7036b837750a184cdddaf2bdb2fb643450803fdf63565edc8b9f4356c44f801",
           "selectedAuthorityRole": "CURRENT SUPPORT — DOWNLOAD",
           "citationTarget": {
-            "citationText": "2015 VBT unismoke ALB/ANB tables",
             "pageReference": "Workbook",
             "sectionReference": "Sheet: 2015 Female Unismoke ANB rows 1-99",
             "sourceReference": "https://www.soa.org/globalassets/assets/files/research/exp-study/2015-vbt-unismoke-alb-anb.xlsx"
@@ -2754,8 +2623,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "Title query is ranked against the complete batch corpus and must resolve to this source."
+          "pass": true
         },
         {
           "testId": "society-of-actuaries-experience-studies-soa-2015-vbt-unismoke-smoke-2",
@@ -2778,7 +2646,6 @@
           "selectedChunkSourceSha256": "c7036b837750a184cdddaf2bdb2fb643450803fdf63565edc8b9f4356c44f801",
           "selectedAuthorityRole": "CURRENT SUPPORT — DOWNLOAD",
           "citationTarget": {
-            "citationText": "2015 VBT unismoke ALB/ANB tables",
             "pageReference": "Workbook",
             "sectionReference": "Sheet: 2015 Male Unismoke ANB rows 1-99",
             "sourceReference": "https://www.soa.org/globalassets/assets/files/research/exp-study/2015-vbt-unismoke-alb-anb.xlsx"
@@ -2791,8 +2658,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "A source-derived substantive query must resolve to the expected source in the corpus."
+          "pass": true
         },
         {
           "testId": "society-of-actuaries-experience-studies-soa-2015-vbt-unismoke-smoke-3",
@@ -2815,7 +2681,6 @@
           "selectedChunkSourceSha256": "c7036b837750a184cdddaf2bdb2fb643450803fdf63565edc8b9f4356c44f801",
           "selectedAuthorityRole": "CURRENT SUPPORT — DOWNLOAD",
           "citationTarget": {
-            "citationText": "2015 VBT unismoke ALB/ANB tables",
             "pageReference": "Workbook",
             "sectionReference": "Sheet: 2015 Male Unismoke ANB rows 1-99",
             "sourceReference": "https://www.soa.org/globalassets/assets/files/research/exp-study/2015-vbt-unismoke-alb-anb.xlsx"
@@ -2828,8 +2693,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "A deterministic page window or workbook table locator remains citable."
+          "pass": true
         },
         {
           "testId": "society-of-actuaries-experience-studies-soa-2015-vbt-unismoke-smoke-4",
@@ -2865,7 +2729,6 @@
           "selectedChunkSourceSha256": "c7036b837750a184cdddaf2bdb2fb643450803fdf63565edc8b9f4356c44f801",
           "selectedAuthorityRole": "CURRENT SUPPORT — DOWNLOAD",
           "citationTarget": {
-            "citationText": "2015 VBT unismoke ALB/ANB tables",
             "pageReference": "Workbook",
             "sectionReference": "Sheet: 2015 Male Unismoke ANB rows 1-99",
             "sourceReference": "https://www.soa.org/globalassets/assets/files/research/exp-study/2015-vbt-unismoke-alb-anb.xlsx"
@@ -2878,8 +2741,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "Numeric/form evidence is checked against the corpus, structural locator, role, and exact source SHA."
+          "pass": true
         },
         {
           "testId": "society-of-actuaries-experience-studies-soa-2015-vbt-unismoke-smoke-5",
@@ -2902,7 +2764,6 @@
           "selectedChunkSourceSha256": "c7036b837750a184cdddaf2bdb2fb643450803fdf63565edc8b9f4356c44f801",
           "selectedAuthorityRole": "CURRENT SUPPORT — DOWNLOAD",
           "citationTarget": {
-            "citationText": "2015 VBT unismoke ALB/ANB tables",
             "pageReference": "Workbook",
             "sectionReference": "Sheet: 2015 Female Unismoke ANB rows 1-99",
             "sourceReference": "https://www.soa.org/globalassets/assets/files/research/exp-study/2015-vbt-unismoke-alb-anb.xlsx"
@@ -2915,8 +2776,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "Approved authority/support metadata remains bound to the selected source and is not upgraded."
+          "pass": true
         },
         {
           "testId": "society-of-actuaries-experience-studies-soa-2015-vbt-unismoke-smoke-6",
@@ -2947,8 +2807,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "A nonsense token remains a basic no-match control and is not counted as confusion-set coverage."
+          "pass": true
         },
         {
           "testId": "society-of-actuaries-experience-studies-soa-2015-vbt-unismoke-smoke-7",
@@ -2971,7 +2830,6 @@
           "selectedChunkSourceSha256": "906db20c567de15ce5c754204ec5f8b467afa96fbc93389db667ea5a88a67dd8",
           "selectedAuthorityRole": "CURRENT SUPPORT — DOWNLOAD",
           "citationTarget": {
-            "citationText": "2015 VBT smoker-distinct ALB/ANB tables",
             "pageReference": "Workbook",
             "sectionReference": "Sheet: 2015 FNS ANB rows 1-81",
             "sourceReference": "https://www.soa.org/globalassets/assets/files/research/exp-study/2015-vbt-smoker-distinct-alb-anb.xlsx"
@@ -2984,8 +2842,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "A plausible overlapping domain query must resolve to the intended source and not accept the competing source as support."
+          "pass": true
         }
       ],
       "allPassed": true
@@ -3015,7 +2872,6 @@
           "selectedChunkSourceSha256": "906db20c567de15ce5c754204ec5f8b467afa96fbc93389db667ea5a88a67dd8",
           "selectedAuthorityRole": "CURRENT SUPPORT — DOWNLOAD",
           "citationTarget": {
-            "citationText": "2015 VBT smoker-distinct ALB/ANB tables",
             "pageReference": "Workbook",
             "sectionReference": "Sheet: 2015 FNS ALB rows 1-81",
             "sourceReference": "https://www.soa.org/globalassets/assets/files/research/exp-study/2015-vbt-smoker-distinct-alb-anb.xlsx"
@@ -3028,8 +2884,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "Title query is ranked against the complete batch corpus and must resolve to this source."
+          "pass": true
         },
         {
           "testId": "society-of-actuaries-experience-studies-soa-2015-vbt-smoker-distinct-smoke-2",
@@ -3052,7 +2907,6 @@
           "selectedChunkSourceSha256": "906db20c567de15ce5c754204ec5f8b467afa96fbc93389db667ea5a88a67dd8",
           "selectedAuthorityRole": "CURRENT SUPPORT — DOWNLOAD",
           "citationTarget": {
-            "citationText": "2015 VBT smoker-distinct ALB/ANB tables",
             "pageReference": "Workbook",
             "sectionReference": "Sheet: 2015 MNS ANB rows 1-81",
             "sourceReference": "https://www.soa.org/globalassets/assets/files/research/exp-study/2015-vbt-smoker-distinct-alb-anb.xlsx"
@@ -3065,8 +2919,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "A source-derived substantive query must resolve to the expected source in the corpus."
+          "pass": true
         },
         {
           "testId": "society-of-actuaries-experience-studies-soa-2015-vbt-smoker-distinct-smoke-3",
@@ -3089,7 +2942,6 @@
           "selectedChunkSourceSha256": "906db20c567de15ce5c754204ec5f8b467afa96fbc93389db667ea5a88a67dd8",
           "selectedAuthorityRole": "CURRENT SUPPORT — DOWNLOAD",
           "citationTarget": {
-            "citationText": "2015 VBT smoker-distinct ALB/ANB tables",
             "pageReference": "Workbook",
             "sectionReference": "Sheet: 2015 MNS ANB rows 1-81",
             "sourceReference": "https://www.soa.org/globalassets/assets/files/research/exp-study/2015-vbt-smoker-distinct-alb-anb.xlsx"
@@ -3102,8 +2954,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "A deterministic page window or workbook table locator remains citable."
+          "pass": true
         },
         {
           "testId": "society-of-actuaries-experience-studies-soa-2015-vbt-smoker-distinct-smoke-4",
@@ -3139,7 +2990,6 @@
           "selectedChunkSourceSha256": "906db20c567de15ce5c754204ec5f8b467afa96fbc93389db667ea5a88a67dd8",
           "selectedAuthorityRole": "CURRENT SUPPORT — DOWNLOAD",
           "citationTarget": {
-            "citationText": "2015 VBT smoker-distinct ALB/ANB tables",
             "pageReference": "Workbook",
             "sectionReference": "Sheet: 2015 MNS ANB rows 1-81",
             "sourceReference": "https://www.soa.org/globalassets/assets/files/research/exp-study/2015-vbt-smoker-distinct-alb-anb.xlsx"
@@ -3152,8 +3002,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "Numeric/form evidence is checked against the corpus, structural locator, role, and exact source SHA."
+          "pass": true
         },
         {
           "testId": "society-of-actuaries-experience-studies-soa-2015-vbt-smoker-distinct-smoke-5",
@@ -3176,7 +3025,6 @@
           "selectedChunkSourceSha256": "906db20c567de15ce5c754204ec5f8b467afa96fbc93389db667ea5a88a67dd8",
           "selectedAuthorityRole": "CURRENT SUPPORT — DOWNLOAD",
           "citationTarget": {
-            "citationText": "2015 VBT smoker-distinct ALB/ANB tables",
             "pageReference": "Workbook",
             "sectionReference": "Sheet: 2015 FNS ALB rows 1-81",
             "sourceReference": "https://www.soa.org/globalassets/assets/files/research/exp-study/2015-vbt-smoker-distinct-alb-anb.xlsx"
@@ -3189,8 +3037,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "Approved authority/support metadata remains bound to the selected source and is not upgraded."
+          "pass": true
         },
         {
           "testId": "society-of-actuaries-experience-studies-soa-2015-vbt-smoker-distinct-smoke-6",
@@ -3221,8 +3068,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "A nonsense token remains a basic no-match control and is not counted as confusion-set coverage."
+          "pass": true
         },
         {
           "testId": "society-of-actuaries-experience-studies-soa-2015-vbt-smoker-distinct-smoke-7",
@@ -3245,7 +3091,6 @@
           "selectedChunkSourceSha256": "d6040cf8bf880fa6b37529dffe7327b9c2a007a67a7c560709d58cda9b612d23",
           "selectedAuthorityRole": "CURRENT SUPPORT — DOWNLOAD",
           "citationTarget": {
-            "citationText": "2015 VBT preferred wearoff factors",
             "pageReference": "Workbook",
             "sectionReference": "Sheet: Wearoff Factors rows 1-1",
             "sourceReference": "https://www.soa.org/globalassets/assets/files/resources/experience-studies/2018/2015-vbt-preferred-wearoff-factors.xlsx"
@@ -3258,8 +3103,7 @@
           "structuralMatch": true,
           "workbookEvidenceMatch": true,
           "wrongSourceExcluded": true,
-          "pass": true,
-          "rationale": "A plausible overlapping domain query must resolve to the intended source and not accept the competing source as support."
+          "pass": true
         }
       ],
       "allPassed": true
