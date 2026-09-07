@@ -1,13 +1,15 @@
 [CmdletBinding()]
 param(
-    [Parameter(Mandatory)][string]$ApprovedManifestPath,
+    [string]$ApprovedManifestPath,
     [string]$PreviousAcquisitionManifestPath,
     [string]$CandidateId,
-    [switch]$IdempotenceOnly
+    [switch]$IdempotenceOnly,
+    [switch]$LibraryMode
 )
 
 Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
+. (Join-Path $PSScriptRoot 'http-transport.ps1')
 
 function Get-Sha256 {
     param([Parameter(Mandatory)][byte[]]$Bytes)
@@ -57,38 +59,7 @@ function Assert-ApprovedRecord {
 
 function Invoke-TrackedGet {
     param([Parameter(Mandatory)][string]$Url, [Parameter(Mandatory)][string]$UserAgent, [int]$TimeoutSeconds = 45)
-    $handler = [System.Net.Http.HttpClientHandler]::new()
-    $handler.AllowAutoRedirect = $false
-    $client = [System.Net.Http.HttpClient]::new($handler)
-    $client.Timeout = [TimeSpan]::FromSeconds($TimeoutSeconds)
-    $client.DefaultRequestHeaders.UserAgent.ParseAdd($UserAgent)
-    $chain = [System.Collections.Generic.List[object]]::new()
-    $current = $Url
-    try {
-        for ($hop = 0; $hop -le 5; $hop++) {
-            $request = [System.Net.Http.HttpRequestMessage]::new([System.Net.Http.HttpMethod]::Get, [Uri]$current)
-            try { $response = $client.SendAsync($request, [Net.Http.HttpCompletionOption]::ResponseHeadersRead).GetAwaiter().GetResult() }
-            finally { $request.Dispose() }
-            $headers = Get-HeaderMap $response
-            $location = if ($headers.Contains('Location')) { [string]$headers['Location'] } else { $null }
-            $chain.Add([ordered]@{ hop = $hop; requestedUrl = $current; status = [int]$response.StatusCode; headers = $headers; location = $location })
-            if ([int]$response.StatusCode -ge 300 -and [int]$response.StatusCode -lt 400 -and $location) {
-                if ($hop -eq 5) { throw "Redirect limit exceeded for $Url" }
-                $current = ([Uri]::new([Uri]$current, $location)).AbsoluteUri
-                $response.Dispose()
-                continue
-            }
-            $bytes = $response.Content.ReadAsByteArrayAsync().GetAwaiter().GetResult()
-            $result = [pscustomobject]@{
-                initialUrl = $Url; finalUrl = $current; status = [int]$response.StatusCode
-                headers = $headers; bytes = $bytes; redirectChain = @($chain)
-            }
-            $response.Dispose()
-            return $result
-        }
-    }
-    finally { $client.Dispose(); $handler.Dispose() }
-    throw "No terminal HTTP response for $Url"
+    return Invoke-TrackedHttpGet -Url $Url -UserAgent $UserAgent -Accept '*/*' -TimeoutSeconds $TimeoutSeconds
 }
 
 function Test-Payload {
@@ -193,6 +164,9 @@ function Write-ReviewPackets {
     Set-Content -LiteralPath $mdPath -Value ($lines -join "`r`n") -Encoding UTF8
     return [pscustomobject]@{ json = $jsonPath; markdown = $mdPath; csv = $csvPath }
 }
+
+if ($LibraryMode) { return }
+if ([string]::IsNullOrWhiteSpace($ApprovedManifestPath)) { throw '-ApprovedManifestPath is required.' }
 
 function Invoke-IdempotenceCheck {
     param([Parameter(Mandatory)]$ApprovedManifest, [Parameter(Mandatory)][string]$ApprovedManifestPath, [Parameter(Mandatory)][string]$ManifestPath, [Parameter(Mandatory)][string]$OutputDirectory)
