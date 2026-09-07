@@ -1,0 +1,250 @@
+{
+  "schemaVersion": "1.0",
+  "packetId": "review-packet-scaled-wave-01-2026-09",
+  "batchId": "scaled-wave-01-2026-09",
+  "generatedAt": "2026-09-07T21:25:07.0818035Z",
+  "reviewMode": "exception_first",
+  "batchSummary": {
+    "batchName": "Controlled scaled review-only batch scaled-wave-01-2026-09",
+    "sourceFamilies": [
+      "society_of_actuaries_experience_studies"
+    ],
+    "processingIntent": "Low-touch review-only processing for admitted raw sources.",
+    "sourceFileCount": 4,
+    "extractedItemCount": 34,
+    "exceptionCount": 1,
+    "summary": "All admitted sources were processed through review-only extraction, structure, chunking, source-index candidate, retrieval smoke test, and validation.",
+    "notes": "{\"totalAdmitted\":4,\"processedSuccessfully\":4,\"cleanReviewCandidates\":3,\"humanReviewRequired\":1,\"processingBlocked\":0,\"systemicFailures\":0,\"totalChunks\":34,\"totalStructuredEvidence\":34}"
+  },
+  "sourceFilesProcessed": [
+    {
+      "sourceId": "society-of-actuaries-experience-studies-soa-2015-vbt-preferred-wearoff",
+      "filename": "2015-vbt-preferred-wearoff-factors.xlsx",
+      "filePath": "C:\\Dev\\Document Processor Sources\\2026-09-02 Intake\\03_Professional_Support\\SOA_Experience_Studies\\2015-vbt-preferred-wearoff-factors.xlsx",
+      "sourceReference": "https://www.soa.org/globalassets/assets/files/resources/experience-studies/2018/2015-vbt-preferred-wearoff-factors.xlsx",
+      "sourceFamilyId": "society_of_actuaries_experience_studies",
+      "domainId": "actuarial_experience",
+      "documentType": "valuation_rates_workbook",
+      "processingStatus": "review_pending",
+      "pageCount": null,
+      "issueCount": 0,
+      "rightsStatus": "RIGHTS_REVIEW_REQUIRED",
+      "notes": "Automated source binding, extraction, deterministic page-window grouping, citation, SHA, and retrieval checks passed."
+    },
+    {
+      "sourceId": "society-of-actuaries-experience-studies-soa-2015-vbt-improvement",
+      "filename": "2015-vbt-improvement-factors.xlsx",
+      "filePath": "C:\\Dev\\Document Processor Sources\\2026-09-02 Intake\\03_Professional_Support\\SOA_Experience_Studies\\2015-vbt-improvement-factors.xlsx",
+      "sourceReference": "https://www.soa.org/globalassets/assets/files/resources/experience-studies/2018/2015-vbt-improvement-factors.xlsx",
+      "sourceFamilyId": "society_of_actuaries_experience_studies",
+      "domainId": "actuarial_experience",
+      "documentType": "valuation_rates_workbook",
+      "processingStatus": "review_pending",
+      "pageCount": null,
+      "issueCount": 1,
+      "rightsStatus": "RIGHTS_REVIEW_REQUIRED",
+      "notes": "1 worksheet(s) contain native non-cell structures not represented by cell extraction and require human review: Documentation."
+    },
+    {
+      "sourceId": "society-of-actuaries-experience-studies-soa-2015-vbt-unismoke",
+      "filename": "2015-vbt-unismoke-alb-anb.xlsx",
+      "filePath": "C:\\Dev\\Document Processor Sources\\2026-09-02 Intake\\03_Professional_Support\\SOA_Experience_Studies\\2015-vbt-unismoke-alb-anb.xlsx",
+      "sourceReference": "https://www.soa.org/globalassets/assets/files/research/exp-study/2015-vbt-unismoke-alb-anb.xlsx",
+      "sourceFamilyId": "society_of_actuaries_experience_studies",
+      "domainId": "actuarial_experience",
+      "documentType": "valuation_rates_workbook",
+      "processingStatus": "review_pending",
+      "pageCount": null,
+      "issueCount": 0,
+      "rightsStatus": "RIGHTS_REVIEW_REQUIRED",
+      "notes": "Automated source binding, extraction, deterministic page-window grouping, citation, SHA, and retrieval checks passed."
+    },
+    {
+      "sourceId": "society-of-actuaries-experience-studies-soa-2015-vbt-smoker-distinct",
+      "filename": "2015-vbt-smoker-distinct-alb-anb.xlsx",
+      "filePath": "C:\\Dev\\Document Processor Sources\\2026-09-02 Intake\\03_Professional_Support\\SOA_Experience_Studies\\2015-vbt-smoker-distinct-alb-anb.xlsx",
+      "sourceReference": "https://www.soa.org/globalassets/assets/files/research/exp-study/2015-vbt-smoker-distinct-alb-anb.xlsx",
+      "sourceFamilyId": "society_of_actuaries_experience_studies",
+      "domainId": "actuarial_experience",
+      "documentType": "valuation_rates_workbook",
+      "processingStatus": "review_pending",
+      "pageCount": null,
+      "issueCount": 0,
+      "rightsStatus": "RIGHTS_REVIEW_REQUIRED",
+      "notes": "Automated source binding, extraction, deterministic page-window grouping, citation, SHA, and retrieval checks passed."
+    }
+  ],
+  "extractedItems": [
+    {
+      "stableId": "society-of-actuaries-experience-studies-soa-2015-vbt-preferred-wearoff--review-item",
+      "sourceId": "society-of-actuaries-experience-studies-soa-2015-vbt-preferred-wearoff",
+      "sourceFamilyId": "society_of_actuaries_experience_studies",
+      "domainId": "actuarial_experience",
+      "documentType": "valuation_rates_workbook",
+      "sourceReference": "https://www.soa.org/globalassets/assets/files/resources/experience-studies/2018/2015-vbt-preferred-wearoff-factors.xlsx",
+      "sourcePath": "C:\\Dev\\Document Processor Sources\\2026-09-02 Intake\\03_Professional_Support\\SOA_Experience_Studies\\2015-vbt-preferred-wearoff-factors.xlsx",
+      "pageReference": "Workbook",
+      "sectionReference": "Workbook sheets",
+      "outcome": "CLEAN_REVIEW_CANDIDATE",
+      "exceptionCode": "NONE",
+      "summary": "Automated source binding, extraction, deterministic page-window grouping, citation, SHA, and retrieval checks passed.",
+      "confidence": "high",
+      "reviewFlags": [],
+      "learnerFacingEligible": false,
+      "appReadyEligible": false,
+      "rightsStatus": "RIGHTS_REVIEW_REQUIRED",
+      "externalArtifactManifestPath": "data/processed/review_packages/scaled-wave-01-2026-09/external-artifact-manifest.json",
+      "notes": "Review-only candidate; no promotion or downstream eligibility is implied."
+    },
+    {
+      "stableId": "society-of-actuaries-experience-studies-soa-2015-vbt-improvement--review-item",
+      "sourceId": "society-of-actuaries-experience-studies-soa-2015-vbt-improvement",
+      "sourceFamilyId": "society_of_actuaries_experience_studies",
+      "domainId": "actuarial_experience",
+      "documentType": "valuation_rates_workbook",
+      "sourceReference": "https://www.soa.org/globalassets/assets/files/resources/experience-studies/2018/2015-vbt-improvement-factors.xlsx",
+      "sourcePath": "C:\\Dev\\Document Processor Sources\\2026-09-02 Intake\\03_Professional_Support\\SOA_Experience_Studies\\2015-vbt-improvement-factors.xlsx",
+      "pageReference": "Workbook",
+      "sectionReference": "Workbook sheets",
+      "outcome": "HUMAN_REVIEW_REQUIRED",
+      "exceptionCode": "XLSX_NON_CELL_CONTENT_REQUIRES_REVIEW",
+      "summary": "1 worksheet(s) contain native non-cell structures not represented by cell extraction and require human review: Documentation.",
+      "confidence": "medium",
+      "reviewFlags": [
+        "XLSX_NON_CELL_CONTENT_REQUIRES_REVIEW"
+      ],
+      "learnerFacingEligible": false,
+      "appReadyEligible": false,
+      "rightsStatus": "RIGHTS_REVIEW_REQUIRED",
+      "externalArtifactManifestPath": "data/processed/review_packages/scaled-wave-01-2026-09/external-artifact-manifest.json",
+      "notes": "Review-only candidate; no promotion or downstream eligibility is implied."
+    },
+    {
+      "stableId": "society-of-actuaries-experience-studies-soa-2015-vbt-unismoke--review-item",
+      "sourceId": "society-of-actuaries-experience-studies-soa-2015-vbt-unismoke",
+      "sourceFamilyId": "society_of_actuaries_experience_studies",
+      "domainId": "actuarial_experience",
+      "documentType": "valuation_rates_workbook",
+      "sourceReference": "https://www.soa.org/globalassets/assets/files/research/exp-study/2015-vbt-unismoke-alb-anb.xlsx",
+      "sourcePath": "C:\\Dev\\Document Processor Sources\\2026-09-02 Intake\\03_Professional_Support\\SOA_Experience_Studies\\2015-vbt-unismoke-alb-anb.xlsx",
+      "pageReference": "Workbook",
+      "sectionReference": "Workbook sheets",
+      "outcome": "CLEAN_REVIEW_CANDIDATE",
+      "exceptionCode": "NONE",
+      "summary": "Automated source binding, extraction, deterministic page-window grouping, citation, SHA, and retrieval checks passed.",
+      "confidence": "high",
+      "reviewFlags": [],
+      "learnerFacingEligible": false,
+      "appReadyEligible": false,
+      "rightsStatus": "RIGHTS_REVIEW_REQUIRED",
+      "externalArtifactManifestPath": "data/processed/review_packages/scaled-wave-01-2026-09/external-artifact-manifest.json",
+      "notes": "Review-only candidate; no promotion or downstream eligibility is implied."
+    },
+    {
+      "stableId": "society-of-actuaries-experience-studies-soa-2015-vbt-smoker-distinct--review-item",
+      "sourceId": "society-of-actuaries-experience-studies-soa-2015-vbt-smoker-distinct",
+      "sourceFamilyId": "society_of_actuaries_experience_studies",
+      "domainId": "actuarial_experience",
+      "documentType": "valuation_rates_workbook",
+      "sourceReference": "https://www.soa.org/globalassets/assets/files/research/exp-study/2015-vbt-smoker-distinct-alb-anb.xlsx",
+      "sourcePath": "C:\\Dev\\Document Processor Sources\\2026-09-02 Intake\\03_Professional_Support\\SOA_Experience_Studies\\2015-vbt-smoker-distinct-alb-anb.xlsx",
+      "pageReference": "Workbook",
+      "sectionReference": "Workbook sheets",
+      "outcome": "CLEAN_REVIEW_CANDIDATE",
+      "exceptionCode": "NONE",
+      "summary": "Automated source binding, extraction, deterministic page-window grouping, citation, SHA, and retrieval checks passed.",
+      "confidence": "high",
+      "reviewFlags": [],
+      "learnerFacingEligible": false,
+      "appReadyEligible": false,
+      "rightsStatus": "RIGHTS_REVIEW_REQUIRED",
+      "externalArtifactManifestPath": "data/processed/review_packages/scaled-wave-01-2026-09/external-artifact-manifest.json",
+      "notes": "Review-only candidate; no promotion or downstream eligibility is implied."
+    }
+  ],
+  "cleanReviewSample": {
+    "sampleType": "CLEAN_REVIEW_CANDIDATE",
+    "sourceIds": [
+      "society-of-actuaries-experience-studies-soa-2015-vbt-preferred-wearoff",
+      "society-of-actuaries-experience-studies-soa-2015-vbt-smoker-distinct",
+      "society-of-actuaries-experience-studies-soa-2015-vbt-unismoke"
+    ]
+  },
+  "exceptionReviewSample": {
+    "sampleType": "HUMAN_REVIEW_REQUIRED",
+    "sourceIds": [
+      "society-of-actuaries-experience-studies-soa-2015-vbt-improvement"
+    ]
+  },
+  "requiredHumanDecisions": [
+    {
+      "decisionId": "society-of-actuaries-experience-studies-soa-2015-vbt-improvement-review-disposition",
+      "decisionType": "promotion_gate",
+      "question": "Is the 2015 VBT mortality improvement factors evidence sufficient for any later promotion consideration?",
+      "whyItMatters": "1 worksheet(s) contain native non-cell structures not represented by cell extraction and require human review: Documentation.",
+      "recommendedOwner": "source reviewer",
+      "priority": "medium"
+    }
+  ],
+  "exceptionsAndFlags": [
+    {
+      "flagId": "society-of-actuaries-experience-studies-soa-2015-vbt-improvement-xlsx_non_cell_content_requires_review",
+      "severity": "medium",
+      "sourceId": "society-of-actuaries-experience-studies-soa-2015-vbt-improvement",
+      "flagType": "xlsx_non_cell_content_requires_review",
+      "message": "1 worksheet(s) contain native non-cell structures not represented by cell extraction and require human review: Documentation.",
+      "notes": "Keep this source in human review; do not promote."
+    }
+  ],
+  "citationIssues": [],
+  "unresolvedIssues": [
+    {
+      "issueId": "society-of-actuaries-experience-studies-soa-2015-vbt-improvement-xlsx_non_cell_content_requires_review",
+      "severity": "medium",
+      "issueType": "xlsx_non_cell_content_requires_review",
+      "sourceId": "society-of-actuaries-experience-studies-soa-2015-vbt-improvement",
+      "outcome": "HUMAN_REVIEW_REQUIRED",
+      "exceptionCode": "XLSX_NON_CELL_CONTENT_REQUIRES_REVIEW",
+      "message": "1 worksheet(s) contain native non-cell structures not represented by cell extraction and require human review: Documentation.",
+      "recommendedAction": "Review source-specific evidence before any future promotion decision."
+    }
+  ],
+  "promotionRecommendation": {
+    "status": "not_recommended",
+    "reason": "This is a controlled review-only batch; no canonical promotion is authorized.",
+    "recommendedNextStep": "Inspect the exception review sample and the stratified clean review sample.",
+    "targetExport": "review_packet"
+  },
+  "learnerFacingStatus": {
+    "ready": false,
+    "reason": "No learner-facing use is authorized.",
+    "statusText": "not approved"
+  },
+  "ragReadiness": {
+    "ready": false,
+    "reason": "No RAG eligibility is authorized.",
+    "indexableItemCount": 0,
+    "notes": "Source-index candidates are review-only."
+  },
+  "appExportReadiness": {
+    "ready": false,
+    "reason": "No app-ready export is authorized.",
+    "targetExports": [],
+    "notes": "No promotion was performed."
+  },
+  "reviewerNotes": "Clean sample contains only CLEAN_REVIEW_CANDIDATE records. Exceptions are routed to human review. Substantive rights-controlled artifacts remain external/private.",
+  "extensions": {
+    "processingRunId": "processing-scaled-wave-01-2026-09",
+    "acquisitionManifestPath": "C:\\Dev\\Document Processor Sources\\2026-09-02 Intake\\_acquisition-manifests\\approved-pilot-20260902\\run-20260907-172504-571\\acquisition-manifest.json",
+    "summary": {
+      "totalAdmitted": 4,
+      "processedSuccessfully": 4,
+      "cleanReviewCandidates": 3,
+      "humanReviewRequired": 1,
+      "processingBlocked": 0,
+      "systemicFailures": 0,
+      "totalChunks": 34,
+      "totalStructuredEvidence": 34
+    }
+  }
+}

@@ -1,0 +1,179 @@
+{
+  "schemaVersion": "1.0",
+  "batchId": "scaled-wave-01-2026-09",
+  "batchName": "Controlled scaled review-only batch scaled-wave-01-2026-09",
+  "status": "review_pending",
+  "createdAt": "2026-09-07T21:25:07.0818035Z",
+  "updatedAt": "2026-09-07T21:25:07.0818035Z",
+  "projectName": "Document Processor",
+  "projectPurpose": "Review-only processing candidates bound to a controlled acquisition wave.",
+  "sourceFamilies": [
+    {
+      "sourceFamilyId": "society_of_actuaries_experience_studies",
+      "label": "Society of Actuaries Experience Studies",
+      "domainId": "actuarial_experience"
+    }
+  ],
+  "sourceFiles": [
+    {
+      "sourceId": "society-of-actuaries-experience-studies-soa-2015-vbt-preferred-wearoff",
+      "filename": "2015-vbt-preferred-wearoff-factors.xlsx",
+      "filePath": "C:\\Dev\\Document Processor Sources\\2026-09-02 Intake\\03_Professional_Support\\SOA_Experience_Studies\\2015-vbt-preferred-wearoff-factors.xlsx",
+      "sourceFamilyId": "society_of_actuaries_experience_studies",
+      "domainId": "actuarial_experience",
+      "documentType": "valuation_rates_workbook",
+      "sourceTitle": "2015 VBT preferred wearoff factors",
+      "sourceReference": "https://www.soa.org/globalassets/assets/files/resources/experience-studies/2018/2015-vbt-preferred-wearoff-factors.xlsx",
+      "pageCount": null,
+      "processingStatus": "review_pending",
+      "authorityLevel": "current_support",
+      "rightsStatus": "RIGHTS_REVIEW_REQUIRED",
+      "fileHash": "d6040cf8bf880fa6b37529dffe7327b9c2a007a67a7c560709d58cda9b612d23",
+      "sizeBytes": 25143,
+      "extension": ".xlsx",
+      "notes": "Automated source binding, extraction, deterministic page-window grouping, citation, SHA, and retrieval checks passed.",
+      "externalArtifactTypes": [
+        "extraction",
+        "chunk-manifest",
+        "source-index",
+        "retrieval-smoke-tests"
+      ],
+      "externalArtifactManifestPath": "data/processed/review_packages/scaled-wave-01-2026-09/external-artifact-manifest.json"
+    },
+    {
+      "sourceId": "society-of-actuaries-experience-studies-soa-2015-vbt-improvement",
+      "filename": "2015-vbt-improvement-factors.xlsx",
+      "filePath": "C:\\Dev\\Document Processor Sources\\2026-09-02 Intake\\03_Professional_Support\\SOA_Experience_Studies\\2015-vbt-improvement-factors.xlsx",
+      "sourceFamilyId": "society_of_actuaries_experience_studies",
+      "domainId": "actuarial_experience",
+      "documentType": "valuation_rates_workbook",
+      "sourceTitle": "2015 VBT mortality improvement factors",
+      "sourceReference": "https://www.soa.org/globalassets/assets/files/resources/experience-studies/2018/2015-vbt-improvement-factors.xlsx",
+      "pageCount": null,
+      "processingStatus": "review_pending",
+      "authorityLevel": "current_support",
+      "rightsStatus": "RIGHTS_REVIEW_REQUIRED",
+      "fileHash": "847ddfd96ed51f47435d5ce99b9dac4f32363186d80336d0d14a1afd1d1e513d",
+      "sizeBytes": 670094,
+      "extension": ".xlsx",
+      "notes": "1 worksheet(s) contain native non-cell structures not represented by cell extraction and require human review: Documentation.",
+      "externalArtifactTypes": [
+        "extraction",
+        "chunk-manifest",
+        "source-index",
+        "retrieval-smoke-tests"
+      ],
+      "externalArtifactManifestPath": "data/processed/review_packages/scaled-wave-01-2026-09/external-artifact-manifest.json"
+    },
+    {
+      "sourceId": "society-of-actuaries-experience-studies-soa-2015-vbt-unismoke",
+      "filename": "2015-vbt-unismoke-alb-anb.xlsx",
+      "filePath": "C:\\Dev\\Document Processor Sources\\2026-09-02 Intake\\03_Professional_Support\\SOA_Experience_Studies\\2015-vbt-unismoke-alb-anb.xlsx",
+      "sourceFamilyId": "society_of_actuaries_experience_studies",
+      "domainId": "actuarial_experience",
+      "documentType": "valuation_rates_workbook",
+      "sourceTitle": "2015 VBT unismoke ALB/ANB tables",
+      "sourceReference": "https://www.soa.org/globalassets/assets/files/research/exp-study/2015-vbt-unismoke-alb-anb.xlsx",
+      "pageCount": null,
+      "processingStatus": "review_pending",
+      "authorityLevel": "current_support",
+      "rightsStatus": "RIGHTS_REVIEW_REQUIRED",
+      "fileHash": "c7036b837750a184cdddaf2bdb2fb643450803fdf63565edc8b9f4356c44f801",
+      "sizeBytes": 74676,
+      "extension": ".xlsx",
+      "notes": "Automated source binding, extraction, deterministic page-window grouping, citation, SHA, and retrieval checks passed.",
+      "externalArtifactTypes": [
+        "extraction",
+        "chunk-manifest",
+        "source-index",
+        "retrieval-smoke-tests"
+      ],
+      "externalArtifactManifestPath": "data/processed/review_packages/scaled-wave-01-2026-09/external-artifact-manifest.json"
+    },
+    {
+      "sourceId": "society-of-actuaries-experience-studies-soa-2015-vbt-smoker-distinct",
+      "filename": "2015-vbt-smoker-distinct-alb-anb.xlsx",
+      "filePath": "C:\\Dev\\Document Processor Sources\\2026-09-02 Intake\\03_Professional_Support\\SOA_Experience_Studies\\2015-vbt-smoker-distinct-alb-anb.xlsx",
+      "sourceFamilyId": "society_of_actuaries_experience_studies",
+      "domainId": "actuarial_experience",
+      "documentType": "valuation_rates_workbook",
+      "sourceTitle": "2015 VBT smoker-distinct ALB/ANB tables",
+      "sourceReference": "https://www.soa.org/globalassets/assets/files/research/exp-study/2015-vbt-smoker-distinct-alb-anb.xlsx",
+      "pageCount": null,
+      "processingStatus": "review_pending",
+      "authorityLevel": "current_support",
+      "rightsStatus": "RIGHTS_REVIEW_REQUIRED",
+      "fileHash": "906db20c567de15ce5c754204ec5f8b467afa96fbc93389db667ea5a88a67dd8",
+      "sizeBytes": 125226,
+      "extension": ".xlsx",
+      "notes": "Automated source binding, extraction, deterministic page-window grouping, citation, SHA, and retrieval checks passed.",
+      "externalArtifactTypes": [
+        "extraction",
+        "chunk-manifest",
+        "source-index",
+        "retrieval-smoke-tests"
+      ],
+      "externalArtifactManifestPath": "data/processed/review_packages/scaled-wave-01-2026-09/external-artifact-manifest.json"
+    }
+  ],
+  "processingIntent": {
+    "mode": "scaled_review_only",
+    "targetDomains": [
+      "actuarial_experience"
+    ],
+    "pipelineStages": [
+      "identity/provenance",
+      "extraction",
+      "structure_detection",
+      "segmentation/chunking",
+      "structured_evidence",
+      "metadata_classification",
+      "source_index_candidate",
+      "retrieval_smoke_test",
+      "validation",
+      "review_package"
+    ],
+    "smallPilot": false,
+    "learnerFacingBlocked": true,
+    "appExportRequested": false,
+    "ragReadinessRequested": false,
+    "reviewStrategy": "exception_first",
+    "notes": "Only records explicitly admitted by the acquisition manifest were processed; quarantined records remained outside the processing queue."
+  },
+  "boundaries": {
+    "rawMaterialExternal": true,
+    "substantiveArtifactsExternal": true,
+    "externalProcessingRoot": "C:\\Dev\\Document Processor Sources\\_processed-private\\processing-scaled-wave-01-2026-09",
+    "gitExcludesRawFiles": true,
+    "gitExcludesSubstantiveArtifacts": true,
+    "noLearnerFacingPromotion": true,
+    "noCanonicalPromotion": true,
+    "acquisitionManifestPath": "C:\\Dev\\Document Processor Sources\\2026-09-02 Intake\\_acquisition-manifests\\approved-pilot-20260902\\run-20260907-172504-571\\acquisition-manifest.json"
+  },
+  "expectedOutputs": [
+    "source_inventory",
+    "extraction_output",
+    "chunk_manifest",
+    "source_index_candidates",
+    "retrieval_smoke_tests",
+    "review_packet",
+    "validation_report",
+    "external_artifact_manifest"
+  ],
+  "reviewStatus": {
+    "defaultStatus": "draft_candidate",
+    "reviewStrategy": "exception_first",
+    "reviewFocus": "exceptions_and_stratified_sample",
+    "promotionGate": "separate human decision required; no automatic promotion",
+    "learnerFacingAllowed": false,
+    "appReadyAllowed": false,
+    "reviewPacketRequired": true
+  },
+  "extensions": {
+    "processingRunId": "processing-scaled-wave-01-2026-09",
+    "acquisitionManifestPath": "C:\\Dev\\Document Processor Sources\\2026-09-02 Intake\\_acquisition-manifests\\approved-pilot-20260902\\run-20260907-172504-571\\acquisition-manifest.json",
+    "authorizedProcessingScope": "ADMIT_TO_PROCESSING_QUEUE only",
+    "quarantinedRecordCount": 8,
+    "a1Excluded": true
+  }
+}
