@@ -27,6 +27,7 @@ const sha256Bytes = (bytes) => crypto.createHash('sha256').update(bytes).digest(
 const stableId = (...parts) => 'pc-' + crypto.createHash('sha256').update(parts.map((part) => String(part ?? '')).join('|')).digest('hex').slice(0, 24)
 const normalize = (value) => String(value || '').replace(/\r/g, '').replace(/[ \t]+/g, ' ').trim()
 const tokens = (value) => [...new Set(normalize(value).toLowerCase().split(/[^a-z0-9]+/).filter((token) => token.length >= 4))]
+export const normalizedRetrievalText = (record) => normalize(record?.normalizedSearchText || record?.searchText || record?.normalizedTextExcerpt || record?.sourceTextExcerpt)
 const isPdf = (chunk, source) => /\.pdf$/i.test(source.filename || '') || source.documentType?.toLowerCase().includes('pdf') || chunk?.pageStart !== null && chunk?.pageStart !== undefined
 const safeRole = (source) => source.extensions?.authoritySupportRole || source.authoritySupportRole || source.authorityLevel || null
 const citation = (chunk) => ({
@@ -125,6 +126,7 @@ const buildPdf = (source, spec, chunks) => {
       sectionReference: chunk.sectionReference || null,
       citation: citation(chunk),
       sourceChunkId: chunk.chunkId,
+      sourceChunkOrdinal: chunk.chunkOrdinal ?? null,
       reviewFlags: Array.isArray(chunk.reviewFlags) ? chunk.reviewFlags : [],
       confidence: active.confidence,
       detectionMethod: active.detectionMethod,
@@ -161,22 +163,23 @@ const buildPdf = (source, spec, chunks) => {
     delete parent.firstChunkId
     delete parent.occurrence
   }
-  for (let index = 0; index < children.length; index += 1) children[index].adjacentSourceChunkId = chunks[index]?.chunkId || null
   return { parents, children, fallbackUnits, representation: children.length ? 'STRUCTURE_AWARE_PARENT_CHILD' : 'STRUCTURE_FALLBACK_PAGE_WINDOWS' }
 }
 
 const buildXlsx = (source, chunks) => {
   const parentMap = new Map()
+  const worksheetOrder = new Map()
   const children = []
   for (const chunk of chunks) {
     const block = workbookBlock(chunk)
+    if (!worksheetOrder.has(block.sheetName)) worksheetOrder.set(block.sheetName, worksheetOrder.size)
     const key = [source.sourceId, block.worksheetPath, block.rowStart, block.rowEnd, block.blockOrdinal].join('|')
     if (!parentMap.has(key)) {
       const parentId = stableId(source.sourceId, 'workbook-block-parent', key)
-      parentMap.set(key, { parentId, sourceId: source.sourceId, sourceSha256: source.sourceSha256, sourceFamilyId: source.sourceFamilyId, documentType: source.documentType, authoritySupportRole: safeRole(source), hierarchyLevel: 2, parentType: 'workbook_table_block', structuralLabel: 'logical workbook table block', structuralIdentifier: key, sheetName: block.sheetName, worksheetPath: block.worksheetPath, sheetState: block.sheetState, rowStart: block.rowStart, rowEnd: block.rowEnd, cellRefs: block.cellRefs, childIds: [], confidence: 'high', detectionMethod: 'deterministic_table_block_coordinates', rightsStatus: source.rightsStatus, reviewFlags: [], reviewOnly: true, promotionStatus: 'not_promoted', ragReadyAllowed: false })
+      parentMap.set(key, { parentId, sourceId: source.sourceId, sourceSha256: source.sourceSha256, sourceFamilyId: source.sourceFamilyId, documentType: source.documentType, authoritySupportRole: safeRole(source), hierarchyLevel: 2, parentType: 'workbook_table_block', structuralLabel: 'logical workbook table block', structuralIdentifier: key, sheetName: block.sheetName, worksheetPath: block.worksheetPath, worksheetOrder: worksheetOrder.get(block.sheetName), sheetState: block.sheetState, rowStart: block.rowStart, rowEnd: block.rowEnd, cellRefs: block.cellRefs, childIds: [], confidence: 'high', detectionMethod: 'deterministic_table_block_coordinates', rightsStatus: source.rightsStatus, reviewFlags: [], reviewOnly: true, promotionStatus: 'not_promoted', ragReadyAllowed: false })
     }
     const parent = parentMap.get(key)
-    const child = { childId: stableId(source.sourceId, parent.parentId, chunk.chunkId), parentId: parent.parentId, sourceId: source.sourceId, sourceSha256: source.sourceSha256, sourceFamilyId: source.sourceFamilyId, documentType: source.documentType, authoritySupportRole: safeRole(source), structuralType: 'workbook_range_child', pageStart: null, pageEnd: null, sheetName: block.sheetName, worksheetPath: block.worksheetPath, rowStart: block.rowStart, rowEnd: block.rowEnd, cellRefs: block.cellRefs, sectionReference: chunk.sectionReference || null, citation: citation(chunk), sourceChunkId: chunk.chunkId, reviewFlags: Array.isArray(chunk.reviewFlags) ? chunk.reviewFlags : [], confidence: 'high', detectionMethod: 'deterministic_table_block_coordinates', rightsStatus: source.rightsStatus, sourceTextExternal: true, reviewOnly: true, promotionStatus: 'not_promoted', ragReadyAllowed: false, searchText: normalize(chunk.normalizedSearchText || chunk.sourceTextExcerpt), sourceTextExcerpt: chunk.sourceTextExcerpt || '', normalizedTextExcerpt: chunk.normalizedTextExcerpt || normalize(chunk.sourceTextExcerpt) }
+    const child = { childId: stableId(source.sourceId, parent.parentId, chunk.chunkId), parentId: parent.parentId, sourceId: source.sourceId, sourceSha256: source.sourceSha256, sourceFamilyId: source.sourceFamilyId, documentType: source.documentType, authoritySupportRole: safeRole(source), structuralType: 'workbook_range_child', pageStart: null, pageEnd: null, sheetName: block.sheetName, worksheetPath: block.worksheetPath, worksheetOrder: worksheetOrder.get(block.sheetName), rowStart: block.rowStart, rowEnd: block.rowEnd, cellRefs: block.cellRefs, sectionReference: chunk.sectionReference || null, citation: citation(chunk), sourceChunkId: chunk.chunkId, sourceChunkOrdinal: chunk.chunkOrdinal ?? null, reviewFlags: Array.isArray(chunk.reviewFlags) ? chunk.reviewFlags : [], confidence: 'high', detectionMethod: 'deterministic_table_block_coordinates', rightsStatus: source.rightsStatus, sourceTextExternal: true, reviewOnly: true, promotionStatus: 'not_promoted', ragReadyAllowed: false, searchText: normalizedRetrievalText(chunk), sourceTextExcerpt: chunk.sourceTextExcerpt || '', normalizedTextExcerpt: chunk.normalizedTextExcerpt || normalize(chunk.sourceTextExcerpt) }
     parent.childIds.push(child.childId)
     children.push(child)
   }
@@ -198,6 +201,7 @@ const publicParent = (parent, externalArtifact) => ({
   pageEnd: parent.pageEnd,
   sheetName: parent.sheetName || null,
   worksheetPath: parent.worksheetPath || null,
+  worksheetOrder: parent.worksheetOrder ?? null,
   sheetState: parent.sheetState || null,
   rowStart: parent.rowStart ?? null,
   rowEnd: parent.rowEnd ?? null,
@@ -228,11 +232,13 @@ const publicChild = (child, externalArtifact) => ({
   sectionReference: child.sectionReference,
   sheetName: child.sheetName || null,
   worksheetPath: child.worksheetPath || null,
+  worksheetOrder: child.worksheetOrder ?? null,
   rowStart: child.rowStart ?? null,
   rowEnd: child.rowEnd ?? null,
   cellRefs: Array.isArray(child.cellRefs) ? child.cellRefs : [],
   citation: child.citation,
   sourceChunkId: child.sourceChunkId,
+  sourceChunkOrdinal: child.sourceChunkOrdinal ?? null,
   reviewFlags: Array.isArray(child.reviewFlags) ? child.reviewFlags : [],
   confidence: child.confidence,
   detectionMethod: child.detectionMethod,
@@ -248,81 +254,195 @@ const publicChild = (child, externalArtifact) => ({
 
 export const scoreChild = (query, child) => {
   const queryTokens = tokens(query)
-  const textTokens = new Set(tokens(child.searchText))
+  const textTokens = new Set(tokens(normalizedRetrievalText(child)))
   const lexical = queryTokens.filter((token) => textTokens.has(token)).length
   const structural = queryTokens.filter((token) => tokens(child.sectionReference).includes(token)).length
   const citationQuality = child.citation?.pageReference || child.citation?.worksheetPath ? 1 : 0
   return lexical + structural * 2 + citationQuality * 0.25
 }
 export const retrieveChildren = (query, children, parentsById) => {
-  const ranked = children.map((child) => ({ child, lexicalScore: scoreChild(query, child) })).filter((item) => item.lexicalScore > 0).sort((a, b) => b.lexicalScore - a.lexicalScore || a.child.childId.localeCompare(b.child.childId))
-  const reranked = ranked.map((item, index) => ({ ...item, rerankScore: item.lexicalScore + (parentsById.get(item.child.parentId)?.confidence === 'high' ? 0.1 : 0), rank: index + 1 }))
+  const queryTokens = tokens(query)
+  const scoreWithTokens = (child) => {
+    const textTokens = new Set(tokens(normalizedRetrievalText(child)))
+    const lexical = queryTokens.filter((token) => textTokens.has(token)).length
+    const structural = queryTokens.filter((token) => tokens(child.sectionReference).includes(token)).length
+    const citationQuality = child.citation?.pageReference || child.citation?.worksheetPath ? 1 : 0
+    return lexical + structural * 2 + citationQuality * 0.25
+  }
+  const ranked = children.map((child) => ({ child, lexicalScore: scoreWithTokens(child) })).filter((item) => item.lexicalScore > 0).sort((a, b) => b.lexicalScore - a.lexicalScore || a.child.childId.localeCompare(b.child.childId))
+  const reranked = ranked.map((item, index) => ({ ...item, rerankAdjustment: parentsById.get(item.child.parentId)?.confidence === 'high' ? 0.1 : 0, rerankScore: item.lexicalScore + (parentsById.get(item.child.parentId)?.confidence === 'high' ? 0.1 : 0), rank: index + 1 }))
     .sort((a, b) => b.rerankScore - a.rerankScore || a.child.childId.localeCompare(b.child.childId))
     .map((item, index) => ({ ...item, rank: index + 1 }))
   return reranked
 }
-export const expandContext = (selected, ranked, childrenByParent) => {
-  if (!selected) return { adjacent: [], reason: 'no_selection', bounded: true }
+export const expandContext = (selected, ranked, childrenByParent, options = {}) => {
+  if (!selected) return { parentContext: null, precedingChild: null, followingChild: null, reason: 'no_selection', bounded: true }
   const siblings = childrenByParent.get(selected.child.parentId) || []
   const position = siblings.findIndex((child) => child.childId === selected.child.childId)
-  const adjacent = []
-  if (position > 0) adjacent.push(siblings[position - 1])
-  if (position >= 0 && position < siblings.length - 1 && adjacent.length < 2) adjacent.push(siblings[position + 1])
   const continuation = /(?:continued|see|defined|except|following|above|below|scope|applicable)/i.test(selected.child.searchText || '')
-  return { adjacent: continuation ? adjacent : adjacent.slice(0, 1), reason: continuation ? 'bounded_continuation_or_scope_signal' : 'bounded_adjacent_context', bounded: true }
+  const includeParent = options.includeParent !== false
+  const includePrevious = options.includePrevious ?? true
+  const includeFollowing = options.includeFollowing ?? continuation
+  return {
+    parentContext: includeParent ? { parentId: selected.child.parentId, bounded: true, textExternal: true } : null,
+    precedingChild: includePrevious && position > 0 ? siblings[position - 1] : null,
+    followingChild: includeFollowing && position >= 0 && position < siblings.length - 1 ? siblings[position + 1] : null,
+    reason: continuation ? 'bounded_continuation_or_scope_signal' : 'bounded_adjacent_context',
+    bounded: true
+  }
 }
 
-const chooseTarget = (chunks, category, sourceIndex) => {
-  const byText = (regex) => chunks.find((chunk) => regex.test(chunk.sourceTextExcerpt || ''))
-  if (category === 'LOCAL_REQUIREMENT') return chunks[Math.min(2, chunks.length - 1)]
-  if (category === 'SCOPE_REQUIREMENT') return byText(/scope|applicable|purpose/i) || chunks[0]
-  if (category === 'REQUIREMENT_EXCEPTION') return byText(/exception|except|unless/i) || chunks[Math.min(1, chunks.length - 1)]
-  if (category === 'DEFINITION_APPLICATION') return byText(/means|defined|definition/i) || chunks[0]
-  if (category === 'CROSS_PAGE_REQUIREMENT') return chunks.find((chunk) => chunk.pageStart !== chunk.pageEnd) || chunks[Math.min(1, chunks.length - 1)]
-  if (category === 'TABLE_PROSE') return chunks.find((chunk) => chunk.extensions?.tableBlock?.cellRefs?.length > 3) || chunks[0]
-  if (category === 'LONG_DOCUMENT_SECTION') return chunks[Math.floor(chunks.length * 0.6)] || chunks[0]
-  if (category === 'WRONG_SECTION_NEGATIVE') return byText(/section|appendix|schedule/i) || chunks[0]
-  if (category === 'WRONG_SOURCE_NEGATIVE') return chunks[0]
-  if (category === 'AUTHORITY_SUPPORT_CONFUSION') return chunks[0]
-  return chunks[0]
+const evaluationDefinitions = [
+  { sourceIndex: 0, category: 'LOCAL_REQUIREMENT', query: 'What accounting principle recognition requirement applies?', target: /recognition|accounting principle/i, required: 'target' },
+  { sourceIndex: 0, category: 'SCOPE_REQUIREMENT', query: 'What is the scope and applicability of statutory accounting guidance?', target: /scope|applicability|applicable/i, required: 'preceding-and-target', parentContext: true },
+  { sourceIndex: 0, category: 'DEFINITION_APPLICATION', query: 'How is a statutory accounting term defined and applied?', target: /definition|means|defined/i, required: 'preceding-and-target', parentContext: true },
+  { sourceIndex: 0, category: 'LONG_DOCUMENT_SECTION', query: 'Which SSAP section governs the accounting treatment?', target: /SSAP\s+\d+/i, required: 'parent-and-target', parentContext: true },
+  { sourceIndex: 1, category: 'LOCAL_REQUIREMENT', query: 'Which annual statement blank field is required for life reporting?', target: /annual statement|life.*blank/i, required: 'target' },
+  { sourceIndex: 1, category: 'CROSS_PAGE_REQUIREMENT', query: 'Which annual statement schedule instruction continues across pages?', target: /continued|schedule|instruction/i, required: 'preceding-and-following', parentContext: true },
+  { sourceIndex: 1, category: 'TABLE_PROSE', query: 'Which life reporting schedule and explanatory instruction belong together?', target: /schedule|instruction|table/i, required: 'preceding-and-target', parentContext: true },
+  { sourceIndex: 1, category: 'WRONG_SECTION_NEGATIVE', query: 'Which annual statement schedule section addresses assets?', target: /assets|schedule/i, required: 'target', parentContext: true },
+  { sourceIndex: 2, category: 'LOCAL_REQUIREMENT', query: 'What quarterly statement instruction applies to life and fraternal reporting?', target: /quarterly statement|life|fraternal/i, required: 'target' },
+  { sourceIndex: 2, category: 'SCOPE_REQUIREMENT', query: 'What is the scope of the quarterly statement instructions?', target: /scope|applicable|purpose/i, required: 'preceding-and-target', parentContext: true },
+  { sourceIndex: 2, category: 'REQUIREMENT_EXCEPTION', query: 'What reporting instruction has an exception or qualification?', target: /exception|except|unless/i, required: 'target-and-following', parentContext: true },
+  { sourceIndex: 2, category: 'WRONG_SECTION_NEGATIVE', query: 'Which quarterly schedule instruction is relevant to life reporting?', target: /schedule|instruction/i, required: 'target', parentContext: true },
+  { sourceIndex: 3, category: 'LOCAL_REQUIREMENT', query: 'What is the VM-20 Table F current spread rate material?', target: /Table F|current spread|valuation/i, required: 'target' },
+  { sourceIndex: 3, category: 'TABLE_PROSE', query: 'Which valuation bucket and current spread range are associated?', target: /valuation bucket|spread/i, required: 'target-and-following', parentContext: true },
+  { sourceIndex: 3, category: 'LONG_DOCUMENT_SECTION', query: 'Which workbook table contains the VM-20 current spread values?', target: /Table G|current spread/i, required: 'parent-and-target', parentContext: true },
+  { sourceIndex: 3, category: 'AUTHORITY_SUPPORT_CONFUSION', query: 'Which workbook provides published VM-20 valuation-rate authority?', target: /valuation|spread|VM-20/i, required: 'parent-and-target', parentContext: true },
+  { sourceIndex: 4, category: 'LOCAL_REQUIREMENT', query: 'Which VM-31 actuarial report template is required?', target: /actuarial report|template/i, required: 'target' },
+  { sourceIndex: 4, category: 'SCOPE_REQUIREMENT', query: 'What scope applies to the VM-31 actuarial report template?', target: /scope|report|template/i, required: 'preceding-and-target', parentContext: true },
+  { sourceIndex: 4, category: 'DEFINITION_APPLICATION', query: 'How does the actuarial report template apply to VM-31 documentation?', target: /actuarial|report|documentation/i, required: 'preceding-and-target', parentContext: true },
+  { sourceIndex: 4, category: 'WRONG_SOURCE_NEGATIVE', query: 'Which VM-31 worksheet template is distinct from the VM-20 spread tables?', target: /VM-31|template|worksheet/i, required: 'target', parentContext: true },
+  { sourceIndex: 5, category: 'LOCAL_REQUIREMENT', query: 'What does the 2015 VBT improvement-factor experience study report?', target: /2015|VBT|improvement factor/i, required: 'target' },
+  { sourceIndex: 5, category: 'TABLE_PROSE', query: 'Which experience-study table explains mortality improvement factors?', target: /experience|mortality|improvement/i, required: 'target-and-following', parentContext: true },
+  { sourceIndex: 5, category: 'WRONG_SOURCE_NEGATIVE', query: 'Which empirical VBT material is historical support rather than current valuation authority?', target: /VBT|experience study|historical/i, required: 'parent-and-target', parentContext: true },
+  { sourceIndex: 5, category: 'AUTHORITY_SUPPORT_CONFUSION', query: 'What empirical mortality study supports but does not establish regulatory authority?', target: /mortality|support|study|VBT/i, required: 'parent-and-target', parentContext: true }
+]
+
+const sourceOrder = (child) => [child.worksheetOrder ?? 0, child.pageStart ?? Number.MAX_SAFE_INTEGER, child.pageEnd ?? Number.MAX_SAFE_INTEGER, child.rowStart ?? Number.MAX_SAFE_INTEGER, child.rowEnd ?? Number.MAX_SAFE_INTEGER, child.sourceChunkOrdinal ?? Number.MAX_SAFE_INTEGER, child.blockOrdinal ?? Number.MAX_SAFE_INTEGER, child.childId]
+export const compareSourceOrder = (left, right) => { const a = sourceOrder(left); const b = sourceOrder(right); for (let index = 0; index < a.length; index += 1) { if (a[index] < b[index]) return -1; if (a[index] > b[index]) return 1 } return 0 }
+export const orderChildren = (children) => [...children].sort(compareSourceOrder)
+const chooseTarget = (chunks, definition) => chunks.find((chunk) => definition.target.test(chunk.sourceTextExcerpt || '')) || chunks[definition.fallbackIndex || 0]
+const lexicalScore = (query, record) => tokens(query).filter((token) => tokens(normalizedRetrievalText(record)).includes(token)).length
+export const scoreBaseline = lexicalScore
+export const reciprocalRank = (rank) => rank ? 1 / rank : 0
+export const computeContextMetrics = (requiredEvidenceIds, capturedEvidenceIds) => {
+  const required = [...new Set(requiredEvidenceIds)]
+  const captured = [...new Set(capturedEvidenceIds)]
+  const requiredCaptured = required.filter((id) => captured.includes(id)).length
+  const extraEvidenceIds = captured.filter((id) => !required.includes(id))
+  return { requiredEvidenceCaptured: required.length > 0 && required.every((id) => captured.includes(id)), extraEvidenceIds, irrelevantEvidenceCount: extraEvidenceIds.length, contextPrecision: captured.length ? requiredCaptured / captured.length : 0, contextRecall: required.length ? requiredCaptured / required.length : 0 }
 }
-const queryFromTarget = (chunk, category) => {
-  const words = tokens(chunk.sourceTextExcerpt || chunk.normalizedSearchText)
-  const prefix = category === 'SCOPE_REQUIREMENT' ? ['scope'] : category === 'REQUIREMENT_EXCEPTION' ? ['exception'] : category === 'DEFINITION_APPLICATION' ? ['definition'] : []
-  return [...new Set([...prefix, ...words])].slice(0, 8).join(' ')
+const deriveRequiredEvidence = (targetChild, siblings, mode) => {
+  if (!targetChild) return []
+  const position = siblings.findIndex((child) => child.childId === targetChild.childId)
+  const previous = position > 0 ? siblings[position - 1] : null
+  const next = position >= 0 && position < siblings.length - 1 ? siblings[position + 1] : null
+  const result = [targetChild.childId]
+  if (mode.includes('preceding') && previous) result.unshift(previous.childId)
+  if (mode.includes('following') && next) result.push(next.childId)
+  if (mode.includes('parent')) result.push('parent:' + targetChild.parentId)
+  return [...new Set(result)]
 }
 
 export const buildEvaluation = ({ sources, privateBySource, parentRecords, childRecords }) => {
-  const categories = ['LOCAL_REQUIREMENT', 'SCOPE_REQUIREMENT', 'REQUIREMENT_EXCEPTION', 'DEFINITION_APPLICATION', 'CROSS_PAGE_REQUIREMENT', 'TABLE_PROSE', 'LONG_DOCUMENT_SECTION', 'WRONG_SECTION_NEGATIVE', 'WRONG_SOURCE_NEGATIVE', 'AUTHORITY_SUPPORT_CONFUSION']
   const allChildren = childRecords.map((child) => ({ ...child, searchText: privateBySource.get(child.sourceId).children.find((item) => item.childId === child.childId)?.searchText || '' }))
   const allBaseline = sources.flatMap((source) => privateBySource.get(source.sourceId).baselineChunks)
   const parentsById = new Map(parentRecords.map((parent) => [parent.parentId, parent]))
   const childrenByParent = new Map()
   for (const child of allChildren) { if (!childrenByParent.has(child.parentId)) childrenByParent.set(child.parentId, []); childrenByParent.get(child.parentId).push(child) }
-  for (const siblings of childrenByParent.values()) siblings.sort((a, b) => a.childId.localeCompare(b.childId))
+  for (const [parentId, siblings] of childrenByParent) childrenByParent.set(parentId, orderChildren(siblings))
   const cases = []
-  for (let index = 0; index < categories.length; index += 1) {
-    const source = sources[index % sources.length]
+  for (let index = 0; index < evaluationDefinitions.length; index += 1) {
+    const definition = evaluationDefinitions[index]
+    const source = sources[definition.sourceIndex]
     const privateSource = privateBySource.get(source.sourceId)
-    const target = chooseTarget(privateSource.baselineChunks, categories[index], source.sourceId)
+    const targetCandidates = privateSource.baselineChunks.filter((chunk) => definition.target.test(chunk.sourceTextExcerpt || ''))
+    const target = targetCandidates.find((chunk) => allChildren.some((child) => child.sourceId === source.sourceId && child.sourceChunkId === chunk.chunkId)) || privateSource.baselineChunks.find((chunk) => allChildren.some((child) => child.sourceId === source.sourceId && child.sourceChunkId === chunk.chunkId))
     if (!target) continue
-    const query = queryFromTarget(target, categories[index])
-    const baselineRanked = allBaseline.map((chunk) => ({ chunk, score: tokens(query).filter((token) => tokens(chunk.searchText).includes(token)).length })).filter((item) => item.score > 0).sort((a, b) => b.score - a.score || a.chunk.chunkId.localeCompare(b.chunk.chunkId))
+    const query = definition.query
+    const queryTokens = tokens(query)
+    const baselineScore = (chunk) => queryTokens.filter((token) => tokens(normalizedRetrievalText(chunk)).includes(token)).length
+    const baselineRanked = allBaseline.map((chunk) => ({ chunk, lexicalScore: baselineScore(chunk) })).filter((item) => item.lexicalScore > 0).sort((a, b) => b.lexicalScore - a.lexicalScore || a.chunk.chunkId.localeCompare(b.chunk.chunkId)).map((item, rank) => ({ ...item, rank: rank + 1 }))
     const architectureRanked = retrieveChildren(query, allChildren, parentsById)
-    const baselineTop = baselineRanked[0]?.chunk || null
-    const selected = architectureRanked[0] || null
     const targetChild = allChildren.find((child) => child.sourceChunkId === target.chunkId && child.sourceId === source.sourceId) || null
+    const expectedParentId = targetChild?.parentId || null
+    const selected = architectureRanked[0] || null
     const selectedParent = selected ? parentsById.get(selected.child.parentId) : null
-    const expansion = expandContext(selected, architectureRanked, childrenByParent)
-    const requiresContext = ['SCOPE_REQUIREMENT', 'REQUIREMENT_EXCEPTION', 'DEFINITION_APPLICATION', 'CROSS_PAGE_REQUIREMENT', 'TABLE_PROSE', 'LONG_DOCUMENT_SECTION'].includes(categories[index])
-    cases.push({ caseId: 'pc-eval-' + String(index + 1).padStart(2, '0'), category: categories[index], expectedSourceId: source.sourceId, expectedRole: source.authoritySupportRole, expectedBaselineChunkId: target.chunkId, expectedChildId: targetChild?.childId || null, queryExternal: true, baseline: { top1SourceId: baselineTop?.sourceId || null, top1ChunkId: baselineTop?.chunkId || null, top3SourceIds: baselineRanked.slice(0, 3).map((item) => item.chunk.sourceId), top1Correct: baselineTop?.sourceId === source.sourceId, top3Correct: baselineRanked.slice(0, 3).some((item) => item.chunk.sourceId === source.sourceId), rank: baselineRanked.findIndex((item) => item.chunk.sourceId === source.sourceId) + 1 || null, citationCorrect: Boolean(baselineTop?.citations?.length) }, parentChild: { selectedChildId: selected?.child.childId || null, selectedSourceId: selected?.child.sourceId || null, selectedRole: selected?.child.authoritySupportRole || null, selectedParentId: selectedParent?.parentId || null, rank: selected?.rank || null, retrievalScore: selected?.lexicalScore || 0, rerankScore: selected?.rerankScore || 0, top1Correct: selected?.child.sourceId === source.sourceId, top3Correct: architectureRanked.slice(0, 3).some((item) => item.child.sourceId === source.sourceId), targetChildTop1: selected?.child.childId === targetChild?.childId, parentCorrect: selectedParent?.sourceId === source.sourceId, roleCorrect: selected?.child.authoritySupportRole === source.authoritySupportRole, citationCorrect: Boolean(selected?.child.citation?.pageReference || selected?.child.citation?.worksheetPath), adjacentChildIds: expansion.adjacent.map((child) => child.childId), expansionReason: expansion.reason, childOnlySufficient: !requiresContext, parentExpansionRequired: requiresContext, adjacentExpansionRequired: requiresContext, requiredContextPresent: !requiresContext || expansion.adjacent.length > 0, unrelatedContextIntroduced: expansion.adjacent.some((child) => child.sourceId !== source.sourceId || child.parentId !== selectedParent?.parentId), contextSize: 1 + expansion.adjacent.length } })
+    const siblings = selected ? childrenByParent.get(selected.child.parentId) || [] : []
+    const expansion = expandContext(selected, architectureRanked, childrenByParent, { includeParent: Boolean(definition.parentContext), includePrevious: definition.required.includes('preceding'), includeFollowing: definition.required.includes('following') })
+    const requiredEvidenceIds = deriveRequiredEvidence(targetChild, targetChild ? childrenByParent.get(targetChild.parentId) || [] : [], definition.required)
+    const capturedEvidenceIds = [selected?.child.childId, expansion.parentContext ? 'parent:' + expansion.parentContext.parentId : null, expansion.precedingChild?.childId, expansion.followingChild?.childId].filter(Boolean)
+    const contextMetrics = computeContextMetrics(requiredEvidenceIds, capturedEvidenceIds)
+    const baselineTargetRank = baselineRanked.find((item) => item.chunk.chunkId === target.chunkId)?.rank || null
+    const childTargetRank = architectureRanked.find((item) => item.child.childId === targetChild?.childId)?.rank || null
+    const baselineTop = baselineRanked[0]?.chunk || null
+    const expectedTargetSource = source.sourceId
+    const selectedParentId = selectedParent?.parentId || null
+    cases.push({
+      caseId: 'pc-eval-' + String(index + 1).padStart(2, '0'),
+      category: definition.category,
+      query,
+      expectedSourceId: expectedTargetSource,
+      expectedRole: source.authoritySupportRole,
+      expectedBaselineChunkId: target.chunkId,
+      expectedChildId: targetChild?.childId || null,
+      expectedParentId,
+      requiredEvidenceIds,
+      queryExternal: true,
+      baseline: {
+        top1SourceId: baselineTop?.sourceId || null,
+        top1ChunkId: baselineTop?.chunkId || null,
+        top3SourceIds: baselineRanked.slice(0, 3).map((item) => item.chunk.sourceId),
+        baselineLexicalScore: baselineTop ? lexicalScore(query, baselineTop) : 0,
+        sourceTop1Correct: baselineTop?.sourceId === expectedTargetSource,
+        sourceTop3Correct: baselineRanked.slice(0, 3).some((item) => item.chunk.sourceId === expectedTargetSource),
+        targetTop1Correct: baselineTop?.chunkId === target.chunkId,
+        targetTop3Correct: baselineRanked.slice(0, 3).some((item) => item.chunk.chunkId === target.chunkId),
+        baselineTargetRank,
+        targetMrrContribution: reciprocalRank(baselineTargetRank),
+        citationCorrect: Boolean(baselineTop?.citations?.length),
+        contextSize: 1
+      },
+      parentChild: {
+        selectedChildId: selected?.child.childId || null,
+        selectedSourceId: selected?.child.sourceId || null,
+        selectedRole: selected?.child.authoritySupportRole || null,
+        selectedParentId,
+        childLexicalScore: selected?.lexicalScore || 0,
+        rerankAdjustment: selected?.rerankAdjustment || 0,
+        finalRerankScore: selected?.rerankScore || 0,
+        childTargetRank,
+        targetMrrContribution: reciprocalRank(childTargetRank),
+        correctSource: selected?.child.sourceId === expectedTargetSource,
+        correctChild: selected?.child.childId === targetChild?.childId,
+        correctParent: selectedParentId === expectedParentId,
+        sourceTop3Correct: architectureRanked.slice(0, 3).some((item) => item.child.sourceId === expectedTargetSource),
+        childTop3Correct: architectureRanked.slice(0, 3).some((item) => item.child.childId === targetChild?.childId),
+        roleCorrect: selected?.child.authoritySupportRole === source.authoritySupportRole,
+        citationCorrect: Boolean(selected?.child.citation?.pageReference || selected?.child.citation?.worksheetPath),
+        parentContextId: expansion.parentContext?.parentId || null,
+        parentContextExternal: Boolean(expansion.parentContext),
+        precedingChildId: expansion.precedingChild?.childId || null,
+        followingChildId: expansion.followingChild?.childId || null,
+        expansionReason: expansion.reason,
+        ...contextMetrics,
+        childOnlySufficient: definition.required === 'target',
+        parentExpansionRequired: definition.required.includes('parent') || Boolean(definition.parentContext),
+        adjacentExpansionRequired: definition.required.includes('preceding') || definition.required.includes('following'),
+        contextSize: capturedEvidenceIds.length
+      }
+    })
   }
   const metric = (selector) => cases.length ? cases.filter(selector).length / cases.length : 0
-  const mrr = (kind) => cases.reduce((sum, item) => sum + (1 / (item[kind].rank || Number.POSITIVE_INFINITY)), 0) / Math.max(cases.length, 1)
-  const improvements = cases.filter((item) => item.parentChild.targetChildTop1 && !item.baseline.top1Correct).map((item) => item.caseId)
-  const noDifference = cases.filter((item) => item.parentChild.targetChildTop1 === item.baseline.top1Correct).map((item) => item.caseId)
-  const worse = cases.filter((item) => !item.parentChild.targetChildTop1 && item.baseline.top1Correct).map((item) => item.caseId)
-  return { schemaVersion: '1.0', runId: architectureRunId, evaluationMode: 'review_only', rankingInputExcludesTestExpectations: true, cases: cases.map((item) => ({ caseId: item.caseId, category: item.category, expectedSourceId: item.expectedSourceId, expectedRole: item.expectedRole, expectedBaselineChunkId: item.expectedBaselineChunkId, expectedChildId: item.expectedChildId, queryExternal: true, baseline: item.baseline, parentChild: item.parentChild })), metrics: { caseCount: cases.length, baseline: { top1: metric((item) => item.baseline.top1Correct), top3: metric((item) => item.baseline.top3Correct), mrr: mrr('baseline'), wrongSourceRate: metric((item) => !item.baseline.top1Correct), citationCorrectness: metric((item) => item.baseline.citationCorrect), averageContextSize: 1 }, parentChildContext: { top1: metric((item) => item.parentChild.top1Correct), top3: metric((item) => item.parentChild.top3Correct), mrr: mrr('parentChild'), correctParentRate: metric((item) => item.parentChild.parentCorrect), requiredContextRate: metric((item) => item.parentChild.requiredContextPresent), wrongSourceRate: metric((item) => !item.parentChild.top1Correct), authoritySupportCorrectness: metric((item) => item.parentChild.roleCorrect), citationCorrectness: metric((item) => item.parentChild.citationCorrect), averageContextSize: cases.reduce((sum, item) => sum + item.parentChild.contextSize, 0) / Math.max(cases.length, 1), boundedContextMaximum: 3, unrelatedContextRate: metric((item) => item.parentChild.unrelatedContextIntroduced) } }, examples: { materiallyImproved: improvements, noDifference, performedWorse: worse }, limitations: ['Queries and substantive evaluation evidence remain external/private.', 'Metrics are a focused architecture comparison, not production RAG readiness.', 'Semantic hierarchy remains conservative; fallback page windows/workbook blocks remain available.'] }
+  const mrr = (kind) => cases.reduce((sum, item) => sum + item[kind].targetMrrContribution, 0) / Math.max(cases.length, 1)
+  const improvements = cases.filter((item) => item.parentChild.correctChild && !item.baseline.targetTop1Correct).map((item) => item.caseId)
+  const baselineWins = cases.filter((item) => !item.parentChild.correctChild && item.baseline.targetTop1Correct).map((item) => item.caseId)
+  const ties = cases.filter((item) => item.parentChild.correctChild === item.baseline.targetTop1Correct).map((item) => item.caseId)
+  return { schemaVersion: '1.0', runId: architectureRunId, evaluationMode: 'review_only', rankingInputExcludesTestExpectations: true, cases: cases.map((item) => ({ caseId: item.caseId, category: item.category, expectedSourceId: item.expectedSourceId, expectedRole: item.expectedRole, expectedBaselineChunkId: item.expectedBaselineChunkId, expectedChildId: item.expectedChildId, expectedParentId: item.expectedParentId, requiredEvidenceIds: item.requiredEvidenceIds, queryExternal: true, baseline: item.baseline, parentChild: item.parentChild })), privateCases: cases, metrics: {
+    caseCount: cases.length,
+    baseline: { sourceTop1: metric((item) => item.baseline.sourceTop1Correct), sourceTop3: metric((item) => item.baseline.sourceTop3Correct), targetTop1: metric((item) => item.baseline.targetTop1Correct), targetTop3: metric((item) => item.baseline.targetTop3Correct), targetMrr: mrr('baseline'), wrongSourceRate: metric((item) => !item.baseline.sourceTop1Correct), citationCorrectness: metric((item) => item.baseline.citationCorrect), averageContextSize: 1 },
+    parentChildContext: { sourceTop1: metric((item) => item.parentChild.correctSource), sourceTop3: metric((item) => item.parentChild.sourceTop3Correct), targetTop1: metric((item) => item.parentChild.correctChild), targetTop3: metric((item) => item.parentChild.childTop3Correct), targetMrr: mrr('parentChild'), correctParentRate: metric((item) => item.parentChild.correctParent), requiredContextRecall: cases.reduce((sum, item) => sum + item.parentChild.contextRecall, 0) / Math.max(cases.length, 1), contextPrecision: cases.reduce((sum, item) => sum + item.parentChild.contextPrecision, 0) / Math.max(cases.length, 1), wrongSourceRate: metric((item) => !item.parentChild.correctSource), wrongSectionRate: metric((item) => !item.parentChild.correctParent), authoritySupportCorrectness: metric((item) => item.parentChild.roleCorrect), citationCorrectness: metric((item) => item.parentChild.citationCorrect), averageContextSize: cases.reduce((sum, item) => sum + item.parentChild.contextSize, 0) / Math.max(cases.length, 1), maximumContextSize: Math.max(...cases.map((item) => item.parentChild.contextSize), 0), irrelevantEvidenceCount: cases.reduce((sum, item) => sum + item.parentChild.irrelevantEvidenceCount, 0) } }, examples: { parentChildImproves: improvements, baselineImproves: baselineWins, ties, performedWorse: baselineWins }, limitations: ['Queries and substantive evaluation details are external/private.', 'Metrics are a focused architecture comparison, not production RAG readiness.', 'PDF children remain structural-parent/page-window children until reliable semantic subdivision is available.', 'PDF parent relationships are flat structural parents; deeper semantic nesting is not claimed.'] }
 }
 
 export const buildArchitecture = async ({ outputRoot = publicOutputRoot, externalRoot = externalProcessingRoot } = {}) => {
@@ -331,7 +451,6 @@ export const buildArchitecture = async ({ outputRoot = publicOutputRoot, externa
   const sourceBundles = []
   const publicParents = []
   const publicChildren = []
-  const publicContexts = []
   const externalArtifacts = []
   for (const spec of provingGrounds) {
     const index = await readJson(path.join(spec.inputRoot, spec.sourceId, 'source-index.json'))
@@ -339,7 +458,8 @@ export const buildArchitecture = async ({ outputRoot = publicOutputRoot, externa
     const source = index.source
     const chunks = chunkManifest.chunks || []
     const built = isPdf(chunks[0], source) ? buildPdf(source, spec, chunks) : buildXlsx(source, chunks)
-    const externalValue = { schemaVersion: '1.0', runId: architectureRunId, sourceId: source.sourceId, sourceSha256: source.sourceSha256, processingRepresentation: built.representation, parents: built.parents, children: built.children, fallbackUnits: built.fallbackUnits, baselineChunks: chunks.map((chunk) => ({ chunkId: chunk.chunkId, sourceId: chunk.sourceId, sourceSha256: source.sourceSha256, sourceTextExcerpt: chunk.sourceTextExcerpt || '', normalizedSearchText: chunk.normalizedSearchText || normalize(chunk.sourceTextExcerpt), sectionReference: chunk.sectionReference || null, pageStart: chunk.pageStart, pageEnd: chunk.pageEnd, citations: chunk.citations || [], extensions: chunk.extensions || {} })), contexts: [], rightsStatus: source.rightsStatus, reviewOnly: true, promotionStatus: 'not_promoted' }
+    const parentContexts = built.parents.map((parent) => ({ parentId: parent.parentId, sourceId: source.sourceId, structuralLabel: parent.structuralLabel || null, structuralIdentifier: parent.structuralIdentifier || null, contextText: normalize(built.children.find((child) => child.parentId === parent.parentId)?.sourceTextExcerpt).slice(0, 600), bounded: true }))
+    const externalValue = { schemaVersion: '1.0', runId: architectureRunId, sourceId: source.sourceId, sourceSha256: source.sourceSha256, processingRepresentation: built.representation, parents: built.parents, parentContexts, children: built.children, fallbackUnits: built.fallbackUnits, baselineChunks: chunks.map((chunk) => ({ chunkId: chunk.chunkId, sourceId: chunk.sourceId, sourceSha256: source.sourceSha256, sourceTextExcerpt: chunk.sourceTextExcerpt || '', normalizedSearchText: normalizedRetrievalText(chunk), sectionReference: chunk.sectionReference || null, pageStart: chunk.pageStart, pageEnd: chunk.pageEnd, citations: chunk.citations || [], extensions: chunk.extensions || {} })), contexts: [], rightsStatus: source.rightsStatus, reviewOnly: true, promotionStatus: 'not_promoted' }
     const bytes = Buffer.from(JSON.stringify(externalValue, null, 2) + '\n', 'utf8')
     const externalPath = path.join(externalRoot, source.sourceId, 'parent-child-substantive.json')
     await fs.mkdir(path.dirname(externalPath), { recursive: true }); await fs.writeFile(externalPath, bytes)
@@ -351,23 +471,27 @@ export const buildArchitecture = async ({ outputRoot = publicOutputRoot, externa
     publicChildren.push(...built.children.map((child) => publicChild(child, externalArtifact)))
   }
   const sourceRecords = sourceBundles.map((bundle) => makeSourceRecord(bundle.source, bundle.spec, bundle.private.processingRepresentation, bundle.counts, bundle.externalArtifact))
-  const parentsById = new Map(publicParents.map((parent) => [parent.parentId, parent]))
-  const parentByChild = new Map(publicChildren.map((child) => [child.childId, parentsById.get(child.parentId)]))
-  for (const child of publicChildren) publicContexts.push({ contextId: stableId(architectureRunId, 'context', child.childId), selectedChildId: child.childId, parentId: child.parentId, adjacentChildIds: [], expansionReason: 'bounded_adjacent_context', contextTextExternal: true, sourceId: child.sourceId, sourceSha256: child.sourceSha256, authoritySupportRole: child.authoritySupportRole, citation: child.citation, contextSize: 1, reviewFlags: child.reviewFlags, reviewOnly: true, promotionStatus: 'not_promoted', ragReadyAllowed: false })
   const publicBySource = new Map(sourceBundles.map((bundle) => [bundle.source.sourceId, bundle.private]))
   const evaluation = buildEvaluation({ sources: sourceRecords, privateBySource: publicBySource, parentRecords: publicParents, childRecords: publicChildren })
-  const evaluatedContexts = evaluation.cases.map((item) => ({ contextId: stableId(architectureRunId, 'context', item.parentChild.selectedChildId || item.caseId), evaluationCaseId: item.caseId, selectedChildId: item.parentChild.selectedChildId, parentId: item.parentChild.selectedParentId, adjacentChildIds: item.parentChild.adjacentChildIds, expansionReason: item.parentChild.expansionReason, contextTextExternal: true, sourceId: item.parentChild.selectedSourceId, sourceSha256: sourceRecords.find((source) => source.sourceId === item.parentChild.selectedSourceId)?.sourceSha256 || null, authoritySupportRole: item.parentChild.selectedRole, contextSize: item.parentChild.contextSize, reviewFlags: publicChildren.find((child) => child.childId === item.parentChild.selectedChildId)?.reviewFlags || [], reviewOnly: true, promotionStatus: 'not_promoted', ragReadyAllowed: false }))
+  const privateEvaluationCases = evaluation.privateCases
+  const publicEvaluation = { ...evaluation }
+  delete publicEvaluation.privateCases
+  const evaluatedContexts = publicEvaluation.cases.map((item) => ({ contextId: stableId(architectureRunId, 'context', item.parentChild.selectedChildId || item.caseId), evaluationCaseId: item.caseId, selectedChildId: item.parentChild.selectedChildId, parentContextId: item.parentChild.parentContextId, precedingChildId: item.parentChild.precedingChildId, followingChildId: item.parentChild.followingChildId, expansionReason: item.parentChild.expansionReason, contextTextExternal: true, sourceId: item.parentChild.selectedSourceId, sourceSha256: sourceRecords.find((source) => source.sourceId === item.parentChild.selectedSourceId)?.sourceSha256 || null, authoritySupportRole: item.parentChild.selectedRole, contextSize: item.parentChild.contextSize, reviewFlags: publicChildren.find((child) => child.childId === item.parentChild.selectedChildId)?.reviewFlags || [], reviewOnly: true, promotionStatus: 'not_promoted', ragReadyAllowed: false }))
+  const evaluationPath = path.join(externalRoot, 'evaluation-details.json')
+  const evaluationBytes = Buffer.from(JSON.stringify({ schemaVersion: '1.0', runId: architectureRunId, cases: privateEvaluationCases, rightsStatus: 'RIGHTS_REVIEW_REQUIRED', reviewOnly: true }, null, 2) + '\n', 'utf8')
+  await fs.writeFile(evaluationPath, evaluationBytes)
+  externalArtifacts.push({ runId: architectureRunId, sourceId: 'architecture-evaluation', artifactType: 'parent-child-evaluation', externalPath: evaluationPath, sha256: sha256Bytes(evaluationBytes), byteCount: evaluationBytes.length, sourceRawSha256: null, generatedTimestamp: generatedAt, rightsStorageStatus: 'RIGHTS_REVIEW_REQUIRED', reviewOnly: true })
   const architectureManifest = { schemaVersion: '1.0', runId: architectureRunId, generatedAt, processingMode: 'review_only_architecture_evaluation', processingRepresentation: 'STRUCTURE_AWARE_PARENT_CHILD with explicit fallback representations', sourceIds: sourceRecords.map((source) => source.sourceId), sourceCount: sourceRecords.length, pdfSourceCount: sourceRecords.filter((source) => /\.pdf$/i.test(source.filename || '')).length, xlsxSourceCount: sourceRecords.filter((source) => /\.xlsx$/i.test(source.filename || '')).length, structureAwareSourceCount: sourceRecords.filter((source) => source.processingRepresentation === 'STRUCTURE_AWARE_PARENT_CHILD').length, fallbackSourceCount: sourceRecords.filter((source) => source.processingRepresentation !== 'STRUCTURE_AWARE_PARENT_CHILD').length, parentCount: publicParents.length, childCount: publicChildren.length, fallbackUnitCount: sourceRecords.reduce((sum, source) => sum + source.fallbackUnitCount, 0), rightsStatus: 'RIGHTS_REVIEW_REQUIRED', externalProcessingRoot: externalRoot, reviewOnly: true, promotionStatus: 'not_promoted', ragReadyAllowed: false }
   const externalManifest = { schemaVersion: '1.0', manifestId: 'external-artifacts-' + architectureRunId, runId: architectureRunId, generatedTimestamp: generatedAt, externalProcessingRoot: externalRoot, rightsStorageStatuses: ['RIGHTS_REVIEW_REQUIRED'], reviewOnly: true, artifacts: externalArtifacts }
   await writeJson(path.join(outputRoot, 'architecture-manifest.json'), architectureManifest)
   await writeJson(path.join(outputRoot, 'parent-manifest.json'), { schemaVersion: '1.0', runId: architectureRunId, parents: publicParents, summary: { parentCount: publicParents.length, pdfParentCount: publicParents.filter((parent) => parent.parentType !== 'workbook_table_block').length, xlsxParentCount: publicParents.filter((parent) => parent.parentType === 'workbook_table_block').length }, reviewOnly: true, promotionStatus: 'not_promoted', ragReadyAllowed: false })
   await writeJson(path.join(outputRoot, 'child-manifest.json'), { schemaVersion: '1.0', runId: architectureRunId, children: publicChildren, summary: { childCount: publicChildren.length, pdfChildCount: publicChildren.filter((child) => child.structuralType === 'semantic_retrieval_child').length, xlsxChildCount: publicChildren.filter((child) => child.structuralType === 'workbook_range_child').length }, reviewOnly: true, promotionStatus: 'not_promoted', ragReadyAllowed: false })
   await writeJson(path.join(outputRoot, 'context-expansion-manifest.json'), { schemaVersion: '1.0', runId: architectureRunId, contexts: evaluatedContexts, summary: { contextCount: evaluatedContexts.length, maximumContextSize: 3, contextTextExternal: true }, reviewOnly: true, promotionStatus: 'not_promoted', ragReadyAllowed: false })
-  await writeJson(path.join(outputRoot, 'evidence-packages.json'), { schemaVersion: '1.0', runId: architectureRunId, packages: evaluation.cases.map((item) => ({ packageId: stableId(architectureRunId, 'package', item.caseId), evaluationCaseId: item.caseId, selectedChildId: item.parentChild.selectedChildId, parentId: item.parentChild.selectedParentId, adjacentChildIds: item.parentChild.adjacentChildIds, sourceId: item.parentChild.selectedSourceId, sourceSha256: sourceRecords.find((source) => source.sourceId === item.parentChild.selectedSourceId)?.sourceSha256 || null, authoritySupportRole: item.parentChild.selectedRole, expansionReason: item.parentChild.expansionReason, retrievalScore: item.parentChild.retrievalScore, rerankScore: item.parentChild.rerankScore, reviewFlags: publicChildren.find((child) => child.childId === item.parentChild.selectedChildId)?.reviewFlags || [], boundedContextExternal: true, contextSize: item.parentChild.contextSize, reviewOnly: true, promotionStatus: 'not_promoted', ragReadyAllowed: false })), summary: { packageCount: evaluation.cases.length, boundedContextMaximum: 3 }, reviewOnly: true, promotionStatus: 'not_promoted', ragReadyAllowed: false })
-  await writeJson(path.join(outputRoot, 'baseline-comparison.json'), evaluation)
+  await writeJson(path.join(outputRoot, 'evidence-packages.json'), { schemaVersion: '1.0', runId: architectureRunId, packages: publicEvaluation.cases.map((item) => ({ packageId: stableId(architectureRunId, 'package', item.caseId), evaluationCaseId: item.caseId, selectedChildId: item.parentChild.selectedChildId, parentId: item.parentChild.selectedParentId, parentContextId: item.parentChild.parentContextId, precedingChildId: item.parentChild.precedingChildId, followingChildId: item.parentChild.followingChildId, sourceId: item.parentChild.selectedSourceId, sourceSha256: sourceRecords.find((source) => source.sourceId === item.parentChild.selectedSourceId)?.sourceSha256 || null, authoritySupportRole: item.parentChild.selectedRole, expansionReason: item.parentChild.expansionReason, retrievalScore: item.parentChild.childLexicalScore, rerankScore: item.parentChild.finalRerankScore, reviewFlags: publicChildren.find((child) => child.childId === item.parentChild.selectedChildId)?.reviewFlags || [], boundedContextExternal: true, contextSize: item.parentChild.contextSize, reviewOnly: true, promotionStatus: 'not_promoted', ragReadyAllowed: false })), summary: { packageCount: publicEvaluation.cases.length, boundedContextMaximum: 3 }, reviewOnly: true, promotionStatus: 'not_promoted', ragReadyAllowed: false })
+  await writeJson(path.join(outputRoot, 'baseline-comparison.json'), publicEvaluation)
   await writeJson(path.join(outputRoot, 'external-artifact-manifest.json'), externalManifest)
   await writeJson(path.join(outputRoot, 'architecture-source-records.json'), { schemaVersion: '1.0', runId: architectureRunId, sources: sourceRecords, reviewOnly: true, promotionStatus: 'not_promoted', ragReadyAllowed: false })
-  return { architectureManifest, sourceRecords, parents: publicParents, children: publicChildren, contexts: evaluatedContexts, evaluation, externalManifest, publicOutputRoot: outputRoot, externalProcessingRoot: externalRoot }
+  return { architectureManifest, sourceRecords, parents: publicParents, children: publicChildren, contexts: evaluatedContexts, evaluation: publicEvaluation, externalManifest, publicOutputRoot: outputRoot, externalProcessingRoot: externalRoot }
 }
 
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) buildArchitecture().then((result) => console.log(JSON.stringify({ runId: architectureRunId, sourceCount: result.sourceRecords.length, parentCount: result.parents.length, childCount: result.children.length, evaluationCases: result.evaluation.cases.length, outputRoot: result.publicOutputRoot, externalProcessingRoot: result.externalProcessingRoot }, null, 2))).catch((error) => { console.error(error.stack || error.message); process.exitCode = 1 })

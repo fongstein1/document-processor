@@ -75,17 +75,27 @@ and external artifact hashes.
 
 ## Evaluation
 
-The generated baseline comparison covers local requirements, scope plus
+The generated baseline comparison contains 24 explicit cases across the six
+existing proving grounds. It covers local requirements, scope plus
 requirement, requirement plus exception, definition plus application,
 cross-page requirements, table plus prose, long-document section selection,
 wrong-section negatives, wrong-source negatives, and authority/support
 confusion. It compares the existing page-window baseline with child retrieval
-and bounded context expansion using top-1, top-3, MRR where available,
-parent/context correctness, wrong-source rate, authority/support correctness,
-citation correctness, context size, and unrelated-context rate.
+and bounded context expansion using separate source top-1/top-3, target-child
+top-1/top-3, target-rank MRR, correct-parent, role, citation, and context
+precision/recall metrics. Baseline lexical score, child lexical score,
+rerank adjustment, and final rerank score are recorded separately.
+
+Evaluation queries and required-evidence definitions are kept in the external
+private `evaluation-details.json` artifact. They are scoring expectations only
+and are excluded from ranking inputs. Context scoring is based on explicit
+required evidence IDs, not merely on whether an adjacent child exists.
 
 This is a focused review-only architecture evaluation, not production RAG
-readiness. The current detector is intentionally conservative, some source
-text remains available only externally, and a future mature implementation
-still needs stronger semantic hierarchy and source-family-specific structural
-adapters before canonical promotion or production retrieval use.
+readiness. The current detector is intentionally conservative, the PDF
+children are still predominantly structural-parent/page-window children, and
+the PDF parents are flat rather than a claimed document-to-section hierarchy.
+The evaluation deliberately exposes the remaining target-child and context
+capture limitations. A future mature implementation needs stronger semantic
+subdivision, source-order-aware structural adapters, and better context
+selection before canonical promotion or production retrieval use.

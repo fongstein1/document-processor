@@ -61,15 +61,25 @@ const validateIntegrity = ({ architecture, parents, children, contexts, packages
   for (const parent of parents) for (const childId of parent.childIds || []) assert(childById.get(childId)?.parentId === parent.parentId, 'Parent child-list mismatch: ' + parent.parentId)
   for (const context of contexts) {
     assert(childById.has(context.selectedChildId), 'Context references missing child: ' + context.contextId)
-    assert(parentById.has(context.parentId), 'Context references missing parent: ' + context.contextId)
+    if (context.parentContextId) assert(parentById.has(context.parentContextId), 'Context references missing parent: ' + context.contextId)
+    if (context.precedingChildId) assert(childById.has(context.precedingChildId), 'Context references missing preceding child: ' + context.contextId)
+    if (context.followingChildId) assert(childById.has(context.followingChildId), 'Context references missing following child: ' + context.contextId)
     assert(context.contextSize >= 1 && context.contextSize <= 3, 'Context exceeds bounded size: ' + context.contextId)
   }
   for (const item of packages.packages || []) {
     assert(childById.has(item.selectedChildId), 'Evidence package references missing child: ' + item.packageId)
     assert(parentById.has(item.parentId), 'Evidence package references missing parent: ' + item.packageId)
   }
-  assert((evaluation.cases || []).length === 10, 'Expected ten focused evaluation cases.')
+  assert((evaluation.cases || []).length === 24, 'Expected twenty-four focused evaluation cases.')
   assert(evaluation.rankingInputExcludesTestExpectations === true, 'Evaluation metadata permits test expectations into ranking.')
+  for (const item of evaluation.cases) {
+    const target = childById.get(item.expectedChildId)
+    assert(target && item.expectedParentId === target.parentId, 'Expected parent is not derived from the expected child: ' + item.caseId)
+    assert(item.baseline.baselineTargetRank === null || item.baseline.baselineTargetRank >= 1, 'Invalid baseline target rank: ' + item.caseId)
+    assert(item.parentChild.childTargetRank === null || item.parentChild.childTargetRank >= 1, 'Invalid child target rank: ' + item.caseId)
+    assert(item.baseline.targetMrrContribution === (item.baseline.baselineTargetRank ? 1 / item.baseline.baselineTargetRank : 0), 'Baseline MRR contribution is not target-rank based: ' + item.caseId)
+    assert(item.parentChild.targetMrrContribution === (item.parentChild.childTargetRank ? 1 / item.parentChild.childTargetRank : 0), 'Child MRR contribution is not target-rank based: ' + item.caseId)
+  }
   const sourceIds = new Set(sources.map((source) => source.sourceId))
   for (const source of sources) {
     assert(sourceIds.has(source.sourceId), 'Missing source record: ' + source.sourceId)
@@ -113,6 +123,8 @@ const main = async () => {
     structureAwareSourceCount: architecture.structureAwareSourceCount,
     fallbackSourceCount: architecture.fallbackSourceCount,
     fallbackUnitCount: architecture.fallbackUnitCount,
+    mixedStructureFallbackSourceCount: sources.filter((source) => source.fallbackUnitCount > 0 && source.processingRepresentation === 'STRUCTURE_AWARE_PARENT_CHILD').length,
+    fullyFallbackSourceCount: sources.filter((source) => source.processingRepresentation !== 'STRUCTURE_AWARE_PARENT_CHILD').length,
     contextCount: contexts.length,
     evaluationCaseCount: evaluation.cases.length,
     ...integrity,

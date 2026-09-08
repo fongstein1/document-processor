@@ -1,6 +1,6 @@
 import fs from 'node:fs/promises'
 import path from 'node:path'
-import { publicOutputRoot, externalProcessingRoot, buildArchitecture, detectPdfStructure, retrieveChildren } from './parent-child-context-architecture.mjs'
+import { publicOutputRoot, externalProcessingRoot, buildArchitecture, detectPdfStructure, retrieveChildren, expandContext, scoreBaseline, reciprocalRank, computeContextMetrics, orderChildren } from './parent-child-context-architecture.mjs'
 import { validateGitSafeArtifact, sha256Bytes } from './rights-storage.mjs'
 
 const publicNames = [
@@ -31,6 +31,8 @@ const expectRightsFailure = (value, label) => {
 const main = async () => {
   assert(detectPdfStructure('SSAP 1. Deterministic heading')?.parentType === 'ssap', 'PDF marker detection failed.')
   assert(detectPdfStructure('ordinary prose') === null, 'PDF detector invented structure.')
+  assert(scoreBaseline('statutory requirement', { normalizedSearchText: 'statutory requirement' }) === 2, 'Baseline retrieval did not use normalized retrieval text.')
+  assert(reciprocalRank(1) === 1 && reciprocalRank(2) === 0.5 && reciprocalRank(null) === 0, 'Target-rank reciprocal-rank fixture failed.')
   const safe = { schemaVersion: '1.0', parentId: 'p-1', childId: 'c-1', sourceId: 'source-1', sourceSha256: 'a'.repeat(64), pageStart: 1, pageEnd: 2, sheetName: 'Sheet1', worksheetPath: 'xl/worksheets/sheet1.xml', rowStart: 1, rowEnd: 3, cellRefs: ['A1:B3'], childIds: ['c-1'], reviewFlags: ['REVIEW_ONLY'], authoritySupportRole: 'current support', exceptionCode: 'NONE', expectedStoredValue: 46023, expectedFormula: null, reviewOnly: true, promotionStatus: 'not_promoted', ragReadyAllowed: false }
   validateGitSafeArtifact({ artifactType: 'positive-parent-child-evidence', value: safe })
   expectRightsFailure({ ...safe, extensions: { duplicateLabelValues: ['Age', '0.9975'] } }, 'negative-duplicate-label-values')
@@ -49,6 +51,19 @@ const main = async () => {
   const ranked = retrieveChildren('scope exception', children, parents)
   assert(ranked[0]?.child.childId === 'c-2', 'Child retrieval did not prefer the semantically matching child.')
   assert(ranked.every((item, index) => item.rank === index + 1), 'Child ranks are not deterministic.')
+  const sourceOrdered = orderChildren([
+    { childId: 'hash-z', pageStart: 3, pageEnd: 3, sourceChunkOrdinal: 3 },
+    { childId: 'hash-a', pageStart: 1, pageEnd: 1, sourceChunkOrdinal: 1 },
+    { childId: 'hash-m', pageStart: 2, pageEnd: 2, sourceChunkOrdinal: 2 }
+  ])
+  assert(sourceOrdered.map((child) => child.childId).join(',') === 'hash-a,hash-m,hash-z', 'Adjacency ordering used IDs instead of source coordinates.')
+  const childrenByParent = new Map([['p-1', sourceOrdered.map((child) => ({ ...child, parentId: 'p-1', sourceId: 'source-1', sourceSha256: 'a'.repeat(64), searchText: 'scope', citation: { pageReference: String(child.pageStart) } }))]])
+  const adjacency = expandContext({ child: childrenByParent.get('p-1')[1] }, [], childrenByParent, { includeParent: true, includePrevious: true, includeFollowing: true })
+  assert(adjacency.precedingChild.childId === 'hash-a' && adjacency.followingChild.childId === 'hash-z', 'Previous/next adjacency is not source ordered.')
+  const contextMetrics = computeContextMetrics(['required-1', 'required-2'], ['required-1', 'extra-1'])
+  assert(contextMetrics.contextPrecision === 0.5 && contextMetrics.contextRecall === 0.5 && contextMetrics.irrelevantEvidenceCount === 1, 'Required-context precision/recall fixture failed.')
+  const expectationNeutral = retrieveChildren('scope exception', children.map((child) => ({ ...child, expectedSourceId: 'source-2', expectedChildId: 'not-used', expectedRegion: 'not-used' })), parents)
+  assert(JSON.stringify(expectationNeutral.map((item) => item.child.childId)) === JSON.stringify(ranked.map((item) => item.child.childId)), 'Evaluation expectation metadata leaked into ranking.')
   const first = await buildArchitecture()
   const firstSnapshot = await snapshot()
   const second = await buildArchitecture()
