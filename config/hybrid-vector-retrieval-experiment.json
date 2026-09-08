@@ -1,0 +1,67 @@
+{
+  "schemaVersion": "1.0",
+  "runId": "hybrid-vector-retrieval-experiment-2026-09",
+  "protocolFrozenAt": "2026-09-08T00:00:00.000Z",
+  "sourceBranch": "processing/semantic-evidence-unit-correction-2026-09",
+  "startingSha": "e1727d05ed5f4d5c41fadd833f45079280c7ef35",
+  "evaluation": {
+    "evaluationVersion": "EVALUATION_V2",
+    "goldFreezeSha256": "ed6a47cd8204a36b1f98183b6685eb890163542793e9ec9442af2dcc1898d5d0",
+    "developmentCaseCount": 6,
+    "holdoutCaseCount": 11,
+    "noHoldoutTuning": true,
+    "rankingInputExcludesGold": true
+  },
+  "embedding": {
+    "model": "intfloat/e5-base-v2",
+    "revision": "f52bf8ec8c7124536f0efb74aca902b2995e5bcd",
+    "license": "mit",
+    "sourceUrl": "https://huggingface.co/intfloat/e5-base-v2",
+    "device": "cpu",
+    "pooling": "attention-mask average pooling over last_hidden_state",
+    "normalization": "L2",
+    "passagePrefix": "passage: ",
+    "queryPrefix": "query: ",
+    "maxSequenceLength": 512,
+    "vectorDtype": "float32-le",
+    "exactVectorSearch": true,
+    "bruteForce": true,
+    "localOnly": true,
+    "hostedApisUsed": false
+  },
+  "bm25": {
+    "k1": 1.2,
+    "b": 0.75,
+    "fieldWeights": {
+      "body": 1,
+      "section": 2.5,
+      "identifier": 4,
+      "parentHeading": 1.5,
+      "sourceTitle": 0.35,
+      "header": 1.5
+    }
+  },
+  "fusion": {
+    "method": "RECIPROCAL_RANK_FUSION",
+    "rrfK": 60,
+    "bm25Weight": 1,
+    "vectorWeight": 1,
+    "parentRrfWeight": 0.5,
+    "candidateDepth": "all",
+    "tieBreak": "child_id_ascending"
+  },
+  "context": {
+    "maximumAddedEvidence": 3,
+    "sameParentOnly": true,
+    "roleAware": true
+  },
+  "governance": {
+    "reviewOnly": true,
+    "promotionStatus": "not_promoted",
+    "ragReadyAllowed": false,
+    "noNewSources": true,
+    "noAnswerGeneration": true,
+    "noProductionRag": true,
+    "noLearnerFacingOutput": true
+  }
+}
