@@ -27,6 +27,7 @@
     "parent-child:test": "node scripts/test-parent-child-context.mjs",
     "parent-child:validate": "node scripts/validate-parent-child-context.mjs",
     "parent-child:evaluate": "npm run parent-child:build && npm run parent-child:validate && npm run parent-child:test",
+    "parent-child-hardening:freeze": "node scripts/freeze-parent-child-retrieval-evaluation.mjs",
     "vm01:artifacts": "node scripts/build-vm01-definition-artifacts.mjs",
     "vm01:validate": "node scripts/validate-vm01-definitions.mjs",
     "vm01:definitions": "npm run source-index:build && npm run vm01:artifacts && npm run vm01:validate",

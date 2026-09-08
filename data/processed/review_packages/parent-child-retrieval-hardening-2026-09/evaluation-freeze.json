@@ -1,0 +1,545 @@
+{
+  "schemaVersion": "1.0",
+  "runId": "parent-child-retrieval-hardening-2026-09",
+  "frozenAt": "2026-09-07T00:00:00.000Z",
+  "developmentCaseCount": 24,
+  "holdoutCaseCount": 15,
+  "goldCorrections": [],
+  "development": [
+    {
+      "caseId": "pc-eval-01",
+      "category": "LOCAL_REQUIREMENT",
+      "expectedSourceId": "naic-accounting-publications-appm-2026",
+      "expectedRole": "current_authority",
+      "expectedBaselineChunkId": "naic-accounting-publications-appm-2026--p-1-4",
+      "expectedChildId": "pc-d3a8b7da6742658547b39dfa",
+      "expectedParentId": "pc-2143bcbff9b8759082773f1c",
+      "requiredEvidenceIds": [
+        "pc-d3a8b7da6742658547b39dfa"
+      ],
+      "goldEvidenceHash": "28de74f3a077e5c33dfee3a4426ede09aa3ed359901252e77c0539990dc294d2",
+      "queryExternal": true
+    },
+    {
+      "caseId": "pc-eval-02",
+      "category": "SCOPE_REQUIREMENT",
+      "expectedSourceId": "naic-accounting-publications-appm-2026",
+      "expectedRole": "current_authority",
+      "expectedBaselineChunkId": "naic-accounting-publications-appm-2026--p-12-12",
+      "expectedChildId": "pc-fd15626ce5613fc208824962",
+      "expectedParentId": "pc-72a15138363ac5c440dd5946",
+      "requiredEvidenceIds": [
+        "pc-fd15626ce5613fc208824962"
+      ],
+      "goldEvidenceHash": "4676ebc1726a5a7571c2b179cca52ab66ebbc48ac1b4fd079c46014d6602c5ee",
+      "queryExternal": true
+    },
+    {
+      "caseId": "pc-eval-03",
+      "category": "DEFINITION_APPLICATION",
+      "expectedSourceId": "naic-accounting-publications-appm-2026",
+      "expectedRole": "current_authority",
+      "expectedBaselineChunkId": "naic-accounting-publications-appm-2026--p-9-9",
+      "expectedChildId": "pc-2634bb450edf5849e8e36a4f",
+      "expectedParentId": "pc-c2f03a89a75ef66a1d0a024e",
+      "requiredEvidenceIds": [
+        "pc-2634bb450edf5849e8e36a4f"
+      ],
+      "goldEvidenceHash": "9edd99e762cdb928565f7efc785fd079e34f4f4f160a28db2cf46587c538e5f6",
+      "queryExternal": true
+    },
+    {
+      "caseId": "pc-eval-04",
+      "category": "LONG_DOCUMENT_SECTION",
+      "expectedSourceId": "naic-accounting-publications-appm-2026",
+      "expectedRole": "current_authority",
+      "expectedBaselineChunkId": "naic-accounting-publications-appm-2026--p-75-75",
+      "expectedChildId": "pc-1d9fc44152b48cded56de082",
+      "expectedParentId": "pc-e41df70538dbae31443cccdc",
+      "requiredEvidenceIds": [
+        "pc-1d9fc44152b48cded56de082",
+        "parent:pc-e41df70538dbae31443cccdc"
+      ],
+      "goldEvidenceHash": "610520e849ede59fd72c3c313d0d12ed382066c0573a802d562386b438282d7c",
+      "queryExternal": true
+    },
+    {
+      "caseId": "pc-eval-05",
+      "category": "LOCAL_REQUIREMENT",
+      "expectedSourceId": "naic-life-fraternal-reporting-asb-life-2025",
+      "expectedRole": "current_support",
+      "expectedBaselineChunkId": "naic-life-fraternal-reporting-asb-life-2025--p-1-3",
+      "expectedChildId": "pc-e1f7651e0faca7506834d01a",
+      "expectedParentId": "pc-2ecddcffb04c54cc085830b1",
+      "requiredEvidenceIds": [
+        "pc-e1f7651e0faca7506834d01a"
+      ],
+      "goldEvidenceHash": "ff21fc669f1b6aca6f09d4de011785f476c63ed31f2d733d03c5ee5fcec1ae43",
+      "queryExternal": true
+    },
+    {
+      "caseId": "pc-eval-06",
+      "category": "CROSS_PAGE_REQUIREMENT",
+      "expectedSourceId": "naic-life-fraternal-reporting-asb-life-2025",
+      "expectedRole": "current_support",
+      "expectedBaselineChunkId": "naic-life-fraternal-reporting-asb-life-2025--p-4-4",
+      "expectedChildId": "pc-b592dc1d95f6f57714c9444a",
+      "expectedParentId": "pc-a273e3fc1cc6f517fdfd7a15",
+      "requiredEvidenceIds": [
+        "pc-b592dc1d95f6f57714c9444a"
+      ],
+      "goldEvidenceHash": "594597b73f6abe23320dbb1c99952289fd0388a55f3daf2a2c0ec431dfea9702",
+      "queryExternal": true
+    },
+    {
+      "caseId": "pc-eval-07",
+      "category": "TABLE_PROSE",
+      "expectedSourceId": "naic-life-fraternal-reporting-asb-life-2025",
+      "expectedRole": "current_support",
+      "expectedBaselineChunkId": "naic-life-fraternal-reporting-asb-life-2025--p-4-4",
+      "expectedChildId": "pc-b592dc1d95f6f57714c9444a",
+      "expectedParentId": "pc-a273e3fc1cc6f517fdfd7a15",
+      "requiredEvidenceIds": [
+        "pc-b592dc1d95f6f57714c9444a"
+      ],
+      "goldEvidenceHash": "594597b73f6abe23320dbb1c99952289fd0388a55f3daf2a2c0ec431dfea9702",
+      "queryExternal": true
+    },
+    {
+      "caseId": "pc-eval-08",
+      "category": "WRONG_SECTION_NEGATIVE",
+      "expectedSourceId": "naic-life-fraternal-reporting-asb-life-2025",
+      "expectedRole": "current_support",
+      "expectedBaselineChunkId": "naic-life-fraternal-reporting-asb-life-2025--p-4-4",
+      "expectedChildId": "pc-b592dc1d95f6f57714c9444a",
+      "expectedParentId": "pc-a273e3fc1cc6f517fdfd7a15",
+      "requiredEvidenceIds": [
+        "pc-b592dc1d95f6f57714c9444a"
+      ],
+      "goldEvidenceHash": "594597b73f6abe23320dbb1c99952289fd0388a55f3daf2a2c0ec431dfea9702",
+      "queryExternal": true
+    },
+    {
+      "caseId": "pc-eval-09",
+      "category": "LOCAL_REQUIREMENT",
+      "expectedSourceId": "naic-life-fraternal-reporting-qsi-life-2026",
+      "expectedRole": "current_support",
+      "expectedBaselineChunkId": "naic-life-fraternal-reporting-qsi-life-2026--p-4-4",
+      "expectedChildId": "pc-d1fbc507f8a0a8729236a29a",
+      "expectedParentId": "pc-fd3d52420599859daa22abe3",
+      "requiredEvidenceIds": [
+        "pc-d1fbc507f8a0a8729236a29a"
+      ],
+      "goldEvidenceHash": "6a458924e7647cc56ec8e01929c2ec376eaf62ae692b188e3b04f85e9686d143",
+      "queryExternal": true
+    },
+    {
+      "caseId": "pc-eval-10",
+      "category": "SCOPE_REQUIREMENT",
+      "expectedSourceId": "naic-life-fraternal-reporting-qsi-life-2026",
+      "expectedRole": "current_support",
+      "expectedBaselineChunkId": "naic-life-fraternal-reporting-qsi-life-2026--p-8-9",
+      "expectedChildId": "pc-369eef2248bd528d6e595674",
+      "expectedParentId": "pc-9ac3b316f60913b4eb3b9843",
+      "requiredEvidenceIds": [
+        "pc-369eef2248bd528d6e595674"
+      ],
+      "goldEvidenceHash": "a5a473565d9c051acecffb4f841511c87d58bb9bc9fab44fee6a4965e0ac16e3",
+      "queryExternal": true
+    },
+    {
+      "caseId": "pc-eval-11",
+      "category": "REQUIREMENT_EXCEPTION",
+      "expectedSourceId": "naic-life-fraternal-reporting-qsi-life-2026",
+      "expectedRole": "current_support",
+      "expectedBaselineChunkId": "naic-life-fraternal-reporting-qsi-life-2026--p-8-9",
+      "expectedChildId": "pc-369eef2248bd528d6e595674",
+      "expectedParentId": "pc-9ac3b316f60913b4eb3b9843",
+      "requiredEvidenceIds": [
+        "pc-369eef2248bd528d6e595674"
+      ],
+      "goldEvidenceHash": "a5a473565d9c051acecffb4f841511c87d58bb9bc9fab44fee6a4965e0ac16e3",
+      "queryExternal": true
+    },
+    {
+      "caseId": "pc-eval-12",
+      "category": "WRONG_SECTION_NEGATIVE",
+      "expectedSourceId": "naic-life-fraternal-reporting-qsi-life-2026",
+      "expectedRole": "current_support",
+      "expectedBaselineChunkId": "naic-life-fraternal-reporting-qsi-life-2026--p-4-4",
+      "expectedChildId": "pc-d1fbc507f8a0a8729236a29a",
+      "expectedParentId": "pc-fd3d52420599859daa22abe3",
+      "requiredEvidenceIds": [
+        "pc-d1fbc507f8a0a8729236a29a"
+      ],
+      "goldEvidenceHash": "6a458924e7647cc56ec8e01929c2ec376eaf62ae692b188e3b04f85e9686d143",
+      "queryExternal": true
+    },
+    {
+      "caseId": "pc-eval-13",
+      "category": "LOCAL_REQUIREMENT",
+      "expectedSourceId": "naic-pbr-vm-20-vm-31-vm-51-vm20-tables-2026-f-g",
+      "expectedRole": "current_support",
+      "expectedBaselineChunkId": "naic-pbr-vm-20-vm-31-vm-51-vm20-tables-2026-f-g--sheet-august-2026--rows-1-35",
+      "expectedChildId": "pc-1980789b3d1e89f2a99387f3",
+      "expectedParentId": "pc-def7029aff02870d84b8ac4e",
+      "requiredEvidenceIds": [
+        "pc-1980789b3d1e89f2a99387f3"
+      ],
+      "goldEvidenceHash": "aad45cee648a19fa416376b222c297fc816b5f4832ea657c08f122f9f1d7680b",
+      "queryExternal": true
+    },
+    {
+      "caseId": "pc-eval-14",
+      "category": "TABLE_PROSE",
+      "expectedSourceId": "naic-pbr-vm-20-vm-31-vm-51-vm20-tables-2026-f-g",
+      "expectedRole": "current_support",
+      "expectedBaselineChunkId": "naic-pbr-vm-20-vm-31-vm-51-vm20-tables-2026-f-g--sheet-august-2026--rows-1-35",
+      "expectedChildId": "pc-1980789b3d1e89f2a99387f3",
+      "expectedParentId": "pc-def7029aff02870d84b8ac4e",
+      "requiredEvidenceIds": [
+        "pc-1980789b3d1e89f2a99387f3"
+      ],
+      "goldEvidenceHash": "aad45cee648a19fa416376b222c297fc816b5f4832ea657c08f122f9f1d7680b",
+      "queryExternal": true
+    },
+    {
+      "caseId": "pc-eval-15",
+      "category": "LONG_DOCUMENT_SECTION",
+      "expectedSourceId": "naic-pbr-vm-20-vm-31-vm-51-vm20-tables-2026-f-g",
+      "expectedRole": "current_support",
+      "expectedBaselineChunkId": "naic-pbr-vm-20-vm-31-vm-51-vm20-tables-2026-f-g--sheet-august-2026--rows-1-35",
+      "expectedChildId": "pc-1980789b3d1e89f2a99387f3",
+      "expectedParentId": "pc-def7029aff02870d84b8ac4e",
+      "requiredEvidenceIds": [
+        "pc-1980789b3d1e89f2a99387f3",
+        "parent:pc-def7029aff02870d84b8ac4e"
+      ],
+      "goldEvidenceHash": "aad45cee648a19fa416376b222c297fc816b5f4832ea657c08f122f9f1d7680b",
+      "queryExternal": true
+    },
+    {
+      "caseId": "pc-eval-16",
+      "category": "AUTHORITY_SUPPORT_CONFUSION",
+      "expectedSourceId": "naic-pbr-vm-20-vm-31-vm-51-vm20-tables-2026-f-g",
+      "expectedRole": "current_support",
+      "expectedBaselineChunkId": "naic-pbr-vm-20-vm-31-vm-51-vm20-tables-2026-f-g--sheet-august-2026--rows-1-35",
+      "expectedChildId": "pc-1980789b3d1e89f2a99387f3",
+      "expectedParentId": "pc-def7029aff02870d84b8ac4e",
+      "requiredEvidenceIds": [
+        "pc-1980789b3d1e89f2a99387f3",
+        "parent:pc-def7029aff02870d84b8ac4e"
+      ],
+      "goldEvidenceHash": "aad45cee648a19fa416376b222c297fc816b5f4832ea657c08f122f9f1d7680b",
+      "queryExternal": true
+    },
+    {
+      "caseId": "pc-eval-17",
+      "category": "LOCAL_REQUIREMENT",
+      "expectedSourceId": "naic-pbr-vm-20-vm-31-vm-51-vm31-templates-reports",
+      "expectedRole": "current_support",
+      "expectedBaselineChunkId": "naic-pbr-vm-20-vm-31-vm-51-vm31-templates-reports--sheet-confidentiality--rows-1-1",
+      "expectedChildId": "pc-0a1e7818963162e2db7e088d",
+      "expectedParentId": "pc-23a5eb0dce1b25f164a333da",
+      "requiredEvidenceIds": [
+        "pc-0a1e7818963162e2db7e088d"
+      ],
+      "goldEvidenceHash": "79ce747c1cadd1413ea9f987dc68759732cedb081c02155c5683650d7346fb7e",
+      "queryExternal": true
+    },
+    {
+      "caseId": "pc-eval-18",
+      "category": "SCOPE_REQUIREMENT",
+      "expectedSourceId": "naic-pbr-vm-20-vm-31-vm-51-vm31-templates-reports",
+      "expectedRole": "current_support",
+      "expectedBaselineChunkId": "naic-pbr-vm-20-vm-31-vm-51-vm31-templates-reports--sheet-confidentiality--rows-1-1",
+      "expectedChildId": "pc-0a1e7818963162e2db7e088d",
+      "expectedParentId": "pc-23a5eb0dce1b25f164a333da",
+      "requiredEvidenceIds": [
+        "pc-0a1e7818963162e2db7e088d"
+      ],
+      "goldEvidenceHash": "79ce747c1cadd1413ea9f987dc68759732cedb081c02155c5683650d7346fb7e",
+      "queryExternal": true
+    },
+    {
+      "caseId": "pc-eval-19",
+      "category": "DEFINITION_APPLICATION",
+      "expectedSourceId": "naic-pbr-vm-20-vm-31-vm-51-vm31-templates-reports",
+      "expectedRole": "current_support",
+      "expectedBaselineChunkId": "naic-pbr-vm-20-vm-31-vm-51-vm31-templates-reports--sheet-confidentiality--rows-1-1",
+      "expectedChildId": "pc-0a1e7818963162e2db7e088d",
+      "expectedParentId": "pc-23a5eb0dce1b25f164a333da",
+      "requiredEvidenceIds": [
+        "pc-0a1e7818963162e2db7e088d"
+      ],
+      "goldEvidenceHash": "79ce747c1cadd1413ea9f987dc68759732cedb081c02155c5683650d7346fb7e",
+      "queryExternal": true
+    },
+    {
+      "caseId": "pc-eval-20",
+      "category": "WRONG_SOURCE_NEGATIVE",
+      "expectedSourceId": "naic-pbr-vm-20-vm-31-vm-51-vm31-templates-reports",
+      "expectedRole": "current_support",
+      "expectedBaselineChunkId": "naic-pbr-vm-20-vm-31-vm-51-vm31-templates-reports--sheet-confidentiality--rows-1-1",
+      "expectedChildId": "pc-0a1e7818963162e2db7e088d",
+      "expectedParentId": "pc-23a5eb0dce1b25f164a333da",
+      "requiredEvidenceIds": [
+        "pc-0a1e7818963162e2db7e088d"
+      ],
+      "goldEvidenceHash": "79ce747c1cadd1413ea9f987dc68759732cedb081c02155c5683650d7346fb7e",
+      "queryExternal": true
+    },
+    {
+      "caseId": "pc-eval-21",
+      "category": "LOCAL_REQUIREMENT",
+      "expectedSourceId": "society-of-actuaries-experience-studies-soa-2015-vbt-improvement",
+      "expectedRole": "current_support",
+      "expectedBaselineChunkId": "society-of-actuaries-experience-studies-soa-2015-vbt-improvement--sheet-mns-unimproved--rows-1-94",
+      "expectedChildId": "pc-7ce9eb3a09f74e01b73034b3",
+      "expectedParentId": "pc-c388db668816bd6e8d965e37",
+      "requiredEvidenceIds": [
+        "pc-7ce9eb3a09f74e01b73034b3"
+      ],
+      "goldEvidenceHash": "6c3902a95eac85278d2ee73301f327b1235a4203e50cef5250ec5b88055daf28",
+      "queryExternal": true
+    },
+    {
+      "caseId": "pc-eval-22",
+      "category": "TABLE_PROSE",
+      "expectedSourceId": "society-of-actuaries-experience-studies-soa-2015-vbt-improvement",
+      "expectedRole": "current_support",
+      "expectedBaselineChunkId": "society-of-actuaries-experience-studies-soa-2015-vbt-improvement--sheet-documentation--rows-2-3",
+      "expectedChildId": "pc-351680bdbc8a57665e5f4e19",
+      "expectedParentId": "pc-ba6758fc5221f910c034df59",
+      "requiredEvidenceIds": [
+        "pc-351680bdbc8a57665e5f4e19"
+      ],
+      "goldEvidenceHash": "c1ae534e336347faf7512a90d1962a8ed2e9c0b46807cadcce9d70f357cf780d",
+      "queryExternal": true
+    },
+    {
+      "caseId": "pc-eval-23",
+      "category": "WRONG_SOURCE_NEGATIVE",
+      "expectedSourceId": "society-of-actuaries-experience-studies-soa-2015-vbt-improvement",
+      "expectedRole": "current_support",
+      "expectedBaselineChunkId": "society-of-actuaries-experience-studies-soa-2015-vbt-improvement--sheet-documentation--rows-2-3",
+      "expectedChildId": "pc-351680bdbc8a57665e5f4e19",
+      "expectedParentId": "pc-ba6758fc5221f910c034df59",
+      "requiredEvidenceIds": [
+        "pc-351680bdbc8a57665e5f4e19",
+        "parent:pc-ba6758fc5221f910c034df59"
+      ],
+      "goldEvidenceHash": "c1ae534e336347faf7512a90d1962a8ed2e9c0b46807cadcce9d70f357cf780d",
+      "queryExternal": true
+    },
+    {
+      "caseId": "pc-eval-24",
+      "category": "AUTHORITY_SUPPORT_CONFUSION",
+      "expectedSourceId": "society-of-actuaries-experience-studies-soa-2015-vbt-improvement",
+      "expectedRole": "current_support",
+      "expectedBaselineChunkId": "society-of-actuaries-experience-studies-soa-2015-vbt-improvement--sheet-documentation--rows-2-3",
+      "expectedChildId": "pc-351680bdbc8a57665e5f4e19",
+      "expectedParentId": "pc-ba6758fc5221f910c034df59",
+      "requiredEvidenceIds": [
+        "pc-351680bdbc8a57665e5f4e19",
+        "parent:pc-ba6758fc5221f910c034df59"
+      ],
+      "goldEvidenceHash": "c1ae534e336347faf7512a90d1962a8ed2e9c0b46807cadcce9d70f357cf780d",
+      "queryExternal": true
+    }
+  ],
+  "holdout": [
+    {
+      "caseId": "pc-holdout-01",
+      "category": "SECTION_IDENTIFICATION",
+      "expectedSourceId": "naic-accounting-publications-appm-2026",
+      "expectedRole": "current_authority",
+      "expectedBaselineChunkId": "naic-accounting-publications-appm-2026--p-1-4",
+      "expectedOriginalChildId": "pc-d3a8b7da6742658547b39dfa",
+      "expectedParentId": "pc-2143bcbff9b8759082773f1c",
+      "requiredMode": "parent-and-target",
+      "evidenceContentHash": "043882abe62915616f38937ff2f50971d7a02bf03a3f3d30241cca8cce491a32",
+      "queryExternal": true
+    },
+    {
+      "caseId": "pc-holdout-02",
+      "category": "SCOPE_REQUIREMENT",
+      "expectedSourceId": "naic-accounting-publications-appm-2026",
+      "expectedRole": "current_authority",
+      "expectedBaselineChunkId": "naic-accounting-publications-appm-2026--p-5-5",
+      "expectedOriginalChildId": "pc-5210169c79fb8c43b4a5b7fa",
+      "expectedParentId": "pc-2143bcbff9b8759082773f1c",
+      "requiredMode": "parent-and-target",
+      "evidenceContentHash": "0363c59d9a535fac5c92505ce0a99de37483b2fb9a72fa0946cc091780f640aa",
+      "queryExternal": true
+    },
+    {
+      "caseId": "pc-holdout-03",
+      "category": "DEFINITION_APPLICATION",
+      "expectedSourceId": "naic-accounting-publications-appm-2026",
+      "expectedRole": "current_authority",
+      "expectedBaselineChunkId": "naic-accounting-publications-appm-2026--p-9-9",
+      "expectedOriginalChildId": "pc-2634bb450edf5849e8e36a4f",
+      "expectedParentId": "pc-c2f03a89a75ef66a1d0a024e",
+      "requiredMode": "parent-and-target",
+      "evidenceContentHash": "d6bb9056a87af66f5be475a4e2ed2013d49e903466fc0b75504e87684c782404",
+      "queryExternal": true
+    },
+    {
+      "caseId": "pc-holdout-04",
+      "category": "REPORTING_FORM",
+      "expectedSourceId": "naic-life-fraternal-reporting-asb-life-2025",
+      "expectedRole": "current_support",
+      "expectedBaselineChunkId": "naic-life-fraternal-reporting-asb-life-2025--p-1-3",
+      "expectedOriginalChildId": "pc-e1f7651e0faca7506834d01a",
+      "expectedParentId": "pc-2ecddcffb04c54cc085830b1",
+      "requiredMode": "target",
+      "evidenceContentHash": "c9184112b73bf478eb0fc57c63539d6cf845bbaaed8059f6106b05420c375592",
+      "queryExternal": true
+    },
+    {
+      "caseId": "pc-holdout-05",
+      "category": "SCHEDULE_CONFUSION",
+      "expectedSourceId": "naic-life-fraternal-reporting-asb-life-2025",
+      "expectedRole": "current_support",
+      "expectedBaselineChunkId": "naic-life-fraternal-reporting-asb-life-2025--p-4-4",
+      "expectedOriginalChildId": "pc-b592dc1d95f6f57714c9444a",
+      "expectedParentId": "pc-a273e3fc1cc6f517fdfd7a15",
+      "requiredMode": "parent-and-target",
+      "evidenceContentHash": "eb317ce3516a5215fea9800007e7997f8e05bf696345b3b35a934ba54b8d23a1",
+      "queryExternal": true
+    },
+    {
+      "caseId": "pc-holdout-06",
+      "category": "QUARTERLY_SCOPE",
+      "expectedSourceId": "naic-life-fraternal-reporting-qsi-life-2026",
+      "expectedRole": "current_support",
+      "expectedBaselineChunkId": "naic-life-fraternal-reporting-qsi-life-2026--p-8-9",
+      "expectedOriginalChildId": "pc-369eef2248bd528d6e595674",
+      "expectedParentId": "pc-9ac3b316f60913b4eb3b9843",
+      "requiredMode": "parent-and-target",
+      "evidenceContentHash": "7d5088a3bb4543a2183f56c204f6af958343b2bd1894c5db0534a0caaeb0abf3",
+      "queryExternal": true
+    },
+    {
+      "caseId": "pc-holdout-07",
+      "category": "SCHEDULE_INSTRUCTION",
+      "expectedSourceId": "naic-life-fraternal-reporting-qsi-life-2026",
+      "expectedRole": "current_support",
+      "expectedBaselineChunkId": "naic-life-fraternal-reporting-qsi-life-2026--p-4-4",
+      "expectedOriginalChildId": "pc-d1fbc507f8a0a8729236a29a",
+      "expectedParentId": "pc-fd3d52420599859daa22abe3",
+      "requiredMode": "target",
+      "evidenceContentHash": "9f01306b2e9df794c7a65ff141109fa15af13be496e4c09fb8fce76ef21daef1",
+      "queryExternal": true
+    },
+    {
+      "caseId": "pc-holdout-08",
+      "category": "REPORTING_EXCEPTION",
+      "expectedSourceId": "naic-life-fraternal-reporting-qsi-life-2026",
+      "expectedRole": "current_support",
+      "expectedBaselineChunkId": "naic-life-fraternal-reporting-qsi-life-2026--p-8-9",
+      "expectedOriginalChildId": "pc-369eef2248bd528d6e595674",
+      "expectedParentId": "pc-9ac3b316f60913b4eb3b9843",
+      "requiredMode": "target-and-following",
+      "evidenceContentHash": "7d5088a3bb4543a2183f56c204f6af958343b2bd1894c5db0534a0caaeb0abf3",
+      "queryExternal": true
+    },
+    {
+      "caseId": "pc-holdout-09",
+      "category": "TABLE_HEADER",
+      "expectedSourceId": "naic-pbr-vm-20-vm-31-vm-51-vm20-tables-2026-f-g",
+      "expectedRole": "current_support",
+      "expectedBaselineChunkId": "naic-pbr-vm-20-vm-31-vm-51-vm20-tables-2026-f-g--sheet-august-2026--rows-1-35",
+      "expectedOriginalChildId": "pc-1980789b3d1e89f2a99387f3",
+      "expectedParentId": "pc-def7029aff02870d84b8ac4e",
+      "requiredMode": "target",
+      "evidenceContentHash": "ec4f06d1617923ed36efd23d7f0ef848787c565190ff9b40207c1f4e8cb3698e",
+      "queryExternal": true
+    },
+    {
+      "caseId": "pc-holdout-10",
+      "category": "RATING_RANGE",
+      "expectedSourceId": "naic-pbr-vm-20-vm-31-vm-51-vm20-tables-2026-f-g",
+      "expectedRole": "current_support",
+      "expectedBaselineChunkId": "naic-pbr-vm-20-vm-31-vm-51-vm20-tables-2026-f-g--sheet-august-2026--rows-1-35",
+      "expectedOriginalChildId": "pc-1980789b3d1e89f2a99387f3",
+      "expectedParentId": "pc-def7029aff02870d84b8ac4e",
+      "requiredMode": "target",
+      "evidenceContentHash": "ec4f06d1617923ed36efd23d7f0ef848787c565190ff9b40207c1f4e8cb3698e",
+      "queryExternal": true
+    },
+    {
+      "caseId": "pc-holdout-11",
+      "category": "TEMPLATE_INSTRUCTION",
+      "expectedSourceId": "naic-pbr-vm-20-vm-31-vm-51-vm31-templates-reports",
+      "expectedRole": "current_support",
+      "expectedBaselineChunkId": "naic-pbr-vm-20-vm-31-vm-51-vm31-templates-reports--sheet-general-instructions--rows-1-2",
+      "expectedOriginalChildId": "pc-64c26609a4763b59c9a0a887",
+      "expectedParentId": "pc-58d56505b59fa15328f39b07",
+      "requiredMode": "target",
+      "evidenceContentHash": "37fdec8bb30aba7bed15946a962e6ea9d67761667d3e232e026436511ea0144d",
+      "queryExternal": true
+    },
+    {
+      "caseId": "pc-holdout-12",
+      "category": "CONFIDENTIALITY_BOUNDARY",
+      "expectedSourceId": "naic-pbr-vm-20-vm-31-vm-51-vm31-templates-reports",
+      "expectedRole": "current_support",
+      "expectedBaselineChunkId": "naic-pbr-vm-20-vm-31-vm-51-vm31-templates-reports--sheet-confidentiality--rows-1-1",
+      "expectedOriginalChildId": "pc-0a1e7818963162e2db7e088d",
+      "expectedParentId": "pc-23a5eb0dce1b25f164a333da",
+      "requiredMode": "target",
+      "evidenceContentHash": "a3e8a43c942282963715370416785726c588d00b85419b8919e348a4a375dd4a",
+      "queryExternal": true
+    },
+    {
+      "caseId": "pc-holdout-13",
+      "category": "MORTALITY_METHOD",
+      "expectedSourceId": "society-of-actuaries-experience-studies-soa-2015-vbt-improvement",
+      "expectedRole": "current_support",
+      "expectedBaselineChunkId": "society-of-actuaries-experience-studies-soa-2015-vbt-improvement--sheet-documentation--rows-5-5",
+      "expectedOriginalChildId": "pc-df184e330f57f5753d5eaf78",
+      "expectedParentId": "pc-4dfd3b654af91d046fd10864",
+      "requiredMode": "target",
+      "evidenceContentHash": "65945e66e1fbc9babed666b1227ba4f477a9ef318f96f6b3908bea91f80036d2",
+      "queryExternal": true
+    },
+    {
+      "caseId": "pc-holdout-14",
+      "category": "IMPROVEMENT_APPLICATION",
+      "expectedSourceId": "society-of-actuaries-experience-studies-soa-2015-vbt-improvement",
+      "expectedRole": "current_support",
+      "expectedBaselineChunkId": "society-of-actuaries-experience-studies-soa-2015-vbt-improvement--sheet-documentation--rows-7-8",
+      "expectedOriginalChildId": "pc-e9084e7a721fd46793070d4e",
+      "expectedParentId": "pc-cc7f2f0b9fc86abf00382868",
+      "requiredMode": "target",
+      "evidenceContentHash": "9d6254b40dff8b39c89aca3bfdf4ee96bb407ed9e92db38c3b586369c1fffb84",
+      "queryExternal": true
+    },
+    {
+      "caseId": "pc-holdout-15",
+      "category": "SEGMENT_TABLE",
+      "expectedSourceId": "society-of-actuaries-experience-studies-soa-2015-vbt-improvement",
+      "expectedRole": "current_support",
+      "expectedBaselineChunkId": "society-of-actuaries-experience-studies-soa-2015-vbt-improvement--sheet-documentation--rows-7-8",
+      "expectedOriginalChildId": "pc-e9084e7a721fd46793070d4e",
+      "expectedParentId": "pc-cc7f2f0b9fc86abf00382868",
+      "requiredMode": "target",
+      "evidenceContentHash": "9d6254b40dff8b39c89aca3bfdf4ee96bb407ed9e92db38c3b586369c1fffb84",
+      "queryExternal": true
+    }
+  ],
+  "sourceIds": [
+    "naic-accounting-publications-appm-2026",
+    "naic-life-fraternal-reporting-asb-life-2025",
+    "naic-life-fraternal-reporting-qsi-life-2026",
+    "naic-pbr-vm-20-vm-31-vm-51-vm20-tables-2026-f-g",
+    "naic-pbr-vm-20-vm-31-vm-51-vm31-templates-reports",
+    "society-of-actuaries-experience-studies-soa-2015-vbt-improvement"
+  ],
+  "rankingInputExcludesExpectations": true,
+  "reviewOnly": true,
+  "promotionStatus": "not_promoted",
+  "ragReadyAllowed": false
+}
