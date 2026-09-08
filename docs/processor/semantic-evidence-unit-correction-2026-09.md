@@ -102,4 +102,3 @@ The corrected units improve holdout accepted-target Top-1 and exact-parent selec
 Validation requires zero duplicate IDs, orphan children, parent cycles, source or SHA mismatches, PDF parent-boundary crossings, workbook sheet/block crossings, out-of-range cell references, and unexplained workbook-cell union differences. Public artifacts are allowlisted non-content evidence. Private artifacts are SHA- and byte-bound under `C:\Dev\Document Processor Sources\_processed-private\semantic-evidence-unit-correction-2026-09`.
 
 The architecture remains `REVIEW_ONLY`, `not_promoted`, and not RAG-ready. Its trusted outcome is evidence-boundary and evaluation integrity, not high retrieval quality.
-
