@@ -12,7 +12,7 @@ const frozenAt = '2026-09-08T00:00:00.000Z'
 
 const readJson = async (file) => JSON.parse((await fs.readFile(file, 'utf8')).replace(/^\uFEFF/, ''))
 const writeJson = async (file, value) => { await fs.mkdir(path.dirname(file), { recursive: true }); await fs.writeFile(file, JSON.stringify(value, null, 2) + '\n', 'utf8') }
-const sha256 = (value) => crypto.createHash('sha256').update(typeof value === 'string' ? value : JSON.stringify(value)).digest('hex')
+const sha256 = (value) => crypto.createHash('sha256').update(typeof value === 'string' || Buffer.isBuffer(value) ? value : JSON.stringify(value)).digest('hex')
 
 const decisions = {
   'pc-eval-01': ['INVALID_TARGET_EXCLUDED', false, 'The recorded target is front matter, not a uniquely identified recognition requirement.'],

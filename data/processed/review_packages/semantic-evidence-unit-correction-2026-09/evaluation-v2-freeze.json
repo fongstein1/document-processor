@@ -6,7 +6,7 @@
   "createdBecauseCode": "INDEPENDENT_REVIEW_GOLD_TARGET_AMBIGUITY",
   "sourceEvaluationVersion": "EVALUATION_V1",
   "sourceEvaluationPath": "data/processed/review_packages/parent-child-retrieval-hardening-2026-09/evaluation-freeze.json",
-  "sourceEvaluationSha256": "160705baad6edee650d8ca31f3bbcb64ba1ca1ca57c16baca39f1053228a370e",
+  "sourceEvaluationSha256": "f24dbacb2f3c66e19c368c172f6645be66557cfb7d4fa83b75007c9910d7d02b",
   "originalCaseCount": 39,
   "uniqueTargetCaseCount": 14,
   "multiAcceptedTargetCaseCount": 0,
@@ -1065,7 +1065,7 @@
     }
   ],
   "privateAdjudicationPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\semantic-evidence-unit-correction-2026-09\\gold-v2-adjudication.json",
-  "privateAdjudicationSha256": "cebaf90ce11ce874f0de2c33d1c2fd947bd10166cab4e092cde818484ca0eb6f",
+  "privateAdjudicationSha256": "faa8144d00492231b14ec87c60d039e4e45b7403da9a093e9a1460f7e2e96621",
   "privateAdjudicationByteCount": 47509,
   "finalGoldSelectionUsesRegex": false,
   "rankingInputExcludesExpectations": true,
