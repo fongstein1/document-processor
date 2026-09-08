@@ -48,6 +48,7 @@ const definitionBoundary = (line) => /^\s*[“"]?[A-Z][^:\n]{1,80}[”"]?\s+(?:m
 const bulletBoundary = (line) => /^\s*(?:[-•▪◦]|\([a-z0-9ivx]+\))\s+\S/i.test(line)
 const tableLike = (text) => {
   const lines = String(text).split(/\n/).map(cleanLine).filter(Boolean)
+  if (lines.some((line) => /(?:\.{5,}|_{5,})/.test(line))) return true
   const numeric = lines.filter((line) => (line.match(/\b\d+(?:\.\d+)?\b/g) || []).length >= 3).length
   return lines.length >= 3 && numeric / lines.length >= 0.45
 }
@@ -118,7 +119,7 @@ export const splitPdfSemanticUnits = (text, { minChars = 180, maxChars = 2200 } 
     else if (role.role === 'REQUIREMENT' && numberedBoundary(unit.text)) representation = 'SEMANTIC_NUMBERED_REQUIREMENT_CHILD'
     else if (role.role === 'TABLE_OR_SCHEDULE' && tableLike(unit.text)) representation = 'SEMANTIC_TABLE_CHILD'
     else if (role.role === 'REPORTING_INSTRUCTION') representation = 'SEMANTIC_INSTRUCTION_CHILD'
-    else if (unit.strong || boundarySignals > 0) representation = 'SEMANTIC_PARAGRAPH_GROUP_CHILD'
+    else if (unit.strong) representation = 'SEMANTIC_PARAGRAPH_GROUP_CHILD'
     return { text: unit.text, role, representation, paragraphCount: Math.max(1, unit.text.split(/\n+/).filter(Boolean).length), detectionMethod: representation.startsWith('SEMANTIC_') ? 'multi_signal_structural_boundary' : 'source_page_window_fallback', confidence: representation.startsWith('SEMANTIC_') ? 'medium' : 'low' }
   })
 }
