@@ -1,0 +1,97 @@
+{
+  "schemaVersion": "2.0",
+  "manifestId": "external-artifacts-parent-child-retrieval-hardening-2026-09",
+  "runId": "parent-child-retrieval-hardening-2026-09",
+  "generatedTimestamp": "2026-09-07T00:00:00.000Z",
+  "externalProcessingRoot": "C:\\Dev\\Document Processor Sources\\_processed-private\\parent-child-retrieval-hardening-2026-09",
+  "rightsStorageStatuses": [
+    "RIGHTS_REVIEW_REQUIRED"
+  ],
+  "artifacts": [
+    {
+      "runId": "parent-child-retrieval-hardening-2026-09",
+      "sourceId": "naic-accounting-publications-appm-2026",
+      "artifactType": "parent-child-retrieval-substantive",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\parent-child-retrieval-hardening-2026-09\\naic-accounting-publications-appm-2026\\parent-child-retrieval-substantive.json",
+      "sha256": "42576691edacaf8221982203f8cc1a0bd74cb115109c87ec4f79cf20cad2a37f",
+      "byteCount": 38651353,
+      "sourceRawSha256": "572b86e1e45582656f23d218d4695ba5a102e5f13f00c4cb34ae68e54d3830a0",
+      "generatedTimestamp": "2026-09-07T00:00:00.000Z",
+      "rightsStorageStatus": "RIGHTS_REVIEW_REQUIRED",
+      "reviewOnly": true
+    },
+    {
+      "runId": "parent-child-retrieval-hardening-2026-09",
+      "sourceId": "naic-life-fraternal-reporting-asb-life-2025",
+      "artifactType": "parent-child-retrieval-substantive",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\parent-child-retrieval-hardening-2026-09\\naic-life-fraternal-reporting-asb-life-2025\\parent-child-retrieval-substantive.json",
+      "sha256": "14e4d6037d35445f3690113cd08d5c5a079ec152a8c87f6ba6117aa36a25ad0f",
+      "byteCount": 10102098,
+      "sourceRawSha256": "6819aeff68578d789fc5a0e09ba5b60e15edc89305ae9d42fd3b66048147cae1",
+      "generatedTimestamp": "2026-09-07T00:00:00.000Z",
+      "rightsStorageStatus": "RIGHTS_REVIEW_REQUIRED",
+      "reviewOnly": true
+    },
+    {
+      "runId": "parent-child-retrieval-hardening-2026-09",
+      "sourceId": "naic-life-fraternal-reporting-qsi-life-2026",
+      "artifactType": "parent-child-retrieval-substantive",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\parent-child-retrieval-hardening-2026-09\\naic-life-fraternal-reporting-qsi-life-2026\\parent-child-retrieval-substantive.json",
+      "sha256": "5248f9df6362b73cdee84330968189ef8e3e6ae1ed1c04fe727660875a8242ba",
+      "byteCount": 5169873,
+      "sourceRawSha256": "fa507228461252f92cbe8d0e728b0cc5dfdd93f6c93a4cf9a6380063dec44f31",
+      "generatedTimestamp": "2026-09-07T00:00:00.000Z",
+      "rightsStorageStatus": "RIGHTS_REVIEW_REQUIRED",
+      "reviewOnly": true
+    },
+    {
+      "runId": "parent-child-retrieval-hardening-2026-09",
+      "sourceId": "naic-pbr-vm-20-vm-31-vm-51-vm20-tables-2026-f-g",
+      "artifactType": "parent-child-retrieval-substantive",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\parent-child-retrieval-hardening-2026-09\\naic-pbr-vm-20-vm-31-vm-51-vm20-tables-2026-f-g\\parent-child-retrieval-substantive.json",
+      "sha256": "9ab36eeccf46bb15192d81bd0fe74954217ee0300c451d0f937e894d2bc8484b",
+      "byteCount": 1287753,
+      "sourceRawSha256": "bcdeb352a66771c18f8d47efd5b1b97a8facd51fa672b0a8c8585be768d31753",
+      "generatedTimestamp": "2026-09-07T00:00:00.000Z",
+      "rightsStorageStatus": "RIGHTS_REVIEW_REQUIRED",
+      "reviewOnly": true
+    },
+    {
+      "runId": "parent-child-retrieval-hardening-2026-09",
+      "sourceId": "naic-pbr-vm-20-vm-31-vm-51-vm31-templates-reports",
+      "artifactType": "parent-child-retrieval-substantive",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\parent-child-retrieval-hardening-2026-09\\naic-pbr-vm-20-vm-31-vm-51-vm31-templates-reports\\parent-child-retrieval-substantive.json",
+      "sha256": "32880ac943763fc40c956dd9e6d0d30335d1b02e03d0729dafb6010c17c49db4",
+      "byteCount": 438958,
+      "sourceRawSha256": "932c9164967363ac06db624fb6f8711c29a31ba4f767201361e4bfa6027a5dcd",
+      "generatedTimestamp": "2026-09-07T00:00:00.000Z",
+      "rightsStorageStatus": "RIGHTS_REVIEW_REQUIRED",
+      "reviewOnly": true
+    },
+    {
+      "runId": "parent-child-retrieval-hardening-2026-09",
+      "sourceId": "society-of-actuaries-experience-studies-soa-2015-vbt-improvement",
+      "artifactType": "parent-child-retrieval-substantive",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\parent-child-retrieval-hardening-2026-09\\society-of-actuaries-experience-studies-soa-2015-vbt-improvement\\parent-child-retrieval-substantive.json",
+      "sha256": "f14ae5a91b7ce599318e4562df894b6966189529b99e5fe28fe2382ef8f053e6",
+      "byteCount": 61520333,
+      "sourceRawSha256": "847ddfd96ed51f47435d5ce99b9dac4f32363186d80336d0d14a1afd1d1e513d",
+      "generatedTimestamp": "2026-09-07T00:00:00.000Z",
+      "rightsStorageStatus": "RIGHTS_REVIEW_REQUIRED",
+      "reviewOnly": true
+    },
+    {
+      "runId": "parent-child-retrieval-hardening-2026-09",
+      "sourceId": "architecture-evaluation",
+      "artifactType": "retrieval-evaluation-details",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\parent-child-retrieval-hardening-2026-09\\evaluation-details.json",
+      "sha256": "f0a3e19ef68e8c296da5774a4926e737e67a7be7252215a77bf252885bb2e1ae",
+      "byteCount": 717414,
+      "sourceRawSha256": null,
+      "generatedTimestamp": "2026-09-07T00:00:00.000Z",
+      "rightsStorageStatus": "RIGHTS_REVIEW_REQUIRED",
+      "reviewOnly": true
+    }
+  ],
+  "reviewOnly": true
+}

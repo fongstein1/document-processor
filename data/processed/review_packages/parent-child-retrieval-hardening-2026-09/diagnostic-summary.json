@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "1.0",
+  "runId": "parent-child-retrieval-hardening-2026-09",
+  "failureTaxonomy": {
+    "COMMON_TOKEN_DOMINANCE": 36,
+    "TARGET_RANK_UNDERWEIGHTED": 36,
+    "PARENT_SIGNAL_UNUSED": 37
+  },
+  "top10External": true,
+  "diagnosticDetailsExternal": true,
+  "caseCount": 39,
+  "reviewOnly": true
+}

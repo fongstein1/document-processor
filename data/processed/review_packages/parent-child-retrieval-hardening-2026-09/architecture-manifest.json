@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "2.0",
+  "runId": "parent-child-retrieval-hardening-2026-09",
+  "generatedAt": "2026-09-07T00:00:00.000Z",
+  "processingMode": "review_only_retrieval_hardening",
+  "sourceIds": [
+    "naic-accounting-publications-appm-2026",
+    "naic-life-fraternal-reporting-asb-life-2025",
+    "naic-life-fraternal-reporting-qsi-life-2026",
+    "naic-pbr-vm-20-vm-31-vm-51-vm20-tables-2026-f-g",
+    "naic-pbr-vm-20-vm-31-vm-51-vm31-templates-reports",
+    "society-of-actuaries-experience-studies-soa-2015-vbt-improvement"
+  ],
+  "sourceCount": 6,
+  "parentCount": 1414,
+  "childCount": 2289,
+  "pdfParentCount": 1325,
+  "pdfChildCount": 0,
+  "xlsxParentCount": 89,
+  "xlsxChildCount": 2289,
+  "structureAwareSourceCount": 6,
+  "fullyStructureAwareSourceCount": 6,
+  "mixedStructureFallbackSourceCount": 0,
+  "fullyFallbackSourceCount": 0,
+  "fallbackUnitCount": 0,
+  "rightsStatus": "RIGHTS_REVIEW_REQUIRED",
+  "externalProcessingRoot": "C:\\Dev\\Document Processor Sources\\_processed-private\\parent-child-retrieval-hardening-2026-09",
+  "reviewOnly": true,
+  "promotionStatus": "not_promoted",
+  "ragReadyAllowed": false
+}

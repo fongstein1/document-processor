@@ -1,0 +1,81 @@
+{
+  "schemaVersion": "1.0",
+  "runId": "parent-child-retrieval-hardening-2026-09",
+  "systems": {
+    "A_pageWindowRaw": {
+      "sourceTop1": 0.5641025641025641,
+      "sourceTop3": 0.6923076923076923,
+      "targetTop1": 0.02564102564102564,
+      "targetTop3": 0.10256410256410256,
+      "targetMrr": 0.09217065943523715,
+      "wrongSourceRate": 0.4358974358974359,
+      "citationCorrectness": 1,
+      "averageContextSize": 1
+    },
+    "B_pageWindowBm25": {
+      "sourceTop1": 0.5641025641025641,
+      "sourceTop3": 0.6923076923076923,
+      "targetTop1": 0.02564102564102564,
+      "targetTop3": 0.10256410256410256,
+      "targetMrr": 0.09217065943523715,
+      "wrongSourceRate": 0.4358974358974359,
+      "citationCorrectness": 1,
+      "averageContextSize": 1
+    },
+    "C_childBm25": {
+      "sourceTop1": 0.5641025641025641,
+      "sourceTop3": 0.6410256410256411,
+      "targetTop1": 0.05128205128205128,
+      "targetTop3": 0.07692307692307693,
+      "targetMrr": 0.09002413975484369,
+      "correctParent": 0.05128205128205128,
+      "requiredContextRecall": 0.05128205128205128,
+      "contextPrecision": 0.05128205128205128,
+      "wrongSourceRate": 0.4358974358974359,
+      "wrongSectionRate": 0.9487179487179487,
+      "authoritySupportCorrectness": 0.6923076923076923,
+      "citationCorrectness": 1,
+      "averageContextSize": 1.8974358974358974,
+      "maximumContextSize": 4,
+      "irrelevantEvidenceCount": 72
+    },
+    "D_parentAware": {
+      "sourceTop1": 0.5641025641025641,
+      "sourceTop3": 0.6410256410256411,
+      "targetTop1": 0.05128205128205128,
+      "targetTop3": 0.07692307692307693,
+      "targetMrr": 0.09002413975484369,
+      "correctParent": 0.05128205128205128,
+      "requiredContextRecall": 0.05128205128205128,
+      "contextPrecision": 0.05128205128205128,
+      "wrongSourceRate": 0.4358974358974359,
+      "wrongSectionRate": 0.9487179487179487,
+      "authoritySupportCorrectness": 0.6923076923076923,
+      "citationCorrectness": 1,
+      "averageContextSize": 1.8974358974358974,
+      "maximumContextSize": 4,
+      "irrelevantEvidenceCount": 72
+    },
+    "E_contextExpanded": {
+      "sourceTop1": 0.5641025641025641,
+      "sourceTop3": 0.6410256410256411,
+      "targetTop1": 0.05128205128205128,
+      "targetTop3": 0.07692307692307693,
+      "targetMrr": 0.09002413975484369,
+      "correctParent": 0.05128205128205128,
+      "requiredContextRecall": 0.05128205128205128,
+      "contextPrecision": 0.05128205128205128,
+      "wrongSourceRate": 0.4358974358974359,
+      "wrongSectionRate": 0.9487179487179487,
+      "authoritySupportCorrectness": 0.6923076923076923,
+      "citationCorrectness": 1,
+      "averageContextSize": 1.8974358974358974,
+      "maximumContextSize": 4,
+      "irrelevantEvidenceCount": 72
+    }
+  },
+  "developmentCaseCount": 24,
+  "holdoutCaseCount": 15,
+  "testExpectationsExcludedFromRanking": true,
+  "reviewOnly": true
+}
