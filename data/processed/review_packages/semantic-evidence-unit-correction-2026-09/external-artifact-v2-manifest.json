@@ -1,0 +1,105 @@
+{
+  "schemaVersion": "3.0",
+  "runId": "semantic-evidence-unit-correction-2026-09",
+  "generatedTimestamp": "2026-09-08T00:00:00.000Z",
+  "externalProcessingRoot": "C:\\Dev\\Document Processor Sources\\_processed-private\\semantic-evidence-unit-correction-2026-09",
+  "artifacts": [
+    {
+      "runId": "semantic-evidence-unit-correction-2026-09",
+      "sourceId": "naic-accounting-publications-appm-2026",
+      "artifactType": "semantic-evidence-substantive",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\semantic-evidence-unit-correction-2026-09\\naic-accounting-publications-appm-2026\\semantic-evidence-substantive.json",
+      "sha256": "3be6faab0bcc156606e514bf5241ed64de13136d46358390be522ca9521cfed9",
+      "byteCount": 44463363,
+      "sourceRawSha256": "572b86e1e45582656f23d218d4695ba5a102e5f13f00c4cb34ae68e54d3830a0",
+      "generatedTimestamp": "2026-09-08T00:00:00.000Z",
+      "rightsStorageStatus": "RIGHTS_REVIEW_REQUIRED",
+      "reviewOnly": true
+    },
+    {
+      "runId": "semantic-evidence-unit-correction-2026-09",
+      "sourceId": "naic-life-fraternal-reporting-asb-life-2025",
+      "artifactType": "semantic-evidence-substantive",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\semantic-evidence-unit-correction-2026-09\\naic-life-fraternal-reporting-asb-life-2025\\semantic-evidence-substantive.json",
+      "sha256": "7de787016cdf71c5e44521b52d20b7fb8cef9e96777ffb6a3686fb1d8f2bb059",
+      "byteCount": 12439473,
+      "sourceRawSha256": "6819aeff68578d789fc5a0e09ba5b60e15edc89305ae9d42fd3b66048147cae1",
+      "generatedTimestamp": "2026-09-08T00:00:00.000Z",
+      "rightsStorageStatus": "RIGHTS_REVIEW_REQUIRED",
+      "reviewOnly": true
+    },
+    {
+      "runId": "semantic-evidence-unit-correction-2026-09",
+      "sourceId": "naic-life-fraternal-reporting-qsi-life-2026",
+      "artifactType": "semantic-evidence-substantive",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\semantic-evidence-unit-correction-2026-09\\naic-life-fraternal-reporting-qsi-life-2026\\semantic-evidence-substantive.json",
+      "sha256": "8b1453e2df74e2029d78c73de57e56d4ba1b161a4be9d6ddc1eb31a31c902a3d",
+      "byteCount": 5355599,
+      "sourceRawSha256": "fa507228461252f92cbe8d0e728b0cc5dfdd93f6c93a4cf9a6380063dec44f31",
+      "generatedTimestamp": "2026-09-08T00:00:00.000Z",
+      "rightsStorageStatus": "RIGHTS_REVIEW_REQUIRED",
+      "reviewOnly": true
+    },
+    {
+      "runId": "semantic-evidence-unit-correction-2026-09",
+      "sourceId": "naic-pbr-vm-20-vm-31-vm-51-vm20-tables-2026-f-g",
+      "artifactType": "semantic-evidence-substantive",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\semantic-evidence-unit-correction-2026-09\\naic-pbr-vm-20-vm-31-vm-51-vm20-tables-2026-f-g\\semantic-evidence-substantive.json",
+      "sha256": "4f787bfbe39cbc164330cbb1e047f38f4ccedb289b560f76a004eddff0e8a064",
+      "byteCount": 816713,
+      "sourceRawSha256": "bcdeb352a66771c18f8d47efd5b1b97a8facd51fa672b0a8c8585be768d31753",
+      "generatedTimestamp": "2026-09-08T00:00:00.000Z",
+      "rightsStorageStatus": "RIGHTS_REVIEW_REQUIRED",
+      "reviewOnly": true
+    },
+    {
+      "runId": "semantic-evidence-unit-correction-2026-09",
+      "sourceId": "naic-pbr-vm-20-vm-31-vm-51-vm31-templates-reports",
+      "artifactType": "semantic-evidence-substantive",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\semantic-evidence-unit-correction-2026-09\\naic-pbr-vm-20-vm-31-vm-51-vm31-templates-reports\\semantic-evidence-substantive.json",
+      "sha256": "0c0f2f85fceae4d7cd7894f5b8401ae78614b2dbd9d7d3743a9d98307c4ac53e",
+      "byteCount": 572967,
+      "sourceRawSha256": "932c9164967363ac06db624fb6f8711c29a31ba4f767201361e4bfa6027a5dcd",
+      "generatedTimestamp": "2026-09-08T00:00:00.000Z",
+      "rightsStorageStatus": "RIGHTS_REVIEW_REQUIRED",
+      "reviewOnly": true
+    },
+    {
+      "runId": "semantic-evidence-unit-correction-2026-09",
+      "sourceId": "society-of-actuaries-experience-studies-soa-2015-vbt-improvement",
+      "artifactType": "semantic-evidence-substantive",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\semantic-evidence-unit-correction-2026-09\\society-of-actuaries-experience-studies-soa-2015-vbt-improvement\\semantic-evidence-substantive.json",
+      "sha256": "19e19bfa0976bad08c191e177f1f3ab62afbf9bef918c329597d2ede1ca5aa12",
+      "byteCount": 14919241,
+      "sourceRawSha256": "847ddfd96ed51f47435d5ce99b9dac4f32363186d80336d0d14a1afd1d1e513d",
+      "generatedTimestamp": "2026-09-08T00:00:00.000Z",
+      "rightsStorageStatus": "RIGHTS_REVIEW_REQUIRED",
+      "reviewOnly": true
+    },
+    {
+      "runId": "semantic-evidence-unit-correction-2026-09",
+      "sourceId": "architecture-evaluation-v2",
+      "artifactType": "semantic-evidence-evaluation-details",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\semantic-evidence-unit-correction-2026-09\\evaluation-v2-details.json",
+      "sha256": "6e581587783cfbb67fb88644081d7b0ea262d24fc50857b2b12552bc7977e2f9",
+      "byteCount": 187931,
+      "sourceRawSha256": null,
+      "generatedTimestamp": "2026-09-08T00:00:00.000Z",
+      "rightsStorageStatus": "RIGHTS_REVIEW_REQUIRED",
+      "reviewOnly": true
+    },
+    {
+      "runId": "semantic-evidence-unit-correction-2026-09",
+      "sourceId": "gold-evaluation-v2",
+      "artifactType": "gold-v2-adjudication",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\semantic-evidence-unit-correction-2026-09\\gold-v2-adjudication.json",
+      "sha256": "faa8144d00492231b14ec87c60d039e4e45b7403da9a093e9a1460f7e2e96621",
+      "byteCount": 47509,
+      "sourceRawSha256": null,
+      "generatedTimestamp": "2026-09-08T00:00:00.000Z",
+      "rightsStorageStatus": "RIGHTS_REVIEW_REQUIRED",
+      "reviewOnly": true
+    }
+  ],
+  "reviewOnly": true
+}

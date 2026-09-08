@@ -1,0 +1,425 @@
+{
+  "schemaVersion": "1.0",
+  "runId": "semantic-evidence-unit-correction-2026-09",
+  "contexts": [
+    {
+      "caseId": "pc-eval-10",
+      "split": "development",
+      "selectedChildId": "seu-ab947d377c6c872d6552a3a8",
+      "selectedParentId": "seu-e5e942c0d8f4b13c422e8fc8",
+      "queryIntent": "SCOPE",
+      "contextEvidenceIds": [
+        "seu-ab947d377c6c872d6552a3a8"
+      ],
+      "requiredRoles": [
+        "SCOPE_OR_APPLICABILITY"
+      ],
+      "requiredRoleRecall": 0,
+      "acceptedEvidenceRecall": 0,
+      "contextPrecision": 0,
+      "completeContext": false,
+      "irrelevantContextCount": 1,
+      "bounded": true,
+      "contextTextExternal": true,
+      "reviewOnly": true
+    },
+    {
+      "caseId": "pc-eval-11",
+      "split": "development",
+      "selectedChildId": "seu-9ca67b201a8ecd297941508e",
+      "selectedParentId": "seu-9dd4706a68e6043a4ebd6498",
+      "queryIntent": "EXCEPTION",
+      "contextEvidenceIds": [
+        "seu-9ca67b201a8ecd297941508e"
+      ],
+      "requiredRoles": [
+        "EXCEPTION_OR_QUALIFICATION"
+      ],
+      "requiredRoleRecall": 0,
+      "acceptedEvidenceRecall": 0,
+      "contextPrecision": 0,
+      "completeContext": false,
+      "irrelevantContextCount": 1,
+      "bounded": true,
+      "contextTextExternal": true,
+      "reviewOnly": true
+    },
+    {
+      "caseId": "pc-eval-13",
+      "split": "development",
+      "selectedChildId": "seu-b32278ac9a97059fddcdf098",
+      "selectedParentId": "seu-a52d589c10a29e48ebb7b3b6",
+      "queryIntent": "TABLE",
+      "contextEvidenceIds": [
+        "seu-b32278ac9a97059fddcdf098"
+      ],
+      "requiredRoles": [
+        "HEADER_CONTEXT"
+      ],
+      "requiredRoleRecall": 0,
+      "acceptedEvidenceRecall": 0,
+      "contextPrecision": 0,
+      "completeContext": false,
+      "irrelevantContextCount": 1,
+      "bounded": true,
+      "contextTextExternal": true,
+      "reviewOnly": true
+    },
+    {
+      "caseId": "pc-eval-14",
+      "split": "development",
+      "selectedChildId": "seu-274b65cbc25bba79c8add3d3",
+      "selectedParentId": "seu-3d31ce2052c7a8db53499255",
+      "queryIntent": "TABLE",
+      "contextEvidenceIds": [
+        "seu-274b65cbc25bba79c8add3d3"
+      ],
+      "requiredRoles": [
+        "HEADER_CONTEXT"
+      ],
+      "requiredRoleRecall": 0,
+      "acceptedEvidenceRecall": 0,
+      "contextPrecision": 0,
+      "completeContext": false,
+      "irrelevantContextCount": 1,
+      "bounded": true,
+      "contextTextExternal": true,
+      "reviewOnly": true
+    },
+    {
+      "caseId": "pc-eval-15",
+      "split": "development",
+      "selectedChildId": "seu-e840739cde6fc77179c08bd4",
+      "selectedParentId": "seu-3018feb972e5fb5bb5b33aaf",
+      "queryIntent": "TABLE",
+      "contextEvidenceIds": [
+        "seu-e840739cde6fc77179c08bd4"
+      ],
+      "requiredRoles": [],
+      "requiredRoleRecall": 1,
+      "acceptedEvidenceRecall": 0,
+      "contextPrecision": 0,
+      "completeContext": false,
+      "irrelevantContextCount": 1,
+      "bounded": true,
+      "contextTextExternal": true,
+      "reviewOnly": true
+    },
+    {
+      "caseId": "pc-eval-18",
+      "split": "development",
+      "selectedChildId": "seu-4049fd585eaddb1a87d88250",
+      "selectedParentId": "seu-c38d0d4c719ee18dad3e2c12",
+      "queryIntent": "SCOPE",
+      "contextEvidenceIds": [
+        "seu-4049fd585eaddb1a87d88250"
+      ],
+      "requiredRoles": [
+        "SCOPE_OR_APPLICABILITY"
+      ],
+      "requiredRoleRecall": 1,
+      "acceptedEvidenceRecall": 0,
+      "contextPrecision": 1,
+      "completeContext": false,
+      "irrelevantContextCount": 0,
+      "bounded": true,
+      "contextTextExternal": true,
+      "reviewOnly": true
+    },
+    {
+      "caseId": "pc-holdout-02",
+      "split": "holdout",
+      "selectedChildId": "seu-f40623b41e2fd8aff4cc24c2",
+      "selectedParentId": "seu-2ae1b257e3d36dbcebfd466a",
+      "queryIntent": "LOCAL",
+      "contextEvidenceIds": [
+        "seu-f40623b41e2fd8aff4cc24c2"
+      ],
+      "requiredRoles": [
+        "SCOPE_OR_APPLICABILITY"
+      ],
+      "requiredRoleRecall": 0,
+      "acceptedEvidenceRecall": 0.5,
+      "contextPrecision": 1,
+      "completeContext": false,
+      "irrelevantContextCount": 0,
+      "bounded": true,
+      "contextTextExternal": true,
+      "reviewOnly": true
+    },
+    {
+      "caseId": "pc-holdout-04",
+      "split": "holdout",
+      "selectedChildId": "seu-3e170209f73fa2f6bd9885c0",
+      "selectedParentId": "seu-32aa0d2662e52ce90126d1c0",
+      "queryIntent": "TABLE",
+      "contextEvidenceIds": [
+        "seu-3e170209f73fa2f6bd9885c0"
+      ],
+      "requiredRoles": [
+        "OTHER"
+      ],
+      "requiredRoleRecall": 0,
+      "acceptedEvidenceRecall": 0,
+      "contextPrecision": 0,
+      "completeContext": false,
+      "irrelevantContextCount": 1,
+      "bounded": true,
+      "contextTextExternal": true,
+      "reviewOnly": true
+    },
+    {
+      "caseId": "pc-holdout-06",
+      "split": "holdout",
+      "selectedChildId": "seu-ab947d377c6c872d6552a3a8",
+      "selectedParentId": "seu-e5e942c0d8f4b13c422e8fc8",
+      "queryIntent": "LOCAL",
+      "contextEvidenceIds": [
+        "seu-ab947d377c6c872d6552a3a8"
+      ],
+      "requiredRoles": [
+        "SCOPE_OR_APPLICABILITY"
+      ],
+      "requiredRoleRecall": 0,
+      "acceptedEvidenceRecall": 0,
+      "contextPrecision": 0,
+      "completeContext": false,
+      "irrelevantContextCount": 1,
+      "bounded": true,
+      "contextTextExternal": true,
+      "reviewOnly": true
+    },
+    {
+      "caseId": "pc-holdout-08",
+      "split": "holdout",
+      "selectedChildId": "seu-4362795ce2575a4b7e7f4547",
+      "selectedParentId": "seu-c204599ed619e9b3ca4f451b",
+      "queryIntent": "EXCEPTION",
+      "contextEvidenceIds": [
+        "seu-4362795ce2575a4b7e7f4547",
+        "seu-a61e72e46f9deb01f4609fd4"
+      ],
+      "requiredRoles": [
+        "EXCEPTION_OR_QUALIFICATION"
+      ],
+      "requiredRoleRecall": 1,
+      "acceptedEvidenceRecall": 0,
+      "contextPrecision": 0.5,
+      "completeContext": false,
+      "irrelevantContextCount": 1,
+      "bounded": true,
+      "contextTextExternal": true,
+      "reviewOnly": true
+    },
+    {
+      "caseId": "pc-holdout-09",
+      "split": "holdout",
+      "selectedChildId": "seu-062067d35768a2c736b66fa7",
+      "selectedParentId": "seu-d33245c01054a4534acb037e",
+      "queryIntent": "TABLE",
+      "contextEvidenceIds": [
+        "seu-062067d35768a2c736b66fa7",
+        "seu-062067d35768a2c736b66fa7"
+      ],
+      "requiredRoles": [],
+      "requiredRoleRecall": 1,
+      "acceptedEvidenceRecall": 0,
+      "contextPrecision": 0,
+      "completeContext": false,
+      "irrelevantContextCount": 2,
+      "bounded": true,
+      "contextTextExternal": true,
+      "reviewOnly": true
+    },
+    {
+      "caseId": "pc-holdout-10",
+      "split": "holdout",
+      "selectedChildId": "seu-1e2decf9b34ecd682b8b791d",
+      "selectedParentId": "seu-e566c8a31c227a03505ade60",
+      "queryIntent": "TABLE",
+      "contextEvidenceIds": [
+        "seu-1e2decf9b34ecd682b8b791d"
+      ],
+      "requiredRoles": [
+        "HEADER_CONTEXT"
+      ],
+      "requiredRoleRecall": 0,
+      "acceptedEvidenceRecall": 0,
+      "contextPrecision": 0,
+      "completeContext": false,
+      "irrelevantContextCount": 1,
+      "bounded": true,
+      "contextTextExternal": true,
+      "reviewOnly": true
+    },
+    {
+      "caseId": "pc-holdout-11",
+      "split": "holdout",
+      "selectedChildId": "seu-5c2d619646487f7fac34a78c",
+      "selectedParentId": "seu-dfa1e9aa75d832a205daa647",
+      "queryIntent": "LOCAL",
+      "contextEvidenceIds": [
+        "seu-5c2d619646487f7fac34a78c"
+      ],
+      "requiredRoles": [
+        "HEADER_CONTEXT"
+      ],
+      "requiredRoleRecall": 0,
+      "acceptedEvidenceRecall": 0.5,
+      "contextPrecision": 1,
+      "completeContext": false,
+      "irrelevantContextCount": 0,
+      "bounded": true,
+      "contextTextExternal": true,
+      "reviewOnly": true
+    },
+    {
+      "caseId": "pc-holdout-12",
+      "split": "holdout",
+      "selectedChildId": "seu-8cc668ea77336c95eb6c75d0",
+      "selectedParentId": "seu-667a93c02758fc2395f2abec",
+      "queryIntent": "LOCAL",
+      "contextEvidenceIds": [
+        "seu-8cc668ea77336c95eb6c75d0"
+      ],
+      "requiredRoles": [],
+      "requiredRoleRecall": 1,
+      "acceptedEvidenceRecall": 0,
+      "contextPrecision": 0,
+      "completeContext": false,
+      "irrelevantContextCount": 1,
+      "bounded": true,
+      "contextTextExternal": true,
+      "reviewOnly": true
+    },
+    {
+      "caseId": "pc-holdout-13",
+      "split": "holdout",
+      "selectedChildId": "seu-ae44cb217f8e3b29532bb64e",
+      "selectedParentId": "seu-3ce2b30d5d7305b48aa75dcc",
+      "queryIntent": "LOCAL",
+      "contextEvidenceIds": [
+        "seu-ae44cb217f8e3b29532bb64e"
+      ],
+      "requiredRoles": [],
+      "requiredRoleRecall": 1,
+      "acceptedEvidenceRecall": 0,
+      "contextPrecision": 0,
+      "completeContext": false,
+      "irrelevantContextCount": 1,
+      "bounded": true,
+      "contextTextExternal": true,
+      "reviewOnly": true
+    },
+    {
+      "caseId": "pc-holdout-14",
+      "split": "holdout",
+      "selectedChildId": "seu-2f79cb831494546c761cf6f9",
+      "selectedParentId": "seu-c57d583b4276934c241971eb",
+      "queryIntent": "LOCAL",
+      "contextEvidenceIds": [
+        "seu-2f79cb831494546c761cf6f9"
+      ],
+      "requiredRoles": [],
+      "requiredRoleRecall": 1,
+      "acceptedEvidenceRecall": 0,
+      "contextPrecision": 0,
+      "completeContext": false,
+      "irrelevantContextCount": 1,
+      "bounded": true,
+      "contextTextExternal": true,
+      "reviewOnly": true
+    },
+    {
+      "caseId": "pc-holdout-15",
+      "split": "holdout",
+      "selectedChildId": "seu-9b26f96a40d9a6767f2f8388",
+      "selectedParentId": "seu-c57d583b4276934c241971eb",
+      "queryIntent": "LOCAL",
+      "contextEvidenceIds": [
+        "seu-9b26f96a40d9a6767f2f8388"
+      ],
+      "requiredRoles": [],
+      "requiredRoleRecall": 1,
+      "acceptedEvidenceRecall": 0,
+      "contextPrecision": 0,
+      "completeContext": false,
+      "irrelevantContextCount": 1,
+      "bounded": true,
+      "contextTextExternal": true,
+      "reviewOnly": true
+    }
+  ],
+  "summary": {
+    "development": {
+      "caseCount": 6,
+      "sourceTop1": 0.16666666666666666,
+      "sourceTop3": 0.3333333333333333,
+      "sourceTop5": 0.3333333333333333,
+      "acceptedTargetTop1": 0,
+      "acceptedTargetTop3": 0,
+      "acceptedTargetTop5": 0,
+      "acceptedTargetTop10": 0,
+      "acceptedTargetMrr": 0.004559030831720023,
+      "exactChildTop1": 0,
+      "exactParentRate": 0,
+      "wrongSourceRate": 0.8333333333333334,
+      "wrongSectionRate": 0.16666666666666666,
+      "authoritySupportCorrectness": 0.16666666666666666,
+      "citationCoordinateValidity": 1,
+      "targetCitationCorrectness": 0,
+      "requiredRoleRecall": 0.3333333333333333,
+      "acceptedEvidenceRecall": 0,
+      "contextPrecision": 0.16666666666666666,
+      "completeContextRate": 0,
+      "irrelevantContextCount": 5
+    },
+    "holdout": {
+      "caseCount": 11,
+      "sourceTop1": 0.5454545454545454,
+      "sourceTop3": 0.5454545454545454,
+      "sourceTop5": 0.6363636363636364,
+      "acceptedTargetTop1": 0.18181818181818182,
+      "acceptedTargetTop3": 0.2727272727272727,
+      "acceptedTargetTop5": 0.2727272727272727,
+      "acceptedTargetTop10": 0.36363636363636365,
+      "acceptedTargetMrr": 0.2558154550535002,
+      "exactChildTop1": 0.14285714285714285,
+      "exactParentRate": 0.18181818181818182,
+      "wrongSourceRate": 0.45454545454545453,
+      "wrongSectionRate": 0.36363636363636365,
+      "authoritySupportCorrectness": 0.5454545454545454,
+      "citationCoordinateValidity": 1,
+      "targetCitationCorrectness": 0.18181818181818182,
+      "requiredRoleRecall": 0.5454545454545454,
+      "acceptedEvidenceRecall": 0.09090909090909091,
+      "contextPrecision": 0.22727272727272727,
+      "completeContextRate": 0,
+      "irrelevantContextCount": 10
+    },
+    "combined": {
+      "caseCount": 17,
+      "sourceTop1": 0.4117647058823529,
+      "sourceTop3": 0.47058823529411764,
+      "sourceTop5": 0.5294117647058824,
+      "acceptedTargetTop1": 0.11764705882352941,
+      "acceptedTargetTop3": 0.17647058823529413,
+      "acceptedTargetTop5": 0.17647058823529413,
+      "acceptedTargetTop10": 0.23529411764705882,
+      "acceptedTargetMrr": 0.1671367170928719,
+      "exactChildTop1": 0.1,
+      "exactParentRate": 0.11764705882352941,
+      "wrongSourceRate": 0.5882352941176471,
+      "wrongSectionRate": 0.29411764705882354,
+      "authoritySupportCorrectness": 0.4117647058823529,
+      "citationCoordinateValidity": 1,
+      "targetCitationCorrectness": 0.11764705882352941,
+      "requiredRoleRecall": 0.47058823529411764,
+      "acceptedEvidenceRecall": 0.058823529411764705,
+      "contextPrecision": 0.20588235294117646,
+      "completeContextRate": 0,
+      "irrelevantContextCount": 15
+    }
+  },
+  "reviewOnly": true
+}

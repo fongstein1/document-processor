@@ -1,0 +1,57 @@
+{
+  "schemaVersion": "3.0",
+  "runId": "semantic-evidence-unit-correction-2026-09",
+  "evaluationVersion": "EVALUATION_V2",
+  "generatedAt": "2026-09-08T00:00:00.000Z",
+  "sourceIds": [
+    "naic-accounting-publications-appm-2026",
+    "naic-life-fraternal-reporting-asb-life-2025",
+    "naic-life-fraternal-reporting-qsi-life-2026",
+    "naic-pbr-vm-20-vm-31-vm-51-vm20-tables-2026-f-g",
+    "naic-pbr-vm-20-vm-31-vm-51-vm31-templates-reports",
+    "society-of-actuaries-experience-studies-soa-2015-vbt-improvement"
+  ],
+  "sourceCount": 6,
+  "parentCount": 1174,
+  "nestedParentCount": 1168,
+  "parentsByHierarchyLevel": {
+    "0": 6,
+    "1": 227,
+    "2": 941
+  },
+  "childCount": 14103,
+  "childRepresentations": {
+    "SEMANTIC_DEFINITION_CHILD": 515,
+    "SEMANTIC_INSTRUCTION_CHILD": 88,
+    "SEMANTIC_NUMBERED_REQUIREMENT_CHILD": 2459,
+    "SEMANTIC_PARAGRAPH_GROUP_CHILD": 6266,
+    "SEMANTIC_TABLE_CHILD": 3737,
+    "STRUCTURAL_PARENT_PAGE_WINDOW_CHILD": 765,
+    "XLSX_BOUNDED_ROW_RANGE_CHILD": 173,
+    "XLSX_HEADER_CONTEXT_CHILD": 33,
+    "XLSX_SMALL_BLOCK_SINGLE_CHILD": 67
+  },
+  "pdfParentCount": 1041,
+  "pdfChildCount": 13830,
+  "pdfChildTokenSize": {
+    "average": 70.48749096167751,
+    "median": 48,
+    "maximum": 358
+  },
+  "xlsxParentCount": 133,
+  "xlsxTableParentCount": 99,
+  "xlsxChildCount": 273,
+  "xlsxSingleChildParentCount": 66,
+  "xlsxMultiChildParentCount": 33,
+  "xlsxAverageChildrenPerParent": 2.757575757575758,
+  "xlsxMedianChildrenPerParent": 1,
+  "xlsxMaximumChildrenPerParent": 11,
+  "xlsxNonEmptyCellCount": 53141,
+  "xlsxFormulaCellCount": 32633,
+  "xlsxValueCellCount": 53141,
+  "headerContextCount": 99,
+  "rightsStatus": "RIGHTS_REVIEW_REQUIRED",
+  "reviewOnly": true,
+  "promotionStatus": "not_promoted",
+  "ragReadyAllowed": false
+}
