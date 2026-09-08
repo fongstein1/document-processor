@@ -224,7 +224,7 @@ export const evaluateHybridExperiment = async () => {
   const queryRows = (await fs.readFile(path.join(externalRoot, 'queries.jsonl'), 'utf8')).trim().split(/\r?\n/).map(JSON.parse)
   if (passageRows.length !== docs.length || passageRows.some((row, index) => row.id !== docs[index].childId)) throw new Error('Passage/vector order differs from corrected evidence units.')
   const embeddingMetadata = await readJson(path.join(externalRoot, 'embedding-metadata.json'))
-  if (embeddingMetadata.model !== inputs.config.embedding.model || embeddingMetadata.revision !== inputs.config.embedding.revision || embeddingMetadata.license !== inputs.config.embedding.license) throw new Error('Embedding model provenance differs from frozen protocol.')
+  if (embeddingMetadata.model !== inputs.config.embedding.model || embeddingMetadata.revision !== inputs.config.embedding.revision || embeddingMetadata.license !== inputs.config.embedding.license || embeddingMetadata.inferencePrecision !== inputs.config.embedding.inferencePrecision) throw new Error('Embedding model provenance differs from frozen protocol.')
   const documentVectors = await readFloat32(path.join(externalRoot, 'document-embeddings.f32'))
   const queryVectors = await readFloat32(path.join(externalRoot, 'query-embeddings.f32'))
   const dimension = embeddingMetadata.vectorDimension
@@ -318,7 +318,7 @@ export const evaluateHybridExperiment = async () => {
     evaluation: inputs.config.evaluation,
     embeddingModel: inputs.config.embedding.model, embeddingRevision: inputs.config.embedding.revision,
     embeddingLicense: inputs.config.embedding.license, embeddingSourceUrl: inputs.config.embedding.sourceUrl,
-    device: embeddingMetadata.device, pooling: embeddingMetadata.pooling, normalization: embeddingMetadata.normalization,
+    device: embeddingMetadata.device, inferencePrecision: embeddingMetadata.inferencePrecision, pooling: embeddingMetadata.pooling, normalization: embeddingMetadata.normalization,
     passagePrefix: inputs.config.embedding.passagePrefix, queryPrefix: inputs.config.embedding.queryPrefix,
     maxSequenceLength: inputs.config.embedding.maxSequenceLength, vectorDtype: embeddingMetadata.vectorDtype,
     vectorDimension: dimension, vectorCount: docs.length, queryVectorCount: queryRows.length,

@@ -89,6 +89,7 @@ def main():
     parser.add_argument("--license", required=True)
     parser.add_argument("--batch-size", type=int, default=16)
     parser.add_argument("--max-length", type=int, default=512)
+    parser.add_argument("--inference-precision", choices=["float32", "dynamic-int8-linear"], default="float32")
     args = parser.parse_args()
 
     os.environ["HF_HUB_OFFLINE"] = "1"
@@ -101,6 +102,8 @@ def main():
     query_rows = load_jsonl(args.queries)
     tokenizer = AutoTokenizer.from_pretrained(args.model_dir, local_files_only=True)
     model = AutoModel.from_pretrained(args.model_dir, local_files_only=True)
+    if args.inference_precision == "dynamic-int8-linear":
+        model = torch.ao.quantization.quantize_dynamic(model, {torch.nn.Linear}, dtype=torch.qint8)
     model.eval()
 
     args.output_dir.mkdir(parents=True, exist_ok=True)
@@ -120,6 +123,7 @@ def main():
         "revision": args.revision,
         "license": args.license,
         "device": "cpu",
+        "inferencePrecision": args.inference_precision,
         "pooling": "attention-mask average pooling over last_hidden_state",
         "normalization": "L2",
         "maxSequenceLength": args.max_length,

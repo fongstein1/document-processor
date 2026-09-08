@@ -18,6 +18,7 @@
     "license": "mit",
     "sourceUrl": "https://huggingface.co/intfloat/e5-base-v2",
     "device": "cpu",
+    "inferencePrecision": "dynamic-int8-linear",
     "pooling": "attention-mask average pooling over last_hidden_state",
     "normalization": "L2",
     "passagePrefix": "passage: ",

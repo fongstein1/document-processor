@@ -21,6 +21,7 @@ const result = spawnSync(python, [
   '--model-id', config.embedding.model,
   '--revision', config.embedding.revision,
   '--license', config.embedding.license,
+  '--inference-precision', config.embedding.inferencePrecision,
   '--batch-size', process.env.LOCAL_E5_BATCH_SIZE || '64',
   '--max-length', String(config.embedding.maxSequenceLength)
 ], { cwd: repoRoot, stdio: 'inherit', env: { ...process.env, HF_HUB_OFFLINE: '1', TRANSFORMERS_OFFLINE: '1' } })

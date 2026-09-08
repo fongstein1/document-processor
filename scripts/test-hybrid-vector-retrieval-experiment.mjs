@@ -22,6 +22,7 @@ assert.equal(config.evaluation.noHoldoutTuning, true)
 assert.equal(config.evaluation.rankingInputExcludesGold, true)
 assert.equal(config.embedding.localOnly, true)
 assert.equal(config.embedding.hostedApisUsed, false)
+assert.equal(config.embedding.inferencePrecision, 'dynamic-int8-linear')
 
 const documents = [
   { childId: 'a', parentId: 'p1' },
