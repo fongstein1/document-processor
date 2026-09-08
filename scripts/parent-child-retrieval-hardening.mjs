@@ -95,7 +95,7 @@ const classifyChildRole = (text) => {
 const sourceOrder = (c) => [c.worksheetOrder ?? 0, c.pageStart ?? 0, c.pageEnd ?? 0, c.rowStart ?? 0, c.rowEnd ?? 0, c.sourceChunkOrdinal ?? 0, c.childOrdinal ?? 0, c.childId]
 export const orderChildren = (children) => [...children].sort((a, b) => { const x = sourceOrder(a); const y = sourceOrder(b); for (let i = 0; i < x.length; i++) { if (x[i] < y[i]) return -1; if (x[i] > y[i]) return 1 } return 0 })
 const stableId = (...parts) => 'pc-' + sha256(parts.map((p) => String(p ?? '')).join('|')).slice(0, 24)
-const isPdf = (source) => /\.pdf$/i.test(source.filename || '') || String(source.documentType || '').toLowerCase().includes('pdf')
+const isPdf = (source, old) => /\.pdf$/i.test(source.filename || '') || String(source.documentType || '').toLowerCase().includes('pdf') || old?.children?.[0]?.pageStart !== null && old?.children?.[0]?.pageStart !== undefined
 const safeRole = (source) => source.authoritySupportRole || source.extensions?.authoritySupportRole || null
 
 const splitPdf = (text) => {
@@ -204,7 +204,7 @@ export const buildHardening = async ({ output = publicRoot, external = externalR
   const builtSources = []; const publicParents = []; const publicChildren = []; const artifacts = []; const sourceById = []
   for (const [sourceId, provingGround] of sourceIds) {
     const old = await readJson(path.join(inputRoot, sourceId, 'parent-child-substantive.json')); const source = { sourceId, ...Object.fromEntries(Object.entries(old).filter(([k]) => ['sourceSha256', 'rightsStatus'].includes(k))), sourceTitle: old.baselineChunks[0]?.sourceTitle || old.children[0]?.sourceTitle || provingGround, documentType: old.children[0]?.documentType, sourceFamilyId: old.children[0]?.sourceFamilyId, authoritySupportRole: old.children[0]?.authoritySupportRole, filename: old.children[0]?.filename }
-    const built = isPdf(source) ? buildPdf(source, old) : buildXlsx(source, old)
+    const built = isPdf(source, old) ? buildPdf(source, old) : buildXlsx(source, old)
     const privateValue = { schemaVersion: '2.0', runId, provingGround, source: { sourceId, sourceSha256: source.sourceSha256, sourceFamilyId: source.sourceFamilyId, documentType: source.documentType, authoritySupportRole: source.authoritySupportRole, rightsStatus: source.rightsStatus }, parents: built.parents, children: built.children, baselineChunks: old.baselineChunks, parentContexts: built.parents.map((p) => ({ parentId: p.parentId, contextText: normalize(built.children.find((c) => c.parentId === p.parentId)?.sourceTextExcerpt || '').slice(0, 600), textExternal: true })), reviewOnly: true, promotionStatus: 'not_promoted', ragReadyAllowed: false }
     const bytes = Buffer.from(JSON.stringify(privateValue, null, 2) + '\n', 'utf8'); const extPath = path.join(external, sourceId, 'parent-child-retrieval-substantive.json'); await fs.mkdir(path.dirname(extPath), { recursive: true }); await fs.writeFile(extPath, bytes)
     const artifact = { runId, sourceId, artifactType: 'parent-child-retrieval-substantive', externalPath: extPath, sha256: sha256(bytes), byteCount: bytes.length, sourceRawSha256: source.sourceSha256, generatedTimestamp: generatedAt, rightsStorageStatus: source.rightsStatus, reviewOnly: true }; artifacts.push(artifact)

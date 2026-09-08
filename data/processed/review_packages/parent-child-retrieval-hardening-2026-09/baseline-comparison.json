@@ -8,7 +8,7 @@
       "expectedSourceId": "naic-accounting-publications-appm-2026",
       "expectedRole": "current_authority",
       "expectedBaselineChunkId": "naic-accounting-publications-appm-2026--p-1-4",
-      "expectedChildId": "pc-bfd1a7ead1cb26b56aa208e3",
+      "expectedChildId": "pc-19e6defc398dbb75b9957f1e",
       "expectedParentId": "pc-2143bcbff9b8759082773f1c",
       "baseline": {
         "top1SourceId": "naic-accounting-publications-appm-2026",
@@ -26,32 +26,32 @@
         "citationCorrect": true
       },
       "parentChild": {
-        "selectedChildId": "pc-3a7ef18b5d59f451896550ac",
+        "selectedChildId": "pc-97c8fdb35f049ae42dce85bf",
         "selectedSourceId": "naic-accounting-publications-appm-2026",
         "selectedRole": "current_authority",
         "selectedParentId": "pc-931c1f37d59eecbca74bbbb2",
         "selectedSourceSha256": "572b86e1e45582656f23d218d4695ba5a102e5f13f00c4cb34ae68e54d3830a0",
         "expectedSourceSha256": "572b86e1e45582656f23d218d4695ba5a102e5f13f00c4cb34ae68e54d3830a0",
         "selectedRoleMatches": true,
-        "childBm25": 9.414881646415445,
+        "childBm25": 13.222142962475482,
         "parentBm25": 64.3302596529743,
         "rerankComponents": {
-          "childBm25": 9.414881646415445,
+          "childBm25": 13.222142962475482,
           "parentBm25": 64.3302596529743,
           "identifierBoost": 0,
           "phraseBoost": 0,
           "structuralBoost": 0,
           "sourceTitleBoost": 0,
           "queryCoverage": 0.26666666666666666,
-          "lengthAdjustment": 0.0875376219064817
+          "lengthAdjustment": 0.12777531299998798
         },
-        "finalRerankScore": 45.150728744124464,
-        "targetRank": 840,
+        "finalRerankScore": 48.998227751278,
+        "targetRank": 1014,
         "sourceTop1Correct": true,
         "sourceTop3Correct": true,
         "targetTop1Correct": false,
         "targetTop3Correct": false,
-        "targetMrr": 0.0011904761904761906,
+        "targetMrr": 0.0009861932938856016,
         "correctParent": false,
         "authoritySupportCorrectness": true,
         "citationCorrectness": true,
@@ -59,7 +59,7 @@
           "pc-d3a8b7da6742658547b39dfa"
         ],
         "capturedEvidenceIds": [
-          "pc-3a7ef18b5d59f451896550ac"
+          "pc-97c8fdb35f049ae42dce85bf"
         ],
         "requiredEvidenceCaptured": false,
         "contextRecall": 0,
@@ -79,7 +79,7 @@
       "expectedSourceId": "naic-accounting-publications-appm-2026",
       "expectedRole": "current_authority",
       "expectedBaselineChunkId": "naic-accounting-publications-appm-2026--p-12-12",
-      "expectedChildId": "pc-19baa0c0941b001c2af24530",
+      "expectedChildId": "pc-3a9a8f4f00290a1f6461fe49",
       "expectedParentId": "pc-72a15138363ac5c440dd5946",
       "baseline": {
         "top1SourceId": "naic-accounting-publications-appm-2026",
@@ -97,32 +97,32 @@
         "citationCorrect": true
       },
       "parentChild": {
-        "selectedChildId": "pc-ca556c2605007a6bdadb60f0",
+        "selectedChildId": "pc-2ca85f4eed355f569b07e1d7",
         "selectedSourceId": "naic-accounting-publications-appm-2026",
         "selectedRole": "current_authority",
         "selectedParentId": "pc-931c1f37d59eecbca74bbbb2",
         "selectedSourceSha256": "572b86e1e45582656f23d218d4695ba5a102e5f13f00c4cb34ae68e54d3830a0",
         "expectedSourceSha256": "572b86e1e45582656f23d218d4695ba5a102e5f13f00c4cb34ae68e54d3830a0",
         "selectedRoleMatches": true,
-        "childBm25": 15.964814703998119,
+        "childBm25": 20.626416008356095,
         "parentBm25": 64.3302596529743,
         "rerankComponents": {
-          "childBm25": 15.964814703998119,
+          "childBm25": 20.626416008356095,
           "parentBm25": 64.3302596529743,
           "identifierBoost": 0,
           "phraseBoost": 0,
           "structuralBoost": 0,
           "sourceTitleBoost": 0,
-          "queryCoverage": 0.6400000000000001,
-          "lengthAdjustment": 0.08695652173913043
+          "queryCoverage": 0.5599999999999999,
+          "lengthAdjustment": 0.15
         },
-        "finalRerankScore": 52.07341403487312,
-        "targetRank": 1539,
+        "finalRerankScore": 56.718058817491965,
+        "targetRank": 2192,
         "sourceTop1Correct": true,
         "sourceTop3Correct": true,
         "targetTop1Correct": false,
         "targetTop3Correct": false,
-        "targetMrr": 0.000649772579597141,
+        "targetMrr": 0.0004562043795620438,
         "correctParent": false,
         "authoritySupportCorrectness": true,
         "citationCorrectness": true,
@@ -130,10 +130,10 @@
           "pc-fd15626ce5613fc208824962"
         ],
         "capturedEvidenceIds": [
-          "pc-ca556c2605007a6bdadb60f0",
+          "pc-2ca85f4eed355f569b07e1d7",
           "parent:pc-931c1f37d59eecbca74bbbb2",
-          "pc-8f22867b3de8c732173c9090",
-          "pc-984a49fb9323193772108514"
+          "pc-e66575c048e033eb65eed94f",
+          "pc-7b3bf51ba577d4292e9673c3"
         ],
         "requiredEvidenceCaptured": false,
         "contextRecall": 0,
@@ -147,11 +147,11 @@
           "textExternal": true
         },
         "precedingChild": {
-          "childId": "pc-8f22867b3de8c732173c9090",
+          "childId": "pc-e66575c048e033eb65eed94f",
           "sourceOrder": true
         },
         "followingChild": {
-          "childId": "pc-984a49fb9323193772108514",
+          "childId": "pc-7b3bf51ba577d4292e9673c3",
           "sourceOrder": true
         },
         "queryNeed": "SCOPE_CONTEXT",
@@ -164,7 +164,7 @@
       "expectedSourceId": "naic-accounting-publications-appm-2026",
       "expectedRole": "current_authority",
       "expectedBaselineChunkId": "naic-accounting-publications-appm-2026--p-9-9",
-      "expectedChildId": "pc-3dd4c65a3f0bacff8945d2ff",
+      "expectedChildId": "pc-02314ca95d69741622d9e65f",
       "expectedParentId": "pc-c2f03a89a75ef66a1d0a024e",
       "baseline": {
         "top1SourceId": "naic-accounting-publications-appm-2026",
@@ -182,32 +182,32 @@
         "citationCorrect": true
       },
       "parentChild": {
-        "selectedChildId": "pc-3a7ef18b5d59f451896550ac",
+        "selectedChildId": "pc-1f8a37fd456970ee96481f26",
         "selectedSourceId": "naic-accounting-publications-appm-2026",
         "selectedRole": "current_authority",
         "selectedParentId": "pc-931c1f37d59eecbca74bbbb2",
         "selectedSourceSha256": "572b86e1e45582656f23d218d4695ba5a102e5f13f00c4cb34ae68e54d3830a0",
         "expectedSourceSha256": "572b86e1e45582656f23d218d4695ba5a102e5f13f00c4cb34ae68e54d3830a0",
         "selectedRoleMatches": true,
-        "childBm25": 10.667018009871805,
+        "childBm25": 14.983378208491528,
         "parentBm25": 64.3302596529743,
         "rerankComponents": {
-          "childBm25": 10.667018009871805,
+          "childBm25": 14.983378208491528,
           "parentBm25": 64.3302596529743,
           "identifierBoost": 0,
           "phraseBoost": 0,
           "structuralBoost": 0,
           "sourceTitleBoost": 0,
           "queryCoverage": 0.5,
-          "lengthAdjustment": 0.0875376219064817
+          "lengthAdjustment": 0.11909826683508273
         },
-        "finalRerankScore": 46.63619844091416,
-        "targetRank": 900,
+        "finalRerankScore": 50.98411928446248,
+        "targetRank": 755,
         "sourceTop1Correct": true,
         "sourceTop3Correct": true,
         "targetTop1Correct": false,
         "targetTop3Correct": false,
-        "targetMrr": 0.0011111111111111111,
+        "targetMrr": 0.0013245033112582781,
         "correctParent": false,
         "authoritySupportCorrectness": true,
         "citationCorrectness": true,
@@ -215,7 +215,7 @@
           "pc-2634bb450edf5849e8e36a4f"
         ],
         "capturedEvidenceIds": [
-          "pc-3a7ef18b5d59f451896550ac"
+          "pc-1f8a37fd456970ee96481f26"
         ],
         "requiredEvidenceCaptured": false,
         "contextRecall": 0,
@@ -235,7 +235,7 @@
       "expectedSourceId": "naic-accounting-publications-appm-2026",
       "expectedRole": "current_authority",
       "expectedBaselineChunkId": "naic-accounting-publications-appm-2026--p-75-75",
-      "expectedChildId": "pc-80dde780893d66ff3f894082",
+      "expectedChildId": "pc-4d79911697dfeb9574540cb9",
       "expectedParentId": "pc-e41df70538dbae31443cccdc",
       "baseline": {
         "top1SourceId": "naic-accounting-publications-appm-2026",
@@ -253,32 +253,32 @@
         "citationCorrect": true
       },
       "parentChild": {
-        "selectedChildId": "pc-8c372084c28399b54ec09bd2",
+        "selectedChildId": "pc-418d90e4c124a2373752a1e3",
         "selectedSourceId": "naic-accounting-publications-appm-2026",
         "selectedRole": "current_authority",
         "selectedParentId": "pc-ff765f0754008f88dabb2b7b",
         "selectedSourceSha256": "572b86e1e45582656f23d218d4695ba5a102e5f13f00c4cb34ae68e54d3830a0",
         "expectedSourceSha256": "572b86e1e45582656f23d218d4695ba5a102e5f13f00c4cb34ae68e54d3830a0",
         "selectedRoleMatches": true,
-        "childBm25": 24.973723995721453,
+        "childBm25": 28.385891375992998,
         "parentBm25": 37.19783463893849,
         "rerankComponents": {
-          "childBm25": 24.973723995721453,
+          "childBm25": 28.385891375992998,
           "parentBm25": 37.19783463893849,
           "identifierBoost": 0,
           "phraseBoost": 0,
           "structuralBoost": 0,
           "sourceTitleBoost": 0,
-          "queryCoverage": 0.6857142857142857,
-          "lengthAdjustment": 0.09901475429766744
+          "queryCoverage": 0.5714285714285715,
+          "lengthAdjustment": 0.15
         },
-        "finalRerankScore": 46.21726208714958,
-        "targetRank": 428,
+        "finalRerankScore": 49.56612899883773,
+        "targetRank": 501,
         "sourceTop1Correct": true,
         "sourceTop3Correct": true,
         "targetTop1Correct": false,
         "targetTop3Correct": false,
-        "targetMrr": 0.002336448598130841,
+        "targetMrr": 0.001996007984031936,
         "correctParent": false,
         "authoritySupportCorrectness": true,
         "citationCorrectness": true,
@@ -287,7 +287,7 @@
           "parent:pc-e41df70538dbae31443cccdc"
         ],
         "capturedEvidenceIds": [
-          "pc-8c372084c28399b54ec09bd2",
+          "pc-418d90e4c124a2373752a1e3",
           "parent:pc-ff765f0754008f88dabb2b7b"
         ],
         "requiredEvidenceCaptured": false,
@@ -313,7 +313,7 @@
       "expectedSourceId": "naic-life-fraternal-reporting-asb-life-2025",
       "expectedRole": "current_support",
       "expectedBaselineChunkId": "naic-life-fraternal-reporting-asb-life-2025--p-1-3",
-      "expectedChildId": "pc-4105e25c042ee864c8b05b2d",
+      "expectedChildId": "pc-f49c98281b16b7e3c10d1edf",
       "expectedParentId": "pc-2ecddcffb04c54cc085830b1",
       "baseline": {
         "top1SourceId": "naic-life-fraternal-reporting-asb-life-2025",
@@ -331,32 +331,32 @@
         "citationCorrect": true
       },
       "parentChild": {
-        "selectedChildId": "pc-b8093a0328aee1cdd7300188",
+        "selectedChildId": "pc-25ef0f822d8d04364205a26f",
         "selectedSourceId": "naic-life-fraternal-reporting-asb-life-2025",
         "selectedRole": "current_support",
         "selectedParentId": "pc-c1b31e4e578085960fb484c1",
         "selectedSourceSha256": "6819aeff68578d789fc5a0e09ba5b60e15edc89305ae9d42fd3b66048147cae1",
         "expectedSourceSha256": "6819aeff68578d789fc5a0e09ba5b60e15edc89305ae9d42fd3b66048147cae1",
         "selectedRoleMatches": true,
-        "childBm25": 11.611071502548995,
+        "childBm25": 16.81694780586456,
         "parentBm25": 64.3302596529743,
         "rerankComponents": {
-          "childBm25": 11.611071502548995,
+          "childBm25": 16.81694780586456,
           "parentBm25": 64.3302596529743,
           "identifierBoost": 0,
           "phraseBoost": 0,
           "structuralBoost": 0,
           "sourceTitleBoost": 0,
           "queryCoverage": 0.5599999999999999,
-          "lengthAdjustment": 0.09962709627734358
+          "lengthAdjustment": 0.13703774196550633
         },
-        "finalRerankScore": 47.65234140796221,
-        "targetRank": 10,
+        "finalRerankScore": 52.895628356965936,
+        "targetRank": 15,
         "sourceTop1Correct": true,
         "sourceTop3Correct": true,
         "targetTop1Correct": false,
         "targetTop3Correct": false,
-        "targetMrr": 0.1,
+        "targetMrr": 0.06666666666666667,
         "correctParent": false,
         "authoritySupportCorrectness": true,
         "citationCorrectness": true,
@@ -364,7 +364,7 @@
           "pc-e1f7651e0faca7506834d01a"
         ],
         "capturedEvidenceIds": [
-          "pc-b8093a0328aee1cdd7300188"
+          "pc-25ef0f822d8d04364205a26f"
         ],
         "requiredEvidenceCaptured": false,
         "contextRecall": 0,
@@ -384,7 +384,7 @@
       "expectedSourceId": "naic-life-fraternal-reporting-asb-life-2025",
       "expectedRole": "current_support",
       "expectedBaselineChunkId": "naic-life-fraternal-reporting-asb-life-2025--p-4-4",
-      "expectedChildId": "pc-0ee8dd1c42b93cd20821c2ff",
+      "expectedChildId": "pc-82001181213e329fbc394424",
       "expectedParentId": "pc-a273e3fc1cc6f517fdfd7a15",
       "baseline": {
         "top1SourceId": "naic-life-fraternal-reporting-qsi-life-2026",
@@ -402,32 +402,32 @@
         "citationCorrect": true
       },
       "parentChild": {
-        "selectedChildId": "pc-cd27430b8d54910995117420",
+        "selectedChildId": "pc-be3eb320a7ac38a752d1bc76",
         "selectedSourceId": "naic-accounting-publications-appm-2026",
         "selectedRole": "current_authority",
         "selectedParentId": "pc-26bbecb9b616169d5c82e8c3",
         "selectedSourceSha256": "572b86e1e45582656f23d218d4695ba5a102e5f13f00c4cb34ae68e54d3830a0",
         "expectedSourceSha256": "6819aeff68578d789fc5a0e09ba5b60e15edc89305ae9d42fd3b66048147cae1",
         "selectedRoleMatches": false,
-        "childBm25": 40.66788979678055,
+        "childBm25": 44.66473972121068,
         "parentBm25": 64.3302596529743,
         "rerankComponents": {
-          "childBm25": 40.66788979678055,
+          "childBm25": 44.66473972121068,
           "parentBm25": 64.3302596529743,
           "identifierBoost": 2.2,
           "phraseBoost": 0,
           "structuralBoost": 0.8,
           "sourceTitleBoost": 0,
           "queryCoverage": 0.30000000000000004,
-          "lengthAdjustment": 0.07543142864047142
+          "lengthAdjustment": 0.09600307214746386
         },
-        "finalRerankScore": 79.4249640345569,
-        "targetRank": 559,
+        "finalRerankScore": 83.44238560249401,
+        "targetRank": 772,
         "sourceTop1Correct": false,
         "sourceTop3Correct": false,
         "targetTop1Correct": false,
         "targetTop3Correct": false,
-        "targetMrr": 0.0017889087656529517,
+        "targetMrr": 0.0012953367875647669,
         "correctParent": false,
         "authoritySupportCorrectness": false,
         "citationCorrectness": true,
@@ -435,9 +435,9 @@
           "pc-b592dc1d95f6f57714c9444a"
         ],
         "capturedEvidenceIds": [
-          "pc-cd27430b8d54910995117420",
+          "pc-be3eb320a7ac38a752d1bc76",
           "parent:pc-26bbecb9b616169d5c82e8c3",
-          "pc-1ad76f03a5037d2d82f1cf80"
+          "pc-8644d2f1c69bb00ba2de662a"
         ],
         "requiredEvidenceCaptured": false,
         "contextRecall": 0,
@@ -452,7 +452,7 @@
         },
         "precedingChild": null,
         "followingChild": {
-          "childId": "pc-1ad76f03a5037d2d82f1cf80",
+          "childId": "pc-8644d2f1c69bb00ba2de662a",
           "sourceOrder": true
         },
         "queryNeed": "TABLE_HEADER_CONTEXT",
@@ -465,7 +465,7 @@
       "expectedSourceId": "naic-life-fraternal-reporting-asb-life-2025",
       "expectedRole": "current_support",
       "expectedBaselineChunkId": "naic-life-fraternal-reporting-asb-life-2025--p-4-4",
-      "expectedChildId": "pc-0ee8dd1c42b93cd20821c2ff",
+      "expectedChildId": "pc-82001181213e329fbc394424",
       "expectedParentId": "pc-a273e3fc1cc6f517fdfd7a15",
       "baseline": {
         "top1SourceId": "naic-life-fraternal-reporting-qsi-life-2026",
@@ -483,32 +483,32 @@
         "citationCorrect": true
       },
       "parentChild": {
-        "selectedChildId": "pc-3940f5679948af1e30c7df5b",
+        "selectedChildId": "pc-6e8430684504061725d33e3e",
         "selectedSourceId": "naic-accounting-publications-appm-2026",
         "selectedRole": "current_authority",
-        "selectedParentId": "pc-79d63e64bc8b34d52e7567cd",
+        "selectedParentId": "pc-3a57581baf643a39fc58e172",
         "selectedSourceSha256": "572b86e1e45582656f23d218d4695ba5a102e5f13f00c4cb34ae68e54d3830a0",
         "expectedSourceSha256": "6819aeff68578d789fc5a0e09ba5b60e15edc89305ae9d42fd3b66048147cae1",
         "selectedRoleMatches": false,
-        "childBm25": 54.33738216289663,
+        "childBm25": 59.93379116183385,
         "parentBm25": 98.76861970096324,
         "rerankComponents": {
-          "childBm25": 54.33738216289663,
+          "childBm25": 59.93379116183385,
           "parentBm25": 98.76861970096324,
           "identifierBoost": 2.2,
           "phraseBoost": 0,
           "structuralBoost": 0.8,
           "sourceTitleBoost": 0,
           "queryCoverage": 0.35555555555555557,
-          "lengthAdjustment": 0.08369739506373744
+          "lengthAdjustment": 0.07796811755854505
         },
-        "finalRerankScore": 112.09937594904571,
-        "targetRank": 791,
+        "finalRerankScore": 117.69005567047773,
+        "targetRank": 1020,
         "sourceTop1Correct": false,
         "sourceTop3Correct": false,
         "targetTop1Correct": false,
         "targetTop3Correct": false,
-        "targetMrr": 0.0012642225031605564,
+        "targetMrr": 0.000980392156862745,
         "correctParent": false,
         "authoritySupportCorrectness": false,
         "citationCorrectness": true,
@@ -516,26 +516,22 @@
           "pc-b592dc1d95f6f57714c9444a"
         ],
         "capturedEvidenceIds": [
-          "pc-3940f5679948af1e30c7df5b",
-          "parent:pc-79d63e64bc8b34d52e7567cd",
-          "pc-62c5f8ee7bef68c122d7ad42"
+          "pc-6e8430684504061725d33e3e",
+          "parent:pc-3a57581baf643a39fc58e172"
         ],
         "requiredEvidenceCaptured": false,
         "contextRecall": 0,
         "contextPrecision": 0,
-        "irrelevantEvidenceCount": 3,
-        "contextSize": 3,
+        "irrelevantEvidenceCount": 2,
+        "contextSize": 2,
         "parentContext": {
-          "parentId": "pc-79d63e64bc8b34d52e7567cd",
+          "parentId": "pc-3a57581baf643a39fc58e172",
           "structuralLabel": "detected schedule",
           "structuralIdentifier": "SCHEDULE AND",
           "textExternal": true
         },
         "precedingChild": null,
-        "followingChild": {
-          "childId": "pc-62c5f8ee7bef68c122d7ad42",
-          "sourceOrder": true
-        },
+        "followingChild": null,
         "queryNeed": "TABLE_HEADER_CONTEXT",
         "expansionReason": "query_need_table_header_context"
       }
@@ -546,7 +542,7 @@
       "expectedSourceId": "naic-life-fraternal-reporting-asb-life-2025",
       "expectedRole": "current_support",
       "expectedBaselineChunkId": "naic-life-fraternal-reporting-asb-life-2025--p-4-4",
-      "expectedChildId": "pc-0ee8dd1c42b93cd20821c2ff",
+      "expectedChildId": "pc-82001181213e329fbc394424",
       "expectedParentId": "pc-a273e3fc1cc6f517fdfd7a15",
       "baseline": {
         "top1SourceId": "naic-accounting-publications-appm-2026",
@@ -564,55 +560,59 @@
         "citationCorrect": true
       },
       "parentChild": {
-        "selectedChildId": "pc-29ca60053efb475654953567",
-        "selectedSourceId": "naic-accounting-publications-appm-2026",
-        "selectedRole": "current_authority",
-        "selectedParentId": "pc-67e0b5480c4206cfafd53357",
-        "selectedSourceSha256": "572b86e1e45582656f23d218d4695ba5a102e5f13f00c4cb34ae68e54d3830a0",
+        "selectedChildId": "pc-c5785ab84588353293c55bda",
+        "selectedSourceId": "naic-life-fraternal-reporting-qsi-life-2026",
+        "selectedRole": "current_support",
+        "selectedParentId": "pc-ae080dbe2518a6340bb7785f",
+        "selectedSourceSha256": "fa507228461252f92cbe8d0e728b0cc5dfdd93f6c93a4cf9a6380063dec44f31",
         "expectedSourceSha256": "6819aeff68578d789fc5a0e09ba5b60e15edc89305ae9d42fd3b66048147cae1",
-        "selectedRoleMatches": false,
-        "childBm25": 29.103617685925613,
+        "selectedRoleMatches": true,
+        "childBm25": 31.57904719846856,
         "parentBm25": 47.918857438183196,
         "rerankComponents": {
-          "childBm25": 29.103617685925613,
+          "childBm25": 31.57904719846856,
           "parentBm25": 47.918857438183196,
           "identifierBoost": 2.2,
           "phraseBoost": 0,
           "structuralBoost": 0.8,
           "sourceTitleBoost": 0,
-          "queryCoverage": 0.5714285714285715,
-          "lengthAdjustment": 0.0831890330807703
+          "queryCoverage": 0.45714285714285713,
+          "lengthAdjustment": 0.12427395320024001
         },
-        "finalRerankScore": 59.113606881435715,
-        "targetRank": 45,
+        "finalRerankScore": 61.51583559981241,
+        "targetRank": 77,
         "sourceTop1Correct": false,
         "sourceTop3Correct": false,
         "targetTop1Correct": false,
         "targetTop3Correct": false,
-        "targetMrr": 0.022222222222222223,
+        "targetMrr": 0.012987012987012988,
         "correctParent": false,
-        "authoritySupportCorrectness": false,
+        "authoritySupportCorrectness": true,
         "citationCorrectness": true,
         "requiredEvidenceIds": [
           "pc-b592dc1d95f6f57714c9444a"
         ],
         "capturedEvidenceIds": [
-          "pc-29ca60053efb475654953567",
-          "parent:pc-67e0b5480c4206cfafd53357"
+          "pc-c5785ab84588353293c55bda",
+          "parent:pc-ae080dbe2518a6340bb7785f",
+          "pc-dc8fb8fd22ce049c630c3de5"
         ],
         "requiredEvidenceCaptured": false,
         "contextRecall": 0,
         "contextPrecision": 0,
-        "irrelevantEvidenceCount": 2,
-        "contextSize": 2,
+        "irrelevantEvidenceCount": 3,
+        "contextSize": 3,
         "parentContext": {
-          "parentId": "pc-67e0b5480c4206cfafd53357",
+          "parentId": "pc-ae080dbe2518a6340bb7785f",
           "structuralLabel": "detected schedule",
           "structuralIdentifier": "SCHEDULE S",
           "textExternal": true
         },
         "precedingChild": null,
-        "followingChild": null,
+        "followingChild": {
+          "childId": "pc-dc8fb8fd22ce049c630c3de5",
+          "sourceOrder": true
+        },
         "queryNeed": "TABLE_HEADER_CONTEXT",
         "expansionReason": "query_need_table_header_context"
       }
@@ -623,7 +623,7 @@
       "expectedSourceId": "naic-life-fraternal-reporting-qsi-life-2026",
       "expectedRole": "current_support",
       "expectedBaselineChunkId": "naic-life-fraternal-reporting-qsi-life-2026--p-4-4",
-      "expectedChildId": "pc-da17a1045d70afb358170316",
+      "expectedChildId": "pc-1ece105122df329ad154f779",
       "expectedParentId": "pc-fd3d52420599859daa22abe3",
       "baseline": {
         "top1SourceId": "naic-life-fraternal-reporting-qsi-life-2026",
@@ -641,32 +641,32 @@
         "citationCorrect": true
       },
       "parentChild": {
-        "selectedChildId": "pc-67667ce56f256505224cf21f",
+        "selectedChildId": "pc-20fc8dfbac3da017d6de21a6",
         "selectedSourceId": "naic-accounting-publications-appm-2026",
         "selectedRole": "current_authority",
         "selectedParentId": "pc-72a15138363ac5c440dd5946",
         "selectedSourceSha256": "572b86e1e45582656f23d218d4695ba5a102e5f13f00c4cb34ae68e54d3830a0",
         "expectedSourceSha256": "fa507228461252f92cbe8d0e728b0cc5dfdd93f6c93a4cf9a6380063dec44f31",
         "selectedRoleMatches": false,
-        "childBm25": 5.094795163331028,
+        "childBm25": 7.604015412512831,
         "parentBm25": 64.3302596529743,
         "rerankComponents": {
-          "childBm25": 5.094795163331028,
+          "childBm25": 7.604015412512831,
           "parentBm25": 64.3302596529743,
           "identifierBoost": 0,
           "phraseBoost": 0,
           "structuralBoost": 0,
           "sourceTitleBoost": 0,
-          "queryCoverage": 0.4,
-          "lengthAdjustment": 0.08551382496180256
+          "queryCoverage": 0.32000000000000006,
+          "lengthAdjustment": 0.08873565094161139
         },
-        "finalRerankScore": 40.961951797428696,
-        "targetRank": 226,
+        "finalRerankScore": 43.39439387259031,
+        "targetRank": 476,
         "sourceTop1Correct": false,
-        "sourceTop3Correct": true,
+        "sourceTop3Correct": false,
         "targetTop1Correct": false,
         "targetTop3Correct": false,
-        "targetMrr": 0.004424778761061947,
+        "targetMrr": 0.0021008403361344537,
         "correctParent": false,
         "authoritySupportCorrectness": false,
         "citationCorrectness": true,
@@ -674,7 +674,7 @@
           "pc-d1fbc507f8a0a8729236a29a"
         ],
         "capturedEvidenceIds": [
-          "pc-67667ce56f256505224cf21f"
+          "pc-20fc8dfbac3da017d6de21a6"
         ],
         "requiredEvidenceCaptured": false,
         "contextRecall": 0,
@@ -694,7 +694,7 @@
       "expectedSourceId": "naic-life-fraternal-reporting-qsi-life-2026",
       "expectedRole": "current_support",
       "expectedBaselineChunkId": "naic-life-fraternal-reporting-qsi-life-2026--p-8-9",
-      "expectedChildId": "pc-2c1bee93564f921b3def5bad",
+      "expectedChildId": "pc-c149011e6b15389d666f6941",
       "expectedParentId": "pc-9ac3b316f60913b4eb3b9843",
       "baseline": {
         "top1SourceId": "naic-life-fraternal-reporting-qsi-life-2026",
@@ -712,32 +712,32 @@
         "citationCorrect": true
       },
       "parentChild": {
-        "selectedChildId": "pc-b8093a0328aee1cdd7300188",
+        "selectedChildId": "pc-02026ea1599341708f33efb4",
         "selectedSourceId": "naic-life-fraternal-reporting-asb-life-2025",
         "selectedRole": "current_support",
         "selectedParentId": "pc-c1b31e4e578085960fb484c1",
         "selectedSourceSha256": "6819aeff68578d789fc5a0e09ba5b60e15edc89305ae9d42fd3b66048147cae1",
         "expectedSourceSha256": "fa507228461252f92cbe8d0e728b0cc5dfdd93f6c93a4cf9a6380063dec44f31",
         "selectedRoleMatches": true,
-        "childBm25": 3.9513610497838325,
+        "childBm25": 7.471516662590925,
         "parentBm25": 64.3302596529743,
         "rerankComponents": {
-          "childBm25": 3.9513610497838325,
+          "childBm25": 7.471516662590925,
           "parentBm25": 64.3302596529743,
           "identifierBoost": 0,
           "phraseBoost": 0,
           "structuralBoost": 0,
           "sourceTitleBoost": 0,
           "queryCoverage": 0.4,
-          "lengthAdjustment": 0.09962709627734358
+          "lengthAdjustment": 0.15
         },
-        "finalRerankScore": 39.83263095519705,
-        "targetRank": 11,
+        "finalRerankScore": 43.40315947172679,
+        "targetRank": 25,
         "sourceTop1Correct": false,
         "sourceTop3Correct": false,
         "targetTop1Correct": false,
         "targetTop3Correct": false,
-        "targetMrr": 0.09090909090909091,
+        "targetMrr": 0.04,
         "correctParent": false,
         "authoritySupportCorrectness": true,
         "citationCorrectness": true,
@@ -745,22 +745,30 @@
           "pc-369eef2248bd528d6e595674"
         ],
         "capturedEvidenceIds": [
-          "pc-b8093a0328aee1cdd7300188",
-          "parent:pc-c1b31e4e578085960fb484c1"
+          "pc-02026ea1599341708f33efb4",
+          "parent:pc-c1b31e4e578085960fb484c1",
+          "pc-25ef0f822d8d04364205a26f",
+          "pc-80983881d9f71423dde61c37"
         ],
         "requiredEvidenceCaptured": false,
         "contextRecall": 0,
         "contextPrecision": 0,
-        "irrelevantEvidenceCount": 2,
-        "contextSize": 2,
+        "irrelevantEvidenceCount": 4,
+        "contextSize": 4,
         "parentContext": {
           "parentId": "pc-c1b31e4e578085960fb484c1",
           "structuralLabel": "detected schedule",
           "structuralIdentifier": "SCHEDULE SIS",
           "textExternal": true
         },
-        "precedingChild": null,
-        "followingChild": null,
+        "precedingChild": {
+          "childId": "pc-25ef0f822d8d04364205a26f",
+          "sourceOrder": true
+        },
+        "followingChild": {
+          "childId": "pc-80983881d9f71423dde61c37",
+          "sourceOrder": true
+        },
         "queryNeed": "SCOPE_CONTEXT",
         "expansionReason": "query_need_scope_context"
       }
@@ -771,7 +779,7 @@
       "expectedSourceId": "naic-life-fraternal-reporting-qsi-life-2026",
       "expectedRole": "current_support",
       "expectedBaselineChunkId": "naic-life-fraternal-reporting-qsi-life-2026--p-8-9",
-      "expectedChildId": "pc-2c1bee93564f921b3def5bad",
+      "expectedChildId": "pc-c149011e6b15389d666f6941",
       "expectedParentId": "pc-9ac3b316f60913b4eb3b9843",
       "baseline": {
         "top1SourceId": "naic-accounting-publications-appm-2026",
@@ -789,17 +797,17 @@
         "citationCorrect": true
       },
       "parentChild": {
-        "selectedChildId": "pc-2c843d54a860fda17625fe81",
+        "selectedChildId": "pc-e46e227554a1951165f3be10",
         "selectedSourceId": "naic-accounting-publications-appm-2026",
         "selectedRole": "current_authority",
         "selectedParentId": "pc-bf32085ea1e21d3e081ffdff",
         "selectedSourceSha256": "572b86e1e45582656f23d218d4695ba5a102e5f13f00c4cb34ae68e54d3830a0",
         "expectedSourceSha256": "fa507228461252f92cbe8d0e728b0cc5dfdd93f6c93a4cf9a6380063dec44f31",
         "selectedRoleMatches": false,
-        "childBm25": 11.547995247785945,
+        "childBm25": 14.942478022836411,
         "parentBm25": 46.99411798830014,
         "rerankComponents": {
-          "childBm25": 11.547995247785945,
+          "childBm25": 14.942478022836411,
           "parentBm25": 46.99411798830014,
           "identifierBoost": 0,
           "phraseBoost": 0,
@@ -808,13 +816,13 @@
           "queryCoverage": 0.5,
           "lengthAdjustment": 0.08646754023342339
         },
-        "finalRerankScore": 37.98122768158445,
-        "targetRank": 1030,
+        "finalRerankScore": 41.37571045663491,
+        "targetRank": 1213,
         "sourceTop1Correct": false,
         "sourceTop3Correct": false,
         "targetTop1Correct": false,
         "targetTop3Correct": false,
-        "targetMrr": 0.000970873786407767,
+        "targetMrr": 0.0008244023083264633,
         "correctParent": false,
         "authoritySupportCorrectness": false,
         "citationCorrectness": true,
@@ -822,9 +830,9 @@
           "pc-369eef2248bd528d6e595674"
         ],
         "capturedEvidenceIds": [
-          "pc-2c843d54a860fda17625fe81",
+          "pc-e46e227554a1951165f3be10",
           "parent:pc-bf32085ea1e21d3e081ffdff",
-          "pc-d07353527930f1119e344575"
+          "pc-87d5685c2a7a92a19fbff444"
         ],
         "requiredEvidenceCaptured": false,
         "contextRecall": 0,
@@ -839,7 +847,7 @@
         },
         "precedingChild": null,
         "followingChild": {
-          "childId": "pc-d07353527930f1119e344575",
+          "childId": "pc-87d5685c2a7a92a19fbff444",
           "sourceOrder": true
         },
         "queryNeed": "EXCEPTION_CONTEXT",
@@ -852,7 +860,7 @@
       "expectedSourceId": "naic-life-fraternal-reporting-qsi-life-2026",
       "expectedRole": "current_support",
       "expectedBaselineChunkId": "naic-life-fraternal-reporting-qsi-life-2026--p-4-4",
-      "expectedChildId": "pc-da17a1045d70afb358170316",
+      "expectedChildId": "pc-1ece105122df329ad154f779",
       "expectedParentId": "pc-fd3d52420599859daa22abe3",
       "baseline": {
         "top1SourceId": "naic-life-fraternal-reporting-qsi-life-2026",
@@ -870,32 +878,32 @@
         "citationCorrect": true
       },
       "parentChild": {
-        "selectedChildId": "pc-cd27430b8d54910995117420",
+        "selectedChildId": "pc-be3eb320a7ac38a752d1bc76",
         "selectedSourceId": "naic-accounting-publications-appm-2026",
         "selectedRole": "current_authority",
         "selectedParentId": "pc-26bbecb9b616169d5c82e8c3",
         "selectedSourceSha256": "572b86e1e45582656f23d218d4695ba5a102e5f13f00c4cb34ae68e54d3830a0",
         "expectedSourceSha256": "fa507228461252f92cbe8d0e728b0cc5dfdd93f6c93a4cf9a6380063dec44f31",
         "selectedRoleMatches": false,
-        "childBm25": 45.56779676174044,
+        "childBm25": 48.93566951351863,
         "parentBm25": 64.3302596529743,
         "rerankComponents": {
-          "childBm25": 45.56779676174044,
+          "childBm25": 48.93566951351863,
           "parentBm25": 64.3302596529743,
           "identifierBoost": 2.2,
           "phraseBoost": 0,
           "structuralBoost": 0.8,
           "sourceTitleBoost": 0,
-          "queryCoverage": 0.6222222222222222,
-          "lengthAdjustment": 0.07543142864047142
+          "queryCoverage": 0.5333333333333333,
+          "lengthAdjustment": 0.09600307214746386
         },
-        "finalRerankScore": 84.647093221739,
-        "targetRank": 1135,
+        "finalRerankScore": 87.9466487281353,
+        "targetRank": 1586,
         "sourceTop1Correct": false,
         "sourceTop3Correct": false,
         "targetTop1Correct": false,
         "targetTop3Correct": false,
-        "targetMrr": 0.000881057268722467,
+        "targetMrr": 0.0006305170239596469,
         "correctParent": false,
         "authoritySupportCorrectness": false,
         "citationCorrectness": true,
@@ -903,9 +911,9 @@
           "pc-d1fbc507f8a0a8729236a29a"
         ],
         "capturedEvidenceIds": [
-          "pc-cd27430b8d54910995117420",
+          "pc-be3eb320a7ac38a752d1bc76",
           "parent:pc-26bbecb9b616169d5c82e8c3",
-          "pc-1ad76f03a5037d2d82f1cf80"
+          "pc-8644d2f1c69bb00ba2de662a"
         ],
         "requiredEvidenceCaptured": false,
         "contextRecall": 0,
@@ -920,7 +928,7 @@
         },
         "precedingChild": null,
         "followingChild": {
-          "childId": "pc-1ad76f03a5037d2d82f1cf80",
+          "childId": "pc-8644d2f1c69bb00ba2de662a",
           "sourceOrder": true
         },
         "queryNeed": "TABLE_HEADER_CONTEXT",
@@ -958,10 +966,10 @@
         "selectedSourceSha256": "bcdeb352a66771c18f8d47efd5b1b97a8facd51fa672b0a8c8585be768d31753",
         "expectedSourceSha256": "bcdeb352a66771c18f8d47efd5b1b97a8facd51fa672b0a8c8585be768d31753",
         "selectedRoleMatches": true,
-        "childBm25": 30.24064913085063,
+        "childBm25": 34.61582220834988,
         "parentBm25": 23.708164440406456,
         "rerankComponents": {
-          "childBm25": 30.24064913085063,
+          "childBm25": 34.61582220834988,
           "parentBm25": 23.708164440406456,
           "identifierBoost": 2.2,
           "phraseBoost": 0,
@@ -970,7 +978,7 @@
           "queryCoverage": 0.17777777777777778,
           "lengthAdjustment": 0.07856742013183861
         },
-        "finalRerankScore": 46.5364847709838,
+        "finalRerankScore": 50.91165784848305,
         "targetRank": 15,
         "sourceTop1Correct": true,
         "sourceTop3Correct": true,
@@ -1032,32 +1040,32 @@
         "citationCorrect": true
       },
       "parentChild": {
-        "selectedChildId": "pc-e9a19cc43ca17ca058198976",
+        "selectedChildId": "pc-56794ab8db449a1164b5e0c7",
         "selectedSourceId": "naic-accounting-publications-appm-2026",
         "selectedRole": "current_authority",
-        "selectedParentId": "pc-2c025aad226cdeaedfbe616f",
+        "selectedParentId": "pc-643838d3067405313a5b9ac3",
         "selectedSourceSha256": "572b86e1e45582656f23d218d4695ba5a102e5f13f00c4cb34ae68e54d3830a0",
         "expectedSourceSha256": "bcdeb352a66771c18f8d47efd5b1b97a8facd51fa672b0a8c8585be768d31753",
         "selectedRoleMatches": false,
-        "childBm25": 18.074720535019534,
+        "childBm25": 16.664291634616315,
         "parentBm25": 0,
         "rerankComponents": {
-          "childBm25": 18.074720535019534,
+          "childBm25": 16.664291634616315,
           "parentBm25": 0,
           "identifierBoost": 0,
           "phraseBoost": 0,
           "structuralBoost": 0,
           "sourceTitleBoost": 0,
-          "queryCoverage": 0.6222222222222222,
-          "lengthAdjustment": 0.07899525055333642
+          "queryCoverage": 0.4444444444444445,
+          "lengthAdjustment": 0.10878565864408424
         },
-        "finalRerankScore": 18.775938007795094,
-        "targetRank": 1442,
+        "finalRerankScore": 17.217521737704843,
+        "targetRank": 2150,
         "sourceTop1Correct": false,
         "sourceTop3Correct": false,
         "targetTop1Correct": false,
         "targetTop3Correct": false,
-        "targetMrr": 0.0006934812760055479,
+        "targetMrr": 0.00046511627906976747,
         "correctParent": false,
         "authoritySupportCorrectness": false,
         "citationCorrectness": true,
@@ -1065,30 +1073,26 @@
           "pc-1980789b3d1e89f2a99387f3"
         ],
         "capturedEvidenceIds": [
-          "pc-e9a19cc43ca17ca058198976",
-          "parent:pc-2c025aad226cdeaedfbe616f",
-          "pc-8ac7641d31018cda88b3f1d9",
-          "pc-fe14b193f2c7492836068ad6"
+          "pc-56794ab8db449a1164b5e0c7",
+          "parent:pc-643838d3067405313a5b9ac3",
+          "pc-85da76ea06b8f45aa738e8d6"
         ],
         "requiredEvidenceCaptured": false,
         "contextRecall": 0,
         "contextPrecision": 0,
-        "irrelevantEvidenceCount": 4,
-        "contextSize": 4,
+        "irrelevantEvidenceCount": 3,
+        "contextSize": 3,
         "parentContext": {
-          "parentId": "pc-2c025aad226cdeaedfbe616f",
+          "parentId": "pc-643838d3067405313a5b9ac3",
           "structuralLabel": "detected appendix",
-          "structuralIdentifier": "APPENDIX A",
+          "structuralIdentifier": "APPENDIX C",
           "textExternal": true
         },
         "precedingChild": {
-          "childId": "pc-8ac7641d31018cda88b3f1d9",
+          "childId": "pc-85da76ea06b8f45aa738e8d6",
           "sourceOrder": true
         },
-        "followingChild": {
-          "childId": "pc-fe14b193f2c7492836068ad6",
-          "sourceOrder": true
-        },
+        "followingChild": null,
         "queryNeed": "TABLE_HEADER_CONTEXT",
         "expansionReason": "query_need_table_header_context"
       }
@@ -1124,10 +1128,10 @@
         "selectedSourceSha256": "bcdeb352a66771c18f8d47efd5b1b97a8facd51fa672b0a8c8585be768d31753",
         "expectedSourceSha256": "bcdeb352a66771c18f8d47efd5b1b97a8facd51fa672b0a8c8585be768d31753",
         "selectedRoleMatches": true,
-        "childBm25": 32.531759326137724,
+        "childBm25": 38.928902108486206,
         "parentBm25": 32.4087398583675,
         "rerankComponents": {
-          "childBm25": 32.531759326137724,
+          "childBm25": 38.928902108486206,
           "parentBm25": 32.4087398583675,
           "identifierBoost": 2.2,
           "phraseBoost": 0,
@@ -1136,7 +1140,7 @@
           "queryCoverage": 0.08888888888888889,
           "lengthAdjustment": 0.07856742013183861
         },
-        "finalRerankScore": 53.52402255726057,
+        "finalRerankScore": 59.921165339609054,
         "targetRank": 15,
         "sourceTop1Correct": true,
         "sourceTop3Correct": true,
@@ -1206,10 +1210,10 @@
         "selectedSourceSha256": "932c9164967363ac06db624fb6f8711c29a31ba4f767201361e4bfa6027a5dcd",
         "expectedSourceSha256": "bcdeb352a66771c18f8d47efd5b1b97a8facd51fa672b0a8c8585be768d31753",
         "selectedRoleMatches": true,
-        "childBm25": 36.18051811607342,
+        "childBm25": 43.35687312705725,
         "parentBm25": 25.05274258972854,
         "rerankComponents": {
-          "childBm25": 36.18051811607342,
+          "childBm25": 43.35687312705725,
           "parentBm25": 25.05274258972854,
           "identifierBoost": 2.2,
           "phraseBoost": 0,
@@ -1218,13 +1222,13 @@
           "queryCoverage": 0.2,
           "lengthAdjustment": 0.15
         },
-        "finalRerankScore": 53.30952654042412,
-        "targetRank": 20,
+        "finalRerankScore": 60.48588155140795,
+        "targetRank": 22,
         "sourceTop1Correct": false,
         "sourceTop3Correct": false,
         "targetTop1Correct": false,
         "targetTop3Correct": false,
-        "targetMrr": 0.05,
+        "targetMrr": 0.045454545454545456,
         "correctParent": false,
         "authoritySupportCorrectness": true,
         "citationCorrectness": true,
@@ -1278,10 +1282,10 @@
         "selectedSourceSha256": "932c9164967363ac06db624fb6f8711c29a31ba4f767201361e4bfa6027a5dcd",
         "expectedSourceSha256": "932c9164967363ac06db624fb6f8711c29a31ba4f767201361e4bfa6027a5dcd",
         "selectedRoleMatches": true,
-        "childBm25": 63.36875944960654,
+        "childBm25": 74.57686562706064,
         "parentBm25": 31.548287412016492,
         "rerankComponents": {
-          "childBm25": 63.36875944960654,
+          "childBm25": 74.57686562706064,
           "parentBm25": 31.548287412016492,
           "identifierBoost": 2.2,
           "phraseBoost": 0,
@@ -1290,7 +1294,7 @@
           "queryCoverage": 0.34285714285714286,
           "lengthAdjustment": 0.15
         },
-        "finalRerankScore": 84.21317466907276,
+        "finalRerankScore": 95.42128084652687,
         "targetRank": 51,
         "sourceTop1Correct": true,
         "sourceTop3Correct": true,
@@ -1349,10 +1353,10 @@
         "selectedSourceSha256": "932c9164967363ac06db624fb6f8711c29a31ba4f767201361e4bfa6027a5dcd",
         "expectedSourceSha256": "932c9164967363ac06db624fb6f8711c29a31ba4f767201361e4bfa6027a5dcd",
         "selectedRoleMatches": true,
-        "childBm25": 63.94977351825902,
+        "childBm25": 75.63530244610226,
         "parentBm25": 30.975272221706884,
         "rerankComponents": {
-          "childBm25": 63.94977351825902,
+          "childBm25": 75.63530244610226,
           "parentBm25": 30.975272221706884,
           "identifierBoost": 2.2,
           "phraseBoost": 0,
@@ -1361,7 +1365,7 @@
           "queryCoverage": 0.4444444444444445,
           "lengthAdjustment": 0.15
         },
-        "finalRerankScore": 84.58061768464226,
+        "finalRerankScore": 96.2661466124855,
         "targetRank": 51,
         "sourceTop1Correct": true,
         "sourceTop3Correct": true,
@@ -1426,10 +1430,10 @@
         "selectedSourceSha256": "932c9164967363ac06db624fb6f8711c29a31ba4f767201361e4bfa6027a5dcd",
         "expectedSourceSha256": "932c9164967363ac06db624fb6f8711c29a31ba4f767201361e4bfa6027a5dcd",
         "selectedRoleMatches": true,
-        "childBm25": 63.94977351825902,
+        "childBm25": 75.63530244610226,
         "parentBm25": 30.975272221706884,
         "rerankComponents": {
-          "childBm25": 63.94977351825902,
+          "childBm25": 75.63530244610226,
           "parentBm25": 30.975272221706884,
           "identifierBoost": 2.2,
           "phraseBoost": 0,
@@ -1438,7 +1442,7 @@
           "queryCoverage": 0.4,
           "lengthAdjustment": 0.15
         },
-        "finalRerankScore": 84.53617324019783,
+        "finalRerankScore": 96.22170216804106,
         "targetRank": 51,
         "sourceTop1Correct": true,
         "sourceTop3Correct": true,
@@ -1497,10 +1501,10 @@
         "selectedSourceSha256": "932c9164967363ac06db624fb6f8711c29a31ba4f767201361e4bfa6027a5dcd",
         "expectedSourceSha256": "932c9164967363ac06db624fb6f8711c29a31ba4f767201361e4bfa6027a5dcd",
         "selectedRoleMatches": true,
-        "childBm25": 86.29438540095731,
+        "childBm25": 102.58512364860889,
         "parentBm25": 47.327439393474386,
         "rerankComponents": {
-          "childBm25": 86.29438540095731,
+          "childBm25": 102.58512364860889,
           "parentBm25": 47.327439393474386,
           "identifierBoost": 2.2,
           "phraseBoost": 0,
@@ -1509,7 +1513,7 @@
           "queryCoverage": 0.43636363636363634,
           "lengthAdjustment": 0.15
         },
-        "finalRerankScore": 115.91084070373186,
+        "finalRerankScore": 132.20157895138345,
         "targetRank": 71,
         "sourceTop1Correct": true,
         "sourceTop3Correct": true,
@@ -1574,10 +1578,10 @@
         "selectedSourceSha256": "847ddfd96ed51f47435d5ce99b9dac4f32363186d80336d0d14a1afd1d1e513d",
         "expectedSourceSha256": "847ddfd96ed51f47435d5ce99b9dac4f32363186d80336d0d14a1afd1d1e513d",
         "selectedRoleMatches": true,
-        "childBm25": 100.21182733583605,
+        "childBm25": 120.545262747107,
         "parentBm25": 97.36221780986676,
         "rerankComponents": {
-          "childBm25": 100.21182733583605,
+          "childBm25": 120.545262747107,
           "parentBm25": 97.36221780986676,
           "identifierBoost": 2.2,
           "phraseBoost": 0,
@@ -1586,7 +1590,7 @@
           "queryCoverage": 0.08000000000000002,
           "lengthAdjustment": 0.15
         },
-        "finalRerankScore": 156.9910471312628,
+        "finalRerankScore": 177.32448254253376,
         "targetRank": 43,
         "sourceTop1Correct": true,
         "sourceTop3Correct": true,
@@ -1645,10 +1649,10 @@
         "selectedSourceSha256": "847ddfd96ed51f47435d5ce99b9dac4f32363186d80336d0d14a1afd1d1e513d",
         "expectedSourceSha256": "847ddfd96ed51f47435d5ce99b9dac4f32363186d80336d0d14a1afd1d1e513d",
         "selectedRoleMatches": true,
-        "childBm25": 63.556077298192456,
+        "childBm25": 77.11263068289038,
         "parentBm25": 53.26999691829548,
         "rerankComponents": {
-          "childBm25": 63.556077298192456,
+          "childBm25": 77.11263068289038,
           "parentBm25": 53.26999691829548,
           "identifierBoost": 0,
           "phraseBoost": 0,
@@ -1657,7 +1661,7 @@
           "queryCoverage": 0.2,
           "lengthAdjustment": 0.15
         },
-        "finalRerankScore": 93.20457560325498,
+        "finalRerankScore": 106.76112898795292,
         "targetRank": 30,
         "sourceTop1Correct": true,
         "sourceTop3Correct": true,
@@ -1715,26 +1719,26 @@
         "citationCorrect": true
       },
       "parentChild": {
-        "selectedChildId": "pc-b8093a0328aee1cdd7300188",
+        "selectedChildId": "pc-25ef0f822d8d04364205a26f",
         "selectedSourceId": "naic-life-fraternal-reporting-asb-life-2025",
         "selectedRole": "current_support",
         "selectedParentId": "pc-c1b31e4e578085960fb484c1",
         "selectedSourceSha256": "6819aeff68578d789fc5a0e09ba5b60e15edc89305ae9d42fd3b66048147cae1",
         "expectedSourceSha256": "847ddfd96ed51f47435d5ce99b9dac4f32363186d80336d0d14a1afd1d1e513d",
         "selectedRoleMatches": true,
-        "childBm25": 4.119150403782204,
+        "childBm25": 7.522916560601173,
         "parentBm25": 64.3302596529743,
         "rerankComponents": {
-          "childBm25": 4.119150403782204,
+          "childBm25": 7.522916560601173,
           "parentBm25": 64.3302596529743,
           "identifierBoost": 0,
           "phraseBoost": 0,
           "structuralBoost": 0,
           "sourceTitleBoost": 0,
           "queryCoverage": 0.13333333333333333,
-          "lengthAdjustment": 0.09962709627734358
+          "lengthAdjustment": 0.13703774196550633
         },
-        "finalRerankScore": 39.733753642528754,
+        "finalRerankScore": 43.17493044503588,
         "targetRank": 6,
         "sourceTop1Correct": false,
         "sourceTop3Correct": true,
@@ -1749,7 +1753,7 @@
           "parent:pc-ba6758fc5221f910c034df59"
         ],
         "capturedEvidenceIds": [
-          "pc-b8093a0328aee1cdd7300188"
+          "pc-25ef0f822d8d04364205a26f"
         ],
         "requiredEvidenceCaptured": false,
         "contextRecall": 0,
@@ -1787,32 +1791,32 @@
         "citationCorrect": true
       },
       "parentChild": {
-        "selectedChildId": "pc-34c817539a16aa8f3ed0b428",
+        "selectedChildId": "pc-c5280ad13aea0e8e2dd84287",
         "selectedSourceId": "naic-accounting-publications-appm-2026",
         "selectedRole": "current_authority",
-        "selectedParentId": "pc-43ad764d388ea77ad90da8ac",
+        "selectedParentId": "pc-86e986d1e007311b42701c43",
         "selectedSourceSha256": "572b86e1e45582656f23d218d4695ba5a102e5f13f00c4cb34ae68e54d3830a0",
         "expectedSourceSha256": "847ddfd96ed51f47435d5ce99b9dac4f32363186d80336d0d14a1afd1d1e513d",
         "selectedRoleMatches": false,
-        "childBm25": 20.110753420600624,
+        "childBm25": 20.80607585266267,
         "parentBm25": 0,
         "rerankComponents": {
-          "childBm25": 20.110753420600624,
+          "childBm25": 20.80607585266267,
           "parentBm25": 0,
           "identifierBoost": 0,
           "phraseBoost": 0,
           "structuralBoost": 0,
           "sourceTitleBoost": 0,
           "queryCoverage": 0.43636363636363634,
-          "lengthAdjustment": 0.09428090415820634
+          "lengthAdjustment": 0.09759000729485333
         },
-        "finalRerankScore": 20.64139796112247,
-        "targetRank": 677,
+        "finalRerankScore": 21.34002949632116,
+        "targetRank": 745,
         "sourceTop1Correct": false,
         "sourceTop3Correct": false,
         "targetTop1Correct": false,
         "targetTop3Correct": false,
-        "targetMrr": 0.0014771048744460858,
+        "targetMrr": 0.0013422818791946308,
         "correctParent": false,
         "authoritySupportCorrectness": false,
         "citationCorrectness": true,
@@ -1821,7 +1825,7 @@
           "parent:pc-ba6758fc5221f910c034df59"
         ],
         "capturedEvidenceIds": [
-          "pc-34c817539a16aa8f3ed0b428"
+          "pc-c5280ad13aea0e8e2dd84287"
         ],
         "requiredEvidenceCaptured": false,
         "contextRecall": 0,
@@ -1841,7 +1845,7 @@
       "expectedSourceId": "naic-accounting-publications-appm-2026",
       "expectedRole": "current_authority",
       "expectedBaselineChunkId": "naic-accounting-publications-appm-2026--p-1-4",
-      "expectedChildId": "pc-bfd1a7ead1cb26b56aa208e3",
+      "expectedChildId": "pc-19e6defc398dbb75b9957f1e",
       "expectedParentId": "pc-2143bcbff9b8759082773f1c",
       "baseline": {
         "top1SourceId": "naic-accounting-publications-appm-2026",
@@ -1859,40 +1863,40 @@
         "citationCorrect": true
       },
       "parentChild": {
-        "selectedChildId": "pc-ca556c2605007a6bdadb60f0",
+        "selectedChildId": "pc-e66575c048e033eb65eed94f",
         "selectedSourceId": "naic-accounting-publications-appm-2026",
         "selectedRole": "current_authority",
         "selectedParentId": "pc-931c1f37d59eecbca74bbbb2",
         "selectedSourceSha256": "572b86e1e45582656f23d218d4695ba5a102e5f13f00c4cb34ae68e54d3830a0",
         "expectedSourceSha256": "572b86e1e45582656f23d218d4695ba5a102e5f13f00c4cb34ae68e54d3830a0",
         "selectedRoleMatches": true,
-        "childBm25": 14.728152642229112,
+        "childBm25": 21.039448357886435,
         "parentBm25": 64.3302596529743,
         "rerankComponents": {
-          "childBm25": 14.728152642229112,
+          "childBm25": 21.039448357886435,
           "parentBm25": 64.3302596529743,
           "identifierBoost": 0,
           "phraseBoost": 0,
           "structuralBoost": 0,
           "sourceTitleBoost": 0,
           "queryCoverage": 0.5333333333333333,
-          "lengthAdjustment": 0.08695652173913043
+          "lengthAdjustment": 0.14744195615489714
         },
-        "finalRerankScore": 50.730085306437445,
-        "targetRank": 82,
+        "finalRerankScore": 57.101866456510535,
+        "targetRank": 104,
         "sourceTop1Correct": true,
         "sourceTop3Correct": true,
         "targetTop1Correct": false,
         "targetTop3Correct": false,
-        "targetMrr": 0.012195121951219513,
+        "targetMrr": 0.009615384615384616,
         "correctParent": false,
         "authoritySupportCorrectness": true,
         "citationCorrectness": true,
         "requiredEvidenceIds": [
-          "pc-bfd1a7ead1cb26b56aa208e3"
+          "pc-19e6defc398dbb75b9957f1e"
         ],
         "capturedEvidenceIds": [
-          "pc-ca556c2605007a6bdadb60f0",
+          "pc-e66575c048e033eb65eed94f",
           "parent:pc-931c1f37d59eecbca74bbbb2"
         ],
         "requiredEvidenceCaptured": false,
@@ -1918,7 +1922,7 @@
       "expectedSourceId": "naic-accounting-publications-appm-2026",
       "expectedRole": "current_authority",
       "expectedBaselineChunkId": "naic-accounting-publications-appm-2026--p-5-5",
-      "expectedChildId": "pc-304cd184a2a11d4645a214bb",
+      "expectedChildId": "pc-5963f915e3057536541e2b6a",
       "expectedParentId": "pc-2143bcbff9b8759082773f1c",
       "baseline": {
         "top1SourceId": "naic-accounting-publications-appm-2026",
@@ -1936,40 +1940,40 @@
         "citationCorrect": true
       },
       "parentChild": {
-        "selectedChildId": "pc-ca556c2605007a6bdadb60f0",
+        "selectedChildId": "pc-e66575c048e033eb65eed94f",
         "selectedSourceId": "naic-accounting-publications-appm-2026",
         "selectedRole": "current_authority",
         "selectedParentId": "pc-931c1f37d59eecbca74bbbb2",
         "selectedSourceSha256": "572b86e1e45582656f23d218d4695ba5a102e5f13f00c4cb34ae68e54d3830a0",
         "expectedSourceSha256": "572b86e1e45582656f23d218d4695ba5a102e5f13f00c4cb34ae68e54d3830a0",
         "selectedRoleMatches": true,
-        "childBm25": 20.521802363309067,
+        "childBm25": 21.625991957719744,
         "parentBm25": 64.3302596529743,
         "rerankComponents": {
-          "childBm25": 20.521802363309067,
+          "childBm25": 21.625991957719744,
           "parentBm25": 64.3302596529743,
           "identifierBoost": 0,
           "phraseBoost": 0,
           "structuralBoost": 0,
           "sourceTitleBoost": 0,
-          "queryCoverage": 0.5599999999999999,
-          "lengthAdjustment": 0.08695652173913043
+          "queryCoverage": 0.48,
+          "lengthAdjustment": 0.14744195615489714
         },
-        "finalRerankScore": 56.55040169418407,
-        "targetRank": 179,
+        "finalRerankScore": 57.63507672301051,
+        "targetRank": 150,
         "sourceTop1Correct": true,
         "sourceTop3Correct": true,
         "targetTop1Correct": false,
         "targetTop3Correct": false,
-        "targetMrr": 0.00558659217877095,
+        "targetMrr": 0.006666666666666667,
         "correctParent": false,
         "authoritySupportCorrectness": true,
         "citationCorrectness": true,
         "requiredEvidenceIds": [
-          "pc-304cd184a2a11d4645a214bb"
+          "pc-5963f915e3057536541e2b6a"
         ],
         "capturedEvidenceIds": [
-          "pc-ca556c2605007a6bdadb60f0"
+          "pc-e66575c048e033eb65eed94f"
         ],
         "requiredEvidenceCaptured": false,
         "contextRecall": 0,
@@ -1989,7 +1993,7 @@
       "expectedSourceId": "naic-accounting-publications-appm-2026",
       "expectedRole": "current_authority",
       "expectedBaselineChunkId": "naic-accounting-publications-appm-2026--p-9-9",
-      "expectedChildId": "pc-3dd4c65a3f0bacff8945d2ff",
+      "expectedChildId": "pc-02314ca95d69741622d9e65f",
       "expectedParentId": "pc-c2f03a89a75ef66a1d0a024e",
       "baseline": {
         "top1SourceId": "naic-accounting-publications-appm-2026",
@@ -2007,40 +2011,40 @@
         "citationCorrect": true
       },
       "parentChild": {
-        "selectedChildId": "pc-ca556c2605007a6bdadb60f0",
+        "selectedChildId": "pc-e66575c048e033eb65eed94f",
         "selectedSourceId": "naic-accounting-publications-appm-2026",
         "selectedRole": "current_authority",
         "selectedParentId": "pc-931c1f37d59eecbca74bbbb2",
         "selectedSourceSha256": "572b86e1e45582656f23d218d4695ba5a102e5f13f00c4cb34ae68e54d3830a0",
         "expectedSourceSha256": "572b86e1e45582656f23d218d4695ba5a102e5f13f00c4cb34ae68e54d3830a0",
         "selectedRoleMatches": true,
-        "childBm25": 15.447263189919575,
+        "childBm25": 19.481925070402028,
         "parentBm25": 64.3302596529743,
         "rerankComponents": {
-          "childBm25": 15.447263189919575,
+          "childBm25": 19.481925070402028,
           "parentBm25": 64.3302596529743,
           "identifierBoost": 0,
           "phraseBoost": 0,
           "structuralBoost": 0,
           "sourceTitleBoost": 0,
           "queryCoverage": 0.5,
-          "lengthAdjustment": 0.08695652173913043
+          "lengthAdjustment": 0.14744195615489714
         },
-        "finalRerankScore": 51.415862520794576,
-        "targetRank": 582,
+        "finalRerankScore": 55.511009835692796,
+        "targetRank": 317,
         "sourceTop1Correct": true,
         "sourceTop3Correct": true,
         "targetTop1Correct": false,
         "targetTop3Correct": false,
-        "targetMrr": 0.001718213058419244,
+        "targetMrr": 0.0031545741324921135,
         "correctParent": false,
         "authoritySupportCorrectness": true,
         "citationCorrectness": true,
         "requiredEvidenceIds": [
-          "pc-3dd4c65a3f0bacff8945d2ff"
+          "pc-02314ca95d69741622d9e65f"
         ],
         "capturedEvidenceIds": [
-          "pc-ca556c2605007a6bdadb60f0"
+          "pc-e66575c048e033eb65eed94f"
         ],
         "requiredEvidenceCaptured": false,
         "contextRecall": 0,
@@ -2060,7 +2064,7 @@
       "expectedSourceId": "naic-life-fraternal-reporting-asb-life-2025",
       "expectedRole": "current_support",
       "expectedBaselineChunkId": "naic-life-fraternal-reporting-asb-life-2025--p-1-3",
-      "expectedChildId": "pc-4105e25c042ee864c8b05b2d",
+      "expectedChildId": "pc-f49c98281b16b7e3c10d1edf",
       "expectedParentId": "pc-2ecddcffb04c54cc085830b1",
       "baseline": {
         "top1SourceId": "naic-accounting-publications-appm-2026",
@@ -2078,42 +2082,42 @@
         "citationCorrect": true
       },
       "parentChild": {
-        "selectedChildId": "pc-cd27430b8d54910995117420",
+        "selectedChildId": "pc-be3eb320a7ac38a752d1bc76",
         "selectedSourceId": "naic-accounting-publications-appm-2026",
         "selectedRole": "current_authority",
         "selectedParentId": "pc-26bbecb9b616169d5c82e8c3",
         "selectedSourceSha256": "572b86e1e45582656f23d218d4695ba5a102e5f13f00c4cb34ae68e54d3830a0",
         "expectedSourceSha256": "6819aeff68578d789fc5a0e09ba5b60e15edc89305ae9d42fd3b66048147cae1",
         "selectedRoleMatches": false,
-        "childBm25": 42.13987422731364,
+        "childBm25": 46.846240474685715,
         "parentBm25": 64.3302596529743,
         "rerankComponents": {
-          "childBm25": 42.13987422731364,
+          "childBm25": 46.846240474685715,
           "parentBm25": 64.3302596529743,
           "identifierBoost": 2.2,
           "phraseBoost": 0,
           "structuralBoost": 0.8,
           "sourceTitleBoost": 0,
-          "queryCoverage": 0.48,
-          "lengthAdjustment": 0.07543142864047142
+          "queryCoverage": 0.4,
+          "lengthAdjustment": 0.09600307214746386
         },
-        "finalRerankScore": 81.07694846508998,
-        "targetRank": 80,
+        "finalRerankScore": 85.72388635596906,
+        "targetRank": 242,
         "sourceTop1Correct": false,
         "sourceTop3Correct": false,
         "targetTop1Correct": false,
         "targetTop3Correct": false,
-        "targetMrr": 0.0125,
+        "targetMrr": 0.004132231404958678,
         "correctParent": false,
         "authoritySupportCorrectness": false,
         "citationCorrectness": true,
         "requiredEvidenceIds": [
-          "pc-4105e25c042ee864c8b05b2d"
+          "pc-f49c98281b16b7e3c10d1edf"
         ],
         "capturedEvidenceIds": [
-          "pc-cd27430b8d54910995117420",
+          "pc-be3eb320a7ac38a752d1bc76",
           "parent:pc-26bbecb9b616169d5c82e8c3",
-          "pc-1ad76f03a5037d2d82f1cf80"
+          "pc-8644d2f1c69bb00ba2de662a"
         ],
         "requiredEvidenceCaptured": false,
         "contextRecall": 0,
@@ -2128,7 +2132,7 @@
         },
         "precedingChild": null,
         "followingChild": {
-          "childId": "pc-1ad76f03a5037d2d82f1cf80",
+          "childId": "pc-8644d2f1c69bb00ba2de662a",
           "sourceOrder": true
         },
         "queryNeed": "TABLE_HEADER_CONTEXT",
@@ -2141,7 +2145,7 @@
       "expectedSourceId": "naic-life-fraternal-reporting-asb-life-2025",
       "expectedRole": "current_support",
       "expectedBaselineChunkId": "naic-life-fraternal-reporting-asb-life-2025--p-4-4",
-      "expectedChildId": "pc-0ee8dd1c42b93cd20821c2ff",
+      "expectedChildId": "pc-82001181213e329fbc394424",
       "expectedParentId": "pc-a273e3fc1cc6f517fdfd7a15",
       "baseline": {
         "top1SourceId": "naic-life-fraternal-reporting-asb-life-2025",
@@ -2159,47 +2163,48 @@
         "citationCorrect": true
       },
       "parentChild": {
-        "selectedChildId": "pc-b8093a0328aee1cdd7300188",
+        "selectedChildId": "pc-25ef0f822d8d04364205a26f",
         "selectedSourceId": "naic-life-fraternal-reporting-asb-life-2025",
         "selectedRole": "current_support",
         "selectedParentId": "pc-c1b31e4e578085960fb484c1",
         "selectedSourceSha256": "6819aeff68578d789fc5a0e09ba5b60e15edc89305ae9d42fd3b66048147cae1",
         "expectedSourceSha256": "6819aeff68578d789fc5a0e09ba5b60e15edc89305ae9d42fd3b66048147cae1",
         "selectedRoleMatches": true,
-        "childBm25": 8.536943614716607,
+        "childBm25": 12.65542595480938,
         "parentBm25": 72.1039143588934,
         "rerankComponents": {
-          "childBm25": 8.536943614716607,
+          "childBm25": 12.65542595480938,
           "parentBm25": 72.1039143588934,
           "identifierBoost": 0,
           "phraseBoost": 0,
           "structuralBoost": 0,
           "sourceTitleBoost": 0,
           "queryCoverage": 0.32000000000000006,
-          "lengthAdjustment": 0.09962709627734358
+          "lengthAdjustment": 0.13703774196550633
         },
-        "finalRerankScore": 48.61372360838533,
-        "targetRank": 544,
+        "finalRerankScore": 52.769616594166266,
+        "targetRank": 923,
         "sourceTop1Correct": true,
         "sourceTop3Correct": true,
         "targetTop1Correct": false,
         "targetTop3Correct": false,
-        "targetMrr": 0.001838235294117647,
+        "targetMrr": 0.0010834236186348862,
         "correctParent": false,
         "authoritySupportCorrectness": true,
         "citationCorrectness": true,
         "requiredEvidenceIds": [
-          "pc-0ee8dd1c42b93cd20821c2ff"
+          "pc-82001181213e329fbc394424"
         ],
         "capturedEvidenceIds": [
-          "pc-b8093a0328aee1cdd7300188",
-          "parent:pc-c1b31e4e578085960fb484c1"
+          "pc-25ef0f822d8d04364205a26f",
+          "parent:pc-c1b31e4e578085960fb484c1",
+          "pc-02026ea1599341708f33efb4"
         ],
         "requiredEvidenceCaptured": false,
         "contextRecall": 0,
         "contextPrecision": 0,
-        "irrelevantEvidenceCount": 2,
-        "contextSize": 2,
+        "irrelevantEvidenceCount": 3,
+        "contextSize": 3,
         "parentContext": {
           "parentId": "pc-c1b31e4e578085960fb484c1",
           "structuralLabel": "detected schedule",
@@ -2207,7 +2212,10 @@
           "textExternal": true
         },
         "precedingChild": null,
-        "followingChild": null,
+        "followingChild": {
+          "childId": "pc-02026ea1599341708f33efb4",
+          "sourceOrder": true
+        },
         "queryNeed": "TABLE_HEADER_CONTEXT",
         "expansionReason": "query_need_table_header_context"
       }
@@ -2218,7 +2226,7 @@
       "expectedSourceId": "naic-life-fraternal-reporting-qsi-life-2026",
       "expectedRole": "current_support",
       "expectedBaselineChunkId": "naic-life-fraternal-reporting-qsi-life-2026--p-8-9",
-      "expectedChildId": "pc-2c1bee93564f921b3def5bad",
+      "expectedChildId": "pc-c149011e6b15389d666f6941",
       "expectedParentId": "pc-9ac3b316f60913b4eb3b9843",
       "baseline": {
         "top1SourceId": "naic-life-fraternal-reporting-qsi-life-2026",
@@ -2243,10 +2251,10 @@
         "selectedSourceSha256": "932c9164967363ac06db624fb6f8711c29a31ba4f767201361e4bfa6027a5dcd",
         "expectedSourceSha256": "fa507228461252f92cbe8d0e728b0cc5dfdd93f6c93a4cf9a6380063dec44f31",
         "selectedRoleMatches": true,
-        "childBm25": 37.560113302586615,
+        "childBm25": 46.727463080686455,
         "parentBm25": 19.576537786995168,
         "rerankComponents": {
-          "childBm25": 37.560113302586615,
+          "childBm25": 46.727463080686455,
           "parentBm25": 19.576537786995168,
           "identifierBoost": 0,
           "phraseBoost": 0,
@@ -2255,18 +2263,18 @@
           "queryCoverage": 0.30000000000000004,
           "lengthAdjustment": 0.15
         },
-        "finalRerankScore": 48.77720908543395,
-        "targetRank": 46,
+        "finalRerankScore": 57.94455886353379,
+        "targetRank": 44,
         "sourceTop1Correct": false,
         "sourceTop3Correct": false,
         "targetTop1Correct": false,
         "targetTop3Correct": false,
-        "targetMrr": 0.021739130434782608,
+        "targetMrr": 0.022727272727272728,
         "correctParent": false,
         "authoritySupportCorrectness": true,
         "citationCorrectness": true,
         "requiredEvidenceIds": [
-          "pc-2c1bee93564f921b3def5bad"
+          "pc-c149011e6b15389d666f6941"
         ],
         "capturedEvidenceIds": [
           "pc-289b93b692a865aa56f4c4d0"
@@ -2289,7 +2297,7 @@
       "expectedSourceId": "naic-life-fraternal-reporting-qsi-life-2026",
       "expectedRole": "current_support",
       "expectedBaselineChunkId": "naic-life-fraternal-reporting-qsi-life-2026--p-4-4",
-      "expectedChildId": "pc-da17a1045d70afb358170316",
+      "expectedChildId": "pc-1ece105122df329ad154f779",
       "expectedParentId": "pc-fd3d52420599859daa22abe3",
       "baseline": {
         "top1SourceId": "naic-life-fraternal-reporting-qsi-life-2026",
@@ -2307,42 +2315,42 @@
         "citationCorrect": true
       },
       "parentChild": {
-        "selectedChildId": "pc-cd27430b8d54910995117420",
+        "selectedChildId": "pc-be3eb320a7ac38a752d1bc76",
         "selectedSourceId": "naic-accounting-publications-appm-2026",
         "selectedRole": "current_authority",
         "selectedParentId": "pc-26bbecb9b616169d5c82e8c3",
         "selectedSourceSha256": "572b86e1e45582656f23d218d4695ba5a102e5f13f00c4cb34ae68e54d3830a0",
         "expectedSourceSha256": "fa507228461252f92cbe8d0e728b0cc5dfdd93f6c93a4cf9a6380063dec44f31",
         "selectedRoleMatches": false,
-        "childBm25": 40.80642361381799,
+        "childBm25": 45.31919148797396,
         "parentBm25": 64.3302596529743,
         "rerankComponents": {
-          "childBm25": 40.80642361381799,
+          "childBm25": 45.31919148797396,
           "parentBm25": 64.3302596529743,
           "identifierBoost": 2.2,
           "phraseBoost": 0,
           "structuralBoost": 0.8,
           "sourceTitleBoost": 0,
           "queryCoverage": 0.5333333333333333,
-          "lengthAdjustment": 0.07543142864047142
+          "lengthAdjustment": 0.09600307214746386
         },
-        "finalRerankScore": 79.79683118492765,
-        "targetRank": 511,
+        "finalRerankScore": 84.33017070259062,
+        "targetRank": 925,
         "sourceTop1Correct": false,
         "sourceTop3Correct": false,
         "targetTop1Correct": false,
         "targetTop3Correct": false,
-        "targetMrr": 0.0019569471624266144,
+        "targetMrr": 0.001081081081081081,
         "correctParent": false,
         "authoritySupportCorrectness": false,
         "citationCorrectness": true,
         "requiredEvidenceIds": [
-          "pc-da17a1045d70afb358170316"
+          "pc-1ece105122df329ad154f779"
         ],
         "capturedEvidenceIds": [
-          "pc-cd27430b8d54910995117420",
+          "pc-be3eb320a7ac38a752d1bc76",
           "parent:pc-26bbecb9b616169d5c82e8c3",
-          "pc-1ad76f03a5037d2d82f1cf80"
+          "pc-8644d2f1c69bb00ba2de662a"
         ],
         "requiredEvidenceCaptured": false,
         "contextRecall": 0,
@@ -2357,7 +2365,7 @@
         },
         "precedingChild": null,
         "followingChild": {
-          "childId": "pc-1ad76f03a5037d2d82f1cf80",
+          "childId": "pc-8644d2f1c69bb00ba2de662a",
           "sourceOrder": true
         },
         "queryNeed": "TABLE_HEADER_CONTEXT",
@@ -2370,7 +2378,7 @@
       "expectedSourceId": "naic-life-fraternal-reporting-qsi-life-2026",
       "expectedRole": "current_support",
       "expectedBaselineChunkId": "naic-life-fraternal-reporting-qsi-life-2026--p-8-9",
-      "expectedChildId": "pc-2c1bee93564f921b3def5bad",
+      "expectedChildId": "pc-c149011e6b15389d666f6941",
       "expectedParentId": "pc-9ac3b316f60913b4eb3b9843",
       "baseline": {
         "top1SourceId": "naic-accounting-publications-appm-2026",
@@ -2388,17 +2396,17 @@
         "citationCorrect": true
       },
       "parentChild": {
-        "selectedChildId": "pc-2c843d54a860fda17625fe81",
+        "selectedChildId": "pc-e46e227554a1951165f3be10",
         "selectedSourceId": "naic-accounting-publications-appm-2026",
         "selectedRole": "current_authority",
         "selectedParentId": "pc-bf32085ea1e21d3e081ffdff",
         "selectedSourceSha256": "572b86e1e45582656f23d218d4695ba5a102e5f13f00c4cb34ae68e54d3830a0",
         "expectedSourceSha256": "fa507228461252f92cbe8d0e728b0cc5dfdd93f6c93a4cf9a6380063dec44f31",
         "selectedRoleMatches": false,
-        "childBm25": 9.034683360449053,
+        "childBm25": 13.127911596022994,
         "parentBm25": 46.99411798830014,
         "rerankComponents": {
-          "childBm25": 9.034683360449053,
+          "childBm25": 13.127911596022994,
           "parentBm25": 46.99411798830014,
           "identifierBoost": 0,
           "phraseBoost": 0,
@@ -2407,23 +2415,23 @@
           "queryCoverage": 0.4444444444444445,
           "lengthAdjustment": 0.08646754023342339
         },
-        "finalRerankScore": 35.412360238691996,
-        "targetRank": 162,
+        "finalRerankScore": 39.50558847426594,
+        "targetRank": 149,
         "sourceTop1Correct": false,
         "sourceTop3Correct": true,
         "targetTop1Correct": false,
         "targetTop3Correct": false,
-        "targetMrr": 0.006172839506172839,
+        "targetMrr": 0.006711409395973154,
         "correctParent": false,
         "authoritySupportCorrectness": false,
         "citationCorrectness": true,
         "requiredEvidenceIds": [
-          "pc-2c1bee93564f921b3def5bad"
+          "pc-c149011e6b15389d666f6941"
         ],
         "capturedEvidenceIds": [
-          "pc-2c843d54a860fda17625fe81",
+          "pc-e46e227554a1951165f3be10",
           "parent:pc-bf32085ea1e21d3e081ffdff",
-          "pc-d07353527930f1119e344575"
+          "pc-87d5685c2a7a92a19fbff444"
         ],
         "requiredEvidenceCaptured": false,
         "contextRecall": 0,
@@ -2438,7 +2446,7 @@
         },
         "precedingChild": null,
         "followingChild": {
-          "childId": "pc-d07353527930f1119e344575",
+          "childId": "pc-87d5685c2a7a92a19fbff444",
           "sourceOrder": true
         },
         "queryNeed": "EXCEPTION_CONTEXT",
@@ -2476,10 +2484,10 @@
         "selectedSourceSha256": "bcdeb352a66771c18f8d47efd5b1b97a8facd51fa672b0a8c8585be768d31753",
         "expectedSourceSha256": "bcdeb352a66771c18f8d47efd5b1b97a8facd51fa672b0a8c8585be768d31753",
         "selectedRoleMatches": true,
-        "childBm25": 38.74396183333994,
+        "childBm25": 43.263306362105745,
         "parentBm25": 23.708164440406456,
         "rerankComponents": {
-          "childBm25": 38.74396183333994,
+          "childBm25": 43.263306362105745,
           "parentBm25": 23.708164440406456,
           "identifierBoost": 2.2,
           "phraseBoost": 0,
@@ -2488,7 +2496,7 @@
           "queryCoverage": 0.34285714285714286,
           "lengthAdjustment": 0.07856742013183861
         },
-        "finalRerankScore": 55.20487683855247,
+        "finalRerankScore": 59.72422136731828,
         "targetRank": 15,
         "sourceTop1Correct": true,
         "sourceTop3Correct": true,
@@ -2550,26 +2558,26 @@
         "citationCorrect": true
       },
       "parentChild": {
-        "selectedChildId": "pc-9f0678e0ca3ef56c69c3f73e",
+        "selectedChildId": "pc-368a5a38df3afff7f98216c1",
         "selectedSourceId": "naic-accounting-publications-appm-2026",
         "selectedRole": "current_authority",
         "selectedParentId": "pc-8348b7006e62bf2cd0d6d2ee",
         "selectedSourceSha256": "572b86e1e45582656f23d218d4695ba5a102e5f13f00c4cb34ae68e54d3830a0",
         "expectedSourceSha256": "bcdeb352a66771c18f8d47efd5b1b97a8facd51fa672b0a8c8585be768d31753",
         "selectedRoleMatches": false,
-        "childBm25": 25.71422549773677,
+        "childBm25": 29.475424616029063,
         "parentBm25": 0,
         "rerankComponents": {
-          "childBm25": 25.71422549773677,
+          "childBm25": 29.475424616029063,
           "parentBm25": 0,
           "identifierBoost": 0,
           "phraseBoost": 0,
           "structuralBoost": 0,
           "sourceTitleBoost": 0,
           "queryCoverage": 0.4,
-          "lengthAdjustment": 0.10690449676496974
+          "lengthAdjustment": 0.12016835362522194
         },
-        "finalRerankScore": 26.221129994501737,
+        "finalRerankScore": 29.995592969654282,
         "targetRank": 18,
         "sourceTop1Correct": false,
         "sourceTop3Correct": false,
@@ -2583,14 +2591,15 @@
           "pc-c7e70a21768a89ce5560110e"
         ],
         "capturedEvidenceIds": [
-          "pc-9f0678e0ca3ef56c69c3f73e",
-          "parent:pc-8348b7006e62bf2cd0d6d2ee"
+          "pc-368a5a38df3afff7f98216c1",
+          "parent:pc-8348b7006e62bf2cd0d6d2ee",
+          "pc-e5a1444960ad8848256a4cac"
         ],
         "requiredEvidenceCaptured": false,
         "contextRecall": 0,
         "contextPrecision": 0,
-        "irrelevantEvidenceCount": 2,
-        "contextSize": 2,
+        "irrelevantEvidenceCount": 3,
+        "contextSize": 3,
         "parentContext": {
           "parentId": "pc-8348b7006e62bf2cd0d6d2ee",
           "structuralLabel": "detected appendix",
@@ -2598,7 +2607,10 @@
           "textExternal": true
         },
         "precedingChild": null,
-        "followingChild": null,
+        "followingChild": {
+          "childId": "pc-e5a1444960ad8848256a4cac",
+          "sourceOrder": true
+        },
         "queryNeed": "TABLE_HEADER_CONTEXT",
         "expansionReason": "query_need_table_header_context"
       }
@@ -2634,10 +2646,10 @@
         "selectedSourceSha256": "932c9164967363ac06db624fb6f8711c29a31ba4f767201361e4bfa6027a5dcd",
         "expectedSourceSha256": "932c9164967363ac06db624fb6f8711c29a31ba4f767201361e4bfa6027a5dcd",
         "selectedRoleMatches": true,
-        "childBm25": 89.82469774313311,
+        "childBm25": 106.61118836763669,
         "parentBm25": 45.48623433654123,
         "rerankComponents": {
-          "childBm25": 89.82469774313311,
+          "childBm25": 106.61118836763669,
           "parentBm25": 45.48623433654123,
           "identifierBoost": 2.2,
           "phraseBoost": 0,
@@ -2646,7 +2658,7 @@
           "queryCoverage": 0.5090909090909091,
           "lengthAdjustment": 0.15
         },
-        "finalRerankScore": 118.50121753732172,
+        "finalRerankScore": 135.28770816182526,
         "targetRank": 1,
         "sourceTop1Correct": true,
         "sourceTop3Correct": true,
@@ -2705,10 +2717,10 @@
         "selectedSourceSha256": "932c9164967363ac06db624fb6f8711c29a31ba4f767201361e4bfa6027a5dcd",
         "expectedSourceSha256": "932c9164967363ac06db624fb6f8711c29a31ba4f767201361e4bfa6027a5dcd",
         "selectedRoleMatches": true,
-        "childBm25": 67.03144681268545,
+        "childBm25": 78.72031763537848,
         "parentBm25": 33.45685806918658,
         "rerankComponents": {
-          "childBm25": 67.03144681268545,
+          "childBm25": 78.72031763537848,
           "parentBm25": 33.45685806918658,
           "identifierBoost": 2.2,
           "phraseBoost": 0,
@@ -2717,7 +2729,7 @@
           "queryCoverage": 0.4,
           "lengthAdjustment": 0.15
         },
-        "finalRerankScore": 88.98271875073807,
+        "finalRerankScore": 100.6715895734311,
         "targetRank": 2,
         "sourceTop1Correct": true,
         "sourceTop3Correct": true,
@@ -2776,10 +2788,10 @@
         "selectedSourceSha256": "847ddfd96ed51f47435d5ce99b9dac4f32363186d80336d0d14a1afd1d1e513d",
         "expectedSourceSha256": "847ddfd96ed51f47435d5ce99b9dac4f32363186d80336d0d14a1afd1d1e513d",
         "selectedRoleMatches": true,
-        "childBm25": 66.60142849907872,
+        "childBm25": 81.05363519166741,
         "parentBm25": 53.26999691829548,
         "rerankComponents": {
-          "childBm25": 66.60142849907872,
+          "childBm25": 81.05363519166741,
           "parentBm25": 53.26999691829548,
           "identifierBoost": 0,
           "phraseBoost": 0,
@@ -2788,7 +2800,7 @@
           "queryCoverage": 0.26666666666666666,
           "lengthAdjustment": 0.15
         },
-        "finalRerankScore": 96.31659347080792,
+        "finalRerankScore": 110.7688001633966,
         "targetRank": 9,
         "sourceTop1Correct": true,
         "sourceTop3Correct": true,
@@ -2840,32 +2852,32 @@
         "citationCorrect": true
       },
       "parentChild": {
-        "selectedChildId": "pc-0ed613a7a87e5ed23b92ccec",
+        "selectedChildId": "pc-316752e5ac45cda9d9f759d4",
         "selectedSourceId": "naic-life-fraternal-reporting-qsi-life-2026",
         "selectedRole": "current_support",
         "selectedParentId": "pc-80e6d8b0257a5ea8e48139ea",
         "selectedSourceSha256": "fa507228461252f92cbe8d0e728b0cc5dfdd93f6c93a4cf9a6380063dec44f31",
         "expectedSourceSha256": "847ddfd96ed51f47435d5ce99b9dac4f32363186d80336d0d14a1afd1d1e513d",
         "selectedRoleMatches": true,
-        "childBm25": 4.076447860730879,
+        "childBm25": 6.289547167226373,
         "parentBm25": 52.12729715853683,
         "rerankComponents": {
-          "childBm25": 4.076447860730879,
+          "childBm25": 6.289547167226373,
           "parentBm25": 52.12729715853683,
           "identifierBoost": 0,
           "phraseBoost": 0,
           "structuralBoost": 0,
           "sourceTitleBoost": 0,
           "queryCoverage": 0.26666666666666666,
-          "lengthAdjustment": 0.08962214298964417
+          "lengthAdjustment": 0.14177624100166716
         },
-        "finalRerankScore": 33.10275010758245,
-        "targetRank": 223,
+        "finalRerankScore": 35.36800351208996,
+        "targetRank": 177,
         "sourceTop1Correct": false,
         "sourceTop3Correct": false,
         "targetTop1Correct": false,
         "targetTop3Correct": false,
-        "targetMrr": 0.004484304932735426,
+        "targetMrr": 0.005649717514124294,
         "correctParent": false,
         "authoritySupportCorrectness": true,
         "citationCorrectness": true,
@@ -2873,7 +2885,7 @@
           "pc-a7d483017bf869b6a7662714"
         ],
         "capturedEvidenceIds": [
-          "pc-0ed613a7a87e5ed23b92ccec"
+          "pc-316752e5ac45cda9d9f759d4"
         ],
         "requiredEvidenceCaptured": false,
         "contextRecall": 0,
@@ -2918,10 +2930,10 @@
         "selectedSourceSha256": "847ddfd96ed51f47435d5ce99b9dac4f32363186d80336d0d14a1afd1d1e513d",
         "expectedSourceSha256": "847ddfd96ed51f47435d5ce99b9dac4f32363186d80336d0d14a1afd1d1e513d",
         "selectedRoleMatches": true,
-        "childBm25": 19.733626361622594,
+        "childBm25": 23.230455786738293,
         "parentBm25": 8.700575417961039,
         "rerankComponents": {
-          "childBm25": 19.733626361622594,
+          "childBm25": 23.230455786738293,
           "parentBm25": 8.700575417961039,
           "identifierBoost": 0,
           "phraseBoost": 0,
@@ -2930,7 +2942,7 @@
           "queryCoverage": 0.30000000000000004,
           "lengthAdjustment": 0.15
         },
-        "finalRerankScore": 24.968942841501164,
+        "finalRerankScore": 28.465772266616863,
         "targetRank": 1,
         "sourceTop1Correct": true,
         "sourceTop3Correct": true,
@@ -2975,20 +2987,20 @@
       },
       "parentChildContext": {
         "sourceTop1": 0.5416666666666666,
-        "sourceTop3": 0.625,
+        "sourceTop3": 0.5833333333333334,
         "targetTop1": 0,
         "targetTop3": 0,
-        "targetMrr": 0.02955903052445523,
+        "targetMrr": 0.025291966857871467,
         "correctParent": 0,
         "requiredContextRecall": 0,
         "contextPrecision": 0,
         "wrongSourceRate": 0.4583333333333333,
         "wrongSectionRate": 1,
-        "authoritySupportCorrectness": 0.6666666666666666,
+        "authoritySupportCorrectness": 0.7083333333333334,
         "citationCorrectness": 1,
-        "averageContextSize": 2,
+        "averageContextSize": 2.0416666666666665,
         "maximumContextSize": 4,
-        "irrelevantEvidenceCount": 48
+        "irrelevantEvidenceCount": 49
       }
     },
     "holdout": {
@@ -3008,7 +3020,7 @@
         "sourceTop3": 0.6666666666666666,
         "targetTop1": 0.13333333333333333,
         "targetTop3": 0.2,
-        "targetMrr": 0.18676831452346523,
+        "targetMrr": 0.1862770062993281,
         "correctParent": 0.13333333333333333,
         "requiredContextRecall": 0.13333333333333333,
         "contextPrecision": 0.13333333333333333,
@@ -3016,9 +3028,9 @@
         "wrongSectionRate": 0.8666666666666667,
         "authoritySupportCorrectness": 0.7333333333333333,
         "citationCorrectness": 1,
-        "averageContextSize": 1.7333333333333334,
+        "averageContextSize": 1.8666666666666667,
         "maximumContextSize": 3,
-        "irrelevantEvidenceCount": 24
+        "irrelevantEvidenceCount": 26
       }
     },
     "baseline": {
@@ -3033,20 +3045,20 @@
     },
     "parentChildContext": {
       "sourceTop1": 0.5641025641025641,
-      "sourceTop3": 0.6410256410256411,
+      "sourceTop3": 0.6153846153846154,
       "targetTop1": 0.05128205128205128,
       "targetTop3": 0.07692307692307693,
-      "targetMrr": 0.09002413975484369,
+      "targetMrr": 0.08720928971997018,
       "correctParent": 0.05128205128205128,
       "requiredContextRecall": 0.05128205128205128,
       "contextPrecision": 0.05128205128205128,
       "wrongSourceRate": 0.4358974358974359,
       "wrongSectionRate": 0.9487179487179487,
-      "authoritySupportCorrectness": 0.6923076923076923,
+      "authoritySupportCorrectness": 0.717948717948718,
       "citationCorrectness": 1,
-      "averageContextSize": 1.8974358974358974,
+      "averageContextSize": 1.9743589743589745,
       "maximumContextSize": 4,
-      "irrelevantEvidenceCount": 72
+      "irrelevantEvidenceCount": 75
     },
     "ablation": {
       "A_pageWindowRaw": {
@@ -3071,54 +3083,54 @@
       },
       "C_childBm25": {
         "sourceTop1": 0.5641025641025641,
-        "sourceTop3": 0.6410256410256411,
+        "sourceTop3": 0.6153846153846154,
         "targetTop1": 0.05128205128205128,
         "targetTop3": 0.07692307692307693,
-        "targetMrr": 0.09002413975484369,
+        "targetMrr": 0.08720928971997018,
         "correctParent": 0.05128205128205128,
         "requiredContextRecall": 0.05128205128205128,
         "contextPrecision": 0.05128205128205128,
         "wrongSourceRate": 0.4358974358974359,
         "wrongSectionRate": 0.9487179487179487,
-        "authoritySupportCorrectness": 0.6923076923076923,
+        "authoritySupportCorrectness": 0.717948717948718,
         "citationCorrectness": 1,
-        "averageContextSize": 1.8974358974358974,
+        "averageContextSize": 1.9743589743589745,
         "maximumContextSize": 4,
-        "irrelevantEvidenceCount": 72
+        "irrelevantEvidenceCount": 75
       },
       "D_parentAware": {
         "sourceTop1": 0.5641025641025641,
-        "sourceTop3": 0.6410256410256411,
+        "sourceTop3": 0.6153846153846154,
         "targetTop1": 0.05128205128205128,
         "targetTop3": 0.07692307692307693,
-        "targetMrr": 0.09002413975484369,
+        "targetMrr": 0.08720928971997018,
         "correctParent": 0.05128205128205128,
         "requiredContextRecall": 0.05128205128205128,
         "contextPrecision": 0.05128205128205128,
         "wrongSourceRate": 0.4358974358974359,
         "wrongSectionRate": 0.9487179487179487,
-        "authoritySupportCorrectness": 0.6923076923076923,
+        "authoritySupportCorrectness": 0.717948717948718,
         "citationCorrectness": 1,
-        "averageContextSize": 1.8974358974358974,
+        "averageContextSize": 1.9743589743589745,
         "maximumContextSize": 4,
-        "irrelevantEvidenceCount": 72
+        "irrelevantEvidenceCount": 75
       },
       "E_contextExpanded": {
         "sourceTop1": 0.5641025641025641,
-        "sourceTop3": 0.6410256410256411,
+        "sourceTop3": 0.6153846153846154,
         "targetTop1": 0.05128205128205128,
         "targetTop3": 0.07692307692307693,
-        "targetMrr": 0.09002413975484369,
+        "targetMrr": 0.08720928971997018,
         "correctParent": 0.05128205128205128,
         "requiredContextRecall": 0.05128205128205128,
         "contextPrecision": 0.05128205128205128,
         "wrongSourceRate": 0.4358974358974359,
         "wrongSectionRate": 0.9487179487179487,
-        "authoritySupportCorrectness": 0.6923076923076923,
+        "authoritySupportCorrectness": 0.717948717948718,
         "citationCorrectness": 1,
-        "averageContextSize": 1.8974358974358974,
+        "averageContextSize": 1.9743589743589745,
         "maximumContextSize": 4,
-        "irrelevantEvidenceCount": 72
+        "irrelevantEvidenceCount": 75
       }
     },
     "rankingInputExcludesTestExpectations": true,

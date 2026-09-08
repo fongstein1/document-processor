@@ -51,20 +51,20 @@
       },
       "parentChildContext": {
         "sourceTop1": 0.5416666666666666,
-        "sourceTop3": 0.625,
+        "sourceTop3": 0.5833333333333334,
         "targetTop1": 0,
         "targetTop3": 0,
-        "targetMrr": 0.02955903052445523,
+        "targetMrr": 0.025291966857871467,
         "correctParent": 0,
         "requiredContextRecall": 0,
         "contextPrecision": 0,
         "wrongSourceRate": 0.4583333333333333,
         "wrongSectionRate": 1,
-        "authoritySupportCorrectness": 0.6666666666666666,
+        "authoritySupportCorrectness": 0.7083333333333334,
         "citationCorrectness": 1,
-        "averageContextSize": 2,
+        "averageContextSize": 2.0416666666666665,
         "maximumContextSize": 4,
-        "irrelevantEvidenceCount": 48
+        "irrelevantEvidenceCount": 49
       }
     },
     "holdout": {
@@ -84,7 +84,7 @@
         "sourceTop3": 0.6666666666666666,
         "targetTop1": 0.13333333333333333,
         "targetTop3": 0.2,
-        "targetMrr": 0.18676831452346523,
+        "targetMrr": 0.1862770062993281,
         "correctParent": 0.13333333333333333,
         "requiredContextRecall": 0.13333333333333333,
         "contextPrecision": 0.13333333333333333,
@@ -92,9 +92,9 @@
         "wrongSectionRate": 0.8666666666666667,
         "authoritySupportCorrectness": 0.7333333333333333,
         "citationCorrectness": 1,
-        "averageContextSize": 1.7333333333333334,
+        "averageContextSize": 1.8666666666666667,
         "maximumContextSize": 3,
-        "irrelevantEvidenceCount": 24
+        "irrelevantEvidenceCount": 26
       }
     },
     "baseline": {
@@ -109,20 +109,20 @@
     },
     "parentChildContext": {
       "sourceTop1": 0.5641025641025641,
-      "sourceTop3": 0.6410256410256411,
+      "sourceTop3": 0.6153846153846154,
       "targetTop1": 0.05128205128205128,
       "targetTop3": 0.07692307692307693,
-      "targetMrr": 0.09002413975484369,
+      "targetMrr": 0.08720928971997018,
       "correctParent": 0.05128205128205128,
       "requiredContextRecall": 0.05128205128205128,
       "contextPrecision": 0.05128205128205128,
       "wrongSourceRate": 0.4358974358974359,
       "wrongSectionRate": 0.9487179487179487,
-      "authoritySupportCorrectness": 0.6923076923076923,
+      "authoritySupportCorrectness": 0.717948717948718,
       "citationCorrectness": 1,
-      "averageContextSize": 1.8974358974358974,
+      "averageContextSize": 1.9743589743589745,
       "maximumContextSize": 4,
-      "irrelevantEvidenceCount": 72
+      "irrelevantEvidenceCount": 75
     },
     "ablation": {
       "A_pageWindowRaw": {
@@ -147,54 +147,54 @@
       },
       "C_childBm25": {
         "sourceTop1": 0.5641025641025641,
-        "sourceTop3": 0.6410256410256411,
+        "sourceTop3": 0.6153846153846154,
         "targetTop1": 0.05128205128205128,
         "targetTop3": 0.07692307692307693,
-        "targetMrr": 0.09002413975484369,
+        "targetMrr": 0.08720928971997018,
         "correctParent": 0.05128205128205128,
         "requiredContextRecall": 0.05128205128205128,
         "contextPrecision": 0.05128205128205128,
         "wrongSourceRate": 0.4358974358974359,
         "wrongSectionRate": 0.9487179487179487,
-        "authoritySupportCorrectness": 0.6923076923076923,
+        "authoritySupportCorrectness": 0.717948717948718,
         "citationCorrectness": 1,
-        "averageContextSize": 1.8974358974358974,
+        "averageContextSize": 1.9743589743589745,
         "maximumContextSize": 4,
-        "irrelevantEvidenceCount": 72
+        "irrelevantEvidenceCount": 75
       },
       "D_parentAware": {
         "sourceTop1": 0.5641025641025641,
-        "sourceTop3": 0.6410256410256411,
+        "sourceTop3": 0.6153846153846154,
         "targetTop1": 0.05128205128205128,
         "targetTop3": 0.07692307692307693,
-        "targetMrr": 0.09002413975484369,
+        "targetMrr": 0.08720928971997018,
         "correctParent": 0.05128205128205128,
         "requiredContextRecall": 0.05128205128205128,
         "contextPrecision": 0.05128205128205128,
         "wrongSourceRate": 0.4358974358974359,
         "wrongSectionRate": 0.9487179487179487,
-        "authoritySupportCorrectness": 0.6923076923076923,
+        "authoritySupportCorrectness": 0.717948717948718,
         "citationCorrectness": 1,
-        "averageContextSize": 1.8974358974358974,
+        "averageContextSize": 1.9743589743589745,
         "maximumContextSize": 4,
-        "irrelevantEvidenceCount": 72
+        "irrelevantEvidenceCount": 75
       },
       "E_contextExpanded": {
         "sourceTop1": 0.5641025641025641,
-        "sourceTop3": 0.6410256410256411,
+        "sourceTop3": 0.6153846153846154,
         "targetTop1": 0.05128205128205128,
         "targetTop3": 0.07692307692307693,
-        "targetMrr": 0.09002413975484369,
+        "targetMrr": 0.08720928971997018,
         "correctParent": 0.05128205128205128,
         "requiredContextRecall": 0.05128205128205128,
         "contextPrecision": 0.05128205128205128,
         "wrongSourceRate": 0.4358974358974359,
         "wrongSectionRate": 0.9487179487179487,
-        "authoritySupportCorrectness": 0.6923076923076923,
+        "authoritySupportCorrectness": 0.717948717948718,
         "citationCorrectness": 1,
-        "averageContextSize": 1.8974358974358974,
+        "averageContextSize": 1.9743589743589745,
         "maximumContextSize": 4,
-        "irrelevantEvidenceCount": 72
+        "irrelevantEvidenceCount": 75
       }
     },
     "rankingInputExcludesTestExpectations": true,
