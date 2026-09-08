@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "1.0",
+  "runId": "parent-child-context-architecture-2026-09",
+  "generatedAt": "2026-09-02T00:00:00.000Z",
+  "processingMode": "review_only_architecture_evaluation",
+  "processingRepresentation": "STRUCTURE_AWARE_PARENT_CHILD with explicit fallback representations",
+  "sourceIds": [
+    "naic-accounting-publications-appm-2026",
+    "naic-life-fraternal-reporting-asb-life-2025",
+    "naic-life-fraternal-reporting-qsi-life-2026",
+    "naic-pbr-vm-20-vm-31-vm-51-vm20-tables-2026-f-g",
+    "naic-pbr-vm-20-vm-31-vm-51-vm31-templates-reports",
+    "society-of-actuaries-experience-studies-soa-2015-vbt-improvement"
+  ],
+  "sourceCount": 6,
+  "pdfSourceCount": 3,
+  "xlsxSourceCount": 3,
+  "structureAwareSourceCount": 6,
+  "fallbackSourceCount": 0,
+  "parentCount": 1414,
+  "childCount": 2219,
+  "fallbackUnitCount": 1,
+  "rightsStatus": "RIGHTS_REVIEW_REQUIRED",
+  "externalProcessingRoot": "C:\\Dev\\Document Processor Sources\\_processed-private\\parent-child-context-architecture-2026-09",
+  "reviewOnly": true,
+  "promotionStatus": "not_promoted",
+  "ragReadyAllowed": false
+}

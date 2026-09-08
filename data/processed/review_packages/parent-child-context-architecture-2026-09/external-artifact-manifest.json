@@ -1,0 +1,85 @@
+{
+  "schemaVersion": "1.0",
+  "manifestId": "external-artifacts-parent-child-context-architecture-2026-09",
+  "runId": "parent-child-context-architecture-2026-09",
+  "generatedTimestamp": "2026-09-02T00:00:00.000Z",
+  "externalProcessingRoot": "C:\\Dev\\Document Processor Sources\\_processed-private\\parent-child-context-architecture-2026-09",
+  "rightsStorageStatuses": [
+    "RIGHTS_REVIEW_REQUIRED"
+  ],
+  "reviewOnly": true,
+  "artifacts": [
+    {
+      "runId": "parent-child-context-architecture-2026-09",
+      "sourceId": "naic-accounting-publications-appm-2026",
+      "artifactType": "parent-child-substantive",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\parent-child-context-architecture-2026-09\\naic-accounting-publications-appm-2026\\parent-child-substantive.json",
+      "sha256": "c4e370ab4f5891a6f2d915112c5b6e29ba78cae6caddd6aa861af08500d3d1b7",
+      "byteCount": 37462499,
+      "sourceRawSha256": "572b86e1e45582656f23d218d4695ba5a102e5f13f00c4cb34ae68e54d3830a0",
+      "generatedTimestamp": "2026-09-02T00:00:00.000Z",
+      "rightsStorageStatus": "RIGHTS_REVIEW_REQUIRED",
+      "reviewOnly": true
+    },
+    {
+      "runId": "parent-child-context-architecture-2026-09",
+      "sourceId": "naic-life-fraternal-reporting-asb-life-2025",
+      "artifactType": "parent-child-substantive",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\parent-child-context-architecture-2026-09\\naic-life-fraternal-reporting-asb-life-2025\\parent-child-substantive.json",
+      "sha256": "d306aa409b3cff48869c6dd4bede8434aeb564aa8604b57ac46a4808a272060a",
+      "byteCount": 9939254,
+      "sourceRawSha256": "6819aeff68578d789fc5a0e09ba5b60e15edc89305ae9d42fd3b66048147cae1",
+      "generatedTimestamp": "2026-09-02T00:00:00.000Z",
+      "rightsStorageStatus": "RIGHTS_REVIEW_REQUIRED",
+      "reviewOnly": true
+    },
+    {
+      "runId": "parent-child-context-architecture-2026-09",
+      "sourceId": "naic-life-fraternal-reporting-qsi-life-2026",
+      "artifactType": "parent-child-substantive",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\parent-child-context-architecture-2026-09\\naic-life-fraternal-reporting-qsi-life-2026\\parent-child-substantive.json",
+      "sha256": "4d8c93de5fe8ce1679a63900972f1efcd52a04c71d063288aa997645ac1c02c8",
+      "byteCount": 5012556,
+      "sourceRawSha256": "fa507228461252f92cbe8d0e728b0cc5dfdd93f6c93a4cf9a6380063dec44f31",
+      "generatedTimestamp": "2026-09-02T00:00:00.000Z",
+      "rightsStorageStatus": "RIGHTS_REVIEW_REQUIRED",
+      "reviewOnly": true
+    },
+    {
+      "runId": "parent-child-context-architecture-2026-09",
+      "sourceId": "naic-pbr-vm-20-vm-31-vm-51-vm20-tables-2026-f-g",
+      "artifactType": "parent-child-substantive",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\parent-child-context-architecture-2026-09\\naic-pbr-vm-20-vm-31-vm-51-vm20-tables-2026-f-g\\parent-child-substantive.json",
+      "sha256": "6984a13f56953dc710547efdf85eafa7a1710a67ef7ce7c82aeb6c59c881f6d6",
+      "byteCount": 838148,
+      "sourceRawSha256": "bcdeb352a66771c18f8d47efd5b1b97a8facd51fa672b0a8c8585be768d31753",
+      "generatedTimestamp": "2026-09-02T00:00:00.000Z",
+      "rightsStorageStatus": "RIGHTS_REVIEW_REQUIRED",
+      "reviewOnly": true
+    },
+    {
+      "runId": "parent-child-context-architecture-2026-09",
+      "sourceId": "naic-pbr-vm-20-vm-31-vm-51-vm31-templates-reports",
+      "artifactType": "parent-child-substantive",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\parent-child-context-architecture-2026-09\\naic-pbr-vm-20-vm-31-vm-51-vm31-templates-reports\\parent-child-substantive.json",
+      "sha256": "209e2adb49b25e2cfc87363fb15d51cca653dc77896047bcdfce7aadec3467a0",
+      "byteCount": 404768,
+      "sourceRawSha256": "932c9164967363ac06db624fb6f8711c29a31ba4f767201361e4bfa6027a5dcd",
+      "generatedTimestamp": "2026-09-02T00:00:00.000Z",
+      "rightsStorageStatus": "RIGHTS_REVIEW_REQUIRED",
+      "reviewOnly": true
+    },
+    {
+      "runId": "parent-child-context-architecture-2026-09",
+      "sourceId": "society-of-actuaries-experience-studies-soa-2015-vbt-improvement",
+      "artifactType": "parent-child-substantive",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\parent-child-context-architecture-2026-09\\society-of-actuaries-experience-studies-soa-2015-vbt-improvement\\parent-child-substantive.json",
+      "sha256": "24f2af678325ebe356e8e1794383ec0915e1b187bb62342f7045a8cd17c55d45",
+      "byteCount": 18558051,
+      "sourceRawSha256": "847ddfd96ed51f47435d5ce99b9dac4f32363186d80336d0d14a1afd1d1e513d",
+      "generatedTimestamp": "2026-09-02T00:00:00.000Z",
+      "rightsStorageStatus": "RIGHTS_REVIEW_REQUIRED",
+      "reviewOnly": true
+    }
+  ]
+}
