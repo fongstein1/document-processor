@@ -46,19 +46,25 @@ def average_pool(last_hidden_states, attention_mask):
 
 
 def embed(rows, tokenizer, model, batch_size, max_length):
-    vectors = []
-    for start in range(0, len(rows), batch_size):
-        batch = [row["text"] for row in rows[start : start + batch_size]]
+    ordered = sorted(enumerate(rows), key=lambda item: (len(item[1]["text"]), item[0]))
+    vectors = None
+    for start in range(0, len(ordered), batch_size):
+        indexed_batch = ordered[start : start + batch_size]
+        batch = [row["text"] for _, row in indexed_batch]
         encoded = tokenizer(batch, max_length=max_length, padding=True, truncation=True, return_tensors="pt")
         with torch.no_grad():
             output = model(**encoded)
             embeddings = average_pool(output.last_hidden_state, encoded["attention_mask"])
             embeddings = torch.nn.functional.normalize(embeddings, p=2, dim=1)
-        vectors.append(embeddings.cpu().to(torch.float32).numpy())
+        batch_vectors = embeddings.cpu().to(torch.float32).numpy()
+        if vectors is None:
+            vectors = np.empty((len(rows), batch_vectors.shape[1]), dtype=np.float32)
+        for batch_index, (original_index, _) in enumerate(indexed_batch):
+            vectors[original_index] = batch_vectors[batch_index]
         completed = min(start + batch_size, len(rows))
-        if completed == len(rows) or completed % (batch_size * 25) == 0:
+        if completed == len(rows) or completed % (batch_size * 10) == 0:
             print(f"embedded {completed}/{len(rows)}", flush=True)
-    return np.concatenate(vectors, axis=0).astype("<f4", copy=False)
+    return vectors.astype("<f4", copy=False)
 
 
 def model_snapshot(model_dir: Path):
