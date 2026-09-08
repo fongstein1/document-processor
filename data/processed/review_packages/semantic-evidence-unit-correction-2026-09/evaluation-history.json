@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "1.0",
+  "runId": "semantic-evidence-unit-correction-2026-09",
+  "evaluations": [
+    {
+      "evaluationVersion": "EVALUATION_V1",
+      "path": "data/processed/review_packages/parent-child-retrieval-hardening-2026-09/evaluation-freeze.json",
+      "sha256": "160705baad6edee650d8ca31f3bbcb64ba1ca1ca57c16baca39f1053228a370e",
+      "preserved": true
+    },
+    {
+      "evaluationVersion": "EVALUATION_V2",
+      "path": "data/processed/review_packages/semantic-evidence-unit-correction-2026-09/evaluation-v2-freeze.json",
+      "frozenAt": "2026-09-08T00:00:00.000Z",
+      "reasonCode": "INDEPENDENT_REVIEW_GOLD_TARGET_AMBIGUITY"
+    }
+  ],
+  "reviewOnly": true,
+  "promotionStatus": "not_promoted",
+  "ragReadyAllowed": false
+}

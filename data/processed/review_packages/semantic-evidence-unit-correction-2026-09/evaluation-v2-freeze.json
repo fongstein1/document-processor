@@ -1,0 +1,1075 @@
+{
+  "schemaVersion": "2.0",
+  "evaluationVersion": "EVALUATION_V2",
+  "runId": "semantic-evidence-unit-correction-2026-09",
+  "frozenAt": "2026-09-08T00:00:00.000Z",
+  "createdBecauseCode": "INDEPENDENT_REVIEW_GOLD_TARGET_AMBIGUITY",
+  "sourceEvaluationVersion": "EVALUATION_V1",
+  "sourceEvaluationPath": "data/processed/review_packages/parent-child-retrieval-hardening-2026-09/evaluation-freeze.json",
+  "sourceEvaluationSha256": "160705baad6edee650d8ca31f3bbcb64ba1ca1ca57c16baca39f1053228a370e",
+  "originalCaseCount": 39,
+  "uniqueTargetCaseCount": 14,
+  "multiAcceptedTargetCaseCount": 0,
+  "multiUnitRequiredCaseCount": 3,
+  "ambiguousExcludedCaseCount": 13,
+  "invalidExcludedCaseCount": 9,
+  "developmentCaseCount": 6,
+  "holdoutCaseCount": 11,
+  "cases": [
+    {
+      "caseId": "pc-eval-01",
+      "split": "development",
+      "category": "LOCAL_REQUIREMENT",
+      "queryHash": "51da1e9b8b6004c310a42ef28cca61a4abf77c9e71a958035b067d613b165b2c",
+      "sourceId": "naic-accounting-publications-appm-2026",
+      "authoritySupportRole": "current_authority",
+      "goldUnitIds": [],
+      "evidenceContentHashes": [],
+      "acceptedSourceChunkIds": [],
+      "targetCoordinates": [],
+      "requiredContextRoles": [],
+      "adjudicationStatus": "INVALID_TARGET_EXCLUDED",
+      "included": false,
+      "reviewerStatus": "INDEPENDENTLY_AUDITED_FROM_PRIVATE_SOURCE_EVIDENCE",
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "pc-eval-02",
+      "split": "development",
+      "category": "SCOPE_REQUIREMENT",
+      "queryHash": "caa59bdb9ea2b17362c696b15e58ea5d9fec0a739a3d3e17bf16955e834fb6fd",
+      "sourceId": "naic-accounting-publications-appm-2026",
+      "authoritySupportRole": "current_authority",
+      "goldUnitIds": [],
+      "evidenceContentHashes": [],
+      "acceptedSourceChunkIds": [],
+      "targetCoordinates": [],
+      "requiredContextRoles": [],
+      "adjudicationStatus": "INVALID_TARGET_EXCLUDED",
+      "included": false,
+      "reviewerStatus": "INDEPENDENTLY_AUDITED_FROM_PRIVATE_SOURCE_EVIDENCE",
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "pc-eval-03",
+      "split": "development",
+      "category": "DEFINITION_APPLICATION",
+      "queryHash": "7689b93310fb3cddfc946b2a2cf121c9d2e9fd9fb7751be5349e33b343c4ee30",
+      "sourceId": "naic-accounting-publications-appm-2026",
+      "authoritySupportRole": "current_authority",
+      "goldUnitIds": [],
+      "evidenceContentHashes": [],
+      "acceptedSourceChunkIds": [],
+      "targetCoordinates": [],
+      "requiredContextRoles": [],
+      "adjudicationStatus": "INVALID_TARGET_EXCLUDED",
+      "included": false,
+      "reviewerStatus": "INDEPENDENTLY_AUDITED_FROM_PRIVATE_SOURCE_EVIDENCE",
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "pc-eval-04",
+      "split": "development",
+      "category": "LONG_DOCUMENT_SECTION",
+      "queryHash": "33756cb0a956a7faa1beafd80314a96b81f259912103e3594ec1d0eaa421d758",
+      "sourceId": "naic-accounting-publications-appm-2026",
+      "authoritySupportRole": "current_authority",
+      "goldUnitIds": [],
+      "evidenceContentHashes": [],
+      "acceptedSourceChunkIds": [],
+      "targetCoordinates": [],
+      "requiredContextRoles": [],
+      "adjudicationStatus": "AMBIGUOUS_EXCLUDED",
+      "included": false,
+      "reviewerStatus": "INDEPENDENTLY_AUDITED_FROM_PRIVATE_SOURCE_EVIDENCE",
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "pc-eval-05",
+      "split": "development",
+      "category": "LOCAL_REQUIREMENT",
+      "queryHash": "e24caaa5d3bac3f572d003f56aa8c00ecdbf80c423db6fb9bfc2ba8d40008145",
+      "sourceId": "naic-life-fraternal-reporting-asb-life-2025",
+      "authoritySupportRole": "current_support",
+      "goldUnitIds": [],
+      "evidenceContentHashes": [],
+      "acceptedSourceChunkIds": [],
+      "targetCoordinates": [],
+      "requiredContextRoles": [],
+      "adjudicationStatus": "INVALID_TARGET_EXCLUDED",
+      "included": false,
+      "reviewerStatus": "INDEPENDENTLY_AUDITED_FROM_PRIVATE_SOURCE_EVIDENCE",
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "pc-eval-06",
+      "split": "development",
+      "category": "CROSS_PAGE_REQUIREMENT",
+      "queryHash": "cc1fc2c4fca972886fd9465abb3fa1e3a91fc3e146ea73c3ee98f3bc030433e5",
+      "sourceId": "naic-life-fraternal-reporting-asb-life-2025",
+      "authoritySupportRole": "current_support",
+      "goldUnitIds": [],
+      "evidenceContentHashes": [],
+      "acceptedSourceChunkIds": [],
+      "targetCoordinates": [],
+      "requiredContextRoles": [],
+      "adjudicationStatus": "INVALID_TARGET_EXCLUDED",
+      "included": false,
+      "reviewerStatus": "INDEPENDENTLY_AUDITED_FROM_PRIVATE_SOURCE_EVIDENCE",
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "pc-eval-07",
+      "split": "development",
+      "category": "TABLE_PROSE",
+      "queryHash": "837401a1c9986315e160d6d740f017b79c909b0fdd2bde61fcf65c4567a2fb7a",
+      "sourceId": "naic-life-fraternal-reporting-asb-life-2025",
+      "authoritySupportRole": "current_support",
+      "goldUnitIds": [],
+      "evidenceContentHashes": [],
+      "acceptedSourceChunkIds": [],
+      "targetCoordinates": [],
+      "requiredContextRoles": [],
+      "adjudicationStatus": "INVALID_TARGET_EXCLUDED",
+      "included": false,
+      "reviewerStatus": "INDEPENDENTLY_AUDITED_FROM_PRIVATE_SOURCE_EVIDENCE",
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "pc-eval-08",
+      "split": "development",
+      "category": "WRONG_SECTION_NEGATIVE",
+      "queryHash": "d587b42dd40fcc6743296d5c54b01d8986caaaa2e934e6fc5b1f75f85fa8574c",
+      "sourceId": "naic-life-fraternal-reporting-asb-life-2025",
+      "authoritySupportRole": "current_support",
+      "goldUnitIds": [],
+      "evidenceContentHashes": [],
+      "acceptedSourceChunkIds": [],
+      "targetCoordinates": [],
+      "requiredContextRoles": [],
+      "adjudicationStatus": "AMBIGUOUS_EXCLUDED",
+      "included": false,
+      "reviewerStatus": "INDEPENDENTLY_AUDITED_FROM_PRIVATE_SOURCE_EVIDENCE",
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "pc-eval-09",
+      "split": "development",
+      "category": "LOCAL_REQUIREMENT",
+      "queryHash": "c87aca50d683191bc07f1aa3874758e3ae01697964c7b99593ecd5e5859140a7",
+      "sourceId": "naic-life-fraternal-reporting-qsi-life-2026",
+      "authoritySupportRole": "current_support",
+      "goldUnitIds": [],
+      "evidenceContentHashes": [],
+      "acceptedSourceChunkIds": [],
+      "targetCoordinates": [],
+      "requiredContextRoles": [],
+      "adjudicationStatus": "INVALID_TARGET_EXCLUDED",
+      "included": false,
+      "reviewerStatus": "INDEPENDENTLY_AUDITED_FROM_PRIVATE_SOURCE_EVIDENCE",
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "pc-eval-10",
+      "split": "development",
+      "category": "SCOPE_REQUIREMENT",
+      "queryHash": "82caae951112107135143f4d06a55861e2933d70b59691b888320cca8fb01c69",
+      "sourceId": "naic-life-fraternal-reporting-qsi-life-2026",
+      "authoritySupportRole": "current_support",
+      "goldUnitIds": [
+        "gold-v2-980aef7053414a747c9f30b9"
+      ],
+      "evidenceContentHashes": [
+        "bbb3c127c5b353d6036610641c3acfca59b0c17f83cd6d2c3b4767acfeb67209"
+      ],
+      "acceptedSourceChunkIds": [
+        "naic-life-fraternal-reporting-qsi-life-2026--p-8-9"
+      ],
+      "targetCoordinates": [
+        {
+          "sourceChunkId": "naic-life-fraternal-reporting-qsi-life-2026--p-8-9",
+          "pageStart": 8,
+          "pageEnd": 9,
+          "sheetName": null,
+          "worksheetPath": null,
+          "rowStart": null,
+          "rowEnd": null,
+          "colStart": null,
+          "colEnd": null,
+          "targetRole": "SCOPE_OR_APPLICABILITY"
+        }
+      ],
+      "requiredContextRoles": [
+        "SCOPE_OR_APPLICABILITY"
+      ],
+      "adjudicationStatus": "UNIQUE_TARGET",
+      "included": true,
+      "reviewerStatus": "INDEPENDENTLY_AUDITED_FROM_PRIVATE_SOURCE_EVIDENCE",
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "pc-eval-11",
+      "split": "development",
+      "category": "REQUIREMENT_EXCEPTION",
+      "queryHash": "6df09a20cbacfc62f030e74bf92ce27df65592b59ce9fe8a5ba7d7fa0b764eb1",
+      "sourceId": "naic-life-fraternal-reporting-qsi-life-2026",
+      "authoritySupportRole": "current_support",
+      "goldUnitIds": [
+        "gold-v2-29958d5701726d437d845544"
+      ],
+      "evidenceContentHashes": [
+        "bbb3c127c5b353d6036610641c3acfca59b0c17f83cd6d2c3b4767acfeb67209"
+      ],
+      "acceptedSourceChunkIds": [
+        "naic-life-fraternal-reporting-qsi-life-2026--p-8-9"
+      ],
+      "targetCoordinates": [
+        {
+          "sourceChunkId": "naic-life-fraternal-reporting-qsi-life-2026--p-8-9",
+          "pageStart": 8,
+          "pageEnd": 9,
+          "sheetName": null,
+          "worksheetPath": null,
+          "rowStart": null,
+          "rowEnd": null,
+          "colStart": null,
+          "colEnd": null,
+          "targetRole": "EXCEPTION_OR_QUALIFICATION"
+        }
+      ],
+      "requiredContextRoles": [
+        "EXCEPTION_OR_QUALIFICATION"
+      ],
+      "adjudicationStatus": "UNIQUE_TARGET",
+      "included": true,
+      "reviewerStatus": "INDEPENDENTLY_AUDITED_FROM_PRIVATE_SOURCE_EVIDENCE",
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "pc-eval-12",
+      "split": "development",
+      "category": "WRONG_SECTION_NEGATIVE",
+      "queryHash": "b24f350aae70e5394ffc174661b1b82bd3db845b777d5cd2be5ef4e0fe7d3862",
+      "sourceId": "naic-life-fraternal-reporting-qsi-life-2026",
+      "authoritySupportRole": "current_support",
+      "goldUnitIds": [],
+      "evidenceContentHashes": [],
+      "acceptedSourceChunkIds": [],
+      "targetCoordinates": [],
+      "requiredContextRoles": [],
+      "adjudicationStatus": "AMBIGUOUS_EXCLUDED",
+      "included": false,
+      "reviewerStatus": "INDEPENDENTLY_AUDITED_FROM_PRIVATE_SOURCE_EVIDENCE",
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "pc-eval-13",
+      "split": "development",
+      "category": "LOCAL_REQUIREMENT",
+      "queryHash": "d073b7c43482cfc8d77c212ae2ea4e1713d7c8c8e51eacc856d8fb0514091928",
+      "sourceId": "naic-pbr-vm-20-vm-31-vm-51-vm20-tables-2026-f-g",
+      "authoritySupportRole": "current_support",
+      "goldUnitIds": [
+        "gold-v2-949144a231c5797f535c19b8"
+      ],
+      "evidenceContentHashes": [
+        "fabe824439aaa83e13aa1c55c3a8dec633742564524b42c41816acfb6ba9e3ca"
+      ],
+      "acceptedSourceChunkIds": [
+        "naic-pbr-vm-20-vm-31-vm-51-vm20-tables-2026-f-g--sheet-august-2026--rows-1-35"
+      ],
+      "targetCoordinates": [
+        {
+          "sourceChunkId": "naic-pbr-vm-20-vm-31-vm-51-vm20-tables-2026-f-g--sheet-august-2026--rows-1-35",
+          "pageStart": null,
+          "pageEnd": null,
+          "sheetName": "August 2026",
+          "worksheetPath": "xl/worksheets/sheet1.xml",
+          "rowStart": 3,
+          "rowEnd": 35,
+          "colStart": "A",
+          "colEnd": "K",
+          "targetRole": "TABLE_OR_SCHEDULE"
+        }
+      ],
+      "requiredContextRoles": [
+        "HEADER_CONTEXT"
+      ],
+      "adjudicationStatus": "MULTI_UNIT_REQUIRED",
+      "included": true,
+      "reviewerStatus": "INDEPENDENTLY_AUDITED_FROM_PRIVATE_SOURCE_EVIDENCE",
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "pc-eval-14",
+      "split": "development",
+      "category": "TABLE_PROSE",
+      "queryHash": "40ceff2816bb3bfd1f75b4622405cf2bca6d9f578e820155df1a3b955d5a4437",
+      "sourceId": "naic-pbr-vm-20-vm-31-vm-51-vm20-tables-2026-f-g",
+      "authoritySupportRole": "current_support",
+      "goldUnitIds": [
+        "gold-v2-949144a231c5797f535c19b8"
+      ],
+      "evidenceContentHashes": [
+        "fabe824439aaa83e13aa1c55c3a8dec633742564524b42c41816acfb6ba9e3ca"
+      ],
+      "acceptedSourceChunkIds": [
+        "naic-pbr-vm-20-vm-31-vm-51-vm20-tables-2026-f-g--sheet-august-2026--rows-1-35"
+      ],
+      "targetCoordinates": [
+        {
+          "sourceChunkId": "naic-pbr-vm-20-vm-31-vm-51-vm20-tables-2026-f-g--sheet-august-2026--rows-1-35",
+          "pageStart": null,
+          "pageEnd": null,
+          "sheetName": "August 2026",
+          "worksheetPath": "xl/worksheets/sheet1.xml",
+          "rowStart": 3,
+          "rowEnd": 35,
+          "colStart": "A",
+          "colEnd": "K",
+          "targetRole": "TABLE_OR_SCHEDULE"
+        }
+      ],
+      "requiredContextRoles": [
+        "HEADER_CONTEXT"
+      ],
+      "adjudicationStatus": "MULTI_UNIT_REQUIRED",
+      "included": true,
+      "reviewerStatus": "INDEPENDENTLY_AUDITED_FROM_PRIVATE_SOURCE_EVIDENCE",
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "pc-eval-15",
+      "split": "development",
+      "category": "LONG_DOCUMENT_SECTION",
+      "queryHash": "05dacfe4685829dda1a1da1aeb3dcc6a494de132bd0fbd52e2e6fc3dd97de050",
+      "sourceId": "naic-pbr-vm-20-vm-31-vm-51-vm20-tables-2026-f-g",
+      "authoritySupportRole": "current_support",
+      "goldUnitIds": [
+        "gold-v2-64edf537010aa35b87917c44"
+      ],
+      "evidenceContentHashes": [
+        "fabe824439aaa83e13aa1c55c3a8dec633742564524b42c41816acfb6ba9e3ca"
+      ],
+      "acceptedSourceChunkIds": [
+        "naic-pbr-vm-20-vm-31-vm-51-vm20-tables-2026-f-g--sheet-august-2026--rows-1-35"
+      ],
+      "targetCoordinates": [
+        {
+          "sourceChunkId": "naic-pbr-vm-20-vm-31-vm-51-vm20-tables-2026-f-g--sheet-august-2026--rows-1-35",
+          "pageStart": null,
+          "pageEnd": null,
+          "sheetName": "August 2026",
+          "worksheetPath": "xl/worksheets/sheet1.xml",
+          "rowStart": 1,
+          "rowEnd": 2,
+          "colStart": "A",
+          "colEnd": "K",
+          "targetRole": "HEADER_CONTEXT"
+        }
+      ],
+      "requiredContextRoles": [],
+      "adjudicationStatus": "UNIQUE_TARGET",
+      "included": true,
+      "reviewerStatus": "INDEPENDENTLY_AUDITED_FROM_PRIVATE_SOURCE_EVIDENCE",
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "pc-eval-16",
+      "split": "development",
+      "category": "AUTHORITY_SUPPORT_CONFUSION",
+      "queryHash": "69c189a26a1f951c1b7983918c091b9be91c5ee62f4c26b2fdc08d223d8fa972",
+      "sourceId": "naic-pbr-vm-20-vm-31-vm-51-vm20-tables-2026-f-g",
+      "authoritySupportRole": "current_support",
+      "goldUnitIds": [],
+      "evidenceContentHashes": [],
+      "acceptedSourceChunkIds": [],
+      "targetCoordinates": [],
+      "requiredContextRoles": [],
+      "adjudicationStatus": "AMBIGUOUS_EXCLUDED",
+      "included": false,
+      "reviewerStatus": "INDEPENDENTLY_AUDITED_FROM_PRIVATE_SOURCE_EVIDENCE",
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "pc-eval-17",
+      "split": "development",
+      "category": "LOCAL_REQUIREMENT",
+      "queryHash": "ab546ecb29ca15335f3223cdb69bb02e659b6264874036aeabf8e86e8e93d8f0",
+      "sourceId": "naic-pbr-vm-20-vm-31-vm-51-vm31-templates-reports",
+      "authoritySupportRole": "current_support",
+      "goldUnitIds": [],
+      "evidenceContentHashes": [],
+      "acceptedSourceChunkIds": [],
+      "targetCoordinates": [],
+      "requiredContextRoles": [],
+      "adjudicationStatus": "AMBIGUOUS_EXCLUDED",
+      "included": false,
+      "reviewerStatus": "INDEPENDENTLY_AUDITED_FROM_PRIVATE_SOURCE_EVIDENCE",
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "pc-eval-18",
+      "split": "development",
+      "category": "SCOPE_REQUIREMENT",
+      "queryHash": "9156ee896a5bb2ccada8766e04b0d3eb180062ce316f6e79c208d7149546c3d8",
+      "sourceId": "naic-pbr-vm-20-vm-31-vm-51-vm31-templates-reports",
+      "authoritySupportRole": "current_support",
+      "goldUnitIds": [
+        "gold-v2-e870e224d5ad30fa5fa6825a"
+      ],
+      "evidenceContentHashes": [
+        "c471bba09cc38bcc044c39197b6bfbc86434602e04282bbbacf20445fdd18299"
+      ],
+      "acceptedSourceChunkIds": [
+        "naic-pbr-vm-20-vm-31-vm-51-vm31-templates-reports--sheet-confidentiality--rows-1-1"
+      ],
+      "targetCoordinates": [
+        {
+          "sourceChunkId": "naic-pbr-vm-20-vm-31-vm-51-vm31-templates-reports--sheet-confidentiality--rows-1-1",
+          "pageStart": null,
+          "pageEnd": null,
+          "sheetName": "Confidentiality",
+          "worksheetPath": "xl/worksheets/sheet1.xml",
+          "rowStart": 1,
+          "rowEnd": 1,
+          "colStart": null,
+          "colEnd": null,
+          "targetRole": "SCOPE_OR_APPLICABILITY"
+        }
+      ],
+      "requiredContextRoles": [
+        "SCOPE_OR_APPLICABILITY"
+      ],
+      "adjudicationStatus": "UNIQUE_TARGET",
+      "included": true,
+      "reviewerStatus": "INDEPENDENTLY_AUDITED_FROM_PRIVATE_SOURCE_EVIDENCE",
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "pc-eval-19",
+      "split": "development",
+      "category": "DEFINITION_APPLICATION",
+      "queryHash": "65b675f5a5680519991aafb73cf8c619a8682d36c3e91333d190da39e0b08322",
+      "sourceId": "naic-pbr-vm-20-vm-31-vm-51-vm31-templates-reports",
+      "authoritySupportRole": "current_support",
+      "goldUnitIds": [],
+      "evidenceContentHashes": [],
+      "acceptedSourceChunkIds": [],
+      "targetCoordinates": [],
+      "requiredContextRoles": [],
+      "adjudicationStatus": "AMBIGUOUS_EXCLUDED",
+      "included": false,
+      "reviewerStatus": "INDEPENDENTLY_AUDITED_FROM_PRIVATE_SOURCE_EVIDENCE",
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "pc-eval-20",
+      "split": "development",
+      "category": "WRONG_SOURCE_NEGATIVE",
+      "queryHash": "87c2ff9212bc4fcf9d2610f12739d7011cafe3161ce654068a15605a45cdd912",
+      "sourceId": "naic-pbr-vm-20-vm-31-vm-51-vm31-templates-reports",
+      "authoritySupportRole": "current_support",
+      "goldUnitIds": [],
+      "evidenceContentHashes": [],
+      "acceptedSourceChunkIds": [],
+      "targetCoordinates": [],
+      "requiredContextRoles": [],
+      "adjudicationStatus": "AMBIGUOUS_EXCLUDED",
+      "included": false,
+      "reviewerStatus": "INDEPENDENTLY_AUDITED_FROM_PRIVATE_SOURCE_EVIDENCE",
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "pc-eval-21",
+      "split": "development",
+      "category": "LOCAL_REQUIREMENT",
+      "queryHash": "90087bef9e6e8dc0720a1e5735b483f77f0f709cec632b14d6734177b096c64d",
+      "sourceId": "society-of-actuaries-experience-studies-soa-2015-vbt-improvement",
+      "authoritySupportRole": "current_support",
+      "goldUnitIds": [],
+      "evidenceContentHashes": [],
+      "acceptedSourceChunkIds": [],
+      "targetCoordinates": [],
+      "requiredContextRoles": [],
+      "adjudicationStatus": "AMBIGUOUS_EXCLUDED",
+      "included": false,
+      "reviewerStatus": "INDEPENDENTLY_AUDITED_FROM_PRIVATE_SOURCE_EVIDENCE",
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "pc-eval-22",
+      "split": "development",
+      "category": "TABLE_PROSE",
+      "queryHash": "b9f0fce609f98ee404aa34961395232f0222415373916c00b30bae7db9b79786",
+      "sourceId": "society-of-actuaries-experience-studies-soa-2015-vbt-improvement",
+      "authoritySupportRole": "current_support",
+      "goldUnitIds": [],
+      "evidenceContentHashes": [],
+      "acceptedSourceChunkIds": [],
+      "targetCoordinates": [],
+      "requiredContextRoles": [],
+      "adjudicationStatus": "INVALID_TARGET_EXCLUDED",
+      "included": false,
+      "reviewerStatus": "INDEPENDENTLY_AUDITED_FROM_PRIVATE_SOURCE_EVIDENCE",
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "pc-eval-23",
+      "split": "development",
+      "category": "WRONG_SOURCE_NEGATIVE",
+      "queryHash": "5070420d8cd378240f7877507538cbd9087cf28d6d0c789193492b64b0ae26ad",
+      "sourceId": "society-of-actuaries-experience-studies-soa-2015-vbt-improvement",
+      "authoritySupportRole": "current_support",
+      "goldUnitIds": [],
+      "evidenceContentHashes": [],
+      "acceptedSourceChunkIds": [],
+      "targetCoordinates": [],
+      "requiredContextRoles": [],
+      "adjudicationStatus": "AMBIGUOUS_EXCLUDED",
+      "included": false,
+      "reviewerStatus": "INDEPENDENTLY_AUDITED_FROM_PRIVATE_SOURCE_EVIDENCE",
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "pc-eval-24",
+      "split": "development",
+      "category": "AUTHORITY_SUPPORT_CONFUSION",
+      "queryHash": "ccb4fff62a487c3f671bd082b8f5d914c1b888ccb78ed6a767af18f3cdc015ae",
+      "sourceId": "society-of-actuaries-experience-studies-soa-2015-vbt-improvement",
+      "authoritySupportRole": "current_support",
+      "goldUnitIds": [],
+      "evidenceContentHashes": [],
+      "acceptedSourceChunkIds": [],
+      "targetCoordinates": [],
+      "requiredContextRoles": [],
+      "adjudicationStatus": "AMBIGUOUS_EXCLUDED",
+      "included": false,
+      "reviewerStatus": "INDEPENDENTLY_AUDITED_FROM_PRIVATE_SOURCE_EVIDENCE",
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "pc-holdout-01",
+      "split": "holdout",
+      "category": "SECTION_IDENTIFICATION",
+      "queryHash": "d69c5d5f4b911d45db1172c2385f21b6531cb8ab9b07dc3f55c4179d76f2c516",
+      "sourceId": "naic-accounting-publications-appm-2026",
+      "authoritySupportRole": "current_authority",
+      "goldUnitIds": [],
+      "evidenceContentHashes": [],
+      "acceptedSourceChunkIds": [],
+      "targetCoordinates": [],
+      "requiredContextRoles": [],
+      "adjudicationStatus": "AMBIGUOUS_EXCLUDED",
+      "included": false,
+      "reviewerStatus": "INDEPENDENTLY_AUDITED_FROM_PRIVATE_SOURCE_EVIDENCE",
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "pc-holdout-02",
+      "split": "holdout",
+      "category": "SCOPE_REQUIREMENT",
+      "queryHash": "cc066e35c7e408e2c7c6674ca4778a8bd4a032ab8cc051fb743f6465495f7fef",
+      "sourceId": "naic-accounting-publications-appm-2026",
+      "authoritySupportRole": "current_authority",
+      "goldUnitIds": [
+        "gold-v2-1690d5c98cc53dfbc69b8409"
+      ],
+      "evidenceContentHashes": [
+        "479dfde08e5f7e6c168743c28625bf35da0fc87713a3d9572c4808eed366928c"
+      ],
+      "acceptedSourceChunkIds": [
+        "naic-accounting-publications-appm-2026--p-5-5"
+      ],
+      "targetCoordinates": [
+        {
+          "sourceChunkId": "naic-accounting-publications-appm-2026--p-5-5",
+          "pageStart": 5,
+          "pageEnd": 5,
+          "sheetName": null,
+          "worksheetPath": null,
+          "rowStart": null,
+          "rowEnd": null,
+          "colStart": null,
+          "colEnd": null,
+          "targetRole": "SCOPE_OR_APPLICABILITY"
+        }
+      ],
+      "requiredContextRoles": [
+        "SCOPE_OR_APPLICABILITY"
+      ],
+      "adjudicationStatus": "UNIQUE_TARGET",
+      "included": true,
+      "reviewerStatus": "INDEPENDENTLY_AUDITED_FROM_PRIVATE_SOURCE_EVIDENCE",
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "pc-holdout-03",
+      "split": "holdout",
+      "category": "DEFINITION_APPLICATION",
+      "queryHash": "f2ad394631ce70d815c8b5c76fd4d2e93858b9b5e9ee8069da6cf606a13f7d99",
+      "sourceId": "naic-accounting-publications-appm-2026",
+      "authoritySupportRole": "current_authority",
+      "goldUnitIds": [],
+      "evidenceContentHashes": [],
+      "acceptedSourceChunkIds": [],
+      "targetCoordinates": [],
+      "requiredContextRoles": [],
+      "adjudicationStatus": "INVALID_TARGET_EXCLUDED",
+      "included": false,
+      "reviewerStatus": "INDEPENDENTLY_AUDITED_FROM_PRIVATE_SOURCE_EVIDENCE",
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "pc-holdout-04",
+      "split": "holdout",
+      "category": "REPORTING_FORM",
+      "queryHash": "77a9cf9d1ae139ee2aca87636f357be57505efc190edbff9a82af4d360b5caf3",
+      "sourceId": "naic-life-fraternal-reporting-asb-life-2025",
+      "authoritySupportRole": "current_support",
+      "goldUnitIds": [
+        "gold-v2-313a2966b0a5c33b3da1a92b"
+      ],
+      "evidenceContentHashes": [
+        "ece35c78a4ad3788331d0685e1696201eafac68d3431286004ac2681b937140b"
+      ],
+      "acceptedSourceChunkIds": [
+        "naic-life-fraternal-reporting-asb-life-2025--p-1-3"
+      ],
+      "targetCoordinates": [
+        {
+          "sourceChunkId": "naic-life-fraternal-reporting-asb-life-2025--p-1-3",
+          "pageStart": 1,
+          "pageEnd": 3,
+          "sheetName": null,
+          "worksheetPath": null,
+          "rowStart": null,
+          "rowEnd": null,
+          "colStart": null,
+          "colEnd": null,
+          "targetRole": "OTHER"
+        }
+      ],
+      "requiredContextRoles": [
+        "OTHER"
+      ],
+      "adjudicationStatus": "UNIQUE_TARGET",
+      "included": true,
+      "reviewerStatus": "INDEPENDENTLY_AUDITED_FROM_PRIVATE_SOURCE_EVIDENCE",
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "pc-holdout-05",
+      "split": "holdout",
+      "category": "SCHEDULE_CONFUSION",
+      "queryHash": "6bf8339944cc871c7e3b9e75e280123c48f2cd2703474de6d1a85c19e001348f",
+      "sourceId": "naic-life-fraternal-reporting-asb-life-2025",
+      "authoritySupportRole": "current_support",
+      "goldUnitIds": [],
+      "evidenceContentHashes": [],
+      "acceptedSourceChunkIds": [],
+      "targetCoordinates": [],
+      "requiredContextRoles": [],
+      "adjudicationStatus": "AMBIGUOUS_EXCLUDED",
+      "included": false,
+      "reviewerStatus": "INDEPENDENTLY_AUDITED_FROM_PRIVATE_SOURCE_EVIDENCE",
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "pc-holdout-06",
+      "split": "holdout",
+      "category": "QUARTERLY_SCOPE",
+      "queryHash": "23571d0abd23da397b01626373b3f0575c1e52313cc05ea5af1929280cda9532",
+      "sourceId": "naic-life-fraternal-reporting-qsi-life-2026",
+      "authoritySupportRole": "current_support",
+      "goldUnitIds": [
+        "gold-v2-980aef7053414a747c9f30b9"
+      ],
+      "evidenceContentHashes": [
+        "bbb3c127c5b353d6036610641c3acfca59b0c17f83cd6d2c3b4767acfeb67209"
+      ],
+      "acceptedSourceChunkIds": [
+        "naic-life-fraternal-reporting-qsi-life-2026--p-8-9"
+      ],
+      "targetCoordinates": [
+        {
+          "sourceChunkId": "naic-life-fraternal-reporting-qsi-life-2026--p-8-9",
+          "pageStart": 8,
+          "pageEnd": 9,
+          "sheetName": null,
+          "worksheetPath": null,
+          "rowStart": null,
+          "rowEnd": null,
+          "colStart": null,
+          "colEnd": null,
+          "targetRole": "SCOPE_OR_APPLICABILITY"
+        }
+      ],
+      "requiredContextRoles": [
+        "SCOPE_OR_APPLICABILITY"
+      ],
+      "adjudicationStatus": "UNIQUE_TARGET",
+      "included": true,
+      "reviewerStatus": "INDEPENDENTLY_AUDITED_FROM_PRIVATE_SOURCE_EVIDENCE",
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "pc-holdout-07",
+      "split": "holdout",
+      "category": "SCHEDULE_INSTRUCTION",
+      "queryHash": "ba75ac8ee12fd2d20854c4b283d965852af8b18d259df35ee8939510f2fee2e1",
+      "sourceId": "naic-life-fraternal-reporting-qsi-life-2026",
+      "authoritySupportRole": "current_support",
+      "goldUnitIds": [],
+      "evidenceContentHashes": [],
+      "acceptedSourceChunkIds": [],
+      "targetCoordinates": [],
+      "requiredContextRoles": [],
+      "adjudicationStatus": "AMBIGUOUS_EXCLUDED",
+      "included": false,
+      "reviewerStatus": "INDEPENDENTLY_AUDITED_FROM_PRIVATE_SOURCE_EVIDENCE",
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "pc-holdout-08",
+      "split": "holdout",
+      "category": "REPORTING_EXCEPTION",
+      "queryHash": "b39102277e389ad24d106b383b45121cd269d2b649a95fdb3547087ea52a6107",
+      "sourceId": "naic-life-fraternal-reporting-qsi-life-2026",
+      "authoritySupportRole": "current_support",
+      "goldUnitIds": [
+        "gold-v2-29958d5701726d437d845544"
+      ],
+      "evidenceContentHashes": [
+        "bbb3c127c5b353d6036610641c3acfca59b0c17f83cd6d2c3b4767acfeb67209"
+      ],
+      "acceptedSourceChunkIds": [
+        "naic-life-fraternal-reporting-qsi-life-2026--p-8-9"
+      ],
+      "targetCoordinates": [
+        {
+          "sourceChunkId": "naic-life-fraternal-reporting-qsi-life-2026--p-8-9",
+          "pageStart": 8,
+          "pageEnd": 9,
+          "sheetName": null,
+          "worksheetPath": null,
+          "rowStart": null,
+          "rowEnd": null,
+          "colStart": null,
+          "colEnd": null,
+          "targetRole": "EXCEPTION_OR_QUALIFICATION"
+        }
+      ],
+      "requiredContextRoles": [
+        "EXCEPTION_OR_QUALIFICATION"
+      ],
+      "adjudicationStatus": "UNIQUE_TARGET",
+      "included": true,
+      "reviewerStatus": "INDEPENDENTLY_AUDITED_FROM_PRIVATE_SOURCE_EVIDENCE",
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "pc-holdout-09",
+      "split": "holdout",
+      "category": "TABLE_HEADER",
+      "queryHash": "f37c6cce00041728db815595b8422b971e09e11a7886e5e60791793539fbf265",
+      "sourceId": "naic-pbr-vm-20-vm-31-vm-51-vm20-tables-2026-f-g",
+      "authoritySupportRole": "current_support",
+      "goldUnitIds": [
+        "gold-v2-64edf537010aa35b87917c44"
+      ],
+      "evidenceContentHashes": [
+        "fabe824439aaa83e13aa1c55c3a8dec633742564524b42c41816acfb6ba9e3ca"
+      ],
+      "acceptedSourceChunkIds": [
+        "naic-pbr-vm-20-vm-31-vm-51-vm20-tables-2026-f-g--sheet-august-2026--rows-1-35"
+      ],
+      "targetCoordinates": [
+        {
+          "sourceChunkId": "naic-pbr-vm-20-vm-31-vm-51-vm20-tables-2026-f-g--sheet-august-2026--rows-1-35",
+          "pageStart": null,
+          "pageEnd": null,
+          "sheetName": "August 2026",
+          "worksheetPath": "xl/worksheets/sheet1.xml",
+          "rowStart": 1,
+          "rowEnd": 2,
+          "colStart": "A",
+          "colEnd": "K",
+          "targetRole": "HEADER_CONTEXT"
+        }
+      ],
+      "requiredContextRoles": [],
+      "adjudicationStatus": "UNIQUE_TARGET",
+      "included": true,
+      "reviewerStatus": "INDEPENDENTLY_AUDITED_FROM_PRIVATE_SOURCE_EVIDENCE",
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "pc-holdout-10",
+      "split": "holdout",
+      "category": "RATING_RANGE",
+      "queryHash": "b375c774500b3a1d9229d27412b7564332d328d2c10d6fd3fcd95d592280605d",
+      "sourceId": "naic-pbr-vm-20-vm-31-vm-51-vm20-tables-2026-f-g",
+      "authoritySupportRole": "current_support",
+      "goldUnitIds": [
+        "gold-v2-949144a231c5797f535c19b8"
+      ],
+      "evidenceContentHashes": [
+        "fabe824439aaa83e13aa1c55c3a8dec633742564524b42c41816acfb6ba9e3ca"
+      ],
+      "acceptedSourceChunkIds": [
+        "naic-pbr-vm-20-vm-31-vm-51-vm20-tables-2026-f-g--sheet-august-2026--rows-1-35"
+      ],
+      "targetCoordinates": [
+        {
+          "sourceChunkId": "naic-pbr-vm-20-vm-31-vm-51-vm20-tables-2026-f-g--sheet-august-2026--rows-1-35",
+          "pageStart": null,
+          "pageEnd": null,
+          "sheetName": "August 2026",
+          "worksheetPath": "xl/worksheets/sheet1.xml",
+          "rowStart": 3,
+          "rowEnd": 35,
+          "colStart": "A",
+          "colEnd": "K",
+          "targetRole": "TABLE_OR_SCHEDULE"
+        }
+      ],
+      "requiredContextRoles": [
+        "HEADER_CONTEXT"
+      ],
+      "adjudicationStatus": "MULTI_UNIT_REQUIRED",
+      "included": true,
+      "reviewerStatus": "INDEPENDENTLY_AUDITED_FROM_PRIVATE_SOURCE_EVIDENCE",
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "pc-holdout-11",
+      "split": "holdout",
+      "category": "TEMPLATE_INSTRUCTION",
+      "queryHash": "743217d4c087dba31e59b171d1fd9e31565b93804b58fd15c5d9231165790787",
+      "sourceId": "naic-pbr-vm-20-vm-31-vm-51-vm31-templates-reports",
+      "authoritySupportRole": "current_support",
+      "goldUnitIds": [
+        "gold-v2-5bfe30c27d12698aba7a0938"
+      ],
+      "evidenceContentHashes": [
+        "45bd6a782dcd9b1c89e9f438f546b5313afd34455e9a877b8d120c06e2655a35"
+      ],
+      "acceptedSourceChunkIds": [
+        "naic-pbr-vm-20-vm-31-vm-51-vm31-templates-reports--sheet-general-instructions--rows-1-2"
+      ],
+      "targetCoordinates": [
+        {
+          "sourceChunkId": "naic-pbr-vm-20-vm-31-vm-51-vm31-templates-reports--sheet-general-instructions--rows-1-2",
+          "pageStart": null,
+          "pageEnd": null,
+          "sheetName": "General Instructions",
+          "worksheetPath": "xl/worksheets/sheet2.xml",
+          "rowStart": 1,
+          "rowEnd": 2,
+          "colStart": null,
+          "colEnd": null,
+          "targetRole": "REPORTING_INSTRUCTION"
+        }
+      ],
+      "requiredContextRoles": [
+        "HEADER_CONTEXT"
+      ],
+      "adjudicationStatus": "UNIQUE_TARGET",
+      "included": true,
+      "reviewerStatus": "INDEPENDENTLY_AUDITED_FROM_PRIVATE_SOURCE_EVIDENCE",
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "pc-holdout-12",
+      "split": "holdout",
+      "category": "CONFIDENTIALITY_BOUNDARY",
+      "queryHash": "4248c3fb0e867c9f9bdecf78b621a50ba4e460766f97543b3fc96c87358ee384",
+      "sourceId": "naic-pbr-vm-20-vm-31-vm-51-vm31-templates-reports",
+      "authoritySupportRole": "current_support",
+      "goldUnitIds": [
+        "gold-v2-e870e224d5ad30fa5fa6825a"
+      ],
+      "evidenceContentHashes": [
+        "c471bba09cc38bcc044c39197b6bfbc86434602e04282bbbacf20445fdd18299"
+      ],
+      "acceptedSourceChunkIds": [
+        "naic-pbr-vm-20-vm-31-vm-51-vm31-templates-reports--sheet-confidentiality--rows-1-1"
+      ],
+      "targetCoordinates": [
+        {
+          "sourceChunkId": "naic-pbr-vm-20-vm-31-vm-51-vm31-templates-reports--sheet-confidentiality--rows-1-1",
+          "pageStart": null,
+          "pageEnd": null,
+          "sheetName": "Confidentiality",
+          "worksheetPath": "xl/worksheets/sheet1.xml",
+          "rowStart": 1,
+          "rowEnd": 1,
+          "colStart": null,
+          "colEnd": null,
+          "targetRole": "SCOPE_OR_APPLICABILITY"
+        }
+      ],
+      "requiredContextRoles": [],
+      "adjudicationStatus": "UNIQUE_TARGET",
+      "included": true,
+      "reviewerStatus": "INDEPENDENTLY_AUDITED_FROM_PRIVATE_SOURCE_EVIDENCE",
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "pc-holdout-13",
+      "split": "holdout",
+      "category": "MORTALITY_METHOD",
+      "queryHash": "c7c2781147362b0ce959ee1e996f3172a2ec6e81a5006b4272ba97347ebcafe8",
+      "sourceId": "society-of-actuaries-experience-studies-soa-2015-vbt-improvement",
+      "authoritySupportRole": "current_support",
+      "goldUnitIds": [
+        "gold-v2-2699dd8f0a4a4de61c78fa0c"
+      ],
+      "evidenceContentHashes": [
+        "78079615d9434bc0c32bfe8280bf1a099b69d078abc8641052c29f618aca5093"
+      ],
+      "acceptedSourceChunkIds": [
+        "society-of-actuaries-experience-studies-soa-2015-vbt-improvement--sheet-documentation--rows-5-5"
+      ],
+      "targetCoordinates": [
+        {
+          "sourceChunkId": "society-of-actuaries-experience-studies-soa-2015-vbt-improvement--sheet-documentation--rows-5-5",
+          "pageStart": null,
+          "pageEnd": null,
+          "sheetName": "Documentation",
+          "worksheetPath": "xl/worksheets/sheet1.xml",
+          "rowStart": 5,
+          "rowEnd": 5,
+          "colStart": null,
+          "colEnd": null,
+          "targetRole": "OTHER"
+        }
+      ],
+      "requiredContextRoles": [],
+      "adjudicationStatus": "UNIQUE_TARGET",
+      "included": true,
+      "reviewerStatus": "INDEPENDENTLY_AUDITED_FROM_PRIVATE_SOURCE_EVIDENCE",
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "pc-holdout-14",
+      "split": "holdout",
+      "category": "IMPROVEMENT_APPLICATION",
+      "queryHash": "cc15db34edea00eb58505e1b083a5dddf2e6693c53c823c3d7a2c846b9e6204b",
+      "sourceId": "society-of-actuaries-experience-studies-soa-2015-vbt-improvement",
+      "authoritySupportRole": "current_support",
+      "goldUnitIds": [
+        "gold-v2-89e95db036c52c265c1a9858"
+      ],
+      "evidenceContentHashes": [
+        "68177b1ce91045927102912fb5764fdf453aa95124ec14f72fed74637582c997"
+      ],
+      "acceptedSourceChunkIds": [
+        "society-of-actuaries-experience-studies-soa-2015-vbt-improvement--sheet-documentation--rows-7-8"
+      ],
+      "targetCoordinates": [
+        {
+          "sourceChunkId": "society-of-actuaries-experience-studies-soa-2015-vbt-improvement--sheet-documentation--rows-7-8",
+          "pageStart": null,
+          "pageEnd": null,
+          "sheetName": "Documentation",
+          "worksheetPath": "xl/worksheets/sheet1.xml",
+          "rowStart": 7,
+          "rowEnd": 7,
+          "colStart": null,
+          "colEnd": null,
+          "targetRole": "OTHER"
+        }
+      ],
+      "requiredContextRoles": [],
+      "adjudicationStatus": "UNIQUE_TARGET",
+      "included": true,
+      "reviewerStatus": "INDEPENDENTLY_AUDITED_FROM_PRIVATE_SOURCE_EVIDENCE",
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "pc-holdout-15",
+      "split": "holdout",
+      "category": "SEGMENT_TABLE",
+      "queryHash": "f568a9dde5b3b69a6a21d3257818f1eaa4c290110882821c4fc3b528a3a14361",
+      "sourceId": "society-of-actuaries-experience-studies-soa-2015-vbt-improvement",
+      "authoritySupportRole": "current_support",
+      "goldUnitIds": [
+        "gold-v2-5fb128d942d98c22a43a9841"
+      ],
+      "evidenceContentHashes": [
+        "68177b1ce91045927102912fb5764fdf453aa95124ec14f72fed74637582c997"
+      ],
+      "acceptedSourceChunkIds": [
+        "society-of-actuaries-experience-studies-soa-2015-vbt-improvement--sheet-documentation--rows-7-8"
+      ],
+      "targetCoordinates": [
+        {
+          "sourceChunkId": "society-of-actuaries-experience-studies-soa-2015-vbt-improvement--sheet-documentation--rows-7-8",
+          "pageStart": null,
+          "pageEnd": null,
+          "sheetName": "Documentation",
+          "worksheetPath": "xl/worksheets/sheet1.xml",
+          "rowStart": 8,
+          "rowEnd": 8,
+          "colStart": null,
+          "colEnd": null,
+          "targetRole": "TABLE_OR_SCHEDULE"
+        }
+      ],
+      "requiredContextRoles": [],
+      "adjudicationStatus": "UNIQUE_TARGET",
+      "included": true,
+      "reviewerStatus": "INDEPENDENTLY_AUDITED_FROM_PRIVATE_SOURCE_EVIDENCE",
+      "queryExternal": true,
+      "rationaleExternal": true
+    }
+  ],
+  "privateAdjudicationPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\semantic-evidence-unit-correction-2026-09\\gold-v2-adjudication.json",
+  "privateAdjudicationSha256": "cebaf90ce11ce874f0de2c33d1c2fd947bd10166cab4e092cde818484ca0eb6f",
+  "privateAdjudicationByteCount": 47509,
+  "finalGoldSelectionUsesRegex": false,
+  "rankingInputExcludesExpectations": true,
+  "reviewOnly": true,
+  "promotionStatus": "not_promoted",
+  "ragReadyAllowed": false
+}
