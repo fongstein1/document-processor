@@ -92,6 +92,8 @@ for (const item of v1Private.cases) {
   if (!decision) throw new Error(`Missing V2 adjudication decision: ${item.caseId}`)
   const [adjudicationStatus, included, rationale] = decision
   const source = await loadSource(item.expectedSourceId)
+  const sourceSha256 = source.source?.sourceSha256
+  if (!/^[0-9a-f]{64}$/.test(sourceSha256 || '')) throw new Error(`Missing source SHA lineage for V2 adjudication: ${item.caseId}`)
   const child = source.children.find((candidate) => candidate.childId === item.expectedChildId)
   const override = coordinateOverride[item.caseId] || {}
   const targetCoordinate = included ? {
@@ -106,7 +108,7 @@ for (const item of v1Private.cases) {
     colEnd: override.colEnd ?? null,
     targetRole: override.targetRole ?? roleOverride[item.caseId]?.[0] ?? child?.semanticRole ?? 'OTHER'
   } : null
-  const goldUnitId = targetCoordinate ? `gold-v2-${sha256([item.expectedSourceId, source.sourceSha256, targetCoordinate]).slice(0, 24)}` : null
+  const goldUnitId = targetCoordinate ? `gold-v2-${sha256([item.expectedSourceId, sourceSha256, targetCoordinate]).slice(0, 24)}` : null
   adjudications.push({
     caseId: item.caseId,
     split: item.caseId.startsWith('pc-holdout-') ? 'holdout' : 'development',
@@ -114,7 +116,7 @@ for (const item of v1Private.cases) {
     query: item.query,
     queryHash: sha256(item.query),
     sourceId: item.expectedSourceId,
-    sourceSha256: source.sourceSha256,
+    sourceSha256,
     authoritySupportRole: item.expectedRole,
     candidateEvidenceIds: [item.expectedChildId].filter(Boolean),
     chosenGoldEvidence: goldUnitId ? [{ goldUnitId, ...targetCoordinate, evidenceContentHash: child?.contentHash || sha256(child?.sourceTextExcerpt || '') }] : [],
