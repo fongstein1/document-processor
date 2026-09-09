@@ -1,0 +1,2588 @@
+{
+  "schemaVersion": "1.0",
+  "evaluationVersion": "MULTI_UNIT_GOLD_V1",
+  "runId": "multi-unit-gold-v1-2026-09",
+  "startingSha": "049af0f3587fede9a2ec7643a33d1b6862bef949",
+  "frozenAt": "2026-09-09T00:00:00.000Z",
+  "counts": {
+    "multiUnit": 35,
+    "singleUnitControls": 10,
+    "unsupported": 5,
+    "partiallyUnsupported": 5,
+    "development": 27,
+    "holdout": 18
+  },
+  "categoryCounts": {
+    "COMPARISON": 5,
+    "DEFINITION_PLUS_REQUIREMENT": 5,
+    "MULTIPLE_REQUIREMENTS": 5,
+    "OTHER_MULTI_UNIT": 5,
+    "REQUIREMENT_PLUS_EXCEPTION": 5,
+    "REQUIREMENT_PLUS_SCOPE": 5,
+    "TABLE_HEADER_PLUS_DATA": 5
+  },
+  "sourceCounts": {
+    "naic-accounting-publications-appm-2026": 26,
+    "naic-life-fraternal-reporting-asb-life-2025": 3,
+    "naic-life-fraternal-reporting-qsi-life-2026": 6,
+    "naic-pbr-vm-20-vm-31-vm-51-vm20-tables-2026-f-g": 3,
+    "naic-pbr-vm-20-vm-31-vm-51-vm31-templates-reports": 3,
+    "society-of-actuaries-experience-studies-soa-2015-vbt-improvement": 4
+  },
+  "modalityCounts": {
+    "PDF": 35,
+    "XLSX": 10
+  },
+  "classificationCounts": {
+    "MULTI_UNIT_REQUIRED": 35,
+    "PARTIALLY_UNSUPPORTED": 5,
+    "UNIQUE_SINGLE_UNIT": 10,
+    "UNSUPPORTED": 5
+  },
+  "privateAdjudicationPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\multi-unit-gold-v1-2026-09\\multi-unit-gold-v1-adjudication.json",
+  "privateAdjudicationSha256": "976189ba0acbd312b73f42fd3432f5e39f31f2427363bca72ff8757434df5443",
+  "privateAdjudicationByteCount": 108512,
+  "retrieverArtifacts": [
+    {
+      "path": "config/hybrid-vector-retrieval-experiment.json",
+      "sha256": "03fe8f7dd7c4b372e2c6219e9c67c89fa12c09fcad09b5bfaa8e8863fda88718"
+    },
+    {
+      "path": "scripts/lib/hybrid-vector-retrieval.mjs",
+      "sha256": "081656f7748a8a323b4372b5cf0b11f544d72aa7b4eddbab6d2ba1f7d221cd84"
+    },
+    {
+      "path": "scripts/lib/semantic-evidence-units.mjs",
+      "sha256": "b863974e1394d512d81b782b4bffc682515f180785f9a9b251f3226e8ce9694f"
+    },
+    {
+      "path": "scripts/lib/hierarchical-retrieval.mjs",
+      "sha256": "e8832329debcfe99eaace4c67330a7f1450ba273544cbfed832bb02011119f74"
+    },
+    {
+      "path": "scripts/hybrid-vector-retrieval-experiment.mjs",
+      "sha256": "60901d1634a97c9e691689c0f776b060002752d861ac423886b099bf86cdb8b6"
+    },
+    {
+      "path": "scripts/embed-local-e5-queries.py",
+      "sha256": "fe32bb505d76675cf207f49003f4689a8e7e878a423535657cc2dac91a460c12"
+    }
+  ],
+  "sidecarProtocol": {
+    "implementation": "scripts/lib/hierarchical-retrieval.mjs#assembleEvidence",
+    "ranking": "UNCHANGED_FLAT_HYBRID_RRF",
+    "parentScope": "FIRST_THREE_DISTINCT_PARENTS_IN_FLAT_RANK_ORDER",
+    "topParents": 3,
+    "maximumPackageEvidence": 6,
+    "maximumPackageCharacters": 16000
+  },
+  "rankingInputExcludesGold": true,
+  "noHoldoutTuning": true,
+  "retrievalConfigurationUnchanged": true,
+  "cases": [
+    {
+      "caseId": "mug1-mu-001",
+      "queryHash": "8fc933ef9796139d0f9ad2f2deb2957021c8fb60a76de954e247e2b76fc4e91c",
+      "split": "development",
+      "classification": "MULTI_UNIT_REQUIRED",
+      "category": "REQUIREMENT_PLUS_SCOPE",
+      "modality": "PDF",
+      "sourceId": "naic-accounting-publications-appm-2026",
+      "sourceSha256": "572b86e1e45582656f23d218d4695ba5a102e5f13f00c4cb34ae68e54d3830a0",
+      "authoritySupportRole": "current_authority",
+      "acceptedEvidenceSets": [
+        {
+          "evidenceIds": [
+            "seu-df9ddcb8a9e770dedd67db82",
+            "seu-670801596d132c6583ab5f76"
+          ],
+          "evidenceSetHash": "a1b113bd60ec6f3faae34df65ff4a368166abc8f9fbc777a6be9726e72f3b229"
+        }
+      ],
+      "acceptedEvidenceSetHashes": [
+        "a1b113bd60ec6f3faae34df65ff4a368166abc8f9fbc777a6be9726e72f3b229"
+      ],
+      "acceptedParentIds": [
+        "seu-cade3aa4e3bd01f996d50b75"
+      ],
+      "requiredEvidenceRoles": [
+        "SCOPE_OR_APPLICABILITY",
+        "REQUIREMENT"
+      ],
+      "citationCoordinates": [
+        {
+          "evidenceId": "seu-df9ddcb8a9e770dedd67db82",
+          "pageStart": 120,
+          "pageEnd": 120,
+          "sourceChunkId": "naic-accounting-publications-appm-2026--p-120-120"
+        },
+        {
+          "evidenceId": "seu-670801596d132c6583ab5f76",
+          "pageStart": 117,
+          "pageEnd": 117,
+          "sourceChunkId": "naic-accounting-publications-appm-2026--p-117-117"
+        }
+      ],
+      "partiallySupportedEvidenceIds": [],
+      "partiallySupportedCoordinates": [],
+      "reviewerStatus": "INDEPENDENTLY_ADJUDICATED",
+      "included": true,
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "mug1-mu-002",
+      "queryHash": "07eb41709746010fd79fb82274b074b4784d22cdae4684f88e83933d3cb752c2",
+      "split": "development",
+      "classification": "MULTI_UNIT_REQUIRED",
+      "category": "REQUIREMENT_PLUS_SCOPE",
+      "modality": "PDF",
+      "sourceId": "naic-accounting-publications-appm-2026",
+      "sourceSha256": "572b86e1e45582656f23d218d4695ba5a102e5f13f00c4cb34ae68e54d3830a0",
+      "authoritySupportRole": "current_authority",
+      "acceptedEvidenceSets": [
+        {
+          "evidenceIds": [
+            "seu-06210140e6039da283e76013",
+            "seu-aa245e86eb2fffb671939d62"
+          ],
+          "evidenceSetHash": "4dc74703635d4128c7e1e546fac328b15634c147009b667b986a3731e98e190a"
+        }
+      ],
+      "acceptedEvidenceSetHashes": [
+        "4dc74703635d4128c7e1e546fac328b15634c147009b667b986a3731e98e190a"
+      ],
+      "acceptedParentIds": [
+        "seu-afe1ab4d49b30fd94fe10c25"
+      ],
+      "requiredEvidenceRoles": [
+        "SCOPE_OR_APPLICABILITY",
+        "REQUIREMENT"
+      ],
+      "citationCoordinates": [
+        {
+          "evidenceId": "seu-06210140e6039da283e76013",
+          "pageStart": 124,
+          "pageEnd": 124,
+          "sourceChunkId": "naic-accounting-publications-appm-2026--p-124-124"
+        },
+        {
+          "evidenceId": "seu-aa245e86eb2fffb671939d62",
+          "pageStart": 124,
+          "pageEnd": 124,
+          "sourceChunkId": "naic-accounting-publications-appm-2026--p-124-124"
+        }
+      ],
+      "partiallySupportedEvidenceIds": [],
+      "partiallySupportedCoordinates": [],
+      "reviewerStatus": "INDEPENDENTLY_ADJUDICATED",
+      "included": true,
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "mug1-mu-003",
+      "queryHash": "57950dc05dbe829d45a82a6650d8e22b7b5f9e8aab7d700a9c548166a06a66ac",
+      "split": "development",
+      "classification": "MULTI_UNIT_REQUIRED",
+      "category": "REQUIREMENT_PLUS_SCOPE",
+      "modality": "PDF",
+      "sourceId": "naic-accounting-publications-appm-2026",
+      "sourceSha256": "572b86e1e45582656f23d218d4695ba5a102e5f13f00c4cb34ae68e54d3830a0",
+      "authoritySupportRole": "current_authority",
+      "acceptedEvidenceSets": [
+        {
+          "evidenceIds": [
+            "seu-a7882fe88b9c8a5203eaa6f3",
+            "seu-adf6a9ff571ca2d291b43aad"
+          ],
+          "evidenceSetHash": "4f5e703775913111b1116f56cadb896523d4c5df8f8c3b10a71474d966ab6da9"
+        }
+      ],
+      "acceptedEvidenceSetHashes": [
+        "4f5e703775913111b1116f56cadb896523d4c5df8f8c3b10a71474d966ab6da9"
+      ],
+      "acceptedParentIds": [
+        "seu-8871512de853bf58a81e11c0"
+      ],
+      "requiredEvidenceRoles": [
+        "SCOPE_OR_APPLICABILITY",
+        "REQUIREMENT"
+      ],
+      "citationCoordinates": [
+        {
+          "evidenceId": "seu-a7882fe88b9c8a5203eaa6f3",
+          "pageStart": 136,
+          "pageEnd": 136,
+          "sourceChunkId": "naic-accounting-publications-appm-2026--p-136-136"
+        },
+        {
+          "evidenceId": "seu-adf6a9ff571ca2d291b43aad",
+          "pageStart": 136,
+          "pageEnd": 136,
+          "sourceChunkId": "naic-accounting-publications-appm-2026--p-136-136"
+        }
+      ],
+      "partiallySupportedEvidenceIds": [],
+      "partiallySupportedCoordinates": [],
+      "reviewerStatus": "INDEPENDENTLY_ADJUDICATED",
+      "included": true,
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "mug1-mu-004",
+      "queryHash": "ce22bee2cf5ba9caf4166793dd80781760e7e3099dbe14fd4f6e99d10269133c",
+      "split": "holdout",
+      "classification": "MULTI_UNIT_REQUIRED",
+      "category": "REQUIREMENT_PLUS_SCOPE",
+      "modality": "PDF",
+      "sourceId": "naic-accounting-publications-appm-2026",
+      "sourceSha256": "572b86e1e45582656f23d218d4695ba5a102e5f13f00c4cb34ae68e54d3830a0",
+      "authoritySupportRole": "current_authority",
+      "acceptedEvidenceSets": [
+        {
+          "evidenceIds": [
+            "seu-8e54d414344ab40c47b8f7e9",
+            "seu-4c822dbff3259d665307fa67"
+          ],
+          "evidenceSetHash": "61a7dac30c851262809a65d850127506fb9186060c0d7e9875a16ad27e0eadbd"
+        }
+      ],
+      "acceptedEvidenceSetHashes": [
+        "61a7dac30c851262809a65d850127506fb9186060c0d7e9875a16ad27e0eadbd"
+      ],
+      "acceptedParentIds": [
+        "seu-5051dc3044474ebdbc7a7d51"
+      ],
+      "requiredEvidenceRoles": [
+        "SCOPE_OR_APPLICABILITY",
+        "REQUIREMENT"
+      ],
+      "citationCoordinates": [
+        {
+          "evidenceId": "seu-8e54d414344ab40c47b8f7e9",
+          "pageStart": 163,
+          "pageEnd": 163,
+          "sourceChunkId": "naic-accounting-publications-appm-2026--p-163-163"
+        },
+        {
+          "evidenceId": "seu-4c822dbff3259d665307fa67",
+          "pageStart": 163,
+          "pageEnd": 163,
+          "sourceChunkId": "naic-accounting-publications-appm-2026--p-163-163"
+        }
+      ],
+      "partiallySupportedEvidenceIds": [],
+      "partiallySupportedCoordinates": [],
+      "reviewerStatus": "INDEPENDENTLY_ADJUDICATED",
+      "included": true,
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "mug1-mu-005",
+      "queryHash": "2b2169b3a049f331be4e2f89e134d824df2dd54fa6567c5e81f943b8f741f998",
+      "split": "development",
+      "classification": "MULTI_UNIT_REQUIRED",
+      "category": "REQUIREMENT_PLUS_SCOPE",
+      "modality": "PDF",
+      "sourceId": "naic-accounting-publications-appm-2026",
+      "sourceSha256": "572b86e1e45582656f23d218d4695ba5a102e5f13f00c4cb34ae68e54d3830a0",
+      "authoritySupportRole": "current_authority",
+      "acceptedEvidenceSets": [
+        {
+          "evidenceIds": [
+            "seu-ca4fdb0d9db63f5dc5ed5d09",
+            "seu-2cd789ee5fd58ea80bee71ed"
+          ],
+          "evidenceSetHash": "9055f9b8eb97680f7ae42243947e19caf9418723eb5c1c92029dc756b93d6c98"
+        }
+      ],
+      "acceptedEvidenceSetHashes": [
+        "9055f9b8eb97680f7ae42243947e19caf9418723eb5c1c92029dc756b93d6c98"
+      ],
+      "acceptedParentIds": [
+        "seu-f42c8107867ed63cfe3b0322"
+      ],
+      "requiredEvidenceRoles": [
+        "SCOPE_OR_APPLICABILITY",
+        "REQUIREMENT"
+      ],
+      "citationCoordinates": [
+        {
+          "evidenceId": "seu-ca4fdb0d9db63f5dc5ed5d09",
+          "pageStart": 167,
+          "pageEnd": 167,
+          "sourceChunkId": "naic-accounting-publications-appm-2026--p-167-167"
+        },
+        {
+          "evidenceId": "seu-2cd789ee5fd58ea80bee71ed",
+          "pageStart": 167,
+          "pageEnd": 167,
+          "sourceChunkId": "naic-accounting-publications-appm-2026--p-167-167"
+        }
+      ],
+      "partiallySupportedEvidenceIds": [],
+      "partiallySupportedCoordinates": [],
+      "reviewerStatus": "INDEPENDENTLY_ADJUDICATED",
+      "included": true,
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "mug1-mu-006",
+      "queryHash": "93a11c1ee0c9987e32726f43f2e5d87db4c64c087fdc0b4856a9fc12edae6eb2",
+      "split": "development",
+      "classification": "MULTI_UNIT_REQUIRED",
+      "category": "REQUIREMENT_PLUS_EXCEPTION",
+      "modality": "PDF",
+      "sourceId": "naic-accounting-publications-appm-2026",
+      "sourceSha256": "572b86e1e45582656f23d218d4695ba5a102e5f13f00c4cb34ae68e54d3830a0",
+      "authoritySupportRole": "current_authority",
+      "acceptedEvidenceSets": [
+        {
+          "evidenceIds": [
+            "seu-99491996836a7d532cd72767",
+            "seu-4755c5f2e4fd2559a42f896d"
+          ],
+          "evidenceSetHash": "069553feb5c343fb06a9cb112eab7b7a1ba91abedde975783c9000635d562aa0"
+        }
+      ],
+      "acceptedEvidenceSetHashes": [
+        "069553feb5c343fb06a9cb112eab7b7a1ba91abedde975783c9000635d562aa0"
+      ],
+      "acceptedParentIds": [
+        "seu-376fd34d5a7c176998c678a4"
+      ],
+      "requiredEvidenceRoles": [
+        "REQUIREMENT",
+        "EXCEPTION_OR_QUALIFICATION"
+      ],
+      "citationCoordinates": [
+        {
+          "evidenceId": "seu-99491996836a7d532cd72767",
+          "pageStart": 63,
+          "pageEnd": 63,
+          "sourceChunkId": "naic-accounting-publications-appm-2026--p-63-63"
+        },
+        {
+          "evidenceId": "seu-4755c5f2e4fd2559a42f896d",
+          "pageStart": 63,
+          "pageEnd": 63,
+          "sourceChunkId": "naic-accounting-publications-appm-2026--p-63-63"
+        }
+      ],
+      "partiallySupportedEvidenceIds": [],
+      "partiallySupportedCoordinates": [],
+      "reviewerStatus": "INDEPENDENTLY_ADJUDICATED",
+      "included": true,
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "mug1-mu-007",
+      "queryHash": "584fd020d2c9c5587f3740d591914b00bfecec6a524d9135b3496f40a4eb0797",
+      "split": "development",
+      "classification": "MULTI_UNIT_REQUIRED",
+      "category": "REQUIREMENT_PLUS_EXCEPTION",
+      "modality": "PDF",
+      "sourceId": "naic-accounting-publications-appm-2026",
+      "sourceSha256": "572b86e1e45582656f23d218d4695ba5a102e5f13f00c4cb34ae68e54d3830a0",
+      "authoritySupportRole": "current_authority",
+      "acceptedEvidenceSets": [
+        {
+          "evidenceIds": [
+            "seu-a1d4b118fb967a43e1e4e142",
+            "seu-7ec53e25f6e4e9aa3fd05dd9"
+          ],
+          "evidenceSetHash": "7a69fba6d704a901005f2d7eb84cb26e1762083845bb50fc7fc65a545826a4b1"
+        }
+      ],
+      "acceptedEvidenceSetHashes": [
+        "7a69fba6d704a901005f2d7eb84cb26e1762083845bb50fc7fc65a545826a4b1"
+      ],
+      "acceptedParentIds": [
+        "seu-2c0eaabbbccf1e6562923106"
+      ],
+      "requiredEvidenceRoles": [
+        "REQUIREMENT",
+        "EXCEPTION_OR_QUALIFICATION"
+      ],
+      "citationCoordinates": [
+        {
+          "evidenceId": "seu-a1d4b118fb967a43e1e4e142",
+          "pageStart": 71,
+          "pageEnd": 71,
+          "sourceChunkId": "naic-accounting-publications-appm-2026--p-71-71"
+        },
+        {
+          "evidenceId": "seu-7ec53e25f6e4e9aa3fd05dd9",
+          "pageStart": 71,
+          "pageEnd": 71,
+          "sourceChunkId": "naic-accounting-publications-appm-2026--p-71-71"
+        }
+      ],
+      "partiallySupportedEvidenceIds": [],
+      "partiallySupportedCoordinates": [],
+      "reviewerStatus": "INDEPENDENTLY_ADJUDICATED",
+      "included": true,
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "mug1-mu-008",
+      "queryHash": "77866a25bbdeff997b2ba9c9aebe5c138d77c8480176f7c3d32a001e2e1c0adb",
+      "split": "development",
+      "classification": "MULTI_UNIT_REQUIRED",
+      "category": "REQUIREMENT_PLUS_EXCEPTION",
+      "modality": "PDF",
+      "sourceId": "naic-accounting-publications-appm-2026",
+      "sourceSha256": "572b86e1e45582656f23d218d4695ba5a102e5f13f00c4cb34ae68e54d3830a0",
+      "authoritySupportRole": "current_authority",
+      "acceptedEvidenceSets": [
+        {
+          "evidenceIds": [
+            "seu-9421f1cb0dfc82d95cc1e835",
+            "seu-e7394cfe530d46c4d40f7692"
+          ],
+          "evidenceSetHash": "0b0e175a2a424d22bce76acde51a0c25db7f889f6e29888b09f0ba2c5ddaba16"
+        }
+      ],
+      "acceptedEvidenceSetHashes": [
+        "0b0e175a2a424d22bce76acde51a0c25db7f889f6e29888b09f0ba2c5ddaba16"
+      ],
+      "acceptedParentIds": [
+        "seu-e2b127ad792c47cd95db863f"
+      ],
+      "requiredEvidenceRoles": [
+        "REQUIREMENT",
+        "EXCEPTION_OR_QUALIFICATION"
+      ],
+      "citationCoordinates": [
+        {
+          "evidenceId": "seu-9421f1cb0dfc82d95cc1e835",
+          "pageStart": 75,
+          "pageEnd": 75,
+          "sourceChunkId": "naic-accounting-publications-appm-2026--p-75-75"
+        },
+        {
+          "evidenceId": "seu-e7394cfe530d46c4d40f7692",
+          "pageStart": 75,
+          "pageEnd": 75,
+          "sourceChunkId": "naic-accounting-publications-appm-2026--p-75-75"
+        }
+      ],
+      "partiallySupportedEvidenceIds": [],
+      "partiallySupportedCoordinates": [],
+      "reviewerStatus": "INDEPENDENTLY_ADJUDICATED",
+      "included": true,
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "mug1-mu-009",
+      "queryHash": "d4a8a07c6797fd01c2ba98066fda312fc545ce3aa72621f501a3c77cfa38d508",
+      "split": "holdout",
+      "classification": "MULTI_UNIT_REQUIRED",
+      "category": "REQUIREMENT_PLUS_EXCEPTION",
+      "modality": "PDF",
+      "sourceId": "naic-accounting-publications-appm-2026",
+      "sourceSha256": "572b86e1e45582656f23d218d4695ba5a102e5f13f00c4cb34ae68e54d3830a0",
+      "authoritySupportRole": "current_authority",
+      "acceptedEvidenceSets": [
+        {
+          "evidenceIds": [
+            "seu-ad3842a4567d00b2e2c4b125",
+            "seu-e9d520c1098b6e79e8c9c078"
+          ],
+          "evidenceSetHash": "2949d8e4fdb06531b2c7313b63ae4c0dbe5c0edbc572e2cd638ead126d0ca701"
+        }
+      ],
+      "acceptedEvidenceSetHashes": [
+        "2949d8e4fdb06531b2c7313b63ae4c0dbe5c0edbc572e2cd638ead126d0ca701"
+      ],
+      "acceptedParentIds": [
+        "seu-f4d0febb7bb2c5b2b6fd1763"
+      ],
+      "requiredEvidenceRoles": [
+        "REQUIREMENT",
+        "EXCEPTION_OR_QUALIFICATION"
+      ],
+      "citationCoordinates": [
+        {
+          "evidenceId": "seu-ad3842a4567d00b2e2c4b125",
+          "pageStart": 91,
+          "pageEnd": 91,
+          "sourceChunkId": "naic-accounting-publications-appm-2026--p-91-91"
+        },
+        {
+          "evidenceId": "seu-e9d520c1098b6e79e8c9c078",
+          "pageStart": 90,
+          "pageEnd": 90,
+          "sourceChunkId": "naic-accounting-publications-appm-2026--p-90-90"
+        }
+      ],
+      "partiallySupportedEvidenceIds": [],
+      "partiallySupportedCoordinates": [],
+      "reviewerStatus": "INDEPENDENTLY_ADJUDICATED",
+      "included": true,
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "mug1-mu-010",
+      "queryHash": "da49c608987dc9b346cd6304eadfaef6cc5ce34f765fbede7605f37a5ded97d9",
+      "split": "development",
+      "classification": "MULTI_UNIT_REQUIRED",
+      "category": "REQUIREMENT_PLUS_EXCEPTION",
+      "modality": "PDF",
+      "sourceId": "naic-accounting-publications-appm-2026",
+      "sourceSha256": "572b86e1e45582656f23d218d4695ba5a102e5f13f00c4cb34ae68e54d3830a0",
+      "authoritySupportRole": "current_authority",
+      "acceptedEvidenceSets": [
+        {
+          "evidenceIds": [
+            "seu-378fe23072ee593e9286b57c",
+            "seu-966b81c21acd7f7ec5418147"
+          ],
+          "evidenceSetHash": "e41830074c5c3bc466cd5bc05acb5340664ad0df2b0f5be7503fb13442899e69"
+        }
+      ],
+      "acceptedEvidenceSetHashes": [
+        "e41830074c5c3bc466cd5bc05acb5340664ad0df2b0f5be7503fb13442899e69"
+      ],
+      "acceptedParentIds": [
+        "seu-c2c23009f678763624e8751d"
+      ],
+      "requiredEvidenceRoles": [
+        "REQUIREMENT",
+        "EXCEPTION_OR_QUALIFICATION"
+      ],
+      "citationCoordinates": [
+        {
+          "evidenceId": "seu-378fe23072ee593e9286b57c",
+          "pageStart": 97,
+          "pageEnd": 97,
+          "sourceChunkId": "naic-accounting-publications-appm-2026--p-97-97"
+        },
+        {
+          "evidenceId": "seu-966b81c21acd7f7ec5418147",
+          "pageStart": 97,
+          "pageEnd": 97,
+          "sourceChunkId": "naic-accounting-publications-appm-2026--p-97-97"
+        }
+      ],
+      "partiallySupportedEvidenceIds": [],
+      "partiallySupportedCoordinates": [],
+      "reviewerStatus": "INDEPENDENTLY_ADJUDICATED",
+      "included": true,
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "mug1-mu-011",
+      "queryHash": "8eaedaf96739b64173835b99eaf2070e01eb5223455aef855c5c1b97bb248df7",
+      "split": "development",
+      "classification": "MULTI_UNIT_REQUIRED",
+      "category": "DEFINITION_PLUS_REQUIREMENT",
+      "modality": "PDF",
+      "sourceId": "naic-accounting-publications-appm-2026",
+      "sourceSha256": "572b86e1e45582656f23d218d4695ba5a102e5f13f00c4cb34ae68e54d3830a0",
+      "authoritySupportRole": "current_authority",
+      "acceptedEvidenceSets": [
+        {
+          "evidenceIds": [
+            "seu-29a8a856672f437b39cdac1d",
+            "seu-5695f77c45e94f3331623140"
+          ],
+          "evidenceSetHash": "a379655e21370242e32d4d968233ed006a094c0ba80aca29135ac941cfe07f31"
+        }
+      ],
+      "acceptedEvidenceSetHashes": [
+        "a379655e21370242e32d4d968233ed006a094c0ba80aca29135ac941cfe07f31"
+      ],
+      "acceptedParentIds": [
+        "seu-6d9c9525da70ca008555baf2"
+      ],
+      "requiredEvidenceRoles": [
+        "DEFINITION",
+        "REQUIREMENT"
+      ],
+      "citationCoordinates": [
+        {
+          "evidenceId": "seu-29a8a856672f437b39cdac1d",
+          "pageStart": 53,
+          "pageEnd": 53,
+          "sourceChunkId": "naic-accounting-publications-appm-2026--p-53-53"
+        },
+        {
+          "evidenceId": "seu-5695f77c45e94f3331623140",
+          "pageStart": 53,
+          "pageEnd": 53,
+          "sourceChunkId": "naic-accounting-publications-appm-2026--p-53-53"
+        }
+      ],
+      "partiallySupportedEvidenceIds": [],
+      "partiallySupportedCoordinates": [],
+      "reviewerStatus": "INDEPENDENTLY_ADJUDICATED",
+      "included": true,
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "mug1-mu-012",
+      "queryHash": "5ee17f94df4e10ede695a073805a81b77cefed8f3362bdde64f2feb76e99cb21",
+      "split": "development",
+      "classification": "MULTI_UNIT_REQUIRED",
+      "category": "DEFINITION_PLUS_REQUIREMENT",
+      "modality": "PDF",
+      "sourceId": "naic-accounting-publications-appm-2026",
+      "sourceSha256": "572b86e1e45582656f23d218d4695ba5a102e5f13f00c4cb34ae68e54d3830a0",
+      "authoritySupportRole": "current_authority",
+      "acceptedEvidenceSets": [
+        {
+          "evidenceIds": [
+            "seu-169cc526661a3ef6ac4e738d",
+            "seu-fdd71669f11cbece9e6d8d0d"
+          ],
+          "evidenceSetHash": "28a5b4b1ad8b2a6b6949d16124bcd5afab559131d03731bfc832af7097653722"
+        }
+      ],
+      "acceptedEvidenceSetHashes": [
+        "28a5b4b1ad8b2a6b6949d16124bcd5afab559131d03731bfc832af7097653722"
+      ],
+      "acceptedParentIds": [
+        "seu-e2b127ad792c47cd95db863f"
+      ],
+      "requiredEvidenceRoles": [
+        "DEFINITION",
+        "REQUIREMENT"
+      ],
+      "citationCoordinates": [
+        {
+          "evidenceId": "seu-169cc526661a3ef6ac4e738d",
+          "pageStart": 75,
+          "pageEnd": 75,
+          "sourceChunkId": "naic-accounting-publications-appm-2026--p-75-75"
+        },
+        {
+          "evidenceId": "seu-fdd71669f11cbece9e6d8d0d",
+          "pageStart": 75,
+          "pageEnd": 75,
+          "sourceChunkId": "naic-accounting-publications-appm-2026--p-75-75"
+        }
+      ],
+      "partiallySupportedEvidenceIds": [],
+      "partiallySupportedCoordinates": [],
+      "reviewerStatus": "INDEPENDENTLY_ADJUDICATED",
+      "included": true,
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "mug1-mu-013",
+      "queryHash": "17365e3179450792a099af136cf49a333ffda3c076a9fbe63bef44e0134537b9",
+      "split": "holdout",
+      "classification": "MULTI_UNIT_REQUIRED",
+      "category": "DEFINITION_PLUS_REQUIREMENT",
+      "modality": "PDF",
+      "sourceId": "naic-accounting-publications-appm-2026",
+      "sourceSha256": "572b86e1e45582656f23d218d4695ba5a102e5f13f00c4cb34ae68e54d3830a0",
+      "authoritySupportRole": "current_authority",
+      "acceptedEvidenceSets": [
+        {
+          "evidenceIds": [
+            "seu-92be59cb190a270539f0f026",
+            "seu-20793bbc069fc121ec1b67f3"
+          ],
+          "evidenceSetHash": "0b786f7e29d58e5f2687e4f88093caeb59638d64ccabb4fb59ad2c0cf3ddab73"
+        }
+      ],
+      "acceptedEvidenceSetHashes": [
+        "0b786f7e29d58e5f2687e4f88093caeb59638d64ccabb4fb59ad2c0cf3ddab73"
+      ],
+      "acceptedParentIds": [
+        "seu-f4d0febb7bb2c5b2b6fd1763"
+      ],
+      "requiredEvidenceRoles": [
+        "DEFINITION",
+        "REQUIREMENT"
+      ],
+      "citationCoordinates": [
+        {
+          "evidenceId": "seu-92be59cb190a270539f0f026",
+          "pageStart": 90,
+          "pageEnd": 90,
+          "sourceChunkId": "naic-accounting-publications-appm-2026--p-90-90"
+        },
+        {
+          "evidenceId": "seu-20793bbc069fc121ec1b67f3",
+          "pageStart": 91,
+          "pageEnd": 91,
+          "sourceChunkId": "naic-accounting-publications-appm-2026--p-91-91"
+        }
+      ],
+      "partiallySupportedEvidenceIds": [],
+      "partiallySupportedCoordinates": [],
+      "reviewerStatus": "INDEPENDENTLY_ADJUDICATED",
+      "included": true,
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "mug1-mu-014",
+      "queryHash": "d8cea19a2d923ae2ee9095cf5717e9ae7a7aeb53a803de4b3027ee9e6ead38d0",
+      "split": "development",
+      "classification": "MULTI_UNIT_REQUIRED",
+      "category": "DEFINITION_PLUS_REQUIREMENT",
+      "modality": "PDF",
+      "sourceId": "naic-accounting-publications-appm-2026",
+      "sourceSha256": "572b86e1e45582656f23d218d4695ba5a102e5f13f00c4cb34ae68e54d3830a0",
+      "authoritySupportRole": "current_authority",
+      "acceptedEvidenceSets": [
+        {
+          "evidenceIds": [
+            "seu-7d4d46706ae3c76d31a82499",
+            "seu-69a76b5e44e6de1f13ee28bc"
+          ],
+          "evidenceSetHash": "b73c4e1319d88f37e5a07181be386b8f2b0682c308f0696716b7c00e024ecaf3"
+        }
+      ],
+      "acceptedEvidenceSetHashes": [
+        "b73c4e1319d88f37e5a07181be386b8f2b0682c308f0696716b7c00e024ecaf3"
+      ],
+      "acceptedParentIds": [
+        "seu-c2c23009f678763624e8751d"
+      ],
+      "requiredEvidenceRoles": [
+        "REQUIREMENT"
+      ],
+      "citationCoordinates": [
+        {
+          "evidenceId": "seu-7d4d46706ae3c76d31a82499",
+          "pageStart": 97,
+          "pageEnd": 97,
+          "sourceChunkId": "naic-accounting-publications-appm-2026--p-97-97"
+        },
+        {
+          "evidenceId": "seu-69a76b5e44e6de1f13ee28bc",
+          "pageStart": 97,
+          "pageEnd": 97,
+          "sourceChunkId": "naic-accounting-publications-appm-2026--p-97-97"
+        }
+      ],
+      "partiallySupportedEvidenceIds": [],
+      "partiallySupportedCoordinates": [],
+      "reviewerStatus": "INDEPENDENTLY_ADJUDICATED",
+      "included": true,
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "mug1-mu-015",
+      "queryHash": "ba08d5d85b7db9d6d965fef0b3fb3c345839f95468fe9890bd93e7fbc69356ff",
+      "split": "holdout",
+      "classification": "MULTI_UNIT_REQUIRED",
+      "category": "DEFINITION_PLUS_REQUIREMENT",
+      "modality": "PDF",
+      "sourceId": "naic-accounting-publications-appm-2026",
+      "sourceSha256": "572b86e1e45582656f23d218d4695ba5a102e5f13f00c4cb34ae68e54d3830a0",
+      "authoritySupportRole": "current_authority",
+      "acceptedEvidenceSets": [
+        {
+          "evidenceIds": [
+            "seu-5d8aacd291cd83bc0a42ac4a",
+            "seu-f58ad6e453f8296b5ceac949"
+          ],
+          "evidenceSetHash": "98d77979fba667599da23abb792ccce0757aeaa575a935ae0158498743489e19"
+        }
+      ],
+      "acceptedEvidenceSetHashes": [
+        "98d77979fba667599da23abb792ccce0757aeaa575a935ae0158498743489e19"
+      ],
+      "acceptedParentIds": [
+        "seu-dd5d15a8b8ab1ebea592c847"
+      ],
+      "requiredEvidenceRoles": [
+        "DEFINITION",
+        "REQUIREMENT"
+      ],
+      "citationCoordinates": [
+        {
+          "evidenceId": "seu-5d8aacd291cd83bc0a42ac4a",
+          "pageStart": 101,
+          "pageEnd": 101,
+          "sourceChunkId": "naic-accounting-publications-appm-2026--p-101-101"
+        },
+        {
+          "evidenceId": "seu-f58ad6e453f8296b5ceac949",
+          "pageStart": 101,
+          "pageEnd": 101,
+          "sourceChunkId": "naic-accounting-publications-appm-2026--p-101-101"
+        }
+      ],
+      "partiallySupportedEvidenceIds": [],
+      "partiallySupportedCoordinates": [],
+      "reviewerStatus": "INDEPENDENTLY_ADJUDICATED",
+      "included": true,
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "mug1-mu-016",
+      "queryHash": "7e5c0ad990d0db14f42c86b9b536678b6d35bb028076d133f0bdf5589127c72d",
+      "split": "development",
+      "classification": "MULTI_UNIT_REQUIRED",
+      "category": "MULTIPLE_REQUIREMENTS",
+      "modality": "PDF",
+      "sourceId": "naic-accounting-publications-appm-2026",
+      "sourceSha256": "572b86e1e45582656f23d218d4695ba5a102e5f13f00c4cb34ae68e54d3830a0",
+      "authoritySupportRole": "current_authority",
+      "acceptedEvidenceSets": [
+        {
+          "evidenceIds": [
+            "seu-0a55ebf219c857b0c6c0ce25",
+            "seu-fbf416d7045149c975131f67"
+          ],
+          "evidenceSetHash": "2113bf15eb7d77bad96300dcc9603304b17083a61fe73a07033e433340dc66ec"
+        }
+      ],
+      "acceptedEvidenceSetHashes": [
+        "2113bf15eb7d77bad96300dcc9603304b17083a61fe73a07033e433340dc66ec"
+      ],
+      "acceptedParentIds": [
+        "seu-6d9c9525da70ca008555baf2"
+      ],
+      "requiredEvidenceRoles": [
+        "REQUIREMENT"
+      ],
+      "citationCoordinates": [
+        {
+          "evidenceId": "seu-0a55ebf219c857b0c6c0ce25",
+          "pageStart": 58,
+          "pageEnd": 58,
+          "sourceChunkId": "naic-accounting-publications-appm-2026--p-58-58"
+        },
+        {
+          "evidenceId": "seu-fbf416d7045149c975131f67",
+          "pageStart": 58,
+          "pageEnd": 58,
+          "sourceChunkId": "naic-accounting-publications-appm-2026--p-58-58"
+        }
+      ],
+      "partiallySupportedEvidenceIds": [],
+      "partiallySupportedCoordinates": [],
+      "reviewerStatus": "INDEPENDENTLY_ADJUDICATED",
+      "included": true,
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "mug1-mu-017",
+      "queryHash": "21bb16b5c32650718b4f010f0ea2c12cd1e6c355198bc53c6e8d73be87f96906",
+      "split": "holdout",
+      "classification": "MULTI_UNIT_REQUIRED",
+      "category": "MULTIPLE_REQUIREMENTS",
+      "modality": "PDF",
+      "sourceId": "naic-accounting-publications-appm-2026",
+      "sourceSha256": "572b86e1e45582656f23d218d4695ba5a102e5f13f00c4cb34ae68e54d3830a0",
+      "authoritySupportRole": "current_authority",
+      "acceptedEvidenceSets": [
+        {
+          "evidenceIds": [
+            "seu-219bdb4dbad5e5c015374f87",
+            "seu-5fb13a13c87cc2a924542db8"
+          ],
+          "evidenceSetHash": "fd8b0875a95b89f218c74de5d72cfd75f8d2b9254c0a19497638b9b6b75f3d82"
+        }
+      ],
+      "acceptedEvidenceSetHashes": [
+        "fd8b0875a95b89f218c74de5d72cfd75f8d2b9254c0a19497638b9b6b75f3d82"
+      ],
+      "acceptedParentIds": [
+        "seu-ed6ffa3f07f283c88f9478c2"
+      ],
+      "requiredEvidenceRoles": [
+        "REQUIREMENT"
+      ],
+      "citationCoordinates": [
+        {
+          "evidenceId": "seu-219bdb4dbad5e5c015374f87",
+          "pageStart": 64,
+          "pageEnd": 64,
+          "sourceChunkId": "naic-accounting-publications-appm-2026--p-64-64"
+        },
+        {
+          "evidenceId": "seu-5fb13a13c87cc2a924542db8",
+          "pageStart": 64,
+          "pageEnd": 64,
+          "sourceChunkId": "naic-accounting-publications-appm-2026--p-64-64"
+        }
+      ],
+      "partiallySupportedEvidenceIds": [],
+      "partiallySupportedCoordinates": [],
+      "reviewerStatus": "INDEPENDENTLY_ADJUDICATED",
+      "included": true,
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "mug1-mu-018",
+      "queryHash": "290ac2a6b2a1605bde7ac4a132498e09ad833b123aaf7d35e752ec2721deb2e4",
+      "split": "development",
+      "classification": "MULTI_UNIT_REQUIRED",
+      "category": "MULTIPLE_REQUIREMENTS",
+      "modality": "PDF",
+      "sourceId": "naic-accounting-publications-appm-2026",
+      "sourceSha256": "572b86e1e45582656f23d218d4695ba5a102e5f13f00c4cb34ae68e54d3830a0",
+      "authoritySupportRole": "current_authority",
+      "acceptedEvidenceSets": [
+        {
+          "evidenceIds": [
+            "seu-4ded8dfa1bbdc9c61435aacf",
+            "seu-a4303165603f3e24f1364e63"
+          ],
+          "evidenceSetHash": "d8da03edffbaf4fe00c6764442c375bd31c1493cf60809c68be8f73ee00d8e09"
+        }
+      ],
+      "acceptedEvidenceSetHashes": [
+        "d8da03edffbaf4fe00c6764442c375bd31c1493cf60809c68be8f73ee00d8e09"
+      ],
+      "acceptedParentIds": [
+        "seu-3a4cacca7777816673a22693"
+      ],
+      "requiredEvidenceRoles": [
+        "REQUIREMENT"
+      ],
+      "citationCoordinates": [
+        {
+          "evidenceId": "seu-4ded8dfa1bbdc9c61435aacf",
+          "pageStart": 72,
+          "pageEnd": 72,
+          "sourceChunkId": "naic-accounting-publications-appm-2026--p-72-72"
+        },
+        {
+          "evidenceId": "seu-a4303165603f3e24f1364e63",
+          "pageStart": 72,
+          "pageEnd": 72,
+          "sourceChunkId": "naic-accounting-publications-appm-2026--p-72-72"
+        }
+      ],
+      "partiallySupportedEvidenceIds": [],
+      "partiallySupportedCoordinates": [],
+      "reviewerStatus": "INDEPENDENTLY_ADJUDICATED",
+      "included": true,
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "mug1-mu-019",
+      "queryHash": "d68ffd224fcae236c91d3038402afc601880ac2a2bf6fc20f220bd543d95fb2c",
+      "split": "holdout",
+      "classification": "MULTI_UNIT_REQUIRED",
+      "category": "MULTIPLE_REQUIREMENTS",
+      "modality": "PDF",
+      "sourceId": "naic-accounting-publications-appm-2026",
+      "sourceSha256": "572b86e1e45582656f23d218d4695ba5a102e5f13f00c4cb34ae68e54d3830a0",
+      "authoritySupportRole": "current_authority",
+      "acceptedEvidenceSets": [
+        {
+          "evidenceIds": [
+            "seu-9421f1cb0dfc82d95cc1e835",
+            "seu-fdd71669f11cbece9e6d8d0d"
+          ],
+          "evidenceSetHash": "e7b93f3402d0e8de2e67be6bab731d13b15c92ac510120a7c8b27191dc4c19bf"
+        }
+      ],
+      "acceptedEvidenceSetHashes": [
+        "e7b93f3402d0e8de2e67be6bab731d13b15c92ac510120a7c8b27191dc4c19bf"
+      ],
+      "acceptedParentIds": [
+        "seu-e2b127ad792c47cd95db863f"
+      ],
+      "requiredEvidenceRoles": [
+        "REQUIREMENT"
+      ],
+      "citationCoordinates": [
+        {
+          "evidenceId": "seu-9421f1cb0dfc82d95cc1e835",
+          "pageStart": 75,
+          "pageEnd": 75,
+          "sourceChunkId": "naic-accounting-publications-appm-2026--p-75-75"
+        },
+        {
+          "evidenceId": "seu-fdd71669f11cbece9e6d8d0d",
+          "pageStart": 75,
+          "pageEnd": 75,
+          "sourceChunkId": "naic-accounting-publications-appm-2026--p-75-75"
+        }
+      ],
+      "partiallySupportedEvidenceIds": [],
+      "partiallySupportedCoordinates": [],
+      "reviewerStatus": "INDEPENDENTLY_ADJUDICATED",
+      "included": true,
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "mug1-mu-020",
+      "queryHash": "771f9549d7b4e34e177ef4acb852710b7a4d2c500e5ddef72ba425d74f84460b",
+      "split": "development",
+      "classification": "MULTI_UNIT_REQUIRED",
+      "category": "MULTIPLE_REQUIREMENTS",
+      "modality": "PDF",
+      "sourceId": "naic-life-fraternal-reporting-qsi-life-2026",
+      "sourceSha256": "fa507228461252f92cbe8d0e728b0cc5dfdd93f6c93a4cf9a6380063dec44f31",
+      "authoritySupportRole": "current_support",
+      "acceptedEvidenceSets": [
+        {
+          "evidenceIds": [
+            "seu-73d66912d24197fab7864feb",
+            "seu-d54fe1ed79b187f4d0a768a9"
+          ],
+          "evidenceSetHash": "2376a80a6055cc69f6d2458a4068d62397f697f5defb9b058bdd6a8efa6e9f04"
+        }
+      ],
+      "acceptedEvidenceSetHashes": [
+        "2376a80a6055cc69f6d2458a4068d62397f697f5defb9b058bdd6a8efa6e9f04"
+      ],
+      "acceptedParentIds": [
+        "seu-e35f6363b55902cc793b72d5"
+      ],
+      "requiredEvidenceRoles": [
+        "TABLE_OR_SCHEDULE"
+      ],
+      "citationCoordinates": [
+        {
+          "evidenceId": "seu-73d66912d24197fab7864feb",
+          "pageStart": 44,
+          "pageEnd": 45,
+          "sourceChunkId": "naic-life-fraternal-reporting-qsi-life-2026--p-44-45"
+        },
+        {
+          "evidenceId": "seu-d54fe1ed79b187f4d0a768a9",
+          "pageStart": 44,
+          "pageEnd": 45,
+          "sourceChunkId": "naic-life-fraternal-reporting-qsi-life-2026--p-44-45"
+        }
+      ],
+      "partiallySupportedEvidenceIds": [],
+      "partiallySupportedCoordinates": [],
+      "reviewerStatus": "INDEPENDENTLY_ADJUDICATED",
+      "included": true,
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "mug1-mu-021",
+      "queryHash": "f425bce10cfe775cb4eba99b532f0e7fcf8983bcb0e19acac363715266857d8d",
+      "split": "holdout",
+      "classification": "MULTI_UNIT_REQUIRED",
+      "category": "COMPARISON",
+      "modality": "PDF",
+      "sourceId": "naic-accounting-publications-appm-2026",
+      "sourceSha256": "572b86e1e45582656f23d218d4695ba5a102e5f13f00c4cb34ae68e54d3830a0",
+      "authoritySupportRole": "current_authority",
+      "acceptedEvidenceSets": [
+        {
+          "evidenceIds": [
+            "seu-966b81c21acd7f7ec5418147",
+            "seu-69a76b5e44e6de1f13ee28bc"
+          ],
+          "evidenceSetHash": "6a0f857e51cb4dcf3c5b5d4fbfb04bc805500944874a58cc3eb0795c05ebfef7"
+        }
+      ],
+      "acceptedEvidenceSetHashes": [
+        "6a0f857e51cb4dcf3c5b5d4fbfb04bc805500944874a58cc3eb0795c05ebfef7"
+      ],
+      "acceptedParentIds": [
+        "seu-c2c23009f678763624e8751d"
+      ],
+      "requiredEvidenceRoles": [
+        "EXCEPTION_OR_QUALIFICATION",
+        "REQUIREMENT"
+      ],
+      "citationCoordinates": [
+        {
+          "evidenceId": "seu-966b81c21acd7f7ec5418147",
+          "pageStart": 97,
+          "pageEnd": 97,
+          "sourceChunkId": "naic-accounting-publications-appm-2026--p-97-97"
+        },
+        {
+          "evidenceId": "seu-69a76b5e44e6de1f13ee28bc",
+          "pageStart": 97,
+          "pageEnd": 97,
+          "sourceChunkId": "naic-accounting-publications-appm-2026--p-97-97"
+        }
+      ],
+      "partiallySupportedEvidenceIds": [],
+      "partiallySupportedCoordinates": [],
+      "reviewerStatus": "INDEPENDENTLY_ADJUDICATED",
+      "included": true,
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "mug1-mu-022",
+      "queryHash": "0b231d72461cdc80d88df0b9cd67db50033ddc6570d717c7d0bc32fc5791ffd2",
+      "split": "development",
+      "classification": "MULTI_UNIT_REQUIRED",
+      "category": "COMPARISON",
+      "modality": "PDF",
+      "sourceId": "naic-accounting-publications-appm-2026",
+      "sourceSha256": "572b86e1e45582656f23d218d4695ba5a102e5f13f00c4cb34ae68e54d3830a0",
+      "authoritySupportRole": "current_authority",
+      "acceptedEvidenceSets": [
+        {
+          "evidenceIds": [
+            "seu-0a55ebf219c857b0c6c0ce25",
+            "seu-fbf416d7045149c975131f67"
+          ],
+          "evidenceSetHash": "2113bf15eb7d77bad96300dcc9603304b17083a61fe73a07033e433340dc66ec"
+        }
+      ],
+      "acceptedEvidenceSetHashes": [
+        "2113bf15eb7d77bad96300dcc9603304b17083a61fe73a07033e433340dc66ec"
+      ],
+      "acceptedParentIds": [
+        "seu-6d9c9525da70ca008555baf2"
+      ],
+      "requiredEvidenceRoles": [
+        "REQUIREMENT"
+      ],
+      "citationCoordinates": [
+        {
+          "evidenceId": "seu-0a55ebf219c857b0c6c0ce25",
+          "pageStart": 58,
+          "pageEnd": 58,
+          "sourceChunkId": "naic-accounting-publications-appm-2026--p-58-58"
+        },
+        {
+          "evidenceId": "seu-fbf416d7045149c975131f67",
+          "pageStart": 58,
+          "pageEnd": 58,
+          "sourceChunkId": "naic-accounting-publications-appm-2026--p-58-58"
+        }
+      ],
+      "partiallySupportedEvidenceIds": [],
+      "partiallySupportedCoordinates": [],
+      "reviewerStatus": "INDEPENDENTLY_ADJUDICATED",
+      "included": true,
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "mug1-mu-023",
+      "queryHash": "598e648ffeb507a57bb815a9c32b6970dfcf5680850d54fb8902bd5be6996190",
+      "split": "holdout",
+      "classification": "MULTI_UNIT_REQUIRED",
+      "category": "COMPARISON",
+      "modality": "PDF",
+      "sourceId": "naic-accounting-publications-appm-2026",
+      "sourceSha256": "572b86e1e45582656f23d218d4695ba5a102e5f13f00c4cb34ae68e54d3830a0",
+      "authoritySupportRole": "current_authority",
+      "acceptedEvidenceSets": [
+        {
+          "evidenceIds": [
+            "seu-20793bbc069fc121ec1b67f3",
+            "seu-7f69f49a5b05a5ebd1580ee5"
+          ],
+          "evidenceSetHash": "008f33e9e98e5ab8b7a1cf258011d437b7f435e3b05b63c63965c7c2589d87cc"
+        }
+      ],
+      "acceptedEvidenceSetHashes": [
+        "008f33e9e98e5ab8b7a1cf258011d437b7f435e3b05b63c63965c7c2589d87cc"
+      ],
+      "acceptedParentIds": [
+        "seu-f4d0febb7bb2c5b2b6fd1763"
+      ],
+      "requiredEvidenceRoles": [
+        "REQUIREMENT"
+      ],
+      "citationCoordinates": [
+        {
+          "evidenceId": "seu-20793bbc069fc121ec1b67f3",
+          "pageStart": 91,
+          "pageEnd": 91,
+          "sourceChunkId": "naic-accounting-publications-appm-2026--p-91-91"
+        },
+        {
+          "evidenceId": "seu-7f69f49a5b05a5ebd1580ee5",
+          "pageStart": 91,
+          "pageEnd": 91,
+          "sourceChunkId": "naic-accounting-publications-appm-2026--p-91-91"
+        }
+      ],
+      "partiallySupportedEvidenceIds": [],
+      "partiallySupportedCoordinates": [],
+      "reviewerStatus": "INDEPENDENTLY_ADJUDICATED",
+      "included": true,
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "mug1-mu-024",
+      "queryHash": "711611343d52df47b646c82dba0aed3e57ab35f5995726d85cecf0ecb973ef8e",
+      "split": "development",
+      "classification": "MULTI_UNIT_REQUIRED",
+      "category": "COMPARISON",
+      "modality": "PDF",
+      "sourceId": "naic-life-fraternal-reporting-qsi-life-2026",
+      "sourceSha256": "fa507228461252f92cbe8d0e728b0cc5dfdd93f6c93a4cf9a6380063dec44f31",
+      "authoritySupportRole": "current_support",
+      "acceptedEvidenceSets": [
+        {
+          "evidenceIds": [
+            "seu-c624d450cdea9b575e6381b7",
+            "seu-a11cf1368bad66d99feaf3f5"
+          ],
+          "evidenceSetHash": "6091eb22ea6afab8cd6c514a083c402bd7fc1603c5e610ab6020c75e88f769e1"
+        }
+      ],
+      "acceptedEvidenceSetHashes": [
+        "6091eb22ea6afab8cd6c514a083c402bd7fc1603c5e610ab6020c75e88f769e1"
+      ],
+      "acceptedParentIds": [
+        "seu-e35f6363b55902cc793b72d5"
+      ],
+      "requiredEvidenceRoles": [
+        "EXCEPTION_OR_QUALIFICATION",
+        "OTHER"
+      ],
+      "citationCoordinates": [
+        {
+          "evidenceId": "seu-c624d450cdea9b575e6381b7",
+          "pageStart": 35,
+          "pageEnd": 36,
+          "sourceChunkId": "naic-life-fraternal-reporting-qsi-life-2026--p-35-36"
+        },
+        {
+          "evidenceId": "seu-a11cf1368bad66d99feaf3f5",
+          "pageStart": 37,
+          "pageEnd": 38,
+          "sourceChunkId": "naic-life-fraternal-reporting-qsi-life-2026--p-37-38"
+        }
+      ],
+      "partiallySupportedEvidenceIds": [],
+      "partiallySupportedCoordinates": [],
+      "reviewerStatus": "INDEPENDENTLY_ADJUDICATED",
+      "included": true,
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "mug1-mu-025",
+      "queryHash": "87ff3a11d1c7c81f9f33802654a05e04fd1c0883df8b0cba72ba2facf2220511",
+      "split": "holdout",
+      "classification": "MULTI_UNIT_REQUIRED",
+      "category": "COMPARISON",
+      "modality": "XLSX",
+      "sourceId": "society-of-actuaries-experience-studies-soa-2015-vbt-improvement",
+      "sourceSha256": "847ddfd96ed51f47435d5ce99b9dac4f32363186d80336d0d14a1afd1d1e513d",
+      "authoritySupportRole": "current_support",
+      "acceptedEvidenceSets": [
+        {
+          "evidenceIds": [
+            "seu-54d5b7981ac88db0c6224421",
+            "seu-43564fd67286ce5504541497"
+          ],
+          "evidenceSetHash": "2ce6868ce288236775ff32668d523c4c62705e3b9ea543fe29458330d5d10130"
+        }
+      ],
+      "acceptedEvidenceSetHashes": [
+        "2ce6868ce288236775ff32668d523c4c62705e3b9ea543fe29458330d5d10130"
+      ],
+      "acceptedParentIds": [
+        "seu-6d97f055ccbf0ad988130745",
+        "seu-90c95f661a6fc4182e44c6bc"
+      ],
+      "requiredEvidenceRoles": [
+        "OTHER"
+      ],
+      "citationCoordinates": [
+        {
+          "evidenceId": "seu-54d5b7981ac88db0c6224421",
+          "worksheetPath": "xl/worksheets/sheet6.xml",
+          "sheetName": "FNS Improved - Step 1",
+          "rowStart": 3,
+          "rowEnd": 14,
+          "colStart": "A",
+          "colEnd": "AJ"
+        },
+        {
+          "evidenceId": "seu-43564fd67286ce5504541497",
+          "worksheetPath": "xl/worksheets/sheet7.xml",
+          "sheetName": "FNS Final - Step 2",
+          "rowStart": 3,
+          "rowEnd": 14,
+          "colStart": "A",
+          "colEnd": "AJ"
+        }
+      ],
+      "partiallySupportedEvidenceIds": [],
+      "partiallySupportedCoordinates": [],
+      "reviewerStatus": "INDEPENDENTLY_ADJUDICATED",
+      "included": true,
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "mug1-mu-026",
+      "queryHash": "d85a1208ca86e960bdfec98b38c3cf466f8a5ce907644cb8e76b077f68691ee0",
+      "split": "development",
+      "classification": "MULTI_UNIT_REQUIRED",
+      "category": "TABLE_HEADER_PLUS_DATA",
+      "modality": "XLSX",
+      "sourceId": "naic-pbr-vm-20-vm-31-vm-51-vm20-tables-2026-f-g",
+      "sourceSha256": "bcdeb352a66771c18f8d47efd5b1b97a8facd51fa672b0a8c8585be768d31753",
+      "authoritySupportRole": "current_support",
+      "acceptedEvidenceSets": [
+        {
+          "evidenceIds": [
+            "seu-1be214c827e2ab77356ffdfd",
+            "seu-bc24e4fad402b1e345030d03"
+          ],
+          "evidenceSetHash": "f82a65df3667265e923f2c6aa4dacfd99f9c3587cf5fe2cb6f749d8b4d8b3fbb"
+        }
+      ],
+      "acceptedEvidenceSetHashes": [
+        "f82a65df3667265e923f2c6aa4dacfd99f9c3587cf5fe2cb6f749d8b4d8b3fbb"
+      ],
+      "acceptedParentIds": [
+        "seu-4192659d757ee3bd003ee4e5"
+      ],
+      "requiredEvidenceRoles": [
+        "HEADER_CONTEXT",
+        "OTHER"
+      ],
+      "citationCoordinates": [
+        {
+          "evidenceId": "seu-1be214c827e2ab77356ffdfd",
+          "worksheetPath": "xl/worksheets/sheet1.xml",
+          "sheetName": "August_2026",
+          "rowStart": 1,
+          "rowEnd": 2,
+          "colStart": "A",
+          "colEnd": "K"
+        },
+        {
+          "evidenceId": "seu-bc24e4fad402b1e345030d03",
+          "worksheetPath": "xl/worksheets/sheet1.xml",
+          "sheetName": "August_2026",
+          "rowStart": 15,
+          "rowEnd": 26,
+          "colStart": "A",
+          "colEnd": "K"
+        }
+      ],
+      "partiallySupportedEvidenceIds": [],
+      "partiallySupportedCoordinates": [],
+      "reviewerStatus": "INDEPENDENTLY_ADJUDICATED",
+      "included": true,
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "mug1-mu-027",
+      "queryHash": "1262383c07754f99e484ffddf76ecd2de62fa71d2a80355a2e4325c984421edd",
+      "split": "holdout",
+      "classification": "MULTI_UNIT_REQUIRED",
+      "category": "TABLE_HEADER_PLUS_DATA",
+      "modality": "XLSX",
+      "sourceId": "naic-pbr-vm-20-vm-31-vm-51-vm20-tables-2026-f-g",
+      "sourceSha256": "bcdeb352a66771c18f8d47efd5b1b97a8facd51fa672b0a8c8585be768d31753",
+      "authoritySupportRole": "current_support",
+      "acceptedEvidenceSets": [
+        {
+          "evidenceIds": [
+            "seu-04ca12481916d2d869b436d2",
+            "seu-01d1190c80b9c201f99058c1"
+          ],
+          "evidenceSetHash": "26e0d441f5beb7b0256e2a8239782cf6c57b88bc769aaa24df9569ed7383cb10"
+        }
+      ],
+      "acceptedEvidenceSetHashes": [
+        "26e0d441f5beb7b0256e2a8239782cf6c57b88bc769aaa24df9569ed7383cb10"
+      ],
+      "acceptedParentIds": [
+        "seu-978873eef131ccfdc78ca424"
+      ],
+      "requiredEvidenceRoles": [
+        "HEADER_CONTEXT",
+        "OTHER"
+      ],
+      "citationCoordinates": [
+        {
+          "evidenceId": "seu-04ca12481916d2d869b436d2",
+          "worksheetPath": "xl/worksheets/sheet2.xml",
+          "sheetName": "July_2026",
+          "rowStart": 1,
+          "rowEnd": 2,
+          "colStart": "M",
+          "colEnd": "W"
+        },
+        {
+          "evidenceId": "seu-01d1190c80b9c201f99058c1",
+          "worksheetPath": "xl/worksheets/sheet2.xml",
+          "sheetName": "July_2026",
+          "rowStart": 27,
+          "rowEnd": 35,
+          "colStart": "M",
+          "colEnd": "W"
+        }
+      ],
+      "partiallySupportedEvidenceIds": [],
+      "partiallySupportedCoordinates": [],
+      "reviewerStatus": "INDEPENDENTLY_ADJUDICATED",
+      "included": true,
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "mug1-mu-028",
+      "queryHash": "c2d83ceeaf3fe8074df6c1df4cbcb10960c23dc5effea79730891e160cd1f34b",
+      "split": "development",
+      "classification": "MULTI_UNIT_REQUIRED",
+      "category": "TABLE_HEADER_PLUS_DATA",
+      "modality": "XLSX",
+      "sourceId": "naic-pbr-vm-20-vm-31-vm-51-vm31-templates-reports",
+      "sourceSha256": "932c9164967363ac06db624fb6f8711c29a31ba4f767201361e4bfa6027a5dcd",
+      "authoritySupportRole": "current_support",
+      "acceptedEvidenceSets": [
+        {
+          "evidenceIds": [
+            "seu-004c0a75e3723ff0e33f7609",
+            "seu-3cbcc25ee84ff4f21f19c730"
+          ],
+          "evidenceSetHash": "f73022ebb6579e07fd6056eac6b55731287b560c502748b75f06cd72be030738"
+        }
+      ],
+      "acceptedEvidenceSetHashes": [
+        "f73022ebb6579e07fd6056eac6b55731287b560c502748b75f06cd72be030738"
+      ],
+      "acceptedParentIds": [
+        "seu-99381239ae1ffb085dab0f8c"
+      ],
+      "requiredEvidenceRoles": [
+        "HEADER_CONTEXT",
+        "OTHER"
+      ],
+      "citationCoordinates": [
+        {
+          "evidenceId": "seu-004c0a75e3723ff0e33f7609",
+          "worksheetPath": "xl/worksheets/sheet9.xml",
+          "sheetName": "Dropdown Boxes",
+          "rowStart": 36,
+          "rowEnd": 38,
+          "colStart": "A",
+          "colEnd": "A"
+        },
+        {
+          "evidenceId": "seu-3cbcc25ee84ff4f21f19c730",
+          "worksheetPath": "xl/worksheets/sheet9.xml",
+          "sheetName": "Dropdown Boxes",
+          "rowStart": 39,
+          "rowEnd": 46,
+          "colStart": "A",
+          "colEnd": "A"
+        }
+      ],
+      "partiallySupportedEvidenceIds": [],
+      "partiallySupportedCoordinates": [],
+      "reviewerStatus": "INDEPENDENTLY_ADJUDICATED",
+      "included": true,
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "mug1-mu-029",
+      "queryHash": "215d45c19032f6099af8c1fa9ed315dc496f584c475f70f184968c81978486a0",
+      "split": "holdout",
+      "classification": "MULTI_UNIT_REQUIRED",
+      "category": "TABLE_HEADER_PLUS_DATA",
+      "modality": "XLSX",
+      "sourceId": "society-of-actuaries-experience-studies-soa-2015-vbt-improvement",
+      "sourceSha256": "847ddfd96ed51f47435d5ce99b9dac4f32363186d80336d0d14a1afd1d1e513d",
+      "authoritySupportRole": "current_support",
+      "acceptedEvidenceSets": [
+        {
+          "evidenceIds": [
+            "seu-4815fcb44e3e4f2bbdc91f17",
+            "seu-9abd99307a7f38f8e5bfeead"
+          ],
+          "evidenceSetHash": "cea257936040c2febad30ecbe1ab9c70786d65f6fdde47b3cd10cf23d4978ca1"
+        }
+      ],
+      "acceptedEvidenceSetHashes": [
+        "cea257936040c2febad30ecbe1ab9c70786d65f6fdde47b3cd10cf23d4978ca1"
+      ],
+      "acceptedParentIds": [
+        "seu-6d97f055ccbf0ad988130745"
+      ],
+      "requiredEvidenceRoles": [
+        "HEADER_CONTEXT",
+        "OTHER"
+      ],
+      "citationCoordinates": [
+        {
+          "evidenceId": "seu-4815fcb44e3e4f2bbdc91f17",
+          "worksheetPath": "xl/worksheets/sheet6.xml",
+          "sheetName": "FNS Improved - Step 1",
+          "rowStart": 1,
+          "rowEnd": 2,
+          "colStart": "A",
+          "colEnd": "AJ"
+        },
+        {
+          "evidenceId": "seu-9abd99307a7f38f8e5bfeead",
+          "worksheetPath": "xl/worksheets/sheet6.xml",
+          "sheetName": "FNS Improved - Step 1",
+          "rowStart": 15,
+          "rowEnd": 26,
+          "colStart": "A",
+          "colEnd": "AJ"
+        }
+      ],
+      "partiallySupportedEvidenceIds": [],
+      "partiallySupportedCoordinates": [],
+      "reviewerStatus": "INDEPENDENTLY_ADJUDICATED",
+      "included": true,
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "mug1-mu-030",
+      "queryHash": "eedf4abf123afbe046a2410760ef64b180433ad6ee5c69a630b526f522c1586f",
+      "split": "development",
+      "classification": "MULTI_UNIT_REQUIRED",
+      "category": "TABLE_HEADER_PLUS_DATA",
+      "modality": "PDF",
+      "sourceId": "naic-life-fraternal-reporting-asb-life-2025",
+      "sourceSha256": "6819aeff68578d789fc5a0e09ba5b60e15edc89305ae9d42fd3b66048147cae1",
+      "authoritySupportRole": "current_support",
+      "acceptedEvidenceSets": [
+        {
+          "evidenceIds": [
+            "seu-ed9ab91b10c5e290720d72b4",
+            "seu-8eaad9abac5e42b88dfda455"
+          ],
+          "evidenceSetHash": "b7d9cee330e3555b0b0a714d2def7509b9900359bd41e4944b4cb0460607705a"
+        }
+      ],
+      "acceptedEvidenceSetHashes": [
+        "b7d9cee330e3555b0b0a714d2def7509b9900359bd41e4944b4cb0460607705a"
+      ],
+      "acceptedParentIds": [
+        "seu-49e41775f1f497c18c836d5a"
+      ],
+      "requiredEvidenceRoles": [
+        "TABLE_OR_SCHEDULE"
+      ],
+      "citationCoordinates": [
+        {
+          "evidenceId": "seu-ed9ab91b10c5e290720d72b4",
+          "pageStart": 11,
+          "pageEnd": 11,
+          "sourceChunkId": "naic-life-fraternal-reporting-asb-life-2025--p-11-11"
+        },
+        {
+          "evidenceId": "seu-8eaad9abac5e42b88dfda455",
+          "pageStart": 11,
+          "pageEnd": 11,
+          "sourceChunkId": "naic-life-fraternal-reporting-asb-life-2025--p-11-11"
+        }
+      ],
+      "partiallySupportedEvidenceIds": [],
+      "partiallySupportedCoordinates": [],
+      "reviewerStatus": "INDEPENDENTLY_ADJUDICATED",
+      "included": true,
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "mug1-mu-031",
+      "queryHash": "758a93d0e0481a72c88e98f858d57055b1d6e4c419aab76b61d34762b2cc0c8d",
+      "split": "holdout",
+      "classification": "MULTI_UNIT_REQUIRED",
+      "category": "OTHER_MULTI_UNIT",
+      "modality": "PDF",
+      "sourceId": "naic-life-fraternal-reporting-qsi-life-2026",
+      "sourceSha256": "fa507228461252f92cbe8d0e728b0cc5dfdd93f6c93a4cf9a6380063dec44f31",
+      "authoritySupportRole": "current_support",
+      "acceptedEvidenceSets": [
+        {
+          "evidenceIds": [
+            "seu-faf74cd2ca9490a1655533f4",
+            "seu-e2acc923160b5d59714067f1"
+          ],
+          "evidenceSetHash": "10f15ac028a34bef7558a0e418fa5dd46a7d278f425bb11f4e9b691ee463e6c8"
+        }
+      ],
+      "acceptedEvidenceSetHashes": [
+        "10f15ac028a34bef7558a0e418fa5dd46a7d278f425bb11f4e9b691ee463e6c8"
+      ],
+      "acceptedParentIds": [
+        "seu-e35f6363b55902cc793b72d5"
+      ],
+      "requiredEvidenceRoles": [
+        "TABLE_OR_SCHEDULE"
+      ],
+      "citationCoordinates": [
+        {
+          "evidenceId": "seu-faf74cd2ca9490a1655533f4",
+          "pageStart": 46,
+          "pageEnd": 47,
+          "sourceChunkId": "naic-life-fraternal-reporting-qsi-life-2026--p-46-47"
+        },
+        {
+          "evidenceId": "seu-e2acc923160b5d59714067f1",
+          "pageStart": 46,
+          "pageEnd": 47,
+          "sourceChunkId": "naic-life-fraternal-reporting-qsi-life-2026--p-46-47"
+        }
+      ],
+      "partiallySupportedEvidenceIds": [],
+      "partiallySupportedCoordinates": [],
+      "reviewerStatus": "INDEPENDENTLY_ADJUDICATED",
+      "included": true,
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "mug1-mu-032",
+      "queryHash": "0f0d094e8739487965a0febbdecb896ba31feb62cde1db2b5c4b3ab729225ca5",
+      "split": "development",
+      "classification": "MULTI_UNIT_REQUIRED",
+      "category": "OTHER_MULTI_UNIT",
+      "modality": "PDF",
+      "sourceId": "naic-life-fraternal-reporting-qsi-life-2026",
+      "sourceSha256": "fa507228461252f92cbe8d0e728b0cc5dfdd93f6c93a4cf9a6380063dec44f31",
+      "authoritySupportRole": "current_support",
+      "acceptedEvidenceSets": [
+        {
+          "evidenceIds": [
+            "seu-df440ad5b124b23a4d81250f",
+            "seu-9d07014cde2c8326ea370df1"
+          ],
+          "evidenceSetHash": "0ce6e9e080c1768d1697fae3ef81d46d3e22da0d932908c2635c4748d5ea09bd"
+        }
+      ],
+      "acceptedEvidenceSetHashes": [
+        "0ce6e9e080c1768d1697fae3ef81d46d3e22da0d932908c2635c4748d5ea09bd"
+      ],
+      "acceptedParentIds": [
+        "seu-e35f6363b55902cc793b72d5"
+      ],
+      "requiredEvidenceRoles": [
+        "REPORTING_INSTRUCTION",
+        "TABLE_OR_SCHEDULE"
+      ],
+      "citationCoordinates": [
+        {
+          "evidenceId": "seu-df440ad5b124b23a4d81250f",
+          "pageStart": 40,
+          "pageEnd": 41,
+          "sourceChunkId": "naic-life-fraternal-reporting-qsi-life-2026--p-40-41"
+        },
+        {
+          "evidenceId": "seu-9d07014cde2c8326ea370df1",
+          "pageStart": 40,
+          "pageEnd": 41,
+          "sourceChunkId": "naic-life-fraternal-reporting-qsi-life-2026--p-40-41"
+        }
+      ],
+      "partiallySupportedEvidenceIds": [],
+      "partiallySupportedCoordinates": [],
+      "reviewerStatus": "INDEPENDENTLY_ADJUDICATED",
+      "included": true,
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "mug1-mu-033",
+      "queryHash": "28f1c99d031ad93c99b9a5c78b4c69a70324de51082596c0f03d634817a38c96",
+      "split": "holdout",
+      "classification": "MULTI_UNIT_REQUIRED",
+      "category": "OTHER_MULTI_UNIT",
+      "modality": "PDF",
+      "sourceId": "naic-life-fraternal-reporting-asb-life-2025",
+      "sourceSha256": "6819aeff68578d789fc5a0e09ba5b60e15edc89305ae9d42fd3b66048147cae1",
+      "authoritySupportRole": "current_support",
+      "acceptedEvidenceSets": [
+        {
+          "evidenceIds": [
+            "seu-6fd0dd617a5d5e224ba77c80",
+            "seu-005fa65fcbd89e7ee3c75cf4"
+          ],
+          "evidenceSetHash": "a20dbbc5b2a0777f0d69619be623ada8958f0aaa1f749b0abc3388b2a18ce7c8"
+        }
+      ],
+      "acceptedEvidenceSetHashes": [
+        "a20dbbc5b2a0777f0d69619be623ada8958f0aaa1f749b0abc3388b2a18ce7c8"
+      ],
+      "acceptedParentIds": [
+        "seu-2f2c5c052f3fe961c54a7ff1"
+      ],
+      "requiredEvidenceRoles": [
+        "TABLE_OR_SCHEDULE"
+      ],
+      "citationCoordinates": [
+        {
+          "evidenceId": "seu-6fd0dd617a5d5e224ba77c80",
+          "pageStart": 12,
+          "pageEnd": 12,
+          "sourceChunkId": "naic-life-fraternal-reporting-asb-life-2025--p-12-12"
+        },
+        {
+          "evidenceId": "seu-005fa65fcbd89e7ee3c75cf4",
+          "pageStart": 12,
+          "pageEnd": 12,
+          "sourceChunkId": "naic-life-fraternal-reporting-asb-life-2025--p-12-12"
+        }
+      ],
+      "partiallySupportedEvidenceIds": [],
+      "partiallySupportedCoordinates": [],
+      "reviewerStatus": "INDEPENDENTLY_ADJUDICATED",
+      "included": true,
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "mug1-mu-034",
+      "queryHash": "814438f843ffbd4c9ecb2148fd28c8aa64f5ffdeae427ffbcf99b29bfe78b58f",
+      "split": "development",
+      "classification": "MULTI_UNIT_REQUIRED",
+      "category": "OTHER_MULTI_UNIT",
+      "modality": "XLSX",
+      "sourceId": "naic-pbr-vm-20-vm-31-vm-51-vm31-templates-reports",
+      "sourceSha256": "932c9164967363ac06db624fb6f8711c29a31ba4f767201361e4bfa6027a5dcd",
+      "authoritySupportRole": "current_support",
+      "acceptedEvidenceSets": [
+        {
+          "evidenceIds": [
+            "seu-a61c1ba82b858aa85c150b2c",
+            "seu-37952d9923ecc775a5d255f5",
+            "seu-aac59ac54d3b9c31e2ecc110"
+          ],
+          "evidenceSetHash": "974941358e4df780148583b66bba769b65e8dfd3e807da2283f7efd7013bc149"
+        }
+      ],
+      "acceptedEvidenceSetHashes": [
+        "974941358e4df780148583b66bba769b65e8dfd3e807da2283f7efd7013bc149"
+      ],
+      "acceptedParentIds": [
+        "seu-20e82deeae465fb3472e90fe"
+      ],
+      "requiredEvidenceRoles": [
+        "HEADER_CONTEXT",
+        "OTHER"
+      ],
+      "citationCoordinates": [
+        {
+          "evidenceId": "seu-a61c1ba82b858aa85c150b2c",
+          "worksheetPath": "xl/worksheets/sheet9.xml",
+          "sheetName": "Dropdown Boxes",
+          "rowStart": 6,
+          "rowEnd": 8,
+          "colStart": "A",
+          "colEnd": "A"
+        },
+        {
+          "evidenceId": "seu-37952d9923ecc775a5d255f5",
+          "worksheetPath": "xl/worksheets/sheet9.xml",
+          "sheetName": "Dropdown Boxes",
+          "rowStart": 9,
+          "rowEnd": 11,
+          "colStart": "A",
+          "colEnd": "A"
+        },
+        {
+          "evidenceId": "seu-aac59ac54d3b9c31e2ecc110",
+          "worksheetPath": "xl/worksheets/sheet9.xml",
+          "sheetName": "Dropdown Boxes",
+          "rowStart": 13,
+          "rowEnd": 24,
+          "colStart": "A",
+          "colEnd": "A"
+        }
+      ],
+      "partiallySupportedEvidenceIds": [],
+      "partiallySupportedCoordinates": [],
+      "reviewerStatus": "INDEPENDENTLY_ADJUDICATED",
+      "included": true,
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "mug1-mu-035",
+      "queryHash": "13a713a78c09629caefa4c260020802a16ecdb45a3706f8106a397356597acc3",
+      "split": "holdout",
+      "classification": "MULTI_UNIT_REQUIRED",
+      "category": "OTHER_MULTI_UNIT",
+      "modality": "XLSX",
+      "sourceId": "society-of-actuaries-experience-studies-soa-2015-vbt-improvement",
+      "sourceSha256": "847ddfd96ed51f47435d5ce99b9dac4f32363186d80336d0d14a1afd1d1e513d",
+      "authoritySupportRole": "current_support",
+      "acceptedEvidenceSets": [
+        {
+          "evidenceIds": [
+            "seu-5937d0002f22a0d3a3c5f28c",
+            "seu-43564fd67286ce5504541497",
+            "seu-90ff5f7f8d1c712c60141651"
+          ],
+          "evidenceSetHash": "7b9cb13595cff8d4c3fb22336da686d6536dfd1d43ecba46e8458713249e7eff"
+        }
+      ],
+      "acceptedEvidenceSetHashes": [
+        "7b9cb13595cff8d4c3fb22336da686d6536dfd1d43ecba46e8458713249e7eff"
+      ],
+      "acceptedParentIds": [
+        "seu-90c95f661a6fc4182e44c6bc"
+      ],
+      "requiredEvidenceRoles": [
+        "HEADER_CONTEXT",
+        "OTHER"
+      ],
+      "citationCoordinates": [
+        {
+          "evidenceId": "seu-5937d0002f22a0d3a3c5f28c",
+          "worksheetPath": "xl/worksheets/sheet7.xml",
+          "sheetName": "FNS Final - Step 2",
+          "rowStart": 1,
+          "rowEnd": 2,
+          "colStart": "A",
+          "colEnd": "AJ"
+        },
+        {
+          "evidenceId": "seu-43564fd67286ce5504541497",
+          "worksheetPath": "xl/worksheets/sheet7.xml",
+          "sheetName": "FNS Final - Step 2",
+          "rowStart": 3,
+          "rowEnd": 14,
+          "colStart": "A",
+          "colEnd": "AJ"
+        },
+        {
+          "evidenceId": "seu-90ff5f7f8d1c712c60141651",
+          "worksheetPath": "xl/worksheets/sheet7.xml",
+          "sheetName": "FNS Final - Step 2",
+          "rowStart": 15,
+          "rowEnd": 26,
+          "colStart": "A",
+          "colEnd": "AJ"
+        }
+      ],
+      "partiallySupportedEvidenceIds": [],
+      "partiallySupportedCoordinates": [],
+      "reviewerStatus": "INDEPENDENTLY_ADJUDICATED",
+      "included": true,
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "mug1-su-001",
+      "queryHash": "f9857a418c4f6c23881301ae6c4f2dead6b4f331b3ac185babe674e5dc62aaec",
+      "split": "development",
+      "classification": "UNIQUE_SINGLE_UNIT",
+      "category": "SINGLE_UNIT_CONTROL",
+      "modality": "PDF",
+      "sourceId": "naic-accounting-publications-appm-2026",
+      "sourceSha256": "572b86e1e45582656f23d218d4695ba5a102e5f13f00c4cb34ae68e54d3830a0",
+      "authoritySupportRole": "current_authority",
+      "acceptedEvidenceSets": [
+        {
+          "evidenceIds": [
+            "seu-219bdb4dbad5e5c015374f87"
+          ],
+          "evidenceSetHash": "d48757a5398b3b9d2b84678b928e7d40cd15d6c5defa01cfd1614d90bca66ccf"
+        }
+      ],
+      "acceptedEvidenceSetHashes": [
+        "d48757a5398b3b9d2b84678b928e7d40cd15d6c5defa01cfd1614d90bca66ccf"
+      ],
+      "acceptedParentIds": [
+        "seu-ed6ffa3f07f283c88f9478c2"
+      ],
+      "requiredEvidenceRoles": [
+        "REQUIREMENT"
+      ],
+      "citationCoordinates": [
+        {
+          "evidenceId": "seu-219bdb4dbad5e5c015374f87",
+          "pageStart": 64,
+          "pageEnd": 64,
+          "sourceChunkId": "naic-accounting-publications-appm-2026--p-64-64"
+        }
+      ],
+      "partiallySupportedEvidenceIds": [],
+      "partiallySupportedCoordinates": [],
+      "reviewerStatus": "INDEPENDENTLY_ADJUDICATED",
+      "included": true,
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "mug1-su-002",
+      "queryHash": "268b47baa0aceba8c1d23e6a6ae1002096e970cba1584bc211a90d5f104630b4",
+      "split": "development",
+      "classification": "UNIQUE_SINGLE_UNIT",
+      "category": "SINGLE_UNIT_CONTROL",
+      "modality": "PDF",
+      "sourceId": "naic-accounting-publications-appm-2026",
+      "sourceSha256": "572b86e1e45582656f23d218d4695ba5a102e5f13f00c4cb34ae68e54d3830a0",
+      "authoritySupportRole": "current_authority",
+      "acceptedEvidenceSets": [
+        {
+          "evidenceIds": [
+            "seu-5695f77c45e94f3331623140"
+          ],
+          "evidenceSetHash": "e621d63bddb29fa25a8ca20cf3aa056c49d22c3629fc0d9fa9d6f87cf25846bd"
+        }
+      ],
+      "acceptedEvidenceSetHashes": [
+        "e621d63bddb29fa25a8ca20cf3aa056c49d22c3629fc0d9fa9d6f87cf25846bd"
+      ],
+      "acceptedParentIds": [
+        "seu-6d9c9525da70ca008555baf2"
+      ],
+      "requiredEvidenceRoles": [
+        "REQUIREMENT"
+      ],
+      "citationCoordinates": [
+        {
+          "evidenceId": "seu-5695f77c45e94f3331623140",
+          "pageStart": 53,
+          "pageEnd": 53,
+          "sourceChunkId": "naic-accounting-publications-appm-2026--p-53-53"
+        }
+      ],
+      "partiallySupportedEvidenceIds": [],
+      "partiallySupportedCoordinates": [],
+      "reviewerStatus": "INDEPENDENTLY_ADJUDICATED",
+      "included": true,
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "mug1-su-003",
+      "queryHash": "0b975c70c7cef114367a3d4a3e58ddabf3445dbb29e1ffeab9f3d76463101302",
+      "split": "development",
+      "classification": "UNIQUE_SINGLE_UNIT",
+      "category": "SINGLE_UNIT_CONTROL",
+      "modality": "PDF",
+      "sourceId": "naic-accounting-publications-appm-2026",
+      "sourceSha256": "572b86e1e45582656f23d218d4695ba5a102e5f13f00c4cb34ae68e54d3830a0",
+      "authoritySupportRole": "current_authority",
+      "acceptedEvidenceSets": [
+        {
+          "evidenceIds": [
+            "seu-7f69f49a5b05a5ebd1580ee5"
+          ],
+          "evidenceSetHash": "9297196232e4b9fd4199dfc3ba6f5c41d4ae3660124030e7c3b4f9feb1fc2607"
+        }
+      ],
+      "acceptedEvidenceSetHashes": [
+        "9297196232e4b9fd4199dfc3ba6f5c41d4ae3660124030e7c3b4f9feb1fc2607"
+      ],
+      "acceptedParentIds": [
+        "seu-f4d0febb7bb2c5b2b6fd1763"
+      ],
+      "requiredEvidenceRoles": [
+        "REQUIREMENT"
+      ],
+      "citationCoordinates": [
+        {
+          "evidenceId": "seu-7f69f49a5b05a5ebd1580ee5",
+          "pageStart": 91,
+          "pageEnd": 91,
+          "sourceChunkId": "naic-accounting-publications-appm-2026--p-91-91"
+        }
+      ],
+      "partiallySupportedEvidenceIds": [],
+      "partiallySupportedCoordinates": [],
+      "reviewerStatus": "INDEPENDENTLY_ADJUDICATED",
+      "included": true,
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "mug1-su-004",
+      "queryHash": "41c816fb6769662d04235be6099fda40c0bd5e2b433e48afe630b8e1a33386d4",
+      "split": "holdout",
+      "classification": "UNIQUE_SINGLE_UNIT",
+      "category": "SINGLE_UNIT_CONTROL",
+      "modality": "PDF",
+      "sourceId": "naic-accounting-publications-appm-2026",
+      "sourceSha256": "572b86e1e45582656f23d218d4695ba5a102e5f13f00c4cb34ae68e54d3830a0",
+      "authoritySupportRole": "current_authority",
+      "acceptedEvidenceSets": [
+        {
+          "evidenceIds": [
+            "seu-69a76b5e44e6de1f13ee28bc"
+          ],
+          "evidenceSetHash": "0c5dd9d13a4e62d929e1cb24232ee48eb83395f51d25715431531fd26f2c4b9f"
+        }
+      ],
+      "acceptedEvidenceSetHashes": [
+        "0c5dd9d13a4e62d929e1cb24232ee48eb83395f51d25715431531fd26f2c4b9f"
+      ],
+      "acceptedParentIds": [
+        "seu-c2c23009f678763624e8751d"
+      ],
+      "requiredEvidenceRoles": [
+        "REQUIREMENT"
+      ],
+      "citationCoordinates": [
+        {
+          "evidenceId": "seu-69a76b5e44e6de1f13ee28bc",
+          "pageStart": 97,
+          "pageEnd": 97,
+          "sourceChunkId": "naic-accounting-publications-appm-2026--p-97-97"
+        }
+      ],
+      "partiallySupportedEvidenceIds": [],
+      "partiallySupportedCoordinates": [],
+      "reviewerStatus": "INDEPENDENTLY_ADJUDICATED",
+      "included": true,
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "mug1-su-005",
+      "queryHash": "26b70b6a79ef089920a2bed542dc1a6599929736f3c9c4a09f6b7ae2c7c84180",
+      "split": "development",
+      "classification": "UNIQUE_SINGLE_UNIT",
+      "category": "SINGLE_UNIT_CONTROL",
+      "modality": "PDF",
+      "sourceId": "naic-life-fraternal-reporting-qsi-life-2026",
+      "sourceSha256": "fa507228461252f92cbe8d0e728b0cc5dfdd93f6c93a4cf9a6380063dec44f31",
+      "authoritySupportRole": "current_support",
+      "acceptedEvidenceSets": [
+        {
+          "evidenceIds": [
+            "seu-df440ad5b124b23a4d81250f"
+          ],
+          "evidenceSetHash": "06e1fb1523544870d0cc7e6433d91032a3f9112c5ae4b84886197b14123ad1fe"
+        }
+      ],
+      "acceptedEvidenceSetHashes": [
+        "06e1fb1523544870d0cc7e6433d91032a3f9112c5ae4b84886197b14123ad1fe"
+      ],
+      "acceptedParentIds": [
+        "seu-e35f6363b55902cc793b72d5"
+      ],
+      "requiredEvidenceRoles": [
+        "REPORTING_INSTRUCTION"
+      ],
+      "citationCoordinates": [
+        {
+          "evidenceId": "seu-df440ad5b124b23a4d81250f",
+          "pageStart": 40,
+          "pageEnd": 41,
+          "sourceChunkId": "naic-life-fraternal-reporting-qsi-life-2026--p-40-41"
+        }
+      ],
+      "partiallySupportedEvidenceIds": [],
+      "partiallySupportedCoordinates": [],
+      "reviewerStatus": "INDEPENDENTLY_ADJUDICATED",
+      "included": true,
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "mug1-su-006",
+      "queryHash": "e6b70cb102310550df560d5b283200a27037da4299951f89558625c6dd02046d",
+      "split": "holdout",
+      "classification": "UNIQUE_SINGLE_UNIT",
+      "category": "SINGLE_UNIT_CONTROL",
+      "modality": "PDF",
+      "sourceId": "naic-life-fraternal-reporting-qsi-life-2026",
+      "sourceSha256": "fa507228461252f92cbe8d0e728b0cc5dfdd93f6c93a4cf9a6380063dec44f31",
+      "authoritySupportRole": "current_support",
+      "acceptedEvidenceSets": [
+        {
+          "evidenceIds": [
+            "seu-c624d450cdea9b575e6381b7"
+          ],
+          "evidenceSetHash": "e76ac08e562231679d14e3ff4c6750185a9977e76044e09558263176f91754b2"
+        }
+      ],
+      "acceptedEvidenceSetHashes": [
+        "e76ac08e562231679d14e3ff4c6750185a9977e76044e09558263176f91754b2"
+      ],
+      "acceptedParentIds": [
+        "seu-e35f6363b55902cc793b72d5"
+      ],
+      "requiredEvidenceRoles": [
+        "EXCEPTION_OR_QUALIFICATION"
+      ],
+      "citationCoordinates": [
+        {
+          "evidenceId": "seu-c624d450cdea9b575e6381b7",
+          "pageStart": 35,
+          "pageEnd": 36,
+          "sourceChunkId": "naic-life-fraternal-reporting-qsi-life-2026--p-35-36"
+        }
+      ],
+      "partiallySupportedEvidenceIds": [],
+      "partiallySupportedCoordinates": [],
+      "reviewerStatus": "INDEPENDENTLY_ADJUDICATED",
+      "included": true,
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "mug1-su-007",
+      "queryHash": "bbf61c5993b97c66f66dc462e9861ccc269ebbe2226bff63db67d142b5d4390d",
+      "split": "development",
+      "classification": "UNIQUE_SINGLE_UNIT",
+      "category": "SINGLE_UNIT_CONTROL",
+      "modality": "PDF",
+      "sourceId": "naic-life-fraternal-reporting-asb-life-2025",
+      "sourceSha256": "6819aeff68578d789fc5a0e09ba5b60e15edc89305ae9d42fd3b66048147cae1",
+      "authoritySupportRole": "current_support",
+      "acceptedEvidenceSets": [
+        {
+          "evidenceIds": [
+            "seu-1b4ff379c141132910462943"
+          ],
+          "evidenceSetHash": "513b57c6ff07088860e64f01b7a524342f415a37e93e1c434b41d374100db99e"
+        }
+      ],
+      "acceptedEvidenceSetHashes": [
+        "513b57c6ff07088860e64f01b7a524342f415a37e93e1c434b41d374100db99e"
+      ],
+      "acceptedParentIds": [
+        "seu-49e41775f1f497c18c836d5a"
+      ],
+      "requiredEvidenceRoles": [
+        "TABLE_OR_SCHEDULE"
+      ],
+      "citationCoordinates": [
+        {
+          "evidenceId": "seu-1b4ff379c141132910462943",
+          "pageStart": 11,
+          "pageEnd": 11,
+          "sourceChunkId": "naic-life-fraternal-reporting-asb-life-2025--p-11-11"
+        }
+      ],
+      "partiallySupportedEvidenceIds": [],
+      "partiallySupportedCoordinates": [],
+      "reviewerStatus": "INDEPENDENTLY_ADJUDICATED",
+      "included": true,
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "mug1-su-008",
+      "queryHash": "3611f3d587e4db749a4ed907e7a3b9b2cbe6facd304480ea9d8f21f8846a9cb8",
+      "split": "holdout",
+      "classification": "UNIQUE_SINGLE_UNIT",
+      "category": "SINGLE_UNIT_CONTROL",
+      "modality": "XLSX",
+      "sourceId": "naic-pbr-vm-20-vm-31-vm-51-vm20-tables-2026-f-g",
+      "sourceSha256": "bcdeb352a66771c18f8d47efd5b1b97a8facd51fa672b0a8c8585be768d31753",
+      "authoritySupportRole": "current_support",
+      "acceptedEvidenceSets": [
+        {
+          "evidenceIds": [
+            "seu-bc24e4fad402b1e345030d03"
+          ],
+          "evidenceSetHash": "303e4795677214fb71be86a59b0a44bf3cecc3bd261cd21296a811b45e23fe2e"
+        }
+      ],
+      "acceptedEvidenceSetHashes": [
+        "303e4795677214fb71be86a59b0a44bf3cecc3bd261cd21296a811b45e23fe2e"
+      ],
+      "acceptedParentIds": [
+        "seu-4192659d757ee3bd003ee4e5"
+      ],
+      "requiredEvidenceRoles": [
+        "OTHER"
+      ],
+      "citationCoordinates": [
+        {
+          "evidenceId": "seu-bc24e4fad402b1e345030d03",
+          "worksheetPath": "xl/worksheets/sheet1.xml",
+          "sheetName": "August_2026",
+          "rowStart": 15,
+          "rowEnd": 26,
+          "colStart": "A",
+          "colEnd": "K"
+        }
+      ],
+      "partiallySupportedEvidenceIds": [],
+      "partiallySupportedCoordinates": [],
+      "reviewerStatus": "INDEPENDENTLY_ADJUDICATED",
+      "included": true,
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "mug1-su-009",
+      "queryHash": "e81d13aa9d89d6d45fc55e5f7a880e60231c80d7d26eaf5ba7dd774e6563bbd4",
+      "split": "development",
+      "classification": "UNIQUE_SINGLE_UNIT",
+      "category": "SINGLE_UNIT_CONTROL",
+      "modality": "XLSX",
+      "sourceId": "naic-pbr-vm-20-vm-31-vm-51-vm31-templates-reports",
+      "sourceSha256": "932c9164967363ac06db624fb6f8711c29a31ba4f767201361e4bfa6027a5dcd",
+      "authoritySupportRole": "current_support",
+      "acceptedEvidenceSets": [
+        {
+          "evidenceIds": [
+            "seu-3cbcc25ee84ff4f21f19c730"
+          ],
+          "evidenceSetHash": "ed639054f0751b161b24c3c6397feaef9b10177588c8930b68a73cb6b45ab5d2"
+        }
+      ],
+      "acceptedEvidenceSetHashes": [
+        "ed639054f0751b161b24c3c6397feaef9b10177588c8930b68a73cb6b45ab5d2"
+      ],
+      "acceptedParentIds": [
+        "seu-99381239ae1ffb085dab0f8c"
+      ],
+      "requiredEvidenceRoles": [
+        "OTHER"
+      ],
+      "citationCoordinates": [
+        {
+          "evidenceId": "seu-3cbcc25ee84ff4f21f19c730",
+          "worksheetPath": "xl/worksheets/sheet9.xml",
+          "sheetName": "Dropdown Boxes",
+          "rowStart": 39,
+          "rowEnd": 46,
+          "colStart": "A",
+          "colEnd": "A"
+        }
+      ],
+      "partiallySupportedEvidenceIds": [],
+      "partiallySupportedCoordinates": [],
+      "reviewerStatus": "INDEPENDENTLY_ADJUDICATED",
+      "included": true,
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "mug1-su-010",
+      "queryHash": "db2391b3671960378bca5577cb3aa70ca47131d180c0dc9192cac76fa7bfdd04",
+      "split": "holdout",
+      "classification": "UNIQUE_SINGLE_UNIT",
+      "category": "SINGLE_UNIT_CONTROL",
+      "modality": "XLSX",
+      "sourceId": "society-of-actuaries-experience-studies-soa-2015-vbt-improvement",
+      "sourceSha256": "847ddfd96ed51f47435d5ce99b9dac4f32363186d80336d0d14a1afd1d1e513d",
+      "authoritySupportRole": "current_support",
+      "acceptedEvidenceSets": [
+        {
+          "evidenceIds": [
+            "seu-9abd99307a7f38f8e5bfeead"
+          ],
+          "evidenceSetHash": "0a1ecc62bd3ceb2a6b3dc96430c6cc5ce92bd34c476294a54a1236144c8d277b"
+        }
+      ],
+      "acceptedEvidenceSetHashes": [
+        "0a1ecc62bd3ceb2a6b3dc96430c6cc5ce92bd34c476294a54a1236144c8d277b"
+      ],
+      "acceptedParentIds": [
+        "seu-6d97f055ccbf0ad988130745"
+      ],
+      "requiredEvidenceRoles": [
+        "OTHER"
+      ],
+      "citationCoordinates": [
+        {
+          "evidenceId": "seu-9abd99307a7f38f8e5bfeead",
+          "worksheetPath": "xl/worksheets/sheet6.xml",
+          "sheetName": "FNS Improved - Step 1",
+          "rowStart": 15,
+          "rowEnd": 26,
+          "colStart": "A",
+          "colEnd": "AJ"
+        }
+      ],
+      "partiallySupportedEvidenceIds": [],
+      "partiallySupportedCoordinates": [],
+      "reviewerStatus": "INDEPENDENTLY_ADJUDICATED",
+      "included": true,
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "mug1-du-001",
+      "queryHash": "71f9779d1b3c9619c19ca2e1a134515a71f3bc2d19f4f51d77cc6fe2c653ca27",
+      "split": "diagnostic",
+      "classification": "UNSUPPORTED",
+      "category": "DIAGNOSTIC",
+      "modality": null,
+      "sourceId": null,
+      "sourceSha256": null,
+      "authoritySupportRole": null,
+      "acceptedEvidenceSets": [],
+      "acceptedEvidenceSetHashes": [],
+      "acceptedParentIds": [],
+      "requiredEvidenceRoles": [],
+      "citationCoordinates": [],
+      "partiallySupportedEvidenceIds": [],
+      "partiallySupportedCoordinates": [],
+      "reviewerStatus": "INDEPENDENTLY_ADJUDICATED",
+      "included": false,
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "mug1-du-002",
+      "queryHash": "1d7651977e1d0aed07b49fb0208932ba01c75e15d18a8124cc221bb06ee5a8e5",
+      "split": "diagnostic",
+      "classification": "UNSUPPORTED",
+      "category": "DIAGNOSTIC",
+      "modality": null,
+      "sourceId": null,
+      "sourceSha256": null,
+      "authoritySupportRole": null,
+      "acceptedEvidenceSets": [],
+      "acceptedEvidenceSetHashes": [],
+      "acceptedParentIds": [],
+      "requiredEvidenceRoles": [],
+      "citationCoordinates": [],
+      "partiallySupportedEvidenceIds": [],
+      "partiallySupportedCoordinates": [],
+      "reviewerStatus": "INDEPENDENTLY_ADJUDICATED",
+      "included": false,
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "mug1-du-003",
+      "queryHash": "124e4cd3c1c1f0ff955d194b2dbcbe739bf21546376e5ffa579f72b8ceb585f4",
+      "split": "diagnostic",
+      "classification": "UNSUPPORTED",
+      "category": "DIAGNOSTIC",
+      "modality": null,
+      "sourceId": null,
+      "sourceSha256": null,
+      "authoritySupportRole": null,
+      "acceptedEvidenceSets": [],
+      "acceptedEvidenceSetHashes": [],
+      "acceptedParentIds": [],
+      "requiredEvidenceRoles": [],
+      "citationCoordinates": [],
+      "partiallySupportedEvidenceIds": [],
+      "partiallySupportedCoordinates": [],
+      "reviewerStatus": "INDEPENDENTLY_ADJUDICATED",
+      "included": false,
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "mug1-du-004",
+      "queryHash": "329d2e5010cf567ad7875386a4e15deab244f7c3127d8c4b424d6409002b6527",
+      "split": "diagnostic",
+      "classification": "UNSUPPORTED",
+      "category": "DIAGNOSTIC",
+      "modality": null,
+      "sourceId": null,
+      "sourceSha256": null,
+      "authoritySupportRole": null,
+      "acceptedEvidenceSets": [],
+      "acceptedEvidenceSetHashes": [],
+      "acceptedParentIds": [],
+      "requiredEvidenceRoles": [],
+      "citationCoordinates": [],
+      "partiallySupportedEvidenceIds": [],
+      "partiallySupportedCoordinates": [],
+      "reviewerStatus": "INDEPENDENTLY_ADJUDICATED",
+      "included": false,
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "mug1-du-005",
+      "queryHash": "3e1a36cf6f4ba21c9c5df33ec7c6e846ede137a4c29c897e205d3c977519dcd1",
+      "split": "diagnostic",
+      "classification": "UNSUPPORTED",
+      "category": "DIAGNOSTIC",
+      "modality": null,
+      "sourceId": null,
+      "sourceSha256": null,
+      "authoritySupportRole": null,
+      "acceptedEvidenceSets": [],
+      "acceptedEvidenceSetHashes": [],
+      "acceptedParentIds": [],
+      "requiredEvidenceRoles": [],
+      "citationCoordinates": [],
+      "partiallySupportedEvidenceIds": [],
+      "partiallySupportedCoordinates": [],
+      "reviewerStatus": "INDEPENDENTLY_ADJUDICATED",
+      "included": false,
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "mug1-dp-001",
+      "queryHash": "19a7b4b2712fa7fa006d25303f85affc8a65c4d6ce577d692d5492729d98c52e",
+      "split": "diagnostic",
+      "classification": "PARTIALLY_UNSUPPORTED",
+      "category": "DIAGNOSTIC",
+      "modality": "XLSX",
+      "sourceId": "naic-pbr-vm-20-vm-31-vm-51-vm20-tables-2026-f-g",
+      "sourceSha256": "bcdeb352a66771c18f8d47efd5b1b97a8facd51fa672b0a8c8585be768d31753",
+      "authoritySupportRole": "current_support",
+      "acceptedEvidenceSets": [],
+      "acceptedEvidenceSetHashes": [],
+      "acceptedParentIds": [],
+      "requiredEvidenceRoles": [],
+      "citationCoordinates": [],
+      "partiallySupportedEvidenceIds": [
+        "seu-01d1190c80b9c201f99058c1"
+      ],
+      "partiallySupportedCoordinates": [
+        {
+          "evidenceId": "seu-01d1190c80b9c201f99058c1",
+          "worksheetPath": "xl/worksheets/sheet2.xml",
+          "sheetName": "July_2026",
+          "rowStart": 27,
+          "rowEnd": 35,
+          "colStart": "M",
+          "colEnd": "W"
+        }
+      ],
+      "reviewerStatus": "INDEPENDENTLY_ADJUDICATED",
+      "included": false,
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "mug1-dp-002",
+      "queryHash": "8d6654abc4165b7e2e120d773288fa3238be054b03e3fb92e8193433b34b482a",
+      "split": "diagnostic",
+      "classification": "PARTIALLY_UNSUPPORTED",
+      "category": "DIAGNOSTIC",
+      "modality": "XLSX",
+      "sourceId": "society-of-actuaries-experience-studies-soa-2015-vbt-improvement",
+      "sourceSha256": "847ddfd96ed51f47435d5ce99b9dac4f32363186d80336d0d14a1afd1d1e513d",
+      "authoritySupportRole": "current_support",
+      "acceptedEvidenceSets": [],
+      "acceptedEvidenceSetHashes": [],
+      "acceptedParentIds": [],
+      "requiredEvidenceRoles": [],
+      "citationCoordinates": [],
+      "partiallySupportedEvidenceIds": [
+        "seu-9abd99307a7f38f8e5bfeead"
+      ],
+      "partiallySupportedCoordinates": [
+        {
+          "evidenceId": "seu-9abd99307a7f38f8e5bfeead",
+          "worksheetPath": "xl/worksheets/sheet6.xml",
+          "sheetName": "FNS Improved - Step 1",
+          "rowStart": 15,
+          "rowEnd": 26,
+          "colStart": "A",
+          "colEnd": "AJ"
+        }
+      ],
+      "reviewerStatus": "INDEPENDENTLY_ADJUDICATED",
+      "included": false,
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "mug1-dp-003",
+      "queryHash": "f5a1c2a6dfd31942e1be0377e62568bafcc2eb17a66c77d00ba85e5a55b83f1d",
+      "split": "diagnostic",
+      "classification": "PARTIALLY_UNSUPPORTED",
+      "category": "DIAGNOSTIC",
+      "modality": "PDF",
+      "sourceId": "naic-accounting-publications-appm-2026",
+      "sourceSha256": "572b86e1e45582656f23d218d4695ba5a102e5f13f00c4cb34ae68e54d3830a0",
+      "authoritySupportRole": "current_authority",
+      "acceptedEvidenceSets": [],
+      "acceptedEvidenceSetHashes": [],
+      "acceptedParentIds": [],
+      "requiredEvidenceRoles": [],
+      "citationCoordinates": [],
+      "partiallySupportedEvidenceIds": [
+        "seu-69a76b5e44e6de1f13ee28bc"
+      ],
+      "partiallySupportedCoordinates": [
+        {
+          "evidenceId": "seu-69a76b5e44e6de1f13ee28bc",
+          "pageStart": 97,
+          "pageEnd": 97,
+          "sourceChunkId": "naic-accounting-publications-appm-2026--p-97-97"
+        }
+      ],
+      "reviewerStatus": "INDEPENDENTLY_ADJUDICATED",
+      "included": false,
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "mug1-dp-004",
+      "queryHash": "bab63ce3e71ce1824911317011ce55026a0f62fa09f260b950c06b58a4acedf2",
+      "split": "diagnostic",
+      "classification": "PARTIALLY_UNSUPPORTED",
+      "category": "DIAGNOSTIC",
+      "modality": "PDF",
+      "sourceId": "naic-life-fraternal-reporting-asb-life-2025",
+      "sourceSha256": "6819aeff68578d789fc5a0e09ba5b60e15edc89305ae9d42fd3b66048147cae1",
+      "authoritySupportRole": "current_support",
+      "acceptedEvidenceSets": [],
+      "acceptedEvidenceSetHashes": [],
+      "acceptedParentIds": [],
+      "requiredEvidenceRoles": [],
+      "citationCoordinates": [],
+      "partiallySupportedEvidenceIds": [
+        "seu-1b4ff379c141132910462943"
+      ],
+      "partiallySupportedCoordinates": [
+        {
+          "evidenceId": "seu-1b4ff379c141132910462943",
+          "pageStart": 11,
+          "pageEnd": 11,
+          "sourceChunkId": "naic-life-fraternal-reporting-asb-life-2025--p-11-11"
+        }
+      ],
+      "reviewerStatus": "INDEPENDENTLY_ADJUDICATED",
+      "included": false,
+      "queryExternal": true,
+      "rationaleExternal": true
+    },
+    {
+      "caseId": "mug1-dp-005",
+      "queryHash": "7071c4fa686d5c34dd95e149049d33ebb1dd1b9a401560b61fcf0457be79a556",
+      "split": "diagnostic",
+      "classification": "PARTIALLY_UNSUPPORTED",
+      "category": "DIAGNOSTIC",
+      "modality": "PDF",
+      "sourceId": "naic-life-fraternal-reporting-qsi-life-2026",
+      "sourceSha256": "fa507228461252f92cbe8d0e728b0cc5dfdd93f6c93a4cf9a6380063dec44f31",
+      "authoritySupportRole": "current_support",
+      "acceptedEvidenceSets": [],
+      "acceptedEvidenceSetHashes": [],
+      "acceptedParentIds": [],
+      "requiredEvidenceRoles": [],
+      "citationCoordinates": [],
+      "partiallySupportedEvidenceIds": [
+        "seu-df440ad5b124b23a4d81250f"
+      ],
+      "partiallySupportedCoordinates": [
+        {
+          "evidenceId": "seu-df440ad5b124b23a4d81250f",
+          "pageStart": 40,
+          "pageEnd": 41,
+          "sourceChunkId": "naic-life-fraternal-reporting-qsi-life-2026--p-40-41"
+        }
+      ],
+      "reviewerStatus": "INDEPENDENTLY_ADJUDICATED",
+      "included": false,
+      "queryExternal": true,
+      "rationaleExternal": true
+    }
+  ],
+  "reviewOnly": true,
+  "promotionStatus": "not_promoted",
+  "ragReadyAllowed": false
+}

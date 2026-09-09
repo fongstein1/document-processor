@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "runId": "multi-unit-gold-v1-2026-09",
+  "evaluationVersion": "MULTI_UNIT_GOLD_V1",
+  "startingSha": "049af0f3587fede9a2ec7643a33d1b6862bef949",
+  "privateRoot": "C:\\Dev\\Document Processor Sources\\_processed-private\\multi-unit-gold-v1-2026-09",
+  "multiUnitCount": 35,
+  "singleUnitControlCount": 10,
+  "unsupportedCount": 5,
+  "partiallyUnsupportedCount": 5,
+  "developmentCount": 27,
+  "holdoutCount": 18,
+  "flatHybridConfigPath": "config/hybrid-vector-retrieval-experiment.json",
+  "flatHybridConfigSha256": "03fe8f7dd7c4b372e2c6219e9c67c89fa12c09fcad09b5bfaa8e8863fda88718",
+  "sidecarProtocol": {
+    "implementation": "scripts/lib/hierarchical-retrieval.mjs#assembleEvidence",
+    "ranking": "UNCHANGED_FLAT_HYBRID_RRF",
+    "parentScope": "FIRST_THREE_DISTINCT_PARENTS_IN_FLAT_RANK_ORDER",
+    "topParents": 3,
+    "maximumPackageEvidence": 6,
+    "maximumPackageCharacters": 16000
+  },
+  "rankingInputExcludesGold": true,
+  "noHoldoutTuning": true,
+  "retrievalConfigurationUnchanged": true,
+  "reviewOnly": true,
+  "promotionStatus": "not_promoted",
+  "ragReadyAllowed": false
+}
