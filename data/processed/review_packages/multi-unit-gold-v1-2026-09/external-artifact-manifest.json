@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "runId": "multi-unit-gold-v1-2026-09",
-  "artifactCount": 6,
-  "totalByteCount": 108636914,
+  "artifactCount": 11,
+  "totalByteCount": 108662339,
   "artifacts": [
     {
       "artifactType": "gold-adjudication",
@@ -39,6 +39,36 @@
       "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\multi-unit-gold-v1-2026-09\\scored-cases.json",
       "sha256": "d4381cf0187c19e44b20a14a71cd660d7e7ae12642ddac8a29ed57343f638948",
       "byteCount": 74397
+    },
+    {
+      "artifactType": "private-adjudication-builder",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\multi-unit-gold-v1-2026-09\\build-private-gold.mjs",
+      "sha256": "3d1b370fd754e89c3dd6c2b12a2a0ddd7a9a565fb8321a2a31d2c8079d71cc88",
+      "byteCount": 19082
+    },
+    {
+      "artifactType": "private-inspection-helper",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\multi-unit-gold-v1-2026-09\\inspect-corpus.mjs",
+      "sha256": "0f6998b5a15160154dfada861df6813799009e9ccc28798ba21a755402940c1d",
+      "byteCount": 1589
+    },
+    {
+      "artifactType": "private-inspection-helper",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\multi-unit-gold-v1-2026-09\\inspect-pairs.mjs",
+      "sha256": "a78124c58b588ca02e66204e8781c825d97d4215c0c16a41d200c2a57f65b644",
+      "byteCount": 2511
+    },
+    {
+      "artifactType": "private-inspection-helper",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\multi-unit-gold-v1-2026-09\\inspect-parent.mjs",
+      "sha256": "d30207245a80eba9992705bdae23059fff900a186cc2e7dead7b041c4bbf75f6",
+      "byteCount": 973
+    },
+    {
+      "artifactType": "private-inspection-helper",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\multi-unit-gold-v1-2026-09\\inspect-workbook.mjs",
+      "sha256": "74379f4d548325e567e1f511ef89525b14b5fb90413822ed3458fb41623400a4",
+      "byteCount": 1270
     }
   ],
   "reviewOnly": true,
