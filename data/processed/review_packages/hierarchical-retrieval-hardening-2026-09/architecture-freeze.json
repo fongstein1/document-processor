@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "1.0",
+  "runId": "hierarchical-retrieval-hardening-2026-09",
+  "startingSha": "ffb651669d17e7334117a9c664d1290e0aeda36c",
+  "artifacts": [
+    {
+      "path": "config/hierarchical-retrieval-hardening.json",
+      "sha256": "cd2b3ce59b7d5d7f039e74161999a8b734f1101e80c366287a13cc07726f18eb"
+    },
+    {
+      "path": "scripts/lib/hierarchical-retrieval.mjs",
+      "sha256": "e8832329debcfe99eaace4c67330a7f1450ba273544cbfed832bb02011119f74"
+    },
+    {
+      "path": "scripts/hierarchical-retrieval-experiment.mjs",
+      "sha256": "75c4bb81c47d41b134e1178f3a5b86e066e4c86d6f5e372b35b97c2222206e11"
+    },
+    {
+      "path": "scripts/lib/hybrid-vector-retrieval.mjs",
+      "sha256": "081656f7748a8a323b4372b5cf0b11f544d72aa7b4eddbab6d2ba1f7d221cd84"
+    },
+    {
+      "path": "scripts/lib/semantic-evidence-units.mjs",
+      "sha256": "b863974e1394d512d81b782b4bffc682515f180785f9a9b251f3226e8ce9694f"
+    },
+    {
+      "path": "scripts/hybrid-vector-retrieval-experiment.mjs",
+      "sha256": "60901d1634a97c9e691689c0f776b060002752d861ac423886b099bf86cdb8b6"
+    },
+    {
+      "path": "config/hybrid-vector-retrieval-experiment.json",
+      "sha256": "03fe8f7dd7c4b372e2c6219e9c67c89fa12c09fcad09b5bfaa8e8863fda88718"
+    },
+    {
+      "path": "scripts/test-hierarchical-retrieval.mjs",
+      "sha256": "fccc508c9b8194f6db6569ef242cf9c28f37ac43787d2aa48a6cf613fe9c500b"
+    }
+  ],
+  "goldFreezeSha256": "ed3f9e165e97c8ce68a76f78b83d2dc3bc3509d8f66bac4800def3759a7d4d8a",
+  "sha256": "5cc9954163cf95d44f4d48709d2a9a0b4284dd88df2ed14a936d52b68bbf2e14",
+  "noHoldoutTuning": true,
+  "reviewOnly": true,
+  "promotionStatus": "not_promoted",
+  "ragReadyAllowed": false
+}

@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "1.0",
+  "runId": "hierarchical-retrieval-hardening-2026-09",
+  "startingSha": "ffb651669d17e7334117a9c664d1290e0aeda36c",
+  "topSources": 2,
+  "topParents": 3,
+  "maximumPackageEvidence": 6,
+  "maximumPackageCharacters": 16000,
+  "parentVectorMethod": "MAX_DIRECT_CHILD_COSINE",
+  "rrfK": 60,
+  "reviewOnly": true,
+  "promotionStatus": "not_promoted",
+  "ragReadyAllowed": false
+}

@@ -20,3 +20,8 @@
 /data/processed/review_packages/vm31-validator-implementation-review/relationship-label-normalization-regression.json text eol=lf
 /data/processed/review_packages/vm31-support-gate-regression.json text eol=lf
 /data/processed/structured_tables/vm20-appendix2-tables.json text eol=lf
+/config/hierarchical-retrieval-hardening.json text eol=lf
+/scripts/lib/hierarchical-retrieval.mjs text eol=lf
+/scripts/hierarchical-retrieval-experiment.mjs text eol=lf
+/scripts/test-hierarchical-retrieval.mjs text eol=lf
+/data/processed/review_packages/hierarchical-retrieval-hardening-2026-09/*.json text eol=lf
