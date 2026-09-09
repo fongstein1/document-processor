@@ -4,6 +4,8 @@
   "startingBranch": "processing/hybrid-vector-retrieval-experiment-2026-09",
   "startingSha": "9ad5e61a57810a187442bd5ce8cac8d0faf5e7b9",
   "evaluationVersion": "GOLD_V3",
+  "goldFreezeCommit": "7fb65e83b25ca55db66aeb5d0d1217afdaacaaa8",
+  "goldFreezeSha256": "ed3f9e165e97c8ce68a76f78b83d2dc3bc3509d8f66bac4800def3759a7d4d8a",
   "frozenRetrievalConfigPath": "config/hybrid-vector-retrieval-experiment.json",
   "frozenRetrievalConfigSha256": "03fe8f7dd7c4b372e2c6219e9c67c89fa12c09fcad09b5bfaa8e8863fda88718",
   "privateRoot": "C:\\Dev\\Document Processor Sources\\_processed-private\\hybrid-vector-retrieval-experiment-2026-09\\gold-v3",

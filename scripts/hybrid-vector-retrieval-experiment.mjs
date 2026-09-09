@@ -34,7 +34,7 @@ const writeJsonl = async (file, rows) => { await fs.mkdir(path.dirname(file), { 
 const fileSha256 = async (file) => crypto.createHash('sha256').update(await fs.readFile(file)).digest('hex')
 const fileRecord = async (file, artifactType) => { const bytes = await fs.readFile(file); return { artifactType, externalPath: path.resolve(file), sha256: crypto.createHash('sha256').update(bytes).digest('hex'), byteCount: bytes.length, rightsStorageStatus: 'RIGHTS_EXTERNAL_STORAGE_ONLY', reviewOnly: true } }
 
-const loadInputs = async () => {
+export const loadInputs = async () => {
   const config = await readJson(configPath)
   const freezePath = path.join(semanticPublicRoot, 'evaluation-v2-freeze.json')
   if (await fileSha256(freezePath) !== config.evaluation.goldFreezeSha256) throw new Error('Frozen Gold V2 physical bytes changed.')
@@ -61,7 +61,7 @@ const loadInputs = async () => {
   return { config, freeze, sourceRecords, substantive, children, parents, headers, parentContexts, privateGold }
 }
 
-const buildRetrievalDocs = ({ substantive, children, parents, parentContexts }) => {
+export const buildRetrievalDocs = ({ substantive, children, parents, parentContexts }) => {
   const parentById = new Map(parents.map((parent) => [parent.parentId, parent]))
   const contextByParent = new Map(parentContexts.map((context) => [context.parentId, context]))
   const sourceById = new Map(substantive.map((item) => [item.source.sourceId, item.source]))

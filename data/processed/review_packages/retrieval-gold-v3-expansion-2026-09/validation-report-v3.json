@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "runId": "retrieval-gold-v3-expansion-2026-09",
+  "tests": [
+    {
+      "testId": "GOLD_V3_COUNTS",
+      "pass": true
+    },
+    {
+      "testId": "FROZEN_SYSTEMS_UNCHANGED",
+      "pass": true
+    },
+    {
+      "testId": "RIGHTS_SAFE_PUBLIC_PROJECTION",
+      "pass": true
+    },
+    {
+      "testId": "EXTERNAL_ARTIFACT_HASHES",
+      "pass": true
+    },
+    {
+      "testId": "NO_THRESHOLD_SELECTION",
+      "pass": true
+    }
+  ],
+  "allPassed": true,
+  "reviewOnly": true,
+  "promotionStatus": "not_promoted",
+  "ragReadyAllowed": false
+}

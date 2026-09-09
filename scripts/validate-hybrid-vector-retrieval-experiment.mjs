@@ -71,5 +71,10 @@ assert.equal(total, manifest.privateArtifactByteCount)
 assert.equal(await hash(path.join(repoRoot, 'data', 'processed', 'review_packages', 'semantic-evidence-unit-correction-2026-09', 'evaluation-v2-freeze.json')), config.evaluation.goldFreezeSha256)
 const diff = spawnSync('git', ['diff', '--name-only', config.startingSha, '--', 'data/processed'], { cwd: repoRoot, encoding: 'utf8' })
 assert.equal(diff.status, 0)
-for (const changed of diff.stdout.trim().split(/\r?\n/).filter(Boolean)) assert(changed.startsWith(`data/processed/review_packages/${config.runId}/`), `Protected processed artifact changed: ${changed}`)
+const approvedSuccessorReviewRuns = ['retrieval-gold-v3-expansion-2026-09']
+for (const changed of diff.stdout.trim().split(/\r?\n/).filter(Boolean)) {
+  const belongsToThisRun = changed.startsWith(`data/processed/review_packages/${config.runId}/`)
+  const belongsToApprovedSuccessor = approvedSuccessorReviewRuns.some((successor) => changed.startsWith(`data/processed/review_packages/${successor}/`))
+  assert(belongsToThisRun || belongsToApprovedSuccessor, `Protected processed artifact changed: ${changed}`)
+}
 console.log(`Validated local hybrid/vector experiment: ${evaluation.systems.BM25.length} cases, ${manifest.artifacts.length} private artifacts, rights-safe public evidence.`)

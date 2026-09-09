@@ -1,0 +1,364 @@
+{
+  "schemaVersion": "1.0",
+  "runId": "retrieval-gold-v3-expansion-2026-09",
+  "unsupportedCaseCount": 15,
+  "diagnostics": [
+    {
+      "systemId": "BM25",
+      "caseCount": 15,
+      "top1Score": {
+        "count": 15,
+        "minimum": 16.135817187512206,
+        "p10": 20.380907531328454,
+        "p25": 25.39302870179388,
+        "median": 31.082942702024127,
+        "p75": 41.94059070597038,
+        "p90": 50.23654627665586,
+        "maximum": 95.86902002034155,
+        "mean": 36.42492218442581
+      },
+      "top1Top2Margin": {
+        "count": 15,
+        "minimum": 0.055152214059955185,
+        "p10": 0.20442288606375317,
+        "p25": 0.6305124499749333,
+        "median": 2.0668033199846647,
+        "p75": 4.373036805546008,
+        "p90": 10.349300737824676,
+        "maximum": 18.529357941999052,
+        "mean": 3.8654348705113266
+      },
+      "cases": [
+        {
+          "caseId": "gold-v3-061",
+          "top1Score": 19.29475362656355,
+          "margin": 0.12999656627272316,
+          "top1SourceId": "naic-accounting-publications-appm-2026"
+        },
+        {
+          "caseId": "gold-v3-062",
+          "top1Score": 32.6029332887815,
+          "margin": 0.3160623657502981,
+          "top1SourceId": "naic-accounting-publications-appm-2026"
+        },
+        {
+          "caseId": "gold-v3-063",
+          "top1Score": 28.119629112231053,
+          "margin": 4.949970920050518,
+          "top1SourceId": "naic-accounting-publications-appm-2026"
+        },
+        {
+          "caseId": "gold-v3-064",
+          "top1Score": 53.65676080618,
+          "margin": 18.529357941999052,
+          "top1SourceId": "naic-life-fraternal-reporting-qsi-life-2026"
+        },
+        {
+          "caseId": "gold-v3-065",
+          "top1Score": 16.135817187512206,
+          "margin": 0.5126227211126064,
+          "top1SourceId": "naic-accounting-publications-appm-2026"
+        },
+        {
+          "caseId": "gold-v3-066",
+          "top1Score": 22.66642829135671,
+          "margin": 0.7484021788372601,
+          "top1SourceId": "naic-life-fraternal-reporting-qsi-life-2026"
+        },
+        {
+          "caseId": "gold-v3-067",
+          "top1Score": 39.59608009300412,
+          "margin": 2.0668033199846647,
+          "top1SourceId": "naic-accounting-publications-appm-2026"
+        },
+        {
+          "caseId": "gold-v3-068",
+          "top1Score": 36.172439161719154,
+          "margin": 6.645507672787701,
+          "top1SourceId": "naic-accounting-publications-appm-2026"
+        },
+        {
+          "caseId": "gold-v3-069",
+          "top1Score": 29.04534195091436,
+          "margin": 0.055152214059955185,
+          "top1SourceId": "naic-life-fraternal-reporting-qsi-life-2026"
+        },
+        {
+          "caseId": "gold-v3-070",
+          "top1Score": 22.010138388475802,
+          "margin": 2.8359238308166432,
+          "top1SourceId": "naic-life-fraternal-reporting-qsi-life-2026"
+        },
+        {
+          "caseId": "gold-v3-071",
+          "top1Score": 31.082942702024127,
+          "margin": 0.9974038088701178,
+          "top1SourceId": "naic-accounting-publications-appm-2026"
+        },
+        {
+          "caseId": "gold-v3-072",
+          "top1Score": 30.730222335976723,
+          "margin": 1.0246070201962247,
+          "top1SourceId": "naic-accounting-publications-appm-2026"
+        },
+        {
+          "caseId": "gold-v3-073",
+          "top1Score": 44.28510131893665,
+          "margin": 3.7961026910414972,
+          "top1SourceId": "naic-accounting-publications-appm-2026"
+        },
+        {
+          "caseId": "gold-v3-074",
+          "top1Score": 45.10622448236964,
+          "margin": 2.555113691374636,
+          "top1SourceId": "naic-accounting-publications-appm-2026"
+        },
+        {
+          "caseId": "gold-v3-075",
+          "top1Score": 95.86902002034155,
+          "margin": 12.818496114515995,
+          "top1SourceId": "naic-accounting-publications-appm-2026"
+        }
+      ]
+    },
+    {
+      "systemId": "VECTOR",
+      "caseCount": 15,
+      "top1Score": {
+        "count": 15,
+        "minimum": 0.7664832155251614,
+        "p10": 0.7868480205696933,
+        "p25": 0.790230471526046,
+        "median": 0.8036601203156217,
+        "p75": 0.8095117086688723,
+        "p90": 0.812170398407717,
+        "maximum": 0.8129011066310209,
+        "mean": 0.799181981107746
+      },
+      "top1Top2Margin": {
+        "count": 15,
+        "minimum": 0.0001032500694491123,
+        "p10": 0.0002616823463617246,
+        "p25": 0.004043863209281406,
+        "median": 0.005701897646677834,
+        "p75": 0.00825771028722555,
+        "p90": 0.009654363406726985,
+        "maximum": 0.009835688332227477,
+        "mean": 0.005371388690703601
+      },
+      "cases": [
+        {
+          "caseId": "gold-v3-061",
+          "top1Score": 0.8129011066310209,
+          "margin": 0.004090753711097128,
+          "top1SourceId": "naic-life-fraternal-reporting-qsi-life-2026"
+        },
+        {
+          "caseId": "gold-v3-062",
+          "top1Score": 0.8126421183153745,
+          "margin": 0.006071604287698262,
+          "top1SourceId": "naic-accounting-publications-appm-2026"
+        },
+        {
+          "caseId": "gold-v3-063",
+          "top1Score": 0.7909489984965443,
+          "margin": 0.009363567722348032,
+          "top1SourceId": "naic-accounting-publications-appm-2026"
+        },
+        {
+          "caseId": "gold-v3-064",
+          "top1Score": 0.8089032960874212,
+          "margin": 0.009409806067355198,
+          "top1SourceId": "naic-accounting-publications-appm-2026"
+        },
+        {
+          "caseId": "gold-v3-065",
+          "top1Score": 0.7664832155251614,
+          "margin": 0.007151852852103069,
+          "top1SourceId": "naic-life-fraternal-reporting-qsi-life-2026"
+        },
+        {
+          "caseId": "gold-v3-066",
+          "top1Score": 0.7889405498818552,
+          "margin": 0.0001032500694491123,
+          "top1SourceId": "naic-accounting-publications-appm-2026"
+        },
+        {
+          "caseId": "gold-v3-067",
+          "top1Score": 0.8042849592283453,
+          "margin": 0.009817401632974843,
+          "top1SourceId": "naic-accounting-publications-appm-2026"
+        },
+        {
+          "caseId": "gold-v3-068",
+          "top1Score": 0.7955477771173668,
+          "margin": 0.003996972707465685,
+          "top1SourceId": "naic-accounting-publications-appm-2026"
+        },
+        {
+          "caseId": "gold-v3-069",
+          "top1Score": 0.7854530010282519,
+          "margin": 0.006125718373419353,
+          "top1SourceId": "naic-accounting-publications-appm-2026"
+        },
+        {
+          "caseId": "gold-v3-070",
+          "top1Score": 0.8101201212503236,
+          "margin": 0.0003519947180024019,
+          "top1SourceId": "naic-accounting-publications-appm-2026"
+        },
+        {
+          "caseId": "gold-v3-071",
+          "top1Score": 0.8114628185462307,
+          "margin": 0.00419514539383814,
+          "top1SourceId": "naic-accounting-publications-appm-2026"
+        },
+        {
+          "caseId": "gold-v3-072",
+          "top1Score": 0.8032009277752832,
+          "margin": 0.00020147409860127308,
+          "top1SourceId": "naic-life-fraternal-reporting-qsi-life-2026"
+        },
+        {
+          "caseId": "gold-v3-073",
+          "top1Score": 0.7895119445555475,
+          "margin": 0.005701897646677834,
+          "top1SourceId": "naic-accounting-publications-appm-2026"
+        },
+        {
+          "caseId": "gold-v3-074",
+          "top1Score": 0.8036601203156217,
+          "margin": 0.009835688332227477,
+          "top1SourceId": "naic-accounting-publications-appm-2026"
+        },
+        {
+          "caseId": "gold-v3-075",
+          "top1Score": 0.8036687618618431,
+          "margin": 0.004153702747296206,
+          "top1SourceId": "naic-accounting-publications-appm-2026"
+        }
+      ]
+    },
+    {
+      "systemId": "HYBRID_RRF",
+      "caseCount": 15,
+      "top1Score": {
+        "count": 15,
+        "minimum": 0.019430760810071154,
+        "p10": 0.02240570719920729,
+        "p25": 0.02385900750254758,
+        "median": 0.028958333333333336,
+        "p75": 0.030944660001699285,
+        "p90": 0.0316704024646251,
+        "maximum": 0.03177805800756621,
+        "mean": 0.02741226112304799
+      },
+      "top1Top2Margin": {
+        "count": 15,
+        "minimum": 0.00003131013178607478,
+        "p10": 0.0005044652498510611,
+        "p25": 0.0006749322568198012,
+        "median": 0.0009279584745413572,
+        "p75": 0.0015318702736099154,
+        "p90": 0.002034306436861964,
+        "maximum": 0.0025949182333687357,
+        "mean": 0.0011275245160667093
+      },
+      "cases": [
+        {
+          "caseId": "gold-v3-061",
+          "top1Score": 0.023150199379707578,
+          "margin": 0.0017865630160712152,
+          "top1SourceId": "naic-life-fraternal-reporting-qsi-life-2026"
+        },
+        {
+          "caseId": "gold-v3-062",
+          "top1Score": 0.030834914611005692,
+          "margin": 0.0009279584745413572,
+          "top1SourceId": "naic-accounting-publications-appm-2026"
+        },
+        {
+          "caseId": "gold-v3-063",
+          "top1Score": 0.02397163120567376,
+          "margin": 0.0009139870953980729,
+          "top1SourceId": "naic-accounting-publications-appm-2026"
+        },
+        {
+          "caseId": "gold-v3-064",
+          "top1Score": 0.03177805800756621,
+          "margin": 0.001098901098901102,
+          "top1SourceId": "naic-life-fraternal-reporting-qsi-life-2026"
+        },
+        {
+          "caseId": "gold-v3-065",
+          "top1Score": 0.028958333333333336,
+          "margin": 0.0008198051948051961,
+          "top1SourceId": "naic-accounting-publications-appm-2026"
+        },
+        {
+          "caseId": "gold-v3-066",
+          "top1Score": 0.031054405392392875,
+          "margin": 0.00047550716643582694,
+          "top1SourceId": "naic-accounting-publications-appm-2026"
+        },
+        {
+          "caseId": "gold-v3-067",
+          "top1Score": 0.02610218048702849,
+          "margin": 0.0021994687173891303,
+          "top1SourceId": "naic-accounting-publications-appm-2026"
+        },
+        {
+          "caseId": "gold-v3-068",
+          "top1Score": 0.023746383799421407,
+          "margin": 0.0011029411764705843,
+          "top1SourceId": "naic-accounting-publications-appm-2026"
+        },
+        {
+          "caseId": "gold-v3-069",
+          "top1Score": 0.031544957774465976,
+          "margin": 0.00003131013178607478,
+          "top1SourceId": "naic-accounting-publications-appm-2026"
+        },
+        {
+          "caseId": "gold-v3-070",
+          "top1Score": 0.027346637102734665,
+          "margin": 0.0025949182333687357,
+          "top1SourceId": "naic-accounting-publications-appm-2026"
+        },
+        {
+          "caseId": "gold-v3-071",
+          "top1Score": 0.03055037313432836,
+          "margin": 0.0015920398009950237,
+          "top1SourceId": "naic-accounting-publications-appm-2026"
+        },
+        {
+          "caseId": "gold-v3-072",
+          "top1Score": 0.019430760810071154,
+          "margin": 0.0005479023749739124,
+          "top1SourceId": "naic-accounting-publications-appm-2026"
+        },
+        {
+          "caseId": "gold-v3-073",
+          "top1Score": 0.029051670471052088,
+          "margin": 0.0007422605826948314,
+          "top1SourceId": "naic-accounting-publications-appm-2026"
+        },
+        {
+          "caseId": "gold-v3-074",
+          "top1Score": 0.021909379078873765,
+          "margin": 0.0006076039309447709,
+          "top1SourceId": "naic-accounting-publications-appm-2026"
+        },
+        {
+          "caseId": "gold-v3-075",
+          "top1Score": 0.031754032258064516,
+          "margin": 0.001471700746224807,
+          "top1SourceId": "naic-accounting-publications-appm-2026"
+        }
+      ]
+    }
+  ],
+  "thresholdSelected": false,
+  "thresholdDecision": "NO_THRESHOLD_SELECTED",
+  "reviewOnly": true
+}
