@@ -12,7 +12,7 @@ const publicRoot = path.join(repoRoot, 'data', 'processed', 'review_packages', c
 const externalRoot = path.join('C:\\Dev\\Document Processor Sources', '_processed-private', config.runId)
 const read = async (file) => JSON.parse(await fs.readFile(file, 'utf8'))
 const hash = async (file) => crypto.createHash('sha256').update(await fs.readFile(file)).digest('hex')
-const files = ['experiment-configuration.json', 'evaluation-results.json', 'source-slice-results.json', 'unsupported-query-diagnostics.json', 'external-artifact-manifest.json', 'experiment-report.json']
+const files = ['experiment-configuration.json', 'evaluation-results.json', 'source-slice-results.json', 'unsupported-query-diagnostics.json', 'external-artifact-manifest.json', 'experiment-report.json', 'validation-report.json']
 const publicArtifacts = Object.fromEntries(await Promise.all(files.map(async (name) => [name, await read(path.join(publicRoot, name))])))
 for (const [name, value] of Object.entries(publicArtifacts)) validateGitSafeArtifact({ artifactType: name, value })
 
@@ -44,11 +44,16 @@ for (const [systemId, metrics] of Object.entries(evaluation.metrics)) {
   for (const split of ['development', 'holdout', 'combined']) for (const [key, value] of Object.entries(metrics[split])) if (key !== 'caseCount' && key !== 'irrelevantContextCount' && value !== null) assert(value >= 0 && value <= 1, `${systemId}/${split}/${key} outside [0,1]`)
 }
 const slices = publicArtifacts['source-slice-results.json']
-assert(slices.a3.every((item) => item.combined.caseCount === 0), 'A3 should disclose zero included Gold V2 cases.')
+assert(slices.a3.every((item) => item.development.caseCount === 0 && item.holdout.caseCount === 1), 'A3 should disclose its single holdout-only Gold V2 case.')
 assert(slices.xlsx.every((item) => item.combined.caseCount > 0), 'XLSX aggregate should be evaluable.')
 const diagnostics = publicArtifacts['unsupported-query-diagnostics.json']
 assert.equal(diagnostics.invalidTargetCaseCount, 9)
 assert.equal(diagnostics.ambiguousCaseCount, 13)
+const report = publicArtifacts['experiment-report.json']
+assert.equal(report.maturityLevel, 'LEVEL_1')
+assert.equal(report.nextStep, 'A')
+assert.equal(report.outcome, 'PASS_WITH_LIMITATIONS')
+assert.equal(publicArtifacts['validation-report.json'].allPassed, true)
 
 const manifest = publicArtifacts['external-artifact-manifest.json']
 assert.equal(path.resolve(manifest.externalProcessingRoot), path.resolve(externalRoot))

@@ -347,6 +347,16 @@ export const evaluateHybridExperiment = async () => {
     goldV2Unchanged: true, noAnswerGeneration: true, noProductionRag: true,
     noLearnerFacingOutput: true, noHostedModels: true, embeddingInputsExternal: true,
     vectorsExternal: true, queriesExternal: true, goldRationaleExternal: true,
+    maturityLevel: 'LEVEL_1', nextStep: 'A', outcome: 'PASS_WITH_LIMITATIONS',
+    limitations: [
+      'Frozen Gold V2 has only 6 development and 11 holdout cases.',
+      'Development accepted-target Top-1 is zero for all five systems.',
+      'Hybrid and parent-aware reranking improve source selection more than accepted-target selection.',
+      'Bounded role-aware context does not achieve complete-context capture.',
+      'A3 has one included holdout case and no included development cases.',
+      'Excluded-query diagnostics are not a calibrated unsupported-query abstention evaluation.',
+      'The committed PyTorch dynamic quantization API is deprecated and requires a future runtime migration before reuse.'
+    ],
     reviewOnly: true, promotionStatus: 'not_promoted', ragReadyAllowed: false
   }
   await writeJson(path.join(publicRoot, 'experiment-configuration.json'), publicConfiguration)

@@ -1,0 +1,83 @@
+{
+  "schemaVersion": "1.0",
+  "runId": "hybrid-vector-retrieval-experiment-2026-09",
+  "invalidTargetCaseCount": 9,
+  "ambiguousCaseCount": 13,
+  "diagnostics": [
+    {
+      "systemId": "BM25",
+      "diagnosticStatus": "INVALID_TARGET_EXCLUDED",
+      "diagnosticCaseCount": 9,
+      "scoreMaximum": 70.44270687007041,
+      "scoreMean": 36.70176898017399,
+      "top1Top2MarginMean": 1.566538024547312,
+      "top1Top2MarginMinimum": 0.19665007187839834
+    },
+    {
+      "systemId": "BM25",
+      "diagnosticStatus": "AMBIGUOUS_EXCLUDED",
+      "diagnosticCaseCount": 13,
+      "scoreMaximum": 52.543624533811695,
+      "scoreMean": 37.535115710190375,
+      "top1Top2MarginMean": 2.1735314052973425,
+      "top1Top2MarginMinimum": 0.15200828183101578
+    },
+    {
+      "systemId": "VECTOR",
+      "diagnosticStatus": "INVALID_TARGET_EXCLUDED",
+      "diagnosticCaseCount": 9,
+      "scoreMaximum": 0.8442605799454653,
+      "scoreMean": 0.821019999802187,
+      "top1Top2MarginMean": 0.003813965253376233,
+      "top1Top2MarginMinimum": 0.0005380035761609614
+    },
+    {
+      "systemId": "VECTOR",
+      "diagnosticStatus": "AMBIGUOUS_EXCLUDED",
+      "diagnosticCaseCount": 13,
+      "scoreMaximum": 0.8727771107648478,
+      "scoreMean": 0.8178861424174287,
+      "top1Top2MarginMean": 0.005253616927263825,
+      "top1Top2MarginMinimum": 0
+    },
+    {
+      "systemId": "HYBRID_RRF",
+      "diagnosticStatus": "INVALID_TARGET_EXCLUDED",
+      "diagnosticCaseCount": 9,
+      "scoreMaximum": 0.03278688524590164,
+      "scoreMean": 0.02782015439785222,
+      "top1Top2MarginMean": 0.0019446657136723297,
+      "top1Top2MarginMinimum": 0.000004738213693435134
+    },
+    {
+      "systemId": "HYBRID_RRF",
+      "diagnosticStatus": "AMBIGUOUS_EXCLUDED",
+      "diagnosticCaseCount": 13,
+      "scoreMaximum": 0.03278688524590164,
+      "scoreMean": 0.027393780359588147,
+      "top1Top2MarginMean": 0.0018021950225348931,
+      "top1Top2MarginMinimum": 0.00008519250717489019
+    },
+    {
+      "systemId": "HYBRID_RRF_PARENT",
+      "diagnosticStatus": "INVALID_TARGET_EXCLUDED",
+      "diagnosticCaseCount": 9,
+      "scoreMaximum": 0.0408514013749339,
+      "scoreMean": 0.03500299995842168,
+      "top1Top2MarginMean": 0.0016993174088144336,
+      "top1Top2MarginMinimum": 0.00003131013178607478
+    },
+    {
+      "systemId": "HYBRID_RRF_PARENT",
+      "diagnosticStatus": "AMBIGUOUS_EXCLUDED",
+      "diagnosticCaseCount": 13,
+      "scoreMaximum": 0.04098360655737705,
+      "scoreMean": 0.03408341412290408,
+      "top1Top2MarginMean": 0.0016644088877468706,
+      "top1Top2MarginMinimum": 0.00008519250717489019
+    }
+  ],
+  "queryExternal": true,
+  "rationaleExternal": true,
+  "reviewOnly": true
+}

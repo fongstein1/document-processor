@@ -1,0 +1,115 @@
+{
+  "schemaVersion": "1.0",
+  "runId": "hybrid-vector-retrieval-experiment-2026-09",
+  "externalProcessingRoot": "C:\\Dev\\Document Processor Sources\\_processed-private\\hybrid-vector-retrieval-experiment-2026-09",
+  "artifacts": [
+    {
+      "artifactType": "embedding-passages",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\hybrid-vector-retrieval-experiment-2026-09\\passages.jsonl",
+      "sha256": "896bbbf7e8c03781cf7d8efa4616dd351940d14c7b8d9a9fe70b327254c9ade7",
+      "byteCount": 17511881,
+      "rightsStorageStatus": "RIGHTS_EXTERNAL_STORAGE_ONLY",
+      "reviewOnly": true
+    },
+    {
+      "artifactType": "private-queries",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\hybrid-vector-retrieval-experiment-2026-09\\queries.jsonl",
+      "sha256": "e810c10ffa9ff11f38a6afae1050bab8008efb9830e20866ffcd66d33a030b37",
+      "byteCount": 10210,
+      "rightsStorageStatus": "RIGHTS_EXTERNAL_STORAGE_ONLY",
+      "reviewOnly": true
+    },
+    {
+      "artifactType": "ranking-input-manifest",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\hybrid-vector-retrieval-experiment-2026-09\\ranking-input-manifest.json",
+      "sha256": "2fda2a3a739d86db466764c1fc76864aaa6209363dbc31ad0ef9144d10b549d4",
+      "byteCount": 1169,
+      "rightsStorageStatus": "RIGHTS_EXTERNAL_STORAGE_ONLY",
+      "reviewOnly": true
+    },
+    {
+      "artifactType": "document-vectors",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\hybrid-vector-retrieval-experiment-2026-09\\document-embeddings.f32",
+      "sha256": "a64d5193a3dba7b36fa2247524aec6754b428cb3b6608752716e8591bbd3c481",
+      "byteCount": 43324416,
+      "rightsStorageStatus": "RIGHTS_EXTERNAL_STORAGE_ONLY",
+      "reviewOnly": true
+    },
+    {
+      "artifactType": "query-vectors",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\hybrid-vector-retrieval-experiment-2026-09\\query-embeddings.f32",
+      "sha256": "a597d2ec5e239994af3cbd735ddd1d7699567af77882af1cdaccd6a33545f56c",
+      "byteCount": 119808,
+      "rightsStorageStatus": "RIGHTS_EXTERNAL_STORAGE_ONLY",
+      "reviewOnly": true
+    },
+    {
+      "artifactType": "embedding-provenance",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\hybrid-vector-retrieval-experiment-2026-09\\embedding-metadata.json",
+      "sha256": "da68ec7e5c088dfd272f06f8cd062e7817b6d4567adf485d2b407d25e598b1c9",
+      "byteCount": 3929,
+      "rightsStorageStatus": "RIGHTS_EXTERNAL_STORAGE_ONLY",
+      "reviewOnly": true
+    },
+    {
+      "artifactType": "exact-vector-index",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\hybrid-vector-retrieval-experiment-2026-09\\document-embedding-index.json",
+      "sha256": "5b5295a6b918afd5273762e0cd16326e34d6a895a9704a9b69987940710015dc",
+      "byteCount": 508062,
+      "rightsStorageStatus": "RIGHTS_EXTERNAL_STORAGE_ONLY",
+      "reviewOnly": true
+    },
+    {
+      "artifactType": "private-ranking-details",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\hybrid-vector-retrieval-experiment-2026-09\\ranking-details.json",
+      "sha256": "ab7e8b7927078648b463d3280d0714816d851e71f1892a5d1e5aa40a89cf82a5",
+      "byteCount": 4228078,
+      "rightsStorageStatus": "RIGHTS_EXTERNAL_STORAGE_ONLY",
+      "reviewOnly": true
+    },
+    {
+      "artifactType": "private-evaluation-details",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\hybrid-vector-retrieval-experiment-2026-09\\evaluation-private.json",
+      "sha256": "6a0d5f86085e182ae0cc33e6fb991031ab573515d036db032caf90e2d5d4d1e8",
+      "byteCount": 237218,
+      "rightsStorageStatus": "RIGHTS_EXTERNAL_STORAGE_ONLY",
+      "reviewOnly": true
+    },
+    {
+      "artifactType": "determinism-evidence",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\hybrid-vector-retrieval-experiment-2026-09\\determinism-evidence.json",
+      "sha256": "6c49648e7fa490ae18728f211f33a2d567a446fabaa4d4d0b605d7771e3e1778",
+      "byteCount": 1333,
+      "rightsStorageStatus": "RIGHTS_EXTERNAL_STORAGE_ONLY",
+      "reviewOnly": true
+    },
+    {
+      "artifactType": "determinism-document-vectors",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\hybrid-vector-retrieval-experiment-2026-09\\determinism-rerun\\document-embeddings.f32",
+      "sha256": "a64d5193a3dba7b36fa2247524aec6754b428cb3b6608752716e8591bbd3c481",
+      "byteCount": 43324416,
+      "rightsStorageStatus": "RIGHTS_EXTERNAL_STORAGE_ONLY",
+      "reviewOnly": true
+    },
+    {
+      "artifactType": "determinism-query-vectors",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\hybrid-vector-retrieval-experiment-2026-09\\determinism-rerun\\query-embeddings.f32",
+      "sha256": "a597d2ec5e239994af3cbd735ddd1d7699567af77882af1cdaccd6a33545f56c",
+      "byteCount": 119808,
+      "rightsStorageStatus": "RIGHTS_EXTERNAL_STORAGE_ONLY",
+      "reviewOnly": true
+    },
+    {
+      "artifactType": "determinism-embedding-provenance",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\hybrid-vector-retrieval-experiment-2026-09\\determinism-rerun\\embedding-metadata.json",
+      "sha256": "da68ec7e5c088dfd272f06f8cd062e7817b6d4567adf485d2b407d25e598b1c9",
+      "byteCount": 3929,
+      "rightsStorageStatus": "RIGHTS_EXTERNAL_STORAGE_ONLY",
+      "reviewOnly": true
+    }
+  ],
+  "privateArtifactByteCount": 109394257,
+  "artifactCount": 13,
+  "aggregateSha256": "0ceb876b921b3bb261d576e9b3629f240f420363359a5585b6c5f17f41fc8d38",
+  "reviewOnly": true
+}

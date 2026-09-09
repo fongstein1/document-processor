@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "1.0",
+  "runId": "hybrid-vector-retrieval-experiment-2026-09",
+  "tests": [
+    { "name": "npm run check", "pass": true },
+    { "name": "npm run parent-child:validate", "pass": true },
+    { "name": "npm run parent-child:test", "pass": true },
+    { "name": "npm run parent-child-hardening:validate", "pass": true },
+    { "name": "npm run parent-child-hardening:test", "pass": true },
+    { "name": "npm run parent-child-hardening:rights-test", "pass": true },
+    { "name": "npm run semantic-evidence:validate", "pass": true },
+    { "name": "npm run semantic-evidence:test", "pass": true },
+    { "name": "npm run semantic-evidence:determinism", "pass": true },
+    { "name": "npm run hybrid-vector:test", "pass": true },
+    { "name": "npm run hybrid-vector:validate", "pass": true },
+    { "name": "full local E5 vector determinism rerun", "pass": true }
+  ],
+  "allPassed": true,
+  "goldV2Unchanged": true,
+  "canonicalCorporaUnchanged": true,
+  "rawSourceBytesUnchanged": true,
+  "noNewSources": true,
+  "reviewOnly": true,
+  "promotionStatus": "not_promoted",
+  "ragReadyAllowed": false
+}
