@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "1.0",
+  "runId": "retrieval-gold-v3-expansion-2026-09",
+  "startingBranch": "processing/hybrid-vector-retrieval-experiment-2026-09",
+  "startingSha": "9ad5e61a57810a187442bd5ce8cac8d0faf5e7b9",
+  "evaluationVersion": "GOLD_V3",
+  "frozenRetrievalConfigPath": "config/hybrid-vector-retrieval-experiment.json",
+  "frozenRetrievalConfigSha256": "03fe8f7dd7c4b372e2c6219e9c67c89fa12c09fcad09b5bfaa8e8863fda88718",
+  "privateRoot": "C:\\Dev\\Document Processor Sources\\_processed-private\\hybrid-vector-retrieval-experiment-2026-09\\gold-v3",
+  "supportedCaseCount": 60,
+  "unsupportedCaseCount": 15,
+  "developmentCaseCount": 36,
+  "holdoutCaseCount": 24,
+  "rankingInputExcludesGold": true,
+  "noHoldoutTuning": true,
+  "retrievalConfigurationUnchanged": true,
+  "reviewOnly": true,
+  "promotionStatus": "not_promoted",
+  "ragReadyAllowed": false
+}

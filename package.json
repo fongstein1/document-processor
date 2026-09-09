@@ -46,6 +46,8 @@
     "hybrid-vector:test": "node scripts/test-hybrid-vector-retrieval-experiment.mjs",
     "hybrid-vector:validate": "node scripts/validate-hybrid-vector-retrieval-experiment.mjs",
     "hybrid-vector:full": "npm run hybrid-vector:prepare && npm run hybrid-vector:embed && npm run hybrid-vector:evaluate && npm run hybrid-vector:determinism && npm run hybrid-vector:evaluate && npm run hybrid-vector:validate && npm run hybrid-vector:test",
+    "gold-v3:freeze": "node scripts/retrieval-gold-v3-freeze.mjs",
+    "gold-v3:validate": "node scripts/validate-gold-v3.mjs && node scripts/test-gold-v3-integrity.mjs",
     "vm01:artifacts": "node scripts/build-vm01-definition-artifacts.mjs",
     "vm01:validate": "node scripts/validate-vm01-definitions.mjs",
     "vm01:definitions": "npm run source-index:build && npm run vm01:artifacts && npm run vm01:validate",
