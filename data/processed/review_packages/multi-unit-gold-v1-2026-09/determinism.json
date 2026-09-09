@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "1.0",
+  "runId": "multi-unit-gold-v1-2026-09",
+  "queryVectorSha256": "8736b28cdab3a6d5b8a891422919367f4fb988b96094752abcdc00d62a1065f6",
+  "queryVectorRerunSha256": "8736b28cdab3a6d5b8a891422919367f4fb988b96094752abcdc00d62a1065f6",
+  "rankingSha256": "93f5e1dccb39801979bed811b967e8e582264621536a1e0871654bc35e691b2a",
+  "rankingRerunSha256": "93f5e1dccb39801979bed811b967e8e582264621536a1e0871654bc35e691b2a",
+  "queryVectorDeterminismPassed": true,
+  "rankingDeterminismPassed": true,
+  "scoringDeterminismPassed": true,
+  "reviewOnly": true,
+  "promotionStatus": "not_promoted",
+  "ragReadyAllowed": false
+}

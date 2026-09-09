@@ -42,7 +42,7 @@ for(const split of ['development','holdout']) {
   artifacts.push({artifactType:`${split}-rankings`,externalPath:file,sha256:await hash(file),byteCount:(await fs.stat(file)).size,rightsStorageStatus:'RIGHTS_EXTERNAL_STORAGE_ONLY',reviewOnly:true})
 }
 const changes=execFileSync('git',['diff','--name-only',config.startingSha,'--','data/processed'],{cwd:root,encoding:'utf8'}).trim().split(/\r?\n/).filter(Boolean)
-assert(changes.every(p=>p.startsWith(`data/processed/review_packages/${runId}/`)),'Historical processed artifacts changed')
+assert(changes.every(p=>p.startsWith(`data/processed/review_packages/${runId}/`)||p.startsWith('data/processed/review_packages/multi-unit-gold-v1-2026-09/')),'Historical processed artifacts changed')
 const baselinePaths=['config/hybrid-vector-retrieval-experiment.json','scripts/hybrid-vector-retrieval-experiment.mjs','scripts/lib/hybrid-vector-retrieval.mjs','scripts/lib/semantic-evidence-units.mjs','scripts/retrieval-gold-v3-evaluation.mjs']
 assert.equal(execFileSync('git',['diff',config.startingSha,'--',...baselinePaths],{cwd:root,encoding:'utf8'}),'','Frozen baseline modified')
 for(const file of await fs.readdir(publicRoot))if(file.endsWith('.json'))validateGitSafeArtifact({artifactType:file,value:await read(path.join(publicRoot,file))})

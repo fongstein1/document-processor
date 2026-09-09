@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "1.0",
+  "runId": "multi-unit-gold-v1-2026-09",
+  "tests": [
+    { "testId": "repository-check", "pass": true },
+    { "testId": "parent-child-validation", "pass": true },
+    { "testId": "parent-child-tests", "pass": true },
+    { "testId": "retrieval-hardening-validation", "pass": true },
+    { "testId": "retrieval-hardening-tests", "pass": true },
+    { "testId": "semantic-evidence-validation", "pass": true },
+    { "testId": "semantic-evidence-determinism", "pass": true },
+    { "testId": "gold-v2", "pass": true },
+    { "testId": "gold-v3", "pass": true },
+    { "testId": "gold-v3-integrity", "pass": true },
+    { "testId": "gold-v3-evaluation", "pass": true },
+    { "testId": "gold-v3-synthetic", "pass": true },
+    { "testId": "hybrid-vector-determinism", "pass": true },
+    { "testId": "hierarchical-synthetic", "pass": true },
+    { "testId": "hierarchical-validation", "pass": true },
+    { "testId": "hierarchical-determinism", "pass": true },
+    { "testId": "multi-unit-gold-v1-integrity", "pass": true },
+    { "testId": "multi-unit-gold-v1-validation", "pass": true }
+  ],
+  "allPassed": true,
+  "reviewOnly": true,
+  "promotionStatus": "not_promoted",
+  "ragReadyAllowed": false
+}

@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "1.0",
+  "runId": "multi-unit-gold-v1-2026-09",
+  "artifactCount": 6,
+  "totalByteCount": 108636914,
+  "artifacts": [
+    {
+      "artifactType": "gold-adjudication",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\multi-unit-gold-v1-2026-09\\multi-unit-gold-v1-adjudication.json",
+      "sha256": "976189ba0acbd312b73f42fd3432f5e39f31f2427363bca72ff8757434df5443",
+      "byteCount": 108512
+    },
+    {
+      "artifactType": "private-queries",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\multi-unit-gold-v1-2026-09\\queries.jsonl",
+      "sha256": "84069a373aeabc65140a2d021d94f6dc2e1567168eb8f8742cad2eb2c58f2e6a",
+      "byteCount": 14684
+    },
+    {
+      "artifactType": "query-vectors",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\multi-unit-gold-v1-2026-09\\query-embeddings.f32",
+      "sha256": "8736b28cdab3a6d5b8a891422919367f4fb988b96094752abcdc00d62a1065f6",
+      "byteCount": 168960
+    },
+    {
+      "artifactType": "query-vector-metadata",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\multi-unit-gold-v1-2026-09\\query-embedding-metadata.json",
+      "sha256": "72b5c040ccd8aedb24e5163609db393460473bc7e6bcfd6afa4953556898df5b",
+      "byteCount": 1037
+    },
+    {
+      "artifactType": "private-rankings",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\multi-unit-gold-v1-2026-09\\rankings.json",
+      "sha256": "93f5e1dccb39801979bed811b967e8e582264621536a1e0871654bc35e691b2a",
+      "byteCount": 108269324
+    },
+    {
+      "artifactType": "private-scoring",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\multi-unit-gold-v1-2026-09\\scored-cases.json",
+      "sha256": "d4381cf0187c19e44b20a14a71cd660d7e7ae12642ddac8a29ed57343f638948",
+      "byteCount": 74397
+    }
+  ],
+  "reviewOnly": true,
+  "promotionStatus": "not_promoted",
+  "ragReadyAllowed": false
+}
