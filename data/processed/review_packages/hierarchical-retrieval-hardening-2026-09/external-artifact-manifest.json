@@ -1,0 +1,65 @@
+{
+  "schemaVersion": "1.0",
+  "runId": "hierarchical-retrieval-hardening-2026-09",
+  "artifacts": [
+    {
+      "artifactType": "development-rankings",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\hybrid-vector-retrieval-experiment-2026-09\\hierarchical-retrieval-hardening-2026-09\\development-rankings.json",
+      "sha256": "79ccfc3702bae8625b533bc5e06dcace7fe3247a4b3b40d07961cd1dc0934c6d",
+      "byteCount": 81658270,
+      "rightsStorageStatus": "RIGHTS_EXTERNAL_STORAGE_ONLY",
+      "reviewOnly": true
+    },
+    {
+      "artifactType": "holdout-rankings",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\hybrid-vector-retrieval-experiment-2026-09\\hierarchical-retrieval-hardening-2026-09\\holdout-rankings.json",
+      "sha256": "93f77f0f48c1f664ad779c3588b65070b150e2da33c6e1c0f9d2938ce0db2618",
+      "byteCount": 54543568,
+      "rightsStorageStatus": "RIGHTS_EXTERNAL_STORAGE_ONLY",
+      "reviewOnly": true
+    },
+    {
+      "artifactType": "gold-adjudication",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\hybrid-vector-retrieval-experiment-2026-09\\gold-v3\\gold-v3-adjudication.json",
+      "sha256": "5e1a1f298eea6288ecad34c84f24761f6817a0540fa15cd898e0dd75ba2c311f",
+      "byteCount": 98758,
+      "rightsStorageStatus": "RIGHTS_EXTERNAL_STORAGE_ONLY",
+      "reviewOnly": true
+    },
+    {
+      "artifactType": "private-queries",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\hybrid-vector-retrieval-experiment-2026-09\\gold-v3\\queries-v3.jsonl",
+      "sha256": "4709bebfe472d48ab290ecc3649c62abfc08b811f8bdb501c1f3e8e575718139",
+      "byteCount": 21434,
+      "rightsStorageStatus": "RIGHTS_EXTERNAL_STORAGE_ONLY",
+      "reviewOnly": true
+    },
+    {
+      "artifactType": "query-vectors",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\hybrid-vector-retrieval-experiment-2026-09\\gold-v3\\query-embeddings.f32",
+      "sha256": "8f1c8b538757cd1dc9c542ba58c92a6131be615ce0cb813c7a595424d3dcedef",
+      "byteCount": 230400,
+      "rightsStorageStatus": "RIGHTS_EXTERNAL_STORAGE_ONLY",
+      "reviewOnly": true
+    },
+    {
+      "artifactType": "frozen-document-vectors",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\hybrid-vector-retrieval-experiment-2026-09\\document-embeddings.f32",
+      "sha256": "a64d5193a3dba7b36fa2247524aec6754b428cb3b6608752716e8591bbd3c481",
+      "byteCount": 43324416,
+      "rightsStorageStatus": "RIGHTS_EXTERNAL_STORAGE_ONLY",
+      "reviewOnly": true
+    },
+    {
+      "artifactType": "frozen-exact-index",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\hybrid-vector-retrieval-experiment-2026-09\\document-embedding-index.json",
+      "sha256": "5b5295a6b918afd5273762e0cd16326e34d6a895a9704a9b69987940710015dc",
+      "byteCount": 508062,
+      "rightsStorageStatus": "RIGHTS_EXTERNAL_STORAGE_ONLY",
+      "reviewOnly": true
+    }
+  ],
+  "privateArtifactByteCount": 180384908,
+  "artifactCount": 7,
+  "reviewOnly": true
+}

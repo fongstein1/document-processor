@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "1.0",
+  "runId": "hierarchical-retrieval-hardening-2026-09",
+  "tests": [
+    {
+      "testId": "gold-v2",
+      "pass": true
+    },
+    {
+      "testId": "gold-v3",
+      "pass": true
+    },
+    {
+      "testId": "gold-v3-evaluation",
+      "pass": true
+    },
+    {
+      "testId": "gold-v3-integrity",
+      "pass": true
+    },
+    {
+      "testId": "gold-v3-synthetic",
+      "pass": true
+    },
+    {
+      "testId": "hardening-tests",
+      "pass": true
+    },
+    {
+      "testId": "hardening-validation",
+      "pass": true
+    },
+    {
+      "testId": "hierarchical-synthetic",
+      "pass": true
+    },
+    {
+      "testId": "legacy-vector-determinism",
+      "pass": true
+    },
+    {
+      "testId": "parent-child-tests",
+      "pass": true
+    },
+    {
+      "testId": "parent-child-validation",
+      "pass": true
+    },
+    {
+      "testId": "repository-check",
+      "pass": true
+    },
+    {
+      "testId": "semantic-determinism",
+      "pass": true
+    },
+    {
+      "testId": "semantic-validation",
+      "pass": true
+    }
+  ],
+  "allPassed": true,
+  "reviewOnly": true,
+  "promotionStatus": "not_promoted",
+  "ragReadyAllowed": false
+}

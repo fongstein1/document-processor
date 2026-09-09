@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "1.0",
+  "runId": "hierarchical-retrieval-hardening-2026-09",
+  "artifacts": [
+    {
+      "artifactType": "development-rankings",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\hybrid-vector-retrieval-experiment-2026-09\\hierarchical-retrieval-hardening-2026-09\\development-rankings.json",
+      "sha256": "79ccfc3702bae8625b533bc5e06dcace7fe3247a4b3b40d07961cd1dc0934c6d",
+      "byteCount": 81658270,
+      "rightsStorageStatus": "RIGHTS_EXTERNAL_STORAGE_ONLY",
+      "reviewOnly": true
+    },
+    {
+      "artifactType": "holdout-rankings",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\hybrid-vector-retrieval-experiment-2026-09\\hierarchical-retrieval-hardening-2026-09\\holdout-rankings.json",
+      "sha256": "93f77f0f48c1f664ad779c3588b65070b150e2da33c6e1c0f9d2938ce0db2618",
+      "byteCount": 54543568,
+      "rightsStorageStatus": "RIGHTS_EXTERNAL_STORAGE_ONLY",
+      "reviewOnly": true
+    }
+  ],
+  "determinismPassed": true,
+  "allPassed": true,
+  "reviewOnly": true
+}
