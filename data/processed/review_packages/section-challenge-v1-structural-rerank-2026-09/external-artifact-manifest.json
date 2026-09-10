@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "1.0",
+  "runId": "section-challenge-v1-structural-rerank-2026-09",
+  "artifactCount": 1,
+  "totalByteCount": 94677,
+  "aggregateSha256": "7c58b3cad116b49126fc2bdfb014ad640ffb11ad6099fe845f46384c43eef700",
+  "artifacts": [
+    {
+      "artifactType": "private-section-challenge-adjudication",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\section-challenge-v1-structural-rerank-2026-09\\section-challenge-v1-adjudication.json",
+      "sha256": "076ae4192f10cdf74c44202af17d12d2e2383cdd862540e6b6ad0d5d91e95647",
+      "byteCount": 94677,
+      "rightsStorageStatus": "EXTERNAL_PRIVATE"
+    }
+  ],
+  "reviewOnly": true,
+  "promotionStatus": "not_promoted",
+  "ragReadyAllowed": false
+}

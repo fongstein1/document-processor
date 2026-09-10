@@ -1,0 +1,46 @@
+{
+  "schemaVersion": "1.0",
+  "evaluationVersion": "SECTION_CHALLENGE_V1",
+  "runId": "section-challenge-v1-structural-rerank-2026-09",
+  "sourceBranch": "processing/broader-retrieval-diagnostic-2026-09",
+  "startingSha": "b2fe084c251f5582fb29ec07e3f1728239454684",
+  "privateRoot": "C:\\Dev\\Document Processor Sources\\_processed-private\\section-challenge-v1-structural-rerank-2026-09",
+  "semanticRoot": "C:\\Dev\\Document Processor Sources\\_processed-private\\semantic-evidence-unit-correction-2026-09",
+  "goldV3PrivateRoot": "C:\\Dev\\Document Processor Sources\\_processed-private\\hybrid-vector-retrieval-experiment-2026-09\\gold-v3",
+  "multiUnitPrivateRoot": "C:\\Dev\\Document Processor Sources\\_processed-private\\multi-unit-gold-v1-2026-09",
+  "vectorRoot": "C:\\Dev\\Document Processor Sources\\_processed-private\\hybrid-vector-retrieval-experiment-2026-09",
+  "frozenRetrievalConfigPath": "config/hybrid-vector-retrieval-experiment.json",
+  "supportedCaseCount": 48,
+  "developmentCaseCount": 28,
+  "holdoutCaseCount": 20,
+  "diagnosticCaseCount": 6,
+  "candidateCutoffs": { "bm25": 100, "vector": 100, "hybrid": 100 },
+  "reachabilityCutoffs": [1, 3, 5, 10, 20, 50, 100],
+  "evaluationMetrics": ["TARGET_REACHABILITY", "SOURCE_TOP_1_3", "PARENT_TOP_1_3_10", "FAILURE_STAGE", "RERANK_EFFECT", "WRONG_SECTION_RESCUE", "CORRECT_TOP1_DAMAGE", "CHILD_RANKING_RESIDUAL", "TOP100_ABSENT"],
+  "successThresholds": {
+    "identifierAbsentTargetTop1AbsoluteImprovementMinimum": 0.10,
+    "parentTop1AbsoluteImprovementMinimum": 0.10,
+    "wrongSectionRescuesMinimum": 2,
+    "netWrongSectionRescuesMinimum": 1
+  },
+  "damageBudget": {
+    "previouslyCorrectTop1LostMaximumCount": 1,
+    "previouslyCorrectTop1LostMaximumRate": 0.10,
+    "sourceTop1AbsoluteRegressionMaximum": 0.05,
+    "sourceCorrectToWrongMaximumCount": 1,
+    "identifierPresentTop1AbsoluteRegressionMaximum": 0.05,
+    "identifierPresentDamagedMaximumCount": 1,
+    "parentCorrectToWrongMaximumCount": 1
+  },
+  "structuralScoreBounds": {
+    "maximumBonus": 0.18,
+    "maximumConflictPenalty": 0.12,
+    "lowConfidenceScale": 0.25,
+    "mediumConfidenceScale": 0.60,
+    "highConfidenceScale": 1.0
+  },
+  "normalization": { "method": "RECIPROCAL_BASE_RANK", "formula": "1 / rank", "unionMissingRank": null, "tieBreak": "childId_ascending" },
+  "reviewOnly": true,
+  "promotionStatus": "not_promoted",
+  "ragReadyAllowed": false
+}
