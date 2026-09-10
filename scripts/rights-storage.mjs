@@ -29,6 +29,24 @@ for (const key of [
   'startingSha', 'sourceBranch', 'protocolFrozenAt', 'protocolCommit', 'configuration', 'embeddingModel', 'embeddingRevision', 'embeddingLicense', 'embeddingSourceUrl', 'modelSnapshotSha256', 'modelSnapshotByteCount', 'runtime', 'pythonVersion', 'torchVersion', 'transformersVersion', 'numpyVersion', 'platform', 'deterministicAlgorithms', 'device', 'inferencePrecision', 'pooling', 'prefixes', 'passagePrefix', 'queryPrefix', 'maxSequenceLength', 'normalization', 'vectorDimension', 'vectorCount', 'queryVectorCount', 'vectorDtype', 'exactVectorSearch', 'bruteForce', 'localOnly', 'hostedApisUsed', 'bm25', 'fieldWeights', 'body', 'section', 'identifier', 'parentHeading', 'sourceTitle', 'header', 'fusion', 'method', 'rrfK', 'bm25Weight', 'vectorWeight', 'parentRrfWeight', 'candidateDepth', 'tieBreak', 'context', 'maximumAddedEvidence', 'sameParentOnly', 'goldFreezeSha256', 'goldUnchanged', 'noHoldoutTuning', 'developmentCaseCount', 'holdoutCaseCount', 'rankingInputExcludesGold', 'rankingInputManifestSha256', 'passageManifestSha256', 'queryManifestSha256', 'documentVectorSha256', 'queryVectorSha256', 'indexSha256', 'determinismSha256', 'determinismPassed', 'normMaximumDeviation', 'privateArtifactByteCount', 'privateSubstantiveArtifactByteCount', 'runtimeEnvironmentByteCount', 'modelByteCount', 'artifactCount', 'aggregateSha256', 'provenance', 'evaluation', 'sourceSlices', 'unsupportedDiagnostics', 'diagnostics', 'diagnosticStatus', 'diagnosticCaseCount', 'ambiguousCaseCount', 'invalidTargetCaseCount', 'scoreMaximum', 'scoreMean', 'top1Top2MarginMean', 'top1Top2MarginMinimum', 'a3', 'xlsx', 'includedCaseCount', 'diagnosticOnlyCaseCount', 'evaluable', 'reason', 'regressions', 'commitCount', 'cleanWorkingTree', 'remoteAligned', 'maturityLevel', 'nextStep', 'outcome', 'limitations', 'noNewSources', 'canonicalCorporaUnchanged', 'rawSourceBytesUnchanged', 'goldV2Unchanged', 'noAnswerGeneration', 'noProductionRag', 'noLearnerFacingOutput', 'noHostedModels', 'embeddingInputsExternal', 'vectorsExternal', 'queriesExternal', 'goldRationaleExternal', 'license', 'revision', 'model', 'hashes', 'byteCounts', 'generatedFrom', 'EVALUATION_V2', 'BM25', 'VECTOR', 'HYBRID_RRF', 'HYBRID_RRF_PARENT', 'HYBRID_RRF_PARENT_CONTEXT'
 ]) safeKeys.add(key)
 
+for (const key of [
+  'diagnosticOnly', 'consumedHoldoutsDescriptiveOnly', 'noParameterOptimization', 'evaluatorOnlyOracleMetrics',
+  'populations', 'population', 'supportedCaseCount', 'queryStyleCounts', 'queryCharacters', 'queryTokenCount',
+  'acceptedEvidenceCharacters', 'acceptedEvidenceCount', 'requiredRoleCount', 'queryIdentifierCount',
+  'lexicalJaccard', 'queryEvidenceTokenRecall', 'queryParentHeadingTokenRecall', 'similarSiblingSectionCount',
+  'parentDepth', 'queryFlagRates', 'acceptedRoleCounts', 'acceptedAlternativeSetRate', 'primaryFailureStages',
+  'diagnosticFlags', 'granularityFindings', 'wrongSectionCauses', 'hybridWrongSectionRate',
+  'hybridCorrectParentWrongChildRate', 'averageSiblingSectionsOutrankingAccepted',
+  'correctParentRetrievedButAcceptedChildMissedTop10', 'fusionComparison', 'improvesOverBothComponents',
+  'worsensStrongerComponent', 'tiesStrongerComponent', 'acceptedTargetReachability', 'sourceReachability',
+  'parentReachability', 'acceptedTargetRank', 'conditionalCorrectSourceTargetRank',
+  'conditionalAcceptedParentTargetRank', 'acceptedMinusTopWrongScore', 'notMeaningfullyRetrieved',
+  'a3Conditions', 'explicitIdentifier', 'noExplicitIdentifier', 'directOrStructural', 'paraphrasedOrAbstract',
+  'byEvidenceRole', 'futureDirections', 'direction', 'evidenceScore', 'evidenceCode', 'freshEvaluationRequirement',
+  'required', 'reasonCode', 'minimumDesign', 'totalByteCount', 'initialSha256', 'rerunSha256',
+  'determinismPassed'
+]) safeKeys.add(key)
+
 export const sha256Bytes = (bytes) => crypto.createHash('sha256').update(bytes).digest('hex')
 const containsNonEmptyString = (value) => {
   if (typeof value === 'string') return value.trim().length > 0

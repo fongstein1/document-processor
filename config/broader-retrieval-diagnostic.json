@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "runId": "broader-retrieval-diagnostic-2026-09",
+  "startingBranch": "processing/multi-unit-sidecar-hardening-2026-09",
+  "startingSha": "e80a6172dd38ea02bf7170b3079de158e789e30c",
+  "privateRoot": "C:\\Dev\\Document Processor Sources\\_processed-private\\broader-retrieval-diagnostic-2026-09",
+  "goldV3PrivateRoot": "C:\\Dev\\Document Processor Sources\\_processed-private\\hybrid-vector-retrieval-experiment-2026-09\\gold-v3",
+  "multiUnitPrivateRoot": "C:\\Dev\\Document Processor Sources\\_processed-private\\multi-unit-gold-v1-2026-09",
+  "vectorRoot": "C:\\Dev\\Document Processor Sources\\_processed-private\\hybrid-vector-retrieval-experiment-2026-09",
+  "semanticRoot": "C:\\Dev\\Document Processor Sources\\_processed-private\\semantic-evidence-unit-correction-2026-09",
+  "frozenRetrievalConfigPath": "config/hybrid-vector-retrieval-experiment.json",
+  "goldV3FreezePath": "data/processed/review_packages/retrieval-gold-v3-expansion-2026-09/evaluation-v3-freeze.json",
+  "multiUnitGoldFreezePath": "data/processed/review_packages/multi-unit-gold-v1-2026-09/gold-freeze.json",
+  "descriptiveThresholds": {
+    "lexicalWeakJaccard": 0.08,
+    "nearDuplicateJaccard": 0.35,
+    "headingAdvantageMinimum": 0.05,
+    "broadChildCharacters": 1800,
+    "narrowChildCharacters": 180,
+    "meaningfulRankLimit": 100
+  },
+  "systems": ["BM25", "VECTOR", "HYBRID_RRF"],
+  "reachabilityCutoffs": [1, 3, 5, 10, 20, 50, 100],
+  "diagnosticOnly": true,
+  "consumedHoldoutsDescriptiveOnly": true,
+  "retrievalConfigurationUnchanged": true,
+  "reviewOnly": true,
+  "promotionStatus": "not_promoted",
+  "ragReadyAllowed": false
+}
