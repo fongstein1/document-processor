@@ -75,6 +75,7 @@ for (const key of [
   'parentCorrectToWrongMaximumCount', 'maximumBonus', 'maximumConflictPenalty', 'lowConfidenceScale',
   'mediumConfidenceScale', 'highConfidenceScale', 'featureInventory', 'available', 'usedByPlannedReranker',
   'unavailable', 'protectedArtifacts', 'goldCreatedBeforeRerankerImplementation',
+  'architectureFrozenAt', 'implementationArtifacts', 'embeddingArtifacts',
   'structuralScoringRules', 'confidenceRules', 'HIGH', 'MEDIUM', 'LOW_OR_UNKNOWN',
   'identifierLocalBonus', 'identifierAncestorBonus', 'conceptCoverageMaximum', 'headingCoverageMaximum',
   'sourceTitleCoverageMaximum', 'orderedBigramCoverageMaximum', 'compatibleRoleBonus',

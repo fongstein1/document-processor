@@ -1,0 +1,128 @@
+{
+  "schemaVersion": "1.0",
+  "runId": "section-challenge-v1-structural-rerank-2026-09",
+  "evaluationVersion": "SECTION_CHALLENGE_V1",
+  "architectureFrozenAt": "2026-09-10T12:00:00.000Z",
+  "implementationArtifacts": [
+    {
+      "path": "scripts/lib/soft-structural-reranker.mjs",
+      "sha256": "10f14b837ae1e769668244c830f7f7065537263da4a9943752d5cabc9c7c507d"
+    },
+    {
+      "path": "scripts/section-structural-reranker-experiment.mjs",
+      "sha256": "7ffa205f0a44e5758c43f7f74d2f72b6998c529ad9fa1b01b54e19eb7c066a0d"
+    },
+    {
+      "path": "config/section-challenge-v1.json",
+      "sha256": "12e70d9ed22f284c4847ecf0e804b697d013451fad2b14b288d583a95714f517"
+    }
+  ],
+  "embeddingArtifacts": [
+    {
+      "artifactType": "development-queries.jsonl",
+      "sha256": "f2329bd368fc0d529aea1f75ffc89c18eb63e642c26460eff5494054f184c9af",
+      "byteCount": 5891
+    },
+    {
+      "artifactType": "development-query-embeddings.f32",
+      "sha256": "c650dda39ed75abba57248bebcf626513fa14f56173409429f6aa3fa467fe52e",
+      "byteCount": 86016
+    },
+    {
+      "artifactType": "development-query-embedding-metadata.json",
+      "sha256": "f393bb7a7ed3b9c013d0e8280ac46be18903f27b8f19edadf48df2556af6b107",
+      "byteCount": 1038
+    },
+    {
+      "artifactType": "holdout-queries.jsonl",
+      "sha256": "b6f3d3f2ea1adbd928ff1e2e39eef8ec78f2afe968119ee91990e563da951e80",
+      "byteCount": 4045
+    },
+    {
+      "artifactType": "holdout-query-embeddings.f32",
+      "sha256": "16bfb802ad31474f96df8d1c89c4c383d4733e39b2f4044460c447eb80c53497",
+      "byteCount": 61440
+    },
+    {
+      "artifactType": "holdout-query-embedding-metadata.json",
+      "sha256": "ef86097db948f47cac7698b94bd00c24bcf751d6d7ba329176fa20ee94b03709",
+      "byteCount": 1038
+    },
+    {
+      "artifactType": "diagnostic-queries.jsonl",
+      "sha256": "8cea6ed6264b64b61cde04ff6833514b24167be374b3140303c6e116974c8337",
+      "byteCount": 1234
+    },
+    {
+      "artifactType": "diagnostic-query-embeddings.f32",
+      "sha256": "dcbfde343e78526a16d7c443db00607002b354ee581414e3d658b7e22c409ac3",
+      "byteCount": 18432
+    },
+    {
+      "artifactType": "diagnostic-query-embedding-metadata.json",
+      "sha256": "b90acb5f10a1cc24ba2bd7ea2eb408dba3686ea44dd240781f50e4931bb40f0d",
+      "byteCount": 1036
+    }
+  ],
+  "candidateCutoffs": {
+    "bm25Cutoff": 100,
+    "vectorCutoff": 100,
+    "hybridCutoff": 100
+  },
+  "normalization": {
+    "method": "RECIPROCAL_BASE_RANK",
+    "formulaCode": "0.15 * (1 / hybridRank) / sum(1 / hybridRank)",
+    "tieBreak": "childId_ascending"
+  },
+  "structuralScoringRules": {
+    "identifierLocalBonus": 0.09,
+    "identifierAncestorBonus": 0.05,
+    "conceptCoverageMaximum": 0.09,
+    "headingCoverageMaximum": 0.04,
+    "sourceTitleCoverageMaximum": 0.01,
+    "orderedBigramCoverageMaximum": 0.03,
+    "compatibleRoleBonus": 0.02,
+    "modalityCompatibilityBonus": 0.01,
+    "strongComponentRescueBonus": 0.06,
+    "componentRescueMaximumComponentRank": 3,
+    "componentRescueMinimumConceptCoverage": 0.55,
+    "componentRescueMinimumClauseCoverage": 0.5,
+    "identifierConflictPenalty": 0.1,
+    "multipartCoveragePenaltyMaximum": 0.045,
+    "modalityConflictPenalty": 0.02,
+    "baselineTopPreservationMargin": 0.02
+  },
+  "confidenceRules": {
+    "HIGH": "explicit bounded structural identifier",
+    "MEDIUM": "structural phrase or at least four content concepts",
+    "LOW_OR_UNKNOWN": "all other queries"
+  },
+  "structuralScoreBounds": {
+    "maximumBonus": 0.18,
+    "maximumConflictPenalty": 0.12,
+    "lowConfidenceScale": 0.25,
+    "mediumConfidenceScale": 0.6,
+    "highConfidenceScale": 1
+  },
+  "successThresholds": {
+    "identifierAbsentTargetTop1AbsoluteImprovementMinimum": 0.1,
+    "parentTop1AbsoluteImprovementMinimum": 0.1,
+    "wrongSectionRescuesMinimum": 2,
+    "netWrongSectionRescuesMinimum": 1
+  },
+  "damageBudget": {
+    "previouslyCorrectTop1LostMaximumCount": 1,
+    "previouslyCorrectTop1LostMaximumRate": 0.1,
+    "sourceTop1AbsoluteRegressionMaximum": 0.05,
+    "sourceCorrectToWrongMaximumCount": 1,
+    "identifierPresentTop1AbsoluteRegressionMaximum": 0.05,
+    "identifierPresentDamagedMaximumCount": 1,
+    "parentCorrectToWrongMaximumCount": 1
+  },
+  "developmentResultsSha256": "91e8c7f409aedf9ea27f0e3c14f3370bca304fc463d154342d6eb4aea63ec6be",
+  "holdoutAccessedBeforeFreeze": false,
+  "rankingInputExcludesGold": true,
+  "reviewOnly": true,
+  "promotionStatus": "not_promoted",
+  "ragReadyAllowed": false
+}
