@@ -1,0 +1,6 @@
+import fs from 'node:fs'
+import path from 'node:path'
+import { spawnSync } from 'node:child_process'
+const split=process.argv[2];if(!['development','holdout','diagnostic'].includes(split))throw Error('split required')
+const root=path.resolve(import.meta.dirname,'..'),base='C:/Dev/Document Processor Sources/_processed-private/hybrid-vector-retrieval-experiment-2026-09',out='C:/Dev/Document Processor Sources/_processed-private/multi-unit-sidecar-hardening-2026-09',frozen=JSON.parse(fs.readFileSync(path.join(root,'config/hybrid-vector-retrieval-experiment.json')))
+const python=path.join(base,'.runtime-venv/Scripts/python.exe'),model=path.join(base,'model/intfloat--e5-base-v2'),r=spawnSync(python,[path.join(root,'scripts/embed-local-e5-queries.py'),'--queries',path.join(out,`${split}-slot-queries.jsonl`),'--model-dir',model,'--output-dir',path.join(out,split),'--model-id',frozen.embedding.model,'--revision',frozen.embedding.revision,'--license',frozen.embedding.license,'--max-length',String(frozen.embedding.maxSequenceLength),'--inference-precision',frozen.embedding.inferencePrecision],{stdio:'inherit',env:{...process.env,HF_HUB_OFFLINE:'1',TRANSFORMERS_OFFLINE:'1'}});if(r.status!==0)process.exit(r.status||1)

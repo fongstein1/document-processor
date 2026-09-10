@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "1.0",
+  "runId": "multi-unit-sidecar-hardening-2026-09",
+  "queryManifestSha256": "908dbcbafa2eb7ac1f7e2ef71ecb4085e33967591c49b83c31f16828891a2508",
+  "queryManifestRerunSha256": "908dbcbafa2eb7ac1f7e2ef71ecb4085e33967591c49b83c31f16828891a2508",
+  "planSha256": "34e52be20a5e1665e9188a88ef80c3cd47ef06a2e3c6123428cfae3d5713157e",
+  "planRerunSha256": "34e52be20a5e1665e9188a88ef80c3cd47ef06a2e3c6123428cfae3d5713157e",
+  "queryVectorSha256": "59188c2847c84535c243926149f71f01e70e7f136ed15d967c540913a55c817f",
+  "queryVectorRerunSha256": "59188c2847c84535c243926149f71f01e70e7f136ed15d967c540913a55c817f",
+  "rankingSha256": "7764ec7bbbcb62cfa4c460decceaae13c9b393ad68f988141d07772e204abf48",
+  "rankingRerunSha256": "7764ec7bbbcb62cfa4c460decceaae13c9b393ad68f988141d07772e204abf48",
+  "scoringSha256": "aa657690cd1a27fa0f9f53c13f927e594e0ba1935a4375368da2fa0d99c0e409",
+  "scoringRerunSha256": "aa657690cd1a27fa0f9f53c13f927e594e0ba1935a4375368da2fa0d99c0e409",
+  "queryVectorDeterminismPassed": true,
+  "rankingDeterminismPassed": true,
+  "scoringDeterminismPassed": true,
+  "determinismPassed": true,
+  "reviewOnly": true,
+  "promotionStatus": "not_promoted",
+  "ragReadyAllowed": false
+}

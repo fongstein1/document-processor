@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "1.0",
+  "runId": "multi-unit-sidecar-hardening-2026-09",
+  "startingSha": "7a3d0b1de1a806488087ad0c47fb33f89670c73e",
+  "developmentResultsSha256": "aa657690cd1a27fa0f9f53c13f927e594e0ba1935a4375368da2fa0d99c0e409",
+  "developmentPrivateArtifactHashes": [
+    {
+      "name": "development-slot-queries.jsonl",
+      "sha256": "908dbcbafa2eb7ac1f7e2ef71ecb4085e33967591c49b83c31f16828891a2508"
+    },
+    {
+      "name": "development-plans.json",
+      "sha256": "34e52be20a5e1665e9188a88ef80c3cd47ef06a2e3c6123428cfae3d5713157e"
+    },
+    {
+      "name": "development/query-embeddings.f32",
+      "sha256": "59188c2847c84535c243926149f71f01e70e7f136ed15d967c540913a55c817f"
+    },
+    {
+      "name": "development/query-embedding-metadata.json",
+      "sha256": "aadb015205c6d8103854c164edb3034775fb2dbe8ea8348272c343956fff8ce4"
+    },
+    {
+      "name": "development-rankings.json",
+      "sha256": "7764ec7bbbcb62cfa4c460decceaae13c9b393ad68f988141d07772e204abf48"
+    },
+    {
+      "name": "development-scored.json",
+      "sha256": "d48ec4a1786c4ad475fe2c1ecc756fffe3f2a067e4557eb96a28b0537a8059e8"
+    }
+  ],
+  "goldFreezeSha256": "cec50b664803336aafed9a9a4839cbb5a3412335340914bc20bdbd75e4c3c63e",
+  "historicalRankingSha256": "93f5e1dccb39801979bed811b967e8e582264621536a1e0871654bc35e691b2a",
+  "artifacts": [
+    {
+      "path": "config/multi-unit-sidecar-hardening.json",
+      "sha256": "dc75e1e376ac0007aebe7811735a532fcd0e8b8bf9ee962d40b771c7a220dd7d"
+    },
+    {
+      "path": "scripts/lib/multi-unit-sidecar.mjs",
+      "sha256": "5b4fabd122aa9cf2b8ea4f35725b7611eb8f6c4b949beca3d05f51891e26c4c1"
+    },
+    {
+      "path": "scripts/multi-unit-sidecar-experiment.mjs",
+      "sha256": "fb4e945bd81ce218274f2ca8bf2d3308a65d0b90a9c2c45c0c25e889345d103d"
+    },
+    {
+      "path": "scripts/run-sidecar-slot-embedding.mjs",
+      "sha256": "a4ce07dedcd7929465d56723c726a64dbedc7be1fc20d7f145ea58f82ec8e1a4"
+    },
+    {
+      "path": "scripts/test-multi-unit-sidecar.mjs",
+      "sha256": "8f2cd670ce67a448157cf149ebd5541ba73fa194bc6660a27b2ac88b6e37c23d"
+    }
+  ],
+  "holdoutAccessedBeforeFreeze": false,
+  "noHoldoutTuning": true,
+  "reviewOnly": true,
+  "promotionStatus": "not_promoted",
+  "ragReadyAllowed": false
+}
