@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "1.0",
+  "runId": "multi-unit-sidecar-hardening-2026-09",
+  "allPassed": true,
+  "regressions": 10,
+  "goldV1Unchanged": true,
+  "goldV2Unchanged": true,
+  "goldV3UnchangedAfterFreeze": true,
+  "noHoldoutTuning": true,
+  "noNewSources": true,
+  "rawSourceBytesUnchanged": true,
+  "canonicalCorporaUnchanged": true,
+  "noAnswerGeneration": true,
+  "noProductionRag": true,
+  "noLearnerFacingOutput": true,
+  "noHostedModels": true,
+  "reviewOnly": true,
+  "promotionStatus": "not_promoted",
+  "ragReadyAllowed": false
+}

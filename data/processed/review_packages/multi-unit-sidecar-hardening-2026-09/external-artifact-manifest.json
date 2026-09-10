@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0",
+  "runId": "multi-unit-sidecar-hardening-2026-09",
+  "artifactCount": 24,
+  "totalByteCount": 112563543,
+  "aggregateSha256": "75fd3dbc7ebd25ce85c8f9ab2ad38f3bc2cbace365c41b01ddf1c2affdc3c0c5",
+  "artifacts": [
+    { "name": "controls-plans.json", "sha256": "7c25a756154b8e6423098ffaee51cfa84c833014a2efeefc0dbb714fb24b8451", "byteCount": 6133 },
+    { "name": "controls-scored.json", "sha256": "174fc70aeb5b936228c265e36c36c99e809c8f6da9d47efcd004a431ac74c71d", "byteCount": 29631 },
+    { "name": "controls/query-embedding-metadata.json", "sha256": "a56fbe768b8b9a1bc1c7bd37d609caceca3ddc62a290590e718a1e03d40c624c", "byteCount": 1038 },
+    { "name": "development-plans.json", "sha256": "34e52be20a5e1665e9188a88ef80c3cd47ef06a2e3c6123428cfae3d5713157e", "byteCount": 21975 },
+    { "name": "development/query-embedding-metadata.json", "sha256": "aadb015205c6d8103854c164edb3034775fb2dbe8ea8348272c343956fff8ce4", "byteCount": 1038 },
+    { "name": "development-slot-queries.jsonl", "sha256": "908dbcbafa2eb7ac1f7e2ef71ecb4085e33967591c49b83c31f16828891a2508", "byteCount": 14866 },
+    { "name": "development/query-embeddings.f32", "sha256": "59188c2847c84535c243926149f71f01e70e7f136ed15d967c540913a55c817f", "byteCount": 132096 },
+    { "name": "development-rankings.json", "sha256": "7764ec7bbbcb62cfa4c460decceaae13c9b393ad68f988141d07772e204abf48", "byteCount": 42985732 },
+    { "name": "development-scored.json", "sha256": "d48ec4a1786c4ad475fe2c1ecc756fffe3f2a067e4557eb96a28b0537a8059e8", "byteCount": 62132 },
+    { "name": "holdout-slot-queries.jsonl", "sha256": "0074ec898c7948f1e4af4fc9d6d33a0f5a4ee457f86965beacf367dc3783112c", "byteCount": 9517 },
+    { "name": "holdout/query-embeddings.f32", "sha256": "9b7cccf6417f4b44e0028f01235e6078b1c26bc41c7bb7a401cb1889b087d3ec", "byteCount": 82944 },
+    { "name": "holdout-rankings.json", "sha256": "6af5f97bb48c82f1235b2bf1cbd0701dd256ce99ed979abcfb156c4521d13d65", "byteCount": 28598859 },
+    { "name": "holdout-scored.json", "sha256": "fcc6abbeb8d5d89bdbca664c1c2ff7d9a9ef800bef5c620416418e9055425a71", "byteCount": 41332 },
+    { "name": "controls-slot-queries.jsonl", "sha256": "cc812cc3d5ae05fcd5fa248de0e9ec60f0019aea7179cbe45499760bf3983083", "byteCount": 3572 },
+    { "name": "controls/query-embeddings.f32", "sha256": "9cf9bcc8401bd828ea77bde0b86b7f18565a93a0d846ec443fec793f75b2b1f7", "byteCount": 39936 },
+    { "name": "controls-rankings.json", "sha256": "27cbf3da692d96a3b39305b71cb06f0ad44201698a694054860ab7ca2ea7a141", "byteCount": 20185538 },
+    { "name": "diagnostic-slot-queries.jsonl", "sha256": "d50d44314ba0e83560580430e0d21eda0561b7e79a90f542ad15668f12f05311", "byteCount": 4707 },
+    { "name": "diagnostic-plans.json", "sha256": "746f6fe52d5fb411391eed6b865ba20bd8d0d42b9695065f5b339c9a21cde650", "byteCount": 7081 },
+    { "name": "diagnostic/query-embeddings.f32", "sha256": "36127889d6a361d68c2169b706a106525191d0f8b18c1c1e5c3207ed40d01ce8", "byteCount": 46080 },
+    { "name": "diagnostic/query-embedding-metadata.json", "sha256": "753732ca8a73d7ad81682dfc377cba2229901abb398c4f1ba6810a7ccc341117", "byteCount": 1038 },
+    { "name": "diagnostic-rankings.json", "sha256": "71c9d2876363ca9bec3b633b3dbd34a16b4a4a3ae86883cd82f60da95a0c75cf", "byteCount": 20261994 }
+    ,{ "name": "diagnostic-scored.json", "sha256": "e3187347fcd325af3c87e14a12a9cb7aadd5384d5748ff42a67fb4f305e39e71", "byteCount": 11219 }
+    ,{ "name": "holdout-plans.json", "sha256": "0a8fe433b93b471623a73f6b37c7c8b8f35213a88b4c366dc1b74718e095f462", "byteCount": 14047 }
+    ,{ "name": "holdout/query-embedding-metadata.json", "sha256": "625e64c3dfe4e72ac348480b2e7fe06df48e83b8ac339ba7137fb1b6bccf9ffc", "byteCount": 1038 }
+  ],
+  "reviewOnly": true,
+  "promotionStatus": "not_promoted",
+  "ragReadyAllowed": false
+}

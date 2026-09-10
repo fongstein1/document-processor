@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "runId": "multi-unit-sidecar-hardening-2026-09",
+  "split": "diagnostic",
+  "classificationCounts": {
+    "UNSUPPORTED": 5,
+    "PARTIALLY_UNSUPPORTED": 5
+  },
+  "bySystem": [
+    {
+      "systemId": "A",
+      "caseCount": 10,
+      "falseCompletePackageCount": 0,
+      "unrelatedEvidenceCount": 10,
+      "supportedSubsetReturnedCount": 0,
+      "preservedUncertaintyCount": 0,
+      "statusCounts": {
+        "PRIMARY_RANKING_ONLY": 10
+      }
+    },
+    {
+      "systemId": "B",
+      "caseCount": 10,
+      "falseCompletePackageCount": 3,
+      "unrelatedEvidenceCount": 15,
+      "supportedSubsetReturnedCount": 0,
+      "preservedUncertaintyCount": 0,
+      "statusCounts": {
+        "HISTORICAL_SIDECAR": 10
+      }
+    },
+    {
+      "systemId": "C",
+      "caseCount": 10,
+      "falseCompletePackageCount": 1,
+      "unrelatedEvidenceCount": 10,
+      "supportedSubsetReturnedCount": 0,
+      "preservedUncertaintyCount": 9,
+      "statusCounts": {
+        "PARTIAL_CANDIDATE": 3,
+        "COMPLETE_CANDIDATE": 1,
+        "PRIMARY_RANKING_ONLY": 5,
+        "INSUFFICIENT_EVIDENCE": 1
+      }
+    }
+  ],
+  "rankingInputExcludesGold": true,
+  "reviewOnly": true,
+  "promotionStatus": "not_promoted",
+  "ragReadyAllowed": false
+}
