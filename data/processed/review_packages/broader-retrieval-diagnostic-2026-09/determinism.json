@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "1.0",
+  "runId": "broader-retrieval-diagnostic-2026-09",
+  "artifacts": [
+    {
+      "name": "component-rankings.json",
+      "initialSha256": "1d3da53ef2e10c1312737957191bd863a4c07c182fecb44d502d0b738be0091c",
+      "rerunSha256": "1d3da53ef2e10c1312737957191bd863a4c07c182fecb44d502d0b738be0091c",
+      "pass": true
+    },
+    {
+      "name": "case-diagnostics.json",
+      "initialSha256": "a721a0ea88303634e290bf00a75680bbc07e13cbec4a42e0ef7366f2d0b87523",
+      "rerunSha256": "a721a0ea88303634e290bf00a75680bbc07e13cbec4a42e0ef7366f2d0b87523",
+      "pass": true
+    },
+    {
+      "name": "input-hashes.json",
+      "initialSha256": "fd04a92194657b33d494cd3828b05ec99f4557a649ba6f847d96889b38bb4405",
+      "rerunSha256": "fd04a92194657b33d494cd3828b05ec99f4557a649ba6f847d96889b38bb4405",
+      "pass": true
+    },
+    {
+      "name": "diagnostic-summary.json",
+      "initialSha256": "7b84ab294aaedc892379330484198c419281f27a6fa2217398d9e16b0027f966",
+      "rerunSha256": "7b84ab294aaedc892379330484198c419281f27a6fa2217398d9e16b0027f966",
+      "pass": true
+    },
+    {
+      "name": "external-artifact-manifest.json",
+      "initialSha256": "b093395a8b3dae279c5759e624ebc6c1e9a8638a3d61b7b059ef820662050e03",
+      "rerunSha256": "b093395a8b3dae279c5759e624ebc6c1e9a8638a3d61b7b059ef820662050e03",
+      "pass": true
+    }
+  ],
+  "determinismPassed": true,
+  "diagnosticOnly": true,
+  "consumedHoldoutsDescriptiveOnly": true,
+  "retrievalConfigurationUnchanged": true,
+  "reviewOnly": true,
+  "promotionStatus": "not_promoted",
+  "ragReadyAllowed": false
+}

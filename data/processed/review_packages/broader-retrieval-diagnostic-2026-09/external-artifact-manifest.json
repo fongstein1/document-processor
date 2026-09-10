@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "1.0",
+  "runId": "broader-retrieval-diagnostic-2026-09",
+  "externalProcessingRoot": "C:\\Dev\\Document Processor Sources\\_processed-private\\broader-retrieval-diagnostic-2026-09",
+  "artifactCount": 3,
+  "totalByteCount": 11929848,
+  "aggregateSha256": "e3ba3ab564ea81994d982dc6403b4b7c6d9959dd2b65619686693f75542fb8de",
+  "artifacts": [
+    {
+      "artifactType": "private-component-rankings",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\broader-retrieval-diagnostic-2026-09\\component-rankings.json",
+      "sha256": "1d3da53ef2e10c1312737957191bd863a4c07c182fecb44d502d0b738be0091c",
+      "byteCount": 11601000,
+      "rightsStorageStatus": "RIGHTS_EXTERNAL_STORAGE_ONLY",
+      "reviewOnly": true
+    },
+    {
+      "artifactType": "private-case-diagnostics",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\broader-retrieval-diagnostic-2026-09\\case-diagnostics.json",
+      "sha256": "a721a0ea88303634e290bf00a75680bbc07e13cbec4a42e0ef7366f2d0b87523",
+      "byteCount": 326481,
+      "rightsStorageStatus": "RIGHTS_EXTERNAL_STORAGE_ONLY",
+      "reviewOnly": true
+    },
+    {
+      "artifactType": "private-input-hashes",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\broader-retrieval-diagnostic-2026-09\\input-hashes.json",
+      "sha256": "fd04a92194657b33d494cd3828b05ec99f4557a649ba6f847d96889b38bb4405",
+      "byteCount": 2367,
+      "rightsStorageStatus": "RIGHTS_EXTERNAL_STORAGE_ONLY",
+      "reviewOnly": true
+    }
+  ],
+  "diagnosticOnly": true,
+  "consumedHoldoutsDescriptiveOnly": true,
+  "retrievalConfigurationUnchanged": true,
+  "reviewOnly": true,
+  "promotionStatus": "not_promoted",
+  "ragReadyAllowed": false
+}

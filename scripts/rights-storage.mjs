@@ -38,13 +38,23 @@ for (const key of [
   'diagnosticFlags', 'granularityFindings', 'wrongSectionCauses', 'hybridWrongSectionRate',
   'hybridCorrectParentWrongChildRate', 'averageSiblingSectionsOutrankingAccepted',
   'correctParentRetrievedButAcceptedChildMissedTop10', 'fusionComparison', 'improvesOverBothComponents',
-  'worsensStrongerComponent', 'tiesStrongerComponent', 'acceptedTargetReachability', 'sourceReachability',
+  'worsensStrongerComponent', 'tiesStrongerComponent', 'sourceFusionComparison', 'parentFusionComparison',
+  'hybridRescuesBothComponents', 'hybridLosesCorrectComponent', 'componentTop1Disagreement',
+  'componentLeaderCounts', 'acceptedTargetReachability', 'sourceReachability',
   'parentReachability', 'acceptedTargetRank', 'conditionalCorrectSourceTargetRank',
-  'conditionalAcceptedParentTargetRank', 'acceptedMinusTopWrongScore', 'notMeaningfullyRetrieved',
-  'a3Conditions', 'explicitIdentifier', 'noExplicitIdentifier', 'directOrStructural', 'paraphrasedOrAbstract',
+  'conditionalAcceptedParentTargetRank', 'conditionalAcceptedParentTargetReachability',
+  'completeAcceptedSetReachability', 'acceptedScorePercentileWithinSource', 'acceptedMinusTopWrongScore', 'notMeaningfullyRetrieved',
+  'a3Conditions', 'a3ByPopulation', 'explicitIdentifier', 'noExplicitIdentifier', 'directOrStructural', 'paraphrasedOrAbstract',
   'byEvidenceRole', 'futureDirections', 'direction', 'evidenceScore', 'evidenceCode', 'freshEvaluationRequirement',
   'required', 'reasonCode', 'minimumDesign', 'totalByteCount', 'initialSha256', 'rerunSha256',
-  'determinismPassed'
+  'determinismPassed', 'controlMatchedComparison', 'controlCount', 'sourceAndModalityMatchedCount',
+  'bothRanksAvailableCount', 'controlBetterRankCount', 'controlWorseRankCount', 'equalRankCount',
+  'controlTargetAbsentTop100Count', 'matchedGoldTargetAbsentTop100Count'
+]) safeKeys.add(key)
+
+for (const key of [
+  'protectedInputsUnchanged', 'multiUnitGoldV1Unchanged', 'noRetrievalTuning', 'noModelChanges',
+  'noSourceAcquisition', 'noCanonicalPromotion', 'publicProjectionRightsSafe', 'privateArtifactsVerified'
 ]) safeKeys.add(key)
 
 export const sha256Bytes = (bytes) => crypto.createHash('sha256').update(bytes).digest('hex')

@@ -139,7 +139,7 @@ function analyzeCase(c, evidence) {
   const accepted = new Set(c.acceptedIds), acceptedParents = new Set(c.acceptedParents), acceptedDocs = c.acceptedIds.map(x => evidence.docById.get(x)).filter(Boolean), acceptedParentDocs = c.acceptedParents.map(x => evidence.parentById.get(x)).filter(Boolean)
   const queryTokens = regulatoryTokens(c.query), queryIds = identifiers(c.query), acceptedText = acceptedDocs.map(x => x.body).join(' '), acceptedHeading = acceptedParentDocs.map(x => `${x.identifier || ''} ${x.parentHeading || x.section || ''}`).join(' ')
   const flags = queryFlags(c.query), acceptedRoles = [...new Set(acceptedDocs.map(x => roleFamily(x.semanticRole)))].sort(), hybrid = c.rankings.hybrid
-  const ranks = {}, parentRanks = {}, sourceRanks = {}, conditionalSourceRanks = {}, conditionalParentRanks = {}, acceptedScores = {}, topWrongMargins = {}
+  const ranks = {}, parentRanks = {}, sourceRanks = {}, conditionalSourceRanks = {}, conditionalParentRanks = {}, acceptedScores = {}, acceptedScorePercentilesWithinSource = {}, topWrongMargins = {}, completeSetRanks = {}
   for (const [system, ranking] of Object.entries(c.rankings)) {
     ranks[system] = firstRank(ranking, accepted)
     parentRanks[system] = uniqueParentRank(ranking, acceptedParents)
@@ -147,6 +147,10 @@ function analyzeCase(c, evidence) {
     conditionalSourceRanks[system] = conditionalTargetRank(ranking, accepted, x => x.sourceId === c.sourceId)
     conditionalParentRanks[system] = conditionalTargetRank(ranking, accepted, x => acceptedParents.has(x.parentId))
     acceptedScores[system] = scoreForAccepted(ranking, accepted)
+    const sameSourceScores = ranking.filter(x => x.sourceId === c.sourceId).map(x => x.score), acceptedScore = acceptedScores[system]
+    acceptedScorePercentilesWithinSource[system] = acceptedScore === null || !sameSourceScores.length ? null : sameSourceScores.filter(x => x <= acceptedScore).length / sameSourceScores.length
+    completeSetRanks[system] = c.classification !== 'MULTI_UNIT_REQUIRED' ? null : Math.min(...c.acceptedSets.map(ids => ids.every(id => ranking.some(x => x.childId === id)) ? Math.max(...ids.map(id => ranking.find(x => x.childId === id).rank)) : Number.POSITIVE_INFINITY))
+    if (!Number.isFinite(completeSetRanks[system])) completeSetRanks[system] = null
     const wrong = ranking.find(x => !accepted.has(x.childId))
     topWrongMargins[system] = acceptedScores[system] === null || !wrong ? null : acceptedScores[system] - wrong.score
   }
@@ -197,29 +201,48 @@ function analyzeCase(c, evidence) {
     population: c.population, caseId: c.caseId, split: c.split, classification: c.classification, category: c.category, modality: c.modality, sourceId: c.sourceId, queryHash: sha(c.query), queryCharacters: c.query.length, queryTokenCount: queryTokens.length,
     acceptedEvidenceCount: c.acceptedIds.length, acceptedSetCount: c.acceptedSets.length, acceptedEvidenceCharacters: acceptedDocs.reduce((n, x) => n + (x.body || '').length, 0), acceptedRoles, requiredRoleCount: c.requiredRoles.length,
     queryIdentifierCount: queryIds.length, sectionIdentifierPresent: queryIds.some(x => /SSAP|VM|SECTION|PARAGRAPH|TABLE|APPENDIX/.test(x)), lexicalJaccard: round(lexicalOverlap), queryEvidenceTokenRecall: round(queryEvidenceRecall), queryParentHeadingTokenRecall: round(headingOverlap), queryStyle: queryIds.length || lexicalOverlap >= .18 ? 'DIRECT_OR_STRUCTURAL' : 'PARAPHRASED_OR_ABSTRACT', queryFlags: flags,
-    parentDepth: acceptedParentDocs.length ? Math.max(...acceptedParentDocs.map(x => parentDepth(x, evidence.parentById))) : null, similarSiblingSectionCount: acceptedParentSiblingCount, acceptedAlternativeSet: c.acceptedSets.length > 1,
-    ranks, sourceRanks, parentRanks, conditionalSourceRanks, conditionalParentRanks, acceptedScores, acceptedMinusTopWrongScore: Object.fromEntries(Object.entries(topWrongMargins).map(([k, v]) => [k, round(v)])), siblingOutrankingCount,
+    parentDepth: acceptedParentDocs.length ? Math.max(...acceptedParentDocs.map(x => parentDepth(x, evidence.parentById))) : null, similarSiblingSectionCount: acceptedParentSiblingCount, acceptedAlternativeSet: c.acceptedSets.length > 1 || (c.classification === 'MULTIPLE_ACCEPTED_TARGETS' && c.acceptedIds.length > 1),
+    ranks, completeSetRanks, sourceRanks, parentRanks, conditionalSourceRanks, conditionalParentRanks, acceptedScores, acceptedScorePercentilesWithinSource: Object.fromEntries(Object.entries(acceptedScorePercentilesWithinSource).map(([k, v]) => [k, round(v)])), acceptedMinusTopWrongScore: Object.fromEntries(Object.entries(topWrongMargins).map(([k, v]) => [k, round(v)])), siblingOutrankingCount,
     primaryFailureStage, diagnosticFlags: [...new Set(diagnosticFlags)].sort(), wrongSectionCauses: [...new Set(wrongSectionCauses)].sort(), granularity: [...new Set(granularity)].sort(),
     topHybridSourceId: top?.sourceId || null, topHybridParentId: top?.parentId || null, topHybridRole: top?.role || null
   }
 }
 
 function aggregatePopulation(name, values) {
-  const systems = ['bm25', 'vector', 'hybrid'], supported = values.filter(x => x.acceptedEvidenceCount > 0), systemMetrics = {}
-  for (const s of systems) {
-    systemMetrics[s] = {
+  const systems = [['BM25', 'bm25'], ['VECTOR', 'vector'], ['HYBRID_RRF', 'hybrid']], supported = values.filter(x => x.acceptedEvidenceCount > 0), systemMetrics = {}
+  for (const [systemId, s] of systems) {
+    systemMetrics[systemId] = {
       acceptedTargetReachability: reachability(supported.map(x => x.ranks[s])),
       sourceReachability: { top1: safeRate(supported.filter(x => x.sourceRanks[s] === 1).length, supported.length), top3: safeRate(supported.filter(x => x.sourceRanks[s] && x.sourceRanks[s] <= 3).length, supported.length), top5: safeRate(supported.filter(x => x.sourceRanks[s] && x.sourceRanks[s] <= 5).length, supported.length) },
       parentReachability: Object.fromEntries([1, 3, 5, 10].map(k => [`top${k}`, safeRate(supported.filter(x => x.parentRanks[s] && x.parentRanks[s] <= k).length, supported.length)])),
       acceptedTargetRank: distribution(supported.map(x => x.ranks[s]).filter(Boolean)),
       conditionalCorrectSourceTargetRank: distribution(supported.map(x => x.conditionalSourceRanks[s]).filter(Boolean)),
       conditionalAcceptedParentTargetRank: distribution(supported.map(x => x.conditionalParentRanks[s]).filter(Boolean)),
+      conditionalAcceptedParentTargetReachability: reachability(supported.map(x => x.conditionalParentRanks[s])),
+      completeAcceptedSetReachability: reachability(supported.filter(x => x.classification === 'MULTI_UNIT_REQUIRED').map(x => x.completeSetRanks[s])),
+      acceptedScorePercentileWithinSource: distribution(supported.map(x => x.acceptedScorePercentilesWithinSource[s]).filter(x => x !== null)),
       acceptedMinusTopWrongScore: distribution(supported.map(x => x.acceptedMinusTopWrongScore[s]).filter(x => x !== null))
     }
   }
   const fusionHelp = supported.filter(x => rankValue(x.ranks.hybrid) < Math.min(rankValue(x.ranks.bm25), rankValue(x.ranks.vector))).length
   const fusionHarm = supported.filter(x => rankValue(x.ranks.hybrid) > Math.min(rankValue(x.ranks.bm25), rankValue(x.ranks.vector))).length
   const strongerTie = supported.length - fusionHelp - fusionHarm
+  const sourceFusionComparison = {
+    hybridRescuesBothComponents: supported.filter(x => x.sourceRanks.hybrid === 1 && x.sourceRanks.bm25 !== 1 && x.sourceRanks.vector !== 1).length,
+    hybridLosesCorrectComponent: supported.filter(x => x.sourceRanks.hybrid !== 1 && (x.sourceRanks.bm25 === 1 || x.sourceRanks.vector === 1)).length,
+    componentTop1Disagreement: supported.filter(x => (x.sourceRanks.bm25 === 1) !== (x.sourceRanks.vector === 1)).length
+  }
+  const parentFusionComparison = {
+    hybridRescuesBothComponents: supported.filter(x => x.parentRanks.hybrid === 1 && x.parentRanks.bm25 !== 1 && x.parentRanks.vector !== 1).length,
+    hybridLosesCorrectComponent: supported.filter(x => x.parentRanks.hybrid !== 1 && (x.parentRanks.bm25 === 1 || x.parentRanks.vector === 1)).length,
+    componentTop1Disagreement: supported.filter(x => (x.parentRanks.bm25 === 1) !== (x.parentRanks.vector === 1)).length
+  }
+  const componentLeaderCounts = countBy(supported, x => {
+    const ranks = [['BM25', x.ranks.bm25], ['VECTOR', x.ranks.vector], ['HYBRID_RRF', x.ranks.hybrid]].filter(([, rank]) => rank)
+    if (!ranks.length) return 'NOT_IN_TOP_100'
+    const best = Math.min(...ranks.map(([, rank]) => rank))
+    return ranks.filter(([, rank]) => rank === best).map(([systemId]) => systemId).join('+')
+  })
   return {
     population: name, caseCount: values.length, supportedCaseCount: supported.length, sourceCounts: countBy(values, 'sourceId'), modalityCounts: countBy(values, 'modality'), categoryCounts: countBy(values, 'category'), classificationCounts: countBy(values, 'classification'), queryStyleCounts: countBy(values, 'queryStyle'),
     queryCharacters: distribution(values.map(x => x.queryCharacters)), queryTokenCount: distribution(values.map(x => x.queryTokenCount)), acceptedEvidenceCharacters: distribution(supported.map(x => x.acceptedEvidenceCharacters)), acceptedEvidenceCount: distribution(supported.map(x => x.acceptedEvidenceCount)), requiredRoleCount: distribution(supported.map(x => x.requiredRoleCount)), queryIdentifierCount: distribution(values.map(x => x.queryIdentifierCount)),
@@ -228,7 +251,7 @@ function aggregatePopulation(name, values) {
     primaryFailureStages: countBy(supported, 'primaryFailureStage'), diagnosticFlags: countBy(supported.flatMap(x => x.diagnosticFlags), x => x), granularityFindings: countBy(supported.flatMap(x => x.granularity), x => x), wrongSectionCauses: countBy(supported.flatMap(x => x.wrongSectionCauses), x => x),
     hybridWrongSectionRate: safeRate(supported.filter(x => x.primaryFailureStage === 'RIGHT_SOURCE_WRONG_PARENT').length, supported.length), hybridCorrectParentWrongChildRate: safeRate(supported.filter(x => x.primaryFailureStage === 'RIGHT_PARENT_WRONG_CHILD').length, supported.length), averageSiblingSectionsOutrankingAccepted: round(average(supported.map(x => x.siblingOutrankingCount))),
     correctParentRetrievedButAcceptedChildMissedTop10: supported.filter(x => x.parentRanks.hybrid && x.parentRanks.hybrid <= 10 && (!x.ranks.hybrid || x.ranks.hybrid > 10)).length,
-    fusionComparison: { improvesOverBothComponents: fusionHelp, worsensStrongerComponent: fusionHarm, tiesStrongerComponent: strongerTie }, systems: systemMetrics
+    fusionComparison: { improvesOverBothComponents: fusionHelp, worsensStrongerComponent: fusionHarm, tiesStrongerComponent: strongerTie }, sourceFusionComparison, parentFusionComparison, componentLeaderCounts, systems: systemMetrics
   }
 }
 
@@ -254,7 +277,7 @@ export async function runDiagnostic() {
     noExplicitIdentifier: sliceAggregate(supported.filter(x => x.sourceId.includes('accounting-publications-appm')), x => !x.sectionIdentifierPresent),
     directOrStructural: sliceAggregate(supported.filter(x => x.sourceId.includes('accounting-publications-appm')), x => x.queryStyle === 'DIRECT_OR_STRUCTURAL'),
     paraphrasedOrAbstract: sliceAggregate(supported.filter(x => x.sourceId.includes('accounting-publications-appm')), x => x.queryStyle === 'PARAPHRASED_OR_ABSTRACT'),
-    byEvidenceRole: Object.fromEntries([...new Set(supported.filter(x => x.sourceId.includes('accounting-publications-appm')).flatMap(x => x.acceptedRoles))].sort().map(role => [role, sliceAggregate(supported.filter(x => x.sourceId.includes('accounting-publications-appm')), x => x.acceptedRoles.includes(role))]))
+    byEvidenceRole: [...new Set(supported.filter(x => x.sourceId.includes('accounting-publications-appm')).flatMap(x => x.acceptedRoles))].sort().map(role => ({ role, metrics: sliceAggregate(supported.filter(x => x.sourceId.includes('accounting-publications-appm')), x => x.acceptedRoles.includes(role)) }))
   }
   const goldV3 = supported.filter(x => x.population.startsWith('GOLD_V3_')), multi = supported.filter(x => x.population.startsWith('MULTI_UNIT_') && x.population !== 'MULTI_UNIT_SINGLE_UNIT_CONTROLS'), controls = supported.filter(x => x.population === 'MULTI_UNIT_SINGLE_UNIT_CONTROLS')
   const matchedControls = controls.map(c => {
@@ -262,6 +285,17 @@ export async function runDiagnostic() {
     const match = [...pool].sort((a, b) => Math.abs(a.lexicalJaccard - c.lexicalJaccard) - Math.abs(b.lexicalJaccard - c.lexicalJaccard) || a.caseId.localeCompare(b.caseId))[0]
     return { controlCaseId: c.caseId, matchedGoldV3CaseId: match?.caseId || null, sourceMatched: Boolean(match), controlHybridRank: c.ranks.hybrid, matchedHybridRank: match?.ranks.hybrid || null, controlFailureStage: c.primaryFailureStage, matchedFailureStage: match?.primaryFailureStage || null }
   })
+  const matchedAvailable = matchedControls.filter(x => x.controlHybridRank && x.matchedHybridRank)
+  const controlMatchedComparison = {
+    controlCount: controls.length,
+    sourceAndModalityMatchedCount: matchedControls.filter(x => x.sourceMatched).length,
+    bothRanksAvailableCount: matchedAvailable.length,
+    controlBetterRankCount: matchedAvailable.filter(x => x.controlHybridRank < x.matchedHybridRank).length,
+    controlWorseRankCount: matchedAvailable.filter(x => x.controlHybridRank > x.matchedHybridRank).length,
+    equalRankCount: matchedAvailable.filter(x => x.controlHybridRank === x.matchedHybridRank).length,
+    controlTargetAbsentTop100Count: matchedControls.filter(x => !x.controlHybridRank).length,
+    matchedGoldTargetAbsentTop100Count: matchedControls.filter(x => !x.matchedHybridRank).length
+  }
   const diagnosticFocus = [...multi, ...controls]
   const wrongParent = diagnosticFocus.filter(x => x.primaryFailureStage === 'RIGHT_SOURCE_WRONG_PARENT').length
   const sourceMiss = diagnosticFocus.filter(x => x.primaryFailureStage === 'SOURCE_MISS').length
@@ -281,7 +315,7 @@ export async function runDiagnostic() {
   await write(rankFile, { schemaVersion: '1.0', runId: cfg.runId, cases: cases.map(x => ({ population: x.population, caseId: x.caseId, query: x.query, rankings: x.rankings })), ...gov })
   await write(privateFile, { schemaVersion: '1.0', runId: cfg.runId, cases: analyzed, matchedControls, ...gov })
   await write(inputFile, { schemaVersion: '1.0', runId: cfg.runId, protectedInputs, goldV3PrivateHash: sha(await fs.readFile(path.join(cfg.goldV3PrivateRoot, 'gold-v3-adjudication.json'))), multiUnitPrivateHash: sha(await fs.readFile(path.join(cfg.multiUnitPrivateRoot, 'multi-unit-gold-v1-adjudication.json'))), documentVectorHash: sha(await fs.readFile(path.join(cfg.vectorRoot, 'document-embeddings.f32'))), ...gov })
-  const summary = { schemaVersion: '1.0', runId: cfg.runId, populations, a3, xlsx, a3Conditions, futureDirections, freshEvaluationRequirement: { required: true, reasonCode: 'GOLD_V3_AND_MULTI_UNIT_GOLD_V1_HOLDOUTS_CONSUMED', minimumDesign: 'NEW_SHA_BOUND_SOURCE_BALANCED_SECTION_CHALLENGE_SET_WITH_UNTOUCHED_HOLDOUT_AND_SINGLE_UNIT_CONTROLS' }, evaluatorOnlyOracleMetrics: true, rankingInputExcludesGold: true, noParameterOptimization: true, ...gov }
+  const summary = { schemaVersion: '1.0', runId: cfg.runId, populations, a3, a3ByPopulation: populationNames.map(name => aggregatePopulation(name, supported.filter(x => x.population === name && x.sourceId.includes('accounting-publications-appm')))).filter(x => x.caseCount), xlsx, a3Conditions, controlMatchedComparison, futureDirections, freshEvaluationRequirement: { required: true, reasonCode: 'GOLD_V3_AND_MULTI_UNIT_GOLD_V1_HOLDOUTS_CONSUMED', minimumDesign: 'NEW_SHA_BOUND_SOURCE_BALANCED_SECTION_CHALLENGE_SET_WITH_UNTOUCHED_HOLDOUT_AND_SINGLE_UNIT_CONTROLS' }, evaluatorOnlyOracleMetrics: true, rankingInputExcludesGold: true, noParameterOptimization: true, ...gov }
   validateGitSafeArtifact({ artifactType: 'broader-retrieval-diagnostic-summary', value: summary })
   await write(path.join(publicRoot, 'diagnostic-summary.json'), summary)
   const manifest = await buildManifest([['private-component-rankings', rankFile], ['private-case-diagnostics', privateFile], ['private-input-hashes', inputFile]])
