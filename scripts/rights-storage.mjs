@@ -20,6 +20,7 @@ for (const key of ['childParentIds', 'sourceChunkIds', 'goldUnitIds', 'evidenceC
 for (const key of ['requiredEvidenceIds']) safeStringArrayKeys.add(key)
 for (const key of ['evidenceIds', 'acceptedEvidenceSetHashes', 'requiredEvidenceRoles', 'partiallySupportedEvidenceIds']) safeStringArrayKeys.add(key)
 for (const key of ['evaluationMetrics', 'available', 'usedByPlannedReranker', 'unavailable', 'acceptedAlternativeTargetSets']) safeStringArrayKeys.add(key)
+for (const key of ['unionTargetOrigins', 'rankingInputFields', 'runtimeFields']) safeStringArrayKeys.add(key)
 for (const key of [
   'evaluationVersion', 'createdBecauseCode', 'sourceEvaluationVersion', 'sourceEvaluationPath', 'sourceEvaluationSha256', 'originalCaseCount', 'uniqueTargetCaseCount', 'multiAcceptedTargetCaseCount', 'multiUnitRequiredCaseCount', 'ambiguousExcludedCaseCount', 'invalidExcludedCaseCount', 'privateAdjudicationPath', 'privateAdjudicationSha256', 'privateAdjudicationByteCount', 'finalGoldSelectionUsesRegex', 'split', 'queryHash', 'goldUnitIds', 'evidenceContentHashes', 'acceptedSourceChunkIds', 'targetCoordinates', 'targetRole', 'requiredContextRoles', 'adjudicationStatus', 'included', 'reviewerStatus', 'queryExternal', 'rationaleExternal', 'evaluations', 'path', 'preserved', 'reasonCode',
   'supportedCaseCount', 'unsupportedCaseCount', 'sourceCounts', 'categoryCounts', 'modalityCounts', 'adjudicationCounts', 'modality', 'frozenRetrievalConfigPath', 'frozenRetrievalConfigSha256', 'retrievalConfigurationUnchanged',
@@ -28,6 +29,38 @@ for (const key of [
   'expectedSourceId', 'acceptedTargetIds', 'acceptedParentIds', 'selectedRankScore', 'targetRank', 'sourceTop5', 'acceptedTop1', 'acceptedTop3', 'acceptedTop5', 'acceptedTop10', 'acceptedMrr', 'exactChildEligible', 'exactChildTop1', 'exactParent', 'wrongSource', 'wrongSection', 'citationCoordinateValidity', 'targetCitationCorrectness', 'requiredRoles', 'requiredRoleRecall', 'acceptedEvidenceRecall', 'completeContext', 'contextEvidenceIds', 'queryIntent', 'contextBounded', 'combined', 'acceptedTargetTop1', 'acceptedTargetTop3', 'acceptedTargetTop5', 'acceptedTargetTop10', 'acceptedTargetMrr', 'exactParentRate', 'completeContextRate', 'bm25ParametersUnchanged', 'k1', 'b', 'excludedCaseCount', 'noAcquisition', 'noVectorRetrieval', 'systemId', 'A_OLD_PAGE_WINDOW_BM25', 'B_OLD_SEMANTIC_44D96FF_BM25', 'C_CORRECTED_SEMANTIC_BM25', 'D_CORRECTED_PARENT_RERANK', 'E_ROLE_AWARE_CONTEXT',
   'counts', 'multiUnit', 'singleUnitControls', 'unsupported', 'partiallyUnsupported', 'classificationCounts', 'privateAdjudicationPath', 'privateAdjudicationSha256', 'privateAdjudicationByteCount', 'retrieverArtifacts', 'sidecarProtocol', 'implementation', 'ranking', 'parentScope', 'topParents', 'maximumPackageEvidence', 'maximumPackageCharacters', 'acceptedEvidenceSets', 'evidenceIds', 'evidenceId', 'evidenceSetHash', 'acceptedEvidenceSetHashes', 'requiredEvidenceRoles', 'citationCoordinates', 'partiallySupportedEvidenceIds', 'partiallySupportedCoordinates', 'createdWithoutRetrievalResults', 'MULTI_UNIT_GOLD_V1', 'singleUnitControls', 'multiUnit', 'completePackageCount', 'completePackageRate', 'packagePrecision', 'partialPackageRate', 'averagePackageSize', 'maximumPackageSize', 'correctSourceRate', 'wrongSourceRate', 'targetCitationCorrectness', 'systems', 'A', 'B', 'C', 'UNCHANGED_FLAT_HYBRID_RRF', 'UNCHANGED_FLAT_HYBRID_RRF_PLUS_EXISTING_CONDITIONAL_ASSEMBLY', 'multiUnit', 'singleUnitControls', 'dimension', 'value', 'descriptive', 'unsupportedPartialDiagnostics', 'bySystem', 'apparentlyCompletePackageCount', 'supportedSubsetReturnedCount', 'unrelatedCompanionEvidenceCount', 'preservedUncertaintyCount', 'primaryRankingIdentical', 'rowStart', 'rowEnd', 'summaries', 'queryVectorRerunSha256', 'rankingSha256', 'rankingRerunSha256', 'queryVectorDeterminismPassed', 'rankingDeterminismPassed', 'scoringDeterminismPassed', 'documentVectorCount', 'totalByteCount', 'flatRankingSha256', 'packageStatusRequiresAllSlots', 'statusCounts', 'PRIMARY_RANKING_ONLY', 'HISTORICAL_SIDECAR', 'COMPLETE_CANDIDATE', 'PARTIAL_CANDIDATE', 'INSUFFICIENT_EVIDENCE', 'CONFLICTING_OR_AMBIGUOUS', 'redundantEvidenceCount', 'packageCorrectSourceRate', 'packageCorrectParentRate', 'packageWrongSourceRate', 'packageWrongSectionRate', 'falseCompletePackageCount', 'unrelatedEvidenceCount', 'developmentPrivateArtifactHashes', 'name', 'queryManifestRerunSha256', 'planSha256', 'planRerunSha256', 'scoringSha256', 'scoringRerunSha256', 'developmentResultsSha256', 'historicalRankingSha256', 'artifacts', 'holdoutAccessedBeforeFreeze',
   'startingSha', 'sourceBranch', 'protocolFrozenAt', 'protocolCommit', 'configuration', 'embeddingModel', 'embeddingRevision', 'embeddingLicense', 'embeddingSourceUrl', 'modelSnapshotSha256', 'modelSnapshotByteCount', 'runtime', 'pythonVersion', 'torchVersion', 'transformersVersion', 'numpyVersion', 'platform', 'deterministicAlgorithms', 'device', 'inferencePrecision', 'pooling', 'prefixes', 'passagePrefix', 'queryPrefix', 'maxSequenceLength', 'normalization', 'vectorDimension', 'vectorCount', 'queryVectorCount', 'vectorDtype', 'exactVectorSearch', 'bruteForce', 'localOnly', 'hostedApisUsed', 'bm25', 'fieldWeights', 'body', 'section', 'identifier', 'parentHeading', 'sourceTitle', 'header', 'fusion', 'method', 'rrfK', 'bm25Weight', 'vectorWeight', 'parentRrfWeight', 'candidateDepth', 'tieBreak', 'context', 'maximumAddedEvidence', 'sameParentOnly', 'goldFreezeSha256', 'goldUnchanged', 'noHoldoutTuning', 'developmentCaseCount', 'holdoutCaseCount', 'rankingInputExcludesGold', 'rankingInputManifestSha256', 'passageManifestSha256', 'queryManifestSha256', 'documentVectorSha256', 'queryVectorSha256', 'indexSha256', 'determinismSha256', 'determinismPassed', 'normMaximumDeviation', 'privateArtifactByteCount', 'privateSubstantiveArtifactByteCount', 'runtimeEnvironmentByteCount', 'modelByteCount', 'artifactCount', 'aggregateSha256', 'provenance', 'evaluation', 'sourceSlices', 'unsupportedDiagnostics', 'diagnostics', 'diagnosticStatus', 'diagnosticCaseCount', 'ambiguousCaseCount', 'invalidTargetCaseCount', 'scoreMaximum', 'scoreMean', 'top1Top2MarginMean', 'top1Top2MarginMinimum', 'a3', 'xlsx', 'includedCaseCount', 'diagnosticOnlyCaseCount', 'evaluable', 'reason', 'regressions', 'commitCount', 'cleanWorkingTree', 'remoteAligned', 'maturityLevel', 'nextStep', 'outcome', 'limitations', 'noNewSources', 'canonicalCorporaUnchanged', 'rawSourceBytesUnchanged', 'goldV2Unchanged', 'noAnswerGeneration', 'noProductionRag', 'noLearnerFacingOutput', 'noHostedModels', 'embeddingInputsExternal', 'vectorsExternal', 'queriesExternal', 'goldRationaleExternal', 'license', 'revision', 'model', 'hashes', 'byteCounts', 'generatedFrom', 'EVALUATION_V2', 'BM25', 'VECTOR', 'HYBRID_RRF', 'HYBRID_RRF_PARENT', 'HYBRID_RRF_PARENT_CONTEXT'
+]) safeKeys.add(key)
+
+for (const key of [
+  'mode', 'caseCount', 'summaries', 'slices', 'rerankEffects', 'unionCandidateDiagnostics',
+  'A_BM25', 'B_VECTOR', 'C_HYBRID', 'D_STRUCTURAL', 'targetReachability', 'top20', 'top50', 'top100',
+  'parentTop1', 'parentTop3', 'parentTop10', 'failureStages', 'SOURCE_MISS',
+  'RIGHT_SOURCE_WRONG_PARENT', 'RIGHT_PARENT_WRONG_CHILD', 'SUCCESS', 'OTHER',
+  'identifierPresent', 'identifierAbsent', 'direct', 'paraphrased', 'shortUnanchored', 'multipart',
+  'siblingPressure', 'a3', 'pdf', 'xlsx', 'seedDeepReachable', 'seedTop100Absent', 'sliceValue',
+  'systems', 'targetRank', 'sourceRank', 'parentRank', 'failureStage', 'topChildId', 'topSourceId',
+  'topParentId', 'unionSize', 'unionTargetReachable', 'unionTargetOrigins', 'rerankEffect',
+  'sourceChanged', 'parentChanged', 'wrongSectionRescued', 'previouslyCorrectTop1Damaged',
+  'sourceCorrectToWrong', 'parentCorrectToWrong', 'childRankingResidual', 'top100Absent',
+  'improvedRankCount', 'worsenedRankCount', 'unchangedRankCount', 'sourceChangedCount',
+  'parentChangedCount', 'wrongSectionRescueCount', 'previouslyCorrectTop1Count',
+  'previouslyCorrectTop1RetainedCount', 'previouslyCorrectTop1DamagedCount',
+  'sourceCorrectToWrongCount', 'parentCorrectToWrongCount', 'identifierPresentDamagedCount',
+  'childRankingResidualCount', 'top100AbsentCount', 'averageUnionSize', 'maximumUnionSize',
+  'unionReachability', 'bm25OnlyRescueCount', 'vectorOnlyRescueCount', 'hybridOnlyRescueCount',
+  'evaluatorOnlyGoldScoring', 'runtimeRankingInputExcludesGold', 'rankingInputFields',
+  'acceptedTargetsReceivedByRuntime', 'acceptedParentsReceivedByRuntime', 'expectedSourceReceivedByRuntime',
+  'goldClassificationReceivedByRuntime', 'splitLabelReceivedByRuntime', 'evaluatorOracleReceivedByRuntime',
+  'UNCHANGED', 'UNCHANGED_ABSENT', 'IMPROVED', 'WORSENED', 'thresholdAssessment', 'observedSuccess',
+  'observedDamage', 'successChecks', 'damageChecks', 'successThresholdsPassed', 'damageBudgetPassed',
+  'identifierAbsentTargetTop1AbsoluteImprovement', 'parentTop1AbsoluteImprovement', 'wrongSectionRescues',
+  'netWrongSectionRescues', 'previouslyCorrectTop1LostCount', 'previouslyCorrectTop1LostRate',
+  'sourceTop1AbsoluteRegression', 'identifierPresentTop1AbsoluteRegression', 'identifierPresentDamagedCount',
+  'identifierAbsentImprovementMet', 'parentImprovementMet', 'wrongSectionRescuesMet',
+  'netWrongSectionRescuesMet', 'correctTop1LostCountWithinBudget', 'correctTop1LostRateWithinBudget',
+  'sourceTop1RegressionWithinBudget', 'sourceCorrectToWrongWithinBudget',
+  'identifierPresentRegressionWithinBudget', 'identifierPresentDamageWithinBudget',
+  'parentCorrectToWrongWithinBudget'
 ]) safeKeys.add(key)
 
 for (const key of [
@@ -42,6 +75,13 @@ for (const key of [
   'parentCorrectToWrongMaximumCount', 'maximumBonus', 'maximumConflictPenalty', 'lowConfidenceScale',
   'mediumConfidenceScale', 'highConfidenceScale', 'featureInventory', 'available', 'usedByPlannedReranker',
   'unavailable', 'protectedArtifacts', 'goldCreatedBeforeRerankerImplementation',
+  'structuralScoringRules', 'confidenceRules', 'HIGH', 'MEDIUM', 'LOW_OR_UNKNOWN',
+  'identifierLocalBonus', 'identifierAncestorBonus', 'conceptCoverageMaximum', 'headingCoverageMaximum',
+  'sourceTitleCoverageMaximum', 'orderedBigramCoverageMaximum', 'compatibleRoleBonus',
+  'modalityCompatibilityBonus', 'strongComponentRescueBonus', 'componentRescueMaximumComponentRank',
+  'componentRescueMinimumConceptCoverage', 'componentRescueMinimumClauseCoverage',
+  'identifierConflictPenalty', 'multipartCoveragePenaltyMaximum', 'modalityConflictPenalty',
+  'baselineTopPreservationMargin',
   'holdoutAccessProhibitedUntilArchitectureFreeze', 'matchedPairId', 'acceptedAlternativeTargetSets',
   'structuralClassifications', 'identifierPresence', 'phrasing', 'shortUnanchored', 'multipart',
   'siblingPressure', 'tableOrProse', 'seedReachabilityClass'
