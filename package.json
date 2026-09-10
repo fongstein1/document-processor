@@ -68,6 +68,7 @@
     "section-challenge:development": "node scripts/section-structural-reranker-experiment.mjs rank development && node scripts/section-structural-reranker-experiment.mjs score development",
     "section-challenge:freeze": "node scripts/section-structural-reranker-experiment.mjs freeze",
     "section-challenge:holdout": "node scripts/section-structural-reranker-experiment.mjs rank holdout && node scripts/section-structural-reranker-experiment.mjs score holdout",
+    "section-challenge:report": "node scripts/build-section-challenge-v1-report.mjs && node scripts/section-structural-reranker-experiment.mjs manifest",
     "section-challenge:validate": "node scripts/validate-section-challenge-v1.mjs",
     "vm01:artifacts": "node scripts/build-vm01-definition-artifacts.mjs",
     "vm01:validate": "node scripts/validate-vm01-definitions.mjs",

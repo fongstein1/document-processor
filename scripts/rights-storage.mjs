@@ -116,6 +116,16 @@ for (const key of [
   'noSourceAcquisition', 'noCanonicalPromotion', 'publicProjectionRightsSafe', 'privateArtifactsVerified'
 ]) safeKeys.add(key)
 
+for (const key of [
+  'diagnosticClassification', 'supportedGoldAvailable', 'evaluationFreezeSha256', 'architectureFreezeSha256',
+  'totalCaseCount', 'matchedPairCount', 'pdfCaseCount', 'xlsxCaseCount', 'structuralFeatureInventory',
+  'candidateUnion', 'cutoffs', 'structuralScoring', 'rules', 'bounds', 'residuals',
+  'childRankingResidual', 'top100Absent', 'likelyCause', 'decisions', 'sectionChallengeEvaluationMaturity',
+  'structuralRerankerMaturity', 'structuralRoutingHardening', 'nextStep',
+  'SOURCE_RETRIEVAL_FAILURE', 'TABLE_REPRESENTATION', 'EVIDENCE_UNIT_STRUCTURE',
+  'LEXICAL_WEAKNESS_OR_VECTOR_REPRESENTATION_MISMATCH', 'METADATA_DEFICIT_OR_UNRESOLVED'
+]) safeKeys.add(key)
+
 export const sha256Bytes = (bytes) => crypto.createHash('sha256').update(bytes).digest('hex')
 const containsNonEmptyString = (value) => {
   if (typeof value === 'string') return value.trim().length > 0

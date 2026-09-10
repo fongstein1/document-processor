@@ -17,10 +17,10 @@ const holdout = await read('holdout-results.json')
 const manifest = await read('external-artifact-manifest.json')
 
 assert.equal(evaluation.evaluationVersion, 'SECTION_CHALLENGE_V1')
-assert.equal(evaluation.supportedCaseCount, 48)
-assert.equal(evaluation.diagnosticCaseCount, 6)
-assert.equal(evaluation.developmentCaseCount, 28)
-assert.equal(evaluation.holdoutCaseCount, 20)
+assert.equal(evaluation.counts.supported, 48)
+assert.equal(evaluation.counts.diagnostic, 6)
+assert.equal(evaluation.counts.development, 28)
+assert.equal(evaluation.counts.holdout, 20)
 assert.deepEqual(evaluation.successThresholds, cfg.successThresholds)
 assert.deepEqual(evaluation.damageBudget, cfg.damageBudget)
 assert.equal(evaluation.goldCreatedBeforeRerankerImplementation, true)
@@ -48,7 +48,7 @@ for (const record of manifest.artifacts) {
 }
 
 console.log(JSON.stringify({
-  evaluationCases: evaluation.supportedCaseCount,
+  evaluationCases: evaluation.counts.supported,
   developmentCases: development.caseCount,
   holdoutCases: holdout.caseCount,
   frozenImplementationArtifacts: architecture.implementationArtifacts.length,

@@ -1,0 +1,2646 @@
+{
+  "schemaVersion": "1.0",
+  "runId": "section-challenge-v1-structural-rerank-2026-09",
+  "evaluationVersion": "SECTION_CHALLENGE_V1",
+  "mode": "holdout",
+  "caseCount": 20,
+  "summaries": {
+    "A_BM25": {
+      "caseCount": 20,
+      "targetReachability": {
+        "top1": 0,
+        "top3": 0,
+        "top5": 0.05,
+        "top10": 0.1,
+        "top20": 0.35,
+        "top50": 0.55,
+        "top100": 0.65
+      },
+      "sourceTop1": 0.55,
+      "sourceTop3": 1,
+      "parentTop1": 0.25,
+      "parentTop3": 0.5,
+      "parentTop10": 0.75,
+      "failureStages": {
+        "RIGHT_PARENT_WRONG_CHILD": 5,
+        "RIGHT_SOURCE_WRONG_PARENT": 6,
+        "SOURCE_MISS": 9
+      }
+    },
+    "B_VECTOR": {
+      "caseCount": 20,
+      "targetReachability": {
+        "top1": 0.15,
+        "top3": 0.2,
+        "top5": 0.2,
+        "top10": 0.25,
+        "top20": 0.25,
+        "top50": 0.4,
+        "top100": 0.65
+      },
+      "sourceTop1": 0.7,
+      "sourceTop3": 0.95,
+      "parentTop1": 0.3,
+      "parentTop3": 0.4,
+      "parentTop10": 0.6,
+      "failureStages": {
+        "RIGHT_PARENT_WRONG_CHILD": 3,
+        "RIGHT_SOURCE_WRONG_PARENT": 8,
+        "SOURCE_MISS": 6,
+        "SUCCESS": 3
+      }
+    },
+    "C_HYBRID": {
+      "caseCount": 20,
+      "targetReachability": {
+        "top1": 0,
+        "top3": 0.1,
+        "top5": 0.2,
+        "top10": 0.3,
+        "top20": 0.45,
+        "top50": 0.65,
+        "top100": 0.75
+      },
+      "sourceTop1": 0.6,
+      "sourceTop3": 1,
+      "parentTop1": 0.15,
+      "parentTop3": 0.65,
+      "parentTop10": 0.9,
+      "failureStages": {
+        "RIGHT_PARENT_WRONG_CHILD": 3,
+        "RIGHT_SOURCE_WRONG_PARENT": 9,
+        "SOURCE_MISS": 8
+      }
+    },
+    "D_STRUCTURAL": {
+      "caseCount": 20,
+      "targetReachability": {
+        "top1": 0.05,
+        "top3": 0.1,
+        "top5": 0.2,
+        "top10": 0.4,
+        "top20": 0.5,
+        "top50": 0.75,
+        "top100": 0.8
+      },
+      "sourceTop1": 0.7,
+      "sourceTop3": 0.95,
+      "parentTop1": 0.3,
+      "parentTop3": 0.6,
+      "parentTop10": 0.8,
+      "failureStages": {
+        "RIGHT_PARENT_WRONG_CHILD": 5,
+        "RIGHT_SOURCE_WRONG_PARENT": 8,
+        "SOURCE_MISS": 6,
+        "SUCCESS": 1
+      }
+    }
+  },
+  "slices": {
+    "identifierPresent": {
+      "A_BM25": {
+        "caseCount": 10,
+        "targetReachability": {
+          "top1": 0,
+          "top3": 0,
+          "top5": 0.1,
+          "top10": 0.1,
+          "top20": 0.6,
+          "top50": 0.9,
+          "top100": 0.9
+        },
+        "sourceTop1": 0.8,
+        "sourceTop3": 1,
+        "parentTop1": 0.4,
+        "parentTop3": 0.8,
+        "parentTop10": 0.9,
+        "failureStages": {
+          "RIGHT_PARENT_WRONG_CHILD": 4,
+          "RIGHT_SOURCE_WRONG_PARENT": 4,
+          "SOURCE_MISS": 2
+        }
+      },
+      "B_VECTOR": {
+        "caseCount": 10,
+        "targetReachability": {
+          "top1": 0.2,
+          "top3": 0.2,
+          "top5": 0.2,
+          "top10": 0.3,
+          "top20": 0.3,
+          "top50": 0.5,
+          "top100": 0.8
+        },
+        "sourceTop1": 0.8,
+        "sourceTop3": 0.9,
+        "parentTop1": 0.4,
+        "parentTop3": 0.5,
+        "parentTop10": 0.6,
+        "failureStages": {
+          "RIGHT_PARENT_WRONG_CHILD": 2,
+          "RIGHT_SOURCE_WRONG_PARENT": 4,
+          "SOURCE_MISS": 2,
+          "SUCCESS": 2
+        }
+      },
+      "C_HYBRID": {
+        "caseCount": 10,
+        "targetReachability": {
+          "top1": 0,
+          "top3": 0.1,
+          "top5": 0.3,
+          "top10": 0.4,
+          "top20": 0.6,
+          "top50": 0.9,
+          "top100": 1
+        },
+        "sourceTop1": 0.7,
+        "sourceTop3": 1,
+        "parentTop1": 0.2,
+        "parentTop3": 0.8,
+        "parentTop10": 0.9,
+        "failureStages": {
+          "RIGHT_PARENT_WRONG_CHILD": 2,
+          "RIGHT_SOURCE_WRONG_PARENT": 5,
+          "SOURCE_MISS": 3
+        }
+      },
+      "D_STRUCTURAL": {
+        "caseCount": 10,
+        "targetReachability": {
+          "top1": 0,
+          "top3": 0.1,
+          "top5": 0.2,
+          "top10": 0.5,
+          "top20": 0.7,
+          "top50": 0.9,
+          "top100": 1
+        },
+        "sourceTop1": 0.9,
+        "sourceTop3": 1,
+        "parentTop1": 0.4,
+        "parentTop3": 0.8,
+        "parentTop10": 0.9,
+        "failureStages": {
+          "RIGHT_PARENT_WRONG_CHILD": 4,
+          "RIGHT_SOURCE_WRONG_PARENT": 5,
+          "SOURCE_MISS": 1
+        }
+      },
+      "caseCount": 10,
+      "sliceValue": "IDENTIFIER_PRESENT"
+    },
+    "identifierAbsent": {
+      "A_BM25": {
+        "caseCount": 10,
+        "targetReachability": {
+          "top1": 0,
+          "top3": 0,
+          "top5": 0,
+          "top10": 0.1,
+          "top20": 0.1,
+          "top50": 0.2,
+          "top100": 0.4
+        },
+        "sourceTop1": 0.3,
+        "sourceTop3": 1,
+        "parentTop1": 0.1,
+        "parentTop3": 0.2,
+        "parentTop10": 0.6,
+        "failureStages": {
+          "RIGHT_PARENT_WRONG_CHILD": 1,
+          "RIGHT_SOURCE_WRONG_PARENT": 2,
+          "SOURCE_MISS": 7
+        }
+      },
+      "B_VECTOR": {
+        "caseCount": 10,
+        "targetReachability": {
+          "top1": 0.1,
+          "top3": 0.2,
+          "top5": 0.2,
+          "top10": 0.2,
+          "top20": 0.2,
+          "top50": 0.3,
+          "top100": 0.5
+        },
+        "sourceTop1": 0.6,
+        "sourceTop3": 1,
+        "parentTop1": 0.2,
+        "parentTop3": 0.3,
+        "parentTop10": 0.6,
+        "failureStages": {
+          "RIGHT_PARENT_WRONG_CHILD": 1,
+          "RIGHT_SOURCE_WRONG_PARENT": 4,
+          "SOURCE_MISS": 4,
+          "SUCCESS": 1
+        }
+      },
+      "C_HYBRID": {
+        "caseCount": 10,
+        "targetReachability": {
+          "top1": 0,
+          "top3": 0.1,
+          "top5": 0.1,
+          "top10": 0.2,
+          "top20": 0.3,
+          "top50": 0.4,
+          "top100": 0.5
+        },
+        "sourceTop1": 0.5,
+        "sourceTop3": 1,
+        "parentTop1": 0.1,
+        "parentTop3": 0.5,
+        "parentTop10": 0.9,
+        "failureStages": {
+          "RIGHT_PARENT_WRONG_CHILD": 1,
+          "RIGHT_SOURCE_WRONG_PARENT": 4,
+          "SOURCE_MISS": 5
+        }
+      },
+      "D_STRUCTURAL": {
+        "caseCount": 10,
+        "targetReachability": {
+          "top1": 0.1,
+          "top3": 0.1,
+          "top5": 0.2,
+          "top10": 0.3,
+          "top20": 0.3,
+          "top50": 0.6,
+          "top100": 0.6
+        },
+        "sourceTop1": 0.5,
+        "sourceTop3": 0.9,
+        "parentTop1": 0.2,
+        "parentTop3": 0.4,
+        "parentTop10": 0.7,
+        "failureStages": {
+          "RIGHT_PARENT_WRONG_CHILD": 1,
+          "RIGHT_SOURCE_WRONG_PARENT": 3,
+          "SOURCE_MISS": 5,
+          "SUCCESS": 1
+        }
+      },
+      "caseCount": 10,
+      "sliceValue": "IDENTIFIER_ABSENT"
+    },
+    "direct": {
+      "A_BM25": {
+        "caseCount": 10,
+        "targetReachability": {
+          "top1": 0,
+          "top3": 0,
+          "top5": 0.1,
+          "top10": 0.1,
+          "top20": 0.6,
+          "top50": 0.9,
+          "top100": 0.9
+        },
+        "sourceTop1": 0.8,
+        "sourceTop3": 1,
+        "parentTop1": 0.4,
+        "parentTop3": 0.8,
+        "parentTop10": 0.9,
+        "failureStages": {
+          "RIGHT_PARENT_WRONG_CHILD": 4,
+          "RIGHT_SOURCE_WRONG_PARENT": 4,
+          "SOURCE_MISS": 2
+        }
+      },
+      "B_VECTOR": {
+        "caseCount": 10,
+        "targetReachability": {
+          "top1": 0.2,
+          "top3": 0.2,
+          "top5": 0.2,
+          "top10": 0.3,
+          "top20": 0.3,
+          "top50": 0.5,
+          "top100": 0.8
+        },
+        "sourceTop1": 0.8,
+        "sourceTop3": 0.9,
+        "parentTop1": 0.4,
+        "parentTop3": 0.5,
+        "parentTop10": 0.6,
+        "failureStages": {
+          "RIGHT_PARENT_WRONG_CHILD": 2,
+          "RIGHT_SOURCE_WRONG_PARENT": 4,
+          "SOURCE_MISS": 2,
+          "SUCCESS": 2
+        }
+      },
+      "C_HYBRID": {
+        "caseCount": 10,
+        "targetReachability": {
+          "top1": 0,
+          "top3": 0.1,
+          "top5": 0.3,
+          "top10": 0.4,
+          "top20": 0.6,
+          "top50": 0.9,
+          "top100": 1
+        },
+        "sourceTop1": 0.7,
+        "sourceTop3": 1,
+        "parentTop1": 0.2,
+        "parentTop3": 0.8,
+        "parentTop10": 0.9,
+        "failureStages": {
+          "RIGHT_PARENT_WRONG_CHILD": 2,
+          "RIGHT_SOURCE_WRONG_PARENT": 5,
+          "SOURCE_MISS": 3
+        }
+      },
+      "D_STRUCTURAL": {
+        "caseCount": 10,
+        "targetReachability": {
+          "top1": 0,
+          "top3": 0.1,
+          "top5": 0.2,
+          "top10": 0.5,
+          "top20": 0.7,
+          "top50": 0.9,
+          "top100": 1
+        },
+        "sourceTop1": 0.9,
+        "sourceTop3": 1,
+        "parentTop1": 0.4,
+        "parentTop3": 0.8,
+        "parentTop10": 0.9,
+        "failureStages": {
+          "RIGHT_PARENT_WRONG_CHILD": 4,
+          "RIGHT_SOURCE_WRONG_PARENT": 5,
+          "SOURCE_MISS": 1
+        }
+      },
+      "caseCount": 10,
+      "sliceValue": "DIRECT"
+    },
+    "paraphrased": {
+      "A_BM25": {
+        "caseCount": 10,
+        "targetReachability": {
+          "top1": 0,
+          "top3": 0,
+          "top5": 0,
+          "top10": 0.1,
+          "top20": 0.1,
+          "top50": 0.2,
+          "top100": 0.4
+        },
+        "sourceTop1": 0.3,
+        "sourceTop3": 1,
+        "parentTop1": 0.1,
+        "parentTop3": 0.2,
+        "parentTop10": 0.6,
+        "failureStages": {
+          "RIGHT_PARENT_WRONG_CHILD": 1,
+          "RIGHT_SOURCE_WRONG_PARENT": 2,
+          "SOURCE_MISS": 7
+        }
+      },
+      "B_VECTOR": {
+        "caseCount": 10,
+        "targetReachability": {
+          "top1": 0.1,
+          "top3": 0.2,
+          "top5": 0.2,
+          "top10": 0.2,
+          "top20": 0.2,
+          "top50": 0.3,
+          "top100": 0.5
+        },
+        "sourceTop1": 0.6,
+        "sourceTop3": 1,
+        "parentTop1": 0.2,
+        "parentTop3": 0.3,
+        "parentTop10": 0.6,
+        "failureStages": {
+          "RIGHT_PARENT_WRONG_CHILD": 1,
+          "RIGHT_SOURCE_WRONG_PARENT": 4,
+          "SOURCE_MISS": 4,
+          "SUCCESS": 1
+        }
+      },
+      "C_HYBRID": {
+        "caseCount": 10,
+        "targetReachability": {
+          "top1": 0,
+          "top3": 0.1,
+          "top5": 0.1,
+          "top10": 0.2,
+          "top20": 0.3,
+          "top50": 0.4,
+          "top100": 0.5
+        },
+        "sourceTop1": 0.5,
+        "sourceTop3": 1,
+        "parentTop1": 0.1,
+        "parentTop3": 0.5,
+        "parentTop10": 0.9,
+        "failureStages": {
+          "RIGHT_PARENT_WRONG_CHILD": 1,
+          "RIGHT_SOURCE_WRONG_PARENT": 4,
+          "SOURCE_MISS": 5
+        }
+      },
+      "D_STRUCTURAL": {
+        "caseCount": 10,
+        "targetReachability": {
+          "top1": 0.1,
+          "top3": 0.1,
+          "top5": 0.2,
+          "top10": 0.3,
+          "top20": 0.3,
+          "top50": 0.6,
+          "top100": 0.6
+        },
+        "sourceTop1": 0.5,
+        "sourceTop3": 0.9,
+        "parentTop1": 0.2,
+        "parentTop3": 0.4,
+        "parentTop10": 0.7,
+        "failureStages": {
+          "RIGHT_PARENT_WRONG_CHILD": 1,
+          "RIGHT_SOURCE_WRONG_PARENT": 3,
+          "SOURCE_MISS": 5,
+          "SUCCESS": 1
+        }
+      },
+      "caseCount": 10,
+      "sliceValue": "PARAPHRASED"
+    },
+    "shortUnanchored": {
+      "A_BM25": {
+        "caseCount": 4,
+        "targetReachability": {
+          "top1": 0,
+          "top3": 0,
+          "top5": 0,
+          "top10": 0.25,
+          "top20": 0.25,
+          "top50": 0.5,
+          "top100": 0.5
+        },
+        "sourceTop1": 0.25,
+        "sourceTop3": 1,
+        "parentTop1": 0,
+        "parentTop3": 0,
+        "parentTop10": 0.25,
+        "failureStages": {
+          "RIGHT_SOURCE_WRONG_PARENT": 1,
+          "SOURCE_MISS": 3
+        }
+      },
+      "B_VECTOR": {
+        "caseCount": 4,
+        "targetReachability": {
+          "top1": 0.25,
+          "top3": 0.25,
+          "top5": 0.25,
+          "top10": 0.25,
+          "top20": 0.25,
+          "top50": 0.5,
+          "top100": 0.5
+        },
+        "sourceTop1": 0.5,
+        "sourceTop3": 1,
+        "parentTop1": 0.25,
+        "parentTop3": 0.25,
+        "parentTop10": 0.25,
+        "failureStages": {
+          "RIGHT_SOURCE_WRONG_PARENT": 1,
+          "SOURCE_MISS": 2,
+          "SUCCESS": 1
+        }
+      },
+      "C_HYBRID": {
+        "caseCount": 4,
+        "targetReachability": {
+          "top1": 0,
+          "top3": 0.25,
+          "top5": 0.25,
+          "top10": 0.25,
+          "top20": 0.5,
+          "top50": 0.5,
+          "top100": 0.5
+        },
+        "sourceTop1": 0.25,
+        "sourceTop3": 1,
+        "parentTop1": 0,
+        "parentTop3": 0.25,
+        "parentTop10": 0.75,
+        "failureStages": {
+          "RIGHT_SOURCE_WRONG_PARENT": 1,
+          "SOURCE_MISS": 3
+        }
+      },
+      "D_STRUCTURAL": {
+        "caseCount": 4,
+        "targetReachability": {
+          "top1": 0.25,
+          "top3": 0.25,
+          "top5": 0.25,
+          "top10": 0.5,
+          "top20": 0.5,
+          "top50": 0.5,
+          "top100": 0.5
+        },
+        "sourceTop1": 0.25,
+        "sourceTop3": 1,
+        "parentTop1": 0.25,
+        "parentTop3": 0.25,
+        "parentTop10": 0.5,
+        "failureStages": {
+          "SOURCE_MISS": 3,
+          "SUCCESS": 1
+        }
+      },
+      "caseCount": 4,
+      "sliceValue": "SHORT_UNANCHORED"
+    },
+    "multipart": {
+      "A_BM25": {
+        "caseCount": 4,
+        "targetReachability": {
+          "top1": 0,
+          "top3": 0,
+          "top5": 0,
+          "top10": 0,
+          "top20": 0.25,
+          "top50": 0.5,
+          "top100": 0.75
+        },
+        "sourceTop1": 0.5,
+        "sourceTop3": 1,
+        "parentTop1": 0.5,
+        "parentTop3": 0.5,
+        "parentTop10": 0.75,
+        "failureStages": {
+          "RIGHT_PARENT_WRONG_CHILD": 2,
+          "SOURCE_MISS": 2
+        }
+      },
+      "B_VECTOR": {
+        "caseCount": 4,
+        "targetReachability": {
+          "top1": 0.25,
+          "top3": 0.5,
+          "top5": 0.5,
+          "top10": 0.5,
+          "top20": 0.5,
+          "top50": 0.5,
+          "top100": 1
+        },
+        "sourceTop1": 0.75,
+        "sourceTop3": 1,
+        "parentTop1": 0.25,
+        "parentTop3": 0.5,
+        "parentTop10": 1,
+        "failureStages": {
+          "RIGHT_SOURCE_WRONG_PARENT": 2,
+          "SOURCE_MISS": 1,
+          "SUCCESS": 1
+        }
+      },
+      "C_HYBRID": {
+        "caseCount": 4,
+        "targetReachability": {
+          "top1": 0,
+          "top3": 0,
+          "top5": 0.25,
+          "top10": 0.5,
+          "top20": 0.75,
+          "top50": 1,
+          "top100": 1
+        },
+        "sourceTop1": 0.75,
+        "sourceTop3": 1,
+        "parentTop1": 0,
+        "parentTop3": 0.75,
+        "parentTop10": 1,
+        "failureStages": {
+          "RIGHT_SOURCE_WRONG_PARENT": 3,
+          "SOURCE_MISS": 1
+        }
+      },
+      "D_STRUCTURAL": {
+        "caseCount": 4,
+        "targetReachability": {
+          "top1": 0,
+          "top3": 0,
+          "top5": 0.5,
+          "top10": 0.5,
+          "top20": 0.75,
+          "top50": 1,
+          "top100": 1
+        },
+        "sourceTop1": 0.75,
+        "sourceTop3": 1,
+        "parentTop1": 0,
+        "parentTop3": 0.5,
+        "parentTop10": 1,
+        "failureStages": {
+          "RIGHT_SOURCE_WRONG_PARENT": 3,
+          "SOURCE_MISS": 1
+        }
+      },
+      "caseCount": 4,
+      "sliceValue": "MULTIPART"
+    },
+    "siblingPressure": {
+      "A_BM25": {
+        "caseCount": 20,
+        "targetReachability": {
+          "top1": 0,
+          "top3": 0,
+          "top5": 0.05,
+          "top10": 0.1,
+          "top20": 0.35,
+          "top50": 0.55,
+          "top100": 0.65
+        },
+        "sourceTop1": 0.55,
+        "sourceTop3": 1,
+        "parentTop1": 0.25,
+        "parentTop3": 0.5,
+        "parentTop10": 0.75,
+        "failureStages": {
+          "RIGHT_PARENT_WRONG_CHILD": 5,
+          "RIGHT_SOURCE_WRONG_PARENT": 6,
+          "SOURCE_MISS": 9
+        }
+      },
+      "B_VECTOR": {
+        "caseCount": 20,
+        "targetReachability": {
+          "top1": 0.15,
+          "top3": 0.2,
+          "top5": 0.2,
+          "top10": 0.25,
+          "top20": 0.25,
+          "top50": 0.4,
+          "top100": 0.65
+        },
+        "sourceTop1": 0.7,
+        "sourceTop3": 0.95,
+        "parentTop1": 0.3,
+        "parentTop3": 0.4,
+        "parentTop10": 0.6,
+        "failureStages": {
+          "RIGHT_PARENT_WRONG_CHILD": 3,
+          "RIGHT_SOURCE_WRONG_PARENT": 8,
+          "SOURCE_MISS": 6,
+          "SUCCESS": 3
+        }
+      },
+      "C_HYBRID": {
+        "caseCount": 20,
+        "targetReachability": {
+          "top1": 0,
+          "top3": 0.1,
+          "top5": 0.2,
+          "top10": 0.3,
+          "top20": 0.45,
+          "top50": 0.65,
+          "top100": 0.75
+        },
+        "sourceTop1": 0.6,
+        "sourceTop3": 1,
+        "parentTop1": 0.15,
+        "parentTop3": 0.65,
+        "parentTop10": 0.9,
+        "failureStages": {
+          "RIGHT_PARENT_WRONG_CHILD": 3,
+          "RIGHT_SOURCE_WRONG_PARENT": 9,
+          "SOURCE_MISS": 8
+        }
+      },
+      "D_STRUCTURAL": {
+        "caseCount": 20,
+        "targetReachability": {
+          "top1": 0.05,
+          "top3": 0.1,
+          "top5": 0.2,
+          "top10": 0.4,
+          "top20": 0.5,
+          "top50": 0.75,
+          "top100": 0.8
+        },
+        "sourceTop1": 0.7,
+        "sourceTop3": 0.95,
+        "parentTop1": 0.3,
+        "parentTop3": 0.6,
+        "parentTop10": 0.8,
+        "failureStages": {
+          "RIGHT_PARENT_WRONG_CHILD": 5,
+          "RIGHT_SOURCE_WRONG_PARENT": 8,
+          "SOURCE_MISS": 6,
+          "SUCCESS": 1
+        }
+      },
+      "caseCount": 20,
+      "sliceValue": "SIBLING_PRESSURE"
+    },
+    "a3": {
+      "A_BM25": {
+        "caseCount": 6,
+        "targetReachability": {
+          "top1": 0,
+          "top3": 0,
+          "top5": 0,
+          "top10": 0.166667,
+          "top20": 0.666667,
+          "top50": 0.666667,
+          "top100": 0.666667
+        },
+        "sourceTop1": 1,
+        "sourceTop3": 1,
+        "parentTop1": 0.333333,
+        "parentTop3": 0.666667,
+        "parentTop10": 1,
+        "failureStages": {
+          "RIGHT_PARENT_WRONG_CHILD": 2,
+          "RIGHT_SOURCE_WRONG_PARENT": 4
+        }
+      },
+      "B_VECTOR": {
+        "caseCount": 6,
+        "targetReachability": {
+          "top1": 0.166667,
+          "top3": 0.166667,
+          "top5": 0.166667,
+          "top10": 0.333333,
+          "top20": 0.333333,
+          "top50": 0.333333,
+          "top100": 0.666667
+        },
+        "sourceTop1": 1,
+        "sourceTop3": 1,
+        "parentTop1": 0.666667,
+        "parentTop3": 0.666667,
+        "parentTop10": 0.833333,
+        "failureStages": {
+          "RIGHT_PARENT_WRONG_CHILD": 3,
+          "RIGHT_SOURCE_WRONG_PARENT": 2,
+          "SUCCESS": 1
+        }
+      },
+      "C_HYBRID": {
+        "caseCount": 6,
+        "targetReachability": {
+          "top1": 0,
+          "top3": 0.166667,
+          "top5": 0.166667,
+          "top10": 0.333333,
+          "top20": 0.5,
+          "top50": 0.666667,
+          "top100": 0.666667
+        },
+        "sourceTop1": 1,
+        "sourceTop3": 1,
+        "parentTop1": 0.333333,
+        "parentTop3": 1,
+        "parentTop10": 1,
+        "failureStages": {
+          "RIGHT_PARENT_WRONG_CHILD": 2,
+          "RIGHT_SOURCE_WRONG_PARENT": 4
+        }
+      },
+      "D_STRUCTURAL": {
+        "caseCount": 6,
+        "targetReachability": {
+          "top1": 0.166667,
+          "top3": 0.166667,
+          "top5": 0.166667,
+          "top10": 0.5,
+          "top20": 0.666667,
+          "top50": 0.833333,
+          "top100": 0.833333
+        },
+        "sourceTop1": 1,
+        "sourceTop3": 1,
+        "parentTop1": 0.5,
+        "parentTop3": 0.833333,
+        "parentTop10": 1,
+        "failureStages": {
+          "RIGHT_PARENT_WRONG_CHILD": 2,
+          "RIGHT_SOURCE_WRONG_PARENT": 3,
+          "SUCCESS": 1
+        }
+      },
+      "caseCount": 6,
+      "sliceValue": "A3"
+    },
+    "pdf": {
+      "A_BM25": {
+        "caseCount": 10,
+        "targetReachability": {
+          "top1": 0,
+          "top3": 0,
+          "top5": 0,
+          "top10": 0.1,
+          "top20": 0.5,
+          "top50": 0.6,
+          "top100": 0.6
+        },
+        "sourceTop1": 0.7,
+        "sourceTop3": 1,
+        "parentTop1": 0.2,
+        "parentTop3": 0.4,
+        "parentTop10": 0.7,
+        "failureStages": {
+          "RIGHT_PARENT_WRONG_CHILD": 2,
+          "RIGHT_SOURCE_WRONG_PARENT": 5,
+          "SOURCE_MISS": 3
+        }
+      },
+      "B_VECTOR": {
+        "caseCount": 10,
+        "targetReachability": {
+          "top1": 0.1,
+          "top3": 0.1,
+          "top5": 0.1,
+          "top10": 0.2,
+          "top20": 0.2,
+          "top50": 0.4,
+          "top100": 0.7
+        },
+        "sourceTop1": 0.7,
+        "sourceTop3": 1,
+        "parentTop1": 0.4,
+        "parentTop3": 0.4,
+        "parentTop10": 0.5,
+        "failureStages": {
+          "RIGHT_PARENT_WRONG_CHILD": 3,
+          "RIGHT_SOURCE_WRONG_PARENT": 3,
+          "SOURCE_MISS": 3,
+          "SUCCESS": 1
+        }
+      },
+      "C_HYBRID": {
+        "caseCount": 10,
+        "targetReachability": {
+          "top1": 0,
+          "top3": 0.1,
+          "top5": 0.2,
+          "top10": 0.3,
+          "top20": 0.5,
+          "top50": 0.6,
+          "top100": 0.7
+        },
+        "sourceTop1": 0.6,
+        "sourceTop3": 1,
+        "parentTop1": 0.2,
+        "parentTop3": 0.7,
+        "parentTop10": 0.8,
+        "failureStages": {
+          "RIGHT_PARENT_WRONG_CHILD": 2,
+          "RIGHT_SOURCE_WRONG_PARENT": 4,
+          "SOURCE_MISS": 4
+        }
+      },
+      "D_STRUCTURAL": {
+        "caseCount": 10,
+        "targetReachability": {
+          "top1": 0.1,
+          "top3": 0.1,
+          "top5": 0.1,
+          "top10": 0.4,
+          "top20": 0.5,
+          "top50": 0.7,
+          "top100": 0.8
+        },
+        "sourceTop1": 0.7,
+        "sourceTop3": 1,
+        "parentTop1": 0.4,
+        "parentTop3": 0.6,
+        "parentTop10": 0.8,
+        "failureStages": {
+          "RIGHT_PARENT_WRONG_CHILD": 3,
+          "RIGHT_SOURCE_WRONG_PARENT": 3,
+          "SOURCE_MISS": 3,
+          "SUCCESS": 1
+        }
+      },
+      "caseCount": 10,
+      "sliceValue": "PDF"
+    },
+    "xlsx": {
+      "A_BM25": {
+        "caseCount": 10,
+        "targetReachability": {
+          "top1": 0,
+          "top3": 0,
+          "top5": 0.1,
+          "top10": 0.1,
+          "top20": 0.2,
+          "top50": 0.5,
+          "top100": 0.7
+        },
+        "sourceTop1": 0.4,
+        "sourceTop3": 1,
+        "parentTop1": 0.3,
+        "parentTop3": 0.6,
+        "parentTop10": 0.8,
+        "failureStages": {
+          "RIGHT_PARENT_WRONG_CHILD": 3,
+          "RIGHT_SOURCE_WRONG_PARENT": 1,
+          "SOURCE_MISS": 6
+        }
+      },
+      "B_VECTOR": {
+        "caseCount": 10,
+        "targetReachability": {
+          "top1": 0.2,
+          "top3": 0.3,
+          "top5": 0.3,
+          "top10": 0.3,
+          "top20": 0.3,
+          "top50": 0.4,
+          "top100": 0.6
+        },
+        "sourceTop1": 0.7,
+        "sourceTop3": 0.9,
+        "parentTop1": 0.2,
+        "parentTop3": 0.4,
+        "parentTop10": 0.7,
+        "failureStages": {
+          "RIGHT_SOURCE_WRONG_PARENT": 5,
+          "SOURCE_MISS": 3,
+          "SUCCESS": 2
+        }
+      },
+      "C_HYBRID": {
+        "caseCount": 10,
+        "targetReachability": {
+          "top1": 0,
+          "top3": 0.1,
+          "top5": 0.2,
+          "top10": 0.3,
+          "top20": 0.4,
+          "top50": 0.7,
+          "top100": 0.8
+        },
+        "sourceTop1": 0.6,
+        "sourceTop3": 1,
+        "parentTop1": 0.1,
+        "parentTop3": 0.6,
+        "parentTop10": 1,
+        "failureStages": {
+          "RIGHT_PARENT_WRONG_CHILD": 1,
+          "RIGHT_SOURCE_WRONG_PARENT": 5,
+          "SOURCE_MISS": 4
+        }
+      },
+      "D_STRUCTURAL": {
+        "caseCount": 10,
+        "targetReachability": {
+          "top1": 0,
+          "top3": 0.1,
+          "top5": 0.3,
+          "top10": 0.4,
+          "top20": 0.5,
+          "top50": 0.8,
+          "top100": 0.8
+        },
+        "sourceTop1": 0.7,
+        "sourceTop3": 0.9,
+        "parentTop1": 0.2,
+        "parentTop3": 0.6,
+        "parentTop10": 0.8,
+        "failureStages": {
+          "RIGHT_PARENT_WRONG_CHILD": 2,
+          "RIGHT_SOURCE_WRONG_PARENT": 5,
+          "SOURCE_MISS": 3
+        }
+      },
+      "caseCount": 10,
+      "sliceValue": "XLSX"
+    },
+    "seedDeepReachable": {
+      "A_BM25": {
+        "caseCount": 12,
+        "targetReachability": {
+          "top1": 0,
+          "top3": 0,
+          "top5": 0,
+          "top10": 0.083333,
+          "top20": 0.333333,
+          "top50": 0.666667,
+          "top100": 0.833333
+        },
+        "sourceTop1": 0.5,
+        "sourceTop3": 1,
+        "parentTop1": 0.166667,
+        "parentTop3": 0.5,
+        "parentTop10": 0.833333,
+        "failureStages": {
+          "RIGHT_PARENT_WRONG_CHILD": 2,
+          "RIGHT_SOURCE_WRONG_PARENT": 4,
+          "SOURCE_MISS": 6
+        }
+      },
+      "B_VECTOR": {
+        "caseCount": 12,
+        "targetReachability": {
+          "top1": 0.166667,
+          "top3": 0.25,
+          "top5": 0.25,
+          "top10": 0.25,
+          "top20": 0.25,
+          "top50": 0.416667,
+          "top100": 0.75
+        },
+        "sourceTop1": 0.666667,
+        "sourceTop3": 0.916667,
+        "parentTop1": 0.166667,
+        "parentTop3": 0.333333,
+        "parentTop10": 0.583333,
+        "failureStages": {
+          "RIGHT_SOURCE_WRONG_PARENT": 6,
+          "SOURCE_MISS": 4,
+          "SUCCESS": 2
+        }
+      },
+      "C_HYBRID": {
+        "caseCount": 12,
+        "targetReachability": {
+          "top1": 0,
+          "top3": 0.083333,
+          "top5": 0.25,
+          "top10": 0.333333,
+          "top20": 0.583333,
+          "top50": 0.833333,
+          "top100": 0.916667
+        },
+        "sourceTop1": 0.583333,
+        "sourceTop3": 1,
+        "parentTop1": 0,
+        "parentTop3": 0.666667,
+        "parentTop10": 1,
+        "failureStages": {
+          "RIGHT_SOURCE_WRONG_PARENT": 7,
+          "SOURCE_MISS": 5
+        }
+      },
+      "D_STRUCTURAL": {
+        "caseCount": 12,
+        "targetReachability": {
+          "top1": 0.083333,
+          "top3": 0.083333,
+          "top5": 0.25,
+          "top10": 0.416667,
+          "top20": 0.583333,
+          "top50": 0.916667,
+          "top100": 0.916667
+        },
+        "sourceTop1": 0.75,
+        "sourceTop3": 0.916667,
+        "parentTop1": 0.25,
+        "parentTop3": 0.583333,
+        "parentTop10": 0.916667,
+        "failureStages": {
+          "RIGHT_PARENT_WRONG_CHILD": 2,
+          "RIGHT_SOURCE_WRONG_PARENT": 6,
+          "SOURCE_MISS": 3,
+          "SUCCESS": 1
+        }
+      },
+      "caseCount": 12,
+      "sliceValue": "SEED_DEEP_REACHABLE"
+    },
+    "seedTop100Absent": {
+      "A_BM25": {
+        "caseCount": 6,
+        "targetReachability": {
+          "top1": 0,
+          "top3": 0,
+          "top5": 0.166667,
+          "top10": 0.166667,
+          "top20": 0.333333,
+          "top50": 0.333333,
+          "top100": 0.333333
+        },
+        "sourceTop1": 0.5,
+        "sourceTop3": 1,
+        "parentTop1": 0.333333,
+        "parentTop3": 0.333333,
+        "parentTop10": 0.5,
+        "failureStages": {
+          "RIGHT_PARENT_WRONG_CHILD": 2,
+          "RIGHT_SOURCE_WRONG_PARENT": 1,
+          "SOURCE_MISS": 3
+        }
+      },
+      "B_VECTOR": {
+        "caseCount": 6,
+        "targetReachability": {
+          "top1": 0.166667,
+          "top3": 0.166667,
+          "top5": 0.166667,
+          "top10": 0.166667,
+          "top20": 0.166667,
+          "top50": 0.333333,
+          "top100": 0.333333
+        },
+        "sourceTop1": 0.666667,
+        "sourceTop3": 1,
+        "parentTop1": 0.333333,
+        "parentTop3": 0.333333,
+        "parentTop10": 0.5,
+        "failureStages": {
+          "RIGHT_PARENT_WRONG_CHILD": 1,
+          "RIGHT_SOURCE_WRONG_PARENT": 2,
+          "SOURCE_MISS": 2,
+          "SUCCESS": 1
+        }
+      },
+      "C_HYBRID": {
+        "caseCount": 6,
+        "targetReachability": {
+          "top1": 0,
+          "top3": 0.166667,
+          "top5": 0.166667,
+          "top10": 0.166667,
+          "top20": 0.166667,
+          "top50": 0.333333,
+          "top100": 0.5
+        },
+        "sourceTop1": 0.5,
+        "sourceTop3": 1,
+        "parentTop1": 0.333333,
+        "parentTop3": 0.5,
+        "parentTop10": 0.666667,
+        "failureStages": {
+          "RIGHT_PARENT_WRONG_CHILD": 2,
+          "RIGHT_SOURCE_WRONG_PARENT": 1,
+          "SOURCE_MISS": 3
+        }
+      },
+      "D_STRUCTURAL": {
+        "caseCount": 6,
+        "targetReachability": {
+          "top1": 0,
+          "top3": 0.166667,
+          "top5": 0.166667,
+          "top10": 0.333333,
+          "top20": 0.333333,
+          "top50": 0.333333,
+          "top100": 0.5
+        },
+        "sourceTop1": 0.5,
+        "sourceTop3": 1,
+        "parentTop1": 0.333333,
+        "parentTop3": 0.5,
+        "parentTop10": 0.5,
+        "failureStages": {
+          "RIGHT_PARENT_WRONG_CHILD": 2,
+          "RIGHT_SOURCE_WRONG_PARENT": 1,
+          "SOURCE_MISS": 3
+        }
+      },
+      "caseCount": 6,
+      "sliceValue": "SEED_TOP100_ABSENT"
+    }
+  },
+  "rerankEffects": {
+    "improvedRankCount": 11,
+    "worsenedRankCount": 3,
+    "unchangedRankCount": 6,
+    "sourceChangedCount": 3,
+    "parentChangedCount": 4,
+    "wrongSectionRescueCount": 1,
+    "previouslyCorrectTop1Count": 0,
+    "previouslyCorrectTop1RetainedCount": 0,
+    "previouslyCorrectTop1DamagedCount": 0,
+    "sourceCorrectToWrongCount": 0,
+    "parentCorrectToWrongCount": 0,
+    "identifierPresentDamagedCount": 0,
+    "childRankingResidualCount": 8,
+    "top100AbsentCount": 4
+  },
+  "unionCandidateDiagnostics": {
+    "averageUnionSize": 176.25,
+    "maximumUnionSize": 199,
+    "unionReachability": 0.8,
+    "bm25OnlyRescueCount": 0,
+    "vectorOnlyRescueCount": 1,
+    "hybridOnlyRescueCount": 0
+  },
+  "thresholdAssessment": {
+    "successThresholds": {
+      "identifierAbsentTargetTop1AbsoluteImprovementMinimum": 0.1,
+      "parentTop1AbsoluteImprovementMinimum": 0.1,
+      "wrongSectionRescuesMinimum": 2,
+      "netWrongSectionRescuesMinimum": 1
+    },
+    "damageBudget": {
+      "previouslyCorrectTop1LostMaximumCount": 1,
+      "previouslyCorrectTop1LostMaximumRate": 0.1,
+      "sourceTop1AbsoluteRegressionMaximum": 0.05,
+      "sourceCorrectToWrongMaximumCount": 1,
+      "identifierPresentTop1AbsoluteRegressionMaximum": 0.05,
+      "identifierPresentDamagedMaximumCount": 1,
+      "parentCorrectToWrongMaximumCount": 1
+    },
+    "observedSuccess": {
+      "identifierAbsentTargetTop1AbsoluteImprovement": 0.1,
+      "parentTop1AbsoluteImprovement": 0.15,
+      "wrongSectionRescues": 1,
+      "netWrongSectionRescues": 1
+    },
+    "observedDamage": {
+      "previouslyCorrectTop1LostCount": 0,
+      "previouslyCorrectTop1LostRate": 0,
+      "sourceTop1AbsoluteRegression": 0,
+      "sourceCorrectToWrongCount": 0,
+      "identifierPresentTop1AbsoluteRegression": 0,
+      "identifierPresentDamagedCount": 0,
+      "parentCorrectToWrongCount": 0
+    },
+    "successChecks": {
+      "identifierAbsentImprovementMet": true,
+      "parentImprovementMet": true,
+      "wrongSectionRescuesMet": false,
+      "netWrongSectionRescuesMet": true
+    },
+    "damageChecks": {
+      "correctTop1LostCountWithinBudget": true,
+      "correctTop1LostRateWithinBudget": true,
+      "sourceTop1RegressionWithinBudget": true,
+      "sourceCorrectToWrongWithinBudget": true,
+      "identifierPresentRegressionWithinBudget": true,
+      "identifierPresentDamageWithinBudget": true,
+      "parentCorrectToWrongWithinBudget": true
+    },
+    "successThresholdsPassed": false,
+    "damageBudgetPassed": true
+  },
+  "cases": [
+    {
+      "caseId": "scv1-015-a",
+      "matchedPairId": "scv1-pair-015",
+      "sourceId": "naic-accounting-publications-appm-2026",
+      "modality": "PDF",
+      "structuralClassifications": {
+        "identifierPresence": "PRESENT",
+        "phrasing": "DIRECT",
+        "shortUnanchored": false,
+        "multipart": false,
+        "siblingPressure": true,
+        "tableOrProse": "PROSE",
+        "seedReachabilityClass": "DEEP_REACHABLE_11_100"
+      },
+      "systems": {
+        "A_BM25": {
+          "targetRank": 13,
+          "sourceRank": 1,
+          "parentRank": 3,
+          "failureStage": "RIGHT_SOURCE_WRONG_PARENT",
+          "topChildId": "seu-cef9d5470f0f41993c2f1ab4",
+          "topSourceId": "naic-accounting-publications-appm-2026",
+          "topParentId": "seu-18280feebb2556294527b6ce"
+        },
+        "B_VECTOR": {
+          "targetRank": 66,
+          "sourceRank": 1,
+          "parentRank": 27,
+          "failureStage": "RIGHT_SOURCE_WRONG_PARENT",
+          "topChildId": "seu-2775702e30aaf183d14e0418",
+          "topSourceId": "naic-accounting-publications-appm-2026",
+          "topParentId": "seu-18280feebb2556294527b6ce"
+        },
+        "C_HYBRID": {
+          "targetRank": 12,
+          "sourceRank": 1,
+          "parentRank": 3,
+          "failureStage": "RIGHT_SOURCE_WRONG_PARENT",
+          "topChildId": "seu-2775702e30aaf183d14e0418",
+          "topSourceId": "naic-accounting-publications-appm-2026",
+          "topParentId": "seu-18280feebb2556294527b6ce"
+        },
+        "D_STRUCTURAL": {
+          "targetRank": 14,
+          "sourceRank": 1,
+          "parentRank": 4,
+          "failureStage": "RIGHT_SOURCE_WRONG_PARENT",
+          "topChildId": "seu-2775702e30aaf183d14e0418",
+          "topSourceId": "naic-accounting-publications-appm-2026",
+          "topParentId": "seu-18280feebb2556294527b6ce"
+        }
+      },
+      "unionSize": 187,
+      "unionTargetReachable": true,
+      "unionTargetOrigins": [
+        "bm25",
+        "hybrid",
+        "vector"
+      ],
+      "rerankEffect": "WORSENED",
+      "sourceChanged": false,
+      "parentChanged": false,
+      "wrongSectionRescued": false,
+      "previouslyCorrectTop1Damaged": false,
+      "sourceCorrectToWrong": false,
+      "parentCorrectToWrong": false,
+      "childRankingResidual": true,
+      "top100Absent": false
+    },
+    {
+      "caseId": "scv1-015-b",
+      "matchedPairId": "scv1-pair-015",
+      "sourceId": "naic-accounting-publications-appm-2026",
+      "modality": "PDF",
+      "structuralClassifications": {
+        "identifierPresence": "ABSENT",
+        "phrasing": "PARAPHRASED",
+        "shortUnanchored": true,
+        "multipart": false,
+        "siblingPressure": true,
+        "tableOrProse": "PROSE",
+        "seedReachabilityClass": "DEEP_REACHABLE_11_100"
+      },
+      "systems": {
+        "A_BM25": {
+          "targetRank": 9,
+          "sourceRank": 1,
+          "parentRank": 5,
+          "failureStage": "RIGHT_SOURCE_WRONG_PARENT",
+          "topChildId": "seu-274b65cbc25bba79c8add3d3",
+          "topSourceId": "naic-accounting-publications-appm-2026",
+          "topParentId": "seu-3d31ce2052c7a8db53499255"
+        },
+        "B_VECTOR": {
+          "targetRank": 1,
+          "sourceRank": 1,
+          "parentRank": 1,
+          "failureStage": "SUCCESS",
+          "topChildId": "seu-5a1ad3640f8963ec0e5ebaaa",
+          "topSourceId": "naic-accounting-publications-appm-2026",
+          "topParentId": "seu-a7bd5b5862e79d9144c6d796"
+        },
+        "C_HYBRID": {
+          "targetRank": 2,
+          "sourceRank": 1,
+          "parentRank": 2,
+          "failureStage": "RIGHT_SOURCE_WRONG_PARENT",
+          "topChildId": "seu-08c94e49413fe897115929bf",
+          "topSourceId": "naic-accounting-publications-appm-2026",
+          "topParentId": "seu-3d31ce2052c7a8db53499255"
+        },
+        "D_STRUCTURAL": {
+          "targetRank": 1,
+          "sourceRank": 1,
+          "parentRank": 1,
+          "failureStage": "SUCCESS",
+          "topChildId": "seu-5a1ad3640f8963ec0e5ebaaa",
+          "topSourceId": "naic-accounting-publications-appm-2026",
+          "topParentId": "seu-a7bd5b5862e79d9144c6d796"
+        }
+      },
+      "unionSize": 187,
+      "unionTargetReachable": true,
+      "unionTargetOrigins": [
+        "bm25",
+        "hybrid",
+        "vector"
+      ],
+      "rerankEffect": "IMPROVED",
+      "sourceChanged": false,
+      "parentChanged": true,
+      "wrongSectionRescued": true,
+      "previouslyCorrectTop1Damaged": false,
+      "sourceCorrectToWrong": false,
+      "parentCorrectToWrong": false,
+      "childRankingResidual": false,
+      "top100Absent": false
+    },
+    {
+      "caseId": "scv1-016-a",
+      "matchedPairId": "scv1-pair-016",
+      "sourceId": "naic-accounting-publications-appm-2026",
+      "modality": "PDF",
+      "structuralClassifications": {
+        "identifierPresence": "PRESENT",
+        "phrasing": "DIRECT",
+        "shortUnanchored": false,
+        "multipart": false,
+        "siblingPressure": true,
+        "tableOrProse": "PROSE",
+        "seedReachabilityClass": "TOP100_ABSENT"
+      },
+      "systems": {
+        "A_BM25": {
+          "targetRank": 15,
+          "sourceRank": 1,
+          "parentRank": 1,
+          "failureStage": "RIGHT_PARENT_WRONG_CHILD",
+          "topChildId": "seu-7d5cb910fce6a0d502fa8e04",
+          "topSourceId": "naic-accounting-publications-appm-2026",
+          "topParentId": "seu-6d9c9525da70ca008555baf2"
+        },
+        "B_VECTOR": {
+          "targetRank": null,
+          "sourceRank": 1,
+          "parentRank": 1,
+          "failureStage": "RIGHT_PARENT_WRONG_CHILD",
+          "topChildId": "seu-7cc5710fd45e4a17cf9f7f56",
+          "topSourceId": "naic-accounting-publications-appm-2026",
+          "topParentId": "seu-6d9c9525da70ca008555baf2"
+        },
+        "C_HYBRID": {
+          "targetRank": 42,
+          "sourceRank": 1,
+          "parentRank": 1,
+          "failureStage": "RIGHT_PARENT_WRONG_CHILD",
+          "topChildId": "seu-7cc5710fd45e4a17cf9f7f56",
+          "topSourceId": "naic-accounting-publications-appm-2026",
+          "topParentId": "seu-6d9c9525da70ca008555baf2"
+        },
+        "D_STRUCTURAL": {
+          "targetRank": 9,
+          "sourceRank": 1,
+          "parentRank": 1,
+          "failureStage": "RIGHT_PARENT_WRONG_CHILD",
+          "topChildId": "seu-7cc5710fd45e4a17cf9f7f56",
+          "topSourceId": "naic-accounting-publications-appm-2026",
+          "topParentId": "seu-6d9c9525da70ca008555baf2"
+        }
+      },
+      "unionSize": 176,
+      "unionTargetReachable": true,
+      "unionTargetOrigins": [
+        "bm25",
+        "hybrid"
+      ],
+      "rerankEffect": "IMPROVED",
+      "sourceChanged": false,
+      "parentChanged": false,
+      "wrongSectionRescued": false,
+      "previouslyCorrectTop1Damaged": false,
+      "sourceCorrectToWrong": false,
+      "parentCorrectToWrong": false,
+      "childRankingResidual": false,
+      "top100Absent": false
+    },
+    {
+      "caseId": "scv1-016-b",
+      "matchedPairId": "scv1-pair-016",
+      "sourceId": "naic-accounting-publications-appm-2026",
+      "modality": "PDF",
+      "structuralClassifications": {
+        "identifierPresence": "ABSENT",
+        "phrasing": "PARAPHRASED",
+        "shortUnanchored": false,
+        "multipart": false,
+        "siblingPressure": true,
+        "tableOrProse": "PROSE",
+        "seedReachabilityClass": "TOP100_ABSENT"
+      },
+      "systems": {
+        "A_BM25": {
+          "targetRank": null,
+          "sourceRank": 1,
+          "parentRank": 6,
+          "failureStage": "RIGHT_SOURCE_WRONG_PARENT",
+          "topChildId": "seu-3a9b03c166244fe42d23a892",
+          "topSourceId": "naic-accounting-publications-appm-2026",
+          "topParentId": "seu-667a93c02758fc2395f2abec"
+        },
+        "B_VECTOR": {
+          "targetRank": null,
+          "sourceRank": 1,
+          "parentRank": 6,
+          "failureStage": "RIGHT_SOURCE_WRONG_PARENT",
+          "topChildId": "seu-5e5baf6059f4516bfaa10d2a",
+          "topSourceId": "naic-accounting-publications-appm-2026",
+          "topParentId": "seu-e1fe62ce388e8178887fc5fa"
+        },
+        "C_HYBRID": {
+          "targetRank": null,
+          "sourceRank": 1,
+          "parentRank": 2,
+          "failureStage": "RIGHT_SOURCE_WRONG_PARENT",
+          "topChildId": "seu-5e5baf6059f4516bfaa10d2a",
+          "topSourceId": "naic-accounting-publications-appm-2026",
+          "topParentId": "seu-e1fe62ce388e8178887fc5fa"
+        },
+        "D_STRUCTURAL": {
+          "targetRank": null,
+          "sourceRank": 1,
+          "parentRank": 3,
+          "failureStage": "RIGHT_SOURCE_WRONG_PARENT",
+          "topChildId": "seu-5e5baf6059f4516bfaa10d2a",
+          "topSourceId": "naic-accounting-publications-appm-2026",
+          "topParentId": "seu-e1fe62ce388e8178887fc5fa"
+        }
+      },
+      "unionSize": 186,
+      "unionTargetReachable": false,
+      "unionTargetOrigins": [],
+      "rerankEffect": "UNCHANGED_ABSENT",
+      "sourceChanged": false,
+      "parentChanged": false,
+      "wrongSectionRescued": false,
+      "previouslyCorrectTop1Damaged": false,
+      "sourceCorrectToWrong": false,
+      "parentCorrectToWrong": false,
+      "childRankingResidual": true,
+      "top100Absent": true
+    },
+    {
+      "caseId": "scv1-017-a",
+      "matchedPairId": "scv1-pair-017",
+      "sourceId": "naic-accounting-publications-appm-2026",
+      "modality": "PDF",
+      "structuralClassifications": {
+        "identifierPresence": "PRESENT",
+        "phrasing": "DIRECT",
+        "shortUnanchored": false,
+        "multipart": false,
+        "siblingPressure": true,
+        "tableOrProse": "PROSE",
+        "seedReachabilityClass": "SHALLOW_1_10"
+      },
+      "systems": {
+        "A_BM25": {
+          "targetRank": 11,
+          "sourceRank": 1,
+          "parentRank": 2,
+          "failureStage": "RIGHT_SOURCE_WRONG_PARENT",
+          "topChildId": "seu-ef483d5775055125d5ffb9e5",
+          "topSourceId": "naic-accounting-publications-appm-2026",
+          "topParentId": "seu-629256c702e74a85f6d30d89"
+        },
+        "B_VECTOR": {
+          "targetRank": 9,
+          "sourceRank": 1,
+          "parentRank": 1,
+          "failureStage": "RIGHT_PARENT_WRONG_CHILD",
+          "topChildId": "seu-9c0d51208eee314d25f2efd3",
+          "topSourceId": "naic-accounting-publications-appm-2026",
+          "topParentId": "seu-c2c23009f678763624e8751d"
+        },
+        "C_HYBRID": {
+          "targetRank": 9,
+          "sourceRank": 1,
+          "parentRank": 2,
+          "failureStage": "RIGHT_SOURCE_WRONG_PARENT",
+          "topChildId": "seu-ef483d5775055125d5ffb9e5",
+          "topSourceId": "naic-accounting-publications-appm-2026",
+          "topParentId": "seu-629256c702e74a85f6d30d89"
+        },
+        "D_STRUCTURAL": {
+          "targetRank": 6,
+          "sourceRank": 1,
+          "parentRank": 2,
+          "failureStage": "RIGHT_SOURCE_WRONG_PARENT",
+          "topChildId": "seu-ef483d5775055125d5ffb9e5",
+          "topSourceId": "naic-accounting-publications-appm-2026",
+          "topParentId": "seu-629256c702e74a85f6d30d89"
+        }
+      },
+      "unionSize": 162,
+      "unionTargetReachable": true,
+      "unionTargetOrigins": [
+        "bm25",
+        "hybrid",
+        "vector"
+      ],
+      "rerankEffect": "IMPROVED",
+      "sourceChanged": false,
+      "parentChanged": false,
+      "wrongSectionRescued": false,
+      "previouslyCorrectTop1Damaged": false,
+      "sourceCorrectToWrong": false,
+      "parentCorrectToWrong": false,
+      "childRankingResidual": false,
+      "top100Absent": false
+    },
+    {
+      "caseId": "scv1-017-b",
+      "matchedPairId": "scv1-pair-017",
+      "sourceId": "naic-accounting-publications-appm-2026",
+      "modality": "PDF",
+      "structuralClassifications": {
+        "identifierPresence": "ABSENT",
+        "phrasing": "PARAPHRASED",
+        "shortUnanchored": false,
+        "multipart": false,
+        "siblingPressure": true,
+        "tableOrProse": "PROSE",
+        "seedReachabilityClass": "SHALLOW_1_10"
+      },
+      "systems": {
+        "A_BM25": {
+          "targetRank": null,
+          "sourceRank": 1,
+          "parentRank": 1,
+          "failureStage": "RIGHT_PARENT_WRONG_CHILD",
+          "topChildId": "seu-c6a74e127c775ae11ff5251c",
+          "topSourceId": "naic-accounting-publications-appm-2026",
+          "topParentId": "seu-c2c23009f678763624e8751d"
+        },
+        "B_VECTOR": {
+          "targetRank": 90,
+          "sourceRank": 1,
+          "parentRank": 1,
+          "failureStage": "RIGHT_PARENT_WRONG_CHILD",
+          "topChildId": "seu-9c0d51208eee314d25f2efd3",
+          "topSourceId": "naic-accounting-publications-appm-2026",
+          "topParentId": "seu-c2c23009f678763624e8751d"
+        },
+        "C_HYBRID": {
+          "targetRank": null,
+          "sourceRank": 1,
+          "parentRank": 1,
+          "failureStage": "RIGHT_PARENT_WRONG_CHILD",
+          "topChildId": "seu-c6a74e127c775ae11ff5251c",
+          "topSourceId": "naic-accounting-publications-appm-2026",
+          "topParentId": "seu-c2c23009f678763624e8751d"
+        },
+        "D_STRUCTURAL": {
+          "targetRank": 48,
+          "sourceRank": 1,
+          "parentRank": 1,
+          "failureStage": "RIGHT_PARENT_WRONG_CHILD",
+          "topChildId": "seu-c6a74e127c775ae11ff5251c",
+          "topSourceId": "naic-accounting-publications-appm-2026",
+          "topParentId": "seu-c2c23009f678763624e8751d"
+        }
+      },
+      "unionSize": 199,
+      "unionTargetReachable": true,
+      "unionTargetOrigins": [
+        "vector"
+      ],
+      "rerankEffect": "IMPROVED",
+      "sourceChanged": false,
+      "parentChanged": false,
+      "wrongSectionRescued": false,
+      "previouslyCorrectTop1Damaged": false,
+      "sourceCorrectToWrong": false,
+      "parentCorrectToWrong": false,
+      "childRankingResidual": true,
+      "top100Absent": false
+    },
+    {
+      "caseId": "scv1-018-a",
+      "matchedPairId": "scv1-pair-018",
+      "sourceId": "naic-life-fraternal-reporting-asb-life-2025",
+      "modality": "PDF",
+      "structuralClassifications": {
+        "identifierPresence": "PRESENT",
+        "phrasing": "DIRECT",
+        "shortUnanchored": false,
+        "multipart": false,
+        "siblingPressure": true,
+        "tableOrProse": "PROSE",
+        "seedReachabilityClass": "TOP100_ABSENT"
+      },
+      "systems": {
+        "A_BM25": {
+          "targetRank": null,
+          "sourceRank": 2,
+          "parentRank": null,
+          "failureStage": "SOURCE_MISS",
+          "topChildId": "seu-e281a2cdea2cd25caa034666",
+          "topSourceId": "naic-life-fraternal-reporting-qsi-life-2026",
+          "topParentId": "seu-6ebd5a771a94928a2cd4cc39"
+        },
+        "B_VECTOR": {
+          "targetRank": 50,
+          "sourceRank": 2,
+          "parentRank": 23,
+          "failureStage": "SOURCE_MISS",
+          "topChildId": "seu-09766e3446ed51078a3273f1",
+          "topSourceId": "naic-life-fraternal-reporting-qsi-life-2026",
+          "topParentId": "seu-e51c784067dc0d6db2146c11"
+        },
+        "C_HYBRID": {
+          "targetRank": 58,
+          "sourceRank": 2,
+          "parentRank": 14,
+          "failureStage": "SOURCE_MISS",
+          "topChildId": "seu-09766e3446ed51078a3273f1",
+          "topSourceId": "naic-life-fraternal-reporting-qsi-life-2026",
+          "topParentId": "seu-e51c784067dc0d6db2146c11"
+        },
+        "D_STRUCTURAL": {
+          "targetRank": 78,
+          "sourceRank": 2,
+          "parentRank": 15,
+          "failureStage": "SOURCE_MISS",
+          "topChildId": "seu-12cd6501746dcb2f5284b996",
+          "topSourceId": "naic-life-fraternal-reporting-qsi-life-2026",
+          "topParentId": "seu-e51c784067dc0d6db2146c11"
+        }
+      },
+      "unionSize": 151,
+      "unionTargetReachable": true,
+      "unionTargetOrigins": [
+        "hybrid",
+        "vector"
+      ],
+      "rerankEffect": "WORSENED",
+      "sourceChanged": false,
+      "parentChanged": false,
+      "wrongSectionRescued": false,
+      "previouslyCorrectTop1Damaged": false,
+      "sourceCorrectToWrong": false,
+      "parentCorrectToWrong": false,
+      "childRankingResidual": false,
+      "top100Absent": false
+    },
+    {
+      "caseId": "scv1-018-b",
+      "matchedPairId": "scv1-pair-018",
+      "sourceId": "naic-life-fraternal-reporting-asb-life-2025",
+      "modality": "PDF",
+      "structuralClassifications": {
+        "identifierPresence": "ABSENT",
+        "phrasing": "PARAPHRASED",
+        "shortUnanchored": true,
+        "multipart": false,
+        "siblingPressure": true,
+        "tableOrProse": "PROSE",
+        "seedReachabilityClass": "TOP100_ABSENT"
+      },
+      "systems": {
+        "A_BM25": {
+          "targetRank": null,
+          "sourceRank": 3,
+          "parentRank": null,
+          "failureStage": "SOURCE_MISS",
+          "topChildId": "seu-4cf38af3e53c9ce7fbd20a9e",
+          "topSourceId": "naic-life-fraternal-reporting-qsi-life-2026",
+          "topParentId": "seu-e27b1bdadb7d969cad504ab7"
+        },
+        "B_VECTOR": {
+          "targetRank": null,
+          "sourceRank": 3,
+          "parentRank": null,
+          "failureStage": "SOURCE_MISS",
+          "topChildId": "seu-4cf38af3e53c9ce7fbd20a9e",
+          "topSourceId": "naic-life-fraternal-reporting-qsi-life-2026",
+          "topParentId": "seu-e27b1bdadb7d969cad504ab7"
+        },
+        "C_HYBRID": {
+          "targetRank": null,
+          "sourceRank": 3,
+          "parentRank": null,
+          "failureStage": "SOURCE_MISS",
+          "topChildId": "seu-4cf38af3e53c9ce7fbd20a9e",
+          "topSourceId": "naic-life-fraternal-reporting-qsi-life-2026",
+          "topParentId": "seu-e27b1bdadb7d969cad504ab7"
+        },
+        "D_STRUCTURAL": {
+          "targetRank": null,
+          "sourceRank": 3,
+          "parentRank": null,
+          "failureStage": "SOURCE_MISS",
+          "topChildId": "seu-4cf38af3e53c9ce7fbd20a9e",
+          "topSourceId": "naic-life-fraternal-reporting-qsi-life-2026",
+          "topParentId": "seu-e27b1bdadb7d969cad504ab7"
+        }
+      },
+      "unionSize": 182,
+      "unionTargetReachable": false,
+      "unionTargetOrigins": [],
+      "rerankEffect": "UNCHANGED_ABSENT",
+      "sourceChanged": false,
+      "parentChanged": false,
+      "wrongSectionRescued": false,
+      "previouslyCorrectTop1Damaged": false,
+      "sourceCorrectToWrong": false,
+      "parentCorrectToWrong": false,
+      "childRankingResidual": null,
+      "top100Absent": true
+    },
+    {
+      "caseId": "scv1-019-a",
+      "matchedPairId": "scv1-pair-019",
+      "sourceId": "naic-life-fraternal-reporting-qsi-life-2026",
+      "modality": "PDF",
+      "structuralClassifications": {
+        "identifierPresence": "PRESENT",
+        "phrasing": "DIRECT",
+        "shortUnanchored": false,
+        "multipart": false,
+        "siblingPressure": true,
+        "tableOrProse": "PROSE",
+        "seedReachabilityClass": "DEEP_REACHABLE_11_100"
+      },
+      "systems": {
+        "A_BM25": {
+          "targetRank": 16,
+          "sourceRank": 1,
+          "parentRank": 4,
+          "failureStage": "RIGHT_SOURCE_WRONG_PARENT",
+          "topChildId": "seu-c4f46f5dc41a2f585f4fe70b",
+          "topSourceId": "naic-life-fraternal-reporting-qsi-life-2026",
+          "topParentId": "seu-2eb7d837c85c52f670d4e89f"
+        },
+        "B_VECTOR": {
+          "targetRank": 51,
+          "sourceRank": 1,
+          "parentRank": 30,
+          "failureStage": "RIGHT_SOURCE_WRONG_PARENT",
+          "topChildId": "seu-d4883f8aba4802a7221cbc27",
+          "topSourceId": "naic-life-fraternal-reporting-qsi-life-2026",
+          "topParentId": "seu-0f19a5fa2d28800a1a1398e4"
+        },
+        "C_HYBRID": {
+          "targetRank": 5,
+          "sourceRank": 2,
+          "parentRank": 3,
+          "failureStage": "SOURCE_MISS",
+          "topChildId": "seu-5fcffe7684603e3109200b19",
+          "topSourceId": "naic-accounting-publications-appm-2026",
+          "topParentId": "seu-16e62c855548f89a89508509"
+        },
+        "D_STRUCTURAL": {
+          "targetRank": 35,
+          "sourceRank": 1,
+          "parentRank": 1,
+          "failureStage": "RIGHT_PARENT_WRONG_CHILD",
+          "topChildId": "seu-faf74cd2ca9490a1655533f4",
+          "topSourceId": "naic-life-fraternal-reporting-qsi-life-2026",
+          "topParentId": "seu-e35f6363b55902cc793b72d5"
+        }
+      },
+      "unionSize": 179,
+      "unionTargetReachable": true,
+      "unionTargetOrigins": [
+        "bm25",
+        "hybrid",
+        "vector"
+      ],
+      "rerankEffect": "WORSENED",
+      "sourceChanged": true,
+      "parentChanged": true,
+      "wrongSectionRescued": false,
+      "previouslyCorrectTop1Damaged": false,
+      "sourceCorrectToWrong": false,
+      "parentCorrectToWrong": false,
+      "childRankingResidual": true,
+      "top100Absent": false
+    },
+    {
+      "caseId": "scv1-019-b",
+      "matchedPairId": "scv1-pair-019",
+      "sourceId": "naic-life-fraternal-reporting-qsi-life-2026",
+      "modality": "PDF",
+      "structuralClassifications": {
+        "identifierPresence": "ABSENT",
+        "phrasing": "PARAPHRASED",
+        "shortUnanchored": true,
+        "multipart": false,
+        "siblingPressure": true,
+        "tableOrProse": "PROSE",
+        "seedReachabilityClass": "DEEP_REACHABLE_11_100"
+      },
+      "systems": {
+        "A_BM25": {
+          "targetRank": 44,
+          "sourceRank": 2,
+          "parentRank": 29,
+          "failureStage": "SOURCE_MISS",
+          "topChildId": "seu-afecda9be619b2713e26e42b",
+          "topSourceId": "naic-accounting-publications-appm-2026",
+          "topParentId": "seu-a81030e4f8e5fc339f3e1853"
+        },
+        "B_VECTOR": {
+          "targetRank": 40,
+          "sourceRank": 2,
+          "parentRank": 21,
+          "failureStage": "SOURCE_MISS",
+          "topChildId": "seu-d8ad92cbe960d0bddf218dfb",
+          "topSourceId": "naic-accounting-publications-appm-2026",
+          "topParentId": "seu-16e62c855548f89a89508509"
+        },
+        "C_HYBRID": {
+          "targetRank": 12,
+          "sourceRank": 2,
+          "parentRank": 10,
+          "failureStage": "SOURCE_MISS",
+          "topChildId": "seu-654de26df24d330b6e279e42",
+          "topSourceId": "naic-accounting-publications-appm-2026",
+          "topParentId": "seu-f40675681223e3ff722f876a"
+        },
+        "D_STRUCTURAL": {
+          "targetRank": 7,
+          "sourceRank": 2,
+          "parentRank": 6,
+          "failureStage": "SOURCE_MISS",
+          "topChildId": "seu-654de26df24d330b6e279e42",
+          "topSourceId": "naic-accounting-publications-appm-2026",
+          "topParentId": "seu-f40675681223e3ff722f876a"
+        }
+      },
+      "unionSize": 185,
+      "unionTargetReachable": true,
+      "unionTargetOrigins": [
+        "bm25",
+        "hybrid",
+        "vector"
+      ],
+      "rerankEffect": "IMPROVED",
+      "sourceChanged": false,
+      "parentChanged": false,
+      "wrongSectionRescued": false,
+      "previouslyCorrectTop1Damaged": false,
+      "sourceCorrectToWrong": false,
+      "parentCorrectToWrong": false,
+      "childRankingResidual": false,
+      "top100Absent": false
+    },
+    {
+      "caseId": "scv1-020-a",
+      "matchedPairId": "scv1-pair-020",
+      "sourceId": "naic-pbr-vm-20-vm-31-vm-51-vm20-tables-2026-f-g",
+      "modality": "XLSX",
+      "structuralClassifications": {
+        "identifierPresence": "PRESENT",
+        "phrasing": "DIRECT",
+        "shortUnanchored": false,
+        "multipart": true,
+        "siblingPressure": true,
+        "tableOrProse": "TABLE",
+        "seedReachabilityClass": "DEEP_REACHABLE_11_100"
+      },
+      "systems": {
+        "A_BM25": {
+          "targetRank": 19,
+          "sourceRank": 1,
+          "parentRank": 1,
+          "failureStage": "RIGHT_PARENT_WRONG_CHILD",
+          "topChildId": "seu-da7997b002c79ced0e67a371",
+          "topSourceId": "naic-pbr-vm-20-vm-31-vm-51-vm20-tables-2026-f-g",
+          "topParentId": "seu-446ec92b4a96eabad9dec2aa"
+        },
+        "B_VECTOR": {
+          "targetRank": 1,
+          "sourceRank": 1,
+          "parentRank": 1,
+          "failureStage": "SUCCESS",
+          "topChildId": "seu-04fca4d563a48b2c580217e7",
+          "topSourceId": "naic-pbr-vm-20-vm-31-vm-51-vm20-tables-2026-f-g",
+          "topParentId": "seu-446ec92b4a96eabad9dec2aa"
+        },
+        "C_HYBRID": {
+          "targetRank": 5,
+          "sourceRank": 1,
+          "parentRank": 2,
+          "failureStage": "RIGHT_SOURCE_WRONG_PARENT",
+          "topChildId": "seu-014adf0ec8a8cbcb6e26b066",
+          "topSourceId": "naic-pbr-vm-20-vm-31-vm-51-vm20-tables-2026-f-g",
+          "topParentId": "seu-a2f034ab31037da60b9222a4"
+        },
+        "D_STRUCTURAL": {
+          "targetRank": 5,
+          "sourceRank": 1,
+          "parentRank": 2,
+          "failureStage": "RIGHT_SOURCE_WRONG_PARENT",
+          "topChildId": "seu-014adf0ec8a8cbcb6e26b066",
+          "topSourceId": "naic-pbr-vm-20-vm-31-vm-51-vm20-tables-2026-f-g",
+          "topParentId": "seu-a2f034ab31037da60b9222a4"
+        }
+      },
+      "unionSize": 174,
+      "unionTargetReachable": true,
+      "unionTargetOrigins": [
+        "bm25",
+        "hybrid",
+        "vector"
+      ],
+      "rerankEffect": "UNCHANGED",
+      "sourceChanged": false,
+      "parentChanged": false,
+      "wrongSectionRescued": false,
+      "previouslyCorrectTop1Damaged": false,
+      "sourceCorrectToWrong": false,
+      "parentCorrectToWrong": false,
+      "childRankingResidual": false,
+      "top100Absent": false
+    },
+    {
+      "caseId": "scv1-020-b",
+      "matchedPairId": "scv1-pair-020",
+      "sourceId": "naic-pbr-vm-20-vm-31-vm-51-vm20-tables-2026-f-g",
+      "modality": "XLSX",
+      "structuralClassifications": {
+        "identifierPresence": "ABSENT",
+        "phrasing": "PARAPHRASED",
+        "shortUnanchored": false,
+        "multipart": true,
+        "siblingPressure": true,
+        "tableOrProse": "TABLE",
+        "seedReachabilityClass": "DEEP_REACHABLE_11_100"
+      },
+      "systems": {
+        "A_BM25": {
+          "targetRank": null,
+          "sourceRank": 3,
+          "parentRank": 23,
+          "failureStage": "SOURCE_MISS",
+          "topChildId": "seu-66c698ebe55cb8f2e46d5de1",
+          "topSourceId": "naic-life-fraternal-reporting-qsi-life-2026",
+          "topParentId": "seu-701da13712b474e5427b623d"
+        },
+        "B_VECTOR": {
+          "targetRank": 3,
+          "sourceRank": 3,
+          "parentRank": 3,
+          "failureStage": "SOURCE_MISS",
+          "topChildId": "seu-5ba8e10937b7902e85d32772",
+          "topSourceId": "naic-accounting-publications-appm-2026",
+          "topParentId": "seu-e501db7ca81f3b8e375eddff"
+        },
+        "C_HYBRID": {
+          "targetRank": 6,
+          "sourceRank": 3,
+          "parentRank": 6,
+          "failureStage": "SOURCE_MISS",
+          "topChildId": "seu-c66b82e507d937a284762725",
+          "topSourceId": "naic-accounting-publications-appm-2026",
+          "topParentId": "seu-d105ee27b449564a28c76654"
+        },
+        "D_STRUCTURAL": {
+          "targetRank": 4,
+          "sourceRank": 3,
+          "parentRank": 4,
+          "failureStage": "SOURCE_MISS",
+          "topChildId": "seu-c66b82e507d937a284762725",
+          "topSourceId": "naic-accounting-publications-appm-2026",
+          "topParentId": "seu-d105ee27b449564a28c76654"
+        }
+      },
+      "unionSize": 188,
+      "unionTargetReachable": true,
+      "unionTargetOrigins": [
+        "hybrid",
+        "vector"
+      ],
+      "rerankEffect": "IMPROVED",
+      "sourceChanged": false,
+      "parentChanged": false,
+      "wrongSectionRescued": false,
+      "previouslyCorrectTop1Damaged": false,
+      "sourceCorrectToWrong": false,
+      "parentCorrectToWrong": false,
+      "childRankingResidual": false,
+      "top100Absent": false
+    },
+    {
+      "caseId": "scv1-021-a",
+      "matchedPairId": "scv1-pair-021",
+      "sourceId": "naic-pbr-vm-20-vm-31-vm-51-vm20-tables-2026-f-g",
+      "modality": "XLSX",
+      "structuralClassifications": {
+        "identifierPresence": "PRESENT",
+        "phrasing": "DIRECT",
+        "shortUnanchored": false,
+        "multipart": false,
+        "siblingPressure": true,
+        "tableOrProse": "TABLE",
+        "seedReachabilityClass": "DEEP_REACHABLE_11_100"
+      },
+      "systems": {
+        "A_BM25": {
+          "targetRank": 22,
+          "sourceRank": 2,
+          "parentRank": 3,
+          "failureStage": "SOURCE_MISS",
+          "topChildId": "seu-e840739cde6fc77179c08bd4",
+          "topSourceId": "naic-accounting-publications-appm-2026",
+          "topParentId": "seu-3018feb972e5fb5bb5b33aaf"
+        },
+        "B_VECTOR": {
+          "targetRank": null,
+          "sourceRank": 6,
+          "parentRank": null,
+          "failureStage": "SOURCE_MISS",
+          "topChildId": "seu-01f8eb8ae67f3823a095bbda",
+          "topSourceId": "naic-accounting-publications-appm-2026",
+          "topParentId": "seu-29e23887275c812e1fb7fb3e"
+        },
+        "C_HYBRID": {
+          "targetRank": 47,
+          "sourceRank": 3,
+          "parentRank": 4,
+          "failureStage": "SOURCE_MISS",
+          "topChildId": "seu-01f8eb8ae67f3823a095bbda",
+          "topSourceId": "naic-accounting-publications-appm-2026",
+          "topParentId": "seu-29e23887275c812e1fb7fb3e"
+        },
+        "D_STRUCTURAL": {
+          "targetRank": 10,
+          "sourceRank": 1,
+          "parentRank": 1,
+          "failureStage": "RIGHT_PARENT_WRONG_CHILD",
+          "topChildId": "seu-1be214c827e2ab77356ffdfd",
+          "topSourceId": "naic-pbr-vm-20-vm-31-vm-51-vm20-tables-2026-f-g",
+          "topParentId": "seu-4192659d757ee3bd003ee4e5"
+        }
+      },
+      "unionSize": 199,
+      "unionTargetReachable": true,
+      "unionTargetOrigins": [
+        "bm25",
+        "hybrid"
+      ],
+      "rerankEffect": "IMPROVED",
+      "sourceChanged": true,
+      "parentChanged": true,
+      "wrongSectionRescued": false,
+      "previouslyCorrectTop1Damaged": false,
+      "sourceCorrectToWrong": false,
+      "parentCorrectToWrong": false,
+      "childRankingResidual": false,
+      "top100Absent": false
+    },
+    {
+      "caseId": "scv1-021-b",
+      "matchedPairId": "scv1-pair-021",
+      "sourceId": "naic-pbr-vm-20-vm-31-vm-51-vm20-tables-2026-f-g",
+      "modality": "XLSX",
+      "structuralClassifications": {
+        "identifierPresence": "ABSENT",
+        "phrasing": "PARAPHRASED",
+        "shortUnanchored": false,
+        "multipart": false,
+        "siblingPressure": true,
+        "tableOrProse": "TABLE",
+        "seedReachabilityClass": "DEEP_REACHABLE_11_100"
+      },
+      "systems": {
+        "A_BM25": {
+          "targetRank": null,
+          "sourceRank": 3,
+          "parentRank": 8,
+          "failureStage": "SOURCE_MISS",
+          "topChildId": "seu-0acb5c6ee7019ee33d3dedae",
+          "topSourceId": "naic-accounting-publications-appm-2026",
+          "topParentId": "seu-0027b64b16707783d5384f52"
+        },
+        "B_VECTOR": {
+          "targetRank": null,
+          "sourceRank": 3,
+          "parentRank": 14,
+          "failureStage": "SOURCE_MISS",
+          "topChildId": "seu-8f6ce0950bd0403adaf3e54d",
+          "topSourceId": "naic-accounting-publications-appm-2026",
+          "topParentId": "seu-d105ee27b449564a28c76654"
+        },
+        "C_HYBRID": {
+          "targetRank": null,
+          "sourceRank": 2,
+          "parentRank": 4,
+          "failureStage": "SOURCE_MISS",
+          "topChildId": "seu-8f6ce0950bd0403adaf3e54d",
+          "topSourceId": "naic-accounting-publications-appm-2026",
+          "topParentId": "seu-d105ee27b449564a28c76654"
+        },
+        "D_STRUCTURAL": {
+          "targetRank": null,
+          "sourceRank": 5,
+          "parentRank": 84,
+          "failureStage": "SOURCE_MISS",
+          "topChildId": "seu-39bd0267c183901d743bf310",
+          "topSourceId": "society-of-actuaries-experience-studies-soa-2015-vbt-improvement",
+          "topParentId": "seu-28a96d45cd4eb98943ab6303"
+        }
+      },
+      "unionSize": 184,
+      "unionTargetReachable": false,
+      "unionTargetOrigins": [],
+      "rerankEffect": "UNCHANGED_ABSENT",
+      "sourceChanged": true,
+      "parentChanged": true,
+      "wrongSectionRescued": false,
+      "previouslyCorrectTop1Damaged": false,
+      "sourceCorrectToWrong": false,
+      "parentCorrectToWrong": false,
+      "childRankingResidual": false,
+      "top100Absent": true
+    },
+    {
+      "caseId": "scv1-022-a",
+      "matchedPairId": "scv1-pair-022",
+      "sourceId": "naic-pbr-vm-20-vm-31-vm-51-vm31-templates-reports",
+      "modality": "XLSX",
+      "structuralClassifications": {
+        "identifierPresence": "PRESENT",
+        "phrasing": "DIRECT",
+        "shortUnanchored": false,
+        "multipart": false,
+        "siblingPressure": true,
+        "tableOrProse": "TABLE",
+        "seedReachabilityClass": "TOP100_ABSENT"
+      },
+      "systems": {
+        "A_BM25": {
+          "targetRank": 4,
+          "sourceRank": 1,
+          "parentRank": 1,
+          "failureStage": "RIGHT_PARENT_WRONG_CHILD",
+          "topChildId": "seu-004c0a75e3723ff0e33f7609",
+          "topSourceId": "naic-pbr-vm-20-vm-31-vm-51-vm31-templates-reports",
+          "topParentId": "seu-99381239ae1ffb085dab0f8c"
+        },
+        "B_VECTOR": {
+          "targetRank": 1,
+          "sourceRank": 1,
+          "parentRank": 1,
+          "failureStage": "SUCCESS",
+          "topChildId": "seu-3cbcc25ee84ff4f21f19c730",
+          "topSourceId": "naic-pbr-vm-20-vm-31-vm-51-vm31-templates-reports",
+          "topParentId": "seu-99381239ae1ffb085dab0f8c"
+        },
+        "C_HYBRID": {
+          "targetRank": 2,
+          "sourceRank": 1,
+          "parentRank": 1,
+          "failureStage": "RIGHT_PARENT_WRONG_CHILD",
+          "topChildId": "seu-004c0a75e3723ff0e33f7609",
+          "topSourceId": "naic-pbr-vm-20-vm-31-vm-51-vm31-templates-reports",
+          "topParentId": "seu-99381239ae1ffb085dab0f8c"
+        },
+        "D_STRUCTURAL": {
+          "targetRank": 2,
+          "sourceRank": 1,
+          "parentRank": 1,
+          "failureStage": "RIGHT_PARENT_WRONG_CHILD",
+          "topChildId": "seu-004c0a75e3723ff0e33f7609",
+          "topSourceId": "naic-pbr-vm-20-vm-31-vm-51-vm31-templates-reports",
+          "topParentId": "seu-99381239ae1ffb085dab0f8c"
+        }
+      },
+      "unionSize": 187,
+      "unionTargetReachable": true,
+      "unionTargetOrigins": [
+        "bm25",
+        "hybrid",
+        "vector"
+      ],
+      "rerankEffect": "UNCHANGED",
+      "sourceChanged": false,
+      "parentChanged": false,
+      "wrongSectionRescued": false,
+      "previouslyCorrectTop1Damaged": false,
+      "sourceCorrectToWrong": false,
+      "parentCorrectToWrong": false,
+      "childRankingResidual": false,
+      "top100Absent": false
+    },
+    {
+      "caseId": "scv1-022-b",
+      "matchedPairId": "scv1-pair-022",
+      "sourceId": "naic-pbr-vm-20-vm-31-vm-51-vm31-templates-reports",
+      "modality": "XLSX",
+      "structuralClassifications": {
+        "identifierPresence": "ABSENT",
+        "phrasing": "PARAPHRASED",
+        "shortUnanchored": true,
+        "multipart": false,
+        "siblingPressure": true,
+        "tableOrProse": "TABLE",
+        "seedReachabilityClass": "TOP100_ABSENT"
+      },
+      "systems": {
+        "A_BM25": {
+          "targetRank": null,
+          "sourceRank": 3,
+          "parentRank": 22,
+          "failureStage": "SOURCE_MISS",
+          "topChildId": "seu-9d22d01f053fb02ff5f8c01b",
+          "topSourceId": "naic-life-fraternal-reporting-qsi-life-2026",
+          "topParentId": "seu-9efeb5a739c817691422d263"
+        },
+        "B_VECTOR": {
+          "targetRank": null,
+          "sourceRank": 1,
+          "parentRank": 15,
+          "failureStage": "RIGHT_SOURCE_WRONG_PARENT",
+          "topChildId": "seu-637c7e862d9c29e564edf803",
+          "topSourceId": "naic-pbr-vm-20-vm-31-vm-51-vm31-templates-reports",
+          "topParentId": "seu-7e44ef5dc7ad7fa2a6983d6a"
+        },
+        "C_HYBRID": {
+          "targetRank": null,
+          "sourceRank": 3,
+          "parentRank": 7,
+          "failureStage": "SOURCE_MISS",
+          "topChildId": "seu-9d22d01f053fb02ff5f8c01b",
+          "topSourceId": "naic-life-fraternal-reporting-qsi-life-2026",
+          "topParentId": "seu-9efeb5a739c817691422d263"
+        },
+        "D_STRUCTURAL": {
+          "targetRank": null,
+          "sourceRank": 2,
+          "parentRank": 26,
+          "failureStage": "SOURCE_MISS",
+          "topChildId": "seu-9d22d01f053fb02ff5f8c01b",
+          "topSourceId": "naic-life-fraternal-reporting-qsi-life-2026",
+          "topParentId": "seu-9efeb5a739c817691422d263"
+        }
+      },
+      "unionSize": 179,
+      "unionTargetReachable": false,
+      "unionTargetOrigins": [],
+      "rerankEffect": "UNCHANGED_ABSENT",
+      "sourceChanged": false,
+      "parentChanged": false,
+      "wrongSectionRescued": false,
+      "previouslyCorrectTop1Damaged": false,
+      "sourceCorrectToWrong": false,
+      "parentCorrectToWrong": false,
+      "childRankingResidual": false,
+      "top100Absent": true
+    },
+    {
+      "caseId": "scv1-023-a",
+      "matchedPairId": "scv1-pair-023",
+      "sourceId": "society-of-actuaries-experience-studies-soa-2015-vbt-improvement",
+      "modality": "XLSX",
+      "structuralClassifications": {
+        "identifierPresence": "PRESENT",
+        "phrasing": "DIRECT",
+        "shortUnanchored": false,
+        "multipart": true,
+        "siblingPressure": true,
+        "tableOrProse": "TABLE",
+        "seedReachabilityClass": "DEEP_REACHABLE_11_100"
+      },
+      "systems": {
+        "A_BM25": {
+          "targetRank": 26,
+          "sourceRank": 1,
+          "parentRank": 1,
+          "failureStage": "RIGHT_PARENT_WRONG_CHILD",
+          "topChildId": "seu-60086fe6a0770ac88590a4c4",
+          "topSourceId": "society-of-actuaries-experience-studies-soa-2015-vbt-improvement",
+          "topParentId": "seu-dd22abe8495474c1670a7995"
+        },
+        "B_VECTOR": {
+          "targetRank": 66,
+          "sourceRank": 1,
+          "parentRank": 8,
+          "failureStage": "RIGHT_SOURCE_WRONG_PARENT",
+          "topChildId": "seu-7608d56a518b7077530efa33",
+          "topSourceId": "society-of-actuaries-experience-studies-soa-2015-vbt-improvement",
+          "topParentId": "seu-9d19e9d952fb1c27edb5e44a"
+        },
+        "C_HYBRID": {
+          "targetRank": 15,
+          "sourceRank": 1,
+          "parentRank": 2,
+          "failureStage": "RIGHT_SOURCE_WRONG_PARENT",
+          "topChildId": "seu-7608d56a518b7077530efa33",
+          "topSourceId": "society-of-actuaries-experience-studies-soa-2015-vbt-improvement",
+          "topParentId": "seu-9d19e9d952fb1c27edb5e44a"
+        },
+        "D_STRUCTURAL": {
+          "targetRank": 11,
+          "sourceRank": 1,
+          "parentRank": 2,
+          "failureStage": "RIGHT_SOURCE_WRONG_PARENT",
+          "topChildId": "seu-7608d56a518b7077530efa33",
+          "topSourceId": "society-of-actuaries-experience-studies-soa-2015-vbt-improvement",
+          "topParentId": "seu-9d19e9d952fb1c27edb5e44a"
+        }
+      },
+      "unionSize": 155,
+      "unionTargetReachable": true,
+      "unionTargetOrigins": [
+        "bm25",
+        "hybrid",
+        "vector"
+      ],
+      "rerankEffect": "IMPROVED",
+      "sourceChanged": false,
+      "parentChanged": false,
+      "wrongSectionRescued": false,
+      "previouslyCorrectTop1Damaged": false,
+      "sourceCorrectToWrong": false,
+      "parentCorrectToWrong": false,
+      "childRankingResidual": true,
+      "top100Absent": false
+    },
+    {
+      "caseId": "scv1-023-b",
+      "matchedPairId": "scv1-pair-023",
+      "sourceId": "society-of-actuaries-experience-studies-soa-2015-vbt-improvement",
+      "modality": "XLSX",
+      "structuralClassifications": {
+        "identifierPresence": "ABSENT",
+        "phrasing": "PARAPHRASED",
+        "shortUnanchored": false,
+        "multipart": true,
+        "siblingPressure": true,
+        "tableOrProse": "TABLE",
+        "seedReachabilityClass": "DEEP_REACHABLE_11_100"
+      },
+      "systems": {
+        "A_BM25": {
+          "targetRank": 84,
+          "sourceRank": 3,
+          "parentRank": 5,
+          "failureStage": "SOURCE_MISS",
+          "topChildId": "seu-e7287749135c7c036cda2bbc",
+          "topSourceId": "naic-life-fraternal-reporting-qsi-life-2026",
+          "topParentId": "seu-701da13712b474e5427b623d"
+        },
+        "B_VECTOR": {
+          "targetRank": 54,
+          "sourceRank": 1,
+          "parentRank": 4,
+          "failureStage": "RIGHT_SOURCE_WRONG_PARENT",
+          "topChildId": "seu-0343cd3d08c0cfe043a7e87c",
+          "topSourceId": "society-of-actuaries-experience-studies-soa-2015-vbt-improvement",
+          "topParentId": "seu-9d19e9d952fb1c27edb5e44a"
+        },
+        "C_HYBRID": {
+          "targetRank": 33,
+          "sourceRank": 1,
+          "parentRank": 3,
+          "failureStage": "RIGHT_SOURCE_WRONG_PARENT",
+          "topChildId": "seu-0343cd3d08c0cfe043a7e87c",
+          "topSourceId": "society-of-actuaries-experience-studies-soa-2015-vbt-improvement",
+          "topParentId": "seu-9d19e9d952fb1c27edb5e44a"
+        },
+        "D_STRUCTURAL": {
+          "targetRank": 21,
+          "sourceRank": 1,
+          "parentRank": 5,
+          "failureStage": "RIGHT_SOURCE_WRONG_PARENT",
+          "topChildId": "seu-0343cd3d08c0cfe043a7e87c",
+          "topSourceId": "society-of-actuaries-experience-studies-soa-2015-vbt-improvement",
+          "topParentId": "seu-9d19e9d952fb1c27edb5e44a"
+        }
+      },
+      "unionSize": 174,
+      "unionTargetReachable": true,
+      "unionTargetOrigins": [
+        "bm25",
+        "hybrid",
+        "vector"
+      ],
+      "rerankEffect": "IMPROVED",
+      "sourceChanged": false,
+      "parentChanged": false,
+      "wrongSectionRescued": false,
+      "previouslyCorrectTop1Damaged": false,
+      "sourceCorrectToWrong": false,
+      "parentCorrectToWrong": false,
+      "childRankingResidual": true,
+      "top100Absent": false
+    },
+    {
+      "caseId": "scv1-024-a",
+      "matchedPairId": "scv1-pair-024",
+      "sourceId": "society-of-actuaries-experience-studies-soa-2015-vbt-improvement",
+      "modality": "XLSX",
+      "structuralClassifications": {
+        "identifierPresence": "PRESENT",
+        "phrasing": "DIRECT",
+        "shortUnanchored": false,
+        "multipart": false,
+        "siblingPressure": true,
+        "tableOrProse": "TABLE",
+        "seedReachabilityClass": "DEEP_REACHABLE_11_100"
+      },
+      "systems": {
+        "A_BM25": {
+          "targetRank": 23,
+          "sourceRank": 1,
+          "parentRank": 3,
+          "failureStage": "RIGHT_SOURCE_WRONG_PARENT",
+          "topChildId": "seu-59787e23cb07840cf4f943e6",
+          "topSourceId": "society-of-actuaries-experience-studies-soa-2015-vbt-improvement",
+          "topParentId": "seu-675440b33775ea53d09f8721"
+        },
+        "B_VECTOR": {
+          "targetRank": 40,
+          "sourceRank": 1,
+          "parentRank": 3,
+          "failureStage": "RIGHT_SOURCE_WRONG_PARENT",
+          "topChildId": "seu-90ab9c10bb79015702dd4a44",
+          "topSourceId": "society-of-actuaries-experience-studies-soa-2015-vbt-improvement",
+          "topParentId": "seu-90c95f661a6fc4182e44c6bc"
+        },
+        "C_HYBRID": {
+          "targetRank": 27,
+          "sourceRank": 1,
+          "parentRank": 3,
+          "failureStage": "RIGHT_SOURCE_WRONG_PARENT",
+          "topChildId": "seu-73082f28e5419bfddd92a7a2",
+          "topSourceId": "society-of-actuaries-experience-studies-soa-2015-vbt-improvement",
+          "topParentId": "seu-675440b33775ea53d09f8721"
+        },
+        "D_STRUCTURAL": {
+          "targetRank": 26,
+          "sourceRank": 1,
+          "parentRank": 2,
+          "failureStage": "RIGHT_SOURCE_WRONG_PARENT",
+          "topChildId": "seu-73082f28e5419bfddd92a7a2",
+          "topSourceId": "society-of-actuaries-experience-studies-soa-2015-vbt-improvement",
+          "topParentId": "seu-675440b33775ea53d09f8721"
+        }
+      },
+      "unionSize": 125,
+      "unionTargetReachable": true,
+      "unionTargetOrigins": [
+        "bm25",
+        "hybrid",
+        "vector"
+      ],
+      "rerankEffect": "IMPROVED",
+      "sourceChanged": false,
+      "parentChanged": false,
+      "wrongSectionRescued": false,
+      "previouslyCorrectTop1Damaged": false,
+      "sourceCorrectToWrong": false,
+      "parentCorrectToWrong": false,
+      "childRankingResidual": true,
+      "top100Absent": false
+    },
+    {
+      "caseId": "scv1-024-b",
+      "matchedPairId": "scv1-pair-024",
+      "sourceId": "society-of-actuaries-experience-studies-soa-2015-vbt-improvement",
+      "modality": "XLSX",
+      "structuralClassifications": {
+        "identifierPresence": "ABSENT",
+        "phrasing": "PARAPHRASED",
+        "shortUnanchored": false,
+        "multipart": false,
+        "siblingPressure": true,
+        "tableOrProse": "TABLE",
+        "seedReachabilityClass": "DEEP_REACHABLE_11_100"
+      },
+      "systems": {
+        "A_BM25": {
+          "targetRank": 75,
+          "sourceRank": 2,
+          "parentRank": 3,
+          "failureStage": "SOURCE_MISS",
+          "topChildId": "seu-0acb5c6ee7019ee33d3dedae",
+          "topSourceId": "naic-accounting-publications-appm-2026",
+          "topParentId": "seu-0027b64b16707783d5384f52"
+        },
+        "B_VECTOR": {
+          "targetRank": null,
+          "sourceRank": 1,
+          "parentRank": 6,
+          "failureStage": "RIGHT_SOURCE_WRONG_PARENT",
+          "topChildId": "seu-e6288cd55ea2d9a4c7183b39",
+          "topSourceId": "society-of-actuaries-experience-studies-soa-2015-vbt-improvement",
+          "topParentId": "seu-90c95f661a6fc4182e44c6bc"
+        },
+        "C_HYBRID": {
+          "targetRank": 99,
+          "sourceRank": 1,
+          "parentRank": 3,
+          "failureStage": "RIGHT_SOURCE_WRONG_PARENT",
+          "topChildId": "seu-90ab9c10bb79015702dd4a44",
+          "topSourceId": "society-of-actuaries-experience-studies-soa-2015-vbt-improvement",
+          "topParentId": "seu-90c95f661a6fc4182e44c6bc"
+        },
+        "D_STRUCTURAL": {
+          "targetRank": 27,
+          "sourceRank": 1,
+          "parentRank": 2,
+          "failureStage": "RIGHT_SOURCE_WRONG_PARENT",
+          "topChildId": "seu-90ab9c10bb79015702dd4a44",
+          "topSourceId": "society-of-actuaries-experience-studies-soa-2015-vbt-improvement",
+          "topParentId": "seu-90c95f661a6fc4182e44c6bc"
+        }
+      },
+      "unionSize": 166,
+      "unionTargetReachable": true,
+      "unionTargetOrigins": [
+        "bm25",
+        "hybrid"
+      ],
+      "rerankEffect": "IMPROVED",
+      "sourceChanged": false,
+      "parentChanged": false,
+      "wrongSectionRescued": false,
+      "previouslyCorrectTop1Damaged": false,
+      "sourceCorrectToWrong": false,
+      "parentCorrectToWrong": false,
+      "childRankingResidual": true,
+      "top100Absent": false
+    }
+  ],
+  "evaluatorOnlyGoldScoring": true,
+  "runtimeRankingInputExcludesGold": true,
+  "noHoldoutTuning": true,
+  "reviewOnly": true,
+  "promotionStatus": "not_promoted",
+  "ragReadyAllowed": false
+}

@@ -1,15 +1,106 @@
 {
   "schemaVersion": "1.0",
   "runId": "section-challenge-v1-structural-rerank-2026-09",
-  "artifactCount": 1,
-  "totalByteCount": 94677,
-  "aggregateSha256": "7c58b3cad116b49126fc2bdfb014ad640ffb11ad6099fe845f46384c43eef700",
+  "artifactCount": 14,
+  "totalByteCount": 18356652,
+  "aggregateSha256": "67497a75d36cc3823536016baaa5df66ffd904a97631044507b4a1ba32595e27",
   "artifacts": [
     {
-      "artifactType": "private-section-challenge-adjudication",
-      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\section-challenge-v1-structural-rerank-2026-09\\section-challenge-v1-adjudication.json",
-      "sha256": "076ae4192f10cdf74c44202af17d12d2e2383cdd862540e6b6ad0d5d91e95647",
-      "byteCount": 94677,
+      "artifactType": "development-queries.jsonl",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\section-challenge-v1-structural-rerank-2026-09\\development\\queries.jsonl",
+      "sha256": "f2329bd368fc0d529aea1f75ffc89c18eb63e642c26460eff5494054f184c9af",
+      "byteCount": 5891,
+      "rightsStorageStatus": "EXTERNAL_PRIVATE"
+    },
+    {
+      "artifactType": "development-query-embeddings.f32",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\section-challenge-v1-structural-rerank-2026-09\\development\\query-embeddings.f32",
+      "sha256": "c650dda39ed75abba57248bebcf626513fa14f56173409429f6aa3fa467fe52e",
+      "byteCount": 86016,
+      "rightsStorageStatus": "EXTERNAL_PRIVATE"
+    },
+    {
+      "artifactType": "development-query-embedding-metadata.json",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\section-challenge-v1-structural-rerank-2026-09\\development\\query-embedding-metadata.json",
+      "sha256": "f393bb7a7ed3b9c013d0e8280ac46be18903f27b8f19edadf48df2556af6b107",
+      "byteCount": 1038,
+      "rightsStorageStatus": "EXTERNAL_PRIVATE"
+    },
+    {
+      "artifactType": "development-rankings.json",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\section-challenge-v1-structural-rerank-2026-09\\development\\rankings.json",
+      "sha256": "69c49b06fabdea06eaaff694929b50bfafa7a78336035568ee636d3aec346419",
+      "byteCount": 9343009,
+      "rightsStorageStatus": "EXTERNAL_PRIVATE"
+    },
+    {
+      "artifactType": "development-scored-details.json",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\section-challenge-v1-structural-rerank-2026-09\\development\\scored-details.json",
+      "sha256": "cf9c9b10a0324b7f17e32fb62b4922cf0f5370b72c57064ca44b05fc3067950a",
+      "byteCount": 62139,
+      "rightsStorageStatus": "EXTERNAL_PRIVATE"
+    },
+    {
+      "artifactType": "holdout-queries.jsonl",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\section-challenge-v1-structural-rerank-2026-09\\holdout\\queries.jsonl",
+      "sha256": "b6f3d3f2ea1adbd928ff1e2e39eef8ec78f2afe968119ee91990e563da951e80",
+      "byteCount": 4045,
+      "rightsStorageStatus": "EXTERNAL_PRIVATE"
+    },
+    {
+      "artifactType": "holdout-query-embeddings.f32",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\section-challenge-v1-structural-rerank-2026-09\\holdout\\query-embeddings.f32",
+      "sha256": "16bfb802ad31474f96df8d1c89c4c383d4733e39b2f4044460c447eb80c53497",
+      "byteCount": 61440,
+      "rightsStorageStatus": "EXTERNAL_PRIVATE"
+    },
+    {
+      "artifactType": "holdout-query-embedding-metadata.json",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\section-challenge-v1-structural-rerank-2026-09\\holdout\\query-embedding-metadata.json",
+      "sha256": "ef86097db948f47cac7698b94bd00c24bcf751d6d7ba329176fa20ee94b03709",
+      "byteCount": 1038,
+      "rightsStorageStatus": "EXTERNAL_PRIVATE"
+    },
+    {
+      "artifactType": "holdout-rankings.json",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\section-challenge-v1-structural-rerank-2026-09\\holdout\\rankings.json",
+      "sha256": "6f7f2a9a718145c1a380a68076babc774ad69a0b22ae12f46e4c7871c8b13654",
+      "byteCount": 6654820,
+      "rightsStorageStatus": "EXTERNAL_PRIVATE"
+    },
+    {
+      "artifactType": "holdout-scored-details.json",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\section-challenge-v1-structural-rerank-2026-09\\holdout\\scored-details.json",
+      "sha256": "48f2aaaed070c23b09fcef2c6b55435c3fd05ab4fb6ee9ed2906ddd17cba71b9",
+      "byteCount": 44746,
+      "rightsStorageStatus": "EXTERNAL_PRIVATE"
+    },
+    {
+      "artifactType": "diagnostic-queries.jsonl",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\section-challenge-v1-structural-rerank-2026-09\\diagnostic\\queries.jsonl",
+      "sha256": "8cea6ed6264b64b61cde04ff6833514b24167be374b3140303c6e116974c8337",
+      "byteCount": 1234,
+      "rightsStorageStatus": "EXTERNAL_PRIVATE"
+    },
+    {
+      "artifactType": "diagnostic-query-embeddings.f32",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\section-challenge-v1-structural-rerank-2026-09\\diagnostic\\query-embeddings.f32",
+      "sha256": "dcbfde343e78526a16d7c443db00607002b354ee581414e3d658b7e22c409ac3",
+      "byteCount": 18432,
+      "rightsStorageStatus": "EXTERNAL_PRIVATE"
+    },
+    {
+      "artifactType": "diagnostic-query-embedding-metadata.json",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\section-challenge-v1-structural-rerank-2026-09\\diagnostic\\query-embedding-metadata.json",
+      "sha256": "b90acb5f10a1cc24ba2bd7ea2eb408dba3686ea44dd240781f50e4931bb40f0d",
+      "byteCount": 1036,
+      "rightsStorageStatus": "EXTERNAL_PRIVATE"
+    },
+    {
+      "artifactType": "diagnostic-rankings.json",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\section-challenge-v1-structural-rerank-2026-09\\diagnostic\\rankings.json",
+      "sha256": "40159fae9dc95b8c299ddf6e5a75ecd713cffda15c38b301573a2a0c219ea977",
+      "byteCount": 2071768,
       "rightsStorageStatus": "EXTERNAL_PRIVATE"
     }
   ],

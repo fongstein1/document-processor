@@ -71,7 +71,7 @@ assert.equal(total, manifest.privateArtifactByteCount)
 assert.equal(await hash(path.join(repoRoot, 'data', 'processed', 'review_packages', 'semantic-evidence-unit-correction-2026-09', 'evaluation-v2-freeze.json')), config.evaluation.goldFreezeSha256)
 const diff = spawnSync('git', ['diff', '--name-only', config.startingSha, '--', 'data/processed'], { cwd: repoRoot, encoding: 'utf8' })
 assert.equal(diff.status, 0)
-const approvedSuccessorReviewRuns = ['retrieval-gold-v3-expansion-2026-09', 'hierarchical-retrieval-hardening-2026-09', 'multi-unit-gold-v1-2026-09', 'multi-unit-sidecar-hardening-2026-09', 'broader-retrieval-diagnostic-2026-09']
+const approvedSuccessorReviewRuns = ['retrieval-gold-v3-expansion-2026-09', 'hierarchical-retrieval-hardening-2026-09', 'multi-unit-gold-v1-2026-09', 'multi-unit-sidecar-hardening-2026-09', 'broader-retrieval-diagnostic-2026-09', 'section-challenge-v1-structural-rerank-2026-09']
 for (const changed of diff.stdout.trim().split(/\r?\n/).filter(Boolean)) {
   const belongsToThisRun = changed.startsWith(`data/processed/review_packages/${config.runId}/`)
   const belongsToApprovedSuccessor = approvedSuccessorReviewRuns.some((successor) => changed.startsWith(`data/processed/review_packages/${successor}/`))

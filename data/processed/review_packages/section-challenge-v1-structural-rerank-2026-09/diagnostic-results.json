@@ -1,0 +1,145 @@
+{
+  "schemaVersion": "1.0",
+  "runId": "section-challenge-v1-structural-rerank-2026-09",
+  "evaluationVersion": "SECTION_CHALLENGE_V1",
+  "mode": "diagnostic",
+  "caseCount": 6,
+  "cases": [
+    {
+      "caseId": "scv1-diagnostic-001",
+      "queryHash": "98aaa07e9a7da558e69daf99784587508697adda7fb53ae6394d355cba82f963",
+      "diagnosticClassification": "UNSUPPORTED_DIAGNOSTIC",
+      "A_BM25": {
+        "topChildId": "seu-de464b07e46dde9316536654",
+        "topSourceId": "naic-accounting-publications-appm-2026"
+      },
+      "B_VECTOR": {
+        "topChildId": "seu-767dec4a960dfd8ec40ef5dd",
+        "topSourceId": "naic-life-fraternal-reporting-asb-life-2025"
+      },
+      "C_HYBRID": {
+        "topChildId": "seu-e1810db941e5ebaead68ba10",
+        "topSourceId": "naic-life-fraternal-reporting-asb-life-2025"
+      },
+      "D_STRUCTURAL": {
+        "topChildId": "seu-7894f20e9a25e9c60dde6853",
+        "topSourceId": "naic-accounting-publications-appm-2026"
+      },
+      "supportedGoldAvailable": false
+    },
+    {
+      "caseId": "scv1-diagnostic-002",
+      "queryHash": "8b1891d618360d9518b8ee828b3cc0d0452622ac72c991792571a55c03dd9b8a",
+      "diagnosticClassification": "UNSUPPORTED_DIAGNOSTIC",
+      "A_BM25": {
+        "topChildId": "seu-9439fd7edb49997221169cf9",
+        "topSourceId": "naic-accounting-publications-appm-2026"
+      },
+      "B_VECTOR": {
+        "topChildId": "seu-6a8a6fba1fc13655fa2bd1dc",
+        "topSourceId": "naic-accounting-publications-appm-2026"
+      },
+      "C_HYBRID": {
+        "topChildId": "seu-9439fd7edb49997221169cf9",
+        "topSourceId": "naic-accounting-publications-appm-2026"
+      },
+      "D_STRUCTURAL": {
+        "topChildId": "seu-9439fd7edb49997221169cf9",
+        "topSourceId": "naic-accounting-publications-appm-2026"
+      },
+      "supportedGoldAvailable": false
+    },
+    {
+      "caseId": "scv1-diagnostic-003",
+      "queryHash": "e8aaa2b3f6eafb740e80a0fa00f96d50fe65f8d42f89d7ed896491a0fbe23ce5",
+      "diagnosticClassification": "UNSUPPORTED_DIAGNOSTIC",
+      "A_BM25": {
+        "topChildId": "seu-70ecc6008cb6aafc890f7ec9",
+        "topSourceId": "naic-accounting-publications-appm-2026"
+      },
+      "B_VECTOR": {
+        "topChildId": "seu-21b0dd67a379b379e3d1c77d",
+        "topSourceId": "naic-life-fraternal-reporting-asb-life-2025"
+      },
+      "C_HYBRID": {
+        "topChildId": "seu-01cd6e5b87f60d4e26b027be",
+        "topSourceId": "naic-pbr-vm-20-vm-31-vm-51-vm31-templates-reports"
+      },
+      "D_STRUCTURAL": {
+        "topChildId": "seu-01cd6e5b87f60d4e26b027be",
+        "topSourceId": "naic-pbr-vm-20-vm-31-vm-51-vm31-templates-reports"
+      },
+      "supportedGoldAvailable": false
+    },
+    {
+      "caseId": "scv1-diagnostic-004",
+      "queryHash": "0746c5068d4ba4f08c201fc7db67947df430efe2ff4b90f4c7945d0ab610e429",
+      "diagnosticClassification": "UNSUPPORTED_DIAGNOSTIC",
+      "A_BM25": {
+        "topChildId": "seu-01068f3b2f41fb7e0a34626f",
+        "topSourceId": "naic-life-fraternal-reporting-qsi-life-2026"
+      },
+      "B_VECTOR": {
+        "topChildId": "seu-ac3182757a8928a747b2ae64",
+        "topSourceId": "naic-life-fraternal-reporting-asb-life-2025"
+      },
+      "C_HYBRID": {
+        "topChildId": "seu-01068f3b2f41fb7e0a34626f",
+        "topSourceId": "naic-life-fraternal-reporting-qsi-life-2026"
+      },
+      "D_STRUCTURAL": {
+        "topChildId": "seu-5e9441641754f62f50f28afd",
+        "topSourceId": "naic-life-fraternal-reporting-qsi-life-2026"
+      },
+      "supportedGoldAvailable": false
+    },
+    {
+      "caseId": "scv1-diagnostic-005",
+      "queryHash": "fcfb957b189e7d8e9db3e346a7258f22d8572896de77fc69bb39c74a98f4c4d5",
+      "diagnosticClassification": "UNSUPPORTED_DIAGNOSTIC",
+      "A_BM25": {
+        "topChildId": "seu-08a9991b72dba033309436e8",
+        "topSourceId": "naic-accounting-publications-appm-2026"
+      },
+      "B_VECTOR": {
+        "topChildId": "seu-c4405f321e07b43907a504ed",
+        "topSourceId": "naic-pbr-vm-20-vm-31-vm-51-vm31-templates-reports"
+      },
+      "C_HYBRID": {
+        "topChildId": "seu-c6f0a3c75e62886c49301fde",
+        "topSourceId": "naic-pbr-vm-20-vm-31-vm-51-vm31-templates-reports"
+      },
+      "D_STRUCTURAL": {
+        "topChildId": "seu-c6f0a3c75e62886c49301fde",
+        "topSourceId": "naic-pbr-vm-20-vm-31-vm-51-vm31-templates-reports"
+      },
+      "supportedGoldAvailable": false
+    },
+    {
+      "caseId": "scv1-diagnostic-006",
+      "queryHash": "fa95b67084c98c13b81219fe148578d8e0c46b771997f882a765542c28aa5dce",
+      "diagnosticClassification": "UNSUPPORTED_DIAGNOSTIC",
+      "A_BM25": {
+        "topChildId": "seu-c4ba431b248fe694ce5d2366",
+        "topSourceId": "naic-accounting-publications-appm-2026"
+      },
+      "B_VECTOR": {
+        "topChildId": "seu-a67e4bdb25b734a298e8a23b",
+        "topSourceId": "naic-accounting-publications-appm-2026"
+      },
+      "C_HYBRID": {
+        "topChildId": "seu-c4ba431b248fe694ce5d2366",
+        "topSourceId": "naic-accounting-publications-appm-2026"
+      },
+      "D_STRUCTURAL": {
+        "topChildId": "seu-c4ba431b248fe694ce5d2366",
+        "topSourceId": "naic-accounting-publications-appm-2026"
+      },
+      "supportedGoldAvailable": false
+    }
+  ],
+  "evaluatorOnlyGoldScoring": false,
+  "reviewOnly": true,
+  "promotionStatus": "not_promoted",
+  "ragReadyAllowed": false
+}
