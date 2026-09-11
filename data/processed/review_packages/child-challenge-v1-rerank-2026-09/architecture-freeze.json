@@ -1,0 +1,60 @@
+{
+  "schemaVersion": "1.0",
+  "runId": "child-challenge-v1-rerank-2026-09",
+  "architectureFrozenAt": "2026-09-11T12:00:00.000Z",
+  "implementationArtifacts": [
+    {
+      "path": "scripts/lib/deterministic-child-reranker.mjs",
+      "sha256": "430d4c136856a5c6361c540c8cccb8d72c3b51795bdb3890a72bd04c03558b1c"
+    },
+    {
+      "path": "scripts/child-reranker-experiment.mjs",
+      "sha256": "54a9ae89226058bbff898a193b2f60c227b7b0773cdcc6f210a1e8305cb5627f"
+    },
+    {
+      "path": "config/child-challenge-v1.json",
+      "sha256": "a056efb9e098a47a06a3fc56acfa1c6af57252fdca8847ced0ca29ec412f0da6"
+    }
+  ],
+  "scoringFormula": "max(0, 1 - 0.01 * (withinParentHybridRank - 1))",
+  "baseScoreRange": [
+    0,
+    1
+  ],
+  "maximumBonus": 0.035,
+  "maximumPenalty": 0.02,
+  "confidenceScales": {
+    "HIGH": 1,
+    "MEDIUM": 0.7,
+    "LOW_OR_UNKNOWN": 0.35
+  },
+  "maximumLocalRankDisplacement": 5,
+  "parentSlotSequencePreserved": true,
+  "candidateCutoffs": {
+    "bm25Cutoff": 100,
+    "vectorCutoff": 100,
+    "hybridCutoff": 100
+  },
+  "candidateParentHorizon": 10,
+  "developmentResultsSha256": "a6d6c9b0d699c0fb3022e3c7f11e57a6dff115fd04a7c51fbed559e9284ead3d",
+  "successThresholds": {
+    "targetTop1AbsoluteImprovementMinimum": 0.08,
+    "targetTop3AbsoluteImprovementMinimum": 0.08,
+    "targetTop10AbsoluteImprovementMinimum": 0.08,
+    "rightParentWrongChildReductionMinimum": 2,
+    "childResidualRescueMinimum": 3
+  },
+  "damageBudget": {
+    "previouslyCorrectTop1LostMaximumCount": 1,
+    "previouslyCorrectTop3WorsenedMaximumCount": 2,
+    "sourceTop1AbsoluteRegressionMaximum": 0.02,
+    "parentTop1AbsoluteRegressionMaximum": 0.02,
+    "correctParentToWrongMaximumCount": 1,
+    "easyControlTop3RegressionMaximum": 0.05
+  },
+  "holdoutAccessedBeforeFreeze": false,
+  "rankingInputExcludesGold": true,
+  "reviewOnly": true,
+  "promotionStatus": "not_promoted",
+  "ragReadyAllowed": false
+}
