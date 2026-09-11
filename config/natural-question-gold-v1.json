@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "1.0",
+  "evaluationVersion": "NATURAL_QUESTION_GOLD_V1",
+  "runId": "natural-question-gold-v1-2026-09",
+  "startingSha": "eeb1244cdcd77d0fead8b0e9ddb67a153e2cf184",
+  "sourceBranch": "processing/child-challenge-v1-rerank-2026-09",
+  "privateRoot": "C:\\Dev\\Document Processor Sources\\_processed-private\\natural-question-gold-v1-2026-09",
+  "questionInputPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\natural-question-gold-v1-2026-09\\question-input.jsonl",
+  "targetQuestionInputCount": 65,
+  "minimumQuestionInputCount": 60,
+  "minimumHumanQuestionCount": 40,
+  "targetSupportedRange": [50, 70],
+  "targetUnsupportedRange": [10, 15],
+  "allowedAuthoringSources": [
+    "HUMAN_REAL_WORLD",
+    "HUMAN_BENCHMARK",
+    "TARGET_BLIND_SECONDARY"
+  ],
+  "allowedTaskCategories": [
+    "DEFINITION",
+    "REQUIREMENT",
+    "SCOPE_OR_APPLICABILITY",
+    "EXCEPTION_OR_QUALIFICATION",
+    "REPORTING_INSTRUCTION",
+    "TABLE_OR_ROW_INTERPRETATION",
+    "COMPARISON",
+    "MULTI_CONCEPT",
+    "OTHER"
+  ],
+  "allowedSourceFamilyHints": [
+    "A3",
+    "W07",
+    "W08",
+    "VM20",
+    "VM31",
+    "SOA_VBT",
+    "UNKNOWN"
+  ],
+  "minimumQuestionCharacters": 12,
+  "maximumQuestionCharacters": 800,
+  "questionTextExternal": true,
+  "adjudicationMayBeginOnlyAfterQuestionFreeze": true,
+  "modelSelectionAllowedBeforeGoldFreeze": false,
+  "reviewOnly": true,
+  "promotionStatus": "not_promoted",
+  "ragReadyAllowed": false
+}

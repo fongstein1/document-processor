@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://document-processor.local/schemas/natural-question-input.schema.json",
+  "title": "Natural Question Gold V1 authoring input",
+  "description": "Private, pre-adjudication question records. This schema intentionally excludes retrieval targets, evidence, Gold labels, and split assignments.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "questionId",
+    "questionText",
+    "authoringSource",
+    "primaryEligible",
+    "createdAt",
+    "targetIndependence"
+  ],
+  "properties": {
+    "questionId": {
+      "type": "string",
+      "pattern": "^nqv1-[a-z0-9][a-z0-9-]{2,63}$"
+    },
+    "questionText": {
+      "type": "string",
+      "minLength": 12,
+      "maxLength": 800
+    },
+    "authoringSource": {
+      "enum": ["HUMAN_REAL_WORLD", "HUMAN_BENCHMARK", "TARGET_BLIND_SECONDARY"]
+    },
+    "primaryEligible": {
+      "type": "boolean"
+    },
+    "taskCategory": {
+      "enum": [
+        "DEFINITION",
+        "REQUIREMENT",
+        "SCOPE_OR_APPLICABILITY",
+        "EXCEPTION_OR_QUALIFICATION",
+        "REPORTING_INSTRUCTION",
+        "TABLE_OR_ROW_INTERPRETATION",
+        "COMPARISON",
+        "MULTI_CONCEPT",
+        "OTHER"
+      ]
+    },
+    "sourceFamilyHint": {
+      "enum": ["A3", "W07", "W08", "VM20", "VM31", "SOA_VBT", "UNKNOWN"]
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "batchId": {
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9][a-zA-Z0-9._-]{0,79}$"
+    },
+    "targetIndependence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "authoredBeforeAdjudication",
+        "authoredWithoutTargetEvidenceAccess",
+        "notDerivedFromTargetText",
+        "attestationMethod"
+      ],
+      "properties": {
+        "authoredBeforeAdjudication": { "const": true },
+        "authoredWithoutTargetEvidenceAccess": { "const": true },
+        "notDerivedFromTargetText": { "const": true },
+        "attestationMethod": {
+          "enum": ["AUTHOR_ATTESTATION", "PROCESS_SEPARATION", "PROVENANCE_RECORD"]
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": { "authoringSource": { "const": "TARGET_BLIND_SECONDARY" } },
+        "required": ["authoringSource"]
+      },
+      "then": { "properties": { "primaryEligible": { "const": false } } },
+      "else": { "properties": { "primaryEligible": { "const": true } } }
+    }
+  ]
+}
