@@ -1,15 +1,113 @@
 {
   "schemaVersion": "1.0",
   "runId": "child-challenge-v1-rerank-2026-09",
-  "artifactCount": 1,
-  "totalByteCount": 99908,
-  "aggregateSha256": "dc18b1a0bc9b3be052e8d995ba8a8401ae7be1baa010c6e083bbcb3b3f7cff92",
+  "artifactCount": 15,
+  "totalByteCount": 21289702,
+  "aggregateSha256": "e60cf46c032df91f2edbebc06526f653e932101b01608a5e1055751ac88fcfe7",
   "artifacts": [
     {
-      "artifactType": "private-child-challenge-adjudication",
-      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\child-challenge-v1-rerank-2026-09\\child-challenge-v1-adjudication.json",
-      "sha256": "73fc3f45c78f3be8747290432324ab69cde350a5dab295ed3f6e2836a69f9d05",
-      "byteCount": 99908,
+      "artifactType": "development-queries.jsonl",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\child-challenge-v1-rerank-2026-09\\development\\queries.jsonl",
+      "sha256": "940d3bbf1b7d6e262fbce7a1c0d738c04812c9b866a75cd57d157f78b39114f6",
+      "byteCount": 6543,
+      "rightsStorageStatus": "EXTERNAL_PRIVATE"
+    },
+    {
+      "artifactType": "development-query-embeddings.f32",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\child-challenge-v1-rerank-2026-09\\development\\query-embeddings.f32",
+      "sha256": "d8a9b2e2ed0941c3ecfa3b25f327467b20cffa662dc6c8c81967c4fd13f2256f",
+      "byteCount": 86016,
+      "rightsStorageStatus": "EXTERNAL_PRIVATE"
+    },
+    {
+      "artifactType": "development-query-embedding-metadata.json",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\child-challenge-v1-rerank-2026-09\\development\\query-embedding-metadata.json",
+      "sha256": "eb421e7918ae9bd1c5e89a71613cd678677cbe21212f223d1e0e54337f385458",
+      "byteCount": 1038,
+      "rightsStorageStatus": "EXTERNAL_PRIVATE"
+    },
+    {
+      "artifactType": "development-rankings.json",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\child-challenge-v1-rerank-2026-09\\development\\rankings.json",
+      "sha256": "5143520e5489794d3ab4db1a37fd5507906ffc12eb613e243294e629688311f2",
+      "byteCount": 9851111,
+      "rightsStorageStatus": "EXTERNAL_PRIVATE"
+    },
+    {
+      "artifactType": "development-scored-details.json",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\child-challenge-v1-rerank-2026-09\\development\\scored-details.json",
+      "sha256": "458f8d55f14eb0ceb9446de68045958257507beee97b4da567a4095643063f65",
+      "byteCount": 50684,
+      "rightsStorageStatus": "EXTERNAL_PRIVATE"
+    },
+    {
+      "artifactType": "holdout-queries.jsonl",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\child-challenge-v1-rerank-2026-09\\holdout\\queries.jsonl",
+      "sha256": "3fc283b1c246d78c6e5494c7017ff319ca92b454fbfa8577f3e3806632205c03",
+      "byteCount": 4512,
+      "rightsStorageStatus": "EXTERNAL_PRIVATE"
+    },
+    {
+      "artifactType": "holdout-query-embeddings.f32",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\child-challenge-v1-rerank-2026-09\\holdout\\query-embeddings.f32",
+      "sha256": "fb36cb60784fde0336ecaa130f62f30be85ff647533cde14ee5e513739cbc472",
+      "byteCount": 61440,
+      "rightsStorageStatus": "EXTERNAL_PRIVATE"
+    },
+    {
+      "artifactType": "holdout-query-embedding-metadata.json",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\child-challenge-v1-rerank-2026-09\\holdout\\query-embedding-metadata.json",
+      "sha256": "5a500e6b3b0d4e1d15f89be197ebfe8c654b6678284c12f2a7a62bd252899300",
+      "byteCount": 1037,
+      "rightsStorageStatus": "EXTERNAL_PRIVATE"
+    },
+    {
+      "artifactType": "holdout-rankings.json",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\child-challenge-v1-rerank-2026-09\\holdout\\rankings.json",
+      "sha256": "d279fb6377dfcd3d7f244d921a2e3864dcd79f0b04ae0d1714a3530c08f02f18",
+      "byteCount": 6890927,
+      "rightsStorageStatus": "EXTERNAL_PRIVATE"
+    },
+    {
+      "artifactType": "holdout-scored-details.json",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\child-challenge-v1-rerank-2026-09\\holdout\\scored-details.json",
+      "sha256": "dafaa86befa98effc2c66267ef7994ba3e255920ccb987f0f18e701642d5d80a",
+      "byteCount": 36171,
+      "rightsStorageStatus": "EXTERNAL_PRIVATE"
+    },
+    {
+      "artifactType": "control-queries.jsonl",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\child-challenge-v1-rerank-2026-09\\control\\queries.jsonl",
+      "sha256": "4ab718f711e88e094ab47d25c7bd6da107204af4e0f9fbccdfe24d695d86ca14",
+      "byteCount": 3141,
+      "rightsStorageStatus": "EXTERNAL_PRIVATE"
+    },
+    {
+      "artifactType": "control-query-embeddings.f32",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\child-challenge-v1-rerank-2026-09\\control\\query-embeddings.f32",
+      "sha256": "5ebe63d1270e90544b877fddf80e109ae80cfc5808cd7e7d0ea4d99e64fcb24b",
+      "byteCount": 36864,
+      "rightsStorageStatus": "EXTERNAL_PRIVATE"
+    },
+    {
+      "artifactType": "control-query-embedding-metadata.json",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\child-challenge-v1-rerank-2026-09\\control\\query-embedding-metadata.json",
+      "sha256": "a1e30074834a9cb9c4b8582bf1042109139d31030f56178a0f1bb578eec480d6",
+      "byteCount": 1038,
+      "rightsStorageStatus": "EXTERNAL_PRIVATE"
+    },
+    {
+      "artifactType": "control-rankings.json",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\child-challenge-v1-rerank-2026-09\\control\\rankings.json",
+      "sha256": "83ddac636b327199bec1b509c04e974755594b21afca1b90f1947d44f5e9357e",
+      "byteCount": 4237195,
+      "rightsStorageStatus": "EXTERNAL_PRIVATE"
+    },
+    {
+      "artifactType": "control-scored-details.json",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\child-challenge-v1-rerank-2026-09\\control\\scored-details.json",
+      "sha256": "14f2d50382d00b22c85c0b6f61c55d3de2f61319c243730cf7dff5909ce6ddd6",
+      "byteCount": 21985,
       "rightsStorageStatus": "EXTERNAL_PRIVATE"
     }
   ],

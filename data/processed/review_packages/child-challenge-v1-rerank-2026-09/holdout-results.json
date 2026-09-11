@@ -1,0 +1,249 @@
+{
+  "schemaVersion": "1.0",
+  "runId": "child-challenge-v1-rerank-2026-09",
+  "mode": "holdout",
+  "caseCount": 20,
+  "systems": {
+    "A_BM25": {
+      "caseCount": 20,
+      "targetReachability": {
+        "top1": 0.55,
+        "top3": 0.65,
+        "top5": 0.7,
+        "top10": 0.7,
+        "top20": 0.8,
+        "top50": 0.95,
+        "top100": 1
+      },
+      "sourceTop1": 0.75,
+      "sourceTop3": 1,
+      "parentTop1": 0.55,
+      "parentTop3": 0.7,
+      "parentTop10": 0.9,
+      "rightParentWrongChildCount": 0
+    },
+    "B_VECTOR": {
+      "caseCount": 20,
+      "targetReachability": {
+        "top1": 0.15,
+        "top3": 0.3,
+        "top5": 0.35,
+        "top10": 0.45,
+        "top20": 0.55,
+        "top50": 0.65,
+        "top100": 0.75
+      },
+      "sourceTop1": 0.6,
+      "sourceTop3": 1,
+      "parentTop1": 0.2,
+      "parentTop3": 0.45,
+      "parentTop10": 0.55,
+      "rightParentWrongChildCount": 1
+    },
+    "C_HYBRID": {
+      "caseCount": 20,
+      "targetReachability": {
+        "top1": 0.4,
+        "top3": 0.55,
+        "top5": 0.65,
+        "top10": 0.75,
+        "top20": 0.8,
+        "top50": 0.9,
+        "top100": 1
+      },
+      "sourceTop1": 0.9,
+      "sourceTop3": 1,
+      "parentTop1": 0.5,
+      "parentTop3": 0.65,
+      "parentTop10": 0.8,
+      "rightParentWrongChildCount": 2
+    },
+    "D_STRUCTURAL": {
+      "caseCount": 20,
+      "targetReachability": {
+        "top1": 0.45,
+        "top3": 0.65,
+        "top5": 0.7,
+        "top10": 0.7,
+        "top20": 0.8,
+        "top50": 0.85,
+        "top100": 0.9
+      },
+      "sourceTop1": 0.9,
+      "sourceTop3": 0.95,
+      "parentTop1": 0.5,
+      "parentTop3": 0.7,
+      "parentTop10": 0.85,
+      "rightParentWrongChildCount": 1
+    },
+    "E_CHILD": {
+      "caseCount": 20,
+      "targetReachability": {
+        "top1": 0.4,
+        "top3": 0.6,
+        "top5": 0.65,
+        "top10": 0.75,
+        "top20": 0.8,
+        "top50": 0.85,
+        "top100": 0.95
+      },
+      "sourceTop1": 0.9,
+      "sourceTop3": 1,
+      "parentTop1": 0.5,
+      "parentTop3": 0.65,
+      "parentTop10": 0.8,
+      "rightParentWrongChildCount": 2
+    }
+  },
+  "effects": {
+    "improved": 2,
+    "worsened": 1,
+    "unchanged": 17,
+    "top1Rescued": 0,
+    "top1Damaged": 0,
+    "parentOrderChanged": 0,
+    "sourceOrderChanged": 0,
+    "childResidualRescued": 0,
+    "targetAbsentFromUnion": 0,
+    "errorTaxonomy": {
+      "PARENT_MISS": 8,
+      "RIGHT_PARENT_WRONG_CHILD": 2,
+      "SOURCE_MISS": 2,
+      "SUCCESS": 8
+    }
+  },
+  "slices": {
+    "pdf": {
+      "caseCount": 14,
+      "targetReachability": {
+        "top1": 0.428571,
+        "top3": 0.571429,
+        "top5": 0.571429,
+        "top10": 0.642857,
+        "top20": 0.714286,
+        "top50": 0.785714,
+        "top100": 0.928571
+      },
+      "sourceTop1": 0.857143,
+      "sourceTop3": 1,
+      "parentTop1": 0.428571,
+      "parentTop3": 0.571429,
+      "parentTop10": 0.714286,
+      "rightParentWrongChildCount": 0
+    },
+    "xlsx": {
+      "caseCount": 6,
+      "targetReachability": {
+        "top1": 0.333333,
+        "top3": 0.666667,
+        "top5": 0.833333,
+        "top10": 1,
+        "top20": 1,
+        "top50": 1,
+        "top100": 1
+      },
+      "sourceTop1": 1,
+      "sourceTop3": 1,
+      "parentTop1": 0.666667,
+      "parentTop3": 0.833333,
+      "parentTop10": 1,
+      "rightParentWrongChildCount": 2
+    },
+    "a3": {
+      "caseCount": 6,
+      "targetReachability": {
+        "top1": 0.166667,
+        "top3": 0.166667,
+        "top5": 0.166667,
+        "top10": 0.333333,
+        "top20": 0.5,
+        "top50": 0.666667,
+        "top100": 1
+      },
+      "sourceTop1": 1,
+      "sourceTop3": 1,
+      "parentTop1": 0.166667,
+      "parentTop3": 0.166667,
+      "parentTop10": 0.5,
+      "rightParentWrongChildCount": 0
+    },
+    "identifierPresent": {
+      "caseCount": 13,
+      "targetReachability": {
+        "top1": 0.538462,
+        "top3": 0.692308,
+        "top5": 0.769231,
+        "top10": 0.846154,
+        "top20": 0.923077,
+        "top50": 1,
+        "top100": 1
+      },
+      "sourceTop1": 1,
+      "sourceTop3": 1,
+      "parentTop1": 0.692308,
+      "parentTop3": 0.769231,
+      "parentTop10": 0.923077,
+      "rightParentWrongChildCount": 2
+    },
+    "identifierAbsent": {
+      "caseCount": 7,
+      "targetReachability": {
+        "top1": 0.142857,
+        "top3": 0.428571,
+        "top5": 0.428571,
+        "top10": 0.571429,
+        "top20": 0.571429,
+        "top50": 0.571429,
+        "top100": 0.857143
+      },
+      "sourceTop1": 0.714286,
+      "sourceTop3": 1,
+      "parentTop1": 0.142857,
+      "parentTop3": 0.428571,
+      "parentTop10": 0.571429,
+      "rightParentWrongChildCount": 0
+    },
+    "direct": {
+      "caseCount": 10,
+      "targetReachability": {
+        "top1": 0.6,
+        "top3": 0.8,
+        "top5": 0.8,
+        "top10": 0.8,
+        "top20": 0.9,
+        "top50": 1,
+        "top100": 1
+      },
+      "sourceTop1": 1,
+      "sourceTop3": 1,
+      "parentTop1": 0.7,
+      "parentTop3": 0.8,
+      "parentTop10": 0.9,
+      "rightParentWrongChildCount": 1
+    },
+    "paraphrased": {
+      "caseCount": 10,
+      "targetReachability": {
+        "top1": 0.2,
+        "top3": 0.4,
+        "top5": 0.5,
+        "top10": 0.7,
+        "top20": 0.7,
+        "top50": 0.7,
+        "top100": 0.9
+      },
+      "sourceTop1": 0.8,
+      "sourceTop3": 1,
+      "parentTop1": 0.3,
+      "parentTop3": 0.5,
+      "parentTop10": 0.7,
+      "rightParentWrongChildCount": 1
+    }
+  },
+  "evaluatorOnlyAcceptedParentMetrics": true,
+  "runtimeRankingInputExcludesGold": true,
+  "noHoldoutTuning": true,
+  "reviewOnly": true,
+  "promotionStatus": "not_promoted",
+  "ragReadyAllowed": false
+}

@@ -21,6 +21,7 @@ for (const key of ['requiredEvidenceIds']) safeStringArrayKeys.add(key)
 for (const key of ['evidenceIds', 'acceptedEvidenceSetHashes', 'requiredEvidenceRoles', 'partiallySupportedEvidenceIds']) safeStringArrayKeys.add(key)
 for (const key of ['evaluationMetrics', 'available', 'usedByPlannedReranker', 'unavailable', 'acceptedAlternativeTargetSets']) safeStringArrayKeys.add(key)
 for (const key of ['unionTargetOrigins', 'rankingInputFields', 'runtimeFields']) safeStringArrayKeys.add(key)
+safeStringArrayKeys.add('features')
 for (const key of [
   'evaluationVersion', 'createdBecauseCode', 'sourceEvaluationVersion', 'sourceEvaluationPath', 'sourceEvaluationSha256', 'originalCaseCount', 'uniqueTargetCaseCount', 'multiAcceptedTargetCaseCount', 'multiUnitRequiredCaseCount', 'ambiguousExcludedCaseCount', 'invalidExcludedCaseCount', 'privateAdjudicationPath', 'privateAdjudicationSha256', 'privateAdjudicationByteCount', 'finalGoldSelectionUsesRegex', 'split', 'queryHash', 'goldUnitIds', 'evidenceContentHashes', 'acceptedSourceChunkIds', 'targetCoordinates', 'targetRole', 'requiredContextRoles', 'adjudicationStatus', 'included', 'reviewerStatus', 'queryExternal', 'rationaleExternal', 'evaluations', 'path', 'preserved', 'reasonCode',
   'supportedCaseCount', 'unsupportedCaseCount', 'sourceCounts', 'categoryCounts', 'modalityCounts', 'adjudicationCounts', 'modality', 'frozenRetrievalConfigPath', 'frozenRetrievalConfigSha256', 'retrievalConfigurationUnchanged',
@@ -141,6 +142,14 @@ for (const key of [
   'targetAbsentFromUnion','errorTaxonomy','PARENT_MISS','TARGET_NOT_IN_UNION',
   'evaluatorOnlyAcceptedParentMetrics','parentSlotSequencePreserved','childScore','baseFormula','baseRange',
   'confidenceScales','maximumLocalRankDisplacement','scoringFormula','baseScoreRange'
+  ,'evaluationFreezeCommit','architectureFreezeCommit','design','features','thresholdAssessment','observed','checks',
+  'targetTop1AbsoluteImprovement','targetTop3AbsoluteImprovement','targetTop10AbsoluteImprovement',
+  'rightParentWrongChildReduction','childResidualRescues','baselineTargetTop1','childTargetTop1',
+  'baselineTargetTop3','childTargetTop3','gitLeakageDetected','childChallengeEvaluationMaturity',
+  'childRerankerMaturity','childLevelRerankerExperiment','INDEPENDENT_CHILD_RERANKER_REVIEW'
+  ,'rights','privateArtifactCount','privateAggregateSha256','control'
+  ,'childDiagnostics','caseTypes','overall','conditionalParentTop1','conditionalParentTop3',
+  'conditionalParentTop10','averageSiblingChildrenOutranking'
 ]) safeKeys.add(key)
 
 export const sha256Bytes = (bytes) => crypto.createHash('sha256').update(bytes).digest('hex')

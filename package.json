@@ -77,6 +77,8 @@
     "child-challenge:development": "node scripts/child-reranker-experiment.mjs rank development && node scripts/child-reranker-experiment.mjs score development",
     "child-challenge:architecture-freeze": "node scripts/child-reranker-experiment.mjs freeze",
     "child-challenge:holdout": "node scripts/child-reranker-experiment.mjs rank holdout && node scripts/child-reranker-experiment.mjs score holdout",
+    "child-challenge:report": "node scripts/build-child-challenge-report.mjs && node scripts/child-reranker-experiment.mjs manifest",
+    "child-challenge:validate": "node scripts/validate-child-challenge-v1.mjs",
     "vm01:artifacts": "node scripts/build-vm01-definition-artifacts.mjs",
     "vm01:validate": "node scripts/validate-vm01-definitions.mjs",
     "vm01:definitions": "npm run source-index:build && npm run vm01:artifacts && npm run vm01:validate",

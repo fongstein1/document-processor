@@ -1,0 +1,1271 @@
+{
+  "schemaVersion": "1.0",
+  "runId": "child-challenge-v1-rerank-2026-09",
+  "startingSha": "54694b2f2d466d92940e427fa9af84e580407043",
+  "evaluationFreezeCommit": "037fd4449a202d25804645761bd71c4a1989732f",
+  "architectureFreezeCommit": "45ba3c478c9cef3ef19890b870219dfe97edb265",
+  "counts": {
+    "supported": 48,
+    "development": 28,
+    "holdout": 20,
+    "control": 12,
+    "matchedPairs": 24
+  },
+  "sourceCounts": {
+    "naic-accounting-publications-appm-2026": 16,
+    "naic-life-fraternal-reporting-asb-life-2025": 8,
+    "naic-life-fraternal-reporting-qsi-life-2026": 8,
+    "naic-pbr-vm-20-vm-31-vm-51-vm20-tables-2026-f-g": 6,
+    "naic-pbr-vm-20-vm-31-vm-51-vm31-templates-reports": 4,
+    "society-of-actuaries-experience-studies-soa-2015-vbt-improvement": 6
+  },
+  "modalityCounts": {
+    "PDF": 32,
+    "XLSX": 16
+  },
+  "caseTypeCounts": {
+    "DEFINITION": 4,
+    "EXCEPTION_OR_QUALIFICATION": 12,
+    "HEADER_CONTEXT": 12,
+    "REPORTING_INSTRUCTION": 2,
+    "REQUIREMENT": 14,
+    "SCOPE_OR_APPLICABILITY": 4
+  },
+  "design": {
+    "scoringFormula": "max(0, 1 - 0.01 * (withinParentHybridRank - 1))",
+    "baseScoreRange": [
+      0,
+      1
+    ],
+    "maximumBonus": 0.035,
+    "maximumPenalty": 0.02,
+    "confidenceScales": {
+      "HIGH": 1,
+      "MEDIUM": 0.7,
+      "LOW_OR_UNKNOWN": 0.35
+    },
+    "maximumLocalRankDisplacement": 5,
+    "parentSlotSequencePreserved": true,
+    "features": [
+      "child concept coverage",
+      "ordered phrase coverage",
+      "child-local identifier",
+      "role compatibility",
+      "clause coverage",
+      "component consensus",
+      "strong BM25/vector child rank",
+      "local sibling distinctiveness"
+    ]
+  },
+  "development": {
+    "systems": {
+      "A_BM25": {
+        "caseCount": 28,
+        "targetReachability": {
+          "top1": 0.535714,
+          "top3": 0.607143,
+          "top5": 0.642857,
+          "top10": 0.678571,
+          "top20": 0.857143,
+          "top50": 0.964286,
+          "top100": 1
+        },
+        "sourceTop1": 0.785714,
+        "sourceTop3": 1,
+        "parentTop1": 0.571429,
+        "parentTop3": 0.607143,
+        "parentTop10": 0.892857,
+        "rightParentWrongChildCount": 1
+      },
+      "B_VECTOR": {
+        "caseCount": 28,
+        "targetReachability": {
+          "top1": 0.178571,
+          "top3": 0.5,
+          "top5": 0.607143,
+          "top10": 0.642857,
+          "top20": 0.678571,
+          "top50": 0.821429,
+          "top100": 0.821429
+        },
+        "sourceTop1": 0.75,
+        "sourceTop3": 0.892857,
+        "parentTop1": 0.321429,
+        "parentTop3": 0.535714,
+        "parentTop10": 0.785714,
+        "rightParentWrongChildCount": 4
+      },
+      "C_HYBRID": {
+        "caseCount": 28,
+        "targetReachability": {
+          "top1": 0.5,
+          "top3": 0.642857,
+          "top5": 0.75,
+          "top10": 0.821429,
+          "top20": 0.892857,
+          "top50": 0.964286,
+          "top100": 0.964286
+        },
+        "sourceTop1": 0.857143,
+        "sourceTop3": 1,
+        "parentTop1": 0.642857,
+        "parentTop3": 0.821429,
+        "parentTop10": 0.892857,
+        "rightParentWrongChildCount": 4
+      },
+      "D_STRUCTURAL": {
+        "caseCount": 28,
+        "targetReachability": {
+          "top1": 0.428571,
+          "top3": 0.607143,
+          "top5": 0.75,
+          "top10": 0.821429,
+          "top20": 0.928571,
+          "top50": 0.928571,
+          "top100": 1
+        },
+        "sourceTop1": 0.821429,
+        "sourceTop3": 0.928571,
+        "parentTop1": 0.535714,
+        "parentTop3": 0.678571,
+        "parentTop10": 0.892857,
+        "rightParentWrongChildCount": 3
+      },
+      "E_CHILD": {
+        "caseCount": 28,
+        "targetReachability": {
+          "top1": 0.464286,
+          "top3": 0.678571,
+          "top5": 0.75,
+          "top10": 0.857143,
+          "top20": 0.892857,
+          "top50": 0.964286,
+          "top100": 0.964286
+        },
+        "sourceTop1": 0.857143,
+        "sourceTop3": 1,
+        "parentTop1": 0.642857,
+        "parentTop3": 0.821429,
+        "parentTop10": 0.892857,
+        "rightParentWrongChildCount": 5
+      }
+    },
+    "effects": {
+      "improved": 5,
+      "worsened": 1,
+      "unchanged": 22,
+      "top1Rescued": 0,
+      "top1Damaged": 1,
+      "parentOrderChanged": 1,
+      "sourceOrderChanged": 0,
+      "childResidualRescued": 1,
+      "targetAbsentFromUnion": 0,
+      "errorTaxonomy": {
+        "PARENT_MISS": 6,
+        "RIGHT_PARENT_WRONG_CHILD": 5,
+        "SOURCE_MISS": 4,
+        "SUCCESS": 13
+      }
+    },
+    "thresholdAssessment": {
+      "observed": {
+        "targetTop1AbsoluteImprovement": -0.035714,
+        "targetTop3AbsoluteImprovement": 0.035714,
+        "targetTop10AbsoluteImprovement": 0.035714,
+        "rightParentWrongChildReduction": -1,
+        "childResidualRescues": 1
+      },
+      "checks": {
+        "targetTop1": false,
+        "targetTop3": false,
+        "targetTop10": false,
+        "rightParentWrongChild": false,
+        "childResidual": false
+      }
+    },
+    "slices": {
+      "pdf": {
+        "caseCount": 18,
+        "targetReachability": {
+          "top1": 0.444444,
+          "top3": 0.722222,
+          "top5": 0.777778,
+          "top10": 0.833333,
+          "top20": 0.833333,
+          "top50": 0.944444,
+          "top100": 0.944444
+        },
+        "sourceTop1": 0.833333,
+        "sourceTop3": 1,
+        "parentTop1": 0.611111,
+        "parentTop3": 0.777778,
+        "parentTop10": 0.833333,
+        "rightParentWrongChildCount": 3
+      },
+      "xlsx": {
+        "caseCount": 10,
+        "targetReachability": {
+          "top1": 0.5,
+          "top3": 0.6,
+          "top5": 0.7,
+          "top10": 0.9,
+          "top20": 1,
+          "top50": 1,
+          "top100": 1
+        },
+        "sourceTop1": 0.9,
+        "sourceTop3": 1,
+        "parentTop1": 0.7,
+        "parentTop3": 0.9,
+        "parentTop10": 1,
+        "rightParentWrongChildCount": 2
+      },
+      "a3": {
+        "caseCount": 10,
+        "targetReachability": {
+          "top1": 0.4,
+          "top3": 0.8,
+          "top5": 0.9,
+          "top10": 1,
+          "top20": 1,
+          "top50": 1,
+          "top100": 1
+        },
+        "sourceTop1": 1,
+        "sourceTop3": 1,
+        "parentTop1": 0.7,
+        "parentTop3": 0.9,
+        "parentTop10": 1,
+        "rightParentWrongChildCount": 3
+      },
+      "identifierPresent": {
+        "caseCount": 19,
+        "targetReachability": {
+          "top1": 0.526316,
+          "top3": 0.789474,
+          "top5": 0.842105,
+          "top10": 0.947368,
+          "top20": 1,
+          "top50": 1,
+          "top100": 1
+        },
+        "sourceTop1": 0.947368,
+        "sourceTop3": 1,
+        "parentTop1": 0.789474,
+        "parentTop3": 0.947368,
+        "parentTop10": 1,
+        "rightParentWrongChildCount": 5
+      },
+      "identifierAbsent": {
+        "caseCount": 9,
+        "targetReachability": {
+          "top1": 0.333333,
+          "top3": 0.444444,
+          "top5": 0.555556,
+          "top10": 0.666667,
+          "top20": 0.666667,
+          "top50": 0.888889,
+          "top100": 0.888889
+        },
+        "sourceTop1": 0.666667,
+        "sourceTop3": 1,
+        "parentTop1": 0.333333,
+        "parentTop3": 0.555556,
+        "parentTop10": 0.666667,
+        "rightParentWrongChildCount": 0
+      },
+      "direct": {
+        "caseCount": 14,
+        "targetReachability": {
+          "top1": 0.571429,
+          "top3": 0.928571,
+          "top5": 0.928571,
+          "top10": 1,
+          "top20": 1,
+          "top50": 1,
+          "top100": 1
+        },
+        "sourceTop1": 1,
+        "sourceTop3": 1,
+        "parentTop1": 0.928571,
+        "parentTop3": 1,
+        "parentTop10": 1,
+        "rightParentWrongChildCount": 5
+      },
+      "paraphrased": {
+        "caseCount": 14,
+        "targetReachability": {
+          "top1": 0.357143,
+          "top3": 0.428571,
+          "top5": 0.571429,
+          "top10": 0.714286,
+          "top20": 0.785714,
+          "top50": 0.928571,
+          "top100": 0.928571
+        },
+        "sourceTop1": 0.714286,
+        "sourceTop3": 1,
+        "parentTop1": 0.357143,
+        "parentTop3": 0.642857,
+        "parentTop10": 0.785714,
+        "rightParentWrongChildCount": 0
+      }
+    },
+    "childDiagnostics": {
+      "sources": {
+        "naic-accounting-publications-appm-2026": {
+          "caseCount": 10,
+          "targetTop1": 0.4,
+          "targetTop3": 0.8,
+          "targetTop10": 1,
+          "parentTop1": 0.7,
+          "parentTop3": 0.9,
+          "parentTop10": 1,
+          "conditionalParentTop1": {
+            "caseCount": 7,
+            "targetTop1": 0.571429,
+            "targetTop3": 1,
+            "targetTop10": 1
+          },
+          "conditionalParentTop3": {
+            "caseCount": 9,
+            "targetTop1": 0.444444,
+            "targetTop3": 0.888889,
+            "targetTop10": 1
+          },
+          "conditionalParentTop10": {
+            "caseCount": 10,
+            "targetTop1": 0.4,
+            "targetTop3": 0.8,
+            "targetTop10": 1
+          },
+          "averageSiblingChildrenOutranking": 0.4
+        },
+        "naic-life-fraternal-reporting-asb-life-2025": {
+          "caseCount": 4,
+          "targetTop1": 0.5,
+          "targetTop3": 0.5,
+          "targetTop10": 0.5,
+          "parentTop1": 0.5,
+          "parentTop3": 0.5,
+          "parentTop10": 0.5,
+          "conditionalParentTop1": {
+            "caseCount": 2,
+            "targetTop1": 1,
+            "targetTop3": 1,
+            "targetTop10": 1
+          },
+          "conditionalParentTop3": {
+            "caseCount": 2,
+            "targetTop1": 1,
+            "targetTop3": 1,
+            "targetTop10": 1
+          },
+          "conditionalParentTop10": {
+            "caseCount": 2,
+            "targetTop1": 1,
+            "targetTop3": 1,
+            "targetTop10": 1
+          },
+          "averageSiblingChildrenOutranking": 0
+        },
+        "naic-life-fraternal-reporting-qsi-life-2026": {
+          "caseCount": 4,
+          "targetTop1": 0.5,
+          "targetTop3": 0.75,
+          "targetTop10": 0.75,
+          "parentTop1": 0.5,
+          "parentTop3": 0.75,
+          "parentTop10": 0.75,
+          "conditionalParentTop1": {
+            "caseCount": 2,
+            "targetTop1": 1,
+            "targetTop3": 1,
+            "targetTop10": 1
+          },
+          "conditionalParentTop3": {
+            "caseCount": 3,
+            "targetTop1": 0.666667,
+            "targetTop3": 1,
+            "targetTop10": 1
+          },
+          "conditionalParentTop10": {
+            "caseCount": 3,
+            "targetTop1": 0.666667,
+            "targetTop3": 1,
+            "targetTop10": 1
+          },
+          "averageSiblingChildrenOutranking": 0
+        },
+        "naic-pbr-vm-20-vm-31-vm-51-vm20-tables-2026-f-g": {
+          "caseCount": 4,
+          "targetTop1": 1,
+          "targetTop3": 1,
+          "targetTop10": 1,
+          "parentTop1": 1,
+          "parentTop3": 1,
+          "parentTop10": 1,
+          "conditionalParentTop1": {
+            "caseCount": 4,
+            "targetTop1": 1,
+            "targetTop3": 1,
+            "targetTop10": 1
+          },
+          "conditionalParentTop3": {
+            "caseCount": 4,
+            "targetTop1": 1,
+            "targetTop3": 1,
+            "targetTop10": 1
+          },
+          "conditionalParentTop10": {
+            "caseCount": 4,
+            "targetTop1": 1,
+            "targetTop3": 1,
+            "targetTop10": 1
+          },
+          "averageSiblingChildrenOutranking": 0
+        },
+        "naic-pbr-vm-20-vm-31-vm-51-vm31-templates-reports": {
+          "caseCount": 2,
+          "targetTop1": 0.5,
+          "targetTop3": 0.5,
+          "targetTop10": 1,
+          "parentTop1": 0.5,
+          "parentTop3": 0.5,
+          "parentTop10": 1,
+          "conditionalParentTop1": {
+            "caseCount": 1,
+            "targetTop1": 1,
+            "targetTop3": 1,
+            "targetTop10": 1
+          },
+          "conditionalParentTop3": {
+            "caseCount": 1,
+            "targetTop1": 1,
+            "targetTop3": 1,
+            "targetTop10": 1
+          },
+          "conditionalParentTop10": {
+            "caseCount": 2,
+            "targetTop1": 0.5,
+            "targetTop3": 0.5,
+            "targetTop10": 1
+          },
+          "averageSiblingChildrenOutranking": 0
+        },
+        "society-of-actuaries-experience-studies-soa-2015-vbt-improvement": {
+          "caseCount": 4,
+          "targetTop1": 0,
+          "targetTop3": 0.25,
+          "targetTop10": 0.75,
+          "parentTop1": 0.5,
+          "parentTop3": 1,
+          "parentTop10": 1,
+          "conditionalParentTop1": {
+            "caseCount": 2,
+            "targetTop1": 0,
+            "targetTop3": 0.5,
+            "targetTop10": 1
+          },
+          "conditionalParentTop3": {
+            "caseCount": 4,
+            "targetTop1": 0,
+            "targetTop3": 0.25,
+            "targetTop10": 0.75
+          },
+          "conditionalParentTop10": {
+            "caseCount": 4,
+            "targetTop1": 0,
+            "targetTop3": 0.25,
+            "targetTop10": 0.75
+          },
+          "averageSiblingChildrenOutranking": 3.5
+        }
+      },
+      "caseTypes": {
+        "EXCEPTION_OR_QUALIFICATION": {
+          "caseCount": 6,
+          "targetTop1": 0.666667,
+          "targetTop3": 0.833333,
+          "targetTop10": 0.833333,
+          "parentTop1": 0.833333,
+          "parentTop3": 0.833333,
+          "parentTop10": 0.833333,
+          "conditionalParentTop1": {
+            "caseCount": 5,
+            "targetTop1": 0.8,
+            "targetTop3": 1,
+            "targetTop10": 1
+          },
+          "conditionalParentTop3": {
+            "caseCount": 5,
+            "targetTop1": 0.8,
+            "targetTop3": 1,
+            "targetTop10": 1
+          },
+          "conditionalParentTop10": {
+            "caseCount": 5,
+            "targetTop1": 0.8,
+            "targetTop3": 1,
+            "targetTop10": 1
+          },
+          "averageSiblingChildrenOutranking": 0.166667
+        },
+        "HEADER_CONTEXT": {
+          "caseCount": 8,
+          "targetTop1": 0.5,
+          "targetTop3": 0.625,
+          "targetTop10": 0.875,
+          "parentTop1": 0.75,
+          "parentTop3": 1,
+          "parentTop10": 1,
+          "conditionalParentTop1": {
+            "caseCount": 6,
+            "targetTop1": 0.666667,
+            "targetTop3": 0.833333,
+            "targetTop10": 1
+          },
+          "conditionalParentTop3": {
+            "caseCount": 8,
+            "targetTop1": 0.5,
+            "targetTop3": 0.625,
+            "targetTop10": 0.875
+          },
+          "conditionalParentTop10": {
+            "caseCount": 8,
+            "targetTop1": 0.5,
+            "targetTop3": 0.625,
+            "targetTop10": 0.875
+          },
+          "averageSiblingChildrenOutranking": 1.75
+        },
+        "REQUIREMENT": {
+          "caseCount": 14,
+          "targetTop1": 0.357143,
+          "targetTop3": 0.642857,
+          "targetTop10": 0.857143,
+          "parentTop1": 0.5,
+          "parentTop3": 0.714286,
+          "parentTop10": 0.857143,
+          "conditionalParentTop1": {
+            "caseCount": 7,
+            "targetTop1": 0.714286,
+            "targetTop3": 1,
+            "targetTop10": 1
+          },
+          "conditionalParentTop3": {
+            "caseCount": 10,
+            "targetTop1": 0.5,
+            "targetTop3": 0.9,
+            "targetTop10": 1
+          },
+          "conditionalParentTop10": {
+            "caseCount": 12,
+            "targetTop1": 0.416667,
+            "targetTop3": 0.75,
+            "targetTop10": 1
+          },
+          "averageSiblingChildrenOutranking": 0.214286
+        }
+      },
+      "overall": {
+        "caseCount": 28,
+        "targetTop1": 0.464286,
+        "targetTop3": 0.678571,
+        "targetTop10": 0.857143,
+        "parentTop1": 0.642857,
+        "parentTop3": 0.821429,
+        "parentTop10": 0.892857,
+        "conditionalParentTop1": {
+          "caseCount": 18,
+          "targetTop1": 0.722222,
+          "targetTop3": 0.944444,
+          "targetTop10": 1
+        },
+        "conditionalParentTop3": {
+          "caseCount": 23,
+          "targetTop1": 0.565217,
+          "targetTop3": 0.826087,
+          "targetTop10": 0.956522
+        },
+        "conditionalParentTop10": {
+          "caseCount": 25,
+          "targetTop1": 0.52,
+          "targetTop3": 0.76,
+          "targetTop10": 0.96
+        },
+        "averageSiblingChildrenOutranking": 0.642857
+      }
+    }
+  },
+  "holdout": {
+    "systems": {
+      "A_BM25": {
+        "caseCount": 20,
+        "targetReachability": {
+          "top1": 0.55,
+          "top3": 0.65,
+          "top5": 0.7,
+          "top10": 0.7,
+          "top20": 0.8,
+          "top50": 0.95,
+          "top100": 1
+        },
+        "sourceTop1": 0.75,
+        "sourceTop3": 1,
+        "parentTop1": 0.55,
+        "parentTop3": 0.7,
+        "parentTop10": 0.9,
+        "rightParentWrongChildCount": 0
+      },
+      "B_VECTOR": {
+        "caseCount": 20,
+        "targetReachability": {
+          "top1": 0.15,
+          "top3": 0.3,
+          "top5": 0.35,
+          "top10": 0.45,
+          "top20": 0.55,
+          "top50": 0.65,
+          "top100": 0.75
+        },
+        "sourceTop1": 0.6,
+        "sourceTop3": 1,
+        "parentTop1": 0.2,
+        "parentTop3": 0.45,
+        "parentTop10": 0.55,
+        "rightParentWrongChildCount": 1
+      },
+      "C_HYBRID": {
+        "caseCount": 20,
+        "targetReachability": {
+          "top1": 0.4,
+          "top3": 0.55,
+          "top5": 0.65,
+          "top10": 0.75,
+          "top20": 0.8,
+          "top50": 0.9,
+          "top100": 1
+        },
+        "sourceTop1": 0.9,
+        "sourceTop3": 1,
+        "parentTop1": 0.5,
+        "parentTop3": 0.65,
+        "parentTop10": 0.8,
+        "rightParentWrongChildCount": 2
+      },
+      "D_STRUCTURAL": {
+        "caseCount": 20,
+        "targetReachability": {
+          "top1": 0.45,
+          "top3": 0.65,
+          "top5": 0.7,
+          "top10": 0.7,
+          "top20": 0.8,
+          "top50": 0.85,
+          "top100": 0.9
+        },
+        "sourceTop1": 0.9,
+        "sourceTop3": 0.95,
+        "parentTop1": 0.5,
+        "parentTop3": 0.7,
+        "parentTop10": 0.85,
+        "rightParentWrongChildCount": 1
+      },
+      "E_CHILD": {
+        "caseCount": 20,
+        "targetReachability": {
+          "top1": 0.4,
+          "top3": 0.6,
+          "top5": 0.65,
+          "top10": 0.75,
+          "top20": 0.8,
+          "top50": 0.85,
+          "top100": 0.95
+        },
+        "sourceTop1": 0.9,
+        "sourceTop3": 1,
+        "parentTop1": 0.5,
+        "parentTop3": 0.65,
+        "parentTop10": 0.8,
+        "rightParentWrongChildCount": 2
+      }
+    },
+    "effects": {
+      "improved": 2,
+      "worsened": 1,
+      "unchanged": 17,
+      "top1Rescued": 0,
+      "top1Damaged": 0,
+      "parentOrderChanged": 0,
+      "sourceOrderChanged": 0,
+      "childResidualRescued": 0,
+      "targetAbsentFromUnion": 0,
+      "errorTaxonomy": {
+        "PARENT_MISS": 8,
+        "RIGHT_PARENT_WRONG_CHILD": 2,
+        "SOURCE_MISS": 2,
+        "SUCCESS": 8
+      }
+    },
+    "thresholdAssessment": {
+      "observed": {
+        "targetTop1AbsoluteImprovement": 0,
+        "targetTop3AbsoluteImprovement": 0.05,
+        "targetTop10AbsoluteImprovement": 0,
+        "rightParentWrongChildReduction": 0,
+        "childResidualRescues": 0
+      },
+      "checks": {
+        "targetTop1": false,
+        "targetTop3": false,
+        "targetTop10": false,
+        "rightParentWrongChild": false,
+        "childResidual": false
+      }
+    },
+    "slices": {
+      "pdf": {
+        "caseCount": 14,
+        "targetReachability": {
+          "top1": 0.428571,
+          "top3": 0.571429,
+          "top5": 0.571429,
+          "top10": 0.642857,
+          "top20": 0.714286,
+          "top50": 0.785714,
+          "top100": 0.928571
+        },
+        "sourceTop1": 0.857143,
+        "sourceTop3": 1,
+        "parentTop1": 0.428571,
+        "parentTop3": 0.571429,
+        "parentTop10": 0.714286,
+        "rightParentWrongChildCount": 0
+      },
+      "xlsx": {
+        "caseCount": 6,
+        "targetReachability": {
+          "top1": 0.333333,
+          "top3": 0.666667,
+          "top5": 0.833333,
+          "top10": 1,
+          "top20": 1,
+          "top50": 1,
+          "top100": 1
+        },
+        "sourceTop1": 1,
+        "sourceTop3": 1,
+        "parentTop1": 0.666667,
+        "parentTop3": 0.833333,
+        "parentTop10": 1,
+        "rightParentWrongChildCount": 2
+      },
+      "a3": {
+        "caseCount": 6,
+        "targetReachability": {
+          "top1": 0.166667,
+          "top3": 0.166667,
+          "top5": 0.166667,
+          "top10": 0.333333,
+          "top20": 0.5,
+          "top50": 0.666667,
+          "top100": 1
+        },
+        "sourceTop1": 1,
+        "sourceTop3": 1,
+        "parentTop1": 0.166667,
+        "parentTop3": 0.166667,
+        "parentTop10": 0.5,
+        "rightParentWrongChildCount": 0
+      },
+      "identifierPresent": {
+        "caseCount": 13,
+        "targetReachability": {
+          "top1": 0.538462,
+          "top3": 0.692308,
+          "top5": 0.769231,
+          "top10": 0.846154,
+          "top20": 0.923077,
+          "top50": 1,
+          "top100": 1
+        },
+        "sourceTop1": 1,
+        "sourceTop3": 1,
+        "parentTop1": 0.692308,
+        "parentTop3": 0.769231,
+        "parentTop10": 0.923077,
+        "rightParentWrongChildCount": 2
+      },
+      "identifierAbsent": {
+        "caseCount": 7,
+        "targetReachability": {
+          "top1": 0.142857,
+          "top3": 0.428571,
+          "top5": 0.428571,
+          "top10": 0.571429,
+          "top20": 0.571429,
+          "top50": 0.571429,
+          "top100": 0.857143
+        },
+        "sourceTop1": 0.714286,
+        "sourceTop3": 1,
+        "parentTop1": 0.142857,
+        "parentTop3": 0.428571,
+        "parentTop10": 0.571429,
+        "rightParentWrongChildCount": 0
+      },
+      "direct": {
+        "caseCount": 10,
+        "targetReachability": {
+          "top1": 0.6,
+          "top3": 0.8,
+          "top5": 0.8,
+          "top10": 0.8,
+          "top20": 0.9,
+          "top50": 1,
+          "top100": 1
+        },
+        "sourceTop1": 1,
+        "sourceTop3": 1,
+        "parentTop1": 0.7,
+        "parentTop3": 0.8,
+        "parentTop10": 0.9,
+        "rightParentWrongChildCount": 1
+      },
+      "paraphrased": {
+        "caseCount": 10,
+        "targetReachability": {
+          "top1": 0.2,
+          "top3": 0.4,
+          "top5": 0.5,
+          "top10": 0.7,
+          "top20": 0.7,
+          "top50": 0.7,
+          "top100": 0.9
+        },
+        "sourceTop1": 0.8,
+        "sourceTop3": 1,
+        "parentTop1": 0.3,
+        "parentTop3": 0.5,
+        "parentTop10": 0.7,
+        "rightParentWrongChildCount": 1
+      }
+    },
+    "childDiagnostics": {
+      "sources": {
+        "naic-accounting-publications-appm-2026": {
+          "caseCount": 6,
+          "targetTop1": 0.166667,
+          "targetTop3": 0.166667,
+          "targetTop10": 0.333333,
+          "parentTop1": 0.166667,
+          "parentTop3": 0.166667,
+          "parentTop10": 0.5,
+          "conditionalParentTop1": {
+            "caseCount": 1,
+            "targetTop1": 1,
+            "targetTop3": 1,
+            "targetTop10": 1
+          },
+          "conditionalParentTop3": {
+            "caseCount": 1,
+            "targetTop1": 1,
+            "targetTop3": 1,
+            "targetTop10": 1
+          },
+          "conditionalParentTop10": {
+            "caseCount": 3,
+            "targetTop1": 0.333333,
+            "targetTop3": 0.333333,
+            "targetTop10": 0.666667
+          },
+          "averageSiblingChildrenOutranking": 0.166667
+        },
+        "naic-life-fraternal-reporting-asb-life-2025": {
+          "caseCount": 4,
+          "targetTop1": 0.75,
+          "targetTop3": 1,
+          "targetTop10": 1,
+          "parentTop1": 0.75,
+          "parentTop3": 1,
+          "parentTop10": 1,
+          "conditionalParentTop1": {
+            "caseCount": 3,
+            "targetTop1": 1,
+            "targetTop3": 1,
+            "targetTop10": 1
+          },
+          "conditionalParentTop3": {
+            "caseCount": 4,
+            "targetTop1": 0.75,
+            "targetTop3": 1,
+            "targetTop10": 1
+          },
+          "conditionalParentTop10": {
+            "caseCount": 4,
+            "targetTop1": 0.75,
+            "targetTop3": 1,
+            "targetTop10": 1
+          },
+          "averageSiblingChildrenOutranking": 0
+        },
+        "naic-life-fraternal-reporting-qsi-life-2026": {
+          "caseCount": 4,
+          "targetTop1": 0.5,
+          "targetTop3": 0.75,
+          "targetTop10": 0.75,
+          "parentTop1": 0.5,
+          "parentTop3": 0.75,
+          "parentTop10": 0.75,
+          "conditionalParentTop1": {
+            "caseCount": 2,
+            "targetTop1": 1,
+            "targetTop3": 1,
+            "targetTop10": 1
+          },
+          "conditionalParentTop3": {
+            "caseCount": 3,
+            "targetTop1": 0.666667,
+            "targetTop3": 1,
+            "targetTop10": 1
+          },
+          "conditionalParentTop10": {
+            "caseCount": 3,
+            "targetTop1": 0.666667,
+            "targetTop3": 1,
+            "targetTop10": 1
+          },
+          "averageSiblingChildrenOutranking": 0.25
+        },
+        "naic-pbr-vm-20-vm-31-vm-51-vm20-tables-2026-f-g": {
+          "caseCount": 2,
+          "targetTop1": 0,
+          "targetTop3": 0.5,
+          "targetTop10": 1,
+          "parentTop1": 0,
+          "parentTop3": 0.5,
+          "parentTop10": 1,
+          "conditionalParentTop1": {
+            "caseCount": 0,
+            "targetTop1": null,
+            "targetTop3": null,
+            "targetTop10": null
+          },
+          "conditionalParentTop3": {
+            "caseCount": 1,
+            "targetTop1": 0,
+            "targetTop3": 1,
+            "targetTop10": 1
+          },
+          "conditionalParentTop10": {
+            "caseCount": 2,
+            "targetTop1": 0,
+            "targetTop3": 0.5,
+            "targetTop10": 1
+          },
+          "averageSiblingChildrenOutranking": 0
+        },
+        "naic-pbr-vm-20-vm-31-vm-51-vm31-templates-reports": {
+          "caseCount": 2,
+          "targetTop1": 1,
+          "targetTop3": 1,
+          "targetTop10": 1,
+          "parentTop1": 1,
+          "parentTop3": 1,
+          "parentTop10": 1,
+          "conditionalParentTop1": {
+            "caseCount": 2,
+            "targetTop1": 1,
+            "targetTop3": 1,
+            "targetTop10": 1
+          },
+          "conditionalParentTop3": {
+            "caseCount": 2,
+            "targetTop1": 1,
+            "targetTop3": 1,
+            "targetTop10": 1
+          },
+          "conditionalParentTop10": {
+            "caseCount": 2,
+            "targetTop1": 1,
+            "targetTop3": 1,
+            "targetTop10": 1
+          },
+          "averageSiblingChildrenOutranking": 0
+        },
+        "society-of-actuaries-experience-studies-soa-2015-vbt-improvement": {
+          "caseCount": 2,
+          "targetTop1": 0,
+          "targetTop3": 0.5,
+          "targetTop10": 1,
+          "parentTop1": 1,
+          "parentTop3": 1,
+          "parentTop10": 1,
+          "conditionalParentTop1": {
+            "caseCount": 2,
+            "targetTop1": 0,
+            "targetTop3": 0.5,
+            "targetTop10": 1
+          },
+          "conditionalParentTop3": {
+            "caseCount": 2,
+            "targetTop1": 0,
+            "targetTop3": 0.5,
+            "targetTop10": 1
+          },
+          "conditionalParentTop10": {
+            "caseCount": 2,
+            "targetTop1": 0,
+            "targetTop3": 0.5,
+            "targetTop10": 1
+          },
+          "averageSiblingChildrenOutranking": 2.5
+        }
+      },
+      "caseTypes": {
+        "DEFINITION": {
+          "caseCount": 4,
+          "targetTop1": 0.5,
+          "targetTop3": 0.75,
+          "targetTop10": 0.75,
+          "parentTop1": 0.5,
+          "parentTop3": 0.75,
+          "parentTop10": 0.75,
+          "conditionalParentTop1": {
+            "caseCount": 2,
+            "targetTop1": 1,
+            "targetTop3": 1,
+            "targetTop10": 1
+          },
+          "conditionalParentTop3": {
+            "caseCount": 3,
+            "targetTop1": 0.666667,
+            "targetTop3": 1,
+            "targetTop10": 1
+          },
+          "conditionalParentTop10": {
+            "caseCount": 3,
+            "targetTop1": 0.666667,
+            "targetTop3": 1,
+            "targetTop10": 1
+          },
+          "averageSiblingChildrenOutranking": 0
+        },
+        "EXCEPTION_OR_QUALIFICATION": {
+          "caseCount": 6,
+          "targetTop1": 0.833333,
+          "targetTop3": 1,
+          "targetTop10": 1,
+          "parentTop1": 0.833333,
+          "parentTop3": 1,
+          "parentTop10": 1,
+          "conditionalParentTop1": {
+            "caseCount": 5,
+            "targetTop1": 1,
+            "targetTop3": 1,
+            "targetTop10": 1
+          },
+          "conditionalParentTop3": {
+            "caseCount": 6,
+            "targetTop1": 0.833333,
+            "targetTop3": 1,
+            "targetTop10": 1
+          },
+          "conditionalParentTop10": {
+            "caseCount": 6,
+            "targetTop1": 0.833333,
+            "targetTop3": 1,
+            "targetTop10": 1
+          },
+          "averageSiblingChildrenOutranking": 0
+        },
+        "HEADER_CONTEXT": {
+          "caseCount": 4,
+          "targetTop1": 0,
+          "targetTop3": 0.5,
+          "targetTop10": 1,
+          "parentTop1": 0.5,
+          "parentTop3": 0.75,
+          "parentTop10": 1,
+          "conditionalParentTop1": {
+            "caseCount": 2,
+            "targetTop1": 0,
+            "targetTop3": 0.5,
+            "targetTop10": 1
+          },
+          "conditionalParentTop3": {
+            "caseCount": 3,
+            "targetTop1": 0,
+            "targetTop3": 0.666667,
+            "targetTop10": 1
+          },
+          "conditionalParentTop10": {
+            "caseCount": 4,
+            "targetTop1": 0,
+            "targetTop3": 0.5,
+            "targetTop10": 1
+          },
+          "averageSiblingChildrenOutranking": 1.25
+        },
+        "REPORTING_INSTRUCTION": {
+          "caseCount": 2,
+          "targetTop1": 0,
+          "targetTop3": 0,
+          "targetTop10": 0.5,
+          "parentTop1": 0,
+          "parentTop3": 0,
+          "parentTop10": 0.5,
+          "conditionalParentTop1": {
+            "caseCount": 0,
+            "targetTop1": null,
+            "targetTop3": null,
+            "targetTop10": null
+          },
+          "conditionalParentTop3": {
+            "caseCount": 0,
+            "targetTop1": null,
+            "targetTop3": null,
+            "targetTop10": null
+          },
+          "conditionalParentTop10": {
+            "caseCount": 1,
+            "targetTop1": 0,
+            "targetTop3": 0,
+            "targetTop10": 1
+          },
+          "averageSiblingChildrenOutranking": 0
+        },
+        "SCOPE_OR_APPLICABILITY": {
+          "caseCount": 4,
+          "targetTop1": 0.25,
+          "targetTop3": 0.25,
+          "targetTop10": 0.25,
+          "parentTop1": 0.25,
+          "parentTop3": 0.25,
+          "parentTop10": 0.5,
+          "conditionalParentTop1": {
+            "caseCount": 1,
+            "targetTop1": 1,
+            "targetTop3": 1,
+            "targetTop10": 1
+          },
+          "conditionalParentTop3": {
+            "caseCount": 1,
+            "targetTop1": 1,
+            "targetTop3": 1,
+            "targetTop10": 1
+          },
+          "conditionalParentTop10": {
+            "caseCount": 2,
+            "targetTop1": 0.5,
+            "targetTop3": 0.5,
+            "targetTop10": 0.5
+          },
+          "averageSiblingChildrenOutranking": 0.5
+        }
+      },
+      "overall": {
+        "caseCount": 20,
+        "targetTop1": 0.4,
+        "targetTop3": 0.6,
+        "targetTop10": 0.75,
+        "parentTop1": 0.5,
+        "parentTop3": 0.65,
+        "parentTop10": 0.8,
+        "conditionalParentTop1": {
+          "caseCount": 10,
+          "targetTop1": 0.8,
+          "targetTop3": 0.9,
+          "targetTop10": 1
+        },
+        "conditionalParentTop3": {
+          "caseCount": 13,
+          "targetTop1": 0.615385,
+          "targetTop3": 0.923077,
+          "targetTop10": 1
+        },
+        "conditionalParentTop10": {
+          "caseCount": 16,
+          "targetTop1": 0.5,
+          "targetTop3": 0.75,
+          "targetTop10": 0.9375
+        },
+        "averageSiblingChildrenOutranking": 0.35
+      }
+    }
+  },
+  "controls": {
+    "EASY_ALREADY_CORRECT": {
+      "caseCount": 4,
+      "baselineTargetTop1": 0.75,
+      "childTargetTop1": 0.5,
+      "baselineTargetTop3": 0.75,
+      "childTargetTop3": 0.75,
+      "targetAbsentFromUnion": 0
+    },
+    "PARENT_NOT_REACHABLE": {
+      "caseCount": 4,
+      "baselineTargetTop1": 0.25,
+      "childTargetTop1": 0.25,
+      "baselineTargetTop3": 0.5,
+      "childTargetTop3": 0.5,
+      "targetAbsentFromUnion": 0
+    },
+    "TARGET_NOT_IN_DEEP_UNION": {
+      "caseCount": 4,
+      "baselineTargetTop1": 0.25,
+      "childTargetTop1": 0.25,
+      "baselineTargetTop3": 0.5,
+      "childTargetTop3": 0.5,
+      "targetAbsentFromUnion": 1
+    }
+  },
+  "errorTaxonomy": {
+    "development": {
+      "PARENT_MISS": 6,
+      "RIGHT_PARENT_WRONG_CHILD": 5,
+      "SOURCE_MISS": 4,
+      "SUCCESS": 13
+    },
+    "holdout": {
+      "PARENT_MISS": 8,
+      "RIGHT_PARENT_WRONG_CHILD": 2,
+      "SOURCE_MISS": 2,
+      "SUCCESS": 8
+    },
+    "control": {
+      "PARENT_MISS": 4,
+      "RIGHT_PARENT_WRONG_CHILD": 1,
+      "SOURCE_MISS": 2,
+      "SUCCESS": 4,
+      "TARGET_NOT_IN_UNION": 1
+    }
+  },
+  "rights": {
+    "privateArtifactCount": 15,
+    "privateArtifactByteCount": 21289702,
+    "privateAggregateSha256": "e60cf46c032df91f2edbebc06526f653e932101b01608a5e1055751ac88fcfe7",
+    "gitLeakageDetected": false
+  },
+  "determinism": {
+    "development": true,
+    "control": true,
+    "holdout": true
+  },
+  "limitations": [
+    "Development missed every prefrozen child-efficacy threshold.",
+    "Holdout improved Target Top-3 by 0.05 but did not improve Target Top-1 or Top-10 and rescued zero child residuals.",
+    "The intended control labels are prospective design strata; observed controls did not fully realize the parent-not-reachable and target-absent proportions implied by their labels.",
+    "Generated query phrasing and small role/source slices require independent review before treating the challenge as a mature reusable benchmark."
+  ],
+  "decisions": {
+    "childChallengeEvaluationMaturity": "LEVEL_2",
+    "childRerankerMaturity": "LEVEL_1",
+    "childLevelRerankerExperiment": "FAIL",
+    "nextStep": "INDEPENDENT_CHILD_RERANKER_REVIEW"
+  },
+  "reviewOnly": true,
+  "promotionStatus": "not_promoted",
+  "ragReadyAllowed": false
+}
