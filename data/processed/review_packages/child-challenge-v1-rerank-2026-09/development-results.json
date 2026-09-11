@@ -1,0 +1,249 @@
+{
+  "schemaVersion": "1.0",
+  "runId": "child-challenge-v1-rerank-2026-09",
+  "mode": "development",
+  "caseCount": 28,
+  "systems": {
+    "A_BM25": {
+      "caseCount": 28,
+      "targetReachability": {
+        "top1": 0.535714,
+        "top3": 0.607143,
+        "top5": 0.642857,
+        "top10": 0.678571,
+        "top20": 0.857143,
+        "top50": 0.964286,
+        "top100": 1
+      },
+      "sourceTop1": 0.785714,
+      "sourceTop3": 1,
+      "parentTop1": 0.571429,
+      "parentTop3": 0.607143,
+      "parentTop10": 0.892857,
+      "rightParentWrongChildCount": 1
+    },
+    "B_VECTOR": {
+      "caseCount": 28,
+      "targetReachability": {
+        "top1": 0.178571,
+        "top3": 0.5,
+        "top5": 0.607143,
+        "top10": 0.642857,
+        "top20": 0.678571,
+        "top50": 0.821429,
+        "top100": 0.821429
+      },
+      "sourceTop1": 0.75,
+      "sourceTop3": 0.892857,
+      "parentTop1": 0.321429,
+      "parentTop3": 0.535714,
+      "parentTop10": 0.785714,
+      "rightParentWrongChildCount": 4
+    },
+    "C_HYBRID": {
+      "caseCount": 28,
+      "targetReachability": {
+        "top1": 0.5,
+        "top3": 0.642857,
+        "top5": 0.75,
+        "top10": 0.821429,
+        "top20": 0.892857,
+        "top50": 0.964286,
+        "top100": 0.964286
+      },
+      "sourceTop1": 0.857143,
+      "sourceTop3": 1,
+      "parentTop1": 0.642857,
+      "parentTop3": 0.821429,
+      "parentTop10": 0.892857,
+      "rightParentWrongChildCount": 4
+    },
+    "D_STRUCTURAL": {
+      "caseCount": 28,
+      "targetReachability": {
+        "top1": 0.428571,
+        "top3": 0.607143,
+        "top5": 0.75,
+        "top10": 0.821429,
+        "top20": 0.928571,
+        "top50": 0.928571,
+        "top100": 1
+      },
+      "sourceTop1": 0.821429,
+      "sourceTop3": 0.928571,
+      "parentTop1": 0.535714,
+      "parentTop3": 0.678571,
+      "parentTop10": 0.892857,
+      "rightParentWrongChildCount": 3
+    },
+    "E_CHILD": {
+      "caseCount": 28,
+      "targetReachability": {
+        "top1": 0.464286,
+        "top3": 0.678571,
+        "top5": 0.75,
+        "top10": 0.857143,
+        "top20": 0.892857,
+        "top50": 0.964286,
+        "top100": 0.964286
+      },
+      "sourceTop1": 0.857143,
+      "sourceTop3": 1,
+      "parentTop1": 0.642857,
+      "parentTop3": 0.821429,
+      "parentTop10": 0.892857,
+      "rightParentWrongChildCount": 5
+    }
+  },
+  "effects": {
+    "improved": 5,
+    "worsened": 1,
+    "unchanged": 22,
+    "top1Rescued": 0,
+    "top1Damaged": 1,
+    "parentOrderChanged": 1,
+    "sourceOrderChanged": 0,
+    "childResidualRescued": 1,
+    "targetAbsentFromUnion": 0,
+    "errorTaxonomy": {
+      "PARENT_MISS": 6,
+      "RIGHT_PARENT_WRONG_CHILD": 5,
+      "SOURCE_MISS": 4,
+      "SUCCESS": 13
+    }
+  },
+  "slices": {
+    "pdf": {
+      "caseCount": 18,
+      "targetReachability": {
+        "top1": 0.444444,
+        "top3": 0.722222,
+        "top5": 0.777778,
+        "top10": 0.833333,
+        "top20": 0.833333,
+        "top50": 0.944444,
+        "top100": 0.944444
+      },
+      "sourceTop1": 0.833333,
+      "sourceTop3": 1,
+      "parentTop1": 0.611111,
+      "parentTop3": 0.777778,
+      "parentTop10": 0.833333,
+      "rightParentWrongChildCount": 3
+    },
+    "xlsx": {
+      "caseCount": 10,
+      "targetReachability": {
+        "top1": 0.5,
+        "top3": 0.6,
+        "top5": 0.7,
+        "top10": 0.9,
+        "top20": 1,
+        "top50": 1,
+        "top100": 1
+      },
+      "sourceTop1": 0.9,
+      "sourceTop3": 1,
+      "parentTop1": 0.7,
+      "parentTop3": 0.9,
+      "parentTop10": 1,
+      "rightParentWrongChildCount": 2
+    },
+    "a3": {
+      "caseCount": 10,
+      "targetReachability": {
+        "top1": 0.4,
+        "top3": 0.8,
+        "top5": 0.9,
+        "top10": 1,
+        "top20": 1,
+        "top50": 1,
+        "top100": 1
+      },
+      "sourceTop1": 1,
+      "sourceTop3": 1,
+      "parentTop1": 0.7,
+      "parentTop3": 0.9,
+      "parentTop10": 1,
+      "rightParentWrongChildCount": 3
+    },
+    "identifierPresent": {
+      "caseCount": 19,
+      "targetReachability": {
+        "top1": 0.526316,
+        "top3": 0.789474,
+        "top5": 0.842105,
+        "top10": 0.947368,
+        "top20": 1,
+        "top50": 1,
+        "top100": 1
+      },
+      "sourceTop1": 0.947368,
+      "sourceTop3": 1,
+      "parentTop1": 0.789474,
+      "parentTop3": 0.947368,
+      "parentTop10": 1,
+      "rightParentWrongChildCount": 5
+    },
+    "identifierAbsent": {
+      "caseCount": 9,
+      "targetReachability": {
+        "top1": 0.333333,
+        "top3": 0.444444,
+        "top5": 0.555556,
+        "top10": 0.666667,
+        "top20": 0.666667,
+        "top50": 0.888889,
+        "top100": 0.888889
+      },
+      "sourceTop1": 0.666667,
+      "sourceTop3": 1,
+      "parentTop1": 0.333333,
+      "parentTop3": 0.555556,
+      "parentTop10": 0.666667,
+      "rightParentWrongChildCount": 0
+    },
+    "direct": {
+      "caseCount": 14,
+      "targetReachability": {
+        "top1": 0.571429,
+        "top3": 0.928571,
+        "top5": 0.928571,
+        "top10": 1,
+        "top20": 1,
+        "top50": 1,
+        "top100": 1
+      },
+      "sourceTop1": 1,
+      "sourceTop3": 1,
+      "parentTop1": 0.928571,
+      "parentTop3": 1,
+      "parentTop10": 1,
+      "rightParentWrongChildCount": 5
+    },
+    "paraphrased": {
+      "caseCount": 14,
+      "targetReachability": {
+        "top1": 0.357143,
+        "top3": 0.428571,
+        "top5": 0.571429,
+        "top10": 0.714286,
+        "top20": 0.785714,
+        "top50": 0.928571,
+        "top100": 0.928571
+      },
+      "sourceTop1": 0.714286,
+      "sourceTop3": 1,
+      "parentTop1": 0.357143,
+      "parentTop3": 0.642857,
+      "parentTop10": 0.785714,
+      "rightParentWrongChildCount": 0
+    }
+  },
+  "evaluatorOnlyAcceptedParentMetrics": true,
+  "runtimeRankingInputExcludesGold": true,
+  "noHoldoutTuning": false,
+  "reviewOnly": true,
+  "promotionStatus": "not_promoted",
+  "ragReadyAllowed": false
+}

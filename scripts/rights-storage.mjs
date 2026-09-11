@@ -136,6 +136,11 @@ for (const key of [
   'childResidualRescueMinimum', 'previouslyCorrectTop3WorsenedMaximumCount',
   'parentTop1AbsoluteRegressionMaximum', 'correctParentToWrongMaximumCount',
   'easyControlTop3RegressionMaximum'
+  ,'E_CHILD','acceptedChildRankWithinParent','siblingChildrenOutranking','rightParentWrongChildCount',
+  'top1Rescued','top1Damaged','parentOrderChanged','sourceOrderChanged','childResidualRescued',
+  'targetAbsentFromUnion','errorTaxonomy','PARENT_MISS','TARGET_NOT_IN_UNION',
+  'evaluatorOnlyAcceptedParentMetrics','parentSlotSequencePreserved','childScore','baseFormula','baseRange',
+  'confidenceScales','maximumLocalRankDisplacement','scoringFormula','baseScoreRange'
 ]) safeKeys.add(key)
 
 export const sha256Bytes = (bytes) => crypto.createHash('sha256').update(bytes).digest('hex')
