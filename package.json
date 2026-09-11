@@ -70,6 +70,8 @@
     "section-challenge:holdout": "node scripts/section-structural-reranker-experiment.mjs rank holdout && node scripts/section-structural-reranker-experiment.mjs score holdout",
     "section-challenge:report": "node scripts/build-section-challenge-v1-report.mjs && node scripts/section-structural-reranker-experiment.mjs manifest",
     "section-challenge:validate": "node scripts/validate-section-challenge-v1.mjs",
+    "child-challenge:freeze": "node scripts/child-challenge-v1-freeze.mjs",
+    "child-challenge:test": "node scripts/test-child-challenge-v1-integrity.mjs",
     "vm01:artifacts": "node scripts/build-vm01-definition-artifacts.mjs",
     "vm01:validate": "node scripts/validate-vm01-definitions.mjs",
     "vm01:definitions": "npm run source-index:build && npm run vm01:artifacts && npm run vm01:validate",

@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0",
+  "evaluationVersion": "CHILD_CHALLENGE_V1",
+  "runId": "child-challenge-v1-rerank-2026-09",
+  "sourceBranch": "processing/section-challenge-v1-structural-rerank-2026-09",
+  "startingSha": "54694b2f2d466d92940e427fa9af84e580407043",
+  "privateRoot": "C:\\Dev\\Document Processor Sources\\_processed-private\\child-challenge-v1-rerank-2026-09",
+  "semanticRoot": "C:\\Dev\\Document Processor Sources\\_processed-private\\semantic-evidence-unit-correction-2026-09",
+  "vectorRoot": "C:\\Dev\\Document Processor Sources\\_processed-private\\hybrid-vector-retrieval-experiment-2026-09",
+  "supportedCaseCount": 48,
+  "developmentCaseCount": 28,
+  "holdoutCaseCount": 20,
+  "controlCaseCount": 12,
+  "candidateCutoffs": { "bm25": 100, "vector": 100, "hybrid": 100 },
+  "candidateParentHorizon": 10,
+  "parentReachabilityDefinition": "accepted parent appears among first 10 unique parents in the flat-hybrid deep union",
+  "childResidualDefinition": "accepted parent is reachable in the first 10 unique parents and accepted child is outside target Top-10",
+  "reachabilityCutoffs": [1, 3, 5, 10, 20, 50, 100],
+  "successThresholds": {
+    "targetTop1AbsoluteImprovementMinimum": 0.08,
+    "targetTop3AbsoluteImprovementMinimum": 0.08,
+    "targetTop10AbsoluteImprovementMinimum": 0.08,
+    "rightParentWrongChildReductionMinimum": 2,
+    "childResidualRescueMinimum": 3
+  },
+  "damageBudget": {
+    "previouslyCorrectTop1LostMaximumCount": 1,
+    "previouslyCorrectTop3WorsenedMaximumCount": 2,
+    "sourceTop1AbsoluteRegressionMaximum": 0.02,
+    "parentTop1AbsoluteRegressionMaximum": 0.02,
+    "correctParentToWrongMaximumCount": 1,
+    "easyControlTop3RegressionMaximum": 0.05
+  },
+  "reviewOnly": true,
+  "promotionStatus": "not_promoted",
+  "ragReadyAllowed": false
+}

@@ -126,6 +126,18 @@ for (const key of [
   'LEXICAL_WEAKNESS_OR_VECTOR_REPRESENTATION_MISMATCH', 'METADATA_DEFICIT_OR_UNRESOLVED'
 ]) safeKeys.add(key)
 
+for (const key of [
+  'CHILD_CHALLENGE_V1', 'controlCaseCount', 'controlClass', 'controlCounts', 'caseType', 'caseTypeCounts',
+  'candidateParentHorizon', 'parentReachabilityDefinition', 'childResidualDefinition', 'rightsSafeProjectionSha256',
+  'createdBeforeChildRerankerImplementation', 'createdWithoutChildChallengeRankings',
+  'EASY_ALREADY_CORRECT', 'PARENT_NOT_REACHABLE', 'TARGET_NOT_IN_DEEP_UNION',
+  'targetTop1AbsoluteImprovementMinimum', 'targetTop3AbsoluteImprovementMinimum',
+  'targetTop10AbsoluteImprovementMinimum', 'rightParentWrongChildReductionMinimum',
+  'childResidualRescueMinimum', 'previouslyCorrectTop3WorsenedMaximumCount',
+  'parentTop1AbsoluteRegressionMaximum', 'correctParentToWrongMaximumCount',
+  'easyControlTop3RegressionMaximum'
+]) safeKeys.add(key)
+
 export const sha256Bytes = (bytes) => crypto.createHash('sha256').update(bytes).digest('hex')
 const containsNonEmptyString = (value) => {
   if (typeof value === 'string') return value.trim().length > 0

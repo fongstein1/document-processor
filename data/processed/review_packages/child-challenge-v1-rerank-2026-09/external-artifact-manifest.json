@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "1.0",
+  "runId": "child-challenge-v1-rerank-2026-09",
+  "artifactCount": 1,
+  "totalByteCount": 99908,
+  "aggregateSha256": "dc18b1a0bc9b3be052e8d995ba8a8401ae7be1baa010c6e083bbcb3b3f7cff92",
+  "artifacts": [
+    {
+      "artifactType": "private-child-challenge-adjudication",
+      "externalPath": "C:\\Dev\\Document Processor Sources\\_processed-private\\child-challenge-v1-rerank-2026-09\\child-challenge-v1-adjudication.json",
+      "sha256": "73fc3f45c78f3be8747290432324ab69cde350a5dab295ed3f6e2836a69f9d05",
+      "byteCount": 99908,
+      "rightsStorageStatus": "EXTERNAL_PRIVATE"
+    }
+  ],
+  "reviewOnly": true,
+  "promotionStatus": "not_promoted",
+  "ragReadyAllowed": false
+}
