@@ -1,23 +1,23 @@
 {
   "schemaVersion": "1.0",
   "goldId": "natural-question-gold-v1",
-  "status": "GOLD_CANDIDATE_PENDING_HUMAN_APPROVAL",
+  "status": "FROZEN_HUMAN_APPROVED",
   "questionCount": 65,
   "supportStatusCounts": {
-    "AMBIGUOUS_REQUIRES_SME": 9,
+    "AMBIGUOUS_REQUIRES_SME": 2,
     "FULLY_SUPPORTED": 11,
-    "PARTIALLY_SUPPORTED": 11,
-    "UNSUPPORTED_COMPANY_SPECIFIC": 23,
-    "UNSUPPORTED_CORPUS_GAP": 10,
+    "PARTIALLY_SUPPORTED": 13,
+    "UNSUPPORTED_COMPANY_SPECIFIC": 24,
+    "UNSUPPORTED_CORPUS_GAP": 14,
     "UNSUPPORTED_OUT_OF_SCOPE": 1
   },
   "supportStructureCounts": {
-    "MULTI_UNIT_REQUIRED": 15,
-    "NOT_APPLICABLE": 43,
-    "SINGLE_UNIT": 7
+    "MULTI_UNIT_REQUIRED": 18,
+    "NOT_APPLICABLE": 41,
+    "SINGLE_UNIT": 6
   },
   "acceptedAlternativeSetCaseCount": 2,
-  "governingSourceAvailableCount": 18,
+  "governingSourceAvailableCount": 20,
   "companionOnlyCount": 3,
   "pass2OutcomeCounts": {
     "AGREE": 52,
@@ -26,8 +26,10 @@
     "DISAGREE_SUPPORT_STATUS": 2,
     "NEEDS_SME": 8
   },
-  "smeRequiredCount": 9,
-  "humanApprovedCount": 0,
+  "smeRequiredCount": 2,
+  "pendingSmeReviewCount": 0,
+  "humanApprovedCount": 21,
+  "humanApprovedAmbiguousCount": 2,
   "sourceFamilyCounts": {
     "company_internal": 23,
     "ltc_regulatory": 4,
@@ -41,44 +43,44 @@
     "mixed_private_dependency": 23
   },
   "splitCounts": {
-    "development": 13,
-    "diagnostic": 43,
+    "development": 15,
+    "diagnostic": 41,
     "holdout": 9
   },
   "modelComparisonReadiness": "NOT_READY",
   "readinessReasons": [
-    "human approval pending",
-    "only 22 supported or partially supported questions"
+    "only 24 supported or partially supported questions",
+    "only 9 supported or partially supported holdout questions"
   ],
   "promotionStatusEvidenceCounts": {
     "not_promoted": 4,
-    "promoted": 40
+    "promoted": 45
   },
   "authorityRoleEvidenceCounts": {
     "CONTEXT_ONLY": 2,
     "CORROBORATING": 2,
     "DEFINITIONAL": 1,
     "INTERPRETIVE_COMPANION": 4,
-    "PRIMARY_GOVERNING": 13,
-    "PRIMARY_OPERATIVE": 22
+    "PRIMARY_GOVERNING": 16,
+    "PRIMARY_OPERATIVE": 24
   },
   "privateArtifact": {
     "relativeExternalLocation": "_processed-private/natural-question-gold-v1-2026-09/private_adjudication.json",
-    "sha256": "5b49fcac7fbf6fd642f4c9b9e168954c56c4ea8753dad91fcf3af4caee77b668",
-    "byteCount": 279374
+    "sha256": "bfaf9044663d4cc896a4c251eb524840f411a65cfef42caa4d57c7f59f99f52b",
+    "byteCount": 303136
   },
   "privateArtifactCount": 2,
-  "privateArtifactByteCount": 398769,
+  "privateArtifactByteCount": 443245,
   "privateArtifacts": [
     {
       "relativeExternalLocation": "_processed-private/natural-question-gold-v1-2026-09/private_adjudication.json",
-      "sha256": "5b49fcac7fbf6fd642f4c9b9e168954c56c4ea8753dad91fcf3af4caee77b668",
-      "byteCount": 279374
+      "sha256": "bfaf9044663d4cc896a4c251eb524840f411a65cfef42caa4d57c7f59f99f52b",
+      "byteCount": 303136
     },
     {
       "relativeExternalLocation": "_processed-private/natural-question-gold-v1-2026-09/sme_review_packet.json",
-      "sha256": "ac07b056ebdf155522ba833d778e768d1bb0644434294e04ed37e793967bdca1",
-      "byteCount": 119395
+      "sha256": "40cb5d0bbbf4fad222f6b05f7b17aaff94a2a7e6681bab51b58cd2042db6bdf6",
+      "byteCount": 140109
     }
   ]
 }

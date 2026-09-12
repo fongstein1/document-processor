@@ -27,7 +27,7 @@ const sourceMap = new Map(repositoryManifest.sourcePackages.map((item) => [item.
 const chunks = (await fs.readFile(path.join(repoRoot, 'data', 'processed', 'source_indexes', 'exports', 'source_chunks.jsonl'), 'utf8')).trim().split(/\r?\n/).map(JSON.parse)
 const chunkMap = new Map(chunks.map((item) => [item.chunkId, item]))
 
-assert.equal(gold.status, 'GOLD_CANDIDATE_PENDING_HUMAN_APPROVAL')
+assert.equal(gold.status, 'FROZEN_HUMAN_APPROVED')
 assert.ok(privateRoot.startsWith(approvedSourceRoot + path.sep))
 assert.ok(!privateRoot.startsWith(repoRoot + path.sep))
 assert.ok(privateRoot.split(path.sep).includes('_processed-private'))
@@ -55,19 +55,26 @@ const statuses = new Set(['FULLY_SUPPORTED', 'PARTIALLY_SUPPORTED', 'UNSUPPORTED
 const structures = new Set(['SINGLE_UNIT', 'MULTI_UNIT_REQUIRED', 'NOT_APPLICABLE'])
 const roles = new Set(['PRIMARY_GOVERNING', 'PRIMARY_OPERATIVE', 'DEFINITIONAL', 'INTERPRETIVE_COMPANION', 'CORROBORATING', 'CONTEXT_ONLY'])
 const outcomes = new Set(['AGREE', 'DISAGREE_SUPPORT_STATUS', 'DISAGREE_EVIDENCE_SET', 'DISAGREE_AUTHORITY_ROLE', 'NEEDS_SME'])
+const approvedDispositions = new Set(['HUMAN_APPROVED_AS_PROPOSED', 'HUMAN_APPROVED_WITH_CHANGE'])
+const expectedReviewedCaseIds = ['1', '2', '3', '4', '5', '9', '27', '29', '40', '42', '43', '44', '46', '47', '49', '55', '58', '60', '61', '62', '63']
+const expectedChangedCaseIds = new Set(['2', '4', '9', '27', '40', '42', '43', '46', '55', '58', '61', '62'])
 for (const item of gold.cases) {
   assert.ok(statuses.has(item.primarySupportStatus))
   assert.ok(structures.has(item.supportStructure))
   assert.ok(outcomes.has(item.pass2Outcome))
   assert.ok(['MODEL_ADJUDICATED', 'INDEPENDENT_MODEL_REVIEWED', 'HUMAN_APPROVED'].includes(item.humanReviewState))
-  assert.equal(item.humanReviewState, 'INDEPENDENT_MODEL_REVIEWED')
+  const humanApproved = expectedReviewedCaseIds.includes(item.questionId)
+  assert.equal(item.humanReviewState, humanApproved ? 'HUMAN_APPROVED' : 'INDEPENDENT_MODEL_REVIEWED')
+  assert.equal(item.humanDisposition, humanApproved ? (expectedChangedCaseIds.has(item.questionId) ? 'HUMAN_APPROVED_WITH_CHANGE' : 'HUMAN_APPROVED_AS_PROPOSED') : null)
+  if (humanApproved) assert.ok(approvedDispositions.has(item.humanDisposition))
   const supported = ['FULLY_SUPPORTED', 'PARTIALLY_SUPPORTED'].includes(item.primarySupportStatus)
   assert.equal(item.acceptedEvidenceSets.length > 0, supported)
   assert.equal(item.supportStructure === 'NOT_APPLICABLE', !supported)
   assert.equal(item.needsSme, item.primarySupportStatus === 'AMBIGUOUS_REQUIRES_SME')
+  assert.equal(item.pendingSmeReview, false)
   if (item.pass2Outcome === 'DISAGREE_SUPPORT_STATUS') {
     const privateItem = privateAdjudication.cases.find((entry) => entry.questionId === item.questionId)
-    assert.notEqual(privateItem.pass1.supportStatus, item.primarySupportStatus)
+    assert.ok(privateItem.resolution.length > 0)
   }
   assert.equal(item.split === 'diagnostic', !supported)
   for (const set of item.acceptedEvidenceSets) {
@@ -91,9 +98,23 @@ for (const item of gold.cases) {
 }
 
 assert.equal(gold.reviewMethod.retrievalOutputsUsedForAdjudication, false)
-assert.equal(gold.reviewMethod.humanApprovalGranted, false)
+assert.equal(gold.reviewMethod.humanApprovalGranted, true)
+assert.equal(gold.reviewMethod.humanReviewDispositionSource, 'USER_EXPLICIT_DISPOSITION')
+assert.equal(gold.reviewMethod.humanReviewDispositionDate, '2026-09-12')
 assert.deepEqual(gold.splitProtocol.forbiddenInputs, ['baseline rank', 'baseline score', 'provisional assessment', 'retrieval success', 'retrieval failure'])
-assert.equal(summary.humanApprovedCount, 0)
+assert.equal(summary.humanApprovedCount, 21)
+assert.equal(summary.humanApprovedAmbiguousCount, 2)
+assert.equal(summary.pendingSmeReviewCount, 0)
+assert.deepEqual(summary.supportStatusCounts, {
+  AMBIGUOUS_REQUIRES_SME: 2,
+  FULLY_SUPPORTED: 11,
+  PARTIALLY_SUPPORTED: 13,
+  UNSUPPORTED_COMPANY_SPECIFIC: 24,
+  UNSUPPORTED_CORPUS_GAP: 14,
+  UNSUPPORTED_OUT_OF_SCOPE: 1,
+})
+assert.deepEqual(summary.splitCounts, { development: 15, diagnostic: 41, holdout: 9 })
+assert.deepEqual(summary.readinessReasons, ['only 24 supported or partially supported questions', 'only 9 supported or partially supported holdout questions'])
 assert.equal(summary.modelComparisonReadiness, 'NOT_READY')
 assert.equal(summary.privateArtifactCount, 2)
 assert.equal(summary.privateArtifacts.length, 2)
@@ -108,6 +129,13 @@ assert.equal(summary.privateArtifacts[1].sha256, sha256(privateSmeBytes))
 assert.equal(summary.privateArtifacts[1].byteCount, privateSmeBytes.byteLength)
 assert.deepEqual(privateSme.cases.map((item) => item.questionId), sme.caseIds)
 assert.deepEqual(sme.needsSmeCaseIds, gold.cases.filter((item) => item.needsSme).map((item) => item.questionId))
+assert.deepEqual(sme.pendingSmeReviewCaseIds, [])
+assert.deepEqual(sme.humanApprovedAmbiguousCaseIds, ['2', '3'])
+assert.deepEqual(sme.caseIds, expectedReviewedCaseIds)
+assert.equal(sme.status, 'human_review_complete')
+assert.equal(privateSme.status, 'human_review_complete')
+assert.deepEqual(privateAdjudication.humanReview.caseIds.map(String).sort((a, b) => Number(a) - Number(b)), expectedReviewedCaseIds)
+assert.equal(privateAdjudication.humanReview.unresolvedCaseCount, 0)
 assert.deepEqual(sme.disagreementCaseIds, gold.cases.filter((item) => !['AGREE', 'NEEDS_SME'].includes(item.pass2Outcome)).map((item) => item.questionId))
 assert.equal(new Set(sme.caseIds).size, sme.caseIds.length)
 assert.equal(new Set(sme.agreementQcCaseIds).size, sme.agreementQcCaseIds.length)

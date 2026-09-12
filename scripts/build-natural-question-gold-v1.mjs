@@ -52,6 +52,8 @@ const publicCases = adjudication.cases.map((item) => ({
   governingSourceAvailable: item.governingSourceAvailable,
   companionOnly: item.companionOnly,
   humanReviewState: item.humanReviewState,
+  humanDisposition: item.humanDisposition ?? null,
+  pendingSmeReview: item.pendingSmeReview ?? false,
   pass2Outcome: item.pass2.outcome,
   needsSme: item.needsSme,
   split: splitFor(item),
@@ -82,7 +84,7 @@ const publicCases = adjudication.cases.map((item) => ({
 const publicProjection = {
   schemaVersion: '1.0',
   goldId: 'natural-question-gold-v1',
-  status: 'GOLD_CANDIDATE_PENDING_HUMAN_APPROVAL',
+  status: adjudication.status,
   evaluationLayer: 'review_only_non_canonical',
   startingRepositorySha: '547f72e94a0c40cf52890eff03e38d90498e0c52',
   benchmarkId: benchmark.benchmarkId,
@@ -97,7 +99,9 @@ const publicProjection = {
     pass1: 'MODEL_ADJUDICATED',
     pass2: 'INDEPENDENT_MODEL_REVIEWED',
     retrievalOutputsUsedForAdjudication: false,
-    humanApprovalGranted: false,
+    humanApprovalGranted: adjudication.status === 'FROZEN_HUMAN_APPROVED',
+    humanReviewDispositionSource: adjudication.humanReview?.dispositionSource ?? null,
+    humanReviewDispositionDate: adjudication.humanReview?.dispositionDate ?? null,
   },
   splitProtocol: {
     seed: splitSeed,
@@ -129,20 +133,23 @@ const summary = {
   companionOnlyCount: publicCases.filter((item) => item.companionOnly).length,
   pass2OutcomeCounts: tally(publicCases.map((item) => item.pass2Outcome)),
   smeRequiredCount: publicCases.filter((item) => item.needsSme).length,
+  pendingSmeReviewCount: publicCases.filter((item) => item.pendingSmeReview).length,
   humanApprovedCount: publicCases.filter((item) => item.humanReviewState === 'HUMAN_APPROVED').length,
+  humanApprovedAmbiguousCount: publicCases.filter((item) => item.humanReviewState === 'HUMAN_APPROVED' && item.primarySupportStatus === 'AMBIGUOUS_REQUIRES_SME').length,
   sourceFamilyCounts: tally(publicCases.map((item) => item.sourceFamily)),
   modalityCounts: tally(publicCases.map((item) => item.modality)),
   splitCounts: tally(publicCases.map((item) => item.split)),
   modelComparisonReadiness: 'NOT_READY',
-  readinessReasons: ['human approval pending', 'only 22 supported or partially supported questions'],
+  readinessReasons: ['only 24 supported or partially supported questions', 'only 9 supported or partially supported holdout questions'],
   promotionStatusEvidenceCounts: tally(evidence.map((item) => item.promotionStatus)),
   authorityRoleEvidenceCounts: tally(evidence.map((item) => item.role)),
   privateArtifact: publicProjection.privateArtifact,
 }
 
-const smeCaseIds = publicCases
-  .filter((item) => item.needsSme || item.pass2Outcome !== 'AGREE')
-  .map((item) => item.questionId)
+const reviewedCaseIds = adjudication.humanReview?.caseIds ?? []
+assert.equal(adjudication.humanReview?.status, 'COMPLETE')
+assert.equal(adjudication.humanReview?.unresolvedCaseCount, 0)
+assert.equal(reviewedCaseIds.length, 21)
 const agreementPool = publicCases.filter((item) => item.pass2Outcome === 'AGREE' && !item.needsSme)
 const agreementQcCandidates = []
 for (const key of [...new Set(agreementPool.map((item) => item.primarySupportStatus))].sort()) {
@@ -158,9 +165,11 @@ const multiAuthorityQc = supported
   .map((item) => item.questionId)
 const smeProjection = {
   schemaVersion: '1.0',
-  status: 'pending_human_review',
-  caseIds: [...new Set([...smeCaseIds, ...agreementQc, ...multiAuthorityQc])].sort((a, b) => Number(a) - Number(b)),
+  status: 'human_review_complete',
+  caseIds: [...reviewedCaseIds].sort((a, b) => Number(a) - Number(b)),
   needsSmeCaseIds: publicCases.filter((item) => item.needsSme).map((item) => item.questionId),
+  pendingSmeReviewCaseIds: publicCases.filter((item) => item.pendingSmeReview).map((item) => item.questionId),
+  humanApprovedAmbiguousCaseIds: publicCases.filter((item) => item.humanReviewState === 'HUMAN_APPROVED' && item.primarySupportStatus === 'AMBIGUOUS_REQUIRES_SME').map((item) => item.questionId),
   disagreementCaseIds: publicCases.filter((item) => !['AGREE', 'NEEDS_SME'].includes(item.pass2Outcome)).map((item) => item.questionId),
   agreementQcCaseIds: agreementQc,
   highImpactMultipleAuthorityCaseIds: multiAuthorityQc,
@@ -169,7 +178,7 @@ const smeProjection = {
 
 const privatePacket = {
   schemaVersion: '1.0',
-  status: 'pending_human_review',
+  status: 'human_review_complete',
   generatedFromPrivateAdjudicationSha256: sha256(privateBytes),
   cases: adjudication.cases
     .filter((item) => smeProjection.caseIds.includes(item.questionId))
@@ -177,6 +186,9 @@ const privatePacket = {
       questionId: item.questionId,
       query: item.query,
       primarySupportStatus: item.primarySupportStatus,
+      humanReviewState: item.humanReviewState,
+      humanDisposition: item.humanDisposition,
+      pendingSmeReview: item.pendingSmeReview,
       pass1: item.pass1,
       pass2: item.pass2,
       resolution: item.resolution,
