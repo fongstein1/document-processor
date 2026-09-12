@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "1.0",
+  "intakeId": "natural-question-expansion-batch-01",
+  "files": [
+    {
+      "path": "intake_projection.json",
+      "sha256": "121195bd2cb10d5758d6d5c2f5dd0cf90f264c0ad8f7340ace7b9b33c4764f6f",
+      "byteCount": 1100
+    }
+  ]
+}

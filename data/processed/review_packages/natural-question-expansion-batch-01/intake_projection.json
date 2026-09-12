@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "intakeId": "natural-question-expansion-batch-01",
+  "status": "OPEN_EMPTY",
+  "boundary": "HUMAN_AUTHORED_INTAKE_ONLY",
+  "createdFromGoldRepositorySha": "94b269b16ef1aaae83f0b8484964259e7b6ae0ad",
+  "priorQuestionArraySha256": "ebf779edc4caa38954a4ba8ca7d190807c3240b86b548d452791a0714cec9055",
+  "questionCount": 0,
+  "provenanceCounts": {
+    "USER_WORK_CHAT": 0,
+    "TEAM_OR_COLLEAGUE": 0,
+    "INTERNAL_MEETING_OR_NOTES": 0,
+    "USER_DIRECT_ENTRY": 0,
+    "OTHER_HUMAN_AUTHORED": 0
+  },
+  "controls": {
+    "exactHumanWordingRequired": true,
+    "modelGeneratedAllowed": false,
+    "paraphrasingAllowed": false,
+    "deterministicIdsAssignedOnlyAtFreeze": true,
+    "duplicateCheckAgainstNaturalQuestionGoldV1": true,
+    "retrievalExecuted": false,
+    "adjudicationExecuted": false
+  },
+  "frozenQuestionRecords": [],
+  "privateArtifact": {
+    "relativeExternalLocation": "_processed-private/natural-question-expansion-batch-01-2026-09/intake.json",
+    "sha256": "5d5d3e4523ec1d470c84060a7cb1c88470da794d9a152868235c2899d66f8485",
+    "byteCount": 492
+  }
+}
