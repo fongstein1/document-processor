@@ -1,0 +1,2021 @@
+{
+  "schemaVersion": "1.0",
+  "goldId": "natural-question-gold-v1",
+  "status": "GOLD_CANDIDATE_PENDING_HUMAN_APPROVAL",
+  "evaluationLayer": "review_only_non_canonical",
+  "startingRepositorySha": "547f72e94a0c40cf52890eff03e38d90498e0c52",
+  "benchmarkId": "natural-question-benchmark-v1",
+  "questionArraySha256": "ebf779edc4caa38954a4ba8ca7d190807c3240b86b548d452791a0714cec9055",
+  "questionCount": 65,
+  "inputBindings": {
+    "benchmarkFileSha256": "bf9d01dbffd6463aa160afd5ecf3005b4ea3387a85f5ca050f03e606cfbea3b3",
+    "baselineResultsSha256": "ea43ada27ef1e09f9080e682e4d59d15d62d5fd6fd485d9b48314533378cdbd3",
+    "provisionalAssessmentsSha256": "434d0935a5f4cc40d4ea915169a66db523d218a11d25e439579edcd1b261f9cc"
+  },
+  "reviewMethod": {
+    "pass1": "MODEL_ADJUDICATED",
+    "pass2": "INDEPENDENT_MODEL_REVIEWED",
+    "retrievalOutputsUsedForAdjudication": false,
+    "humanApprovalGranted": false
+  },
+  "splitProtocol": {
+    "seed": "natural-question-gold-v1-split-2026-09",
+    "algorithm": "sha256_gold_attributes_modulo_10",
+    "developmentBuckets": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "holdoutBuckets": [
+      6,
+      7,
+      8,
+      9
+    ],
+    "diagnosticRule": "all statuses other than FULLY_SUPPORTED and PARTIALLY_SUPPORTED",
+    "forbiddenInputs": [
+      "baseline rank",
+      "baseline score",
+      "provisional assessment",
+      "retrieval success",
+      "retrieval failure"
+    ]
+  },
+  "privateArtifact": {
+    "relativeExternalLocation": "_processed-private/natural-question-gold-v1-2026-09/private_adjudication.json",
+    "sha256": "5b49fcac7fbf6fd642f4c9b9e168954c56c4ea8753dad91fcf3af4caee77b668",
+    "byteCount": 279374
+  },
+  "cases": [
+    {
+      "questionId": "1",
+      "querySha256": "15732cb7d3ddbac97c09ba45d33083d5705e9f3785f2ba88ee4ec6f671e22602",
+      "primarySupportStatus": "FULLY_SUPPORTED",
+      "supportStructure": "MULTI_UNIT_REQUIRED",
+      "category": "reserve_method",
+      "identifierPresence": "PRESENT",
+      "sourceFamily": "valuation_manual_pdfs",
+      "modality": "PDF",
+      "governingSourceAvailable": true,
+      "companionOnly": false,
+      "humanReviewState": "INDEPENDENT_MODEL_REVIEWED",
+      "pass2Outcome": "AGREE",
+      "needsSme": false,
+      "split": "development",
+      "acceptedEvidenceSets": [
+        {
+          "setId": "Q1-SET-1",
+          "setHash": "71a635dd8a2a7a504d36000f91e3487e75e4fa54aa0218efe7163af223432232",
+          "sufficiency": "FULL",
+          "evidence": [
+            {
+              "sourceId": "vm20-section3c-hierarchical",
+              "sourceSha256": null,
+              "sourceIndexSha256": "42800a2fa680a839dfc300f774a5d4099ab9f36288ed68790a3fed2794b75237",
+              "parentChunkId": "vm20-section3c-hierarchical-section-3-c-1-mortality-rates",
+              "chunkId": "vm20-section3c-hierarchical-section-3-c-1-mortality-rates-child-001",
+              "citation": {
+                "pageStart": 59,
+                "pageEnd": 59,
+                "pageReference": "pp. 59-59"
+              },
+              "role": "PRIMARY_GOVERNING",
+              "authorityLevel": "manual_section",
+              "promotionStatus": "promoted"
+            },
+            {
+              "sourceId": "vm20-section3c-hierarchical",
+              "sourceSha256": null,
+              "sourceIndexSha256": "42800a2fa680a839dfc300f774a5d4099ab9f36288ed68790a3fed2794b75237",
+              "parentChunkId": "vm20-section3c-hierarchical-section-3-c-2-interest-rates",
+              "chunkId": "vm20-section3c-hierarchical-section-3-c-2-interest-rates-child-001",
+              "citation": {
+                "pageStart": 63,
+                "pageEnd": 63,
+                "pageReference": "pp. 63-63"
+              },
+              "role": "PRIMARY_GOVERNING",
+              "authorityLevel": "manual_section",
+              "promotionStatus": "promoted"
+            },
+            {
+              "sourceId": "vm20-section3c-hierarchical",
+              "sourceSha256": null,
+              "sourceIndexSha256": "42800a2fa680a839dfc300f774a5d4099ab9f36288ed68790a3fed2794b75237",
+              "parentChunkId": "vm20-section3c-hierarchical-section-3-c-3-lapse-rates",
+              "chunkId": "vm20-section3c-hierarchical-section-3-c-3-lapse-rates-child-001",
+              "citation": {
+                "pageStart": 65,
+                "pageEnd": 65,
+                "pageReference": "pp. 65-65"
+              },
+              "role": "PRIMARY_GOVERNING",
+              "authorityLevel": "manual_section",
+              "promotionStatus": "promoted"
+            },
+            {
+              "sourceId": "vm20-remaining-prose-appendix-coverage",
+              "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+              "sourceIndexSha256": "a98b5a6e5e5fd7f84701939ea8a2a00547322d76871d87afb6dc897c6ec1bc9b",
+              "parentChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-a-general-assumption-requirements",
+              "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-a-general-assumption-requirements-child-001",
+              "citation": {
+                "pageStart": 94,
+                "pageEnd": 95,
+                "pageReference": "pp. 94-95"
+              },
+              "role": "PRIMARY_OPERATIVE",
+              "authorityLevel": "manual_section",
+              "promotionStatus": "promoted"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "2",
+      "querySha256": "0286a7178326cca9b3837a81d6364d58a42d1e0fe11df8bbde07951031b7e2d3",
+      "primarySupportStatus": "PARTIALLY_SUPPORTED",
+      "supportStructure": "MULTI_UNIT_REQUIRED",
+      "category": "reserve_method",
+      "identifierPresence": "PRESENT",
+      "sourceFamily": "valuation_manual_pdfs",
+      "modality": "PDF",
+      "governingSourceAvailable": true,
+      "companionOnly": false,
+      "humanReviewState": "INDEPENDENT_MODEL_REVIEWED",
+      "pass2Outcome": "AGREE",
+      "needsSme": false,
+      "split": "holdout",
+      "acceptedEvidenceSets": [
+        {
+          "setId": "Q2-SET-1",
+          "setHash": "d2d4d8b66fea68cbb8fdfb70061ea65e4f7103d4bb5c5cf7d2f341f4e1ab91a8",
+          "sufficiency": "PARTIAL",
+          "evidence": [
+            {
+              "sourceId": "vm20-canonical-coverage",
+              "sourceSha256": null,
+              "sourceIndexSha256": "b6ee5bcdc808912a5b073f7dc36542affda46b0525109de3ef246604e6be9d56",
+              "parentChunkId": "vm20-canonical-coverage-vm20-role-map-sections-3-4-5",
+              "chunkId": "vm20-canonical-coverage-vm20-role-map-sections-3-4-5-child-001",
+              "citation": {
+                "pageStart": 48,
+                "pageEnd": 48,
+                "pageReference": "pp. 48-48"
+              },
+              "role": "PRIMARY_GOVERNING",
+              "authorityLevel": "manual_section",
+              "promotionStatus": "promoted"
+            },
+            {
+              "sourceId": "vm20-canonical-coverage",
+              "sourceSha256": null,
+              "sourceIndexSha256": "b6ee5bcdc808912a5b073f7dc36542affda46b0525109de3ef246604e6be9d56",
+              "parentChunkId": "vm20-canonical-coverage-vm20-section8-reinsurance",
+              "chunkId": "vm20-canonical-coverage-vm20-section8-reinsurance-child-002",
+              "citation": {
+                "pageStart": 89,
+                "pageEnd": 89,
+                "pageReference": "pp. 89-89"
+              },
+              "role": "PRIMARY_OPERATIVE",
+              "authorityLevel": "manual_section",
+              "promotionStatus": "promoted"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "3",
+      "querySha256": "f1d08ed5730b436a453e18d06c0eb351f079c42b1fac7140fcbf4e974a103625",
+      "primarySupportStatus": "AMBIGUOUS_REQUIRES_SME",
+      "supportStructure": "NOT_APPLICABLE",
+      "category": "reserve_method",
+      "identifierPresence": "PRESENT",
+      "sourceFamily": "valuation_manual_pdfs",
+      "modality": "PDF",
+      "governingSourceAvailable": false,
+      "companionOnly": false,
+      "humanReviewState": "INDEPENDENT_MODEL_REVIEWED",
+      "pass2Outcome": "NEEDS_SME",
+      "needsSme": true,
+      "split": "diagnostic",
+      "acceptedEvidenceSets": []
+    },
+    {
+      "questionId": "4",
+      "querySha256": "34dd01ceada65ce3beb7c6839e0bbe34b0cd798e640c1ed5a47fe54a8272fd5a",
+      "primarySupportStatus": "AMBIGUOUS_REQUIRES_SME",
+      "supportStructure": "NOT_APPLICABLE",
+      "category": "reserve_method",
+      "identifierPresence": "ABSENT",
+      "sourceFamily": "valuation_manual_pdfs",
+      "modality": "PDF",
+      "governingSourceAvailable": false,
+      "companionOnly": false,
+      "humanReviewState": "INDEPENDENT_MODEL_REVIEWED",
+      "pass2Outcome": "DISAGREE_SUPPORT_STATUS",
+      "needsSme": true,
+      "split": "diagnostic",
+      "acceptedEvidenceSets": []
+    },
+    {
+      "questionId": "5",
+      "querySha256": "f28bc21d8a5341e23b3bb4c97639f6f3c81f7db4bf5c3115a33599a4104ce6b5",
+      "primarySupportStatus": "UNSUPPORTED_COMPANY_SPECIFIC",
+      "supportStructure": "NOT_APPLICABLE",
+      "category": "company_reconciliation",
+      "identifierPresence": "PRESENT",
+      "sourceFamily": "company_internal",
+      "modality": "mixed_private_dependency",
+      "governingSourceAvailable": false,
+      "companionOnly": false,
+      "humanReviewState": "INDEPENDENT_MODEL_REVIEWED",
+      "pass2Outcome": "AGREE",
+      "needsSme": false,
+      "split": "diagnostic",
+      "acceptedEvidenceSets": []
+    },
+    {
+      "questionId": "6",
+      "querySha256": "7f0598fe8d9f4fc677ef009de72e9f163025772fbbe4769917f7b84f445034a4",
+      "primarySupportStatus": "UNSUPPORTED_COMPANY_SPECIFIC",
+      "supportStructure": "NOT_APPLICABLE",
+      "category": "company_reconciliation",
+      "identifierPresence": "PRESENT",
+      "sourceFamily": "company_internal",
+      "modality": "mixed_private_dependency",
+      "governingSourceAvailable": false,
+      "companionOnly": false,
+      "humanReviewState": "INDEPENDENT_MODEL_REVIEWED",
+      "pass2Outcome": "AGREE",
+      "needsSme": false,
+      "split": "diagnostic",
+      "acceptedEvidenceSets": []
+    },
+    {
+      "questionId": "7",
+      "querySha256": "e054b57c0fdc8119d1b5845497ba4e62f26e6105b130c10c6398f4a8d3f1a79f",
+      "primarySupportStatus": "UNSUPPORTED_COMPANY_SPECIFIC",
+      "supportStructure": "NOT_APPLICABLE",
+      "category": "company_reconciliation",
+      "identifierPresence": "PRESENT",
+      "sourceFamily": "company_internal",
+      "modality": "mixed_private_dependency",
+      "governingSourceAvailable": false,
+      "companionOnly": false,
+      "humanReviewState": "INDEPENDENT_MODEL_REVIEWED",
+      "pass2Outcome": "AGREE",
+      "needsSme": false,
+      "split": "diagnostic",
+      "acceptedEvidenceSets": []
+    },
+    {
+      "questionId": "8",
+      "querySha256": "16a554f02e906e51c1a6da581973944d72d0b4c28bdddce1b8bf2d42e9f23db7",
+      "primarySupportStatus": "UNSUPPORTED_COMPANY_SPECIFIC",
+      "supportStructure": "NOT_APPLICABLE",
+      "category": "company_reconciliation",
+      "identifierPresence": "ABSENT",
+      "sourceFamily": "company_internal",
+      "modality": "mixed_private_dependency",
+      "governingSourceAvailable": false,
+      "companionOnly": false,
+      "humanReviewState": "INDEPENDENT_MODEL_REVIEWED",
+      "pass2Outcome": "AGREE",
+      "needsSme": false,
+      "split": "diagnostic",
+      "acceptedEvidenceSets": []
+    },
+    {
+      "questionId": "9",
+      "querySha256": "e7c20e94faff68dad6083b08321147cad8cfd095834e2b0296b67530f2d2aa92",
+      "primarySupportStatus": "FULLY_SUPPORTED",
+      "supportStructure": "SINGLE_UNIT",
+      "category": "reserve_method",
+      "identifierPresence": "PRESENT",
+      "sourceFamily": "valuation_manual_pdfs",
+      "modality": "PDF",
+      "governingSourceAvailable": true,
+      "companionOnly": false,
+      "humanReviewState": "INDEPENDENT_MODEL_REVIEWED",
+      "pass2Outcome": "AGREE",
+      "needsSme": false,
+      "split": "holdout",
+      "acceptedEvidenceSets": [
+        {
+          "setId": "Q9-SET-1",
+          "setHash": "d487a7ec7ec3f0db7d08c91cb79c897e94b4b94fc4104efbd34c602dc88355af",
+          "sufficiency": "FULL",
+          "evidence": [
+            {
+              "sourceId": "vm20-remaining-prose-appendix-coverage",
+              "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+              "sourceIndexSha256": "a98b5a6e5e5fd7f84701939ea8a2a00547322d76871d87afb6dc897c6ec1bc9b",
+              "parentChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section4-complete",
+              "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section4-complete-child-001",
+              "citation": {
+                "pageStart": 66,
+                "pageEnd": 67,
+                "pageReference": "pp. 66-67"
+              },
+              "role": "PRIMARY_OPERATIVE",
+              "authorityLevel": "manual_section",
+              "promotionStatus": "promoted"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "10",
+      "querySha256": "279c17e08de68d87137680ab0e48695f7f386077a507ea2f91e2597f14d5701b",
+      "primarySupportStatus": "PARTIALLY_SUPPORTED",
+      "supportStructure": "MULTI_UNIT_REQUIRED",
+      "category": "reserve_method",
+      "identifierPresence": "PRESENT",
+      "sourceFamily": "valuation_manual_pdfs",
+      "modality": "PDF",
+      "governingSourceAvailable": true,
+      "companionOnly": false,
+      "humanReviewState": "INDEPENDENT_MODEL_REVIEWED",
+      "pass2Outcome": "AGREE",
+      "needsSme": false,
+      "split": "development",
+      "acceptedEvidenceSets": [
+        {
+          "setId": "Q10-SET-1",
+          "setHash": "7a788f3afe2091a7968e69b21bc4f3a894444a5e071a7e8f81cb8a69433b1abf",
+          "sufficiency": "PARTIAL",
+          "evidence": [
+            {
+              "sourceId": "vm20-section3c-hierarchical",
+              "sourceSha256": null,
+              "sourceIndexSha256": "42800a2fa680a839dfc300f774a5d4099ab9f36288ed68790a3fed2794b75237",
+              "parentChunkId": "vm20-section3c-hierarchical-section-3-d-npr-calculation-and-cash-surrender-value-floor",
+              "chunkId": "vm20-section3c-hierarchical-section-3-d-npr-calculation-and-cash-surrender-value-floor-child-001",
+              "citation": {
+                "pageStart": 58,
+                "pageEnd": 65,
+                "pageReference": "pp. 58-65"
+              },
+              "role": "PRIMARY_GOVERNING",
+              "authorityLevel": "manual_section",
+              "promotionStatus": "promoted"
+            },
+            {
+              "sourceId": "vm20-canonical-coverage",
+              "sourceSha256": null,
+              "sourceIndexSha256": "b6ee5bcdc808912a5b073f7dc36542affda46b0525109de3ef246604e6be9d56",
+              "parentChunkId": "vm20-canonical-coverage-vm20-section8-reinsurance",
+              "chunkId": "vm20-canonical-coverage-vm20-section8-reinsurance-child-002",
+              "citation": {
+                "pageStart": 89,
+                "pageEnd": 89,
+                "pageReference": "pp. 89-89"
+              },
+              "role": "PRIMARY_OPERATIVE",
+              "authorityLevel": "manual_section",
+              "promotionStatus": "promoted"
+            },
+            {
+              "sourceId": "vm20-canonical-coverage",
+              "sourceSha256": null,
+              "sourceIndexSha256": "b6ee5bcdc808912a5b073f7dc36542affda46b0525109de3ef246604e6be9d56",
+              "parentChunkId": "vm20-canonical-coverage-vm20-section8-reinsurance",
+              "chunkId": "vm20-canonical-coverage-vm20-section8-reinsurance-child-003",
+              "citation": {
+                "pageStart": 90,
+                "pageEnd": 90,
+                "pageReference": "pp. 90-90"
+              },
+              "role": "CORROBORATING",
+              "authorityLevel": "manual_section",
+              "promotionStatus": "promoted"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "11",
+      "querySha256": "cb1b2459eb8da0f08f772d74551f5cf83856cba5e79a8b8553721e461e1be696",
+      "primarySupportStatus": "UNSUPPORTED_COMPANY_SPECIFIC",
+      "supportStructure": "NOT_APPLICABLE",
+      "category": "company_reconciliation",
+      "identifierPresence": "PRESENT",
+      "sourceFamily": "company_internal",
+      "modality": "mixed_private_dependency",
+      "governingSourceAvailable": false,
+      "companionOnly": false,
+      "humanReviewState": "INDEPENDENT_MODEL_REVIEWED",
+      "pass2Outcome": "AGREE",
+      "needsSme": false,
+      "split": "diagnostic",
+      "acceptedEvidenceSets": []
+    },
+    {
+      "questionId": "12",
+      "querySha256": "cf5ccbd1a09ed9f2e4400641adedc460cad437257adfb3636f4d9cbc5fd3e85c",
+      "primarySupportStatus": "UNSUPPORTED_COMPANY_SPECIFIC",
+      "supportStructure": "NOT_APPLICABLE",
+      "category": "company_reconciliation",
+      "identifierPresence": "PRESENT",
+      "sourceFamily": "company_internal",
+      "modality": "mixed_private_dependency",
+      "governingSourceAvailable": false,
+      "companionOnly": false,
+      "humanReviewState": "INDEPENDENT_MODEL_REVIEWED",
+      "pass2Outcome": "AGREE",
+      "needsSme": false,
+      "split": "diagnostic",
+      "acceptedEvidenceSets": []
+    },
+    {
+      "questionId": "13",
+      "querySha256": "b82af1e7008c701876de9f6be22556a70c531cea1c14f961248d6db7ac7fed4e",
+      "primarySupportStatus": "UNSUPPORTED_COMPANY_SPECIFIC",
+      "supportStructure": "NOT_APPLICABLE",
+      "category": "company_reconciliation",
+      "identifierPresence": "ABSENT",
+      "sourceFamily": "company_internal",
+      "modality": "mixed_private_dependency",
+      "governingSourceAvailable": false,
+      "companionOnly": false,
+      "humanReviewState": "INDEPENDENT_MODEL_REVIEWED",
+      "pass2Outcome": "AGREE",
+      "needsSme": false,
+      "split": "diagnostic",
+      "acceptedEvidenceSets": []
+    },
+    {
+      "questionId": "14",
+      "querySha256": "c3626a94125db76b86b1a078e19b2bbf35addaf5a027979f112f53f92e6362bf",
+      "primarySupportStatus": "UNSUPPORTED_COMPANY_SPECIFIC",
+      "supportStructure": "NOT_APPLICABLE",
+      "category": "company_reconciliation",
+      "identifierPresence": "ABSENT",
+      "sourceFamily": "company_internal",
+      "modality": "mixed_private_dependency",
+      "governingSourceAvailable": false,
+      "companionOnly": false,
+      "humanReviewState": "INDEPENDENT_MODEL_REVIEWED",
+      "pass2Outcome": "AGREE",
+      "needsSme": false,
+      "split": "diagnostic",
+      "acceptedEvidenceSets": []
+    },
+    {
+      "questionId": "15",
+      "querySha256": "7517f492e5da4687283b8efb1eca8653a8c5b9dad9a07dc4dda4f45882e9a8d2",
+      "primarySupportStatus": "UNSUPPORTED_COMPANY_SPECIFIC",
+      "supportStructure": "NOT_APPLICABLE",
+      "category": "company_reconciliation",
+      "identifierPresence": "ABSENT",
+      "sourceFamily": "company_internal",
+      "modality": "mixed_private_dependency",
+      "governingSourceAvailable": false,
+      "companionOnly": false,
+      "humanReviewState": "INDEPENDENT_MODEL_REVIEWED",
+      "pass2Outcome": "AGREE",
+      "needsSme": false,
+      "split": "diagnostic",
+      "acceptedEvidenceSets": []
+    },
+    {
+      "questionId": "16",
+      "querySha256": "e3fb864bb194c63fdb124bab1ea7f68dbb61a18674ca496e7271efb2a6b5e983",
+      "primarySupportStatus": "UNSUPPORTED_COMPANY_SPECIFIC",
+      "supportStructure": "NOT_APPLICABLE",
+      "category": "company_reconciliation",
+      "identifierPresence": "PRESENT",
+      "sourceFamily": "company_internal",
+      "modality": "mixed_private_dependency",
+      "governingSourceAvailable": false,
+      "companionOnly": false,
+      "humanReviewState": "INDEPENDENT_MODEL_REVIEWED",
+      "pass2Outcome": "AGREE",
+      "needsSme": false,
+      "split": "diagnostic",
+      "acceptedEvidenceSets": []
+    },
+    {
+      "questionId": "17",
+      "querySha256": "1ffaad26ac846c1f9a989e65a0100f07b3027fa864e27cf1c7a9f7d3f84b3fd0",
+      "primarySupportStatus": "UNSUPPORTED_COMPANY_SPECIFIC",
+      "supportStructure": "NOT_APPLICABLE",
+      "category": "company_reconciliation",
+      "identifierPresence": "ABSENT",
+      "sourceFamily": "company_internal",
+      "modality": "mixed_private_dependency",
+      "governingSourceAvailable": false,
+      "companionOnly": false,
+      "humanReviewState": "INDEPENDENT_MODEL_REVIEWED",
+      "pass2Outcome": "AGREE",
+      "needsSme": false,
+      "split": "diagnostic",
+      "acceptedEvidenceSets": []
+    },
+    {
+      "questionId": "18",
+      "querySha256": "cea68da85e7a36a127312b633cd96a029839faaae9ea62f8e2c7a30bcedaafa3",
+      "primarySupportStatus": "UNSUPPORTED_COMPANY_SPECIFIC",
+      "supportStructure": "NOT_APPLICABLE",
+      "category": "company_reconciliation",
+      "identifierPresence": "ABSENT",
+      "sourceFamily": "company_internal",
+      "modality": "mixed_private_dependency",
+      "governingSourceAvailable": false,
+      "companionOnly": false,
+      "humanReviewState": "INDEPENDENT_MODEL_REVIEWED",
+      "pass2Outcome": "AGREE",
+      "needsSme": false,
+      "split": "diagnostic",
+      "acceptedEvidenceSets": []
+    },
+    {
+      "questionId": "19",
+      "querySha256": "2fb4333c56e3a1dd64045e803d44784a26e8914e881f8381d5494b4bdf4a6d15",
+      "primarySupportStatus": "UNSUPPORTED_COMPANY_SPECIFIC",
+      "supportStructure": "NOT_APPLICABLE",
+      "category": "company_reconciliation",
+      "identifierPresence": "PRESENT",
+      "sourceFamily": "company_internal",
+      "modality": "mixed_private_dependency",
+      "governingSourceAvailable": false,
+      "companionOnly": false,
+      "humanReviewState": "INDEPENDENT_MODEL_REVIEWED",
+      "pass2Outcome": "AGREE",
+      "needsSme": false,
+      "split": "diagnostic",
+      "acceptedEvidenceSets": []
+    },
+    {
+      "questionId": "20",
+      "querySha256": "0f161b97f7f155529bc4f7359196dd1cc3691a1fd3da415a72d278119a2e683e",
+      "primarySupportStatus": "UNSUPPORTED_COMPANY_SPECIFIC",
+      "supportStructure": "NOT_APPLICABLE",
+      "category": "company_reconciliation",
+      "identifierPresence": "ABSENT",
+      "sourceFamily": "company_internal",
+      "modality": "mixed_private_dependency",
+      "governingSourceAvailable": false,
+      "companionOnly": false,
+      "humanReviewState": "INDEPENDENT_MODEL_REVIEWED",
+      "pass2Outcome": "AGREE",
+      "needsSme": false,
+      "split": "diagnostic",
+      "acceptedEvidenceSets": []
+    },
+    {
+      "questionId": "21",
+      "querySha256": "bbd8fa03639eec7e8438e488fbd2fb7c2ad4cb0aacb3659dcf5071f6250c9e4b",
+      "primarySupportStatus": "UNSUPPORTED_COMPANY_SPECIFIC",
+      "supportStructure": "NOT_APPLICABLE",
+      "category": "company_reconciliation",
+      "identifierPresence": "ABSENT",
+      "sourceFamily": "company_internal",
+      "modality": "mixed_private_dependency",
+      "governingSourceAvailable": false,
+      "companionOnly": false,
+      "humanReviewState": "INDEPENDENT_MODEL_REVIEWED",
+      "pass2Outcome": "AGREE",
+      "needsSme": false,
+      "split": "diagnostic",
+      "acceptedEvidenceSets": []
+    },
+    {
+      "questionId": "22",
+      "querySha256": "e8c977f9c9d05fea74fddf9810e0ac96ecfeba7cdf54b5be8383eb207349b201",
+      "primarySupportStatus": "UNSUPPORTED_COMPANY_SPECIFIC",
+      "supportStructure": "NOT_APPLICABLE",
+      "category": "company_reconciliation",
+      "identifierPresence": "ABSENT",
+      "sourceFamily": "company_internal",
+      "modality": "mixed_private_dependency",
+      "governingSourceAvailable": false,
+      "companionOnly": false,
+      "humanReviewState": "INDEPENDENT_MODEL_REVIEWED",
+      "pass2Outcome": "AGREE",
+      "needsSme": false,
+      "split": "diagnostic",
+      "acceptedEvidenceSets": []
+    },
+    {
+      "questionId": "23",
+      "querySha256": "df919936527bf4de1d23cdad55824bae1a62961b17e1b2db65152338719b0517",
+      "primarySupportStatus": "UNSUPPORTED_COMPANY_SPECIFIC",
+      "supportStructure": "NOT_APPLICABLE",
+      "category": "company_reconciliation",
+      "identifierPresence": "ABSENT",
+      "sourceFamily": "company_internal",
+      "modality": "mixed_private_dependency",
+      "governingSourceAvailable": false,
+      "companionOnly": false,
+      "humanReviewState": "INDEPENDENT_MODEL_REVIEWED",
+      "pass2Outcome": "AGREE",
+      "needsSme": false,
+      "split": "diagnostic",
+      "acceptedEvidenceSets": []
+    },
+    {
+      "questionId": "24",
+      "querySha256": "34dea4ee7e26582a4841edce22259be17937223bc1582118851af3106e23185a",
+      "primarySupportStatus": "UNSUPPORTED_COMPANY_SPECIFIC",
+      "supportStructure": "NOT_APPLICABLE",
+      "category": "company_reconciliation",
+      "identifierPresence": "PRESENT",
+      "sourceFamily": "company_internal",
+      "modality": "mixed_private_dependency",
+      "governingSourceAvailable": false,
+      "companionOnly": false,
+      "humanReviewState": "INDEPENDENT_MODEL_REVIEWED",
+      "pass2Outcome": "AGREE",
+      "needsSme": false,
+      "split": "diagnostic",
+      "acceptedEvidenceSets": []
+    },
+    {
+      "questionId": "25",
+      "querySha256": "1a39e7ed88959c36e7ac87df1c5ac6c9672d3ec8a5e60cfef7627bd62a1e56d2",
+      "primarySupportStatus": "UNSUPPORTED_COMPANY_SPECIFIC",
+      "supportStructure": "NOT_APPLICABLE",
+      "category": "company_reconciliation",
+      "identifierPresence": "ABSENT",
+      "sourceFamily": "company_internal",
+      "modality": "mixed_private_dependency",
+      "governingSourceAvailable": false,
+      "companionOnly": false,
+      "humanReviewState": "INDEPENDENT_MODEL_REVIEWED",
+      "pass2Outcome": "AGREE",
+      "needsSme": false,
+      "split": "diagnostic",
+      "acceptedEvidenceSets": []
+    },
+    {
+      "questionId": "26",
+      "querySha256": "90976d902deea6faee7308eb95484d4316ca148fddba7bad936ca4b2ce2b7fa6",
+      "primarySupportStatus": "UNSUPPORTED_COMPANY_SPECIFIC",
+      "supportStructure": "NOT_APPLICABLE",
+      "category": "company_reconciliation",
+      "identifierPresence": "ABSENT",
+      "sourceFamily": "company_internal",
+      "modality": "mixed_private_dependency",
+      "governingSourceAvailable": false,
+      "companionOnly": false,
+      "humanReviewState": "INDEPENDENT_MODEL_REVIEWED",
+      "pass2Outcome": "AGREE",
+      "needsSme": false,
+      "split": "diagnostic",
+      "acceptedEvidenceSets": []
+    },
+    {
+      "questionId": "27",
+      "querySha256": "691b008ae5a571934c737a1c426f929a4528207828e84ff73f3f1f62451364cb",
+      "primarySupportStatus": "PARTIALLY_SUPPORTED",
+      "supportStructure": "SINGLE_UNIT",
+      "category": "reinsurance",
+      "identifierPresence": "PRESENT",
+      "sourceFamily": "valuation_manual_pdfs",
+      "modality": "PDF",
+      "governingSourceAvailable": true,
+      "companionOnly": false,
+      "humanReviewState": "INDEPENDENT_MODEL_REVIEWED",
+      "pass2Outcome": "DISAGREE_EVIDENCE_SET",
+      "needsSme": false,
+      "split": "development",
+      "acceptedEvidenceSets": [
+        {
+          "setId": "Q27-SET-1",
+          "setHash": "a1b910beb186a21f3d3031bf4f6f87705e0d565d2972559deec10853820b806b",
+          "sufficiency": "PARTIAL",
+          "evidence": [
+            {
+              "sourceId": "vm20-canonical-coverage",
+              "sourceSha256": null,
+              "sourceIndexSha256": "b6ee5bcdc808912a5b073f7dc36542affda46b0525109de3ef246604e6be9d56",
+              "parentChunkId": "vm20-canonical-coverage-vm20-section8-reinsurance",
+              "chunkId": "vm20-canonical-coverage-vm20-section8-reinsurance-child-002",
+              "citation": {
+                "pageStart": 89,
+                "pageEnd": 89,
+                "pageReference": "pp. 89-89"
+              },
+              "role": "PRIMARY_OPERATIVE",
+              "authorityLevel": "manual_section",
+              "promotionStatus": "promoted"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "28",
+      "querySha256": "3a32dbdbae8a887e6a2ca27a1a07575d6740ee1b470228bfca695a2716af7e5e",
+      "primarySupportStatus": "FULLY_SUPPORTED",
+      "supportStructure": "MULTI_UNIT_REQUIRED",
+      "category": "reinsurance",
+      "identifierPresence": "PRESENT",
+      "sourceFamily": "valuation_manual_pdfs",
+      "modality": "PDF",
+      "governingSourceAvailable": true,
+      "companionOnly": false,
+      "humanReviewState": "INDEPENDENT_MODEL_REVIEWED",
+      "pass2Outcome": "AGREE",
+      "needsSme": false,
+      "split": "development",
+      "acceptedEvidenceSets": [
+        {
+          "setId": "Q28-SET-1",
+          "setHash": "b9c0015c3e4d4e73954a3794ba004d058447db94e56831d43ff5fa65c56dc17e",
+          "sufficiency": "FULL",
+          "evidence": [
+            {
+              "sourceId": "vm20-canonical-coverage",
+              "sourceSha256": null,
+              "sourceIndexSha256": "b6ee5bcdc808912a5b073f7dc36542affda46b0525109de3ef246604e6be9d56",
+              "parentChunkId": "vm20-canonical-coverage-vm20-section8-reinsurance",
+              "chunkId": "vm20-canonical-coverage-vm20-section8-reinsurance-child-002",
+              "citation": {
+                "pageStart": 89,
+                "pageEnd": 89,
+                "pageReference": "pp. 89-89"
+              },
+              "role": "PRIMARY_OPERATIVE",
+              "authorityLevel": "manual_section",
+              "promotionStatus": "promoted"
+            },
+            {
+              "sourceId": "vm20-canonical-coverage",
+              "sourceSha256": null,
+              "sourceIndexSha256": "b6ee5bcdc808912a5b073f7dc36542affda46b0525109de3ef246604e6be9d56",
+              "parentChunkId": "vm20-canonical-coverage-vm20-section8-reinsurance",
+              "chunkId": "vm20-canonical-coverage-vm20-section8-reinsurance-child-003",
+              "citation": {
+                "pageStart": 90,
+                "pageEnd": 90,
+                "pageReference": "pp. 90-90"
+              },
+              "role": "PRIMARY_OPERATIVE",
+              "authorityLevel": "manual_section",
+              "promotionStatus": "promoted"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "29",
+      "querySha256": "4c516ad49bf7c9626e238878cdf6c59c1ff46c6895662ac53763b68ecd3ff9f7",
+      "primarySupportStatus": "UNSUPPORTED_CORPUS_GAP",
+      "supportStructure": "NOT_APPLICABLE",
+      "category": "reinsurance",
+      "identifierPresence": "ABSENT",
+      "sourceFamily": "reinsurance_methodology",
+      "modality": "PDF",
+      "governingSourceAvailable": false,
+      "companionOnly": false,
+      "humanReviewState": "INDEPENDENT_MODEL_REVIEWED",
+      "pass2Outcome": "AGREE",
+      "needsSme": false,
+      "split": "diagnostic",
+      "acceptedEvidenceSets": []
+    },
+    {
+      "questionId": "30",
+      "querySha256": "e9d5689d1bf1125ca91f55226624d8932bf1e9ff55681b7fb557b35ef06b35b4",
+      "primarySupportStatus": "FULLY_SUPPORTED",
+      "supportStructure": "MULTI_UNIT_REQUIRED",
+      "category": "reinsurance",
+      "identifierPresence": "PRESENT",
+      "sourceFamily": "valuation_manual_pdfs",
+      "modality": "PDF",
+      "governingSourceAvailable": true,
+      "companionOnly": false,
+      "humanReviewState": "INDEPENDENT_MODEL_REVIEWED",
+      "pass2Outcome": "AGREE",
+      "needsSme": false,
+      "split": "holdout",
+      "acceptedEvidenceSets": [
+        {
+          "setId": "Q30-SET-1",
+          "setHash": "2ce308388cedb50620fcfe171695f063a2568707c2a6c95d343f8bd8bdc9c202",
+          "sufficiency": "FULL",
+          "evidence": [
+            {
+              "sourceId": "vm20-canonical-coverage",
+              "sourceSha256": null,
+              "sourceIndexSha256": "b6ee5bcdc808912a5b073f7dc36542affda46b0525109de3ef246604e6be9d56",
+              "parentChunkId": "vm20-canonical-coverage-vm20-section8-reinsurance",
+              "chunkId": "vm20-canonical-coverage-vm20-section8-reinsurance-child-002",
+              "citation": {
+                "pageStart": 89,
+                "pageEnd": 89,
+                "pageReference": "pp. 89-89"
+              },
+              "role": "PRIMARY_OPERATIVE",
+              "authorityLevel": "manual_section",
+              "promotionStatus": "promoted"
+            },
+            {
+              "sourceId": "vm20-canonical-coverage",
+              "sourceSha256": null,
+              "sourceIndexSha256": "b6ee5bcdc808912a5b073f7dc36542affda46b0525109de3ef246604e6be9d56",
+              "parentChunkId": "vm20-canonical-coverage-vm20-section8-reinsurance",
+              "chunkId": "vm20-canonical-coverage-vm20-section8-reinsurance-child-007",
+              "citation": {
+                "pageStart": 94,
+                "pageEnd": 94,
+                "pageReference": "pp. 94-94"
+              },
+              "role": "PRIMARY_OPERATIVE",
+              "authorityLevel": "manual_section",
+              "promotionStatus": "promoted"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "31",
+      "querySha256": "d91666cbc62bf635b1c595d38c7713fd87c3119322de40c832703720ae3254e6",
+      "primarySupportStatus": "UNSUPPORTED_CORPUS_GAP",
+      "supportStructure": "NOT_APPLICABLE",
+      "category": "reinsurance",
+      "identifierPresence": "PRESENT",
+      "sourceFamily": "reinsurance_methodology",
+      "modality": "PDF",
+      "governingSourceAvailable": false,
+      "companionOnly": false,
+      "humanReviewState": "INDEPENDENT_MODEL_REVIEWED",
+      "pass2Outcome": "AGREE",
+      "needsSme": false,
+      "split": "diagnostic",
+      "acceptedEvidenceSets": []
+    },
+    {
+      "questionId": "32",
+      "querySha256": "44be783e7531d805c60b114cf028ba606b8a87dc8318fcb17c82372d08caf15d",
+      "primarySupportStatus": "UNSUPPORTED_CORPUS_GAP",
+      "supportStructure": "NOT_APPLICABLE",
+      "category": "reinsurance",
+      "identifierPresence": "PRESENT",
+      "sourceFamily": "reinsurance_methodology",
+      "modality": "PDF",
+      "governingSourceAvailable": false,
+      "companionOnly": false,
+      "humanReviewState": "INDEPENDENT_MODEL_REVIEWED",
+      "pass2Outcome": "AGREE",
+      "needsSme": false,
+      "split": "diagnostic",
+      "acceptedEvidenceSets": []
+    },
+    {
+      "questionId": "33",
+      "querySha256": "3d5a5020025ea770de9ddc2afa2e8f83d67d02a1e09164b5de926708fed46fd8",
+      "primarySupportStatus": "UNSUPPORTED_COMPANY_SPECIFIC",
+      "supportStructure": "NOT_APPLICABLE",
+      "category": "company_reconciliation",
+      "identifierPresence": "ABSENT",
+      "sourceFamily": "company_internal",
+      "modality": "mixed_private_dependency",
+      "governingSourceAvailable": false,
+      "companionOnly": false,
+      "humanReviewState": "INDEPENDENT_MODEL_REVIEWED",
+      "pass2Outcome": "AGREE",
+      "needsSme": false,
+      "split": "diagnostic",
+      "acceptedEvidenceSets": []
+    },
+    {
+      "questionId": "34",
+      "querySha256": "2f31c4f7407564694d7f7bced48d99c86ac6c03ecba2f4051414fc6d3114ac76",
+      "primarySupportStatus": "UNSUPPORTED_COMPANY_SPECIFIC",
+      "supportStructure": "NOT_APPLICABLE",
+      "category": "company_reconciliation",
+      "identifierPresence": "PRESENT",
+      "sourceFamily": "company_internal",
+      "modality": "mixed_private_dependency",
+      "governingSourceAvailable": false,
+      "companionOnly": false,
+      "humanReviewState": "INDEPENDENT_MODEL_REVIEWED",
+      "pass2Outcome": "AGREE",
+      "needsSme": false,
+      "split": "diagnostic",
+      "acceptedEvidenceSets": []
+    },
+    {
+      "questionId": "35",
+      "querySha256": "fc1de0e428838a82a0e8840b1a6699e43f2f33f80303de45792ac287bb88efac",
+      "primarySupportStatus": "UNSUPPORTED_CORPUS_GAP",
+      "supportStructure": "NOT_APPLICABLE",
+      "category": "riders_ltc",
+      "identifierPresence": "PRESENT",
+      "sourceFamily": "ltc_regulatory",
+      "modality": "PDF",
+      "governingSourceAvailable": false,
+      "companionOnly": false,
+      "humanReviewState": "INDEPENDENT_MODEL_REVIEWED",
+      "pass2Outcome": "AGREE",
+      "needsSme": false,
+      "split": "diagnostic",
+      "acceptedEvidenceSets": []
+    },
+    {
+      "questionId": "36",
+      "querySha256": "cc379777f603b030bd0f50da944f1265292ff8e05f801a25b09ba0d2a37472ed",
+      "primarySupportStatus": "PARTIALLY_SUPPORTED",
+      "supportStructure": "MULTI_UNIT_REQUIRED",
+      "category": "riders_ltc",
+      "identifierPresence": "ABSENT",
+      "sourceFamily": "practice_notes",
+      "modality": "PDF",
+      "governingSourceAvailable": false,
+      "companionOnly": false,
+      "humanReviewState": "INDEPENDENT_MODEL_REVIEWED",
+      "pass2Outcome": "AGREE",
+      "needsSme": false,
+      "split": "development",
+      "acceptedEvidenceSets": [
+        {
+          "setId": "Q36-SET-1",
+          "setHash": "808751e16b32e16e5b6c30f032ee8560e3562063da0be490c9d2a8aa3048a88e",
+          "sufficiency": "PARTIAL",
+          "evidence": [
+            {
+              "sourceId": "vm20-practice-note-companion",
+              "sourceSha256": null,
+              "sourceIndexSha256": "78d2a0f7f3608880079fdeebe7ec3b4c99bffacdcc899dc485ce5aa9c85f6950",
+              "parentChunkId": "vm20-practice-note-companion-vm20-pn-front-matter",
+              "chunkId": "vm20-practice-note-companion-vm20-pn-front-matter-child-006",
+              "citation": {
+                "pageStart": 8,
+                "pageEnd": 8,
+                "pageReference": "pp. 8-8"
+              },
+              "role": "INTERPRETIVE_COMPANION",
+              "authorityLevel": "companion_guidance",
+              "promotionStatus": "not_promoted"
+            },
+            {
+              "sourceId": "vm20-remaining-prose-appendix-coverage",
+              "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+              "sourceIndexSha256": "a98b5a6e5e5fd7f84701939ea8a2a00547322d76871d87afb6dc897c6ec1bc9b",
+              "parentChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions",
+              "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions-child-001",
+              "citation": {
+                "pageStart": 118,
+                "pageEnd": 119,
+                "pageReference": "pp. 118-119"
+              },
+              "role": "CONTEXT_ONLY",
+              "authorityLevel": "manual_section",
+              "promotionStatus": "promoted"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "37",
+      "querySha256": "baa30ab2192474854272534ee5008fa8d10a65acc3403958326bf34f11e521ef",
+      "primarySupportStatus": "UNSUPPORTED_CORPUS_GAP",
+      "supportStructure": "NOT_APPLICABLE",
+      "category": "riders_ltc",
+      "identifierPresence": "ABSENT",
+      "sourceFamily": "ltc_regulatory",
+      "modality": "PDF",
+      "governingSourceAvailable": false,
+      "companionOnly": false,
+      "humanReviewState": "INDEPENDENT_MODEL_REVIEWED",
+      "pass2Outcome": "AGREE",
+      "needsSme": false,
+      "split": "diagnostic",
+      "acceptedEvidenceSets": []
+    },
+    {
+      "questionId": "38",
+      "querySha256": "90a6a0deed6e252058134b70ce0b796b0ee897032b0682131c66dd17824804ec",
+      "primarySupportStatus": "UNSUPPORTED_CORPUS_GAP",
+      "supportStructure": "NOT_APPLICABLE",
+      "category": "riders_ltc",
+      "identifierPresence": "ABSENT",
+      "sourceFamily": "ltc_regulatory",
+      "modality": "PDF",
+      "governingSourceAvailable": false,
+      "companionOnly": false,
+      "humanReviewState": "INDEPENDENT_MODEL_REVIEWED",
+      "pass2Outcome": "AGREE",
+      "needsSme": false,
+      "split": "diagnostic",
+      "acceptedEvidenceSets": []
+    },
+    {
+      "questionId": "39",
+      "querySha256": "284eabd49d235da2b25744fe4cb96495bc5f120b1db352c27e0083accd9d3dde",
+      "primarySupportStatus": "UNSUPPORTED_CORPUS_GAP",
+      "supportStructure": "NOT_APPLICABLE",
+      "category": "riders_ltc",
+      "identifierPresence": "PRESENT",
+      "sourceFamily": "ltc_regulatory",
+      "modality": "PDF",
+      "governingSourceAvailable": false,
+      "companionOnly": false,
+      "humanReviewState": "INDEPENDENT_MODEL_REVIEWED",
+      "pass2Outcome": "AGREE",
+      "needsSme": false,
+      "split": "diagnostic",
+      "acceptedEvidenceSets": []
+    },
+    {
+      "questionId": "40",
+      "querySha256": "ec656ba7f8534b16d9d7e0ed2a40d8571cfd21d716c4b088f42867471864935f",
+      "primarySupportStatus": "AMBIGUOUS_REQUIRES_SME",
+      "supportStructure": "NOT_APPLICABLE",
+      "category": "riders_ltc",
+      "identifierPresence": "PRESENT",
+      "sourceFamily": "valuation_manual_pdfs",
+      "modality": "PDF",
+      "governingSourceAvailable": false,
+      "companionOnly": false,
+      "humanReviewState": "INDEPENDENT_MODEL_REVIEWED",
+      "pass2Outcome": "NEEDS_SME",
+      "needsSme": true,
+      "split": "diagnostic",
+      "acceptedEvidenceSets": []
+    },
+    {
+      "questionId": "41",
+      "querySha256": "1d9d7329f9373ada1af7025909068ad96accdd4a419de894ae711f47bb0b488d",
+      "primarySupportStatus": "FULLY_SUPPORTED",
+      "supportStructure": "MULTI_UNIT_REQUIRED",
+      "category": "assumption_governance",
+      "identifierPresence": "ABSENT",
+      "sourceFamily": "valuation_manual_pdfs",
+      "modality": "PDF",
+      "governingSourceAvailable": true,
+      "companionOnly": false,
+      "humanReviewState": "INDEPENDENT_MODEL_REVIEWED",
+      "pass2Outcome": "AGREE",
+      "needsSme": false,
+      "split": "holdout",
+      "acceptedEvidenceSets": [
+        {
+          "setId": "Q41-SET-1",
+          "setHash": "abf540c19473702e8540b5128ae33c588a8d413b1644f2b1c6d4d70dc693f26c",
+          "sufficiency": "FULL",
+          "evidence": [
+            {
+              "sourceId": "vm20-remaining-prose-appendix-coverage",
+              "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+              "sourceIndexSha256": "a98b5a6e5e5fd7f84701939ea8a2a00547322d76871d87afb6dc897c6ec1bc9b",
+              "parentChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-a-general-assumption-requirements",
+              "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-a-general-assumption-requirements-child-001",
+              "citation": {
+                "pageStart": 94,
+                "pageEnd": 95,
+                "pageReference": "pp. 94-95"
+              },
+              "role": "PRIMARY_GOVERNING",
+              "authorityLevel": "manual_section",
+              "promotionStatus": "promoted"
+            },
+            {
+              "sourceId": "vm20-remaining-prose-appendix-coverage",
+              "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+              "sourceIndexSha256": "a98b5a6e5e5fd7f84701939ea8a2a00547322d76871d87afb6dc897c6ec1bc9b",
+              "parentChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-c-mortality-assumptions",
+              "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-c-mortality-assumptions-child-001",
+              "citation": {
+                "pageStart": 97,
+                "pageEnd": 98,
+                "pageReference": "pp. 97-98"
+              },
+              "role": "PRIMARY_OPERATIVE",
+              "authorityLevel": "manual_section",
+              "promotionStatus": "promoted"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "42",
+      "querySha256": "2014cded10c285c46f8e0d297d1daea8e6004fe1617fabf2f14672e0e99ccbd4",
+      "primarySupportStatus": "AMBIGUOUS_REQUIRES_SME",
+      "supportStructure": "NOT_APPLICABLE",
+      "category": "assumption_governance",
+      "identifierPresence": "ABSENT",
+      "sourceFamily": "valuation_manual_pdfs",
+      "modality": "PDF",
+      "governingSourceAvailable": false,
+      "companionOnly": false,
+      "humanReviewState": "INDEPENDENT_MODEL_REVIEWED",
+      "pass2Outcome": "NEEDS_SME",
+      "needsSme": true,
+      "split": "diagnostic",
+      "acceptedEvidenceSets": []
+    },
+    {
+      "questionId": "43",
+      "querySha256": "05b0bceeff2ac847ebb0ffeb58c5eba45f2735fd7ba94ce0c58fa17eb920f34e",
+      "primarySupportStatus": "AMBIGUOUS_REQUIRES_SME",
+      "supportStructure": "NOT_APPLICABLE",
+      "category": "assumption_governance",
+      "identifierPresence": "ABSENT",
+      "sourceFamily": "valuation_manual_pdfs",
+      "modality": "PDF",
+      "governingSourceAvailable": false,
+      "companionOnly": false,
+      "humanReviewState": "INDEPENDENT_MODEL_REVIEWED",
+      "pass2Outcome": "NEEDS_SME",
+      "needsSme": true,
+      "split": "diagnostic",
+      "acceptedEvidenceSets": []
+    },
+    {
+      "questionId": "44",
+      "querySha256": "8a87456482ab29f1e3ed18e72f4f7745dc64535c4d0e8aff647fc9217138df6f",
+      "primarySupportStatus": "PARTIALLY_SUPPORTED",
+      "supportStructure": "MULTI_UNIT_REQUIRED",
+      "category": "applicability_scope",
+      "identifierPresence": "PRESENT",
+      "sourceFamily": "practice_notes",
+      "modality": "PDF",
+      "governingSourceAvailable": false,
+      "companionOnly": true,
+      "humanReviewState": "INDEPENDENT_MODEL_REVIEWED",
+      "pass2Outcome": "DISAGREE_AUTHORITY_ROLE",
+      "needsSme": false,
+      "split": "holdout",
+      "acceptedEvidenceSets": [
+        {
+          "setId": "Q44-SET-1",
+          "setHash": "1a3ab57960b2c77035c6aa334b7388e6d84187ace94066c56c2ee169e09df012",
+          "sufficiency": "PARTIAL",
+          "evidence": [
+            {
+              "sourceId": "vm20-practice-note-companion",
+              "sourceSha256": null,
+              "sourceIndexSha256": "78d2a0f7f3608880079fdeebe7ec3b4c99bffacdcc899dc485ce5aa9c85f6950",
+              "parentChunkId": "vm20-practice-note-companion-vm20-pn-front-matter",
+              "chunkId": "vm20-practice-note-companion-vm20-pn-front-matter-child-003",
+              "citation": {
+                "pageStart": 5,
+                "pageEnd": 6,
+                "pageReference": "pp. 5-6"
+              },
+              "role": "INTERPRETIVE_COMPANION",
+              "authorityLevel": "companion_guidance",
+              "promotionStatus": "not_promoted"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "45",
+      "querySha256": "15431f1d213921c310664804091e085b0cc1e8b58a6d941e5270280411540b96",
+      "primarySupportStatus": "UNSUPPORTED_CORPUS_GAP",
+      "supportStructure": "NOT_APPLICABLE",
+      "category": "applicability_scope",
+      "identifierPresence": "PRESENT",
+      "sourceFamily": "valuation_manual_pdfs",
+      "modality": "PDF",
+      "governingSourceAvailable": false,
+      "companionOnly": false,
+      "humanReviewState": "INDEPENDENT_MODEL_REVIEWED",
+      "pass2Outcome": "AGREE",
+      "needsSme": false,
+      "split": "diagnostic",
+      "acceptedEvidenceSets": []
+    },
+    {
+      "questionId": "46",
+      "querySha256": "8bf7e4372b9f50ce5789956a4eebe6921e2e84ca981c191c70795574653d5750",
+      "primarySupportStatus": "PARTIALLY_SUPPORTED",
+      "supportStructure": "MULTI_UNIT_REQUIRED",
+      "category": "reserve_method",
+      "identifierPresence": "PRESENT",
+      "sourceFamily": "valuation_manual_pdfs",
+      "modality": "PDF",
+      "governingSourceAvailable": true,
+      "companionOnly": false,
+      "humanReviewState": "INDEPENDENT_MODEL_REVIEWED",
+      "pass2Outcome": "DISAGREE_SUPPORT_STATUS",
+      "needsSme": false,
+      "split": "development",
+      "acceptedEvidenceSets": [
+        {
+          "setId": "Q46-SET-1",
+          "setHash": "660b544f935f1d5bcf3887c9eaee0792a38f24d1b31ec0183d659bb62f45e9b0",
+          "sufficiency": "PARTIAL",
+          "evidence": [
+            {
+              "sourceId": "vm20-canonical-coverage",
+              "sourceSha256": null,
+              "sourceIndexSha256": "b6ee5bcdc808912a5b073f7dc36542affda46b0525109de3ef246604e6be9d56",
+              "parentChunkId": "vm20-canonical-coverage-vm20-role-map-sections-3-4-5",
+              "chunkId": "vm20-canonical-coverage-vm20-role-map-sections-3-4-5-child-001",
+              "citation": {
+                "pageStart": 48,
+                "pageEnd": 48,
+                "pageReference": "pp. 48-48"
+              },
+              "role": "PRIMARY_GOVERNING",
+              "authorityLevel": "manual_section",
+              "promotionStatus": "promoted"
+            },
+            {
+              "sourceId": "vm20-canonical-coverage",
+              "sourceSha256": null,
+              "sourceIndexSha256": "b6ee5bcdc808912a5b073f7dc36542affda46b0525109de3ef246604e6be9d56",
+              "parentChunkId": "vm20-canonical-coverage-vm20-section8-reinsurance",
+              "chunkId": "vm20-canonical-coverage-vm20-section8-reinsurance-child-002",
+              "citation": {
+                "pageStart": 89,
+                "pageEnd": 89,
+                "pageReference": "pp. 89-89"
+              },
+              "role": "PRIMARY_OPERATIVE",
+              "authorityLevel": "manual_section",
+              "promotionStatus": "promoted"
+            },
+            {
+              "sourceId": "vm20-canonical-coverage",
+              "sourceSha256": null,
+              "sourceIndexSha256": "b6ee5bcdc808912a5b073f7dc36542affda46b0525109de3ef246604e6be9d56",
+              "parentChunkId": "vm20-canonical-coverage-vm20-section8-reinsurance",
+              "chunkId": "vm20-canonical-coverage-vm20-section8-reinsurance-child-003",
+              "citation": {
+                "pageStart": 90,
+                "pageEnd": 90,
+                "pageReference": "pp. 90-90"
+              },
+              "role": "PRIMARY_OPERATIVE",
+              "authorityLevel": "manual_section",
+              "promotionStatus": "promoted"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "47",
+      "querySha256": "6ee0f82be421c864be741e4231b721c0e9f5da0ab6f924eebbc5eb76297329eb",
+      "primarySupportStatus": "FULLY_SUPPORTED",
+      "supportStructure": "MULTI_UNIT_REQUIRED",
+      "category": "reserve_method",
+      "identifierPresence": "ABSENT",
+      "sourceFamily": "valuation_manual_pdfs",
+      "modality": "PDF",
+      "governingSourceAvailable": true,
+      "companionOnly": false,
+      "humanReviewState": "INDEPENDENT_MODEL_REVIEWED",
+      "pass2Outcome": "AGREE",
+      "needsSme": false,
+      "split": "development",
+      "acceptedEvidenceSets": [
+        {
+          "setId": "Q47-SET-1",
+          "setHash": "fbe2e5fa5bfeb4efc8d06bb26b0ca6fc1969a24b89df490210f77a92f0803bf4",
+          "sufficiency": "FULL",
+          "evidence": [
+            {
+              "sourceId": "vm20-canonical-coverage",
+              "sourceSha256": null,
+              "sourceIndexSha256": "b6ee5bcdc808912a5b073f7dc36542affda46b0525109de3ef246604e6be9d56",
+              "parentChunkId": "vm20-canonical-coverage-vm20-section6-exclusion-tests",
+              "chunkId": "vm20-canonical-coverage-vm20-section6-exclusion-tests-child-001",
+              "citation": {
+                "pageStart": 69,
+                "pageEnd": 69,
+                "pageReference": "pp. 69-69"
+              },
+              "role": "PRIMARY_GOVERNING",
+              "authorityLevel": "manual_section",
+              "promotionStatus": "promoted"
+            },
+            {
+              "sourceId": "vm20-canonical-coverage",
+              "sourceSha256": null,
+              "sourceIndexSha256": "b6ee5bcdc808912a5b073f7dc36542affda46b0525109de3ef246604e6be9d56",
+              "parentChunkId": "vm20-canonical-coverage-vm20-section6-exclusion-tests",
+              "chunkId": "vm20-canonical-coverage-vm20-section6-exclusion-tests-child-002",
+              "citation": {
+                "pageStart": 70,
+                "pageEnd": 70,
+                "pageReference": "pp. 70-70"
+              },
+              "role": "PRIMARY_OPERATIVE",
+              "authorityLevel": "manual_section",
+              "promotionStatus": "promoted"
+            }
+          ]
+        },
+        {
+          "setId": "Q47-SET-2",
+          "setHash": "b7a3fd1a63dcb1352ba820ce556058b603f727981fa7764ded63463cb24c312d",
+          "sufficiency": "FULL",
+          "evidence": [
+            {
+              "sourceId": "vm20-canonical-coverage",
+              "sourceSha256": null,
+              "sourceIndexSha256": "b6ee5bcdc808912a5b073f7dc36542affda46b0525109de3ef246604e6be9d56",
+              "parentChunkId": "vm20-canonical-coverage-vm20-section6-exclusion-tests",
+              "chunkId": "vm20-canonical-coverage-vm20-section6-exclusion-tests-child-001",
+              "citation": {
+                "pageStart": 69,
+                "pageEnd": 69,
+                "pageReference": "pp. 69-69"
+              },
+              "role": "PRIMARY_GOVERNING",
+              "authorityLevel": "manual_section",
+              "promotionStatus": "promoted"
+            },
+            {
+              "sourceId": "vm20-canonical-coverage",
+              "sourceSha256": null,
+              "sourceIndexSha256": "b6ee5bcdc808912a5b073f7dc36542affda46b0525109de3ef246604e6be9d56",
+              "parentChunkId": "vm20-canonical-coverage-vm20-section6-exclusion-tests",
+              "chunkId": "vm20-canonical-coverage-vm20-section6-exclusion-tests-child-004",
+              "citation": {
+                "pageStart": 72,
+                "pageEnd": 72,
+                "pageReference": "pp. 72-72"
+              },
+              "role": "PRIMARY_OPERATIVE",
+              "authorityLevel": "manual_section",
+              "promotionStatus": "promoted"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "48",
+      "querySha256": "273a5b288c111f8ccc91a07215fd83d90d023a349cd488106a94d42e03dfac2b",
+      "primarySupportStatus": "FULLY_SUPPORTED",
+      "supportStructure": "SINGLE_UNIT",
+      "category": "reserve_method",
+      "identifierPresence": "PRESENT",
+      "sourceFamily": "valuation_manual_pdfs",
+      "modality": "PDF",
+      "governingSourceAvailable": true,
+      "companionOnly": false,
+      "humanReviewState": "INDEPENDENT_MODEL_REVIEWED",
+      "pass2Outcome": "AGREE",
+      "needsSme": false,
+      "split": "development",
+      "acceptedEvidenceSets": [
+        {
+          "setId": "Q48-SET-1",
+          "setHash": "b9c6a1d22c84df7a29a5ebd6767d614ad37d9d7a6ea88d176472a35a05b97591",
+          "sufficiency": "FULL",
+          "evidence": [
+            {
+              "sourceId": "vm20-remaining-prose-appendix-coverage",
+              "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+              "sourceIndexSha256": "a98b5a6e5e5fd7f84701939ea8a2a00547322d76871d87afb6dc897c6ec1bc9b",
+              "parentChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-a-general-assumption-requirements",
+              "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-a-general-assumption-requirements-child-001",
+              "citation": {
+                "pageStart": 94,
+                "pageEnd": 95,
+                "pageReference": "pp. 94-95"
+              },
+              "role": "PRIMARY_GOVERNING",
+              "authorityLevel": "manual_section",
+              "promotionStatus": "promoted"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "49",
+      "querySha256": "cff50361fac009e0bb6cf187955b4d92b12723c3b6a1c0b6f1f651380e2d5c7a",
+      "primarySupportStatus": "FULLY_SUPPORTED",
+      "supportStructure": "MULTI_UNIT_REQUIRED",
+      "category": "assumption_governance",
+      "identifierPresence": "ABSENT",
+      "sourceFamily": "valuation_manual_pdfs",
+      "modality": "PDF",
+      "governingSourceAvailable": true,
+      "companionOnly": false,
+      "humanReviewState": "INDEPENDENT_MODEL_REVIEWED",
+      "pass2Outcome": "AGREE",
+      "needsSme": false,
+      "split": "development",
+      "acceptedEvidenceSets": [
+        {
+          "setId": "Q49-SET-1",
+          "setHash": "d7d42536b2dec1d35e3e3335d9926b87c5f40cff81449f6297af4e41581e6848",
+          "sufficiency": "FULL",
+          "evidence": [
+            {
+              "sourceId": "vm20-remaining-prose-appendix-coverage",
+              "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+              "sourceIndexSha256": "a98b5a6e5e5fd7f84701939ea8a2a00547322d76871d87afb6dc897c6ec1bc9b",
+              "parentChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-a-general-assumption-requirements",
+              "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-a-general-assumption-requirements-child-001",
+              "citation": {
+                "pageStart": 94,
+                "pageEnd": 95,
+                "pageReference": "pp. 94-95"
+              },
+              "role": "PRIMARY_GOVERNING",
+              "authorityLevel": "manual_section",
+              "promotionStatus": "promoted"
+            },
+            {
+              "sourceId": "vm20-remaining-prose-appendix-coverage",
+              "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+              "sourceIndexSha256": "a98b5a6e5e5fd7f84701939ea8a2a00547322d76871d87afb6dc897c6ec1bc9b",
+              "parentChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-c-mortality-assumptions",
+              "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-c-mortality-assumptions-child-006",
+              "citation": {
+                "pageStart": 103,
+                "pageEnd": 103,
+                "pageReference": "pp. 103-103"
+              },
+              "role": "PRIMARY_OPERATIVE",
+              "authorityLevel": "manual_section",
+              "promotionStatus": "promoted"
+            }
+          ]
+        },
+        {
+          "setId": "Q49-SET-2",
+          "setHash": "befebcdd394091cd1391e18ac4e33cfb61345865adf9640804668b91510bf55b",
+          "sufficiency": "FULL",
+          "evidence": [
+            {
+              "sourceId": "vm20-remaining-prose-appendix-coverage",
+              "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+              "sourceIndexSha256": "a98b5a6e5e5fd7f84701939ea8a2a00547322d76871d87afb6dc897c6ec1bc9b",
+              "parentChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-c-mortality-assumptions",
+              "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-c-mortality-assumptions-child-001",
+              "citation": {
+                "pageStart": 97,
+                "pageEnd": 98,
+                "pageReference": "pp. 97-98"
+              },
+              "role": "PRIMARY_OPERATIVE",
+              "authorityLevel": "manual_section",
+              "promotionStatus": "promoted"
+            },
+            {
+              "sourceId": "vm20-remaining-prose-appendix-coverage",
+              "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+              "sourceIndexSha256": "a98b5a6e5e5fd7f84701939ea8a2a00547322d76871d87afb6dc897c6ec1bc9b",
+              "parentChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-c-mortality-assumptions",
+              "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-c-mortality-assumptions-child-006",
+              "citation": {
+                "pageStart": 103,
+                "pageEnd": 103,
+                "pageReference": "pp. 103-103"
+              },
+              "role": "PRIMARY_OPERATIVE",
+              "authorityLevel": "manual_section",
+              "promotionStatus": "promoted"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "50",
+      "querySha256": "e1ff9f410ebb9e9d87981f916384d6baa49e6c3080cb7439889c6301bb19d4dd",
+      "primarySupportStatus": "FULLY_SUPPORTED",
+      "supportStructure": "MULTI_UNIT_REQUIRED",
+      "category": "assumption_governance",
+      "identifierPresence": "ABSENT",
+      "sourceFamily": "valuation_manual_pdfs",
+      "modality": "PDF",
+      "governingSourceAvailable": true,
+      "companionOnly": false,
+      "humanReviewState": "INDEPENDENT_MODEL_REVIEWED",
+      "pass2Outcome": "AGREE",
+      "needsSme": false,
+      "split": "development",
+      "acceptedEvidenceSets": [
+        {
+          "setId": "Q50-SET-1",
+          "setHash": "72bdb8d2db45207d391314dd7f1fc037f9a0f691b6a2589345f53ef9df603243",
+          "sufficiency": "FULL",
+          "evidence": [
+            {
+              "sourceId": "vm20-section3c-hierarchical",
+              "sourceSha256": null,
+              "sourceIndexSha256": "42800a2fa680a839dfc300f774a5d4099ab9f36288ed68790a3fed2794b75237",
+              "parentChunkId": "vm20-section3c-hierarchical-section-3-c-1-mortality-rates",
+              "chunkId": "vm20-section3c-hierarchical-section-3-c-1-mortality-rates-child-001",
+              "citation": {
+                "pageStart": 59,
+                "pageEnd": 59,
+                "pageReference": "pp. 59-59"
+              },
+              "role": "PRIMARY_GOVERNING",
+              "authorityLevel": "manual_section",
+              "promotionStatus": "promoted"
+            },
+            {
+              "sourceId": "vm20-remaining-prose-appendix-coverage",
+              "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+              "sourceIndexSha256": "a98b5a6e5e5fd7f84701939ea8a2a00547322d76871d87afb6dc897c6ec1bc9b",
+              "parentChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-c-mortality-assumptions",
+              "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-c-mortality-assumptions-child-006",
+              "citation": {
+                "pageStart": 103,
+                "pageEnd": 103,
+                "pageReference": "pp. 103-103"
+              },
+              "role": "PRIMARY_OPERATIVE",
+              "authorityLevel": "manual_section",
+              "promotionStatus": "promoted"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "51",
+      "querySha256": "713c9820b6af25a7799beaeb9caf3c64a47394e288a2afaff86b7d345a06f411",
+      "primarySupportStatus": "FULLY_SUPPORTED",
+      "supportStructure": "SINGLE_UNIT",
+      "category": "assumption_governance",
+      "identifierPresence": "ABSENT",
+      "sourceFamily": "valuation_manual_pdfs",
+      "modality": "PDF",
+      "governingSourceAvailable": true,
+      "companionOnly": false,
+      "humanReviewState": "INDEPENDENT_MODEL_REVIEWED",
+      "pass2Outcome": "AGREE",
+      "needsSme": false,
+      "split": "development",
+      "acceptedEvidenceSets": [
+        {
+          "setId": "Q51-SET-1",
+          "setHash": "50b8fd16c91817f8fbddc7bc927d73052ce75469bc12efadc62240638ff80561",
+          "sufficiency": "FULL",
+          "evidence": [
+            {
+              "sourceId": "vm20-remaining-prose-appendix-coverage",
+              "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+              "sourceIndexSha256": "a98b5a6e5e5fd7f84701939ea8a2a00547322d76871d87afb6dc897c6ec1bc9b",
+              "parentChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-e-expense-assumptions",
+              "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-e-expense-assumptions-child-001",
+              "citation": {
+                "pageStart": 121,
+                "pageEnd": 122,
+                "pageReference": "pp. 121-122"
+              },
+              "role": "PRIMARY_OPERATIVE",
+              "authorityLevel": "manual_section",
+              "promotionStatus": "promoted"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "52",
+      "querySha256": "617e0f8c872c9c3ae0efac98148179ef83c4eb2166e0a55e61b99f21cbaa92b8",
+      "primarySupportStatus": "FULLY_SUPPORTED",
+      "supportStructure": "SINGLE_UNIT",
+      "category": "assumption_governance",
+      "identifierPresence": "ABSENT",
+      "sourceFamily": "valuation_manual_pdfs",
+      "modality": "PDF",
+      "governingSourceAvailable": true,
+      "companionOnly": false,
+      "humanReviewState": "INDEPENDENT_MODEL_REVIEWED",
+      "pass2Outcome": "AGREE",
+      "needsSme": false,
+      "split": "holdout",
+      "acceptedEvidenceSets": [
+        {
+          "setId": "Q52-SET-1",
+          "setHash": "141a3f51a39589548ce9afe3129cbe0c4317b5dd519476c6e83f4c5cb77ff361",
+          "sufficiency": "FULL",
+          "evidence": [
+            {
+              "sourceId": "vm20-remaining-prose-appendix-coverage",
+              "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+              "sourceIndexSha256": "a98b5a6e5e5fd7f84701939ea8a2a00547322d76871d87afb6dc897c6ec1bc9b",
+              "parentChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions",
+              "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions-child-002",
+              "citation": {
+                "pageStart": 120,
+                "pageEnd": 120,
+                "pageReference": "pp. 120-120"
+              },
+              "role": "PRIMARY_OPERATIVE",
+              "authorityLevel": "manual_section",
+              "promotionStatus": "promoted"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "53",
+      "querySha256": "993a05097a016fb43a1a1563d91811f720b06d9f8832155a19b2806af6e71d8d",
+      "primarySupportStatus": "PARTIALLY_SUPPORTED",
+      "supportStructure": "SINGLE_UNIT",
+      "category": "product_features_modeling",
+      "identifierPresence": "ABSENT",
+      "sourceFamily": "practice_notes",
+      "modality": "PDF",
+      "governingSourceAvailable": false,
+      "companionOnly": true,
+      "humanReviewState": "INDEPENDENT_MODEL_REVIEWED",
+      "pass2Outcome": "AGREE",
+      "needsSme": false,
+      "split": "development",
+      "acceptedEvidenceSets": [
+        {
+          "setId": "Q53-SET-1",
+          "setHash": "14d035c796293402453df3b98124e5e8bc994f70114a7034cb1b051c25310c79",
+          "sufficiency": "PARTIAL",
+          "evidence": [
+            {
+              "sourceId": "vm20-practice-note-companion",
+              "sourceSha256": null,
+              "sourceIndexSha256": "78d2a0f7f3608880079fdeebe7ec3b4c99bffacdcc899dc485ce5aa9c85f6950",
+              "parentChunkId": "vm20-practice-note-companion-vm20-pn-nge",
+              "chunkId": "vm20-practice-note-companion-vm20-pn-nge-child-001",
+              "citation": {
+                "pageStart": 101,
+                "pageEnd": 101,
+                "pageReference": "pp. 101-101"
+              },
+              "role": "INTERPRETIVE_COMPANION",
+              "authorityLevel": "companion_guidance",
+              "promotionStatus": "not_promoted"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "54",
+      "querySha256": "d08dc032ce4fd7cfc64e54842450c172f9e1ea50d2b24797b15e26c81a3a07a8",
+      "primarySupportStatus": "UNSUPPORTED_CORPUS_GAP",
+      "supportStructure": "NOT_APPLICABLE",
+      "category": "assumption_governance",
+      "identifierPresence": "ABSENT",
+      "sourceFamily": "valuation_manual_pdfs",
+      "modality": "PDF",
+      "governingSourceAvailable": false,
+      "companionOnly": false,
+      "humanReviewState": "INDEPENDENT_MODEL_REVIEWED",
+      "pass2Outcome": "AGREE",
+      "needsSme": false,
+      "split": "diagnostic",
+      "acceptedEvidenceSets": []
+    },
+    {
+      "questionId": "55",
+      "querySha256": "4936ebbc9739f7ee8516d48c7042c9da343af71a7633c13be75cc37ed3a5c1db",
+      "primarySupportStatus": "AMBIGUOUS_REQUIRES_SME",
+      "supportStructure": "NOT_APPLICABLE",
+      "category": "product_features_modeling",
+      "identifierPresence": "PRESENT",
+      "sourceFamily": "valuation_manual_pdfs",
+      "modality": "PDF",
+      "governingSourceAvailable": false,
+      "companionOnly": false,
+      "humanReviewState": "INDEPENDENT_MODEL_REVIEWED",
+      "pass2Outcome": "NEEDS_SME",
+      "needsSme": true,
+      "split": "diagnostic",
+      "acceptedEvidenceSets": []
+    },
+    {
+      "questionId": "56",
+      "querySha256": "db315ef557ce0ef4350aff33be59a4742bc264fe6b1456adab555ee282319d96",
+      "primarySupportStatus": "PARTIALLY_SUPPORTED",
+      "supportStructure": "MULTI_UNIT_REQUIRED",
+      "category": "product_features_modeling",
+      "identifierPresence": "ABSENT",
+      "sourceFamily": "valuation_manual_pdfs",
+      "modality": "PDF",
+      "governingSourceAvailable": true,
+      "companionOnly": false,
+      "humanReviewState": "INDEPENDENT_MODEL_REVIEWED",
+      "pass2Outcome": "AGREE",
+      "needsSme": false,
+      "split": "holdout",
+      "acceptedEvidenceSets": [
+        {
+          "setId": "Q56-SET-1",
+          "setHash": "029c70aff1c8be1979d3780cff1f58562a34e1362bffa91e5fd9da48fb506b54",
+          "sufficiency": "PARTIAL",
+          "evidence": [
+            {
+              "sourceId": "vm01-definitions",
+              "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+              "sourceIndexSha256": "2a5ea606b2aebade05b0e4079a3001133ab68138db97ea4d0e2295661c016780",
+              "parentChunkId": null,
+              "chunkId": "vm01-definition-081-secondary-guarantee",
+              "citation": {
+                "pageStart": 35,
+                "pageEnd": 35,
+                "pageReference": "pp. 35-35"
+              },
+              "role": "DEFINITIONAL",
+              "authorityLevel": "manual_section",
+              "promotionStatus": "promoted"
+            },
+            {
+              "sourceId": "vm20-remaining-prose-appendix-coverage",
+              "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+              "sourceIndexSha256": "a98b5a6e5e5fd7f84701939ea8a2a00547322d76871d87afb6dc897c6ec1bc9b",
+              "parentChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions",
+              "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions-child-002",
+              "citation": {
+                "pageStart": 120,
+                "pageEnd": 120,
+                "pageReference": "pp. 120-120"
+              },
+              "role": "PRIMARY_OPERATIVE",
+              "authorityLevel": "manual_section",
+              "promotionStatus": "promoted"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "57",
+      "querySha256": "47d1191812b1917287bc455bd57fbf11f9b047fc1d09e1196961c5411df5fd11",
+      "primarySupportStatus": "PARTIALLY_SUPPORTED",
+      "supportStructure": "MULTI_UNIT_REQUIRED",
+      "category": "product_features_modeling",
+      "identifierPresence": "PRESENT",
+      "sourceFamily": "valuation_manual_pdfs",
+      "modality": "PDF",
+      "governingSourceAvailable": true,
+      "companionOnly": false,
+      "humanReviewState": "INDEPENDENT_MODEL_REVIEWED",
+      "pass2Outcome": "AGREE",
+      "needsSme": false,
+      "split": "holdout",
+      "acceptedEvidenceSets": [
+        {
+          "setId": "Q57-SET-1",
+          "setHash": "cd386741b21c12bdce9726848e620b019f691dddbfdb32ebaaa1322380eff33a",
+          "sufficiency": "PARTIAL",
+          "evidence": [
+            {
+              "sourceId": "vm20-canonical-coverage",
+              "sourceSha256": null,
+              "sourceIndexSha256": "b6ee5bcdc808912a5b073f7dc36542affda46b0525109de3ef246604e6be9d56",
+              "parentChunkId": "vm20-canonical-coverage-vm20-section7-asset-mechanics",
+              "chunkId": "vm20-canonical-coverage-vm20-section7-asset-mechanics-child-004",
+              "citation": {
+                "pageStart": 83,
+                "pageEnd": 83,
+                "pageReference": "pp. 83-83"
+              },
+              "role": "PRIMARY_OPERATIVE",
+              "authorityLevel": "manual_section",
+              "promotionStatus": "promoted"
+            },
+            {
+              "sourceId": "vm20-remaining-prose-appendix-coverage",
+              "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+              "sourceIndexSha256": "a98b5a6e5e5fd7f84701939ea8a2a00547322d76871d87afb6dc897c6ec1bc9b",
+              "parentChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions",
+              "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions-child-001",
+              "citation": {
+                "pageStart": 118,
+                "pageEnd": 119,
+                "pageReference": "pp. 118-119"
+              },
+              "role": "CONTEXT_ONLY",
+              "authorityLevel": "manual_section",
+              "promotionStatus": "promoted"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "58",
+      "querySha256": "748d526d7da6a13a23a08d265831df42536b0e885ed3f0b44061255d3ca656ba",
+      "primarySupportStatus": "AMBIGUOUS_REQUIRES_SME",
+      "supportStructure": "NOT_APPLICABLE",
+      "category": "product_features_modeling",
+      "identifierPresence": "PRESENT",
+      "sourceFamily": "valuation_manual_pdfs",
+      "modality": "PDF",
+      "governingSourceAvailable": false,
+      "companionOnly": false,
+      "humanReviewState": "INDEPENDENT_MODEL_REVIEWED",
+      "pass2Outcome": "NEEDS_SME",
+      "needsSme": true,
+      "split": "diagnostic",
+      "acceptedEvidenceSets": []
+    },
+    {
+      "questionId": "59",
+      "querySha256": "e07cf10126f1680ad67f1de84b3ef0412238716d932a3437da71aebb60369f0c",
+      "primarySupportStatus": "PARTIALLY_SUPPORTED",
+      "supportStructure": "SINGLE_UNIT",
+      "category": "product_features_modeling",
+      "identifierPresence": "ABSENT",
+      "sourceFamily": "practice_notes",
+      "modality": "PDF",
+      "governingSourceAvailable": false,
+      "companionOnly": true,
+      "humanReviewState": "INDEPENDENT_MODEL_REVIEWED",
+      "pass2Outcome": "AGREE",
+      "needsSme": false,
+      "split": "holdout",
+      "acceptedEvidenceSets": [
+        {
+          "setId": "Q59-SET-1",
+          "setHash": "14d035c796293402453df3b98124e5e8bc994f70114a7034cb1b051c25310c79",
+          "sufficiency": "PARTIAL",
+          "evidence": [
+            {
+              "sourceId": "vm20-practice-note-companion",
+              "sourceSha256": null,
+              "sourceIndexSha256": "78d2a0f7f3608880079fdeebe7ec3b4c99bffacdcc899dc485ce5aa9c85f6950",
+              "parentChunkId": "vm20-practice-note-companion-vm20-pn-nge",
+              "chunkId": "vm20-practice-note-companion-vm20-pn-nge-child-001",
+              "citation": {
+                "pageStart": 101,
+                "pageEnd": 101,
+                "pageReference": "pp. 101-101"
+              },
+              "role": "INTERPRETIVE_COMPANION",
+              "authorityLevel": "companion_guidance",
+              "promotionStatus": "not_promoted"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "60",
+      "querySha256": "4d4ec5b66df6b4bd0e368ff55feefe6ec06ec550c15d190c637ec7819896b321",
+      "primarySupportStatus": "UNSUPPORTED_OUT_OF_SCOPE",
+      "supportStructure": "NOT_APPLICABLE",
+      "category": "reporting_governance",
+      "identifierPresence": "ABSENT",
+      "sourceFamily": "state_specific_regulatory",
+      "modality": "PDF",
+      "governingSourceAvailable": false,
+      "companionOnly": false,
+      "humanReviewState": "INDEPENDENT_MODEL_REVIEWED",
+      "pass2Outcome": "AGREE",
+      "needsSme": false,
+      "split": "diagnostic",
+      "acceptedEvidenceSets": []
+    },
+    {
+      "questionId": "61",
+      "querySha256": "1738106e4174fadb7aa615f4545e71d26c7f7f8b72b387b019a84d6ec155263e",
+      "primarySupportStatus": "AMBIGUOUS_REQUIRES_SME",
+      "supportStructure": "NOT_APPLICABLE",
+      "category": "reporting_governance",
+      "identifierPresence": "ABSENT",
+      "sourceFamily": "valuation_manual_pdfs",
+      "modality": "PDF",
+      "governingSourceAvailable": false,
+      "companionOnly": false,
+      "humanReviewState": "INDEPENDENT_MODEL_REVIEWED",
+      "pass2Outcome": "NEEDS_SME",
+      "needsSme": true,
+      "split": "diagnostic",
+      "acceptedEvidenceSets": []
+    },
+    {
+      "questionId": "62",
+      "querySha256": "5546f10ac6b6befe8b729bc76a11123824a627c2aee3c6a04091cffcdb3e3936",
+      "primarySupportStatus": "AMBIGUOUS_REQUIRES_SME",
+      "supportStructure": "NOT_APPLICABLE",
+      "category": "reporting_governance",
+      "identifierPresence": "ABSENT",
+      "sourceFamily": "valuation_manual_pdfs",
+      "modality": "PDF",
+      "governingSourceAvailable": false,
+      "companionOnly": false,
+      "humanReviewState": "INDEPENDENT_MODEL_REVIEWED",
+      "pass2Outcome": "NEEDS_SME",
+      "needsSme": true,
+      "split": "diagnostic",
+      "acceptedEvidenceSets": []
+    },
+    {
+      "questionId": "63",
+      "querySha256": "28162a4d309380c9ac0ee0f5761079be31ee2e17312121d9903e03a40da0ed30",
+      "primarySupportStatus": "PARTIALLY_SUPPORTED",
+      "supportStructure": "MULTI_UNIT_REQUIRED",
+      "category": "reporting_governance",
+      "identifierPresence": "ABSENT",
+      "sourceFamily": "valuation_manual_pdfs",
+      "modality": "PDF",
+      "governingSourceAvailable": true,
+      "companionOnly": false,
+      "humanReviewState": "INDEPENDENT_MODEL_REVIEWED",
+      "pass2Outcome": "DISAGREE_AUTHORITY_ROLE",
+      "needsSme": false,
+      "split": "development",
+      "acceptedEvidenceSets": [
+        {
+          "setId": "Q63-SET-1",
+          "setHash": "9f407576645dd15ce8c5852c7f1ed996e53b97d3590d355df46ab91a8c51015a",
+          "sufficiency": "PARTIAL",
+          "evidence": [
+            {
+              "sourceId": "vm31-current-manual",
+              "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+              "sourceIndexSha256": "fe1cfb11b0569aba9d4512303d79dffe888bfecd14bc6875e2c975570a12d1ac",
+              "parentChunkId": "vm31-section-3-d-life-report",
+              "chunkId": "vm31-section-3-d-life-report-2-cash-flow-models",
+              "citation": {
+                "pageStart": 345,
+                "pageEnd": 346,
+                "pageReference": "pp. 345-346"
+              },
+              "role": "PRIMARY_GOVERNING",
+              "authorityLevel": "manual_section",
+              "promotionStatus": "promoted"
+            },
+            {
+              "sourceId": "vm31-current-manual",
+              "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+              "sourceIndexSha256": "fe1cfb11b0569aba9d4512303d79dffe888bfecd14bc6875e2c975570a12d1ac",
+              "parentChunkId": "vm31-section-3-d-life-report",
+              "chunkId": "vm31-section-3-d-life-report-11-additional-information",
+              "citation": {
+                "pageStart": 358,
+                "pageEnd": 362,
+                "pageReference": "pp. 358-362"
+              },
+              "role": "CORROBORATING",
+              "authorityLevel": "manual_section",
+              "promotionStatus": "promoted"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "64",
+      "querySha256": "328762c2fb8dad72265aa72b8ccd94a8b0cc88f8b5d53cbc1f5ea9c75aa159a8",
+      "primarySupportStatus": "UNSUPPORTED_CORPUS_GAP",
+      "supportStructure": "NOT_APPLICABLE",
+      "category": "reporting_governance",
+      "identifierPresence": "ABSENT",
+      "sourceFamily": "state_specific_regulatory",
+      "modality": "PDF",
+      "governingSourceAvailable": false,
+      "companionOnly": false,
+      "humanReviewState": "INDEPENDENT_MODEL_REVIEWED",
+      "pass2Outcome": "AGREE",
+      "needsSme": false,
+      "split": "diagnostic",
+      "acceptedEvidenceSets": []
+    },
+    {
+      "questionId": "65",
+      "querySha256": "cc155eec2c293a34540c13c5bd5b29cfe189c3d6ed6f3c161aa14333a6d58439",
+      "primarySupportStatus": "UNSUPPORTED_COMPANY_SPECIFIC",
+      "supportStructure": "NOT_APPLICABLE",
+      "category": "company_reconciliation",
+      "identifierPresence": "ABSENT",
+      "sourceFamily": "company_internal",
+      "modality": "mixed_private_dependency",
+      "governingSourceAvailable": false,
+      "companionOnly": false,
+      "humanReviewState": "INDEPENDENT_MODEL_REVIEWED",
+      "pass2Outcome": "AGREE",
+      "needsSme": false,
+      "split": "diagnostic",
+      "acceptedEvidenceSets": []
+    }
+  ],
+  "privateArtifacts": [
+    {
+      "relativeExternalLocation": "_processed-private/natural-question-gold-v1-2026-09/private_adjudication.json",
+      "sha256": "5b49fcac7fbf6fd642f4c9b9e168954c56c4ea8753dad91fcf3af4caee77b668",
+      "byteCount": 279374
+    },
+    {
+      "relativeExternalLocation": "_processed-private/natural-question-gold-v1-2026-09/sme_review_packet.json",
+      "sha256": "ac07b056ebdf155522ba833d778e768d1bb0644434294e04ed37e793967bdca1",
+      "byteCount": 119395
+    }
+  ]
+}

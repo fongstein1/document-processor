@@ -1,0 +1,58 @@
+{
+  "schemaVersion": "1.0",
+  "status": "pending_human_review",
+  "caseIds": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "9",
+    "27",
+    "29",
+    "40",
+    "42",
+    "43",
+    "44",
+    "46",
+    "47",
+    "49",
+    "55",
+    "58",
+    "60",
+    "61",
+    "62",
+    "63"
+  ],
+  "needsSmeCaseIds": [
+    "3",
+    "4",
+    "40",
+    "42",
+    "43",
+    "55",
+    "58",
+    "61",
+    "62"
+  ],
+  "disagreementCaseIds": [
+    "4",
+    "27",
+    "44",
+    "46",
+    "63"
+  ],
+  "agreementQcCaseIds": [
+    "1",
+    "2",
+    "5",
+    "29",
+    "60",
+    "9"
+  ],
+  "highImpactMultipleAuthorityCaseIds": [
+    "47",
+    "49"
+  ],
+  "detailedPacketLocation": "_processed-private/natural-question-gold-v1-2026-09/sme_review_packet.json"
+}

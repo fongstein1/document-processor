@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "1.0",
+  "goldId": "natural-question-gold-v1",
+  "files": [
+    {
+      "path": "natural_question_gold_v1.json",
+      "sha256": "637fdb159eda1a00d98d0ff67a46c6056e13d2a81036cb1caa51d2b8e53a97b6",
+      "byteCount": 80968
+    },
+    {
+      "path": "natural_question_gold_v1_summary.json",
+      "sha256": "9496499071a17fefcef4b65d526617a00b5bbc0b7234f92a83e58d6316ed5b4e",
+      "byteCount": 2446
+    },
+    {
+      "path": "natural_question_gold_v1_sme_projection.json",
+      "sha256": "d85fa95f19b3d606cd7e752d3b426a48dbcb43c81fbb200f4eb4031bceffa387",
+      "byteCount": 741
+    }
+  ]
+}
