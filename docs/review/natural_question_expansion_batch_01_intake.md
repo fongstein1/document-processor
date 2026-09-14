@@ -6,7 +6,7 @@ This review-only scaffold collects additional authentic human-authored natural q
 
 ## Current state
 
-The approved private workspace was inspected for a separate expansion intake. No authentic, unused human-authored question collection was present. The batch therefore starts `OPEN_EMPTY` with zero questions. No questions were generated, mined from source text, paraphrased, or recycled from Natural Question Gold V1.
+The batch is `OPEN_INTAKE` with 41 human-approved, authentic, verbatim question or query-like records. The intake also binds three authentic non-question utterances to a private quarantine and excludes nine candidates for which verbatim human source wording was not recovered. No questions were generated, mined from source text, paraphrased, or recycled from Natural Question Gold V1.
 
 ## Private intake contract
 
@@ -16,8 +16,8 @@ Before freeze, records have no question ID or stored query hash. At intake freez
 
 ## Public boundary
 
-Git stores only batch status, counts, provenance counts, control flags, frozen IDs/hashes when available, and the external private artifact hash and byte count. It never stores question text, answers, expected sources, evidence, rationale, or retrieval output. The current public projection contains zero question records.
+Git stores only batch status, counts, provenance counts, duplicate-screen counts, control flags, frozen IDs/hashes when available, and external private artifact hashes and byte counts. It never stores question text, quarantined utterance text, answers, expected sources, evidence, rationale, or retrieval output. Because the batch remains open, the public projection contains no frozen question records.
 
 ## Next action
 
-Collect additional authentic human-authored questions. Do not run retrieval or adjudication until a later approved milestone freezes a sufficiently large intake.
+Human-review the deterministic lexical/mechanical near-duplicate candidates and continue collecting authentic human-authored questions before deciding whether to freeze. Do not run retrieval or adjudication during open intake.

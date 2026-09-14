@@ -23,6 +23,7 @@
     "benchmark:natural-question:v1:validate": "node scripts/validate-natural-question-benchmark-v1.mjs",
     "benchmark:natural-question:gold:v1:build": "node scripts/build-natural-question-gold-v1.mjs",
     "benchmark:natural-question:gold:v1:validate": "node scripts/validate-natural-question-gold-v1.mjs",
+    "benchmark:natural-question:expansion:batch-01:import": "node scripts/import-natural-question-expansion-batch-01.mjs",
     "benchmark:natural-question:expansion:batch-01:build": "node scripts/build-natural-question-expansion-batch-01.mjs",
     "benchmark:natural-question:expansion:batch-01:validate": "node scripts/validate-natural-question-expansion-batch-01.mjs",
     "acquisition-pilot:process": "node scripts/process-approved-acquisition-pilot.mjs",

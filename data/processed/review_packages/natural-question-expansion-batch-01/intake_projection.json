@@ -1,17 +1,28 @@
 {
   "schemaVersion": "1.0",
   "intakeId": "natural-question-expansion-batch-01",
-  "status": "OPEN_EMPTY",
+  "status": "OPEN_INTAKE",
   "boundary": "HUMAN_AUTHORED_INTAKE_ONLY",
   "createdFromGoldRepositorySha": "94b269b16ef1aaae83f0b8484964259e7b6ae0ad",
   "priorQuestionArraySha256": "ebf779edc4caa38954a4ba8ca7d190807c3240b86b548d452791a0714cec9055",
-  "questionCount": 0,
+  "questionCount": 41,
+  "approvedEligibleQuestionCount": 41,
+  "quarantinedAuthenticNonQuestionCount": 3,
+  "notFoundExcludedCount": 9,
   "provenanceCounts": {
-    "USER_WORK_CHAT": 0,
-    "TEAM_OR_COLLEAGUE": 0,
-    "INTERNAL_MEETING_OR_NOTES": 0,
+    "USER_WORK_CHAT": 20,
+    "TEAM_OR_COLLEAGUE": 7,
+    "INTERNAL_MEETING_OR_NOTES": 14,
     "USER_DIRECT_ENTRY": 0,
     "OTHER_HUMAN_AUTHORED": 0
+  },
+  "duplicateScreen": {
+    "exactDuplicatesWithinApproved": 0,
+    "exactDuplicatesWithinIntake": 0,
+    "exactDuplicatesAgainstNaturalQuestionGoldV1": 0,
+    "automaticNearDuplicateCandidatesWithinBatch": 3,
+    "automaticNearDuplicateCandidatesAgainstNaturalQuestionGoldV1": 2,
+    "disposition": "HUMAN_REVIEW_REQUIRED_NO_AUTOMATIC_REMOVAL"
   },
   "controls": {
     "exactHumanWordingRequired": true,
@@ -19,13 +30,44 @@
     "paraphrasingAllowed": false,
     "deterministicIdsAssignedOnlyAtFreeze": true,
     "duplicateCheckAgainstNaturalQuestionGoldV1": true,
+    "lexicalMechanicalNearDuplicateScreenOnly": true,
+    "nearDuplicateAutomaticRemovalAllowed": false,
+    "nonQuestionRecordsQuarantined": true,
+    "notFoundCandidatesExcluded": true,
     "retrievalExecuted": false,
     "adjudicationExecuted": false
   },
   "frozenQuestionRecords": [],
-  "privateArtifact": {
-    "relativeExternalLocation": "_processed-private/natural-question-expansion-batch-01-2026-09/intake.json",
-    "sha256": "5d5d3e4523ec1d470c84060a7cb1c88470da794d9a152868235c2899d66f8485",
-    "byteCount": 492
-  }
+  "privateArtifacts": [
+    {
+      "role": "intake",
+      "relativeExternalLocation": "_processed-private/natural-question-expansion-batch-01-2026-09/intake.json",
+      "sha256": "27bee6c7bfb0739d70a1669cd12c495698e78bb150a4f3489837fe83d582d4cc",
+      "byteCount": 17293
+    },
+    {
+      "role": "approvedEligible",
+      "relativeExternalLocation": "_processed-private/natural-question-expansion-batch-01-2026-09/handoff/natural_question_expansion_batch01_approved_eligible_41.json",
+      "sha256": "eb65795dfb7229af53f1dbb387f0f4e22f47d18604dc68faa2afb6e716f01e50",
+      "byteCount": 17314
+    },
+    {
+      "role": "nonQuestionQuarantine",
+      "relativeExternalLocation": "_processed-private/natural-question-expansion-batch-01-2026-09/handoff/natural_question_expansion_batch01_authentic_nonquestion_quarantine.json",
+      "sha256": "b14a753c2ee13d95ec80cde4fdd45356557c26f2812ef139de27ed43073b1817",
+      "byteCount": 1568
+    },
+    {
+      "role": "notFoundCandidates",
+      "relativeExternalLocation": "_processed-private/natural-question-expansion-batch-01-2026-09/handoff/natural_question_expansion_batch01_not_found_candidates.json",
+      "sha256": "3158926f624a9a9b16c6b0c2bbe89201f23bb808b0690bb34cfc2785904cd21b",
+      "byteCount": 246
+    },
+    {
+      "role": "nearDuplicateReview",
+      "relativeExternalLocation": "_processed-private/natural-question-expansion-batch-01-2026-09/near_duplicate_review.json",
+      "sha256": "4e44c0a43319fe55d19bfd1965c0d508ca1bb60a6574c59cac83f5665e19be8a",
+      "byteCount": 6288
+    }
+  ]
 }
