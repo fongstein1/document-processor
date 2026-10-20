@@ -1,0 +1,42 @@
+{
+  "batchId": "batch-013",
+  "batchName": "Supporting VM batch 013 - VM-01 definitions and introduction",
+  "batchSlug": "supporting-vm-013",
+  "batchProfile": "supporting_vm_chapter",
+  "sourceFiles": [
+    {
+      "sourceId": "supporting-vm01-definitions",
+      "fileName": "pbr_data_valuation_manual_2026.pdf",
+      "fileHash": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+      "pageRange": {
+        "start": 25,
+        "end": 39
+      },
+      "sourceReference": "2026 NAIC Valuation Manual",
+      "sectionReference": "VM-01: Definitions for Terms in Requirements"
+    }
+  ],
+  "boundaries": {
+    "reviewOnly": true,
+    "learnerFacingAllowed": false,
+    "appReadyAllowed": false,
+    "ragReadyAllowed": false,
+    "noRealProcessing": false
+  },
+  "reviewPacketFlags": [
+    {
+      "flagId": "flag-supporting-vm01-definitions",
+      "severity": "medium",
+      "flagType": "definition_slice",
+      "message": "The VM-01 slice is a definitions chapter and should remain review-only until the terms are mapped to later operational chapters."
+    }
+  ],
+  "humanDecisions": [
+    {
+      "decisionId": "decision-supporting-vm01-definitions",
+      "decisionType": "scope_split",
+      "question": "Should VM-01 stay as one definitions batch, or should certain cross-reference terms be split into later chapter-specific batches?",
+      "status": "pending_human_review"
+    }
+  ]
+}
