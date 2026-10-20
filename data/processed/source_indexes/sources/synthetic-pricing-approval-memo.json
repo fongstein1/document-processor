@@ -42,6 +42,7 @@
     "authorityLevel": "internal",
     "sourceStatus": "active",
     "versionDate": "2026-02-05",
+    "licensingStatus": "CLEARED_INTERNAL_POC",
     "pageCount": 2,
     "pageRange": {
       "start": 1,
@@ -80,6 +81,7 @@
       "sectionReference": "Approval memo: approval",
       "lineReference": null,
       "sourceTextExcerpt": "The Pricing Governance Committee approves the methodology subject to implementation controls.",
+      "sourceTextSha256": "0fdfd36f6d0da494bbcbef0b09b4a31e923298d8e18b5ca702b03cd537026ae8",
       "normalizedTextExcerpt": "Synthetic approval and control condition.",
       "summary": "The memo records approval of the pricing methodology subject to implementation controls.",
       "topic": "The memo records approval of the pricing methodology subject to implementation controls.",
@@ -159,6 +161,7 @@
       "sectionReference": "Approval memo: change summary",
       "lineReference": null,
       "sourceTextExcerpt": "The memo confirms version 1.0 of the product spec, assumption memo, and pricing method.",
+      "sourceTextSha256": "21d2228efa3ed74dd29ce4bb0c15f969586871592cc7179a5b8f09a0ea944be8",
       "normalizedTextExcerpt": "Synthetic change summary and version confirmation.",
       "summary": "The memo confirms the controlled versions and documents the change summary.",
       "topic": "The memo confirms the controlled versions and documents the change summary.",

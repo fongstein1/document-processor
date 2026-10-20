@@ -39,6 +39,8 @@
     "authorityLevel": "manual_section",
     "sourceStatus": "active",
     "versionDate": null,
+    "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+    "licensingStatus": "CLEARED_INTERNAL_POC",
     "pageCount": 457,
     "pageRange": {
       "start": 45,
@@ -77,6 +79,7 @@
       "sectionReference": "Section 1: Purpose; Section 2: Minimum Reserve (overview)",
       "lineReference": null,
       "sourceTextExcerpt": "These requirements establish the minimum reserve valuation standard.",
+      "sourceTextSha256": "18e48b0f28a395c0162213707565ac9f5f15066c50a15f67a397a3e472bb4b24",
       "normalizedTextExcerpt": "Minimum reserve valuation standard and reserving structure overview.",
       "summary": "VM-20 establishes the minimum reserve valuation standard and introduces the reserving structure at a high level.",
       "topic": "VM-20 establishes the minimum reserve valuation standard and introduces the reserving structure at a high level.",

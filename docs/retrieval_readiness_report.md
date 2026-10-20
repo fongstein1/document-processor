@@ -17,7 +17,7 @@
 - Source-family accuracy: 96%
 - Authority-level accuracy: 93%
 - Citation availability: 0%
-- Multi-chunk evidence recall: 14%
+- Multi-chunk evidence recall: 18%
 - Unsupported-query precision: 60%
 
 ## Category breakdown

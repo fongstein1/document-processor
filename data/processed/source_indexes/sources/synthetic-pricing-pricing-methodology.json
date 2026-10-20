@@ -43,6 +43,7 @@
     "authorityLevel": "internal",
     "sourceStatus": "active",
     "versionDate": "2026-01-25",
+    "licensingStatus": "CLEARED_INTERNAL_POC",
     "pageCount": 2,
     "pageRange": {
       "start": 1,
@@ -81,6 +82,7 @@
       "sectionReference": "Pricing methodology: model approach",
       "lineReference": null,
       "sourceTextExcerpt": "Project premium streams, account value, claims, expenses, and charges on a monthly basis.",
+      "sourceTextSha256": "464e12685b79774babe3621bc6824834e0fd7a1bfa6083ba6bf5ad3b089fe4a8",
       "normalizedTextExcerpt": "Synthetic pricing method and monthly projection basis.",
       "summary": "The pricing method projects monthly cash flows and applies the assumption memo inputs.",
       "topic": "The pricing method projects monthly cash flows and applies the assumption memo inputs.",
@@ -160,6 +162,7 @@
       "sectionReference": "Pricing methodology: sensitivities and dependencies",
       "lineReference": null,
       "sourceTextExcerpt": "The method uses lapse, yield, and expense sensitivities and feeds the profitability study.",
+      "sourceTextSha256": "d7a7dd45f54b13d52345686171cb8823b4581eff986ccda773c93e1e8ac5dffd",
       "normalizedTextExcerpt": "Synthetic sensitivities and study dependency.",
       "summary": "The methodology lists sensitivities and supports the downstream profitability study.",
       "topic": "The methodology lists sensitivities and supports the downstream profitability study.",

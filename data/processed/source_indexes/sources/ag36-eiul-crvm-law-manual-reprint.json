@@ -39,6 +39,7 @@
     "authorityLevel": "companion_reprint",
     "sourceStatus": "companion-only",
     "versionDate": null,
+    "licensingStatus": "CLEARED_INTERNAL_POC",
     "pageCount": 18,
     "pageRange": {
       "start": 1,
@@ -77,6 +78,7 @@
       "sectionReference": "AG 36 reprint: background through certification closeout",
       "lineReference": null,
       "sourceTextExcerpt": "AG 36 reprint companion slice",
+      "sourceTextSha256": "230d374baa4cf30d7968a8584cc9f9626fe0fb9def59d610583cb297381e67f1",
       "normalizedTextExcerpt": "ag 36 reprint companion slice",
       "summary": "The 2021 Law Manual reprint keeps the companion background, mechanics, hedged-as-required criteria, notification material, and certification closeout together.",
       "topic": "Reprint background through certification closeout",

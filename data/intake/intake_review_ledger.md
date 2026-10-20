@@ -1,5 +1,5 @@
 # NAIC Controlled-Source Pipeline — Intake Review Ledger
-**Generated At:** 2026-10-20T14:48:55.210Z  
+**Generated At:** 2026-10-20T17:56:53.965Z  
 **Governing Standard:** 2026 NAIC Valuation Manual  
 **Repository:** `fongstein1/document-processor`  
 

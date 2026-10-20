@@ -44,6 +44,7 @@
     "authorityLevel": "internal",
     "sourceStatus": "active",
     "versionDate": "2026-01-20",
+    "licensingStatus": "CLEARED_INTERNAL_POC",
     "pageCount": 2,
     "pageRange": {
       "start": 1,
@@ -82,6 +83,7 @@
       "sectionReference": "Assumption memo: assumptions",
       "lineReference": null,
       "sourceTextExcerpt": "Lapse, mortality, expense, and investment return assumptions are set on a fictional competitor benchmark.",
+      "sourceTextSha256": "f30147daf74ff8d58891dfcd458c4cff33cf58f2aca2a8e04624d12689c60a91",
       "normalizedTextExcerpt": "Synthetic pricing assumptions and basis.",
       "summary": "The assumption memo defines lapse, mortality, expense, and investment return assumptions for the fictional product.",
       "topic": "The assumption memo defines lapse, mortality, expense, and investment return assumptions for the fictional product.",
@@ -163,6 +165,7 @@
       "sectionReference": "Assumption memo: experience basis",
       "lineReference": null,
       "sourceTextExcerpt": "The memo records the fictional experience basis and the internal target margin.",
+      "sourceTextSha256": "fc14b2729259a83c7cc3daf195e0fc22a2938a0484d29b711a18e9cfa061d30d",
       "normalizedTextExcerpt": "Synthetic experience basis and target margin.",
       "summary": "The memo records the experience basis and the target margin that support the pricing design.",
       "topic": "The memo records the experience basis and the target margin that support the pricing design.",

@@ -15,12 +15,12 @@
   "sourceFamilyAccuracy": 0.9555555555555556,
   "authorityLevelAccuracy": 0.9333333333333333,
   "citationAvailability": 0,
-  "multiChunkEvidenceRecall": 0.14285714285714285,
+  "multiChunkEvidenceRecall": 0.17857142857142858,
   "unsupportedQueryPrecision": 0.6,
   "deduplication": {
     "topN": 5,
-    "rawTopKCollisionCount": 42,
-    "rawTopKCollisionGroupCount": 18,
+    "rawTopKCollisionCount": 39,
+    "rawTopKCollisionGroupCount": 17,
     "postDeduplicationCollisionCount": 0,
     "affectedQueries": [
       {
@@ -145,10 +145,6 @@
           {
             "parentChunkId": "vm20-practice-note-companion-vm20-pn-reinsurance",
             "childChunkId": "vm20-practice-note-companion-vm20-pn-reinsurance-child-002"
-          },
-          {
-            "parentChunkId": "vm20-practice-note-companion-vm20-pn-reinsurance",
-            "childChunkId": "vm20-practice-note-companion-vm20-pn-reinsurance-child-005"
           }
         ]
       },
@@ -222,19 +218,6 @@
           {
             "parentChunkId": "vm20-canonical-coverage-vm20-section7-model-structure",
             "childChunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-002"
-          }
-        ]
-      },
-      {
-        "queryId": "q-reg210-filing-records",
-        "collisionGroups": [
-          {
-            "parentChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-a-general-assumption-requirements",
-            "childChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-a-general-assumption-requirements-child-001"
-          },
-          {
-            "parentChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-a-general-assumption-requirements",
-            "childChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-a-general-assumption-requirements-child-002"
           }
         ]
       },
@@ -762,19 +745,19 @@
           "citationCount": 0
         },
         {
+          "chunkId": "vm21-section-13-contract-allocation-a-cash-surrender-value",
+          "sourceId": "vm21-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 28.199999999999996,
+          "citationCount": 0
+        },
+        {
           "chunkId": "vm01-definition-011-cash-surrender-value",
           "sourceId": "vm01-definitions",
           "sourceFamilyId": "valuation_manual_pdfs",
           "authorityLevel": "manual_section",
           "score": 27,
-          "citationCount": 0
-        },
-        {
-          "chunkId": "vm21-section-13-contract-allocation-a-cash-surrender-value",
-          "sourceId": "vm21-current-manual",
-          "sourceFamilyId": "valuation_manual_pdfs",
-          "authorityLevel": "manual_section",
-          "score": 25.949999999999996,
           "citationCount": 0
         },
         {
@@ -816,14 +799,14 @@
             "authorityLevel": "manual_section"
           },
           {
-            "chunkId": "vm01-definition-011-cash-surrender-value",
-            "sourceId": "vm01-definitions",
-            "score": 27,
+            "chunkId": "vm21-section-13-contract-allocation-a-cash-surrender-value",
+            "sourceId": "vm21-current-manual",
+            "score": 28.199999999999996,
             "authorityLevel": "manual_section"
           }
         ],
         "corpusGap": null,
-        "structuredEvidenceAvailable": false,
+        "structuredEvidenceAvailable": true,
         "semanticAlignment": {
           "topScore": 44.75,
           "matches": [
@@ -838,9 +821,9 @@
               "tokenOverlap": 4
             },
             {
-              "chunkId": "vm01-definition-011-cash-surrender-value",
-              "score": 27,
-              "tokenOverlap": 5
+              "chunkId": "vm21-section-13-contract-allocation-a-cash-surrender-value",
+              "score": 28.199999999999996,
+              "tokenOverlap": 4
             }
           ]
         },
@@ -2261,6 +2244,14 @@
           "citationCount": 0
         },
         {
+          "chunkId": "vm21-section-5-reinsurance-ceded-a-treatment-in-aggregate-reserve",
+          "sourceId": "vm21-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 26.4,
+          "citationCount": 0
+        },
+        {
           "chunkId": "vm20-practice-note-companion-vm20-pn-reinsurance-child-002",
           "sourceId": "vm20-practice-note-companion",
           "sourceFamilyId": "practice_notes",
@@ -2274,14 +2265,6 @@
           "sourceFamilyId": "practice_notes",
           "authorityLevel": "companion_guidance",
           "score": 25.549999999999997,
-          "citationCount": 0
-        },
-        {
-          "chunkId": "vm20-practice-note-companion-vm20-pn-reinsurance-child-004",
-          "sourceId": "vm20-practice-note-companion",
-          "sourceFamilyId": "practice_notes",
-          "authorityLevel": "companion_guidance",
-          "score": 25.25,
           "citationCount": 0
         }
       ],
@@ -2315,14 +2298,14 @@
             "authorityLevel": "manual_section"
           },
           {
-            "chunkId": "vm20-practice-note-companion-vm20-pn-reinsurance-child-002",
-            "sourceId": "vm20-practice-note-companion",
-            "score": 25.549999999999997,
-            "authorityLevel": "companion_guidance"
+            "chunkId": "vm21-section-5-reinsurance-ceded-a-treatment-in-aggregate-reserve",
+            "sourceId": "vm21-current-manual",
+            "score": 26.4,
+            "authorityLevel": "manual_section"
           }
         ],
         "corpusGap": null,
-        "structuredEvidenceAvailable": false,
+        "structuredEvidenceAvailable": true,
         "semanticAlignment": {
           "topScore": 41.1,
           "matches": [
@@ -2337,9 +2320,9 @@
               "tokenOverlap": 19
             },
             {
-              "chunkId": "vm20-practice-note-companion-vm20-pn-reinsurance-child-002",
-              "score": 25.549999999999997,
-              "tokenOverlap": 13
+              "chunkId": "vm21-section-5-reinsurance-ceded-a-treatment-in-aggregate-reserve",
+              "score": 26.4,
+              "tokenOverlap": 9
             }
           ]
         },
@@ -2350,10 +2333,6 @@
           {
             "parentChunkId": "vm20-practice-note-companion-vm20-pn-reinsurance",
             "childChunkId": "vm20-practice-note-companion-vm20-pn-reinsurance-child-002"
-          },
-          {
-            "parentChunkId": "vm20-practice-note-companion-vm20-pn-reinsurance",
-            "childChunkId": "vm20-practice-note-companion-vm20-pn-reinsurance-child-005"
           }
         ],
         "suppressedParentChunkIds": [
@@ -2538,19 +2517,19 @@
           "citationCount": 0
         },
         {
-          "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-e-expense-assumptions-child-001",
-          "sourceId": "vm20-remaining-prose-appendix-coverage",
+          "chunkId": "vm21-section-12-other-assumptions-d-expense-assumptions",
+          "sourceId": "vm21-current-manual",
           "sourceFamilyId": "valuation_manual_pdfs",
           "authorityLevel": "manual_section",
-          "score": 31.39999999999999,
+          "score": 33.199999999999996,
           "citationCount": 0
         },
         {
-          "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-e-expense-assumptions-child-002",
-          "sourceId": "vm20-remaining-prose-appendix-coverage",
+          "chunkId": "vm22-section-12-other-assumptions-d-expense-assumptions",
+          "sourceId": "vm22-current-manual",
           "sourceFamilyId": "valuation_manual_pdfs",
           "authorityLevel": "manual_section",
-          "score": 30.799999999999997,
+          "score": 31.699999999999996,
           "citationCount": 0
         }
       ],
@@ -2630,8 +2609,7 @@
           }
         ],
         "suppressedParentChunkIds": [
-          "vm20-practice-note-companion-vm20-pn-expense",
-          "vm20-remaining-prose-appendix-coverage-vm20-section9-e-expense-assumptions"
+          "vm20-practice-note-companion-vm20-pn-expense"
         ],
         "postDeduplicationCollisionCount": 0
       },
@@ -4378,7 +4356,7 @@
           "sourceId": "vm21-current-manual",
           "sourceFamilyId": "valuation_manual_pdfs",
           "authorityLevel": "manual_section",
-          "score": 39.34999999999999,
+          "score": 43.09999999999999,
           "citationCount": 0
         },
         {
@@ -4394,23 +4372,23 @@
           "sourceId": "vm22-current-manual",
           "sourceFamilyId": "valuation_manual_pdfs",
           "authorityLevel": "manual_section",
-          "score": 34.54999999999999,
+          "score": 38.29999999999999,
           "citationCount": 0
         },
         {
-          "chunkId": "vm20-practice-note-companion-vm20-pn-sr-overview-child-002",
-          "sourceId": "vm20-practice-note-companion",
-          "sourceFamilyId": "practice_notes",
-          "authorityLevel": "companion_guidance",
-          "score": 30.949999999999996,
+          "chunkId": "vm21-section-4-determination-of-sr-b-scenario-reserve",
+          "sourceId": "vm21-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 33.54999999999999,
           "citationCount": 0
         },
         {
-          "chunkId": "vm20-practice-note-companion-vm20-pn-sr-overview-child-003",
-          "sourceId": "vm20-practice-note-companion",
-          "sourceFamilyId": "practice_notes",
-          "authorityLevel": "companion_guidance",
-          "score": 30.65,
+          "chunkId": "vm21-section-4-determination-of-sr-c-projection-scenarios",
+          "sourceId": "vm21-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 32.8,
           "citationCount": 0
         }
       ],
@@ -4434,7 +4412,7 @@
           {
             "chunkId": "vm21-section-4-determination-of-sr-a-projection-of-accumulated-deficiencies",
             "sourceId": "vm21-current-manual",
-            "score": 39.34999999999999,
+            "score": 43.09999999999999,
             "authorityLevel": "manual_section"
           },
           {
@@ -4446,18 +4424,18 @@
           {
             "chunkId": "vm22-section-4-determination-dr-sr-a-projection-accumulated-deficiencies",
             "sourceId": "vm22-current-manual",
-            "score": 34.54999999999999,
+            "score": 38.29999999999999,
             "authorityLevel": "manual_section"
           }
         ],
         "corpusGap": null,
         "structuredEvidenceAvailable": true,
         "semanticAlignment": {
-          "topScore": 39.34999999999999,
+          "topScore": 43.09999999999999,
           "matches": [
             {
               "chunkId": "vm21-section-4-determination-of-sr-a-projection-of-accumulated-deficiencies",
-              "score": 39.34999999999999,
+              "score": 43.09999999999999,
               "tokenOverlap": 15
             },
             {
@@ -4467,7 +4445,7 @@
             },
             {
               "chunkId": "vm22-section-4-determination-dr-sr-a-projection-accumulated-deficiencies",
-              "score": 34.54999999999999,
+              "score": 38.29999999999999,
               "tokenOverlap": 13
             }
           ]
@@ -5024,7 +5002,7 @@
           "sourceId": "vm31-current-manual",
           "sourceFamilyId": "valuation_manual_pdfs",
           "authorityLevel": "manual_section",
-          "score": 14.049999999999999,
+          "score": 14.799999999999999,
           "citationCount": 0
         },
         {
@@ -5032,7 +5010,7 @@
           "sourceId": "vm21-current-manual",
           "sourceFamilyId": "valuation_manual_pdfs",
           "authorityLevel": "manual_section",
-          "score": 10.25,
+          "score": 11,
           "citationCount": 0
         },
         {
@@ -5040,7 +5018,7 @@
           "sourceId": "vm30-current-manual",
           "sourceFamilyId": "valuation_manual_pdfs",
           "authorityLevel": "manual_section",
-          "score": 10.1,
+          "score": 10.85,
           "citationCount": 0
         },
         {
@@ -5048,7 +5026,7 @@
           "sourceId": "vm30-current-manual",
           "sourceFamilyId": "valuation_manual_pdfs",
           "authorityLevel": "manual_section",
-          "score": 9.95,
+          "score": 10.7,
           "citationCount": 0
         }
       ],
@@ -5078,13 +5056,13 @@
           {
             "chunkId": "vm31-section-1-purpose-purpose",
             "sourceId": "vm31-current-manual",
-            "score": 14.049999999999999,
+            "score": 14.799999999999999,
             "authorityLevel": "manual_section"
           },
           {
             "chunkId": "vm21-section-2-scope-effective-date-a-scope",
             "sourceId": "vm21-current-manual",
-            "score": 10.25,
+            "score": 11,
             "authorityLevel": "manual_section"
           }
         ],
@@ -5100,12 +5078,12 @@
             },
             {
               "chunkId": "vm31-section-1-purpose-purpose",
-              "score": 14.049999999999999,
+              "score": 14.799999999999999,
               "tokenOverlap": 5
             },
             {
               "chunkId": "vm21-section-2-scope-effective-date-a-scope",
-              "score": 10.25,
+              "score": 11,
               "tokenOverlap": 6
             }
           ]
@@ -5158,7 +5136,7 @@
           "sourceId": "vm31-current-manual",
           "sourceFamilyId": "valuation_manual_pdfs",
           "authorityLevel": "manual_section",
-          "score": 17.299999999999997,
+          "score": 18.799999999999997,
           "citationCount": 0
         },
         {
@@ -5166,7 +5144,7 @@
           "sourceId": "vm30-current-manual",
           "sourceFamilyId": "valuation_manual_pdfs",
           "authorityLevel": "manual_section",
-          "score": 10.1,
+          "score": 10.85,
           "citationCount": 0
         },
         {
@@ -5174,7 +5152,7 @@
           "sourceId": "vm30-current-manual",
           "sourceFamilyId": "valuation_manual_pdfs",
           "authorityLevel": "manual_section",
-          "score": 10.1,
+          "score": 10.85,
           "citationCount": 0
         }
       ],
@@ -5210,7 +5188,7 @@
           {
             "chunkId": "vm31-section-3-b-executive-summary-1-qualified-actuary",
             "sourceId": "vm31-current-manual",
-            "score": 17.299999999999997,
+            "score": 18.799999999999997,
             "authorityLevel": "manual_section"
           }
         ],
@@ -5231,7 +5209,7 @@
             },
             {
               "chunkId": "vm31-section-3-b-executive-summary-1-qualified-actuary",
-              "score": 17.299999999999997,
+              "score": 18.799999999999997,
               "tokenOverlap": 5
             }
           ]
@@ -5272,27 +5250,11 @@
           "citationCount": 0
         },
         {
-          "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-a-general-assumption-requirements-child-001",
-          "sourceId": "vm20-remaining-prose-appendix-coverage",
-          "sourceFamilyId": "valuation_manual_pdfs",
-          "authorityLevel": "manual_section",
-          "score": 9.4,
-          "citationCount": 0
-        },
-        {
-          "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-a-general-assumption-requirements-child-002",
-          "sourceId": "vm20-remaining-prose-appendix-coverage",
-          "sourceFamilyId": "valuation_manual_pdfs",
-          "authorityLevel": "manual_section",
-          "score": 9.4,
-          "citationCount": 0
-        },
-        {
           "chunkId": "vm21-section-10-contract-holder-behavior-d-specific-requirements",
           "sourceId": "vm21-current-manual",
           "sourceFamilyId": "valuation_manual_pdfs",
           "authorityLevel": "manual_section",
-          "score": 9.4,
+          "score": 10.15,
           "citationCount": 0
         },
         {
@@ -5300,7 +5262,23 @@
           "sourceId": "vm21-current-manual",
           "sourceFamilyId": "valuation_manual_pdfs",
           "authorityLevel": "manual_section",
-          "score": 9.4,
+          "score": 10.15,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm21-section-12-other-assumptions-b-general-requirements",
+          "sourceId": "vm21-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 10.15,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm21-section-9-modeling-hedges-e-specific-requirements",
+          "sourceId": "vm21-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 10.15,
           "citationCount": 0
         }
       ],
@@ -5328,20 +5306,20 @@
             "authorityLevel": "regulation"
           },
           {
-            "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-a-general-assumption-requirements-child-001",
-            "sourceId": "vm20-remaining-prose-appendix-coverage",
-            "score": 9.4,
+            "chunkId": "vm21-section-10-contract-holder-behavior-d-specific-requirements",
+            "sourceId": "vm21-current-manual",
+            "score": 10.15,
             "authorityLevel": "manual_section"
           },
           {
-            "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-a-general-assumption-requirements-child-002",
-            "sourceId": "vm20-remaining-prose-appendix-coverage",
-            "score": 9.4,
+            "chunkId": "vm21-section-10-contract-holder-behavior-g-guaranteed-benefit-considerations",
+            "sourceId": "vm21-current-manual",
+            "score": 10.15,
             "authorityLevel": "manual_section"
           }
         ],
         "corpusGap": null,
-        "structuredEvidenceAvailable": false,
+        "structuredEvidenceAvailable": true,
         "semanticAlignment": {
           "topScore": 27.799999999999997,
           "matches": [
@@ -5351,13 +5329,13 @@
               "tokenOverlap": 6
             },
             {
-              "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-a-general-assumption-requirements-child-001",
-              "score": 9.4,
+              "chunkId": "vm21-section-10-contract-holder-behavior-d-specific-requirements",
+              "score": 10.15,
               "tokenOverlap": 3
             },
             {
-              "chunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-a-general-assumption-requirements-child-002",
-              "score": 9.4,
+              "chunkId": "vm21-section-10-contract-holder-behavior-g-guaranteed-benefit-considerations",
+              "score": 10.15,
               "tokenOverlap": 3
             }
           ]
@@ -5365,19 +5343,8 @@
         "lowScore": false
       },
       "deduplication": {
-        "rawTopKCollisionGroups": [
-          {
-            "parentChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-a-general-assumption-requirements",
-            "childChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-a-general-assumption-requirements-child-001"
-          },
-          {
-            "parentChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-a-general-assumption-requirements",
-            "childChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-a-general-assumption-requirements-child-002"
-          }
-        ],
-        "suppressedParentChunkIds": [
-          "vm20-remaining-prose-appendix-coverage-vm20-section9-a-general-assumption-requirements"
-        ],
+        "rawTopKCollisionGroups": [],
+        "suppressedParentChunkIds": [],
         "postDeduplicationCollisionCount": 0
       },
       "resultLabel": "supported_top1"
@@ -5679,19 +5646,11 @@
           "citationCount": 0
         },
         {
-          "chunkId": "chunk-synthetic-pricing-pricing-methodology-001",
-          "sourceId": "synthetic-pricing-pricing-methodology",
-          "sourceFamilyId": "synthetic_pricing_documents",
-          "authorityLevel": "internal",
-          "score": 15.95,
-          "citationCount": 0
-        },
-        {
           "chunkId": "vm21-section-10-contract-holder-behavior-c-sensitivity-testing",
           "sourceId": "vm21-current-manual",
           "sourceFamilyId": "valuation_manual_pdfs",
           "authorityLevel": "manual_section",
-          "score": 14.9,
+          "score": 16.399999999999995,
           "citationCount": 0
         },
         {
@@ -5699,7 +5658,15 @@
           "sourceId": "vm21-current-manual",
           "sourceFamilyId": "valuation_manual_pdfs",
           "authorityLevel": "manual_section",
-          "score": 14.9,
+          "score": 16.399999999999995,
+          "citationCount": 0
+        },
+        {
+          "chunkId": "vm21-section-12-other-assumptions-c-assumption-margins",
+          "sourceId": "vm21-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 16.399999999999995,
           "citationCount": 0
         }
       ],
@@ -5733,14 +5700,14 @@
             "authorityLevel": "internal"
           },
           {
-            "chunkId": "chunk-synthetic-pricing-pricing-methodology-001",
-            "sourceId": "synthetic-pricing-pricing-methodology",
-            "score": 15.95,
-            "authorityLevel": "internal"
+            "chunkId": "vm21-section-10-contract-holder-behavior-c-sensitivity-testing",
+            "sourceId": "vm21-current-manual",
+            "score": 16.399999999999995,
+            "authorityLevel": "manual_section"
           }
         ],
         "corpusGap": null,
-        "structuredEvidenceAvailable": false,
+        "structuredEvidenceAvailable": true,
         "semanticAlignment": {
           "topScore": 25.050000000000004,
           "matches": [
@@ -5755,9 +5722,9 @@
               "tokenOverlap": 5
             },
             {
-              "chunkId": "chunk-synthetic-pricing-pricing-methodology-001",
-              "score": 15.95,
-              "tokenOverlap": 5
+              "chunkId": "vm21-section-10-contract-holder-behavior-c-sensitivity-testing",
+              "score": 16.399999999999995,
+              "tokenOverlap": 6
             }
           ]
         },
@@ -5805,6 +5772,14 @@
           "citationCount": 0
         },
         {
+          "chunkId": "vm21-section-3-reserve-methodology-e-alternative-methodology",
+          "sourceId": "vm21-current-manual",
+          "sourceFamilyId": "valuation_manual_pdfs",
+          "authorityLevel": "manual_section",
+          "score": 10.85,
+          "citationCount": 0
+        },
+        {
           "chunkId": "chunk-synthetic-pricing-approval-memo-001",
           "sourceId": "synthetic-pricing-approval-memo",
           "sourceFamilyId": "synthetic_pricing_documents",
@@ -5813,19 +5788,11 @@
           "citationCount": 0
         },
         {
-          "chunkId": "vm21-section-3-reserve-methodology-e-alternative-methodology",
-          "sourceId": "vm21-current-manual",
+          "chunkId": "vm30-section-2-b-asset-adequacy-standards-2-methods-of-analysis",
+          "sourceId": "vm30-current-manual",
           "sourceFamilyId": "valuation_manual_pdfs",
           "authorityLevel": "manual_section",
-          "score": 10.1,
-          "citationCount": 0
-        },
-        {
-          "chunkId": "vm21-section-7-alternative-methodology-a-general-methodology",
-          "sourceId": "vm21-current-manual",
-          "sourceFamilyId": "valuation_manual_pdfs",
-          "authorityLevel": "manual_section",
-          "score": 9.35,
+          "score": 9.4,
           "citationCount": 0
         }
       ],
@@ -5859,14 +5826,14 @@
             "authorityLevel": "internal"
           },
           {
-            "chunkId": "chunk-synthetic-pricing-approval-memo-001",
-            "sourceId": "synthetic-pricing-approval-memo",
-            "score": 10.45,
-            "authorityLevel": "internal"
+            "chunkId": "vm21-section-3-reserve-methodology-e-alternative-methodology",
+            "sourceId": "vm21-current-manual",
+            "score": 10.85,
+            "authorityLevel": "manual_section"
           }
         ],
         "corpusGap": null,
-        "structuredEvidenceAvailable": false,
+        "structuredEvidenceAvailable": true,
         "semanticAlignment": {
           "topScore": 13.7,
           "matches": [
@@ -5881,8 +5848,8 @@
               "tokenOverlap": 4
             },
             {
-              "chunkId": "chunk-synthetic-pricing-approval-memo-001",
-              "score": 10.45,
+              "chunkId": "vm21-section-3-reserve-methodology-e-alternative-methodology",
+              "score": 10.85,
               "tokenOverlap": 3
             }
           ]

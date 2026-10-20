@@ -39,6 +39,7 @@
     "authorityLevel": "guideline",
     "sourceStatus": "active",
     "versionDate": null,
+    "licensingStatus": "CLEARED_INTERNAL_POC",
     "pageCount": 1,
     "pageRange": {
       "start": 1,
@@ -77,6 +78,7 @@
       "sectionReference": "AG 03: maturity value interpretation",
       "lineReference": null,
       "sourceTextExcerpt": "Interpretive guidance for maturity value in the nonforfeiture-law context.",
+      "sourceTextSha256": "92ae4ab107e11451b268d22f6bc2234079580fec027d87df041dc091846c3ed5",
       "normalizedTextExcerpt": "Maturity-value interpretation guidance.",
       "summary": "AG 03 explains the maturity-value treatment and keeps the underlying nonforfeiture-law cross-reference review-only.",
       "topic": "AG 03 explains the maturity-value treatment and keeps the underlying nonforfeiture-law cross-reference review-only.",

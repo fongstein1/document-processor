@@ -2,6 +2,9 @@
 
 - Source ID: `vm20-section3c-hierarchical`
 - Source version ID: `source-index-vm20-section3c-hierarchical`
+- Source edition ID: `n/a`
+- Source version identifier: n/a
+- Source SHA-256: `496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9`
 - Source reference: 2026 NAIC Valuation Manual
 - Source family: valuation_manual_pdfs
 - Domain: naic_regulatory

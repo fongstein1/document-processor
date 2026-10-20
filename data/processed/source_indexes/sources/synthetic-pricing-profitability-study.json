@@ -43,6 +43,7 @@
     "authorityLevel": "internal",
     "sourceStatus": "active",
     "versionDate": "2026-01-30",
+    "licensingStatus": "CLEARED_INTERNAL_POC",
     "pageCount": 2,
     "pageRange": {
       "start": 1,
@@ -81,6 +82,7 @@
       "sectionReference": "Profitability study: findings",
       "lineReference": null,
       "sourceTextExcerpt": "The base scenario meets the target margin and lapse downside is the most material sensitivity.",
+      "sourceTextSha256": "e63487514bf2c90000fb31457cabf77077795615d879ebcaa805c50659ed31d4",
       "normalizedTextExcerpt": "Synthetic profitability findings and sensitivity ranking.",
       "summary": "The study reports that the base scenario meets target margin and lapse is the most material sensitivity.",
       "topic": "The study reports that the base scenario meets target margin and lapse is the most material sensitivity.",
@@ -160,6 +162,7 @@
       "sectionReference": "Profitability study: scenario interpretation",
       "lineReference": null,
       "sourceTextExcerpt": "Yield downside reduces profitability but remains within the modeled tolerance window.",
+      "sourceTextSha256": "314bd44852f93f56d560cc37730a295308c5b9b378b295664ab92322a392c449",
       "normalizedTextExcerpt": "Synthetic scenario interpretation and tolerance window.",
       "summary": "The study shows that yield downside remains tolerable even though it reduces profitability.",
       "topic": "The study shows that yield downside remains tolerable even though it reduces profitability.",
