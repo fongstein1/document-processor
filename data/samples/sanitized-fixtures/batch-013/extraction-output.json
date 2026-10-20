@@ -1,0 +1,21 @@
+{
+  "batchId": "batch-013",
+  "generatedAt": "2026-10-20T12:00:00.000Z",
+  "sanitized": true,
+  "notes": "Sanitized test fixture for controlled batch-013 verification without proprietary full-text PDF distribution.",
+  "sourceGroups": [
+    {
+      "sourceId": "supporting-vm01-definitions",
+      "extractedItems": [
+        {
+          "itemKind": "chunk",
+          "chunkId": "sanitized-item-supporting-vm01-definitions",
+          "pageStart": 25,
+          "pageEnd": 39,
+          "chunkText": "[p. 25] Definitions for Terms in Requirements VM-01 \n \n© 2025 National Association of Insurance Commissioners 01-1 VM-01: Definitions for Terms in Requirements \nVM-01 provides definitions for terms used in the Valuation Manual . \n \n• The term “accident and health insurance” means contracts that incorporate morbidity risk and provide protection against economic loss resulting from accident, sickness or medical conditions. (Model #820 definition.)\n• The term “appointed actuary” means a qualified actuary who is appointed or retained to prepare the statement of actuarial opinion.\n• The term “cash surrender value” means the amount available in cash upon surrender of an insurance policy.\n• The term “valuation manual” means the manual of valuation instructions adopted by the NAIC.",
+          "wordCount": 92
+        }
+      ]
+    }
+  ]
+}
