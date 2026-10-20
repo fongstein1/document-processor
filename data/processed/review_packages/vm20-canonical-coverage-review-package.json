@@ -367,7 +367,7 @@
     "meanReciprocalRank": 0.8866666666666667,
     "deduplication": {
       "topN": 5,
-      "rawTopKCollisionCount": 33,
+      "rawTopKCollisionCount": 32,
       "rawTopKCollisionGroupCount": 10,
       "postDeduplicationCollisionCount": 0,
       "affectedQueries": [
@@ -488,10 +488,6 @@
             {
               "parentChunkId": "vm20-practice-note-companion-vm20-pn-reinsurance",
               "childChunkId": "vm20-practice-note-companion-vm20-pn-reinsurance-child-005"
-            },
-            {
-              "parentChunkId": "vm20-practice-note-companion-vm20-pn-reinsurance",
-              "childChunkId": "vm20-practice-note-companion-vm20-pn-reinsurance-child-004"
             }
           ]
         },
@@ -572,8 +568,8 @@
     },
     "corpusDeduplication": {
       "topN": 5,
-      "rawTopKCollisionCount": 41,
-      "rawTopKCollisionGroupCount": 17,
+      "rawTopKCollisionCount": 38,
+      "rawTopKCollisionGroupCount": 16,
       "postDeduplicationCollisionCount": 0,
       "affectedQueries": [
         {
@@ -702,10 +698,6 @@
             {
               "parentChunkId": "vm20-practice-note-companion-vm20-pn-reinsurance",
               "childChunkId": "vm20-practice-note-companion-vm20-pn-reinsurance-child-005"
-            },
-            {
-              "parentChunkId": "vm20-practice-note-companion-vm20-pn-reinsurance",
-              "childChunkId": "vm20-practice-note-companion-vm20-pn-reinsurance-child-004"
             }
           ]
         },
@@ -779,19 +771,6 @@
             {
               "parentChunkId": "vm20-canonical-coverage-vm20-section7-model-structure",
               "childChunkId": "vm20-canonical-coverage-vm20-section7-model-structure-child-002"
-            }
-          ]
-        },
-        {
-          "queryId": "q-reg210-filing-records",
-          "collisionGroups": [
-            {
-              "parentChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-a-general-assumption-requirements",
-              "childChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-a-general-assumption-requirements-child-001"
-            },
-            {
-              "parentChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-a-general-assumption-requirements",
-              "childChunkId": "vm20-remaining-prose-appendix-coverage-vm20-section9-a-general-assumption-requirements-child-002"
             }
           ]
         },
@@ -1167,8 +1146,8 @@
         "top1ChunkId": "vm20-canonical-coverage-vm20-section8-reinsurance",
         "top3ChunkIds": [
           "vm20-canonical-coverage-vm20-section8-reinsurance",
-          "vm20-practice-note-companion-vm20-pn-reinsurance-child-002",
-          "vm20-practice-note-companion-vm20-pn-reinsurance-child-005"
+          "vm21-section-5-reinsurance-ceded-a-treatment-in-aggregate-reserve",
+          "vm20-practice-note-companion-vm20-pn-reinsurance-child-002"
         ],
         "top1Hit": true,
         "top3Hit": true,
@@ -1183,10 +1162,6 @@
           {
             "parentChunkId": "vm20-practice-note-companion-vm20-pn-reinsurance",
             "childChunkId": "vm20-practice-note-companion-vm20-pn-reinsurance-child-005"
-          },
-          {
-            "parentChunkId": "vm20-practice-note-companion-vm20-pn-reinsurance",
-            "childChunkId": "vm20-practice-note-companion-vm20-pn-reinsurance-child-004"
           }
         ]
       },

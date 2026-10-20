@@ -44,7 +44,7 @@
 - Supported top-3: 25/25
 - Unsupported queries detected: 1/1
 - Mean reciprocal rank: 0.887
-- Raw equivalent parent-child top-k collision slots: 33; post-deduplication: 0
+- Raw equivalent parent-child top-k collision slots: 32; post-deduplication: 0
 - Retrieval uses generic local-topic metadata, equivalent parent/child deduplication, and context-only handling for very large parents; no question-specific rule was added.
 - Raw PDF spot-check: `data/processed/review_packages/vm20-qa-source-spotcheck.json`.
 - Full 26-query report: `data/processed/review_packages/vm20-retrieval-qa-report.json`.

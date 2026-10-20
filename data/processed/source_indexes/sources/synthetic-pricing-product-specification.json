@@ -43,6 +43,7 @@
     "authorityLevel": "internal",
     "sourceStatus": "active",
     "versionDate": "2026-01-15",
+    "licensingStatus": "CLEARED_INTERNAL_POC",
     "pageCount": 2,
     "pageRange": {
       "start": 1,
@@ -81,6 +82,7 @@
       "sectionReference": "Product specification: control and purpose",
       "lineReference": null,
       "sourceTextExcerpt": "This synthetic product specification defines the Orion Term Accumulator test product for pricing portability testing.",
+      "sourceTextSha256": "ca5892a6b4ec8e3901099522452c232997f3d8c4d6dd7df88d96545ce49a9003",
       "normalizedTextExcerpt": "Synthetic product specification and purpose statement.",
       "summary": "The product specification establishes the fictional Orion Term Accumulator corpus and the pricing portability test purpose.",
       "topic": "The product specification establishes the fictional Orion Term Accumulator corpus and the pricing portability test purpose.",
@@ -161,6 +163,7 @@
       "sectionReference": "Product specification: features and limits",
       "lineReference": null,
       "sourceTextExcerpt": "The product has flexible premiums, a guaranteed minimum accumulation rate, optional withdrawals, and age-limited issue rules.",
+      "sourceTextSha256": "15c39bc721eea8e79163b7156ff6b5261d8d3b294a1caafb18bf3ae35d03f3c2",
       "normalizedTextExcerpt": "Synthetic product features and eligibility limits.",
       "summary": "The product features define the pricing target: flexible premiums, guaranteed accumulation, optional withdrawals, and issue-age limits.",
       "topic": "The product features define the pricing target: flexible premiums, guaranteed accumulation, optional withdrawals, and issue-age limits.",

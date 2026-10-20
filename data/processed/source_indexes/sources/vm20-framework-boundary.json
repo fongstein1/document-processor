@@ -39,6 +39,8 @@
     "authorityLevel": "manual_section",
     "sourceStatus": "active",
     "versionDate": null,
+    "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+    "licensingStatus": "CLEARED_INTERNAL_POC",
     "pageCount": 457,
     "pageRange": {
       "start": 47,
@@ -77,6 +79,7 @@
       "sectionReference": "Section 2: Minimum Reserve (category continuation)",
       "lineReference": null,
       "sourceTextExcerpt": "The minimum reserve for each VM-20 reserving category equals the sum of the Section 2 results.",
+      "sourceTextSha256": "3017154be4b0a0163a8fd10e286f7b84f9b2d3a1d4713bd3430b910f16cf0d89",
       "normalizedTextExcerpt": "Boundary slice from overview into reserve-category mechanics.",
       "summary": "This slice marks the transition from framework overview into reserve-category mechanics and is retained as a boundary-control checkpoint only.",
       "topic": "This slice marks the transition from framework overview into reserve-category mechanics and is retained as a boundary-control checkpoint only.",

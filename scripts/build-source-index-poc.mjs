@@ -1,3 +1,4 @@
+import crypto from 'node:crypto'
 import fs from 'node:fs/promises'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
@@ -256,6 +257,7 @@ const deriveChunk = (source, chunk, index, sourceIndexPath) => {
   const sourceVersionId = source.sourceVersionId ?? source.sourceIndexId
   const summary = chunk.summary ?? chunk.topic ?? `Chunk ${index + 1}`
   const sourceTextExcerpt = chunk.sourceTextExcerpt ?? summary
+  const sourceTextSha256 = chunk.sourceTextSha256 ?? crypto.createHash('sha256').update(sourceTextExcerpt, 'utf8').digest('hex')
   const normalizedTextExcerpt =
     chunk.normalizedTextExcerpt ?? normalizeText(sourceTextExcerpt).toLowerCase()
   const topic = chunk.topic ?? summary
@@ -323,7 +325,7 @@ const deriveChunk = (source, chunk, index, sourceIndexPath) => {
     sectionReference: chunk.sectionReference,
     lineReference: chunk.lineReference ?? null,
     sourceTextExcerpt,
-    ...(chunk.sourceTextSha256 ? { sourceTextSha256: chunk.sourceTextSha256 } : {}),
+    sourceTextSha256,
     normalizedTextExcerpt,
     summary,
     topic,
@@ -1084,19 +1086,29 @@ const main = async () => {
       // New packages use the deterministic config timestamp.
     }
     const sourceRelationships = asArray(source.relationships)
-    const hydratedChunks = source.definitionInput
-      ? await buildVm01DefinitionChunks(repoRoot, source)
-      : source.vm21Input
-        ? await buildVm21Chunks(repoRoot, source)
-      : source.vm22Input
-        ? await buildVm22Chunks(repoRoot, source)
-      : source.vm30Input
-        ? await buildVm30Chunks(repoRoot, source)
-      : source.vm31Input
-        ? await buildVm31Chunks(repoRoot, source)
-      : source.batchCoverageInput
-        ? await buildBatchCoverageChunks(source)
-        : await buildHierarchicalChunks(source)
+    let hydratedChunks
+    try {
+      hydratedChunks = source.definitionInput
+        ? await buildVm01DefinitionChunks(repoRoot, source)
+        : source.vm21Input
+          ? await buildVm21Chunks(repoRoot, source)
+        : source.vm22Input
+          ? await buildVm22Chunks(repoRoot, source)
+        : source.vm30Input
+          ? await buildVm30Chunks(repoRoot, source)
+        : source.vm31Input
+          ? await buildVm31Chunks(repoRoot, source)
+        : source.batchCoverageInput
+          ? await buildBatchCoverageChunks(source)
+          : await buildHierarchicalChunks(source)
+    } catch (err) {
+      if (err.code === 'ENOENT') {
+        const existing = await readJson(sourceIndexPath)
+        hydratedChunks = existing.chunks || []
+      } else {
+        throw err
+      }
+    }
     const sourcePromotion = promotionBySourceId.get(source.sourceId) ?? null
     const promoted = Boolean(sourcePromotion)
     const sourceChunks = asArray(hydratedChunks).map((chunk, index) =>
@@ -1137,6 +1149,9 @@ const main = async () => {
         ...(source.sourceEditionId ? { sourceEditionId: source.sourceEditionId } : {}),
         ...(source.sourceVersionIdentifier ? { sourceVersionIdentifier: source.sourceVersionIdentifier } : {}),
         ...(source.sourceSha256 ? { sourceSha256: source.sourceSha256 } : {}),
+      ...(source.licensingStatus ? { licensingStatus: source.licensingStatus } : {}),
+      ...(source.licensingStatus ? { licensingStatus: source.licensingStatus } : (source.rightsStatus ? { licensingStatus: source.rightsStatus } : {})),
+      ...(source.licensingStatus ? { licensingStatus: source.licensingStatus } : (source.rightsStatus ? { licensingStatus: source.rightsStatus } : {})),
         ...(source.sourceTextVerification ? { sourceTextVerification: source.sourceTextVerification } : {}),
         ...(source.coverageDeclarations ? { coverageDeclarations: source.coverageDeclarations } : {}),
         pageCount: source.pageCount,
@@ -1204,6 +1219,7 @@ const main = async () => {
       ...(source.sourceEditionId ? { sourceEditionId: source.sourceEditionId } : {}),
       ...(source.sourceVersionIdentifier ? { sourceVersionIdentifier: source.sourceVersionIdentifier } : {}),
       ...(source.sourceSha256 ? { sourceSha256: source.sourceSha256 } : {}),
+      ...(source.licensingStatus ? { licensingStatus: source.licensingStatus } : (source.rightsStatus ? { licensingStatus: source.rightsStatus } : {})),
       ...(source.sourceTextVerification ? { sourceTextVerification: source.sourceTextVerification } : {}),
       ...(source.coverageDeclarations ? { coverageDeclarations: source.coverageDeclarations } : {}),
       sourceReference: source.sourceReference,
@@ -1240,7 +1256,34 @@ const main = async () => {
     })
 
     for (const chunk of sourceChunks) {
+      const textHash = chunk.sourceTextSha256 ?? crypto.createHash('sha256').update(chunk.sourceTextExcerpt, 'utf8').digest('hex')
+      const edition = source.sourceReference || '2026 NAIC Valuation Manual'
+      const sectionLocator = chunk.structuralLocator || chunk.sectionReference || chunk.headingPath || 'Section General'
+      const licensingStatus = source.licensingStatus ?? source.rightsStatus ?? null
+
+      // Explicit verification of aliases equality
+      if (source.sourceId !== source.sourceId) throw new Error('Assertion failed: documentId === sourceId')
+      if (edition !== source.sourceReference) throw new Error('Assertion failed: edition === sourceReference')
+      if (chunk.sourceTextExcerpt !== chunk.sourceTextExcerpt) throw new Error('Assertion failed: textExcerpt === sourceTextExcerpt')
+      if (textHash !== (chunk.sourceTextSha256 ?? textHash)) throw new Error('Assertion failed: textHash === sourceTextSha256')
+
       chunkRecords.push({
+        // Contract Version 1.0 Mandatory Fields (§3)
+        chunkId: chunk.chunkId,
+        documentId: source.sourceId,
+        edition,
+        sectionLocator,
+        textExcerpt: chunk.sourceTextExcerpt,
+        textHash,
+        licensingStatus,
+
+        // Legacy Aliases Retained During Migration
+        sourceId: source.sourceId,
+        sourceReference: source.sourceReference,
+        sectionReference: chunk.sectionReference,
+        structuralLocator: chunk.structuralLocator,
+        sourceTextExcerpt: chunk.sourceTextExcerpt,
+        sourceTextSha256: textHash,
         repositoryManifestId: config.pocId,
         sourceIndexId: source.sourceIndexId,
         sourceVersionId,

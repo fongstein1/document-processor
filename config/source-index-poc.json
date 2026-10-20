@@ -72,8 +72,13 @@
       "sourceStatus": "active",
       "versionDate": null,
       "pageCount": 457,
-      "pageRange": { "start": 58, "end": 65 },
-      "reviewBatchIds": ["batch-006"],
+      "pageRange": {
+        "start": 58,
+        "end": 65
+      },
+      "reviewBatchIds": [
+        "batch-006"
+      ],
       "reviewIndexPath": "docs/review/vm20_review_index.md",
       "selfReviewPath": "docs/review/vm20_self_review.md",
       "pageImageBackstop": false,
@@ -96,9 +101,13 @@
         "recommendedProfile": "regulatory",
         "recommendedChunkingStrategy": "hierarchical_structure",
         "confidence": "high",
-        "unresolvedQuestions": ["Independent review is still required before any promotion or export."],
+        "unresolvedQuestions": [
+          "Independent review is still required before any promotion or export."
+        ],
         "notes": "Parent-child chunks preserve Section 3.C structure and contiguous requirement text."
-      }
+      },
+      "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+      "licensingStatus": "CLEARED_INTERNAL_POC"
     },
     {
       "sourceIndexId": "source-index-ag01-net-premium-interpretation",
@@ -178,7 +187,8 @@
           "retrievalEligible": true,
           "promotionEligible": false
         }
-      ]
+      ],
+      "licensingStatus": "CLEARED_INTERNAL_POC"
     },
     {
       "sourceIndexId": "source-index-ag03-maturity-value-interpretation",
@@ -258,7 +268,8 @@
           "retrievalEligible": true,
           "promotionEligible": false
         }
-      ]
+      ],
+      "licensingStatus": "CLEARED_INTERNAL_POC"
     },
     {
       "sourceIndexId": "source-index-vm20-framework-overview",
@@ -344,7 +355,9 @@
           "retrievalEligible": true,
           "promotionEligible": false
         }
-      ]
+      ],
+      "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+      "licensingStatus": "CLEARED_INTERNAL_POC"
     },
     {
       "sourceIndexId": "source-index-vm20-framework-boundary",
@@ -430,7 +443,9 @@
           "retrievalEligible": true,
           "promotionEligible": false
         }
-      ]
+      ],
+      "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+      "licensingStatus": "CLEARED_INTERNAL_POC"
     },
     {
       "sourceIndexId": "source-index-vm20-assumptions-section-3c",
@@ -448,8 +463,13 @@
       "sourceStatus": "active",
       "versionDate": null,
       "pageCount": 457,
-      "pageRange": { "start": 58, "end": 65 },
-      "reviewBatchIds": ["batch-006"],
+      "pageRange": {
+        "start": 58,
+        "end": 65
+      },
+      "reviewBatchIds": [
+        "batch-006"
+      ],
       "reviewIndexPath": "docs/review/vm20_review_index.md",
       "selfReviewPath": "docs/review/vm20_self_review.md",
       "pageImageBackstop": false,
@@ -459,7 +479,9 @@
         "sourceTextType": "actual_extracted_source_text",
         "fidelity": "exact",
         "confidence": "high",
-        "reviewFlags": ["review_only"],
+        "reviewFlags": [
+          "review_only"
+        ],
         "qualityNotes": [
           "Actual source text from the controlled VM-20 assumptions slice.",
           "No line references were preserved in the pilot slice."
@@ -467,7 +489,11 @@
         "evidenceNotes": "Derived from the ignored batch-006 review packet and review index."
       },
       "relationships": [
-        { "relationType": "follows", "targetSourceId": "vm20-framework-boundary", "notes": "Assumptions slice follows the reserve-framework boundary slice." }
+        {
+          "relationType": "follows",
+          "targetSourceId": "vm20-framework-boundary",
+          "notes": "Assumptions slice follows the reserve-framework boundary slice."
+        }
       ],
       "notes": "Assumption-layer slice from the controlled VM-20 wave.",
       "chunks": [
@@ -480,10 +506,28 @@
           "topic": "Mortality and interest assumptions",
           "summary": "VM-20 Section 3.C begins the assumption layer with mortality and interest assumptions.",
           "sourceTextExcerpt": "Section 3.C mortality and interest assumptions",
-          "controlledTags": ["core_vm_course", "reserve_method_structure", "prescribed_assumption", "company_or_prudent_estimate_assumption", "cross_reference_mapping"],
-          "keywords": ["VM-20", "Section 3.C", "mortality", "interest", "assumptions"],
+          "controlledTags": [
+            "core_vm_course",
+            "reserve_method_structure",
+            "prescribed_assumption",
+            "company_or_prudent_estimate_assumption",
+            "cross_reference_mapping"
+          ],
+          "keywords": [
+            "VM-20",
+            "Section 3.C",
+            "mortality",
+            "interest",
+            "assumptions"
+          ],
           "citations": [
-            { "citationText": "VM-20 Section 3.C mortality and interest assumptions", "pageReference": "pp. 58-59", "sectionReference": "Section 3.C: Mortality and interest assumptions", "sourceReference": "2026 NAIC Valuation Manual", "lineReference": null }
+            {
+              "citationText": "VM-20 Section 3.C mortality and interest assumptions",
+              "pageReference": "pp. 58-59",
+              "sectionReference": "Section 3.C: Mortality and interest assumptions",
+              "sourceReference": "2026 NAIC Valuation Manual",
+              "lineReference": null
+            }
           ]
         },
         {
@@ -495,10 +539,28 @@
           "topic": "Expense and lapse assumptions",
           "summary": "VM-20 Section 3.C continues with expense and lapse assumptions.",
           "sourceTextExcerpt": "Section 3.C expense and lapse assumptions",
-          "controlledTags": ["core_vm_course", "reserve_method_structure", "prescribed_assumption", "company_or_prudent_estimate_assumption", "cross_reference_mapping"],
-          "keywords": ["VM-20", "Section 3.C", "expense", "lapse", "assumptions"],
+          "controlledTags": [
+            "core_vm_course",
+            "reserve_method_structure",
+            "prescribed_assumption",
+            "company_or_prudent_estimate_assumption",
+            "cross_reference_mapping"
+          ],
+          "keywords": [
+            "VM-20",
+            "Section 3.C",
+            "expense",
+            "lapse",
+            "assumptions"
+          ],
           "citations": [
-            { "citationText": "VM-20 Section 3.C expense and lapse assumptions", "pageReference": "pp. 60-61", "sectionReference": "Section 3.C: Expense and lapse assumptions", "sourceReference": "2026 NAIC Valuation Manual", "lineReference": null }
+            {
+              "citationText": "VM-20 Section 3.C expense and lapse assumptions",
+              "pageReference": "pp. 60-61",
+              "sectionReference": "Section 3.C: Expense and lapse assumptions",
+              "sourceReference": "2026 NAIC Valuation Manual",
+              "lineReference": null
+            }
           ]
         },
         {
@@ -510,10 +572,28 @@
           "topic": "Margins and sensitivity treatment",
           "summary": "VM-20 Section 3.C addresses margins and sensitivity treatment for assumptions.",
           "sourceTextExcerpt": "Section 3.C margins and sensitivity treatment",
-          "controlledTags": ["core_vm_course", "reserve_method_structure", "formula_context", "prescribed_assumption", "requires_human_interpretation"],
-          "keywords": ["VM-20", "Section 3.C", "margins", "sensitivity", "treatment"],
+          "controlledTags": [
+            "core_vm_course",
+            "reserve_method_structure",
+            "formula_context",
+            "prescribed_assumption",
+            "requires_human_interpretation"
+          ],
+          "keywords": [
+            "VM-20",
+            "Section 3.C",
+            "margins",
+            "sensitivity",
+            "treatment"
+          ],
           "citations": [
-            { "citationText": "VM-20 Section 3.C margins and sensitivity treatment", "pageReference": "pp. 62-63", "sectionReference": "Section 3.C: Margins and sensitivity treatment", "sourceReference": "2026 NAIC Valuation Manual", "lineReference": null }
+            {
+              "citationText": "VM-20 Section 3.C margins and sensitivity treatment",
+              "pageReference": "pp. 62-63",
+              "sectionReference": "Section 3.C: Margins and sensitivity treatment",
+              "sourceReference": "2026 NAIC Valuation Manual",
+              "lineReference": null
+            }
           ]
         },
         {
@@ -525,13 +605,33 @@
           "topic": "Assumption closeout and Section 4 boundary",
           "summary": "VM-20 Section 3.C closes out the assumption layer and marks the transition toward Section 4.",
           "sourceTextExcerpt": "Section 3.C closeout and Section 4 boundary",
-          "controlledTags": ["core_vm_course", "reserve_method_structure", "cross_reference_mapping", "boundary_control_window", "requires_human_interpretation"],
-          "keywords": ["VM-20", "Section 3.C", "closeout", "Section 4", "boundary"],
+          "controlledTags": [
+            "core_vm_course",
+            "reserve_method_structure",
+            "cross_reference_mapping",
+            "boundary_control_window",
+            "requires_human_interpretation"
+          ],
+          "keywords": [
+            "VM-20",
+            "Section 3.C",
+            "closeout",
+            "Section 4",
+            "boundary"
+          ],
           "citations": [
-            { "citationText": "VM-20 Section 3.C assumption closeout and Section 4 boundary", "pageReference": "pp. 64-65", "sectionReference": "Section 3.C: Assumption closeout and Section 4 boundary", "sourceReference": "2026 NAIC Valuation Manual", "lineReference": null }
+            {
+              "citationText": "VM-20 Section 3.C assumption closeout and Section 4 boundary",
+              "pageReference": "pp. 64-65",
+              "sectionReference": "Section 3.C: Assumption closeout and Section 4 boundary",
+              "sourceReference": "2026 NAIC Valuation Manual",
+              "lineReference": null
+            }
           ]
         }
-      ]
+      ],
+      "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+      "licensingStatus": "CLEARED_INTERNAL_POC"
     },
     {
       "sourceIndexId": "source-index-vm20-canonical-coverage",
@@ -549,9 +649,21 @@
       "sourceStatus": "active",
       "versionDate": null,
       "pageCount": 457,
-      "pageRange": { "start": 48, "end": 95 },
+      "pageRange": {
+        "start": 48,
+        "end": 95
+      },
       "expectedChunkCount": 52,
-      "reviewBatchIds": ["batch-004", "batch-005", "batch-007", "batch-008", "batch-009", "batch-010", "batch-011", "batch-012"],
+      "reviewBatchIds": [
+        "batch-004",
+        "batch-005",
+        "batch-007",
+        "batch-008",
+        "batch-009",
+        "batch-010",
+        "batch-011",
+        "batch-012"
+      ],
       "reviewIndexPath": "docs/review/vm20_review_index.md",
       "selfReviewPath": "docs/review/vm20_self_review.md",
       "pageImageBackstop": false,
@@ -561,8 +673,12 @@
         "sourceTextType": "actual_extracted_source_text",
         "fidelity": "exact",
         "confidence": "high",
-        "reviewFlags": ["review_only"],
-        "controlledTags": ["core_vm_course"],
+        "reviewFlags": [
+          "review_only"
+        ],
+        "controlledTags": [
+          "core_vm_course"
+        ],
         "qualityNotes": [
           "Actual source text from the controlled current VM-20 review wave.",
           "Page locators are preserved; line references were not available in the source extraction."
@@ -592,7 +708,10 @@
           "vm20-section7-asset-mechanics",
           "vm20-section8-reinsurance"
         ],
-        "includeKinds": ["chunk", "review_note"],
+        "includeKinds": [
+          "chunk",
+          "review_note"
+        ],
         "childTargetWords": 360
       },
       "classification": {
@@ -606,10 +725,14 @@
         "recommendedProfile": "regulatory",
         "recommendedChunkingStrategy": "hierarchical_structure",
         "confidence": "high",
-        "unresolvedQuestions": ["The current manual source is only available in reviewed slices; independent review is required before promotion."],
+        "unresolvedQuestions": [
+          "The current manual source is only available in reviewed slices; independent review is required before promotion."
+        ],
         "notes": "Current manual evidence only; summaries and review commentary remain distinct from source text."
       },
-      "notes": "Expanded current-manual VM-20 coverage for the reviewed 2026 source slices. This is review-only, not learner-facing, not app-ready, not RAG-ready, and not promoted."
+      "notes": "Expanded current-manual VM-20 coverage for the reviewed 2026 source slices. This is review-only, not learner-facing, not app-ready, not RAG-ready, and not promoted.",
+      "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
+      "licensingStatus": "CLEARED_INTERNAL_POC"
     },
     {
       "sourceIndexId": "source-index-vm20-remaining-prose-appendix-coverage",
@@ -630,9 +753,17 @@
       "versionDate": null,
       "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
       "pageCount": 457,
-      "pageRange": { "start": 66, "end": 140 },
+      "pageRange": {
+        "start": 66,
+        "end": 140
+      },
       "expectedChunkCount": 77,
-      "reviewBatchIds": ["batch-231", "batch-232", "batch-233", "batch-234"],
+      "reviewBatchIds": [
+        "batch-231",
+        "batch-232",
+        "batch-233",
+        "batch-234"
+      ],
       "reviewIndexPath": "docs/review/vm20_review_index.md",
       "selfReviewPath": "docs/review/vm20_self_review.md",
       "pageImageBackstop": false,
@@ -647,9 +778,18 @@
       },
       "coverageDeclarations": {
         "scopeType": "current_manual_prose_and_methodology",
-        "includedInformationTypes": ["prose", "methodology", "section_requirements", "cross_references"],
+        "includedInformationTypes": [
+          "prose",
+          "methodology",
+          "section_requirements",
+          "cross_references"
+        ],
         "structuredDataAvailable": false,
-        "deferredInformationTypes": ["structured_table_rows", "current_table_values", "table_version_metadata"],
+        "deferredInformationTypes": [
+          "structured_table_rows",
+          "current_table_values",
+          "table_version_metadata"
+        ],
         "knownGaps": [
           "Appendix 2 current prescribed asset-default, asset-spread, and swap-spread table rows are not ingested as structured data.",
           "Appendix 2 current table version metadata is deferred to the structured-table milestone."
@@ -659,8 +799,14 @@
         "sourceTextType": "actual_extracted_source_text",
         "fidelity": "exact",
         "confidence": "high",
-        "reviewFlags": ["review_only", "requires_human_interpretation"],
-        "controlledTags": ["core_vm_course", "vm20_remaining_coverage"],
+        "reviewFlags": [
+          "review_only",
+          "requires_human_interpretation"
+        ],
+        "controlledTags": [
+          "core_vm_course",
+          "vm20_remaining_coverage"
+        ],
         "qualityNotes": [
           "Actual source text from the authoritative current VM-20 manual is retained without source-text normalization or rewriting.",
           "Structural parents follow Sections 4, 5, 9 and Appendix 1-2 headings; children retain contiguous paragraph boundaries.",
@@ -701,7 +847,9 @@
           "vm20-appendix2-g-long-term-benchmark-swap-spreads",
           "vm20-appendix2-h-tables"
         ],
-        "includeKinds": ["chunk"],
+        "includeKinds": [
+          "chunk"
+        ],
         "childTargetWords": 340
       },
       "classification": {
@@ -721,7 +869,8 @@
         ],
         "notes": "Current manual source evidence only; generated summaries and review commentary remain distinct from source text."
       },
-      "notes": "Review-only VM-20 Sections 4, 5, 9 and Appendices 1-2 coverage. Structured current regulatory tables remain a separate later milestone."
+      "notes": "Review-only VM-20 Sections 4, 5, 9 and Appendices 1-2 coverage. Structured current regulatory tables remain a separate later milestone.",
+      "licensingStatus": "CLEARED_INTERNAL_POC"
     },
     {
       "sourceIndexId": "source-index-vm20-practice-note-companion",
@@ -739,9 +888,34 @@
       "sourceStatus": "historical_companion",
       "versionDate": "2020-04-01",
       "pageCount": 115,
-      "pageRange": { "start": 1, "end": 115 },
+      "pageRange": {
+        "start": 1,
+        "end": 115
+      },
       "expectedChunkCount": 175,
-      "reviewBatchIds": ["batch-055", "batch-056", "batch-057", "batch-058", "batch-059", "batch-060", "batch-061", "batch-062", "batch-063", "batch-064", "batch-065", "batch-066", "batch-067", "batch-068", "batch-069", "batch-070", "batch-071", "batch-072", "batch-073", "batch-074", "batch-075"],
+      "reviewBatchIds": [
+        "batch-055",
+        "batch-056",
+        "batch-057",
+        "batch-058",
+        "batch-059",
+        "batch-060",
+        "batch-061",
+        "batch-062",
+        "batch-063",
+        "batch-064",
+        "batch-065",
+        "batch-066",
+        "batch-067",
+        "batch-068",
+        "batch-069",
+        "batch-070",
+        "batch-071",
+        "batch-072",
+        "batch-073",
+        "batch-074",
+        "batch-075"
+      ],
       "reviewIndexPath": "docs/review/vm20_practice_note_review_index.md",
       "selfReviewPath": "docs/review/vm20_practice_note_self_review.md",
       "pageImageBackstop": false,
@@ -751,8 +925,16 @@
         "sourceTextType": "actual_extracted_source_text",
         "fidelity": "exact",
         "confidence": "high",
-        "reviewFlags": ["review_only", "companion_guidance", "non_binding_guidance"],
-        "controlledTags": ["supporting_guidance", "companion_guidance", "non_binding_guidance"],
+        "reviewFlags": [
+          "review_only",
+          "companion_guidance",
+          "non_binding_guidance"
+        ],
+        "controlledTags": [
+          "supporting_guidance",
+          "companion_guidance",
+          "non_binding_guidance"
+        ],
         "qualityNotes": [
           "Actual extracted practice-note text is retained as companion evidence.",
           "The practice note is non-binding and based on a historical VM-20 edition; current-manual confirmation is required."
@@ -784,9 +966,32 @@
           "data/work/batches/batch-075/extraction-output.json"
         ],
         "sourceIds": [
-          "vm20-pn-front-matter", "vm20-pn-common-practice", "vm20-pn-calculation-overview", "vm20-pn-npr-overview", "vm20-pn-dr-overview", "vm20-pn-sr-overview", "vm20-pn-stochastic-exclusion", "vm20-pn-deterministic-exclusion", "vm20-pn-scenario-reserve", "vm20-pn-valuation-date", "vm20-pn-starting-assets", "vm20-pn-scenarios-econ", "vm20-pn-prudent-estimate", "vm20-pn-margins", "vm20-pn-mortality", "vm20-pn-premium", "vm20-pn-behavior", "vm20-pn-expense", "vm20-pn-nge", "vm20-pn-reinsurance", "vm20-pn-hedging"
+          "vm20-pn-front-matter",
+          "vm20-pn-common-practice",
+          "vm20-pn-calculation-overview",
+          "vm20-pn-npr-overview",
+          "vm20-pn-dr-overview",
+          "vm20-pn-sr-overview",
+          "vm20-pn-stochastic-exclusion",
+          "vm20-pn-deterministic-exclusion",
+          "vm20-pn-scenario-reserve",
+          "vm20-pn-valuation-date",
+          "vm20-pn-starting-assets",
+          "vm20-pn-scenarios-econ",
+          "vm20-pn-prudent-estimate",
+          "vm20-pn-margins",
+          "vm20-pn-mortality",
+          "vm20-pn-premium",
+          "vm20-pn-behavior",
+          "vm20-pn-expense",
+          "vm20-pn-nge",
+          "vm20-pn-reinsurance",
+          "vm20-pn-hedging"
         ],
-        "includeKinds": ["chunk", "review_note"],
+        "includeKinds": [
+          "chunk",
+          "review_note"
+        ],
         "childTargetWords": 360
       },
       "classification": {
@@ -800,10 +1005,13 @@
         "recommendedProfile": "regulatory",
         "recommendedChunkingStrategy": "hierarchical_structure",
         "confidence": "high",
-        "unresolvedQuestions": ["The practice note is non-binding, dated 2020, and must not substitute for the current Valuation Manual."],
+        "unresolvedQuestions": [
+          "The practice note is non-binding, dated 2020, and must not substitute for the current Valuation Manual."
+        ],
         "notes": "Companion guidance is indexed separately from current manual authority."
       },
-      "notes": "Expanded hierarchical companion coverage for the reviewed VM-20 practice-note wave. Non-binding, historical, review-only, and not promoted."
+      "notes": "Expanded hierarchical companion coverage for the reviewed VM-20 practice-note wave. Non-binding, historical, review-only, and not promoted.",
+      "licensingStatus": "CLEARED_INTERNAL_POC"
     },
     {
       "sourceIndexId": "source-index-vm21-current-manual",
@@ -824,11 +1032,31 @@
       "versionDate": null,
       "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
       "pageCount": 457,
-      "pageRange": { "start": 143, "end": 225 },
+      "pageRange": {
+        "start": 143,
+        "end": 225
+      },
       "expectedChunkCount": 78,
       "canonicalCandidate": true,
       "processingCreatedAt": "2026-08-28T00:00:00Z",
-      "reviewBatchIds": ["batch-022", "batch-023", "batch-024", "batch-025", "batch-026", "batch-027", "batch-028", "batch-029", "batch-030", "batch-031", "batch-032", "batch-033", "batch-034", "batch-035", "batch-036", "batch-037"],
+      "reviewBatchIds": [
+        "batch-022",
+        "batch-023",
+        "batch-024",
+        "batch-025",
+        "batch-026",
+        "batch-027",
+        "batch-028",
+        "batch-029",
+        "batch-030",
+        "batch-031",
+        "batch-032",
+        "batch-033",
+        "batch-034",
+        "batch-035",
+        "batch-036",
+        "batch-037"
+      ],
       "reviewIndexPath": "docs/review/vm21_review_index.md",
       "selfReviewPath": "docs/review/vm21_self_review.md",
       "pageImageBackstop": true,
@@ -842,7 +1070,23 @@
         "qaScript": "scripts/validate-vm21-current-manual.mjs"
       },
       "coverageDeclarations": {
-        "coveredSections": ["chapter_opening", "section_1", "section_2", "section_3", "section_4", "section_5", "section_6", "section_7", "section_8", "section_9", "section_10", "section_11", "section_12", "section_13", "closing_boundary"],
+        "coveredSections": [
+          "chapter_opening",
+          "section_1",
+          "section_2",
+          "section_3",
+          "section_4",
+          "section_5",
+          "section_6",
+          "section_7",
+          "section_8",
+          "section_9",
+          "section_10",
+          "section_11",
+          "section_12",
+          "section_13",
+          "closing_boundary"
+        ],
         "structuredDataAvailable": true,
         "parentCount": 15,
         "childCount": 63,
@@ -878,8 +1122,14 @@
         "sourceTextType": "actual_extracted_source_text",
         "fidelity": "exact",
         "confidence": "high",
-        "reviewFlags": ["review_only", "requires_independent_review"],
-        "controlledTags": ["vm21_current_manual", "variable_annuity_reserves"],
+        "reviewFlags": [
+          "review_only",
+          "requires_independent_review"
+        ],
+        "controlledTags": [
+          "vm21_current_manual",
+          "variable_annuity_reserves"
+        ],
         "qualityNotes": [
           "Actual source text from the authoritative current VM-21 chapter is retained without source-text rewriting.",
           "Each child keeps a complete top-level lettered provision with nested qualifications, guidance notes, formulas, and table text.",
@@ -889,22 +1139,70 @@
       },
       "vm21Input": {
         "extractions": [
-          { "extractionPath": "data/work/batches/batch-022/extraction-output.json", "batchManifestPath": "data/work/batches/batch-022/batch-manifest.json" },
-          { "extractionPath": "data/work/batches/batch-023/extraction-output.json", "batchManifestPath": "data/work/batches/batch-023/batch-manifest.json" },
-          { "extractionPath": "data/work/batches/batch-024/extraction-output.json", "batchManifestPath": "data/work/batches/batch-024/batch-manifest.json" },
-          { "extractionPath": "data/work/batches/batch-025/extraction-output.json", "batchManifestPath": "data/work/batches/batch-025/batch-manifest.json" },
-          { "extractionPath": "data/work/batches/batch-026/extraction-output.json", "batchManifestPath": "data/work/batches/batch-026/batch-manifest.json" },
-          { "extractionPath": "data/work/batches/batch-027/extraction-output.json", "batchManifestPath": "data/work/batches/batch-027/batch-manifest.json" },
-          { "extractionPath": "data/work/batches/batch-028/extraction-output.json", "batchManifestPath": "data/work/batches/batch-028/batch-manifest.json" },
-          { "extractionPath": "data/work/batches/batch-029/extraction-output.json", "batchManifestPath": "data/work/batches/batch-029/batch-manifest.json" },
-          { "extractionPath": "data/work/batches/batch-030/extraction-output.json", "batchManifestPath": "data/work/batches/batch-030/batch-manifest.json" },
-          { "extractionPath": "data/work/batches/batch-031/extraction-output.json", "batchManifestPath": "data/work/batches/batch-031/batch-manifest.json" },
-          { "extractionPath": "data/work/batches/batch-032/extraction-output.json", "batchManifestPath": "data/work/batches/batch-032/batch-manifest.json" },
-          { "extractionPath": "data/work/batches/batch-033/extraction-output.json", "batchManifestPath": "data/work/batches/batch-033/batch-manifest.json" },
-          { "extractionPath": "data/work/batches/batch-034/extraction-output.json", "batchManifestPath": "data/work/batches/batch-034/batch-manifest.json" },
-          { "extractionPath": "data/work/batches/batch-035/extraction-output.json", "batchManifestPath": "data/work/batches/batch-035/batch-manifest.json" },
-          { "extractionPath": "data/work/batches/batch-036/extraction-output.json", "batchManifestPath": "data/work/batches/batch-036/batch-manifest.json" },
-          { "extractionPath": "data/work/batches/batch-037/extraction-output.json", "batchManifestPath": "data/work/batches/batch-037/batch-manifest.json" }
+          {
+            "extractionPath": "data/work/batches/batch-022/extraction-output.json",
+            "batchManifestPath": "data/work/batches/batch-022/batch-manifest.json"
+          },
+          {
+            "extractionPath": "data/work/batches/batch-023/extraction-output.json",
+            "batchManifestPath": "data/work/batches/batch-023/batch-manifest.json"
+          },
+          {
+            "extractionPath": "data/work/batches/batch-024/extraction-output.json",
+            "batchManifestPath": "data/work/batches/batch-024/batch-manifest.json"
+          },
+          {
+            "extractionPath": "data/work/batches/batch-025/extraction-output.json",
+            "batchManifestPath": "data/work/batches/batch-025/batch-manifest.json"
+          },
+          {
+            "extractionPath": "data/work/batches/batch-026/extraction-output.json",
+            "batchManifestPath": "data/work/batches/batch-026/batch-manifest.json"
+          },
+          {
+            "extractionPath": "data/work/batches/batch-027/extraction-output.json",
+            "batchManifestPath": "data/work/batches/batch-027/batch-manifest.json"
+          },
+          {
+            "extractionPath": "data/work/batches/batch-028/extraction-output.json",
+            "batchManifestPath": "data/work/batches/batch-028/batch-manifest.json"
+          },
+          {
+            "extractionPath": "data/work/batches/batch-029/extraction-output.json",
+            "batchManifestPath": "data/work/batches/batch-029/batch-manifest.json"
+          },
+          {
+            "extractionPath": "data/work/batches/batch-030/extraction-output.json",
+            "batchManifestPath": "data/work/batches/batch-030/batch-manifest.json"
+          },
+          {
+            "extractionPath": "data/work/batches/batch-031/extraction-output.json",
+            "batchManifestPath": "data/work/batches/batch-031/batch-manifest.json"
+          },
+          {
+            "extractionPath": "data/work/batches/batch-032/extraction-output.json",
+            "batchManifestPath": "data/work/batches/batch-032/batch-manifest.json"
+          },
+          {
+            "extractionPath": "data/work/batches/batch-033/extraction-output.json",
+            "batchManifestPath": "data/work/batches/batch-033/batch-manifest.json"
+          },
+          {
+            "extractionPath": "data/work/batches/batch-034/extraction-output.json",
+            "batchManifestPath": "data/work/batches/batch-034/batch-manifest.json"
+          },
+          {
+            "extractionPath": "data/work/batches/batch-035/extraction-output.json",
+            "batchManifestPath": "data/work/batches/batch-035/batch-manifest.json"
+          },
+          {
+            "extractionPath": "data/work/batches/batch-036/extraction-output.json",
+            "batchManifestPath": "data/work/batches/batch-036/batch-manifest.json"
+          },
+          {
+            "extractionPath": "data/work/batches/batch-037/extraction-output.json",
+            "batchManifestPath": "data/work/batches/batch-037/batch-manifest.json"
+          }
         ]
       },
       "extensions": {
@@ -914,7 +1212,8 @@
         "focusedRetrievalEvaluationPath": "data/processed/review_packages/vm21-focused-retrieval-evaluation.json",
         "structuredEvidencePath": "data/processed/review_packages/vm21-structured-evidence-inventory.json"
       },
-      "notes": "Substantially complete current 2026 VM-21 canonical candidate built from the existing controlled extraction wave; review-only and not promoted pending independent approval."
+      "notes": "Substantially complete current 2026 VM-21 canonical candidate built from the existing controlled extraction wave; review-only and not promoted pending independent approval.",
+      "licensingStatus": "CLEARED_INTERNAL_POC"
     },
     {
       "sourceIndexId": "source-index-vm22-current-manual",
@@ -935,11 +1234,32 @@
       "versionDate": null,
       "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
       "pageCount": 457,
-      "pageRange": { "start": 227, "end": 318 },
+      "pageRange": {
+        "start": 227,
+        "end": 318
+      },
       "expectedChunkCount": 83,
       "canonicalCandidate": true,
       "processingCreatedAt": "2026-09-02T00:00:00Z",
-      "reviewBatchIds": ["batch-038", "batch-039", "batch-040", "batch-041", "batch-042", "batch-043", "batch-044", "batch-045", "batch-046", "batch-047", "batch-048", "batch-049", "batch-050", "batch-051", "batch-052", "batch-053", "batch-054"],
+      "reviewBatchIds": [
+        "batch-038",
+        "batch-039",
+        "batch-040",
+        "batch-041",
+        "batch-042",
+        "batch-043",
+        "batch-044",
+        "batch-045",
+        "batch-046",
+        "batch-047",
+        "batch-048",
+        "batch-049",
+        "batch-050",
+        "batch-051",
+        "batch-052",
+        "batch-053",
+        "batch-054"
+      ],
       "reviewIndexPath": "docs/review/vm22_review_index.md",
       "selfReviewPath": "docs/review/vm22_self_review.md",
       "pageImageBackstop": true,
@@ -953,12 +1273,32 @@
         "qaScript": "scripts/validate-vm22-current-manual.mjs"
       },
       "coverageDeclarations": {
-        "coveredSections": ["chapter_opening", "section_1", "section_2", "section_3", "section_4", "section_5", "section_6", "section_7", "section_8", "section_9", "section_10", "section_11", "section_12", "section_13", "closing_boundary"],
+        "coveredSections": [
+          "chapter_opening",
+          "section_1",
+          "section_2",
+          "section_3",
+          "section_4",
+          "section_5",
+          "section_6",
+          "section_7",
+          "section_8",
+          "section_9",
+          "section_10",
+          "section_11",
+          "section_12",
+          "section_13",
+          "closing_boundary"
+        ],
         "structuredDataAvailable": true,
         "parentCount": 15,
         "childCount": 68,
         "retrievalUnitCount": 66,
-        "knownGaps": ["Relationship candidates remain review-only, pending, and not promoted.", "Structured table and formula records are review aids; exact source text remains authoritative.", "The April 3, 2025 LATF referral is retained as future-context guidance and is not treated as a current operative requirement."]
+        "knownGaps": [
+          "Relationship candidates remain review-only, pending, and not promoted.",
+          "Structured table and formula records are review aids; exact source text remains authoritative.",
+          "The April 3, 2025 LATF referral is retained as future-context guidance and is not treated as a current operative requirement."
+        ]
       },
       "classification": {
         "domainId": "naic_regulatory",
@@ -975,37 +1315,103 @@
         "recommendedProfile": "calculation_and_assumptions",
         "recommendedChunkingStrategy": "section_parent_to_complete_lettered_subsection_child",
         "confidence": "high",
-        "unresolvedQuestions": ["Independent review is required before canonical promotion.", "Dense tables, formulas, assumption classifications, relationships, and downstream eligibility require separate review."],
+        "unresolvedQuestions": [
+          "Independent review is required before canonical promotion.",
+          "Dense tables, formulas, assumption classifications, relationships, and downstream eligibility require separate review."
+        ],
         "notes": "Exact source excerpts control; semantic classifications, summaries, structured-evidence labels, and cross-reference candidates are derivative metadata."
       },
       "chunkDefaults": {
         "sourceTextType": "actual_extracted_source_text",
         "fidelity": "exact",
         "confidence": "high",
-        "reviewFlags": ["review_only", "requires_independent_review"],
-        "controlledTags": ["vm22_current_manual", "non_variable_annuity_reserves"],
-        "qualityNotes": ["Actual source text from the authoritative current VM-22 chapter is retained without source-text rewriting.", "Each child keeps a complete top-level lettered provision with nested qualifications, guidance notes, formulas, and table text.", "Physical page 318 is intentionally blank and physical page 319 begins VM-25 outside scope."],
+        "reviewFlags": [
+          "review_only",
+          "requires_independent_review"
+        ],
+        "controlledTags": [
+          "vm22_current_manual",
+          "non_variable_annuity_reserves"
+        ],
+        "qualityNotes": [
+          "Actual source text from the authoritative current VM-22 chapter is retained without source-text rewriting.",
+          "Each child keeps a complete top-level lettered provision with nested qualifications, guidance notes, formulas, and table text.",
+          "Physical page 318 is intentionally blank and physical page 319 begins VM-25 outside scope."
+        ],
         "evidenceNotes": "Derived from reviewed supporting batches 038-054 with the authoritative 2026 Valuation Manual SHA-256; review-only and not promoted."
       },
-      "vm22Input": { "extractions": [
-        { "extractionPath": "data/work/batches/batch-038/extraction-output.json", "batchManifestPath": "data/work/batches/batch-038/batch-manifest.json" },
-        { "extractionPath": "data/work/batches/batch-039/extraction-output.json", "batchManifestPath": "data/work/batches/batch-039/batch-manifest.json" },
-        { "extractionPath": "data/work/batches/batch-040/extraction-output.json", "batchManifestPath": "data/work/batches/batch-040/batch-manifest.json" },
-        { "extractionPath": "data/work/batches/batch-041/extraction-output.json", "batchManifestPath": "data/work/batches/batch-041/batch-manifest.json" },
-        { "extractionPath": "data/work/batches/batch-042/extraction-output.json", "batchManifestPath": "data/work/batches/batch-042/batch-manifest.json" },
-        { "extractionPath": "data/work/batches/batch-043/extraction-output.json", "batchManifestPath": "data/work/batches/batch-043/batch-manifest.json" },
-        { "extractionPath": "data/work/batches/batch-044/extraction-output.json", "batchManifestPath": "data/work/batches/batch-044/batch-manifest.json" },
-        { "extractionPath": "data/work/batches/batch-045/extraction-output.json", "batchManifestPath": "data/work/batches/batch-045/batch-manifest.json" },
-        { "extractionPath": "data/work/batches/batch-046/extraction-output.json", "batchManifestPath": "data/work/batches/batch-046/batch-manifest.json" },
-        { "extractionPath": "data/work/batches/batch-047/extraction-output.json", "batchManifestPath": "data/work/batches/batch-047/batch-manifest.json" },
-        { "extractionPath": "data/work/batches/batch-048/extraction-output.json", "batchManifestPath": "data/work/batches/batch-048/batch-manifest.json" },
-        { "extractionPath": "data/work/batches/batch-049/extraction-output.json", "batchManifestPath": "data/work/batches/batch-049/batch-manifest.json" },
-        { "extractionPath": "data/work/batches/batch-050/extraction-output.json", "batchManifestPath": "data/work/batches/batch-050/batch-manifest.json" },
-        { "extractionPath": "data/work/batches/batch-051/extraction-output.json", "batchManifestPath": "data/work/batches/batch-051/batch-manifest.json" },
-        { "extractionPath": "data/work/batches/batch-052/extraction-output.json", "batchManifestPath": "data/work/batches/batch-052/batch-manifest.json" },
-        { "extractionPath": "data/work/batches/batch-053/extraction-output.json", "batchManifestPath": "data/work/batches/batch-053/batch-manifest.json" },
-        { "extractionPath": "data/work/batches/batch-054/extraction-output.json", "batchManifestPath": "data/work/batches/batch-054/batch-manifest.json" }
-      ] },
+      "vm22Input": {
+        "extractions": [
+          {
+            "extractionPath": "data/work/batches/batch-038/extraction-output.json",
+            "batchManifestPath": "data/work/batches/batch-038/batch-manifest.json"
+          },
+          {
+            "extractionPath": "data/work/batches/batch-039/extraction-output.json",
+            "batchManifestPath": "data/work/batches/batch-039/batch-manifest.json"
+          },
+          {
+            "extractionPath": "data/work/batches/batch-040/extraction-output.json",
+            "batchManifestPath": "data/work/batches/batch-040/batch-manifest.json"
+          },
+          {
+            "extractionPath": "data/work/batches/batch-041/extraction-output.json",
+            "batchManifestPath": "data/work/batches/batch-041/batch-manifest.json"
+          },
+          {
+            "extractionPath": "data/work/batches/batch-042/extraction-output.json",
+            "batchManifestPath": "data/work/batches/batch-042/batch-manifest.json"
+          },
+          {
+            "extractionPath": "data/work/batches/batch-043/extraction-output.json",
+            "batchManifestPath": "data/work/batches/batch-043/batch-manifest.json"
+          },
+          {
+            "extractionPath": "data/work/batches/batch-044/extraction-output.json",
+            "batchManifestPath": "data/work/batches/batch-044/batch-manifest.json"
+          },
+          {
+            "extractionPath": "data/work/batches/batch-045/extraction-output.json",
+            "batchManifestPath": "data/work/batches/batch-045/batch-manifest.json"
+          },
+          {
+            "extractionPath": "data/work/batches/batch-046/extraction-output.json",
+            "batchManifestPath": "data/work/batches/batch-046/batch-manifest.json"
+          },
+          {
+            "extractionPath": "data/work/batches/batch-047/extraction-output.json",
+            "batchManifestPath": "data/work/batches/batch-047/batch-manifest.json"
+          },
+          {
+            "extractionPath": "data/work/batches/batch-048/extraction-output.json",
+            "batchManifestPath": "data/work/batches/batch-048/batch-manifest.json"
+          },
+          {
+            "extractionPath": "data/work/batches/batch-049/extraction-output.json",
+            "batchManifestPath": "data/work/batches/batch-049/batch-manifest.json"
+          },
+          {
+            "extractionPath": "data/work/batches/batch-050/extraction-output.json",
+            "batchManifestPath": "data/work/batches/batch-050/batch-manifest.json"
+          },
+          {
+            "extractionPath": "data/work/batches/batch-051/extraction-output.json",
+            "batchManifestPath": "data/work/batches/batch-051/batch-manifest.json"
+          },
+          {
+            "extractionPath": "data/work/batches/batch-052/extraction-output.json",
+            "batchManifestPath": "data/work/batches/batch-052/batch-manifest.json"
+          },
+          {
+            "extractionPath": "data/work/batches/batch-053/extraction-output.json",
+            "batchManifestPath": "data/work/batches/batch-053/batch-manifest.json"
+          },
+          {
+            "extractionPath": "data/work/batches/batch-054/extraction-output.json",
+            "batchManifestPath": "data/work/batches/batch-054/batch-manifest.json"
+          }
+        ]
+      },
       "extensions": {
         "structureModel": "vm22_section_subsection_hierarchy_v1",
         "relationshipCandidatePath": "data/processed/relationship_registries/vm22-current-manual-relationship-candidates.json",
@@ -1013,7 +1419,8 @@
         "focusedRetrievalEvaluationPath": "data/processed/review_packages/vm22-focused-retrieval-evaluation.json",
         "structuredEvidencePath": "data/processed/review_packages/vm22-structured-evidence-inventory.json"
       },
-      "notes": "Substantially complete current 2026 VM-22 canonical candidate built from the existing controlled extraction wave; review-only and not promoted pending independent approval."
+      "notes": "Substantially complete current 2026 VM-22 canonical candidate built from the existing controlled extraction wave; review-only and not promoted pending independent approval.",
+      "licensingStatus": "CLEARED_INTERNAL_POC"
     },
     {
       "sourceIndexId": "source-index-ag36-eiul-crvm-guidance",
@@ -1031,8 +1438,16 @@
       "sourceStatus": "active",
       "versionDate": null,
       "pageCount": 11,
-      "pageRange": { "start": 1, "end": 11 },
-      "reviewBatchIds": ["batch-123", "batch-124", "batch-125", "batch-126"],
+      "pageRange": {
+        "start": 1,
+        "end": 11
+      },
+      "reviewBatchIds": [
+        "batch-123",
+        "batch-124",
+        "batch-125",
+        "batch-126"
+      ],
       "reviewIndexPath": "docs/review/ag36_review_index.md",
       "selfReviewPath": "docs/review/ag36_self_review.md",
       "pageImageBackstop": true,
@@ -1042,7 +1457,10 @@
         "sourceTextType": "actual_extracted_source_text",
         "fidelity": "exact",
         "confidence": "medium",
-        "reviewFlags": ["noisy_text_layer", "page_image_backstop"],
+        "reviewFlags": [
+          "noisy_text_layer",
+          "page_image_backstop"
+        ],
         "qualityNotes": [
           "Encoding-noisy OCR layer; page-image wording backstop remains required.",
           "No line references were preserved in the source package."
@@ -1050,7 +1468,11 @@
         "evidenceNotes": "Derived from the ignored AG 36 review packets and review index."
       },
       "relationships": [
-        { "relationType": "duplicate_or_reprint", "targetSourceId": "ag36-eiul-crvm-law-manual-reprint", "notes": "Active AG 36 source counterpart to the Law Manual reprint." }
+        {
+          "relationType": "duplicate_or_reprint",
+          "targetSourceId": "ag36-eiul-crvm-law-manual-reprint",
+          "notes": "Active AG 36 source counterpart to the Law Manual reprint."
+        }
       ],
       "notes": "Active AG 36 source package retained as a review-only guideline slice.",
       "chunks": [
@@ -1063,10 +1485,27 @@
           "topic": "Foundation and method overview",
           "summary": "AG 36 introduces the CRVM framework for equity-indexed life insurance policies.",
           "sourceTextExcerpt": "AG 36 foundation and method overview",
-          "controlledTags": ["regulatory_requirement", "reserve_method_structure", "definition_or_terminology", "cross_reference_mapping", "background_content"],
-          "keywords": ["AG 36", "CRVM", "equity indexed life insurance", "overview"],
+          "controlledTags": [
+            "regulatory_requirement",
+            "reserve_method_structure",
+            "definition_or_terminology",
+            "cross_reference_mapping",
+            "background_content"
+          ],
+          "keywords": [
+            "AG 36",
+            "CRVM",
+            "equity indexed life insurance",
+            "overview"
+          ],
           "citations": [
-            { "citationText": "AG 36 foundation and method overview", "pageReference": "pp. 1-3", "sectionReference": "AG 36: Foundation and method overview", "sourceReference": "Actuarial Guideline XXXVI", "lineReference": null }
+            {
+              "citationText": "AG 36 foundation and method overview",
+              "pageReference": "pp. 1-3",
+              "sectionReference": "AG 36: Foundation and method overview",
+              "sourceReference": "Actuarial Guideline XXXVI",
+              "lineReference": null
+            }
           ]
         },
         {
@@ -1078,10 +1517,27 @@
           "topic": "Attachments and method mechanics",
           "summary": "AG 36 describes the attachment-driven mechanics and rate framework.",
           "sourceTextExcerpt": "AG 36 attachments and method mechanics",
-          "controlledTags": ["regulatory_requirement", "reserve_method_structure", "calculation_structure", "formula_context", "prescribed_assumption"],
-          "keywords": ["AG 36", "attachments", "mechanics", "rates"],
+          "controlledTags": [
+            "regulatory_requirement",
+            "reserve_method_structure",
+            "calculation_structure",
+            "formula_context",
+            "prescribed_assumption"
+          ],
+          "keywords": [
+            "AG 36",
+            "attachments",
+            "mechanics",
+            "rates"
+          ],
           "citations": [
-            { "citationText": "AG 36 attachments and method mechanics", "pageReference": "pp. 4-6", "sectionReference": "AG 36: Attachments and method mechanics", "sourceReference": "Actuarial Guideline XXXVI", "lineReference": null }
+            {
+              "citationText": "AG 36 attachments and method mechanics",
+              "pageReference": "pp. 4-6",
+              "sectionReference": "AG 36: Attachments and method mechanics",
+              "sourceReference": "Actuarial Guideline XXXVI",
+              "lineReference": null
+            }
           ]
         },
         {
@@ -1093,10 +1549,26 @@
           "topic": "Hedged as required and notification",
           "summary": "AG 36 adds the hedged-as-required criteria and the notification threshold.",
           "sourceTextExcerpt": "AG 36 hedged as required and notification",
-          "controlledTags": ["regulatory_requirement", "hedging_or_risk_mitigation", "reporting_requirement", "governance_or_control_expectation", "cross_reference_mapping"],
-          "keywords": ["AG 36", "hedged as required", "notification"],
+          "controlledTags": [
+            "regulatory_requirement",
+            "hedging_or_risk_mitigation",
+            "reporting_requirement",
+            "governance_or_control_expectation",
+            "cross_reference_mapping"
+          ],
+          "keywords": [
+            "AG 36",
+            "hedged as required",
+            "notification"
+          ],
           "citations": [
-            { "citationText": "AG 36 hedged as required and notification", "pageReference": "pp. 7-8", "sectionReference": "AG 36: Hedged as required and notification", "sourceReference": "Actuarial Guideline XXXVI", "lineReference": null }
+            {
+              "citationText": "AG 36 hedged as required and notification",
+              "pageReference": "pp. 7-8",
+              "sectionReference": "AG 36: Hedged as required and notification",
+              "sourceReference": "Actuarial Guideline XXXVI",
+              "lineReference": null
+            }
           ]
         },
         {
@@ -1108,13 +1580,31 @@
           "topic": "Certification and closeout",
           "summary": "AG 36 closes with reasonableness and consistency certifications.",
           "sourceTextExcerpt": "AG 36 certification and closeout",
-          "controlledTags": ["regulatory_requirement", "reporting_requirement", "documentation_expectation", "governance_or_control_expectation", "cross_reference_mapping", "boundary_control_window"],
-          "keywords": ["AG 36", "certification", "closeout"],
+          "controlledTags": [
+            "regulatory_requirement",
+            "reporting_requirement",
+            "documentation_expectation",
+            "governance_or_control_expectation",
+            "cross_reference_mapping",
+            "boundary_control_window"
+          ],
+          "keywords": [
+            "AG 36",
+            "certification",
+            "closeout"
+          ],
           "citations": [
-            { "citationText": "AG 36 certification and closeout", "pageReference": "pp. 9-11", "sectionReference": "AG 36: Certification and closeout", "sourceReference": "Actuarial Guideline XXXVI", "lineReference": null }
+            {
+              "citationText": "AG 36 certification and closeout",
+              "pageReference": "pp. 9-11",
+              "sectionReference": "AG 36: Certification and closeout",
+              "sourceReference": "Actuarial Guideline XXXVI",
+              "lineReference": null
+            }
           ]
         }
-      ]
+      ],
+      "licensingStatus": "CLEARED_INTERNAL_POC"
     },
     {
       "sourceIndexId": "source-index-ag36-eiul-crvm-law-manual-reprint",
@@ -1132,8 +1622,13 @@
       "sourceStatus": "companion-only",
       "versionDate": null,
       "pageCount": 18,
-      "pageRange": { "start": 1, "end": 18 },
-      "reviewBatchIds": ["batch-279"],
+      "pageRange": {
+        "start": 1,
+        "end": 18
+      },
+      "reviewBatchIds": [
+        "batch-279"
+      ],
       "reviewIndexPath": "docs/review/ag36_law_manual_reprint_review_index.md",
       "selfReviewPath": "docs/review/ag36_law_manual_reprint_self_review.md",
       "pageImageBackstop": true,
@@ -1143,7 +1638,10 @@
         "sourceTextType": "review_artifact_derived_text",
         "fidelity": "curated",
         "confidence": "high",
-        "reviewFlags": ["companion_guidance", "page_image_backstop"],
+        "reviewFlags": [
+          "companion_guidance",
+          "page_image_backstop"
+        ],
         "qualityNotes": [
           "Companion-only reprint slice; do not merge with the active AG 36 package automatically.",
           "Page-image wording backstop remains required."
@@ -1151,7 +1649,11 @@
         "evidenceNotes": "Derived from the ignored AG 36 Law Manual reprint review packet and review index."
       },
       "relationships": [
-        { "relationType": "duplicate_or_reprint", "targetSourceId": "ag36-eiul-crvm-guidance", "notes": "Companion reprint counterpart to the active AG 36 source." }
+        {
+          "relationType": "duplicate_or_reprint",
+          "targetSourceId": "ag36-eiul-crvm-guidance",
+          "notes": "Companion reprint counterpart to the active AG 36 source."
+        }
       ],
       "notes": "Companion-only AG 36 Law Manual reprint retained as separate evidence.",
       "chunks": [
@@ -1164,13 +1666,41 @@
           "topic": "Reprint background through certification closeout",
           "summary": "The 2021 Law Manual reprint keeps the companion background, mechanics, hedged-as-required criteria, notification material, and certification closeout together.",
           "sourceTextExcerpt": "AG 36 reprint companion slice",
-          "controlledTags": ["companion_guidance", "duplicate_or_reprint", "regulatory_requirement", "reserve_method_structure", "calculation_structure", "formula_context", "prescribed_assumption", "hedging_or_risk_mitigation", "reporting_requirement", "documentation_expectation", "definition_or_terminology", "cross_reference_mapping", "boundary_control_window", "requires_human_interpretation"],
-          "keywords": ["AG 36", "reprint", "EIUL", "CRVM", "companion"],
+          "controlledTags": [
+            "companion_guidance",
+            "duplicate_or_reprint",
+            "regulatory_requirement",
+            "reserve_method_structure",
+            "calculation_structure",
+            "formula_context",
+            "prescribed_assumption",
+            "hedging_or_risk_mitigation",
+            "reporting_requirement",
+            "documentation_expectation",
+            "definition_or_terminology",
+            "cross_reference_mapping",
+            "boundary_control_window",
+            "requires_human_interpretation"
+          ],
+          "keywords": [
+            "AG 36",
+            "reprint",
+            "EIUL",
+            "CRVM",
+            "companion"
+          ],
           "citations": [
-            { "citationText": "AG 36 reprint companion slice", "pageReference": "pp. 1-18", "sectionReference": "AG 36 reprint: background through certification closeout", "sourceReference": "Actuarial Guideline XXXVI / 2021 Law Manual reprint", "lineReference": null }
+            {
+              "citationText": "AG 36 reprint companion slice",
+              "pageReference": "pp. 1-18",
+              "sectionReference": "AG 36 reprint: background through certification closeout",
+              "sourceReference": "Actuarial Guideline XXXVI / 2021 Law Manual reprint",
+              "lineReference": null
+            }
           ]
         }
-      ]
+      ],
+      "licensingStatus": "CLEARED_INTERNAL_POC"
     },
     {
       "sourceIndexId": "source-index-model-governance-practice-note",
@@ -1188,8 +1718,15 @@
       "sourceStatus": "non-binding practice note",
       "versionDate": null,
       "pageCount": 18,
-      "pageRange": { "start": 1, "end": 18 },
-      "reviewBatchIds": ["batch-183", "batch-184", "batch-185"],
+      "pageRange": {
+        "start": 1,
+        "end": 18
+      },
+      "reviewBatchIds": [
+        "batch-183",
+        "batch-184",
+        "batch-185"
+      ],
       "reviewIndexPath": "docs/review/model_governance_practice_note_review_index.md",
       "selfReviewPath": "docs/review/model_governance_practice_note_self_review.md",
       "pageImageBackstop": false,
@@ -1199,7 +1736,10 @@
         "sourceTextType": "review_artifact_derived_text",
         "fidelity": "curated",
         "confidence": "high",
-        "reviewFlags": ["companion_guidance", "page_locator_anchor"],
+        "reviewFlags": [
+          "companion_guidance",
+          "page_locator_anchor"
+        ],
         "qualityNotes": [
           "Non-binding practice note; page locators are the primary anchor.",
           "Keep the companion-guidance caveat visible."
@@ -1217,10 +1757,26 @@
           "topic": "Opening companion guidance",
           "summary": "The practice note opens with disclaimer, introduction, and model-development context.",
           "sourceTextExcerpt": "Model governance opening companion guidance",
-          "controlledTags": ["background_content", "caveat_or_companion_guidance", "non_binding_practice_note", "cross_reference_mapping", "boundary_control_window"],
-          "keywords": ["model governance", "practice note", "opening"],
+          "controlledTags": [
+            "background_content",
+            "caveat_or_companion_guidance",
+            "non_binding_practice_note",
+            "cross_reference_mapping",
+            "boundary_control_window"
+          ],
+          "keywords": [
+            "model governance",
+            "practice note",
+            "opening"
+          ],
           "citations": [
-            { "citationText": "Model governance opening companion guidance", "pageReference": "pp. 1-7", "sectionReference": "Opening companion guidance", "sourceReference": "American Academy of Actuaries practice note, April 2017", "lineReference": null }
+            {
+              "citationText": "Model governance opening companion guidance",
+              "pageReference": "pp. 1-7",
+              "sectionReference": "Opening companion guidance",
+              "sourceReference": "American Academy of Actuaries practice note, April 2017",
+              "lineReference": null
+            }
           ]
         },
         {
@@ -1232,10 +1788,27 @@
           "topic": "Governance and validation",
           "summary": "The practice note covers model governance policy, risk, controls, and validation.",
           "sourceTextExcerpt": "Model governance policy risk controls validation",
-          "controlledTags": ["governance_or_control_expectation", "documentation_expectation", "non_binding_practice_note", "cross_reference_mapping", "requires_human_interpretation"],
-          "keywords": ["governance", "controls", "validation", "practice note"],
+          "controlledTags": [
+            "governance_or_control_expectation",
+            "documentation_expectation",
+            "non_binding_practice_note",
+            "cross_reference_mapping",
+            "requires_human_interpretation"
+          ],
+          "keywords": [
+            "governance",
+            "controls",
+            "validation",
+            "practice note"
+          ],
           "citations": [
-            { "citationText": "Model governance policy risk controls validation", "pageReference": "pp. 8-14", "sectionReference": "Governance and validation", "sourceReference": "American Academy of Actuaries practice note, April 2017", "lineReference": null }
+            {
+              "citationText": "Model governance policy risk controls validation",
+              "pageReference": "pp. 8-14",
+              "sectionReference": "Governance and validation",
+              "sourceReference": "American Academy of Actuaries practice note, April 2017",
+              "lineReference": null
+            }
           ]
         },
         {
@@ -1247,13 +1820,32 @@
           "topic": "Validation and documentation closeout",
           "summary": "The practice note closes with validation, documentation, references, and definitions.",
           "sourceTextExcerpt": "Model governance validation documentation closeout",
-          "controlledTags": ["documentation_expectation", "definition_or_terminology", "non_binding_practice_note", "cross_reference_mapping", "boundary_control_window", "requires_human_interpretation"],
-          "keywords": ["validation", "documentation", "closeout", "practice note"],
+          "controlledTags": [
+            "documentation_expectation",
+            "definition_or_terminology",
+            "non_binding_practice_note",
+            "cross_reference_mapping",
+            "boundary_control_window",
+            "requires_human_interpretation"
+          ],
+          "keywords": [
+            "validation",
+            "documentation",
+            "closeout",
+            "practice note"
+          ],
           "citations": [
-            { "citationText": "Model governance validation documentation closeout", "pageReference": "pp. 15-18", "sectionReference": "Validation and documentation closeout", "sourceReference": "American Academy of Actuaries practice note, April 2017", "lineReference": null }
+            {
+              "citationText": "Model governance validation documentation closeout",
+              "pageReference": "pp. 15-18",
+              "sectionReference": "Validation and documentation closeout",
+              "sourceReference": "American Academy of Actuaries practice note, April 2017",
+              "lineReference": null
+            }
           ]
         }
-      ]
+      ],
+      "licensingStatus": "CLEARED_INTERNAL_POC"
     },
     {
       "sourceIndexId": "source-index-actuarial-memorandum-practice-note",
@@ -1271,8 +1863,16 @@
       "sourceStatus": "non-binding practice note",
       "versionDate": null,
       "pageCount": 37,
-      "pageRange": { "start": 1, "end": 37 },
-      "reviewBatchIds": ["batch-202", "batch-203", "batch-204", "batch-205"],
+      "pageRange": {
+        "start": 1,
+        "end": 37
+      },
+      "reviewBatchIds": [
+        "batch-202",
+        "batch-203",
+        "batch-204",
+        "batch-205"
+      ],
       "reviewIndexPath": "docs/review/actuarial_memorandum_practice_note_review_index.md",
       "selfReviewPath": "docs/review/actuarial_memorandum_practice_note_self_review.md",
       "pageImageBackstop": false,
@@ -1282,7 +1882,10 @@
         "sourceTextType": "review_artifact_derived_text",
         "fidelity": "curated",
         "confidence": "high",
-        "reviewFlags": ["companion_guidance", "page_locator_anchor"],
+        "reviewFlags": [
+          "companion_guidance",
+          "page_locator_anchor"
+        ],
         "qualityNotes": [
           "Non-binding practice note; page locators are the primary anchor.",
           "Keep the companion-guidance caveat visible."
@@ -1300,10 +1903,26 @@
           "topic": "Opening and background guidance",
           "summary": "The note opens with exposure-draft framing and background guidance.",
           "sourceTextExcerpt": "Actuarial memorandum opening background guidance",
-          "controlledTags": ["background_content", "caveat_or_companion_guidance", "non_binding_practice_note", "cross_reference_mapping", "boundary_control_window"],
-          "keywords": ["actuarial memorandum", "practice note", "opening"],
+          "controlledTags": [
+            "background_content",
+            "caveat_or_companion_guidance",
+            "non_binding_practice_note",
+            "cross_reference_mapping",
+            "boundary_control_window"
+          ],
+          "keywords": [
+            "actuarial memorandum",
+            "practice note",
+            "opening"
+          ],
           "citations": [
-            { "citationText": "Actuarial memorandum opening background guidance", "pageReference": "pp. 1-8", "sectionReference": "Opening and background guidance", "sourceReference": "American Academy of Actuaries exposure draft, January 2020", "lineReference": null }
+            {
+              "citationText": "Actuarial memorandum opening background guidance",
+              "pageReference": "pp. 1-8",
+              "sectionReference": "Opening and background guidance",
+              "sourceReference": "American Academy of Actuaries exposure draft, January 2020",
+              "lineReference": null
+            }
           ]
         },
         {
@@ -1315,10 +1934,27 @@
           "topic": "Drafting and content considerations",
           "summary": "The note covers drafting and content considerations for the memorandum.",
           "sourceTextExcerpt": "Actuarial memorandum drafting content considerations",
-          "controlledTags": ["reporting_requirement", "documentation_expectation", "definition_or_terminology", "non_binding_practice_note", "cross_reference_mapping"],
-          "keywords": ["memorandum", "drafting", "content", "practice note"],
+          "controlledTags": [
+            "reporting_requirement",
+            "documentation_expectation",
+            "definition_or_terminology",
+            "non_binding_practice_note",
+            "cross_reference_mapping"
+          ],
+          "keywords": [
+            "memorandum",
+            "drafting",
+            "content",
+            "practice note"
+          ],
           "citations": [
-            { "citationText": "Actuarial memorandum drafting content considerations", "pageReference": "pp. 9-18", "sectionReference": "Drafting and content considerations", "sourceReference": "American Academy of Actuaries exposure draft, January 2020", "lineReference": null }
+            {
+              "citationText": "Actuarial memorandum drafting content considerations",
+              "pageReference": "pp. 9-18",
+              "sectionReference": "Drafting and content considerations",
+              "sourceReference": "American Academy of Actuaries exposure draft, January 2020",
+              "lineReference": null
+            }
           ]
         },
         {
@@ -1330,10 +1966,28 @@
           "topic": "Judgment and reserve-items slice",
           "summary": "The note addresses judgment-heavy reserve-item considerations.",
           "sourceTextExcerpt": "Actuarial memorandum judgment reserve items",
-          "controlledTags": ["calculation_structure", "formula_context", "reporting_requirement", "documentation_expectation", "non_binding_practice_note", "requires_human_interpretation"],
-          "keywords": ["judgment", "reserve items", "memorandum", "practice note"],
+          "controlledTags": [
+            "calculation_structure",
+            "formula_context",
+            "reporting_requirement",
+            "documentation_expectation",
+            "non_binding_practice_note",
+            "requires_human_interpretation"
+          ],
+          "keywords": [
+            "judgment",
+            "reserve items",
+            "memorandum",
+            "practice note"
+          ],
           "citations": [
-            { "citationText": "Actuarial memorandum judgment reserve items", "pageReference": "pp. 19-27", "sectionReference": "Judgment and reserve-items slice", "sourceReference": "American Academy of Actuaries exposure draft, January 2020", "lineReference": null }
+            {
+              "citationText": "Actuarial memorandum judgment reserve items",
+              "pageReference": "pp. 19-27",
+              "sectionReference": "Judgment and reserve-items slice",
+              "sourceReference": "American Academy of Actuaries exposure draft, January 2020",
+              "lineReference": null
+            }
           ]
         },
         {
@@ -1345,13 +1999,31 @@
           "topic": "Appendices and checklist",
           "summary": "The note closes with appendices and checklist material.",
           "sourceTextExcerpt": "Actuarial memorandum appendices checklist",
-          "controlledTags": ["background_content", "caveat_or_companion_guidance", "non_binding_practice_note", "cross_reference_mapping", "boundary_control_window"],
-          "keywords": ["appendices", "checklist", "memorandum", "practice note"],
+          "controlledTags": [
+            "background_content",
+            "caveat_or_companion_guidance",
+            "non_binding_practice_note",
+            "cross_reference_mapping",
+            "boundary_control_window"
+          ],
+          "keywords": [
+            "appendices",
+            "checklist",
+            "memorandum",
+            "practice note"
+          ],
           "citations": [
-            { "citationText": "Actuarial memorandum appendices checklist", "pageReference": "pp. 28-37", "sectionReference": "Appendices and checklist", "sourceReference": "American Academy of Actuaries exposure draft, January 2020", "lineReference": null }
+            {
+              "citationText": "Actuarial memorandum appendices checklist",
+              "pageReference": "pp. 28-37",
+              "sectionReference": "Appendices and checklist",
+              "sourceReference": "American Academy of Actuaries exposure draft, January 2020",
+              "lineReference": null
+            }
           ]
         }
-      ]
+      ],
+      "licensingStatus": "CLEARED_INTERNAL_POC"
     },
     {
       "sourceIndexId": "source-index-reg210-non-guaranteed-elements",
@@ -1369,8 +2041,15 @@
       "sourceStatus": "active",
       "versionDate": "2018-03-19",
       "pageCount": 10,
-      "pageRange": { "start": 1, "end": 9 },
-      "reviewBatchIds": ["batch-186", "batch-187", "batch-188"],
+      "pageRange": {
+        "start": 1,
+        "end": 9
+      },
+      "reviewBatchIds": [
+        "batch-186",
+        "batch-187",
+        "batch-188"
+      ],
       "reviewIndexPath": "docs/review/reg210_review_index.md",
       "selfReviewPath": "docs/review/reg210_self_review.md",
       "pageImageBackstop": false,
@@ -1380,7 +2059,9 @@
         "sourceTextType": "actual_extracted_source_text",
         "fidelity": "exact",
         "confidence": "high",
-        "reviewFlags": ["page_locator_anchor"],
+        "reviewFlags": [
+          "page_locator_anchor"
+        ],
         "qualityNotes": [
           "Page locators are the primary anchor for this regulation.",
           "No stable line references were preserved in the handoff layer."
@@ -1398,10 +2079,28 @@
           "topic": "Opening title, purpose, scope, and definitions",
           "summary": "The regulation opens with title, purpose, scope, and definitions.",
           "sourceTextExcerpt": "Regulation 210 opening title purpose scope definitions",
-          "controlledTags": ["regulatory_requirement", "state_regulation", "jurisdiction_specific_requirement", "definition_or_terminology", "cross_reference_mapping", "background_content"],
-          "keywords": ["Regulation 210", "non-guaranteed elements", "definitions", "purpose"],
+          "controlledTags": [
+            "regulatory_requirement",
+            "state_regulation",
+            "jurisdiction_specific_requirement",
+            "definition_or_terminology",
+            "cross_reference_mapping",
+            "background_content"
+          ],
+          "keywords": [
+            "Regulation 210",
+            "non-guaranteed elements",
+            "definitions",
+            "purpose"
+          ],
           "citations": [
-            { "citationText": "Regulation 210 opening title purpose scope definitions", "pageReference": "pp. 1-3", "sectionReference": "Opening title, purpose, scope, and definitions", "sourceReference": "11 NYCRR Part 48 (Insurance Regulation 210)", "lineReference": null }
+            {
+              "citationText": "Regulation 210 opening title purpose scope definitions",
+              "pageReference": "pp. 1-3",
+              "sectionReference": "Opening title, purpose, scope, and definitions",
+              "sourceReference": "11 NYCRR Part 48 (Insurance Regulation 210)",
+              "lineReference": null
+            }
           ]
         },
         {
@@ -1413,10 +2112,28 @@
           "topic": "Qualified actuary, board-approved criteria, and non-guaranteed elements",
           "summary": "The regulation sets out qualified actuary and board-approved criteria alongside the non-guaranteed element framework.",
           "sourceTextExcerpt": "Regulation 210 qualified actuary board approved criteria",
-          "controlledTags": ["regulatory_requirement", "state_regulation", "jurisdiction_specific_requirement", "governance_or_control_expectation", "company_or_prudent_estimate_assumption", "cross_reference_mapping"],
-          "keywords": ["Regulation 210", "qualified actuary", "board approved", "non-guaranteed elements"],
+          "controlledTags": [
+            "regulatory_requirement",
+            "state_regulation",
+            "jurisdiction_specific_requirement",
+            "governance_or_control_expectation",
+            "company_or_prudent_estimate_assumption",
+            "cross_reference_mapping"
+          ],
+          "keywords": [
+            "Regulation 210",
+            "qualified actuary",
+            "board approved",
+            "non-guaranteed elements"
+          ],
           "citations": [
-            { "citationText": "Regulation 210 qualified actuary board approved criteria", "pageReference": "pp. 4-6", "sectionReference": "Qualified actuary, board-approved criteria, and non-guaranteed elements", "sourceReference": "11 NYCRR Part 48 (Insurance Regulation 210)", "lineReference": null }
+            {
+              "citationText": "Regulation 210 qualified actuary board approved criteria",
+              "pageReference": "pp. 4-6",
+              "sectionReference": "Qualified actuary, board-approved criteria, and non-guaranteed elements",
+              "sourceReference": "11 NYCRR Part 48 (Insurance Regulation 210)",
+              "lineReference": null
+            }
           ]
         },
         {
@@ -1428,13 +2145,33 @@
           "topic": "Filing and records closeout",
           "summary": "The regulation closes with filing and records requirements.",
           "sourceTextExcerpt": "Regulation 210 filing and records closeout",
-          "controlledTags": ["regulatory_requirement", "state_regulation", "jurisdiction_specific_requirement", "reporting_requirement", "documentation_expectation", "governance_or_control_expectation", "boundary_control_window"],
-          "keywords": ["Regulation 210", "filing", "records", "closeout"],
+          "controlledTags": [
+            "regulatory_requirement",
+            "state_regulation",
+            "jurisdiction_specific_requirement",
+            "reporting_requirement",
+            "documentation_expectation",
+            "governance_or_control_expectation",
+            "boundary_control_window"
+          ],
+          "keywords": [
+            "Regulation 210",
+            "filing",
+            "records",
+            "closeout"
+          ],
           "citations": [
-            { "citationText": "Regulation 210 filing and records closeout", "pageReference": "pp. 7-9", "sectionReference": "Filing and records closeout", "sourceReference": "11 NYCRR Part 48 (Insurance Regulation 210)", "lineReference": null }
+            {
+              "citationText": "Regulation 210 filing and records closeout",
+              "pageReference": "pp. 7-9",
+              "sectionReference": "Filing and records closeout",
+              "sourceReference": "11 NYCRR Part 48 (Insurance Regulation 210)",
+              "lineReference": null
+            }
           ]
         }
-      ]
+      ],
+      "licensingStatus": "CLEARED_INTERNAL_POC"
     },
     {
       "sourceIndexId": "source-index-cia-2022-capital-fct-educational-note",
@@ -1452,8 +2189,16 @@
       "sourceStatus": "educational note",
       "versionDate": null,
       "pageCount": 20,
-      "pageRange": { "start": 1, "end": 20 },
-      "reviewBatchIds": ["batch-206", "batch-207", "batch-208", "batch-209"],
+      "pageRange": {
+        "start": 1,
+        "end": 20
+      },
+      "reviewBatchIds": [
+        "batch-206",
+        "batch-207",
+        "batch-208",
+        "batch-209"
+      ],
       "reviewIndexPath": "docs/review/cia_2022_capital_fct_educational_note_review_index.md",
       "selfReviewPath": "docs/review/cia_2022_capital_fct_educational_note_self_review.md",
       "pageImageBackstop": false,
@@ -1463,7 +2208,9 @@
         "sourceTextType": "actual_extracted_source_text",
         "fidelity": "exact",
         "confidence": "high",
-        "reviewFlags": ["page_locator_anchor"],
+        "reviewFlags": [
+          "page_locator_anchor"
+        ],
         "qualityNotes": [
           "Educational note and companion guidance; page locators are the primary anchor.",
           "No stable line references were available in the source package."
@@ -1481,10 +2228,27 @@
           "topic": "Opening and background guidance",
           "summary": "The note opens with educational-note framing and background guidance.",
           "sourceTextExcerpt": "CIA educational note opening background guidance",
-          "controlledTags": ["background_content", "caveat_or_companion_guidance", "non_binding_practice_note", "educational_note", "cross_reference_mapping"],
-          "keywords": ["CIA", "educational note", "capital", "FCT"],
+          "controlledTags": [
+            "background_content",
+            "caveat_or_companion_guidance",
+            "non_binding_practice_note",
+            "educational_note",
+            "cross_reference_mapping"
+          ],
+          "keywords": [
+            "CIA",
+            "educational note",
+            "capital",
+            "FCT"
+          ],
           "citations": [
-            { "citationText": "CIA educational note opening background guidance", "pageReference": "pp. 1-6", "sectionReference": "Opening and background guidance", "sourceReference": "Canadian Institute of Actuaries educational note, February 2022", "lineReference": null }
+            {
+              "citationText": "CIA educational note opening background guidance",
+              "pageReference": "pp. 1-6",
+              "sectionReference": "Opening and background guidance",
+              "sourceReference": "Canadian Institute of Actuaries educational note, February 2022",
+              "lineReference": null
+            }
           ]
         },
         {
@@ -1496,10 +2260,27 @@
           "topic": "Capital and FCT overview",
           "summary": "The note covers the capital and FCT overview.",
           "sourceTextExcerpt": "CIA educational note capital and FCT overview",
-          "controlledTags": ["regulatory_requirement", "reporting_requirement", "documentation_expectation", "educational_note", "cross_reference_mapping"],
-          "keywords": ["capital", "FCT", "overview", "CIA"],
+          "controlledTags": [
+            "regulatory_requirement",
+            "reporting_requirement",
+            "documentation_expectation",
+            "educational_note",
+            "cross_reference_mapping"
+          ],
+          "keywords": [
+            "capital",
+            "FCT",
+            "overview",
+            "CIA"
+          ],
           "citations": [
-            { "citationText": "CIA educational note capital and FCT overview", "pageReference": "pp. 7-11", "sectionReference": "Capital and FCT overview", "sourceReference": "Canadian Institute of Actuaries educational note, February 2022", "lineReference": null }
+            {
+              "citationText": "CIA educational note capital and FCT overview",
+              "pageReference": "pp. 7-11",
+              "sectionReference": "Capital and FCT overview",
+              "sourceReference": "Canadian Institute of Actuaries educational note, February 2022",
+              "lineReference": null
+            }
           ]
         },
         {
@@ -1511,10 +2292,28 @@
           "topic": "Additional guidance",
           "summary": "The note adds caution-heavy guidance on climate, COVID-19, ORSA, reinsurance, and model use.",
           "sourceTextExcerpt": "CIA educational note additional guidance",
-          "controlledTags": ["scenario_or_stochastic_requirement", "reinsurance", "asset_modeling_judgment", "educational_note", "requires_human_interpretation"],
-          "keywords": ["CIA", "climate", "COVID-19", "ORSA", "reinsurance"],
+          "controlledTags": [
+            "scenario_or_stochastic_requirement",
+            "reinsurance",
+            "asset_modeling_judgment",
+            "educational_note",
+            "requires_human_interpretation"
+          ],
+          "keywords": [
+            "CIA",
+            "climate",
+            "COVID-19",
+            "ORSA",
+            "reinsurance"
+          ],
           "citations": [
-            { "citationText": "CIA educational note additional guidance", "pageReference": "pp. 12-16", "sectionReference": "Additional guidance", "sourceReference": "Canadian Institute of Actuaries educational note, February 2022", "lineReference": null }
+            {
+              "citationText": "CIA educational note additional guidance",
+              "pageReference": "pp. 12-16",
+              "sectionReference": "Additional guidance",
+              "sourceReference": "Canadian Institute of Actuaries educational note, February 2022",
+              "lineReference": null
+            }
           ]
         },
         {
@@ -1526,13 +2325,31 @@
           "topic": "Appendices and closeout",
           "summary": "The note closes with appendix material and a clear boundary checkpoint.",
           "sourceTextExcerpt": "CIA educational note appendices closeout",
-          "controlledTags": ["background_content", "caveat_or_companion_guidance", "educational_note", "boundary_control_window", "cross_reference_mapping"],
-          "keywords": ["appendix", "closeout", "CIA", "educational note"],
+          "controlledTags": [
+            "background_content",
+            "caveat_or_companion_guidance",
+            "educational_note",
+            "boundary_control_window",
+            "cross_reference_mapping"
+          ],
+          "keywords": [
+            "appendix",
+            "closeout",
+            "CIA",
+            "educational note"
+          ],
           "citations": [
-            { "citationText": "CIA educational note appendices closeout", "pageReference": "pp. 17-20", "sectionReference": "Appendices and closeout", "sourceReference": "Canadian Institute of Actuaries educational note, February 2022", "lineReference": null }
+            {
+              "citationText": "CIA educational note appendices closeout",
+              "pageReference": "pp. 17-20",
+              "sectionReference": "Appendices and closeout",
+              "sourceReference": "Canadian Institute of Actuaries educational note, February 2022",
+              "lineReference": null
+            }
           ]
         }
-      ]
+      ],
+      "licensingStatus": "CLEARED_INTERNAL_POC"
     },
     {
       "sourceIndexId": "source-index-synthetic-pricing-product-specification",
@@ -1549,8 +2366,13 @@
       "sourceStatus": "active",
       "versionDate": "2026-01-15",
       "pageCount": 2,
-      "pageRange": { "start": 1, "end": 2 },
-      "reviewBatchIds": ["batch-synthetic-pricing"],
+      "pageRange": {
+        "start": 1,
+        "end": 2
+      },
+      "reviewBatchIds": [
+        "batch-synthetic-pricing"
+      ],
       "reviewIndexPath": "docs/review/synthetic_pricing_review_index.md",
       "selfReviewPath": "docs/review/synthetic_pricing_self_review.md",
       "pageImageBackstop": false,
@@ -1602,8 +2424,18 @@
           "sourceTextExcerpt": "This synthetic product specification defines the Orion Term Accumulator test product for pricing portability testing.",
           "normalizedTextExcerpt": "Synthetic product specification and purpose statement.",
           "summary": "The product specification establishes the fictional Orion Term Accumulator corpus and the pricing portability test purpose.",
-          "controlledTags": ["product_family", "pricing_stage", "background_content", "boundary_control_window"],
-          "keywords": ["Orion Term Accumulator", "product specification", "synthetic", "pricing"],
+          "controlledTags": [
+            "product_family",
+            "pricing_stage",
+            "background_content",
+            "boundary_control_window"
+          ],
+          "keywords": [
+            "Orion Term Accumulator",
+            "product specification",
+            "synthetic",
+            "pricing"
+          ],
           "citations": [
             {
               "citationText": "Orion Term Accumulator - Product Specification.md",
@@ -1622,7 +2454,9 @@
           ],
           "fidelity": "curated",
           "confidence": "high",
-          "reviewFlags": ["synthetic_source"],
+          "reviewFlags": [
+            "synthetic_source"
+          ],
           "qualityNotes": [
             "Synthetic source document.",
             "Use the profile metadata to keep product features separate from pricing assumptions."
@@ -1643,8 +2477,19 @@
           "sourceTextExcerpt": "The product has flexible premiums, a guaranteed minimum accumulation rate, optional withdrawals, and age-limited issue rules.",
           "normalizedTextExcerpt": "Synthetic product features and eligibility limits.",
           "summary": "The product features define the pricing target: flexible premiums, guaranteed accumulation, optional withdrawals, and issue-age limits.",
-          "controlledTags": ["product_family", "benefit", "eligibility", "pricing_impact", "implementation_dependency"],
-          "keywords": ["guaranteed minimum accumulation rate", "optional withdrawal", "issue age", "charges"],
+          "controlledTags": [
+            "product_family",
+            "benefit",
+            "eligibility",
+            "pricing_impact",
+            "implementation_dependency"
+          ],
+          "keywords": [
+            "guaranteed minimum accumulation rate",
+            "optional withdrawal",
+            "issue age",
+            "charges"
+          ],
           "citations": [
             {
               "citationText": "Orion Term Accumulator - Product Specification.md",
@@ -1663,7 +2508,9 @@
           ],
           "fidelity": "curated",
           "confidence": "high",
-          "reviewFlags": ["synthetic_source"],
+          "reviewFlags": [
+            "synthetic_source"
+          ],
           "qualityNotes": [
             "Synthetic source document.",
             "The product profile should stay separate from the assumption and profitability records."
@@ -1672,7 +2519,8 @@
           "retrievalEligible": true,
           "promotionEligible": false
         }
-      ]
+      ],
+      "licensingStatus": "CLEARED_INTERNAL_POC"
     },
     {
       "sourceIndexId": "source-index-synthetic-pricing-assumption-memo",
@@ -1689,8 +2537,13 @@
       "sourceStatus": "active",
       "versionDate": "2026-01-20",
       "pageCount": 2,
-      "pageRange": { "start": 1, "end": 2 },
-      "reviewBatchIds": ["batch-synthetic-pricing"],
+      "pageRange": {
+        "start": 1,
+        "end": 2
+      },
+      "reviewBatchIds": [
+        "batch-synthetic-pricing"
+      ],
       "reviewIndexPath": "docs/review/synthetic_pricing_review_index.md",
       "selfReviewPath": "docs/review/synthetic_pricing_self_review.md",
       "pageImageBackstop": false,
@@ -1748,8 +2601,18 @@
           "sourceTextExcerpt": "Lapse, mortality, expense, and investment return assumptions are set on a fictional competitor benchmark.",
           "normalizedTextExcerpt": "Synthetic pricing assumptions and basis.",
           "summary": "The assumption memo defines lapse, mortality, expense, and investment return assumptions for the fictional product.",
-          "controlledTags": ["pricing_assumption_type", "assumption_basis", "pricing_stage", "background_content"],
-          "keywords": ["lapse", "mortality", "expenses", "investment return"],
+          "controlledTags": [
+            "pricing_assumption_type",
+            "assumption_basis",
+            "pricing_stage",
+            "background_content"
+          ],
+          "keywords": [
+            "lapse",
+            "mortality",
+            "expenses",
+            "investment return"
+          ],
           "citations": [
             {
               "citationText": "Orion Term Accumulator - Assumption Memo.md",
@@ -1768,7 +2631,9 @@
           ],
           "fidelity": "curated",
           "confidence": "high",
-          "reviewFlags": ["synthetic_source"],
+          "reviewFlags": [
+            "synthetic_source"
+          ],
           "qualityNotes": [
             "Synthetic source document.",
             "Keep assumption basis separate from methodology mechanics."
@@ -1789,8 +2654,17 @@
           "sourceTextExcerpt": "The memo records the fictional experience basis and the internal target margin.",
           "normalizedTextExcerpt": "Synthetic experience basis and target margin.",
           "summary": "The memo records the experience basis and the target margin that support the pricing design.",
-          "controlledTags": ["pricing_assumption_type", "target_metric", "decision_status", "implementation_dependency"],
-          "keywords": ["experience basis", "target margin", "approval"],
+          "controlledTags": [
+            "pricing_assumption_type",
+            "target_metric",
+            "decision_status",
+            "implementation_dependency"
+          ],
+          "keywords": [
+            "experience basis",
+            "target margin",
+            "approval"
+          ],
           "citations": [
             {
               "citationText": "Orion Term Accumulator - Assumption Memo.md",
@@ -1809,7 +2683,9 @@
           ],
           "fidelity": "curated",
           "confidence": "high",
-          "reviewFlags": ["synthetic_source"],
+          "reviewFlags": [
+            "synthetic_source"
+          ],
           "qualityNotes": [
             "Synthetic source document.",
             "Keep the target margin separate from approval control."
@@ -1818,7 +2694,8 @@
           "retrievalEligible": true,
           "promotionEligible": false
         }
-      ]
+      ],
+      "licensingStatus": "CLEARED_INTERNAL_POC"
     },
     {
       "sourceIndexId": "source-index-synthetic-pricing-pricing-methodology",
@@ -1835,8 +2712,13 @@
       "sourceStatus": "active",
       "versionDate": "2026-01-25",
       "pageCount": 2,
-      "pageRange": { "start": 1, "end": 2 },
-      "reviewBatchIds": ["batch-synthetic-pricing"],
+      "pageRange": {
+        "start": 1,
+        "end": 2
+      },
+      "reviewBatchIds": [
+        "batch-synthetic-pricing"
+      ],
       "reviewIndexPath": "docs/review/synthetic_pricing_review_index.md",
       "selfReviewPath": "docs/review/synthetic_pricing_self_review.md",
       "pageImageBackstop": false,
@@ -1893,8 +2775,17 @@
           "sourceTextExcerpt": "Project premium streams, account value, claims, expenses, and charges on a monthly basis.",
           "normalizedTextExcerpt": "Synthetic pricing method and monthly projection basis.",
           "summary": "The pricing method projects monthly cash flows and applies the assumption memo inputs.",
-          "controlledTags": ["pricing_method", "model_component", "implementation_dependency", "calculation_structure"],
-          "keywords": ["discounted cash flow", "monthly projection", "charges"],
+          "controlledTags": [
+            "pricing_method",
+            "model_component",
+            "implementation_dependency",
+            "calculation_structure"
+          ],
+          "keywords": [
+            "discounted cash flow",
+            "monthly projection",
+            "charges"
+          ],
           "citations": [
             {
               "citationText": "Orion Term Accumulator - Pricing Methodology.md",
@@ -1913,7 +2804,9 @@
           ],
           "fidelity": "curated",
           "confidence": "high",
-          "reviewFlags": ["synthetic_source"],
+          "reviewFlags": [
+            "synthetic_source"
+          ],
           "qualityNotes": [
             "Synthetic source document.",
             "Keep the model mechanics separate from the profitability result."
@@ -1934,8 +2827,17 @@
           "sourceTextExcerpt": "The method uses lapse, yield, and expense sensitivities and feeds the profitability study.",
           "normalizedTextExcerpt": "Synthetic sensitivities and study dependency.",
           "summary": "The methodology lists sensitivities and supports the downstream profitability study.",
-          "controlledTags": ["sensitivity_driver", "pricing_risk", "model_component", "analysis_dependency"],
-          "keywords": ["lapse sensitivity", "yield sensitivity", "expense sensitivity"],
+          "controlledTags": [
+            "sensitivity_driver",
+            "pricing_risk",
+            "model_component",
+            "analysis_dependency"
+          ],
+          "keywords": [
+            "lapse sensitivity",
+            "yield sensitivity",
+            "expense sensitivity"
+          ],
           "citations": [
             {
               "citationText": "Orion Term Accumulator - Pricing Methodology.md",
@@ -1954,7 +2856,9 @@
           ],
           "fidelity": "curated",
           "confidence": "high",
-          "reviewFlags": ["synthetic_source"],
+          "reviewFlags": [
+            "synthetic_source"
+          ],
           "qualityNotes": [
             "Synthetic source document.",
             "Sensitivity details should remain profile metadata, not generic-core obligations."
@@ -1963,7 +2867,8 @@
           "retrievalEligible": true,
           "promotionEligible": false
         }
-      ]
+      ],
+      "licensingStatus": "CLEARED_INTERNAL_POC"
     },
     {
       "sourceIndexId": "source-index-synthetic-pricing-profitability-study",
@@ -1980,8 +2885,13 @@
       "sourceStatus": "active",
       "versionDate": "2026-01-30",
       "pageCount": 2,
-      "pageRange": { "start": 1, "end": 2 },
-      "reviewBatchIds": ["batch-synthetic-pricing"],
+      "pageRange": {
+        "start": 1,
+        "end": 2
+      },
+      "reviewBatchIds": [
+        "batch-synthetic-pricing"
+      ],
       "reviewIndexPath": "docs/review/synthetic_pricing_review_index.md",
       "selfReviewPath": "docs/review/synthetic_pricing_self_review.md",
       "pageImageBackstop": false,
@@ -2038,8 +2948,17 @@
           "sourceTextExcerpt": "The base scenario meets the target margin and lapse downside is the most material sensitivity.",
           "normalizedTextExcerpt": "Synthetic profitability findings and sensitivity ranking.",
           "summary": "The study reports that the base scenario meets target margin and lapse is the most material sensitivity.",
-          "controlledTags": ["profitability_metric", "target_metric", "sensitivity_driver", "pricing_risk"],
-          "keywords": ["target margin", "base scenario", "lapse downside"],
+          "controlledTags": [
+            "profitability_metric",
+            "target_metric",
+            "sensitivity_driver",
+            "pricing_risk"
+          ],
+          "keywords": [
+            "target margin",
+            "base scenario",
+            "lapse downside"
+          ],
           "citations": [
             {
               "citationText": "Orion Term Accumulator - Profitability Study.md",
@@ -2058,7 +2977,9 @@
           ],
           "fidelity": "curated",
           "confidence": "high",
-          "reviewFlags": ["synthetic_source"],
+          "reviewFlags": [
+            "synthetic_source"
+          ],
           "qualityNotes": [
             "Synthetic source document.",
             "Keep findings separate from method mechanics and approval control."
@@ -2079,8 +3000,16 @@
           "sourceTextExcerpt": "Yield downside reduces profitability but remains within the modeled tolerance window.",
           "normalizedTextExcerpt": "Synthetic scenario interpretation and tolerance window.",
           "summary": "The study shows that yield downside remains tolerable even though it reduces profitability.",
-          "controlledTags": ["scenario_or_stochastic_requirement", "pricing_risk", "implementation_dependency"],
-          "keywords": ["yield downside", "tolerance window", "profitability"],
+          "controlledTags": [
+            "scenario_or_stochastic_requirement",
+            "pricing_risk",
+            "implementation_dependency"
+          ],
+          "keywords": [
+            "yield downside",
+            "tolerance window",
+            "profitability"
+          ],
           "citations": [
             {
               "citationText": "Orion Term Accumulator - Profitability Study.md",
@@ -2099,7 +3028,9 @@
           ],
           "fidelity": "curated",
           "confidence": "high",
-          "reviewFlags": ["synthetic_source"],
+          "reviewFlags": [
+            "synthetic_source"
+          ],
           "qualityNotes": [
             "Synthetic source document.",
             "Keep scenario interpretation separate from the approval memo."
@@ -2108,7 +3039,8 @@
           "retrievalEligible": true,
           "promotionEligible": false
         }
-      ]
+      ],
+      "licensingStatus": "CLEARED_INTERNAL_POC"
     },
     {
       "sourceIndexId": "source-index-synthetic-pricing-approval-memo",
@@ -2125,8 +3057,13 @@
       "sourceStatus": "active",
       "versionDate": "2026-02-05",
       "pageCount": 2,
-      "pageRange": { "start": 1, "end": 2 },
-      "reviewBatchIds": ["batch-synthetic-pricing"],
+      "pageRange": {
+        "start": 1,
+        "end": 2
+      },
+      "reviewBatchIds": [
+        "batch-synthetic-pricing"
+      ],
       "reviewIndexPath": "docs/review/synthetic_pricing_review_index.md",
       "selfReviewPath": "docs/review/synthetic_pricing_self_review.md",
       "pageImageBackstop": false,
@@ -2182,8 +3119,16 @@
           "sourceTextExcerpt": "The Pricing Governance Committee approves the methodology subject to implementation controls.",
           "normalizedTextExcerpt": "Synthetic approval and control condition.",
           "summary": "The memo records approval of the pricing methodology subject to implementation controls.",
-          "controlledTags": ["approval_body", "decision_status", "governance_or_control_expectation"],
-          "keywords": ["approval", "pricing governance committee", "implementation controls"],
+          "controlledTags": [
+            "approval_body",
+            "decision_status",
+            "governance_or_control_expectation"
+          ],
+          "keywords": [
+            "approval",
+            "pricing governance committee",
+            "implementation controls"
+          ],
           "citations": [
             {
               "citationText": "Orion Term Accumulator - Approval Memo.md",
@@ -2202,7 +3147,9 @@
           ],
           "fidelity": "curated",
           "confidence": "high",
-          "reviewFlags": ["synthetic_source"],
+          "reviewFlags": [
+            "synthetic_source"
+          ],
           "qualityNotes": [
             "Synthetic source document.",
             "Keep approval control separate from product and assumption evidence."
@@ -2223,8 +3170,16 @@
           "sourceTextExcerpt": "The memo confirms version 1.0 of the product spec, assumption memo, and pricing method.",
           "normalizedTextExcerpt": "Synthetic change summary and version confirmation.",
           "summary": "The memo confirms the controlled versions and documents the change summary.",
-          "controlledTags": ["version", "change_summary", "implementation_dependency"],
-          "keywords": ["version 1.0", "change summary", "approval date"],
+          "controlledTags": [
+            "version",
+            "change_summary",
+            "implementation_dependency"
+          ],
+          "keywords": [
+            "version 1.0",
+            "change summary",
+            "approval date"
+          ],
           "citations": [
             {
               "citationText": "Orion Term Accumulator - Approval Memo.md",
@@ -2243,7 +3198,9 @@
           ],
           "fidelity": "curated",
           "confidence": "high",
-          "reviewFlags": ["synthetic_source"],
+          "reviewFlags": [
+            "synthetic_source"
+          ],
           "qualityNotes": [
             "Synthetic source document.",
             "The version summary should remain profile metadata, not generic-core law."
@@ -2252,7 +3209,8 @@
           "retrievalEligible": true,
           "promotionEligible": false
         }
-      ]
+      ],
+      "licensingStatus": "CLEARED_INTERNAL_POC"
     },
     {
       "sourceIndexId": "source-index-vm01-definitions",
@@ -2273,11 +3231,16 @@
       "versionDate": null,
       "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
       "pageCount": 457,
-      "pageRange": { "start": 25, "end": 39 },
+      "pageRange": {
+        "start": 25,
+        "end": 39
+      },
       "expectedChunkCount": 98,
       "canonicalCandidate": true,
       "processingCreatedAt": "2026-08-26T00:00:00.000Z",
-      "reviewBatchIds": ["batch-013"],
+      "reviewBatchIds": [
+        "batch-013"
+      ],
       "reviewIndexPath": "docs/review/supporting_vm_review_index.md",
       "selfReviewPath": "docs/review/supporting_vm_self_review.md",
       "pageImageBackstop": false,
@@ -2332,7 +3295,10 @@
         "sourceTextType": "actual_extracted_source_text",
         "fidelity": "exact",
         "confidence": "high",
-        "reviewFlags": ["review_only", "definition_or_terminology"]
+        "reviewFlags": [
+          "review_only",
+          "definition_or_terminology"
+        ]
       },
       "definitionInput": {
         "extractionPath": "data/work/batches/batch-013/extraction-output.json",
@@ -2347,7 +3313,8 @@
         "relationshipCandidatePath": "data/processed/relationship_registries/vm01-definition-relationship-candidates.json",
         "reviewPackagePath": "data/processed/review_packages/vm01-canonical-definitions-review-package.json"
       },
-      "notes": "Canonically promoted 2026 VM-01 definition coverage under a recorded independent-review decision; learner, app, RAG, vector, and Copilot export remain blocked, and relationship candidates remain separately governed."
+      "notes": "Canonically promoted 2026 VM-01 definition coverage under a recorded independent-review decision; learner, app, RAG, vector, and Copilot export remain blocked, and relationship candidates remain separately governed.",
+      "licensingStatus": "CLEARED_INTERNAL_POC"
     },
     {
       "sourceIndexId": "source-index-vm30-current-manual",
@@ -2368,11 +3335,17 @@
       "versionDate": null,
       "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
       "pageCount": 457,
-      "pageRange": { "start": 325, "end": 339 },
+      "pageRange": {
+        "start": 325,
+        "end": 339
+      },
       "expectedChunkCount": 51,
       "canonicalCandidate": true,
       "processingCreatedAt": "2026-08-28T00:00:00Z",
-      "reviewBatchIds": ["batch-017", "batch-018"],
+      "reviewBatchIds": [
+        "batch-017",
+        "batch-018"
+      ],
       "reviewIndexPath": "data/processed/review_packages/vm30-canonical-coverage-review-package.md",
       "selfReviewPath": "data/processed/review_packages/vm30-source-qa.md",
       "pageImageBackstop": true,
@@ -2435,8 +3408,14 @@
         "sourceTextType": "actual_extracted_source_text",
         "fidelity": "exact",
         "confidence": "high",
-        "reviewFlags": ["review_only", "requires_independent_review"],
-        "controlledTags": ["vm30_current_manual", "actuarial_opinion_and_memorandum"],
+        "reviewFlags": [
+          "review_only",
+          "requires_independent_review"
+        ],
+        "controlledTags": [
+          "vm30_current_manual",
+          "actuarial_opinion_and_memorandum"
+        ],
         "qualityNotes": [
           "Actual source text from the authoritative current VM-30 chapter is retained without source-text rewriting.",
           "Each child keeps a complete numbered provision with nested qualifications, prescribed wording, guidance notes, and tables.",
@@ -2446,8 +3425,16 @@
       },
       "vm30Input": {
         "extractions": [
-          { "extractionPath": "data/work/batches/batch-017/extraction-output.json", "batchManifestPath": "data/work/batches/batch-017/batch-manifest.json", "sourceId": "supporting-vm30-scope" },
-          { "extractionPath": "data/work/batches/batch-018/extraction-output.json", "batchManifestPath": "data/work/batches/batch-018/batch-manifest.json", "sourceId": "supporting-vm30-detail" }
+          {
+            "extractionPath": "data/work/batches/batch-017/extraction-output.json",
+            "batchManifestPath": "data/work/batches/batch-017/batch-manifest.json",
+            "sourceId": "supporting-vm30-scope"
+          },
+          {
+            "extractionPath": "data/work/batches/batch-018/extraction-output.json",
+            "batchManifestPath": "data/work/batches/batch-018/batch-manifest.json",
+            "sourceId": "supporting-vm30-detail"
+          }
         ]
       },
       "extensions": {
@@ -2456,7 +3443,8 @@
         "reviewPackagePath": "data/processed/review_packages/vm30-canonical-coverage-review-package.json",
         "focusedRetrievalEvaluationPath": "data/processed/review_packages/vm30-focused-retrieval-evaluation.json"
       },
-      "notes": "Canonically promoted current 2026 VM-30 coverage under a recorded independent-review decision; relationship candidates and downstream learner, app, RAG, vector, and Copilot use remain separately governed."
+      "notes": "Canonically promoted current 2026 VM-30 coverage under a recorded independent-review decision; relationship candidates and downstream learner, app, RAG, vector, and Copilot use remain separately governed.",
+      "licensingStatus": "CLEARED_INTERNAL_POC"
     },
     {
       "sourceIndexId": "source-index-vm31-current-manual",
@@ -2477,11 +3465,18 @@
       "versionDate": null,
       "sourceSha256": "496cab9f387c84971df69eab1528d93aea70f7e57c8429661f2765498b38d4e9",
       "pageCount": 457,
-      "pageRange": { "start": 341, "end": 386 },
+      "pageRange": {
+        "start": 341,
+        "end": 386
+      },
       "expectedChunkCount": 84,
       "canonicalCandidate": true,
       "processingCreatedAt": "2026-08-27T00:00:00.000Z",
-      "reviewBatchIds": ["batch-019", "batch-020", "batch-021"],
+      "reviewBatchIds": [
+        "batch-019",
+        "batch-020",
+        "batch-021"
+      ],
       "reviewIndexPath": "data/processed/review_packages/vm31-canonical-coverage-review-package.md",
       "selfReviewPath": "data/processed/review_packages/vm31-source-qa.md",
       "pageImageBackstop": true,
@@ -2544,8 +3539,14 @@
         "sourceTextType": "actual_extracted_source_text",
         "fidelity": "exact",
         "confidence": "high",
-        "reviewFlags": ["review_only", "requires_independent_review"],
-        "controlledTags": ["vm31_current_manual", "reporting_requirement"],
+        "reviewFlags": [
+          "review_only",
+          "requires_independent_review"
+        ],
+        "controlledTags": [
+          "vm31_current_manual",
+          "reporting_requirement"
+        ],
         "qualityNotes": [
           "Actual source text from the authoritative current VM-31 chapter is retained without source-text rewriting.",
           "Each child keeps a complete numbered or lettered provision with its nested qualifications and list items.",
@@ -2578,7 +3579,8 @@
         "reviewPackagePath": "data/processed/review_packages/vm31-canonical-coverage-review-package.json",
         "focusedRetrievalEvaluationPath": "data/processed/review_packages/vm31-focused-retrieval-evaluation.json"
       },
-      "notes": "Canonically promoted current 2026 VM-31 reporting coverage under a recorded independent-review decision; relationship candidates and downstream learner, app, RAG, vector, and Copilot use remain separately governed."
+      "notes": "Canonically promoted current 2026 VM-31 reporting coverage under a recorded independent-review decision; relationship candidates and downstream learner, app, RAG, vector, and Copilot use remain separately governed.",
+      "licensingStatus": "CLEARED_INTERNAL_POC"
     }
   ],
   "retrievalSettings": {
@@ -2658,7 +3660,9 @@
         "vm20-section3c-hierarchical-section-3-c-2-interest-rates-child-001",
         "vm20-section3c-hierarchical-section-3-c-3-lapse-rates-child-001"
       ],
-      "expectedSourceIds": ["vm20-section3c-hierarchical"],
+      "expectedSourceIds": [
+        "vm20-section3c-hierarchical"
+      ],
       "rationale": "Demonstrates child retrieval with parent context and stable adjacency for an existing reviewed source slice."
     },
     {
@@ -2669,7 +3673,9 @@
         "vm20-canonical-coverage-vm20-npr-entry-formula",
         "vm20-canonical-coverage-vm20-npr-entry-formula-child-001"
       ],
-      "expectedSourceIds": ["vm20-canonical-coverage"],
+      "expectedSourceIds": [
+        "vm20-canonical-coverage"
+      ],
       "rationale": "Tests current-manual NPR formula retrieval while preserving the formula/setup boundary."
     },
     {
@@ -2682,7 +3688,9 @@
         "vm20-section3c-hierarchical-section-3-d-npr-calculation-and-cash-surrender-value-floor",
         "vm20-section3c-hierarchical-section-3-d-npr-calculation-and-cash-surrender-value-floor-child-001"
       ],
-      "expectedSourceIds": ["vm20-canonical-coverage"],
+      "expectedSourceIds": [
+        "vm20-canonical-coverage"
+      ],
       "rationale": "Tests the current-manual DR entry point without claiming complete Section 4 coverage."
     },
     {
@@ -2693,7 +3701,9 @@
         "vm20-canonical-coverage-vm20-section5-entry",
         "vm20-canonical-coverage-vm20-section5-entry-child-001"
       ],
-      "expectedSourceIds": ["vm20-canonical-coverage"],
+      "expectedSourceIds": [
+        "vm20-canonical-coverage"
+      ],
       "rationale": "Tests the reviewed SR entry and aggregation boundary."
     },
     {
@@ -2704,7 +3714,9 @@
         "vm20-canonical-coverage-vm20-section6-exclusion-tests",
         "vm20-canonical-coverage-vm20-section6-exclusion-tests-child-001"
       ],
-      "expectedSourceIds": ["vm20-canonical-coverage"],
+      "expectedSourceIds": [
+        "vm20-canonical-coverage"
+      ],
       "rationale": "Tests direct retrieval of SET, SERT, and DET material."
     },
     {
@@ -2715,7 +3727,9 @@
         "vm20-canonical-coverage-vm20-section7-model-structure",
         "vm20-canonical-coverage-vm20-section7-model-structure-child-001"
       ],
-      "expectedSourceIds": ["vm20-canonical-coverage"],
+      "expectedSourceIds": [
+        "vm20-canonical-coverage"
+      ],
       "rationale": "Tests model-structure and starting-asset retrieval from the current manual."
     },
     {
@@ -2728,7 +3742,9 @@
         "vm20-canonical-coverage-vm20-section7-model-structure",
         "vm20-canonical-coverage-vm20-section7-model-structure-child-002"
       ],
-      "expectedSourceIds": ["vm20-canonical-coverage"],
+      "expectedSourceIds": [
+        "vm20-canonical-coverage"
+      ],
       "rationale": "Tests asset-treatment, scenario, and proxy-mapping coverage."
     },
     {
@@ -2739,7 +3755,9 @@
         "vm20-canonical-coverage-vm20-section8-reinsurance",
         "vm20-canonical-coverage-vm20-section8-reinsurance-child-001"
       ],
-      "expectedSourceIds": ["vm20-canonical-coverage"],
+      "expectedSourceIds": [
+        "vm20-canonical-coverage"
+      ],
       "rationale": "Tests reinsurance credit and cash-flow treatment while keeping Section 9 as an explicit gap."
     },
     {
@@ -2753,7 +3771,10 @@
         "vm20-practice-note-companion-vm20-pn-prudent-estimate-child-002",
         "vm20-practice-note-companion-vm20-pn-prudent-estimate-child-003"
       ],
-      "expectedSourceIds": ["vm20-section3c-hierarchical", "vm20-canonical-coverage"],
+      "expectedSourceIds": [
+        "vm20-section3c-hierarchical",
+        "vm20-canonical-coverage"
+      ],
       "rationale": "Tests a cross-section comparison without collapsing source text and interpretation."
     },
     {
@@ -2764,7 +3785,9 @@
         "vm20-practice-note-companion-vm20-pn-expense",
         "vm20-practice-note-companion-vm20-pn-expense-child-001"
       ],
-      "expectedSourceIds": ["vm20-practice-note-companion"],
+      "expectedSourceIds": [
+        "vm20-practice-note-companion"
+      ],
       "rationale": "Tests expense guidance as companion evidence, not current binding manual text."
     },
     {
@@ -2775,7 +3798,9 @@
         "vm20-practice-note-companion-vm20-pn-mortality-child-001",
         "vm20-practice-note-companion-vm20-pn-behavior-child-001"
       ],
-      "expectedSourceIds": ["vm20-practice-note-companion"],
+      "expectedSourceIds": [
+        "vm20-practice-note-companion"
+      ],
       "rationale": "Tests comparison across two companion sections while preserving the non-binding label."
     },
     {
@@ -2789,7 +3814,9 @@
         "vm20-practice-note-companion-vm20-pn-margins-child-002",
         "vm20-practice-note-companion-vm20-pn-margins-child-006"
       ],
-      "expectedSourceIds": ["vm20-practice-note-companion"],
+      "expectedSourceIds": [
+        "vm20-practice-note-companion"
+      ],
       "rationale": "Tests margin retrieval from the separate companion package."
     },
     {
@@ -2800,7 +3827,9 @@
         "vm20-remaining-prose-appendix-coverage-vm20-section4-complete",
         "vm20-remaining-prose-appendix-coverage-vm20-section4-complete-child-001"
       ],
-      "expectedSourceIds": ["vm20-remaining-prose-appendix-coverage"],
+      "expectedSourceIds": [
+        "vm20-remaining-prose-appendix-coverage"
+      ],
       "rationale": "Tests direct retrieval of the complete Section 4 methods and associated calculation conditions."
     },
     {
@@ -2811,7 +3840,9 @@
         "vm20-remaining-prose-appendix-coverage-vm20-section5-complete",
         "vm20-remaining-prose-appendix-coverage-vm20-section5-complete-child-001"
       ],
-      "expectedSourceIds": ["vm20-remaining-prose-appendix-coverage"],
+      "expectedSourceIds": [
+        "vm20-remaining-prose-appendix-coverage"
+      ],
       "rationale": "Tests Section 5 methodology, scenario reserve steps, CTE 70, additional material risk, and PIMR context."
     },
     {
@@ -2824,7 +3855,10 @@
         "vm20-practice-note-companion-vm20-pn-dr-overview-child-006",
         "vm20-practice-note-companion-vm20-pn-sr-overview-child-003"
       ],
-      "expectedSourceIds": ["vm20-remaining-prose-appendix-coverage", "vm20-practice-note-companion"],
+      "expectedSourceIds": [
+        "vm20-remaining-prose-appendix-coverage",
+        "vm20-practice-note-companion"
+      ],
       "rationale": "Tests a cross-section comparison without collapsing the two current sections; companion hits remain visible as a known authority-separation risk."
     },
     {
@@ -2836,7 +3870,10 @@
         "vm20-remaining-prose-appendix-coverage-vm20-section9-a-general-assumption-requirements-child-001",
         "vm20-practice-note-companion-vm20-pn-prudent-estimate-child-005"
       ],
-      "expectedSourceIds": ["vm20-remaining-prose-appendix-coverage", "vm20-practice-note-companion"],
+      "expectedSourceIds": [
+        "vm20-remaining-prose-appendix-coverage",
+        "vm20-practice-note-companion"
+      ],
       "rationale": "Tests Section 9 applicability and general assumption requirements while preserving the companion-guidance comparison risk."
     },
     {
@@ -2847,7 +3884,9 @@
         "vm20-remaining-prose-appendix-coverage-vm20-section9-c-mortality-assumptions",
         "vm20-remaining-prose-appendix-coverage-vm20-section9-c-mortality-assumptions-child-001"
       ],
-      "expectedSourceIds": ["vm20-remaining-prose-appendix-coverage"],
+      "expectedSourceIds": [
+        "vm20-remaining-prose-appendix-coverage"
+      ],
       "rationale": "Tests child retrieval with its structural Section 9.C parent context."
     },
     {
@@ -2858,7 +3897,9 @@
         "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions",
         "vm20-remaining-prose-appendix-coverage-vm20-section9-d-policyholder-behavior-assumptions-child-001"
       ],
-      "expectedSourceIds": ["vm20-remaining-prose-appendix-coverage"],
+      "expectedSourceIds": [
+        "vm20-remaining-prose-appendix-coverage"
+      ],
       "rationale": "Tests exception and condition language in the Section 9.D policyholder-behavior subsection."
     },
     {
@@ -2870,7 +3911,9 @@
         "vm20-remaining-prose-appendix-coverage-vm20-appendix2-a-baseline-annual-default-cost-factors",
         "vm20-canonical-coverage-vm20-section7-asset-mechanics-child-001"
       ],
-      "expectedSourceIds": ["vm20-remaining-prose-appendix-coverage"],
+      "expectedSourceIds": [
+        "vm20-remaining-prose-appendix-coverage"
+      ],
       "rationale": "Tests explicit cross-references between Section 9.F, Section 7, and Appendix 2; nearby Section 7 hits remain a structural retrieval risk to review."
     },
     {
@@ -2881,7 +3924,9 @@
         "vm20-remaining-prose-appendix-coverage-vm20-appendix1-f-this-section-describes-the-set-of-16-scenarios-for-the-sert-in-vm-20-starting-with-the-yield-curve",
         "vm20-remaining-prose-appendix-coverage-vm20-appendix1-f-this-section-describes-the-set-of-16-scenarios-for-the-sert-in-vm-20-starting-with-the-yield-curve-child-001"
       ],
-      "expectedSourceIds": ["vm20-remaining-prose-appendix-coverage"],
+      "expectedSourceIds": [
+        "vm20-remaining-prose-appendix-coverage"
+      ],
       "rationale": "Tests first-class Appendix 1 scenario description retrieval without generalizing scenario examples."
     },
     {
@@ -2892,7 +3937,9 @@
         "vm20-remaining-prose-appendix-coverage-vm20-appendix2-a-baseline-annual-default-cost-factors",
         "vm20-remaining-prose-appendix-coverage-vm20-appendix2-a-baseline-annual-default-cost-factors-child-001"
       ],
-      "expectedSourceIds": ["vm20-remaining-prose-appendix-coverage"],
+      "expectedSourceIds": [
+        "vm20-remaining-prose-appendix-coverage"
+      ],
       "rationale": "Tests Appendix 2 prose and table-basis context while leaving structured table rows deferred."
     },
     {
@@ -2903,7 +3950,10 @@
       "expectedChunkIds": [],
       "expectedSourceIds": [],
       "supportRequirements": {
-        "informationTypes": ["structured_table_rows", "current_version_metadata"],
+        "informationTypes": [
+          "structured_table_rows",
+          "current_version_metadata"
+        ],
         "exact": true,
         "current": true
       },
@@ -2920,7 +3970,9 @@
         "vm20-canonical-coverage-vm20-section7-asset-mechanics-child-008",
         "vm20-canonical-coverage-vm20-section7-model-structure"
       ],
-      "expectedSourceIds": ["vm20-canonical-coverage"],
+      "expectedSourceIds": [
+        "vm20-canonical-coverage"
+      ],
       "rationale": "Tests cross-reference retrieval for VM-31 and related valuation-manual sections without inferring legal effect."
     },
     {
@@ -3126,10 +4178,16 @@
       "queryId": "q-vm01-exact-cte",
       "queryCategory": "vm01_exact_definition",
       "query": "How does VM-01 define conditional tail expectation?",
-      "expectedChunkIds": ["vm01-definition-016-conditional-tail-expectation"],
-      "expectedSourceIds": ["vm01-definitions"],
+      "expectedChunkIds": [
+        "vm01-definition-016-conditional-tail-expectation"
+      ],
+      "expectedSourceIds": [
+        "vm01-definitions"
+      ],
       "supportRequirements": {
-        "informationTypes": ["formal_definition"],
+        "informationTypes": [
+          "formal_definition"
+        ],
         "definedTerm": "conditional tail expectation"
       },
       "rationale": "Tests exact formal-definition retrieval from the current authoritative VM-01 package."
@@ -3138,10 +4196,16 @@
       "queryId": "q-vm01-acronym-gic",
       "queryCategory": "vm01_acronym_definition",
       "query": "How does VM-01 define GIC?",
-      "expectedChunkIds": ["vm01-definition-030-guaranteed-investment-contract"],
-      "expectedSourceIds": ["vm01-definitions"],
+      "expectedChunkIds": [
+        "vm01-definition-030-guaranteed-investment-contract"
+      ],
+      "expectedSourceIds": [
+        "vm01-definitions"
+      ],
       "supportRequirements": {
-        "informationTypes": ["formal_definition"],
+        "informationTypes": [
+          "formal_definition"
+        ],
         "definedTerm": "GIC"
       },
       "rationale": "Tests an acronym that is explicitly supplied within the VM-01 defined term."
@@ -3150,10 +4214,16 @@
       "queryId": "q-vm01-similar-claim-reserve",
       "queryCategory": "vm01_similar_terms",
       "query": "How does VM-01 define claim reserve, rather than contract reserve?",
-      "expectedChunkIds": ["vm01-definition-012-claim-reserve"],
-      "expectedSourceIds": ["vm01-definitions"],
+      "expectedChunkIds": [
+        "vm01-definition-012-claim-reserve"
+      ],
+      "expectedSourceIds": [
+        "vm01-definitions"
+      ],
       "supportRequirements": {
-        "informationTypes": ["formal_definition"],
+        "informationTypes": [
+          "formal_definition"
+        ],
         "definedTerm": "claim reserve"
       },
       "rationale": "Tests preservation of the distinction between two related reserve terms."
@@ -3162,10 +4232,16 @@
       "queryId": "q-vm01-cross-document-prudent-estimate",
       "queryCategory": "vm01_cross_document_terminology",
       "query": "VM-20 uses prudent estimate assumption; what formal definition does VM-01 provide?",
-      "expectedChunkIds": ["vm01-definition-073-prudent-estimate-assumption"],
-      "expectedSourceIds": ["vm01-definitions"],
+      "expectedChunkIds": [
+        "vm01-definition-073-prudent-estimate-assumption"
+      ],
+      "expectedSourceIds": [
+        "vm01-definitions"
+      ],
       "supportRequirements": {
-        "informationTypes": ["formal_definition"],
+        "informationTypes": [
+          "formal_definition"
+        ],
         "definedTerm": "prudent estimate assumption"
       },
       "rationale": "Tests terminology-layer retrieval without duplicating the definition into VM-20 chunks."
@@ -3178,7 +4254,9 @@
       "expectedChunkIds": [],
       "expectedSourceIds": [],
       "supportRequirements": {
-        "informationTypes": ["formal_definition"],
+        "informationTypes": [
+          "formal_definition"
+        ],
         "definedTerm": "deterministic exclusion test"
       },
       "rationale": "Checks that related deterministic-reserve prose cannot be presented as a formal VM-01 definition."
@@ -3191,7 +4269,9 @@
       "expectedChunkIds": [],
       "expectedSourceIds": [],
       "supportRequirements": {
-        "informationTypes": ["formal_definition"],
+        "informationTypes": [
+          "formal_definition"
+        ],
         "definedTerm": "reserve"
       },
       "rationale": "Checks that several related reserve definitions do not create a false formal definition for the broader ambiguous term."
