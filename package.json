@@ -129,6 +129,7 @@
     "vm20:batch-010": "node scripts/run-pilot-batch.mjs --batch batch-010",
     "vm20:batch-011": "node scripts/run-pilot-batch.mjs --batch batch-011",
     "vm20:batch-012": "node scripts/run-pilot-batch.mjs --batch batch-012",
-    "vm21:batch": "node scripts/run-pilot-batch.mjs"
+    "vm21:batch": "node scripts/run-pilot-batch.mjs",
+    "test:contract": "node scripts/validate_export_contract.mjs"
   }
 }
